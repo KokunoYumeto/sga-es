@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "release": {
+    "object": "one evolving Spanish SGA 1-through-N edition",
+    "version": "2026-08-13-r1",
+    "version_doi": "10.5281/zenodo.21923956",
+    "concept_doi": "10.5281/zenodo.21923955",
+    "repository": "https://github.com/KokunoYumeto/sga-es",
+    "incomplete": true,
+    "separate_volume_dois": false,
+    "separate_expose_dois": false
+  },
+  "payload": [
+    {
+      "ordinal": 0,
+      "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+      "bytes": 5707955,
+      "sha256": "DEBC275FF602B7A34C0A130B0526885DFF54A9B1BD421CC1C80CDC700BF7BC57"
+    },
+    {
+      "ordinal": 1,
+      "name": "01_SGA1_ES_COMPLETE_READER.pdf",
+      "bytes": 2701982,
+      "sha256": "98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F"
+    },
+    {
+      "ordinal": 2,
+      "name": "02_SGA2_ES_THROUGH_EXPOSE_V_READER.pdf",
+      "bytes": 871286,
+      "sha256": "4BB88DEE00E2F02543B0333724EAAEC5C71699396BA605A3F11AACB6D2359FFD"
+    },
+    {
+      "ordinal": 3,
+      "name": "03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
+      "bytes": 2196982,
+      "sha256": "2B69F774EF0F3E56262C45E36DE1807DB3428563678AB1132322521C716E32CC"
+    },
+    {
+      "ordinal": 4,
+      "name": "04_SGA6_ES_EXPOSE_X_PARTIAL_READER.pdf",
+      "bytes": 219996,
+      "sha256": "9C6279297439C34328C4C055E0D4691FCFF03375741C313C9DE8DB39F42BEAA0"
+    },
+    {
+      "ordinal": 5,
+      "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
+      "bytes": 1046517,
+      "sha256": "471B3A1A2B88D3CDCDD3E38302D6AB5C52B3E25D500EE692B301AE34C49E09E3"
+    },
+    {
+      "ordinal": 6,
+      "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+      "bytes": 40280110,
+      "sha256": "8A6FDD7EE77D687EA87EA5F49A23EB89AC0F2E2228CFAB2E807B9F6D7D95870F"
+    },
+    {
+      "ordinal": 7,
+      "name": "07_SGA_ES_SHA256_MANIFEST.txt",
+      "bytes": 776,
+      "sha256": "ABD72D6476BED5D8DF9EA7980738D5A8D2C542097CEAEA35AC143DDA52AB6505"
+    }
+  ],
+  "validation": {
+    "cumulative_pdf_independent_qa_receipt_sha256": "0AD137D8694BDC847F2843104E555327151A18614941AC904CEE7AC392CCF083",
+    "editable_sources_receipt_sha256": "9B965CC6B75A7730F8A1177C5CA0C1288ED2DDE7F763B1215170BF381B951AEB",
+    "evidence_provenance_receipt_sha256": "C43CF2230C6B1C337CF65B45BEF41C38D9856466840B4A44C9D284E8FD6F7EDC",
+    "payload_manifest_replay": "PASS",
+    "git_invocation_performed": false
+  }
+}
