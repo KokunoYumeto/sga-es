@@ -3,7 +3,7 @@
   "upload_type": "publication",
   "publication_type": "other",
   "publication_date": "2026-08-21",
-  "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> La versión 2026-08-21-r2 incluye SGA 1, SGA 2, SGA 5 y SGA 6 completos y verificados. SGA 3, SGA 4 y SGA 7 todavía no se incluyen; la edición global permanece incompleta.</p><p>El depósito ofrece un lector acumulativo enlazado, los cuatro lectores componentes, fuentes editables seleccionadas, evidencia pública y manifiestos SHA-256. No se crean DOI separados por volumen o exposición.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p>",
+  "description": "<p>Una sola edici&oacute;n espa&ntilde;ola evolutiva de SGA. La versi&oacute;n 2026-08-21-r3 conserva SGA 1, SGA 2, SGA 5 y SGA 6 completos y verificados, y a&ntilde;ade la edici&oacute;n espa&ntilde;ola aut&oacute;noma completa de SGA 7, tome I, Groupes de monodromie en g&eacute;om&eacute;trie alg&eacute;brique: preliminares; Exposiciones I, II, VI, VII, VIII y IX; bibliograf&iacute;as; el folio 524 documentado como blanco; y el material editorial terminal. Las Exposiciones III&ndash;V no fueron redactadas para este tomo.</p>\n<p>Se suministran dos lectores de SGA 7.1: una rama corregida/actual y una rama original/diplom&aacute;tica de lectura impresa, junto con fuentes componibles, evidencia y un manifiesto SHA-256. Ambas ramas son deterministas, tienen 335 p&aacute;ginas, fuentes Unicode incrustadas, extracci&oacute;n textual verificada, mapas exactos para los &iacute;ndices de escaneo 0&ndash;539 y control visual integral. El escaneo privado de control no se redistribuye.</p>\n<p>Los avisos de copyright se conservan &uacute;nicamente como procedencia hist&oacute;rica y no restringen esta edici&oacute;n matem&aacute;tica independiente ni su publicaci&oacute;n. No se afirma dominio p&uacute;blico ni una licencia abierta general; se preservan atribuci&oacute;n, autor&iacute;a, procedencia y no aprobaci&oacute;n.</p>\n<p>El lector acumulativo heredado contin&uacute;a documentando su propia cobertura de SGA 1, 2, 5 y 6. SGA 7.1 se a&ntilde;ade como archivos aut&oacute;nomos 08&ndash;11 bajo el mismo DOI conceptual; no se afirma que el lector acumulativo heredado ya contenga SGA 7.1. SGA 3, SGA 4 y el resto de SGA 7 a&uacute;n no se incluyen, por lo que la edici&oacute;n global permanece incompleta.</p>",
   "creators": [
     {
       "name": "Grothendieck, Alexandre"
@@ -28,7 +28,7 @@
     "AI-assisted scholarly edition"
   ],
   "language": "spa",
-  "version": "2026-08-21-r2",
+  "version": "2026-08-21-r3",
   "access_right": "open",
   "license": "notspecified",
   "related_identifiers": [
