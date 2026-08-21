@@ -1,18 +1,16 @@
 {
-  "schema_version": 1,
-  "version_doi": "10.5281/zenodo.22044898",
+  "version_doi": "10.5281/zenodo.22047550",
   "concept_doi": "10.5281/zenodo.21923955",
   "relations": [
     {
       "identifier": "10.5281/zenodo.20410947",
-      "relation": "IsPartOf",
-      "scheme": "DOI"
+      "relation": "isPartOf",
+      "scheme": "doi"
     },
     {
       "identifier": "https://github.com/KokunoYumeto/sga-es",
-      "relation": "IsSupplementedBy",
-      "scheme": "URL"
+      "relation": "isSupplementedBy",
+      "scheme": "url"
     }
-  ],
-  "lineage_rule": "one evolving Spanish-SGA concept DOI; no per-volume deposits"
+  ]
 }
