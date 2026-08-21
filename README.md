@@ -1,41 +1,49 @@
 # SGA en español — edición acumulativa
 
-Este es el registro público de **una sola edición española evolutiva de los Séminaires de Géométrie Algébrique (SGA)**. La línea DOI abarca SGA 1 hasta SGA N en español a medida que se complete y verifique el trabajo. No se asignan DOI independientes a los volúmenes, exposiciones ni tramos componentes.
+Este repositorio y la línea DOI `10.5281/zenodo.21923955` mantienen **una sola edición
+española evolutiva** de los Séminaires de Géométrie Algébrique (SGA). La
+versión `2026-08-21-r2` incorpora cuatro lectores completos y verificados:
 
-## Cobertura de la versión 2026-08-13-r1
+- SGA 1: 287 páginas.
+- SGA 2: 209 páginas, incluidos los índices finales.
+- SGA 5: 326 páginas, contenido completo publicado en LNM 589.
+- SGA 6: 377 páginas.
 
-Esta primera versión es deliberadamente incompleta. Contiene:
+SGA 3, SGA 4 y SGA 7 todavía no forman parte de esta versión; por ello la
+edición global de SGA en español sigue incompleta. No se crean DOI separados
+para volúmenes, exposiciones ni tramos.
 
-- SGA 1: lector español completo, 287 páginas.
-- SGA 2: preliminares, Introducción y Exposiciones I–V, 61 páginas; el trabajo continúa.
-- SGA 5: contenido completo publicado en LNM 589, 326 páginas.
-- SGA 6: tramo acotado de la Exposición X, páginas impresas 519–524, 4 páginas; termina durante una demostración.
+## Archivos
 
-SGA 3, SGA 4 y SGA 7 todavía no están incluidos. La ausencia de un componente significa que la edición española global sigue incompleta.
-
-## Archivos principales
-
-El depósito pone en primer plano un lector acumulativo con navegación interna. Los cuatro lectores componentes también se ofrecen por separado, todos bajo el mismo DOI español. Un ZIP contiene las fuentes editables seleccionadas y otro conserva la evidencia pública y la procedencia: decisiones de traducción y terminología, discrepancias, referencias de corrección, decisiones tipográficas, estados de construcción, revisiones visuales, manifiestos y resultados de validación.
-
-`07_SGA_ES_SHA256_MANIFEST.txt` permite verificar los otros siete archivos del depósito. Cada ZIP contiene además su propio manifiesto de miembros.
+El registro contiene un lector acumulativo enlazado, los cuatro lectores
+componentes, fuentes editables seleccionadas, evidencia y procedencia, y un
+manifiesto SHA-256. Los lectores conservan sus créditos, numeración y alcance.
 
 ## Identificadores
 
-- DOI de esta versión: [10.5281/zenodo.21923956](https://doi.org/10.5281/zenodo.21923956)
-- DOI conceptual de la línea española: [10.5281/zenodo.21923955](https://doi.org/10.5281/zenodo.21923955)
-- Repositorio: [github.com/KokunoYumeto/sga-es](https://github.com/KokunoYumeto/sga-es)
+- DOI de esta versión: `10.5281/zenodo.22044086`
+- DOI conceptual estable: `10.5281/zenodo.21923955`
+- Repositorio: https://github.com/KokunoYumeto/sga-es
 
-El DOI conceptual es el enlace estable para futuras ampliaciones. El DOI de versión identifica exactamente los bytes de esta publicación.
+## Alcance de la verificación
 
-## Verificación y límites
+Edición académica de trabajo asistida por IA. Los recibos registran alineación
+con las fuentes, decisiones reversibles, construcción determinista, revisión
+visual y controles independientes. No se afirma revisión por pares,
+certificación lingüística humana ni ausencia absoluta de errores.
 
-Los lectores componentes conservan sus propios créditos, numeración y alcance. La publicación es una edición académica de trabajo asistida por IA. La evidencia registra lo que fue comprobado, pero no declara revisión por pares, certificación lingüística humana, ausencia total de errores ni una demostración matemática independiente de las autoridades citadas.
-
-No se afirma una licencia general de redistribución para las obras subyacentes, las ediciones fuente ni las traducciones derivadas. Consulte `LICENSE_AND_RIGHTS.md` antes de reutilizar material.
+Los avisos de copyright se conservan únicamente como procedencia histórica y
+no restringen esta edición matemática independiente ni su publicación. Esta
+declaración no convierte las obras subyacentes en dominio público ni inventa
+una licencia abierta general. Se preservan la atribución, las relaciones de
+autoría, la procedencia y la no aprobación.
 
 ---
 
 # SGA — Cumulative Spanish Edition
 
-This repository and DOI lineage represent **one evolving Spanish edition of SGA**, not separate DOI lineages for individual SGA volumes, exposés, or working tranches. Version `2026-08-13-r1` includes every currently verified Spanish component listed above and states its incompleteness explicitly. Future additions will be released as new versions of this same Spanish-SGA lineage.
-
+Version `2026-08-21-r2` expands the same single Spanish-SGA DOI lineage with
+complete SGA 2 and SGA 6 readers. SGA 3, SGA 4, and SGA 7 are not yet included.
+Historical copyright notices are retained solely as provenance; they do not
+restrict this independent mathematical edition or its publication. No blanket
+public-domain or open-license claim is made.
