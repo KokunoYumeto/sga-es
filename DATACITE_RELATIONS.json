@@ -1,43 +1,18 @@
 {
   "schema_version": 1,
-  "object_scope": "one evolving Spanish SGA 1-through-N edition",
-  "family_mode": "evolving_corpus",
-  "resource_type_general": "Collection",
-  "component_resource_intent": "bibliographic book readers within the single collection lineage",
-  "version": "2026-08-13-r1",
-  "version_doi": "10.5281/zenodo.21923956",
+  "version_doi": "10.5281/zenodo.22044086",
   "concept_doi": "10.5281/zenodo.21923955",
   "relations": [
     {
-      "subject": "10.5281/zenodo.21923956",
-      "relation": "IsVersionOf",
-      "object": "10.5281/zenodo.21923955",
-      "object_type": "DOI"
-    },
-    {
-      "subject": "10.5281/zenodo.21923955",
-      "relation": "HasVersion",
-      "object": "10.5281/zenodo.21923956",
-      "object_type": "DOI"
-    },
-    {
-      "subject": "10.5281/zenodo.21923955",
+      "identifier": "10.5281/zenodo.20410947",
       "relation": "IsPartOf",
-      "object": "10.5281/zenodo.20410947",
-      "object_type": "DOI",
-      "note": "Global multilingual SGA directory concept. This is not a separate Spanish volume DOI."
+      "scheme": "DOI"
     },
     {
-      "subject": "10.5281/zenodo.21923955",
+      "identifier": "https://github.com/KokunoYumeto/sga-es",
       "relation": "IsSupplementedBy",
-      "object": "https://github.com/KokunoYumeto/sga-es",
-      "object_type": "URL"
+      "scheme": "URL"
     }
   ],
-  "translation_relation_note": "The current global multilingual record is broader than a same-scope source-language SGA object, so it is not asserted as IsTranslationOf. The Spanish relationship to the French authorities is stated explicitly in README and provenance evidence without inventing a false same-scope DOI relation.",
-  "forbidden_granularity": {
-    "separate_sga_volume_doi": false,
-    "separate_expose_doi": false,
-    "component_doi": false
-  }
+  "lineage_rule": "one evolving Spanish-SGA concept DOI; no per-volume deposits"
 }
