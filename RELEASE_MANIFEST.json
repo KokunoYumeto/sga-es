@@ -1,297 +1,304 @@
 {
-  "schema_version": 2,
-  "status": "READY_FOR_AUTHORIZED_IN_PLACE_PUBLICATION",
+  "schema_version": 6,
+  "status": "PUBLIC_IMMUTABLE_CROSS_SERVICE",
   "release": {
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
-    "version": "2026-08-21-r8",
+    "version": "2026-08-21-r9",
     "publication_date": "2026-08-21",
-    "version_doi": "10.5281/zenodo.22050188",
+    "version_doi": "10.5281/zenodo.22050350",
+    "version_record_id": 22050350,
     "concept_doi": "10.5281/zenodo.21923955",
+    "concept_record_id": 21923955,
+    "predecessor_version": "2026-08-21-r8",
+    "predecessor_version_doi": "10.5281/zenodo.22050188",
+    "predecessor_record_id": 22050188,
+    "predecessor_github_tag": "v2026-08-21-r8",
+    "github_tag": "v2026-08-21-r9",
     "repository": "https://github.com/KokunoYumeto/sga-es",
-    "predecessor_version": "2026-08-21-r7",
-    "predecessor_doi": "10.5281/zenodo.22050082",
     "expected_payload_count": 34,
-    "cumulative_pages": 2873,
+    "expected_payload_bytes": 97680531,
+    "projection_bytes": 4039,
+    "projection_sha256": "0075FFA2D0C6BEEEE3F7C8D7C0ED85A55BC2922FEE16F486E01C49DBD9CB1DB3",
     "duplicate_deposit": false
   },
   "coverage": {
     "complete": [
       "SGA 1",
       "SGA 2",
-      "SGA 4, Tomo I",
-      "SGA 4, Tomo II",
-      "SGA 4, Tomo III",
       "SGA 4½",
+      "SGA 4, tome I",
+      "SGA 4, tome II",
+      "SGA 4, tome III",
       "SGA 5",
       "SGA 6",
-      "SGA 7, Tomo I",
-      "SGA 7, Tomo II"
+      "SGA 7, tome I",
+      "SGA 7, tome II"
     ],
     "absent": [
       "SGA 3"
-    ]
+    ],
+    "global_series_complete": false
   },
   "payload": [
     {
+      "ordinal": 0,
       "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
-      "bytes": 20812805,
-      "sha256": "3E088F9BF9510CA210FAD0D35DEB61B0840F33E38554BF7744CB259154B47E0F",
-      "pages": 2873,
-      "encrypted": false
+      "bytes": 9171199,
+      "sha256": "CB9A2A867375DE69FD88080BC5BDC1840EEB23B2EB29C351C68F1E565689D652",
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 1,
       "name": "01_SGA1_ES_COMPLETE_READER.pdf",
       "bytes": 2701982,
       "sha256": "98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F",
-      "pages": 287,
-      "encrypted": false
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 2,
       "name": "02_SGA2_ES_COMPLETE_READER.pdf",
       "bytes": 2008342,
       "sha256": "41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748",
-      "pages": 209,
-      "encrypted": false
+      "provenance": "inherited_public_r4"
     },
     {
-      "name": "03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf",
-      "bytes": 2200080,
-      "sha256": "79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004",
-      "pages": 326,
-      "encrypted": false
-    },
-    {
+      "ordinal": 3,
       "name": "03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
       "bytes": 2197248,
       "sha256": "AF1E67D1AF6FCAB46C81EAB6B1CF2B8CE08B5C7FADE3FFE617365F2B68264749",
-      "pages": 326,
-      "encrypted": false
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 4,
+      "name": "03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf",
+      "bytes": 2200080,
+      "sha256": "79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004",
+      "provenance": "inherited_public_r4"
+    },
+    {
+      "ordinal": 5,
       "name": "04_SGA6_ES_COMPLETE_READER.pdf",
       "bytes": 2884189,
       "sha256": "A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294",
-      "pages": 377,
-      "encrypted": false
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 6,
       "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
       "bytes": 4257787,
       "sha256": "12B52B10D1AF4A461ADF653F1330A624F6A49061D768A988BFE7A913B52C1672",
-      "zip_entries": 219,
-      "zip_uncompressed_bytes": 5430624
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 7,
       "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
       "bytes": 41513147,
       "sha256": "93197234D1EEC3A97AE7D6B6F317B050FF6552A62BD39A36B9EE7BC1A038B074",
-      "zip_entries": 66,
-      "zip_uncompressed_bytes": 46087666
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 8,
       "name": "07_SGA_ES_SHA256_MANIFEST.txt",
-      "bytes": 3940,
-      "sha256": "3169B6107549ED228653E34DB5965D8E85A2405783DB5E54E8C14C4517148620"
+      "bytes": 1369,
+      "sha256": "1C06A1DDEB82EB9DEC530509DD112316479B4BEF2EE218C72AF53F2A8A4C710E",
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 9,
       "name": "08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
       "bytes": 2375139,
       "sha256": "84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1",
-      "pages": 335,
-      "encrypted": false
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 10,
       "name": "09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
       "bytes": 2374693,
       "sha256": "0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543",
-      "pages": 335,
-      "encrypted": false
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 11,
       "name": "10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
       "bytes": 590972,
       "sha256": "B873B495EEDC58D89DE735C7F60DC2EA2EAEEC66ACAAB95C291E5A3D9EBBEE75",
-      "zip_entries": 288,
-      "zip_uncompressed_bytes": 1411436
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 12,
       "name": "11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
       "bytes": 541,
-      "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B"
+      "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B",
+      "provenance": "inherited_public_r4"
     },
     {
+      "ordinal": 13,
       "name": "12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
       "bytes": 2401433,
       "sha256": "04BA3B269D5AFC0A0A090F7728250DF0899B28FD45BDEC6AD5E2F376C63CE9AD",
-      "pages": 278,
-      "encrypted": false
+      "provenance": "new_sga72"
     },
     {
+      "ordinal": 14,
       "name": "13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
       "bytes": 2401603,
       "sha256": "27F1B42B8F8E78E28D3543C5B729735FAF68BD81FF989804728B90F97D48813F",
-      "pages": 278,
-      "encrypted": false
+      "provenance": "new_sga72"
     },
     {
+      "ordinal": 15,
       "name": "14_SGA7_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
-      "bytes": 2860725,
-      "sha256": "FFC39951A0C2464C78D68D7DBEE2926B63D86DFCE4A82FCACCFE55640ED2ECFD",
-      "zip_entries": 68,
-      "zip_uncompressed_bytes": 2849357
+      "bytes": 2904389,
+      "sha256": "672E3B4A1B2F41FAD37E36C91AAC7F3A64AFA9E03E848357876D27EFE93AC8E8",
+      "provenance": "corrective_r9_sga72"
     },
     {
+      "ordinal": 16,
       "name": "15_SGA7_TOME_II_SHA256_MANIFEST_20260821.txt",
       "bytes": 582,
-      "sha256": "7E04ECC2CCAFF1808C0ADA22F9098E653878D1419EC14EC2EC869F1C6561CB42"
+      "sha256": "3AE7084A5ADFF29108F29C4BA459ECF1BF8094E2743C3433F429050DBA692DC4",
+      "provenance": "corrective_r9_sga72"
     },
     {
-      "name": "16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
-      "bytes": 1875389,
-      "sha256": "4BF4BA999D726FCF191C5765A6236B0A0B8865CD8733EF6B50667473E6DDFB84",
-      "pages": 375,
-      "encrypted": false
-    },
-    {
-      "name": "17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
-      "bytes": 1815707,
-      "sha256": "FBA4A5D66A0D85102F89BB7D2C3C6D44B43944CF4077EA4A946E8F22AA6418C9",
-      "pages": 367,
-      "encrypted": false
-    },
-    {
-      "name": "18_SGA4_TOME_III_FUENTES_Y_EVIDENCIA_20260821.zip",
-      "bytes": 448579,
-      "sha256": "B9BB7969611DBA3B8156CF38AA1EBF1EBFAF8C7A85301BE5DDC3791C670354E7",
-      "zip_entries": 45,
-      "zip_uncompressed_bytes": 1565064
-    },
-    {
-      "name": "19_SGA4_TOME_III_SHA256_MANIFEST_20260821.txt",
-      "bytes": 477,
-      "sha256": "5087466603343D7534A8CE795685170F459A455104C6B25A74599B7818F4E558"
-    },
-    {
-      "name": "20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
-      "bytes": 1170371,
-      "sha256": "FEE3CD904F5EA2C48A3C9DD9F18E4498F27C126C9FA742FBBB003A2818E4A0F5",
-      "pages": 182,
-      "encrypted": false
-    },
-    {
-      "name": "21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
-      "bytes": 1158624,
-      "sha256": "83576642F9BEE13A7488EB097885C544131F4A1F8A9E9B82F4C7A48C9BE7AA12",
-      "pages": 180,
-      "encrypted": false
-    },
-    {
-      "name": "22_SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
-      "bytes": 1144208,
-      "sha256": "58A70B561B57A668B7B9F79AE8EFA0D5479CDC8E2253AC56544CFBC2A783D29A",
-      "zip_entries": 139,
-      "zip_uncompressed_bytes": 1120348
-    },
-    {
-      "name": "23_SGA4_TOME_II_SHA256_MANIFEST_20260821.txt",
-      "bytes": 395,
-      "sha256": "CE2D35496BA07DC00B30D67FC6D27B283883F52AF4CC812D2BDA4EF4330F1792"
-    },
-    {
-      "name": "24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
-      "bytes": 1791217,
-      "sha256": "8CED3F06272264CDD0242910AC17AB6E5BF2B9F6A5DBF5A9CDB5FE4FB672157F",
-      "pages": 302,
-      "encrypted": false
-    },
-    {
-      "name": "25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
-      "bytes": 1783326,
-      "sha256": "E72DDE9FCFA1E28B4FE815E428619827C5B8A597071EF5D000E52FBB94EAAB60",
-      "pages": 302,
-      "encrypted": false
-    },
-    {
-      "name": "26_SGA4_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
-      "bytes": 1334989,
-      "sha256": "3FBA1C084012901CE11F3434B3134F81B32FEF644D6D42E68A33553CE21FB892",
-      "zip_entries": 367,
-      "zip_uncompressed_bytes": 1280043
-    },
-    {
-      "name": "27_SGA4_TOME_I_PUBLICATION_MANIFEST_20260821.json",
-      "bytes": 6437,
-      "sha256": "EBBB8D27B00B8ECEEDD1E07918353FF950EC048FD29F8F26D795FD22CE446CA0"
-    },
-    {
-      "name": "28_SGA4_TOME_I_SHA256_MANIFEST_20260821.txt",
-      "bytes": 396,
-      "sha256": "A57CD7D6CC55E6263744196935023031856CD5F8A8BF89A341006124EB09E7D2"
-    },
-    {
+      "ordinal": 17,
       "name": "SGA4HALF_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
       "bytes": 2091367,
       "sha256": "9F6A75A178BA53DD87935BF4FFFF720D2D84FF5B532602684A81696C80B09157",
-      "pages": 198,
-      "encrypted": false
+      "provenance": "new_sga4half"
     },
     {
+      "ordinal": 18,
       "name": "SGA4HALF_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
       "bytes": 2090821,
       "sha256": "6660C5F438D2AC4CB79EE2EFF873F1E303F19AF03DAFD328D12640374104C406",
-      "pages": 198,
-      "encrypted": false
+      "provenance": "new_sga4half"
     },
     {
+      "ordinal": 19,
       "name": "SGA4HALF_FUENTES_Y_EVIDENCIA_20260821.zip",
       "bytes": 983058,
       "sha256": "55887CCF8E0E1708EF5A613ABCA390EF0953F8363AC600722E58956874C0A5B9",
-      "zip_entries": 157,
-      "zip_uncompressed_bytes": 5072311
+      "provenance": "new_sga4half"
     },
     {
+      "ordinal": 20,
       "name": "SGA4HALF_SHA256_MANIFEST_20260821.txt",
       "bytes": 475,
-      "sha256": "A399CA78AFABF403E9401E0D51BFB2BD001215C44B205260D41745C21396D91F"
+      "sha256": "A399CA78AFABF403E9401E0D51BFB2BD001215C44B205260D41745C21396D91F",
+      "provenance": "new_sga4half"
+    },
+    {
+      "ordinal": 21,
+      "name": "16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 1875389,
+      "sha256": "4BF4BA999D726FCF191C5765A6236B0A0B8865CD8733EF6B50667473E6DDFB84",
+      "provenance": "inherited_public_r5_sga4_tome3"
+    },
+    {
+      "ordinal": 22,
+      "name": "17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 1815707,
+      "sha256": "FBA4A5D66A0D85102F89BB7D2C3C6D44B43944CF4077EA4A946E8F22AA6418C9",
+      "provenance": "inherited_public_r5_sga4_tome3"
+    },
+    {
+      "ordinal": 23,
+      "name": "18_SGA4_TOME_III_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 448579,
+      "sha256": "B9BB7969611DBA3B8156CF38AA1EBF1EBFAF8C7A85301BE5DDC3791C670354E7",
+      "provenance": "corrective_r6_sga4_tome3"
+    },
+    {
+      "ordinal": 24,
+      "name": "19_SGA4_TOME_III_SHA256_MANIFEST_20260821.txt",
+      "bytes": 477,
+      "sha256": "5087466603343D7534A8CE795685170F459A455104C6B25A74599B7818F4E558",
+      "provenance": "corrective_r6_sga4_tome3"
+    },
+    {
+      "ordinal": 25,
+      "name": "20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 1170371,
+      "sha256": "FEE3CD904F5EA2C48A3C9DD9F18E4498F27C126C9FA742FBBB003A2818E4A0F5",
+      "provenance": "new_sga4_tome2"
+    },
+    {
+      "ordinal": 26,
+      "name": "21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 1158624,
+      "sha256": "83576642F9BEE13A7488EB097885C544131F4A1F8A9E9B82F4C7A48C9BE7AA12",
+      "provenance": "new_sga4_tome2"
+    },
+    {
+      "ordinal": 27,
+      "name": "22_SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 1144208,
+      "sha256": "58A70B561B57A668B7B9F79AE8EFA0D5479CDC8E2253AC56544CFBC2A783D29A",
+      "provenance": "new_sga4_tome2"
+    },
+    {
+      "ordinal": 28,
+      "name": "23_SGA4_TOME_II_SHA256_MANIFEST_20260821.txt",
+      "bytes": 395,
+      "sha256": "CE2D35496BA07DC00B30D67FC6D27B283883F52AF4CC812D2BDA4EF4330F1792",
+      "provenance": "new_sga4_tome2"
+    },
+    {
+      "ordinal": 29,
+      "name": "24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 1791217,
+      "sha256": "8CED3F06272264CDD0242910AC17AB6E5BF2B9F6A5DBF5A9CDB5FE4FB672157F",
+      "provenance": "inherited_public_r8_sga4_tome1"
+    },
+    {
+      "ordinal": 30,
+      "name": "25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 1783326,
+      "sha256": "E72DDE9FCFA1E28B4FE815E428619827C5B8A597071EF5D000E52FBB94EAAB60",
+      "provenance": "inherited_public_r8_sga4_tome1"
+    },
+    {
+      "ordinal": 31,
+      "name": "26_SGA4_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 1334989,
+      "sha256": "3FBA1C084012901CE11F3434B3134F81B32FEF644D6D42E68A33553CE21FB892",
+      "provenance": "inherited_public_r8_sga4_tome1"
+    },
+    {
+      "ordinal": 32,
+      "name": "27_SGA4_TOME_I_PUBLICATION_MANIFEST_20260821.json",
+      "bytes": 6437,
+      "sha256": "EBBB8D27B00B8ECEEDD1E07918353FF950EC048FD29F8F26D795FD22CE446CA0",
+      "provenance": "inherited_public_r8_sga4_tome1"
+    },
+    {
+      "ordinal": 33,
+      "name": "28_SGA4_TOME_I_SHA256_MANIFEST_20260821.txt",
+      "bytes": 396,
+      "sha256": "A57CD7D6CC55E6263744196935023031856CD5F8A8BF89A341006124EB09E7D2",
+      "provenance": "inherited_public_r8_sga4_tome1"
     }
   ],
-  "metadata": [
-    {
-      "name": "README.md",
-      "bytes": 1994,
-      "sha256": "20F0D512BD95DC3A2FAE279B9F76A97AE1E6E9FB7EA310701108D891CD174D78"
+  "late_predecessor_mutation": {
+    "detected_after_immutable_r9_publication": true,
+    "r8_asset_00": {
+      "bytes": 20812805,
+      "sha256": "3E088F9BF9510CA210FAD0D35DEB61B0840F33E38554BF7744CB259154B47E0F",
+      "admitted_in_r9": false
     },
-    {
-      "name": "CITATION.cff",
-      "bytes": 575,
-      "sha256": "BDEBBE46E1B1F071FCCE227D5E06F6B01F4BA95E2610C87545ED57BAE15546AA"
+    "r8_asset_07": {
+      "bytes": 3940,
+      "sha256": "3169B6107549ED228653E34DB5965D8E85A2405783DB5E54E8C14C4517148620",
+      "admitted_in_r9": false
     },
-    {
-      "name": "COMPONENT_COVERAGE.tsv",
-      "bytes": 1079,
-      "sha256": "6E29EBA8DE05C9D92F4AF6DFE91F209E30AA1DA02C9CF2DC60F8EF75A98BEE52"
-    },
-    {
-      "name": "SOURCE_AUTHORITY.md",
-      "bytes": 699,
-      "sha256": "BD862BCCFD7899E1A80CC69B3FE34938A63B31C2872C8C9464C3C2D0CC51F1DB"
-    },
-    {
-      "name": "LICENSE_AND_RIGHTS.md",
-      "bytes": 716,
-      "sha256": "D81FCC872B7BB2B51FEEC50E1584B3396E2A270A8EDCC64CDDF59512AD51533B"
-    },
-    {
-      "name": "DATACITE_RELATIONS.json",
-      "bytes": 449,
-      "sha256": "530B94C1B6620B22C9CFC5B274CED50A7F639F7C4BE8785ABF232C4723D64D7C"
-    },
-    {
-      "name": "ZENODO_METADATA.json",
-      "bytes": 2850,
-      "sha256": "0E7BECDA7545347D4052B656F258950F1BEC163A3A6769CCAF2B89D5C80EDBB2"
-    }
-  ],
+    "disposition": "Deferred by Canon to r10; this task does not reserve or create r10."
+  },
+  "verification": {
+    "zenodo_public_readback": "PASS_34_OF_34_SHA256",
+    "github_assets_must_mirror_zenodo_r9": true,
+    "cross_service_readback_required": true,
+    "git_commands_used": false
+  },
   "rights": {
     "license": "notspecified",
     "historical_notices": "provenance only; not a publication restriction",
