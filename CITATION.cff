@@ -1,33 +1,17 @@
 cff-version: 1.2.0
-message: "Cite the immutable version DOI for these release bytes, or the concept DOI for the evolving Spanish-SGA lineage."
-title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition"
-type: dataset
-authors:
-  - family-names: Grothendieck
-    given-names: Alexandre
-  - name: Séminaire de Géométrie Algébrique contributors
-version: "2026-08-21-r6"
-date-released: 2026-08-21
-doi: 10.5281/zenodo.22050007
-url: "https://github.com/KokunoYumeto/sga-es"
+message: "If you use this edition, cite the version DOI below."
+title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa"
+version: "2026-08-21-r8"
+doi: "10.5281/zenodo.22050188"
+date-released: "2026-08-21"
 repository-code: "https://github.com/KokunoYumeto/sga-es"
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.21923955
-    description: "Concept DOI for the one evolving Spanish-SGA lineage."
-  - type: doi
-    value: 10.5281/zenodo.22048777
-    description: "Immediately preceding version DOI (2026-08-21-r5)."
-abstract: "One evolving, explicitly incomplete Spanish edition of SGA. This corrective successor preserves all r5 reader PDFs and replaces only identified evidence-package and manifest defects for SGA 7 Tome II and SGA 4 Tome III."
-preferred-citation:
-  type: book
-  title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition"
-  authors:
-    - family-names: Grothendieck
-      given-names: Alexandre
-    - name: Séminaire de Géométrie Algébrique contributors
-  year: 2026
-  version: "2026-08-21-r6"
-  doi: 10.5281/zenodo.22050007
-  publisher:
-    name: Zenodo
+authors:
+  - family-names: "Grothendieck"
+    given-names: "Alexandre"
+  - name: "Séminaire de Géométrie Algébrique contributors"
+keywords:
+  - SGA
+  - SGA 4
+  - algebraic geometry
+  - Spanish translation
+  - scholarly edition

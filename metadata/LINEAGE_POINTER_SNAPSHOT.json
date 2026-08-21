@@ -1,0 +1,20 @@
+{
+  "schema": "spanish-sga-lineage-pointer/3",
+  "concept_record_id": 21923955,
+  "concept_doi": "10.5281/zenodo.21923955",
+  "predecessor": {
+    "version": "2026-08-21-r7",
+    "record_id": 22050082,
+    "doi": "10.5281/zenodo.22050082",
+    "github_tag": "v2026-08-21-r7",
+    "public_readback": "PASS"
+  },
+  "successor": {
+    "version": "2026-08-21-r8",
+    "record_id": 22050188,
+    "doi": "10.5281/zenodo.22050188",
+    "github_tag": "v2026-08-21-r8",
+    "state": "RESERVED_STAGED_FOR_IMMEDIATE_PUBLICATION"
+  },
+  "duplicate_deposit": false
+}

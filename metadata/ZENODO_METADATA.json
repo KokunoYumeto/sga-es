@@ -4,8 +4,7 @@
     "upload_type": "publication",
     "publication_type": "other",
     "publication_date": "2026-08-21",
-    "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> La versión 2026-08-21-r7 sucede a 2026-08-21-r6 (DOI 10.5281/zenodo.22050007) dentro de la misma línea DOI conceptual. Conserva sin sustitución todos los archivos de la versión inmediata anterior y añade la edición española completa de SGA 4, Tomo II (LNM 270): lectores autónomos corregido/actual y diplomático/original, fuentes editables, evidencia y manifiesto SHA-256.</p><p>El nuevo componente cubre los Exposés V, Vbis, VI, VII y VIII, preliminares e índices finales. Los dos lectores fueron construidos de forma determinista; sus 362 páginas fueron revisadas visualmente; y las correcciones aceptadas se representan de manera reversible. El lector acumulativo heredado permanece byte por byte como en la versión anterior; el nuevo Tomo II se ofrece como componente autónomo completo.</p><p>La edición global sigue siendo acumulativa e incompleta. Las ampliaciones futuras serán sucesores de esta misma línea DOI, nunca depósitos duplicados por volumen, exposición, componente o rama.</p><p>Los avisos de copyright reproducidos se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. Esto no afirma dominio público ni una licencia general o uniforme.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
-    "access_right": "open",
+    "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> La versión 2026-08-21-r8 sucede a r7 (DOI 10.5281/zenodo.22050082) dentro del mismo DOI conceptual. Conserva sus veintinueve archivos byte por byte y añade cinco archivos de SGA 4, tomo I, edición completa, sellada e independientemente auditada.</p><p>SGA 4, tomo I aporta lectores corregido/actual y original/diplomático de 302 páginas, fuentes/evidencia, manifiesto de publicación y manifiesto SHA-256. Sus lectores autónomos no se concatenan al lector acumulativo heredado.</p><p>SGA 3 aún no se incluye, por lo que la edición global permanece incompleta. Las ampliaciones futuras serán nuevas versiones de esta misma línea DOI española, nunca depósitos duplicados por volumen, exposición, rama o componente.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
     "creators": [
       {
         "name": "Grothendieck, Alexandre"
@@ -20,28 +19,28 @@
         "type": "Other"
       },
       {
-        "name": "TTP",
-        "affiliation": "https://github.com/KokunoYumeto/sga-es",
+        "name": "Translation and Transcription Project",
         "type": "Other"
       }
     ],
     "keywords": [
       "SGA",
       "Séminaire de Géométrie Algébrique",
+      "SGA 4",
       "geometría algebraica",
       "edición española",
       "traducción matemática",
+      "sourcekeeping",
       "provenance",
-      "AI-assisted scholarly edition",
-      "SGA 4",
-      "SGA 4 Tome II",
-      "LNM 270",
-      "Spanish mathematical edition",
-      "diplomatic and corrected branches"
+      "AI-assisted scholarly edition"
     ],
+    "language": "spa",
+    "version": "2026-08-21-r8",
+    "access_right": "open",
+    "license": "notspecified",
     "related_identifiers": [
       {
-        "identifier": "10.5281/zenodo.22050007",
+        "identifier": "10.5281/zenodo.22050082",
         "relation": "isNewVersionOf",
         "scheme": "doi"
       },
@@ -56,9 +55,6 @@
         "scheme": "url"
       }
     ],
-    "version": "2026-08-21-r7",
-    "language": "spa",
-    "license": "notspecified",
-    "notes": "Single evolving Spanish-SGA DOI lineage. Version 2026-08-21-r7 succeeds 2026-08-21-r6 / 10.5281/zenodo.22050007; no per-volume, per-exposé, per-branch, per-component, or duplicate DOI. The global edition remains incomplete."
+    "notes": "Exactly one evolving Spanish-SGA DOI lineage. Version 2026-08-21-r8 / record 22050188 succeeds 10.5281/zenodo.22050082 / record 22050082 and v2026-08-21-r7 under concept DOI 10.5281/zenodo.21923955. No duplicate or per-component DOI. Current global edition incomplete because SGA 3 is absent."
   }
 }

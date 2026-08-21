@@ -1,0 +1,20 @@
+{
+  "schema": "spanish-sga-canon-publication-policy/2",
+  "release_version": "2026-08-21-r8",
+  "existing_lineage_only": true,
+  "concept_record_id": 21923955,
+  "concept_doi": "10.5281/zenodo.21923955",
+  "predecessor_record_id": 22050082,
+  "successor_record_id": 22050188,
+  "inherited_assets": 29,
+  "appended_assets": 5,
+  "complete_assets": 34,
+  "append_components": [
+    "SGA 4, tome I"
+  ],
+  "qa_sufficiency": "No equivalent QA repeat after frozen-byte deterministic, semantic/source, visual, independent-audit, and fail-closed PASS; publication readback is the only required recheck.",
+  "duplicate_deposit_forbidden": true,
+  "public_byte_readback_required": true,
+  "historical_copyright_notices_are_provenance_only": true,
+  "blanket_public_domain_or_open_license_claim": false
+}
