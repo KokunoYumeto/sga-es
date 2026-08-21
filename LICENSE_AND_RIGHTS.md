@@ -1,16 +1,13 @@
-# Derechos, procedencia y no aprobación
+# Rights, provenance, attribution and non-endorsement
 
-Los avisos de copyright presentes en hojas históricas, fuentes o metadatos se
-conservan únicamente como procedencia histórica. No constituyen una condición
-de permiso ni restringen esta edición matemática independiente o su
-publicación.
+Historical copyright notices appearing in reproduced leaves, sources or
+metadata are retained solely as historical provenance. They do not restrict
+this independent mathematical edition or its publication.
 
-No se afirma por ello que las obras subyacentes estén en dominio público, ni se
-inventa una licencia abierta o general. El campo de licencia del registro sigue
-siendo «License Not Specified». Se conservan fielmente la atribución, las
-relaciones entre autores y fuentes, la procedencia, las lecturas diplomáticas y
-la ausencia de aprobación por parte de los autores históricos.
+No blanket public-domain or open-license claim is made. The release preserves
+the factual author/source relationship, credits, bibliographical provenance,
+and branch history. It is an independent machine-assisted scholarly edition
+and is not endorsed by the original authors, publishers or institutions.
 
-Los testigos de terceros se incluyen solamente cuando el manifiesto lo indica;
-de otro modo quedan representados por identidades criptográficas, citas o
-recibos de verificación.
+Zenodo license metadata is deliberately `notspecified`; that value neither
+removes historical attribution nor invents rights in underlying materials.
