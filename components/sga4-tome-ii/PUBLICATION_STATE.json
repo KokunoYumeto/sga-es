@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "component": "SGA 4, Tomo II — edición matemática española",
+  "concept_doi": "10.5281/zenodo.21923955",
+  "version": "2026-08-21-r7",
+  "version_doi": "10.5281/zenodo.22050082",
+  "zenodo_record_id": 22050082,
+  "github_tag": "v2026-08-21-r7",
+  "asset_mapping": {
+    "SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf": "20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+    "SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf": "21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+    "SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip": "22_SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+    "SGA4_TOME_II_SHA256_MANIFEST_20260821.txt": "23_SGA4_TOME_II_SHA256_MANIFEST_20260821.txt"
+  },
+  "technical_seal": "PASS",
+  "package_seal": "PASS",
+  "public_byte_readback": "REQUIRED"
+}
