@@ -1,16 +1,13 @@
 # Source authority and translation scope
 
-Version `2026-08-21-r4` is the direct existing-lineage successor to Zenodo record `22044898` / DOI `10.5281/zenodo.22044898` and GitHub release `v2026-08-21-r3`. It preserves that public package as an immutable lineage witness, replaces the SGA 5 current reader with the independently reconciled successor, and adds its reversible diplomatic/original reader as `03B`.
+Version `2026-08-21-r6` is the corrective existing-lineage successor to Zenodo record `22048777` / DOI `10.5281/zenodo.22048777`. It preserves every r5 reader PDF and replaces only the identified evidence-package and manifest defects for SGA 7 Tome II and SGA 4 Tome III under the same concept DOI.
 
-- **SGA 1:** exact inherited complete 287-page Spanish reader, SHA-256 `98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F`.
-- **SGA 2:** exact inherited complete 209-page Spanish reader, including final indexes, SHA-256 `41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748`.
-- **SGA 5 corrected/current:** the final materialized branch and deterministic 326-page PDF under `SGA5_ES_RECONCILE_R1`, SHA-256 `AF1E67D1AF6FCAB46C81EAB6B1CF2B8CE08B5C7FADE3FFE617365F2B68264749`.
-- **SGA 5 diplomatic/original:** the reversible original branch from the same reconciled successor, distributed separately as `03B`, 326 pages, SHA-256 `79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004`.
-- **SGA 6:** exact inherited complete 377-page Spanish reader, SHA-256 `A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294`.
-- **SGA 7, Tome I:** exact inherited r3 assets `08`–`11`: complete 335-page corrected/current and diplomatic/original readers, their source/evidence archive, and their SHA-256 manifest. These remain standalone and are not concatenated into the cumulative reader.
+SGA 4 Tome III covers Exposés IX–XIX and the terminal indexes. Its corrected/current reader is 375 pages, 1,875,389 bytes, SHA-256 `4BF4BA999D726FCF191C5765A6236B0A0B8865CD8733EF6B50667473E6DDFB84`; its original/diplomatic reader is 367 pages, 1,815,707 bytes, SHA-256 `FBA4A5D66A0D85102F89BB7D2C3C6D44B43944CF4077EA4A946E8F22AA6418C9`. The branch distinction preserves printed readings while carrying accepted source corrections only in the corrected/current surface.
 
-The rebuilt 1203-page cumulative reader imports the complete current SGA 1, SGA 2, SGA 5, and SGA 6 readers only. The SGA 5 original branch remains separately downloadable and is carried with both branch source surfaces in the rebuilt source/evidence archives. Transcription, French correction, Spanish translation, and presentation changes remain distinct and reversible.
+The Tome III seal comprises a deterministic four-pass XeLaTeX rebuild with byte-identical replay, semantic/source verification, reference closure, reversible source-error apparatus, full-page visual QA for both branches, one independent audit, and a fail-closed final checker. The evidence ZIP contains the translated sources, build support, source-witness receipts, semantic reports, and the final seal/control receipts; the private scan witness is identified but not redistributed.
 
-French scans, source trees, and third-party witnesses are not duplicated merely to make the archive self-contained. Public evidence records bibliographic identities, byte counts, hashes, decisions, build closure, and visual verification. Any reproduced copyright notice is historical provenance only and does not restrict this independent mathematical edition or its publication; no blanket public-domain or open-license claim is made.
+The inherited cumulative reader remains 1203 pages and does not concatenate the standalone later components. SGA 3 and SGA 4 Tomes I–II remain absent from r5. Transcription, printed-source correction, Spanish translation, and presentation changes remain distinct and reversible.
 
-No separate DOI is assigned to a volume, exposé, component, or branch. The only publication path is version DOI `10.5281/zenodo.22047550` under concept DOI `10.5281/zenodo.21923955` and release tag `v2026-08-21-r4` in the existing repository `KokunoYumeto/sga-es`; no duplicate lineage is created.
+Reproduced copyright notices are historical provenance only and do not restrict this independent mathematical edition or its publication. No blanket public-domain or open-license claim is made. Authorship, source relationships, attribution, and non-endorsement are preserved.
+
+No separate DOI is assigned to a volume, exposé, component, or branch. The publication path is version DOI `10.5281/zenodo.22050007` under concept DOI `10.5281/zenodo.21923955` and GitHub release `v2026-08-21-r6` in the existing repository `KokunoYumeto/sga-es`.
