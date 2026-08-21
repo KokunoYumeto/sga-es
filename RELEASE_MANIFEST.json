@@ -2,8 +2,8 @@
   "schema_version": 2,
   "release": {
     "object": "one evolving Spanish SGA edition",
-    "version": "2026-08-21-r2",
-    "version_doi": "10.5281/zenodo.22044086",
+    "version": "2026-08-21-r3",
+    "version_doi": "10.5281/zenodo.22044898",
     "concept_doi": "10.5281/zenodo.21923955",
     "repository": "https://github.com/KokunoYumeto/sga-es",
     "incomplete_global_series": true,
@@ -11,12 +11,13 @@
       "SGA 1",
       "SGA 2",
       "SGA 5",
-      "SGA 6"
+      "SGA 6",
+      "SGA 7, tome I"
     ],
     "not_yet_included": [
       "SGA 3",
       "SGA 4",
-      "SGA 7"
+      "SGA 7.2"
     ],
     "duplicate_deposits_created": false
   },
@@ -68,6 +69,30 @@
       "name": "07_SGA_ES_SHA256_MANIFEST.txt",
       "bytes": 762,
       "sha256": "CE684833549D565610E1F757D0A73AF1F9DB066CEE9450B4910A57261E428ACD"
+    },
+    {
+      "ordinal": 8,
+      "name": "08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 2375139,
+      "sha256": "84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1"
+    },
+    {
+      "ordinal": 9,
+      "name": "09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 2374693,
+      "sha256": "0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543"
+    },
+    {
+      "ordinal": 10,
+      "name": "10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 590972,
+      "sha256": "B873B495EEDC58D89DE735C7F60DC2EA2EAEEC66ACAAB95C291E5A3D9EBBEE75"
+    },
+    {
+      "ordinal": 11,
+      "name": "11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
+      "bytes": 541,
+      "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B"
     }
   ],
   "validation": {
@@ -111,6 +136,24 @@
         "pages": 377,
         "links": 91,
         "encrypted": false
+      },
+      {
+        "code": "SGA 7, tome I (current)",
+        "coverage": "edición española corregida/actual completa",
+        "name": "08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "bytes": 2375139,
+        "sha256": "84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1",
+        "pages": 335,
+        "encrypted": false
+      },
+      {
+        "code": "SGA 7, tome I (diplomatic)",
+        "coverage": "edición española original/diplomática completa",
+        "name": "09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "bytes": 2374693,
+        "sha256": "0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543",
+        "pages": 335,
+        "encrypted": false
       }
     ],
     "cumulative": {
@@ -146,6 +189,18 @@
       "bytes": 762,
       "sha256": "CE684833549D565610E1F757D0A73AF1F9DB066CEE9450B4910A57261E428ACD",
       "rows": 7
+    },
+    "sga7_tome1_evidence": {
+      "name": "10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 590972,
+      "sha256": "B873B495EEDC58D89DE735C7F60DC2EA2EAEEC66ACAAB95C291E5A3D9EBBEE75",
+      "private_controlling_scan_included": false
+    },
+    "sga7_tome1_manifest": {
+      "name": "11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
+      "bytes": 541,
+      "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B",
+      "rows": 3
     },
     "copyright_notice_role": "historical provenance only; no publication hold",
     "blanket_public_domain_or_open_license_claim": false
