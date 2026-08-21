@@ -6,6 +6,10 @@
 - SGA 5: lector y archivo sellados del contenido publicado en LNM 589.
 - SGA 6: `sga6_fr_r1/src/fr.tex`, 132 fragmentos españoles en orden de fuente,
   ramas reversibles `\sisi`, lector completo y auditoría final.
+- SGA 7, tomo I: cierre español de 188 entradas que cubre las nueve unidades y
+  los índices de escaneo 0--539; ramas corregida y diplomática deterministas,
+  controles de fuente, mapas, auditoría independiente y revisión visual
+  integral. El escaneo privado de control queda excluido del paquete público.
 
 Las traducciones no sustituyen las fuentes históricas. La rama diplomática
 preserva las lecturas impresas; la rama corriente expone correcciones locales
