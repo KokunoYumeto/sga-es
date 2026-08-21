@@ -3,8 +3,8 @@
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
     "upload_type": "publication",
     "publication_type": "other",
-    "publication_date": "2026-08-13",
-    "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> Esta primera versión es explícitamente incompleta e incluye todos los componentes españoles actualmente verificados: SGA 1 completo; SGA 2 con preliminares, Introducción y Exposiciones I–V; SGA 5 con el contenido completo publicado en LNM 589; y un tramo acotado de SGA 6, Exposición X, páginas impresas 519–524, que termina durante una demostración.</p><p>El depósito contiene un lector acumulativo con navegación interna, los cuatro lectores componentes bajo el mismo DOI, fuentes editables seleccionadas, y evidencia pública exhaustiva de las decisiones registradas de traducción, terminología, composición, discrepancias, construcción y revisión. SGA 3, SGA 4 y SGA 7 aún no están incluidos. Los volúmenes y exposiciones no reciben DOI independientes; las ampliaciones futuras serán nuevas versiones de esta misma línea DOI española.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni una demostración matemática independiente. Consulte LICENSE_AND_RIGHTS.md para los límites de derechos y reutilización.</p>",
+    "publication_date": "2026-08-21",
+    "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> La versión 2026-08-21-r2 incluye SGA 1, SGA 2, SGA 5 y SGA 6 completos y verificados. SGA 3, SGA 4 y SGA 7 todavía no se incluyen; la edición global permanece incompleta.</p><p>El depósito ofrece un lector acumulativo enlazado, los cuatro lectores componentes, fuentes editables seleccionadas, evidencia pública y manifiestos SHA-256. No se crean DOI separados por volumen o exposición.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p>",
     "creators": [
       {
         "name": "Grothendieck, Alexandre"
@@ -15,11 +15,7 @@
     ],
     "contributors": [
       {
-        "name": "Manuscript Typesetting Project",
-        "type": "Editor"
-      },
-      {
-        "name": "OpenAI Codex / Interlanguage Project",
+        "name": "AI typesetting & translation",
         "type": "Other"
       }
     ],
@@ -33,7 +29,7 @@
       "AI-assisted scholarly edition"
     ],
     "language": "spa",
-    "version": "2026-08-13-r1",
+    "version": "2026-08-21-r2",
     "access_right": "open",
     "license": "notspecified",
     "related_identifiers": [
@@ -48,6 +44,6 @@
         "scheme": "url"
       }
     ],
-    "notes": "Exactly one evolving Spanish-SGA DOI lineage. No per-volume, per-exposé, or per-component DOI. Current edition incomplete."
+    "notes": "One evolving Spanish-SGA DOI lineage. Copyright notices are historical provenance only and impose no publication hold. No blanket public-domain or open-license claim."
   }
 }
