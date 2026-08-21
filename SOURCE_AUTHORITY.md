@@ -1,16 +1,14 @@
-# Autoridad de fuente y cadena editorial
+# Source authority and editorial layers
 
-- SGA 1: lector R25 sellado y su archivo de fuentes editables.
-- SGA 2: corpus francés canónico con ramas diplomática/corregida; lector R17
-  completo, índices finales y controles semánticos R16/R17.
-- SGA 5: lector y archivo sellados del contenido publicado en LNM 589.
-- SGA 6: `sga6_fr_r1/src/fr.tex`, 132 fragmentos españoles en orden de fuente,
-  ramas reversibles `\sisi`, lector completo y auditoría final.
-- SGA 7, tomo I: cierre español de 188 entradas que cubre las nueve unidades y
-  los índices de escaneo 0--539; ramas corregida y diplomática deterministas,
-  controles de fuente, mapas, auditoría independiente y revisión visual
-  integral. El escaneo privado de control queda excluido del paquete público.
+The SGA 4 Tome I edition is bounded to LNM 269, Exposés I-IV and the Tome I
+front/back matter present in the print witness. Source authority is recorded by
+hash in the bundled witness manifest, corpus map, page map, spot checks and
+unit-level evidence.
 
-Las traducciones no sustituyen las fuentes históricas. La rama diplomática
-preserva las lecturas impresas; la rama corriente expone correcciones locales
-registradas. Las discrepancias de fuente se remiten al custodio canónico.
+The maintained French sourcekeeper, edited TeX, and print scan are distinct
+witnesses. Diplomatic/original readings remain recoverable. Accepted source
+corrections occur only in corrected/current branches and are bound to the
+shared Canon source-error ledger. Spanish translation decisions, local
+presentation repairs, and thin Romance terminology sidecars remain separate.
+No scan or external copyrighted source corpus is redistributed inside the
+source/evidence ZIP.
