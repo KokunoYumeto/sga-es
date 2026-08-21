@@ -14,5 +14,6 @@
   },
   "technical_seal": "PASS",
   "package_seal": "PASS",
-  "public_byte_readback": "REQUIRED"
+  "public_byte_readback": "PASS",
+  "completed_utc": "2026-08-21T19:59:25.633500Z"
 }
