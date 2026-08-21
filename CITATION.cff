@@ -1,14 +1,14 @@
 cff-version: 1.2.0
-message: "Cite the version DOI below for these immutable release bytes, or the concept DOI for the evolving Spanish-SGA lineage."
+message: "Cite the immutable version DOI for these release bytes, or the concept DOI for the evolving Spanish-SGA lineage."
 title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition"
 type: dataset
 authors:
   - family-names: Grothendieck
     given-names: Alexandre
   - name: Séminaire de Géométrie Algébrique contributors
-version: "2026-08-21-r4"
+version: "2026-08-21-r6"
 date-released: 2026-08-21
-doi: 10.5281/zenodo.22047550
+doi: 10.5281/zenodo.22050007
 url: "https://github.com/KokunoYumeto/sga-es"
 repository-code: "https://github.com/KokunoYumeto/sga-es"
 identifiers:
@@ -16,9 +16,9 @@ identifiers:
     value: 10.5281/zenodo.21923955
     description: "Concept DOI for the one evolving Spanish-SGA lineage."
   - type: doi
-    value: 10.5281/zenodo.22044898
-    description: "Immediately preceding version DOI (2026-08-21-r3)."
-abstract: "One evolving, explicitly incomplete Spanish edition of SGA. This successor reconciles SGA 5 into distinct corrected/current and diplomatic/original branches; retains the complete SGA 1, SGA 2, and SGA 6 readers; and preserves the complete corrected/current and diplomatic/original SGA 7 Tome I readers as standalone assets."
+    value: 10.5281/zenodo.22048777
+    description: "Immediately preceding version DOI (2026-08-21-r5)."
+abstract: "One evolving, explicitly incomplete Spanish edition of SGA. This corrective successor preserves all r5 reader PDFs and replaces only identified evidence-package and manifest defects for SGA 7 Tome II and SGA 4 Tome III."
 preferred-citation:
   type: book
   title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition"
@@ -27,7 +27,7 @@ preferred-citation:
       given-names: Alexandre
     - name: Séminaire de Géométrie Algébrique contributors
   year: 2026
-  version: "2026-08-21-r4"
-  doi: 10.5281/zenodo.22047550
+  version: "2026-08-21-r6"
+  doi: 10.5281/zenodo.22050007
   publisher:
     name: Zenodo
