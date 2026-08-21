@@ -1,7 +1,13 @@
-# Source authority and translation scope
+# Source authority and editorial layers
 
-Version `2026-08-21-r8` is the direct existing-lineage successor to Zenodo record `22050082` / DOI `10.5281/zenodo.22050082` and GitHub release `v2026-08-21-r7`. It preserves all 29 predecessor assets byte-identically and appends the independently sealed Spanish edition of SGA 4, tome I.
+The SGA 4 Tome I edition is bounded to LNM 269, Exposés I-IV and the Tome I
+front/back matter present in the print witness. Source authority is recorded by
+hash in its bundled witness manifest, corpus map, page map, spot checks and
+unit-level evidence.
 
-SGA 4 Tome I supplies corrected/current and diplomatic/original 302-page readers with SHA-256 `8CED3F06272264CDD0242910AC17AB6E5BF2B9F6A5DBF5A9CDB5FE4FB672157F` and `E72DDE9FCFA1E28B4FE815E428619827C5B8A597071EF5D000E52FBB94EAAB60`.
-
-Historical copyright notices are provenance only and do not restrict this independent mathematical edition or publication. No blanket public-domain or open-license claim is made. No separate DOI is assigned to any volume, exposé, component, or branch.
+Maintained French TeX, edited TeX and print scans remain distinct witnesses.
+Diplomatic/original readings are recoverable. Accepted source corrections occur
+only in corrected/current branches and are bound to the shared Canon ledger.
+Spanish translation, presentation repairs and thin Romance terminology
+sidecars remain separate. No controlling scan is redistributed in the Tome I
+source/evidence ZIP.
