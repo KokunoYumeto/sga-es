@@ -3,20 +3,19 @@
   "concept_record_id": 21923955,
   "concept_doi": "10.5281/zenodo.21923955",
   "predecessor": {
-    "version": "2026-08-21-r8",
-    "record_id": 22050188,
-    "doi": "10.5281/zenodo.22050188",
-    "github_tag": "v2026-08-21-r8",
-    "public_readback": "PASS",
-    "late_in_place_asset_update_not_admitted_to_r9": true
-  },
-  "successor": {
     "version": "2026-08-21-r9",
     "record_id": 22050350,
     "doi": "10.5281/zenodo.22050350",
     "github_tag": "v2026-08-21-r9",
-    "state": "PUBLIC_IMMUTABLE_CROSS_SERVICE"
+    "github_commit": "d68f888be64d5b3b2c2e9dfca7214c66571f3966",
+    "public_cross_service_readback": "PASS"
   },
-  "late_r8_reader_manifest_disposition": "deferred_to_canon_r10",
+  "successor": {
+    "version": "2026-08-21-r10",
+    "record_id": 22050499,
+    "doi": "10.5281/zenodo.22050499",
+    "github_tag": "v2026-08-21-r10",
+    "state_at_commit": "STAGED_FOR_IMMEDIATE_PUBLICATION"
+  },
   "duplicate_deposit": false
 }

@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this edition, cite the exact version DOI."
 title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition"
-version: "2026-08-21-r9"
+version: "2026-08-21-r10"
 date-released: 2026-08-21
-doi: "10.5281/zenodo.22050350"
+doi: "10.5281/zenodo.22050499"
 url: "https://github.com/KokunoYumeto/sga-es"
 type: dataset
 authors:
@@ -16,3 +16,4 @@ keywords:
   - Spanish translation
   - étale cohomology
 license: other
+  - SGA 3

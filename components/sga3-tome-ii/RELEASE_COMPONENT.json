@@ -1,0 +1,30 @@
+{
+  "schema": "spanish-sga-release-component/1",
+  "component": "SGA 3, tome II",
+  "status": "COMPLETE_SEALED_INDEPENDENTLY_AUDITED",
+  "sga3_overall_complete": false,
+  "absent_tomes": [
+    "I",
+    "III"
+  ],
+  "coverage": "front matter, Exposés VIII–XVIII, terminal notation index",
+  "readers": [
+    {
+      "role": "corrected/current",
+      "pages": 410,
+      "name": "29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 3436896,
+      "sha256": "FC8B852A812D42472E8AE57F1D9CB087BB9ACF51CE0CFE7C245C1A9203266BA7"
+    },
+    {
+      "role": "diplomatic/original",
+      "pages": 410,
+      "name": "30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 3436675,
+      "sha256": "639007DFF1E0BCE822585ACD063FE32DE9EF7E027EA7391BA71B85E9CDCA43C4"
+    }
+  ],
+  "source_and_evidence_archive": "31_SGA3_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+  "publication_manifest": "32_SGA3_TOME_II_PUBLICATION_MANIFEST_20260821.json",
+  "sha256_manifest": "33_SGA3_TOME_II_SHA256_MANIFEST_20260821.txt"
+}

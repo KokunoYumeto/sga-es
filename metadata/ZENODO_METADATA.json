@@ -1,21 +1,23 @@
 {
   "metadata": {
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
-    "upload_type": "publication",
-    "publication_type": "other",
     "publication_date": "2026-08-21",
-    "description": "<p><strong>Una sola edici&oacute;n espa&ntilde;ola evolutiva de SGA.</strong> La versi&oacute;n correctiva 2026-08-21-r9 sucede a r8 (DOI 10.5281/zenodo.22050188) dentro del mismo DOI conceptual. Conserva exactamente 32 de sus 34 archivos y sustituye &uacute;nicamente el paquete de fuentes/evidencia y el manifiesto de SGA 7, tomo II.</p>\n<p>La l&iacute;nea contiene ediciones espa&ntilde;olas completas, con lectores corregido/actual y original/diplom&aacute;tico, de SGA 4&frac12;, SGA 4 tomos I&ndash;III y SGA 7 tomos I&ndash;II, adem&aacute;s de los lectores heredados de SGA 1, 2, 5 y 6. SGA 7, tomo II cubre preliminares, Exposiciones X&ndash;XXII, bibliograf&iacute;as y los &iacute;ndices de escaneo 0&ndash;445 en dos lectores de 278 p&aacute;ginas. Sus fuentes, evidencia, decisiones can&oacute;nicas reversibles, construcciones deterministas, controles visuales integrales y auditor&iacute;as independientes quedan ligados por recibos. Los escaneos privados de control no se redistribuyen.</p>\n<p>SGA 3 a&uacute;n no se incluye, por lo que la edici&oacute;n global permanece incompleta. SGA 4&frac12; es una obra distinta de SGA 4. Las ampliaciones futuras ser&aacute;n nuevas versiones de esta misma l&iacute;nea DOI espa&ntilde;ola, nunca dep&oacute;sitos duplicados por volumen, exposici&oacute;n, rama o componente.</p>\n<p>Los avisos de copyright se conservan &uacute;nicamente como procedencia hist&oacute;rica y no restringen esta edici&oacute;n matem&aacute;tica independiente ni su publicaci&oacute;n. No se afirma dominio p&uacute;blico ni una licencia abierta general; se preservan atribuci&oacute;n, autor&iacute;a, procedencia y no aprobaci&oacute;n.</p>\n<p>Edici&oacute;n acad&eacute;mica de trabajo asistida por IA. No declara revisi&oacute;n por pares, certificaci&oacute;n ling&uuml;&iacute;stica humana, ausencia total de errores ni respaldo de los autores o editores hist&oacute;ricos.</p>",
+    "description": "<p>Una sola edici&oacute;n espa&ntilde;ola evolutiva de SGA. La versi&oacute;n 2026-08-21-r10 sucede a r9 (DOI 10.5281/zenodo.22050350) dentro del mismo DOI conceptual. Conserva 32 archivos de r9 byte por byte, sustituye el lector acumulativo y su manifiesto SHA-256 global, y a&ntilde;ade cinco archivos de SGA 3, tomo II.</p>\n<p>El lector acumulativo enlazado de 3284 p&aacute;ginas incorpora once lectores corregidos/actuales: SGA 1, SGA 2, SGA 3 tomo II, SGA 4 tomos I&ndash;III, SGA 4&frac12;, SGA 5, SGA 6 y SGA 7 tomos I&ndash;II. SGA 3, tomo II aporta una edici&oacute;n espa&ntilde;ola completa de 410 p&aacute;ginas con preliminares, Exposiciones VIII&ndash;XVIII e &iacute;ndice terminal de notaciones. Se depositan por separado sus lectores corregido/actual y original/diplom&aacute;tico, fuentes y evidencia, manifiesto de publicaci&oacute;n y manifiesto SHA-256.</p>\n<p>SGA 3 sigue incompleto en esta l&iacute;nea porque los tomos I y III no est&aacute;n incluidos. SGA 4&frac12; es una obra distinta de SGA 4. Las ampliaciones futuras ser&aacute;n nuevas versiones de esta misma l&iacute;nea DOI espa&ntilde;ola, nunca dep&oacute;sitos duplicados.</p>\n<p>Los avisos de copyright se conservan &uacute;nicamente como procedencia hist&oacute;rica y no restringen esta edici&oacute;n matem&aacute;tica independiente ni su publicaci&oacute;n. No se afirma dominio p&uacute;blico ni una licencia abierta general; se preservan atribuci&oacute;n, autor&iacute;a, procedencia y no aprobaci&oacute;n.</p>\n<p>Edici&oacute;n acad&eacute;mica de trabajo asistida por IA. No declara revisi&oacute;n por pares, certificaci&oacute;n ling&uuml;&iacute;stica humana, ausencia total de errores ni respaldo de los autores o editores hist&oacute;ricos.</p>",
+    "access_right": "open",
     "creators": [
       {
-        "name": "Grothendieck, Alexandre"
+        "name": "Grothendieck, Alexandre",
+        "affiliation": null
       },
       {
-        "name": "Séminaire de Géométrie Algébrique contributors"
+        "name": "Séminaire de Géométrie Algébrique contributors",
+        "affiliation": null
       }
     ],
     "contributors": [
       {
         "name": "AI typesetting & translation",
+        "affiliation": null,
         "type": "Other"
       },
       {
@@ -37,15 +39,14 @@
       "SGA 4, tome II",
       "SGA 7, tome II",
       "provenance",
-      "AI-assisted scholarly edition"
+      "AI-assisted scholarly edition",
+      "SGA 3",
+      "SGA 3, tome II",
+      "esquemas en grupos"
     ],
-    "language": "spa",
-    "version": "2026-08-21-r9",
-    "access_right": "open",
-    "license": "notspecified",
     "related_identifiers": [
       {
-        "identifier": "10.5281/zenodo.22050188",
+        "identifier": "10.5281/zenodo.22050350",
         "relation": "isNewVersionOf",
         "scheme": "doi"
       },
@@ -60,6 +61,12 @@
         "scheme": "url"
       }
     ],
-    "notes": "One evolving Spanish-SGA DOI lineage. Copyright notices are historical provenance only and impose no publication hold. No blanket public-domain or open-license claim."
+    "version": "2026-08-21-r10",
+    "language": "spa",
+    "license": "notspecified",
+    "imprint_publisher": "Zenodo",
+    "notes": "<p>One evolving Spanish-SGA DOI lineage. Version 2026-08-21-r10 adds the complete Spanish SGA 3 Tome II while explicitly leaving SGA 3 Tomes I and III absent. Copyright notices are historical provenance only and impose no publication hold. No blanket public-domain or open-license claim.</p>",
+    "upload_type": "publication",
+    "publication_type": "other"
   }
 }
