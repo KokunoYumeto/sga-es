@@ -1,0 +1,93 @@
+{
+  "schema": "spanish-sga-publication-staging-independent-audit/2",
+  "result": "PASS",
+  "state": "PASS_READY_FOR_REMOTE_STAGE",
+  "mode": "Final",
+  "release_version": "2026-08-21-r4",
+  "expected_payload_count": 13,
+  "current_payload_count": 13,
+  "payload": [
+    {
+      "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+      "bytes": 9171199,
+      "sha256": "CB9A2A867375DE69FD88080BC5BDC1840EEB23B2EB29C351C68F1E565689D652"
+    },
+    {
+      "name": "01_SGA1_ES_COMPLETE_READER.pdf",
+      "bytes": 2701982,
+      "sha256": "98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F"
+    },
+    {
+      "name": "02_SGA2_ES_COMPLETE_READER.pdf",
+      "bytes": 2008342,
+      "sha256": "41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748"
+    },
+    {
+      "name": "03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
+      "bytes": 2197248,
+      "sha256": "AF1E67D1AF6FCAB46C81EAB6B1CF2B8CE08B5C7FADE3FFE617365F2B68264749"
+    },
+    {
+      "name": "03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf",
+      "bytes": 2200080,
+      "sha256": "79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004"
+    },
+    {
+      "name": "04_SGA6_ES_COMPLETE_READER.pdf",
+      "bytes": 2884189,
+      "sha256": "A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294"
+    },
+    {
+      "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
+      "bytes": 4257787,
+      "sha256": "12B52B10D1AF4A461ADF653F1330A624F6A49061D768A988BFE7A913B52C1672"
+    },
+    {
+      "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+      "bytes": 41513147,
+      "sha256": "93197234D1EEC3A97AE7D6B6F317B050FF6552A62BD39A36B9EE7BC1A038B074"
+    },
+    {
+      "name": "07_SGA_ES_SHA256_MANIFEST.txt",
+      "bytes": 1369,
+      "sha256": "1C06A1DDEB82EB9DEC530509DD112316479B4BEF2EE218C72AF53F2A8A4C710E"
+    },
+    {
+      "name": "08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 2375139,
+      "sha256": "84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1"
+    },
+    {
+      "name": "09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 2374693,
+      "sha256": "0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543"
+    },
+    {
+      "name": "10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 590972,
+      "sha256": "B873B495EEDC58D89DE735C7F60DC2EA2EAEEC66ACAAB95C291E5A3D9EBBEE75"
+    },
+    {
+      "name": "11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
+      "bytes": 541,
+      "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B"
+    }
+  ],
+  "cumulative_current_only": true,
+  "editable_current_and_original": true,
+  "immutable_predecessor_components_preserved": true,
+  "metadata_rights_disclaimer": "PASS",
+  "ttp_policy": "OMITTED",
+  "same_github_repository": "KokunoYumeto/sga-es",
+  "same_zenodo_concept_record_id": 21923955,
+  "same_zenodo_concept_doi": "10.5281/zenodo.21923955",
+  "exact_newversion_only": true,
+  "remote_script_static_contract": "PASS",
+  "final_sga5_seal_ready": true,
+  "zenodo_newversion_reserved": true,
+  "final_payload_ready": true,
+  "remaining_external_dependencies": [],
+  "network_used": false,
+  "git_used": false,
+  "remote_mutation_performed": false
+}

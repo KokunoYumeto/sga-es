@@ -1,10 +1,11 @@
-component	status	pages_in_cumulative	standalone_files	note
-SGA 1	complete	5-291	01	Complete Spanish reader
-SGA 2	complete	292-500	02	Complete Spanish reader including final indexes
-SGA 4 Tome I	complete	501-802	12,13,14,15	Current branch in cumulative; diplomatic branch and full source/evidence deposited separately
-SGA 5	complete	803-1128	03	Complete content published in LNM 589
-SGA 6	complete	1129-1505	04	Complete Spanish reader
-SGA 7 Tome I	complete	1506-1840	08,09,10,11	Current branch in cumulative; diplomatic branch deposited separately
-SGA 3	absent	-	-	Not included
-SGA 4 Tomes II-III and SGA 4½	absent	-	-	Not included
-SGA 7 Tome II	absent	-	-	Not included
+ordinal	component	branch	spanish_edition_scope	status	pages	bytes	sha256	deposit_filename
+1	SGA 1	current	complete Spanish reader	complete	287	2701982	98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F	01_SGA1_ES_COMPLETE_READER.pdf
+2	SGA 2	current	complete Spanish reader, including final indexes	complete	209	2008342	41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748	02_SGA2_ES_COMPLETE_READER.pdf
+3	SGA 5	corrected/current	complete published contents in LNM 589; canonical reconciled Spanish branch	complete	326	2197248	AF1E67D1AF6FCAB46C81EAB6B1CF2B8CE08B5C7FADE3FFE617365F2B68264749	03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf
+3B	SGA 5	diplomatic/original	complete published contents in LNM 589; reversible original Spanish branch	complete	326	2200080	79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004	03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf
+4	SGA 6	current	complete Spanish reader	complete	377	2884189	A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294	04_SGA6_ES_COMPLETE_READER.pdf
+5	SGA 7, Tome I	corrected/current standalone	complete corrected/current Spanish reader; inherited exactly from r3 and excluded from the cumulative reader	complete	335	2375139	84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1	08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf
+6	SGA 7, Tome I	diplomatic/original standalone	complete original/diplomatic Spanish reader; inherited exactly from r3 and excluded from the cumulative reader	complete	335	2374693	0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543	09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf
+7	SGA 3	not included	pending another task	not included	0			
+8	SGA 4	not included	pending another task	not included	0			
+9	SGA 7.2	not included	pending another task	not included	0			

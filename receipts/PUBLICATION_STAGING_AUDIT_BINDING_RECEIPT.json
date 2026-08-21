@@ -1,0 +1,10 @@
+{
+  "schema": "spanish-sga-publication-staging-audit-binding/1",
+  "result": "PASS",
+  "audit_receipt": "receipts/PUBLICATION_STAGING_INDEPENDENT_AUDIT.json",
+  "audit_receipt_sha256": "897A8ACDAF19D5FB12287A44F6C248F89AB32551210849AA8BFA5A7D7CB2D6FE",
+  "release_manifest": "metadata/RELEASE_MANIFEST.json",
+  "release_manifest_sha256": "1CCF77AA9E5E8DC7029B416337D508DD0B5E6610E224A9FD3077F4B17BE40BBD",
+  "network_used": false,
+  "git_used": false
+}

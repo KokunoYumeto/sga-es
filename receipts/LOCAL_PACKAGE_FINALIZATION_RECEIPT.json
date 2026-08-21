@@ -1,0 +1,98 @@
+{
+  "schema": "spanish-sga-local-package-finalization/1",
+  "result": "PASS",
+  "payload_count": 13,
+  "payload": [
+    {
+      "ordinal": 0,
+      "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+      "bytes": 9171199,
+      "sha256": "CB9A2A867375DE69FD88080BC5BDC1840EEB23B2EB29C351C68F1E565689D652"
+    },
+    {
+      "ordinal": 1,
+      "name": "01_SGA1_ES_COMPLETE_READER.pdf",
+      "bytes": 2701982,
+      "sha256": "98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F"
+    },
+    {
+      "ordinal": 2,
+      "name": "02_SGA2_ES_COMPLETE_READER.pdf",
+      "bytes": 2008342,
+      "sha256": "41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748"
+    },
+    {
+      "ordinal": 3,
+      "name": "03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
+      "bytes": 2197248,
+      "sha256": "AF1E67D1AF6FCAB46C81EAB6B1CF2B8CE08B5C7FADE3FFE617365F2B68264749"
+    },
+    {
+      "ordinal": 4,
+      "name": "03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf",
+      "bytes": 2200080,
+      "sha256": "79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004"
+    },
+    {
+      "ordinal": 5,
+      "name": "04_SGA6_ES_COMPLETE_READER.pdf",
+      "bytes": 2884189,
+      "sha256": "A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294"
+    },
+    {
+      "ordinal": 6,
+      "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
+      "bytes": 4257787,
+      "sha256": "12B52B10D1AF4A461ADF653F1330A624F6A49061D768A988BFE7A913B52C1672"
+    },
+    {
+      "ordinal": 7,
+      "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+      "bytes": 41513147,
+      "sha256": "93197234D1EEC3A97AE7D6B6F317B050FF6552A62BD39A36B9EE7BC1A038B074"
+    },
+    {
+      "ordinal": 8,
+      "name": "07_SGA_ES_SHA256_MANIFEST.txt",
+      "bytes": 1369,
+      "sha256": "1C06A1DDEB82EB9DEC530509DD112316479B4BEF2EE218C72AF53F2A8A4C710E"
+    },
+    {
+      "ordinal": 9,
+      "name": "08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 2375139,
+      "sha256": "84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1"
+    },
+    {
+      "ordinal": 10,
+      "name": "09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 2374693,
+      "sha256": "0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543"
+    },
+    {
+      "ordinal": 11,
+      "name": "10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+      "bytes": 590972,
+      "sha256": "B873B495EEDC58D89DE735C7F60DC2EA2EAEEC66ACAAB95C291E5A3D9EBBEE75"
+    },
+    {
+      "ordinal": 12,
+      "name": "11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
+      "bytes": 541,
+      "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B"
+    }
+  ],
+  "version_record_id": 22047550,
+  "version_doi": "10.5281/zenodo.22047550",
+  "concept_record_id": 21923955,
+  "concept_doi": "10.5281/zenodo.21923955",
+  "receipt_hashes": {
+    "cumulative_pdf_independent_qa_receipt_sha256": "1D749DB482B6AFB5774E7A058B4145A744EE4CD9AD40C1A937B27DB87C803723",
+    "cumulative_pdf_visual_qa_receipt_sha256": "D49698DA229E44EB2650207747CC791F506634F5B03DBB9292F74D82A89B98B4",
+    "editable_sources_receipt_sha256": "890C53891EA0A74D495BACEF6BFB04713AD94DEC18220F5AFA2E71A7CAA16C11",
+    "evidence_provenance_receipt_sha256": "2DE8D2286928209683476893C563660B94132FBA4B2BD6F472D930B689B4CB36",
+    "payload_manifest_receipt_sha256": "3B9E593C08EDA04EC162AF3C45F18979F45DF1442CE55BBDE923824E40FF313C"
+  },
+  "network_used": false,
+  "git_used": false
+}

@@ -4,7 +4,7 @@
     "upload_type": "publication",
     "publication_type": "other",
     "publication_date": "2026-08-21",
-    "description": "<p>Cuarta versión de la única línea acumulativa española de los <em>Séminaires de Géométrie Algébrique</em>. El lector enlazado de 1.840 páginas incluye SGA 1, SGA 2, SGA 4 Tomo I, SGA 5, SGA 6 y SGA 7 Tomo I completos. SGA 3, SGA 4 Tomos II-III, SGA 4½ y SGA 7 Tomo II aún no están incluidos; la edición global sigue siendo incompleta.</p><p>Los 16 archivos depositados incluyen el lector acumulativo, lectores componentes, ramas corregida/actual y diplomática/original de SGA 4 Tome I y SGA 7 Tome I, fuentes editables, evidencia/procedencia y manifiestos SHA-256. SGA 4 Tome I cubre LNM 269, Exposiciones I-IV, bibliografía e índices; contiene 351 unidades traducidas, aparato reversible, construcción determinista y revisión visual completa.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni se inventa una licencia abierta general. Se preservan autoría, procedencia, relaciones con las fuentes y no aprobación.</p><p>Edición académica independiente asistida por IA; no afirma revisión por pares, certificación lingüística humana ni ausencia absoluta de errores.</p>",
+    "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> La versión 2026-08-21-r4 sucede a 2026-08-21-r3 (DOI 10.5281/zenodo.22044898; etiqueta v2026-08-21-r3) dentro de la misma línea DOI conceptual. Conserva los lectores completos de SGA 1, SGA 2 y SGA 6; sustituye el lector de SGA 5 por su reconciliación canónica corregida/actual de 326 páginas; y añade, como archivo separado y reversible, la rama diplomática/original de SGA 5 de 326 páginas.</p><p>El depósito contiene trece archivos. El lector acumulativo de 1203 páginas contiene cuatro páginas preliminares y los lectores actuales completos de SGA 1, SGA 2, SGA 5 y SGA 6; no concatena la rama 03B ni SGA 7. Los archivos 08–11 de SGA 7, tomo I —lectores completos corregido/actual y original/diplomático de 335 páginas, fuentes/evidencia y manifiesto— se heredan exactamente de r3 y permanecen autónomos. Los archivos 05–07 contienen las fuentes editables acumulativas, la evidencia/procedencia y el manifiesto SHA-256 de los otros doce archivos.</p><p>SGA 3, SGA 4 y SGA 7.2 aún no están incluidos, por lo que la edición global permanece incompleta. Las ampliaciones futuras serán nuevas versiones de esta misma línea DOI española, nunca depósitos duplicados por volumen, exposición o rama.</p><p>Los avisos de copyright reproducidos se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. El copyright no constituye una puerta de permiso, seguridad, revisión jurídica, derechos, traducción, auditoría, construcción o publicación. Esto no afirma dominio público ni una licencia general o uniforme.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni una demostración matemática independiente, y no implica respaldo de los autores o editores históricos.</p>",
     "creators": [
       {
         "name": "Grothendieck, Alexandre"
@@ -15,25 +15,30 @@
     ],
     "contributors": [
       {
-        "name": "TTP",
-        "type": "Other",
-        "affiliation": "https://github.com/KokunoYumeto/sga-es"
+        "name": "OpenAI Codex / Interlanguage Project",
+        "type": "Other"
       }
+    ],
+    "keywords": [
+      "SGA",
+      "Séminaire de Géométrie Algébrique",
+      "geometría algebraica",
+      "edición española",
+      "traducción matemática",
+      "sourcekeeping",
+      "provenance",
+      "AI-assisted scholarly edition"
     ],
     "language": "spa",
     "version": "2026-08-21-r4",
     "access_right": "open",
     "license": "notspecified",
-    "keywords": [
-      "SGA",
-      "Séminaire de Géométrie Algébrique",
-      "algebraic geometry",
-      "Spanish mathematical translation",
-      "étale cohomology",
-      "topos theory",
-      "SGA 4 Tome I"
-    ],
     "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.22044898",
+        "relation": "isNewVersionOf",
+        "scheme": "doi"
+      },
       {
         "identifier": "10.5281/zenodo.20410947",
         "relation": "isPartOf",
@@ -45,6 +50,6 @@
         "scheme": "url"
       }
     ],
-    "notes": "Exactly one evolving Spanish-SGA DOI lineage. No per-volume, per-exposé, or duplicate deposits. Coverage is explicit and the overall edition remains incomplete."
+    "notes": "Exactly one evolving Spanish-SGA DOI lineage. Version 2026-08-21-r4 / record 22047550 succeeds published record 22044898 / DOI 10.5281/zenodo.22044898 and GitHub tag v2026-08-21-r3 under concept DOI 10.5281/zenodo.21923955. No per-volume, per-exposé, per-branch, per-component, or duplicate DOI. Copyright notices are historical provenance only and impose no publication hold; no blanket public-domain or open-license claim. Current global edition incomplete."
   }
 }
