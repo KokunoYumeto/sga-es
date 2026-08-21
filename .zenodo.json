@@ -3,7 +3,7 @@
   "upload_type": "publication",
   "publication_type": "other",
   "publication_date": "2026-08-21",
-  "description": "<p><strong>Una sola edición española evolutiva de SGA.</strong> La versión 2026-08-21-r8 sucede a r7 (DOI 10.5281/zenodo.22050082) dentro del mismo DOI conceptual. Conserva sus veintinueve archivos byte por byte y añade cinco archivos de SGA 4, tomo I, edición completa, sellada e independientemente auditada.</p><p>SGA 4, tomo I aporta lectores corregido/actual y original/diplomático de 302 páginas, fuentes/evidencia, manifiesto de publicación y manifiesto SHA-256. Sus lectores autónomos no se concatenan al lector acumulativo heredado.</p><p>SGA 3 aún no se incluye, por lo que la edición global permanece incompleta. Las ampliaciones futuras serán nuevas versiones de esta misma línea DOI española, nunca depósitos duplicados por volumen, exposición, rama o componente.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
+  "description": "<p>Versión 2026-08-21-r8 de la única línea acumulativa española de los <em>Séminaires de Géométrie Algébrique</em>. El lector enlazado de 2.873 páginas incluye las ramas corregidas/actuales completas de SGA 1, SGA 2, SGA 4, Tomo I, SGA 4, Tomo II, SGA 4, Tomo III, SGA 4½, SGA 5, SGA 6, SGA 7, Tomo I y SGA 7, Tomo II. SGA 3 aún no está incluido; la edición global sigue siendo incompleta.</p><p>Los 34 archivos incluyen el lector acumulativo, lectores componentes, ramas diplomáticas disponibles, fuentes/evidencia y manifiestos SHA-256. SGA 4 Tomo I cubre LNM 269, Exposiciones I-IV, preliminares, bibliografía e índices; contiene 351 unidades traducidas, aparato reversible, construcción determinista y revisión visual completa.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general. Se preservan autoría, procedencia, relaciones con las fuentes y no aprobación.</p><p>Edición académica independiente asistida por IA; no afirma revisión por pares, certificación lingüística humana ni ausencia absoluta de errores.</p>",
   "creators": [
     {
       "name": "Grothendieck, Alexandre"
@@ -18,25 +18,24 @@
       "type": "Other"
     },
     {
-      "name": "Translation and Transcription Project",
-      "type": "Other"
+      "name": "TTP",
+      "type": "Other",
+      "affiliation": "https://github.com/KokunoYumeto/sga-es"
     }
-  ],
-  "keywords": [
-    "SGA",
-    "Séminaire de Géométrie Algébrique",
-    "SGA 4",
-    "geometría algebraica",
-    "edición española",
-    "traducción matemática",
-    "sourcekeeping",
-    "provenance",
-    "AI-assisted scholarly edition"
   ],
   "language": "spa",
   "version": "2026-08-21-r8",
   "access_right": "open",
   "license": "notspecified",
+  "keywords": [
+    "SGA",
+    "Séminaire de Géométrie Algébrique",
+    "algebraic geometry",
+    "Spanish mathematical translation",
+    "étale cohomology",
+    "topos theory",
+    "SGA 4 Tome I"
+  ],
   "related_identifiers": [
     {
       "identifier": "10.5281/zenodo.22050082",
@@ -54,5 +53,5 @@
       "scheme": "url"
     }
   ],
-  "notes": "Exactly one evolving Spanish-SGA DOI lineage. Version 2026-08-21-r8 / record 22050188 succeeds 10.5281/zenodo.22050082 / record 22050082 and v2026-08-21-r7 under concept DOI 10.5281/zenodo.21923955. No duplicate or per-component DOI. Current global edition incomplete because SGA 3 is absent."
+  "notes": "Exactly one evolving Spanish-SGA DOI lineage. No per-volume, per-exposé or duplicate deposits. Coverage is explicit and the overall edition remains incomplete."
 }
