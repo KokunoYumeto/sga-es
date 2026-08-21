@@ -1,21 +1,31 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "release": {
-    "object": "one evolving Spanish SGA 1-through-N edition",
-    "version": "2026-08-13-r1",
-    "version_doi": "10.5281/zenodo.21923956",
+    "object": "one evolving Spanish SGA edition",
+    "version": "2026-08-21-r2",
+    "version_doi": "10.5281/zenodo.22044086",
     "concept_doi": "10.5281/zenodo.21923955",
     "repository": "https://github.com/KokunoYumeto/sga-es",
-    "incomplete": true,
-    "separate_volume_dois": false,
-    "separate_expose_dois": false
+    "incomplete_global_series": true,
+    "complete_components": [
+      "SGA 1",
+      "SGA 2",
+      "SGA 5",
+      "SGA 6"
+    ],
+    "not_yet_included": [
+      "SGA 3",
+      "SGA 4",
+      "SGA 7"
+    ],
+    "duplicate_deposits_created": false
   },
   "payload": [
     {
       "ordinal": 0,
       "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
-      "bytes": 5707955,
-      "sha256": "DEBC275FF602B7A34C0A130B0526885DFF54A9B1BD421CC1C80CDC700BF7BC57"
+      "bytes": 9171165,
+      "sha256": "2DA6C18424E84B13A80D16C6B8A9F1399D199F0B89C6164F34B54773B3B1926D"
     },
     {
       "ordinal": 1,
@@ -25,9 +35,9 @@
     },
     {
       "ordinal": 2,
-      "name": "02_SGA2_ES_THROUGH_EXPOSE_V_READER.pdf",
-      "bytes": 871286,
-      "sha256": "4BB88DEE00E2F02543B0333724EAAEC5C71699396BA605A3F11AACB6D2359FFD"
+      "name": "02_SGA2_ES_COMPLETE_READER.pdf",
+      "bytes": 2008342,
+      "sha256": "41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748"
     },
     {
       "ordinal": 3,
@@ -37,34 +47,107 @@
     },
     {
       "ordinal": 4,
-      "name": "04_SGA6_ES_EXPOSE_X_PARTIAL_READER.pdf",
-      "bytes": 219996,
-      "sha256": "9C6279297439C34328C4C055E0D4691FCFF03375741C313C9DE8DB39F42BEAA0"
+      "name": "04_SGA6_ES_COMPLETE_READER.pdf",
+      "bytes": 2884189,
+      "sha256": "A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294"
     },
     {
       "ordinal": 5,
       "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
-      "bytes": 1046517,
-      "sha256": "471B3A1A2B88D3CDCDD3E38302D6AB5C52B3E25D500EE692B301AE34C49E09E3"
+      "bytes": 3825054,
+      "sha256": "70E47F811A3280E9E201D1884C8120A2564106B322E7EF2192010C0E734B929C"
     },
     {
       "ordinal": 6,
       "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
-      "bytes": 40280110,
-      "sha256": "8A6FDD7EE77D687EA87EA5F49A23EB89AC0F2E2228CFAB2E807B9F6D7D95870F"
+      "bytes": 40725790,
+      "sha256": "CBB43CBA5A79946DC08695FC11BC8ED2EF7FA64BE26D650B46DDA2CD5F4295C8"
     },
     {
       "ordinal": 7,
       "name": "07_SGA_ES_SHA256_MANIFEST.txt",
-      "bytes": 776,
-      "sha256": "ABD72D6476BED5D8DF9EA7980738D5A8D2C542097CEAEA35AC143DDA52AB6505"
+      "bytes": 762,
+      "sha256": "CE684833549D565610E1F757D0A73AF1F9DB066CEE9450B4910A57261E428ACD"
     }
   ],
   "validation": {
-    "cumulative_pdf_independent_qa_receipt_sha256": "0AD137D8694BDC847F2843104E555327151A18614941AC904CEE7AC392CCF083",
-    "editable_sources_receipt_sha256": "9B965CC6B75A7730F8A1177C5CA0C1288ED2DDE7F763B1215170BF381B951AEB",
-    "evidence_provenance_receipt_sha256": "C43CF2230C6B1C337CF65B45BEF41C38D9856466840B4A44C9D284E8FD6F7EDC",
-    "payload_manifest_replay": "PASS",
-    "git_invocation_performed": false
+    "components": [
+      {
+        "code": "SGA 1",
+        "coverage": "edición española completa",
+        "name": "01_SGA1_ES_COMPLETE_READER.pdf",
+        "bytes": 2701982,
+        "sha256": "98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F",
+        "pages": 287,
+        "links": 1813,
+        "encrypted": false
+      },
+      {
+        "code": "SGA 2",
+        "coverage": "edición española completa, incluidos índices finales",
+        "name": "02_SGA2_ES_COMPLETE_READER.pdf",
+        "bytes": 2008342,
+        "sha256": "41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748",
+        "pages": 209,
+        "links": 1233,
+        "encrypted": false
+      },
+      {
+        "code": "SGA 5",
+        "coverage": "contenido completo publicado en LNM 589",
+        "name": "03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
+        "bytes": 2196982,
+        "sha256": "2B69F774EF0F3E56262C45E36DE1807DB3428563678AB1132322521C716E32CC",
+        "pages": 326,
+        "links": 29,
+        "encrypted": false
+      },
+      {
+        "code": "SGA 6",
+        "coverage": "edición española completa",
+        "name": "04_SGA6_ES_COMPLETE_READER.pdf",
+        "bytes": 2884189,
+        "sha256": "A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294",
+        "pages": 377,
+        "links": 91,
+        "encrypted": false
+      }
+    ],
+    "cumulative": {
+      "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+      "bytes": 9171165,
+      "sha256": "2DA6C18424E84B13A80D16C6B8A9F1399D199F0B89C6164F34B54773B3B1926D",
+      "pages": 1203,
+      "links": 3175,
+      "deterministic_replay": true
+    },
+    "editable_sources": {
+      "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
+      "members": 165,
+      "uncompressed_bytes": 6055019,
+      "bytes": 3825054,
+      "sha256": "70E47F811A3280E9E201D1884C8120A2564106B322E7EF2192010C0E734B929C",
+      "manifest_bytes": 29134,
+      "manifest_sha256": "95BC0D5602F848D5173F1A3466A42B8D6D8584D6E04C69351EC5534605537CBC",
+      "deterministic_replay": true
+    },
+    "evidence": {
+      "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+      "members": 35,
+      "uncompressed_bytes": 47457530,
+      "bytes": 40725790,
+      "sha256": "CBB43CBA5A79946DC08695FC11BC8ED2EF7FA64BE26D650B46DDA2CD5F4295C8",
+      "manifest_bytes": 4635,
+      "manifest_sha256": "F70533A0C4D8A3434DEECFD6828324BCA95C2DE902B667B518E55135B6963AA8",
+      "deterministic_replay": true
+    },
+    "payload_manifest": {
+      "name": "07_SGA_ES_SHA256_MANIFEST.txt",
+      "bytes": 762,
+      "sha256": "CE684833549D565610E1F757D0A73AF1F9DB066CEE9450B4910A57261E428ACD",
+      "rows": 7
+    },
+    "copyright_notice_role": "historical provenance only; no publication hold",
+    "blanket_public_domain_or_open_license_claim": false
   }
 }
