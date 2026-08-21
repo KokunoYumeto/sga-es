@@ -1,56 +1,52 @@
 # SGA en español — edición acumulativa
 
-Este repositorio y la línea DOI `10.5281/zenodo.21923955` mantienen **una sola edición
-española evolutiva** de los Séminaires de Géométrie Algébrique (SGA). La
-versión `2026-08-21-r3` conserva cuatro lectores completos y verificados y
-añade la edición española completa de SGA 7, tomo I:
+Esta versión `2026-08-21-r4` continúa una sola línea española evolutiva de los
+Séminaires de Géométrie Algébrique (SGA). El lector acumulativo enlazado tiene
+1.840 páginas e incorpora, una sola vez, seis lectores completos:
 
-- SGA 1: 287 páginas.
-- SGA 2: 209 páginas, incluidos los índices finales.
-- SGA 5: 326 páginas, contenido completo publicado en LNM 589.
-- SGA 6: 377 páginas.
-- SGA 7, tomo I: dos lectores autónomos de 335 páginas, uno
-  corregido/actual y otro original/diplomático.
+- SGA 1 (287 páginas).
+- SGA 2 (209 páginas, incluidos los índices finales).
+- SGA 4, Tomo I (302 páginas; LNM 269, Exposiciones I-IV, bibliografía e índices).
+- SGA 5 (326 páginas; contenido completo publicado en LNM 589).
+- SGA 6 (377 páginas).
+- SGA 7, Tomo I (335 páginas).
 
-SGA 3, SGA 4 y SGA 7.2 todavía no forman parte de esta versión; por ello la
-edición global de SGA en español sigue incompleta. No se crean DOI separados
-para volúmenes, exposiciones ni tramos.
-
-## Archivos
-
-El registro contiene el lector acumulativo enlazado heredado para SGA 1, 2, 5
-y 6, sus cuatro lectores componentes, los dos lectores autónomos de SGA 7.1,
-fuentes editables seleccionadas, evidencia y procedencia, y manifiestos
-SHA-256. El lector acumulativo heredado todavía no incorpora SGA 7.1; cada
-lector conserva sus créditos, numeración y alcance.
+SGA 3, SGA 4 Tomos II-III, SGA 4½ y SGA 7 Tomo II todavía no están incluidos;
+la edición global sigue siendo incompleta. Las ramas diplomática/original de
+SGA 4 Tome I y SGA 7 Tome I se suministran como lectores separados. Los ZIP de
+fuentes y evidencia contienen fuentes editables, aparatos reversibles,
+manifiestos, revisiones y recibos de construcción/QA.
 
 ## Identificadores
 
-- DOI de esta versión: `10.5281/zenodo.22044898`
+- DOI de esta versión: `10.5281/zenodo.22047550`
 - DOI conceptual estable: `10.5281/zenodo.21923955`
 - Repositorio: https://github.com/KokunoYumeto/sga-es
 
-## Alcance de la verificación
+## Verificación y alcance
 
-Edición académica de trabajo asistida por IA. Los recibos registran alineación
-con las fuentes, decisiones reversibles, construcción determinista, revisión
-visual y controles independientes. No se afirma revisión por pares,
-certificación lingüística humana ni ausencia absoluta de errores.
+SGA 4 Tome I se tradujo en 351 unidades, con 610 operaciones de aparato,
+847 etiquetas únicas, 1.473 referencias internas resueltas, construcción
+determinista de las ramas actual y original, revisión visual completa y un
+comprobador final de cierre. La edición conserva por separado transcripción,
+restauración, corrección de fuente, traducción, aparato y presentación.
 
-Los avisos de copyright se conservan únicamente como procedencia histórica y
-no restringen esta edición matemática independiente ni su publicación. Esta
-declaración no convierte las obras subyacentes en dominio público ni inventa
-una licencia abierta general. Se preservan la atribución, las relaciones de
-autoría, la procedencia y la no aprobación.
+Los avisos de copyright históricos se conservan únicamente como procedencia y
+no restringen esta edición matemática independiente ni su publicación. No se
+afirma dominio público ni se inventa una licencia abierta general. Se preservan
+autoría, procedencia, relaciones con las fuentes y no aprobación.
+
+Esta es una edición académica independiente asistida por IA. No afirma revisión
+por pares, certificación lingüística humana ni ausencia absoluta de errores.
 
 ---
 
 # SGA — Cumulative Spanish Edition
 
-Version `2026-08-21-r3` expands the same single Spanish-SGA DOI lineage with
-complete current and diplomatic SGA 7 Tome I readers. The inherited cumulative
-reader still covers SGA 1, 2, 5, and 6; SGA 7.1 is supplied as standalone
-files. SGA 3, SGA 4, and SGA 7.2 are not yet included.
-Historical copyright notices are retained solely as provenance; they do not
-restrict this independent mathematical edition or its publication. No blanket
+Version `2026-08-21-r4` extends the same Spanish-SGA lineage with the complete SGA 4
+Tome I current and diplomatic readers, source/evidence bundle, and component
+manifest. The linked 1,840-page cumulative reader contains complete SGA 1,
+SGA 2, SGA 4 Tome I, SGA 5, SGA 6, and SGA 7 Tome I. The overall edition remains
+incomplete. Historical copyright notices are provenance only and do not
+restrict this independent mathematical edition or publication; no blanket
 public-domain or open-license claim is made.
