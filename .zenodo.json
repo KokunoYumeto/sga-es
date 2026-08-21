@@ -3,14 +3,10 @@
   "upload_type": "publication",
   "publication_type": "other",
   "publication_date": "2026-08-21",
-  "description": "<p>Cuarta versión de la única línea acumulativa española de los <em>Séminaires de Géométrie Algébrique</em>. El lector enlazado de 1.840 páginas incluye SGA 1, SGA 2, SGA 4 Tomo I, SGA 5, SGA 6 y SGA 7 Tomo I completos. SGA 3, SGA 4 Tomos II-III, SGA 4½ y SGA 7 Tomo II aún no están incluidos; la edición global sigue siendo incompleta.</p><p>Los 16 archivos depositados incluyen el lector acumulativo, lectores componentes, ramas corregida/actual y diplomática/original de SGA 4 Tome I y SGA 7 Tome I, fuentes editables, evidencia/procedencia y manifiestos SHA-256. SGA 4 Tome I cubre LNM 269, Exposiciones I-IV, bibliografía e índices; contiene 351 unidades traducidas, aparato reversible, construcción determinista y revisión visual completa.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni se inventa una licencia abierta general. Se preservan autoría, procedencia, relaciones con las fuentes y no aprobación.</p><p>Edición académica independiente asistida por IA; no afirma revisión por pares, certificación lingüística humana ni ausencia absoluta de errores.</p>",
+  "description": "<p>Una sola edición española evolutiva de SGA. La versión correctiva 2026-08-21-r6 sucede a r5 dentro del mismo DOI conceptual y conserva byte por byte todos sus lectores PDF; reemplaza únicamente los paquetes de fuentes/evidencia y sus manifiestos de SGA 7 tomo II y SGA 4 tomo III para cerrar defectos de empaquetado detectados en la lectura pública de r5.</p><p>SGA 4 tomo III mantiene las Exposiciones IX–XIX y los índices terminales: un lector corregido/actual de 375 páginas y un lector original/diplomático de 367 páginas. Los lectores son byte-idénticos a r5; los archivos 18 y 19 corrigen sólo referencias internas de nombres de archivo en el paquete de evidencia y su manifiesto.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>SGA 3 y los tomos I–II de SGA 4 aún no se incluyen, por lo que la edición global permanece incompleta.</p>",
   "creators": [
-    {
-      "name": "Grothendieck, Alexandre"
-    },
-    {
-      "name": "Séminaire de Géométrie Algébrique contributors"
-    }
+    {"name": "Grothendieck, Alexandre"},
+    {"name": "Séminaire de Géométrie Algébrique contributors"}
   ],
   "contributors": [
     {
@@ -20,7 +16,7 @@
     }
   ],
   "language": "spa",
-  "version": "2026-08-21-r4",
+  "version": "2026-08-21-r6",
   "access_right": "open",
   "license": "notspecified",
   "keywords": [
@@ -30,7 +26,7 @@
     "Spanish mathematical translation",
     "étale cohomology",
     "topos theory",
-    "SGA 4 Tome I"
+    "SGA 4 Tome III"
   ],
   "related_identifiers": [
     {
