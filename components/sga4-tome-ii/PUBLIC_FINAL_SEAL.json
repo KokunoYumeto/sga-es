@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "record_kind": "sga4_tome2_spanish_public_final_seal",
+  "sealed_utc": "2026-08-21T17:18:52.2537409Z",
+  "status": "PASS",
+  "work": "SGA 4, Tomo II — edición matemática española",
+  "coverage": [
+    "front matter",
+    "Exposé V",
+    "Exposé Vbis",
+    "Exposé VI",
+    "Exposé VII",
+    "Exposé VIII",
+    "term index",
+    "notation index"
+  ],
+  "readers": {
+    "corrected_current": {
+      "filename": "SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+      "bytes": 1170371,
+      "pages": 182,
+      "sha256": "FEE3CD904F5EA2C48A3C9DD9F18E4498F27C126C9FA742FBBB003A2818E4A0F5"
+    },
+    "diplomatic_original": {
+      "filename": "SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+      "bytes": 1158624,
+      "pages": 180,
+      "sha256": "83576642F9BEE13A7488EB097885C544131F4A1F8A9E9B82F4C7A48C9BE7AA12"
+    }
+  },
+  "source_projection": {
+    "files": 119,
+    "payload_bytes": 1009211,
+    "manifest_bytes": 14398,
+    "sha256": "BE83F5EDC3E1A8BA1EAC082B445A230F54EEE1CFA49E6962CF7C5A287863C9AF"
+  },
+  "verification": {
+    "deterministic_replay": "PASS",
+    "static_semantic_source_checks": "PASS",
+    "pdf_parser_geometry_fonts_links": "PASS",
+    "native_pages_visually_inspected": 362,
+    "full_visual_qa": "PASS",
+    "final_checker": {
+      "filename": "audit_tome2_final.py",
+      "bytes": 15749,
+      "sha256": "BC3C688333D342430C314EAF06976DA75C29584C261ADA9728C29C89DCA50160",
+      "result": "PASS",
+      "failures": 0
+    }
+  },
+  "canon": {
+    "accepted_ranges": [
+      "SGA-SRC-000150--SGA-SRC-000153",
+      "SGA-SRC-000657--SGA-SRC-000694",
+      "SGA-SRC-000697--SGA-SRC-000767"
+    ],
+    "holds_preserved": [
+      "SGA-SRC-000768",
+      "SGA-SRC-000769"
+    ]
+  },
+  "provenance_limitation": "Authenticated Springer body-page images for printed pages 1--412 were unavailable; official front and back matter were authenticated and reviewed.",
+  "publication": {
+    "authorized": true,
+    "concept_doi": "10.5281/zenodo.21923955",
+    "existing_lineage_only": true,
+    "duplicate_deposit_forbidden": true,
+    "public_byte_readback_required": true
+  }
+}
