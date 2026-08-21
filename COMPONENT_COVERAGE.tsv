@@ -3,6 +3,8 @@ ordinal	volume	status	pages	coverage	sha256
 2	SGA 2	complete	209	edición española completa, incluidos índices finales	41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748
 3	SGA 5	complete	326	contenido completo publicado en LNM 589	2B69F774EF0F3E56262C45E36DE1807DB3428563678AB1132322521C716E32CC
 4	SGA 6	complete	377	edición española completa	A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294
-5	SGA 3	not_included	0	pending other task	
-6	SGA 4	not_included	0	pending other task	
-7	SGA 7	not_included	0	pending other task	
+5	SGA 7, tome I (current)	complete	335	edición española corregida/actual completa	84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1
+6	SGA 7, tome I (diplomatic)	complete	335	edición española original/diplomática completa	0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543
+7	SGA 3	not_included	0	pending other task	
+8	SGA 4	not_included	0	pending other task	
+9	SGA 7.2	not_included	0	pending other task	
