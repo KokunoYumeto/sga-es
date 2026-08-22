@@ -369,14 +369,15 @@
     "non_endorsement_preserved": true
   },
   "schema_version": 11,
-  "status": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+  "status": "PASS_PUBLICATION_AND_ANONYMOUS_CROSS_SERVICE_READBACK",
   "validation": {
     "appended_r17_assets": [],
     "complete_assets": 39,
     "complete_cumulative_reader_pages": 4450,
-    "cross_service_identity": "PENDING",
+    "cross_service_identity": "PASS",
     "deleted_r16_assets": [],
-    "github_public_readback": "PENDING",
+    "github_public_readback": "PASS_39_OF_39_SHA256",
+    "github_public_readback_receipt_sha256": "C1F8AF123DB44745A1B95B01E80285BC97A2B4B0EB3E252E2EF6DA99A44E49E9",
     "inherited_r16_assets_byte_identical": 36,
     "replaced_r16_assets": [
       "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",

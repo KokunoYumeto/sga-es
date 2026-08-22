@@ -1,0 +1,383 @@
+{
+  "anonymous_asset_downloads_verified": 39,
+  "anonymous_release_inventory_verified": "PASS_39_OF_39_NAMES_AND_LINKS",
+  "anonymous_release_landing_page_verified": true,
+  "credential_material_recorded": false,
+  "github_release_url": "https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-08-22-r17",
+  "lineage": {
+    "concept_doi": "10.5281/zenodo.21923955",
+    "duplicate_deposit_or_repository": false,
+    "figshare_concept_doi": "10.6084/m9.figshare.33314850",
+    "github_release_id": 375014948,
+    "github_repository": "https://github.com/KokunoYumeto/sga-es",
+    "github_tag": "v2026-08-22-r17",
+    "publication_commit": "a185976f6be684242d4a212bc5555366835ab16d",
+    "zenodo_record_id": 22059051,
+    "zenodo_version_doi": "10.5281/zenodo.22059051"
+  },
+  "metadata_control_api_authenticated": true,
+  "payload": {
+    "anonymous_github_sha256_verified": 39,
+    "bytes": 149436356,
+    "cross_service_sha256_verified": 39,
+    "files": 39,
+    "inventory": [
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 31913355,
+        "github_asset_id": 525357360,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+        "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+        "sha256": "F27703FB89DA4793C2E825B87DBB4E9F149DC1B41A42445DD3A1F39A8C2CABC7",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2701982,
+        "github_asset_id": 525357423,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/01_SGA1_ES_COMPLETE_READER.pdf",
+        "name": "01_SGA1_ES_COMPLETE_READER.pdf",
+        "sha256": "98B6939868E22609C10EFE9364D1E3CFB16BFC1F4B5727921CDF40780CAA376F",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/01_SGA1_ES_COMPLETE_READER.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2008342,
+        "github_asset_id": 525357439,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/02_SGA2_ES_COMPLETE_READER.pdf",
+        "name": "02_SGA2_ES_COMPLETE_READER.pdf",
+        "sha256": "41132E6471822AA51CB92EFA7AEF2A611984EBAE05324DC5D5FE70FC68C0A748",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/02_SGA2_ES_COMPLETE_READER.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2200080,
+        "github_asset_id": 525357463,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf",
+        "name": "03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf",
+        "sha256": "79A715153F91A7B997BDE0D4CE1581A8D2BF5E0FCC2C193B9FD3630452866004",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2197248,
+        "github_asset_id": 525357475,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
+        "name": "03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf",
+        "sha256": "AF1E67D1AF6FCAB46C81EAB6B1CF2B8CE08B5C7FADE3FFE617365F2B68264749",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2884189,
+        "github_asset_id": 525357490,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/04_SGA6_ES_COMPLETE_READER.pdf",
+        "name": "04_SGA6_ES_COMPLETE_READER.pdf",
+        "sha256": "A8C5AD8EBCEF473CC714C1C39C4B1BD5C9A2B880C5D294501361E29025AEE294",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/04_SGA6_ES_COMPLETE_READER.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 5695474,
+        "github_asset_id": 525357495,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/05_SGA_ES_EDITABLE_SOURCES.zip",
+        "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
+        "sha256": "B40A9D84217DBE94B1823C57683746FAEAC195EE23EDA21D40D944BBCD1926B5",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/05_SGA_ES_EDITABLE_SOURCES.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 61288267,
+        "github_asset_id": 525357611,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+        "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+        "sha256": "255EFA62B5217437E70DD875D3172BA337863AECD2CF0BF7EA172A0AF5B31703",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 4739,
+        "github_asset_id": 525357704,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/07_SGA_ES_SHA256_MANIFEST.txt",
+        "name": "07_SGA_ES_SHA256_MANIFEST.txt",
+        "sha256": "E31EFBA2B014E9157E1E4CDDF21C77D329438835C71B8644393F3DA26736555A",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/07_SGA_ES_SHA256_MANIFEST.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2375139,
+        "github_asset_id": 525357720,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "84F2A1451DEFF23C33FDF4326C14500CA66CFAD9573C18B23660B8E61A9F0BC1",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2374693,
+        "github_asset_id": 525357734,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "0598C6C61390857C8510BCE59D7B7F9DBF3D6D6AC1D7E3841F4D3406317E9543",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 590972,
+        "github_asset_id": 525357748,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "B873B495EEDC58D89DE735C7F60DC2EA2EAEEC66ACAAB95C291E5A3D9EBBEE75",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/10_SGA7_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 541,
+        "github_asset_id": 525357761,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
+        "name": "11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt",
+        "sha256": "9BF8541BF69BDF8BC0717B69AC32F4D3303B86DCEA1745D219EC42DAC9FF9B5B",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/11_SGA7_TOME_I_SHA256_MANIFEST_20260821.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2401433,
+        "github_asset_id": 525357771,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "04BA3B269D5AFC0A0A090F7728250DF0899B28FD45BDEC6AD5E2F376C63CE9AD",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2401603,
+        "github_asset_id": 525357787,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "27F1B42B8F8E78E28D3543C5B729735FAF68BD81FF989804728B90F97D48813F",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2904389,
+        "github_asset_id": 525357813,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/14_SGA7_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "14_SGA7_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "672E3B4A1B2F41FAD37E36C91AAC7F3A64AFA9E03E848357876D27EFE93AC8E8",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/14_SGA7_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 582,
+        "github_asset_id": 525357826,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/15_SGA7_TOME_II_SHA256_MANIFEST_20260821.txt",
+        "name": "15_SGA7_TOME_II_SHA256_MANIFEST_20260821.txt",
+        "sha256": "3AE7084A5ADFF29108F29C4BA459ECF1BF8094E2743C3433F429050DBA692DC4",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/15_SGA7_TOME_II_SHA256_MANIFEST_20260821.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1875389,
+        "github_asset_id": 525357850,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "4BF4BA999D726FCF191C5765A6236B0A0B8865CD8733EF6B50667473E6DDFB84",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1815707,
+        "github_asset_id": 525357872,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "FBA4A5D66A0D85102F89BB7D2C3C6D44B43944CF4077EA4A946E8F22AA6418C9",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 448579,
+        "github_asset_id": 525357931,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/18_SGA4_TOME_III_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "18_SGA4_TOME_III_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "B9BB7969611DBA3B8156CF38AA1EBF1EBFAF8C7A85301BE5DDC3791C670354E7",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/18_SGA4_TOME_III_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 477,
+        "github_asset_id": 525357947,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/19_SGA4_TOME_III_SHA256_MANIFEST_20260821.txt",
+        "name": "19_SGA4_TOME_III_SHA256_MANIFEST_20260821.txt",
+        "sha256": "5087466603343D7534A8CE795685170F459A455104C6B25A74599B7818F4E558",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/19_SGA4_TOME_III_SHA256_MANIFEST_20260821.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1170371,
+        "github_asset_id": 525357973,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "FEE3CD904F5EA2C48A3C9DD9F18E4498F27C126C9FA742FBBB003A2818E4A0F5",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1158624,
+        "github_asset_id": 525358005,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "83576642F9BEE13A7488EB097885C544131F4A1F8A9E9B82F4C7A48C9BE7AA12",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1144208,
+        "github_asset_id": 525358023,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/22_SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "22_SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "58A70B561B57A668B7B9F79AE8EFA0D5479CDC8E2253AC56544CFBC2A783D29A",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/22_SGA4_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 395,
+        "github_asset_id": 525358052,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/23_SGA4_TOME_II_SHA256_MANIFEST_20260821.txt",
+        "name": "23_SGA4_TOME_II_SHA256_MANIFEST_20260821.txt",
+        "sha256": "CE2D35496BA07DC00B30D67FC6D27B283883F52AF4CC812D2BDA4EF4330F1792",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/23_SGA4_TOME_II_SHA256_MANIFEST_20260821.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1791217,
+        "github_asset_id": 525358070,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "8CED3F06272264CDD0242910AC17AB6E5BF2B9F6A5DBF5A9CDB5FE4FB672157F",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1783326,
+        "github_asset_id": 525358130,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "E72DDE9FCFA1E28B4FE815E428619827C5B8A597071EF5D000E52FBB94EAAB60",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 1334989,
+        "github_asset_id": 525358164,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/26_SGA4_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "26_SGA4_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "3FBA1C084012901CE11F3434B3134F81B32FEF644D6D42E68A33553CE21FB892",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/26_SGA4_TOME_I_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 6437,
+        "github_asset_id": 525358199,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/27_SGA4_TOME_I_PUBLICATION_MANIFEST_20260821.json",
+        "name": "27_SGA4_TOME_I_PUBLICATION_MANIFEST_20260821.json",
+        "sha256": "EBBB8D27B00B8ECEEDD1E07918353FF950EC048FD29F8F26D795FD22CE446CA0",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/27_SGA4_TOME_I_PUBLICATION_MANIFEST_20260821.json/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 396,
+        "github_asset_id": 525358207,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/28_SGA4_TOME_I_SHA256_MANIFEST_20260821.txt",
+        "name": "28_SGA4_TOME_I_SHA256_MANIFEST_20260821.txt",
+        "sha256": "A57CD7D6CC55E6263744196935023031856CD5F8A8BF89A341006124EB09E7D2",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/28_SGA4_TOME_I_SHA256_MANIFEST_20260821.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 3436896,
+        "github_asset_id": 525358238,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "FC8B852A812D42472E8AE57F1D9CB087BB9ACF51CE0CFE7C245C1A9203266BA7",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 3436675,
+        "github_asset_id": 525358313,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "639007DFF1E0BCE822585ACD063FE32DE9EF7E027EA7391BA71B85E9CDCA43C4",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 919190,
+        "github_asset_id": 525358363,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/31_SGA3_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "31_SGA3_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "B4EE9A85952C833BFA02361ACB3A2B123124BF0BD85575625855BDBC5EAF4F5B",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/31_SGA3_TOME_II_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 4148,
+        "github_asset_id": 525358402,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/32_SGA3_TOME_II_PUBLICATION_MANIFEST_20260821.json",
+        "name": "32_SGA3_TOME_II_PUBLICATION_MANIFEST_20260821.json",
+        "sha256": "186B2201C2AF420D4A1437FFFB60AC044C8F16ED61A0BB71C71028397764E647",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/32_SGA3_TOME_II_PUBLICATION_MANIFEST_20260821.json/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 583,
+        "github_asset_id": 525358422,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/33_SGA3_TOME_II_SHA256_MANIFEST_20260821.txt",
+        "name": "33_SGA3_TOME_II_SHA256_MANIFEST_20260821.txt",
+        "sha256": "2069E89130FADFED6CC173370AD0E6C7401F71C02D83087903CBF36B0873D380",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/33_SGA3_TOME_II_SHA256_MANIFEST_20260821.txt/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2091367,
+        "github_asset_id": 525358457,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/SGA4HALF_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "name": "SGA4HALF_EDICION_ESPANOLA_CORREGIDA_20260821.pdf",
+        "sha256": "9F6A75A178BA53DD87935BF4FFFF720D2D84FF5B532602684A81696C80B09157",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/SGA4HALF_EDICION_ESPANOLA_CORREGIDA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 2090821,
+        "github_asset_id": 525358480,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/SGA4HALF_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "name": "SGA4HALF_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf",
+        "sha256": "6660C5F438D2AC4CB79EE2EFF873F1E303F19AF03DAFD328D12640374104C406",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/SGA4HALF_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 983058,
+        "github_asset_id": 525358500,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/SGA4HALF_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "name": "SGA4HALF_FUENTES_Y_EVIDENCIA_20260821.zip",
+        "sha256": "55887CCF8E0E1708EF5A613ABCA390EF0953F8363AC600722E58956874C0A5B9",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/SGA4HALF_FUENTES_Y_EVIDENCIA_20260821.zip/content"
+      },
+      {
+        "anonymous_cross_service_sha256_verified": true,
+        "bytes": 475,
+        "github_asset_id": 525358525,
+        "github_url": "https://github.com/KokunoYumeto/sga-es/releases/download/v2026-08-22-r17/SGA4HALF_SHA256_MANIFEST_20260821.txt",
+        "name": "SGA4HALF_SHA256_MANIFEST_20260821.txt",
+        "sha256": "A399CA78AFABF403E9401E0D51BFB2BD001215C44B205260D41745C21396D91F",
+        "zenodo_url": "https://zenodo.org/api/records/22059051/files/SGA4HALF_SHA256_MANIFEST_20260821.txt/content"
+      }
+    ],
+    "projection_bytes": 4656,
+    "projection_sha256": "E0FBF828DA1E59841009A566CD8C2320628B34218E6B2306AE9CDE75C2932E88"
+  },
+  "schema": "spanish-sga-r17-github-public-readback/1",
+  "status": "PASS_GITHUB_39_OF_39_ANONYMOUS_SHA256_AND_CROSS_SERVICE_IDENTITY",
+  "verified_utc": "2026-08-22T19:21:35.753577Z"
+}

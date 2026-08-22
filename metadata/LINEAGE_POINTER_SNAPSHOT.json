@@ -25,7 +25,7 @@
     "github_tag": "v2026-08-22-r17",
     "record_id": 22059051,
     "scope": "complete cumulative Spanish edition; all thirteen books in canonical order",
-    "state_at_commit": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+    "state_at_commit": "PASS_PUBLICATION_AND_ANONYMOUS_CROSS_SERVICE_READBACK",
     "version": "2026-08-22-r17"
   }
 }
