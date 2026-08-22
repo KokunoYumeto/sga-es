@@ -93,8 +93,8 @@
       "component": "Spanish SGA cumulative lineage",
       "name": "07_SGA_ES_SHA256_MANIFEST.txt",
       "ordinal": 8,
-      "role": "r13 cumulative SHA-256 manifest",
-      "sha256": "5150019AC4689A4FD82808838860C911B71BE8791C6E5B33947E2892A6BF1577"
+      "role": "r14 cumulative SHA-256 manifest",
+      "sha256": "5EE0A887DA94678FE84E7F06456C3D9B321ECE7A845D07F656AD9B510523BE6B"
     },
     {
       "bytes": 2375139,
@@ -339,46 +339,46 @@
       "sha256": "2069E89130FADFED6CC173370AD0E6C7401F71C02D83087903CBF36B0873D380"
     },
     {
-      "bytes": 5154583,
-      "component": "SGA 3, tome I accessible corpus",
+      "bytes": 5140297,
+      "component": "SGA 3, tome I",
       "name": "34_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
       "ordinal": 39,
       "pages": 692,
-      "role": "corrected/current partial reader",
-      "sha256": "D31CC8044E3B6024C80E3C4297DB16B56F8B9FD56D38272265A2EDE48D9F4C68"
+      "role": "bounded corrected/current reader",
+      "sha256": "0843763E0027C061B8E2E2065335FB43B156EA66D3204FB8A5C984C311F19EC8"
     },
     {
-      "bytes": 3848003,
-      "component": "SGA 3, tome I accessible corpus",
+      "bytes": 3815438,
+      "component": "SGA 3, tome I",
       "name": "35_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
       "ordinal": 40,
-      "pages": 546,
-      "role": "diplomatic/historical partial reader",
-      "sha256": "0F1401E5FA586B128A2033E9E47E98C6A4DF8475ABCDFC7D72033228CFE56EB8"
+      "pages": 544,
+      "role": "bounded diplomatic/original reader",
+      "sha256": "B1E0F04ACC7CA265307E879797E38C5FCFC85024FF2F4CC3093360A00F37BB02"
     },
     {
-      "bytes": 2062192,
-      "component": "SGA 3, tome I accessible corpus",
+      "bytes": 2068913,
+      "component": "SGA 3, tome I",
       "name": "36_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_FUENTES_Y_EVIDENCIA_20260822.zip",
       "ordinal": 41,
-      "role": "sources and evidence",
-      "sha256": "75D8E9F7B4662D59E889C22E2CDB6E2806CC31FD187EAE9FC0C83FC04724AA59"
+      "role": "bounded sources and evidence",
+      "sha256": "D2ADC38283DC0EFE63F45519FF33698F24517A1A997893917C10D4932D5A2723"
     },
     {
-      "bytes": 4790,
-      "component": "SGA 3, tome I accessible corpus",
+      "bytes": 7682,
+      "component": "SGA 3, tome I",
       "name": "37_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_PUBLICATION_MANIFEST_20260822.json",
       "ordinal": 42,
-      "role": "publication manifest",
-      "sha256": "DC99EADA7025538D876FAC9C27D6BBE134745EDB6AADE238A899DC1907645416"
+      "role": "bounded publication manifest",
+      "sha256": "30EBE14901EE037823EE6E6C267E65AFA98DF11CA70DAD5269CDF9252ED1E360"
     },
     {
-      "bytes": 707,
-      "component": "SGA 3, tome I accessible corpus",
+      "bytes": 825,
+      "component": "SGA 3, tome I",
       "name": "38_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_SHA256_MANIFEST_20260822.txt",
       "ordinal": 43,
-      "role": "SHA-256 manifest",
-      "sha256": "8AE5DDAC933BA9BFFCD486A8F50F3498B7982F8D2AF7CD661A663A6AC703C6A4"
+      "role": "bounded component SHA-256 manifest",
+      "sha256": "A6C0364572E92966F69B5D1DF97A73A79BFBCEE5F2721E108FB5996654492F39"
     },
     {
       "bytes": 3464362,
@@ -427,21 +427,21 @@
     "concept_doi": "10.5281/zenodo.21923955",
     "concept_record_id": 21923955,
     "duplicate_deposit": false,
-    "expected_payload_bytes": 143836236,
+    "expected_payload_bytes": 143799116,
     "expected_payload_count": 49,
-    "github_tag": "v2026-08-22-r13",
-    "predecessor_github_commit": "6b755c43aefc18b69e8c256a9d248850befc83ab",
-    "predecessor_github_tag": "v2026-08-22-r12",
-    "predecessor_record_id": 22051798,
-    "predecessor_version_doi": "10.5281/zenodo.22051798",
+    "github_tag": "v2026-08-22-r14",
+    "predecessor_github_commit": "50cb951c6fb40ad88aa486172675bf79e598f779",
+    "predecessor_github_tag": "v2026-08-22-r13",
+    "predecessor_record_id": 22052017,
+    "predecessor_version_doi": "10.5281/zenodo.22052017",
     "projection_bytes": 6015,
-    "projection_sha256": "6C6EED9D8D77276551300157AA344148A4965F5549D429D283DCEEB1ED1952DA",
+    "projection_sha256": "E5050682E3239DDF49630E5D22F64C3EAB1C168F8E5914F9F432AFAD49954A09",
     "publication_date": "2026-08-22",
     "repository": "https://github.com/KokunoYumeto/sga-es",
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
-    "version": "2026-08-22-r13",
-    "version_doi": "10.5281/zenodo.22052017",
-    "version_record_id": 22052017
+    "version": "2026-08-22-r14",
+    "version_doi": "10.5281/zenodo.22052452",
+    "version_record_id": 22052452
   },
   "rights": {
     "blanket_open_license_claim": false,
@@ -450,20 +450,25 @@
     "license": "notspecified",
     "non_endorsement_preserved": true
   },
-  "schema_version": 8,
-  "status": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
+  "schema_version": 9,
+  "status": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
   "validation": {
-    "appended_r13_assets": 5,
-    "cross_service_identity": "PASS",
+    "appended_r14_assets": [],
+    "cross_service_identity": "PENDING",
     "cumulative_reader_replaced": false,
-    "equivalent_qa_rerun": false,
-    "github_public_readback": "PASS_49_OF_49_SHA256",
-    "inherited_r12_assets_byte_identical": 43,
-    "public_readback_receipt_sha256": "250A6EB1C87789D7DC1EC875E3CA62161E27A11931FF77A4CF6679D6609B69D6",
-    "replaced_r12_assets": [
-      "07_SGA_ES_SHA256_MANIFEST.txt"
+    "deleted_r13_assets": [],
+    "equivalent_full_volume_qa_rerun": false,
+    "github_public_readback": "PENDING",
+    "inherited_r13_assets_byte_identical": 43,
+    "replaced_r13_assets": [
+      "07_SGA_ES_SHA256_MANIFEST.txt",
+      "34_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
+      "35_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
+      "36_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_FUENTES_Y_EVIDENCIA_20260822.zip",
+      "37_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_PUBLICATION_MANIFEST_20260822.json",
+      "38_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_SHA256_MANIFEST_20260822.txt"
     ],
-    "translation_pdfs_mutated": false,
-    "zenodo_public_readback": "PASS_49_OF_49_SHA256"
+    "tome_i_partial_readers_replaced": true,
+    "zenodo_public_readback": "PENDING"
   }
 }

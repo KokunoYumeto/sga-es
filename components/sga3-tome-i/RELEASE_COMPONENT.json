@@ -1,0 +1,39 @@
+{
+  "accepted_canon_bindings": 33,
+  "accessible_corpus_translation_complete": true,
+  "already_conformant_dispositions": 16,
+  "byte_changing_dispositions": 17,
+  "changed_source_files": 18,
+  "component": "SGA 3, tome I",
+  "coverage": "accessible corpus C005-C616: Avertissement, Introduction, Exposés I-VII_B, index",
+  "included_in_cumulative_reader": false,
+  "missing_printed_pages": "v-xviii",
+  "open_candidates_from_this_batch": 0,
+  "publication_manifest": "37_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_PUBLICATION_MANIFEST_20260822.json",
+  "readers": [
+    {
+      "bytes": 5140297,
+      "name": "34_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
+      "pages": 692,
+      "role": "corrected/current",
+      "sha256": "0843763E0027C061B8E2E2065335FB43B156EA66D3204FB8A5C984C311F19EC8"
+    },
+    {
+      "bytes": 3815438,
+      "name": "35_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
+      "pages": 544,
+      "role": "diplomatic/original",
+      "sha256": "B1E0F04ACC7CA265307E879797E38C5FCFC85024FF2F4CC3093360A00F37BB02"
+    }
+  ],
+  "schema": "spanish-sga-release-component/3",
+  "sha256_manifest": "38_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_SHA256_MANIFEST_20260822.txt",
+  "source_projection": {
+    "files": 299,
+    "payload_bytes": 2322164,
+    "projection_bytes": 38229,
+    "sha256": "2603D79821C77E74603E288CF67B433F7FD7E3C4F81184EEFD935EB3FC3AE723"
+  },
+  "sources_evidence": "36_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_FUENTES_Y_EVIDENCIA_20260822.zip",
+  "whole_tome_translation_complete": false
+}

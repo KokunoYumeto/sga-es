@@ -23,7 +23,7 @@
         "name": "Séminaire de Géométrie Algébrique contributors"
       }
     ],
-    "description": "<p>Una sola edición española evolutiva de SGA. La versión 2026-08-22-r13 sucede inmediatamente a r12 (DOI 10.5281/zenodo.22051798) dentro del mismo DOI conceptual. Conserva 43 archivos de r12 byte por byte, regenera el manifiesto SHA-256 acumulativo y añade cinco archivos accesibles de SGA 3, tomo III.</p><p>SGA 3, tomo III está traducido íntegramente: preliminares, contenido, Exposiciones XIX–XXVI e índices terminales. Se publican el lector corregido/actual de 474 páginas, el lector original/diplomático de 462 páginas, fuentes y evidencia reversibles, manifiesto de publicación y manifiesto SHA-256. Las compilaciones deterministas, la auditoría independiente, las 936 páginas de VQA en dos renderizados y el comprobador final pasan sin defectos abiertos. El lector acumulativo heredado de 3.284 páginas no cambia y todavía no incorpora este tomo.</p><p>Treinta y nueve posibles defectos o variantes de la fuente francesa siguen explícitos y pendientes de asignación/deduplicación por Canon; esta versión no afirma que la reconciliación crítica de la fuente esté cerrada. SGA 3, tomo I continúa como corpus parcial C005–C616: faltan las páginas impresas v–xviii. Por tanto SGA 3 y la serie global no se declaran completos.</p><p>El archivo reversible ya estaba preservado byte por byte en el estante histórico DOI 10.5281/zenodo.22050725; r13 lo integra, junto con lectores directamente accesibles, en la única línea española. No se crea un concepto duplicado.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
+    "description": "<p>Una sola edición española evolutiva de SGA. La versión 2026-08-22-r14 sucede inmediatamente a r13 (DOI 10.5281/zenodo.22052017) dentro del mismo DOI conceptual. Conserva 43 archivos de r13 byte por byte y sustituye exactamente seis nombres existentes: el manifiesto SHA-256 acumulativo y los cinco archivos del corpus accesible de SGA 3, tomo I. No añade ni elimina nombres.</p><p>Esta revisión integra treinta y tres disposiciones aceptadas de Canon (SGA-SRC-000818, 000819 y 000833–000863). Diecisiete disposiciones producen cambios españoles en dieciocho archivos; dieciséis ya eran conformes y se conservan byte por byte. Los lectores finales tienen 692 páginas en la rama corregida/actual y 544 en la rama original/diplomática. Una compilación dual nueva, VQA dirigida a las páginas afectadas, auditoría independiente y comprobador final pasan sobre los mismos bytes congelados, sin repetir QA equivalente de todo el volumen.</p><p>El alcance sigue siendo deliberadamente parcial: C005–C616, con Avertissement, Introduction, Exposiciones I–VII_B e índice. Las páginas impresas v–xviii siguen ausentes; no se afirma que el tomo I esté completo. El lector acumulativo heredado de 3.284 páginas no cambia y no incorpora este corpus parcial.</p><p>El paquete reversible actualiza fuentes, evidencia, trazabilidad de Canon y las correcciones francesas de procedencia ya aceptadas, sin alterar la rama diplomática. No se crea un concepto ni depósito duplicado.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
     "imprint_publisher": "Zenodo",
     "keywords": [
       "SGA",
@@ -47,16 +47,18 @@
       "edición reversible",
       "SGA 3, tome III",
       "esquemas en grupos reductivos",
-      "edición diplomática"
+      "edición diplomática",
+      "corpus accesible C005-C616",
+      "reconciliación de fuentes"
     ],
     "language": "spa",
     "license": "notspecified",
-    "notes": "<p>Existing-lineage r13 adds the complete sealed Spanish SGA 3 Tome-III component as five assets; the cumulative reader is unchanged, Tome I remains partial, and 39 Tome-III Canon candidates remain explicit.</p>",
+    "notes": "<p>Existing-lineage r14 is a bounded SGA 3 Tome-I source-reconciliation upgrade: 33 accepted Canon bindings, 17 byte-changing dispositions across 18 files, 16 already-conformant dispositions, and exact replacement of assets 07 and 34–38. Printed v–xviii remain missing, so Tome I is not complete.</p>",
     "publication_date": "2026-08-22",
     "publication_type": "other",
     "related_identifiers": [
       {
-        "identifier": "10.5281/zenodo.22051798",
+        "identifier": "10.5281/zenodo.22052017",
         "relation": "isNewVersionOf",
         "scheme": "doi"
       },
@@ -78,6 +80,6 @@
     ],
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
     "upload_type": "publication",
-    "version": "2026-08-22-r13"
+    "version": "2026-08-22-r14"
   }
 }

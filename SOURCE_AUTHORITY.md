@@ -9,3 +9,7 @@ Historical copyright notices are provenance only and do not restrict this indepe
 ## r13 SGA 3 Tome-III scope
 
 The complete current and diplomatic Spanish readers are sealed against a 196-file source projection. Thirty-nine French-source candidates remain explicit and Canon-owned; no silent correction or source-closure claim is made. The cumulative reader is unchanged.
+
+## r14 SGA 3 Tome-I bounded Canon reconciliation
+
+The 299-file C005-C616 Spanish projection binds accepted Canon IDs 000818, 000819, and 000833-000863. Seventeen dispositions changed 18 source files; sixteen were already conformant. Fresh current/original builds, targeted VQA, independent audit, and the final checker pass. Printed v-xviii remain unavailable, so no whole-tome completion claim is made.
