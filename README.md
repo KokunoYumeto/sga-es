@@ -1,18 +1,13 @@
-# Séminaires de Géométrie Algébrique — edición española acumulativa
+# Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica
 
-Versión `2026-08-22-r15` · DOI de versión `10.5281/zenodo.22053281` · DOI conceptual estable `10.5281/zenodo.21923955`.
+Versión `2026-08-22-r17` · DOI de versión `10.5281/zenodo.22059051` · DOI conceptual estable `10.5281/zenodo.21923955`.
 
-Esta versión sucede a `v2026-08-22-r14` / `10.5281/zenodo.22052452`. Conserva byte por byte 43 archivos de r14 y sustituye exactamente `07_SGA_ES_SHA256_MANIFEST.txt` y los cinco activos 39–43 de SGA 3, tomo III. No añade ni elimina nombres. El lector acumulativo heredado de 3.284 páginas permanece sin cambios.
+## Edición española acumulativa completa
 
-## SGA 3, tomo III — reconciliación cerrada del Canon
+El lector enlazado de 4.450 páginas contiene los trece libros en orden canónico: SGA 1; SGA 2; SGA 3, tomos I–III; SGA 4, tomos I–III; SGA 4½; SGA 5; SGA 6; y SGA 7, tomos I–II. SGA 3, tomo I ocupa las páginas 502–1193, tomo II las páginas 1194–1603 y tomo III las páginas 1604–2077.
 
-El tomo completo integra 39 disposiciones aceptadas del Canon: 33 registros nuevos, seis duplicados vinculados y tres nuevas ramas españolas reversibles (SGA-SRC-000778, SGA-SRC-000799 y SGA-SRC-000800). Treinta y seis disposiciones ya eran conformes o probatorias. Se publican lectores corregido/actual (474 páginas) y original/diplomático (462 páginas), fuentes/evidencia reversibles y manifiestos.
+r17 sucede a Zenodo r16 (`10.5281/zenodo.22054046`) en el mismo linaje. Conserva 36 activos de r16 byte por byte y sustituye exactamente el lector acumulativo, la evidencia global y el manifiesto (00, 06 y 07) para corregir las superficies bilingües; el contenido matemático y las fuentes permanecen sin cambios. El inventario de la versión contiene exactamente 39 activos.
 
-La rama diplomática permanece idéntica a r14; en la rama actual solo cambian las páginas 152 y 335. La compilación final y su repetición son idénticas para PDF, AUX y OUT. La VQA cubrió únicamente esas páginas y una repetición de control independiente verificó los mismos bytes. No se repitió QA equivalente de todo el tomo.
+En GitHub, r17 sucede al último tag público r15; el tag r16 no se creó durante la suspensión temporal de la cuenta. Esto no omite ninguna obra: los bytes públicos r17 coinciden con Zenodo. El espejo educativo PDF ligero se mantiene en Figshare `10.6084/m9.figshare.33314850.v1`.
 
-Los avisos históricos de copyright son únicamente procedencia y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni licencia abierta general. Se preservan atribución, relaciones entre autores y fuentes, procedencia y no aprobación.
-
-## Alcance completo de la obra original (R15-SGA3-TOME-I-ORIGINAL-SCOPE-COMPLETE)
-
-SGA 3, tomo I está completo para la obra matemática original C005–C616. El envoltorio editorial independiente añadido por SMF en 2011, pp. v–xviii, está fuera de alcance y no es trabajo faltante. Por tanto, los tomos I–III de SGA 3 y la serie española definida por las obras matemáticas originales están completos. Los tomos I y III siguen publicados como activos independientes; el lector acumulativo no cambia.
-
+Los avisos históricos de copyright son únicamente procedencia. No se afirma dominio público ni licencia abierta general. Se preservan atribución, relaciones entre autores y fuentes, procedencia y no aprobación.

@@ -1,36 +1,24 @@
 {
   "appended_assets": [],
   "blanket_public_domain_or_open_license_claim": false,
-  "complete_assets": 49,
+  "complete_assets": 39,
   "concept_doi": "10.5281/zenodo.21923955",
   "concept_record_id": 21923955,
   "deleted_assets": [],
-  "duplicate_deposit_forbidden": true,
+  "edition_complete": true,
   "existing_lineage_only": true,
-  "global_original_work_series_complete": true,
+  "figshare_pdf_mirror_uses_same_evolving_item": true,
   "historical_copyright_notices_are_provenance_only": true,
-  "inherited_assets_byte_identical": 43,
-  "predecessor_record_id": 22052452,
+  "inherited_assets_byte_identical": 36,
+  "predecessor_record_id": 22054046,
   "public_byte_readback_required": true,
-  "qa_sufficiency": "Frozen-byte dual build/replay, focused changed-page VQA, and independent control replay PASS; only public readback is repeated.",
-  "release_version": "2026-08-22-r15",
+  "release_version": "2026-08-22-r17",
   "replaced_assets": [
-    "07_SGA_ES_SHA256_MANIFEST.txt",
-    "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
-    "40_SGA3_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
-    "41_SGA3_TOME_III_FUENTES_Y_EVIDENCIA_20260822.zip",
-    "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
-    "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt"
+    "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+    "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+    "07_SGA_ES_SHA256_MANIFEST.txt"
   ],
-  "schema": "spanish-sga-canon-publication-policy/7",
-  "scope_correction_assets_changed": false,
-  "scope_correction_new_version_created": false,
-  "scope_correction_qa_repeated": false,
-  "source_reconciliation_qualification": "39 accepted Tome-III dispositions closed; 33 new records, six deduplications, three reversible Spanish bindings; zero open candidates from this batch",
-  "successor_record_id": 22053281,
-  "tome_i_original_scope_completion": {
-    "excluded_disposition": "OUT_OF_SCOPE_2011_EDITORIAL_MATTER",
-    "receipt_sha256": "B6076ACC69B24B2F74C78C62391FA37EBD9AB9D66C8CB33BE0C539DD932DD7FA",
-    "status": "COMPLETE"
-  }
+  "schema": "spanish-sga-publication-policy/9",
+  "sga3_tomes_i_iii_integrated": true,
+  "successor_record_id": 22059051
 }

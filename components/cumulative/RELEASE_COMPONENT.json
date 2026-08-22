@@ -1,0 +1,24 @@
+{
+  "books": 13,
+  "component": "complete cumulative Spanish SGA edition",
+  "coverage": "SGA 1-7, including SGA 3 Tomes I-III, in canonical order",
+  "editable_sources": {
+    "bytes": 5695474,
+    "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
+    "sha256": "B40A9D84217DBE94B1823C57683746FAEAC195EE23EDA21D40D944BBCD1926B5"
+  },
+  "edition_complete": true,
+  "evidence_and_provenance": {
+    "bytes": 61288267,
+    "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
+    "sha256": "255EFA62B5217437E70DD875D3172BA337863AECD2CF0BF7EA172A0AF5B31703"
+  },
+  "pages": 4450,
+  "reader": {
+    "bytes": 31913355,
+    "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
+    "sha256": "F27703FB89DA4793C2E825B87DBB4E9F149DC1B41A42445DD3A1F39A8C2CABC7"
+  },
+  "schema": "spanish-sga-release-component/7",
+  "sha256_manifest": "07_SGA_ES_SHA256_MANIFEST.txt"
+}

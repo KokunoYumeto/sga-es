@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this edition, cite the exact version DOI and retain the component and Canon-reconciliation scope."
-title: "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition"
-version: "2026-08-22-r15"
+message: "If you use this edition, cite the exact version DOI and retain the complete cumulative scope."
+title: "Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica (SGA) — edición española acumulativa / Cumulative Spanish Edition"
+version: "2026-08-22-r17"
 date-released: 2026-08-22
-doi: "10.5281/zenodo.22053281"
+doi: "10.5281/zenodo.22059051"
 url: "https://github.com/KokunoYumeto/sga-es"
 type: dataset
 authors:
@@ -14,6 +14,5 @@ keywords:
   - algebraic geometry
   - SGA
   - Spanish translation
-  - SGA 3
-  - SGA 3, Tome III
+  - complete cumulative edition
 license: other

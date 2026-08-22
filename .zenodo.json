@@ -22,7 +22,7 @@
       "name": "Séminaire de Géométrie Algébrique contributors"
     }
   ],
-  "description": "<p>Una sola edición española evolutiva de SGA. La versión 2026-08-22-r15 sucede inmediatamente a r14 (DOI 10.5281/zenodo.22052452) dentro del mismo DOI conceptual. Conserva 43 archivos de r14 byte por byte y sustituye exactamente seis nombres existentes: el manifiesto SHA-256 acumulativo y los cinco activos de SGA 3, tomo III. No añade ni elimina nombres.</p><p>Esta revisión cierra treinta y nueve disposiciones aceptadas del Canon: treinta y tres registros nuevos, seis duplicados vinculados y tres nuevas ramas españolas reversibles (SGA-SRC-000778, SGA-SRC-000799 y SGA-SRC-000800). Treinta y seis disposiciones ya eran conformes o probatorias y se conservaron. Los lectores finales tienen 474 páginas en la rama corregida/actual y 462 en la rama original/diplomática. La rama diplomática es idéntica a r14; en la rama actual solo cambian las páginas 152 y 335.</p><p>Una compilación dual final y su repetición son idénticas para PDF, AUX y OUT; la proyección de 196 fuentes permanece cerrada. La VQA focalizada cubre las únicas páginas cambiadas y una repetición de control independiente pasa sobre los mismos bytes, sin repetir QA equivalente de todo el volumen. El tomo III está traducido por completo y reconciliado con este lote del Canon. El lector acumulativo heredado de 3.284 páginas no cambia.</p><p>El paquete reversible actualiza fuentes, evidencia, trazabilidad del Canon y las correcciones de procedencia aceptadas, sin alterar la rama diplomática. No se crea un concepto ni depósito duplicado.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p><p><strong>Corrección de alcance (R15-SGA3-TOME-I-ORIGINAL-SCOPE-COMPLETE).</strong> Por decisión directa de Floris del 22 de agosto de 2026, el trabajo matemático original de SGA 3, tomo I —Avertissement, Introduction, Exposés I–VII_B e índice, C005–C616— está traducido y completo. El envoltorio editorial independiente añadido por SMF en 2011, pp. v–xviii, está fuera del alcance autorizado y no constituye trabajo faltante. En consecuencia, los tomos I–III de SGA 3 y la serie española definida por las obras matemáticas originales están completos; los lectores de los tomos I y III siguen siendo activos independientes y el lector acumulativo de 3.284 páginas no cambia.</p>",
+  "description": "<p><strong>Corrección bilingüe del título / Bilingual title correction.</strong> La versión r17 presenta el nombre de la serie como <em>Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica</em> en la portada, la cita, los metadatos PDF, la evidencia activa y el título del registro. Los trece libros matemáticos permanecen sin cambios.</p><p>La versión 2026-08-22-r17 sucede inmediatamente a r16 (DOI <a href=\"https://doi.org/10.5281/zenodo.22054046\">10.5281/zenodo.22054046</a>) dentro del mismo DOI conceptual. Conserva 36 activos de r16 byte por byte y sustituye exactamente 00, 06 y 07 para corregir las superficies bilingües; no cambia el contenido matemático ni las fuentes de los trece libros. El inventario permanece en 39 activos.</p><p>La edición española acumulativa está completa: SGA 1, SGA 2, SGA 3 tomos I–III, SGA 4 tomos I–III, SGA 4½, SGA 5, SGA 6 y SGA 7 tomos I–II aparecen en orden canónico en un lector enlazado de 4.450 páginas, con navegación interna y cobertura verificadas.</p><p>Zenodo conserva el paquete archival completo: lector acumulativo, PDF individuales, fuentes editables, evidencia y procedencia, y manifiestos SHA-256. El espejo educativo ligero de Figshare, con el lector acumulativo como PDF principal y sin los grandes paquetes de procedencia, está disponible en <a href=\"https://doi.org/10.6084/m9.figshare.33314850.v1\">10.6084/m9.figshare.33314850.v1</a>. La línea evolutiva de Figshare es <a href=\"https://doi.org/10.6084/m9.figshare.33314850\">10.6084/m9.figshare.33314850</a>.</p><p>Se mantiene el repositorio GitHub existente <a href=\"https://github.com/KokunoYumeto/sga-es\">KokunoYumeto/sga-es</a>; no se ha creado un repositorio ni un depósito duplicado.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
   "imprint_publisher": "Zenodo",
   "keywords": [
     "SGA",
@@ -51,16 +51,19 @@
     "reconciliación del Canon",
     "traducción matemática española",
     "obra matemática original completa",
-    "alcance editorial 2011 excluido"
+    "alcance editorial 2011 excluido",
+    "edición española acumulativa completa",
+    "SGA 3, tomos I–III",
+    "lector enlazado"
   ],
   "language": "spa",
   "license": "notspecified",
-  "notes": "<p>Existing-lineage r15 reconciles the complete translated SGA 3 Tome III with 39 accepted Canon dispositions, introduces three reversible Spanish bindings, preserves the diplomatic reader byte-for-byte, and replaces only assets 07 and 39–43.</p><p>R15-SGA3-TOME-I-ORIGINAL-SCOPE-COMPLETE: SGA 3 Tome I is complete for the original mathematical-work scope. The separately authored 2011 SMF editorial wrapper on printed pp. v–xviii is out of scope and is not missing translation work. No payload asset changed.</p>",
+  "notes": "<p>r17: 39 files; 36 inherited byte-for-byte from r16; only assets 00, 06, and 07 replaced. Mathematical/source content is unchanged. The 4,450-page cumulative reader is the default preview. Lean Figshare PDF mirror: 10.6084/m9.figshare.33314850.v1. GitHub remains the same repository while account restoration is pending.</p>",
   "publication_date": "2026-08-22",
   "publication_type": "other",
   "related_identifiers": [
     {
-      "identifier": "10.5281/zenodo.22052452",
+      "identifier": "10.5281/zenodo.22054046",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     },
@@ -78,9 +81,14 @@
       "identifier": "https://github.com/KokunoYumeto/sga-es",
       "relation": "isSupplementedBy",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.6084/m9.figshare.33314850",
+      "relation": "isSupplementedBy",
+      "scheme": "doi"
     }
   ],
-  "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
+  "title": "Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica (SGA) — edición española acumulativa / Cumulative Spanish Edition",
   "upload_type": "publication",
-  "version": "2026-08-22-r15"
+  "version": "2026-08-22-r17"
 }

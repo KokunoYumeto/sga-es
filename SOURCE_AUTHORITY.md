@@ -1,19 +1,13 @@
 # Source authority and translation scope
 
-Version `2026-08-21-r10` is the direct existing-lineage successor to Zenodo record `22050350` / DOI `10.5281/zenodo.22050350` and GitHub release `v2026-08-21-r9`. It preserves 32 predecessor assets byte-identically, replaces the cumulative reader with the final 3,284-page revision, regenerates the cumulative SHA-256 manifest, and appends the independently sealed Spanish edition of SGA 3, Tome II.
+Version `2026-08-22-r17` is the complete cumulative Spanish SGA edition in the existing Zenodo concept `10.5281/zenodo.21923955` and GitHub repository `KokunoYumeto/sga-es`. The 4,450-page reader integrates all thirteen mathematical books in canonical order. Editable sources, reversible correction branches, and audit/provenance evidence remain bound in assets 05 and 06; the global SHA-256 manifest is asset 07.
 
-SGA 3 Tome II supplies corrected/current and diplomatic/original 410-page readers with SHA-256 `FC8B852A812D42472E8AE57F1D9CB087BB9ACF51CE0CFE7C245C1A9203266BA7` and `639007DFF1E0BCE822585ACD063FE32DE9EF7E027EA7391BA71B85E9CDCA43C4`. Tome II is complete; SGA 3 overall remains incomplete because Tomes I and III are absent.
+## SGA 3 scope
 
-Historical copyright notices are provenance only and do not restrict this independent mathematical edition or publication. No blanket public-domain or open-license claim is made. No separate DOI is assigned to any volume, exposé, component, or branch.
+SGA 3 Tome I covers the complete original mathematical corpus C005-C616 (Exposés I-VII_B and index). The independently authored 2011 SMF editorial wrapper, printed pp. v-xviii, is outside that edition's scope. Tome II covers Exposés VIII-XVIII and the notation index. Tome III covers its front matter, Exposés XIX-XXVI, and terminal indices. All three are integrated at cumulative pages 502-2077.
 
-## r13 SGA 3 Tome-III scope
+## r17 title-surface correction
 
-The complete current and diplomatic Spanish readers are sealed against a 196-file source projection. Thirty-nine French-source candidates remain explicit and Canon-owned; no silent correction or source-closure claim is made. The cumulative reader is unchanged.
+r17 preserves 36 r16 assets byte-for-byte and replaces only 00, 06, and 07 to present the bilingual series name consistently. Mathematical and editable-source content is unchanged. The Figshare record `10.6084/m9.figshare.33314850` is a lean PDF access mirror, not a competing canon.
 
-## r14 SGA 3 Tome-I bounded Canon reconciliation
-
-The 299-file C005-C616 Spanish projection binds accepted Canon IDs 000818, 000819, and 000833-000863. Seventeen dispositions changed 18 source files; sixteen were already conformant. Fresh current/original builds, targeted VQA, independent audit, and the final checker pass. By Floris's direct 2026-08-22 scope decision (R15-SGA3-TOME-I-ORIGINAL-SCOPE-COMPLETE), C005-C616 is the complete original SGA 3-I mathematical edition. Printed v-xviii are separately authored 2011 SMF editorial-wrapper matter, deliberately out of scope and absent; no claim is made to reproduce the complete 2011 physical wrapper.
-
-## r15 SGA 3 Tome-III Canon reconciliation
-
-The complete 196-file Spanish projection binds 39 accepted dispositions: 33 new records, six deduplications, and three new reversible Spanish branches (000778, 000799, 000800). Thirty-six rows were already conformant or evidence-only. Final current/original seal and replay builds, focused VQA on the only changed current pages 152 and 335, and an independent control replay pass. The diplomatic reader is byte-identical to r14.
+Historical copyright notices are provenance only and do not restrict this independent mathematical edition or publication. No blanket public-domain or open-license claim is made. Attribution, author/source relationships, provenance, reversible branch history, and non-endorsement are preserved.
