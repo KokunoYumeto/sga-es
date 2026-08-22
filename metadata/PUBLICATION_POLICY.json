@@ -7,6 +7,7 @@
   "deleted_assets": [],
   "duplicate_deposit_forbidden": true,
   "existing_lineage_only": true,
+  "global_original_work_series_complete": true,
   "historical_copyright_notices_are_provenance_only": true,
   "inherited_assets_byte_identical": 43,
   "predecessor_record_id": 22052452,
@@ -22,6 +23,14 @@
     "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt"
   ],
   "schema": "spanish-sga-canon-publication-policy/7",
+  "scope_correction_assets_changed": false,
+  "scope_correction_new_version_created": false,
+  "scope_correction_qa_repeated": false,
   "source_reconciliation_qualification": "39 accepted Tome-III dispositions closed; 33 new records, six deduplications, three reversible Spanish bindings; zero open candidates from this batch",
-  "successor_record_id": 22053281
+  "successor_record_id": 22053281,
+  "tome_i_original_scope_completion": {
+    "excluded_disposition": "OUT_OF_SCOPE_2011_EDITORIAL_MATTER",
+    "receipt_sha256": "B6076ACC69B24B2F74C78C62391FA37EBD9AB9D66C8CB33BE0C539DD932DD7FA",
+    "status": "COMPLETE"
+  }
 }

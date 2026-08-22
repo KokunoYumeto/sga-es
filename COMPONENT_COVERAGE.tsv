@@ -10,5 +10,5 @@ SGA 5	complete	1969-2294	03,03B	Current branch in cumulative; diplomatic branch 
 SGA 6	complete	2295-2671	04	Complete Spanish reader
 SGA 7, Tome I	complete	2672-3006	08,09,10,11	Current branch in cumulative; diplomatic branch and source/evidence separate
 SGA 7, Tome II	complete	3007-3284	12,13,14,15	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 3, Tome I	bounded-partial/canon-batch-closed	C005-C616	34,35,36,37,38	33 accepted Canon bindings integrated; printed v-xviii absent; not in cumulative reader
 SGA 3, Tome III	complete/canon-batch-reconciled	front matter; XIX-XXVI; terminal indices	39,40,41,42,43	39 accepted Canon dispositions closed; 33 new records; six deduplications; three reversible Spanish bindings; not in cumulative reader
+SGA 3, Tome I	complete-original-scope/canon-batch-closed	C005-C616	34,35,36,37,38	Original SGA 3-I mathematical work complete; 33 accepted Canon bindings integrated; printed v-xviii are excluded 2011 editorial-wrapper matter and absent; not in cumulative reader

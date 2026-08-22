@@ -3,8 +3,7 @@
     "complete": [
       "SGA 1",
       "SGA 2",
-      "SGA 3, tome II",
-      "SGA 3, tome III (translation complete; 39-disposition Canon batch reconciled)",
+      "SGA 3, tome I (original mathematical scope complete; C005-C616; printed v-xviii excluded as 2011 editorial-wrapper matter)",
       "SGA 4, tome I",
       "SGA 4, tome II",
       "SGA 4, tome III",
@@ -14,13 +13,9 @@
       "SGA 7, tome I",
       "SGA 7, tome II"
     ],
-    "global_series_complete": false,
-    "incomplete": [
-      "SGA 3 overall incomplete because Tome I is incomplete"
-    ],
-    "partial": [
-      "SGA 3, tome I accessible corpus C005-C616; printed v-xviii absent"
-    ]
+    "global_series_complete": true,
+    "incomplete": [],
+    "partial": []
   },
   "payload": [
     {
@@ -469,6 +464,11 @@
       "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
       "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt"
     ],
+    "scope_correction_asset_bytes_changed": false,
+    "scope_correction_asset_qa_repeated": false,
+    "scope_correction_receipt": "receipts/R15_SCOPE_CORRECTION_PUBLIC_EVIDENCE.json",
+    "tome_i_2011_editorial_wrapper_disposition": "OUT_OF_SCOPE_2011_EDITORIAL_MATTER",
+    "tome_i_original_scope_completion": "PASS_TERMINAL_RECEIPT",
     "tome_iii_readers_replaced": true,
     "zenodo_public_readback": "PASS_49_OF_49_SHA256"
   }

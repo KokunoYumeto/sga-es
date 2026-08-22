@@ -4,11 +4,15 @@
   "already_conformant_dispositions": 16,
   "byte_changing_dispositions": 17,
   "changed_source_files": 18,
+  "complete_2011_physical_wrapper_reproduced": false,
   "component": "SGA 3, tome I",
-  "coverage": "accessible corpus C005-C616: Avertissement, Introduction, Exposés I-VII_B, index",
+  "coverage": "original mathematical work C005-C616: Avertissement, Introduction, Exposés I-VII_B, notes, bibliographies, diagrams, and Tome-I index",
+  "excluded_2011_editorial_wrapper": "printed v-xviii",
+  "excluded_2011_editorial_wrapper_disposition": "OUT_OF_SCOPE_2011_EDITORIAL_MATTER",
   "included_in_cumulative_reader": false,
-  "missing_printed_pages": "v-xviii",
+  "missing_required_work": [],
   "open_candidates_from_this_batch": 0,
+  "original_mathematical_work_complete": true,
   "publication_manifest": "37_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_PUBLICATION_MANIFEST_20260822.json",
   "readers": [
     {
@@ -26,7 +30,7 @@
       "sha256": "B1E0F04ACC7CA265307E879797E38C5FCFC85024FF2F4CC3093360A00F37BB02"
     }
   ],
-  "schema": "spanish-sga-release-component/3",
+  "schema": "spanish-sga-release-component/4",
   "sha256_manifest": "38_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_SHA256_MANIFEST_20260822.txt",
   "source_projection": {
     "files": 299,
@@ -35,5 +39,9 @@
     "sha256": "2603D79821C77E74603E288CF67B433F7FD7E3C4F81184EEFD935EB3FC3AE723"
   },
   "sources_evidence": "36_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_FUENTES_Y_EVIDENCIA_20260822.zip",
-  "whole_tome_translation_complete": false
+  "status": "COMPLETE_ORIGINAL_MATHEMATICAL_WORK",
+  "terminal_scope_receipt": {
+    "bytes": 4559,
+    "sha256": "B6076ACC69B24B2F74C78C62391FA37EBD9AB9D66C8CB33BE0C539DD932DD7FA"
+  }
 }

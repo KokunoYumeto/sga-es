@@ -1,0 +1,45 @@
+{
+  "asset_identity": {
+    "asset_qa_repeated": false,
+    "bytes": 144257721,
+    "files": 49,
+    "github_before_equals_after": true,
+    "sha256_projection": "7FA8C4B75738CFBD2CD7698933DB95483439B8DB06CF9139EF2ECB53F47C2044",
+    "zenodo_before_equals_after": true
+  },
+  "authority": {
+    "terminal_condition": "SATISFIED",
+    "terminal_receipt_bytes": 4559,
+    "terminal_receipt_sha256": "B6076ACC69B24B2F74C78C62391FA37EBD9AB9D66C8CB33BE0C539DD932DD7FA"
+  },
+  "external_metadata": {
+    "github_release_body_sha256": "AA8F2CDD5FB005596653CEF56E09979F7F571AE94F2BDFB85060BC7564EB191E",
+    "scope_marker": "R15-SGA3-TOME-I-ORIGINAL-SCOPE-COMPLETE",
+    "zenodo_metadata_sha256": "738F2326E71A6D07A091D19C8475359422C2207AA6339B22FD2AA410D4BC905B"
+  },
+  "lineage": {
+    "concept_doi": "10.5281/zenodo.21923955",
+    "frozen_tag_commit": "9c012e8d9d2157ca077dd9c5956235708da70d83",
+    "github_release_id": 374808150,
+    "github_tag": "v2026-08-22-r15",
+    "new_release_created": false,
+    "new_version_created": false,
+    "version_doi": "10.5281/zenodo.22053281",
+    "zenodo_record_id": 22053281
+  },
+  "schema": "spanish-sga-r15-scope-correction-public-evidence/1",
+  "scope": {
+    "excluded_2011_editorial_wrapper_disposition": "OUT_OF_SCOPE_2011_EDITORIAL_MATTER",
+    "global_original_work_series_complete": true,
+    "sga3_tome_i_original_mathematical_work_complete": true,
+    "sga3_tomes_i_ii_iii_complete": true
+  },
+  "status": "PASS_METADATA_CORRECTED_ASSETS_UNCHANGED",
+  "supersession": {
+    "historical_asset_readback_remains_valid": true,
+    "historical_receipt": "receipts/R15_PUBLIC_READBACK_RECEIPT.json",
+    "replacement": "SGA 3 Tomes I-III complete under Floris's original-mathematical-work scope; 2011 wrapper out of scope",
+    "superseded_field": "scope.sga3_overall_complete=false"
+  },
+  "verified_utc": "2026-08-22T05:44:49.433416Z"
+}

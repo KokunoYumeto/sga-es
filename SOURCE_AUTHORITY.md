@@ -12,7 +12,7 @@ The complete current and diplomatic Spanish readers are sealed against a 196-fil
 
 ## r14 SGA 3 Tome-I bounded Canon reconciliation
 
-The 299-file C005-C616 Spanish projection binds accepted Canon IDs 000818, 000819, and 000833-000863. Seventeen dispositions changed 18 source files; sixteen were already conformant. Fresh current/original builds, targeted VQA, independent audit, and the final checker pass. Printed v-xviii remain unavailable, so no whole-tome completion claim is made.
+The 299-file C005-C616 Spanish projection binds accepted Canon IDs 000818, 000819, and 000833-000863. Seventeen dispositions changed 18 source files; sixteen were already conformant. Fresh current/original builds, targeted VQA, independent audit, and the final checker pass. By Floris's direct 2026-08-22 scope decision (R15-SGA3-TOME-I-ORIGINAL-SCOPE-COMPLETE), C005-C616 is the complete original SGA 3-I mathematical edition. Printed v-xviii are separately authored 2011 SMF editorial-wrapper matter, deliberately out of scope and absent; no claim is made to reproduce the complete 2011 physical wrapper.
 
 ## r15 SGA 3 Tome-III Canon reconciliation
 
