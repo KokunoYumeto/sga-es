@@ -1,21 +1,21 @@
 {
-  "schema": "spanish-sga-lineage-pointer/5",
+  "schema": "spanish-sga-lineage-pointer/6",
   "concept_record_id": 21923955,
   "concept_doi": "10.5281/zenodo.21923955",
   "predecessor": {
-    "version": "2026-08-21-r10",
-    "record_id": 22050499,
-    "doi": "10.5281/zenodo.22050499",
-    "github_tag": "v2026-08-21-r10",
-    "github_commit": "2d9d30a447b19c0a4e8779ba6e97cabbc67e9564",
-    "public_cross_service_readback": "PASS"
-  },
-  "successor": {
     "version": "2026-08-22-r11",
     "record_id": 22051743,
     "doi": "10.5281/zenodo.22051743",
     "github_tag": "v2026-08-22-r11",
-    "state_at_commit": "PUBLIC_AND_READBACK_PASS",
+    "github_commit": "4ddca1f400553f0d92246420ec3b42f9a38cc6a3",
+    "public_state": "PUBLIC_MANIFEST_STALE"
+  },
+  "successor": {
+    "version": "2026-08-22-r12",
+    "record_id": 22051798,
+    "doi": "10.5281/zenodo.22051798",
+    "github_tag": "v2026-08-22-r12",
+    "state_at_commit": "ZENODO_PUBLIC_GITHUB_STAGING",
     "bounded_scope": "SGA 3 Tome I C005-C616; printed v-xviii absent"
   },
   "duplicate_deposit": false

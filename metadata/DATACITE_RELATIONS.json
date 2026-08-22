@@ -1,19 +1,19 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "object_scope": "one evolving Spanish SGA edition",
   "family_mode": "evolving_corpus",
   "resource_type_general": "Collection",
-  "version": "2026-08-22-r11",
-  "version_doi": "10.5281/zenodo.22051743",
-  "version_record_id": 22051743,
+  "version": "2026-08-22-r12",
+  "version_doi": "10.5281/zenodo.22051798",
+  "version_record_id": 22051798,
   "concept_doi": "10.5281/zenodo.21923955",
   "concept_record_id": 21923955,
-  "predecessor_version_doi": "10.5281/zenodo.22050499",
-  "predecessor_record_id": 22050499,
-  "predecessor_github_tag": "v2026-08-21-r10",
+  "predecessor_version_doi": "10.5281/zenodo.22051743",
+  "predecessor_record_id": 22051743,
+  "predecessor_github_tag": "v2026-08-22-r11",
   "relations": [
     {
-      "subject": "10.5281/zenodo.22051743",
+      "subject": "10.5281/zenodo.22051798",
       "relation": "IsVersionOf",
       "object": "10.5281/zenodo.21923955",
       "object_type": "DOI"
@@ -21,19 +21,19 @@
     {
       "subject": "10.5281/zenodo.21923955",
       "relation": "HasVersion",
+      "object": "10.5281/zenodo.22051798",
+      "object_type": "DOI"
+    },
+    {
+      "subject": "10.5281/zenodo.22051798",
+      "relation": "IsNewVersionOf",
       "object": "10.5281/zenodo.22051743",
       "object_type": "DOI"
     },
     {
       "subject": "10.5281/zenodo.22051743",
-      "relation": "IsNewVersionOf",
-      "object": "10.5281/zenodo.22050499",
-      "object_type": "DOI"
-    },
-    {
-      "subject": "10.5281/zenodo.22050499",
       "relation": "IsPreviousVersionOf",
-      "object": "10.5281/zenodo.22051743",
+      "object": "10.5281/zenodo.22051798",
       "object_type": "DOI"
     },
     {

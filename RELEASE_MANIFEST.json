@@ -1,24 +1,24 @@
 {
   "schema_version": 7,
-  "status": "PUBLIC_AND_ANONYMOUS_READBACK_PASS",
+  "status": "ZENODO_PUBLIC_GITHUB_STAGING",
   "release": {
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
-    "version": "2026-08-22-r11",
+    "version": "2026-08-22-r12",
     "publication_date": "2026-08-22",
-    "version_doi": "10.5281/zenodo.22051743",
-    "version_record_id": 22051743,
+    "version_doi": "10.5281/zenodo.22051798",
+    "version_record_id": 22051798,
     "concept_doi": "10.5281/zenodo.21923955",
     "concept_record_id": 21923955,
-    "predecessor_version_doi": "10.5281/zenodo.22050499",
-    "predecessor_record_id": 22050499,
-    "predecessor_github_tag": "v2026-08-21-r10",
-    "predecessor_github_commit": "2d9d30a447b19c0a4e8779ba6e97cabbc67e9564",
-    "github_tag": "v2026-08-22-r11",
+    "predecessor_version_doi": "10.5281/zenodo.22051743",
+    "predecessor_record_id": 22051743,
+    "predecessor_github_tag": "v2026-08-22-r11",
+    "predecessor_github_commit": "4ddca1f400553f0d92246420ec3b42f9a38cc6a3",
+    "github_tag": "v2026-08-22-r12",
     "repository": "https://github.com/KokunoYumeto/sga-es",
     "expected_payload_count": 44,
-    "expected_payload_bytes": 131381880,
+    "expected_payload_bytes": 131382618,
     "projection_bytes": 5393,
-    "projection_sha256": "B8FEC0FD55263EFB859C9050E861C32ECB931EFE882D4ABD63936A24D04F0BA5",
+    "projection_sha256": "6910C3B34BB449983ACCF38B910A9ADE2744C7EE9AC48741368E2C4D52A023B8",
     "duplicate_deposit": false
   },
   "coverage": {
@@ -113,10 +113,10 @@
     {
       "ordinal": 8,
       "name": "07_SGA_ES_SHA256_MANIFEST.txt",
-      "bytes": 4738,
-      "sha256": "182FDE8A73CCD34CB3027A565D7B2990137CDA61DBA7E37064B9A6BA1FFF98F4",
+      "bytes": 5476,
+      "sha256": "684DD08CF7BAF32C61737AEDF87D9731ADA728D084543ADAEC1D9A438A31C801",
       "component": "Spanish SGA cumulative lineage",
-      "role": "replacement global SHA-256 manifest"
+      "role": "corrected r12 cumulative SHA-256 manifest"
     },
     {
       "ordinal": 9,
@@ -404,18 +404,17 @@
     }
   ],
   "validation": {
-    "inherited_r10_assets_byte_identical": 39,
-    "replaced_r10_assets": [],
-    "appended_r11_assets": 5,
+    "inherited_r11_assets_byte_identical": 43,
+    "replaced_r11_assets": [
+      "07_SGA_ES_SHA256_MANIFEST.txt"
+    ],
+    "appended_r12_assets": 0,
     "cumulative_reader_replaced": false,
-    "deterministic_builds": "PASS",
-    "semantic_and_source_controls": "PASS_BOUNDED_WITH_31_OPEN_CANON_CANDIDATES",
-    "visual_qa": "PASS_1238_PAGES",
-    "independent_audits": "PASS",
-    "fail_closed_controls": "PASS",
-    "zenodo_public_readback": "PASS",
-    "github_public_readback": "PASS",
-    "cross_service_identity": "PASS"
+    "translation_pdfs_mutated": false,
+    "equivalent_qa_rerun": false,
+    "zenodo_public_readback": "PENDING_FULL",
+    "github_public_readback": "PENDING_FULL",
+    "cross_service_identity": "PENDING"
   },
   "rights": {
     "license": "notspecified",

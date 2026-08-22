@@ -1,7 +1,7 @@
 {
   "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
   "publication_date": "2026-08-22",
-  "description": "<p>Una sola edición española evolutiva de SGA. La versión 2026-08-22-r11 sucede a r10 (DOI 10.5281/zenodo.22050499) dentro del mismo DOI conceptual. Conserva los 39 archivos públicos de r10 byte por byte y añade cinco archivos de una edición española provisional y acotada del corpus digitalmente accesible de SGA 3, tomo I. El lector acumulativo enlazado heredado permanece byte por byte sin cambios y todavía no incorpora esta entrega parcial.</p>\n<p>La entrega de SGA 3, tomo I cubre C005–C616: el <em>Avertissement</em>, la Introducción, las Exposiciones I–VII_B y el índice del tomo I, en lectores español corregido/actual y diplomático/histórico, junto con fuentes, evidencia, manifiesto de publicación y manifiesto SHA-256. No es una edición completa del tomo I. Faltan las páginas impresas v–xviii: los prefacios francés e inglés de los editores, la guía de lectura/bibliografía y el prefacio de Demazure. Se incorporarán, si se recupera autoridad auténtica, en una versión sucesora de esta misma línea DOI.</p>\n<p>Treinta y un posibles defectos o variantes de la fuente francesa continúan abiertos en la cola de Canon; esta versión no afirma que la reconciliación crítica de la fuente esté cerrada. SGA 4½ sigue siendo una obra distinta de SGA 4. Las ampliaciones futuras serán nuevas versiones de esta misma línea DOI española, nunca depósitos duplicados.</p>\n<p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p>\n<p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
+  "description": "<p>Una sola edición española evolutiva de SGA. La versión 2026-08-22-r12 sucede inmediatamente a r11 (DOI 10.5281/zenodo.22051743) dentro del mismo DOI conceptual. Corrige únicamente el manifiesto SHA-256 acumulativo <code>07_SGA_ES_SHA256_MANIFEST.txt</code>, que en r11 conservó por error los bytes de r10. Los otros 43 archivos públicos permanecen byte por byte sin cambios. El manifiesto corregido enumera esos 43 archivos y se excluye a sí mismo, como corresponde.</p>\n<p>La entrega de SGA 3, tomo I sigue siendo provisional y acotada al corpus digitalmente accesible C005–C616: el <em>Avertissement</em>, la Introducción, las Exposiciones I–VII_B y el índice del tomo I, en lectores español corregido/actual y diplomático/histórico, junto con fuentes, evidencia, manifiesto de publicación y manifiesto SHA-256. No es una edición completa del tomo I. Faltan las páginas impresas v–xviii: los prefacios francés e inglés de los editores, la guía de lectura/bibliografía y el prefacio de Demazure. Se incorporarán, si se recupera autoridad auténtica, en una versión sucesora de esta misma línea DOI.</p>\n<p>Treinta y un posibles defectos o variantes de la fuente francesa continúan abiertos en la cola de Canon; esta versión no afirma que la reconciliación crítica de la fuente esté cerrada. El lector acumulativo enlazado heredado permanece sin cambios y todavía no incorpora la entrega parcial de SGA 3, tomo I. SGA 4½ sigue siendo una obra distinta de SGA 4. Las ampliaciones futuras serán nuevas versiones de esta misma línea DOI española, nunca depósitos duplicados.</p>\n<p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p>\n<p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
   "access_right": "open",
   "creators": [
     {
@@ -48,7 +48,7 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "10.5281/zenodo.22050499",
+      "identifier": "10.5281/zenodo.22051743",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     },
@@ -63,11 +63,11 @@
       "scheme": "url"
     }
   ],
-  "version": "2026-08-22-r11",
+  "version": "2026-08-22-r12",
   "language": "spa",
   "license": "notspecified",
   "imprint_publisher": "Zenodo",
-  "notes": "<p>One evolving Spanish-SGA DOI lineage. Version 2026-08-22-r11 adds a coverage-qualified SGA 3 Tome I partial edition (C005–C616) while explicitly excluding printed pages v–xviii and leaving the inherited cumulative reader unchanged. Copyright notices are historical provenance only. No blanket public-domain or open-license claim.</p>",
+  "notes": "<p>One evolving Spanish-SGA DOI lineage. Version 2026-08-22-r12 supersedes manifest-stale r11 by replacing only the cumulative SHA-256 manifest; the other 43 files are unchanged. SGA 3 Tome I remains a coverage-qualified C005–C616 partial edition, with printed v–xviii explicitly absent and the inherited cumulative reader unchanged. No blanket public-domain or open-license claim.</p>",
   "upload_type": "publication",
   "publication_type": "other"
 }
