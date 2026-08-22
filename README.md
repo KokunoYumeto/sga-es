@@ -1,15 +1,13 @@
 # Séminaires de Géométrie Algébrique — edición española acumulativa
 
-Versión `2026-08-22-r12` · DOI de versión `10.5281/zenodo.22051798` · DOI conceptual estable `10.5281/zenodo.21923955`.
+Versión `2026-08-22-r13` · DOI de versión `10.5281/zenodo.22052017` · DOI conceptual estable `10.5281/zenodo.21923955`.
 
-Esta versión sucede inmediatamente a `v2026-08-22-r11` / `10.5281/zenodo.22051743`. Corrige únicamente el manifiesto SHA-256 acumulativo `07_SGA_ES_SHA256_MANIFEST.txt`, que en r11 conservó por error los bytes de r10. Los otros 43 archivos públicos permanecen byte por byte sin cambios. El manifiesto corregido enumera esos 43 archivos y se excluye a sí mismo.
+Esta versión sucede a `v2026-08-22-r12` / `10.5281/zenodo.22051798`. Conserva byte por byte 43 archivos de r12, regenera `07_SGA_ES_SHA256_MANIFEST.txt` y añade cinco archivos de SGA 3, tomo III. El lector acumulativo heredado de 3.284 páginas permanece sin cambios.
 
-La entrega parcial de SGA 3, tomo I conserva exactamente el alcance C005–C616: el *Avertissement*, la Introducción, las Exposiciones I–VII_B y el índice del tomo I, en ramas corregida/actual y diplomática/histórica. **No es una edición completa del tomo I.** Faltan las páginas impresas v–xviii: los prefacios francés e inglés de los editores, la guía de lectura/bibliografía y el prefacio de Demazure. Esas unidades permanecen `BLOCKED_MISSING_AUTHORITY` y se incorporarán, si se recupera autoridad auténtica, en una versión sucesora de esta misma línea.
+## SGA 3, tomo III
 
-Treinta y un posibles defectos o variantes de la fuente francesa continúan abiertos en la cola de Canon. Esta publicación no afirma que la reconciliación crítica de la fuente esté cerrada. El lector acumulativo heredado permanece sin cambios y todavía no incorpora la entrega parcial de SGA 3, tomo I. SGA 3, tomo II permanece completo en esta línea; SGA 3 en conjunto y la serie global no se declaran completos. SGA 4½ es una obra distinta de SGA 4.
+La traducción del tomo III cubre íntegramente preliminares, contenido, Exposiciones XIX–XXVI e índices terminales. Se publican lectores corregido/actual (474 páginas) y original/diplomático (462 páginas), junto con fuentes/evidencia reversibles y manifiestos. La compilación determinista, la auditoría independiente, dos renderizados de las 936 páginas y el comprobador final pasan con cero defectos visuales abiertos.
 
-Las ampliaciones futuras usarán nuevas versiones de este mismo DOI conceptual, nunca depósitos duplicados por volumen, exposición, rama o componente.
+Treinta y nueve candidatos de la fuente francesa siguen explícitos y pendientes de asignación/deduplicación por Canon; por ello no se afirma que la reconciliación crítica esté cerrada. SGA 3, tomo I sigue siendo parcial C005–C616 y carece de las páginas impresas v–xviii. Ni SGA 3 en conjunto ni la serie global se declaran completos.
 
-Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general. Se preservan atribución, relaciones entre autores y fuentes, procedencia y no aprobación.
-
-Esta es una edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.
+Los avisos históricos de copyright son únicamente procedencia y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni licencia abierta general. Se preservan atribución, relaciones entre autores y fuentes, procedencia y no aprobación.

@@ -1,23 +1,23 @@
 {
-  "schema": "spanish-sga-lineage-pointer/6",
-  "concept_record_id": 21923955,
   "concept_doi": "10.5281/zenodo.21923955",
+  "concept_record_id": 21923955,
+  "duplicate_deposit": false,
   "predecessor": {
-    "version": "2026-08-22-r11",
-    "record_id": 22051743,
-    "doi": "10.5281/zenodo.22051743",
-    "github_tag": "v2026-08-22-r11",
-    "github_commit": "4ddca1f400553f0d92246420ec3b42f9a38cc6a3",
-    "public_state": "PUBLIC_MANIFEST_STALE"
-  },
-  "successor": {
-    "version": "2026-08-22-r12",
-    "record_id": 22051798,
     "doi": "10.5281/zenodo.22051798",
+    "github_commit": "6b755c43aefc18b69e8c256a9d248850befc83ab",
     "github_tag": "v2026-08-22-r12",
-    "state_at_commit": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
-    "bounded_scope": "SGA 3 Tome I C005-C616; printed v-xviii absent",
-    "public_projection_sha256": "6910C3B34BB449983ACCF38B910A9ADE2744C7EE9AC48741368E2C4D52A023B8"
+    "public_cross_service_readback": "PASS",
+    "record_id": 22051798,
+    "version": "2026-08-22-r12"
   },
-  "duplicate_deposit": false
+  "schema": "spanish-sga-lineage-pointer/7",
+  "successor": {
+    "doi": "10.5281/zenodo.22052017",
+    "expected_projection_sha256": "6C6EED9D8D77276551300157AA344148A4965F5549D429D283DCEEB1ED1952DA",
+    "github_tag": "v2026-08-22-r13",
+    "record_id": 22052017,
+    "scope": "complete translated SGA 3 Tome III; 39 Canon candidates explicit; cumulative reader unchanged",
+    "state_at_commit": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+    "version": "2026-08-22-r13"
+  }
 }

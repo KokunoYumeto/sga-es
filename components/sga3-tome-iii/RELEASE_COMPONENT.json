@@ -1,0 +1,38 @@
+{
+  "canonical_source_reconciliation_complete": false,
+  "component": "SGA 3, tome III",
+  "coverage": "front matter, contents, Exposés XIX-XXVI, terminal indices",
+  "included_in_cumulative_reader": false,
+  "open_canon_candidates": 39,
+  "prior_public_archive": {
+    "byte_identity": "same as asset 41",
+    "doi": "10.5281/zenodo.22050725",
+    "filename": "SGA3_Tome_III_ES_reversible_audited_20260821.zip"
+  },
+  "publication_manifest": "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
+  "readers": [
+    {
+      "bytes": 3464362,
+      "name": "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
+      "pages": 474,
+      "role": "corrected/current",
+      "sha256": "4E1121B8F572091697A68A7E0A17B6BCD99C1B2EC4A4640A3D5B5F2A0B24B88C"
+    },
+    {
+      "bytes": 3335483,
+      "name": "40_SGA3_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
+      "pages": 462,
+      "role": "diplomatic/original",
+      "sha256": "D885A5A7F4E5A1767C343229E45C3751B330DB837E085801637AD94C12B774C1"
+    }
+  ],
+  "schema": "spanish-sga-release-component/2",
+  "sha256_manifest": "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt",
+  "source_projection": {
+    "bytes": 25433,
+    "files": 196,
+    "sha256": "EF945510799BF0227BEF08A141FCA1552AFB75054DE3C8DB4FDBEFB4BCB39692"
+  },
+  "sources_evidence": "41_SGA3_TOME_III_FUENTES_Y_EVIDENCIA_20260822.zip",
+  "translation_complete": true
+}

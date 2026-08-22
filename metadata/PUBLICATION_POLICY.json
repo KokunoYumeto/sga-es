@@ -1,24 +1,24 @@
 {
-  "schema": "spanish-sga-canon-publication-policy/3",
-  "release_version": "2026-08-21-r10",
-  "existing_lineage_only": true,
-  "concept_record_id": 21923955,
-  "concept_doi": "10.5281/zenodo.21923955",
-  "predecessor_record_id": 22050350,
-  "successor_record_id": 22050499,
-  "inherited_assets_byte_identical": 32,
-  "replaced_assets": [
-    "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
-    "07_SGA_ES_SHA256_MANIFEST.txt"
+  "append_components": [
+    "SGA 3, tome III"
   ],
   "appended_assets": 5,
-  "complete_assets": 39,
-  "append_components": [
-    "SGA 3, tome II"
-  ],
-  "qa_sufficiency": "No equivalent QA repeat after frozen-byte build, semantic/source, visual, independent-audit, and fail-closed PASS; publication readback is the required recheck.",
+  "blanket_public_domain_or_open_license_claim": false,
+  "complete_assets": 49,
+  "concept_doi": "10.5281/zenodo.21923955",
+  "concept_record_id": 21923955,
   "duplicate_deposit_forbidden": true,
-  "public_byte_readback_required": true,
+  "existing_lineage_only": true,
   "historical_copyright_notices_are_provenance_only": true,
-  "blanket_public_domain_or_open_license_claim": false
+  "inherited_assets_byte_identical": 43,
+  "predecessor_record_id": 22051798,
+  "public_byte_readback_required": true,
+  "qa_sufficiency": "Frozen-byte build/VQA/audit/checker already PASS; only publication readback is repeated.",
+  "release_version": "2026-08-22-r13",
+  "replaced_assets": [
+    "07_SGA_ES_SHA256_MANIFEST.txt"
+  ],
+  "schema": "spanish-sga-canon-publication-policy/5",
+  "source_reconciliation_qualification": "39 unnumbered Canon candidates remain explicit",
+  "successor_record_id": 22052017
 }
