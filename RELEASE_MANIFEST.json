@@ -451,18 +451,19 @@
     "non_endorsement_preserved": true
   },
   "schema_version": 8,
-  "status": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+  "status": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
   "validation": {
     "appended_r13_assets": 5,
-    "cross_service_identity": "PENDING",
+    "cross_service_identity": "PASS",
     "cumulative_reader_replaced": false,
     "equivalent_qa_rerun": false,
-    "github_public_readback": "PENDING",
+    "github_public_readback": "PASS_49_OF_49_SHA256",
     "inherited_r12_assets_byte_identical": 43,
+    "public_readback_receipt_sha256": "250A6EB1C87789D7DC1EC875E3CA62161E27A11931FF77A4CF6679D6609B69D6",
     "replaced_r12_assets": [
       "07_SGA_ES_SHA256_MANIFEST.txt"
     ],
     "translation_pdfs_mutated": false,
-    "zenodo_public_readback": "PENDING"
+    "zenodo_public_readback": "PASS_49_OF_49_SHA256"
   }
 }
