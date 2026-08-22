@@ -15,9 +15,11 @@
     "doi": "10.5281/zenodo.22052452",
     "expected_projection_sha256": "E5050682E3239DDF49630E5D22F64C3EAB1C168F8E5914F9F432AFAD49954A09",
     "github_tag": "v2026-08-22-r14",
+    "public_projection_sha256": "E5050682E3239DDF49630E5D22F64C3EAB1C168F8E5914F9F432AFAD49954A09",
+    "public_readback_receipt_sha256": "313D03BF771166E28394A66A86ED0E4A0E278764FAC80831EEB42E4F2E5ECA44",
     "record_id": 22052452,
     "scope": "bounded SGA 3 Tome-I C005-C616 Canon-binding upgrade; v-xviii absent; cumulative reader unchanged",
-    "state_at_commit": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+    "state_at_commit": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
     "version": "2026-08-22-r14"
   }
 }
