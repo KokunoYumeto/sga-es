@@ -1,0 +1,39 @@
+{
+  "schema": "sga-r12-public-readback/1",
+  "status": "PASS",
+  "verified_utc": "2026-08-22T00:59:18.673438+00:00",
+  "lineage": {
+    "concept_doi": "10.5281/zenodo.21923955",
+    "predecessor_record_id": 22051743,
+    "predecessor_state": "PUBLIC_MANIFEST_STALE",
+    "record_id": 22051798,
+    "doi": "10.5281/zenodo.22051798",
+    "version": "2026-08-22-r12",
+    "github_release_id": 374757201,
+    "github_tag": "v2026-08-22-r12",
+    "duplicate_deposit": false
+  },
+  "payload": {
+    "files": 44,
+    "bytes": 131382618,
+    "projection_bytes": 5393,
+    "projection_sha256": "6910C3B34BB449983ACCF38B910A9ADE2744C7EE9AC48741368E2C4D52A023B8",
+    "anonymous_zenodo_sha256_verified": 44,
+    "anonymous_github_sha256_verified": 44,
+    "cross_service_byte_identity": "PASS",
+    "unchanged_from_r11": 43,
+    "replaced_only": [
+      "07_SGA_ES_SHA256_MANIFEST.txt"
+    ],
+    "manifest_bytes": 5476,
+    "manifest_sha256": "684DD08CF7BAF32C61737AEDF87D9731ADA728D084543ADAEC1D9A438A31C801"
+  },
+  "scope": {
+    "sga3_tome_i": "ACCESSIBLE_CORPUS_PARTIAL_C005_C616",
+    "missing_pages": "v-xviii",
+    "tome_complete": false,
+    "open_canon_candidates": 31,
+    "cumulative_reader_replaced": false
+  },
+  "credential_material_recorded": false
+}

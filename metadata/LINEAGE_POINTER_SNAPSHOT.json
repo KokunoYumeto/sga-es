@@ -15,8 +15,9 @@
     "record_id": 22051798,
     "doi": "10.5281/zenodo.22051798",
     "github_tag": "v2026-08-22-r12",
-    "state_at_commit": "ZENODO_PUBLIC_GITHUB_STAGING",
-    "bounded_scope": "SGA 3 Tome I C005-C616; printed v-xviii absent"
+    "state_at_commit": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
+    "bounded_scope": "SGA 3 Tome I C005-C616; printed v-xviii absent",
+    "public_projection_sha256": "6910C3B34BB449983ACCF38B910A9ADE2744C7EE9AC48741368E2C4D52A023B8"
   },
   "duplicate_deposit": false
 }

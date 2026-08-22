@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "status": "ZENODO_PUBLIC_GITHUB_STAGING",
+  "status": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
   "release": {
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
     "version": "2026-08-22-r12",
@@ -412,9 +412,9 @@
     "cumulative_reader_replaced": false,
     "translation_pdfs_mutated": false,
     "equivalent_qa_rerun": false,
-    "zenodo_public_readback": "PENDING_FULL",
-    "github_public_readback": "PENDING_FULL",
-    "cross_service_identity": "PENDING"
+    "zenodo_public_readback": "PASS_44_OF_44_SHA256",
+    "github_public_readback": "PASS_44_OF_44_SHA256",
+    "cross_service_identity": "PASS"
   },
   "rights": {
     "license": "notspecified",
