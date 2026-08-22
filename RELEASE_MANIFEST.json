@@ -4,7 +4,7 @@
       "SGA 1",
       "SGA 2",
       "SGA 3, tome II",
-      "SGA 3, tome III (translation complete; source reconciliation qualified)",
+      "SGA 3, tome III (translation complete; 39-disposition Canon batch reconciled)",
       "SGA 4, tome I",
       "SGA 4, tome II",
       "SGA 4, tome III",
@@ -93,8 +93,8 @@
       "component": "Spanish SGA cumulative lineage",
       "name": "07_SGA_ES_SHA256_MANIFEST.txt",
       "ordinal": 8,
-      "role": "r14 cumulative SHA-256 manifest",
-      "sha256": "5EE0A887DA94678FE84E7F06456C3D9B321ECE7A845D07F656AD9B510523BE6B"
+      "role": "r15 cumulative SHA-256 manifest",
+      "sha256": "20E4E7E74D85720F0D77BB62F905083ABD4B01CFBA3F8FF150E6B78EB02BA370"
     },
     {
       "bytes": 2375139,
@@ -381,13 +381,13 @@
       "sha256": "A6C0364572E92966F69B5D1DF97A73A79BFBCEE5F2721E108FB5996654492F39"
     },
     {
-      "bytes": 3464362,
+      "bytes": 3464311,
       "component": "SGA 3, tome III",
       "name": "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
       "ordinal": 44,
       "pages": 474,
-      "role": "corrected/current reader",
-      "sha256": "4E1121B8F572091697A68A7E0A17B6BCD99C1B2EC4A4640A3D5B5F2A0B24B88C"
+      "role": "Canon-reconciled corrected/current reader",
+      "sha256": "82E2D5C37DC587C7B43184836E1A3A3E8A43E01CEF01B826987744BEB5509FD8"
     },
     {
       "bytes": 3335483,
@@ -399,49 +399,49 @@
       "sha256": "D885A5A7F4E5A1767C343229E45C3751B330DB837E085801637AD94C12B774C1"
     },
     {
-      "bytes": 5648050,
+      "bytes": 6107142,
       "component": "SGA 3, tome III",
       "name": "41_SGA3_TOME_III_FUENTES_Y_EVIDENCIA_20260822.zip",
       "ordinal": 46,
-      "role": "sources and evidence",
-      "sha256": "3570B7E88B2929B7674BFB98FE8E5B050B25F4989CADF036F3E82A313B0DF5C5"
+      "role": "Canon-reconciled sources and evidence",
+      "sha256": "20DC79CF16552D5A7843FA98EBA6628D4EB6201C3EDB46976FC7B7C78E99F12C"
     },
     {
-      "bytes": 4465,
+      "bytes": 4023,
       "component": "SGA 3, tome III",
       "name": "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
       "ordinal": 47,
-      "role": "publication manifest",
-      "sha256": "95128246744ADE4BD6B38B3354A4C43B28088BC6396F7862096AB683EB29BF84"
+      "role": "Canon-reconciled publication manifest",
+      "sha256": "BA5AB53226577A4FDD7D6CB43900F63DE606465A4778A4F8F00878D455CA5CB3"
     },
     {
-      "bytes": 636,
+      "bytes": 642,
       "component": "SGA 3, tome III",
       "name": "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt",
       "ordinal": 48,
       "role": "component SHA-256 manifest",
-      "sha256": "C110DA140F666A9020BF52604EC53AD0C0B3D01023BF4075C47AE18C0DF75B57"
+      "sha256": "B5DBD9A9A2DF5927E7DB9E98AE185F9D244B7E180ABD11CAC0E62AE73682CE9F"
     }
   ],
   "release": {
     "concept_doi": "10.5281/zenodo.21923955",
     "concept_record_id": 21923955,
     "duplicate_deposit": false,
-    "expected_payload_bytes": 143799116,
+    "expected_payload_bytes": 144257721,
     "expected_payload_count": 49,
-    "github_tag": "v2026-08-22-r14",
-    "predecessor_github_commit": "50cb951c6fb40ad88aa486172675bf79e598f779",
-    "predecessor_github_tag": "v2026-08-22-r13",
-    "predecessor_record_id": 22052017,
-    "predecessor_version_doi": "10.5281/zenodo.22052017",
+    "github_tag": "v2026-08-22-r15",
+    "predecessor_github_commit": "551f720967cc14722261d2a0247eb4d84b516a73",
+    "predecessor_github_tag": "v2026-08-22-r14",
+    "predecessor_record_id": 22052452,
+    "predecessor_version_doi": "10.5281/zenodo.22052452",
     "projection_bytes": 6015,
-    "projection_sha256": "E5050682E3239DDF49630E5D22F64C3EAB1C168F8E5914F9F432AFAD49954A09",
+    "projection_sha256": "7FA8C4B75738CFBD2CD7698933DB95483439B8DB06CF9139EF2ECB53F47C2044",
     "publication_date": "2026-08-22",
     "repository": "https://github.com/KokunoYumeto/sga-es",
     "title": "Séminaires de Géométrie Algébrique (SGA) — edición española acumulativa / Cumulative Spanish Edition",
-    "version": "2026-08-22-r14",
-    "version_doi": "10.5281/zenodo.22052452",
-    "version_record_id": 22052452
+    "version": "2026-08-22-r15",
+    "version_doi": "10.5281/zenodo.22053281",
+    "version_record_id": 22053281
   },
   "rights": {
     "blanket_open_license_claim": false,
@@ -451,25 +451,24 @@
     "non_endorsement_preserved": true
   },
   "schema_version": 9,
-  "status": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
+  "status": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
   "validation": {
-    "appended_r14_assets": [],
-    "cross_service_identity": "PASS",
+    "appended_r15_assets": [],
+    "cross_service_identity": "PENDING",
     "cumulative_reader_replaced": false,
-    "deleted_r13_assets": [],
+    "deleted_r14_assets": [],
     "equivalent_full_volume_qa_rerun": false,
-    "github_public_readback": "PASS_49_OF_49_SHA256",
-    "inherited_r13_assets_byte_identical": 43,
-    "public_readback_receipt_sha256": "313D03BF771166E28394A66A86ED0E4A0E278764FAC80831EEB42E4F2E5ECA44",
-    "replaced_r13_assets": [
+    "github_public_readback": "PENDING",
+    "inherited_r14_assets_byte_identical": 43,
+    "replaced_r14_assets": [
       "07_SGA_ES_SHA256_MANIFEST.txt",
-      "34_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
-      "35_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
-      "36_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_FUENTES_Y_EVIDENCIA_20260822.zip",
-      "37_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_PUBLICATION_MANIFEST_20260822.json",
-      "38_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_SHA256_MANIFEST_20260822.txt"
+      "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
+      "40_SGA3_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
+      "41_SGA3_TOME_III_FUENTES_Y_EVIDENCIA_20260822.zip",
+      "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
+      "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt"
     ],
-    "tome_i_partial_readers_replaced": true,
-    "zenodo_public_readback": "PASS_49_OF_49_SHA256"
+    "tome_iii_readers_replaced": true,
+    "zenodo_public_readback": "PENDING"
   }
 }

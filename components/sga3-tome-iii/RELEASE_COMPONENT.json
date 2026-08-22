@@ -1,38 +1,48 @@
 {
-  "canonical_source_reconciliation_complete": false,
+  "accepted_canon_dispositions": 39,
+  "already_conformant_or_evidence_only": 36,
+  "canonical_source_reconciliation_complete": true,
+  "changed_current_text_pages": [
+    152,
+    335
+  ],
   "component": "SGA 3, tome III",
   "coverage": "front matter, contents, Exposés XIX-XXVI, terminal indices",
+  "deduplicated_records": 6,
   "included_in_cumulative_reader": false,
-  "open_canon_candidates": 39,
-  "prior_public_archive": {
-    "byte_identity": "same as asset 41",
-    "doi": "10.5281/zenodo.22050725",
-    "filename": "SGA3_Tome_III_ES_reversible_audited_20260821.zip"
-  },
+  "new_canon_records": 33,
+  "new_reversible_spanish_bindings": [
+    "SGA-SRC-000778",
+    "SGA-SRC-000799",
+    "SGA-SRC-000800"
+  ],
+  "open_candidates_from_this_batch": 0,
   "publication_manifest": "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
   "readers": [
     {
-      "bytes": 3464362,
+      "bytes": 3464311,
       "name": "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
       "pages": 474,
       "role": "corrected/current",
-      "sha256": "4E1121B8F572091697A68A7E0A17B6BCD99C1B2EC4A4640A3D5B5F2A0B24B88C"
+      "sha256": "82E2D5C37DC587C7B43184836E1A3A3E8A43E01CEF01B826987744BEB5509FD8"
     },
     {
       "bytes": 3335483,
       "name": "40_SGA3_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
       "pages": 462,
+      "predecessor_byte_identical": true,
       "role": "diplomatic/original",
       "sha256": "D885A5A7F4E5A1767C343229E45C3751B330DB837E085801637AD94C12B774C1"
     }
   ],
-  "schema": "spanish-sga-release-component/2",
+  "schema": "spanish-sga-release-component/4",
   "sha256_manifest": "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt",
   "source_projection": {
-    "bytes": 25433,
     "files": 196,
-    "sha256": "EF945510799BF0227BEF08A141FCA1552AFB75054DE3C8DB4FDBEFB4BCB39692"
+    "manifest_bytes": 25433,
+    "sha256": "0B327697E0970A2A3EC637E07EE60DFC4DF8CDD86A6364C4E55CA8B5AE15425B"
   },
   "sources_evidence": "41_SGA3_TOME_III_FUENTES_Y_EVIDENCIA_20260822.zip",
-  "translation_complete": true
+  "translation_complete": true,
+  "whole_tome_translation_complete": true
 }

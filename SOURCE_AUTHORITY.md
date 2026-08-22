@@ -13,3 +13,7 @@ The complete current and diplomatic Spanish readers are sealed against a 196-fil
 ## r14 SGA 3 Tome-I bounded Canon reconciliation
 
 The 299-file C005-C616 Spanish projection binds accepted Canon IDs 000818, 000819, and 000833-000863. Seventeen dispositions changed 18 source files; sixteen were already conformant. Fresh current/original builds, targeted VQA, independent audit, and the final checker pass. Printed v-xviii remain unavailable, so no whole-tome completion claim is made.
+
+## r15 SGA 3 Tome-III Canon reconciliation
+
+The complete 196-file Spanish projection binds 39 accepted dispositions: 33 new records, six deduplications, and three new reversible Spanish branches (000778, 000799, 000800). Thirty-six rows were already conformant or evidence-only. Final current/original seal and replay builds, focused VQA on the only changed current pages 152 and 335, and an independent control replay pass. The diplomatic reader is byte-identical to r14.

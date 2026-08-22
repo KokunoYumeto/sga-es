@@ -1,13 +1,13 @@
 # Séminaires de Géométrie Algébrique — edición española acumulativa
 
-Versión `2026-08-22-r14` · DOI de versión `10.5281/zenodo.22052452` · DOI conceptual estable `10.5281/zenodo.21923955`.
+Versión `2026-08-22-r15` · DOI de versión `10.5281/zenodo.22053281` · DOI conceptual estable `10.5281/zenodo.21923955`.
 
-Esta versión sucede a `v2026-08-22-r13` / `10.5281/zenodo.22052017`. Conserva byte por byte 43 archivos de r13 y sustituye exactamente `07_SGA_ES_SHA256_MANIFEST.txt` y los cinco activos 34–38 de SGA 3, tomo I. No añade ni elimina nombres. El lector acumulativo heredado de 3.284 páginas permanece sin cambios.
+Esta versión sucede a `v2026-08-22-r14` / `10.5281/zenodo.22052452`. Conserva byte por byte 43 archivos de r14 y sustituye exactamente `07_SGA_ES_SHA256_MANIFEST.txt` y los cinco activos 39–43 de SGA 3, tomo III. No añade ni elimina nombres. El lector acumulativo heredado de 3.284 páginas permanece sin cambios.
 
-## SGA 3, tomo I — revisión acotada de Canon
+## SGA 3, tomo III — reconciliación cerrada del Canon
 
-El corpus accesible C005–C616 integra 33 disposiciones aceptadas de Canon: 17 cambian 18 archivos españoles y 16 ya eran conformes. Se publican lectores corregido/actual (692 páginas) y original/diplomático (544 páginas), fuentes/evidencia reversibles y manifiestos. Una compilación dual nueva, VQA dirigida, auditoría independiente y comprobador final pasan sobre los mismos bytes.
+El tomo completo integra 39 disposiciones aceptadas del Canon: 33 registros nuevos, seis duplicados vinculados y tres nuevas ramas españolas reversibles (SGA-SRC-000778, SGA-SRC-000799 y SGA-SRC-000800). Treinta y seis disposiciones ya eran conformes o probatorias. Se publican lectores corregido/actual (474 páginas) y original/diplomático (462 páginas), fuentes/evidencia reversibles y manifiestos.
 
-Las páginas impresas v–xviii siguen ausentes. Este activo es una edición parcial delimitada; no se afirma que el tomo I, SGA 3 en conjunto ni la serie global estén completos. El corpus parcial tampoco se incorpora todavía al lector acumulativo.
+La rama diplomática permanece idéntica a r14; en la rama actual solo cambian las páginas 152 y 335. La compilación final y su repetición son idénticas para PDF, AUX y OUT. La VQA cubrió únicamente esas páginas y una repetición de control independiente verificó los mismos bytes. No se repitió QA equivalente de todo el tomo.
 
 Los avisos históricos de copyright son únicamente procedencia y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni licencia abierta general. Se preservan atribución, relaciones entre autores y fuentes, procedencia y no aprobación.

@@ -3,26 +3,26 @@
   "concept_record_id": 21923955,
   "family_mode": "evolving_corpus",
   "object_scope": "one evolving Spanish SGA edition",
-  "predecessor_record_id": 22052017,
-  "predecessor_version_doi": "10.5281/zenodo.22052017",
+  "predecessor_record_id": 22052452,
+  "predecessor_version_doi": "10.5281/zenodo.22052452",
   "relations": [
     {
       "object": "10.5281/zenodo.21923955",
       "object_type": "DOI",
       "relation": "IsVersionOf",
-      "subject": "10.5281/zenodo.22052452"
-    },
-    {
-      "object": "10.5281/zenodo.22052017",
-      "object_type": "DOI",
-      "relation": "IsNewVersionOf",
-      "subject": "10.5281/zenodo.22052452"
+      "subject": "10.5281/zenodo.22053281"
     },
     {
       "object": "10.5281/zenodo.22052452",
       "object_type": "DOI",
+      "relation": "IsNewVersionOf",
+      "subject": "10.5281/zenodo.22053281"
+    },
+    {
+      "object": "10.5281/zenodo.22053281",
+      "object_type": "DOI",
       "relation": "IsPreviousVersionOf",
-      "subject": "10.5281/zenodo.22052017"
+      "subject": "10.5281/zenodo.22052452"
     },
     {
       "object": "https://github.com/KokunoYumeto/sga-es",
@@ -33,7 +33,7 @@
   ],
   "resource_type_general": "Collection",
   "schema_version": 9,
-  "version": "2026-08-22-r14",
-  "version_doi": "10.5281/zenodo.22052452",
-  "version_record_id": 22052452
+  "version": "2026-08-22-r15",
+  "version_doi": "10.5281/zenodo.22053281",
+  "version_record_id": 22053281
 }

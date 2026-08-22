@@ -9,19 +9,19 @@
   "existing_lineage_only": true,
   "historical_copyright_notices_are_provenance_only": true,
   "inherited_assets_byte_identical": 43,
-  "predecessor_record_id": 22052017,
+  "predecessor_record_id": 22052452,
   "public_byte_readback_required": true,
-  "qa_sufficiency": "Fresh frozen-byte dual build, targeted VQA, independent audit, and checker PASS; only publication readback is repeated.",
-  "release_version": "2026-08-22-r14",
+  "qa_sufficiency": "Frozen-byte dual build/replay, focused changed-page VQA, and independent control replay PASS; only public readback is repeated.",
+  "release_version": "2026-08-22-r15",
   "replaced_assets": [
     "07_SGA_ES_SHA256_MANIFEST.txt",
-    "34_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
-    "35_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
-    "36_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_FUENTES_Y_EVIDENCIA_20260822.zip",
-    "37_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_PUBLICATION_MANIFEST_20260822.json",
-    "38_SGA3_TOME_I_CORPUS_ACCESIBLE_PARCIAL_SHA256_MANIFEST_20260822.txt"
+    "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
+    "40_SGA3_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260822.pdf",
+    "41_SGA3_TOME_III_FUENTES_Y_EVIDENCIA_20260822.zip",
+    "42_SGA3_TOME_III_PUBLICATION_MANIFEST_20260822.json",
+    "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt"
   ],
-  "schema": "spanish-sga-canon-publication-policy/6",
-  "source_reconciliation_qualification": "accepted batch 000818/000819/000833-000863 closed; printed v-xviii still unavailable",
-  "successor_record_id": 22052452
+  "schema": "spanish-sga-canon-publication-policy/7",
+  "source_reconciliation_qualification": "39 accepted Tome-III dispositions closed; 33 new records, six deduplications, three reversible Spanish bindings; zero open candidates from this batch",
+  "successor_record_id": 22053281
 }
