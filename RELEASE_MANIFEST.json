@@ -451,15 +451,16 @@
     "non_endorsement_preserved": true
   },
   "schema_version": 9,
-  "status": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+  "status": "PUBLIC_AND_ANONYMOUS_FULL_READBACK_PASS",
   "validation": {
     "appended_r15_assets": [],
-    "cross_service_identity": "PENDING",
+    "cross_service_identity": "PASS",
     "cumulative_reader_replaced": false,
     "deleted_r14_assets": [],
     "equivalent_full_volume_qa_rerun": false,
-    "github_public_readback": "PENDING",
+    "github_public_readback": "PASS_49_OF_49_SHA256",
     "inherited_r14_assets_byte_identical": 43,
+    "public_readback_receipt_sha256": "9C620CB967D6DBB80AB7B00E09937AA4890D0CC396E034720C66327F197D4B2E",
     "replaced_r14_assets": [
       "07_SGA_ES_SHA256_MANIFEST.txt",
       "39_SGA3_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260822.pdf",
@@ -469,6 +470,6 @@
       "43_SGA3_TOME_III_SHA256_MANIFEST_20260822.txt"
     ],
     "tome_iii_readers_replaced": true,
-    "zenodo_public_readback": "PENDING"
+    "zenodo_public_readback": "PASS_49_OF_49_SHA256"
   }
 }
