@@ -1,15 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this edition, cite the exact version DOI and retain the complete cumulative scope."
 title: "Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica (SGA) — edición española acumulativa / Cumulative Spanish Edition"
-version: "2026-08-22-r17"
-date-released: 2026-08-22
-doi: "10.5281/zenodo.22059051"
+version: "2026-08-25-r18"
+date-released: 2026-08-25
+doi: "10.5281/zenodo.22087758"
 url: "https://github.com/KokunoYumeto/sga-es"
 type: dataset
 authors:
   - family-names: Grothendieck
     given-names: Alexandre
-  - name: "Séminaire de Géométrie Algébrique contributors"
+  - name: "Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica contributors"
 keywords:
   - algebraic geometry
   - SGA
