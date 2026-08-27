@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this edition, cite the exact version DOI and retain the complete cumulative scope."
 title: "Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica (SGA) — edición española acumulativa / Cumulative Spanish Edition"
-version: "2026-08-25-r18"
-date-released: 2026-08-25
-doi: "10.5281/zenodo.22087758"
+version: "2026-08-27-r19"
+date-released: 2026-08-27
+doi: "10.5281/zenodo.22133685"
 url: "https://github.com/KokunoYumeto/sga-es"
 type: dataset
 authors:

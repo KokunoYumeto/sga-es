@@ -3,21 +3,21 @@
   "component": "complete cumulative Spanish SGA edition",
   "coverage": "SGA 1-7, including SGA 3 Tomes I-III, in canonical order",
   "editable_sources": {
-    "bytes": 6512013,
+    "bytes": 6665278,
     "name": "05_SGA_ES_EDITABLE_SOURCES.zip",
-    "sha256": "D64510AF87CBCE850D362D65BC1EDB35E9491979D76D9FAABD9C21B46864EDB1"
+    "sha256": "C1CD5D7EE9B42370D137F46426FC3243D54E6685456C075A21B430932E83C38E"
   },
   "edition_complete": true,
   "evidence_and_provenance": {
-    "bytes": 61658194,
+    "bytes": 61676825,
     "name": "06_SGA_ES_EVIDENCE_AND_PROVENANCE.zip",
-    "sha256": "DE4DBEB25A5A747C5EE6E9CF62240DAB8CDE23881C681BE8D6A3612ABA9AFB92"
+    "sha256": "063EDD1DA08AFC50354369D83D42F83717FF1CB2CF4FAD45A8FD046C4CFC94BE"
   },
   "pages": 4451,
   "reader": {
-    "bytes": 31916348,
+    "bytes": 31916349,
     "name": "00_SGA_ES_CUMULATIVE_LINKED_READER.pdf",
-    "sha256": "B585ED4B824291B4DEB681C02C540DAC8081E2366C020FA1A928E766C89890AA"
+    "sha256": "BEF5143F544B079EFEE51DAEF34A38AFBD04E8174D3EC6FEDC4886448AD97AE1"
   },
   "schema": "spanish-sga-release-component/7",
   "sha256_manifest": "07_SGA_ES_SHA256_MANIFEST.txt"

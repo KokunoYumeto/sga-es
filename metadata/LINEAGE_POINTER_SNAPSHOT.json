@@ -2,26 +2,22 @@
   "concept_doi": "10.5281/zenodo.21923955",
   "concept_record_id": 21923955,
   "duplicate_deposit_or_repository": false,
-  "figshare": {
-    "concept_doi": "10.6084/m9.figshare.33314850",
-    "role": "lean PDF educational mirror"
-  },
   "predecessor": {
-    "doi": "10.5281/zenodo.22059051",
-    "github_commit": "8b7d81efc45c32090f1ece2808aac70d08325dcd",
-    "github_tag": "v2026-08-22-r17",
-    "record_id": 22059051,
-    "version": "2026-08-22-r17",
-    "zenodo_public_readback": "PASS"
-  },
-  "schema": "spanish-sga-lineage-pointer/11",
-  "successor": {
     "doi": "10.5281/zenodo.22087758",
-    "expected_projection_sha256": "F73633321A477B7E9E47ED36981B7C7DDBFBFDEA9E7D0FC3A8DCF598791D0847",
+    "github_commit": "adb91776e8cc92b0deaec7d9b4ed63d96e3d6f19",
     "github_tag": "v2026-08-25-r18",
     "record_id": 22087758,
+    "version": "2026-08-25-r18",
+    "zenodo_public_readback": "PASS"
+  },
+  "schema": "spanish-sga-lineage-pointer/12",
+  "successor": {
+    "doi": "10.5281/zenodo.22133685",
+    "expected_projection_sha256": "C2832C4A78629AEBAF49993D1AF1C777770C4D39CB55B2C361940A038D17BD4A",
+    "github_tag": "v2026-08-27-r19",
+    "record_id": 22133685,
     "scope": "complete cumulative Spanish edition; all thirteen books in canonical order; Canon/terminology revision",
-    "state_at_commit": "PASS_PUBLICATION_AND_ANONYMOUS_CROSS_SERVICE_READBACK",
-    "version": "2026-08-25-r18"
+    "state_at_commit": "STAGED_FOR_IMMEDIATE_PUBLICATION_AND_READBACK",
+    "version": "2026-08-27-r19"
   }
 }

@@ -23,7 +23,7 @@
         "name": "Séminaire de Géométrie Algébrique contributors"
       }
     ],
-    "description": "<p>Revisi&oacute;n can&oacute;nica y terminol&oacute;gica / Canon and terminology revision. La versi&oacute;n r18 integra las 1.604 decisiones terminales ACCEPT de la cadena can&oacute;nica, normaliza terminolog&iacute;a de geometr&iacute;a algebraica contra un corpus nativo espa&ntilde;ol y conserva los trece libros en orden can&oacute;nico dentro del lector acumulativo completo.</p>\n<p>Correcci&oacute;n biling&uuml;e del t&iacute;tulo / Bilingual title correction. La versi&oacute;n r17 presenta el nombre de la serie como S&eacute;minaires de G&eacute;om&eacute;trie Alg&eacute;brique / Seminarios de Geometr&iacute;a Algebraica en la portada, la cita, los metadatos PDF, la evidencia activa y el t&iacute;tulo del registro. Los trece libros matem&aacute;ticos permanecen sin cambios.</p>\n<p>La versi&oacute;n 2026-08-22-r17 sucede inmediatamente a r16 (DOI 10.5281/zenodo.22054046) dentro del mismo DOI conceptual. Conserva 36 activos de r16 byte por byte y sustituye exactamente 00, 06 y 07 para corregir las superficies biling&uuml;es; no cambia el contenido matem&aacute;tico ni las fuentes de los trece libros. El inventario permanece en 39 activos.</p>\n<p>La edici&oacute;n espa&ntilde;ola acumulativa est&aacute; completa: SGA 1, SGA 2, SGA 3 tomos I&ndash;III, SGA 4 tomos I&ndash;III, SGA 4&frac12;, SGA 5, SGA 6 y SGA 7 tomos I&ndash;II aparecen en orden can&oacute;nico en un lector enlazado de 4.450 p&aacute;ginas, con navegaci&oacute;n interna y cobertura verificadas.</p>\n<p>Zenodo conserva el paquete archival completo: lector acumulativo, PDF individuales, fuentes editables, evidencia y procedencia, y manifiestos SHA-256. El espejo educativo ligero de Figshare, con el lector acumulativo como PDF principal y sin los grandes paquetes de procedencia, est&aacute; disponible en 10.6084/m9.figshare.33314850.v1. La l&iacute;nea evolutiva de Figshare es 10.6084/m9.figshare.33314850.</p>\n<p>Se mantiene el repositorio GitHub existente KokunoYumeto/sga-es; no se ha creado un repositorio ni un dep&oacute;sito duplicado.</p>\n<p>Los avisos de copyright se conservan &uacute;nicamente como procedencia hist&oacute;rica y no restringen esta edici&oacute;n matem&aacute;tica independiente ni su publicaci&oacute;n. No se afirma dominio p&uacute;blico ni una licencia abierta general; se preservan atribuci&oacute;n, autor&iacute;a, procedencia y no aprobaci&oacute;n.</p>\n<p>Edici&oacute;n acad&eacute;mica de trabajo asistida por IA. No declara revisi&oacute;n por pares, certificaci&oacute;n ling&uuml;&iacute;stica humana, ausencia total de errores ni respaldo de los autores o editores hist&oacute;ricos.</p>",
+    "description": "<p><strong>Spanish SGA r19 Canon update.</strong> This existing-lineage successor integrates accepted source corrections SGA-SRC-001618 and SGA-SRC-001619 in SGA 5, preserves the rejected no-change reading for SGA-SRC-001620, and retains all thirteen books in canonical order in the cumulative reader.</p><p><strong>Revisión canónica y terminológica / Canon and terminology revision.</strong> La versión r18 integra las 1.604 decisiones terminales ACCEPT de la cadena canónica, normaliza terminología de geometría algebraica contra un corpus nativo español y conserva los trece libros en orden canónico.</p><p>La edición española acumulativa está completa: SGA 1, SGA 2, SGA 3 tomos I–III, SGA 4 tomos I–III, SGA 4½, SGA 5, SGA 6 y SGA 7 tomos I–II aparecen en un lector enlazado de 4.451 páginas, con navegación interna, estructura y cobertura verificadas.</p><p>Zenodo conserva el paquete archival completo de 39 activos: lector acumulativo, PDF individuales, fuentes editables, evidencia y procedencia, y manifiestos SHA-256. El repositorio GitHub existente es KokunoYumeto/sga-es, versión v2026-08-25-r18. El DOI conceptual 10.6084/m9.figshare.33314850 se conserva como la única línea designada para el espejo educativo ligero de Figshare; no se ha creado un espejo duplicado.</p><p>Los avisos de copyright se conservan únicamente como procedencia histórica y no restringen esta edición matemática independiente ni su publicación. No se afirma dominio público ni una licencia abierta general; se preservan atribución, autoría, procedencia y no aprobación.</p><p>Edición académica de trabajo asistida por IA. No declara revisión por pares, certificación lingüística humana, ausencia total de errores ni respaldo de los autores o editores históricos.</p>",
     "imprint_publisher": "Zenodo",
     "keywords": [
       "SGA",
@@ -59,8 +59,8 @@
     ],
     "language": "spa",
     "license": "notspecified",
-    "notes": "<p>Existing-lineage r18 Canon/terminology successor: exactly 39 files; 12 inherited byte-for-byte from r17 and 27 replaced under immutable public filenames. No asset is appended or deleted. GitHub remains the same repository and Figshare remains the lean PDF mirror.</p>",
-    "publication_date": "2026-08-25",
+    "notes": "<p>Public/open existing-lineage successor. Exactly 39 filenames are retained: 34 files are inherited byte-for-byte from r18 and five are replaced. No file is appended or removed. The historical/diplomatic SGA 5 reader is unchanged.</p>",
+    "publication_date": "2026-08-27",
     "publication_type": "other",
     "related_identifiers": [
       {
@@ -82,15 +82,10 @@
         "identifier": "https://github.com/KokunoYumeto/sga-es",
         "relation": "isSupplementedBy",
         "scheme": "url"
-      },
-      {
-        "identifier": "10.6084/m9.figshare.33314850",
-        "relation": "isSupplementedBy",
-        "scheme": "doi"
       }
     ],
     "title": "Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica (SGA) — edición española acumulativa / Cumulative Spanish Edition",
     "upload_type": "publication",
-    "version": "2026-08-25-r18"
+    "version": "2026-08-27-r19"
   }
 }
