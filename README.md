@@ -1,5 +1,7 @@
 # Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica
 
+> **Atlas de traducciones:** consulte las ediciones EGA, FGA y SGA por obra e idioma en el [Grothendieck Translation Atlas](https://github.com/KokunoYumeto/ega-fga-sga).
+
 Versión `2026-08-27-r19` · DOI de versión `10.5281/zenodo.22133685` · DOI conceptual estable `10.5281/zenodo.21923955`.
 
 ## Edición española acumulativa completa
