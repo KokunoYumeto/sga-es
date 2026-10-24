@@ -1,0 +1,175 @@
+\begin{corollaire}
+\label{IX.6.6}
+Sea~$f\colon X\to S$ un morfismo propio de preesquemas localmente
+noetherianos tal que~$f_*(\cal{O}_X)=\cal{O}_S$, y sea~$X'$ un preesquema
+propio sobre~$X$. Consideremos la factorización de \emph{Stein}
+~$X'\to S'\to S$ de~$X'\to S$ y el morfismo canónico
+~$X'\to X\times_S S'$. Sean~$s$ un punto de~$S$ y~$s'$ un punto de~$S'$
+situado sobre~$s$, correspondiente a una componente conexa~$F_1'$ de la
+fibra~$X'_s$ de~$X'$ en~$s$. Para que el morfismo
+~$X'\to X\times_S S'$ sea un isomorfismo sobre un entorno abierto~$U'$ de
+~$s'$ étale sobre~$S$, es necesario y suficiente que~$X'$ sea étale sobre
+~$X$ en los puntos de~$F_1'$ y que~$F_1'$ sea un recubrimiento
+geométricamente trivial de la fibra~$F=X_s$.
+\end{corollaire}
+
+La necesidad sigue siendo trivial, por lo que resta probar la suficiencia.
+La conclusión significa también que a) el morfismo deducido de
+~$X'\to X\times_S S'$ por el cambio de base
+~$\Spec(\widehat{\cal{O}}_{s'})\to S'$ es un isomorfismo; b)~$S'$ es étale
+sobre~$S$ en~$s'$, es decir,~$\widehat{\cal{O}}_{s'}$ es étale sobre
+~$\widehat{\cal{O}}_s$. Bajo esta forma, se ve que la conclusión es
+invariante por el cambio de base~$\Spec(\widehat{\cal{O}}_s)\to S$. Como las
+hipótesis son también estables por este cambio de base, podemos suponer que
+~$S$ es el espectro de un anillo local noetheriano completo. Podemos además
+suponer evidentemente que~$X'$ es conexo, lo cual implica aquí que
+~$S'=\Spec(\cal{O}_{s'})$ y~$F'=F_1'$.
+
+Como
+\marginpar{257}
+el conjunto de los puntos de~$X'$ en los que~$X'$ es étale sobre~$X$ es
+abierto y contiene la fibra~$X'_{s'}=F'$, y como~$X'$ es propio sobre~$S$, se
+sigue que~$X'$ es étale sobre~$X$. Puesto que induce sobre~$F=X_s$ un
+recubrimiento étale isomorfo a un~$F\otimes_{\kres(s)}L$, donde~$L$ es étale
+sobre~$\kres(s)$, resulta de~\Ref{IX.1.10} que es isomorfo a un
+recubrimiento de la forma~$X\times_S T$, con~$T$ étale sobre~$S$ (N.B.: aquí
+también basta utilizar que el funtor de~\Ref{IX.1.10} es plenamente fiel,
+lo cual resulta de que todo isomorfismo formal de haces coherentes sobre~$X$
+procede de un isomorfismo de esos haces). Por tanto, si~$T$ está definido por
+el álgebra~$B$ finita sobre~$A$,~$X'$ se identifica con el espectro del
+álgebra~$\cal{O}_X\otimes_A B$ sobre~$X$, de donde resulta inmediatamente,
+puesto que~$f_*(\cal{O}_X)=\cal{O}_S$, que~$h_*(\cal{O}_{X'})$ está definido
+por~$B$. Así, el homomorfismo canónico~$X'\to X\times_S S'$ no es otro que el
+isomorfismo considerado~$X'\isomto X\times_S T$. Esto termina la
+demostración.
+
+\begin{corollaire}
+\label{IX.6.7}
+Bajo las condiciones de~\Ref{IX.6.5}, para que existan un preesquema~$S'$
+étale sobre~$S$ y un~$X$-isomorfismo~$X'\isomto X\times_S S'$, es
+necesario y suficiente que~$X'$ sea étale sobre~$X$ y que, para todo
+~$s\in S$,
+\ifthenelse{\boolean{orig}}{$X'_{s'}$}{$X'_s$}
+sea un recubrimiento geométricamente trivial de~$X_s$.
+\end{corollaire}
+
+En efecto, si esto ocurre,~$X'$ es unión de abiertos~$X_i'$ isomorfos a
+imágenes inversas de~$S_i'$ étale sobre~$S$. Se ve entonces fácilmente que
+estos~$S_i'$ se pegan en un~$S'$ étale sobre~$S$ y que se obtiene un
+isomorfismo~$X'\isomto X\times_S S'$. Puede decirse, por ejemplo, que los
+~$X_i'$ están provistos de datos de descenso relativos a~$X\to S$, que se
+pegan necesariamente en un dato de descenso sobre~$X'$ entero relativo a
+~$X\to S$. Y, como este último es efectivo sobre los~$X_i'$, se sigue
+fácilmente (gracias a un sorites omitido en el número~\Ref{IX.4}) que es
+efectivo. También puede enunciarse~\Ref{IX.6.7} en la forma siguiente:
+
+\begin{corollaire}
+\label{IX.6.8}
+Sea~$f\colon X\to S$ un morfismo propio y sobreyectivo de presentación
+finita, con fibras geométricamente conexas. Entonces~$f$ es un morfismo de
+descenso efectivo para la categoría fibrada de los preesquemas étale y
+finitos sobre otros. El funtor~$S'\mto X\times_S S'$ induce una equivalencia
+de la categoría de los preesquemas étale y finitos sobre~$S$ con la
+categoría de los preesquemas
+\marginpar{258}
+étale y finitos sobre~$X$ que inducen sobre cada fibra~$X_s$ un
+recubrimiento geométricamente trivial.
+\end{corollaire}
+
+\begin{remarque}
+\label{IX.6.9}
+Sea~$f\colon X\to S$ un morfismo propio y sobreyectivo, con
+\ifthenelse{\boolean{orig}}{$Y$}{$S$}
+localmente noetheriano. Entonces~$f$ se factoriza en un morfismo~$X\to S'$
+que satisface la hipótesis de~\Ref{IX.6.8} y un morfismo finito y sobreyectivo
+~$S'\to S$ al que se aplica~\Ref{IX.4.7}; por tanto, se expresa como
+composición de dos
+morfismos que son \emph{morfismos de descenso efectivo universales} para la
+categoría fibrada de los preesquemas étale y finitos sobre otros. Puede
+concluirse que el propio~$f$ es un morfismo de descenso efectivo universal
+para la categoría fibrada considerada. Se recupera así~\Ref{IX.4.12} por un
+método diferente.
+\end{remarque}
+
+\begin{remarque}
+\label{IX.6.10}
+La conclusión de~\Ref{IX.6.7} deja de ser válida si se sustituye la hipótesis
+de que~$f$ es propio por la siguiente:~$X$ es de tipo finito sobre~$S$ y
+admite una sección sobre~$S$ (por tanto,~$f$ es universalmente submersivo y
+un morfismo de descenso para la categoría fibrada de los preesquemas étale
+sobre otros), incluso cuando~$S$ es el espectro de un anillo de valoración
+discreta y~$X'$ es un recubrimiento étale de~$X$. Para verlo, se parte de un
+~$Z$ propio sobre~$S$, cuya fibra genérica
+es una curva racional no singular y cuya fibra especial~$Z_0$ consta de dos
+rectas secantes. Por ejemplo, si~$t$ es un uniformizante del anillo de
+valoración~$A$, se toma el subesquema cerrado~$Z$ de~$\PP_A^2$ definido por
+la ecuación homogénea~$x^2+y^2+tz^2=0$ (coordenadas homogéneas~$x$,~$y$,
+~$z$). Se toma por~$X$ el complementario del punto singular~$a$ de~$Z_0$ en
+la unión~$Z\cup\PP_k^2$. Las fibras de~$X$ son~$\PP_k^1$ y
+~$\PP_k^2-a$; son, por tanto, geométricamente simplemente conexas (es decir,
+todo recubrimiento étale de una de estas fibras es geométricamente trivial).
+Sin embargo,
+\marginpar{259}
+procediendo como en el número~\Ref{IX.4}, se construyen fácilmente
+recubrimientos étale de~$X$ que no proceden de recubrimientos étale de~$S$,
+pegando recubrimientos triviales de~$Z-a$ y de~$\PP_k^2-a$. En cambio, es
+posible que la conclusión de~\Ref{IX.6.7} subsista si se sustituye la
+hipótesis de que el morfismo sea propio por la de que~$X$ sea
+\emph{universalmente abierto} y
+de presentación finita sobre~$S$\kern1pt\footnote{Esto ya está demostrado,
+siendo~\ifthenelse{\boolean{orig}}{$g$}{$f$} solamente universalmente abierto
+y sobreyectivo; \cf SGA~4 XV~1.15.}.
+Esto es cierto al menos si se supone que las fibras de~$X$ sobre~$S$ son
+geométricamente irreducibles, y no solo geométricamente conexas. Señalemos
+únicamente que, en esta cuestión, podemos reducirnos al caso en que~$S$ es
+el espectro de un anillo de valoración discreta completo con cuerpo residual
+algebraicamente cerrado.
+\end{remarque}
+
+La interpretación de~\Ref{IX.6.7} en términos del grupo fundamental es la
+siguiente:
+
+\begin{corollaire}
+\label{IX.6.11}
+Sea~$f\colon X\to S$ un morfismo propio y sobreyectivo de presentación
+finita, con fibras geométricamente conexas. Supongamos que~$X$, y por tanto
+~$S$, es conexo. Sean~$a$ un punto geométrico de~$X$,~$b$ su imagen en~$S$ y,
+para todo~$s\in S$, elijamos una clausura algebraica
+~$\overline{\kres(s)}$ de~$\kres(s)$, un punto geométrico~$a_s$ de
+\ifthenelse{\boolean{orig}}{$S_s$}{$X_s$}
+con valores en esta extensión y una clase de caminos desde~$a_s$ hasta~$a$, de donde
+se obtiene un homomorfismo~$\pi_1(\overline X_s,a_s)\to\pi_1(X,a)$, donde
+~$\overline X_s=X_s\otimes_{\kres(s)}\overline{\kres(s)}$. Entonces el
+homomorfismo~$\pi_1(X,a)\to\pi_1(S,b)$ es sobreyectivo, y su núcleo es el
+subgrupo normal cerrado de~$\pi_1(X,a)$ engendrado por las imágenes de los
+~$\pi_1(\overline X_s,a_s)$.
+\end{corollaire}
+
+\begin{remarque}
+\label{IX.6.12}
+Bajo las condiciones de~\Ref{IX.6.7}, suponiendo~$S$ noetheriano, se ve
+fácilmente que el conjunto de los puntos~$s\in S$ tales que
+\ifthenelse{\boolean{orig}}{$S'_{s'}$}{$X'_s$}
+sea geométricamente trivial sobre~$X_s$ es constructible; si~$X'$ es propio
+sobre~$X$, es incluso abierto, como se ve en~\Ref{IX.6.6}. Esto permite, por
+tanto, si~$S$
+\ifthenelse{\boolean{orig}}{y}{es}
+un preesquema de Jacobson (por ejemplo, de tipo finito sobre un cuerpo), o
+\marginpar{260}
+si~$X'$ es propio sobre~$X$, limitarse, para verificar las condiciones
+de~\Ref{IX.6.7}, a los puntos~$s$ de~$S$ que son \emph{cerrados}. Del mismo
+modo, en~\Ref{IX.6.11} basta entonces tomar los
+~$\pi_1(\overline X_s,a_s)$ para los puntos de~$S$ que son cerrados.
+\end{remarque}
+
+\begin{sgabibliography}{D}{IX.7}
+
+\bibitem[D]{IX.D} J\ptbl \textsc{Giraud}, Méthode de la
+\ifthenelse{\boolean{orig}}
+{d'escente,}
+{descente,}
+Mémoire \no 2 de la Soc.\ Math.\ Fr.,~1964.
+
+\bibitem[1]{IX.1} A\ptbl \textsc{Grothendieck}, Géométrie Algébrique et
+Géométrie Formelle, Séminaire Bourbaki t\ptbl 11, 1959, \No 182.
+\end{sgabibliography}

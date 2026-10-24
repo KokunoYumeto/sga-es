@@ -1,0 +1,1475 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XXI}{El nivel de la cohomología de las intersecciones completas}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XXI}\par
+\vspace{2em}
+{\Large\underline{El nivel de la cohomología de las intersecciones
+completas}}\par
+\vspace{1.5em}
+{\large por N. Katz}\par
+\vspace{0.6em}
+con un apéndice de P. Deligne (\S~5)
+\end{center}
+
+\section*{Sumario}
+\begin{description}
+\item[0.] Introducción \hfill 1
+\item[1.] La matriz de Hasse--Witt de una intersección completa \hfill 2
+\item[2.] El conivel sobre un cuerpo finito de definición \hfill 14
+\item[3.] Aplicación a las intersecciones completas \hfill 16
+\item[4.] Conclusiones \hfill 19
+\item[5.] Teoremas de integralidad \hfill 21
+\end{description}
+
+\pageoriginale
+
+\section*{0. Introducción}
+
+Sea $X$ una variedad proyectiva lisa de dimensión $n\geq3$, sea $Y(d)$
+una sección por una hipersuperficie de grado $d$, y sea
+$E^{n-1}(Y(d),\mathbb Q_\ell)$ la cohomología «evanescente» de $Y(d)$
+(XVIII~5.4.4). El objeto de esta exposición es demostrar que, para $d$
+suficientemente grande e $Y(d)$ suficientemente general, no es cierto que
+todo $E^{n-1}(Y(d),\mathbb Q_\ell)$ «provenga» de los grupos $H^i$,
+$i<n-1$, de variedades algebraicas lisas y propias mediante
+correspondencias algebraicas. En característica cero esto se deduce
+inmediatamente de la bigraduación de Hodge de la cohomología compleja y
+del hecho de que, en cohomología coherente,
+\begin{equation*}
+\dim H^{n-1}(Y(d),\mathcal O_{Y(d)})\longrightarrow\infty
+\qquad\text{cuando }d\longrightarrow\infty.
+\end{equation*}
+
+En característica $p$, el método relaciona de nuevo el grupo coherente
+$H^{n-1}(Y(d),\mathcal O_{Y(d)})$ con el grupo étale
+$H^{n-1}_{\mathrm{et}}(Y(d),\mathbb Q_\ell)$. Para ello se trabaja sobre
+un cuerpo base finito,
+
+\pageoriginale
+
+donde ambos quedan ligados por la función zeta de $Y(d)$: esta función se
+expresa en términos de la cohomología $\ell$-ádica, mientras que su
+«reducción módulo $p$» se expresa en términos de la cohomología coherente
+(cf.~XXII~3.9). Para las intersecciones completas este método funciona sin
+dificultad, gracias al conocimiento detallado de ambos tipos de
+cohomología, étale y coherente, en este caso. Da el resultado principal,
+el Teorema~4.2, como consecuencia de un resultado sobre las operaciones de
+Hasse--Witt, el Teorema~1.4 (véase 1.0).
+
+Hay argumentos heurísticos, debidos a A. Grothendieck y basados en el yoga
+de la cohomología cristalina, que hacen plausible el enunciado general
+para todo $X$ proyectivo liso, esencialmente por el mismo método.
+
+Incluso en el caso particular de las intersecciones completas, la
+demostración utiliza de manera esencial en 2.2 el Teorema~2.1 sobre la
+integralidad de los valores propios de Frobenius, demostrado recientemente
+por P. Deligne y demostrado aquí en el apéndice (\S~5).
+
+\section*{1. La matriz de Hasse--Witt de una intersección completa}
+
+\subsubsection*{Definición 1.0.}
+Un esquema propio sobre un cuerpo $k$ de exponente característico $p$ se
+llama \emph{especial} si la operación aditiva $p$-lineal
+\begin{equation}\tag{1.0.1}
+\mathfrak F_p:\mathcal O_X\longrightarrow\mathcal O_X,
+\qquad g\longmapsto g^p,
+\end{equation}
+induce una operación nilpotente
+\begin{equation}\tag{1.0.2}
+\mathfrak F_p:H^{\dim X}(X,\mathcal O_X)
+\longrightarrow H^{\dim X}(X,\mathcal O_X).
+\end{equation}
+
+\pageoriginale
+
+Equivalentemente, si
+$M=\dim_k H^{\dim X}(X,\mathcal O_X)$, la operación $p^M$-lineal
+\begin{equation}\tag{1.0.3}
+\mathfrak F_p^M=\mathfrak F_{p^M}:\mathcal O_X\longrightarrow\mathcal O_X,
+\qquad g\longmapsto g^{p^M},
+\end{equation}
+anula $H^{\dim X}(X,\mathcal O_X)$.
+
+Recordemos [2] que, para todo $i\in\mathbb Z$, el homomorfismo
+\begin{equation*}
+H^i(X,\mathcal O_X)\xrightarrow{\ \mathfrak F_p\ }
+H^i(X,\mathcal O_X)
+\end{equation*}
+inducido por (1.0.1) se llama clásicamente \emph{homomorfismo de
+Hasse--Witt} sobre $H^i(X,\mathcal O_X)$. Obsérvese que, cuando $p=1$,
+decir que $X$ no es especial significa simplemente que
+$H^{\dim X}(X,\mathcal O_X)\ne0$.
+
+\subsubsection*{Teorema 1.1.}
+Fijemos un exponente característico $p$, una dimensión $n\geq1$, un
+entero $r\geq1$ y un multigrado $(d_1,\dots,d_r)$. Si
+\begin{equation}\tag{1.1.0}
+\sum_{i=1}^{r}d_i\geq(n+r)+1,
+\end{equation}
+entonces, entre todas las intersecciones completas de dimensión $n$ en
+$\mathbb P^{n+r}$, de multigrado $(d_1,\dots,d_r)$ y característica $p$,
+una suficientemente general no es especial en el sentido de 1.0.
+
+\noindent\underline{Demostración.}
+Sea
+\begin{equation}\tag{1.1.1}
+f:X_U\longrightarrow U
+\end{equation}
+la «familia universal» de intersecciones completas de multigrado
+$(d_1,\dots,d_r)$ en $\mathbb P^{n+r}$ y característica $p$, provistas de
+sus ecuaciones de definición. Así, $U$ es un abierto de un producto de
+$r$ espacios proyectivos sobre $\mathbb F_p$, de dimensión impresionante.
+
+\pageoriginale
+
+El $\mathcal O_U$-módulo
+\begin{equation}\tag{1.1.2}
+R^nf_*\mathcal O_{X_U}
+\end{equation}
+es localmente libre y su formación conmuta con todo cambio de base
+(XI~1.5(i)). Por (1.1.0), su rango $M$ no es nulo (XI~2.5). Si $p=1$,
+esto demuestra el teorema para toda intersección completa que verifica
+(1.1.0).
+
+Supongamos ahora $p\geq2$. La operación iterada de Hasse--Witt
+\begin{equation}\tag{1.1.3}
+\mathfrak F_p^M=\mathfrak F_{p^M}:
+R^nf_*\mathcal O_{X_U}\longrightarrow R^nf_*\mathcal O_{X_U}
+\end{equation}
+es $p^M$-lineal sobre $\mathcal O_U$. Como
+$R^nf_*\mathcal O_{X_U}$ es localmente libre, (1.1.3) se representa
+localmente sobre $U$ por una matriz $(M,M)$, denotada $H$, con coeficientes
+en $\mathcal O_U$. Por consiguiente,
+\begin{equation}\tag{1.1.4}
+\{u\in U\mid X_u\text{ no es especial}\}\quad\text{es abierto en }U.
+\end{equation}
+En efecto, es el conjunto de los $u$ para los que $H(u)\ne0$. Como $U$ es
+irreducible, basta hallar un valor de $u$ para el que $X_u$ no sea
+especial; lo haremos sobre un cuerpo finito.
+
+\subsubsection*{Proposición 1.1.5.}
+Sea $X$ una intersección completa sobre $\mathbb F_q$. Si $X$ no tiene
+puntos racionales sobre $\mathbb F_q$, entonces $X$ no es especial.
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Basta evidentemente demostrar, para una intersección completa $X$, la
+implicación
+\begin{equation}\tag{1.1.5.1}
+X\text{ especial}\quad\Longrightarrow\quad
+\operatorname{card}\bigl(X(\mathbb F_q)\bigr)\equiv1\pmod p.
+\end{equation}
+Por la fórmula de las trazas, demostrada en el Exposé XXII, 3.2,
+\begin{equation*}
+\operatorname{card}\bigl(X(\mathbb F_q)\bigr)
+\equiv\sum_{i\geq0}(-1)^i
+\operatorname{tr}\bigl(\mathfrak F_q\mid H^i(X,\mathcal O_X)\bigr)
+\pmod p.
+\end{equation*}
+Ahora bien, $H^i(X,\mathcal O_X)=0$ salvo si $i=0$ o
+$i=n=\dim X$, mientras que
+$H^0(X,\mathcal O_X)\simeq\mathbb F_q$ (XI~1.5(iii)); por tanto,
+\begin{equation*}
+\operatorname{card}\bigl(X(\mathbb F_q)\bigr)
+\equiv1+(-1)^n
+\operatorname{tr}\bigl(\mathfrak F_q\mid H^n(X,\mathcal O_X)\bigr)
+\pmod p.
+\end{equation*}
+Si $X$ es especial, $\mathfrak F_q$ actúa nilpotentemente sobre
+$H^n(X,\mathcal O_X)$ y su traza es nula. Esto prueba (1.1.5.1) y la
+proposición.
+
+\subsubsection*{Proposición 1.2.}
+Para toda potencia $q$ de $p$, si
+\begin{equation*}
+\sum_{i=1}^{r}d_i\geq n+r+1,
+\end{equation*}
+existe una intersección completa en $\mathbb P^{n+r}_{\mathbb F_q}$ de
+multigrado $(d_1,\dots,d_r)$ que no tiene ningún punto racional sobre
+$\mathbb F_q$.
+
+\noindent\underline{Demostración.}
+Comencemos por $r=1$. Para todo $d\geq n+2$ debemos hallar una forma
+homogénea de grado $d$,
+
+\pageoriginale
+
+\begin{equation}\tag{1.2.1}
+H(X_1,\dots,X_{n+2})\in
+\mathbb F_q[X_1,\dots,X_{n+2}],
+\end{equation}
+tal que
+\begin{equation}\tag{1.2.2}
+\begin{aligned}
+&(\alpha_1,\dots,\alpha_{n+2})\in(\mathbb F_q)^{n+2},\qquad
+H(\alpha_1,\dots,\alpha_{n+2})=0\quad\Longrightarrow\\
+&\hspace{7em}\alpha_1=\cdots=\alpha_{n+2}=0.
+\end{aligned}
+\end{equation}
+Pongamos $\mathbb E=\mathbb F_{q^d}$ y elijamos elementos
+$\beta_1,\dots,\beta_{n+2}$ de $\mathbb E$ linealmente independientes
+sobre $\mathbb F_q$. Tomemos
+\begin{equation}\tag{1.2.3}
+H(X_1,\dots,X_{n+2})=
+N_{\mathbb E/\mathbb F_q}
+\left(\sum_{i=1}^{n+2}\beta_iX_i\right).
+\end{equation}
+
+En el caso general, como
+\begin{equation}\tag{1.2.4}
+\sum_{i=1}^{r}d_i\geq n+r+1,
+\end{equation}
+podemos poner $a_0=0$ y elegir $r$ enteros
+\begin{equation}\tag{1.2.5}
+1\leq a_1<a_2<\cdots<a_r=n+r+1
+\end{equation}
+tales que
+\begin{equation}\tag{1.2.6}
+d_i\geq a_i-a_{i-1}\qquad(1\leq i\leq r).
+\end{equation}
+
+\pageoriginale
+
+Para cada $i=1,\dots,r$, elijamos una forma homogénea de grado $d_i$,
+\begin{equation*}
+H_i(X_{a_{i-1}+1},\dots,X_{a_i})
+\in\mathbb F_q[X_{a_{i-1}+1},\dots,X_{a_i}],
+\end{equation*}
+en las $a_i-a_{i-1}$ variables indicadas y con la propiedad (1.2.2). La
+intersección completa buscada está definida por las formas homogéneas
+\begin{equation*}
+H_1(X_1,\dots,X_{a_1}),\quad\dots,\quad
+H_r(X_{a_{r-1}+1},\dots,X_{a_r}).
+\end{equation*}
+
+\subsubsection*{Teorema 1.3.}
+Sea $X$ una intersección completa irreducible de dimensión $n\geq1$ sobre
+un cuerpo $k$ de exponente característico $p$. Para todo entero
+$d\geq n+1$, una sección suficientemente general de $X$ por una
+hipersuperficie de grado $d$ no es especial en el sentido de 1.0.
+
+\noindent\underline{Demostración.}
+Las secciones $X\mathbin{\cdot}H_u$ de $X$ por hipersuperficies de grado
+$d$ están parametrizadas por las rectas de $H^0(X,\mathcal O_X(d))$, es
+decir, por
+\begin{equation}\tag{1.3.1}
+U=\mathbb P\bigl(H^0(X,\mathcal O_X(d))\bigr).
+\end{equation}
+Sobre $U$ tenemos la «sección universal de $X$ por una hipersuperficie de
+grado $d$»
+\begin{equation}\tag{1.3.2}
+f:X\mathbin{\cdot}H_u\longrightarrow U.
+\end{equation}
+Sea $U'$ el abierto de los $u\in U$ para los que $\dim(X_u)=n-1$. Por
+XI~1.5(i) y 2.5, la restricción
+\begin{equation}\tag{1.3.3}
+\left.R^{n-1}f_*\mathcal O_{X\cdot H_u}\right|_{U'}
+\end{equation}
+
+\pageoriginale
+
+es localmente libre, su formación conmuta con todo cambio de base y su
+rango $M$ es al menos uno. Si $p=1$, esto demuestra el teorema para toda
+sección por una hipersuperficie de grado al menos $n+1$.
+
+Supongamos, pues, $p>0$. La operación iterada de Hasse--Witt
+$\mathfrak F_{p^M}$ se representa de nuevo localmente por una matriz
+$M\times M$ con coeficientes en $\mathcal O_U$. Por consiguiente,
+\begin{equation}\tag{1.3.4}
+\{u\in U'\mid X\mathbin{\cdot}H_u\text{ no es especial}\}
+\quad\text{es abierto en }U'.
+\end{equation}
+Solo queda probar que el conjunto de (1.3.4) no es vacío.
+
+Consideremos primero el caso
+\begin{equation}\tag{1.3.5}
+k=\mathbb F_q.
+\end{equation}
+Tras reemplazar $\mathbb F_q$ por una extensión finita, podemos suponer
+que
+\begin{equation}\tag{1.3.6}
+\operatorname{card}\bigl(X(\mathbb F_q)\bigr)>0
+\end{equation}
+y que
+\begin{equation}\tag{1.3.7}
+\begin{aligned}
+&\text{hay coordenadas homogéneas }X_1,\dots,X_{n+r+1}
+ \text{ en }\mathbb P_k^{n+r}\\
+&\text{tales que $X$ no corta la subvariedad lineal }
+X_1=\cdots=X_{n+1}=0.
+\end{aligned}
+\end{equation}
+Elijamos una forma homogénea de grado $d$,
+\begin{equation}\tag{1.3.8}
+H(X_1,\dots,X_{n+1})\in
+\mathbb F_q[X_1,\dots,X_{n+1}],
+\end{equation}
+con la propiedad (1.2.2), lo que es posible porque $d\geq n+1$. Sea $H$
+también la hipersuperficie de $\mathbb P^{n+r}$ definida por
+$H(X_1,\dots,X_{n+1})=0$.
+
+\pageoriginale
+
+Por construcción, $X\mathbin{\cdot}H$ no tiene puntos racionales sobre
+$\mathbb F_q$. En vista de (1.3.6), esto muestra además que
+$X\not\subset H$; como $X$ es irreducible,
+$X\mathbin{\cdot}H$ tiene dimensión $n-1$, luego $H\in U'$. La
+Proposición~1.1.5 muestra que $X\mathbin{\cdot}H$ no es especial.
+
+Pasemos al caso general. Examinando las ecuaciones que definen $X$,
+podemos suponer que $k$ es de tipo finito sobre $\mathbb F_p$. Existe
+entonces un subanillo $B\subset k$, de tipo finito como álgebra sobre
+$\mathbb F_p$ y de cuerpo de fracciones $k$, tal que
+\begin{equation}\tag{1.3.9}
+X\subset\mathbb P_k^{n+r}
+\end{equation}
+es la fibra genérica de una intersección completa relativa
+$\widetilde X\subset\mathbb P_B^{n+r}$ que, fibra por fibra, tiene el
+mismo multigrado que $X$ y es geométricamente irreducible.
+
+Escribamos
+\begin{equation}\tag{1.3.10}
+\rho:\widetilde X\longrightarrow S=\operatorname{Spec}(B)
+\end{equation}
+para la proyección,
+\begin{equation}\tag{1.3.11}
+E=\rho_*\mathcal O_{\widetilde X}(d)
+\end{equation}
+para el $\mathcal O_S$-módulo localmente libre, y
+\begin{equation}\tag{1.3.12}
+\pi:T=\check{\mathbb P}(E)\longrightarrow S
+\end{equation}
+para el fibrado de rectas asociado. La fibra genérica de (1.3.12) es
+precisamente
+\[
+U=\mathbb P\bigl(H^0(X,\mathcal O_X(d))\bigr).
+\]
+Sobre $T$ tenemos la sección universal de
+$\widetilde X\subset\mathbb P_B^{n+r}$ por hipersuperficies de grado $d$,
+
+\pageoriginale
+
+denotada
+\begin{equation}\tag{1.3.13}
+\alpha:\widetilde X\mathbin{\cdot}H_T\longrightarrow T.
+\end{equation}
+Estas construcciones encajan en el diagrama siguiente de cuadrados
+cartesianos:
+\begin{equation}\tag{1.3.14}
+\begin{tikzcd}[column sep=huge,row sep=large]
+\widetilde X\mathbin{\cdot}H_T \arrow[d,"\alpha"]
+& X\mathbin{\cdot}H_u=
+ \sisi{(\widetilde X\mathbin{\cdot}H_T)\times_U T}
+       {(\widetilde X\mathbin{\cdot}H_T)\times_T U}
+ \arrow[l]\arrow[d] \\
+T \arrow[d,"\pi"]
+& U=T\times_S\operatorname{Spec}(k) \arrow[l]\arrow[d] \\
+S & \operatorname{Spec}(k)\arrow[l]
+\end{tikzcd}
+\end{equation}
+El $\mathcal O_T$-módulo
+\begin{equation}\tag{1.3.15}
+R^{n-1}\alpha_*\mathcal O_{\widetilde X\cdot H_T}
+\end{equation}
+es localmente libre sobre el abierto $T'\subset T$ formado por los $t$
+para los que $\dim\alpha^{-1}(t)=n-1$, y su formación conmuta allí con
+todo cambio de base. Como $T$ y $U$ tienen el mismo punto genérico, para
+mostrar que (1.3.4) no es vacío basta probar que el abierto de $T'$
+\begin{equation}\tag{1.3.16}
+\bigl\{t\in T'\mid\widetilde X_{\pi(t)}\mathbin{\cdot}H_t
+\text{ no es especial}\bigr\}
+\end{equation}
+no es vacío. Pero el caso (1.3.5), ya demostrado, muestra que, para todo
+punto cerrado $s\in S$, la fibra $\pi^{-1}(s)$ corta al abierto (1.3.16).
+
+\pageoriginale
+
+Esto demuestra el teorema.
+
+\subsubsection*{Teorema 1.4.}
+Sea $X\subset\mathbb P^N$ un esquema proyectivo Cohen--Macaulay,
+equidimensional de dimensión $n\geq1$, sobre un cuerpo $k$. Existe un
+entero $d_0$ tal que, para todo $d\geq d_0$, si
+$i:X\mathbin{\cdot}H\longrightarrow X$ denota la inclusión de una sección
+por una hipersuperficie general de grado $d$, entonces la acción de
+\begin{equation}\tag{1.4.0}
+\mathfrak F_p\quad\text{sobre}\quad
+\frac{H^{n-1}(X\mathbin{\cdot}H,\mathcal O_{X\cdot H})}
+{i^*H^{n-1}(X,\mathcal O_X)}
+\end{equation}
+no es nilpotente.
+
+\noindent\underline{Demostración.}
+Como antes, nos reducimos al caso $k=\mathbb F_q$ y a hallar un solo $H$
+---para cada grado fijo suficientemente grande para el que
+$\dim H^{n-1}(X\mathbin{\cdot}H,\mathcal O_{X\cdot H})$ sea independiente
+de $H$; véase (1.4.4)--- que verifique (1.4.0). Ampliando $q$, podemos
+suponer que las componentes irreducibles $X_i$ de $X$ son
+geométricamente irreducibles, que
+\begin{equation}\tag{1.4.1}
+\operatorname{card}\bigl(X_i(\mathbb F_q)\bigr)\geq2,
+\end{equation}
+y que
+\begin{equation}\tag{1.4.2}
+\begin{aligned}
+&\text{hay coordenadas proyectivas }X_0,\dots,X_N\text{ tales que}\\
+&\qquad X\text{ no corta la subvariedad lineal }
+X_0=\cdots=X_n=0.
+\end{aligned}
+\end{equation}
+
+\pageoriginale
+
+Por un teorema de anulación de Serre ([1], o SGA~2 XII~1.4), existe un
+entero $d_1$ tal que, para todo $d\geq d_1$,
+\begin{equation}\tag{1.4.3}
+H^i(X,\mathcal O_X(-d))=0\qquad\text{si }i\ne n=\dim X.
+\end{equation}
+Así, si $H$ es una hipersuperficie de grado $d\geq d_1$, (1.4.3) da
+\begin{equation}\tag{1.4.4}
+\begin{aligned}
+H^i(X,\mathcal O_X)&\xrightarrow{\ \sim\ }
+H^i(X\mathbin{\cdot}H,\mathcal O_{X\cdot H})
+&&\text{si }i\leq n-2,\\[1ex]
+H^{n-1}(X,\mathcal O_X)&\lhook\joinrel\longrightarrow
+H^{n-1}(X\mathbin{\cdot}H,\mathcal O_{X\cdot H})
+&&\text{inyectivamente}.
+\end{aligned}
+\end{equation}
+
+Demostremos el teorema con $d_0=\max(N+1,d_1)$. Para cada $d\geq d_0$
+debemos hallar una hipersuperficie $H$ de grado $d$, definida sobre
+$\mathbb F_q$, que no contenga ningún $X_i$ y para la que
+\begin{equation}\tag{1.4.5}
+\operatorname{tr}\!\left(\mathfrak F_q\ \middle|\
+\frac{H^{n-1}(X\cdot H,\mathcal O_{X\cdot H})}
+{H^{n-1}(X,\mathcal O_X)}\right)\ne0.
+\end{equation}
+Por la fórmula de las trazas (XXII~3.2.1), módulo $p$ tenemos
+\begin{equation}\tag{1.4.6}
+\begin{aligned}
+\operatorname{card}\bigl((X\cdot H)(\mathbb F_q)\bigr)
+&\equiv\sum_{i=0}^{n-1}(-1)^i
+\operatorname{tr}\bigl(\mathfrak F_q\mid
+H^i(X\cdot H,\mathcal O_{X\cdot H})\bigr)\\
+&\stackrel{(1.4.4)}{\equiv}
+\sum_{i=0}^{n-1}(-1)^i
+\operatorname{tr}\bigl(\mathfrak F_q\mid H^i(X,\mathcal O_X)\bigr)\\
+&\quad+(-1)^{n-1}\operatorname{tr}\!\left(
+\mathfrak F_q\ \middle|\
+\frac{H^{n-1}(X\cdot H,\mathcal O_{X\cdot H})}
+{H^{n-1}(X,\mathcal O_X)}\right).
+\end{aligned}
+\end{equation}
+
+\pageoriginale
+
+Sea $a\in\mathbb Z/p\mathbb Z$ la cantidad
+\[
+a=\sum_{i=0}^{n-1}(-1)^i
+\operatorname{tr}\bigl(\mathfrak F_q\mid H^i(X,\mathcal O_X)\bigr).
+\]
+Basta, pues, para todo $d\geq d_0$, hallar una hipersuperficie $H$ de
+grado $d$, definida sobre $\mathbb F_q$, que no contenga $X$ y tal que
+\begin{equation}\tag{1.4.7}
+\operatorname{card}\bigl((X\cdot H)(\mathbb F_q)\bigr)
+\not\equiv a\pmod p.
+\end{equation}
+
+Hay dos casos. Si $a\ne0$, basta tomar un $H$ sobre $\mathbb F_q$ para el
+que $(X\cdot H)(\mathbb F_q)$ sea vacío, como en (1.3.8). Tal $H$ verifica
+(1.4.7) y no contiene ningún $X_i$, pues
+$\operatorname{card}(X_i(\mathbb F_q))\geq2$.
+
+Si $a=0$, basta hallar un $H$ tal que
+$\operatorname{card}((X\cdot H)(\mathbb F_q))=1$. Entonces (1.4.7) se
+verifica y $X_i\not\subset H$. Elijamos coordenadas proyectivas
+$X_0,\dots,X_N$ tales que $(1,0,\dots,0)$ sea un punto de $X$. Tomemos
+$H$ de ecuación $H(X_1,\dots,X_N)=0$, donde $H$ es una forma homogénea
+que verifica
+\begin{equation}\tag{1.4.8}
+\alpha_1,\dots,\alpha_N\in\mathbb F_q,\quad
+H(\alpha_1,\dots,\alpha_N)=0
+\quad\Longrightarrow\quad
+\alpha_1=\cdots=\alpha_N=0.
+\end{equation}
+La hipersuperficie definida por $H$ en $\mathbb P^N$ tiene entonces como
+único punto sobre $\mathbb F_q$ a $(1,0,\dots,0)$; a fortiori,
+$X\cdot H$ solo tiene ese punto. Esto demuestra el teorema.
+
+\pageoriginale
+
+\section*{2. El conivel sobre un cuerpo finito de definición}
+
+\subsection*{2.0.}
+Sea $X$ un esquema separado de tipo finito sobre $\mathbb F_q$. Para todo
+primo $\ell\ne\operatorname{char}(\mathbb F_q)$, escribamos
+\begin{equation}\tag{2.0.1}
+H_c^i(\overline X,\mathbb Q_\ell)
+\end{equation}
+para los grupos de cohomología con soporte propio de
+$\overline X=X\otimes_{\mathbb F_q}\overline{\mathbb F}_q$. Son espacios
+vectoriales de dimensión finita sobre $\mathbb Q_\ell$ en los que actúa
+$\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)$. Sea
+\begin{equation}\tag{2.0.2}
+\varphi_q\in\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)
+\end{equation}
+el automorfismo de Frobenius. Se sabe (SGA~5 XIII~3.2.1) que la función
+zeta de $X$ (XXII~3.0.1) viene dada por
+\begin{equation}\tag{2.0.3}
+Z(t,X/\mathbb F_q)=
+\prod_{i\geq0}
+\det\!\left(1-t\varphi_q^{-1}\mid
+H_c^i(\overline X,\mathbb Q_\ell)\right)^{(-1)^{i+1}}.
+\end{equation}
+Deligne ha demostrado recientemente, generalizando un resultado de
+Washnitzer para $X$ proyectivo liso, el teorema siguiente, que se demuestra
+en el apéndice (5.5.3).
+
+\subsubsection*{Teorema 2.1.}
+Los valores propios de $\varphi_q^{-1}$ sobre
+$H_c^i(\overline X,\mathbb Q_\ell)$ son enteros algebraicos; si
+$i>\dim X$, son divisibles, como enteros algebraicos, por
+$q^{i-\dim X}$.
+
+\pageoriginale
+
+En particular se obtiene, tautológicamente:
+
+\medskip
+\noindent\textbf{(2.1 bis).}
+Los valores propios de $\varphi_q^{-1}$ sobre
+$H_c^i(\overline X,\mathbb Q_\ell(-j))$ son enteros algebraicos divisibles
+por $q^j$.
+
+\subsubsection*{Corolario 2.2.}
+Sea $X$ propio, liso y geométricamente conexo sobre $\mathbb F_q$.
+Entonces los valores propios de $\varphi_q^{-1}$ sobre
+$N^jH^q(\overline X,\mathbb Q_\ell)$ (notación de XX~2.0.6) son enteros
+algebraicos divisibles por $q^j$.
+
+\noindent\underline{Demostración.}
+La afirmación es invariante por una extensión finita
+$\mathbb F_{q^M}/\mathbb F_q$, que equivale a reemplazar los valores
+propios considerados por sus potencias $M$-ésimas. Tras tal cambio de
+base, la definición proporciona un número finito de esquemas $T_i$
+proyectivos, lisos y geométricamente conexos sobre $\mathbb F_q$, de
+dimensiones $d_i$, y ciclos algebraicos $Z_i$ sobre
+$T_i\times_{\mathbb F_q}X$ de codimensión $j+d_i$, tales que el
+homomorfismo de $\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)$-
+módulos
+\begin{equation*}
+\bigoplus_i H^{q-2j}(\overline T_i,\mathbb Q_\ell(-j))
+\xrightarrow{\ \oplus_i\operatorname{Cl}(Z_i)\ }
+N^jH^q(\overline X,\mathbb Q_\ell)
+\end{equation*}
+es sobreyectivo. La conclusión se deduce de (2.1 bis).
+
+\pageoriginale
+
+\section*{3. Aplicación a las intersecciones completas}
+
+\subsection*{3.0.}
+Sea $X$ una intersección completa lisa de dimensión $n\geq1$ en
+$\mathbb P^N$ sobre un cuerpo $k$. Para
+$\ell\ne\operatorname{char}(k)$, Lefschetz débil y la dualidad dan
+(XI~1.6)
+\begin{equation}\tag{3.0.1}
+H^i(\overline X,\mathbb Q_\ell)=
+\begin{cases}
+0 & \text{si $i$ es impar e $i\ne n$},\\[1.5ex]
+\mathbb Q_\ell\!\left(-\dfrac{i}{2}\right)
+  & \text{si $i$ es par, $i\leq2n$ e $i\ne n$},\\[1.5ex]
+H^n(\overline X,\mathbb Q_\ell) & \text{si $i=n$}.
+\end{cases}
+\end{equation}
+Para $k=\mathbb F_q$ se obtiene la fórmula siguiente para la función zeta:
+\begin{equation}\tag{3.0.2}
+Z(t,X/\mathbb F_q)\prod_{i=0}^{n}(1-q^it)
+=\det\!\left(1-t\varphi_q^{-1}\mid
+\mathrm{Prim}^n(\overline X,\mathbb Q_\ell)\right)^{(-1)^{n+1}}.
+\end{equation}
+Aquí se ha utilizado la descomposición primitiva y (3.0.1).
+
+\subsubsection*{Corolario 3.0.3.}
+Bajo las hipótesis de 3.0, con $k=\mathbb F_q$, se tiene la congruencia
+módulo $p$
+\[
+\det\!\left(1-t\varphi_q^{-1}\mid
+H^n(\overline X,\mathbb Q_\ell)\right)
+\equiv
+\det\!\left(1-t\mathfrak F_q\mid H^n(X,\mathcal O_X)\right).
+\]
+
+\noindent\underline{Demostración.}
+Por la fórmula de congruencia (XXII~3.2.1), y puesto que
+\begin{equation}\tag{3.0.4}
+H^i(X,\mathcal O_X)\simeq
+\begin{cases}
+\mathbb F_q & i=0,\\[1.5ex]
+0 & 1\leq i\leq n-1,\\[1.5ex]
+0 & i\geq n+1,
+\end{cases}
+\end{equation}
+
+\pageoriginale
+
+tenemos
+\begin{equation}\tag{3.0.5}
+Z(t,X/\mathbb F_q)\equiv
+(1-t)^{-1}
+\det\!\left(1-t\mathfrak F_q\mid H^n(X,\mathcal O_X)\right)^{(-1)^{n+1}}
+\pmod p.
+\end{equation}
+Por consiguiente, (3.0.5) y (3.0.2) dan
+\begin{equation}\tag{3.0.6}
+\det\!\left(1-t\varphi_q^{-1}\mid
+\mathrm{Prim}^n(\overline X,\mathbb Q_\ell)\right)
+\equiv
+\det\!\left(1-t\mathfrak F_q\mid H^n(X,\mathcal O_X)\right)
+\pmod p.
+\end{equation}
+La conclusión buscada resulta de
+\begin{equation}\tag{3.0.7}
+H^n(\overline X,\mathbb Q_\ell)\simeq
+\begin{cases}
+\mathrm{Prim}^n(\overline X,\mathbb Q_\ell) & \text{si $n$ es impar},\\[2mm]
+\mathrm{Prim}^n(\overline X,\mathbb Q_\ell)
+\oplus\mathbb Q_\ell\!\left(-\dfrac n2\right) & \text{si $n$ es par}.
+\end{cases}
+\end{equation}
+
+\subsubsection*{Corolario 3.1.}
+Sea $X$ una intersección completa lisa de dimensión $n\geq1$ sobre
+$\mathbb F_q$. Si
+\begin{equation}\tag{3.1.0}
+H^n(\overline X,\mathbb Q_\ell)=N^1H^n(\overline X,\mathbb Q_\ell),
+\end{equation}
+entonces
+\begin{equation}\tag{3.1.1}
+\mathfrak F_p\quad\text{es nilpotente sobre}\quad H^n(X,\mathcal O_X).
+\end{equation}
+
+\noindent\underline{Demostración.}
+Por el Corolario~2.2, (3.1.0) implica
+\begin{equation}\tag{3.1.2}
+\det\!\left(1-t\varphi_q^{-1}\mid
+H^n(\overline X,\mathbb Q_\ell)\right)
+\equiv1\pmod p
+\qquad\text{(incluso módulo $q$)}.
+\end{equation}
+Junto con el Corolario~3.0.3, esto da
+\begin{equation}\tag{3.1.3}
+\det\!\left(1-t\mathfrak F_q\mid H^n(X,\mathcal O_X)\right)=1.
+\end{equation}
+
+\pageoriginale
+
+Por tanto, $\mathfrak F_q$ es nilpotente sobre $H^n(X,\mathcal O_X)$, y
+también lo es $\mathfrak F_p$. Esto demuestra el corolario.
+
+\subsubsection*{Proposición 3.2.}
+Sea $X$ una intersección completa lisa de dimensión $n\geq1$ sobre un
+cuerpo $k$. Si
+\begin{equation}\tag{3.2.1}
+H^n(\overline X,\mathbb Q_\ell)=N^1H^n(\overline X,\mathbb Q_\ell),
+\end{equation}
+entonces $X$ es especial, es decir,
+\begin{equation}\tag{3.2.2}
+\mathfrak F_p\quad\text{es nilpotente sobre}\quad H^n(X,\mathcal O_X).
+\end{equation}
+
+\noindent\underline{Demostración.}
+Podemos suponer que $k$ es de tipo finito sobre $\mathbb F_p$ (el caso
+$p=0$ es trivial), y que existe una $\mathbb F_p$-subálgebra $B$ de $k$,
+de tipo finito, tal que $X/k$ sea la fibra genérica de una intersección
+completa relativa lisa $\widetilde X$:
+\begin{equation}\tag{3.2.3}
+\begin{tikzcd}[column sep=4.5em,row sep=3em]
+\widetilde X \arrow[d,"\pi"'] &
+X=\sisi{\widetilde X/_{\eta}}{\widetilde X_\eta}
+ \arrow[l]\arrow[d] \\
+\operatorname{Spec}(B)=S & \eta=\operatorname{Spec}(k)\arrow[l].
+\end{tikzcd}
+\end{equation}
+El $B$-módulo $R^n\pi_*\mathcal O_{\widetilde X}$ es localmente libre y
+su formación conmuta con todo cambio de base. Por consiguiente, el conjunto
+\begin{equation}\tag{3.2.4}
+\{s\in S\mid X_s\text{ es especial}\}
+\end{equation}
+
+\pageoriginale
+
+es cerrado en $S$.
+
+Por XX~2.3, tras encoger $S$ podemos suponer que
+\begin{equation}\tag{3.2.5}
+\forall s\in S,\qquad
+H^n(X_{\bar s},\mathbb Q_\ell)=N^1H^n(X_{\bar s},\mathbb Q_\ell).
+\end{equation}
+Por el Corolario~3.1, $X_s$ es especial para todo punto cerrado $s$ de
+$S$. Se sigue que el cerrado (3.2.4) es todo $S$ y, en particular, que
+$X=\widetilde X_\eta$ es especial.
+
+\section*{4. Conclusiones}
+
+Reuniendo el Teorema~1.1 y la Proposición~3.2 se obtiene:
+
+\subsubsection*{Teorema 4.1.}
+Fijemos una característica $p$, una dimensión $n$ y un multigrado
+$(d_1,\ldots,d_r)$. Sea
+\begin{equation}\tag{4.1.0}
+X_V\longrightarrow V
+\end{equation}
+la intersección completa lisa universal de dimensión $n$ y multigrado
+$(d_1,\ldots,d_r)$ en característica $p$. Si
+\begin{equation}\tag{4.1.1}
+\sum_{i=1}^{r}d_i\geq n+r+1,
+\end{equation}
+entonces existe un abierto denso $U\subset V$ tal que
+\begin{equation}\tag{4.1.2}
+\text{para todo }u\in U,\qquad
+H^n(X_{\bar u},\mathbb Q_\ell)\ne N^1H^n(X_{\bar u},\mathbb Q_\ell).
+\end{equation}
+
+Reuniendo de igual modo el Teorema~1.3 y la Proposición~3.2 se obtiene:
+
+\pageoriginale
+
+\subsubsection*{Teorema 4.2.}
+Sea $X$ una intersección completa lisa de dimensión $n\geq1$ sobre un
+cuerpo $k$. Fijemos un entero
+\begin{equation}\tag{4.2.1}
+d\geq n+1.
+\end{equation}
+Sea
+\begin{equation}\tag{4.2.2}
+X\mathbin{\cdot}H_u\longrightarrow U
+\end{equation}
+la familia universal de secciones de $X$ por hipersuperficies de grado
+$d$ que son lisas de dimensión $n-1$. Existe un abierto denso $T\subset U$
+tal que
+\begin{equation}\tag{4.2.3}
+\text{para todo }t\in T,\qquad
+H^{n-1}(X\mathbin{\cdot}H_{\bar t},\mathbb Q_\ell)
+\ne N^1H^{n-1}(X\mathbin{\cdot}H_{\bar t},\mathbb Q_\ell).
+\end{equation}
+
+\section*{Bibliografía}
+\begin{enumerate}[label={\textup{[\arabic*]}},leftmargin=2.6em]
+\item J.-P. Serre, \emph{Faisceaux algébriques cohérents},
+  \emph{Annals of Mathematics} \textbf{61} (1955), 197--278.
+\item J.-P. Serre, \emph{Sur la topologie des variétés algébriques en
+  caractéristique $p$}, en \emph{Symposium Internacional de Topología
+  Algebraica}, México, 1958.
+\end{enumerate}
+
+\pageoriginale
+
+\section*{5. Apéndice: teoremas de integralidad}
+\begin{center}
+por P. Deligne
+\end{center}
+
+\subsection*{5.0.}
+Sea $p$ un número primo, $q$ una potencia de $p$, $\mathbb F_q$ un cuerpo
+de $q$ elementos, $E$ el completado de un cuerpo de números en un lugar
+que divide un primo $\ell\ne p$, y $T$ un conjunto de números primos (por
+ejemplo, $T=\varnothing$).
+
+Un elemento $\alpha$ de una clausura algebraica de $E$ se llama
+\emph{$T$-entero} si es algebraico sobre $\mathbb Q$ y entero sobre
+$\mathbb Z[(1/r)_{r\in T}]$. Un endomorfismo $F$ de un espacio vectorial
+de dimensión finita sobre $E$ se llama $T$-entero si sus valores propios
+son $T$-enteros.
+
+Sea $k$ un cuerpo finito de $q'$ elementos, $\bar k$ una clausura
+algebraica de $k$ y
+\[
+\mathfrak G=\operatorname{Gal}(\bar k/k).
+\]
+Denotemos por $f\in\mathfrak G$ la sustitución de Frobenius
+\[
+f(x)=x^{q'},
+\]
+y por $F$ el Frobenius «geométrico», inverso de $f$ en $\mathfrak G$.
+Una representación $\rho$ de $\mathfrak G$ sobre un espacio vectorial de
+dimensión finita sobre $E$ se llama $T$-entera si $\rho(F)$ es $T$-entero.
+
+Si $X$ es un esquema de tipo finito sobre $\mathbb F_q$ y $x$ es un punto
+cerrado de $X$, denotamos por $F_x$ el elemento de Frobenius geométrico del
+grupo de Galois de $k(x)$. Si $\bar x$ es un punto geométrico de $X$ sobre
+$x$ y $\underline G$ es un $E$-haz sobre $X$, entonces $F_x$ actúa, por
+transporte de estructura, sobre la fibra $G_{\bar x}$.
+
+\subsubsection*{Definición 5.1.}
+Un $E$-haz constructible $\underline G$ sobre un esquema $X$ de tipo
+finito sobre $\mathbb F_q$ se llama $T$-entero si, para todo punto
+geométrico $\bar x$ de $X$ sobre un punto cerrado $x$, $F_x$ es un
+automorfismo $T$-entero de $G_{\bar x}$.
+
+\pageoriginale
+
+Si $a:X\longrightarrow\operatorname{Spec}(\mathbb F_q)$ es un esquema
+de tipo finito sobre $\mathbb F_q$ y $\underline G$ un $E$-haz
+constructible sobre $X$, escribimos $\underline H^*(X,\underline G)$ para
+los $E$-haces $R^*a_*\underline G$ sobre
+$\operatorname{Spec}(\mathbb F_q)_{\acute e t}$. Si
+$\overline{\mathbb F}_q$ es una clausura algebraica de $\mathbb F_q$ y
+$\overline X=X\times_{\mathbb F_q}\overline{\mathbb F}_q$, estos haces se
+identifican con los grupos $H^*(\overline X,\underline G)$ considerados
+como módulos galoisianos, es decir, provistos de una acción del Frobenius
+geométrico $F$. Adoptamos la misma convención para la cohomología con
+soporte propio.
+
+\subsubsection*{Lema 5.2.1.}
+Sea $\underline G$ un $E$-haz constructible sobre un esquema $X$ de tipo
+finito sobre $\mathbb F_q$, de dimensión a lo sumo $n$.
+\begin{enumerate}[label=(\roman*)]
+\item Existe un cerrado $Y$ de $X$, de dimensión $0$, tal que la
+  aplicación evidente
+  \[
+  \underline H^0(X,\underline G)\longrightarrow
+  \underline H^0(Y,\underline G)
+  \]
+  es inyectiva.
+\item Si $X$ es separado y $U$ es un abierto de $X$ cuyo complemento $Z$
+  tiene dimensión menor que $n$, existe un cerrado $Y$ de $U$, de
+  dimensión $0$, y una aplicación sobreyectiva
+  \[
+  \underline H^0(Y,\underline G)(-n)\longrightarrow
+  \underline H_c^{2n}(X,\underline G).
+  \]
+\end{enumerate}
+
+\noindent\underline{Demostración.}
+La afirmación (i) es evidente. Demostremos (ii). Tras reemplazar $X$ por
+$X_{\mathrm{red}}$ y encoger $U$, podemos suponer que $U$ es liso y que
+$\underline G|_U$ es constante torcido. Como $\dim Z<n$, tenemos
+\[
+0=\underline H_c^{2n-1}(Z,\underline G)
+\longrightarrow\underline H_c^{2n}(U,\underline G)
+\xrightarrow{\sim}\underline H_c^{2n}(X,\underline G)
+\longrightarrow\underline H_c^{2n}(Z,\underline G)=0,
+\]
+y la dualidad de Poincaré (SGA~4, Exposé~XVIII, y [2]) da
+\[
+\underline H_c^{2n}(U,\underline G)\simeq
+\underline H^0(U,\underline G^\vee(n))^\vee.
+\]
+La conclusión se deduce de (i).
+
+\pageoriginale
+
+\subsubsection*{Teorema 5.2.2.}
+Sea $X$ un esquema separado de tipo finito sobre $\mathbb F_q$, de
+dimensión a lo sumo $n$, y sea $\underline G$ un $E$-haz constructible
+$T$-entero. Entonces los endomorfismos $F$ y $q^{n-i}F$ de
+$\underline H_c^i(X,\underline G)$ son $T$-enteros.
+
+\noindent\underline{Demostración.}
+El caso $\dim X\leq0$ es trivial, y los casos $i=0$ e $i=2n$ resultan del
+Lema~5.2.1. Sea
+\[
+Z(X,\underline G,t)=
+\prod_{x\in X}\det\!\left(1-F_xt^{\deg(x)}\,;\,G_x\right)^{-1}
+\in E[[t]].
+\]
+Por SGA~5, Exposé~XV, 3.2, se tiene
+\begin{equation}\tag{5.2.3}
+Z(X,\underline G,t)=
+\prod_i\det\!\left(1-Ft\,;\,
+\underline H_c^i(X,\underline G)\right)^{(-1)^{i+1}}.
+\end{equation}
+
+Demostremos primero el teorema para $n=1$. Entonces
+$\underline H_c^i(X,\underline G)=0$ para $i>2$ (SGA~4, Exposé~X, 4.3,
+o Exposé~XVII, 5.2.8.1). Por hipótesis, los coeficientes de
+$Z(X,\underline G,t)$ son $T$-enteros. Por los casos $i=0$ e $i=2n=2$
+ya demostrados, el producto de $Z(X,\underline G,t)$ por
+\[
+\det\!\left(1-Ft\,;\,\underline H_c^0(X,\underline G)\right)
+\det\!\left(1-Ft\,;\,\underline H_c^2(X,\underline G)\right)
+\]
+tiene aún coeficientes $T$-enteros. Este producto es precisamente
+$\det(1-Ft\,;\,\underline H_c^1(X,\underline G))$, lo que demuestra el
+teorema para $n=1$.
+
+Procedamos por inducción sobre $n=\dim X$. Sea $U$ un abierto de Zariski
+de $X$ cuyo complemento $Z$ tiene dimensión menor que $n$, y supongamos
+que existe un morfismo $f:U\longrightarrow Y$ hacia una curva, de fibras
+de dimensión a lo sumo $n-1$:
+
+\pageoriginale
+
+\begin{center}
+\begin{tikzcd}
+U \arrow[r,hook,"j"] \arrow[d,"f"'] & X & Z \arrow[l,hook',"i"'] \\
+Y
+\end{tikzcd}
+\qquad .
+\end{center}
+La sucesión exacta
+\[
+0\longrightarrow j_!j^*\underline G\longrightarrow\underline G
+\longrightarrow i_!i^*\underline G\longrightarrow0
+\]
+induce sucesiones exactas
+\[
+\underline H_c^i(U,\underline G)\longrightarrow
+\underline H_c^i(X,\underline G)\longrightarrow
+\underline H_c^i(Z,\underline G).
+\]
+Por inducción, basta comprobar el teorema para $\underline G$ sobre $U$.
+Aplicando la hipótesis de inducción a las fibras de $f$, junto con el
+cambio de base propio, se ve que los haces $R^if_!\underline G$ y
+$R^if_!\underline G(i-(n-1))$ sobre $Y$ son $T$-enteros. La sucesión
+espectral de Leray para $f$ es
+\[
+E_2^{pq}=\underline H_c^p(Y,R^qf_!\underline G)
+\Longrightarrow\underline H_c^{p+q}(U,\underline G).
+\]
+Por lo anterior y por el teorema ya demostrado para $Y$, tanto $E_2^{pq}$
+como $E_2^{pq}(p+q-n)$ son $T$-enteros. Se sigue el teorema.
+
+\subsubsection*{Corolario 5.3.}
+Sea $X$ un esquema de tipo finito sobre $\mathbb F_q$, de dimensión a lo
+sumo $1$, sea $U$ un abierto de $X$, sea $j:U\hookrightarrow X$ la
+inclusión, y sea $\underline G$ un $E$-haz constructible sobre $U$.
+\begin{enumerate}[label=(\alph*)]
+\item Si $\underline G$ es $T$-entero, entonces $j_*\underline G$ es
+  $T$-entero.
+\item Si $G_x^\vee$ es $T$-entero para todo $x\in U$, entonces
+  $(j_*\underline G)_x^\vee$ es $T$-entero para todo $x\in X$.
+\end{enumerate}
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Nos reducimos primero al caso en que $X$ es afín, y después al caso en que
+$X$ es proyectivo. Definamos $\underline H$ por la sucesión exacta
+\[
+0\longrightarrow j_!\underline G\longrightarrow j_*\underline G
+\longrightarrow\underline H\longrightarrow0.
+\]
+Si $Y$ es el soporte finito de $\underline H$, la sucesión de cohomología
+correspondiente da una sucesión exacta
+\[
+\underline H^0(U,\underline G)\longrightarrow
+\underline H^0(Y,\underline H)\longrightarrow
+\underline H_c^1(U,\underline G).
+\]
+El Lema~5.2.1 y el Teorema~5.2.2 muestran que los dos términos exteriores
+son $T$-enteros. Por tanto, $\underline H^0(Y,\underline H)$ es $T$-entero,
+lo que demuestra (a).
+
+Sea $X'$ la normalización de la parte puramente unidimensional de
+$X_{\mathrm{red}}$, y elijamos un abierto $U'$ de $U$, denso en el lugar
+liso unidimensional de $U_{\mathrm{red}}$, tal que
+$\underline G|_{U'}$ sea constante torcido:
+\begin{center}
+\begin{tikzcd}
+U' \arrow[r,hook,"j'"'] \arrow[d,hook] & X' \arrow[d,hook,"p"] & {} \\
+U \arrow[r,hook,"j"'] & X & Y \arrow[l,hook']
+\end{tikzcd}
+\qquad .
+\end{center}
+Entonces
+\[
+(p_*j'_*\underline G)|_Y\simeq(j_*\underline G)|_Y.
+\]
+Basta tratar el caso en que $X$ es liso de dimensión uno y
+$\underline G|_U$ es constante torcido. El haz $\underline G^\vee$ es
+entonces $T$-entero, de modo que ya sabemos que
+$(j_*\underline G^\vee)_x$ es $T$-entero para todo $x\in X$.
+
+\pageoriginale
+
+Sea $\mathfrak G_x$ el grupo de Galois del cuerpo de fracciones de
+$\widehat{\mathcal O}_{X,x}$ y sea $\mathfrak I_x$ el grupo de inercia.
+El haz $\underline G$ define una representación de $\mathfrak G_x$,
+denotada también por $\underline G$. El
+$\mathfrak G_x/\mathfrak I_x=
+\operatorname{Gal}(\overline{k(x)}/k(x))$-módulo
+$(j_*\underline G^\vee)_x$ (respectivamente,
+$(j_*\underline G)_x^\vee$) se identifica con el módulo de invariantes
+(respectivamente, de coinvariantes) en $\underline G^\vee$. Queda por
+demostrar:
+
+\subsubsection*{Lema 5.3.1.}
+Sea $K$ un cuerpo local de cuerpo residual $\mathbb F_q$, sea $G$ su
+grupo de Galois, sea $I$ el grupo de inercia y sea $\rho$ una
+representación continua de $G$ sobre un espacio vectorial $V$ de
+dimensión $n$ sobre $E$ (cf.~5.0). Sean $V^I$ y $V_I$, respectivamente,
+el espacio de invariantes y el de coinvariantes bajo $I$, considerados
+como $G/I$-módulos. Pongamos $r=\dim_E V^I$, y sean
+$\alpha_1,\ldots,\alpha_r$ los valores propios de $F$ sobre $V^I$.
+Entonces existen enteros $m_i\geq0$ tales que los valores propios de $F$
+sobre $V_I$ son
+\[
+\alpha_iq^{m_i}\qquad(1\leq i\leq r).
+\]
+
+\noindent\underline{Demostración.}
+Sea $I'$ el mayor subgrupo de $I$ de orden primo con $\ell$. El grupo
+$\rho(I')$ es finito, pues es un subgrupo compacto de
+$\operatorname{GL}(V)$ de orden primo con $\ell$. Así,
+\[
+V_I\simeq\bigl(V^{\rho(I')}\bigr)_I.
+\]
+Reemplazando $V$ por $V^{I'}$, podemos suponer que $I'$ actúa trivialmente
+sobre $V$. Como $G/I$-módulos se tiene
+\[
+I/I'\simeq\mathbb Z_\ell(1).
+\]
+Sea $T$ un generador topológico de $I/I'$. Para cada $\alpha$, sea
+$V^{(\alpha)}$ el subespacio propio generalizado de $T$ sobre $V$ de
+valor propio $\alpha$. Entonces
+\[
+V=\bigoplus_\alpha V^{(\alpha)},
+\]
+y la descomposición
+\[
+V=V^{(1)}\oplus\bigoplus_{\alpha\ne1}V^{(\alpha)}
+\]
+es estable bajo $G$ y compatible con la dualidad.
+
+\pageoriginale
+
+Podemos, por tanto, reemplazar $V$ por $V^{(1)}$ y suponer que $I$ actúa
+unipotentemente.
+
+\subsubsection*{Lema 5.3.2.}
+Sea $V$ un espacio vectorial de dimensión finita sobre un cuerpo $k$ de
+característica $0$, sea $I$ un grupo aditivo uniparamétrico, sea
+$\rho:I\longrightarrow\operatorname{GL}(V)$ una representación y sea $N$
+un generador infinitesimal de $I$. Pongamos
+\[
+V^{I,k}=V^I\cap\operatorname{Im}(N^k)
+\]
+y
+\[
+V_{I,k}=\operatorname{Im}\!\left(\operatorname{Ker}(N^{k+1})
+\longrightarrow V_I\right).
+\]
+Entonces $N^k$ induce un isomorfismo
+\[
+N^k:V_{I,k}/V_{I,k-1}\xrightarrow{\sim}
+V^{I,k}/V^{I,k+1},
+\]
+y define isomorfismos canónicos
+\[
+V_{I,k}/V_{I,k-1}\otimes I^{\otimes k}
+\simeq V^{I,k}/V^{I,k+1}.
+\]
+
+\noindent\underline{Demostración.}
+Por medio de $N$, las representaciones $V$ de $I$ se identifican con los
+$k[T]$-módulos anulados por una potencia de $T$. Basta comprobar el
+Lema~5.3.2 cuando $V$ corresponde al módulo indescomponible
+$k[T]/T^k$, donde la afirmación es inmediata.
+
+Terminemos la demostración del Lema~5.3.1. El Lema~5.3.2 proporciona
+filtraciones creciente y decreciente $V_{I,k}$ y $V^{I,k}$ de $V_I$ y
+$V^I$, junto con isomorfismos de $G/I$-módulos
+\[
+V^{I,k}/V^{I,k+1}\simeq
+\bigl(V_{I,k}/V_{I,k-1}\bigr)(k).
+\]
+Se sigue la afirmación.
+
+\pageoriginale
+
+\subsubsection*{Teorema 5.4.}
+Sea $X$ un esquema separado de tipo finito sobre $\mathbb F_q$, de
+dimensión $n$, y sea $\underline G$ un $E$-haz constructible sobre $X$.
+Supongamos que, para todo $x\in X$, el endomorfismo $F_x$ de $G_x^\vee$
+es $T$-entero. Entonces los endomorfismos $q^iF^\vee$ y $q^nF^\vee$ de
+$\underline H_c^i(X,\underline G)^\vee$ son $T$-enteros.
+
+\noindent\underline{Demostración.}
+Como en el Teorema~5.2.2, nos reducimos al caso en que $X$ es una curva
+lisa y $\underline G$ es constante torcido sobre $X$. Sea $j$ la
+inclusión de $X$ en una curva proyectiva lisa $X'$ que la compactifica.
+
+Por dualidad de Poincaré, $\underline H^i(X',j_*\underline G)$ es dual de
+$\underline H^{2-i}(X',j_*\underline G^\vee(1))$. Por el
+Corolario~5.3(a), el Teorema~5.2.2 se aplica a
+$j_*\underline G^\vee$:
+\begin{align*}
+\underline H^0(X',j_*\underline G^\vee)
+&\simeq\underline H^2(X',j_*\underline G)^\vee(-1)
+&&\text{es $T$-entero},\\
+\underline H^1(X',j_*\underline G^\vee)
+&\simeq\underline H^1(X',j_*\underline G)^\vee(-1)
+&&\text{es $T$-entero},\\
+\underline H^2(X',j_*\underline G^\vee)(1)
+&\simeq\underline H^0(X',j_*\underline G)^\vee
+&&\text{es $T$-entero}.
+\end{align*}
+Esto demuestra el teorema para $j_*\underline G$.
+
+Definamos $\underline H$ por la sucesión exacta
+\[
+0\longrightarrow j_!\underline G\longrightarrow j_*\underline G
+\longrightarrow\underline H\longrightarrow0.
+\]
+Si $Y$ es el soporte de $\underline H$, la sucesión exacta larga de
+cohomología proporciona
+\begin{center}
+\begin{tikzcd}[row sep=large,column sep=large]
+{} & \underline H_c^0(X,\underline G)
+ \arrow[r,hook] & \underline H^0(X',j_*\underline G) & ,\\
+\underline H^0(Y,\underline H) \arrow[r] &
+ \underline H_c^1(X,\underline G) \arrow[r] &
+ \underline H^1(X',j_*\underline G) & ,\\
+{} & \underline H_c^2(X,\underline G)
+ \arrow[r,"\sim"] & \underline H^2(X',j_*\underline G) & .
+\end{tikzcd}
+\end{center}
+
+\pageoriginale
+
+Por consiguiente, el teorema para $(X,\underline G)$ resulta del teorema
+para $(X',j_*\underline G)$.
+
+\subsection*{5.5.}
+El método anterior de fibración en curvas proporciona asimismo las
+estimaciones de Lang--Weil [3] para los valores absolutos complejos de los
+valores propios de Frobenius.
+
+Sea $X$ un esquema de tipo finito sobre $\mathbb F_q$, sea $\underline G$
+un $E$-haz constructible sobre $X$ y sea $\lambda\in\mathbb R$.
+Supongamos que, para todo punto $x\in X$, con
+$\#k(x)=q_x$, los valores propios de $F_x$ sobre $G_x$ son números
+algebraicos $\alpha$ cuyos valores absolutos complejos verifican
+\[
+|\alpha|\leq q_x^\lambda.
+\]
+Escribiremos entonces
+\[
+\log|\underline G|\leq\lambda.
+\]
+
+\subsubsection*{Lema 5.5.1.}
+Sea $X$ una curva sobre $\mathbb F_q$, entendiendo aquí por ello un
+esquema separado $X$ de tipo finito sobre $\mathbb F_q$ y de dimensión a
+lo sumo $1$. Sea $\underline G$ un $E$-haz constructible sobre $X$ tal
+que $\log|\underline G|\leq\lambda$, con $\lambda\in\mathbb R$. Entonces
+los valores absolutos complejos de los valores propios $\alpha$ de $F$
+sobre $\underline H_c^1(X,\underline G)$ verifican
+\[
+|\alpha|\leq q^{\lambda+1}.
+\]
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Sea $\sigma$ una inmersión compleja de $E$, o simplemente una inmersión
+compleja de la clausura algebraica de $\mathbb Q$ en $E$. Basta comprobar
+que, para todo $\sigma$, los ceros $\beta$ de la función racional
+$\sigma Z(X,\underline G,t)$ verifican
+\[
+|\beta^{-1}|\leq q^{\lambda+1}.
+\]
+En efecto, el Lema~5.2.1 muestra ya que, si $\alpha$ es un valor propio de
+Frobenius sobre $\underline H_c^0(X,\underline G)$ o sobre
+$\underline H_c^2(X,\underline G)$, entonces
+$|\sigma\alpha|\leq q^{\lambda+1}$.
+
+Comprobemos que la serie
+\[
+\log\sigma Z(X,\underline G,t)
+=\sum_k\frac{t^k}{k}
+\sum_{x\in X(\mathbb F_{q^k})}
+\sigma\operatorname{Tr}(F,x^*\underline G)
+\]
+converge para $|t|<q^{-\lambda-1}$. Representando $X$ como un
+recubrimiento ramificado de $\mathbb P^1$, se obtiene la estimación
+elemental
+\[
+\#X(\mathbb F_{q^k})\leq Aq^k.
+\]
+Por otra parte, la hipótesis da
+\[
+\left|\sigma\operatorname{Tr}(F,x^*\underline G)\right|
+\leq B(q^k)^\lambda.
+\]
+Así, el coeficiente $c_k$ de $t^k$ en
+$\log\sigma Z(X,\underline G,t)$ verifica
+\[
+|c_k|\leq\frac1k C(q^{1+\lambda})^k,
+\]
+y se sigue la afirmación.
+
+\subsubsection*{Teorema 5.5.2.}
+Sea $X$ un esquema separado de tipo finito sobre $\mathbb F_q$, de
+dimensión a lo sumo $n$, y sea $\underline G$ un $E$-haz constructible
+sobre $X$ tal que $\log|\underline G|\leq\lambda$, con
+$\lambda\in\mathbb R$. Entonces los valores absolutos complejos de los
+valores propios $\alpha$ de Frobenius sobre
+$\underline H_c^i(X,\underline G)$ verifican
+\[
+|\alpha|\leq q^{\lambda+i}
+\qquad\text{y}\qquad
+|\alpha|\leq q^{\lambda+n}.
+\]
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Si $n\leq0$, el teorema es trivial. Si $n=1$, los casos $i=0$ e $i=2$
+se deducen del Lema~5.2.1, mientras que el caso $i=1$ se deduce del
+Lema~5.5.1. Se procede después por inducción sobre $n$, como en la
+demostración del Teorema~5.2.2.
+
+\subsubsection*{Corolario 5.5.3.}
+Sea $X$ un esquema separado de tipo finito y dimensión $n$ sobre
+$\mathbb F_q$. Los valores propios $\alpha$ del endomorfismo de Frobenius
+geométrico $F$ sobre $\underline H_c^i(X,\mathbb Q_\ell)$ son enteros
+algebraicos. Además:
+\begin{enumerate}[label=(\roman*)]
+\item si $\ell'\ne p$, $\alpha$ es una unidad $\ell'$-ádica;
+\item si $i>n$, $\alpha$ es divisible por $q^{i-n}$;
+\item si $i\leq n$ (respectivamente, $i\geq n$),
+  $q^i\alpha^{-1}$ (respectivamente, $q^n\alpha^{-1}$) es un entero
+  algebraico;
+\item si $0<i$, los valores absolutos complejos de $\alpha$ verifican
+  \[
+  |\alpha|\leq q^{i-\frac12}
+  \qquad\text{y}\qquad
+  |\alpha|\leq q^n.
+  \]
+\end{enumerate}
+
+\noindent\underline{Demostración.}
+Por el Teorema~5.2.2, $\alpha$ y $q^{n-i}\alpha$ son enteros algebraicos.
+Las afirmaciones (i)--(iii) se deducen del Teorema~5.4. Para $i>n$, (iv)
+se deduce del Teorema~5.5.2. Para obtener (iv) cuando $i\leq n$, debemos
+combinar el Teorema~5.5.2 con la hipótesis de Riemann para las curvas.
+
+Procedemos por inducción sobre $n$, siendo trivial el caso $n=0$. Si $U$
+es un abierto de $X$ cuyo complemento $Z$ tiene dimensión menor que $n$,
+la sucesión exacta
+\[
+\underline H_c^i(U,\mathbb Q_\ell)\longrightarrow
+\underline H_c^i(X,\mathbb Q_\ell)\longrightarrow
+\underline H_c^i(Z,\mathbb Q_\ell)
+\]
+muestra que basta demostrar la afirmación para $U$.
+
+\pageoriginale
+
+Tras reemplazar primero $X$ por $X_{\mathrm{red}}$, nos reducimos al caso
+en que $X$ es liso y afín y existe un morfismo liso
+$f:X\longrightarrow S$ que verifica:
+\begin{enumerate}[label=(\alph*)]
+\item $\dim S\leq n-1$;
+\item las fibras de $f$ son puramente unidimensionales.
+\end{enumerate}
+Como las fibras de $f$ son curvas afines,
+\[
+R^0f_!\mathbb Q_\ell=0.
+\]
+Por Weil [4],
+\begin{equation}\tag{5.5.3.1}
+\log\bigl|R^1f_!\mathbb Q_\ell\bigr|\leq\frac12,
+\end{equation}
+y el Lema~5.2.1 aplicado a las fibras de $f$ da
+\begin{equation}\tag{5.5.3.2}
+\log\bigl|R^2f_!\mathbb Q_\ell\bigr|\leq1.
+\end{equation}
+La sucesión espectral de Leray para $f$ se reduce aquí a una sucesión
+exacta larga; su parte pertinente es
+\[
+\underline H_c^{i-2}(S,R^2f_!\mathbb Q_\ell)\longrightarrow
+\underline H_c^i(X,\mathbb Q_\ell)\longrightarrow
+\underline H_c^{i-1}(S,R^1f_!\mathbb Q_\ell).
+\]
+Por (5.5.3.1), respectivamente (5.5.3.2), y el Teorema~5.5.2, los valores
+absolutos complejos de los valores propios $\alpha$ de Frobenius sobre el
+término derecho, respectivamente el izquierdo, verifican
+\[
+|\alpha|\leq q^{i-1+\frac12}=q^{i-\frac12},
+\]
+respectivamente
+\[
+|\alpha|\leq q^{i-2+1}=q^{i-1}\leq q^{i-\frac12}.
+\]
+Se sigue el corolario.
+
+\pageoriginale
+
+\subsection*{5.6.}
+Para obtener resultados análogos a los anteriores en cohomología sin
+soportes parece necesario disponer de la resolución de singularidades.
+En dimensión a lo sumo $1$, el problema queda resuelto por el
+Corolario~5.3.
+
+\subsubsection*{Teorema 5.6.}
+Sea $N$ un entero, y supongamos disponible la resolución fuerte de
+singularidades en el sentido de Hironaka para los esquemas de tipo finito
+sobre $\mathbb F_q$ de dimensión a lo sumo $N$ (en la actualidad puede
+tomarse, pues, $N=2$ [1]). Sea $f:X\longrightarrow Y$ un morfismo de
+esquemas de tipo finito sobre $\mathbb F_q$, y sea $\underline G$ un
+$E$-haz constructible $T$-entero sobre $X$. Si $\dim X\leq N$, entonces
+los $E$-haces $R^if_*\underline G$ sobre $Y$ son $T$-enteros.
+
+\noindent\underline{Demostración.}
+Procedemos por inducción sobre la dimensión $n\leq N$ de $X$. Sea
+$j:U\hookrightarrow X$ un abierto de $X$, liso y afín, tal que
+$\underline G|_U$ sea constante torcido y el complemento $Z$ tenga
+dimensión menor que $n$. Por resolución de singularidades, los haces
+$R^ij_*(j^*\underline G)$ son constructibles (SGA~5, Exposé~I; [2]); si
+$i>0$ están soportados sobre $Z$, y para $i=0$,
+$j_*(j^*\underline G)$ solo difiere de $\underline G$ sobre $Z$. La
+hipótesis de inducción muestra que basta demostrar el teorema para el haz
+$j^*\underline G$ y los morfismos $j$ y $f\circ j$. Podemos suponer,
+pues, que $X$ es liso y afín y $\underline G$ es constante torcido, es
+decir, procede de una representación continua del grupo fundamental de
+$X$ sobre un espacio vectorial de dimensión finita sobre $E$.
+
+\pageoriginale
+
+Sea $R$ el anillo de enteros de $E$, sea $\lambda$ un uniformizante, sea
+$e$ el índice absoluto de ramificación, y elijamos un entero
+$b>e/(\ell-1)$. Como $X$ es liso, luego normal, y su grupo fundamental es
+profínito, existe un $R$-haz constante torcido $\underline G^\circ$ tal
+que
+\[
+\underline G\simeq\underline G^\circ\otimes_R E.
+\]
+Sea $p:X'\longrightarrow X$ el recubrimiento étale que trivializa el haz
+localmente constante $\underline G^\circ\otimes_RR/\lambda^b$. El haz
+$\underline G$ es un factor directo de $p_*p^*\underline G$, de modo que
+basta demostrar el teorema para $p^*\underline G$ y $f\circ p$. Queda
+tratar el caso en que se cumplen las condiciones siguientes:
+\[
+(*)\quad
+\begin{minipage}{0.82\linewidth}
+$X$ es liso y afín, y existe un $R$-haz constante torcido
+$\underline G^\circ$ tal que
+$\underline G\simeq\underline G^\circ\otimes_R E$ y
+$\underline G^\circ\otimes_RR/\lambda^b$ es constante.
+\end{minipage}
+\]
+
+Factoricemos $f$ como un morfismo propio seguido de una inmersión abierta,
+$f=\bar f\circ j$:
+\begin{center}
+\begin{tikzcd}
+X \arrow[r,hook,"j"'] \arrow[d,"f"'] & X' \arrow[dl,"\bar f"] \\
+Y & {}
+\end{tikzcd}
+\qquad .
+\end{center}
+El teorema ya se ha demostrado para $\bar f$ (5.2), por lo que basta
+demostrarlo para $j$. Aplicando la resolución de singularidades a $X'$,
+podemos suponer que $X'$ es liso y que $X$ es el complemento en $X'$ de
+un divisor con cruces normales, unión de divisores lisos. La hipótesis
+$(*)$ implica que $\underline G$ está moderadamente ramificado a lo largo
+de este divisor. Tenemos entonces:
+
+\pageoriginale
+
+\subsubsection*{Lema 5.6.1.}
+Sea $X$ un esquema liso de tipo finito sobre $\mathbb F_q$, sea $D$ un
+divisor con cruces normales en $X$, unión de divisores lisos $D_i$, sea
+$j:U\hookrightarrow X$ el complemento de $D$ en $X$, y sea $\underline G$
+un $E$-haz constante torcido sobre $U$, moderadamente ramificado a lo
+largo de $D$. Si $\underline G$ es $T$-entero, entonces los haces
+$R^ij_*\underline G$ son $T$-enteros.
+
+Admitiremos el resultado siguiente (cf.~SGA~1, Exposé~XIII).
+
+\subsubsection*{Lema 5.6.2.}
+\begin{enumerate}[label=(\roman*)]
+\item Bajo las hipótesis del Lema~5.6.1, sea $D'$ una componente de $D$,
+sea $D''$ la unión de las demás componentes, y pongamos
+$U'=X-D''$ y $D^{\prime\circ}=D'\cap U'$:
+\begin{center}
+\begin{tikzcd}
+{} & D^{\prime\circ}
+ \arrow[r,hook,"j'_D"'] \arrow[d,"i^\circ"] &
+ D' \arrow[d,"i"] \\
+U \arrow[r,hook,"j_1"'] &
+ U' \arrow[r,hook,"j'"'] & X
+\end{tikzcd}
+\qquad .
+\end{center}
+Entonces la aplicación de cambio de base
+\[
+i^*Rj'_*(Rj_{1*}\underline G)
+\longrightarrow
+Rj'_{D*}\,i^{\circ *}(Rj_{1*}\underline G)
+\]
+es un isomorfismo, y los haces
+$i^{\circ *}Rj_{1*}\underline G$ son constantes torcidos y moderadamente
+ramificados a lo largo de $D'-D^{\prime\circ}$.
+
+\item Si $C$ es una curva lisa sobre $X$, transversal a $D$ en un punto
+liso $x$ de $D$,
+\begin{center}
+\begin{tikzcd}
+C\cap U \arrow[r,"j_c"'] \arrow[d,"k'"] & C \arrow[d,"k"] \\
+U \arrow[r,"j"'] & X
+\end{tikzcd}
+\qquad ,
+\end{center}
+entonces la aplicación de cambio de base
+\[
+k^*Rj_*\underline G\longrightarrow Rj_{c*}\,k^{\prime *}\underline G
+\]
+es un isomorfismo en $x$.
+\end{enumerate}
+
+Deducimos el Lema~5.6.1 del Lema~5.6.2 por inducción sobre la dimensión,
+admitiendo provisionalmente el Lema~5.6.1 para las curvas. El
+Lema~5.6.2(ii) y esta hipótesis muestran que los haces
+$R^ij_*\underline G$ son $T$-enteros en todo punto liso de $D$. En
+particular, en la notación del Lema~5.6.2(i), los haces
+$R^ij_{1*}\underline G$ son $T$-enteros.
+
+\pageoriginale
+
+El Lema~5.6.2(i), junto con la hipótesis de inducción aplicada a
+$i^{\circ *}Rj_{1*}\underline G$ y a $j'_D$, muestra entonces que los
+haces $i^*R^ij_*\underline G$ son $T$-enteros, cualquiera que sea la
+componente $D'$ elegida. Esto demuestra el Lema~5.6.1.
+
+Queda tratar las curvas. Bajo las hipótesis del Lema~5.6.1, sea $x$ un
+punto de $X-U$, sea $\mathfrak G$ el grupo de Galois del cuerpo de
+fracciones de $\widehat{\mathcal O}_{x,X}$, y sea $\mathfrak J$ el grupo
+de inercia. Denotemos también por $\underline G$ la representación de
+$\mathfrak G$ definida por el haz, y sea $\bar x$ un punto geométrico de
+$X$ localizado en $x$. Hay isomorfismos de
+$\mathfrak G/\mathfrak J$-módulos galoisianos
+\[
+(j_*\underline G)_{\bar x}\simeq\underline G^{\mathfrak J},
+\]
+\[
+(R^1j_*\underline G)_{\bar x}\simeq\underline G_{\mathfrak J}(-1),
+\]
+y
+\[
+(R^ij_*\underline G)_{\bar x}=0\qquad\text{para }i\geq2.
+\]
+La afirmación se deduce del Corolario~5.3(a) y del Lema~5.3.1.
+
+\pageoriginale
+
+\section*{Bibliografía}
+\begin{enumerate}[label={\textup{[\arabic*]}},leftmargin=2.4em]
+\item S.~S. Abhyankar, \emph{Resolution of Singularities of Embedded
+  Algebraic Surfaces}, Academic Press, Nueva York, 1966.
+\item J.-P. Jouanolou, \emph{Cohomologie $\ell$-adique des schémas}, de
+  próxima aparición en \emph{Lecture Notes in Mathematics}.
+\item S. Lang y A. Weil, «Number of Points of Varieties in Finite
+  Fields», \emph{Amer. J. Math.} \textbf{76} (1954), 819--827.
+\item A. Weil, \emph{Sur les courbes algébriques et les variétés qui
+  s'en déduisent}, \emph{Actualités Sci. Indust.} n.º~1041, Hermann,
+  París, 1948.
+\end{enumerate}

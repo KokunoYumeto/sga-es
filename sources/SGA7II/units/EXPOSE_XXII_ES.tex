@@ -1,0 +1,2291 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XXII}{Una fórmula de congruencia para la función zeta}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XXII}\par
+\vspace{2em}
+{\Large\underline{Una fórmula de congruencia para la función zeta}}\par
+\vspace{1.5em}
+{\large por N. Katz}\par
+\end{center}
+
+\section*{0. Introducción}
+
+Sea $X$ un esquema propio sobre $\mathbb F_q$. Su función zeta,
+considerada como elemento de $\mathbb Z[[T]]$, puede reducirse módulo $p$;
+queremos calcularla módulo $p$. Obtenemos una expresión del tipo que cabía
+esperar de las fórmulas de puntos fijos de tipo «Woods Hole»: un producto
+alternado de polinomios característicos de un «Frobenius» adecuado que
+actúa sobre cualquiera de los tres espacios de cohomología siguientes:
+
+\begin{enumerate}[label=\arabic*)]
+\item la cohomología coherente $H^i(X,\mathcal O_X)$ (3.1.1);
+\item la cohomología de De Rham
+  $H^i_{\mathrm{DR}}(X)=\mathbb H^i(X,\Omega_X^\bullet)$ (3.1.1);
+\item la cohomología étale $H^i_{\mathrm{et}}(X,\mathbb Z/p\mathbb Z)$
+  (3.1.2).
+\end{enumerate}
+
+Esta expresión debe verse como un perfeccionamiento de un caso particular
+de la fórmula de trazas de Woods Hole, a saber, el del haz estructural y el
+endomorfismo de Frobenius. En efecto, este caso es un corolario de la
+fórmula de congruencia (cf.~3.2.1).
+
+El método de esta exposición es completamente ingenuo. Consiste en reducirse al
+caso de una hipersuperficie y después «reducir módulo $p$» el cálculo de
+Dwork para la verdadera función zeta de una hipersuperficie.
+
+\pageoriginale
+
+Al efectuar cuidadosamente esta «reducción», se obtiene el
+perfeccionamiento 5.0.6, debido a Ax~[1] (y también a Dwork en el caso liso
+[4, \S~7]), del conocido teorema de Warning--Chevalley~[8].
+
+Deligne acaba de encontrar otro método, enteramente cohomológico y en el
+espíritu de SGA~5, que se aplica también a los «coeficientes torcidos» y que
+debería aparecer en la nueva edición de SGA~5. Se apoya en la fórmula de
+trazas de tipo Woods Hole y en la «fórmula de Künneth simétrica» de Deligne
+(SGA~4, XVII~5.5.21).
+
+\section*{\texorpdfstring{1. Recordatorio sobre las operaciones
+$p$-lineales}{1. Recordatorio sobre las operaciones p-lineales}}
+
+\subsection*{1.0.}
+Sea $V$ un espacio vectorial de dimensión finita sobre un cuerpo $k$ de
+característica $p>0$, y sea $q$ una potencia de $p$. Una aplicación
+
+\begin{equation}\tag{1.0.1}
+\varphi:V\longrightarrow V
+\end{equation}
+
+se llama $q$-\emph{lineal} si es aditiva y satisface
+
+\begin{equation}\tag{1.0.2}
+\varphi(\lambda v)=\lambda^q\varphi(v)
+\qquad\text{para todo }\lambda\in k,\ v\in V.
+\end{equation}
+
+\subsection*{1.0.3.}
+Obsérvese que la $n$-ésima iterada $\varphi^n$ de un endomorfismo
+$q$-lineal es $q^n$-lineal y que, si $k$ no es perfecto, la imagen
+$\varphi(V)$ de un endomorfismo $q$-lineal no es necesariamente un
+subespacio vectorial sobre $k$.
+
+\subsection*{1.0.4.}
+Para toda extensión $K/k$, un endomorfismo $q$-lineal $\varphi$ de $V$
+da lugar a un único endomorfismo $q$-lineal $\varphi_K$ de
+$V_K=V\otimes_kK$ que satisface
+
+\begin{equation}\tag{1.0.5}
+\varphi_K(\mu\otimes v)=\mu^q\varphi(v)
+\qquad\text{para }\mu\in K,\ v\in V.
+\end{equation}
+
+\pageoriginale
+
+\subsection*{1.0.6.}
+Un endomorfismo $q$-lineal $\varphi$ de $V$ se llama \emph{semisimple} si
+su imagen genera $V$ sobre $k$, y \emph{nilpotente} si alguna de sus
+iteradas es cero. Definamos los siguientes subespacios de $V$, estables por
+$\varphi$:
+
+\begin{equation}\tag{1.0.7}
+V_{\mathrm{ss}}=
+\bigcap_{n\geq1}\langle\varphi^n(V)\rangle_k,
+\end{equation}
+
+\begin{equation}\tag{1.0.8}
+V_{\mathrm{nilp}}=
+\bigcup_{n\geq1}\ker(\varphi^n:V\longrightarrow V).
+\end{equation}
+
+Es claro que la restricción de $\varphi$ a $V_{\mathrm{ss}}$ es
+semisimple, mientras que su restricción a $V_{\mathrm{nilp}}$ es
+nilpotente. Si $k$ es perfecto, entonces
+
+\begin{equation}\tag{1.0.9}
+V=V_{\mathrm{ss}}\oplus V_{\mathrm{nilp}}.
+\end{equation}
+
+Si $k$ no es perfecto, en cambio, (1.0.9) es falsa, pues existen
+endomorfismos $q$-lineales inyectivos que no son semisimples. Para una
+extensión arbitraria $K/k$, se tiene
+
+\begin{equation}\tag{1.0.10}
+(V_K)_{\mathrm{ss}}=V_{\mathrm{ss}}\otimes_kK.
+\end{equation}
+
+\subsubsection*{Proposición 1.1.}
+Sea $\varphi$ un endomorfismo $q$-lineal de un espacio vectorial $V$ de
+dimensión finita sobre un cuerpo separablemente cerrado $k$. Supongamos que
+$\varphi$ es semisimple, y pongamos
+
+\[
+V^{1-\varphi}
+=\text{el espacio vectorial sobre $\mathbb F_q$ de los puntos fijos de
+$\varphi$}
+=\ker(1-\varphi).
+\]
+
+Entonces
+
+\begin{equation}\tag{1.1.1}
+V\xleftarrow{\ \sim\ }
+V^{1-\varphi}\otimes_{\mathbb F_q}k.
+\end{equation}
+
+\pageoriginale
+
+\subsubsection*{Corolario 1.1.2.}
+Hay un isomorfismo
+
+\[
+V^{1-\varphi^n}\xleftarrow{\ \sim\ }
+V^{1-\varphi}\otimes_{\mathbb F_q}\mathbb F_{q^n}.
+\]
+
+\medskip
+\noindent\emph{Demostración de la Proposición 1.1.}
+(Lang, cf.~[6], p.~119.) Sea $e$ una base de $V$ sobre $k$, y escribamos
+
+\begin{equation}\tag{1.1.3}
+\varphi(e)=Ae,\qquad A\in\mathrm{GL}(n,k).
+\end{equation}
+
+Sea
+
+\begin{equation}\tag{1.1.4}
+F:\mathrm{GL}(n,k)\longrightarrow\mathrm{GL}(n,k)
+\end{equation}
+
+la aplicación que eleva cada coordenada a la $q$-ésima potencia. Para
+$g\in\mathrm{GL}(n,k)$, la base $ge$ de $V$ está formada por puntos fijos
+de $\varphi$ si y solo si
+
+\begin{equation}\tag{1.1.5}
+F(g)Ag^{-1}=1.
+\end{equation}
+
+Sea $\bar k$ una clausura algebraica de $k$. El grupo
+$\mathrm{GL}(n,\bar k)$ actúa sobre la variedad
+$\mathrm{GL}(n,\bar k)$ mediante
+
+\begin{equation}\tag{1.1.6}
+\left\{
+\begin{aligned}
+\mathrm{GL}(n,\bar k)\times\mathrm{GL}(n,\bar k)
+&\longrightarrow\mathrm{GL}(n,\bar k),\\
+(g,A)&\longmapsto F(g)Ag^{-1}.
+\end{aligned}
+\right.
+\end{equation}
+
+Para $A$ fijo, la aplicación
+
+\begin{equation}\tag{1.1.7}
+g\longmapsto F(g)Ag^{-1}
+\end{equation}
+
+es étale, como se ve calculando su aplicación tangente. Sus órbitas son,
+por tanto, abiertas. Como $\mathrm{GL}(n,\bar k)$ es irreducible, no hay
+más que una órbita; en otras palabras, la aplicación
+
+\begin{equation}\tag{1.1.8}
+\begin{aligned}
+\mathrm{GL}(n,\bar k)&\longrightarrow\mathrm{GL}(n,\bar k),\\
+g&\longmapsto F(g^{-1})\,g
+\end{aligned}
+\end{equation}
+
+\pageoriginale
+
+es sobreyectiva. Puesto que es además étale y $k$ es separablemente
+cerrado, la aplicación
+
+\begin{equation}\tag{1.1.9}
+\begin{aligned}
+\mathrm{GL}(n,k)&\longrightarrow\mathrm{GL}(n,k),\\
+g&\longmapsto F(g^{-1})\,g
+\end{aligned}
+\end{equation}
+
+es sobreyectiva. Así, $V$ posee una base sobre $k$ formada por puntos fijos
+de $\varphi$. Como $\varphi$ es $q$-lineal, todo punto fijo de $\varphi$
+pertenece al espacio vectorial sobre $\mathbb F_q$ generado por una tal base
+sobre $k$. Esto demuestra la Proposición~1.1.
+
+\subsubsection*{Corolario 1.1.10.}
+Sea $\varphi$ un endomorfismo $q$-lineal de un espacio vectorial $V$ de
+dimensión finita sobre un cuerpo separablemente cerrado $k$. Hay un
+isomorfismo canónico
+
+\begin{equation}\tag{1.1.11}
+V_{\mathrm{ss}}\xleftarrow{\ \sim\ }
+V^{1-\varphi}\otimes_{\mathbb F_q}k.
+\end{equation}
+
+En efecto, basta aplicar la Proposición~1.1 a $V_{\mathrm{ss}}$.
+
+\subsubsection*{Proposición 1.2.}
+Sea $\varphi$ un endomorfismo $q$-lineal de un espacio vectorial de
+dimensión finita sobre un cuerpo separablemente cerrado $k$. Entonces la
+aplicación aditiva
+
+\[
+1-\varphi:V\longrightarrow V
+\]
+
+es sobreyectiva.
+
+\medskip
+\noindent\emph{Demostración.}
+Hay una sucesión exacta de grupos abelianos
+
+\[
+0\longrightarrow V_{\mathrm{ss}}\longrightarrow V
+\longrightarrow V/V_{\mathrm{ss}}\longrightarrow0,
+\]
+
+\pageoriginale
+
+sobre la cual actúa $1-\varphi$. Por el lema de la serpiente, basta tratar
+$V_{\mathrm{ss}}$, lo cual es inmediato por la Proposición~1.1 usando una
+base formada por puntos fijos, y $V/V_{\mathrm{ss}}$, sobre el cual
+$\varphi$ es nilpotente y, por tanto, $1-\varphi$ es invertible.
+
+\section*{2. Cohomología coherente y cohomología étale}
+
+\subsubsection*{Proposición 2.0.}
+Sea $\bar X$ un esquema propio sobre un cuerpo separablemente cerrado $k$,
+y sea
+
+\begin{equation}\tag{2.0.1}
+\mathfrak F_p:H^i(\bar X,\mathcal O_{\bar X})
+\longrightarrow H^i(\bar X,\mathcal O_{\bar X})
+\end{equation}
+
+la aplicación $p$-lineal inducida por
+
+\begin{equation}\tag{2.0.2}
+\mathfrak F_p:\mathcal O_{\bar X}\longrightarrow\mathcal O_{\bar X},
+\qquad \mathfrak F_p(f)=f^p.
+\end{equation}
+
+Denotemos por
+
+\[
+H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\]
+
+los grupos de cohomología étale con coeficientes en el haz constante
+$\mathbb Z/p\mathbb Z$. Entonces hay isomorfismos canónicos
+
+\begin{equation}\tag{2.0.3}
+H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\simeq
+H^i(\bar X,\mathcal O_{\bar X})^{1-\mathfrak F_p}.
+\end{equation}
+
+\medskip
+\noindent\emph{Demostración.}
+Hay una sucesión exacta de haces sobre $\bar X_{\mathrm{et}}$:
+
+\begin{equation}\tag{2.0.4}
+0\longrightarrow\mathbb Z/p\mathbb Z\longrightarrow\mathcal O_{\bar X}
+\xrightarrow{\ 1-\mathfrak F_p\ }\mathcal O_{\bar X}\longrightarrow0,
+\end{equation}
+
+que da una sucesión exacta de cohomología
+
+\begin{equation}\tag{2.0.5}
+\cdots\longrightarrow H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\longrightarrow H^i_{\mathrm{et}}(\bar X,\mathcal O_{\bar X})
+\xrightarrow{\ 1-\mathfrak F_p\ }
+H^i_{\mathrm{et}}(\bar X,\mathcal O_{\bar X})\longrightarrow\cdots .
+\end{equation}
+
+Se tiene
+$H^i_{\mathrm{et}}(\bar X,\mathcal O_{\bar X})\simeq
+H^i(\bar X,\mathcal O_{\bar X})$; este es un espacio vectorial de
+dimensión finita sobre $k$ porque $\bar X$ es propio. Aplicando la
+Proposición~1.2 se obtienen las sucesiones exactas
+
+\pageoriginale
+
+\begin{equation}\tag{2.0.6}
+0\longrightarrow H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\longrightarrow H^i(\bar X,\mathcal O_{\bar X})
+\xrightarrow{\ 1-\mathfrak F_p\ }
+H^i(\bar X,\mathcal O_{\bar X})\longrightarrow0,
+\end{equation}
+
+lo que demuestra la afirmación. La Proposición~1.1.10 da ahora el
+corolario siguiente de la Proposición~2.0.
+
+\subsubsection*{Corolario 2.1.}
+Para $\bar X$ propio sobre un cuerpo separablemente cerrado $k$, hay un
+isomorfismo canónico
+
+\begin{equation}\tag{2.1.1}
+H^i(\bar X,\mathcal O_{\bar X})_{\mathrm{ss}}
+\xleftarrow{\ \sim\ }
+H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\otimes_{\mathbb F_p}k.
+\end{equation}
+
+\subsection*{2.2.}
+Sea ahora $f:X\longrightarrow\operatorname{Spec}(\mathbb F_q)$ un esquema propio sobre
+$\mathbb F_q$. Sea $k$ una clausura algebraica de $\mathbb F_q$, y
+pongamos
+
+\begin{equation}\tag{2.2.1}
+\bar X=X\times_{\mathbb F_q}k.
+\end{equation}
+
+El haz étale $R^if_*(\mathbb Z/p\mathbb Z)$ sobre
+$\operatorname{Spec}(\mathbb F_q)$ se identifica con
+$H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)$, considerado como
+$\operatorname{Gal}(k/\mathbb F_q)$-módulo. Sea
+
+\begin{equation}\tag{2.2.2}
+\mathfrak F_q:H^i(X,\mathcal O_X)\longrightarrow H^i(X,\mathcal O_X)
+\end{equation}
+
+la operación lineal (es $q$-lineal, pero el cuerpo base es
+$\mathbb F_q$) inducida por
+
+\begin{equation}\tag{2.2.3}
+\mathfrak F_q:\mathcal O_X\longrightarrow\mathcal O_X,
+\qquad \mathfrak F_q(f)=f^q.
+\end{equation}
+
+\subsubsection*{Proposición 2.2.4.}
+Sea $\varphi_q\in\operatorname{Gal}(k/\mathbb F_q)$ el elemento «Frobenius»
+$\varphi_q(\lambda)=\lambda^q$, y sea $i\in\mathbb Z$. Hay una identidad
+de polinomios característicos
+
+\begin{equation}\tag{2.2.4.1}
+\det_{\mathbb F_p}\!\left(
+1-t\varphi_q^{-1}\mid H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\right)
+=
+\det_{\mathbb F_q}\!\left(
+1-t\mathfrak F_q\mid H^i(X,\mathcal O_X)
+\right).
+\end{equation}
+
+Aquí, el miembro de la izquierda es el polinomio característico del
+elemento $\varphi_q^{-1}$ de $\pi_1(\operatorname{Spec}(\mathbb F_q))$ que actúa sobre
+el módulo de Galois
+$H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)$.
+
+La Proposición~2.2.4 es un corolario del resultado siguiente.
+
+\pageoriginale
+
+\subsubsection*{Proposición 2.2.5.}
+Sea $X$ propio sobre $\operatorname{Spec}(\mathbb F_q)$. Hay un isomorfismo canónico
+
+\begin{equation}\tag{2.2.6}
+H^i(X,\mathcal O_X)_{\mathrm{ss}}\otimes_{\mathbb F_q}k
+\simeq
+H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\otimes_{\mathbb F_p}k
+\end{equation}
+
+que lleva el automorfismo inducido por $\mathfrak F_q$ en el miembro de la
+izquierda al automorfismo inducido por $\varphi_q^{-1}$ en el miembro de la
+derecha. Este último puede interpretarse también como
+$(\mathrm{Fr}_q^X)^*\otimes_{\mathbb F_p}k$, donde
+$\mathrm{Fr}_q^X:\bar X\longrightarrow\bar X$ es el endomorfismo de
+Frobenius sobre $k$ (cf.~SGA~5, XVIII~2.3.4).
+
+\medskip
+\noindent\emph{Demostración.}
+Puesto que
+
+\begin{equation}\tag{2.2.7}
+H^i(\bar X,\mathcal O_{\bar X})\simeq
+H^i(X,\mathcal O_X)\otimes_{\mathbb F_q}k,
+\end{equation}
+
+la Proposición~1.0.10 da
+
+\begin{equation}\tag{2.2.8}
+H^i(\bar X,\mathcal O_{\bar X})_{\mathrm{ss}}\simeq
+H^i(X,\mathcal O_X)_{\mathrm{ss}}\otimes_{\mathbb F_q}k.
+\end{equation}
+
+Así, el isomorfismo (2.2.6) se obtiene componiendo (2.2.8) con (2.1.1).
+
+En virtud de (2.2.7), la operación $q$-lineal
+
+\begin{equation}\tag{2.2.9}
+\mathfrak F_q:H^i(X,\mathcal O_X)\longrightarrow H^i(X,\mathcal O_X)
+\end{equation}
+
+posee una extensión $q$-lineal (cf.~1.0.5)
+
+\begin{equation}\tag{2.2.10}
+\overline{\mathfrak F}_q:H^i(\bar X,\mathcal O_{\bar X})
+\longrightarrow H^i(\bar X,\mathcal O_{\bar X}),
+\end{equation}
+
+y también una extensión $k$-lineal, denotada de nuevo por
+$\overline{\mathfrak F}_q$,
+
+\begin{equation}\tag{2.2.11}
+\overline{\mathfrak F}_q:H^i(\bar X,\mathcal O_{\bar X})
+\longrightarrow H^i(\bar X,\mathcal O_{\bar X}).
+\end{equation}
+
+Sea
+
+\pageoriginale
+
+\begin{equation}\tag{2.2.12}
+\varphi_q:H^i(\bar X,\mathcal O_{\bar X})
+\longrightarrow H^i(\bar X,\mathcal O_{\bar X})
+\end{equation}
+
+la operación $q$-lineal cuyos puntos fijos son
+$H^i(X,\mathcal O_X)$. Bajo (2.2.7), los operadores $\mathfrak F_q$,
+$\varphi_q$ y $\overline{\mathfrak F}_q$ pueden escribirse también,
+respectivamente, como $\mathfrak F_q\otimes\mathrm{id}_k$,
+$\mathrm{id}\otimes\varphi_q$ y
+$\mathfrak F_q\otimes\varphi_q$. Por tanto, conmutan entre sí y
+
+\begin{equation}\tag{2.2.13}
+\overline{\mathfrak F}_q
+=\varphi_q\mathfrak F_q
+=\mathfrak F_q\circ\varphi_q.
+\end{equation}
+
+Todos conmutan con $\mathfrak F_p$, por lo que $\mathfrak F_q$ y
+$\varphi_q$ actúan tanto sobre
+$H^i(\bar X,\mathcal O_{\bar X})^{1-\overline{\mathfrak F}_q}$ como sobre
+$H^i(\bar X,\mathcal O_{\bar X})^{1-\mathfrak F_p}$. Por (2.2.13),
+$\mathfrak F_q$ y $\varphi_q$ son inversos el uno del otro sobre
+$H^i(\bar X,\mathcal O_{\bar X})^{1-\overline{\mathfrak F}_q}$. De ahí
+que la acción de $\mathfrak F_q$ sobre
+
+\[
+H^i(\bar X,\mathcal O_{\bar X})_{\mathrm{ss}}
+\simeq
+H^i(\bar X,\mathcal O_{\bar X})^{1-\overline{\mathfrak F}_q}
+\otimes_{\mathbb F_q}k
+\qquad\text{(cf.~1.1.11)}
+\]
+
+sea inversa a la acción de $\varphi_q\otimes\mathrm{id}_k$ sobre
+
+\[
+H^i(\bar X,\mathcal O_{\bar X})^{1-\overline{\mathfrak F}_q}
+\otimes_{\mathbb F_q}k.
+\]
+
+Escribiendo
+
+\begin{equation}\tag{2.2.14}
+H^i(\bar X,\mathcal O_{\bar X})^{1-\overline{\mathfrak F}_q}
+\simeq
+H^i(\bar X,\mathcal O_{\bar X})^{1-\mathfrak F_p}
+\otimes_{\mathbb F_p}\mathbb F_q,
+\end{equation}
+
+el automorfismo $\varphi_q$ del miembro izquierdo de (2.2.14) se
+convierte, por medio de (2.2.14), en el automorfismo inducido por
+$\varphi_q$ sobre
+$H^i(\bar X,\mathcal O_{\bar X})^{1-\mathfrak F_p}
+\otimes_{\mathbb F_p}\mathbb F_q$. En consecuencia, el automorfismo
+inducido por $\mathfrak F_q$ sobre
+$H^i(\bar X,\mathcal O_{\bar X})_{\mathrm{ss}}$ se convierte, por medio
+de (2.1.1), en el automorfismo inducido por
+$\sisi{\varphi_q}{\varphi_q^{-1}}$ sobre
+$H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)
+\otimes_{\mathbb F_p}k$. Esto demuestra la Proposición~2.2.5.
+
+\pageoriginale
+
+\section*[3. Fórmula de congruencia]{3. La fórmula de congruencia: enunciados y equivalencias elementales}
+
+Deseo agradecer a Grothendieck y Deligne que me explicaran las variantes
+\sisi{(6.1.2), (3.1.1.2) y (3.1.3)}
+{(3.1.2), (3.2.1)--(3.2.2) y (3.3.1)} de (3.1.1).
+
+\subsection*{3.0.}
+Sea $X$ un esquema de tipo finito sobre $\mathbb F_q$. El grado de un
+punto cerrado $y\in X$ se define como el grado de su cuerpo residual
+$\mathbb F_q(y)/\mathbb F_q$. La función zeta de $X/\mathbb F_q$,
+considerada como elemento de $\mathbb Z[[t]]$, se define por la fórmula
+(cf.~también SGA~5, XIII~3.1)
+
+\begin{equation}\tag{3.0.1}
+Z(t,X/\mathbb F_q)=\prod_y(1-t^{\deg(y)})^{-1}.
+\end{equation}
+
+Por «función zeta módulo $p$» entenderemos siempre la imagen de
+$Z(t,X/\mathbb F_q)$ en $\mathbb F_q[[t]]$ por la aplicación de
+«reducción módulo $p$»
+
+\[
+\mathbb Z[[t]]\longrightarrow\mathbb F_q[[t]].
+\]
+
+\subsubsection*{Teorema 3.1.}
+Sea $X$ un esquema propio sobre $\mathbb F_q$. Entonces
+
+\begin{equation}\tag{3.1.1}
+Z(t,X/\mathbb F_q)
+\equiv
+\prod_{i\geq0}
+\det\!\left(1-t\mathfrak F_q\mid H^i(X,\mathcal O_X)\right)^{(-1)^{i+1}}
+\pmod p,
+\end{equation}
+
+o, equivalentemente por la Proposición~2.2.4,
+
+\begin{equation}\tag{3.1.2}
+Z(t,X/\mathbb F_q)
+\equiv
+\prod_{i\geq0}
+\det\!\left(1-t\varphi_q^{-1}\mid
+H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)\right)^{(-1)^{i+1}}
+\pmod p.
+\end{equation}
+
+\subsubsection*{Corolario 3.2.}
+Sea $X$ un esquema propio sobre $\mathbb F_q$. Entonces
+
+\begin{equation}\tag{3.2.1}
+\sum_{i\geq0}(-1)^i
+\operatorname{Tr}\!\left(\mathfrak F_q\mid H^i(X,\mathcal O_X)\right)
+\equiv \#X(\mathbb F_q)\pmod p,
+\end{equation}
+
+o, equivalentemente por la Proposición~2.2.4,
+
+\pageoriginale
+
+\begin{equation}\tag{3.2.2}
+\sum_{i\geq0}(-1)^i
+\operatorname{Tr}\!\left(\varphi_q^{-1}\mid
+H^i_{\mathrm{et}}(\bar X,\mathbb Z/p\mathbb Z)\right)
+\equiv \#X(\mathbb F_q)\pmod p.
+\end{equation}
+
+En efecto, basta tomar los coeficientes de $t$ en las congruencias (3.1.1)
+y (3.1.2).
+
+\subsubsection*{Teorema 3.3.}
+Sea $X$ un esquema propio sobre $\mathbb F_q$, y denotemos por
+$H^i_{\mathrm{DR}}(X/\mathbb F_q)$ los espacios vectoriales sobre
+$\mathbb F_q$ $H^i(X,\Omega^\bullet_{X/\mathbb F_q})$, sobre los cuales
+actúa $\mathfrak F_q$. Entonces
+
+\begin{equation}\tag{3.3.1}
+Z(t,X/\mathbb F_q)
+\equiv
+\prod_{i\geq0}
+\det\!\left(1-t\mathfrak F_q\mid
+H^i_{\mathrm{DR}}(X/\mathbb F_q)\right)^{(-1)^{i+1}}
+\pmod p.
+\end{equation}
+
+En efecto, considérese la sucesión espectral
+
+\begin{equation}\tag{3.3.2}
+E_1^{p,q}=H^q(X,\Omega^p_{X/\mathbb F_q})
+\Longrightarrow H^{p+q}_{\mathrm{DR}}(X/\mathbb F_q).
+\end{equation}
+
+El operador $\mathfrak F_q$ actúa sobre ella mediante el endomorfismo
+$\mathfrak F_q=(\sisi{\mathrm{Fr}_p^X}{\mathrm{Fr}_q^X})^*$ inducido por
+$\mathrm{Fr}_q^X:X\longrightarrow X$, y anula $E_1^{p,q}$ para
+\sisi{$q\ne0$}{$p\ne0$}. Se sigue que (3.3.1) equivale a (3.1.1).
+
+Añadamos un pequeño complemento. Como la formación de la «parte
+semisimple» (cf.~1.0.7) es un funtor exacto, (3.3.2) da una sucesión
+espectral
+
+\begin{equation}\tag{3.3.3}
+(E_1^{p,q})_{\mathrm{ss}}
+\Longrightarrow H^{p+q}_{\mathrm{DR}}(X/\mathbb F_q)_{\mathrm{ss}}.
+\end{equation}
+
+Como $(E_1^{p,q})_{\mathrm{ss}}=0$ para
+\sisi{$q\ne0$}{$p\ne0$}, obtenemos para todo $i$ un isomorfismo
+
+\begin{equation}\tag{3.3.4}
+H^i_{\mathrm{DR}}(X/\mathbb F_q)_{\mathrm{ss}}
+\xrightarrow{\ \sim\ }
+H^i(X,\mathcal O_X)_{\mathrm{ss}}
+\end{equation}
+
+que conmuta con $\mathfrak F_q$. Por tanto,
+
+\begin{equation}\tag{3.3.5}
+\det\!\left(1-t\mathfrak F_q\mid H^i_{\mathrm{DR}}(X/\mathbb F_q)\right)
+=
+\det\!\left(1-t\mathfrak F_q\mid H^i(X,\mathcal O_X)\right).
+\end{equation}
+
+\pageoriginale
+
+\subsubsection*{Teorema 3.4.}
+Sea $X$ un esquema separado de tipo finito sobre $\mathbb F_q$. Denotando
+por $H_c^i$ la cohomología étale con soportes propios (SGA~4,
+XVII~5.1.9(iii)), se tiene
+
+\begin{equation}\tag{3.4.1}
+Z(t,X/\mathbb F_q)
+\equiv
+\prod_{i\geq0}
+\det\!\left(1-t\varphi_q^{-1}\mid
+H_c^i(\bar X,\mathbb Z/p\mathbb Z)\right)^{(-1)^{i+1}}
+\pmod p.
+\end{equation}
+
+Comencemos por demostrar la equivalencia de (3.4.1) y (3.1.1). Por el
+momento, escribamos
+
+\begin{equation}\tag{3.4.2}
+Z(X)\quad\text{en lugar de }Z(t,X/\mathbb F_q)
+\end{equation}
+
+y
+
+\begin{equation}\tag{3.4.3}
+Z'(X)\quad\text{en lugar de}\quad
+\prod_i\det\!\left(1-t\varphi_q^{-1}\mid
+H_c^i(\bar X,\mathbb Z/p\mathbb Z)\right)^{(-1)^{i+1}}.
+\end{equation}
+
+\subsubsection*{Lema 3.5.}
+Si $\{U_i\}$ es un recubrimiento finito de $X$ por subesquemas abiertos,
+entonces
+
+\begin{equation}\tag{3.5.1}
+Z'(X)=
+\prod_{j\geq0}
+\prod_{1\leq i_0<\cdots<i_j\leq n}
+Z'(U_{i_0}\cap\cdots\cap U_{i_j})^{(-1)^j}.
+\end{equation}
+
+\medskip
+\noindent\emph{Demostración.}
+Esto se deduce inmediatamente de la sucesión espectral de localización
+(SGA~4, XVII~6.2.10)
+
+\[
+E_1^{-a,b}=\bigoplus_{i_0<\cdots<i_b}
+H_c^a(\bar U_{i_0}\cap\cdots\cap\bar U_{i_b},\mathbb Z/p\mathbb Z)
+\Longrightarrow H_c^{-a+b}(\bar X,\mathbb Z/p\mathbb Z).
+\]
+
+También puede obtenerse por inducción sobre $n$, usando el Lema~3.6.
+
+\subsubsection*{Lema 3.6.}
+Si $U$ es un subesquema abierto de $X$ e $Y$ es el subesquema cerrado
+$X-U$, entonces
+
+\begin{equation}\tag{3.6.1}
+Z'(X)=Z'(U)Z'(Y).
+\end{equation}
+
+\medskip
+\noindent\emph{Demostración.}
+Esto se deduce de la sucesión exacta de cohomología
+
+\begin{equation}\tag{3.6.2}
+\longrightarrow H_c^i(\bar U,\mathbb Z/p\mathbb Z)
+\longrightarrow H_c^i(\bar X,\mathbb Z/p\mathbb Z)
+\longrightarrow H_c^i(\bar Y,\mathbb Z/p\mathbb Z)\longrightarrow.
+\end{equation}
+
+\pageoriginale
+
+\subsubsection*{Lema 3.7 (Möbius).}
+Sea $B$ un conjunto finito y sea $\{A_i\}$ un recubrimiento finito por
+subconjuntos. Entonces
+
+\begin{equation}\tag{3.7.1}
+\operatorname{card}(B)=
+\sum_{j\geq0}(-1)^j
+\sum_{i_0<\cdots<i_j}
+\operatorname{card}(A_{i_0}\cap\cdots\cap A_{i_j}).
+\end{equation}
+
+\medskip
+\noindent\emph{Demostración.}
+Hay una sucesión espectral de Leray para la cohomología racional del
+espacio discreto $B$ y del recubrimiento abierto $\{A_i\}$,
+
+\[
+E_1^{p,q}=\bigoplus_{i_0<\cdots<i_q}
+H^p(A_{i_0}\cap\cdots\cap A_{i_q},\mathbb Q)
+\Longrightarrow H^{p+q}(B,\mathbb Q),
+\]
+
+y se calcula la característica de Euler--Poincaré de $B$.
+
+\subsubsection*{Lema 3.8.}
+Si $\{U_i\}$ es un recubrimiento finito de $X$ por subesquemas, entonces
+
+\begin{equation}\tag{3.8.1}
+Z(X)=
+\prod_{j\geq0}
+\prod_{i_0<\cdots<i_j}
+Z(U_{i_0}\cap\cdots\cap U_{i_j})^{(-1)^j}.
+\end{equation}
+
+\medskip
+\noindent\emph{Demostración.}
+Se tiene
+
+\begin{equation}\tag{3.8.2}
+\operatorname{card}(X(\mathbb F_{q^n}))
+=\sum_{r\mid n}r\,\operatorname{card}\{y\in X\mid\deg(y)=r\},
+\end{equation}
+
+lo cual da
+
+\begin{equation}\tag{3.8.3}
+Z(X)=\exp\!\left(
+\sum_{n\geq1}\operatorname{card}(X(\mathbb F_{q^n}))\frac{t^n}{n}
+\right).
+\end{equation}
+
+La conclusión se deduce de (3.7.1).
+
+\subsubsection*{Lema 3.9.}
+Supongamos que la fórmula (3.4.1), o equivalentemente (3.1.2) y por tanto
+(3.1.1), vale cuando $X$ es una hipersuperficie proyectiva. Entonces vale
+para todo esquema separado $X$ de tipo finito.
+
+\pageoriginale
+
+\medskip
+\noindent\emph{Demostración.}
+Por los Lemas~3.8 y 3.6, (3.4.1) vale para el complemento
+$\mathbb P^n-H$ de una hipersuperficie. Como
+
+\[
+\bigcap_i(\mathbb P^n-H_i)=\mathbb P^n-\bigcup_iH_i
+\]
+
+es de nuevo el complemento de una hipersuperficie, el recubrimiento
+abierto $\{\mathbb P^n-H_i\}$ de $\mathbb P^n-\bigcap_iH_i$ permite
+aplicar los Lemas~3.8 y 3.5 y deducir \sisi{(3.1.3)}{(3.4.1)} para
+$\mathbb P^n-\bigcap_iH_i$. Por los Lemas~3.8 y 3.6, (3.4.1) vale entonces
+para $\bigcap_iH_i$, y por tanto para todo $X$ proyectivo. Otra aplicación
+de los Lemas~3.8 y 3.5 da \sisi{(3.1.3)}{(3.4.1)} para todo $X$ cuasiproyectivo, en
+particular para todo $X$ afín. Por último, si $X$ es separado y de tipo
+finito, elíjase un recubrimiento finito por subesquemas abiertos afines y
+aplíquense los Lemas~3.8 y 3.5.
+
+\section*[4. Función zeta: método de Dwork]{4. Cálculo de la función zeta de una hipersuperficie por el
+método de Dwork}
+
+\subsection*{4.0.}
+Sea
+
+\begin{equation}\tag{4.0.1}
+f(X)=f(X_1,\ldots,X_{n+2})\in\mathbb F_q[X]
+\end{equation}
+
+homogéneo de grado $d$, y supongamos que su lugar de ceros define la
+hipersuperficie $V\subset\mathbb P^{n+1}$. Denotemos por $V^*$ el abierto
+de $V$ en el que $\prod_{i=1}^{n+2}X_i$ es invertible, y por
+$V^*_{\mathrm{aff}}$ el cono afín sobre $V^*$.
+
+Elijamos un carácter aditivo no trivial
+
+\begin{equation}\tag{4.0.2}
+\chi:\mathbb F_{q^\nu}\longrightarrow\mu_p(C),
+\end{equation}
+
+donde $C$ es un cuerpo algebraicamente cerrado fijo de característica cero
+(por ejemplo, $C=\mathbb C$). Así,
+
+\begin{equation}\tag{4.0.3}
+\text{para }x\in\mathbb F_{q^\nu},\qquad
+\sum_{y\in\mathbb F_{q^\nu}}\chi(xy)=
+\begin{cases}
+q^\nu,&x=0,\\
+0,&x\ne0.
+\end{cases}
+\end{equation}
+
+Para $x=(x_1,\ldots,x_{n+2})\in(\mathbb F_{q^\nu}^*)^{n+2}$ tenemos,
+por tanto,
+
+\pageoriginale
+
+\begin{equation}\tag{4.0.4}
+1+\sum_{x_0\in\mathbb F_{q^\nu}^*}\chi(x_0f(x))
+=\sum_{x_0\in\mathbb F_{q^\nu}}\chi(x_0f(x))
+=
+\begin{cases}
+q^\nu,&f(x)=0,\\
+0,&\text{en otro caso}.
+\end{cases}
+\end{equation}
+
+Sumando (4.0.4) sobre $x\in(\mathbb F_{q^\nu}^*)^{n+2}$, se obtiene
+
+\begin{equation}\tag{4.0.5}
+\operatorname{card}V^*_{\mathrm{aff}}(\mathbb F_{q^\nu})
+=\frac1{q^\nu}
+\sum_{x\in(\mathbb F_{q^\nu}^*)^{n+2}}
+\left\{1+\sum_{x_0\in\mathbb F_{q^\nu}^*}\chi(x_0f(x))\right\}.
+\end{equation}
+
+Como
+
+\begin{equation}\tag{4.0.6}
+\operatorname{card}V^*_{\mathrm{aff}}(\mathbb F_{q^\nu})
+=(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu}),
+\end{equation}
+
+la fórmula (4.0.5) se convierte en
+
+\begin{equation}\tag{4.0.7}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+=\frac{(q^\nu-1)^{n+2}}{q^\nu}
++\frac1{q^\nu}
+\sum_{(x_0,x)\in(\mathbb F_{q^\nu}^*)^{n+3}}\chi(x_0f(x)).
+\end{equation}
+
+Escribamos explícitamente $f(X)$ como una suma de monomios,
+
+\begin{equation}\tag{4.0.8}
+f(X)=\sum_w a_wX^w,
+\end{equation}
+
+donde $w=(w_1,\ldots,w_{n+2})$, $\sum_iw_i=d$, y
+$X^w\mathrel{\mathop:}=X_1^{w_1}\cdots X_{n+2}^{w_{n+2}}$. Entonces
+(4.0.7) puede reescribirse como
+
+\begin{equation}\tag{4.0.9}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+=\frac{(q^\nu-1)^{n+2}}{q^\nu}
++\frac1{q^\nu}
+\sum_{(x_0,x)\in(\mathbb F_{q^\nu}^*)^{n+3}}
+\prod_w\chi(a_wx_0X^w).
+\end{equation}
+
+\subsection*{4.1.}
+Ahora debemos explicitar nuestro «carácter aditivo con valores en
+característica cero». Querríamos tomar simplemente
+
+\begin{equation}\tag{4.1.0}
+\chi:x\longmapsto
+\exp\!\left(2\pi i\,\operatorname{tr}_{\mathbb F_{q^\nu}/\mathbb F_p}(x)\right)
+=\xi_p^{\operatorname{tr}_{\mathbb F_{q^\nu}/\mathbb F_p}(x)}.
+\end{equation}
+
+\pageoriginale
+
+Sea
+
+\begin{align}
+\tag{4.1.1}
+\Omega&=\text{una clausura algebraica de }\mathbb Q_p,\\
+\tag{4.1.2}
+\operatorname{ord}:\Omega^*&\longrightarrow\mathbb Q
+  &&\text{la valuación normalizada por }\operatorname{ord}(p)=1,\\
+\tag{4.1.3}
+\xi_p&\in\Omega
+  &&\text{una raíz $p$-ésima primitiva de la unidad.}
+\end{align}
+
+Se comprueba (cf.~[2]) que existe
+
+\begin{equation}\tag{4.1.4}
+\pi\in\mathbb Q_p(\xi_p),\qquad
+\operatorname{ord}(\pi)=\frac1{p-1},
+\end{equation}
+
+tal que
+
+\begin{equation}\tag{4.1.5}
+\sum_{n\geq0}\frac{\pi^{p^n}}{p^n}=0.
+\end{equation}
+
+(Obsérvese también que el miembro de la izquierda converge en
+$\mathbb Q_p(\xi_p)$.)
+
+Definamos la exponencial de Artin--Hasse
+
+\begin{equation}\tag{4.1.6}
+E(X)=\exp\!\left(\sum_{n\geq0}\frac{X^{p^n}}{p^n}\right)
+\in\mathbb Q_p[[X]],
+\end{equation}
+
+que, milagrosamente, pertenece a $\mathbb Z_p[[X]]$. Definamos
+
+\begin{equation}\tag{4.1.7}
+\Theta(X)=E(\pi X).
+\end{equation}
+
+Sus propiedades fundamentales se resumen en el lema siguiente.
+
+\subsubsection*{Lema 4.2.}
+
+\begin{equation}\tag{4.2.1}
+\Theta(X)=\sum_n B_n X^n,\qquad B_0=1,\quad
+\sisi{A_1}{B_1}=\pi,\quad
+\operatorname{ord}(B_n)\geq\frac n{p-1}.
+\end{equation}
+
+\begin{equation}\tag{4.2.2}
+\Theta(1)=\xi_p,\qquad\text{una raíz $p$-ésima primitiva de la unidad.}
+\end{equation}
+
+Sea $t\in\Omega$ y supongamos que, para cierto entero $a>0$,
+
+\begin{equation}\tag{4.2.3}
+t=t^{p^a};
+\end{equation}
+
+es decir, $t$ es un representante de Teichmüller en
+$W(\mathbb F_{\sisi{q^a}{p^a}})\subset\Omega$. Entonces
+$\sum_{j=0}^{a-1}t^{p^j}\in\mathbb Z_p$, de modo que la serie formal
+
+\pageoriginale
+
+\[
+(\Theta(X))^{\sum_{j=0}^{a-1}\sisi{t^j}{t^{p^j}}}
+\]
+
+está definida, y se tiene la identidad de series formales
+
+\begin{equation}\tag{4.2.3.1}
+\prod_{j=0}^{a-1}\Theta(t^{p^j}X)
+=(\Theta(X))^{\sum_{j=0}^{a-1}\sisi{t^j}{t^{p^j}}}.
+\end{equation}
+
+\medskip
+\noindent\emph{Demostración.}
+Como $E(X)\in\mathbb Z_p[[X]]$, (4.2.1) se deduce de la definición. Para
+(4.2.2), se tiene
+
+\begin{equation}\tag{4.2.4}
+\log(\Theta(1))=0
+\qquad\text{por la elección de $\pi$ en (4.1.5),}
+\end{equation}
+
+y
+
+\begin{equation}\tag{4.2.5}
+\operatorname{ord}(\Theta(1)-1)=\frac1{p-1}
+\qquad\text{por (4.2.1).}
+\end{equation}
+
+Por (4.2.4), existe un entero $n\geq0$ tal que
+$\Theta(1)^{p^n}=1$ (esta es la caracterización del núcleo del logaritmo),
+y (4.2.5) implica que $n=1$.
+
+En cuanto a (4.2.3.1), tras tomar logaritmos se deduce por un cálculo
+inmediato, una vez que se sabe que
+$\sum_{j=0}^{a-1}t^{p^j}\in\mathbb Z_p$. Pero los $t^{p^j}$,
+$0\leq j\leq a-1$, son precisamente los conjugados sobre $\mathbb Z_p$
+de $t\in W(\mathbb F_{p^a})$; por tanto,
+
+\[
+\sum_{j=0}^{a-1}t^{p^j}
+=\operatorname{Tr}_{W(\mathbb F_{p^a})/\mathbb Z_p}(t)\in\mathbb Z_p.
+\]
+
+Evaluando en $X=1$ ambos miembros de (4.2.3.1), se obtiene el resultado
+siguiente.
+
+\subsubsection*{Corolario 4.3.}
+Sea $t\in\Omega$ tal que $t^{p^a}=t$, y denotemos su clase residual por
+$\bar t\in\mathbb F_{p^a}$. Entonces
+
+\begin{equation}\tag{4.3.1}
+\prod_{j=0}^{a-1}\Theta(t^{p^j})
+=\xi_p^{\operatorname{tr}_{\mathbb F_{p^a}/\mathbb F_p}(\bar t)}.
+\end{equation}
+
+\pageoriginale
+
+\subsection*{4.4.}
+Recordemos que el cuerpo residual del anillo de enteros de
+$\mathbb Q_p(\xi_p)$ es $\mathbb F_p$. Sea
+
+\begin{equation}\tag{4.4.0}
+K=\text{la extensión no ramificada de $\mathbb Q_p(\xi_p)$ con cuerpo
+residual $\mathbb F_q$},
+\end{equation}
+
+y sea
+
+\begin{equation}\tag{4.4.1}
+\tau\in\operatorname{Gal}(K/\mathbb Q_p(\xi_p))
+\end{equation}
+
+el «Frobenius», es decir, el automorfismo cuya reducción es el automorfismo
+de Frobenius de $\mathbb F_q/\mathbb F_p$, $x\longmapsto x^p$.
+
+Sea
+
+\begin{equation}\tag{4.4.2}
+F(X)=\sum_w A_wX^w\in K[X_1,\ldots,X_{n+2}]
+\end{equation}
+
+el levantamiento de $f(X)$ cuyos coeficientes satisfacen $A_w^q=A_w$.
+Reuniendo (4.3.1) y (4.0.9), y teniendo en cuenta la definición (4.1.0) de
+$\chi$, se obtiene
+
+\begin{equation}\tag{4.4.3}
+\begin{aligned}
+&(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+-\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad=\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_w\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+\Theta\!\left(A_w^{p^j}X_0^{p^j}X^{p^jw}\right).
+\end{aligned}
+\end{equation}
+
+Definamos
+
+\[
+H(X)=H(X_0,\ldots,X_{n+2})\in K[[X_0,\ldots,X_{n+2}]]
+\]
+
+por
+
+\begin{equation}\tag{4.4.4}
+H(X)=\prod_w
+\Theta\!\left(A_wX_0X_1^{w_1}\cdots X_{n+2}^{w_{n+2}}\right).
+\end{equation}
+
+Hacemos actuar $\operatorname{Gal}(K/\mathbb Q_p(\xi_p))$ sobre
+$K[[X_0,\ldots,X_{n+2}]]$ mediante su acción sobre los coeficientes; la
+acción componente a componente de
+$\sigma\in\operatorname{Gal}(K/\mathbb Q_p(\xi_p))$ se denotará por
+
+\begin{equation}\tag{4.4.5}
+G(X)\longmapsto G^\sigma(X).
+\end{equation}
+
+\pageoriginale
+
+En particular,
+
+\[
+H^{\tau^j}(X)=\prod_w
+\Theta\!\left(A_w^{\tau^j}X_0X_1^{w_1}\cdots
+X_{n+2}^{w_{n+2}}\right).
+\]
+
+Como $A_w^{\tau^j}=A_w^{p^j}$, la fórmula (4.4.3) puede reescribirse
+como
+
+\begin{equation}\tag{4.4.6}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac1{q^\nu}
+\sum_{(X_0,X)\in(\mu_{q^\nu-1}(\Omega))^{n+3}}
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j}).
+\end{aligned}
+\end{equation}
+
+\subsection*{4.5.}
+Ahora expresaremos la suma de (4.4.6) como una traza.
+
+Para cada $b\in\mathbb Q$, definamos un álgebra de Banach $p$-ádica sobre
+$K$
+
+\begin{equation}\tag{4.5.1}
+L(b)=\text{el subanillo de $K[[X_0,\ldots,X_{n+2}]]$ formado por las series}
+\end{equation}
+
+que pueden escribirse
+
+\begin{equation}\tag{4.5.2}
+\sum_{dU_0=\sum_{i\geq1}U_i}
+B_UX_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}},
+\qquad U=(U_0,\ldots,U_{n+2}),
+\end{equation}
+
+y que satisfacen
+
+\begin{equation}\tag{4.5.3}
+\inf_U\bigl(\operatorname{ord}(B_U)-bU_0\bigr)>-\infty.
+\end{equation}
+
+Es un álgebra de Banach $p$-ádica para la función orden (el opuesto del
+logaritmo de la norma)
+
+\begin{equation}\tag{4.5.4}
+\inf_U\bigl(\operatorname{ord}(B_U)-bU_0\bigr)
+=\operatorname{ord}\!\left(\sum_U B_UX^U\right).
+\end{equation}
+
+Se deduce de (4.4.4) y (4.2.1) que
+
+\[
+H(X)\in L\!\left(\frac1{p-1}\right).
+\]
+
+\pageoriginale
+
+Introduzcamos algunos operadores. Para todo entero $k>0$, definamos un
+operador continuo entre espacios de Banach sobre $K$ por
+
+\begin{equation}\tag{4.5.5}
+\left\{
+\begin{aligned}
+\psi_k:L(b)&\longrightarrow L(kb),\\
+\psi_k\!\left(\sum_U B_UX^U\right)&=\sum_U B_{kU}X^U.
+\end{aligned}
+\right.
+\end{equation}
+
+Para todo par $(b,b')$ con $b'<b$, hay un operador de «restricción», que
+es completamente continuo (es decir, límite uniforme de operadores de
+rango finito):
+
+\begin{equation}\tag{4.5.6}
+\left\{
+\begin{aligned}
+L(b)&\xrightarrow{\ \text{restricción}\ }L(b'),\\
+\sum_U B_UX^U&\longmapsto\sum_U B_UX^U.
+\end{aligned}
+\right.
+\end{equation}
+
+Cada elemento $G$ del álgebra $L(b)$ da el endomorfismo continuo de
+multiplicación por $G$,
+
+\begin{equation}\tag{4.5.7}
+\left\{
+\begin{aligned}
+G:L(b)&\longrightarrow L(b),\\
+\eta&\longmapsto\eta G.
+\end{aligned}
+\right.
+\end{equation}
+
+Estos operadores están relacionados por el lema siguiente, cuya
+demostración se encuentra en [2] (véase también [4]).
+
+\pageoriginale
+
+\subsubsection*{Lema 4.5.8 (lema de la traza de Dwork).}
+Sean $b\in\mathbb Q$, $b>0$, $k\in\mathbb Z$, $k\geq2$, y
+$G\in L(b/k)$. Entonces el compuesto
+
+\[
+L(b)\xrightarrow{\ \text{restricción}\ }L(b/k)
+\xrightarrow{\ \times G\ }L(b/k)
+\xrightarrow{\ \psi_k\ }L(b),
+\]
+
+denotado por $\psi_k\circ G$, es completamente continuo, y su traza
+(cf.~[4]) viene dada por
+
+\begin{equation}\tag{4.5.9}
+\operatorname{tr}(\psi_k\circ G)
+=\frac1{(k-1)^{n+2}}
+\sum_{X\in(\mu_{k-1}(\Omega))^{n+3}}G(X).
+\end{equation}
+
+Apliquemos este lema con
+
+\[
+\left\{
+\begin{aligned}
+k&=q^\nu,\\
+G(X)&=\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}
+H^{\tau^j}(X^{p^j})
+\in L\!\left(\frac{p}{(p-1)q^\nu}\right),\\
+b&=\frac1{p-1}.
+\end{aligned}
+\right.
+\]
+
+La fórmula (4.4.6) se convierte en
+
+\begin{equation}\tag{4.5.10}
+\begin{aligned}
+(q^\nu-1)\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=\frac{(q^\nu-1)^{n+2}}{q^\nu}\\
+&\quad+\frac{(\sisi{q}{q^\nu}-1)^{n+3}}{q^\nu}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}\circ
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L\!\left(\frac1{p-1}\right)\right).
+\end{aligned}
+\end{equation}
+
+Sea $L^0(b)$ el ideal de los elementos de $L(b)$ que «se anulan en
+cero», es decir, que no tienen término constante. Es estable por
+$\psi_k\circ G$, y evidentemente
+
+\begin{equation}\tag{4.5.11}
+\operatorname{tr}(\psi_k\circ G)
+=G(0)+\operatorname{tr}\!\left(\left.\psi_k\circ G\right|L^0(b)\right).
+\end{equation}
+
+Como $H(0)=1$, la fórmula (4.5.10) puede reescribirse como
+
+\begin{equation}\tag{4.5.12}
+\begin{aligned}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+&=(q^\nu-1)^{n+1}\\
+&\quad+\frac{(q^\nu-1)^{n+2}}{\sisi{q}{q^\nu}}
+\operatorname{tr}\!\left(
+\left.\psi_{q^\nu}\circ
+\prod_{j=0}^{\operatorname{ord}(q^\nu)-1}H^{\tau^j}(X^{p^j})
+\right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{aligned}
+\end{equation}
+
+\pageoriginale
+
+Consideremos ahora el operador $\tau^{-1}$-lineal
+
+\begin{equation}\tag{4.5.13}
+\tau^{-1}\circ\psi_p\circ H(X):L(b)\longrightarrow L(b).
+\end{equation}
+
+Sus iteradas son
+
+\begin{equation}\tag{\sisi{5.4.14}{4.5.14}}
+(\tau^{-1}\circ\psi_p\circ H(X))^a
+=\tau^{-a}\circ\psi_{p^a}\circ
+H(X)H^\tau(X^p)\cdots H^{\tau^{a-1}}(X^{p^{a-1}}),
+\end{equation}
+
+y, si $\operatorname{ord}(q)$ divide a $a$, entonces
+$\tau^{-a}=\operatorname{id}$. Definamos la operación $\tau^{-1}$-lineal
+
+\begin{equation}\tag{4.5.15}
+\left\{
+\begin{aligned}
+\alpha:L^0\!\left(\frac1{p-1}\right)
+&\longrightarrow L^0\!\left(\frac1{p-1}\right),\\
+\alpha&=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X).
+\end{aligned}
+\right.
+\end{equation}
+
+Entonces (4.5.12) toma la forma
+
+\begin{equation}\tag{4.5.16}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\operatorname{tr}\!\left(
+\left.\alpha^{\operatorname{ord}(q^\nu)}
+\right|L^0\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Pongamos
+
+\begin{equation}\tag{4.5.17}
+S=\{1,\ldots,n+2\}.
+\end{equation}
+
+Para todo subconjunto no vacío $A\subset S$, definamos el subespacio
+
+\begin{equation}\tag{4.5.18}
+\begin{aligned}
+L^A(b)=\{\,&\text{series $\sum_U B_UX^U\in L(b)$ tales que, para cada
+monomio $X^U$ con $B_U\ne0$,}\\
+&\text{los índices $i$ para los que $U_i>0$ son exactamente $0$ y los
+$j\in A$}\,\}.
+\end{aligned}
+\end{equation}
+
+Entonces
+
+\begin{equation}\tag{4.5.19}
+L^0(b)=\bigoplus_{\substack{A\subset S\\A\ne\varnothing}}L^A(b).
+\end{equation}
+
+\pageoriginale
+
+Y, para todo subconjunto no vacío $B\subset S$, se tiene
+
+\begin{equation}\tag{4.5.20}
+\bigoplus_{A\supset B}L^A(b)
+=L(b)\cap\left(\prod_{i\in B}X_i\right)K[[X]].
+\end{equation}
+
+Evidentemente, cada subespacio $\bigoplus_{A\supset B}L^A(b)$ es estable
+por $\alpha$. Se sigue que lo mismo ocurre con
+$\bigoplus_{A\not\supset B}L^A(b)$, que es una suma de subespacios del
+tipo anterior. Definamos
+
+{\small
+\begin{equation}\tag{4.5.21}
+\alpha_B=\text{el endomorfismo $\tau^{-1}$-lineal inducido por $\alpha$
+sobre}\quad
+\frac{\displaystyle\bigoplus_{A\supset B}
+L^A\!\left(\frac1{p-1}\right)}
+{\displaystyle\bigoplus_{\substack{A\supset B\\A\ne B}}
+L^A\!\left(\frac1{p-1}\right)}
+\simeq L^B\!\left(\frac1{p-1}\right).
+\end{equation}
+}
+
+Explícitamente, $\alpha_B$ viene dado por
+
+\begin{equation}\tag{4.5.22}
+\alpha_B=\frac{\tau^{-1}}p\,\psi_p\,H_B(X),
+\end{equation}
+
+operación bajo la cual $L^B$ es estable, donde $H_B(X)$ se obtiene de
+$H(X)$ sustituyendo $X_i=0$ para $i\notin\{0\}\cup B$.
+
+Reescribiendo una vez más (4.5.16), se obtiene
+
+\begin{equation}\tag{\sisi{4.5.2.3}{4.5.23}}
+\operatorname{card}V^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{n+1}
++(q^\nu-1)^{n+2}
+\sum_{\substack{A\subset S\\A\ne\varnothing}}
+\operatorname{tr}\!\left((\alpha_A)^{\operatorname{ord}(q^\nu)}\right).
+\end{equation}
+
+Para $A\subset S$, $A\ne\varnothing$, definamos la hipersuperficie
+
+\begin{equation}\tag{4.5.24}
+V_A\subset\mathbb P^{\operatorname{card}(A)-1}
+\simeq
+\mathbb P^{n+1}\cap
+\{X_i=0\text{ para todo }i\notin A\}
+\end{equation}
+
+mediante $f_A(X)$, el polinomio obtenido de $f(X)$ sustituyendo $X_i=0$
+para $i\notin A$.
+
+\pageoriginale
+
+Por la compatibilidad de la formación de la serie $H$ a partir de $f(X)$
+con la sustitución por $0$ de algunas variables, (4.5.23) da, para todo
+$A\subset S$, $A\ne\varnothing$,
+
+\begin{equation}\tag{4.5.25}
+\operatorname{card}V_A^*(\mathbb F_{q^\nu})
+=(q^\nu-1)^{\sisi{\operatorname{car}(A)}{\operatorname{card}(A)}-1}
++(q^\nu-1)^{\operatorname{card}(A)}
+\sum_{B\subset A}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{equation}
+
+Por otra parte,
+
+\begin{equation}\tag{4.5.26}
+\operatorname{card}V(\mathbb F_{q^\nu})
+=\sum_{\substack{A\subset S\\A\ne\varnothing}}
+\operatorname{card}V_A^*(\mathbb F_{q^\nu}).
+\end{equation}
+
+Después de una suma sencilla, (4.5.25) da por tanto
+
+\begin{equation}\tag{4.5.27}
+\begin{aligned}
+\operatorname{card}V(\mathbb F_{q^\nu})
+={}&1+q^\nu+q^{2\nu}+\cdots
++q^{\nu(\operatorname{card}(S)-1)}\\
+&+\sum_{\substack{B\subset S\\B\ne\varnothing}}
+(q^\nu-1)^{\operatorname{card}(B)}
+q^{\nu\operatorname{card}(S-B)}
+\operatorname{tr}\!\left((\alpha_B)^{\operatorname{ord}(q^\nu)}\right).
+\end{aligned}
+\end{equation}
+
+Como $\alpha$, y por tanto los $\alpha_B$, son $\tau^{-1}$-lineales, los
+operadores $\alpha_B^{\operatorname{ord}(q)}$ son $K$-lineales. Definamos
+la serie característica
+
+\[
+\Delta_B(t)\in1+tK[[t]]
+\]
+
+por
+
+\begin{equation}\tag{4.5.28}
+\Delta_B(t)=\det\!\left(
+1-t\alpha_B^{\operatorname{ord}(q)}
+\mathrel{\Big|}L^B\!\left(\frac1{p-1}\right)\right).
+\end{equation}
+
+Introduzcamos los endomorfismos siguientes de $1+tK[[t]]$:
+
+\begin{equation}\tag{4.5.29}
+\varphi:g(t)\longmapsto g^\varphi(t)=g(qt)
+\end{equation}
+
+y
+
+\begin{equation}\tag{4.5.30}
+\delta=1-\varphi:g(t)\longmapsto
+g^\delta(t)=\frac{g(t)}{g(qt)}.
+\end{equation}
+
+\pageoriginale
+
+Teniendo en cuenta las identidades
+
+\begin{equation}\tag{4.5.31}
+Z(t,V/\mathbb F_q)
+=\exp\!\left(
+\sum_{\nu\geq1}
+\operatorname{card}V(\mathbb F_{q^\nu})\frac{t^\nu}{\nu}
+\right)
+\end{equation}
+
+y
+
+\begin{equation}\tag{4.5.32}
+\det\!\left(1-t\alpha_B^{\operatorname{ord}(q)}\right)
+=\exp\!\left(
+-\sum_{\nu\geq1}
+\operatorname{tr}\!\left((\alpha_B)^{\nu\operatorname{ord}(q)}\right)
+\frac{t^\nu}{\nu}
+\right),
+\end{equation}
+
+la fórmula (4.5.27) puede reescribirse como
+
+\begin{equation}\tag{\sisi{4.5.23}{4.5.33}}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+=\prod_{j=1}^{n+2}
+\left(
+\prod_{\substack{B\subset S\\\operatorname{card}(B)=j}}
+\Delta_B(t)
+\right)^{-(-\delta)^j\varphi^{n+2-j}}.
+\end{equation}
+
+\subsection*{4.6.}
+Estudiemos ahora la integralidad de las series $\Delta_B$. Pongamos
+
+\begin{equation}\tag{4.6.1}
+\mathcal O=\text{el anillo de enteros de $K$},
+\end{equation}
+
+y definamos una filtración sobre $1+t\mathcal O[[t]]$ por
+
+\begin{equation}\tag{4.6.2}
+F^i(1+t\mathcal O[[t]])
+=1+q^it\mathcal O[[q^it]]
+=\varphi^i(1+t\mathcal O[[t]]).
+\end{equation}
+
+Se tiene
+
+\begin{align}
+\varphi(F^i)&\subset F^{i+1}, \tag{4.6.3}\\
+\delta(F^i)&\subset F^i, \tag{4.6.4}\\
+\delta&\text{ induce la identidad sobre }F^i/F^{i+1}. \tag{4.6.5}
+\end{align}
+
+\subsubsection*{Lema 4.6.6.}
+Se tiene $\Delta_B(t)\in1+t\mathcal O[[t]]$; además, si un entero $j$
+satisface
+
+\begin{equation}\tag{4.6.7}
+jd<\operatorname{card}(B),
+\end{equation}
+
+entonces
+
+\begin{equation}\tag{4.6.8}
+\Delta_B(t)\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+\pageoriginale
+
+\noindent\emph{Demostración.}
+Los espacios de Banach $L^B\!\left(\frac1{p-1}\right)$ son todos del
+tipo $B(I)$ en el sentido de Serre~[7]; es decir, admiten bases
+ortonormales, a saber, los monomios
+
+\begin{equation}\tag{4.6.9}
+\pi^{U_0}X_0^{U_0}X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\end{equation}
+
+que les pertenecen. Decir que esta es una base ortonormal significa, por
+definición, que
+
+\begin{equation}\tag{4.6.10}
+\operatorname{ord}\!\left(
+\sum_U C_U\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}
+\right)
+=\min_U\operatorname{ord}(C_U).
+\end{equation}
+
+Sea
+
+\begin{equation}\tag{4.6.11}
+R_B=\text{el submódulo sobre $\mathcal O$ de
+$L^B\!\left(\frac1{p-1}\right)$ formado por los elementos de orden
+$\geq0$}.
+\end{equation}
+
+Para demostrar el lema basta probar
+
+\begin{equation}\tag{4.6.12}
+jd<\operatorname{card}(B)
+\quad\Longrightarrow\quad
+(\alpha_B)^{\operatorname{ord}(q)}R_B\subset q^jR_B,
+\end{equation}
+
+o, con mayor razón, probar
+
+\begin{equation}\tag{4.6.13}
+jd<\operatorname{card}(B)
+\quad\Longrightarrow\quad
+\alpha_B(R_B)\subset p^jR_B.
+\end{equation}
+
+Por (4.5.22),
+
+\begin{equation}\tag{4.6.14}
+\alpha_B=\frac1p\,\tau^{-1}\circ\psi_p\circ H_B(X).
+\end{equation}
+
+Como
+
+\begin{equation}\tag{4.6.15}
+H(X)\in L\!\left(\frac1{p-1}\right),
+\qquad \operatorname{ord}(H(X))\geq0,
+\end{equation}
+
+se tiene
+
+\begin{equation}\tag{4.6.16}
+H_B(X)\,R_B\subset R_B
+\end{equation}
+
+y, evidentemente,
+
+\begin{equation}\tag{4.6.17}
+\tau^{-1}(R_B)=R_B.
+\end{equation}
+
+\pageoriginale
+
+En consecuencia, (4.6.13) se deduce de
+
+\begin{equation}\tag{4.6.18}
+jd<\operatorname{card}(B)
+\quad\Longrightarrow\quad
+\psi_p(R_B)\subset p^{j+1}R_B.
+\end{equation}
+
+Verifiquemos (4.6.18) monomio a monomio. Se tiene
+
+{\small
+\begin{equation}\tag{4.6.19}
+\begin{cases}
+\psi_p\!\left(\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}\right)=0,
+&\text{salvo si }p\mid U_i\text{ para todo }i,\\[3pt]
+\psi_p\!\left(
+\pi^{pU_0}X_0^{pU_0}\cdots X_{n+2}^{pU_{n+2}}
+\right)
+=\pi^{(p-1)U_0}
+\underbrace{\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}}_{\in R_B}.
+\end{cases}
+\end{equation}
+}
+
+Las condiciones para que
+$\pi^{U_0}X_0^{U_0}\cdots X_{n+2}^{U_{n+2}}$ pertenezca a
+$L^B\!\left(\frac1{p-1}\right)$ son
+
+\begin{equation}\tag{4.6.20}
+\begin{cases}
+dU_0=\displaystyle\sum_{i\geq1}U_i,\\
+U_i>0\Longleftrightarrow i\in B,\qquad i\geq1.
+\end{cases}
+\end{equation}
+
+En particular,
+
+\begin{equation}\tag{4.6.21}
+dU_0\geq\operatorname{card}(B).
+\end{equation}
+
+Por tanto,
+
+\begin{equation}\tag{4.6.22}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq\frac{\operatorname{card}(B)}d>j,
+\end{equation}
+
+y, como $U_0\in\mathbb Z$,
+
+\begin{equation}\tag{4.6.23}
+\operatorname{ord}\!\left(\pi^{(p-1)U_0}\right)
+=U_0\geq j+1.
+\end{equation}
+
+Junto con (4.6.19), esto demuestra (4.6.18).
+
+\pageoriginale
+
+\section*{5. Un teorema de Ax [1] (cf. también [4], sección 7)}
+
+\subsubsection*{Teorema 5.0.}
+Sea $V$ una hipersuperficie de $\mathbb P^{n+1}$ de grado $d>0$,
+definida sobre $\mathbb F_q$, y sea $j$ un entero. Si
+
+\begin{equation}\tag{5.0.1}
+jd<n+2,
+\end{equation}
+
+entonces
+
+\begin{equation}\tag{5.0.2}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in1+q^jt\mathbb Z[[q^jt]],
+\end{equation}
+
+y el inverso de todo cero o polo de
+
+\begin{equation}\tag{5.0.3}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\end{equation}
+
+es de la forma $q^j$ por un entero algebraico.
+
+\subsubsection*{Teorema 5.0 bis.}
+Sea $V_{\mathrm{aff}}$ una hipersuperficie de $\mathbb A^{n+2}$ definida
+por una forma homogénea de grado $d$, sobre $\mathbb F_q$. Si
+
+\begin{equation}\tag{\sisi{5.0.7}{5.0.4}}
+jd<n+2,
+\end{equation}
+
+entonces
+
+\begin{equation}\tag{5.0.5}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+\in1+q^jt\mathbb Z[[q^jt]].
+\end{equation}
+
+En particular,
+
+\begin{equation}\tag{5.0.6}
+\operatorname{card}\bigl(V_{\mathrm{aff}}(\mathbb F_q)\bigr)
+\equiv0\pmod{q^j},
+\end{equation}
+
+y, por consiguiente,
+
+\begin{equation}\tag{5.0.6 bis}
+\operatorname{card}\bigl(V(\mathbb F_q)\bigr)
+\geq\frac{q^j-1}{q-1}>0,
+\end{equation}
+
+lo que mejora el teorema de Chevalley--Warning~[8].
+
+\pageoriginale
+
+\medskip
+\noindent\emph{Demostración.}
+La implicación (5.0.5) $\Rightarrow$ (5.0.6) es clara tomando el
+coeficiente de $t$ en la función zeta. Las afirmaciones (5.0.4) y (5.0.2)
+son equivalentes, pues
+
+\begin{equation}\tag{5.0.7}
+\operatorname{card}V_{\mathrm{aff}}(\mathbb F_{q^\nu})
+=1+(q^\nu-1)\operatorname{card}V(\mathbb F_{q^\nu}),
+\end{equation}
+
+de donde
+
+\begin{equation}\tag{5.0.8}
+Z(t,V_{\mathrm{aff}}/\mathbb F_q)
+=\frac{Z(t,V/\mathbb F_q)}
+{Z(qt,V/\mathbb F_q)(1-t)}
+\end{equation}
+
+y
+
+\begin{equation}\tag{5.0.9}
+Z(t,V/\mathbb F_q)
+=\prod_{i\geq0}
+\left[(1-q^i\sisi{f}{t})Z(q^it,V_{\mathrm{aff}}/\mathbb F_q)\right].
+\end{equation}
+
+Las afirmaciones (5.0.2) y (5.0.3) son asimismo equivalentes, por el
+teorema de Fatou~[3] y la racionalidad de la función zeta. Como
+
+\begin{equation}\tag{5.0.10}
+Z(t,V/\mathbb F_q)\in\mathbb Z[[t]],
+\end{equation}
+
+basta demostrar
+
+\begin{equation}\tag{5.0.11}
+Z(t,V/\mathbb F_q)\prod_{i=0}^{n+1}(1-q^it)
+\in F^j(1+t\mathcal O[[t]]).
+\end{equation}
+
+A la vista de (4.5.33) y (4.6.4)--(4.6.5), basta mostrar, para
+$\varnothing\ne B\subset\{1,\ldots,n+2\}$, que
+
+\begin{equation}\tag{5.0.12}
+\Delta_B(t)\in F^{j+\operatorname{card}(B)-(n+2)}.
+\end{equation}
+
+Podemos terminar la demostración aplicando el
+Lema~\sisi{4.4.6}{4.6.6} una vez probado que
+
+\begin{equation}\tag{5.0.13}
+jd<n+2
+\quad\Longrightarrow\quad
+\bigl(j+\operatorname{card}(B)-(n+2)\bigr)d
+<\operatorname{card}(B).
+\end{equation}
+
+Esto puede reescribirse como
+
+\pageoriginale
+
+\begin{equation}\tag{5.0.14}
+jd<n+2
+\quad\Longrightarrow\quad
+(j-(n+2))d<\operatorname{card}(B)(1-d).
+\end{equation}
+
+Pero
+
+\[
+\inf_{\varnothing\ne B\subset\{1,\ldots,n+2\}}
+\operatorname{card}(B)(1-d)
+=(n+2)(1-d),
+\]
+
+por lo que basta demostrar
+
+\begin{equation}\tag{5.0.15}
+jd<n+2
+\quad\Longrightarrow\quad
+(j-(n+2))d<(n+2)(1-d),
+\end{equation}
+
+lo cual es cierto.
+
+\subsubsection*{Observación 5.1.}
+La condición
+
+\begin{equation}\tag{5.1.1}
+jd<n+2
+\end{equation}
+
+admite una interpretación cohomológica. Sea $V$ una hipersuperficie lisa
+de grado $d$ y dimensión $n$. Como en XI~2.1, pongamos, para $a+b=n$,
+
+\begin{equation}\tag{5.1.2}
+h_0^{a,b}
+=\dim H^b(V,\Omega_V^a)-\delta_{a,b}
+=\dim E^{a,b}(V),
+\end{equation}
+
+donde $E^{a,b}(V)$ es la componente de bigrado $(a,b)$ de la cohomología
+de Hodge evanescente (compárese XVII~5.4.4)
+
+\begin{equation}\tag{5.1.3}
+E^{a,b}(V)
+=\operatorname{Coker}\!\left(
+H^b(\mathbb P^{n+1},\Omega_{\mathbb P^{n+1}}^a)
+\longrightarrow H^b(V,\Omega_V^a)\right).
+\end{equation}
+
+Entonces, por XI~2.8,
+
+\begin{equation}\tag{5.1.4}
+jd<n+2
+\quad\Longleftrightarrow\quad
+h_0^{a,n-a}=0\quad\text{para }a<j\text{ y }a>n-j.
+\end{equation}
+
+En otras palabras, la condición dice que el nivel de Hodge (XI~2.7) de la
+cohomología de De Rham evanescente de $V$,
+
+\[
+E_{\mathrm{DR}}^n(V)
+=\operatorname{Coker}\!\left(
+H_{\mathrm{Hdg}}^n(\mathbb P^{n+1})
+\longrightarrow H_{\mathrm{Hdg}}^n(V)\right),
+\]
+
+\pageoriginale
+
+es a lo sumo $n-2j$, es decir, que su conivel es al menos $j$. Por otra
+parte, la conclusión dice también que los valores propios del Frobenius
+$\mathfrak F_q$ que actúa sobre la cohomología $\ell$-ádica evanescente
+($\ell\ne p$) son enteros algebraicos divisibles por $q^j$ (XXI~A.2).
+Así, el resultado 5.0 de Ax apoya la conjetura siguiente, sugerida por el
+yoga del nivel de los motivos y que relaciona las conjeturas clásicas de
+Hodge y de Tate~[5].
+
+\subsubsection*{Conjetura 5.2.}
+Sea $f:X\to S$ un morfismo propio y liso, con $S$ integral, de tipo finito
+sobre $\operatorname{Spec}(\mathbb Z)$ y dominante sobre
+$\operatorname{Spec}(\mathbb Z)$; sean $i,j$ enteros. Supongamos que el
+conivel de Hodge de $H^i$ de la fibra genérica de $f$ es al menos $j$.
+Entonces, para todo punto $s\in S$, el conivel (XX~2.0.6) de
+$H^i(X_s,\mathbb Q_\ell)$ es al menos $j$. Por tanto (XX~2.2), si $s$ es
+un punto cerrado de $S$, los valores propios de Frobenius sobre
+$H^i(X_s,\mathbb Q_\ell)$ son enteros algebraicos divisibles por $q^j$,
+donde $q=\operatorname{card}(k(s))$.
+
+\section*{6. Fin de la demostración de la fórmula de congruencia}
+
+Teniendo en cuenta (4.6.6) y (4.6.3)--(4.6.4), la fórmula
+\sisi{(4.5.24)}{(4.5.33)} da
+
+\begin{equation}\tag{6.0.1}
+Z(t,V/\mathbb F_q)(1-t)
+\equiv\Delta_S(t)^{(-1)^{n+1}}
+\pmod{1+qt\mathcal O[[t]]}.
+\end{equation}
+
+Calculemos ahora $\Delta_S(t)$ módulo $\pi\mathcal O[[t]]$. Definamos,
+como en (4.6.11),
+
+\begin{equation}\tag{6.0.2}
+W_S=\sisi{R_B}{R_S}\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+
+\pageoriginale
+
+\begin{equation}\tag{6.0.3}
+\bar\alpha_S:W_S\longrightarrow W_S
+\end{equation}
+
+denota la operación $\tau^{-1}$-lineal inducida por $\alpha_S$;
+
+\begin{equation}\tag{6.0.4}
+R_S(i)
+=\text{el submódulo de $R_S$ formado por los elementos de grado $i$ en
+$X_0$},
+\end{equation}
+
+y
+
+\begin{equation}\tag{6.0.5}
+W_S(i)=R_S(i)\otimes_{\mathcal O}\mathbb F_q.
+\end{equation}
+
+\subsubsection*{Proposición 6.0.6.}
+Se tiene
+\[
+\alpha_S(R_S)\subset R_S(1)+pR_S.
+\]
+
+\noindent\emph{Demostración.}
+Se tiene la factorización (4.6.14)
+
+\begin{equation}\tag{6.0.7}
+\alpha_S=\frac1p\,\tau^{-1}\circ\psi_p\circ H(X).
+\end{equation}
+
+Sabemos (véase (4.6.15)) que
+
+\begin{equation}\tag{6.0.8}
+H(X)\,R_S\subset R_S,
+\end{equation}
+
+y, evidentemente,
+
+\begin{equation}\tag{6.0.9}
+\tau^{-1}\bigl(R_S(1)+pR_S\bigr)=R_S(1)+pR_S.
+\end{equation}
+
+Basta, por tanto, verificar
+
+\begin{equation}\tag{6.0.10}
+\frac1p\,\psi_p(R_S)\subset R_S(1)+pR_S,
+\end{equation}
+
+lo cual es claro por (4.6.19).
+
+\subsubsection*{Corolario 6.0.11.}
+Se tiene
+\[
+\bar\alpha_S(W_S)\subset W_S(1).
+\]
+
+\pageoriginale
+
+\subsubsection*{Corolario 6.0.12.}
+Se tiene la congruencia
+
+\[
+\Delta_S(t)\equiv
+\det\!\left(
+1-t(\bar\alpha_S)^{\operatorname{ord}(q)}
+\mathrel{\Big|}W_S(1)\right)
+\pmod{\pi\mathcal O[[t]]}.
+\]
+
+\subsubsection*{Proposición 6.1.}
+La operación $\tau^{-1}$-lineal
+$\bar\alpha_S:W_S(1)\to W_S(1)$ es igual a
+
+\begin{equation}\tag{6.1.1}
+\frac1p\,\tau^{-1}\circ\psi_p\circ(X_0f(X))^{p-1}.
+\end{equation}
+
+\noindent\emph{Demostración.}
+Escribamos
+
+\begin{equation}\tag{6.1.2}
+H(X)=1+\sum_{i\geq1}H_i(X),
+\end{equation}
+
+donde
+
+\begin{equation}\tag{6.1.3}
+H_i(X)\text{ es de grado $i$ en }X_0.
+\end{equation}
+
+De nuevo por (4.6.19),
+
+\begin{equation}\tag{6.1.4}
+\frac1p\,\psi_pR_S(i)\subset pR_S
+\qquad\text{si }i\ne p.
+\end{equation}
+
+Como
+
+\begin{equation}\tag{6.1.5}
+H_i(X)\,R_S(j)\subset R_S(i+j),
+\end{equation}
+
+se tiene
+
+\begin{equation}\tag{6.1.6}
+\left(
+\alpha_S-\frac1p\,\tau^{-1}\circ\psi_p\circ H_{p-1}(X)
+\right)(R_S(1))
+\subset pR_S.
+\end{equation}
+
+En consecuencia,
+
+\begin{equation}\tag{6.1.7}
+\left[
+(\alpha_S)^{\operatorname{ord}(q)}
+-\left(
+\frac1p\,\tau^{-1}\circ\psi_p\circ H_{p-1}(X)
+\right)^{\operatorname{ord}(q)}
+\right]R_S(1)
+\subset pR_S.
+\end{equation}
+
+Queda calcular $H_{p-1}(X)$. Por (4.4.4),
+
+\pageoriginale
+
+\begin{equation}\tag{6.1.8}
+\begin{aligned}
+H(X)
+&=\prod_W\Theta(\pi A_WX_0X^W)\\
+&=\prod_W\exp\!\left(
+\sum_{r\geq0}\frac{(\pi A_WX_0X^W)^{p^r}}{p^r}
+\right)\\
+&=\prod_W\prod_{r\geq0}
+\exp\!\left(\frac{(\pi A_WX_0X^W)^{p^r}}{p^r}\right)\\
+&\equiv\prod_W\exp(\pi A_WX_0X^W)
+\pmod{\text{términos de grado }\geq p}\\
+&=\exp\!\left(\pi\sum_WA_WX_0X^W\right)
+\pmod{\text{términos de grado }\geq p}\\
+&=\exp(\pi X_0f(X))
+\pmod{\text{términos de grado }\geq p}.
+\end{aligned}
+\end{equation}
+
+Se sigue que
+
+\begin{equation}\tag{6.1.9}
+H_{p-1}(X)
+=\frac{\pi^{p-1}X_0^{p-1}}{(p-1)!}\,f(X)^{p-1}.
+\end{equation}
+
+Se comprueba fácilmente que
+
+\begin{equation}\tag{6.1.10}
+\frac{\pi^{p-1}}p\equiv-1\pmod p,
+\end{equation}
+
+y, por tanto,
+
+\begin{equation}\tag{6.1.11}
+\frac1p\,H_{p-1}(X)
+\equiv(X_0f(X))^{p-1}\pmod p.
+\end{equation}
+
+Esto termina la demostración de la Proposición~6.1.
+
+\subsubsection*{Corolario 6.1.12.}
+El operador lineal
+\[
+(\bar\alpha_S)^{\operatorname{ord}(q)}:W_S(1)\longrightarrow W_S(1)
+\]
+es precisamente
+\[
+\psi_q\circ(X_0f(X))^{q-1}.
+\]
+
+\pageoriginale
+
+\noindent\emph{Demostración.}
+Por (6.1.1),
+
+\begin{equation*}
+\begin{aligned}
+(\bar\alpha_S)^{\operatorname{ord}(q)}
+&=
+\left(
+\frac1p\,\tau^{-1}\circ\psi_p\circ(X_0f(X))^{p-1}
+\right)^{\operatorname{ord}(q)}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\sisi{\operatorname{ord}(a)}{\operatorname{ord}(q)}-1}
+\left(X_0^{p^j}f^{\tau^j}(X^{p^j})\right)^{p-1}\\
+&=
+\psi_q\circ
+\prod_{j=0}^{\operatorname{ord}(q)-1}
+(X_0f(X))^{p^j(p-1)}\\
+&=\psi_q\circ(X_0f(X))^{q-1}.
+\end{aligned}
+\end{equation*}
+
+\subsubsection*{Corolario 6.1.13.}
+Módulo $p$, se tiene la congruencia
+
+\begin{equation*}
+Z(t,V/\mathbb F_q)
+\equiv
+\frac{
+\det\!\left(
+1-t\,\psi_q\circ(X_0f(X))^{q-1}
+\mathrel{\Big|}W_S(1)
+\right)^{(-1)^{n+1}}
+}{1-t}.
+\end{equation*}
+
+\subsection*{6.2.}
+Queda calcular los grupos de cohomología de $\mathcal O_V$. Pongamos
+
+\begin{equation}\tag{6.2.1}
+\mathfrak F_q
+=\text{la operación de elevar a la $q$-ésima potencia en $\mathcal O_V$}.
+\end{equation}
+
+Hay una sucesión exacta de haces sobre
+$\mathbb P^{n+1}=\mathbb P$,
+
+\begin{equation}\tag{6.2.2}
+0\longrightarrow\mathcal O_{\mathbb P}(-d)
+\xrightarrow{\,f\,}\mathcal O_{\mathbb P}
+\longrightarrow\mathcal O_V\longrightarrow0,
+\end{equation}
+
+y el diagrama siguiente es conmutativo:
+
+\begin{equation}\tag{6.2.3}
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] &
+\mathcal O_{\mathbb P}(-d) \arrow[r,"f"] \arrow[d,"f^{q-1}\mathfrak F_q"'] &
+\mathcal O_{\mathbb P} \arrow[r] \arrow[d,"\mathfrak F_q"'] &
+\mathcal O_V \arrow[r] \arrow[d,"\mathfrak F_q"'] &
+0\\
+0 \arrow[r] &
+\mathcal O_{\mathbb P}(-d) \arrow[r,"f"] &
+\mathcal O_{\mathbb P} \arrow[r] &
+\mathcal O_V \arrow[r] &
+0 .
+\end{tikzcd}
+\end{equation}
+
+\pageoriginale
+
+Teniendo en cuenta que
+
+\begin{equation}\tag{6.2.4}
+\begin{cases}
+H^i(\mathbb P^{n+1},\mathcal O_{\mathbb P})=0,
+&i\ne0,\\
+H^i(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))=0,
+&i\ne0,n+1,
+\end{cases}
+\end{equation}
+
+la sucesión exacta larga de cohomología asociada a (6.2.2) da
+
+\begin{equation}\tag{6.2.5}
+\begin{cases}
+H^0(V,\mathcal O_V)\simeq\mathbb F_q,\\
+H^i(V,\mathcal O_V)=0,&i\ne0,n,\\
+H^n(V,\mathcal O_V)
+\simeq H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d)).
+\end{cases}
+\end{equation}
+
+El diagrama conmutativo (6.2.3) da, por tanto,
+
+\begin{equation}\tag{6.2.6}
+\det\!\left(1-t\mathfrak F_q
+\mathrel{\Big|}H^0(V,\mathcal O_V)\right)=1-t
+\end{equation}
+
+y
+
+\begin{equation}\tag{6.2.7}
+\det\!\left(1-t\mathfrak F_q
+\mathrel{\Big|}H^n(V,\mathcal O_V)\right)
+=
+\det\!\left(
+1-tf^{q-1}\mathfrak F_q
+\mathrel{\Big|}
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+\right).
+\end{equation}
+
+Solo queda demostrar
+
+\begin{equation}\tag{6.2.8}
+\begin{aligned}
+&\det\!\left(
+1-tf^{q-1}\mathfrak F_q
+\mathrel{\Big|}
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+\right)\\
+&\qquad=
+\det\!\left(
+1-t\,\psi_q\circ(X_0f(X))^{q-1}
+\mathrel{\Big|}W_S(1)
+\right),
+\end{aligned}
+\end{equation}
+
+lo cual es consecuencia de la proposición siguiente.
+
+\subsubsection*{Proposición 6.3.}
+Hay un isomorfismo
+
+\begin{equation}\tag{6.3.1}
+W_S(1)\simeq
+\operatorname{Hom}_{\mathbb F_q}\!\left(
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d)),
+\mathbb F_q\right)
+\end{equation}
+
+respecto al cual el operador
+
+\begin{equation}\tag{6.3.2}
+\psi_q\circ(X_0f(X))^{q-1}:W_S(1)\longrightarrow W_S(1)
+\end{equation}
+
+\pageoriginale
+
+es el transpuesto de
+
+\begin{equation}\tag{6.3.3}
+f(X)^{q-1}\mathfrak F_q:
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+\longrightarrow
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d)).
+\end{equation}
+
+\noindent\emph{Demostración.}
+El cálculo de
+$H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))$ mediante el
+recubrimiento estándar de $\mathbb P^{n+1}$ da
+
+\begin{equation}\tag{6.3.4}
+\begin{aligned}
+H^{\sisi{i+1}{n+1}}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+&=\text{el espacio vectorial sobre $\mathbb F_q$ con base los monomios}\\
+&\quad X_1^{W_1}\cdots X_{n+2}^{W_{n+2}},
+\qquad W_i\in\mathbb Z,\quad\sum_iW_i=-d,\\
+&\sisi{=}{\mathrel{\big/}}\text{el subespacio sobre $\mathbb F_q$ con base aquellos monomios}\\
+&\quad X_1^{W_1}\cdots X_{n+2}^{W_{n+2}}
+\text{ para los que existe }i\text{ con }W_i\geq0.
+\end{aligned}
+\end{equation}
+
+Por otra parte, $W_S(1)=R_S(1)\otimes_{\mathcal O}\mathbb F_q$, y
+
+\begin{equation}\tag{6.3.5}
+\begin{aligned}
+R_S(1)
+&=\text{el módulo libre sobre $\mathcal O$ con base los monomios}\\
+&\quad
+(\pi X_0)X_1^{U_1}\cdots X_{n+2}^{U_{n+2}},
+\qquad
+\sum_iU_i=d,\quad U_i>0\ \forall i.
+\end{aligned}
+\end{equation}
+
+El emparejamiento
+
+\begin{equation}\tag{6.3.6}
+(\ ,\ ):
+W_S(1)\times
+H^{n+1}(\mathbb P^{n+1},\mathcal O_{\mathbb P}(-d))
+\longrightarrow\mathbb F_q
+\end{equation}
+
+definido por
+
+\begin{equation}\tag{6.3.7}
+\left(
+\operatorname{clase}\!\left(
+\pi X_0X_1^{U_1}\cdots X_{n+2}^{U_{n+2}}
+\right),
+X_1^{W_1}\cdots X_{n+2}^{W_{n+2}}
+\right)
+=
+\begin{cases}
+1,&U_i=-W_i\text{ para todo }i,\\
+0,&\text{en otro caso},
+\end{cases}
+\end{equation}
+
+es claramente una dualidad perfecta de espacios vectoriales sobre
+$\mathbb F_q$. Se comprueba de inmediato que
+$\psi_q\circ(X_0f(X))^{q-1}$ es el transpuesto de
+$f(X)^{q-1}\mathfrak F_q$, lo cual demuestra la Proposición~6.3.
+
+\pageoriginale
+
+\section*{Bibliografía}
+
+\begin{enumerate}[label={\textup{[\arabic*]}},leftmargin=2.4em]
+\item J.~Ax, «Zeroes of Polynomials Over Finite Fields»,
+  \emph{Amer. J. Math.} \textbf{86} (1964), 255--261.
+\item B.~Dwork, «On the Rationality of the Zeta Function of an Algebraic
+  Variety», \emph{Amer. J. Math.} \textbf{82} (1960), 631--648.
+\item B.~Dwork, «An Algebraic Variety», en \emph{Proceedings of the
+  Woods Hole Summer Institute 1964} (mimeografiado).
+\item B.~Dwork, «On the Zeta Function of a Hypersurface II»,
+  \emph{Ann. of Math.} (2) \textbf{80} (1964), 227--299.
+\item A.~Grothendieck, «Le Groupe de Brauer III», en
+  \emph{Dix Exposés sur la Cohomologie des Schémas},
+  North-Holland Publishing Co., 1968.
+\item J.-P.~Serre, \emph{Groupes algébriques et corps de classes},
+  Hermann, París, 1959.
+\item J.-P.~Serre, «Endomorphismes complètement continus des espaces de
+  Banach $p$-adiques», \emph{Publ. Math. I.H.E.S.} n.º~12 (1962).
+\item C.~Chevalley, «Démonstration d'une hypothèse de M.~Artin»,
+  \emph{Abh. Math. Sem. Univ. Hamburg} \textbf{11} (1936), 73--75.
+\end{enumerate}

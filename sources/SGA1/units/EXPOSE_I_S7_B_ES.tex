@@ -1,0 +1,18 @@
+\marginpar{13}
+El teorema~\Ref{I.7.6} se sigue ahora de la conjunción de~\Ref{I.7.9} y~\Ref{I.7.10}. Queda demostrar~\Ref{I.7.9}. Pongamos $S'=B'-\goth{n}'$, de modo que $B'{S'}^{-1}=B'_{\goth{n}'}$.
+$$
+\begin{array}{ccccc}
+B&\longrightarrow&B{S'}^{-1}&\longrightarrow&BS^{-1}=B_\goth{n}\\ \Big\uparrow&&\Big\uparrow&&\\
+B'&\longrightarrow&B'{S'}^{-1}
+\rlap{\hbox{$\displaystyle\ =B'_{\goth{n}'}$}}&&
+\end{array}
+$$
+Sea análogamente $S=B-\goth{n}$, de modo que $BS^{-1}=B_\goth{n}$. Se tiene, pues, un homomorfismo natural $B{S'}^{-1}\to BS^{-1}=B_\goth{n}$. Demostremos que es un isomorfismo, \ie que los elementos de~$S$ son invertibles en $B{S'}^{-1}$, \ie que todo ideal maximal $\goth{p}$ de este último no interseca a~$S$, \ie induce~$\goth{n}$ sobre~$B$. En efecto, como $B{S'}^{-1}$ es finito sobre~$B'{S'}^{-1}=B'_{\goth{n}'}$, $\goth{p}$ induce el único ideal maximal $\goth{n}'B'_{\goth{n}'}$ de~$B'_{\goth{n}'}$,% SGA1-CORR-0007: la autoridad omite la prima en B'_{n'}.
+y, por tanto, induce el ideal maximal $\goth{n}'$ de~$B'$; como $B$ es finito sobre~$B'$, el ideal $\goth{q}$ de~$B$ inducido por~$\goth{p}$, al estar situado sobre~$\goth{n}'$, es necesariamente maximal y no contiene a~$u$, por lo que es idéntico a~$\goth{n}$. (Acabamos de utilizar que $u$ pertenece a todo ideal maximal de~$B$ distinto de~$\goth{n}$.) Demostremos ahora que $B{S'}^{-1}=B'{S'}^{-1}$: como el primero es finito sobre el segundo, Nakayama reduce a demostrar la igualdad módulo $\goth{n}'B{S'}^{-1}$ y, \emph{a fortiori}, basta demostrar la igualdad módulo $\goth{m}B{S'}^{-1}$. Ahora bien,
+$B{S'}^{-1}/\goth{m}B{S'}^{-1}=B_\goth{n}/\goth{m}B_\goth{n}$
+está generado sobre~$k$ por~$u$ (aquí se utiliza la otra propiedad de~$u$); por tanto, la imagen de~$B'$ (y, \emph{a fortiori}, la de $B'{S'}^{-1}$) en él es todo el anillo, pues es un subanillo que contiene a~$k$ y a la imagen de~$u$.
+
+\begin{remarquestar}
+Debería poder enunciarse el teorema~\Ref{I.7.6} para un anillo $\cal{O}$ que solo sea semilocal, de modo que abarque también~\Ref{I.7.5}: se formulará la hipótesis de que $\cal{O}/\goth{m}\cal{O}$ es una $k$-álgebra \emph{monógena}; podrá encontrarse entonces un $u\in B$ cuya imagen en \ifthenelse{\boolean{orig}}{$B/mB$}{$B/\goth{m}B$}\ % La autoridad corrige m por \goth m.
+sea un generador y que pertenezca a todos los ideales maximales de~$B$ que no provengan de~$\cal{O}$. Los lemas~\Ref{I.7.9} y~\Ref{I.7.10} deben adaptarse sin dificultad. Más generalmente, \ldots
+\end{remarquestar}

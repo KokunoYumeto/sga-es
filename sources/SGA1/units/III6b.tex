@@ -1,0 +1,76 @@
+
+\begin{theoreme}
+\label{III.6.3}
+\index{obstrucción a la prolongación de un esquema a un esquema liso|hyperpage}%
+Sean $(S,\cal{I},X_n)$ como antes, y supóngase que~$X_n$ es separado\footnote{En realidad, esta condición es innecesaria, y pueden evitarse los cálculos de cociclos precedentes. Cf. el libro de J.\ \textsc{Giraud}, \emph{Cohomologie Non Abélienne} (de próxima aparición en Springer Verlag, 1971). Compárense las observaciones~\Ref{III.6.4}.}. Entonces puede definirse canónicamente una clase de obstrucción en~$\H^2(X_0,\cal{G})$ (donde~$\cal{G}$ se define en~\Ref{III.6.1}), cuya anulación es necesaria y suficiente para la existencia de un esquema~$X_{n+1}$ liso sobre~$S_{n+1}$ que se reduzca a~$X_n$. Si esta obstrucción es nula, el conjunto de las clases de $S_{n+1}$-preesquemas~$X_{n+1}$ que se reduzcan a~$X_n$, salvo isomorfismo que induzca la identidad sobre~$X_n$, es, de manera natural, un espacio homogéneo principal bajo~$\H^1(X_0,\cal{G})$.
+\end{theoreme}
+
+\begin{remarques}
+\label{III.6.4}
+A partir de~\Ref{III.6.1}, los razonamientos hechos aquí son puramente formales y se transcriben ventajosamente en el marco de las categorías locales,
+\marginpar{81}
+o incluso de las categorías fibradas generales. La clase de obstrucción a la existencia de un objeto «global» de una categoría ---en la que puede encontrarse un objeto «localmente», dos objetos cualesquiera son siempre «localmente isomorfos» y el grupo de automorfismos de todo objeto es conmutativo--- obtenida así en el contexto general contiene, como caso particular, el «segundo morfismo de borde» de una sucesión exacta de haces de grupos no necesariamente conmutativos, estudiado, por ejemplo, por Grothendieck en Kansas o
+\ifthenelse{\boolean{orig}}
+{Tohoku}
+{T\^ohoku}.
+El cálculo simplón mediante cociclos efectuado aquí debe considerarse, pues, un mal menor, debido a la inexistencia de un texto de referencia satisfactorio.
+\end{remarques}
+
+\refstepcounter{proposition}% III.6.5
+\setcounter{subsection}{4}%
+\subsection{}
+\label{III.6.5}
+Obsérvese que en~\Ref{III.6.3} no hay, en general, ningún elemento privilegiado en el espacio homogéneo principal considerado bajo~$\H^1(X_0,\cal{G})$. Esto se traduce, en particular, en que se obtiene ---localizando sobre~$S$--- un haz homogéneo principal sobre~$S_0$, de grupo estructural~$\R^1f_*(\cal{G})$, que no es necesariamente trivial; es decir, define una clase de cohomología en~$\H^1(S_0,\R^1f_*(\cal{G}))$ que no es necesariamente nula. (Esto ocurre cuando se supone que la clase $d\in\H^2(X_0,\cal{G})$ no es nula, pero es nula «localmente sobre~$S$»; es decir, define la sección nula de~$\R^2f_*(\cal{G})$, o sea, el elemento nulo de~$\H^0(S_0,\R^2f_*(\cal{G}))$).
+
+\refstepcounter{proposition}% III.6.6
+\setcounter{subsection}{5}%
+\subsection{}
+\label{III.6.6}
+Por ahora no se sabe casi nada del mecanismo algebraico general de las clases de cohomología introducidas en este número, de sus relaciones con el número precedente, ni puede decirse nada preciso de ellas en los casos particulares más sencillos, como el de los esquemas abelianos sobre anillos artinianos\footnote{\label{III.6.6.p24}%
+\ifthenelse{\boolean{orig}}
+{Ahora se sabe que esta obstrucción es siempre nula en este caso.}
+{Ahora se sabe que esta obstrucción es siempre nula en este caso \lcrochetbf añadido en 2003 (MR): cf. F\ptbl Oort, \emph{Finite group schemes, local moduli for abelian varieties and lifting problems}, Algebraic Geometry Oslo 1970, Wolters-Noordhoff, 1972, pp\ptbl223--254\rcrochetbf.}}. Cabe esperar que haya quien estudie a fondo la cuestión, que parece particularmente interesante. Está íntimamente ligada, en particular, a la «teoría de los espacios de módulos» de las estructuras algebraicas.
+
+\begin{corollaire}
+\label{III.6.7}
+Supongamos que~$\H^2(X_0,\cal{G})=0$. Entonces existe un~$X_{n+1}$, y es único salvo isomorfismo si, además, $\H^1(X_0,\cal{G})=0$.
+\end{corollaire}
+
+En particular, procediendo paso a paso y observando que un esquema afín es acíclico para todo haz cuasicoherente, se concluye:
+
+\begin{corollaire}
+\label{III.6.8}
+Bajo
+\marginpar{82}
+las condiciones del teorema~\Ref{III.4.1}, si~$X_0$ es afín, existe un~$X$ liso sobre~$Y$ que se reduce a~$X_0$, y este~$X$ es único salvo un isomorfismo, que no es único.
+\end{corollaire}
+
+Obsérvese que la demostración directa del teorema~\Ref{III.4.1} no podía darnos este resultado.
+
+\begin{corollaire}
+\label{III.6.9}
+Bajo las condiciones de~\Ref{III.6.3}, supóngase que~$S$ es afín de anillo~$A$, que~$\cal{I}$ está definido por un ideal~$I$ de~$A$ y, por último, que los~$\gr^n_{\cal{I}}(\cal{O}_S)=\cal{I}^n/\cal{I}^{n+1}$ son localmente libres. Entonces~$\H^i(X_0,\cal{G})$ se identifica con~$\H^i(X_0,\cal{G}_0)\otimes_A\gr_I^{n+1}(A)$, donde
+$$
+\cal{G}_0=\goth{g}_{X_0/S_0},
+$$
+de modo que la clase de obstrucción a la prolongación de~$X_n$ se encuentra en~$\H^2(X_0,\cal{G}_0)\otimes_A\gr_I^{n+1}(A)$ y, si es nula, el conjunto de las clases de soluciones, salvo isomorfismo, es un espacio homogéneo principal bajo~$\H^1(X_0,\cal{G}_0)\otimes_A\gr_I^{n+1}(A)$.
+\end{corollaire}
+
+En particular:
+
+\begin{corollaire}
+\label{III.6.10}
+Bajo las condiciones de~\Ref{III.6.9}, supóngase que
+$$
+\H^2(X_0,\goth{g}_{X_0/S_0})=0.
+$$
+Entonces existe un esquema formal
+\ifthenelse{\boolean{orig}}{}{~$\goth{X}$}
+que es $\hat I$-ádico sobre el completado formal $\cal{I}$-ádico~$\hat{S}$ de~$S$, que es «liso sobre~$S$» (es decir, los~$\goth{X}_p$ son lisos sobre los~$S_p$) y que se reduce a~$X_n$, es decir, provisto de un isomorfismo
+$$
+\goth{X}\times_S S_n\isomfrom X_n.
+$$
+Si, además, $\H^1(X_0,\goth{g}_{X_0/S_0})=0$, tal~$\goth{X}$ es único salvo isomorfismo.
+\end{corollaire}
+
+En efecto, se construyen paso a paso~$X_{n+1},X_{n+2},\dots$, de donde se obtiene~$\goth{X}$ pasando al límite inductivo de los~$X_i$. La afirmación de unicidad figura ya en el número precedente.

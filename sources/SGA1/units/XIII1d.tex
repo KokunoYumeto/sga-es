@@ -1,0 +1,54 @@
+
+\begin{corollaire}
+\label{XIII.1.7}
+Sean $f\colon X\to Y$ y $g\colon Y\to Z$ dos $S$-morfismos, y sea~$F$
+un haz de grupos sobre~$X$. Supongamos que $(F,gf)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant -1$ (\resp que
+$(F,gf)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ y que $(F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant -1$). Entonces $(f_*F,g)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp en dimensión $\leqslant 0$).
+\end{corollaire}
+
+Retomemos las notaciones de~\eqref{eq:XIII.1.6.1} y, para todo esquema
+$Y_1$ étale sobre~$Y$, denotemos por~$f_1$ y~$F_1$ las respectivas
+imágenes inversas de~$f$ y~$F$ por el morfismo $Y_1\to Y$. Sean~$\Phi$
+el stack de los torsores bajo~$F$ y~$\Psi$ el stack de los torsores
+bajo~$f_*F$. Se tiene un funtor canónico
+$$
+\varphi\colon\Psi\to f_*\Phi\text{,}
+$$
+obtenido asociando a todo esquema~$Y_1$ étale sobre~$Y$ y a todo torsor
+$P$ sobre~$Y_1$ bajo~$f_{1*}F_1$ el torsor~$\tilde{P}$ sobre~$X_1$
+obtenido a partir de~$f_1^*P$ por extensión del grupo estructural a lo
+largo de $f_1^*f_{1*}F_1\to F_1$. El funtor~$\varphi$ es plenamente
+fiel. En efecto, si~$P$ y~$Q$ son dos torsores sobre~$Y_1$ bajo
+$f_{1*}F_1$, se tiene un morfismo canónico
+$$
+\SheafIsom_{f_{1*}F_1}(P,Q)\to
+f_{1*}(\SheafIsom_{F_1}(\tilde{P},\tilde{Q}))
+$$
+que
+\marginpar{356}
+es un isomorfismo porque lo es localmente. De ello se deduce que el
+morfismo canónico
+$$
+\Isom_{f_{1*}F_1}(P,Q)\to\Isom_{F_1}(\tilde{P},\tilde{Q})
+$$
+es un isomorfismo y, por tanto, que~$\varphi$ es plenamente fiel.
+
+Se tiene un diagrama conmutativo
+$$
+\ifthenelse{\boolean{orig}}
+{\xymatrix{ g'_*k^*\Psi \ar[r]^i \ar[d]_{g'_*k^*(\varphi)} &
+m^*(g_*\Psi) \ar[d]^{m^*g_*(\varphi)} \\ g'_*k^*(f_*\Phi) \ar[r]^j &
+m^*(g_*f_*\Phi)\text{,} }}
+{\xymatrix{ m^*(g_*\Psi) \ar[r]^i \ar[d]_{m^*g_*(\varphi)} &
+g'_*k^*\Psi \ar[d]^{g'_*k^*(\varphi)} \\ m^*(g_*f_*\Phi) \ar[r]^j &
+g'_*k^*(f_*\Phi)\text{,} }}
+$$
+donde~$i$ y~$j$ son los morfismos de cambio de base. De
+\Ref{XIII.1.6}~2) se deduce que~$j$ es fiel (\resp plenamente fiel).
+Como $g'_*k^*(\varphi)$ y $m^*g_*(\varphi)$ son plenamente fieles, del
+diagrama anterior se deduce que~$i$ es fiel (\resp plenamente fiel).

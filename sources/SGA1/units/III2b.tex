@@ -1,0 +1,84 @@
+
+(iii)$\To$(ii).
+\marginpar{65}
+Sea~$\goth{n}$ el ideal maximal de~$C$ y, para todo entero $q>0$, sea
+$$
+C_q=C/\goth{n}^q,\qquad J_q=(J+\goth{n}^q)/\goth{n}^q.
+$$
+Así, $C_q/J_q$ se identifica con un álgebra cociente de~$C/J$; por otra parte, el homomorfismo compuesto $u_q\colon B\to C/J\to C_q/J_q$ es continuo de~$B$ en el anillo discreto~$C_q/J_q$, y~$J_q$ es un ideal nilpotente de~$C_q$. Se construyen sucesivamente $A$-homomorfismos
+$$
+v_q\colon B\to C_q
+$$
+tales que (a)~$v_q$ levanta~$u_q$ y (b)~$v_q$ levanta~$v_{q-1}$. La posibilidad de la inducción se comprueba fácilmente, pues, como
+$$
+u_q\colon B\to C/(J+\goth{n}^q)\qquad\text{y}\qquad
+v_{q-1}\colon B\to C/\goth{n}^{q-1}
+$$
+definen el mismo homomorfismo
+$$
+B\to C/((J+\goth{n}^q)+\goth{n}^{q-1})
+=C/(J+\goth{n}^{q-1})=C_{q-1}/J_{q-1},
+$$
+a saber, $u_{q-1}$, determinan un homomorfismo
+$$
+B\to C/J_q'\qquad\text{donde}\qquad
+J_q'=(J+\goth{n}^q)\cap\goth{n}^{q-1}\supset\goth{n}^q
+$$
+(del cual ambos proceden por reducción). Se reduce, pues, el problema a levantar un homomorfismo $B\to C/J_q'$ de~$B$ en un cociente de~$C_q$ por un ideal $J_q'/\goth{n}^q$ contenido en~$J_q$ y, por tanto, nilpotente; ello es posible por la hipótesis~(iii).
+
+Hecho esto, los~$v_q$ definen un homomorfismo de~$B$ en el límite proyectivo~$C$ de los~$C_q$. Como~$J$ es cerrado, $J$ es el límite proyectivo de los~$J_q$; por consiguiente, $v$ levanta~$u$, como se quería demostrar.
+
+(iv)$\To$(i). Se comprueba primero de inmediato que, si se verifica~(iv), sigue verificándose para los componentes locales de $B\otimes_A A'$ sobre~$A'$, cuando~$A'$ es una $A$-álgebra local finita. Tomando~$A'$ libre sobre~$A$ y tal que las extensiones residuales de~$B'$ sobre~$A'$ sean triviales, se reduce el problema, gracias a~\Ref{III.1.4}~(ii), al caso en que la extensión residual de~$B$ sobre~$A$ es trivial. Demostraremos entonces el resultado algo más preciso siguiente.
+
+\begin{corollaire}
+\label{III.2.2}
+Bajo las condiciones de~\Ref{III.2.1}, supongamos además que la extensión residual de~$B$ sobre~$A$ es trivial. Entonces las condiciones equivalentes
+\marginpar{66}
+de~\Ref{III.2.1} son también equivalentes a las dos condiciones siguientes (suponiendo en \textup{(v)} que~$A$ y~$B$ son completos):
+\begin{enumerate}
+\item[(iv~ter)] Como \textup{(iv)}, pero restringiendo el anillo local artiniano~$C$, finito sobre~$A$, a tener una extensión residual trivial (y, además, si se desea, suponiendo que el ideal~$J$ es de cuadrado nulo).
+\item[(v)] Existe un $A$-homomorfismo local (donde $n=\dim \goth{n}/(\goth{n}^2+\goth{m}B)$)
+$$
+u\colon B\to B_1=A[[t_1,\dots,t_n]]
+$$
+que induce un \emph{isomorfismo}
+$$
+\goth{n}/(\goth{n}^2+\goth{m}B)\isomto
+\goth{n}_1/(\goth{n}_1^2+\goth{m}B_1),
+$$
+donde~$\goth{n}$ (respectivamente $\goth{n}_1$) es el ideal maximal de~$B$ (respectivamente de~$B_1$), y~$\goth{m}$ el de~$A$.
+\end{enumerate}
+\end{corollaire}
+
+\subsubsection*{Demostración}
+Como (iv~bis) implica evidentemente (iv~ter) ---dejando de lado la broma del ideal de cuadrado nulo---, bastará demostrar (iv~ter)$\To$(v)$\To$(i).
+
+(iv~ter)$\To$(v). Elijamos una base $a_1,\dots,a_n$ de $\goth{n}/(\goth{n}^2+\goth{m}B)$, lo que define un homomorfismo local de $A$-álgebras
+$$
+B\to B_1/(\goth{n}_1^2+\goth{m}B_1)
+=k[t_1,\dots,t_n]/(t_1,\dots,t_n)^2,
+$$
+que, en virtud de~(iv~ter), puede levantarse sucesivamente a homomorfismos de $A$-álgebras de~$B$ en $B_1/\goth{n}_1^2$, $B_1/\goth{n}_1^3$, etc.; pasando al límite proyectivo se obtiene el homomorfismo $B\to B_1$ con la propiedad deseada.
+
+(v)$\To$(i). Como, en el diagrama conmutativo
+$$
+\ifthenelse{\boolean{orig}}
+{\xymatrix{ \goth{m}/\goth{m}^2 \ar[r] & \goth{n}/\goth{n}^2 \ar[r]
+\ar[d] & \goth{n}/(\goth{n}^2+\goth{m}B) \ar[r] \ar[d] & 0 \\
+\goth{m}/\goth{m}^2 \ar[r] & \goth{n}_1/\goth{n}_1^2 \ar[r] &
+\goth{n}_1/(\goth{n}_1^2+\goth{m}B_1) \ar[r] & 0}}
+{\xymatrix{ \goth{m}/\goth{m}^2 \ar[r] \ar[d] & \goth{n}/\goth{n}^2
+\ar[r] \ar[d] & \goth{n}/(\goth{n}^2+\goth{m}B) \ar[r] \ar[d] & 0 \\
+\goth{m}/\goth{m}^2 \ar[r] & \goth{n}_1/\goth{n}_1^2 \ar[r] &
+\goth{n}_1/(\goth{n}_1^2+\goth{m}B_1) \ar[r] & 0}}
+$$
+las dos filas son exactas y las flechas verticales extremas son sobreyectivas, la flecha intermedia es sobreyectiva; de ello se sigue (al ser~$B$ completo) que $B\to B_1$ es sobreyectivo. Sean~$x_i$ ($1\leq i\leq n$) elementos de~$B$ que levantan los~$t_i$. Definen un homomorfismo de $A$-álgebras $B_1\to B$, que será sobreyectivo por la misma razón que~$u$ y cuya composición con~$u$ es la identidad por construcción. Por tanto, $B_1\to B$ es también inyectivo y, en consecuencia, un isomorfismo. Se obtiene así el corolario siguiente.
+
+\begin{corollaire}
+\label{III.2.3}
+Bajo
+\marginpar{67}
+las condiciones de~\Ref{III.2.2}~\textup{(v)}, $u$ es necesariamente un isomorfismo.
+\end{corollaire}
+
+Esto concluye la demostración de que~$B$ es formalmente lisa sobre~$A$. Al mismo tiempo hemos recuperado~\Ref{III.1.5} (aunque no hay gran mérito en ello).

@@ -1,0 +1,194 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\subsection{}
+\label{XIII.2.2}
+Conservemos las notaciones de~\Ref{XIII.2.1}. Vamos a definir una noción de
+objeto moderadamente ramificado de un stack~$\Phi$ sobre~$U$ cuando este viene
+dado, localmente \emph{sobre}~$X$ y sobre~$S$ para la topología étale, como
+\emph{imagen inversa de un stack}~$\Psi$ \emph{sobre}~$S$.
+
+Sea primero $G$ un gerbe sobre~$U$ y supongamos dados un morfismo étale
+sobreyectivo $S_1\to S$, un morfismo étale sobreyectivo
+$X_2\to X\times_S S_1$, un gerbe trivial $H$ sobre~$S_1$ y un isomorfismo
+$$
+G|{U_2}\to H|{U_2},
+$$
+donde
+\marginpar{377}
+\ifthenelse{\boolean{orig}}
+{$U_1=U\times_X X_1$, $U_2=U\times_X X_2$.}
+{$X_1=X\times_S S_1$, $U_1=U\times_X X_1$,
+$U_2=U\times_X X_2$.}
+Al elegir una trivialización de~$H|{X_2}$, el isomorfismo anterior identifica
+$G|{U_2}$ con el stack de torsores bajo un haz de grupos~$F$. Se dice que un
+objeto $x$ de~$G_U$ está moderadamente ramificado sobre~$X$ relativamente
+\ifthenelse{\boolean{orig}}
+{a~$S$,}
+{a~$S$}
+si la restricción de~$x$ a~$U_2$ es un torsor moderadamente ramificado
+\ifthenelse{\boolean{orig}}
+{sobre~$X$ relativamente a~$S$.}
+{sobre~$X_2$ relativamente a~$S_1$.}
+Según~\Ref{XIII.2.1.4}, esta noción no depende de la trivialización elegida
+de~$H|X_2$.
+
+Sea ahora $\Phi$ un stack sobre~$U$ y supongamos dados un morfismo étale
+sobreyectivo $S_1\to S$, un morfismo étale sobreyectivo
+$X_2\to X\times_S S_1$, un stack $\Psi$ sobre~$S_1$ y un isomorfismo
+$$
+i\colon \Phi|U_2\to \Psi|U_2.
+$$
+Sea $x$ un objeto de~$\Phi_U$, sea $G_x$ el subgerbe maximal de~$\Phi$
+generado por~$x$
+\ifthenelse{\boolean{orig}}
+{[III~2.1.7]}
+{\cite[III~2.1.7]{XIII.1}},
+y $S\Phi$ el haz de los subgerbes maximales de~$\Phi$. El isomorfismo~$i$
+induce un isomorfismo
+$$
+S\Phi|U_2\to S\Psi|U_2.
+$$
+De~\Ref{XIII.5.7} resulta que, tras reemplazar si es preciso $S_1$ por una
+extensión étale sobreyectiva, existe un único subgerbe maximal~$H$ de~$\Psi$,
+que puede suponerse trivial, tal que~$i$ define un isomorfismo
+$$
+G_x|U_2\to H|U_2.
+$$
+Se dice que el objeto~$x$ está moderadamente ramificado sobre~$X$
+relativamente a~$S$ si lo está como objeto de~$G_x$, provisto del
+isomorfismo anterior.
+
+\subsubsection{}
+\label{XIII.2.2.1}
+Sea $\Phi$ un stack sobre~$U$ dado, localmente sobre~$X$ y~$S$, como imagen
+inversa de un stack sobre~$S$, y sea
+$$
+\xymatrix{ U \ar[r]^i
+\ar[d]_g & X \ar[dl]^f \\ T }
+$$
+un diagrama como en~\Ref{XIII.2.1.2}. Para todo esquema $T'$ étale sobre~$T$,
+\ifthenelse{\boolean{orig}}
+{si $U'=U\times_TT'$,}
+{si $U'=U\times_TT'$ y $X'=X\times_TT'$,}
+consideremos el subconjunto
+$(g_*^{\tame}\Phi)_{T'}$
+\label{indnot:mg}\oldindexnot{$(g_*^{\tame}\Phi)_{T'}$|hyperpage}%
+de~$(g_*\Phi)_{T'}=\Phi_{U'}$ formado
+\marginpar{378}
+por los objetos de~$\Phi_{U'}$ moderadamente ramificados
+\index{objeto moderadamente ramificado de un stack|hyperpage}%
+\ifthenelse{\boolean{orig}}
+{sobre~$X$ relativamente a~$S$.}
+{sobre~$X'$ relativamente a~$S$.}
+Se denomina \emph{imagen directa
+moderadamente ramificada}
+\index{imagen directa moderadamente ramificada de un stack|hyperpage}%
+\index{moderadamente ramificada (imagen directa de un stack)|hyperpage}%
+de~$\Phi$ por~$g$, y se denota por
+$$
+g_*^{\tame}\Phi
+$$
+la subcategoría plena de~$g_*\Phi$ cuyos objetos sobre un esquema $T'$ étale
+sobre~$T$ son los objetos de~$(g_*^{\tame}\Phi)_{T'}$. Es claro que
+$g_*^{\tame}\Phi$ es un substack de~$g_*\Phi$.
+
+\subsubsection{}
+\label{XIII.2.2.2}
+\ifthenelse{\boolean{orig}}
+{}
+{Retomemos las notaciones de~\Ref{XIII.2.1.5}. }
+Reduciendo al caso de un stack de torsores, se ve que, si $\Phi$ es un stack
+sobre~$U$ que, localmente para la topología étale sobre~$S$ y sobre~$X$, es
+imagen inversa de un stack sobre~$S$, el morfismo canónico
+$$
+h^*(g_*\Phi)\to g'_*\Phi'
+$$
+induce por restricción un morfismo canónico
+$$
+h^*(g_*^{\tame}\Phi)\to g_*^{\prime\tame}\Phi'
+$$
+
+\setcounter{proposition}{2}% La observación siguiente es XIII.2.3; los §§2.0--2.2
+\begin{remarques}
+\label{XIII.2.3}
+
+a) Si $F$ es un haz de conjuntos localmente constante y constructible
+sobre~$U$, para que $F$ esté moderadamente ramificado sobre~$X$ relativamente
+a~$S$, basta que la condición de~\Ref{XIII.2.1.1} se satisfaga para los puntos
+geométricos de~$S$ situados sobre los puntos maximales de~$S$. Para verlo,
+puede suponerse que $D$ es de cruzamientos normales estrictos. El haz~$F$ es
+representable por un recubrimiento étale~$V$ de~$U$. Si $\overline{s}$ es un
+punto geométrico de~$S$ y $y$ un punto maximal de~$Y_{\overline{s}}$,
+\ifthenelse{\boolean{orig}}
+{denotemos por $\overline{S}$ la localización estricta de~$S$ en
+$\overline{s}$ y por $\overline{X}$ la localización estricta de~$X$ en
+$\overline{y}$,}
+{elijamos un punto geométrico $\overline y$ situado sobre~$y$; denotemos por
+$\overline{S}$ la localización estricta de~$S$ en~$\overline{s}$ y por
+$\overline{X}$ la localización estricta de~$X$ en~$\overline{y}$,}
+$\overline{U}=U\times_X\overline{X}$ y
+$\overline{V}=V\times_X\overline{X}$. Si la condición
+de~\Ref{XIII.2.1.1} se satisface en los puntos geométricos situados sobre los
+puntos maximales de~$S$, de~\Ref{XIII.5.5} más abajo resulta que
+$\overline{V}$ es un recubrimiento de~$\overline{U}$ moderadamente ramificado
+sobre~$\overline{X}$ relativamente a~$\overline{S}$; por tanto, $V$ es un
+recubrimiento étale de~$U$ moderadamente ramificado sobre~$X$ relativamente
+a~$S$.
+
+b)
+\marginpar{379}
+Sea $F$ un haz de grupos sobre~$U$ moderadamente ramificado sobre~$X$
+relativamente a~$S$. Si $\overline{s}$ es un punto geométrico de~$S$ y $y$
+un punto maximal de~$Y_{\overline{s}}$, denotemos por $K$ el cuerpo de
+fracciones de~$\cal{O}_{X_{\overline{s}},y}$. Supongamos que, para todo punto
+$\overline{s}$ y todo punto~$y$, la $K$-álgebra~$L$ cuyo espectro representa
+$F|K$ es de rango primo con la característica residual~$p$ de
+\ifthenelse{\boolean{orig}}
+{$\cal{O}_{X_{\overline{s}}}$.}
+{$\cal{O}_{X_{\overline{s}},y}$.}
+Diremos a veces, por abuso de lenguaje, que $F$ es primo con las
+características residuales de~$S$.
+\index{primo con las características residuales (haz)|hyperpage}%
+En tal caso, todo torsor~$P$ bajo~$F$ está moderadamente ramificado sobre~$X$
+relativamente a~$S$.
+
+En efecto,
+\ifthenelse{\boolean{orig}}
+{sean}
+{elijamos un punto geométrico $\overline y$ situado sobre~$y$; sean}
+$\overline{R}$ la localización estricta de
+$\cal{O}_{X_{\overline{s}},y}$ en~$\overline{y}$, $\overline{K}$ su cuerpo de
+fracciones y $\overline{F}$ la imagen inversa de~$F$ sobre~$\overline{K}$.
+Demostremos que puede suponerse constante
+\ifthenelse{\boolean{orig}}
+{$F$.}
+{$\overline{F}$.}
+Como $F$ está moderadamente ramificado sobre~$X$ relativamente a~$S$,
+$\overline{F}$ es representable por el espectro de una $\overline{K}$-álgebra
+$L=\prod L_i$, donde los $L_i$ son extensiones de~$\overline{K}$ de grado
+primo con~$p$. Puede encontrarse, por tanto, una extensión~$K'$ de
+$\overline{K}$ de grado primo con~$p$ tal que $\overline{F}|K'$ sea un haz
+constante. Según~\Ref{XIII.2.0.3}, para demostrar que $P|\overline{K}$ está
+moderadamente ramificado sobre~$\overline{R}$, basta ver que $P|K'$ está
+moderadamente ramificado sobre la clausura integral de~$\overline{R}$ en
+$K'$; esto reduce al caso en que $\overline{F}$ es constante. Supongamos en
+adelante que $\overline{F}$ es constante. La $\overline{K}$-álgebra~$H$ que
+representa $P|\overline{K}$ es entonces producto de extensiones~$H_i$ de
+$\overline{K}$ isomorfas entre sí. Como el rango de~$H$ es primo con~$p$,
+también lo es $[H_1:\overline{K}]$, lo que demuestra que $H$ está
+moderadamente ramificada
+\ifthenelse{\boolean{orig}}
+{sobre~$X$ relativamente a~$S$.}
+{sobre~$\overline{R}$.}
+
+c) Sean $X$ un esquema regular, $D$ un divisor de cruzamientos normales
+sobre~$X$ (SGA~5 I~3.1.5), $U=X-\Supp D$ y $F$ un haz de conjuntos sobre~$U$.
+Si $y$ es un punto maximal de~$\Supp D$, denotemos por $K$ el cuerpo de
+fracciones de~$\cal{O}_{X,y}$. Se dice que $F$ está
+\emph{moderadamente ramificado relativamente a}~$D$
+\index{moderadamente ramificado (haz)|hyperpage}%
+si, para todo punto maximal $y$ de~$\Supp D$, $F|K$ es representable por el
+espectro de una $K$-álgebra moderadamente ramificada sobre~$\cal{O}_{X,y}$.
+\end{remarques}
+\endgroup

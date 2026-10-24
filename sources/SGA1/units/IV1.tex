@@ -1,0 +1,119 @@
+
+\chapter{Morfismos planos}\label{IV}
+\marginpar{87}
+
+Exponemos aquí principalmente las propiedades de planitud que hemos utilizado en los exposés precedentes. Se encontrará un estudio más detallado en el capítulo~IV de los «Éléments de Géométrie Algébrique» en preparación\footnote{\Cf EGA IV 11 y 12.}, donde se estudia sistemáticamente la situación siguiente: dado~$X$ localmente de tipo finito sobre~$Y$ localmente noetheriano, y~$\cal{F}$ coherente sobre~$X$ y plano sobre~$Y$, establecer relaciones entre las propiedades de~$Y$, las de~$\cal{F}$ y las de los haces coherentes inducidos por~$\cal{F}$ sobre las fibras de~$X\to Y$ (en particular desde el punto de vista de la dimensión, de la dimensión cohomológica, de la profundidad, \ifthenelse{\boolean{orig}}{etc...}{etc.}).
+Se dispone, en particular, de un modo sistemático de obtener teoremas de tipo \emph{Seidenberg} o \emph{Bertini} (para las secciones hiperplanas). El resultado esencial para aplicar los métodos de planitud en este contexto es el siguiente (que se demostrará más adelante): si~$Y$ es íntegro, $X$ de tipo finito sobre~$Y$ y~$\cal{F}$ coherente sobre~$X$, existe un abierto no vacío~$U$ de~$Y$ tal que~$\cal{F}$ sea plano sobre~$Y$ en los puntos de~$X$ situados sobre~$U$. Una segunda manera, sin duda aún más importante, en que la planitud interviene en geometría algebraica es la \emph{teoría del descenso}: véanse, por ejemplo, los dos exposés de Grothendieck sobre el tema en el Séminaire Bourbaki\footnote{Y, para una exposición más detallada, los exposés~\Ref{VIII} y~\Ref{IX} más adelante.}. La planitud aparece así como una de las nociones técnicas centrales de la geometría algebraica.
+
+Recordemos que Serre introdujo en GAGA las nociones de planitud y planitud fiel. También se encontrará una exposición de los números~\Ref{IV.1} y~\Ref{IV.2} siguientes en el Álgebra Conmutativa de Bourbaki (que, por supuesto, como indica el título del libro, no se limita al caso de anillos de base conmutativos)\footnote{N. Bourbaki, Algèbre Commutative, cap.~I (Modules Plats), Act. Sc. Ind. 1290, París, Hermann (1961).}.
+
+A diferencia de los exposés precedentes, no suponemos que los anillos considerados sean necesariamente noetherianos.
+
+\section{Sorites sobre los módulos planos}
+\label{IV.1}
+
+Se dice que un módulo~$M$ sobre el anillo~$A$ es \emph{plano}
+\index{plano, fielmente plano (módulo)|hyperpage}%
+(o plano sobre~$A$, si se quiere precisar~$A$)
+\marginpar{88}
+si el funtor
+$$
+T_M \colon N \mto M \otimes_{A}N
+$$
+(que es, en cualquier caso, exacto por la derecha) es
+\ifthenelse{\boolean{orig}}
+{\emph{exacto}}
+{\emph{exacto},}
+\ie transforma monomorfismos en monomorfismos. Esto equivale a decir que
+\ifthenelse{\boolean{orig}}
+{el primer funtor derivado por la derecha, o todos los funtores derivados por la derecha,}
+{el primer funtor derivado por la izquierda, o todos los funtores derivados por la izquierda,}
+son nulos, \ie que se tiene%
+\ifthenelse{\boolean{orig}}
+{}
+{\enlargethispage{.5cm}}
+$$
+\Tor^{A}_{1}(M,N)=0 \qquad \text{para todo $N$,}
+$$
+\resp que se tiene
+$$
+\Tor^{A}_{i}(M,N)=0 \qquad \text{para $i>0$ y todo $N$.}
+$$
+Como los~$\Tor_i$ conmutan con los límites inductivos, basta además verificar estas condiciones para~$N$ de tipo finito, e incluso (tomando entonces una sucesión de composición de~$N$ con cocientes cíclicos) que se tenga
+$$
+\Tor^{A}_{1}(M,N)=0
+$$
+si~$N$ es cíclico, \ie de la forma~$A/I$, siendo~$I$ un ideal de~$A$. Obsérvese además que
+$$
+\Tor^{A}_{1}(M,A/I)=0 \quad\Longleftrightarrow\quad I\otimes_{A}M \rightarrow
+M=A\otimes_{A}M\text{ es \emph{inyectivo}},
+$$
+como se ve en la sucesión exacta de los~$\Tor$, teniendo en cuenta que~$\Tor^{A}_{1}(M,A)=0$. Por tanto, que~$M$ sea plano equivale a que, para todo ideal~$I$, el homomorfismo natural
+$$
+I\otimes_{A}M \to IM
+$$
+sea un isomorfismo. Basta, además, verificarlo para~$I$ de tipo finito; a fortiori, basta verificar que el funtor~$M\otimes$ sea exacto sobre los módulos \emph{de tipo finito}.
+
+Como ocurre siempre que se tiene un funtor exacto~$T$, si para un subobjeto~$N'$ de~$N$ se identifica~$T(N')$ con un subobjeto de~$T(N)$, se tiene
+$$
+T(N' \cap N'')=T(N') \cap T(N'')
+$$
+$$
+T(N' + N'')=T(N') + T(N'')
+$$
+para dos subobjetos~$N'$, $N''$ de~$N$.
+
+Una suma directa de módulos planos y un sumando directo de un módulo plano son planos. En particular, como~$A$ es plano, todo módulo \emph{libre}, y por tanto también todo módulo \emph{proyectivo}, es plano. El producto tensorial de dos módulos planos es plano y, si~$M$ es plano sobre~$A$, entonces~$M\otimes_AB$ es plano sobre~$B$ para todo cambio de base
+\ifthenelse{\boolean{orig}}{$A \ B$}{$A \to B$}
+(por la asociatividad del producto tensorial y porque un compuesto de funtores
+\marginpar{89}
+exactos es exacto). Si~$M$ es plano sobre~$B$ y~$B$ plano sobre~$A$, entonces~$M$ es plano sobre~$A$ (por la misma razón).
+
+La sucesión exacta de los~$\Tor$, junto con la «conmutatividad» del~$\Tor$, da:
+
+\begin{proposition}
+\label{IV.1.1}
+Sea~$0 \to M' \to M \to M'' \to 0$ una sucesión exacta de módulos sobre~$A$, siendo~$M''$ plano. Entonces
+\begin{enumerate}
+\item[(i)] esta sucesión sigue siendo exacta al tensorizar por cualquier módulo~$N$ sobre~$A$;
+\item[(ii)] para que~$M$ sea plano es necesario y suficiente que~$M'$ lo sea.
+\end{enumerate}
+\end{proposition}
+
+Puede decirse, por tanto, que desde el punto de vista del comportamiento respecto de los productos tensoriales, los módulos planos son «tan buenos» como los módulos libres o proyectivos (y que, en particular, la sucesión exacta de~\Ref{IV.1.1} es «tan buena» como si se escindiese).
+
+Sea~$S$ un conjunto multiplicativamente cerrado de~$A$; entonces~$S^{-1}A$ es plano sobre~$A$, pues~$S^{-1}A\otimes N=S^{-1}N$ es un funtor exacto en~$N$. Si~$M$ es plano sobre~$A$, entonces~$S^{-1}M=S^{-1}A\otimes M$ es plano sobre~$S^{-1}A$; el recíproco es cierto si~$M\to S^{-1}M$ es un
+\ifthenelse{\boolean{orig}}
+{isomorfismo}
+{isomorfismo,}
+\ie \ifthenelse{\boolean{orig}}{Si}{si}
+los~$s\in S$ actúan biyectivamente sobre~$M$ (por la transitividad de la planitud, ya que~$S^{-1}A$ es plano sobre~$A$). Más generalmente, el caso de un morfismo de preesquemas~$X\to Y$ y de un haz cuasicoherente~$\cal{F}$ sobre~$X$ cuya planitud respecto de~$Y$ se quiere estudiar conduce a la situación con dos anillos:
+
+\begin{proposition}
+\label{IV.1.2}
+Sean~$A\to B$ un homomorfismo de anillos, $M$ un módulo sobre~$B$ y~$T$ un conjunto multiplicativamente cerrado de~$B$.
+\begin{enumerate}
+\item[(i)] Si~$M$ es plano sobre~$A$, entonces~$T^{-1}M$ es plano sobre~$A$ (y, por tanto, también sobre~$S^{-1}A$ para todo conjunto multiplicativamente cerrado~$S$ de~$A$ cuya imagen esté contenida en~$T$).
+\item[(ii)] \ifthenelse{\boolean{orig}}
+{Recíprocamente, si~$M_{\goth{n}}$ es plano sobre~$A_{\goth{n}}$ para todo ideal maximal~$\goth{n}$ de~$B$, $M_{\goth{n}}$ es plano sobre~$A$ (o, lo que equivale a lo mismo, sobre~$A_{\goth{m}}$, donde~$\goth{m}$ es el ideal primo de~$A$ imagen inversa de~$\goth{n}$), entonces~$M$ es plano sobre~$A$.}
+{Recíprocamente, si para todo ideal maximal~$\goth{n}$ de~$B$ el módulo~$M_{\goth{n}}$ es plano sobre~$A$ (o, lo que equivale a lo mismo, sobre~$A_{\goth{m}}$, donde~$\goth{m}$ es el ideal primo de~$A$ imagen inversa de~$\goth{n}$), entonces~$M$ es plano sobre~$A$.}
+\end{enumerate}
+\end{proposition}
+
+En efecto, se tiene la fórmula, funtorial respecto del módulo~$N$ sobre~$A$:
+$$
+T^{-1}M \otimes_{A} N=T^{-1}(M \otimes_{A} N)
+$$
+pues ambos miembros son funtorialmente isomorfos a~$T^{-1}B\otimes_BM\otimes_BN_{(B)}$ (con~$N_{(B)}=N\otimes_AB$), en virtud de las fórmulas de asociatividad de~$\otimes$. Se sigue inmediatamente que, si~$M\otimes_AN$ es exacto en~$N$, ocurre lo mismo con~$T^{-1}M\otimes_AN$ (como compuesto de dos funtores exactos), de donde~(i). Y se deduce asimismo~(ii), pues para verificar la exactitud de una sucesión de módulos sobre~$B$ basta verificar la exactitud de los localizados en todos los ideales maximales de~$B$.
+
+\begin{proposition}
+\label{IV.1.3}
+\begin{enumerate}
+\item[(i)] Sea
+\marginpar{90}
+$M$ un módulo plano sobre~$A$. Si~$x\in A$ no es divisor de~$0$ en~$A$, tampoco lo es en~$M$. En particular, si~$A$ es íntegro, $M$ es libre de torsión.
+\item[(ii)] Supongamos que~$A$ es íntegro y que, para todo ideal maximal~$\goth{m}$ de~$A$, $A_{\goth{m}}$ es principal (por ejemplo, si~$A$ es un anillo de Dedekind, o incluso principal). Para que el módulo~$M$ sobre~$A$ sea plano, \ifthenelse{\boolean{orig}}{es necesario y suficiente}{es necesario y suficiente} que sea libre de torsión.
+\end{enumerate}
+\end{proposition}
+
+Se obtiene~(i) observando que la multiplicación por~$x$ en~$M$ se obtiene tensorizando por~$M$ la multiplicación por~$x$ en~$A$. Para~(ii), por~\Ref{IV.1.2}(ii) puede suponerse ya que~$A$ es principal; hay que demostrar que, si~$M$ es libre de torsión, entonces para todo ideal~$I$ de~$A$ la inyección~$I\to A$, tensorizada por~$M$, es una inyección, lo que significa que el generador~$x$ de~$I$ no es divisor de~$0$ en~$M$. O.K.

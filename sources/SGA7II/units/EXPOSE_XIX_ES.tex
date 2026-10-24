@@ -1,0 +1,654 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XIX}{El teorema de Noether}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XIX}\par
+\vspace{2em}
+{\Large\underline{El teorema de Noether}}\par
+\vspace{1.5em}
+{\large por P. Deligne}
+\end{center}
+
+\section*{Sumario}
+
+\noindent 1. Enunciado de los teoremas. \hfill 1
+
+\noindent 2. Un complemento a XVIII. \hfill 4
+
+\noindent 3. Demostración de 1.3. \hfill 5
+
+\noindent 4. Un segundo complemento a XVIII. \hfill 8
+
+\noindent 5. Los casos excepcionales del teorema de Noether. \hfill 11
+
+\section*{1. Enunciado de los teoremas}
+
+La presente exposición actualiza la demostración de Lefschetz
+[3, p.~108] del teorema de Noether (1.2) enunciado a continuación.
+
+\subsubsection*{1.1.}
+
+Sea $k$ un cuerpo algebraicamente cerrado de característica $p$. Sean
+$d\geq1$ y
+\[
+\underline a=(a_i)_{1\leq i\leq d}
+\]
+una sucesión de enteros mayores o iguales que $1$. Una intersección
+completa $V$ de dimensión $n$ y multigrado $\underline a$ en el espacio
+proyectivo $\mathbb P^{n+d}$ sobre $k$ se dirá \underline{genérica} si,
+tras una extensión de $k$, es proyectivamente isomorfa a una
+intersección completa definida por ecuaciones cuyos coeficientes son
+algebraicamente independientes sobre el cuerpo primo. En lo que sigue,
+salvo indicación expresa en contrario, suponemos $d\geq1$ y $a_i\geq2$.
+
+\subsubsection*{Teorema 1.2.}
+
+Sea $V\subset\mathbb P^{2+d}$ una superficie intersección completa
+genérica de multigrado $\underline a$. Supongamos que
+\[
+\underline a\ne(2),(3),(2,2).
+\]
+Entonces toda curva reducida de $V$ es la intersección esquemática de
+$V$ con una hipersuperficie de $\mathbb P^{2+d}$.
+
+Mostremos que el teorema resulta de su corolario
+
+\pageoriginale
+
+\begin{equation}\tag{1.2.1}
+\operatorname{Pic}(\mathbb P^{2+d})=\mathbb Z
+\xrightarrow{\ \sim\ }\operatorname{Pic}(V).
+\end{equation}
+Si $C$ es una curva de $V$, (1.2.1) implica
+$\mathcal O(C)\simeq\mathcal O(n)$ para cierto $n$. Si $H$ es una
+sección hiperplana, entonces
+\[
+n=\bigl(\textstyle\prod_i a_i\bigr)^{-1}(C,H)>0.
+\]
+Queda probar que el sistema lineal inducido sobre $V$ por $|nH|$ es
+completo. Escribamos $V$ como intersección de hipersuperficies $H_i$ de
+grado $a_i$, y pongamos $V_i=H_1\cap\cdots\cap H_i$. Una inducción sobre
+$i$ muestra que el sistema lineal inducido por $|nH|$ sobre $V_i$ es
+completo: en la sucesión exacta
+\[
+H^0(V_i,\mathcal O(n))\longrightarrow
+H^0(V_{i+1},\mathcal O(n))\longrightarrow
+H^1(V_i,\mathcal O(n-a_{i+1})),
+\]
+el último grupo es nulo (FAC).
+
+\subsubsection*{Teorema 1.3.}
+
+Sea $V\subset\mathbb P^{2n+d}$ una intersección completa genérica de
+dimensión par no nula $2n$ y de multigrado $\underline a$. Supongamos
+que se verifica una de las condiciones siguientes:
+\begin{enumerate}[label=(\alph*)]
+\item $k$ no es de característica $2$, y $(2n;\underline a)$ es
+  distinto de $(2n;2)$, $(2n;2,2)$ y $(2;3)$;
+\item el número de Hodge $h^{2n,0}$ no es nulo, es decir,
+  $\sum_i(a_i-1)>2n$.
+\end{enumerate}
+Entonces toda clase de cohomología algebraica de
+$H^{2n}(V,\mathbb Q_\ell(n))$ es un múltiplo racional de la clase
+$\eta^n$ de una sección lineal.
+
+Deducimos (1.2.1) de 1.3. Los casos excepcionales de 1.2 son exactamente
+aquellos para los que
+$\sum_i(\sisi{d_i}{a_i}-1)\leq2$; por tanto, 1.3(b) se aplica a la
+superficie $V$ de 1.2. Sabemos que $\operatorname{Pic}^{\tau}(V)=0$
+(XI 1.8), luego $\operatorname{Pic}(V)$ se inyecta en
+$H^2(V,\mathbb Q_\ell(1))$. Por 1.3, todo elemento de
+$\operatorname{Pic}(V)$ es un múltiplo racional de la clase $\eta$ de
+$\mathcal O(1)$, y (XI 1.8) da la conclusión.
+
+Es claro que la validez de 1.2 y 1.3 no depende de la intersección
+completa genérica elegida, sino únicamente de $p$, $n$ y
+$\underline a$.
+
+\pageoriginale
+
+\subsubsection*{Teorema 1.4.}
+
+Sea $X\subset\mathbb P$ una variedad proyectiva lisa, pura de dimensión
+$2n+1$ sobre $k$. Sea $\ell\subset\check{\mathbb P}$ un pincel de
+Lefschetz de secciones hiperplanas de $X$. Si $k$ tiene característica
+$2$, supongamos además que $\ell$ es un pincel de Lefschetz genérico.
+
+Supongamos que $X$ satisface la condición (LV) (XVIII 5.2.2), y sea $V$
+la sección hiperplana genérica del pincel $\ell$. Se verifica una de las
+dos condiciones siguientes:
+\begin{enumerate}[label=(\alph*)]
+\item ninguna clase de cohomología no nula de la parte evanescente
+  $\operatorname{Ev}(V,\mathbb Q_\ell(n))$ de
+  $H^{2n}(V,\mathbb Q_\ell(n))$ es algebraica;
+\item las clases de cohomología algebraica engendran
+  $\operatorname{Ev}(V,\mathbb Q_\ell(n))$.
+\end{enumerate}
+
+Precisemos el sentido de ``genérico'' en 1.4.
+\begin{enumerate}[label=(\alph*)]
+\item Sea $G$ la grassmanniana de rectas del espacio proyectivo
+  $\check{\mathbb P}$ dual de $\mathbb P$. Por ``punto geométrico'' de
+  $G$ entendemos un morfismo del espectro de un cuerpo algebraicamente
+  cerrado a $G$. Todo punto geométrico $\bar s\to G$ define un pincel
+  $\ell$ de secciones hiperplanas de la variedad obtenida de $X$
+  extendiendo escalares de $k$ a $k(\bar s)$. Decimos que $\ell$ es
+  genérico si $\bar s$ está sobre el punto genérico de $G$.
+\item Sea $\ell$ un pincel de secciones hiperplanas (una recta de
+  $\check{\mathbb P}$). Todo punto geométrico $\bar s\to\ell$ define
+  una sección hiperplana de la variedad obtenida de $X$ extendiendo
+  escalares de $k$ a $k(\bar s)$. Decimos que esta sección es genérica
+  si $\bar s$ está sobre el punto genérico de $\ell$.
+\end{enumerate}
+
+Sea $\bar s$ como arriba, con imagen el punto genérico $s$ de $\ell$, y
+sea $S\subset\ell$ el conjunto finito de puntos que dan secciones
+hiperplanas singulares. El grupo de monodromía
+$\pi_1(\ell-S,\bar s)$, cociente de
+$\operatorname{Gal}(k(\bar s)/k(s))$, actúa sobre
+$\operatorname{Ev}(V,\mathbb Q_\ell(n))$. Si $k$ no es de
+característica $2$, esta acción es irreducible (XVIII 6.7); en la
+sección 2 mostraremos que la afirmación sigue siendo válida sin
+hipótesis sobre la característica para un pincel genérico. El
+subespacio de $\operatorname{Ev}(V,\mathbb Q_\ell(n))$ engendrado por
+las clases de cohomología algebraica es estable bajo monodromía, es
+decir, bajo Galois. Es, pues, cero o todo el espacio, lo que prueba 1.4.
+
+\pageoriginale
+
+\subsubsection*{Corolario 1.5.}
+
+Sea $V\subset\mathbb P^{2n+d}$ una intersección completa genérica de
+dimensión par $2n$ y multigrado $\underline a$. Entonces:
+\begin{enumerate}[label=(\alph*)]
+\item toda clase de cohomología algebraica de
+  $H^{2n}(V,\mathbb Q_\ell(n))$ es un múltiplo racional de $\eta^n$; o
+\item $H^{2n}(V,\mathbb Q_\ell(n))$ está engendrado por clases de
+  cohomología algebraica.
+\end{enumerate}
+Si se verifica (b), entonces, para toda intersección completa de
+dimensión $2n$ y multigrado $\underline a$ sobre un cuerpo
+algebraicamente cerrado de característica $p$, el grupo
+$H^{2n}(V,\mathbb Q_\ell(n))$ está engendrado por clases algebraicas.
+
+Apliquemos 1.4 con $X$ una intersección completa genérica de dimensión
+$2n+1$ y multigrado $(a_1,\ldots,a_{d-1})$, y con $\ell$ un pincel
+genérico de secciones de $X$ por hipersuperficies de grado $a_d$
+(cf. XVII 2.4). También podríamos tomar $X$ de multigrado
+$(a_1,\ldots,a_d)$ y $\ell$ un pincel genérico de secciones
+hiperplanas. La afirmación final resulta de que una clase de cohomología
+algebraica sigue siendo algebraica por especialización.
+
+\section*{2. Un complemento a XVIII}
+
+\subsubsection*{Proposición 2.1.}
+
+Sea $X\subset\mathbb P$ una variedad proyectiva lisa, pura de dimensión
+\sisi{par $2n$}{impar $2n+1$} sobre un cuerpo algebraicamente cerrado
+$k$, y sea $\ell\subset\check{\mathbb P}$ un pincel de Lefschetz
+genérico de secciones hiperplanas de $X$. Sea $s$ un punto geométrico
+de $\ell$, sea $H_s$ la sección hiperplana correspondiente, sea
+$S\subset\ell$ el conjunto de valores excepcionales del pincel, y sea
+$\pi_1(\ell-S,s)$ el grupo de monodromía. Supongamos que $X$ satisface
+la condición (LV). Entonces la representación de $\pi_1(\ell-S,s)$
+sobre la cohomología evanescente
+\[
+\operatorname{Ev}(H_s,\mathbb Q_\ell)
+\subset H^{2n}(H_s,\mathbb Q_\ell)
+\]
+es absolutamente irreducible.
+
+Recordemos que $\operatorname{Ev}(H_s,\mathbb Q_\ell)$ es el ortogonal
+de la imagen de $H^{2n}(X,\mathbb Q_\ell)$ en
+$H^{2n}(H_s,\mathbb Q_\ell)$, imagen que coincide con el subgrupo de
+invariantes bajo el grupo de monodromía (XVIII 5.6.10).
+
+\pageoriginale
+
+\subsubsection*{Demostración.}
+
+La recta proyectiva $\mathbb P^1$ es simplemente conexa. Por tanto,
+$\pi_1(\ell-S,s)$ está engendrado topológicamente por los subgrupos de
+inercia en los puntos de $S$ y sus conjugados. Su imagen en
+\[
+\operatorname{GL}\bigl(
+\sisi{H^n(H_s,\mathbb Q_\ell)}{H^{2n}(H_s,\mathbb Q_\ell)}
+\bigr)
+\]
+está engendrada topológicamente por las transformaciones
+\[
+x\longmapsto x-(-1)^n(x\cdot\delta)\delta,
+\]
+donde $\delta$ es conjugado de un ciclo evanescente. En consecuencia,
+la imagen de $H^{2n}(X,\mathbb Q_\ell)$ en
+$H^{2n}(H_s,\mathbb Q_\ell)$ es el ortogonal del subespacio engendrado
+por los ciclos evanescentes y sus conjugados; así,
+$\operatorname{Ev}(H_s,\mathbb Q_\ell)$ está engendrado por dichos
+ciclos y sus conjugados.
+
+Para un pincel de Lefschetz \underline{genérico}, los argumentos de
+XVIII, §6, muestran que los ciclos evanescentes asociados a los
+distintos puntos de $S$ son conjugados entre sí.
+
+Sea $W\subset\operatorname{Ev}(H_s,\mathbb Q_\ell)$ un subespacio
+invariante no nulo. Existen un conjugado $\delta$ de un ciclo
+evanescente y un elemento $v\in W$ tales que $(v,\delta)\ne0$; aquí es
+donde se utiliza (LV). Puesto que
+\[
+v-(-1)^{\sisi{m}{n}}(v\cdot\delta)\delta\in W,
+\]
+se tiene $\delta\in W$. El subespacio $W$, que contiene un ciclo
+evanescente y todos sus conjugados, coincide por tanto con
+$\operatorname{Ev}(H_s,\mathbb Q_\ell)$. El argumento sigue siendo
+válido tras extender el cuerpo de coeficientes $\mathbb Q_\ell$, lo que
+prueba la irreducibilidad absoluta.
+
+\subsubsection*{Observación 2.2.}
+
+Si se omite la condición (LV), los argumentos precedentes muestran aún
+que todo subespacio invariante de $H^{2n}(H_s,\mathbb Q_\ell)$ contiene
+$\operatorname{Ev}(H_s,\mathbb Q_\ell)$ o está contenido en la imagen
+de $H^{2n}(X,\mathbb Q_\ell)$. La misma afirmación vale para $X$ de
+dimensión par y para todo pincel de Lefschetz.
+
+\section*{3. Demostración de 1.3}
+
+\subsubsection*{3.1.}
+
+Bajo las hipótesis del teorema queda probar que no se verifica 1.5(b).
+El caso $h^{0,2n}\ne0$ será tratado por Katz en XXI 4.1; la condición
+$h^{0,2n}\ne0$ equivale a
+\[
+\sum_i\sisi{d_i}{a_i}-(2n+r+1)\geq0,
+\]
+y este número es el entero $m$ tal que
+$\Omega_V^{2n}\simeq\mathcal O(m)$. Los resultados de la presente exposición
+no volverán a utilizarse en el resto del seminario, de modo que no hay
+círculo vicioso.
+
+\pageoriginale
+
+\subsubsection*{3.2.}
+
+Cuando $k=\mathbb C$, se demuestra 1.3 observando que, si se verifica
+1.5(b), la cohomología de $V$ es puramente de tipo $(n,n)$, puesto que
+la cohomología algebraica es de tipo $(n,n)$. Esto solo ocurre en los
+casos excepcionales excluidos en 1.3 (XI 2.9). Por el principio de
+Lefschetz, 1.3 es, pues, verdadero en característica cero.
+
+\subsubsection*{Proposición 3.3.}
+
+Supongamos las hipótesis de 1.4 y que se verifica (b). Sea
+$\operatorname{Ev}(V,\mathbb Q)$ el subespacio vectorial sobre
+$\mathbb Q$ de $\operatorname{Ev}(V,\mathbb Q_\ell(n))$ engendrado por
+las clases de cohomología algebraica.
+\begin{enumerate}[label=(\alph*)]
+\item Se tiene un isomorfismo
+  \[
+  \operatorname{Ev}(V,\mathbb Q)\otimes\mathbb Q_\ell
+  \xrightarrow{\ \sim\ }
+  \operatorname{Ev}(V,\mathbb Q_\ell(n)).
+  \]
+  Sobre $\operatorname{Ev}(V,\mathbb Q)$, la forma de intersección es
+  racional y definida, de signo $(-1)^n$.
+\item Los ciclos evanescentes y sus conjugados pertenecen a
+  $\operatorname{Ev}(V,\mathbb Q)$; forman allí un sistema de raíces
+  irreducible de tipo $A$, $D$ o $E$.
+\item El grupo de monodromía, imagen de $\pi_1(\ell-S,\bar s)$ en
+  $\operatorname{GL}(\operatorname{Ev}(V,\mathbb Q))$, es finito; es
+  el \sisi{grupo de Weil}{grupo de Weyl} del sistema de raíces de (b).
+\end{enumerate}
+
+Salvo el carácter definido de la forma de intersección, (a) resulta de
+que la forma de intersección es no degenerada sobre
+$\operatorname{Ev}(V,\mathbb Q_\ell(n))$ por (LV), y racional sobre
+$\operatorname{Ev}(V,\mathbb Q)$.
+
+La condición 1.4(b) equivale a que existan sobre $V$ ciclos algebraicos,
+módulo equivalencia numérica, que no sean invariantes por monodromía;
+por tanto, esta condición no depende de $\ell$. Sea $x$ tal ciclo
+algebraico, y sea $\delta$ el ciclo evanescente asociado a
+$s_o\in S$ y a un camino $c$ desde $\bar s$, que define $V$, hasta
+$s_o$. Para un $c$ adecuado, $(x,\delta)\ne0$. El transformado de
+Galois
+\[
+\sigma(x)=x-(-1)^n(x,\delta)\delta
+\]
+es aún algebraico; por tanto, $(x,\delta)\delta$ es algebraico, imagen
+de un ciclo $y$ independiente de $\ell$. El número racional
+\[
+\frac{(-1)^n}{2}(y,y)=(x,\delta)^2
+\]
+es, en consecuencia, independiente de $\ell$. Es un cuadrado en todo
+$\mathbb Q_\ell$, luego es un cuadrado en $\mathbb Q$; así, salvo
+signo, $(x,\delta)$ pertenece a $\mathbb Q$ y es independiente de
+$\ell$. Esto muestra no solo que
+$\delta\in\operatorname{Ev}(V,\mathbb Q)$, sino también que el ciclo
+algebraico módulo equivalencia numérica
+\[
+\pm\delta=\frac{\sigma(x)-x}{(x,\delta)}
+\]
+es independiente de $\ell$.
+
+\pageoriginale
+
+Un ciclo algebraico sobre una variedad $V$ está siempre definido sobre
+una extensión finita de todo cuerpo de definición de $V$. Se sigue que
+$\pi_1(\ell-S,s)$ actúa sobre $\operatorname{Ev}(V,\mathbb Q)$ a través
+de un grupo finito. Este grupo está engendrado por las reflexiones
+asociadas a los ciclos evanescentes $\delta$ y sus conjugados
+(XVIII 6.6.1 y §2). Por tanto, los $\delta$ y sus conjugados forman un
+sistema de raíces cuyo \sisi{grupo de Weil}{grupo de Weyl} es el grupo
+de monodromía. Además, todas las raíces de este sistema son conjugadas
+bajo el \sisi{grupo de Weil}{grupo de Weyl}; es de tipo $A$, $D$ o $E$.
+
+Salvo un factor escalar, la forma de intersección es la única forma
+invariante bajo el \sisi{grupo de Weil}{grupo de Weyl}. Es, pues,
+definida. Su signo se determina calculando
+\[
+(\delta,\delta)=2(-1)^n.
+\]
+
+\subsubsection*{Proposición 3.4.}
+
+Si $k=\mathbb C$, bajo las hipótesis de 1.4 son equivalentes las
+condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item el grupo de monodromía es finito;
+\item la cohomología evanescente $\operatorname{Ev}(V)$ es puramente
+  de tipo $(n,n)$.
+\end{enumerate}
+
+Sea $\widetilde X\to\ell$ la familia cuyas fibras son las secciones
+hiperplanas del pincel $\ell$, y sea $V_s$ la fibra en
+$s\in\ell(\mathbb C)$. Los $\operatorname{Ev}(V_s)$ forman una
+variación algebraica de estructuras de Hodge sobre $\ell$. Por el
+teorema de la parte fija [2, 4.1.2], aplicado a un recubrimiento finito
+de $\ell$ (cf. [2, 4.1.3.3]), (i) implica que la estructura de Hodge
+sobre $\operatorname{Ev}(V_s)$ es localmente constante. El grupo de
+monodromía actúa, por tanto, mediante automorfismos de la estructura de
+Hodge. Para una transformación de Picard--Lefschetz $T$,
+$\operatorname{Im}(T-1)$ es una subestructura de Hodge de rango uno;
+es, pues, de tipo $(n,n)$ y está engendrada por un ciclo evanescente
+$\delta$. Como los ciclos evanescentes son de tipo $(n,n)$, todo
+$\operatorname{Ev}(V_s)$ es de ese tipo.
+
+Recíprocamente, si $\operatorname{Ev}(V)$ es puramente de tipo $(n,n)$,
+la forma de intersección sobre $\operatorname{Ev}(V)$ es definida y el
+grupo de monodromía es finito (cf. [2, 4.1.3.3]).
+
+\pageoriginale
+
+\subsubsection*{Observación 3.5.}
+
+Si se verifican las condiciones equivalentes de 3.3, el argumento de
+3.3 muestra que los ciclos evanescentes y sus conjugados forman un
+sistema de raíces de tipo $A$, $D$ o $E$, cuyo
+\sisi{grupo de Weil}{grupo de Weyl} es el grupo de monodromía.
+
+\subsubsection*{3.6.}
+
+Demostremos 1.3 cuando $k$ tiene característica finita distinta de
+$2$. Sea $S=\operatorname{Spec}(V)$ el espectro de
+un anillo de valoración discreta de característica mixta con cuerpo
+residual $k$, y sea
+$X\subset\mathbb P_S^{2n+d}$ una intersección completa de dimensión
+relativa $2n+1$ y multigrado $(a_1,\ldots,a_{d-1})$ sobre $S$. Sea
+$\ell$ un pincel de Lefschetz de secciones de $X$ por
+hipersuperficies de grado $a_d$; en la fibra especial, $\ell_s$ es un
+pincel de Lefschetz para $X_s$. Sea
+\[
+f:\widetilde X\longrightarrow\ell\simeq\mathbb P^1_S
+\]
+la familia cuyas fibras son las secciones del pincel. El lugar
+excepcional $T\subset\ell$ es étale sobre $S$ (XVII 6; aquí se usa
+$p\ne2$). El haz $R^{2n}f_*\mathbb Q_\ell$ es localmente constante
+sobre $\ell-T$; por tanto, está moderadamente ramificado y su
+monodromía es la misma en característica $p$ que en característica
+cero. Si se verifica 1.5(b), se deduce de 3.3(c) y 3.4 que el grupo de
+cohomología $H^{2n}(V)$ de las intersecciones completas complejas de
+dimensión $2n$ y multigrado $\underline a$ es puramente de tipo
+$(n,n)$, cosa que solo ocurre en los casos excluidos por 1.3
+(XI 2.9).
+
+\section*{4. Un segundo complemento a XVIII}
+
+En esta sección trabajamos sobre $\mathbb C$ y con cohomología clásica
+entera. Retomamos, con métodos más próximos a los de Lefschetz, algunos
+resultados de XVIII. Allí solo se demostraron después de tensorizar por
+$\mathbb Q$ (o, más precisamente, por $\mathbb Q_\ell$, lo que viene a
+ser lo mismo).
+
+\subsubsection*{4.1.}
+
+Sea $X\subset\mathbb P$ una variedad proyectiva compleja lisa, pura de
+dimensión $n+1$, y sea $\ell$ un pincel de Lefschetz de secciones
+hiperplanas de $X$, con eje $A$. Denotamos asimismo por $\ell$ el
+espacio de parámetros del pincel, isomorfo a $\mathbb P^1$. Sea
+$S\subset\ell$ el conjunto de valores excepcionales. Para $s\in\ell$,
+denotemos por $H_s$ la sección hiperplana correspondiente de $X$, de
+dimensión $n$.
+
+\pageoriginale
+
+Sea $T(A)$ un entorno tubular cerrado de $A\cap X$ en $X$, cuyo borde
+es transversal a todos los $H_s$.
+
+Elijamos dos puntos $0,\infty\in\ell-S$, y sea
+\[
+\alpha:\sisi{\ell-S}{\ell}\longrightarrow\mathbb P^1(\mathbb C)
+\]
+un difeomorfismo que preserva la orientación, envía $0$ en $0$,
+$\infty$ en $\infty$ y $S$ en la circunferencia de radio uno centrada
+en $0$. El compuesto $\alpha f$ de $\alpha$ con la proyección sobre
+$\ell$ hace de $X-T(A)^\circ$ una fibración singular en variedades con
+borde sobre $\mathbb P^1(\mathbb C)$, con una singularidad sobre cada
+punto de $\alpha(S)$. Denotemos por $c_s$ el segmento rectilíneo que une
+$0$ con $\alpha(s)$.
+
+Omitiendo $\alpha$ de la notación, se obtiene la figura
+\begin{center}
+\begin{tikzpicture}[x=1.2cm,y=1.2cm]
+  \coordinate (O) at (0,0);
+  \coordinate (L) at (-1.8,1.8);
+  \coordinate (S2) at (0,2.8);
+  \coordinate (S1) at (2.2,2.0);
+  \draw (O)--(L);
+  \draw (O)--(S2);
+  \draw (O)--(S1);
+  \node[right] at (O) {$0$};
+  \node[above right] at (S2) {$s_2$};
+  \node[above right] at (S1) {$s_1$};
+  \node[right] at (0,1.65) {$c_2$};
+  \node[below right] at (1.25,1.14) {$c_1$};
+  \fill (-0.73,0.76) circle (0.035);
+  \fill (-0.55,0.91) circle (0.035);
+  \fill (-0.37,1.03) circle (0.035);
+\end{tikzpicture}
+\end{center}
+
+Cerca de $s\in S$ y del punto singular $x_s$ de $H_s\subset X$, unas
+coordenadas locales adecuadas nos sitúan en la situación estudiada en
+XIV 3.2. Si $\alpha$ se elige holomorfa cerca de $s$, incluso pueden
+elegirse coordenadas locales sobre $X$ y $\ell$ en las que $f$ se
+escribe $\sum z_i^2$ y $\alpha^{-1}(c_s)$ viene dado por ``los $z_i$
+son reales y positivos''. Sobre la intersección de un entorno de $s$
+con $\alpha^{-1}(c_s)-\{s\}$, consideremos el fibrado de esferas reales
+$\Delta'_s\subset X$ definido por ``los $z_i$ son reales''. Cuando
+$t\to s$, la fibra $\Delta'_{st}$ de $\Delta'_s$ en $t$ tiende a
+$x_s$.
+
+Sea $\Delta_s$ la unión de $\{x_s\}$ y de un fibrado de esferas sobre
+$\alpha^{-1}(c_s)-\{s\}$, contenido en $X-T(A)$ y que prolonga
+$\Delta'_s$. Entonces $\Delta_s$ es un disco encajado en $X$, cuyo
+borde $H_0\cap\Delta_s$ es una esfera que representa el ciclo
+evanescente $\delta_s$ en $s$, transportado hasta $H_0$ a lo largo del
+camino $\alpha^{-1}(c_s)$.
+
+Apliquemos la teoría de Morse a la función $|\alpha f|^2$ para estudiar
+cómo cambia el tipo de homotopía de
+\[
+\{x\in X\mid x\in T(A)\ \text{o bien}\ |\alpha f(x)|^2\leq r\}
+\]
+
+\pageoriginale
+
+cuando $r$ crece. Pongamos
+\[
+X^-=\{x\in X\mid x\in T(A)\ \text{o bien}\ \alpha f(x)\ne\infty\}.
+\]
+Se obtiene que las inclusiones
+\[
+H_0\cup\bigcup_{s\in S}\Delta_s
+\lhook\joinrel\longrightarrow
+T(A)\cup H_0\cup\bigcup_{s\in S}\Delta_s
+\lhook\joinrel\longrightarrow X^-
+\]
+son equivalencias de homotopía. La teoría de Morse muestra asimismo que
+$X-X^-$ se retrae por deformación sobre un subcomplejo de dimensión
+real a lo sumo $n$. En conjunto, esto da el resultado siguiente.
+
+\subsubsection*{Teorema 4.2.}
+
+Existe un subcomplejo compacto $\Sigma$ de dimensión real a lo sumo
+$n$ en $H_\infty^{\mathrm{af}}=H_\infty-A$ tal que la inclusión
+\[
+H_0\cup\bigcup_{s\in S}\Delta_s\longrightarrow X-\Sigma
+\]
+es una equivalencia de homotopía.
+
+\subsubsection*{4.3.}
+
+La supresión de $\Sigma$ no afecta a los grupos de cohomología,
+homología u homotopía de $X$ en grados $i\leq n$. Como
+$H_0\cup\bigcup_{s\in S}\Delta_s$ se obtiene de $H_0$ adjuntando discos
+de dimensión $n+1$ a lo largo de esferas que representan los ciclos
+evanescentes, la homología da
+\[
+\mathbb Z^S\longrightarrow
+H_n\bigl(\sisi{V_0}{H_0}\bigr)
+\longrightarrow H_n(X)\longrightarrow0.
+\]
+La sucesión exacta análoga en cohomología, junto con la sucesión que se
+deduce de ella por dualidad de Poincaré, forma el diagrama conmutativo
+\begin{equation}\tag{4.3.1}
+\begin{tikzcd}[row sep=large,column sep=large]
+{} & \mathbb Z^S & {} & {} \\
+\mathbb Z^S \arrow[r,"{\sum n_s\delta_s}"] &
+H^n\bigl(\sisi{V_0}{H_0}\bigr)
+  \arrow[u,"{(\ ,\delta_s)}"'] \arrow[r] &
+H^{n+2}(X) \arrow[r] & 0 \\
+{} & H^n(X) \arrow[u] \arrow[ur,"{\eta\wedge}"'] & {} & {} \\
+{} & 0 \arrow[u] & {} & {}
+\end{tikzcd}
+\end{equation}
+
+\pageoriginale
+
+\section*{5. Los casos excepcionales del teorema de Noether}
+
+En esta sección seguimos trabajando sobre $\mathbb C$, con cohomología
+entera.
+
+\subsubsection*{5.1.}
+
+Sean $2n$, $d$ y $\underline a=(a_1,\ldots,a_d)$, con $d\geq1$ y
+$a_i\geq2$, tales que la cohomología media de las intersecciones
+completas lisas $V$ de dimensión $2n$ y multigrado $\underline a$ sea
+puramente de tipo $(n,n)$. En otras palabras, o bien $n=0$, o bien
+$(2n;\underline a)$ es uno de los casos $(2n;2)$, $(2n;2,2)$ y $(2;3)$
+(XI 2.9).
+
+Supongamos que $V$ se obtiene de una intersección completa
+$X\subset\mathbb P^{2n+d}$, respectivamente
+$X\subset\mathbb P^{2n+d+1}$, de dimensión $2n+1$ y multigrado
+$(a_1,\ldots,a_{d-1})$, respectivamente $(a_1,\ldots,a_d)$, tomando
+una sección por una hipersuperficie de grado $a_d$, respectivamente una
+sección hiperplana, perteneciente a un pincel de Lefschetz $\ell$.
+
+Por (4.3.1), la parte evanescente $\operatorname{Ev}(V)$ de
+$H^{2n}(V)$, que coincide con su parte primitiva, está engendrada sobre
+$\mathbb Z$ por los ciclos evanescentes. Es el ortogonal de la potencia
+$\eta^n$ de la clase de cohomología $\eta$ de una sección hiperplana.
+
+Como la forma de intersección sobre $H^{2n}(V)$ es unimodular y
+$\sisi{\eta^{2n}}{\eta^n}$ no es $b\,y$, con $b>1$, para ninguna otra
+clase de cohomología $y$ (XI 1.6(iv)), el discriminante de la forma de
+intersección sobre $\operatorname{Ev}(V)$ es
+\[
+(\eta^n,\eta^n)=\prod_i a_i.
+\]
+
+Sea $R$ el sistema de raíces de $H^{2n}(V)$ formado por los ciclos
+evanescentes y sus conjugados. Se dispone de la información siguiente:
+\begin{enumerate}[label=(\alph*)]
+\item $R$ es vacío o es de tipo $A$, $D$ o $E$;
+\item el rango de $R$ está dado en XI 1.10;
+\item su discriminante es $\prod_i a_i$. En las tablas, este
+  discriminante es el orden del centro del grupo simple complejo
+  simplemente conexo correspondiente. El argumento mediante el que se
+  ha calculado el discriminante muestra que dicho centro, dual del
+  cociente de la red de pesos por la red de raíces, es cíclico.
+\end{enumerate}
+
+\pageoriginale
+
+En todos los casos, esta información determina completamente $R$ si
+$n\ne0$. Se obtiene:
+
+\subsubsection*{Proposición 5.2.}
+
+\begin{enumerate}[label=(\roman*)]
+\item Si $V$ es una cuádrica de dimensión par, $R$ es de tipo $A_1$.
+\item Si $V$ es una superficie cúbica, $R$ es de tipo $E_6$.
+\item Si $V$ tiene dimensión $2n$ y es la intersección de dos
+  cuádricas, $R$ es de tipo $D_{2n+3}$.
+\end{enumerate}
+
+\subsubsection*{5.3.}
+
+Supongamos $n\ne0$. El conjunto $R^1$ de vectores de longitud $\pm2$
+en $\operatorname{Ev}(V)$ es asimismo un sistema de raíces y tiene las
+mismas propiedades (a), (b) y (c) que $R$. Por tanto, $R=R^1$. Sea
+$\pi_1$ el grupo fundamental del espacio de parámetros de todas las
+intersecciones completas $V\subset\mathbb P^{2n+d}$ del tipo
+considerado. La imagen de $\pi_1$ en
+$\operatorname{GL}(\operatorname{Ev}(V))$ es el
+\sisi{grupo de Weil}{grupo de Weyl} de $R$. En todos los casos es el
+grupo de automorfismos de la terna
+\[
+\bigl(H^{2n}(V),\eta^n,\text{forma de intersección}\bigr).
+\]
+
+\subsubsection*{5.4.}
+
+Reemplazando $R$ por $R^1$ como en 5.3, la afirmación
+\sisi{4.2(ii)}{5.2(ii)} es bien conocida [1], y para valores pequeños de
+$n$, \sisi{4.2(iii)}{5.2(iii)} era conocida, al menos por Manin
+($n=0$ es trivial; una superficie que es intersección de dos cuádricas
+es una superficie de del Pezzo). M. Reid [4] realizó un estudio
+detallado de la intersección de dos cuádricas. Deduce 5.2(iii) a partir
+del estudio de la geometría de los subespacios lineales
+$n$-dimensionales de una intersección de dos cuádricas
+$V\subset\mathbb P^{2n+2}$.
+
+\section*{Bibliografía}
+
+\begin{enumerate}[label={[\arabic*]}]
+\item E. Cartan, ``Quelques remarques sur les 28 bitangentes d'une
+  quartique plane et les 27 droites d'une surface cubique'',
+  \emph{Bull. Sci. Math.} \textbf{70} (1946), 42--45;
+  \emph{Oeuvres}, parte I, vol. 2, p.~1353.
+\item P. Deligne, ``Théorie de Hodge II'', \emph{Publ. Math. IHES}
+  \textbf{40} (1971), 5--58.
+
+\pageoriginale
+
+\item S. Lefschetz, \emph{L'analysis situs et la géométrie algébrique},
+  Gauthier--Villars, 1924, reeditado en \emph{Selected Papers},
+  Chelsea.
+\item M. Reid, tesis doctoral, Cambridge, 1972.
+\item J.-P. Serre, ``Faisceaux algébriques cohérents'',
+  \emph{Ann. of Math.} \textbf{61} (1955), 197--278, citado como FAC.
+\end{enumerate}

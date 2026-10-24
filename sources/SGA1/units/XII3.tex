@@ -1,0 +1,222 @@
+
+\section{Comparación de las propiedades de los morfismos}
+\label{XII.3}
+
+\begin{proposition}
+\label{XII.3.1}
+Sean $f\colon X\to Y$ un morfismo de $\CC$-esquemas localmente de tipo
+finito y $f^\an\colon X^\an\to Y^\an$ el morfismo deducido de~$f$ sobre los
+espacios analíticos asociados. Sea~$P$ la propiedad de ser
+\begin{enumerate}
+\item[(i)] plano
+\item[(ii)] neto (\ie no ramificado)
+\item[(iii)] étale
+\item[(iv)] liso
+\item[(v)] normal
+\item[(vi)]
+\marginpar{321}
+reducido
+\item[(vii)] inyectivo
+\item[(viii)] separado
+\item[(ix)] un isomorfismo
+\item[(x)] un monomorfismo
+\item[(xi)] una inmersión abierta.
+\end{enumerate}
+Entonces, para que~$f$ posea la propiedad~$P$, es necesario y suficiente que
+también la posea~$f^\an$.
+\end{proposition}
+
+Denotemos por $\varphi\colon X^\an\to X$ y $\psi\colon Y^\an\to Y$ los
+morfismos canónicos. Sean~$x$ un punto de~$X^\an$ e $y=f^\an(x)$. Los
+morfismos $\cal{O}_{Y^\an,y}\to{\mathcal O}_{X^\an,x}$ y
+$\cal{O}_{Y,\psi(y)}\to\cal{O}_{X,\varphi(x)}$,
+\ifthenelse{\boolean{orig}}
+{inducidos por~$f$ y~$f^\an$, respectivamente,}
+{inducidos por~$f^\an$ y~$f$, respectivamente,}%
+dan el mismo morfismo al pasar a las completaciones~\eqref{XII.1.1}. Según
+\cite[ch\ptbl 3 \S 5 prop\ptbl 4]{XII.2} (\resp EGA~IV~17.4.4), equivale,
+pues, decir que~$f^\an$ verifica la propiedad~(i) (\resp (ii)) o decir que~$f$
+verifica~(i) (\resp (ii)) en cada punto cerrado de~$X$. Como el conjunto de
+los puntos de~$X$ en los que se verifica~(i) (\resp (ii)) es abierto
+(EGA~IV~11.1.1 e I~3.3), esto demuestra~(i) y~(ii) y, por tanto,
+también~(iii).
+
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+Sea~$P$ la propiedad~(iv) (\resp (v), \resp (vi)). Teniendo en cuenta
+\Ref{XII.2.1}
+\ifthenelse{\boolean{orig}}
+{((v), (vi), (vii)),}
+{((iv), (vi), (vii)),}%
+~equivale decir que las fibras geométricas de~$f^\an$ en los distintos
+puntos~$y$ de~$Y^\an$ son regulares (\resp normales, \resp reducidas) o que
+lo mismo ocurre con las fibras geométricas de~$f$ en los distintos puntos
+cerrados~$\psi(y)$ de~$Y$. Los casos~(iv) (\resp (v), \resp (vi)) resultan
+entonces de~(i) y del hecho de que el conjunto de los puntos de~$Y$ en los
+que las fibras geométricas de~$f$ son regulares es abierto
+(EGA~IV~12.1.7).
+
+(vii). Si~$f$ es inyectivo, también lo es~$f^\an$. Recíprocamente,
+supongamos que~$f^\an$ es inyectivo y demostremos que~$f$ también lo es.
+Podemos suponer
+\marginpar{322}
+que~$f$ es de tipo finito. Como el morfismo~$f^\an$ es inyectivo, las fibras
+de~$f$ en los puntos cerrados de~$Y$ son radiciales; como el conjunto de los
+puntos de~$Y$ cuya fibra es radicial es localmente constructible
+(EGA~IV~9.6.1) y como~$Y$ es un esquema de Jacobson, todas las fibras de~$f$
+son radiciales y, por tanto, es inyectivo.
+
+(viii). Sean $\Delta\colon X\to X\times_YX$ y
+$\Delta^\an\colon X^\an\to X^\an\times_{Y^\an}X^\an$ las inmersiones
+diagonales, y sea
+$\Theta\colon X^\an\times_{Y^\an}X^\an\to X\times_YX$ el morfismo canónico.
+En virtud de~\Ref{XII.2.3}, equivale decir que~$\Delta(X)$ es cerrado en
+$X\times_YX$ o que~$\Delta^\an(X^\an)$ es cerrado en
+$X^\an\times_{Y^\an}X^\an$.
+
+Como una inmersión abierta no es sino un morfismo étale inyectivo
+(EGA~IV~17.9.1 y~\cite[\no13 \S 1]{XII.4}), (xi) resulta de~(iii) y~(vii).
+Como un isomorfismo es lo mismo que una inmersión abierta sobreyectiva, (ix)
+resulta de~(xi) y de (\Ref{XII.3.2}~(i)) más abajo. Decir que~$f$ es un
+monomorfismo equivale a decir que
+\ifthenelse{\boolean{orig}}
+{la morfismo}
+{el morfismo}%
+~diagonal $\Delta\colon X\to X\times_YX$ es un isomorfismo; por tanto, (x)
+resulta de~(ix).
+
+\begin{proposition}
+\label{XII.3.2}
+Sean~$X$ e~$Y$ dos $\CC$-esquemas localmente de tipo finito,
+$f\colon X\to Y$ un morfismo de tipo finito y
+$f^\an\colon X^\an\to Y^\an$ el morfismo deducido de~$f$ sobre los espacios
+analíticos asociados. Sea~$P$ la propiedad de ser
+\begin{enumerate}
+\item[(i)] sobreyectivo
+\item[(ii)] dominante
+\item[(iii)] una inmersión cerrada
+\item[(iv)] una inmersión
+\item[(v)] propio\footnote{Diremos que un morfismo de espacios analíticos es
+propio si lo es en el sentido de~\cite[ch\ptbl 1 \S 10 \no1]{XII.1} y si es
+separado.}
+\item[(vi)]
+\marginpar{323}
+finito.
+\end{enumerate}
+Entonces, para que~$f$ posea la propiedad~$P$, es necesario y suficiente que
+también la posea~$f^\an$.
+\end{proposition}
+
+Sean $\varphi\colon X^\an\to X$ y $\psi\colon Y^\an\to Y$ los morfismos
+canónicos.
+
+(i). Si~$f$ es sobreyectivo, para todo punto~$y$ de~$Y^\an$,
+$f^{-1}(\psi(y))$ es un subconjunto cerrado no vacío de~$X$; contiene, pues,
+al menos un punto cerrado, lo cual demuestra que~$f^\an$ es sobreyectivo.
+Recíprocamente, si~$f^\an$ es sobreyectivo, $f(X)$ es un subconjunto
+localmente constructible de~$Y$ (EGA~IV~1.8.4) que contiene todos los puntos
+cerrados de~$Y$; por tanto, $f(X)=Y$.
+
+(ii) resulta de~\Ref{XII.2.2}.
+
+(iii). Si~$f$ es una inmersión cerrada, también lo es~$f^\an$ según
+\Ref{XII.1.1}~a). Recíprocamente, si~$f^\an$ es una inmersión cerrada, también
+lo es~$f$ según~\Ref{XII.3.1}~(x) y~\Ref{XII.3.2}~(v), pues esto equivale a
+decir que~$f$ es un monomorfismo propio (EGA~IV~8.11.5).
+
+(iv). Es claro que, si~$f$ es una inmersión, también lo es~$f^\an$.
+Recíprocamente, supongamos que~$f^\an$ es una inmersión, y sean~$T$ la imagen
+de~$X$ en~$Y$ y~$\overline{T}$ la clausura esquemática de~$f$. Se tiene una
+factorización de~$f$,
+$$
+X \lto{i} \overline{T} \lto{j}
+\ifthenelse{\boolean{orig}}
+{J}
+{Y}%
+\quoi,
+$$
+donde~$j$ es una inmersión cerrada e~$i$ el morfismo canónico; de ella se
+deduce la factorización siguiente de~$f^\an$:
+$$
+X^\an \lto{i^\an} \overline{T}^{\mkern1mu \an} \lto{j^\an} Y^\an\ .
+$$
+Como
+\marginpar{324}
+$T=f(X)$ es un subconjunto localmente constructible de~$Y$ (EGA~IV~1.8.4),
+se tiene, según~\Ref{XII.2.2},
+$\overline{T}^{\mkern1mu \an}=\overline{f^\an(X^\an)}$. De ello resulta que
+$i^\an(X^\an)$ es un abierto de~$\overline{T}^{\mkern1mu \an}$ y, por tanto,
+que~$i(X)$ es un abierto de~$\overline{T}$. Consideremos la factorización
+canónica de~$i$:
+$$
+X \lto{i_1} i(X) \lto{i_2} \overline{T}.
+$$
+El morfismo~$i_1^\an$ es un monomorfismo propio; por tanto, también lo es
+$i_1$ según~\Ref{XII.3.2}~(v) y~\Ref{XII.3.1}~(x). Esto demuestra que~$i_1$
+y, por consiguiente, también~$f$ es una inmersión.
+
+(v). Supongamos que~$f$ es propio y demostremos que~$f^\an$ también lo es.
+Como el hecho de que~$f^\an$ sea propio es local sobre~$Y^\an$, podemos
+suponer que~$Y$ es afín. Según el lema de Chow (EGA~II~5.6.1), puede
+encontrarse un $Y$-esquema proyectivo~$X'$ y un morfismo proyectivo
+sobreyectivo
+$$
+g\colon X'\to X.
+$$
+El morfismo $(fg)^\an=f^\an g^\an$ es proyectivo y, por tanto, propio;
+$g^\an$ es sobreyectivo, y de~\cite[ch\ptbl 1 \S 10]{XII.1} resulta que
+$f^\an$ es propio.
+
+Recíprocamente, supongamos que~$f^\an$ es propio y demostremos que~$f$
+también lo es. Según~\Ref{XII.3.1}~(viii), $f$ es separado. Falta probar que
+$f$ es universalmente cerrado, e incluso basta demostrar que~$f$ es cerrado;
+en efecto, para todo $Y$-esquema~$Y'$ localmente de tipo finito, el morfismo
+$$
+f_{(Y')}=h\colon X\times_YY'\to Y'
+$$
+también será cerrado, pues~$h^\an$ es propio. Sea~$T$ un subconjunto cerrado
+de~$X$; $f(T)$ es un conjunto localmente constructible y se tiene
+$$
+f^\an(\varphi^{-1}(T))=\psi^{-1}(f(T)).
+$$
+Como
+\marginpar{325}
+$f^\an$ es propio, $\psi^{-1}(f(T))$ es un subconjunto cerrado de~$Y^\an$;
+de~\Ref{XII.2.2} resulta, pues, que
+$$
+\psi^{-1}(\overline{f(T)})=\psi^{-1}(f(T))\quoi.
+$$
+Esto implica que $f(T)=\overline{f(T)}$, \ie que~$f$ es
+\ifthenelse{\boolean{orig}}
+{cerrada}
+{cerrado}%
+~y, por tanto, que~$f$ es propio.
+
+(vi). Decir que un morfismo es finito equivale a decir que es propio de
+fibras finitas (EGA~III~4.4.2 y~\cite[\no19 \S 5]{XII.4}). Como el conjunto
+de los puntos en los que las fibras de~$f$ son finitas es localmente
+constructible (EGA~IV~9.7.9), las fibras de~$f$ son finitas
+\ifthenelse{\boolean{orig}}
+{si y solo si}
+{si y solo si}%
+~lo son las fibras de~$f^\an$; por tanto, (vi) resulta de~(v).
+
+\begin{remarque}
+\label{XII.3.3}
+\begin{enumerate}
+\item[a)] sea $f\colon X\to Y$ un morfismo de $\CC$-esquemas localmente de
+tipo finito. El hecho de que~$f^\an$ sea un isomorfismo local no implica que
+lo mismo ocurra con~$f$. En efecto, si~$f$ es étale, $f^\an$ es étale y, por
+tanto, un isomorfismo local~\hbox{\cite[\no13 \S 1]{XII.4}}, pero~$f$ no lo es
+necesariamente.
+\item[b)]
+\ifthenelse{\boolean{orig}}
+{el enunciado~\Ref{XII.3.2}}
+{El enunciado~\Ref{XII.3.2}}%
+~no es cierto si no se supone que~$f$ es de tipo finito. Demostremos, por
+ejemplo, que~$f^\an$ puede ser una inmersión cerrada sin que~$f$ lo sea. Basta
+tomar como~$X$ la suma disjunta de~$\ZZ$ copias de~$\Spec\CC$, como~$Y$ la
+recta afín y como~$f$ el morfismo obtenido enviando los puntos de~$X$ a
+puntos distintos de~$Y$ que forman un subconjunto discreto.
+\end{enumerate}
+\end{remarque}

@@ -1,0 +1,162 @@
+
+\section{Grupos de descomposición y de inercia. Caso étale}
+\label{V.2}
+Sea~$G$
+\ifthenelse{\boolean{orig}}{\ignorespaces}{un}
+grupo finito que actúa por la derecha sobre el preesquema~$X$. Si $x\in X$,
+se llama
+\marginpar{111}
+\emph{grupo de descomposición de~$x$}
+\index{descomposición (grupo de)|hyperpage}%
+\index{grupo de descomposición|hyperpage}%
+al estabilizador $G_d(x)$ de~$x$. Este grupo actúa canónicamente (por la
+izquierda) sobre el cuerpo residual
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)$}
+{$\kres(x)$}, y el conjunto de los elementos de~$G_d(x)$ que actúan
+trivialmente se llama 
+\emph{grupo de inercia}
+\index{grupo de inercia|hyperpage}%
+\index{inercia (grupo de)|hyperpage}%
+de~$x$, y se denota por~$G_i(x)$.
+
+Supongamos que la acción de~$G$ sobre~$X$ es admisible y que~$Y$ es un
+preesquema sobre un preesquema~$Z$. Fijemos $z\in Z$ y una extensión
+algebraicamente cerrada~$\Omega$
+\ifthenelse{\boolean{orig}}
+{de~$\kappa(z)$ cuyo grado de trascendencia sea mayor que el de las
+$\kappa(x)/\kappa(z)$}
+{de~$\kres(z)$ cuyo grado de trascendencia sea mayor que el de las
+$\kres(x)/\kres(z)$}, donde~$x$ es un punto de~$X$ situado sobre~$z$. Puede
+considerarse $\Spec(\Omega)$ como un $Z$-esquema, y los puntos de~$X$ con
+valores en~$\Omega$ corresponden a los homomorfismos
+\ifthenelse{\boolean{orig}}
+{de $\kappa(z)$-álgebras $\kappa(x)\to\Omega$}
+{de $\kres(z)$-álgebras $\kres(x)\to\Omega$}, donde~$x$ es un punto de~$X$
+situado sobre~$z$. Como $\Omega$ se ha tomado suficientemente grande, todo
+punto~$x$ de~$X$ situado sobre~$z$ es el punto subyacente a un punto de~$X$
+con valores en~$\Omega$. Si $X(\Omega)$ e~$Y(\Omega)$ designan,
+respectivamente, los conjuntos de puntos de~$X$ y de~$Y$ con valores
+en~$\Omega$, se tiene una aplicación natural
+$$
+X(\Omega)\to Y(\Omega),
+$$
+y, por otra parte, $G$ actúa sobre~$X(\Omega)$ y la aplicación precedente es
+invariante por~$G$. Sentado esto, las conclusiones (ii) y (iii)
+de~\Ref{V.1.3} pueden interpretarse también así: \emph{la aplicación
+precedente es sobreyectiva e identifica $Y(\Omega)$ con el cociente
+$X(\Omega)/G$. Además, si~$x$ es el punto subyacente a $a\in X(\Omega)$,
+entonces el estabilizador de~$a$ en~$G$ no es otro que el grupo de inercia
+$G_i(x)$}. Todo esto es cierto, por lo demás, sin suponer que~$\Omega$ sea
+«suficientemente grande»; esta última hipótesis sirve únicamente para
+asegurar que el grupo de inercia de todo punto de~$X$ situado sobre~$z$ pueda
+caracterizarse como estabilizador «geométrico». Se deduce inmediatamente,
+por ejemplo:
+
+\begin{proposition}
+\label{V.2.1}
+Hagamos una extensión de la base $Z'\to Z$, de donde
+$X'=X\times_ZZ'$. Sea~$x'$ un punto de~$X'$ y~$x$ su imagen en~$X$.
+Entonces $G_i(x)=G_i(x')$.
+\end{proposition}
+
+En las consideraciones precedentes basta tomar como~$\Omega$ una extensión
+suficientemente grande
+\ifthenelse{\boolean{orig}}
+{de~$\kappa(z')$}
+{de~$\kres(z')$}
+(donde $z,z'$ son las imágenes de $x,x'$ en $Z,Z'$, respectivamente).
+
+\begin{proposition}
+\label{V.2.2}
+Bajo las condiciones de~\Ref{V.1.3}, supongamos que~$Y$ es localmente
+noetheriano y que~$X$ es finito sobre~$Y$. Sea~$H$ un subgrupo de~$G$;
+consideremos $X'=X/H$ (\cf \Ref{cor:V.1.7}) y sean
+\marginpar{112}
+$x\in X$, $x'$ su imagen en~$X'$ e~$y$ su imagen en~$Y$.
+\begin{enumerate}
+\item[(i)] Si $H\supset G_d(x)$, entonces el homomorfismo
+$\cal{O}_y\to\cal{O}_{x'}$ induce un isomorfismo entre las completaciones.
+\item[(ii)] Si $H\supset G_i(x)$, entonces el homomorfismo
+$\cal{O}_y\to\cal{O}_{x'}$ es étale, \ie $X'$ es étale sobre~$Y$ en~$x'$.
+\end{enumerate}
+\end{proposition}
+
+Sea $Y_1=\Spec(\widehat{\cal{O}_y})$ y hagamos el cambio de base
+$Y_1\to Y$. Se obtiene $X_1=X\times_Y Y_1$, finito sobre~$Y_1$, sobre el
+que actúa~$G$, siendo el cociente~$Y_1$ por~\Ref{V.1.9}. Sea~$y_1$ el único
+punto de~$Y_1$ situado sobre~$y$. Como
+\ifthenelse{\boolean{orig}}
+{$\kappa(y)=\kappa(y_1)$}
+{$\kres(y)=\kres(y_1)$},
+la fibra de~$X$ en~$y$ es isomorfa a la de~$X_1$ en~$y_1$; de aquí resulta
+un único punto~$x_1$ de~$X_1$ situado sobre~$x$. Además, por~\Ref{V.1.9},
+se tiene $X_1/H=X'_1=X'\times_Y Y_1$. Sea~$x'_1$ la imagen de~$x_1$ en
+$X'_1$; está situado sobre~$x'$, y se comprueba fácilmente (pues~$X'$ es de
+tipo finito sobre~$Y$) que el homomorfismo
+$\cal{O}_{x'}\to\cal{O}_{x'_1}$ induce un isomorfismo entre las
+completaciones. Por tanto, la cuestión se reduce al caso en que~$Y$ es el
+espectro de un anillo local completo~$B$ y, por consiguiente, $X$ es el
+espectro de una $B$-álgebra finita~$A$, producto de un número finito de
+anillos locales~$A_{x_i}$
+\ifthenelse{\boolean{orig}}{correspondientes}{correspondientes}
+a los puntos~$x_i$ de~$X$ situados sobre~$Y$. Si~$A_0$ corresponde a
+$x=x_0$, entonces~$A$ se identifica con el anillo
+$\Hom_{G_d}(G,A_0)$ de las funciones $f\colon G\to A_0$ tales que
+$f(st)=sf(t)$ para $s\in G_d$, estando definidas las operaciones de~$G$ sobre
+estas funciones por $(uf)(t)=f(tu)$. Se ve, pues, que si~$H$ es un subgrupo
+cualquiera de~$G$, entonces~$A^H$ es el anillo de las funciones
+$f\colon G\to A_0$ tales que
+$$
+f(stu)=sf(t)\qquad\text{para}\ s\in G_d,\ u\in H.
+$$
+Por tanto, es un anillo semilocal cuyos componentes locales corresponden a
+las clases dobles $G_daH$ en~$G$; a la clase doble definida por $a\in G$
+corresponde (mediante la aplicación $f\mto f(a)$) el subanillo
+$A_0^{H(a)}$ de~$A_0$, donde $H(a)=G_d\cap aHa^{-1}$. Además, el componente
+local de~$A^H$ correspondiente a la imagen~$x'$ de~$x$ es también el que
+corresponde a la clase doble~$G_dH$ del elemento neutro; su componente local
+es, por tanto, $A_0^{G_d\cap H}$. Si, pues,
+\ifthenelse{\boolean{orig}}{$G_d\in H$,}{$G_d\subset H$,}
+se obtiene $A_0^{G_d}=A^G=B$, lo cual demuestra (i). Para demostrar (ii),
+puede pasarse a una extensión finita plana conveniente de~$A$ y utilizarse
+\Ref{V.2.1}, reduciendo así la cuestión al caso en que la extensión residual
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)/\kappa(y)$}
+{$\kres(x)/\kres(y)$}
+es trivial. Pero entonces $G_i(x)=G_d(x)$, y se vuelve al caso precedente.
+
+\begin{corollaire}
+\label{V.2.3}
+Bajo
+\marginpar{113}
+las condiciones de~\Ref{V.2.2}, supongamos que $G_i(x)=(e)$. Entonces~$X$
+es étale sobre~$Y$ en~$x$. Por consiguiente, si $G_i(x)=(e)$ para todo
+$x\in X$, entonces $X\to Y$ es un morfismo étale.
+\end{corollaire}
+
+Hay un recíproco parcial:
+
+\begin{corollaire}
+\label{V.2.4}
+Supongamos que~$X$ es conexo y que la acción de~$G$ sobre~$X$ es fiel. Para
+que $p\colon X\to Y=X/G$ sea étale es necesario y suficiente que los grupos
+de inercia de los puntos de~$X$ se reduzcan al elemento neutro. Si así
+ocurre, $G$ se identifica con el grupo de todos los $Y$-automorfismos del
+$Y$-esquema~$X$.
+\end{corollaire}
+
+En vista de~\Ref{V.2.3}, puede suponerse que~$X$ es étale sobre~$Y$. Pero si
+un $s\in G$ pertenece a algún $G_i(x)$, de~\Ref{I.5.4} se sigue entonces
+\ifthenelse{\boolean{orig}}
+{que~$s$ actúa trivialmente sobre~$G$}
+{que~$s$ actúa trivialmente sobre~$X$},
+y, por tanto, es el elemento neutro, pues la acción de~$G$ es fiel; esto
+demuestra la primera afirmación. Sea~$u$ un $Y$-automorfismo de~$X$ y sea
+$x\in X$. Según la Proposición~\Ref{V.1.3}, existe $s\in G$ tal que
+$x'=s(x)=u(x)$ y que induce el mismo homomorfismo residual
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)\to\kappa(x')$}
+{$\kres(x')\to\kres(x)$}
+que~$u$. Por~\loccit, se tiene entonces $s=u$, lo cual concluye la
+demostración.

@@ -1,0 +1,70 @@
+\section[Levantamiento infinitesimal de los esquemas étales]{Levantamiento infinitesimal de los esquemas étales. Aplicación a los esquemas formales}
+\label{I.8}
+
+\begin{proposition}
+\label{I.8.1}
+Sean $Y$ un preesquema, $Y_0$ un subpreesquema, $X_0$ un $Y_0$-esquema étale y $x$ un punto de~$X_0$. Entonces existen un $Y$-esquema étale~$X$, un entorno~$U_0$ de~$x$ en~$X_0$ y un $Y_0$-isomorfismo $U_0\isomto X\times_Y Y_0$.
+\end{proposition}
+
+Sea, en efecto, $y$ la proyección de~$x$ en~$Y_0$. Aplicando~\Ref{I.7.6} al homomorfismo local étale $A_0\to B_0$ de los anillos locales de~$y$ y~$x$ en $Y_0$ y~$X_0$, se obtiene un isomorfismo
+\marginpar{14}%
+$$
+B_0={C_0}_{\goth{n}_0}\qquad C_0=A_0[t]/F_0A_0[t],
+$$
+donde $F_0$ es un polinomio mónico y $\goth{n}_0$ un ideal maximal de~$C_0$ que no contiene la clase de $F'_0(t)$ en~$C_0$. Sea $A$ el anillo local de~$y$ en~$Y$, sea $F$ un polinomio mónico de~$A[t]$ que da~$F_0$ mediante el homomorfismo sobreyectivo $A\to A_0$ (se levantan los coeficientes de~$F_0$), y sea, por último,
+\ifthenelse{\boolean{orig}}{$\cal{C}=A[t]/FA[t]$}{$C=A[t]/FA[t]$}\ % La autoridad corrige \cal C por C.
+y $\goth{n}$ el ideal maximal \ifthenelse{\boolean{orig}}{de~$\cal{C}$}{de~$C$}\ % La autoridad corrige \cal C por C.
+que es imagen inversa de \ifthenelse{\boolean{orig}}{$\goth{n}_0x$}{$\goth{n}_0$}\ % La autoridad elimina la x espuria.
+por el epimorfismo natural $C\to C\otimes_AA_0=C_0$. Pongamos
+$$
+\ifthenelse{\boolean{orig}}{B=C_\goth{n}}{B=C_\goth{n}.}% La autoridad añade el punto final.
+$$
+Por la construcción y~\Ref{I.7.1}, es inmediato que $B$ es étale sobre~$A$ y que se tiene un isomorfismo $B\otimes_AA_0\simeq B_0$.% SGA1-CORR-0008: la autoridad imprime A_0.
+Se sabe (cap\ptbl\ I) que existen un $Y$-esquema de tipo finito~$X$ y un punto~$z$ de~$X$ sobre~$y$ tales que $\cal{O}_z$ es $A$-isomorfo a~$B$;% SGA1-CORR-0008: la autoridad imprime C, pero solo B=C_n es étale.
+como este último es étale sobre~$A=\cal{O}_y$, puede suponerse (tomando $X$ suficientemente pequeño) que $X$ es étale sobre~$Y$. Sea $X'_0=X\times_YY_0$; entonces el anillo local de~$z$ en~$X'_0$ se identifica con $\cal{O}_z\otimes_AA_0=B\otimes_AA_0$ y es, por tanto, isomorfo a~$B_0$. Este isomorfismo está definido por un isomorfismo de un entorno~$U_0$ de~$x$ en~$X_0$ sobre un entorno de~$z$ en~$X'_0$ (\emph{loc. cit.}), que puede suponerse igual a~$X'_0$ tomando $X$ suficientemente pequeño. Hemos terminado.
+
+\begin{corollaire}
+\label{I.8.2}
+Enunciado análogo para \emph{recubrimientos} étales, suponiendo infinito el cuerpo residual $\kres(y)$.
+\end{corollaire}
+
+La demostración es la misma, sustituyendo~\Ref{I.7.6} por~\Ref{I.7.5}.
+
+\begin{theoreme}
+\label{I.8.3}
+El funtor considerado en~\Ref{I.5.5} es una \emph{equivalencia de categorías}.
+\end{theoreme}
+
+En virtud del teorema~\Ref{I.5.5}, queda demostrar que todo $S_0$-esquema étale~$X_0$ es isomorfo a un $S_0$-esquema $X\times_SS_0$, donde $X$ es un $S$-esquema étale. El espacio topológico subyacente a~$X$ deberá ser necesariamente idéntico al de~$X_0$, identificándose además $X_0$ con un subpreesquema cerrado de~$X$. El problema equivale, pues, al siguiente: encontrar sobre el espacio topológico subyacente $|X_0|$ de~$X_0$ un haz de álgebras~$\cal{O}_X$ sobre~$f_0^*(\cal{O}_S)$ (donde $f_0$ es la proyección $X_0\to S_0$, considerada aquí como aplicación continua de los espacios subyacentes) que haga de~$|X_0|$ un $S$-preesquema étale~$X$, y un homomorfismo de álgebras $\cal{O}_X\to\cal{O}_{X_0}$ compatible, en los haces de escalares, con el homomorfismo $f_0^*(\cal{O}_S)\to f_0^*(\cal{O}_{S_0})$, y que induzca un isomorfismo
+$\cal{O}_X\otimes_{f_0^*(\cal{O}_S)}f_0^*(\cal{O}_{S_0})\isomto\cal{O}_{X_0}$.
+(Entonces $X$ será un $S$-preesquema étale cuya restricción es~$X_0$,
+\marginpar{15}
+y será, por tanto, separado sobre~$S$, puesto que $X_0$ lo es sobre~$S_0$; así, $X$ resuelve el problema.) Si $(U_i)$ es un recubrimiento de~$X_0$ por abiertos y se ha encontrado una solución del problema en cada~$U_i$, del teorema de unicidad~\Ref{I.5.5} se sigue que estas soluciones se pegan (\ie se pegan los haces de álgebras que las definen, provistos de sus homomorfismos de aumentación), y se comprueba de inmediato que el espacio anillado así construido sobre~$S$ es un $S$-preesquema étale~$X$ provisto de un isomorfismo $X\times_SS_0\isomfrom X_0$. Basta, pues, encontrar una solución localmente, lo cual está garantizado por~\Ref{I.8.1}.
+
+\begin{corollaire}
+\label{I.8.4}
+Sea $S$ un preesquema formal localmente noetheriano, provisto de un ideal de definición~$J$, y sea $S_0=\bigl(|S|,\cal{O}_S/\cal{J}\bigr)$ el preesquema ordinario correspondiente. Entonces el funtor $\goth{X}\mto\goth{X}\times_SS_0$, de la categoría de los recubrimientos étales de~$S$ en la categoría de los recubrimientos étales de~$S_0$, es una equivalencia de categorías.
+\end{corollaire}
+
+Por supuesto, se llamará recubrimiento étale de un preesquema \emph{formal}~$S$ a un recubrimiento de~$S$, \ie un preesquema formal sobre~$S$ definido mediante un haz coherente de álgebras~$\cal{B}$, tal que $\cal{B}$ sea \emph{localmente libre} y las fibras residuales $\cal{B}_s\otimes_{\cal{O}_s}\kres(s)$ de~$\cal{B}$ sean álgebras \emph{separables} sobre~$\kres(s)$. Si se denota por~$S_n$ el preesquema ordinario
+\ifthenelse{\boolean{orig}}{$\bigl(|S|\ \cal{O}_S/J^{n+1}\bigr)$,}
+{$\bigl(|S|,\cal{O}_S/J^{n+1}\bigr)$,}% La autoridad corrige el espacio por una coma.
+dar un haz coherente de álgebras $\cal{B}$ sobre~$S$ equivale a dar una sucesión de haces coherentes de álgebras
+\ifthenelse{\boolean{orig}}{$B_n$}{$\cal{B}_n$}
+sobre
+\ifthenelse{\boolean{orig}}{los~$X_n$,}{los~$S_n$,}
+provistos de un sistema transitivo de homomorfismos
+\ifthenelse{\boolean{orig}}{$B_m\to B_n$}{$\cal{B}_m\to\cal{B}_n$}
+($m\geq n$) que definen isomorfismos
+\ifthenelse{\boolean{orig}}
+{$B_m\otimes_{\cal{O}_{S_m}}\cal{O}_{S_n}\isomto B_n$.}
+{$\cal{B}_m\otimes_{\cal{O}_{S_m}}\cal{O}_{S_n}\isomto\cal{B}_n$.}
+Es inmediato que $\cal{B}$ es localmente libre si y solo si lo son los $\cal{B}_n$ sobre los~$S_n$, y que la condición de separabilidad se verifica si y solo si se verifica para~$\cal{B}_0$, o también para todos
+\ifthenelse{\boolean{orig}}{los~$B_n$.}{los~$\cal{B}_n$.}
+Así, $\cal{B}$ es étale sobre~$S$ si y solo si lo son los
+\ifthenelse{\boolean{orig}}{$B_n$}{$\cal{B}_n$}
+sobre los~$S_n$. Teniendo esto en cuenta,~\Ref{I.8.4} se sigue inmediatamente de~\Ref{I.8.3}.
+
+\begin{remarquestar}
+En~\Ref{I.8.4} no era necesario limitarse al caso de los \emph{recubrimientos}. Sin embargo, es el único que se utiliza por el momento.
+\end{remarquestar}

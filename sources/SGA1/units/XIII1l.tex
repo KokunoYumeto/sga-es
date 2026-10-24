@@ -1,0 +1,88 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\begin{corollaire}
+\label{XIII.1.15}
+Sean $f \colon X \to S$ un morfismo, $\Phi$ un stack sobre~$X$ y $\LL$
+un conjunto de números primos. Supongamos que, para todo esquema $X_1$
+étale sobre~$X$ y para toda pareja de objetos $x$, $y$ de
+$\Phi_{X_1}$, el haz $\SheafHom_{X_1}(x,y)$ es localmente constante,
+que el haz $\SheafAut_{X_1}(x)$ es un ind-$\LL$-grupo localmente
+constante y que el haz de los subgerbes maximales $S\Phi$ de~$\Phi$
+\textup{\cite[III 2.1.7]{XIII.1}} es localmente constante. Supongamos que
+$(\Phi,f)$ es cohomológicamente propio en dimensión $\leqslant 1$ y que
+$f$ es localmente $1$-asférico para $\LL$. Entonces, para toda
+especialización $\overline{s}_1 \to \overline{s}_2$ de puntos geométricos
+de~$S$, el morfismo de especialización
+$$
+a \colon (f_* \Phi)_{\overline{s}_2} \to (f_*
+\Phi)_{\overline{s}_1}
+$$
+es una equivalencia de categorías.
+\end{corollaire}
+
+Sean $\overline{S}_1$ (\resp $\overline{S}_2$) la localización estricta
+de~$S$ en $\overline{s}_1$ (\resp la localización estricta de~$S$ en
+$\overline{s}_2$), $\overline{X}_2$, $\overline{\Phi}_2$
+(\resp $\overline{X}_1$, $\overline{\Phi}_1$) las imágenes inversas de
+\ifthenelse{\boolean{orig}}
+{$X_2$, $\Phi_2$}
+{$X$, $\Phi$}
+sobre~$\overline{S}_2$ (\resp de
+\ifthenelse{\boolean{orig}}
+{$X_1$, $\Phi_1$}
+{$X$, $\Phi$}
+sobre~$\overline{S}_1$), y consideremos el cuadrado cartesiano
+$$
+\xymatrix{ \overline{X}_1 \ar[r]^h \ar[d]_{\overline{f}_1} &
+\overline{X}_2 \ar[d]^{\overline{f}_2} \\ \overline{S}_1 \ar[r]^g &
+\overline{S}_2 }
+\text{.}
+$$
+Debe demostrarse que el funtor
+$$
+\varphi \colon \overline{\Phi}_2(\overline{X}_2) \to \overline{\Phi}_1
+(\overline{X}_1)
+$$
+es una equivalencia. El funtor $\varphi$ es plenamente fiel;
+\ifthenelse{\boolean{orig}}
+{en}
+{}
+en
+\marginpar{368}
+efecto, sean $x$, $y$ dos objetos de~$(\overline{\Phi}_2)_{\overline{X}_2}$;
+el morfismo canónico
+$$
+\Hom_{\overline{X}_2}(x,y) \to
+\Hom_{\overline{X}_1}(\varphi(x),\varphi(y))
+$$
+se identifica con el morfismo canónico
+$$
+\H^0(\overline{X}_2, \SheafHom_{\overline{X}_2}(x,y)) \to
+\H^0(\overline{X}_1,h^*(\SheafHom_{\overline{X}_2}(x,y))
+\ifthenelse{\boolean{orig}}
+{}
+{)}
+\text{.}
+$$
+Este morfismo es un isomorfismo por~\Ref{XIII.1.14}.
+
+Demostremos que $\varphi$ es una equivalencia. Sean $x_1$ un objeto
+de~$\overline{\Phi}_1(\overline{X}_1)$ y $G_1$ el subgerbe maximal
+de~$\overline{\Phi}_1$ generado por $x_1$. El morfismo
+$$
+\H^0(\overline{X}_2, S\overline{\Phi}_2) \to \H^0(\overline{X}_1,
+h^*(S \overline{\Phi}_2)) =
+\H^0(\overline{X}_1,S\overline{\Phi}_1)
+$$
+es biyectivo y existe, por tanto, un subgerbe maximal $G_2$ de
+$\overline{\Phi}_2$ tal que $h^* G_2$ es isomorfo a~$G_1$. Basta entonces
+probar que el funtor
+$$
+G_2 \to h_* h^* G_2
+$$
+es una equivalencia. Pero, bajo esta forma, la cuestión es local para la
+topología étale sobre~$\overline{X}_2$. Puede suponerse, pues, que $G_2$ es
+un gerbe de torsores bajo el grupo de automorfismos de un objeto de~$G_2$,
+caso en el que la afirmación se deduce de~\Ref{XIII.1.14}.
+\endgroup

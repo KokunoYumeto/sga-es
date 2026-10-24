@@ -1,0 +1,161 @@
+
+\begin{theoreme}
+\label{II.4.15}
+Sean $X$ un $S$-preesquema localmente de tipo finito, $Y$ un subpreesquema cerrado de~$X$ definido por un haz coherente $\cal{J}$ de ideales sobre~$X$, y $x$ un punto de~$X$. Supongamos ahora que \emph{$Y$ es liso sobre~$S$ en $x$} (sin suponer nada sobre~$X$). Entonces son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $X$ es liso sobre~$S$ en $x$;
+\item[(ii)] la inmersión $i\colon Y\to X$ es regular en $x$, es decir, $\cal{J}_x$ es un ideal regular de~$\cal{O}_x$.
+\end{enumerate}
+\end{theoreme}
+
+\begin{corollaire}
+\label{II.4.16}
+Supongamos que $Y$ es \emph{liso} sobre~$S$. Para que $X$ sea liso sobre~$S$ en un entorno de~$Y$ (es decir, en los puntos de~$Y$), es necesario y suficiente que $Y$ esté inmerso regularmente en~$X$, es decir, que la inmersión $i\colon Y\to X$ sea regular.
+\end{corollaire}
+
+\subsubsection*{Demostración}
+(i) implica (ii). Aplicamos el criterio~(ii) de~\Ref{II.4.10}; como
+\ifthenelse{\boolean{orig}}{$g\colon X_1\to X$}{$g\colon X_1\to X'$}
+es \emph{plano}, para demostrar que la imagen inversa por $g$ del subpreesquema $Y'$ de~$X'$ está inmersa regularmente, nos reducimos a probar que $Y'=S[t_{p+1},\dots,t_n]$ está inmerso regularmente en $S[t_1,\dots,t_n]$, lo cual es trivial (los $t_i$ ($1\leq i\leq p$) forman un sistema regular de generadores del ideal que define $Y'$ en $X'$).
+
+(ii) implica (i). Sea $g_i$ ($1\leq i\leq p$) un sistema regular de generadores de~$\cal{J}_x$, y sean $g_i$ ($p+1\leq i\leq n$) elementos de~$\cal{O}_{X,x}$ tales que sus imágenes $g'_i$ en $\cal{O}_{Y,x}$ definan un morfismo \emph{étale}
+\[
+Y_1\to Y'=S[t_{p+1},\dots,t_n]
+\]
+\ifthenelse{\boolean{orig}}
+{de un entorno $Y_1$ de~$Y$ en~$Y'$}
+{de un entorno $Y_1$ de~$x$ en~$Y$}.
+Los $g_i$ ($1\leq i\leq n$) provienen de secciones (denotadas del mismo modo) de~$\cal{O}_X$ sobre un entorno $X_1$ de~$x$, y podemos suponer que $X_1=X$, $Y_1=Y$. Se obtiene así un morfismo
+\[
+g\colon X\to X'=S[t_1,\dots,t_n],
+\]
+y todo se reduce a probar que este morfismo es \emph{étale} en~$x$. Tomando $X_1$ suficientemente pequeño,
+\marginpar{48}
+podemos suponer que los $g_i$ ($1\leq i\leq p$) forman un sistema regular de generadores de~$\cal{J}$ en todo~$X$. En particular, engendran $\cal{J}$, de modo que el subpreesquema $Y$ de~$X$ se identifica con la imagen inversa por $g$ del subpreesquema $Y'$ de~$X'$. Sea $x'=g(x)$. Entonces
+\ifthenelse{\boolean{orig}}
+{la fibra de~$X'\to X$ en~$x'$}
+{la fibra de~$X\to X'$ sobre~$x'$}
+es
+\ifthenelse{\boolean{orig}}{por tanto}{\ignorespaces}
+idéntica a la fibra de~$Y\to Y'$ sobre~$x'$ y, por consiguiente, es étale sobre~$\kres(x')$; por tanto, $g$ es \emph{no ramificado} en $x$. Falta probar que $g$ es \emph{plano} en $x$. Ahora bien, el graduado asociado a~$\cal{O}_{X',x'}$, filtrado por las potencias de
+\ifthenelse{\boolean{orig}}{$\cal{J}'_x$}{$\cal{J}'_{x'}$},
+es \emph{libre} sobre~$\cal{O}_{Y',x'}$ en todos los grados. Por otra parte, el graduado asociado a~$\cal{O}_{X,x}$, filtrado por las potencias de
+\ifthenelse{\boolean{orig}}
+{$\cal{J}_x=\cal{J}'_x\cal{O}_{X,x}$}
+{$\cal{J}_x=\cal{J}'_{x'}\cal{O}_{X,x}$},
+es isomorfo (por el homomorfismo canónico) al producto tensorial del anterior por $\cal{O}_{Y,x}$, pues uno y otro anillo son anillos de polinomios en
+\ifthenelse{\boolean{orig}}{$n-p$}{$p$}
+indeterminadas, con anillo de constantes $\cal{O}_{Y',x'}$, \resp $\cal{O}_{Y,x}$. Finalmente, sobre $\cal{O}_{X',x'}/\cal{J}'_{x'}=\cal{O}_{Y',x'}$, $\cal{O}_{X,x}/\cal{J}_x=\cal{O}_{Y,x}$ es plano.
+
+Según un criterio general de planitud (válido para un homomorfismo local de anillos locales noetherianos $A'\to A$, estando $A'$ dotado de un ideal $J'\neq A'$ tal que el graduado asociado sea libre sobre~$A'/J'$ en todo grado), se sigue que $X$ es plano sobre~$X'$ en $x$, como se quería demostrar.
+
+\begin{corollaire}
+\label{II.4.17}
+Sean $X$ un preesquema localmente de tipo finito sobre~$Y$, $i$ una sección de~$X$ sobre~$Y$, $y$ un punto de~$Y$, $x=i(y)$, y $\cal{J}$ el haz de ideales sobre~$X$ definido por el subpreesquema $i(Y)$ (que suponemos cerrado para simplificar el enunciado, condición que se cumple si $X$ es un esquema).
+
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $X$ es liso sobre~$Y$ en $x$;
+\item[(ii)] $i$ es una inmersión regular en $y$;
+\item[(iii)] la $\cal{O}_y$-álgebra obtenida completando $\cal{O}_x$ para la topología definida por las potencias de~$\cal{J}_x$ es isomorfa a un álgebra de series formales $\cal{O}_y[[t_1,\dots,t_n]]$;
+\item[(iii~bis)] existe un entorno abierto $U$ de~$y$ tal que el haz de álgebras $\varprojlim i^*(\cal{O}_X/\cal{J}^{n+1})$ sobre~$\cal{O}_Y$ sea isomorfo, sobre~$U$, a un haz de la forma $\cal{O}_Y[[t_1,\dots,t_n]]$;
+\item[(iv)] existen un entorno abierto $U$ de~$y$, un entorno abierto $V$ de~$x$ y, finalmente, un $Y$-morfismo $g\colon V\to U[t_1,\dots,t_n]$ tal que $g$ sea étale, que
+\ifthenelse{\boolean{orig}}{$s$}{$i$}
+induzca una sección de~$V$ sobre~$U$, transformada por $g$ en la sección cero de~$U[t_1,\dots,t_n]$ sobre~$U$.
+\end{enumerate}
+\end{corollaire}
+
+La equivalencia
+\marginpar{49}
+de (i) y (ii) es un caso particular del teorema~\Ref{II.4.15}, tomando $Y=S$; la equivalencia de (ii) y (iii) (y, moralmente, de (ii) y (iii~bis)) se señaló junto con los «recordatorios». En cuanto a la equivalencia de (i) y (iv), se deduce fácilmente del teorema~\Ref{II.4.10} (equivalencia de las condiciones (i) y (ii) de dicho teorema).
+
+\begin{corollaire}
+\label{II.4.18}
+Sea $X$ un preesquema liso sobre~$S$. Entonces el morfismo diagonal
+\[
+\Delta_{X/S}\colon X\to X\times_S X
+\]
+es una
+\ifthenelse{\boolean{orig}}
+{\emph{inmersión regular}.}
+{\emph{inmersión regular},}
+o, como se dice también, $X$ es «\emph{diferencialmente liso}» sobre~$S$.
+\index{diferencialmente liso|hyperpage}%
+\end{corollaire}
+
+En efecto, este es un caso particular del corolario~\Ref{II.4.16}, pues $X$ y $X\times_S X$ son ambos lisos sobre~$S$.
+
+\setcounter{subsection}{17}
+\setcounter{proposition}{17}
+
+\begin{remarques}
+\label{rem:II.4.18}
+Recordemos (\Ref{I.1}) que, si $X$ es un preesquema sobre~$S$, se introducen los haces cuasicoherentes
+\ifthenelse{\boolean{orig}}{de Álgebras}{de álgebras}
+$\cal{P}_{X/S}^n=\cal{O}_{X\times_S X}/\cal{I}_X^{n+1}$ sobre~$X$ (donde $\cal{I}_X$ designa el haz
+\ifthenelse{\boolean{orig}}{de Ideales}{de ideales}
+que define la diagonal en $X\times_S X$), considerado como haz de $\cal{O}_X$-álgebras mediante la primera proyección $\pr_1\colon X\times_S X\to X$. Los $\cal{P}_{X/S}^n$ forman un sistema proyectivo de álgebras sobre~$X$, cuyo límite proyectivo se denota por $\cal{P}_{X/S}^{\infty}$ y no es sino el haz estructural de la completación formal de~$X\times_S X$ a lo largo de la diagonal (suponiendo ahora que $X$ es localmente de tipo finito sobre~$S$, de modo que los $\cal{P}_{X/S}^n$ sean coherentes). Decir que $X$ es diferencialmente liso sobre~$S$ (es decir, que el morfismo diagonal $\Delta_{X/S}$ es una inmersión regular) significa también que $\cal{P}_{X/S}^{\infty}$ es regular como haz de álgebras aumentado hacia $\cal{O}_X$, es decir, que $\it{\Omega}_{X/S}^1$ es localmente libre y que el homomorfismo sobreyectivo canónico
+\[
+S_{\cal{O}_X}(\it{\Omega}_{X/S}^1)\to
+\mathrm{gr}_*(\cal{P}_{X/S}^{\infty})
+\]
+es un isomorfismo; o, finalmente, que todo punto de~$X$ tiene
+un entorno abierto sobre el cual el haz
+\ifthenelse{\boolean{orig}}{de Álgebras}{de álgebras}
+aumentadas $\cal{P}_{X/S}^{\infty}$ es isomorfo a un haz $\cal{O}_X[[t_1,\dots,t_n]]$.
+
+Sea $s$ una sección de~$X$ sobre~$S$, y sea $\cal{J}$ el haz de ideales sobre~$X$ que ella define (suponiendo,
+\marginpar{50}
+para simplificar, que $s(S)$ es cerrado). Se tienen entonces isomorfismos canónicos de $\cal{O}_X$-álgebras aumentadas:
+\begin{equation}
+\label{eq:II.4.4}
+s^*(\cal{P}_{X/S}^n)=\cal{O}_X/\cal{J}^{n+1}\quoi,\quad
+s^*(\cal{P}_{X/S}^{\infty})=\varprojlim_n
+\cal{O}_X/\cal{J}^{n+1}.
+\end{equation}
+Estos isomorfismos son funtoriales, en un sentido evidente, por cambio de base y (teniendo en cuenta este hecho) vuelven a dar una caracterización de los haces de álgebras $\cal{P}_{X/S}^n$ sobre~$S$. Si, por ejemplo, $S=\Spec(k)$, con $k$ un cuerpo, dar una sección $s$ de~$X$ sobre~$S$ equivale a dar un punto $x$ de~$X$ racional sobre~$k$, y las fórmulas precedentes significan que se tiene un isomorfismo de $k$-álgebras
+\begin{equation}
+\label{eq:II.4.5}
+\cal{P}_{X/S}^n(x)=\cal{O}_x/\goth{m}_x^{n+1},
+\end{equation}
+lo que justifica el nombre «\emph{haz de partes principales de orden~$n$ sobre~$X$ relativo a~$S$}»
+\index{partes principales de orden~$n$ (haz de, sistema de)|hyperpage}%
+\label{indnot:ad1}\oldindexnot{$\cal{P}_{X/Y}^n$|hyperpage}%
+dado a~$\cal{P}_{X/S}^n$. Se ve además en~\eqref{eq:II.4.4} que \emph{si $X$ es diferencialmente liso sobre~$S$ en todo punto de~$s(S)$, entonces $X$ es liso sobre~$S$ en todo punto de~$s(S)$} (corolario~\Ref{II.4.17}), \emph{siendo también cierto el recíproco} (corolario~\Ref{II.4.18}). Teniendo en cuenta~\Ref{II.4.13}, se concluye fácilmente que, si $X$ es un $S$-preesquema localmente de tipo finito, \emph{$X$ es liso sobre~$S$ si y solo si es plano sobre~$S$ y diferencialmente liso sobre~$S$}. (Nótese que la hipótesis de planitud es esencial, como se ve tomando por $X$ un subpreesquema cerrado de~$S$).
+
+Recordemos también que se obtiene una \emph{segunda estructura de álgebra} sobre~$\cal{P}_{X/S}^n$ mediante la proyección $\pr_2\colon X\times_S X\to X$, la cual se deduce, por otra parte, de la anterior mediante la \emph{involución canónica} del haz de anillos $\cal{P}_{X/S}^n$, inducida por el automorfismo de simetría de~$X\times_S X$. Se denota por $d_{X/S}^n$
+\label{indnot:bb}\oldindexnot{$d_{X/S}^n$|hyperpage}%
+o simplemente por $d^n$ el homomorfismo de haces de anillos
+\begin{equation}
+\label{eq:II.4.6}
+d_{X/S}^n\colon\cal{O}_X\to\cal{P}_{X/S}^n
+\end{equation}
+que corresponde a esta segunda estructura de álgebra. Teniendo en cuenta el isomorfismo~\eqref{eq:II.4.4}, este homomorfismo transforma una sección $f$ de~$\cal{O}_X$ en una sección $d^n(f)$ de~$\cal{P}_{X/S}^n$ cuya imagen inversa por una sección $s$ de~$X$ sobre~$S$ se identifica con la imagen canónica de~$f$ en $\Gamma(X,\cal{O}_X/\cal{J}^{n+1})$. Esto justifica el nombre de «\emph{sistema de partes principales de orden~$n$ de~$f$}»
+\index{sistema de partes principales de orden n de una sección@sistema de partes principales de orden~$n$ de una sección|hyperpage}%
+dado a~$d^nf$,
+\marginpar{51}
+especialmente en el caso $S=\Spec(k)$ considerado en la fórmula~\eqref{eq:II.4.5}.
+
+Para terminar, señalemos que el homomorfismo~\eqref{eq:II.4.6} puede considerarse como el \emph{operador diferencial universal de orden}~$\leq n$\kern1pt\footnote{Para todo lo relativo al presente párrafo, puede consultarse EGA IV~16.8 a 16.12.} (relativo al preesquema de constantes $S$) sobre~$\cal{O}_X$, conviniendo en llamar operador diferencial de orden~$\leq n$
+\index{operador diferencial universal de orden~$\leq n$|hyperpage}%
+\index{operador diferencial de orden~$\leq n$|hyperpage}%
+de~$\cal{O}_X$ en un módulo $F$ a un homomorfismo de haces $D$ que se factoriza como
+\[
+D\colon\cal{O}_X\lto{d^n}\cal{P}_{X/S}^n\lto{u}F,
+\]
+donde $u$ es un homomorfismo \emph{de $\cal{O}_X$-módulos}, determinado de manera única por~$D$. Esta definición concuerda con la definición recursiva intuitiva ($D$ es un operador diferencial de orden $\leq n$ si, para toda sección $g$ de~$\cal{O}_X$ sobre un abierto $U$ de~$X$,
+\ifthenelse{\boolean{orig}}
+{$f\mto D(fg)-D(f)$}
+{$f\mto D(fg)-gD(f)$}
+es un operador diferencial de orden $\leq n-1$ sobre~$U$). Se sigue que \emph{si $X$ es diferencialmente liso sobre~$S$, el haz de anillos de operadores diferenciales de todos los órdenes tiene la estructura sencilla bien conocida} en el cálculo diferencial sobre variedades diferenciables y, en particular, admite localmente una base de $\cal{O}_X$-módulo
+\ifthenelse{\boolean{orig}}{cerrada}{formada}
+por las \emph{potencias divididas} de unos operadores que conmutan $\delta/\delta x_i$ ($1\leq i\leq n$). Si
+\ifthenelse{\boolean{orig}}{$S$}{$\cal{O}_S$}
+es un haz de $\QQ$-álgebras ($\QQ=$ el cuerpo de los números racionales), basta tomar los polinomios ordinarios en los $\delta/\delta x_i$. En este caso, además, y de modo muy excepcional, para que $X$ sea diferencialmente liso sobre~$S$, basta ya con que $\it{\Omega}_{X/S}^1$ sea localmente libre.
+\end{remarques}
+
+\begin{remarque}
+\label{II.4.19}
+\index{Cohen--Macaulay (esquema de)|hyperpage}%
+La terminología «inmersión regular», «ideal regular», etc., introducida en este número, encontró una oposición bastante viva y general (Chevalley, Serre). Se propusieron «ideal de Cohen--Macaulay», «ideal de Macaulay» o «ideal macaulayano», lo cual obligaría moralmente a adoptar también «inmersión de Cohen--Macaulay» o «inmersión de Macaulay». Sin embargo, esta terminología entra en conflicto con otra ya empleada en futuras redacciones del \emph{multiplodoque}, donde un morfismo (de tipo finito) se dice «Cohen--Macaulay» en un punto si es plano en dicho punto y la fibra que pasa por él tiene allí un anillo local que es un anillo de Cohen--Macaulay. Mientras se encuentra una solución satisfactoria, mantendremos, con toda reserva, la terminología introducida en este número\footnote{Es la adoptada en EGA~$\mathrm{0}_{\mathrm{IV}}$~15.1.7.}.
+\end{remarque}

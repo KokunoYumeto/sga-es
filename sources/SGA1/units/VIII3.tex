@@ -1,0 +1,140 @@
+\section[Descenso de propiedades conjuntistas]{Descenso de propiedades
+conjuntistas y de propiedades de finitud de morfismos\protect\footnotemark}
+\label{VIII.3}
+
+
+\footnotetext{Para otros resultados como los tratados en los números 3
+y~4, \Cf EGA~IV~2.3, 2.6 y~2.7.}
+
+\begin{proposition}
+\label{VIII.3.1}
+Sean $f\colon X\to Y$ un~$S$-morfismo, $g\colon S'\to S$ un morfismo
+sobreyectivo y $f'\colon X'=X\times_{S}S'\to Y'=Y\times_{S}S'$ el morfismo
+deducido de~$f$ mediante el cambio de base por~$g\colon S'\to S$. Para que
+$f$ sea sobreyectivo (\resp radicial), es necesario y suficiente que lo
+sea~$f'$.
+\end{proposition}
+
+Obsérvese que $f'$ también puede obtenerse mediante el cambio de base
+$Y'\to Y$, que asimismo es sobreyectivo, pues se deduce del morfismo
+sobreyectivo~$g\colon S'\to S$. Por otra parte, para todo~$y\in Y$ y
+todo~$y'\in Y'$ situado sobre~$y$, se tiene un isomorfismo
+$$
+X'_{y'}\isomfrom X_{y}\otimes_{\kres(y)}\kres(y')\quoi,
+$$
+donde $X_{y}$ denota la fibra de~$X$ en~$y$, y $X'_{y'}$ la de~$X'$ en
+$y'$. Se sigue que~$X_{y}$ es no vacía (\resp tiene a lo sumo un punto, y
+este corresponde a una extensión residual radicial) si y solo si
+\ifthenelse{\boolean{orig}}
+{$X_{y'}$}
+{$X'_{y'}$}
+tiene la misma propiedad. Esto demuestra~\Ref{VIII.3.1}.
+
+\begin{corollaire}
+\label{VIII.3.2}
+Bajo las condiciones de~\Ref{VIII.3.1}, si $f'$ es inyectivo
+(\resp biyectivo), entonces $f$ también lo es.
+\end{corollaire}
+
+Esto se debe a que, si $X'_{y'}$ tiene a lo sumo un punto
+(\resp exactamente un punto), lo mismo ocurre con~$X_{y}$; así es, en
+efecto, puesto que el morfismo $X'_{y'}\to X_{y}$ es sobreyectivo (por
+deducirse del morfismo sobreyectivo
+$\Spec(\kres(y'))\to \Spec(\kres(y))$).
+
+\begin{proposition}
+\label{VIII.3.3}
+Con las notaciones de~\Ref{VIII.3.1}, supongamos que~$g\colon S'\to S$ es
+sobreyectivo y cuasicompacto (\resp fielmente plano y cuasicompacto). Para
+que~$f$ sea cuasicompacto (\resp de tipo finito), es necesario y suficiente
+que lo sea~$f'$.
+\end{proposition}
+
+\marginpar{204}
+Solo hay que demostrar la suficiencia. Puede suponerse, evidentemente,
+$S=Y$, pues la hipótesis hecha sobre~$g\colon S'\to S$ se conserva para
+$Y'\to Y$. Además, puede suponerse que~$Y$ es afín. Entonces $Y'$ es
+cuasicompacto y, por tanto, $X'$ es cuasicompacto (pues~$f'$ lo es por
+hipótesis). Sea $(X_{i})_{i\in I}$ una familia de abiertos afines de~$X$ que
+recubre~$X$; los~$X_{i}'$ son abiertos de~$X'$ que recubren~$X'$, por lo que
+una subfamilia finita recubre~$X'$. Como $X'\to X$ es sobreyectivo, se sigue
+que los~$X_{i}$ correspondientes ya recubren~$X$; por tanto, $X$ es
+cuasicompacto, es decir, $f$ es cuasicompacto. Supongamos ahora que~$f'$ es
+de tipo finito y demostremos que~$f$ lo es, suponiendo~$g$ fielmente plano.
+Reemplazando $Y'$ por la suma de una familia de abiertos afines que lo
+recubre, puede suponerse que~$Y'$ es afín. Por último, como, por lo que
+precede, $X$ está recubierto por un número finito de abiertos afines
+$X_{i}$, hay que demostrar que estos son de tipo finito sobre~$Y$, sabiendo
+que $X_{i}'$ es de tipo finito sobre~$Y'$. Quedamos reducidos entonces al
+
+\begin{corollaire}
+\label{VIII.3.4}
+Sean $B$ una $A$-álgebra, $A'$ una~$A$-álgebra fielmente plana y
+$B'=B\otimes_{A}A'$ la
+\ifthenelse{\boolean{orig}}
+{$A$-álgebra}
+{$A'$-álgebra}
+deducida de~$B$ por cambio de anillos. Para que~$B$ sea de tipo finito, es
+necesario y suficiente que lo sea~$B'$.
+\end{corollaire}
+
+Solo hay que demostrar la suficiencia. Se tiene
+$B=\varinjlim_i B_{i}$, donde los~$B_{i}$ son las subálgebras de tipo finito
+de~$B$. Por tanto, $B'=\varinjlim_i B_{i}'$ y, si $B'$ es de tipo finito
+sobre~$A'$, entonces $B'$ es igual a uno de los~$B_{i}'$; por consiguiente,
+$B$ es igual a~$B_{i}$ y, por tanto, es de tipo finito.
+
+\begin{corollaire}
+\label{VIII.3.5}
+Supongamos de nuevo que el morfismo de cambio de base~$g\colon S'\to S$ es
+fielmente plano y cuasicompacto. Para que~$f$ sea cuasifinito, es necesario y
+suficiente que lo sea~$f'$.
+\end{corollaire}
+
+En efecto, la propiedad «ser cuasifinito» es, por definición, la conjunción
+de «ser de tipo finito» y «tener fibras finitas», cada una de las cuales
+desciende bien por~$g$: la primera en virtud de~\Ref{VIII.3.3}, y la segunda
+por el razonamiento de~\Ref{VIII.3.1} (que solo utiliza la sobreyectividad
+de~$g$).
+
+\begin{remarques}
+\label{VIII.3.6}
+Sean $A$ un anillo y $X$ un~$A$-preesquema. Se ve fácilmente que
+\marginpar{205}
+las condiciones siguientes son equivalentes:
+
+\begin{enumerate}
+\item[(i)] Existe un anillo noetheriano~$A_{0}$ (que, si se desea, puede
+suponerse un subanillo de tipo finito de~$A$), un $A_{0}$-preesquema de tipo
+finito~$X_{0}$, un homomorfismo
+\ifthenelse{\boolean{orig}}
+{$A\to A_{0}$}
+{$A_0\to A$}
+y un $A$-isomorfismo~$X\isomto X_{0}\times_{A_{0}}A$.
+\item[(ii)] El morfismo diagonal~$X\to X\times_{\Spec(A)}X$ es cuasicompacto
+(condición vacía si $X$ está separado sobre~$A$), y $X$ es reunión finita de
+abiertos afines~$X_{i}$ cuyos anillos~$B_{i}$ son álgebras de presentación
+finita sobre~$A$, es decir, cocientes de álgebras de polinomios en un número
+finito de indeterminadas por ideales de tipo finito.
+\end{enumerate}
+
+Si $X$ es él mismo afín, de anillo~$B$, estas condiciones significan
+simplemente que~$B$ es un álgebra de presentación finita sobre~$A$.
+
+Un morfismo~$f\colon X\to Y$ se llama \emph{morfismo de presentación
+finita},
+\index{presentacion finita@presentación finita (morfismo de)|hyperpage}%
+y se dice también que~$X$ es de presentación finita sobre~$Y$ si $Y$ es
+reunión de abiertos afines~$Y_{i}$
+\ifthenelse{\boolean{orig}}
+{tal que}
+{tales que}
+$X|Y_{i}$, como $Y_{i}$-preesquema, satisface las condiciones equivalentes
+anteriores. Lo mismo ocurre entonces con $X|Y'$ para \emph{todo} abierto
+afín~$Y'$ de~$Y$. Esta propiedad es estable por cambio de base y, además, el
+compuesto de dos morfismos de presentación finita es de presentación finita.
+
+Sentadas estas nociones, se ve en~(ii), procediendo como
+en~\Ref{VIII.1.10}, que este enunciado sigue siendo válido al reemplazar en
+él las palabras «de tipo finito» por «de presentación finita».
+\end{remarques}

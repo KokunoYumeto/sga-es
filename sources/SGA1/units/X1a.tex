@@ -1,0 +1,139 @@
+\chapter{Teoría de la especialización del grupo fundamental}
+\label{X}
+\marginpar{261}
+En la presente exposición nos limitamos al estudio del grupo fundamental de
+las fibras geométricas en un morfismo \emph{propio}, \ie del grupo fundamental
+de un esquema algebraico \emph{propio} variable. En una exposición posterior
+generalizaremos la técnica empleada a los recubrimientos étale
+\emph{moderadamente ramificados} «en el infinito». Esto nos dará, por ejemplo,
+una solución del «problema de los tres puntos» en el caso de los recubrimientos
+galoisianos de orden primo con la característica (\ie una determinación de los
+recubrimientos galoisianos de la recta proyectiva~$\PP_k^1$, ramificados a lo
+sumo en tres puntos dados y moderadamente ramificados en esos puntos), así como
+de sus variantes evidentes.
+
+\section[La sucesión exacta de homotopía para un morfismo propio]
+{La sucesión exacta de homotopía para un morfismo propio y separable}
+\label{X.1}
+
+\begin{definition}
+\label{X.1.1}
+Un preesquema~$X$ sobre un cuerpo~$k$ se dice \emph{separable}, o
+\emph{separable sobre~$k$}, si para toda extensión~$K$ de~$k$,
+$X\otimes_k K$ es reducido. Si~$f\colon X\to Y$ es un morfismo de
+preesquemas, se dice que~$f$ es \emph{separable}, o que~$X$ \emph{es separable
+sobre~$Y$}, si~$X$ es plano sobre~$Y$ y si, para todo~$y\in Y$, la fibra
+$X\otimes_Y \kres(y)$ es separable sobre~$\kres(y)$.
+\end{definition}
+
+Si~$X$ es un preesquema sobre un cuerpo~$k$, decir que es separable significa
+también que es \emph{reducido} y que los cuerpos~$\kres(x)$, para~$x$ punto
+genérico de una componente irreducible de~$X$, son extensiones separables
+de~$k$. Si~$k$ es perfecto, equivale, pues, a decir que~$X$ es reducido.
+Obsérvese que, si~$X$ es separable sobre~$Y$, entonces, para todo cambio de
+base~$Y'\to Y$,~$X'=X\times_Y Y'$ es separable sobre~$Y'$. Puede probarse
+también, bajo hipótesis de finitud convenientes, que el compuesto de dos
+morfismos separables es
+\marginpar{262}
+un morfismo separable. Solo lo necesitaremos en la forma siguiente:
+\emph{si~$X$ es separable sobre~$Y$ y~$X'$ es étale sobre~$X$, entonces~$X'$
+es separable sobre~$Y$.} Es, en efecto, una consecuencia inmediata de las
+definiciones y de~\Ref{I.9.2}. Por otra parte, la hipótesis «morfismo
+separable» nos servirá mediante la proposición siguiente:
+
+\begin{proposition}
+\label{X.1.2}
+Sea~$f\colon X\to Y$ un morfismo propio y separable, con~$Y$ localmente
+noetheriano, y consideremos su factorización de \emph{Stein}
+$X\lto{f'}Y'\dpl\to Y$, donde~$f_*'(\cal{O}_X)=\cal{O}_{Y'}$, siendo~$Y'$
+finito sobre~$Y$ e isomorfo al espectro del álgebra~$f_*(\cal{O}_X)$. Entonces
+~$Y'$ es un \emph{recubrimiento étale} de~$Y$.
+\end{proposition}
+
+Esta proposición figurará en (EGA~III 7)\footnote{\Cf EGA~III 7.8.10 (i)}.
+Indiquemos el principio de la demostración. Se reduce fácilmente al caso en que
+~$Y$ es el espectro de un anillo local completo~$A$ y, haciendo además una
+extensión finita plana conveniente de este último (correspondiente a una
+extensión residual conveniente), puede suponerse que las componentes conexas
+de la fibra del punto cerrado~$y$ son geométricamente conexas, lo que significa
+también que~$\H^0(X_y,\cal{O}_{X_y})$ se descompone en un producto de cuerpos
+idénticos a~$k=\kres(y)$. Suponiendo entonces~$X$ conexo, como es lícito, se
+tendrá~$\H^0(X_y,\cal{O}_{X_y})=k$, por lo que el homomorfismo
+$A\to \H^0(X_y,\cal{O}_{X_y})$ es \emph{sobreyectivo}. Se concluye, mediante
+una proposición general (de tipo Künneth), que~$f_*(\cal{O}_X)$ está definido
+por un módulo~$B$ sobre~$A$ que es libre sobre~$A$, y que
+$B/\goth{m} B\to \H^0(X_y,\cal{O}_{X_y})=k$ es biyectivo. Por tanto, en este
+caso~$B$ es un álgebra étale sobre~$A$, lo cual termina la demostración.
+
+\begin{theoreme}
+\label{X.1.3}
+Sea~$f\colon X\to Y$ un morfismo propio y separable, con~$Y$ localmente
+noetheriano y conexo, y supongamos que~$f_*(\cal{O}_X)=\cal{O}_Y$ (lo que
+implica que las fibras de~$X$ sobre~$Y$ son geométricamente conexas, y
+recíprocamente gracias a~\Ref{X.1.2}). Sean~$y$ un punto de~$Y$,
+$\overline{\kres(y)}$ una clausura algebraica de~$\kres(y)$ y
+$\overline X_y=X_y\otimes_{\kres(y)}\overline{\kres(y)}$. Sean, por último,
+~$X'$ un recubrimiento étale \emph{conexo} de~$X$ y
+$\overline X_y'=X_y'\otimes_{\kres(y)}\overline{\kres(y)}$. Para que exista
+un recubrimiento étale~$Y'$ de~$Y$ y un~$X$-isomorfismo
+\marginpar{263}
+$X'\isomto X\times_Y Y'$, es necesario y suficiente que~$\overline{X'}_y$
+admita una sección sobre~$\overline X_y$.
+\end{theoreme}
+
+Poniendo~$Y'=\Spec(h_*(\cal{O}_{X'}))$ (donde~$h\colon X'\to Y$ es el
+morfismo compuesto~$X'\to X\to Y$), basta probar que el~$Y$-morfismo canónico
+$$
+X'\to X\times_Y Y'
+$$
+es un \emph{isomorfismo} y que~$Y'$ es étale sobre~$Y$. Ahora bien, ya sabemos
+por~\Ref{X.1.2} que~$Y'$ es étale sobre~$Y$; por tanto,
+~$X\times_Y Y'$ es étale sobre~$X$, y por ello el morfismo
+~$X'\to X\times_Y Y'$ es también étale (\Ref{I.4.8}). Además,~$Y'$ es
+conexo como imagen de~$X'$, que lo es; por tanto,~$X\times_Y Y'$ es conexo,
+pues~$X$ tiene fibras conexas sobre~$Y$ (\Ref{IX.3.4} y
+\Ref{V.6.9}~(iii)). Así, para probar que~$X'\to X\times_Y Y'$ es un
+isomorfismo, basta ver que su grado de proyección en \emph{un} punto de
+~$X\times_Y Y'$ es igual a~1. Esto resulta fácilmente de la hipótesis de que
+~$\overline{X'}_y$ admite una sección sobre~$\overline X_y$, bien utilizando
+\Ref{IX.6.6}, bien, más simplemente, observando que basta probar la
+existencia de tal punto en~$X\times_Y Y'$ después del cambio de base
+\ifthenelse{\boolean{orig}}
+{$\Spec(\overline k)\to Y$}
+{$\Spec(\overline{\kres(y)})\to Y$}, donde esto es evidente.
+Esto termina la demostración de~\Ref{X.1.3}.
+
+Teniendo en cuenta~\Ref{IX.3.4} y el diccionario~\Ref{V.6.9} y
+\Ref{V.6.11}, puede ponerse~\Ref{X.1.3} en la forma equivalente siguiente:
+
+\begin{corollaire}
+\label{X.1.4}
+Con las notaciones precedentes para~$f\colon X\to Y$ y~$\overline X_y$, sea
+~$\bar{a}$ un punto geométrico de~$\overline X_y$,~$a$ su imagen en~$X$ y
+~$b$ su imagen en~$Y$. Entonces la sucesión siguiente de homomorfismos de
+grupos es \emph{exacta}:
+$$
+\pi_1(\overline X_y,\bar{a})\to \pi_1(X,a)\to \pi_1(Y,b)\to e.
+$$
+\end{corollaire}
+
+\begin{remarques}
+\label{X.1.5}
+Obsérvese que la demostración de~\Ref{X.1.3} hace intervenir de manera esencial
+~\Ref{X.1.2} y, por ello, el «primer teorema de comparación» en geometría
+algebraico-formal. En cambio, la teoría del descenso de la exposición~\Ref{IX}
+\marginpar{264}
+solo ha intervenido mediante~\Ref{IX.3.4}, cuya demostración directa es
+fácil en el caso de un morfismo \emph{propio}~$f\colon X\to Y$ tal que
+~$f_*(\cal{O}_X)=\cal{O}_Y$. Sea, en efecto,~$Y'$ étale sobre~$Y$ y
+supongamos que~$X'=X\times_Y Y'$ sea unión disjunta de dos abiertos no vacíos;
+probemos que ocurre lo mismo con~$Y'$. En efecto, se tendrá
+~$Y'=\Spec(\cal{A})$, y por tanto~$X'=\Spec(\cal{B})$, con
+~$\cal{B}=\cal{A}\otimes_{\cal{O}_Y}\cal{O}_X$; la descomposición de~$X'$ en
+unión disjunta corresponde a una descomposición de~$\cal{B}$ en producto de
+dos álgebras no nulas~$\cal{B}_1$ y~$\cal{B}_2$. Como
+~$f_*(\cal{O}_X)=\cal{O}_Y$, se concluye fácilmente que
+~$f_*(\cal{B})=\cal{A}$; por tanto,~$\cal{A}$ será producto de dos álgebras
+(también no nulas, pues sus secciones unidad no son nulas)
+~$f_*(\cal{B}_1)$ y~$f_*(\cal{B}_2)$, c.q.d.
+\end{remarques}

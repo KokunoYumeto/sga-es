@@ -1,0 +1,137 @@
+\section{Variedades abelianas}
+\label{XI.2}
+Sean $k$ un cuerpo algebraicamente cerrado, $A$ una variedad abeliana
+sobre~$k$, es decir, un esquema en grupos sobre~$k$, propio sobre~$k$,
+liso sobre~$k$ y conexo, y, finalmente, $G$ un esquema en grupos conmutativos de tipo
+finito sobre~$k$. Denotemos por $\Ext(A,G)$ el grupo de las clases de
+extensiones conmutativas de~$A$ por~$G$, por $\H^1(A,G)$ el grupo de las
+clases de fibrados principales sobre~$A$ de grupo~$G$ (comparar
+\No \Ref{XI.4} más adelante), y consideremos el homomorfismo canónico
+$$
+\Ext(A,G)\to \H^1(A,G)\quoi.
+$$
+Un
+\marginpar{287}
+razonamiento de Serre~\cite[cap\ptbl VII, teor\ptbl 5]{XI.5} muestra que
+este es un homomorfismo inyectivo cuya imagen es el conjunto de los
+\og elementos primitivos\fg{} de~$\H^1(A,G)$, es decir, de los elementos
+$\xi$ para los cuales se tiene:
+$$
+\pi^*(\xi) = \pr_1^*(\xi) + \pr_2^*(\xi)\quoi,
+$$
+donde los $\pr_i$ son las dos proyecciones de~$A\times A$ sobre~$A$, y
+$\pi\colon A\times A\to A$ la ley de composición de~$A$ (N.B. Serre solo
+enuncia su teorema para $G$ lineal y conexo y, por supuesto, liso sobre~$k$,
+pero, simplificando la primera parte de su razonamiento, se ve que estas
+restricciones son innecesarias: basta observar que todo morfismo de~$A$ a un
+esquema en grupos $E$ de tipo finito sobre~$k$ que transforma la unidad en
+la unidad es un homomorfismo de grupos, y aplicar esto a las secciones sobre
+$A$ de una extensión $E$ de~$A$ por~$G$).
+
+Vamos a aplicar este resultado al caso en que $G$ es un grupo finito
+separable sobre~$k$, es decir, un grupo finito ordinario, que supondremos
+conmutativo. Utilizando entonces
+$\pi_1(A\times A)\isomto\allowbreak\pi_1(A)\times\pi_1(A)$
+(\Ref{X.1.7}) e interpretando $\H^1(X,G)$ como
+$\Hom(\pi_1(X),G)$ para todo esquema algebraico~$X$, en particular para
+$X=A$ o $X=A\times A$, se ve que toda clase de~$\H^1(A,G)$ es primitiva;
+por tanto, se tiene un isomorfismo
+$$
+\Ext(A,G)\isomto \H^1(A,G)\quoi,
+$$
+en otras palabras, \emph{todo recubrimiento principal de~$A$ de grupo
+estructural conmutativo~$G$, punteado sobre el origen de~$A$, queda dotado
+de manera única de una estructura de grupo algebraico que tiene al punto
+marcado como origen y tal que $A'\to A$ es un homomorfismo de grupos
+algebraicos.} En particular, si $A'$ es conexa, también es una variedad
+abeliana isógena a~$A$.
+
+Por otra parte, como el funtor $X\mto\pi_1(X)$ de los esquemas algebraicos
+punteados $X$ en los grupos conmuta con el producto (\Ref{IX.1.7}),
+transforma un grupo de la primera categoría en un grupo de la categoría de
+grupos, es decir, en un grupo \emph{conmutativo}. Por tanto, \emph{si $A$ es
+una variedad abeliana, $\pi_1(A)$
+\marginpar{288}
+es un grupo conmutativo.} Así, para conocer $\pi_1(A)$, basta conocer el
+funtor $G\mto\H^1(A,G)=\Hom(\pi_1(A),G)$ cuando $G$ recorre los grupos
+finitos \emph{conmutativos}. Finalmente, recordemos que, para todo entero
+$n>0$, el homomorfismo de multiplicación por $n$ en~$A$,
+$$
+A\lto{n} A
+$$
+es sobreyectivo y, por tanto, de núcleo finito, es decir, es una isogenia,
+y que de ello resulta que toda isogenia $A'\to A$ es cociente de una
+isogenia del tipo anterior. De esto y de razonamientos estándar
+(\cf por ejemplo,~\cite{XI.6}) se deduce:
+
+\begin{theoreme}[Serre--Lang]
+\label{XI.2.1}
+Sea $A$ una variedad abeliana sobre un cuerpo algebraicamente cerrado~$k$.
+Para todo entero $n>0$, consideremos el grupo finito ordinario $K_n$
+subyacente al núcleo ${}_nA$ de la multiplicación por $n$ en~$A$ y, para
+todo número primo~$\ell$, pongamos
+$$
+T_\ell(A)=\varprojlim_r K_{\ell^r}
+$$
+y
+$$
+T_{.}(A)=\underset{\ell}{\prod}T_\ell(A)=\varprojlim_n K_n
+$$
+(donde, si $m$ es múltiplo de~$n$, $m=ns$, se envía $K_m$ en $K_n$
+mediante la multiplicación por~$s$). Entonces el grupo $\pi_1(A)$ es
+canónicamente isomorfo a $T_{.}(A)$; por consiguiente, para todo número
+primo~$\ell$, la componente $\ell$-primaria de~$\pi_1(A)$ es canónicamente
+isomorfa a $T_\ell(A)$.
+\end{theoreme}
+
+Obsérvese que estos isomorfismos son funtoriales respecto de~$A$. El módulo
+$T_\ell(A)$ se llama \emph{módulo $\ell$-ádico de Tate} de la variedad
+abeliana~$A$. Es un funtor aditivo en~$A$; en particular, da lugar a una
+representación del anillo $\Hom(A,A)$ de los endomorfismos de~$A$ sobre
+$T_\ell(A)$, llamada \emph{representación $\ell$-ádica de Weil}, y que
+desempeña un papel importante en la teoría de las variedades abelianas
+(\cf por ejemplo, \hbox{\cite[cap.~VII]{XI.4}}). El
+teorema~\Ref{XI.2.1} le da una interpretación como la representación
+natural en el \emph{grupo de homología $\ell$-ádica} de~$A$,
+$\H_1(A,\ZZ_\ell)=\pi_1(A)_\ell$, lo cual
+\marginpar{289}
+es evidentemente más satisfactorio a priori, en particular desde el punto
+de vista de la fórmula de Lefschetz, \cite[cap.~V]{XI.4}. Recordemos aquí
+los resultados de Weil sobre la estructura de~$T_\ell(A)$:
+\begin{enumerate}
+\item[a)] Si $n$ es primo con $\car(k)$, entonces $K_n$ es un módulo libre
+de rango $2\dim A$ sobre~$\ZZ/n\ZZ$; por tanto, si $\ell$ es un número
+primo $\neq\car(k)$, $T_\ell(A)$ es un módulo libre de rango $2\dim A$
+sobre el anillo $\ZZ_\ell$ de los enteros $\ell$-ádicos;
+\item[b)] Si $n$ es una potencia de~$\car(k)=p$, entonces $K_n$ es un
+módulo libre de rango $\nu\leq\dim A$ sobre~$\ZZ/n\ZZ$, con $\nu$
+independiente de~$n$; por tanto, $T_p(A)$ es un módulo libre de rango
+$\nu\leq\dim A$ sobre el anillo $\ZZ_p$ de los enteros $p$-ádicos.
+\end{enumerate}
+
+Esto muestra que, en la teoría del grupo fundamental desarrollada aquí, el
+grupo fundamental de una variedad abeliana variable no varía de manera
+regular con el parámetro: su componente $p$-primaria puede disminuir
+bruscamente para valores del parámetro $t$ correspondientes a una
+característica residual~$p$; el caso más conocido de este fenómeno es el de
+las curvas elípticas. Obsérvese, sin embargo, que, cualquiera que sea $n$
+(primo o no con la característica), el verdadero núcleo ${}_nA$ en~$A$ de
+la multiplicación por $n$ es un esquema en grupos finito sobre~$k$ de grado
+$n^{2g}$, donde $g=\dim A$, que no será separable sobre~$k$ si $n$ es
+múltiplo de~$p=\car(k)$. Además, cuando $A$ varía en una familia de
+variedades abelianas, es decir, cuando se tiene un esquema abeliano $A$
+sobre un esquema base $S$, se demuestra más generalmente que ${}_nA$ es un
+esquema en grupos finito y plano sobre~$S$, de grado $n^{2g}$ sobre~$S$;
+esto es, a condición de tener en cuenta las partes infinitesimales de los
+núcleos ${}_nA$, estos se comportan de manera regular cualquiera que
+sea~$n$. Esto sugiere que el \og verdadero\fg{} grupo fundamental de una
+variedad abeliana $A$ es el progrupo algebraico (límite proyectivo formal
+de grupos finitos sobre~$k$) $\varprojlim_n{{}_nA}$, donde por \og verdadero
+grupo fundamental\fg{} de un esquema algebraico~$X$ hay que entender el
+progrupo que clasifica los recubrimientos principales de~$X$ cuyo grupo
+estructural es un grupo finito cualquiera $G$ sobre~$k$ (no necesariamente
+separable sobre~$k$). De este modo, por ejemplo, las representaciones de
+$\Hom(A,A)$ en la componente $p$-primaria del verdadero grupo fundamental
+de~$A$ recuperan el polinomio característico de Weil, definido por este
+último mediante los primos $\ell\neq p$, de forma más natural que la
+construcción de Serre~\cite{XI.8}.

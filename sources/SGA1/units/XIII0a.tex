@@ -1,0 +1,79 @@
+
+\section{Recordatorio sobre la teoría de stacks}
+\label{XIII.0}
+
+En lo que sigue utilizaremos la teoría de stacks expuesta en
+\cite{XIII.1} y~\cite{XIII.2}. Nos limitamos al caso del sitio étale de un
+esquema. Dado un esquema~$X$, denotemos por~$X_\et$ el sitio étale de~$X$.
+Recordemos que un
+\ifthenelse{\boolean{orig}}
+{stack}
+{stack $F$}
+\index{stack|hyperpage}%
+sobre~$X$ es una categoría fibrada sobre~$X_\et$ tal que, para todo
+esquema~$X'$ étale sobre~$X$ y para todo par
+\ifthenelse{\boolean{orig}}
+{de objeto}
+{de objetos}
+$x$, $y$ de la fibra~$F_{X'}$, el prehaz~$\SheafHom_{X'}(x,y)$ sea un haz,
+y tal que, para todo morfismo étale sobreyectivo $X''\to X'$, todo objeto
+de~$F_{X''}$ provisto de un dato de descenso relativamente a $X''\to X'$
+sea imagen inversa de un objeto de~$F_{X'}$.
+
+Se denota por~$F(X')$ la categoría de las secciones cartesianas de~$F/X'$.
+Más generalmente, si~$\Sch_X$ es la categoría de los esquemas sobre~$X$
+provista de la topología étale, el stack~$F$ puede extenderse a un
+stack~$\cal{F}$ sobre~$\Sch_X$ y, para todo morfismo $f\colon X'\to X$, se
+denota también por~$F(X')$ la categoría de las secciones cartesianas de este
+stack~$\cal{F}$ sobre~$X'$.
+
+Un gerbe
+\index{gerbe|hyperpage}%
+es un stack tal que, para todo esquema~$X'$ étale sobre~$X$ y para todo par
+de objetos $x$, $y$ de~$F_{X'}$, todo morfismo de~$x$ a~$y$ sea un
+isomorfismo, que $x$ e~$y$ sean localmente isomorfos y que la familia de
+objetos~$X'$ de~$X_\et$ tales que la fibra~$F_{X'}$ no sea vacía constituya
+un recubrimiento de~$X_\et$. Por ejemplo, el stack de los torsores bajo un haz
+de grupos es un gerbe que, además, posee una sección cartesiana.
+Recíprocamente, un gerbe que posee una sección, \ie tal que existe un
+objeto~$x$ de~$F_X$, es equivalente al stack de los torsores bajo el haz
+\marginpar{346}
+de grupos~$\SheafAut_X(x)$.
+
+Existe una noción evidente de subgerbe y de subgerbe maximal de un
+stack~$F$. Dada una sección cartesiana~$x$ de~$F(X)$, existe un único
+subgerbe maximal~$G_x$ de~$F$ tal que~$x$ se factoriza a través de~$G_x$.
+$G_x$ recibe el nombre de subgerbe generado por~$x$; por definición, es un
+gerbe trivial.
+\index{gerbe trivial|hyperpage}%
+El prehaz~$SF$
+\label{indnot:mb}\oldindexnot{$SF$ o $S(F)$|hyperpage}%
+definido por
+$$
+SF(X') = \{ \text{subgerbes maximales de }F|X' \}
+$$
+es un haz, llamado haz de los subgerbes maximales de~$F$.
+\index{haz de los subgerbes maximales|hyperpage}%
+Sea~$O$ el prehaz definido por
+$$
+O(X') = \{ \text{clases de objetos de }F_{X'}\text{ salvo isomorfismo}
+\} \text{.}
+$$
+Asociando a todo objeto~$x$ de~$F_{X'}$ el subgerbe maximal de~$F|X'$
+generado por~$x$, se obtiene un morfismo
+$$
+O \to SF \text{;}
+$$
+según~\cite[III 2.1.4]{XIII.2}, este morfismo hace de~$SF$ un haz asociado
+a~$O$.
+
+Se dice que un stack~$F$ es \emph{constructible}
+\index{constructible (stack)|hyperpage}%
+(\emph{\resp ind-$\LL$-finito},
+\index{stack ind-finito (\resp ind-$l$-finito)|hyperpage}%
+donde~$\LL$ es un conjunto de números primos) si, para todo esquema~$X'$
+étale sobre~$X$ y para todo objeto~$x$ de~$F_{X'}$, el haz
+$\SheafAut_{X'}(x)$ posee la propiedad correspondiente
+\cite[VII 2.2.1]{XIII.2}. Se dice que un stack es $1$-constructible
+\index{stack $1$-constructible (\resp constructible)|hyperpage}%
+si es constructible y si el haz de los subgerbes maximales es constructible.

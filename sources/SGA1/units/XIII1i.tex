@@ -1,0 +1,68 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo los delimitadores de curvatura de Xy-pic.
+\begin{proposition}
+\label{XIII.1.12}
+Sean $S$ un esquema y $f\colon X \to Y$ un $S$-morfismo.
+\begin{enumerate}
+\item[1)] Sea
+$$
+\xymatrix@C=.5cm{ \Phi \ar[r] & \Phi_1 \ar@<2pt>[r] \ar@<-2pt>[r] &
+\Phi_2 }
+$$
+un diagrama exacto de stacks sobre~$X$. Supongamos que $(\Phi_1, f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ y que $(\Phi_2, f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant -1$. Entonces $(\Phi,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión $\leqslant 0$.
+
+\item[2)] Sea
+$$
+\xymatrix@C=.5cm{ \Phi \ar[r] & \Phi_1 \ar@<2pt>[r] \ar@<-2pt>[r] &
+\Phi_2 \ar@<4pt>[r] \ar[r] \ar@<-4pt>[r] & \Phi_3 }
+$$
+un diagrama exacto de stacks sobre~$X$. Supongamos que
+\ifthenelse{\boolean{orig}}
+{$(\Phi,f)$}
+{$(\Phi_1,f)$}
+es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 1$, que $(\Phi_2, f)$ es cohomológicamente propio
+\marginpar{362}
+relativamente a~$S$ en dimensión $\leqslant 0$ y que
+$(\Phi_3, f)$ es cohomológicamente propio
+\ifthenelse{\boolean{orig}}
+{}
+{relativamente}
+a~$S$ en dimensión $\leqslant -1$. Entonces $(\Phi,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión $\leqslant 1$.
+\end{enumerate}
+\end{proposition}
+
+Para todo $S$-esquema~$S'$, consideremos el diagrama conmutativo siguiente,
+en el que todos los cuadrados son cartesianos:
+$$
+\xymatrix{ X' \ar[r]^{f'} \ar[d]_h & Y' \ar[r] \ar[d]_g & S' \ar[d] \\
+X \ar[r]^f & Y \ar[r] & S }
+$$
+
+Demostremos 2), pues la demostración de 1) es análoga. Como los funtores de
+imagen directa y de imagen inversa transforman
+\ifthenelse{\boolean{orig}}
+{diagrama exacto de stacks en diagrama exacto}
+{un diagrama exacto de stacks en un diagrama exacto}
+\eqref{XIII.1.10.4}, se tiene el morfismo siguiente
+de diagramas exactos de stacks:
+$$
+\xymatrix{ g^* f_* \Phi \ar[r]^\pi \ar[d]_{\varphi} & g^*
+f_* \Phi_1 \ar@<2pt>[r]^{\pi_1} \ar@<-2pt>[r]_{\pi_2}
+\ar[d]_{\varphi_1} & g^* f_* \Phi_2 \ar@<4pt>[r] \ar[r]
+\ar@<-4pt>[r] \ar[d]_{\varphi_2} & g^* f_* \Phi_3
+\ar[d]_{\varphi_3} \\ f'_* h^* \Phi \ar[r] & f'_* h^*
+\Phi_1 \ar@<2pt>[r] \ar@<-2pt>[r] & f'_* h^* \Phi_2
+\ar@<4pt>[r] \ar[r] \ar@<-4pt>[r] & f'_* h^* \Phi_3 }
+\text{.}
+$$
+Por hipótesis, $\varphi_1$ es una equivalencia de categorías,
+$\varphi_2$ es plenamente fiel y $\varphi_3$ es fiel. Se deduce, por tanto,
+del diagrama anterior que~$\varphi$ es una equivalencia.
+\endgroup

@@ -1,0 +1,76 @@
+
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{0}
+\begin{sublemme}
+\label{XIII.4.3.1}
+Sean $f\colon X\to S$ un morfismo $0$-acíclico y localmente
+$0$-acíclico, y~$g$ una sección de~$f$. Sea~$C$ un grupo constante
+finito tal que $(C_X,f)$ sea cohomológicamente propio en dimensión
+$\leqslant0$ y que la imagen directa por~$f$ del stack de los torsores bajo
+$C_X$ sea constructible. Entonces, para toda sección~$z$ de
+$\H^0(S,\R^1f_*C_X)$, puede encontrarse un recubrimiento étale
+$S_1$ de~$S$ y,
+\ifthenelse{\boolean{orig}}
+{si $X_1=X\times_SS_1$, un elemento de}
+{si $X_1=X\times_SS_1$ y $f_1\colon X_1\to S_1$ es la proyección, un elemento de}
+$\H^1(X_1,C_{X_1})$ cuya imagen por el morfismo canónico
+$$
+\H^1(X_1,C_{X_1})\to
+\ifthenelse{\boolean{orig}}
+{\H^0(S_1,\R^1f_*C_{X_1})}
+{\H^0(S_1,\R^1f_{1*}C_{X_1})}
+$$
+sea igual a la restricción de~$z$ a
+\ifthenelse{\boolean{orig}}
+{$\H^0(S_1,\R^1f_*C_{X_1})$}
+{$\H^0(S_1,\R^1f_{1*}C_{X_1})$}.
+\end{sublemme}
+
+Para todo esquema~$S'$ étale sobre~$S$, se pone $X'=X\times_SS'$ y
+\ifthenelse{\boolean{orig}}
+{se denota por~$g'$ (\resp $F'$, etc.) la imagen inversa de~$g$
+(\resp $F$, etc.) por el morfismo}
+{se denota por~$g'$ la imagen inversa de~$g$ por el morfismo}
+\marginpar{419}
+$S'\to S$. El prehaz~$G$ sobre~$S$ definido por
+\newlength{\tmpRacinet} \setlength{\tmpRacinet}{\textwidth}
+\addtolength{\tmpRacinet}{-7em}
+$$
+G(S') = \left\{\text{\parbox{\tmpRacinet}{clases, salvo isomorfismo, de
+		torsores $P$ sobre~$X'$ bajo~$C_{X'}$, provistos de un
+		isomorfismo $g'^*P\isomto C_{S'}$ }} \right\}
+$$
+es entonces un haz. Esto resulta, en efecto, por descenso, del hecho
+de que un automorfismo del torsor~$P$ sobre~$X'$ queda bien
+determinado por su restricción a~$g'(S')$. Además, se tiene un
+morfismo sobreyectivo
+$$
+\ifthenelse{\boolean{orig}}
+{G\to \R^1f_*F.}
+{G\to \R^1f_*C_X.}
+$$
+Sean~$z$ un elemento de~$\H^0(S,\R^1f_*C_X)$ y~$H$ el
+subhaz de~$G$ que es la imagen inversa de~$z$. Basta demostrar
+que~$H$ es un haz localmente constante y constructible. Como esta
+propiedad es local sobre~$S$, puede suponerse que~$z$
+proviene de un elemento de~$\H^1(X,C_X)$ representado por
+un torsor~$P$ tal que $g^*P$ sea isomorfo a~$C_S$. Dar un
+isomorfismo $i\colon g^*P\isomto C_S$ equivale a dar una
+sección global de~$\SheafAut_{C_S}(g^*P)$, y dos isomorfismos~$i$
+e~$i'$ definen el mismo elemento de
+\ifthenelse{\boolean{orig}}
+{$G(X)$}
+{$G(S)$}
+si y solo si
+\ifthenelse{\boolean{orig}}
+{$ii'^{-1}$}
+{$i^{-1}i'$}
+es la imagen de un elemento de
+$\Aut_{C_X}(P)$. Si se considera la inyección canónica
+$$
+f_*\SheafAut_{C_X}(P)\to\SheafAut_{C_S}(g^*P)\simeq C,
+$$
+$H$ se identifica, por tanto, con el cociente de
+$\SheafAut_{C_S}(g^*P)$ por~$f_*\SheafAut_{C_X}(P)$. Según
+\Ref{XIII.1.16}, $f_*\SheafAut_{C_X}(P)$ es localmente constante;
+lo mismo ocurre, pues, con~$H$, lo que concluye la demostración.

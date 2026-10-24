@@ -1,0 +1,51 @@
+
+\setcounter{subsection}{3} \setcounter{subsubsection}{-1}
+
+\subsubsection{}
+\label{XIII.5.3.0} Retomemos las hipótesis y las notaciones
+de~\Ref{XIII.5.2}, suponiendo además que
+\ifthenelse{\boolean{orig}}
+{$S$}
+{$X$}
+es estrictamente local. Entonces se deduce de \loccit que todo
+recubrimiento étale conexo de~$U$, moderadamente ramificado
+relativamente a~$D$, es cociente de un recubrimiento moderadamente
+ramificado de la forma
+$$
+U'=U[T_1,\dots,T_r]/(T_1^{n_1}-f_1,\dots,T_r^{n_r}-f_r),
+$$
+donde los $n_i$ son enteros primos con~$p$. Sea $\bbmu_n$ el grupo de
+las raíces $n$-ésimas de la unidad de~$U$. El grupo de los
+$U$-automorfismos de~$U'$ no es otro que el grupo
+$\bbmu_{n_1}\times\dots\times\bbmu_{n_r}$: una raíz $n_i$-ésima de
+la unidad~$\xi_i$ actúa sobre~$U'$ transformando $T_i$ en
+$\xi_i T_i$. Se obtiene, pues, el enunciado siguiente:
+
+\setcounter{subsection}{2}
+
+\begin{corollaire}
+\label{XIII.5.3} Sea $X$ un esquema estrictamente local regular de
+característica residual $p\geq 0$,
+$D=\sum_{1\leq i\leq
+\ifthenelse{\boolean{orig}}{n}{r}
+} \divisor f_i$ un divisor de cruzamientos normales sobre~$X$,
+$U=X-\Supp D$. Pongamos
+$$
+\tilde U=\varprojlim_{(n_i)}
+U[T_1,\dots,T_r]/(T_1^{n_1}-f_1,\dots,T_r^{n_r}-f_r),
+$$
+donde el límite proyectivo se toma sobre el conjunto ordenado filtrante
+(para la relación de divisibilidad) de las familias de enteros $n_i>0$
+primos con~$p$. Entonces $\tilde U$ es un recubrimiento universal
+moderadamente ramificado de~$U$. Por consiguiente, el grupo fundamental
+moderadamente ramificado de~$U$ es
+$$
+\pi_1^{\tame}(U)\simeq \prod_{\ell\neq p} \ZZ_\ell [1]^r
+\qquad \text{(isomorfismo canónico)}
+$$
+donde se ha puesto
+$\ZZ_\ell[1]=\varprojlim_{n>0}\bbmu_{\ell^n}$. El grupo
+$\pi_1^{\tame}(U)$ es isomorfo no canónicamente a
+$\prod_{\ell\neq p}\ZZ_\ell^r$.
+\label{indnot:mm}\oldindexnot{$\ZZ_\ell[1]$|hyperpage}%
+\end{corollaire}

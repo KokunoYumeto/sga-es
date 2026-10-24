@@ -1,0 +1,193 @@
+
+\section{La sucesión exacta de cohomología}
+\label{XI.4}
+
+Sea~$S$ un preesquema, de modo que queda determinada la categoría
+$\Sch_{/S}$ de los preesquemas sobre
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$S$},
+y, por tanto, también la noción de grupo en ella, al que se llamará asimismo
+\emph{preesquema en grupos sobre~$S$}, o simplemente \emph{$S$-grupo}.
+Para simplificar la exposición y fijar las ideas, en lo sucesivo nos
+limitaremos la mayoría de las veces a grupos \emph{afines} y \emph{planos}
+sobre~$S$\kern1pt\footnote{En realidad, para lo que sigue bastaría la
+hipótesis de cuasiafinidad en lugar de afinidad; \cf la nota al pie
+\eqref{note-296}, p\ptbl\pageref{note-296}.}, lo cual bastará para las
+aplicaciones que tenemos en mente. (Naturalmente, se presentan muchos casos
+en los que no se verifica ninguna de las dos hipótesis.) Sea
+\marginpar{293}
+$G$ uno de tales $S$-grupos, y sea~$P$ un preesquema sobre~$S$ en el que~$G$
+actúa por la derecha, lo cual implica, en particular, un morfismo
+$$
+\pi:P\times_SG\to P
+$$
+en la categoría~$\Sch_{/S}$, que satisface los axiomas conocidos. Se dice que
+$P$ es \emph{formalmente homogéneo principal bajo}~$G$ si el morfismo
+$$
+P\times_S G\to P\times_S P
+$$
+de componentes~$\pr_1$ y~$\pi$ es un isomorfismo; equivalentemente, para todo
+objeto~$S'$ de
+\ifthenelse{\boolean{orig}}
+{$\Sch_{/S'}$}
+{$\Sch_{/S}$},
+$P(S')=\Hom_S(S',P)$, considerado como conjunto con grupo de operadores
+$G(S')=\Hom_S(S',G)$, es vacío u homogéneo principal (\ie vacío o isomorfo
+a~$G(S')$, sobre el cual el grupo~$G(S')$ actúa por traslaciones a la
+derecha). Se dice que~$P$ es \emph{trivial} si~$P$ es isomorfo a~$G$, sobre
+el cual~$G$ actúa por traslaciones a la derecha o, lo que es equivalente, si
+cada uno de los conjuntos con operadores~$P(S')$ bajo~$G(S')$ es trivial.
+Se comprueba, por ejemplo mediante el procedimiento patentado de reducción al
+caso conjuntista, que~$P$ \emph{es trivial si y solo
+\ifthenelse{\boolean{orig}}
+{si}
+{si}
+es formalmente homogéneo principal y admite una sección sobre~$S$} (este
+último hecho se expresa en términos categóricos diciendo que~$P$ tiene una
+sección sobre el objeto final~$e=S$ de~$\Sch_{/S}$, \ie que existe un
+morfismo de~$e$ en~$P$). Para definir la noción de fibrado homogéneo
+principal~$P$ bajo~$G$, más fuerte que la de fibrado formalmente homogéneo
+principal, es preciso especificar primero en~$\Sch_{/S}$ un conjunto de
+morfismos que se usarán para el «descenso» y desempeñarán el papel de
+«morfismos de localización» para «trivializar» fibrados. La elección más
+adecuada varía según el contexto, y ninguna contiene a todas las demás%
+\footnote{\label{note-293}Véase al respecto SGA~3~IV, en particular~\S 4.}.
+Aquí convendrá adoptar la definición siguiente:
+
+\begin{definition}
+\label{XI.4.1}
+Sea~$G$ un $S$-grupo. Se llama \emph{fibrado homogéneo principal} (por la
+derecha) bajo~$G$ a un $S$-preesquema~$P$ con acción por la derecha del
+$S$-grupo~$G$, tal que exista un recubrimiento de~$S$ por abiertos~$U_i$ y,
+para todo~$i$, un morfismo de cambio de base~$S'_i\to U_i$ fielmente plano y
+cuasicompacto, tal que
+\ifthenelse{\boolean{orig}}
+{$P'_i=P\times_S S'_i$ sea un preesquema con operadores trivial bajo
+$G'=G\times_S S'$.}
+{$P'=P\times_S S'$ sea un preesquema con operadores trivial bajo
+$G'=G\times_S S'$, donde~$S'$ es el $S$-preesquema suma disjunta de los~$S'_i$.}
+\end{definition}
+
+(Obsérvese que el funtor de cambio de base~$X\mto X'=X\times_S S'$,
+\marginpar{294}
+por ser exacto por la izquierda, transforma grupos en grupos y objetos con
+grupos de operadores en objetos con grupos de operadores.) Obsérvese que
+\Ref{XI.4.1} es \emph{estable por cambio de base}. Obsérvese también lo
+siguiente:
+
+\begin{proposition}
+\label{XI.4.2}
+Sean~$G$ un $S$-grupo plano y cuasicompacto sobre~$S$, y~$P$ un
+$S$-preesquema en el que~$G$ actúa por la derecha. Son equivalentes las
+condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $P$ es un fibrado homogéneo principal
+\ifthenelse{\boolean{orig}}
+{bajo~$G$.}
+{bajo~$G$;}
+\item[(ii)] $P$ es formalmente homogéneo principal bajo~$G$,
+\index{formalmente homogéneo principal (preesquema)|hyperpage}%
+y el morfismo estructural~$P\to S$ es fielmente plano y cuasicompacto.
+\end{enumerate}
+\end{proposition}
+
+Si~$P$ es homogéneo principal bajo~$G$, entonces, con las notaciones
+de~\Ref{XI.4.1}, $P'$ es fielmente plano y cuasicompacto sobre~$S'$ (pues
+$G'$ lo es y~$P'$ es $S'$-isomorfo a él), luego~$P$ tiene las mismas
+propiedades sobre~$S$ (para «sobreyectivo» y «cuasicompacto», \cf
+\Ref{VIII.3.1}; para «plano», se trata de una omisión en los sorites del
+Exposé~\Ref{VIII}). Recíprocamente, si se verifica~(ii), tomemos el cambio de
+base~$S'=P$, que es fielmente plano y cuasicompacto sobre~$S$; entonces~$P'$
+será formalmente homogéneo principal sobre~$S'$, puesto que~$P$ lo es
+sobre~$S$ y el funtor de cambio de base es exacto por la izquierda; por otra
+parte, $P'$ tiene una sección sobre~$S'$,
+\ifthenelse{\boolean{orig}}
+{a saber}
+{a saber}
+la sección diagonal, por lo que es un fibrado principal trivial, lo cual
+concluye la demostración.
+
+\begin{corollaire}
+\label{XI.4.3}
+Si~$G$ es afín y plano sobre~$S$, todo fibrado homogéneo principal~$P$
+bajo~$G$ es afín y plano sobre~$S$.
+\end{corollaire}
+
+En efecto, adquiere esas propiedades tras una extensión fielmente plana y
+cuasicompacta de la base, y se aplica~\Ref{VIII.5.6}.
+
+La utilidad de la definición~\Ref{XI.4.1} para los $S$-grupos \emph{planos}
+y \emph{afines} sobre~$S$ se debe a~\Ref{VIII.2.1}, \ie al hecho de que los
+morfismos~$S'\to S$ considerados en~\Ref{XI.4.1} son morfismos de descenso
+efectivo para la categoría de los preesquemas afines sobre otros
+preesquemas. Gracias a este hecho, la comprobación de los hechos esbozados a
+continuación se efectúa de manera esencialmente «categórica»%
+\footnote{\Cf \loccit en la nota al pie~\eqref{note-293},
+p\ptbl\pageref{note-293}.}. Sea~$E$ un $S$-preesquema en el que el
+$S$-grupo~$G$ actúa por la izquierda, y sea~$P$ un fibrado homogéneo principal
+(por la derecha) bajo~$G$; queremos definir un fibrado asociado~$E^{(P)}$,
+«localmente» isomorfo a~$E$. Para ello, hagamos actuar
+\marginpar{295}
+$G$ por la derecha sobre~$P\times_S E$ según la ley~$(x,y)\mto
+(xg,g^{-1}y)$, que describe tales acciones en el contexto conjuntista y se
+extiende a las categorías mediante el procedimiento patentado. A reserva de
+su existencia, pondremos:
+$$
+E^{(P)}=(P\times_S E)/G
+$$
+Con ello se comprueba que~$P\times_S E$ será un preesquema sobre
+$T=E^{(P)}$, con grupo de operadores por la derecha~$G_T=G\times_S T$; para
+trabajar con comodidad, querríamos además que~$P\times_S E$ fuera un fibrado
+homogéneo principal sobre~$T$ de grupo~$G_T$. Para comprobar la existencia
+de~$E^{(P)}$ y la propiedad precedente, retomemos el~$S'$ de la
+definición~\Ref{XI.4.1} y consideremos sobre~$S'$ la imagen inversa de la
+situación inicial. Puesto que~$P'$ es
+\ifthenelse{\boolean{orig}}
+{trivial}
+{trivial,}
+\ie isomorfo a~$G'_d$, se ve inmediatamente que~$E^{\prime(P')}$ existe y
+posee la propiedad de exactitud requerida. En efecto,
+$E'\times_{S'} P'$ es $G'$-isomorfo al producto~$E'\times_{S'} G'$, luego
+$E^{\prime(P')}$ es isomorfo a~$E'$. Además, la formación del «fibrado
+asociado» en el caso de un espacio con operadores trivial conmuta con toda
+extensión de la base y, tomando
+\ifthenelse{\boolean{orig}}
+{en este caso}
+{en este caso}
+las diversas extensiones de la base
+\begingroup
+\shorthandoff{<>}% Spanish babel trata de otro modo los delimitadores de curvatura de Xy-pic.
+$\xymatrix@C=.5cm{S''\ar@<2pt>[r]\ar@<-2pt>[r]&S'}$
+y
+$\xymatrix@C=.5cm{S'''\ar@<4pt>[r]\ar@<0pt>[r]\ar@<-4pt>[r]&S'}$%
+\endgroup, donde
+$S''$ y~$S'''$ son los productos fibrados doble y triple de~$S'$ sobre~$S$,
+se comprueba que~$E^{\prime(P')}$ \emph{está provisto de un dato de descenso
+relativo al morfismo~$S'\to S$, y que~$E^{(P)}$ existe con las propiedades
+requeridas si y solo si este dato de descenso es efectivo}; naturalmente,
+$E^{(P)}$ no es entonces sino el objeto descendido. (Úsese el hecho de que
+$S'\to S$ es un morfismo de descenso en la categoría de los
+$S$-preesquemas, \cf \Ref{VIII.5.2}.) Se sigue que \emph{el fibrado asociado
+existe si~$E$ es afín sobre~$S$}. Aplicaremos esta construcción al caso en
+que se tiene un homomorfismo de $S$-grupos~$G\to H$ y se toma como~$E$ el
+$S$-preesquema~$H$, dotado de las acciones por la izquierda de~$G$ sobre~$H$
+inducidas por el morfismo dado; como~$H$ actúa por la derecha sobre sí mismo
+de manera que conmuta con las acciones de~$G$ sobre~$H$, y como la formación
+del fibrado asociado (cuando existe sobre~$S$) conmuta con la extensión de la
+base, se comprueba fácilmente que~$H$ actúa por la derecha sobre
+\ifthenelse{\boolean{orig}}
+{$P^{(H)}$}
+{$H^{(P)}$},
+que es, por consiguiente, un fibrado homogéneo principal bajo~$H$ en el
+sentido de~\Ref{XI.4.1}, y
+\marginpar{296}
+más precisamente queda
+\ifthenelse{\boolean{orig}}
+{trivializado}
+{trivializado}
+por el mismo morfismo~$S'\to S$ que~$P$. En particular, \emph{a todo fibrado
+homogéneo principal~$P$ bajo~$G$ y a todo homomorfismo de $S$-grupos
+$G\to H$, con~$H$ afín sobre~$S$, se asocia un fibrado homogéneo principal de
+grupo~$H$}, de manera funtorial en~$(G\to H)$ y compatible con los cambios
+de base cualesquiera~$T\to S$.

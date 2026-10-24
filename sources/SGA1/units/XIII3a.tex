@@ -1,0 +1,68 @@
+
+\section[Ser cohomológicamente propio y aciclicidad local]{Propiedad de ser cohomológicamente propio y aciclicidad local genérica}
+\label{XIII.3}
+\marginpar{395}
+
+\begin{theoreme}
+\label{XIII.3.1}
+Sean $S$ un esquema irreducible con punto genérico~$s$, $X$ e~$Y$ dos
+$S$-esquemas de presentación finita y $f\colon X\to Y$ un
+$S$-morfismo. Para todo $S$-esquema~$S'$, se denotan por $Y'$, $X'$, etc.
+las imágenes inversas de~$Y$, $X$, etc. por el morfismo $S'\to S$.
+Se tienen las propiedades siguientes:
+
+\begin{enumerate}
+\item[1)]
+{\upshape a)} Puede encontrarse un abierto no vacío~$S'$ de~$S$ tal que,
+para todo haz de conjuntos constante finito~$F'$ sobre~$X'$, $f'_*F'$ sea
+constructible y~$(F',f')$ sea cohomológicamente propio relativamente
+a~$S'$ en dimensión $\leqslant 0$.
+
+{\upshape b)} Sea $F$ un haz de conjuntos constructible sobre~$X$.
+Entonces puede encontrarse un abierto no vacío~$S'$ de~$S$ (dependiente
+de~$F$) tal que $f'_*F'$ sea constructible y~$(F',f')$ sea
+cohomológicamente propio relativamente a~$S'$ en dimensión
+$\leqslant 0$.
+
+\item[2)] Supongamos que los esquemas de tipo finito de dimensión
+$\leqslant\dim X_s$ sobre una clausura algebraica~$\overline{k}$
+de~$\kres(s)$ son fuertemente desingularizables
+\textup{(SGA~5 I~3.1.5)}. Se tienen entonces, además, las propiedades
+siguientes:
+
+{\upshape a)} Puede encontrarse un abierto no vacío~$S'$ de~$S$ tal que,
+para todo haz de grupos constante finito~$F'$ sobre~$X'$, de orden primo
+con las características residuales de~$S$, si~$\Phi'$ es el stack de los
+torsores bajo~$F'$, $f'_*\Phi'$ sea $1$-constructible y~$(F',f')$ sea
+cohomológicamente propio relativamente a~$S'$ en dimensión
+$\leqslant 1$.
+
+{\upshape b)} Sean $\LL$ el conjunto de los números primos distintos de
+las características residuales de~$S$ y~$\Phi$ un stack ind-$\LL$,
+$1$-constructible, sobre~$X$ \eqref{XIII.0}, tal que, para todo
+esquema~$X_1$ étale sobre~$X$ y para todo par de objetos $x,x_1$
+de~$\Phi_{X_1}$, el haz $\SheafHom_{X_1}(x,x_1)$ sea constructible.
+Supongamos además que~$S$ es localmente noetheriano. Entonces puede
+encontrarse un abierto no vacío~$S'$ de~$S$ tal que $f'_*\Phi'$ sea
+$1$-constructible, que,
+\ifthenelse{\boolean{orig}}
+{}
+{para todo esquema~$Y_1$ étale sobre~$Y'$ y}
+para todo par de objetos $y,y_1$ de la fibra $(f'_*\Phi')_{Y_1}$,
+el haz $\SheafHom_{Y_1}(y,y_1)$ sea constructible,
+\marginpar{396}
+y que~$(\Phi',f')$ sea cohomológicamente propio relativamente a~$S'$
+en dimensión $\leqslant 1$.
+\end{enumerate}
+\end{theoreme}
+
+\subsubsection*{Demostración}
+Puede suponerse que~$S$ es afín; según SGA~4 VIII~1.1, puede suponerse
+que~$S$ es íntegro; finalmente, por paso al límite, puede suponerse que
+$S$ es el espectro de un álgebra de tipo finito sobre~$\ZZ$; en
+particular, $S$ es entonces noetheriano.
+Como la cuestión es local sobre~$Y$, puede suponerse que~$Y$ es afín.
+Además, para demostrar el teorema, basta hacerlo tras una extensión finita
+de la base $S'\to S$, donde~$S'$ es un esquema íntegro y~$S'\to S$ es un
+compuesto de morfismos étales y de morfismos finitos, radiciales y
+sobreyectivos.

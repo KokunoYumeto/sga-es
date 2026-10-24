@@ -1,0 +1,74 @@
+\section{Categorías cofibradas, categorías bifibradas}
+\label{VI.10}
+Consideremos una categoría $\cal{F}$ sobre~$\cal{E}$, con el funtor de
+proyección
+$$
+p\colon \cal{F}\to \cal{E},
+$$
+que define una categoría $\cal{F}^\circ$ sobre $\cal{E}^\circ$ mediante el
+funtor de proyección
+$$
+p^\circ\colon \cal{F}^\circ\to \cal{E}^\circ.
+$$
+Un morfismo $\alpha\colon \eta\to\xi$ de $\cal{F}$ se llama
+\emph{cocartesiano} si es un morfismo cartesiano para $\cal{F}^\circ$
+sobre~$\cal{E}^\circ$. Explicitando la definición, se ve que esto significa
+que, para todo objeto $\xi'$ de~$\cal{F}_S$, la aplicación
+$u\mto u\circ \alpha$
+$$
+\Hom_S(\xi,\xi')\to\Hom_f(\eta,\xi')
+$$
+es biyectiva. Se dice también entonces que $(\xi,\alpha)$ es una
+\emph{imagen directa}
+\index{imagen directa|hyperpage}%
+de~$\eta$ por~$f$, en la categoría $\cal{F}$ sobre~$\cal{E}$. Si existe
+para todo $\eta$ de~$\cal{F}_T$, se dice que existe el funtor de imagen
+directa por~$f$, y se denota este funtor
+\marginpar{182}
+$f_*^{\cal{F}}$ o~$f_*$,
+\label{indnot:ft}\oldindexnot{$f_*^{\cal{F}}$ o~$f_*$|hyperpage}%
+una vez escogido. Queda, pues, definido por un isomorfismo de bifuntores
+sobre~$\cal{F}_T^\circ\times\cal{F}_S$:
+$$
+\Hom_S(f_*(\eta),\xi)\isomto \Hom_f(\eta,\xi).
+$$
+Por consiguiente, si $f_*$ existe, para que $f^*$ exista es necesario y
+suficiente que
+\ifthenelse{\boolean{orig}}
+{$f$}
+{$f_*$}
+admita un funtor adjunto, es decir, que exista un funtor
+$f^*\colon \cal{F}_S\to\cal{F}_T$ y un isomorfismo de bifuntores
+$$
+\ifthenelse{\boolean{orig}}
+{\Hom_E(f_*(\eta),\xi)\isomto \Hom_T(\eta,f^*(\xi)).}
+{\Hom_S(f_*(\eta),\xi)\isomto \Hom_T(\eta,f^*(\xi)).}
+$$
+Sea $g\colon U\to T$ otro morfismo de $\cal{E}$, y supongamos que existen
+las imágenes inversas y directas por $f,g$ y~$fg$. Consideremos entonces
+las transformaciones naturales
+$$
+\begin{array}{cccc}
+c^{f,g}\colon&f_*g_*&\dpl\from&(fg)_*\\
+c_{f,g}\colon&g^*f^*&\dpl\to&(fg)^*.
+\end{array}
+$$
+Se comprueba que, si se consideran $f_*g_*$ y $g^*f^*$ como un par de
+funtores adjuntos, al igual que $(fg)_*$ y $(fg)^*$, las dos
+transformaciones precedentes son adjuntas entre sí. Por tanto, una es un
+isomorfismo si y solo si la otra lo es. En particular:
+\begin{proposition}
+\label{VI.10.1} Supongamos que la categoría $\cal{F}$ sobre~$\cal{E}$ es
+prefibrada y coprefibrada. Para que sea fibrada, es necesario y suficiente
+que sea cofibrada.
+\end{proposition}
+
+Por supuesto, se dice que $\cal{F}$ es coprefibrada, \resp cofibrada,
+\index{cofibrada (categoría)|hyperpage}%
+sobre~$\cal{E}$ si $\cal{F}^\circ$ es prefibrada, \resp fibrada%
+\ifthenelse{\boolean{orig}}
+{, sobre~$\cal{E}$.}
+{, sobre~$\cal{E}^\circ$.}
+Diremos que $\cal{F}$ es bifibrada sobre~$\cal{E}$,
+\index{bifibrada (categoría)|hyperpage}%
+si es a la vez fibrada y cofibrada sobre~$\cal{E}$.

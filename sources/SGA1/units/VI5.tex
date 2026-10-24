@@ -1,0 +1,184 @@
+\section{Morfismos cartesianos, imágenes inversas, funtores
+cartesianos}
+\label{VI.5}
+
+Sea~$\cal{F}$ una categoría sobre~$\cal{E}$, con funtor de
+proyección~$p$.
+\ifthenelse{\boolean{orig}}
+{}
+{\enlargethispage{.5cm}}
+
+\begin{definition}
+\label{VI.5.1} Consideremos un morfismo
+$$
+\alpha\colon\eta\to\xi
+$$
+en~$\cal{F}$, y sean
+$$
+S=p(\xi),\quad T=p(\eta),\quad f=p(\alpha)%
+\ifthenelse{\boolean{orig}}{}{.}
+$$
+Se dice que~$\alpha$ es un \emph{morfismo cartesiano}
+\index{cartesiano (morfismo)|hyperpage}%
+si, para todo $\eta'\in\Ob(\cal{F}_T)$ y todo $f$-morfismo
+$u\colon\eta'\to\xi$, existe un único $T$-morfismo
+$\overline{u}\colon\eta'\to\eta$ tal que
+$u=\alpha\circ\overline{u}$.
+\end{definition}
+
+Esto significa, pues, que para todo $\eta'\in\Ob(\cal{F}_T)$, la
+aplicación $v\mto\alpha\circ v$:
+\begin{equation}
+\tag{i} \Hom_T(\eta',\eta)\to\Hom_f(\eta',\xi)
+\end{equation}
+es biyectiva. Significa también que el par $(\eta,\alpha)$
+\emph{representa el funtor en~$\eta'$} $\cal{F}^{\circ}_T\to\Ens$ del
+segundo miembro. Si, para un morfismo dado $f\colon T\to S$ en~$\cal{E}$
+y un $\xi\in\Ob(\cal{F}_S)$ dado, existe tal par $(\eta,\alpha)$, es decir,
+un morfismo
+\marginpar{162}
+cartesiano~$\alpha$ en~$\cal{F}$ de destino~$\xi$, tal que
+$p(\alpha)=f$, entonces~$\eta$ queda determinado en~$\cal{F}_T$ salvo
+isomorfismo único. Se dice entonces que \emph{existe la imagen inversa
+de~$\xi$ por~$f$}, y un objeto~$\eta$ de~$\cal{F}_T$ provisto de un
+$f$-morfismo cartesiano $\alpha\colon\eta\to\xi$ se llama \emph{una imagen
+inversa de~$\xi$ por~$f$}.
+\index{imagen inversa|hyperpage}%
+A menudo se supone
+\ifthenelse{\boolean{orig}}{elegido}{elegida}
+tal imagen inversa cada vez que existe (con~$\cal{F}$ fijada); se denotará
+entonces la imagen inversa mediante símbolos como~$f^*_{\cal{F}}(\xi)$, o
+simplemente~$f^*(\xi)$
+\label{indnot:fo}\oldindexnot{$f^*_{\cal{F}}(\xi)$ o $f^*(\xi)$|hyperpage}%
+\ifthenelse{\boolean{orig}}{donde~$\xi\times_S T$}
+{o bien~$\xi\times_S T$}
+cuando estas notaciones no ocasionen
+\ifthenelse{\boolean{orig}}{unas confusiones;}{confusión;}
+el morfismo canónico $\alpha\colon\eta\to\xi$ se denotará, en lo que
+sigue, por~$\alpha_f(\xi)$.
+\label{indnot:fp}\oldindexnot{$\alpha_f(\xi)$|hyperpage}%
+Si para todo $\xi\in\Ob(\cal{F}_S)$ existe la imagen inversa de~$\xi$
+por~$f$, se dirá también que \emph{existe el funtor de imagen inversa
+por~$f$ en~$\cal{F}$}, y~$f^*(\xi)$ se convierte entonces en un
+\emph{funtor covariante en~$\xi$}, de~$\cal{F}_S$ en~$\cal{F}_T$. Esto
+procede de que el segundo miembro de~(i) depende covariantemente de~$\xi$,
+es decir, más precisamente, designa un funtor de
+$\cal{F}^{\circ}_T\times\cal{F}_S$ en~$\Ens$. Esta dependencia funtorial
+de~$f^*(\xi)$ se explicita así: consideremos $f$-morfismos cartesianos
+$$
+\alpha\colon\eta\to\xi,\quad\alpha'\colon\eta'\to\xi'
+$$
+y un $S$-morfismo $\lambda\colon\xi\to\xi'$; entonces existe un único
+$T$-morfismo $\mu\colon\eta\to\eta'$ tal que
+$$
+\alpha'\mu=\lambda\alpha
+$$
+(como se deduce de que~$\alpha'$ es cartesiano).
+
+Señalemos también el hecho inmediato siguiente: consideremos un diagrama
+conmutativo
+$$
+\xymatrix@C=1.2cm{
+\xi\ar[d]_-{\lambda}&\ar[l]_-{\alpha}\eta\ar[d]^-{\mu}\\
+\xi'&\ar[l]_-{\alpha'}\eta'
+}
+$$
+en~$\cal{F}$,
+\marginpar{163}
+donde~$\alpha$ y~$\alpha'$ son $f$-morfismos,~$\lambda$ un
+$S$-isomorfismo y~$\mu$ un $T$-isomorfismo. \emph{Para que~$\alpha$ sea
+cartesiano, es necesario y suficiente que~$\alpha'$ lo sea}.
+
+\begin{definition}
+\label{VI.5.2} Un $\cal{E}$-funtor $F\colon\cal{F}\to\cal{G}$ se llama
+\emph{funtor cartesiano}
+\index{cartesiano (funtor)|hyperpage}%
+si transforma los morfismos cartesianos en morfismos cartesianos.
+Se denota por $\SheafHom_\cart(\cal{F},\cal{G})$
+\label{indnot:fq}\oldindexnot{$\SheafHom_\cart(\cal{F},\cal{G})$|hyperpage}%
+la subcategoría plena de
+$\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$ formada por los funtores
+cartesianos.
+
+Por ejemplo, considerando~$\cal{E}$ como una categoría sobre~$\cal{E}$
+mediante el funtor identidad, todo morfismo de~$\cal{E}$ es cartesiano; por
+tanto, un funtor cartesiano de~$\cal{E}$ en~$\cal{F}$ es un funtor sección
+$F\colon\cal{E}\to\cal{F}$ que transforma todo morfismo de~$\cal{E}$ en
+un morfismo cartesiano; tal funtor se llama una \emph{sección cartesiana}
+de~$\cal{F}$ sobre~$\cal{E}$.
+\end{definition}
+
+\begin{proposition}
+\label{VI.5.3} \textup{(i)}~Un funtor $F\colon\cal{F}\to\cal{G}$ que sea
+una $\cal{E}$-equivalencia es un funtor cartesiano.
+\textup{(ii)}~Sean~$F,G$ dos $\cal{E}$-funtores
+\emph{isomorfos}~$\cal{F}\to\cal{G}$. Si uno es cartesiano, el otro también
+lo es. \textup{(iii)}~El compuesto de dos funtores cartesianos
+$\cal{F}\to\cal{G}$ y $\cal{G}\to\cal{H}$ es un funtor cartesiano.
+\end{proposition}
+
+La afirmación~(iii) es trivial por la definición; (ii) se deduce de la
+observación que precede a~\Ref{VI.5.2}; (i) se deduce fácilmente de la
+definición y del criterio~\Ref{VI.4.2}~(iii). Más precisamente, un
+morfismo~$\alpha$ en~$\cal{F}$ es cartesiano si y solo si~$F(\alpha)$ lo
+es.
+
+\begin{corollaire}
+\label{VI.5.4}
+Sea $F\colon\cal{F}\to\cal{G}$ una $\cal{E}$-equivalencia. Entonces, para
+toda categoría~$\cal{H}$ sobre~$\cal{E}$, los funtores correspondientes
+$G\mto G\circ F$ y $G\mto F\circ G$ inducen equivalencias de categorías:
+\begin{eqnarray*}
+\SheafHom_\cart(\cal{G},\cal{H})\lto{\approx}
+\SheafHom_\cart(\cal{F},\cal{H})\\
+\SheafHom_\cart(\cal{H},\cal{F})\lto{\approx}
+\SheafHom_\cart(\cal{H},\cal{G})
+\end{eqnarray*}
+\end{corollaire}
+
+Esto se deduce, de la manera habitual, del criterio~(i) de~\Ref{VI.4.2} y
+de~\Ref{VI.5.3}~(i), (ii) y~(iii).
+\marginpar{164}
+Puede precisarse que \emph{el $\cal{E}$-funtor
+$G\colon\cal{G}\to\cal{H}$ es cartesiano si y solo si $G\circ F$ lo es},
+y, análogamente, \emph{un $\cal{E}$-funtor
+$G\colon\cal{H}\to\cal{F}$ es cartesiano si y solo si $F\circ G$ lo es}.
+
+De
+\ifthenelse{\boolean{orig}}{\Ref{VI.5.4}~(iii)}{\Ref{VI.5.3}~(iii)}
+se deduce que, si se considera la subcategoría~$\Cat^\cart_{/\cal{E}}$
+\label{indnot:fr}\oldindexnot{$\Cat^\cart_{/\cal{E}}$|hyperpage}%
+de~$\Cat_{/\cal{E}}$ cuyos objetos son los mismos que los de
+$\Cat_{/\cal{E}}$ y cuyos morfismos son los funtores \emph{cartesianos},
+se tienen, como en el~\No \Ref{VI.2}, operaciones de composición:
+$$
+\SheafHom_\cart(\cal{F},\cal{G})\times
+\SheafHom_\cart(\cal{G},\cal{H})\to\SheafHom_\cart(\cal{F},\cal{H})
+$$
+\ifthenelse{\boolean{orig}}{inducida}{inducidas}
+por las del~\No \Ref{VI.2}, que permiten considerar
+$\SheafHom_\cart(\cal{F},\cal{G})$ como un funtor en~$\cal{F}$,
+$\cal{G}$, de la categoría $\left(\Cat^\cart_{/\cal{E}}\right)^\circ
+\times\Cat^\cart_{/\cal{E}}$
+\ifthenelse{\boolean{orig}}{en~$\Cat$).}{en~$\Cat$.}
+Necesitaremos esta observación sobre todo para el caso en que
+$\cal{F}=\cal{G}$:
+
+\begin{definition}
+\label{VI.5.5}
+Sea $\cal{F}$ una categoría sobre~$\cal{E}$. Se denota por
+$$
+\varprojLim\cal{F}/\cal{E}
+$$
+\label{indnot:fs}\oldindexnot{$\varprojLim\cal{F}/\cal{E}$|hyperpage}%
+la categoría de los $\cal{E}$-funtores cartesianos
+$\cal{E}\to\cal{F}$, es decir, de las secciones cartesianas de~$\cal{F}$
+sobre~$\cal{E}$.
+\end{definition}
+
+De acuerdo con lo que acaba de decirse,
+$\varprojLim\cal{F}/\cal{E}$ es un funtor en~$\cal{F}$, de la categoría
+$\Cat^\cart_{/\cal{E}}$ en la categoría~$\Cat$.
+
+Veremos más adelante las relaciones entre esta operación~$\varprojLim$ y la
+noción de límite proyectivo de categorías, así como numerosos ejemplos.

@@ -1,0 +1,187 @@
+
+\begin{proposition}
+\label{V.5.8}
+El funtor $X\mto E_X$ es una equivalencia de la categoría~$\cal{C}$ con la
+categoría de los funtores covariantes del grupoide fundamental~$\Gamma$
+de~$\cal{C}$ en~$\Ens$ que satisfacen la condición
+\ifthenelse{\boolean{orig}}
+{subrayada más arriba.}
+{destacada más arriba.}
+\end{proposition}
+
+En efecto, sea~$F_0$ un objeto del grupoide fundamental y sea
+$\pi_0=\Aut(F_0)$. El funtor $\xi\mto\xi(F_0)$ es entonces una equivalencia
+de la segunda categoría considerada en~\Ref{V.5.8} con la categoría
+$\cal{C}(\pi_0)$, como se comprueba inmediatamente. Por otra parte, la
+composición de este último con el funtor $X\mto E_X$ es la equivalencia
+natural $\cal{C}\to\cal{C}(\pi_0)$. Se sigue que el propio funtor
+$X\mto E_X$ es una equivalencia.
+
+\begin{corollaire}
+\label{V.5.9}
+La categoría $\Prodash\cal{C}$
+es canónicamente equivalente a la categoría de los funtores covariantes
+$\xi$ del grupoide fundamental~$\Gamma$ en la categoría de los espacios
+topológicos que satisfacen la condición siguiente: para todo objeto~$F$
+de~$\Gamma$, $\xi(F)$ es un espacio compacto totalmente desconectado sobre
+el que actúa el grupo topológico~$\pi_F$.
+\end{corollaire}
+
+También aquí, para verificar esta condición sobre~$\xi$, basta verificarla
+para \emph{un}~$F$. La demostración es la misma que la de~\Ref{V.5.8}.
+
+\begin{remarque}
+\label{V.5.10}
+Sea $(F_s)_{s\in S}$ una familia
+\ifthenelse{\boolean{orig}}{de objeto}{de objetos}
+del grupoide fundamental~$\Gamma$. Para $s,s'\in S$, pongamos
+$$
+\Hom(s,s')=\Hom(F_s,F_{s'})
+$$
+de modo que~$S$ se convierte a su vez en un grupoide conexo y la aplicación
+$s\mto F_s$ en un funtor plenamente fiel de~$S$ en~$\Gamma$, que
+denotaremos por~$f$. Al considerar entonces el funtor $X\mto E_X\circ f$
+de~$\cal{C}$ en la categoría de funtores $\Hom(S,\Ens)$, se obtiene una
+variante de~\Ref{V.5.8} (y de~\Ref{V.5.9}) con~$\Gamma$ reemplazado por~$S$.
+El enunciado así obtenido se reduce al teorema~\Ref{V.4.1} cuando~$S$ se
+reduce a un punto, y no es sino el propio enunciado~\Ref{V.5.8} si~$S$ es
+el conjunto de los objetos de~$\Gamma$.
+\end{remarque}
+
+Utilizaremos~\Ref{V.5.9} para definir un proobjeto canónico de~$\cal{C}$.
+Para ello consideramos el funtor de~$\Gamma$ en la categoría de los espacios
+topológicos
+\marginpar{132}
+(e incluso de los grupos topológicos):
+$$
+f\colon F\mto\Aut(F)=\pi_F.
+$$
+Este funtor satisface la condición considerada en~\Ref{V.5.8}: el espacio
+con operadores~$f(F)$ bajo~$\pi_F$ no es sino~$\pi_F$, considerado como
+espacio con operadores bajo sí mismo mediante los automorfismos interiores.
+Por tanto, el funtor~$f$ corresponde a un proobjeto de~$\cal{C}$
+determinado salvo isomorfismo único, que es incluso un progrupo de
+$\cal{C}$ y se llama el \emph{progrupo fundamental de~$\cal{C}$},
+\index{progrupo fundamental de una categoría galoisiana|hyperpage}%
+el cual desempeña el papel de un sistema local de grupos fundamentales. Es,
+por tanto, un progrupo~$\Pi$ de~$\cal{C}$ definido por la condición de que
+exista un isomorfismo funtorial en~$F$
+$$
+F(\Pi)\simeq\pi_F.
+$$
+
+Si~$X$ es un proobjeto cualquiera de~$\cal{C}$, se tiene un morfismo
+canónico
+$$
+\Pi\times X\to X
+$$
+que hace de~$X$ un objeto con grupo de operadores izquierdos
+\ifthenelse{\boolean{orig}}{$G$}{$\Pi$}
+en~$\Prodash\cal{C}$. Para verlo basta observar que, para~$F$ variable, se
+tiene una aplicación canónica
+$$
+\Pi(F)\times X(F)\to X(F)
+$$
+\ie
+$$
+\Aut(F)\times E_X(F)\to E_X(F),\quad\text{o}\quad
+\pi_F\times F(X)\to F(X)
+$$
+que es funtorial en~$F$. También es funtorial en~$X$; por consiguiente, para
+todo morfismo $X\to Y$ de proobjetos, el diagrama correspondiente
+$$
+\xymatrix{
+\Pi\times X\ar[r]\ar[d]&X\ar[d]\\
+\Pi\times Y\ar[r]&Y
+}
+$$
+es conmutativo.
+
+\begin{remarque}
+\label{V.5.11}
+No debe confundirse un proobjeto fundamental~$P$ (que no está provisto de
+una estructura de grupo y es conexo) con el progrupo fundamental (que es un
+pro\emph{grupo} y, en general, no es conexo). Más precisamente,
+\ifthenelse{\boolean{orig}}{$G$}{$\Pi$}
+es conexo si
+\ifthenelse{\boolean{orig}}{\ignorespaces}{y}
+solo si~$\pi_F$, actuando sobre sí mismo mediante automorfismos interiores,
+actúa transitivamente, \ie si~$\pi$ se reduce al elemento neutro o,
+equivalentemente, si~$\cal{C}$ es equivalente a la categoría de los
+conjuntos finitos. Otra diferencia
+\marginpar{133}
+esencial es que
+\ifthenelse{\boolean{orig}}{$G$}{$\Pi$}
+está determinado salvo isomorfismo único, mientras que~$P$ solo está
+determinado salvo isomorfismo no único.
+
+Sea~$E$ un conjunto finito y consideremos el funtor constante sobre el
+grupoide~$\Gamma$, de valor~$E$; en virtud de~\Ref{V.5.8}, este define un
+objeto de~$\cal{C}$, denotado por~$E_{\cal{C}}$, que puede interpretarse
+también como la suma de~$E$ ejemplares del objeto final~$e_{\cal{C}}$
+de~$\cal{C}$. Puede considerarse~$E_{\cal{C}}$ como un funtor en~$E$, de la
+categoría de los conjuntos finitos en la categoría~$\cal{C}$, y este funtor
+es \emph{exacto}; por tanto, transforma grupos finitos en
+$\cal{C}$-grupos,
+\ifthenelse{\boolean{orig}}{etc...}{etc.}
+Así pues, si~$X$ es un objeto de~$\cal{C}$ sobre el que el grupo finito~$G$
+actúa por la derecha, puede considerarse~$X$ como un objeto de~$\cal{C}$
+provisto del $\cal{C}$-grupo de operadores derechos~$G_{\cal{C}}$. Por
+extensión de la terminología general relativa a objetos con grupos de
+operadores que son $\cal{C}$-grupos, se dirá que~$X$ es \emph{formalmente
+homogéneo principal}
+\index{formalmente homogéneo principal (objeto)|hyperpage}%
+bajo~$G$ si es formalmente homogéneo principal bajo~$G_{\cal{C}}$, \ie si
+el morfismo canónico
+$$
+X\times G_{\cal{C}}\to X\times X
+$$
+deducido de la acción derecha de~$G_{\cal{C}}$ sobre~$X$, es un
+isomorfismo. Se dice que~$X$ es \emph{homogéneo principal}
+\index{homogéneo principal (objeto)|hyperpage}%
+bajo~$G$ si lo es bajo~$G_{\cal{C}}$, \ie si lo es formalmente y, además,
+el cociente $X/G=X/G_{\cal{C}}$ es~$e_{\cal{C}}$. Si se fija un funtor
+fundamental, y por tanto una equivalencia de~$\cal{C}$ con una categoría
+$\cal{C}(\pi)$, el objeto~$X$ corresponde a un conjunto sobre el que~$\pi$
+actúa continuamente por la izquierda, sea~$E=F(X)$. Hacer actuar~$G$ por la
+derecha sobre~$X$ equivale entonces a hacerlo actuar por la derecha sobre
+el conjunto~$E$, de modo que las operaciones de~$G$ conmuten con las
+de~$\pi$. Se comprueba de inmediato que~$X$ es homogéneo principal bajo~$G$
+si y solo si el conjunto~$E$ es un espacio homogéneo principal
+\ifthenelse{\boolean{orig}}
+{bajo~$G$}
+{bajo~$G$,}
+\ie si y solo si~$G$ actúa sobre él de manera simplemente transitiva. (Por
+otra parte, $X$ es formalmente homogéneo principal \sss\ 
+$E$ es homogéneo principal \emph{o} vacío.) Comparando con~\Ref{V.5.3}, se
+ve que, si~$X$ es homogéneo principal bajo~$G$ \emph{y conexo}, entonces el
+homomorfismo dado de~$G$ en el grupo opuesto a~$\Aut(X)$ es un
+\emph{isomorfismo}; además, para que un objeto~$X$
+\ifthenelse{\boolean{orig}}{de~$C$}{de~$\cal{C}$}
+sea conexo y homogéneo principal bajo el grupo opuesto a~$\Aut(X)$, es
+necesario y suficiente, con las notaciones del \No~\Ref{V.4}, que sea
+isomorfo a un~$P_i$ \emph{galoisiano}. En el caso modelo
+$\cal{C}=\cal{C}(\pi)$, esto significa que~$X$ es isomorfo a un cociente
+de~$\pi$ por un subgrupo normal.
+
+Supongamos aún dado un funtor fundamental~$F$. Entonces, dar un
+\marginpar{134}
+objeto~$X$ homogéneo principal bajo un grupo finito~$G$ que actúa por la
+derecha, junto con un punto $a\in F(X)$, equivale a dar un homomorfismo
+de~$\pi$ en el grupo~$G$. En efecto, a tal homomorfismo se le hace
+corresponder el conjunto~$E=G$, haciendo actuar~$\pi$ por la izquierda
+mediante el homomorfismo dado $\pi\to G$ y las traslaciones izquierdas
+de~$G$, y haciendo actuar~$G$ por la derecha mediante traslación derecha;
+el punto marcado~$a$ de~$E$ es el elemento neutro de~$G$. Gracias a lo
+anterior se obtiene así, de manera esencialmente única, todo triple
+$(X,G,a)$ con las propiedades consideradas,
+\ifthenelse{\boolean{orig}}
+{puesto que un}
+{puesto que un}
+conjunto homogéneo principal bajo un grupo~$G$ y provisto de un punto
+marcado se identifica con dicho grupo. De este modo se obtiene una
+interpretación geométrica directa del funtor $G\mto\Hom(\pi,G)$ de la
+categoría de los grupos finitos en~$\Ens$, funtor que es prorepresentable
+mediante~$\pi$ y cuya consideración proporcionaría, por tanto, otra
+construcción del grupo~$\pi$ asociado a~$F$.
+\end{remarque}

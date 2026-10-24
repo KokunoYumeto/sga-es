@@ -1,0 +1,83 @@
+\section[Ejemplo]{Ejemplo: categoría con clivaje definida por un funtor
+$\cal{E}^\circ\to\Cat$; categorías escindidas sobre~$\cal{E}$}
+\label{VI.9}
+Supongamos dado un funtor
+$$
+\ifthenelse{\boolean{orig}}
+{\phi\colon\cal{E}^\circ\to\Cat,}
+{\varphi\colon\cal{E}^\circ\to\Cat,}
+$$
+Este define entonces un pseudofuntor al poner
+$$
+\ifthenelse{\boolean{orig}}
+{\cal{F}(S)=\phi(S),}
+{\cal{F}(S)=\varphi(S),}
+\quad f^*=\varphi(f),\quad c_{f,g}=\id_{(fg)^*}
+$$
+\marginpar{180}%
+Por tanto, la construcción del número precedente nos da una categoría
+$\cal{F}$ con clivaje sobre~$\cal{E}$, llamada asociada al funtor
+$\varphi$. Para que una categoría con clivaje sobre~$\cal{E}$ sea
+isomorfa a una categoría con clivaje definida por un funtor
+$\varphi:\cal{E}^\circ\to\Cat$, es necesario y suficiente,
+manifiestamente, que satisfaga las condiciones
+$$
+(fg)^*=g^*f^*,\quad c_{f,g}=\id_{(fg)^*}\quoi.
+$$
+En términos del conjunto $K$ de los morfismos de transporte, esto significa
+sencillamente que \emph{el compuesto de dos morfismos de transporte es un
+morfismo de transporte}. Un clivaje de una categoría $\cal{F}$
+sobre~$\cal{E}$ que satisface la condición precedente se llama una
+\emph{escisión}
+\index{escision@escisión|hyperpage}%
+de~$\cal{F}$ sobre~$\cal{E}$, y una categoría $\cal{F}$ sobre~$\cal{E}$
+dotada de una escisión se llama una \emph{categoría escindida
+sobre~$\cal{E}$}.
+\index{escindida (categoria)@escindida (categoría)|hyperpage}%
+Se trata, pues, de un caso particular de la noción de categoría con
+clivaje. La categoría de las categorías escindidas sobre~$\cal{E}$ es,
+por tanto, equivalente a~$\SheafHom(\cal{E}^\circ,\Cat)$. Obsérvese que
+una categoría escindida sobre~$\cal{E}$ es, con mayor razón, una
+categoría con clivaje sobre~$\cal{E}$.
+
+Si $\cal{F}$ es una categoría fibrada sobre~$\cal{E}$, no siempre existe
+una escisión de~$\cal{F}$. Supongamos, por ejemplo, que
+$\Ob\cal{E}$ y $\Ob\cal{F}$ se reducen cada uno a un elemento y que los
+endomorfismos de estos elementos forman grupos $E$ y $F$,
+respectivamente, de modo que el funtor de proyección $p$ viene dado por un
+homomorfismo de grupos $p\colon F\to E$, sobreyectivo porque $p$ es un
+fibrado. Se comprueba entonces inmediatamente que el conjunto de los
+clivajes de~$\cal{F}$ sobre~$\cal{E}$ está en correspondencia biunívoca
+con el conjunto de las aplicaciones $s\colon E\to F$ tales que
+$ps=\id_E$ (es decir, el conjunto de los «sistemas de representantes» de
+las clases módulo el subgrupo $G$, núcleo del homomorfismo sobreyectivo
+$p\colon F\to E$). Un clivaje es una escisión si y solo si $s$ es un
+homomorfismo de grupos. Decir que existe una escisión significa, pues, que
+la extensión de grupos $F$ de~$E$ por~$G$ es escindida, lo cual, cuando
+$G$ es conmutativo, se expresa por la anulación de cierta clase de
+cohomología en~$\H^2(E,G)$ (donde se considera $G$ como un grupo sobre el
+que actúa~$E$).
+
+Supongamos, sin embargo, que $\cal{F}$ es una categoría fibrada
+sobre~$\cal{E}$ tal que las
+\marginpar{181}
+$\cal{F}_S$ son categorías \emph{rígidas}, es decir, el grupo de
+automorfismos de todo objeto de~$\cal{F}_S$ se reduce a la identidad. Es
+entonces fácil probar que $\cal{F}$ admite una escisión sobre~$\cal{E}$.
+En efecto, se observa primero que la cuestión de la existencia de una
+escisión no cambia si se sustituye $\cal{F}$ por una categoría
+$\cal{E}$-equivalente, lo que nos reduce en este caso a aquel en que las
+$\cal{F}_S$ son categorías rígidas \emph{y reducidas} (es decir, dos
+objetos isomorfos de~$\cal{F}_S$ son idénticos). Pero si $G$ es una
+categoría rígida y reducida, todo isomorfismo entre dos funtores $H\to G$
+(donde $H$ es una categoría cualquiera) es una identidad. Se sigue que si
+$\cal{F}$ es una categoría fibrada sobre~$\cal{E}$ cuyas categorías fibra
+son rígidas y reducidas, entonces existe un clivaje \emph{único} de
+$\cal{F}$ sobre~$\cal{E}$, que es necesariamente una escisión. Por tanto,
+$\cal{F}$ es isomorfa a la categoría definida por un funtor
+$\varphi\colon \cal{E}^\circ\to \Cat$ tal que las $\varphi(S)$ sean
+categorías rígidas y
+\ifthenelse{\boolean{orig}}
+{discretas}
+{reducidas}
+, y el funtor $\varphi$ queda determinado salvo isomorfismo.

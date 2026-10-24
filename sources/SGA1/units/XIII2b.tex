@@ -1,0 +1,249 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\subsection{}
+\label{XIII.2.1}
+Sea
+\marginpar{372}
+$X$ un $S$-esquema y sea $D$ un divisor $\geq 0$ sobre~$X$. Recordemos
+(SGA~5 II~4.2) que se dice que $D$ es \emph{de cruzamientos normales
+estrictos relativamente a}~$S$
+\index{cruzamientos normales (divisor de)|hyperpage}%
+\index{divisor de cruzamientos normales|hyperpage}%
+\index{cruzamientos normales estrictos (divisor de)|hyperpage}%
+si existe una familia finita $(f_i)_{i\in I}$ de elementos de
+$\Gamma(X,\cal{O}_X)$ tal que $D=\sum_{i\in I}\divisor(f_i)$ y se satisface
+la condición siguiente:
+
+\setcounter{subsubsection}{-1}
+\subsubsection{}
+\label{XIII.2.1.0}
+Para todo punto $x$ de~$\Supp D$, $X$ es liso sobre~$S$ en~$x$ y, si se
+denota por $I(x)$ el conjunto de los $i\in I$ tales que $f_i(x)=0$, el
+subesquema $V((f_i)_{i\in I(x)})$ es liso sobre~$S$ de codimensión
+\ifthenelse{\boolean{orig}}
+{$\mathrm{card}.\,I(x)$}
+{$\card I(x)$}
+en~$X$.
+
+Se dice que $D$ es \emph{de cruzamientos normales relativamente a}~$S$ si,
+localmente sobre~$X$ para la topología étale, es de cruzamientos normales
+estrictos.
+
+Sea $D$ un divisor de cruzamientos normales relativamente a~$S$. Pongamos
+$Y=\Supp D$, $U=X-Y$, y denotemos por $i\colon U\to X$ la inmersión
+canónica. Para todo punto geométrico $\overline{s}$ de~$S$ y para todo punto
+maximal $y$ de la fibra geométrica $Y_{\overline{s}}$, el anillo
+$R=\cal{O}_{X_{\overline{s}},y}$ es un anillo de valoración discreta.
+
+En lo que resta de este número utilizaremos la definición técnica siguiente:
+
+\begin{subdefinition}
+\label{XIII.2.1.1}
+Sea $F$ un haz de conjuntos sobre~$U$. Se dice que $F$ está
+\emph{moderadamente ramificado sobre}~$X$
+\index{moderadamente ramificado (haz)|hyperpage}%
+(\emph{a lo largo de}~$D$) \emph{relativamente a}~$S$ si, para todo punto
+geométrico $\overline{s}$ de~$S$, se satisface la condición siguiente:
+
+Para todo punto maximal $y$ de~$Y_{\overline{s}}$, la restricción de~$F$ al
+cuerpo de fracciones $K$ de
+\ifthenelse{\boolean{orig}}
+{$\cal{O}_{X_{\overline{s}}}$}
+{$\cal{O}_{X_{\overline{s}},y}$}
+es representable por el espectro de una $K$-álgebra étale $L$ moderadamente
+ramificada sobre
+\ifthenelse{\boolean{orig}}
+{$\cal{O}_{X_{\overline{s},y}}$}
+{$\cal{O}_{X_{\overline{s}},y}$}.
+\end{subdefinition}
+
+La mayoría de las veces, cuando no pueda resultar confusión, omitiremos la
+mención de~$D$ en la terminología.
+
+\begin{subdefinition}
+\label{XIII.2.1.2}
+Si
+\marginpar{373}
+$F$ es un haz de grupos sobre~$U$, moderadamente ramificado sobre~$X$
+relativamente a~$S$, se denota por
+$$
+\H^1_{\tame}(U,F)
+$$
+\label{indnot:mc}\oldindexnot{$\H^1_{\tame}(U,F)$|hyperpage}%
+el subconjunto de~$\H^1(U,F)$ formado por las clases de torsores bajo
+$F$ que están moderadamente ramificados sobre~$X$ relativamente a~$S$.
+\end{subdefinition}
+
+Sea
+$$
+\xymatrix{ U \ar[r]^i \ar[d]_g & X \ar[dl]^f \\ T}
+$$
+un diagrama conmutativo de $S$-esquemas, con $i$ como en~\Ref{XIII.2.1};
+se denota por
+$$
+\R^1_{\tame} g_* F
+$$
+\label{indnot:md}\oldindexnot{$\R^1_{\tame} g_* F$|hyperpage}%
+el haz sobre~$T$ asociado al prehaz $T'\mto\H^1_{\tame}(U',F)$, donde $T'$
+recorre los esquemas étale sobre~$T$ y $U'=U\times_TT'$;
+$\R^1_{\tame}g_*F$ es un subhaz de~$\R^1g_*F$.
+
+Obsérvese que, si $g$ es coherente, si $\overline{t}$ es un punto geométrico
+de~$T$, si $\overline{T}$ es la localización estricta de~$T$ en
+$\overline{t}$ y si $\overline{U}=U\times_T\overline{T}$, se tiene un
+isomorfismo
+\begin{equation*}
+\label{eq:XIII.2.1.2.1}
+\tag{\thesubsubsection.1} (\R^1_{\tame} g_*F)_{\overline{t}}\simeq
+\H^1_{\tame}(\overline{U},\overline{F}).
+\end{equation*}
+
+\subsubsection{}
+\label{XIII.2.1.3}
+Sea $C_t((U,X)/S)$, o simplemente $C_t$,
+\label{indnot:me}\oldindexnot{$C_t((U,X)/S)$ o $C_t$|hyperpage}%
+la categoría de los recubrimientos étale de~$U$ moderadamente ramificados
+sobre~$X$ relativamente a~$S$. Supongamos que $U$ es conexo y sea $a$ un
+punto geométrico de~$U$. Sea $\Gamma_t$ el funtor que asocia a todo
+recubrimiento étale~$U'$ de~$U$ moderadamente ramificado sobre~$X$
+relativamente a~$S$ el conjunto de los puntos geométricos de~$U'$ situados
+sobre~$a$. De~\Ref{XIII.2.0} resulta que el par $(C_t,\Gamma_t)$ satisface
+los axiomas ($G_1$) a ($G_6$) de~\Ref{V.4}. Por consiguiente, $\Gamma_t$
+es representable por un proobjeto denominado \emph{recubrimiento universal
+moderadamente ramificado
+\marginpar{374}
+de~$(U,X)$ relativamente a~$S$, punteado en~$a$}.
+\index{moderadamente ramificado (recubrimiento universal)|hyperpage}%
+\index{recubrimiento universal moderadamente ramificado|hyperpage}%
+El grupo opuesto al grupo de los $U$-automorfismos del recubrimiento universal
+moderadamente ramificado se denomina \emph{grupo fundamental moderadamente
+ramificado}
+\index{grupo fundamental moderadamente ramificado|hyperpage}%
+\index{moderadamente ramificado (grupo fundamental)|hyperpage}%
+y se denota por
+$$
+\pi_1^{\tame}((U,X)/S,a)\text{ o simplemente }\pi_1^{\tame}(U,a)\text{ o
+incluso }\pi_1^{\tame}(U).
+$$
+\label{indnot:mf}\oldindexnot{$\pi_1^{\tame}((U,X)/S,a)$ o $\pi_1^{\tame}(U,a)$ o $\pi_1^{\tame}(U)$|hyperpage}%
+Es evidentemente un cociente del grupo fundamental $\pi_1(U,a)$
+(\Ref{V.6.9}).
+
+\subsubsection{}
+\label{XIII.2.1.4}
+Sea $F$ un haz de grupos sobre~$U$, sea $P$ un torsor por la derecha bajo~$F$
+y sea $Q$ un torsor por la izquierda bajo~$F$. Supongamos que $P$ y $Q$ están
+moderadamente ramificados sobre~$X$ relativamente a~$S$. Entonces lo mismo
+sucede con~$P\stackrel{F}{\wedge}Q$. En efecto, se reduce a demostrar que,
+si $R$ es un anillo de valoración discreta de cuerpo de fracciones $K$, si
+$F$ es un esquema en grupos finito étale sobre~$K$ y si $P$ y $Q$ son dos
+torsores bajo~$F$ moderadamente ramificados sobre~$R$, entonces lo mismo
+sucede con~$P\stackrel{F}{\wedge}Q$. Ahora bien,
+$T=P\stackrel{F}{\wedge}Q$ es un cociente de~$P\times_KQ$. Si $L$, $M$ y
+$N$ designan las $K$-álgebras que representan, respectivamente, $T$, $P$ y
+$Q$, entonces $L$ es una subálgebra de $M\otimes_KN$, y de
+\Ref{XIII.2.0.3} resulta que $L$ está moderadamente ramificada sobre~$R$.
+
+De lo anterior se sigue que, si $F$ es un haz de grupos sobre~$U$ y existe
+un torsor bajo~$F$ moderadamente ramificado sobre~$X$ relativamente a~$S$,
+entonces $F$ está moderadamente ramificado sobre~$X$ relativamente a~$S$.
+En efecto, el torsor $P^{\circ}$, opuesto a~$P$, está moderadamente ramificado
+sobre~$X$ relativamente a~$S$, pues es isomorfo a~$P$ como haz de conjuntos.
+Si $\leftexp{P\mkern-4mu}{F}$ es el grupo torcido de~$F$ por~$P$,
+existe un isomorfismo
+$$
+F\simeq P^{\circ}\stackrel{\leftexp{P\mkern-4mu}{F}}{\wedge}P
+$$
+y, por consiguiente, $F$ está moderadamente ramificado sobre~$X$
+relativamente a~$S$.
+
+Como antes, se ve que, si $F\to F'$ es un morfismo de haces de grupos sobre
+$U$, moderadamente ramificados sobre~$X$ relativamente a~$S$, y si $P$ es un
+torsor bajo $F$ moderadamente ramificado sobre~$X$ relativamente
+\marginpar{375}
+a~$S$, entonces el torsor $P'$ obtenido de~$P$ por extensión del grupo
+estructural $F\to F'$ está moderadamente ramificado sobre~$X$ relativamente
+a~$S$.
+
+En particular, el morfismo canónico
+$$
+\H^1(U,F)\to\H^1(U,F')
+$$
+induce, por restricción a $\H^1_{\tame}(U,F)$, un morfismo canónico
+$$
+\H^1_{\tame}(U,F)\to\H^1_{\tame}(U,F').
+$$
+
+\subsubsection{}
+\label{XIII.2.1.5}
+Sea $S'\to S$ un morfismo, y denotemos por $U'$ (\resp $X'$, etc.) la
+imagen inversa de~$U$ (\resp $X$, etc.) sobre~$S'$. Si $F$ es un haz de
+conjuntos sobre~$U$ moderadamente ramificado sobre~$X$ relativamente a~$S$,
+de la Definición~\Ref{XIII.2.1.1} y de~\Ref{XIII.2.0.3} resulta que $F'$ está
+moderadamente ramificado sobre~$X'$ relativamente a~$S'$.
+
+Si ahora $F$ es un haz de grupos sobre~$U$, la imagen inversa sobre~$S'$ de
+un torsor bajo $F$ moderadamente ramificado sobre~$X$ relativamente a~$S$ es
+un torsor bajo $F'$ moderadamente ramificado sobre~$X'$ relativamente
+a~$S'$. En particular, se tiene un funtor canónico
+\begin{equation*}
+\label{eq:XIII.2.1.5.1}
+\tag{\thesubsubsection.1} C_t((U,X)/S)\to C_t((U',X')/S').
+\end{equation*}
+Supongamos que $U$ y $U'$ son conexos, y sean $a$ un punto geométrico de~$U$
+y $a'$ un punto geométrico de~$U'$ situado sobre~$a$; lo anterior proporciona
+un morfismo canónico
+\begin{equation*}
+\label{eq:XIII.2.1.5.2}
+\tag{\thesubsubsection.2} \pi_1^{\tame}(U',a')\to\pi_1^{\tame}(U,a).
+\end{equation*}
+
+Si $S'\to S$ es un morfismo y $h\colon T'\to T$ es la proyección canónica,
+el morfismo
+$$
+h^*(\R^1g_*F)\to\R^1g'_*F'
+$$
+se restringe a un morfismo canónico
+\begin{equation*}
+\label{eq:XIII.2.1.5.3}
+\tag{\thesubsubsection.3} h^*(\R^1_{\tame}g_*F)\to
+\R^1_{\tame}g'_*F'.
+\end{equation*}
+
+\subsubsection{}
+\label{XIII.2.1.6}
+Sea
+\marginpar{376}
+$F$ un haz de grupos sobre~$U$, moderadamente ramificado sobre~$X$
+relativamente a~$S$. Con la notación de~\Ref{XIII.2.1.2}, se tienen las
+sucesiones exactas canónicas:
+\begin{equation*}
+\label{eq:XIII.2.1.6.1}
+\tag{\thesubsubsection.1}
+\begin{array}{ccccccc}
+1 & \longrightarrow & \H^1(X,i_*F)& \longrightarrow & \H^1_{\tame}(U,F) &
+\longrightarrow & \H^0(X,\R^1_{\tame} i_*F)\\[10pt] 1 &
+\longrightarrow & \R^1f_*(i_*F) & \longrightarrow & \R^1_{\tame}g_*F &
+\longrightarrow & f_*(\R^1_{\tame}i_*F).
+\end{array}
+\end{equation*}
+
+La primera se obtiene de la sucesión exacta (SGA~4 III~3.2):
+$$
+1\to\H^1(X,i_*F)\to\H^1(U,F)\to\H^0(X,\R^1i_*F).
+$$
+En efecto, basta demostrar que la imagen de~$\H^1(X,i_*F)$ en
+$\H^1(U,F)$ está contenida de hecho en~$\H^1_{\tame}(U,F)$ y que la imagen
+de~$\H^1_{\tame}(U,F)$ en~$\H^0(X,\R^1i_*F)$ está contenida de hecho en
+$\H^0(X,\R^1_{\tame}i_*F)$. Ahora bien, la imagen inversa sobre~$U$ de un
+torsor bajo $i_*F$ es un torsor bajo $i^*i_*F$ que está evidentemente
+moderadamente ramificado sobre~$X$ relativamente a~$S$; por tanto, lo mismo
+ocurre tras la extensión del grupo estructural $i^*i_*F\to F$, lo que demuestra
+la existencia de la flecha
+$\H^1(X,i_*F)\to\H^1_{\tame}(U,F)$. El hecho de que la imagen de
+$\H^1_{\tame}(U,F)$ en~$\H^0(X,\R^1i_*F)$ esté contenida en
+$\H^0(X,\R^1_{\tame}i_*F)$ resulta inmediatamente de la definición de
+$\R^1_{\tame}i_*F$. Esto demuestra la existencia de la primera sucesión
+exacta; la segunda se deduce de ella por localización.
+\endgroup

@@ -1,0 +1,255 @@
+
+\begin{proposition}
+\label{XII.5.3}
+Sean $\othercal{X}$ un espacio analítico normal y $\othercal{Y}$ un
+subconjunto analítico cerrado tal que
+$\othercal{U}=\othercal{X}-\othercal{Y}$ sea denso en~$\othercal{X}$.
+Entonces el funtor que a cada recubrimiento finito
+normal~\eqref{XII.5.0} $\othercal{X}'$ de~$\othercal{X}$ le asigna su
+restricción a~$\othercal{U}$ es plenamente fiel.
+\end{proposition}
+
+Sean $\othercal{X}'$
+\ifthenelse{\boolean{orig}}
+{y}
+{y}%
+$\othercal{X}''$ dos recubrimientos finitos normales de~$\othercal{X}$.
+Debemos demostrar que la aplicación canónica
+$$
+\Hom_{\othercal{X}}(\othercal{X}',\othercal{X}'') \to
+\Hom_{\othercal{U}}(\othercal{X}'|\othercal{U},\othercal{X}''|\othercal{U})
+$$
+es biyectiva. Sean $u$, $v$ dos $\othercal{X}$-morfismos de
+$\othercal{X}'$ en~$\othercal{X}''$ cuyas restricciones a~$\othercal{U}$
+son iguales y demostremos que $u=v$. Los morfismos $u$ y
+\marginpar{338}
+$v$ coinciden sobre el abierto denso
+$\othercal{U}\times_{\othercal{X}}\othercal{X}'$ y, por tanto, sobre los
+espacios topológicos subyacentes. Según
+\hbox{\cite[\no 19~\S 4~cor\ptbl 5]{XII.4}}, esto demuestra que $u=v$.
+
+Sea ahora $u$ un $\othercal{U}$-morfismo de
+$\othercal{X}'|\othercal{U}$ en~$\othercal{X}''|\othercal{U}$ y
+demostremos que se prolonga a todo~$\othercal{X}'$. Podemos suponer que
+$\othercal{X}'$ es regular. En efecto, como $\othercal{X}'$ es normal,
+se puede encontrar un abierto $\othercal{V}$ de~$\othercal{X}$ cuyo
+complementario sea un subconjunto analítico de codimensión $\geq2$, tal
+que $\othercal{X}'\times_{\othercal{X}}\othercal{V}=\othercal{V}'$ sea
+regular. Sea
+$\othercal{V}''=\othercal{X}''\times_{\othercal{X}}\othercal{V}$ y
+supongamos demostrada la proposición para~$\othercal{V}$. Consideremos el
+diagrama conmutativo
+\begingroup
+\shorthandoff{>}% Spanish babel otherwise treats the Xy-pic arrow tip as a shorthand.
+$$
+\xymatrix{ \othercal{V}' \ar[dd]_{g'}\ar[rd]\ar[rrr]^{i'} && &\othercal{X}'
+\ar[dd]^{\hbox{\raise10mm\hbox{$f'$}}} \cr &\othercal{V}'' \ar[ld]_{g''\mkern-10mu}\ar[rrr]^-{i''~~} & &
+&\othercal{X}'' \ar[ld]_{f''\mkern-12mu} \cr \othercal{V} \ar[rrr]^{i} && &\othercal{X} \cr
+}
+$$
+\endgroup
+A~$u$ se le asocia un morfismo de
+$\cal{O}_{\othercal{V}}$-álgebras
+$g''_*\cal{O}_{\othercal{V}''}\to g'_*\cal{O}_{\othercal{V}'}$, de donde
+se deduce un morfismo
+$$
+i_*g''_*\cal{O}_{\othercal{V}''}\to
+i_*g'_*\cal{O}_{\othercal{V}'}\quoi.
+$$
+Teniendo en cuenta los isomorfismos
+$i'_*\cal{O}_{\othercal{V}'}\simeq\cal{O}_{\othercal{X}'}$ e
+$i''_*\cal{O}_{\othercal{V}''}\simeq\cal{O}_{\othercal{X}''}$
+\cite[\no 3~prop\ptbl 4]{XII.11}, se deduce un morfismo de
+$\cal{O}_{\othercal{X}}$-álgebras
+$$
+f''_*\cal{O}_{\othercal{X}''}\to
+f'_*\cal{O}_{\othercal{X}'}\quoi,
+$$
+de donde se obtiene el morfismo buscado
+$\othercal{X}'\to\othercal{X}''$.
+
+Supongamos
+\marginpar{339}
+en adelante que $\othercal{X}'$ es regular. Sean
+$\othercal{U}'=\othercal{U}\times_{\othercal{X}}\othercal{X}'$ y
+$\othercal{Y}'=\othercal{X}'-\othercal{U}'$. Consideremos
+$\othercal{Y}'$ como subespacio analítico reducido de~$\othercal{X}'$;
+si $\othercal{Y}'_1$ es el lugar singular de~$\othercal{Y}'$, se tiene
+$\dim\othercal{Y}'_1<\dim\othercal{Y}'$
+\cite[\no 20~D\ptbl Th\ptbl 3]{XII.4}. Por recurrencia sobre la dimensión
+de~$\othercal{Y}'$, podemos suponer, pues, que $\othercal{Y}'$ es liso.
+Como basta prolongar $u$ a un entorno abierto de cada punto de
+$\othercal{Y}'$, por el teorema de las funciones implícitas podemos
+suponer que $\othercal{X}'$ es una bola de un espacio afín
+$\othercal{E}^n$ y que $\othercal{Y}'$ es el cerrado definido por la
+anulación de las primeras $p$ funciones coordenadas
+$z_1,\dots,z_p$, con $0\leq p\leq n$.
+
+A~$u$ le asociamos una sección $s$ de
+$p\colon\othercal{X}'\times_{\othercal{X}}\othercal{X}''\to\othercal{X}'$
+sobre~$\othercal{U}'$; restringiendo $\othercal{X}'$ si es necesario,
+podemos suponer que
+$p_*(\cal{O}_{\othercal{X}'\times_{\othercal{X}}\othercal{X}''})$ está
+engendrado por elementos $x_1,\dots,x_q$ de
+$\Gamma(\othercal{X}',p_*\cal{O}_{\othercal{X}'\times_{\othercal{X}}\othercal{X}''})$;
+sean $u_1,\dots,u_q\in\Gamma(\othercal{U}',\cal{O}_{\othercal{X}'})$ las
+imágenes por~$s$ de~${x_1}|\othercal{U}',\dots,{x_q}|\othercal{U}'$.
+Decir que $s$ se prolonga a~$\othercal{X}'$ equivale a decir que
+$u_1,\dots,u_q$ se prolongan en secciones de
+$\Gamma(\othercal{X}',\cal{O}_{\othercal{X}'})$. Pero como
+\ifthenelse{\boolean{orig}}
+{$f$}
+{$p$}%
+~es finito, cada $u_i$ es una serie de Laurent en
+$z_1,\dots,z_p$, con coeficientes que son series de potencias en
+$z_{p{+}1},\dots,z_n$, y satisface relaciones de dependencia integral.
+Se deduce que $u_i$ es acotado, luego es una serie de potencias en
+$z_1,\dots,z_n$ y, por consiguiente, se prolonga a~$\othercal{X}'$.
+
+Cabe preguntarse si el funtor introducido en~\Ref{XII.5.3} es una
+equivalencia de categorías. El teorema de
+\textsc{Grauert}--\textsc{Remmert} \cite{XII.6} da una respuesta a esta
+pregunta; a continuación presentamos una demostración que utiliza la
+resolución de singularidades. También se habría podido emplear el teorema
+de \textsc{Grauert}--\textsc{Remmert} para demostrar~\Ref{XII.5.1}; así
+se hacía antes de disponer de~\cite{XII.8}.
+
+\ifthenelse{\boolean{orig}}
+{}
+{\enlargethispage{.5cm}}
+\begin{theoreme}[Teorema de \textsc{Grauert}--\textsc{Remmert}]
+\label{XII.5.4}
+Sean
+\marginpar{340}
+\index{Grauert-Remmert (teorema de)|hyperpage}%
+\index{teorema de Grauert-Remmert|hyperpage}%
+$\othercal{X}$ un espacio analítico normal y $\othercal{Y}$ un
+subconjunto analítico cerrado tal que
+$\othercal{U}=\othercal{X}-\othercal{Y}$ sea denso en~$\othercal{X}$.
+Sea $\othercal{U}'$ un recubrimiento finito normal de~$\othercal{U}$;
+supongamos que existe un subconjunto analítico cerrado de interior vacío
+$\othercal{S}$ de~$\othercal{X}$ tal que la restricción de
+$\othercal{U}'$ a~$\othercal{U}-\othercal{U}\cap\othercal{S}$ sea étale.
+Entonces existe un recubrimiento finito normal $\othercal{X}'$ de
+$\othercal{X}$ que prolonga $\othercal{U}'$, y $\othercal{X}'$ es único
+salvo isomorfismo.
+\end{theoreme}
+
+La unicidad resulta de~\Ref{XII.5.3}. El problema de prolongar
+$\othercal{U}'$ es, por tanto, local sobre~$\othercal{X}$. Podemos
+suponer que $\othercal{U}$ es regular y que $\othercal{U}'$ es étale
+sobre~$\othercal{U}$. En efecto, el conjunto de los puntos regulares de
+$\othercal{U}$ es un abierto $\othercal{V}$ denso en~$\othercal{X}$ cuyo
+complementario es un subconjunto analítico
+\hbox{\cite[\no20~D th\ptbl 2]{XII.4}}, y basta sustituir
+$\othercal{U}$ por el abierto
+$\othercal{V}-\othercal{V}\cap\othercal{S}$.
+
+Sea $y$ un punto de~$\othercal{X}-\othercal{U}$ y demostremos que se
+puede prolongar $\othercal{U}'$ a un entorno de~$y$. Restringiendo
+$\othercal{X}$ a un entorno abierto de~$y$, resulta del teorema de
+resolución de singularidades \cite{XII.8} que se pueden encontrar un
+espacio analítico regular $\othercal{X}_1$ y un morfismo proyectivo
+$f\colon\othercal{X}_1\to\othercal{X}$ que induce por restricción a
+$\othercal{U}$ un isomorfismo
+$\othercal{U}_1=f^{-1}(\othercal{U})\simeq\othercal{U}$, tales que
+$\othercal{U}_1$ sea el complementario en~$\othercal{X}_1$ de un divisor
+con cruzamientos normales. Demostremos que $\othercal{U}'$ se prolonga
+en un recubrimiento finito normal de~$\othercal{X}_1$. Como la cuestión
+es local sobre~$\othercal{X}_1$, podemos suponer que $\othercal{X}_1$ es
+una bola de un espacio afín $\othercal{E}^n$ y que
+$\othercal{X}_1-\othercal{U}_1$ está definido por la anulación de las
+primeras $p$ funciones coordenadas
+\ifthenelse{\boolean{orig}}
+{$z_1,\dots,z_q$,}
+{$z_1,\dots,z_p$,}
+con $0\leq p\leq n$. El recubrimiento étale $\othercal{U}'$ de
+$\othercal{U}_1$ es cociente de un recubrimiento de la forma
+$$
+\othercal{U}_2=\othercal{U}_1[T_1,\dots,T_p]/\left(T_1^{n_1}-z_1,\dots,
+T_p^{n_p}-z_p\right)
+$$
+por un subgrupo $H$ del grupo de Galois de~$\othercal{U}_2$. El
+recubrimiento $\othercal{U}_2$ se prolonga
+\marginpar{341}
+en el recubrimiento
+$$
+\othercal{X}_2=\othercal{X}_1[T_1,\dots,T_p]/\left(T_1^{n_1}-z_1,\dots,
+T_p^{n_p}-z_p\right)
+$$
+de~$\othercal{X}_1$, sobre el cual actúa $H$, y
+$\othercal{X}_2/H$ prolonga $\othercal{U}'$ a~$\othercal{X}_1$.
+
+Denotemos por~$\othercal{X}_1'$ el recubrimiento finito normal de
+$\othercal{X}_1$ que prolonga $\othercal{U}'$ y por~$\othercal{F}_1$ la
+$\cal{O}_{\othercal{X}_1}$-álgebra coherente
+\ifthenelse{\boolean{orig}}
+{definida por~$\othercal{F}_1$}
+{que define~$\othercal{X}_1'$}%
+. Según el teorema de finitud de
+\textsc{Grauert}--\textsc{Remmert}
+\hbox{\cite[\no15 th\ptbl 1.1]{XII.4}}, $f_*\othercal{F}_1$ es una
+$\cal{O}_{\othercal{X}}$-álgebra coherente. Le corresponde, pues, un
+recubrimiento finito $\othercal{X}'$ de~$\othercal{X}$, que además es
+normal porque $\othercal{X}_1'$ lo es, y $\othercal{X}'$ es la
+prolongación buscada de~$\othercal{U}'$.
+
+\begin{remarque}
+\label{XII.5.5}
+En el enunciado~\Ref{XII.5.4} no se puede suprimir la hipótesis sobre el
+lugar de los puntos en los que el morfismo
+$\othercal{U}'\to\othercal{U}$ no es étale. Sea, por ejemplo,
+$\othercal{X}$ el disco unidad del plano complejo, $\othercal{U}$ el
+complementario del origen en~$\othercal{X}$ y
+$\othercal{U}'=\othercal{U}[T]/(T^2-\sin 1/z)$, donde $z$ es la función
+coordenada sobre~$\othercal{X}$. Entonces $\othercal{U}'$ es un
+recubrimiento finito normal de~$\othercal{U}$ que no se prolonga a
+$\othercal{X}$. Supongamos, en efecto, que $\othercal{U}'$ se prolonga
+en un recubrimiento finito $\othercal{X}'$ de~$\othercal{X}$; el lugar de
+los puntos de~$\othercal{X}$ en los que el morfismo
+$\othercal{X}'\to\othercal{X}$ no es étale sería entonces un cerrado
+analítico que contendría todos los puntos $z$ tales que
+$\sin 1/z=0$, lo cual es absurdo.
+
+Sin embargo, se puede suprimir la hipótesis sobre el lugar singular del
+morfismo $\othercal{U}'\to\othercal{U}$ cuando
+$\codim(\othercal{X}-\othercal{U},\othercal{X})\geq2$. Podemos suponer,
+en efecto, que $\othercal{U}$ es regular. El lugar de los puntos de
+$\othercal{U}$ en los que $\othercal{U}'\to\othercal{U}$ no es étale es
+un divisor de~$\othercal{U}$, y del teorema de
+\textsc{Remmert}--\textsc{Stein} \cite[th\ptbl 3]{XII.9} resulta que es
+\marginpar{342}
+la traza sobre~$\othercal{U}$ de un divisor de~$\othercal{X}$. Ahora
+bien, en este caso, si $\othercal{A}$ es una
+$\cal{O}_{\othercal{U}}$-álgebra coherente tal que
+$\othercal{U}'=\Spec\an(\othercal{A})$ y si
+$i:\othercal{U}\to\othercal{X}$ es el morfismo canónico, basta
+tomar $\othercal{X}'=\Spec\an(i_*\othercal{A})$; se sabe, en efecto, que
+$i_*\othercal{A}$ es
+\ifthenelse{\boolean{orig}}
+{coherentes}
+{coherente}
+\cite[\no 1 th\ptbl 1]{XII.11}.
+\end{remarque}
+
+\ifthenelse{\boolean{orig}}
+{}
+{\begin{remarqueMR}
+\label{XII.5.6}
+Existen grupos no triviales finitamente presentados $G$ que no poseen
+subgrupos de índice finito distintos de~$G$, por ejemplo el grupo de
+G\ptbl Higman (\cf J-P\ptbl Serre, \emph{Arbres et amalgames}, Astérisque
+N$^\circ$46, prop\ptbl 6, cap\ptbl I, \S 1). Por consiguiente, si un grupo
+de este tipo se realiza como grupo fundamental topológico de un esquema
+$V$ sobre~$\CC$, digamos liso y proyectivo, el espacio topológico
+$V_{\mathrm{top}}$ subyacente a~$V$ no es simplemente conexo, pero $V$
+es algebraicamente simplemente conexo. En la actualidad no se conoce
+ningún $V$ de este tipo. Señalemos, no obstante, que D\ptbl Toledo ha
+construido esquemas lisos y proyectivos $V$ sobre~$\CC$ cuyo grupo
+fundamental topológico no es Hausdorff para la topología de los
+subgrupos de índice finito (el morfismo natural
+$\pi_1(V_{\mathrm{top}})\to\pi_1(V_{\alg})$ no es inyectivo).
+[D\ptbl Toledo, Projective varieties with non-residually finite
+fundamental group, Publ.\ Math.\ IHES \textbf{77} (1993),
+p\ptbl 103--119].
+\end{remarqueMR}}

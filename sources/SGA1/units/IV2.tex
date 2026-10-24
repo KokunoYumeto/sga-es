@@ -1,0 +1,158 @@
+
+\section{Módulos fielmente planos}
+\label{IV.2}
+
+Un funtor~$F$ de una categoría en otra se dice 
+\emph{fiel} si, para cualesquiera~$X$, $Y$, la aplicación~$\Hom(X,Y)\to
+\Hom(F(X),F(Y))$ es inyectiva. Si se trata de un funtor aditivo entre
+categorías aditivas, equivale a decir que~$F(u)=0$ implica~$u=0$, y esto
+implica que~$F(X)=0$ implica~$X=0$. Para que~$F$ sea \emph{fiel y exacto},
+es necesario y suficiente que se cumpla la condición siguiente: para toda
+sucesión~$M'\to M\to M''$ de morfismos en~$\cal{C}$, la sucesión transformada
+\ifthenelse{\boolean{orig}}{$F(M)\to F(M')\to F(M'')$}
+{$F(M')\to F(M)\to F(M'')$}
+es exacta \emph{si y solo si} lo es la anterior. O, lo que es lo mismo:
+$F$ es exacto, y~$F(X)=0$ implica~$X=0$. (N.B.: para poder hablar de
+exactitud hay que suponer que las categorías consideradas son
+\emph{abelianas}). Supongamos dada una familia~$(M_i)$ de objetos no nulos
+de~$\cal{C}$ tales que todo objeto no nulo de~$\cal{C}$ tenga un subobjeto
+que admita un cociente isomorfo a algún~$M_i$. Entonces, que~$F$ sea fiel y
+exacto equivale a que~$F$ sea exacto y~$F(M_i)\neq0$ para todo~$i$. Si
+$\cal{C}$ es la categoría de los módulos sobre un anillo~$A$, puede tomarse,
+por ejemplo, como~$(M_i)$ la familia de los~$A/\goth{m}$, donde~$\goth{m}$
+recorre los ideales maximales de~$A$. (En efecto, todo módulo no nulo admite
+un submódulo cíclico no nulo, por tanto isomorfo a un~$A/I$, con~$I$ un
+ideal distinto de~$A$, el cual, por Krull, admite un cociente~$A/\goth{m}$).
+De estos sorites se deduce, en particular:
+
+\begin{proposition}
+\label{IV.2.1}
+Sea~$M$ un $A$-módulo. Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] El funtor~$M\otimes_A$ es fiel y exacto.
+\item[(i~bis)]
+\marginpar{91}
+$M$ es plano, y~$M\otimes_A N=0$ implica~$N=0$.
+\item[(i~ter)] $M$ es plano, y~$M\otimes_A A/\goth{m}\neq0$ para todo ideal
+maximal~$\goth{m}$ de~$A$.
+\item[(ii)] Para toda sucesión de homomorfismos~$N'\to N\to N''$, la
+sucesión tensorizada por~$M$ es exacta si y solo si lo es la sucesión
+inicial.
+\end{enumerate}
+\end{proposition}
+
+Se dice entonces que~$M$ es un $A$-módulo \emph{fielmente plano}.
+\index{fielmente plano (módulo)|hyperpage}%
+\index{plano, fielmente plano (módulo)|hyperpage}%
+En particular, si~$M$ es fielmente plano, entonces~$N\to N'$ es un
+monomorfismo (epimorfismo, isomorfismo) si y solo si lo es el homomorfismo
+tensorizado por~$M$. Un módulo fielmente plano es \emph{fiel}, puesto que la
+multiplicación por~$f$ en~$M$ se obtiene tensorizando por~$M$ la
+multiplicación por~$f$ en~$A$.
+
+\ifthenelse{\boolean{orig}}
+{Como en~\Ref{IV.1}, se obtienen}
+{Como en~\Ref{IV.1}, se obtienen}
+las propiedades habituales de transitividad: el producto tensorial de dos
+módulos fielmente planos es fielmente plano; si~$M$ es fielmente plano
+sobre~$A$, $M\otimes_A B$ es fielmente plano sobre~$B$ para toda extensión
+de la base~$A\to B$; si~$B$ es una $A$-álgebra fielmente plana sobre~$A$ y
+$M$ es un $B$-módulo fielmente plano, entonces~$M$ es un $A$-módulo
+fielmente plano.
+
+\begin{corollaire}
+\label{IV.2.2}
+Sean~$A\to B$ un homomorfismo local de anillos locales y~$M$ un $B$-módulo
+de tipo finito. Para que~$M$ sea fielmente plano sobre~$A$, es necesario y
+suficiente que sea plano sobre~$A$ y no nulo.
+\end{corollaire}
+
+Esto resulta del criterio~(i~ter) y de Nakayama. En particular,
+\emph{para que~$B$ sea plano sobre~$A$, es necesario y suficiente que sea
+fielmente plano sobre~$A$}.
+
+\begin{proposition}
+\label{IV.2.3}
+Sean~$A\to B$ un homomorfismo de anillos y~$M$ un $B$-módulo fielmente plano
+sobre~$A$. Para todo ideal primo~$\goth{p}$ de~$A$ existe un ideal
+primo~$\goth{q}$ de~$B$ cuya contracción a~$A$ es~$\goth{p}$.
+\end{proposition}
+
+Al pasar a cocientes por~$\goth{p}$, se reduce al caso~$\goth{p}=0$.
+Localizando en el ideal primo~$0$, se reduce al caso en que~$A$ es un
+cuerpo. Pero, como~$M$ es fielmente plano sobre~$A$, no es nulo; con mayor
+razón, $B\neq0$, de modo que~$B$ tiene un ideal primo, cuya contracción solo
+puede ser el único ideal primo de~$A$. Geométricamente, puede decirse que la
+existencia de un haz cuasicoherente~$\cal{F}$ sobre~$X=\Spec(B)$ que sea
+«fielmente plano» sobre~$A$ implica que~$X\to Y=\Spec(A)$ es
+\emph{sobreyectivo}.
+
+\begin{corollaire}
+\label{IV.2.4}
+Supongamos que~$M$ es plano sobre~$A$, de tipo finito sobre~$B$ y
+\ifthenelse{\boolean{orig}}{sup.~$M=\Spec(B)$}{$\Supp M=\Spec(B)$}
+(\ie $M_{\goth{q}}\neq0$ para todo ideal primo~$\goth{q}$ de~$B$). Entonces,
+los ideales primos~$\goth{q}$ de~$B$ que contienen~$\goth{p}B$ y son
+minimales entre ellos se contraen a~$\goth{p}$.
+\end{corollaire}
+
+\marginpar{92}
+Se reduce de nuevo al caso~$\goth{p}=0$ (pues todas las hipótesis se
+conservan al pasar a cocientes), y por tanto~$A$ es íntegro. Se reduce así al
+enunciado siguiente:
+
+\begin{corollaire}
+\label{IV.2.5}
+Si~$M$ es como antes, todo ideal primo minimal~$\goth{q}$ de~$B$ se contrae
+a un ideal primo~$\goth{p}$ de~$A$ que es minimal.
+\end{corollaire}
+
+En efecto, localizando en~$\goth{p}$ y~$\goth{q}$, se reduce a demostrar que,
+si~$A$ y~$B$ son locales, el homomorfismo~$A\to B$ es local, $M$ es un
+$B$-módulo no nulo plano sobre~$A$ y~$B$ tiene dimensión~$0$, entonces~$A$
+tiene dimensión~$0$. Por~\Ref{IV.2.2} y~\Ref{IV.2.3}, se concluye que todo
+ideal primo de~$A$ es la contracción de un ideal primo de~$B$, por tanto del
+ideal maximal
+\ifthenelse{\boolean{orig}}{de~$A$,}{de~$B$,}
+y por consiguiente es el ideal maximal, como se quería. Geométricamente,
+\Ref{IV.2.5} significa que toda componente irreducible de
+\ifthenelse{\boolean{orig}}{$\overline{X}=\Spec(B)$}{$X=\Spec(B)$}
+domina alguna componente irreducible de~$Y=\Spec(A)$ (si existe un haz
+cuasicoherente de tipo finito sobre~$X$, con soporte~$X$, y plano sobre~$Y$).
+
+Obsérvese que en~\Ref{IV.2.4} no fue necesario suponer que~$M$ fuera
+fielmente plano sobre~$A$, pero entonces nada garantiza la existencia de un
+ideal primo que contenga~$\goth{p}B$ (y, por tanto, de uno minimal entre
+ellos).
+
+\begin{proposition}
+\label{IV.2.6}
+Sea~$i\colon A\to B$ un homomorfismo de anillos. Son equivalentes las
+condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $B$ es un $A$-módulo fielmente plano.
+\item[(ii)] $B$ es plano sobre~$A$, y~$\Spec(B)\to\Spec(A)$ es sobreyectivo.
+\item[(ii~bis)] $B$ es plano sobre~$A$, y
+\ifthenelse{\boolean{orig}}
+{todo ideal maximal es la contracción de un ideal de~$B$.}
+{todo ideal maximal de~$A$ es la contracción de un ideal de~$B$.}
+\item[(iii)] $i$ es inyectivo y~$\Coker i$ es un $A$-módulo plano.
+\item[(iv)] El funtor~$M\mapsto M_{(B)}=M\otimes_A B$ sobre los $A$-módulos
+es exacto, y el homomorfismo funtorial canónico~$M\to M_{(B)}$ es inyectivo.
+\item[(iv~bis)] Para todo ideal~$I$ de~$A$, $I\otimes_A B\to IB$ es un
+isomorfismo, y la imagen inversa de~$IB$ en~$A$ es igual a~$I$.
+\end{enumerate}
+\end{proposition}
+
+Se tiene (i)$\To$(ii) por~\Ref{IV.2.3}; (ii)$\To$(ii~bis) es trivial, y
+(ii~bis)$\To$(i) por el criterio~(i~ter) de~\Ref{IV.2.1}. Se tiene
+(iii)$\To$(iv) por~\Ref{IV.1.1}; (iv)$\To$(iv~bis) trivialmente (tomando
+$M=A/I$ en la segunda condición
+\ifthenelse{\boolean{orig}}{(iv~bis)}{(iv)}),
+y (iv~bis)$\To$(i) en virtud del criterio de planitud por ideales visto al
+comienzo de~\Ref{IV.1} y del criterio~\Ref{IV.2.1}~(i~ter). Por último,
+(iv)$\To$(iii) por un recíproco fácil de~\Ref{IV.1.1}, y (i)$\To$(iv) porque
+\marginpar{93}
+si~$N$ es el núcleo de~$M\to M\otimes_A B=T(M)$, entonces (como~$T$ es
+exacto) $N\to T(N)$ es nulo, de donde~$T(N)=N\otimes_A B=0$, y por tanto
+$N=0$, como se quería.

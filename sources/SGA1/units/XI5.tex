@@ -1,0 +1,177 @@
+
+\section{Casos particulares de fibrados principales}
+\label{XI.5}
+
+Supongamos ahora que~$S$ es conexo y está dotado de un punto
+geométrico~$a$, de donde se obtiene un grupo fundamental~$\pi_1(S,a)$ que
+permite clasificar los recubrimientos étale de~$S$: la categoría de los
+recubrimientos étale de~$S$ es equivalente a la categoría de los conjuntos
+finitos sobre los que~$\pi_1$ actúa continuamente. Se sigue que un esquema
+en grupos~$G$, finito y étale sobre~$S$, está determinado esencialmente por
+un grupo finito ordinario~$\cal{G}$, sobre el cual~$\pi_1$ actúa continuamente
+por automorfismos de grupo. Un recubrimiento étale~$P$ de~$S$, sobre el que
+$G$ actúa por la derecha, está determinado esencialmente por un conjunto
+finito~$\cal{P}$ sobre el que~$\pi_1$ actúa continuamente (por la izquierda),
+y sobre el que~$\cal{G}$ actúa por la derecha de manera compatible con las
+acciones de~$\pi_1$:
+$$
+s(p\cdot g)=(sp)\cdot(sg)\qquad \text{para }s\in\pi_1,\
+p\in\cal{P},\ g\in\cal{G}.
+$$
+Se comprueba que~$P$ es un fibrado homogéneo principal en el sentido
+de~\Ref{XI.4.1} si y solo si~$\cal{P}$ es un conjunto homogéneo principal
+bajo~$\cal{G}$ (úsese, por ejemplo, el criterio~\Ref{XI.4.2}). En otros
+términos, \emph{la categoría de los fibrados homogéneos principales sobre~$S$
+de grupo~$G$ es equivalente a la categoría de los fibrados homogéneos
+principales de grupo
+\ifthenelse{\boolean{orig}}
+{$G$}
+{$\cal G$}
+en la categoría de los conjuntos finitos sobre los que~$\pi_1$ actúa
+continuamente.} Se deduce, en particular, una biyección canónica, funtorial
+en~$G$:
+\begin{equation*}
+\label{eq:XI.5.etoile}
+\tag{$*$} \H^1(S,G)\isomto \H^1(\pi_1,\cal{G})\quoi,
+\end{equation*}
+donde
+\marginpar{300}
+el segundo miembro denota el conjunto de las clases, salvo isomorfismo, de
+los fibrados homogéneos principales bajo~$\cal{G}$ en la categoría de los
+conjuntos finitos sobre los que~$\pi_1$ actúa (por lo demás, no hace falta
+precisar: continuamente), conjunto que, como es bien sabido, se explicita
+como el conjunto cociente del conjunto
+\ifthenelse{\boolean{orig}}
+{$Z^1(\pi_1,G)$}
+{$Z^1(\pi_1,\cal G)$}
+de los $1$-cociclos~$\varphi:\pi_1\to \cal{G}$ (que satisfacen
+$\varphi(1)=1$, $\varphi(st)=\varphi(s)(s.\varphi(t))$) por el grupo~$\cal{G}$,
+que actúa sobre él de manera
+\ifthenelse{\boolean{orig}}
+{natural).}
+{natural.}
+
+\label{page-300}
+Un caso importante es aquel en que~$\pi_1$ actúa trivialmente sobre~$\cal{G}$,
+\ie cuando~$G$ es un recubrimiento completamente descompuesto de~$S$,
+isomorfo a la suma de~$\cal{G}$ ejemplares de~$S$; se escribe entonces también
+$\H^1(S,\cal{G})$ en lugar de~$\H^1(S,G)$, y este conjunto está en
+correspondencia biyectiva~\eqref{eq:XI.5.etoile} con
+$\H^1(\pi_1,\cal G)= \Hom(\pi_1,\cal{G})/$automorfismos interiores
+de~$\cal{G}$. Obsérvese, además, que en este caso un fibrado homogéneo
+principal sobre~$S$ de grupo~$G$ no es sino un \emph{recubrimiento principal}
+de~$S$ con grupo~$\cal{G}$ (\Ref{V.2.7}), y la correspondencia biyectiva
+precedente es la que se deduce de la correspondencia entre recubrimientos
+principales de~$S$ con grupo~$\cal{G}$, \emph{punteados} sobre~$a$, y los
+homomorfismos continuos de~$\pi_1(S,a)$ en~$\cal{G}$
+(\Ref{V}, al final de~\Ref{V.5}).
+
+El interés de relacionar la teoría de los recubrimientos étale con la de los
+fibrados principales (ya implícita en \textsc{A\ptbl\ Weil},
+\emph{Generalización de las funciones abelianas}, y explicitada por
+\textsc{S\ptbl\ Lang} en su teoría geométrica del cuerpo de clases, \cf
+Serre~\cite{XI.5}) proviene del hecho de que todo $S$-grupo finito y étale
+sobre~$S$ puede sumergirse en un $S$-grupo~$H$, afín y liso sobre~$S$, de
+fibras conexas,
+\ifthenelse{\boolean{orig}}
+{conmutativo cuando~$G$ lo es de modo que}
+{conmutativo cuando~$G$ lo es; así,}
+mediante la sucesión
+exacta~\Ref{XI.4.5} (y, eventualmente, sus variantes no conmutativas), la
+clasificación «discreta» de los recubrimientos principales de grupo~$G$ puede
+estudiarse con ayuda de la clasificación «continua» de los fibrados
+principales de grupo~$H$, y también recíprocamente. Para la idea de la
+construcción general de la inmersión de~$G$ en~$H$ (al parecer bastante poco
+utilizada en la práctica), véase~\cite[VI~2.8]{XI.5}. Nos limitaremos a
+desarrollar en el número siguiente dos casos particulares importantes, por
+lo demás clásicos. Necesitaremos allí un resultado auxiliar:
+
+\begin{proposition}
+\label{XI.5.1}
+Sea
+\marginpar{301}
+$S$ un preesquema y~$G$ un $S$-grupo isomorfo a~$\Gl(n)_S$ (por ejemplo,
+$\GG_{m\,S}$) o a~$\GG_{a\,S}$; entonces todo fibrado homogéneo principal
+bajo~$G$ es localmente trivial.
+\end{proposition}
+
+Precisemos que~$\Gl(n)_S$ ($n$ entero~$\geq 0$) denota el $S$-grupo que
+representa el funtor contravariante~$T\mto
+\Gl(n,\Gamma(T,\cal{O}_T))$ de la variable $S$-preesquema~$T$; en particular,
+$\GG_{m\,S}$ («grupo multiplicativo sobre~$S$») representa el funtor
+contravariante~$T\mto \Gamma(T,\cal{O}_T^*)$ y, por tanto, como preesquema
+sobre~$S$, es isomorfo a~$\Spec {\cal{O}_S[t,t^{-1}]}$, donde~$t$ es una
+indeterminada. Del mismo modo, $\GG_{a\,S}$ representa el funtor
+contravariante~$T\mto \Gamma(T,\cal{O}_T)$ y es, por tanto, isomorfo como
+$S$-preesquema a~$\Spec(\cal{O}_S[t])$, donde~$t$ es una indeterminada.
+Obsérvese que, mediante una reducción por etapas, \Ref{XI.5.1} recupera el
+resultado de
+\ifthenelse{\boolean{orig}}
+{trivialidad local}
+{trivialidad local}
+de Rosenlicht, relativo al caso en que~$G$ admite una «serie de composición»
+cuyos factores sucesivos son grupos del tipo considerado aquí. (Para un
+estudio más fino de las cuestiones de
+\ifthenelse{\boolean{orig}}
+{trivialidad local}
+{trivialidad local}
+de los fibrados homogéneos principales, \cf
+\cite{XI.7}~y~\cite{XI.3}).
+
+La primera afirmación se demuestra observando que
+$G(T)=\Aut(\cal{O}_T^n)$ y que los morfismos~$S'\to S$ que intervienen
+en~\Ref{XI.4.1} (\ie que son fielmente planos y cuasicompactos) son morfismos
+de descenso efectivo para la categoría fibrada de los
+\ifthenelse{\boolean{orig}}
+{módulos}
+{módulos}
+localmente
+isomorfos a~$\cal{O}_T^n$, \ie localmente libres de rango~$n$
+(\Ref{VIII.1.12}). La segunda se demuestra de manera análoga,
+observando que en este caso se tiene~$G(T)=\Aut(\cal{E}_T)$, donde
+$\cal{E}_T$ es la \emph{extensión} trivial de~$\cal{O}_T$ por~$\cal{O}_T$ (y
+donde, naturalmente, los automorfismos deben respetar la estructura de
+extensión), y que los morfismos~$S'\to S$ que intervienen en~\Ref{XI.4.1}
+son morfismos de descenso efectivo para la categoría fibrada de las
+extensiones de~$\cal{O}_T$ por~$\cal{O}_T$ (como se deduce fácilmente de
+\Ref{VIII.1.1}), y que tales extensiones son automáticamente localmente
+triviales.
+
+\begin{remarque}
+\label{XI.5.2}
+Obsérvese que el mismo tipo de demostración se aplica al grupo
+simpléctico~$\Symp(2n)_S$, teniendo en cuenta que una forma alternada sobre un
+módulo localmente isomorfo a~$\cal{O}_S^{2n}$ que sea «no degenerada», \ie que
+defina un isomorfismo de este módulo con su dual, es localmente isomorfa a la
+forma estándar. En cambio, el resultado para el grupo ortogonal es falso, ya
+cuando~$S$ es el espectro de un cuerpo, pues puede haber formas
+\marginpar{302}
+cuadráticas sobre un cuerpo que no sean isomorfas a la forma estándar. Por
+otra parte, se demuestra esencialmente en~\cite{XI.3} que los grupos~$\Gl$,
+$\Symp$, $\GG_a$ y los que se descomponen por etapas en tales grupos son, con
+pequeñas salvedades, los únicos para los cuales se tiene un resultado de
+trivialidad local del tipo considerado aquí.
+\end{remarque}
+
+\begin{corollaire}
+\label{XI.5.3}
+Se tienen biyecciones canónicas
+$$
+\H^1(S,\GL(n)_S)\isomfrom \H^1(S,\GL(n,\cal{O}_S))\quoi,
+$$
+en particular
+$$
+\H^1(S,\GG_{m\,S})\isomfrom \H^1(S,\cal{O}_S^*)\quoi,
+$$
+y
+$$
+\H^1(S,\GG_{a\,S})\isomfrom \H^1(S,\cal{O}_S)\quoi,
+$$
+donde los segundos miembros denotan cohomologías del espacio topológico~$S$
+con coeficientes en haces ordinarios.
+\end{corollaire}
+
+En particular, $\H^1(S,\GL(n)_S)$ se identifica con el conjunto de las
+clases, salvo isomorfismo, de módulos localmente libres de rango~$n$ sobre~$S$,
+y~$\H^1(S,\GG_{a\,S})$ se identifica con el conjunto de las clases de
+extensiones del módulo~$\cal{O}_S$ por sí mismo.

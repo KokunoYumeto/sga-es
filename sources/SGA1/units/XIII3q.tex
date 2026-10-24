@@ -1,0 +1,85 @@
+
+\setcounter{subsection}{4}
+\subsection{}
+\label{XIII.4.5}
+Retomemos las notaciones y las hipótesis de~\Ref{XIII.4.3}. Si
+$\bar{s}$ es un punto geométrico de~$S$ y $a=g(\bar{s})$,
+la sección~$g$ permite definir un morfismo
+$$
+w\colon \pi_1(S,a)\to \pi_1'(X,a),
+$$
+de modo que $\pi_1'(X,a)$ se identifica con el producto semidirecto de
+$\pi_1(S,a)$ por
+\ifthenelse{\boolean{orig}}
+{$\pi_1(X_{\bar{s}},a)$}
+{$\pi_1^\LL(X_{\bar{s}},a)$}.
+El grupo profinito $\pi_1(S,a)$ actúa, por tanto, sobre
+\ifthenelse{\boolean{orig}}
+{$\pi_1(X_{\bar{s}},a)$}
+{$\pi_1^\LL(X_{\bar{s}},a)$}.
+Como $\pi_1^\LL(X_{\bar{s}},a)$ es límite proyectivo estricto de grupos
+invariantes bajo la acción de~$\pi_1(S,a)$, dar
+$\pi_1^\LL(X_{\bar{s}},a)$ provisto de esta acción equivale
+a dar un sistema proyectivo estricto de esquemas
+en grupos finitos y étales sobre~$S$, que se denota por
+$$
+\pi_1^\LL(X/S,g,\bar{s})\quad\text{o
+simplemente}\quad\pi_1^\LL(X/S,g).
+$$
+\label{indnot:mk}\oldindexnot{$\pi_1^\LL(X/S,g,\bar{s})$ o $\pi_1^\LL(X/S,g)$|hyperpage}%
+
+Se tienen entonces las propiedades siguientes:
+\setcounter{subsubsection}{0}
+
+\subsubsection{}
+\label{XIII.4.5.1}
+Para todo esquema en grupos finito y étale~$G$ sobre~$S$, cuyas
+fibras son~$\LL$-grupos, el conjunto~$E$ de las clases de torsores
+$P$ bajo la imagen inversa~$G_X$ de~$G$ sobre~$X$, provistos de un
+isomorfismo $g^*P\isomto G$, es canónicamente isomorfo al conjunto
+$$
+\Hom_S(\pi_1^\LL(X/S,g,\bar{s}),G) \quad\text{módulo automorfismos
+interiores de~$G$.}
+$$
+
+\subsubsection{}
+\label{XIII.4.5.2}
+Para todo esquema en grupos finito y étale~$G$ sobre~$S$ cuyas
+fibras son~$\LL$-grupos, el haz $\R^1f_*G_X$ es
+canónicamente isomorfo al haz asociado al prehaz
+$$
+S'\mto \Hom_{S'}(\pi_1^\LL(X/S,g,\bar{s}),G)\
+\text{módulo automorfismos interiores de~$G$.}
+$$
+($S'$ designa un esquema étale sobre~$S$).
+
+\subsubsection{}
+\label{XIII.4.5.3}
+Sean
+\marginpar{421}
+$S'$ un $S$-esquema conexo, $\bar{s}$ un punto geométrico de~$S'$, y~$X'$,
+$g'$ las imágenes inversas respectivas de~$X,g$ sobre~$S'$. Entonces,
+$\pi_1^\LL(X'/S',g',\bar{s})$ es canónicamente isomorfo a
+la imagen inversa de~$\pi_1^\LL(X/S,g,\bar{s})$ sobre~$S'$. Para todo
+punto geométrico~$\xi$ de~$S$, la fibra
+$\pi_1^\LL(X/S,g,\bar{s})_\xi$ es isomorfa a~$\pi_1^\LL(X_\xi)$.
+
+Dar~$G$ equivale, en efecto, a dar un~$\LL$-grupo abstracto~$\mathbf{G}$
+sobre el cual actúa~$\pi_1(S,a)$, de donde resulta una acción de
+$\pi_1'(X,a)$ sobre~$\mathbf{G}$. El isomorfismo definido
+en~\Ref{XIII.4.5.1} se obtiene entonces, por restricción al subconjunto
+$E$, a partir del morfismo canónico
+\[
+\H^1(\pi_1'(X,a),\mathbf{G})\to
+\H^1(\pi_1^\LL(X_{\bar{s}},a),\mathbf{G}) =
+\Hom(\pi_1^\LL(X_{\bar{s}},a),\mathbf{G})/
+\ifthenelse{\boolean{orig}}
+{\text{aut. int. }G}
+{\text{aut. int. }\mathbf{G}},
+\]
+y este morfismo envía biyectivamente~$E$ sobre el subconjunto de los
+morfismos de~$\pi_1^\LL(X_{\bar{s}},a)$ a~$\mathbf{G}$ compatibles con
+la acción de~$\pi_1(S,a)$. La afirmación~\Ref{XIII.4.5.3} resulta
+entonces de la definición de~$\pi_1^\LL(X/S,g,\bar{s})$, habida cuenta
+de la sucesión exacta de homotopía~\eqref{eq:XIII.4.3.1}, y
+\Ref{XIII.4.5.2} se deduce de~\Ref{XIII.4.5.1} y~\Ref{XIII.4.5.3}.

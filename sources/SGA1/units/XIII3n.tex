@@ -1,0 +1,80 @@
+
+\begin{lemme}
+\label{XIII.4.2}
+Sean $S$ un esquema conexo, $f\colon X\to S$ un morfismo localmente
+$0$-acíclico y $0$-acíclico, y~$\LL$ un conjunto de números primos. Supongamos
+\marginpar{417}
+que, para todo haz constante finito de~$\LL$-grupos~$F$ sobre~$X$,
+$(F,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant1$, y que, para todo recubrimiento étale~$S'$ de~$S$ y para todo
+recubrimiento étale~$E$ de~$X'$, cociente de un recubrimiento galoisiano
+cuyo grupo es un~$\LL$-grupo, $f'_*E$ es constructible. Entonces, si~$\bar{s}$
+es un punto geométrico de~$S$ y~$a$ un punto geométrico de la fibra
+$X_{\bar{s}}$, la sucesión de homomorfismos de grupos
+$$
+\pi_1^{\LL}(X_{\bar{s}},a)\to\pi_1'(X,a)\to\pi_1(S,a)\to1
+$$
+es exacta.
+\end{lemme}
+
+Se satisfacen las hipótesis de~\Ref{XIII.4.1}. En efecto, de
+\Ref{XIII.1.13}~3) se sigue que, para todo esquema~$S'$ étale sobre~$S$ y
+para todo recubrimiento étale~$E$ de~$X'$, cociente de un recubrimiento
+galoisiano cuyo grupo es un~$\LL$-grupo, $(E,f')$ es cohomológicamente propio
+relativamente a~$S'$ en dimensión $\leqslant 0$.
+
+\begin{proposition}
+\label{XIII.4.3}
+\setcounter{subsection}{\value{proposition}}% sincroniza la etiqueta visible XIII.4.3.1
+Sean $S$ un esquema conexo, $\LL$ un conjunto de números primos,
+$f\colon X\to S$ un morfismo $0$-acíclico y localmente $1$-asférico
+para~$\LL$ \textup{(SGA~4 XV~1.11)}, y~$g\colon S\to X$ una sección de~$f$.
+Sean~$\bar{s}$ un punto geométrico de~$S$ y~$a$ un punto geométrico de la
+fibra~$X_{\bar{s}}$. Supongamos que, para todo haz de
+\ifthenelse{\boolean{orig}}
+{$\LL$-grupo}
+{$\LL$-grupos}
+constante~$F$, $(F,f)$ es cohomológicamente propio en dimensión
+$\leqslant1$, que la imagen directa por~$f$ del stack de los torsores bajo
+$F$ es un stack $1$-constructible \eqref{XIII.0} y que,
+\ifthenelse{\boolean{orig}}
+{para todo recubrimiento étale~$E$ de~$X'$}
+{para todo recubrimiento étale~$S'$ de~$S$ y para todo
+recubrimiento étale~$E$ de~$X'$}, cociente de un recubrimiento galoisiano
+cuyo grupo es un~$\LL$-grupo, $f'_*E$ es constructible. Entonces, la sucesión
+de homomorfismos de grupos
+\begin{equation*}
+\label{eq:XIII.4.3.1}
+\tag{\thesubsection.1}
+1\to\pi_1^{\LL}(X_{\bar{s}},a)\lto{u} \pi_1'(X,a)\lto{v}\pi_1(S,a)\to1
+\end{equation*}
+es exacta.
+\end{proposition}
+
+Habida cuenta de~\Ref{XIII.4.2}, basta demostrar la inyectividad del
+morfismo~$u$, es decir, probar que, para todo recubrimiento principal
+$\overline{Z}$ de~$X_{\bar{s}}$
+\marginpar{418}
+cuyo grupo es un~$\LL$-grupo~$C$, existen un recubrimiento étale~$Z$ de~$X$
+y un morfismo de una componente conexa de~$Z|X_{\bar{s}}$ hacia
+$\overline{Z}$ (\Ref{V.6.8}). Sean, pues, $\overline{Z}$ un recubrimiento
+principal de~$X_{\bar{s}}$ cuyo grupo es un~$\LL$-grupo~$C$ y~$\bar{z}$ su
+clase en~$\H^1(X_{\bar{s}},C_{X_{\bar{s}}})$. Según \Ref{XIII.1.5}~d), se
+tiene un isomorfismo canónico
+$$
+\left(\R^1f_*C_X\right)_{\bar{s}}\isomto\H^1(X_{\bar{s}},C_{X_{\bar{s}}}),
+$$
+y, según~\Ref{XIII.1.16}, $\R^1f_*C_X$ es un haz localmente constante y
+constructible. Puede encontrarse, por tanto, un recubrimiento étale~$S'$ de~$S$
+tal que~$\R^1f_*C_X|S'$ sea constante. Si~$\bar{s}\to S'$ es un punto
+geométrico situado sobre el punto geométrico~$\bar{s}\to S$, existe un
+elemento~$z$ de~$\H^0(S', \R^1f_*C_X)$ cuya imagen en
+$\H^1(X_{\bar{s}},C_{X_{\bar{s}}})$ es~$\bar{z}$. Según el lema
+\Ref{XIII.4.3.1} que sigue, puede encontrarse un recubrimiento étale~$S'_1$
+de~$S'$ y un torsor~$P$ sobre~$X'_1$ bajo~$C$ cuya imagen en
+$\H^0(S'_1,\R^1f_*C)$ sea igual a la restricción de~$z$. El torsor~$P$ es
+representable por un recubrimiento étale~$Z$ de~$X'_1=X\times_SS'_1$ tal que
+$Z\times_{X'_1}X_{\bar{s}}$ sea isomorfo a~$\overline{Z}$. Si se considera
+$Z$ como un recubrimiento étale de~$X$, se tiene entonces un morfismo
+de~$Z\times_XX_{\bar{s}}$ hacia~$\overline{Z}$, lo que concluye la
+demostración.

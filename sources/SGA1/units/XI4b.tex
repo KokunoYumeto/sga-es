@@ -1,0 +1,198 @@
+
+\begin{definition}
+\label{XI.4.4}
+Sea~$G$ un $S$-preesquema. Se denota por~$\H^0(S,G)$ el conjunto de las
+secciones de~$G$ sobre~$S$, que se considerará como grupo cuando~$G$ sea un
+$S$-grupo. En tal caso, se denota por~$\H^1(S,G)$ el conjunto de las clases,
+salvo isomorfismo, de fibrados homogéneos principales sobre~$S$ de grupo
+\ifthenelse{\boolean{orig}}
+{$S$}
+{$G$},
+considerando~$\H^1(S,G)$ dotado del «punto marcado» que corresponde a los
+fibrados triviales\footnote{\label{note-296}Esta notación solo es coherente
+\ifthenelse{\boolean{orig}}
+{con respecto a}
+{con respecto a}
+las notaciones cohomológicas generales (SGA~4~V) cuando se dispone de
+criterios de efectividad del descenso, que apenas están garantizados salvo si
+$G$ es afín (o tan solo cuasiafín, \cf (\Ref{VIII.7.9})).}.
+\end{definition}
+
+Así, $\H^0(S,G)$ es un funtor de la variable $S$-preesquema~$G$, con valores
+en la categoría de los conjuntos. Este funtor es exacto por la izquierda y,
+con mayor razón, conmuta con los productos finitos, lo cual implica, en
+efecto, que transforma grupos en grupos y grupos conmutativos en grupos
+conmutativos. De manera análoga, $\H^1(S,G)$ es un funtor de la variable
+$S$-grupo \emph{afín}~$G$, con valores en la categoría de los conjuntos por
+medio de la formación de fibrados asociados; se comprueba fácilmente que
+este funtor conmuta con los productos finitos. En particular, transforma los
+grupos de la categoría de los $S$-grupos afines, \ie los $S$-grupos
+\emph{afines conmutativos}, en grupos de la segunda categoría, e incluso en
+grupos conmutativos (pues los grupos de la primera categoría son
+conmutativos). Así, \emph{si~$G$ es un $S$-grupo afín conmutativo,
+$\H^1(S,G)$ es un grupo conmutativo}, y un homomorfismo~$G\to H$ de
+$S$-grupos afines conmutativos da lugar a un homomorfismo de grupos
+$\H^1(S,G)\to\H^1(S,H)$.
+
+Para simplificar, en lo sucesivo nos limitaremos a considerar $S$-grupos
+\emph{afines y conmutativos}. Sea
+$$
+0\to G'\lto{u} G\lto{v}G''\to 0
+$$
+una sucesión de morfismos de tales grupos; \emph{diremos que esta sucesión es
+exacta si~$vu=0$} (lo que permite considerar~$G$ como un preesquema
+sobre~$G''$, con grupo de operadores por la derecha~$G'_{G''}$) \emph{y
+si~$G$ es un fibrado homogéneo principal
+\marginpar{297}%
+sobre~$G''$ de grupo~$G'_{G''}=G'\times_S G''$}. Esto implica, en particular,
+que~$u\colon G'\to G$ es un núcleo de~$v$ y, con mayor razón, implica la
+exactitud de la sucesión
+$$
+\ifthenelse{\boolean{orig}}
+{0\to\H^0(X,G')\to\H^0(X,G)\to\H^0(X,G'').}
+{0\to\H^0(S,G')\to\H^0(S,G)\to\H^0(S,G'').}
+$$
+Esto implica, además, la posibilidad de definir una aplicación
+$$
+\ifthenelse{\boolean{orig}}
+{\partial\colon\H^0(X,G'')\to\H^1(X,G')\quoi,}
+{\partial\colon\H^0(S,G'')\to\H^1(S,G')\quoi,}
+$$
+asociando a toda sección de~$G''$ sobre~$S$, \ie a todo $S$-morfismo
+$f\colon S\to G''$, el fibrado homogéneo principal~$P_f$ de grupo
+$G'\simeq f^*(G'_{G''})$ sobre~$S$, imagen inversa del fibrado homogéneo
+principal~$G$ sobre~$G''$. Desde el punto de vista de los $S$-preesquemas, no
+es, pues, sino la imagen inversa por~$v\colon G\to G''$ del subpreesquema
+imagen de~$S$ por la inmersión~$f$, y las acciones de~$G'$ sobre~$P_f$ son
+inducidas por las acciones por la derecha de~$G'$
+\ifthenelse{\boolean{orig}}
+{sobre~$G$).}
+{sobre~$G$.}
+Dejamos asimismo al lector la comprobación de la proposición siguiente, que
+no presenta más dificultad que la de su redacción:
+
+\begin{proposition}
+\label{XI.4.5}
+La aplicación
+\ifthenelse{\boolean{orig}}
+{$\partial\colon \H^0(X,G'')\to\H^1(X,G')$}
+{$\partial\colon \H^0(S,G'')\to\H^1(S,G')$}
+es un homomorfismo de grupos. La sucesión de homomorfismos siguiente es
+exacta:
+\begin{multline*}
+\ifthenelse{\boolean{orig}}
+{0\to\H^0(X,G')\lto{u^0}\H^0(X,G)\lto{v^0}\H^0(X,G')\lto{\partial}\H^1(X,G'')\\
+\lto{u^1}\H^1(X,G) \lto{v^1}\H^1(X,G'')}
+{0\to\H^0(S,G')\lto{u^0}\H^0(S,G)\lto{v^0}\H^0(S,G'')\lto{\partial}\H^1(S,G')\\
+\lto{u^1}\H^1(S,G) \lto{v^1}\H^1(S,G'')}
+\end{multline*}
+(donde los homomorfismos distintos de~$\partial$ proceden de la ley
+funtorial de~$\H^0$ \resp de~$\H^1$).
+\end{proposition}
+
+\begin{remarques}
+\label{XI.4.6}
+El punto de vista expuesto aquí para el estudio de los fibrados homogéneos
+principales está visiblemente inspirado en Serre~\cite{XI.7}, cuya consulta
+será de gran provecho para el lector. Cuando se desea un formalismo que se
+aplique también a $S$-grupos estructurales cuasiproyectivos sobre~$S$ (de
+manera que abarque, en particular, los esquemas abelianos proyectivos),
+conviene modificar~\Ref{XI.4.1} exigiendo que~$S'$ sea suma de
+preesquemas~$S'_i$ finitos y localmente libres sobre abiertos~$S_i$ de~$S$
+que recubran~$S$. Los desarrollos precedentes siguen siendo entonces
+válidos, incluido en particular~\Ref{XI.4.5}, sustituyendo en todas partes la
+hipótesis de afinidad por la de cuasiproyectividad e interpretando de manera
+correspondiente la definición dada
+\ifthenelse{\boolean{orig}}
+{anteriormente}
+{anteriormente}
+de una sucesión exacta de $S$-grupos. En efecto, basta sustituir la referencia
+a~(\Ref{VIII.2.1})
+\marginpar{298}
+por~(\Ref{VIII.7.7}): los
+\ifthenelse{\boolean{orig}}
+{morfismos utilizados}
+{morfismos utilizados}
+$S'\to S$ son morfismos de descenso efectivo para la categoría fibrada de
+los preesquemas cuasiproyectivos sobre otros preesquemas. Sin embargo, debe
+advertirse que esta segunda noción de fibrado homogéneo principal es más
+restrictiva que la primera de~\Ref{XI.4.1}.
+\end{remarques}
+
+\sganum
+\label{XI.4.7}
+Se obtiene una noción aún más restrictiva de fibrado homogéneo principal
+exigiendo que~$S$ esté recubierto por abiertos~$S_i$ tales que, para todo~$i$,
+$P|S_i$ sea un fibrado con operadores trivial bajo~$G|S_i$; se dirá entonces
+que~$P$ es un fibrado homogéneo principal \emph{localmente trivial}.
+\index{homogéneo principal localmente trivial (fibrado)|hyperpage}%
+Las clases de estos fibrados, para~$G$ dado, forman una parte de
+\ifthenelse{\boolean{orig}}
+{$\H^1(X,G)$}
+{$\H^1(S,G)$},
+que está en correspondencia biyectiva con
+\ifthenelse{\boolean{orig}}
+{$\H^1(X,\cal{O}_X(G))$}
+{$\H^1(S,\cal{O}_S(G))$},
+donde
+\ifthenelse{\boolean{orig}}
+{$\cal{O}_X(G)$}
+{$\cal{O}_S(G)$}
+es el haz (en el sentido ordinario) de las secciones
+de~$G$ sobre~$S$, \cf \cite{XI.2}. Para que estos~$\H^1$ sigan dando lugar a
+una sucesión exacta de cohomología~\Ref{XI.4.5}, es preciso suponer,
+evidentemente, que la sucesión~$0\to G'\to G\to G''\to 0$ sea exacta en el
+sentido razonable para este nuevo contexto, \ie que~$G$ sea un fibrado
+localmente trivial sobre~$G''$, de grupo~$G'_{G''}$; esto significa también
+que~$u\colon G'\to G$ es un núcleo de~$v\colon G\to G''$ y que~$G$ admite
+localmente una sección sobre~$G''$.
+
+\sganum
+\label{XI.4.8}
+Es, evidentemente, muy deseable prolongar la sucesión exacta~\Ref{XI.4.5}
+introduciendo los grupos de cohomología superiores
+\ifthenelse{\boolean{orig}}
+{$\H^i(X,G)$}
+{$\H^i(S,G)$}.
+Esto es posible situándose en el marco de la «cohomología de Weil»: se
+considera la categoría~$\cal{B}$ de los preesquemas cuasicompactos sobre~$S$,
+\ifthenelse{\boolean{orig}}
+{dotada}
+{dotada}
+del conjunto~$\cal{M}$ de los morfismos fielmente planos y cuasicompactos,
+que se llamarán morfismos localizantes. Un «haz de Weil» abeliano sobre~$S$
+(o, mejor, sobre~$(\cal{B},\cal{M})$) es entonces un funtor contravariante
+$\cal{F}$ de~$\cal{B}$ en la categoría de los grupos abelianos, que transforma
+sumas en productos y una sucesión
+\begingroup
+\shorthandoff{<>}% Spanish babel trata de otro modo los delimitadores de curvatura de Xy-pic.
+${\def\labelstyle{\scriptstyle}\xymatrix@C=.5cm{T''=T'\times_TT'\ar@<+2pt>[rr]^-{\pr_1,\pr_2}\ar@<-2pt>[rr] &&T'\ar[r]^f & T}}$,
+con~$f\in\cal{M}$, en un diagrama \emph{exacto} de conjuntos
+$\xymatrix@C=.5cm{\cal{F}(T)\ar[r] & \cal{F}(T')
+\ar@<2pt>[r]\ar@<-2pt>[r] & \cal{F}(T'')}$.%
+\endgroup\ 
+Los haces de Weil forman una categoría abeliana con límites inductivos
+exactos que admite un generador y, por tanto, que posee suficientes objetos
+inyectivos~\cite{XI.1}. Los funtores derivados por la derecha del funtor
+$\Gamma(\cal{F})=\cal{F}(S)$ se denotan entonces por~$\H^i(S,\cal{F})$. Por
+otra parte, todo $S$-grupo conmutativo define evidentemente un haz de Weil
+(\Ref{VIII.5.2}), cuyos $\H^0$ y~$\H^1$ no son sino~$\H^0(S,G)$ y
+$\H^1(S,G)$, lo que permite definir de manera razonable los demás
+$\H^i(S,G)$. Se
+\marginpar{299}
+demuestra, además, que una sucesión exacta de $S$-grupos define una sucesión
+exacta de haces de Weil, lo que permite recuperar y prolongar la sucesión
+exacta~\Ref{XI.4.5}\footnote{Para un estudio sistemático de este punto de
+vista, \cf SGA~4~I a~IX.}.
+
+\sganum
+\label{XI.4.9}
+Sería conveniente desarrollar las variantes no conmutativas de~\Ref{XI.4.5},
+como en~\cite{XI.2}. Para un desarrollo sistemático, en el marco adecuado,
+de las diversas nociones cohomológicas esbozadas en el presente número,
+remitimos a un trabajo entonces en preparación de
+J\ptbl\ \textsc{Giraud}\footnote{\Cf J\ptbl\ \textsc{Giraud},
+\ifthenelse{\boolean{orig}}
+{\emph{Álgebra homológica no abeliana}, de próxima aparición en}
+{\emph{Cohomología no abeliana},}
+Springer-Verlag 1971.}.

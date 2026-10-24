@@ -1,0 +1,79 @@
+\section{Recubrimientos étales de un esquema normal}
+\label{I.10}
+
+\begin{proposition}
+\label{I.10.1}
+Sea $X$ un preesquema étale separado sobre~$Y$, normal y conexo, de cuerpo de funciones~$K$. Entonces las componentes conexas $X_i$ de~$X$ son íntegras, sus cuerpos de funciones $K_i$ son extensiones finitas separables de~$K$, y $X_i$ se identifica con una parte abierta no vacía de la normalización de
+\ifthenelse{\boolean{orig}}{$X$}{$Y$}\ % SGA1-CORR-0009: la base de normalización es Y.
+en~$K_i$ (por tanto, $X$ se identifica con una parte abierta densa de la normalización de~$Y$ en $R(X)=L=\prod K_i$).
+\end{proposition}
+
+Según~\Ref{I.9.10}, $X$ es normal; \,\emph{a fortiori}, sus anillos locales son íntegros, de modo que las componentes conexas de~$X$ son irreducibles. Como $X_i$ es normal,
+\ifthenelse{\boolean{orig}}{finito}{cuasifinito}\ % SGA1-CORR-0009: la hipótesis étale solo da cuasifinitud.
+y dominante sobre~$Y$, se sigue de un caso particular (por lo demás casi trivial) del \emph{Main Theorem} que $X_i$ es un abierto de la normalización de
+\ifthenelse{\boolean{orig}}{$X$}{$Y$}\ % SGA1-CORR-0009.
+en el cuerpo $K_i$ de
+\ifthenelse{\boolean{orig}}{$X$}{$X_i$}.% SGA1-CORR-0009.
+
+\begin{corollaire}
+\label{I.10.2}
+En las condiciones de~\Ref{I.10.1}, $X$ es finito sobre~$Y$ (\ie un recubrimiento étale de~$Y$) si y solo si $X$ es isomorfo a la normalización $Y'$ de~$Y$ en $L=R(X)$ (anillo de las funciones racionales sobre~$X$).
+\end{corollaire}
+
+En efecto, se sabe que esta normalización es finita sobre~$Y$ (por ser $Y$ normal y
+\ifthenelse{\boolean{orig}}{$R/K$}{$L/K$}\ % SGA1-CORR-0010: L=R(X); R no está definido.
+separable); recíprocamente, si $X$ es finito sobre~$Y$, lo es sobre~$Y'$, por lo que su imagen en~$Y'$ es cerrada y, por otra parte, densa.
+
+Se dirá que un álgebra $L$ de rango finito sobre~$K$ es \emph{no ramificada sobre
+\ifthenelse{\boolean{orig}}{$X$}{$Y$}}\ % SGA1-CORR-0011: la base definida es Y.
+(o simplemente no ramificada sobre~$K$, si
+\ifthenelse{\boolean{orig}}{$X$}{$Y$}\ % SGA1-CORR-0011.
+se sobreentiende) si $L$ es un álgebra separable sobre~$K$, \ie un producto directo de extensiones separables $K_i$, y si la normalización $Y'$ de~$Y$ en~$L$ (suma disjunta de las normalizaciones de~$Y$ en los $K_i$) es no ramificada ($=$ étale por~\Ref{I.9.11}) sobre~$Y$. Por tanto:
+
+\begin{corollaire}
+\label{I.10.3}
+Para todo $X$ finito sobre~$Y$ tal que cada una de sus componentes irreducibles domina a~$Y$, sea $R(X)$ el anillo de las funciones racionales sobre~$X$ (producto de los anillos
+\marginpar{22}
+locales de los puntos genéricos de las componentes irreducibles de~$X$), de modo que $X\mto R(X)$ es un funtor con valores en las álgebras de rango finito sobre~$K=R(Y)$. Este funtor establece una equivalencia entre la categoría de los recubrimientos étales conexos de~$Y$ y la categoría de las extensiones $L$ de~$K$ no ramificadas sobre~$Y$.
+\end{corollaire}
+
+El funtor inverso es el funtor de normalización.
+
+Supongamos que $Y$ es afín, definido, por tanto, por un anillo normal~$A$ de cuerpo de fracciones~$K$. Sea $L$ una extensión finita de~$K$ que es producto directo de cuerpos. Por definición, la normalización $Y'$ de~$Y$ en~$L$ es isomorfa a~$\Spec(A')$, donde $A'$ es la normalización de~$A$ en~$L$. Decir que $L$ es no ramificada sobre~$Y$ significa que $A'$ es no ramificada (o, equivalentemente, étale) sobre~$A$. Si $A$ es local, esto equivale a decir que los anillos locales $A'_{\goth{n}}$ (donde $\goth{n}$ recorre el conjunto finito de los ideales maximales de~$A'$, \ie de sus ideales primos que inducen el ideal maximal $\goth{m}$ de~$A$) son no ramificados ($=$ étales) sobre
+\ifthenelse{\boolean{orig}}{$X$ }{}\ % Corrección ya incorporada en la autoridad: se suprime X.
+el anillo local~$A$. Observemos, por último, que el criterio del discriminante~(\Ref{I.4.10}) también puede aplicarse en esta situación (más generalmente, una variante de dicho criterio debería enunciarse así, sin condición preliminar de planitud cuando $X$ domina a~$Y$, aunque se suponga que $Y$ es localmente íntegro: $A\to B$ y $B\to B\otimes_AK=L$ son inyectivos ---entonces está definida $\trace_{L/K}$--- y $\trace_{L/K}(xy)$ induce una \emph{forma bilineal fundamental} $B\times B\to A$, \ie existen $x_i\in B$ ($1\leq i\leq n$, donde $n$ es el rango de~$L$ sobre~$K$) tales que $\trace(x_ix_j)\in A$ para todo $i,j$ y
+\ifthenelse{\boolean{orig}}{la matriz $(\trace(x_ix_j))$}{$\det(\trace(x_ix_j))$}\ % La autoridad corrige la pérdida de det.
+es invertible en~$A$).
+
+El sorites~(4.6) implica de inmediato el sorites de la no ramificación en el marco clásico:
+
+\begin{proposition}
+\label{I.10.4}
+Sea $Y$ un preesquema normal íntegro, de cuerpo de funciones~$K$.
+\textup{(i)} $K$ es no ramificado sobre~$Y$.
+\textup{(ii)} Si $L$ es una extensión de~$K$ no ramificada sobre~$Y$, si $Y'$ es un preesquema normal de cuerpo de funciones~$L$ que domina a~$Y$ (por ejemplo, la normalización de~$Y$ en~$L$), y si $M$ es una extensión de~$L$ no ramificada sobre~$Y'$, entonces $M/K$ es no ramificada sobre
+\ifthenelse{\boolean{orig}}{$X$}{$Y$}\ % SGA1-CORR-0012: X no se introduce; la base transitiva es Y.
+(\emph{transitividad} de la no ramificación).
+\textup{(iii)} Sea $Y'$ un preesquema normal íntegro que domina a~$Y$, de cuerpo de funciones $K'/K$; si $L$ es una extensión de~$K$ no ramificada sobre~$Y$, entonces $L\otimes_KK'$ es una extensión de~$K'$ no ramificada sobre~$Y'$ (propiedad de \emph{traslación}).
+\end{proposition}
+
+Además:
+\marginpar{23}
+
+\begin{corollaire}
+\label{I.10.5}
+En las condiciones de~\textup{(iii)}, si $Y=\Spec(A)$ y $Y'=\Spec(A')$, entonces la normalización $\bar{A'}$ de~$Y'$ en $L'=L\otimes_KK'$ se identifica con $\bar{A}\otimes_AA'$, donde $\bar{A}$ es la normalización de~$A$ en~$L$.
+\end{corollaire}
+
+Habitualmente, quienes rehúyen considerar anillos no íntegros, aunque sean productos directos de cuerpos, enuncian la propiedad de traslación en la forma siguiente, más débil:
+
+\begin{corollaire}
+\label{I.10.6}
+En las condiciones de~\textup{(iii)}, sea $L_1$ una \emph{extensión compuesta} de~$L/K$ (no ramificada sobre~$Y$) y de~$K'/K$. Entonces $L_1/K'$ es no ramificada sobre~$Y'$. En el caso en que $Y=\Spec(A)$ y $Y'=\Spec(A')$, se tendrá además
+\[
+\overline{A'}=A[\overline{A},A'].
+\]
+Es decir, el anillo $\overline{A'}$, normalización de~$A'$ en~$L_1$, es el $A$-álgebra engendrada por~$A'$ y por la normalización $\overline{A}$ de~$A$ en~$L$.
+\end{corollaire}
+
+Este último hecho es, por lo demás, falso sin la hipótesis de no ramificación, incluso para extensiones compuestas de cuerpos de números...

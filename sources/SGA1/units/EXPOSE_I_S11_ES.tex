@@ -1,0 +1,33 @@
+\section{Algunos complementos}
+\label{I.11}
+
+Ya hemos dicho que un recubrimiento étale conexo de un esquema íntegro no es necesariamente íntegro. He aquí dos ejemplos de este hecho.
+
+\noindent
+a) Sea $C$ una curva algebraica con un punto doble ordinario~$x$, sea $C'$ su normalización, y sean $a$ y~$b$ los dos puntos de~$C'$ situados por encima de~$x$. Sean $C'_i$ ($i=1,2$) dos copias de~$C'$, y sean $a_i$ y~$b_i$ los puntos de~$C'_i$ que corresponden a~$a$ y~$b$, respectivamente. En la curva suma $C'_1\amalg C'_2$, identifiquemos
+\ifthenelse{\boolean{orig}}{$a_1^x$}{$a_1$}\ % La autoridad corrige a_1^x por a_1.
+con~$b_2$, por una parte, y $a_2$ con~$b_1$, por otra (se deja al lector precisar el proceso de identificación; se explicará en el cap.~VI del multiplodoque, pero, para curvas sobre un cuerpo algebraicamente cerrado, se trata en el libro de Serre sobre curvas algebraicas). Se obtiene una curva $C''$ \emph{conexa} y \emph{reducible}, que es un recubrimiento étale de grado~$2$ de~$C$. El lector comprobará que, en general, los recubrimientos étales conexos «galoisianos» $C''$ de~$C$ cuya imagen inversa $C''\times_CC'$ es un recubrimiento \emph{trivial} de~$C'$ (\ie isomorfo a la suma disjunta de cierto número de copias de~$C'$) son «cíclicos» de grado~$n$, y que, para todo entero $n>0$, puede construirse un recubrimiento étale conexo cíclico de grado~$n$. En el lenguaje del grupo fundamental, que se desarrollará más adelante, esto significa que el cociente de~$\pi_1(C)$ por el subgrupo normal cerrado engendrado por la imagen de~$\pi_1(C')\to\pi_1(C)$ (homomorfismo inducido por la proyección) es isomorfo a la completación profinita de~$\ZZ$. Más precisamente, debería poder demostrarse que el grupo fundamental de~$C$ es isomorfo al producto libre topológico del grupo fundamental
+\ifthenelse{\boolean{orig}}{de~$C$}{de~$C'$}\ % La autoridad corrige C por C'.
+con la completación profinita de~$\ZZ$. Obsérvese que cuestiones de este tipo dieron origen a la «teoría del descenso» para los esquemas.
+
+\noindent
+b) Sea $A$ un anillo local completo íntegro. Se sabe que su normalización $A'$ es finita
+\marginpar{27}
+sobre~$A$ (Nagata); es, por tanto, un anillo semilocal completo y, por ser íntegro, es local. Supongamos que la extensión residual $L/k$ que define no es radicial (en el caso contrario se dirá que $A$ es geométricamente unirramoso; \cf más abajo). Así ocurre, por ejemplo, para el anillo
+\ifthenelse{\boolean{orig}}
+{$\RR[s,t]/(s^2+t^2)\RR[s,t]$}
+{$\RR[[s,t]]/(s^2+t^2)\RR[[s,t]]$},% La autoridad repone el anillo local completo de series formales.
+donde $\RR$ es el cuerpo de los números reales. Sea entonces $k'$ una extensión galoisiana finita de~$k$ tal que $L\otimes_kk'$ se descomponga, y sea~$B$ un álgebra finita étale sobre~$A$ correspondiente a la extensión residual~$k'$ (recordemos que $B$ es esencialmente única). Entonces $B'=A'\otimes_AB$, como $B$-álgebra, tiene el álgebra residual $L\otimes_kk'$, que no es local; por tanto, $B'$ no es un anillo local y, como es completo, tiene divisores de cero. Puesto que está contenido en el anillo total de fracciones de~$B$ (pues es libre sobre~$A'$, luego sin torsión sobre~$A'$, luego sin torsión sobre~$A$, y está, por consiguiente, contenido en $B'\otimes_AK=B'_{(K)}=A'_{(K)}\otimes_KB_{(K)}=B_{(K)}$, ya que $A'_{(K)}=K$), se sigue que $B$ no es íntegro. En el caso del anillo $\RR[[s,t]]/(s^2+t^2)\RR[[s,t]]$, tomando $k'/k=\CC/\RR$, se obtiene para~$B$ el anillo local de dos rectas secantes del plano en su punto de intersección.
+
+Obsérvese, además, que, si existe un recubrimiento étale conexo $X$ de un esquema íntegro~$Y$ que no sea irreducible, entonces toda componente irreducible de~$X$ da un ejemplo de un recubrimiento no ramificado $X'$ de~$Y$, dominante sobre~$Y$, que no es étale sobre~$Y$. En el ejemplo~a) se obtiene así que $C'$ es no ramificado sobre~$C$ sin ser étale en los dos puntos $a$ y~$b$ (como también se comprueba directamente inspeccionando los completados de los anillos locales de~$x$ y~$a$: desde el punto de vista «formal», $C'$ en el punto~$a$ se identifica con un subesquema cerrado de~$C$ en el punto~$x$, a saber, una de las dos «ramas» de~$C$ que pasan por~$x$).
+
+En a) y~b), se ve que la falta de validez de las conclusiones de~\Ref{I.9.5}\ptbl\textup{(i)} y~\textup{(ii)} está ligada directamente al hecho de que un punto de~$Y$ «se desdobla» en puntos \emph{distintos} de la normalización (\ifthenelse{\boolean{orig}}{en~b,}{en~b),}\ % La autoridad repone el paréntesis.
+el hecho de que la extensión residual no sea radicial debe interpretarse geométricamente de este modo). Más precisamente, diremos que un anillo local íntegro~$A$ es \emph{geométricamente unirramoso}
+\index{geométricamente unirramoso|hyperpage}%
+\index{unirramoso (geométricamente)|hyperpage}%
+si su normalización tiene un único ideal maximal y la extensión residual correspondiente es radicial; se dice que un punto~$y$ de un preesquema íntegro es geométricamente unirramoso si lo es su anillo local. Ejemplos: un punto normal, un punto cuspidal ordinario de una curva, etc. Parece que, si $Y$ admite un punto que no es unirramoso, existe siempre
+\marginpar{28}
+\ifthenelse{\boolean{orig}}{algún}{un}\ % La autoridad corrige el artículo francés.
+recubrimiento étale conexo no irreducible de~$Y$; esto es, al menos, lo que hemos demostrado en el caso~b), cuando $Y$ es el espectro de un anillo local completo. En cambio, puede demostrarse que \emph{si todos los puntos de~$Y$ son geométricamente unirramosos, entonces todo $Y$-preesquema no ramificado, conexo y dominante sobre~$Y$ es étale} e irreducible. La demostración retoma la de~\Ref{I.9.5}, utilizando la generalización siguiente del teorema~\Ref{I.8.3}, que se demostrará más adelante mediante la técnica del descenso:\footnote{\Cf \Ref{IX.4.10}. Para una demostración más directa, \cf EGA~IV~18.10.3, donde se utiliza una variante de~\Ref{I.9.5} para anillos locales geométricamente unirramosos.}
+
+\emph{Sea $Y'\to Y$ un morfismo finito, radicial y sobreyectivo (\ie lo que podría llamarse un «homeomorfismo universal»). Consideremos el funtor $X\mto X\times_YY'=X'$ de los $Y$-preesquemas en los $Y'$-preesquemas. Este funtor induce una equivalencia entre la categoría de los $Y$-esquemas étales y la categoría de los $Y'$-esquemas étales.} Este resultado podrá aplicarse, por ejemplo, en el caso en que $Y'$ es la normalización de~$Y$, suponiendo que $Y$ sea unirramoso (y que $Y'$ sea finito sobre~$Y$, como sucede en todos los casos que se encuentran en la práctica), o al caso de un $Y''$ «intercalado» entre~$Y$ y su normalización (que ya no necesita ser finita sobre~$Y$).

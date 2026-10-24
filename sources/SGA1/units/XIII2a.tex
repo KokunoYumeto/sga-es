@@ -1,0 +1,149 @@
+
+\section[Un caso particular: ser cohomológicamente propio]{Un caso particular de la
+propiedad de ser cohomológicamente propio: divisores de cruzamientos normales relativos}
+\label{XIII.2}
+
+\setcounter{subsection}{-1}
+
+\subsection{}
+\label{XIII.2.0}
+Sean $R$ un anillo de valoración discreta de cuerpo de fracciones $K$ y $L$
+una $K$-álgebra étale; entonces $L$ es producto directo de un número finito
+de cuerpos $L_i$, donde $L_i$ es una extensión étale de~$K$. Si $L'_i$
+designa la extensión galoisiana generada por $L_i$ dentro de una clausura
+algebraica de~$L_i$, se dice que $L$ está \emph{moderadamente ramificada}
+\index{moderadamente ramificada (álgebra)|hyperpage}%
+sobre~$R$ si los $L'_i$ son extensiones moderadamente ramificadas en el
+sentido de~\Ref{X.3}, \ie si un grupo de inercia~$I_i$ de~$L'_i|K$ tiene
+orden primo con la característica residual $p$ de~$R$.
+
+Se sabe que $I_i$ es, en todo caso, extensión de un grupo cíclico de orden
+primo con~$p$ por un $p$-grupo. (Esto resulta de
+\cite[ch\ptbl IV prop\ptbl 7 cor\ptbl 4]{XIII.5} cuando la extensión residual
+de~$R$ es separable. La demostración dada en \loccit se extiende al caso
+general de la manera siguiente. Retomemos las hipótesis y la notación de
+\loccit, pero sin suponer separable la extensión residual. Sea $H_i$ el
+subgrupo del grupo de inercia $G_0$ formado por los elementos $s$ de~$G_0$
+tales que $s\pi/\pi\in U^i$ para todo uniformizante $\pi$ de~$A_L$. Se
+comprueba entonces que $G_0/H_1$ es un grupo de orden primo con~$p$ y que, para
+$i\geqslant 1$, los
+\ifthenelse{\boolean{orig}}
+{$H^i/H^{i+1}$}
+{$H_i/H_{i+1}$}
+son $p$-grupos, de donde se deduce el resultado anunciado.)
+
+\subsubsection{}
+\label{XIII.2.0.1}
+Cuando $R$ es estrictamente local se tiene la caracterización sencilla
+siguiente: la $K$-álgebra $L$ está moderadamente ramificada sobre~$R$ si y
+solo si los $[L_i:K]$ son primos con~$p$. Además, si $L$ está moderadamente
+ramificada sobre~$R$, los $L_i$ son extensiones cíclicas de~$K$. En efecto,
+cuando $R$ es estrictamente local, $I_i$ es igual al grupo de Galois
+\marginpar{370}
+de~$L'_i$ sobre~$K$. Como acaba de recordarse, $I_i$ es extensión de un grupo
+cíclico de orden primo con~$p$ por un $p$-grupo. Si se supone que $L'_i$ está
+moderadamente ramificada sobre~$R$, entonces $I_i$ es un grupo cíclico de
+orden primo con~$p$. Se sigue que $[L_i:K]$ es primo con~$p$ y que $L_i=L'_i$.
+Recíprocamente, si $[L_i:K]$ es primo con~$p$, $I_i$ no puede contener ningún
+$p$-subgrupo normal no trivial; por tanto, $I_i$ es un grupo cíclico de orden
+primo con~$p$, lo que demuestra que $L_i$ está moderadamente ramificada
+sobre~$R$.
+
+\subsubsection{}
+\label{XIII.2.0.2}
+Sean $R$ un anillo de valoración discreta de cuerpo de fracciones $K$, $L$
+una $K$-álgebra étale, $\overline{R}$ una localización estricta de~$R$,
+$\overline{K}$ su cuerpo de fracciones y
+$\overline{L}=L\otimes_K\overline{K}$. Entonces $L$ está moderadamente
+ramificada sobre~$R$ si y solo si $\overline{L}$ está moderadamente
+ramificada sobre~$\overline{R}$. En efecto, se reduce al caso en que $L$ es
+un cuerpo. Escribamos $\overline{L}=\prod_i\overline{L}_i$, donde los
+$\overline{L}_i$ son extensiones de~$\overline{K}$; si $L'$ es la
+extensión galoisiana generada por $L$ y si
+\ifthenelse{\boolean{orig}}
+{$L'=L'\otimes_K\overline{K}$,}
+{$\overline{L'}=L'\otimes_K\overline{K}$,}
+se tiene asimismo una descomposición de~$\overline{L'}$ en producto de
+cuerpos,
+\ifthenelse{\boolean{orig}}
+{$L'=\prod_j\overline{L'_j}$}
+{$\overline{L'}=\prod_j\overline{L'_j}$}
+y cada $\overline{L}_i$ es una subextensión de al menos uno de los
+$\overline{L'_j}$. Como $L'$ es una extensión galoisiana de~$K$, los
+$\overline{L'_j}$ son extensiones galoisianas de~$\overline{K}$. Supongamos
+que $L$ está moderadamente ramificada sobre~$R$; como el grupo de Galois de
+\ifthenelse{\boolean{orig}}
+{$\overline{L'_j}|K$}
+{$\overline{L'_j}|\overline{K}$}
+es isomorfo al grupo de inercia de~$L'|K$, los
+\ifthenelse{\boolean{orig}}
+{$L'_j$}
+{$\overline{L'_j}$}
+están también moderadamente ramificados sobre~$\overline{R}$ y, por tanto,
+lo mismo sucede con los $\overline{L}_i$. Recíprocamente, supongamos que
+$\overline{L}$ está moderadamente ramificada sobre~$\overline{R}$. Para cada
+$j$, sea $v_j$ la valoración discreta de~$\overline{L'_j}$ que prolonga la
+valoración de~$\overline{K}$, y denotemos también por $v_j$ la valoración
+inducida sobre~$L'$. Al variar~$j$, $v_j$ recorre el conjunto de las
+valoraciones de
+\ifthenelse{\boolean{orig}}
+{$L$}
+{$L'$}
+que prolongan la valoración de~$K$. Sean $G=\Gal(L'|K)$,
+$H=\Gal(L'|L)$, $I_j$ el grupo de inercia de~$L'|K$ en $v_j$ y $J_j$ el
+grupo de inercia de~$L'|L$ en $v_j$. El grupo
+\ifthenelse{\boolean{orig}}
+{$I_i$}
+{$I_j$}
+es extensión de un grupo cíclico de orden primo con~$p$ por un $p$-grupo
+$P_j$. Como los $\overline{L}_i$ están moderadamente ramificados
+sobre~$\overline{R}$, $I_j/J_j$ tiene orden primo con~$p$ y, por tanto,
+$P_j\subset J_j$. En consecuencia, el grupo $H$ contiene todos los $P_j$ y,
+por tanto, también el grupo $P$ engendrado por
+\marginpar{371}
+los $P_j$ al variar~$j$. Pero el grupo~$P$ es invariante en~$G$, pues un
+automorfismo interior de~$G$ permuta los~$I_j$ entre sí y, por tanto, también
+los $P_j$ entre sí. Se sigue que $P$ es un subgrupo de~$H$ normal en~$G$ y,
+por consiguiente, puesto que $L'$ es la extensión galoisiana generada por
+$L$, que $P=1$, lo que demuestra que $L$ está moderadamente ramificada
+sobre~$R$.
+
+Más generalmente, sea $R\to R'$ un homomorfismo de anillos de valoración
+discreta tal que la imagen de un uniformizante $\pi$ de~$R$ sea un
+uniformizante $\pi'$ de~$R'$ y que la extensión residual $\kres(R')$ sea una
+extensión separable de~$\kres(R)$. Sean $K$ el cuerpo de fracciones de~$R$,
+$K'$ el cuerpo de fracciones de~$R'$, $L$ una $K$-álgebra étale y
+$L'=L\otimes_KK'$. Entonces $L$ está moderadamente ramificada sobre~$R$ si y
+solo si $L'$ está moderadamente ramificada sobre~$R'$. En efecto, puede
+suponerse que $R$ y $R'$ son estrictamente locales. Según~\Ref{XIII.2.0.1},
+basta probar que, cuando $L$ es un cuerpo, también lo es~$L'$. Sean
+$\tilde{R}$ la normalización de~$R$ en~$L$, $\tilde{\pi}$ un
+uniformizante de~$\tilde{R}$ y
+$\tilde{R}'=\tilde{R}\otimes_RR'$. Como la extensión
+$\kres(\tilde{R})|\kres(R)$ es radicial y la extensión
+$\kres(R')|\kres(R)$ es étale,
+$\kres(\tilde{R})\otimes_{\kres(R)}\kres(R')$ es un cuerpo [EGA IV 4.3.2
+y 4.3.5]. Esto demuestra que
+\ifthenelse{\boolean{orig}}
+{$R'$}
+{$\tilde{R}'$}
+es un anillo local y, como $\pi$ tiene por imagen $\pi'$ en~$R'$, se tiene
+\ifthenelse{\boolean{orig}}
+{$\kres(\tilde{R}')=R'/(\tilde{\pi})$;}
+{$\kres(\tilde{R}')=\tilde{R}'/(\tilde{\pi})$;}
+por consiguiente,
+\ifthenelse{\boolean{orig}}
+{$R'$}
+{$\tilde{R}'$}
+es un anillo de valoración discreta
+\cite[ch\ptbl I \S 2 prop\ptbl 2]{XIII.5} y, por tanto, $L'$ es un cuerpo.
+
+\subsubsection{}
+\label{XIII.2.0.3}
+Reduciendo al caso estrictamente local, se ve que una subálgebra de un
+álgebra moderadamente ramificada está moderadamente ramificada; que el
+producto tensorial de dos álgebras moderadamente ramificadas está
+moderadamente ramificado; que un álgebra moderadamente ramificada sigue
+siéndolo tras extender el anillo de valoración discreta; y que un álgebra
+que pasa a estar moderadamente ramificada tras una extensión moderadamente
+ramificada está moderadamente ramificada.

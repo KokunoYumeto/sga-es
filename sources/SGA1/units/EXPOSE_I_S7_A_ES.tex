@@ -1,0 +1,95 @@
+\marginpar{10}
+\section{Construcción local de los morfismos no ramificados y étales}
+\label{I.7}
+
+\begin{proposition}
+\label{I.7.1}
+Sean $A$ un anillo noetheriano, $B$ un álgebra finita sobre~$A$, $u$ un generador de~$B$ sobre~$A$, $F\in A[t]$ tal que $F(u)=0$ (no se supone que $F$ sea mónico), $u'=F'(u)$ (donde $F'$ es el polinomio derivado), $\goth{q}$ un ideal primo de~$B$ que no contiene a~$u'$, y $\goth{p}$ su contracción a~$A$. Entonces $B_\goth{q}$ es neto sobre~$A_\goth{p}$.
+\end{proposition}
+
+En otros términos, poniendo $Y=\Spec(A)$, $X=\Spec(B)$ y $X_{u'}=\Spec(B_{u'})$, el preesquema $X_{u'}$ es no ramificado sobre~$Y$. El enunciado se sigue del siguiente, más preciso:
+
+\begin{corollaire}
+\label{I.7.2}
+El ideal diferente de~$B/A$ contiene a $u'B$, y es igual a él si el homomorfismo natural $A[t]/FA[t]\to B$ (que envía $t$ en~$u$) es un isomorfismo.
+\end{corollaire}
+
+Sea $J$ el núcleo del homomorfismo $C=A[t]\to B$; este núcleo contiene a $FA[t]$ y es igual a él en el segundo caso considerado en~\Ref{I.7.2}. Como el homomorfismo es sobreyectivo, $\Omega^1_{B/A}$ se identifica con el cociente de~$\Omega^1_{C/A}$ por el submódulo generado por $J\Omega^1_{C/A}$ y $d(J)$ (habría sido preciso explicitar en el \No\Ref{I.1} la definición del homomorfismo~$d$ y el cálculo de~$\Omega^1$ para un álgebra de polinomios). Identificando $\Omega^1_{C/A}$ con~$C$ mediante la base~$dt$, se obtiene $B/B\cdot J'$; por tanto, la diferente está generada por el conjunto~$J'$ de las imágenes en~$B$ de las derivadas de los $G\in J$ (y basta tomar unos $G$ que generen~$J$). Como $F\in J$, \resp $F$ es un generador de~$J$, hemos terminado. (N.B.: debería ponerse~\Ref{I.7.2} como proposición y~\Ref{I.7.1} como corolario.) Se obtiene:
+
+\begin{corollaire}
+\label{I.7.3}
+Bajo las condiciones de~\Ref{I.7.1}, suponiendo que $F$ es mónico y que $A[t]/FA[t]\to B$ es un isomorfismo, para que $B_\goth{q}$ sea étale sobre~$A_\goth{p}$ \ifthenelse{\boolean{orig}}{es n. y s.}{es necesario y suficiente} que~$\goth{q}$ no contenga a~$u'$.
+\end{corollaire}
+
+En efecto, como $B$ es plano sobre~$A$, étale equivale a neto y puede aplicarse~\Ref{I.7.2}.
+
+\begin{corollaire}
+\label{I.7.4}
+Bajo las condiciones de~\Ref{I.7.3}, para que $B$ sea étale sobre~$A$ \ifthenelse{\boolean{orig}}{es n. y s.}{es necesario y suficiente}\ % La autoridad corrige la abreviatura francesa mal puntuada.
+que~$u'$ sea invertible, o también que el ideal generado por $F$ y $F'$ en~$A[t]$ sea el ideal unidad.
+\end{corollaire}
+
+El último criterio se sigue del primero y del lema de Nakayama (en~$B$).
+
+Se dice que un polinomio mónico $F\in A[t]$ que tiene la propiedad
+\marginpar{11}
+enunciada en el corolario~\Ref{I.7.4}
+es un \emph{polinomio separable}
+\index{separable (polinomio)|hyperpage}%
+(si $F$ no es mónico, habría que exigir al menos que el coeficiente de su término de mayor grado fuera invertible; cuando $A$ es un cuerpo se recupera la definición usual).
+
+\begin{corollaire}
+\label{I.7.5}
+Sea $B$ un álgebra \emph{finita} sobre el anillo \emph{local}~$A$. Supongamos que $K(A)$ es infinito o que $B$ es local. Sea~$n$ el rango de $L=B\otimes_AK(A)$ sobre~$K(A)=k$. Para que $B$ sea neta (\resp étale) sobre~$A$ es necesario y suficiente que $B$ sea isomorfa a un cociente de (\resp isomorfa a) $A[t]/FA[t]$, donde $F$ es un polinomio mónico separable que puede suponerse (\resp que es necesariamente) de grado~$n$.
+\end{corollaire}
+
+Solo hay que demostrar la necesidad. Supongamos que $B$ es neta sobre~$A$; entonces $L$ es separable sobre~$k$, y de la hipótesis formulada se sigue que $L/k$ admite un generador~$\xi$, por lo que los $\xi^i$ ($0\leq i<n$) forman una base de~$L$ sobre~$k$. Sea $u\in B$ un levantamiento de~$\xi$; por Nakayama, los $u^i$ ($0\leq i<n$) generan el $A$-módulo~$B$ (\resp forman una base de este). En particular, puede encontrarse un polinomio mónico $F\in A[t]$ tal que $F(u)=0$, y $B$ será isomorfa a un cociente de (\resp isomorfa a) $A[t]/FA[t]$. Por último, en virtud de~\Ref{I.7.4} aplicado a $L/k$, $F$ y~$F'$ generan $A[t]$ \ifthenelse{\boolean{orig}}{módulo}{módulo}\ % La autoridad corrige «module» por «modulo».
+$\goth{m}A[t]$; por tanto (por Nakayama en $A[t]/FA[t]$), $F$ y~$F'$ generan~$A[t]$. Hemos terminado.
+
+\begin{theoreme}
+\label{I.7.6}
+Sean $A$ un anillo local y $A\to\cal{O}$ un homomorfismo local tal que~$\cal{O}$ sea isomorfa a la localización de un álgebra de tipo finito sobre~$A$. Supongamos que \ifthenelse{\boolean{orig}}{$\cal{O}$}{$\cal{O}$}\ % La autoridad corrige $O$ por $\cal O$.
+es \emph{neta} sobre~$A$. Entonces pueden encontrarse un $A$-álgebra $B$ integral sobre~$A$, un ideal maximal $\goth{n}$ de~$B$, un generador $u$ de~$B$ sobre~$A$ y un polinomio mónico $F\in A[t]$ tales que $\goth{n}\not\ni F'(u)$ y que $\cal{O}$ sea isomorfa, como $A$-álgebra, a~$B_{\goth{n}}$. Si $\cal{O}$ es étale sobre~$A$, puede tomarse $B=A[t]/FA[t]$.
+\end{theoreme}
+
+(Por supuesto, estas condiciones son asimismo suficientes\ldots)
+
+Señalemos primero los agradables corolarios siguientes:
+
+\begin{corollaire}
+\label{I.7.7}
+Para que $\cal{O}$ sea neta sobre~$A$ es necesario y suficiente que $\cal{O}$ sea isomorfa al cociente de un álgebra de forma análoga y \emph{étale} sobre~$A$.
+\end{corollaire}
+
+En efecto, se tomará $\cal{O}'=B'_{\goth{n}'}$, donde $B'=A[t]/FA[t]$ y $\goth{n}'$ es la imagen inversa de~$\goth{n}$ en~$B'$.
+
+\marginpar{12}
+\begin{corollaire}
+\label{I.7.8}
+Sea
+$f\colon X\to Y$ un morfismo de tipo finito y sea $x\in X$. Para que $f$ sea neto en~$x$ es necesario y suficiente que exista un entorno abierto~$U$ de~$x$ tal que $f|U$ se factorice como $U\to X'\to Y$, donde la primera flecha es una inmersión cerrada y la segunda un morfismo étale.
+\end{corollaire}
+
+Esta es una simple traducción de~\Ref{I.7.7}.
+
+Veamos cómo la formulación de~\Ref{I.7.6} se sigue del enunciado principal: en efecto, por~\Ref{I.7.7} existe un epimorfismo $\cal{O}'\to\cal{O}$, donde $\cal{O}'$ tiene las propiedades requeridas;% SGA1-CORR-0005: la autoridad imprime aquí O sin prima.
+si además $\cal{O}$ es étale sobre~$A$, tanto $\cal{O}'$ como~$\cal{O}$ son étales sobre~$A$, y el morfismo $\cal{O}'\to\cal{O}$ es étale por~\Ref{I.4.8}, luego es un isomorfismo.
+
+\subsubsection*{Demostración de~\Ref{I.7.6}}
+Retoma una demostración del seminario Chevalley. Por el \emph{Main Theorem} se tendrá $\cal{O}=B_{\goth{n}}$, donde $B$ es un álgebra finita sobre~$A$ y $\goth{n}$ uno de sus ideales maximales. Entonces $B/\goth{n}=K(\cal{O})$ es una extensión separable y, por tanto, monógena de~$k$; si $\goth{n}_i$ ($1\leq i\leq r$) son los ideales maximales de~$B$ distintos de~$\goth{n}$, existe, pues, un elemento $u$ de~$B$ que pertenece a todos los~$\goth{n}_i$ y cuya imagen en~$B/\goth{n}$ es un generador. Ahora bien,
+$B/\goth{n}=B_\goth{n}/\goth{n}B_\goth{n}=B_\goth{n}/\goth{m}B_\goth{n}$
+(donde $\goth{m}$ es el ideal maximal de~$A$). Admitamos por un momento el lema siguiente.
+
+\begin{lemme}
+\label{I.7.9}
+Sean $A$ un anillo local, $B$ un álgebra finita sobre~$A$, $\goth{n}$ un ideal maximal de~$B$ y $u$ un elemento de~$B$ cuya imagen en $B_\goth{n}/\goth{m}B_\goth{n}$ lo genera como álgebra sobre~$k=A/\goth{m}$ y que pertenece a todos los ideales maximales de~$B$ distintos de~$\goth{n}$. Sean
+$B'=A[u]$ y $\goth{n}'=\goth{n}\cap B'$.% SGA1-CORR-0006: la autoridad imprime B'=B[u], n'=nB'.
+Entonces el homomorfismo canónico $B'_{\goth{n}'}\to B_\goth{n}$ es un isomorfismo.
+\end{lemme}
+
+\begin{lemme}
+\label{I.7.10}
+(Habría debido figurar como corolario de~\Ref{I.7.1}, antes de~\Ref{I.7.5}, al que implica.) Sea $B$ un álgebra finita sobre~$A$ generada por un elemento~$u$, y sea $\goth{n}$ un ideal maximal de~$B$ tal que $B_\goth{n}$ sea no ramificado sobre~$A$. Entonces existe un polinomio mónico $F\in A[t]$ tal que $F(u)=0$ y $F'(u)\notin\goth{n}$.
+\end{lemme}
+
+Sea, en efecto, $n$ el rango de la $k$-álgebra $L=B\otimes_Ak$; por Nakayama existe un polinomio mónico de grado~$n$ en~$A[t]$ tal que $F(u)=0$. Sea $f$ el polinomio deducido de~$F$ por reducción módulo~$\goth{m}$; entonces $L$ es $k$-isomorfa a $k[t]/fk[t]$, y por~\Ref{I.7.3}, $f'(\xi)$ no pertenece al ideal maximal de~$L$ que corresponde a~$\goth{n}$ (donde $\xi$ designa la imagen de~$t$ en~$L$, \ie la imagen de~$u$ en~$L$). Como $f'(\xi)$ es la imagen de~$F'(u)$, hemos terminado.

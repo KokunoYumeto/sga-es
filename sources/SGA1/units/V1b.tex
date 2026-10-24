@@ -1,0 +1,166 @@
+
+\begin{corollaire}
+\label{V.1.6}
+Para que $X$ sea afín, \resp un esquema,
+\ifthenelse{\boolean{orig}}{es n.~y~s.}{es necesario y suficiente}
+que~$Y$ lo sea.
+\end{corollaire}
+
+\begin{definition}
+\label{V.1.7}
+Sea
+\marginpar{109}
+$X$ un preesquema sobre el que un grupo finito~$G$ actúa por la derecha. Se
+dice que la acción de~$G$ es \emph{admisible} si existe un morfismo
+$p\colon X\to Y$ que tiene las propiedades de~\Ref{V.1.3} (lo cual implica
+que $X/G$ existe y es isomorfo a~$Y$).
+\end{definition}
+
+\begin{proposition}
+\label{V.1.8}
+Sea $X$ un preesquema sobre el que el grupo finito~$G$ actúa por la derecha.
+Para que la acción de~$G$ sea admisible es necesario y suficiente que~$X$
+sea unión de abiertos afines invariantes por~$G$, o, equivalentemente, que
+toda órbita de~$G$ en~$X$ esté contenida en un abierto afín.
+\end{proposition}
+
+La primera condición implica evidentemente la segunda, y esta, a su vez,
+implica la primera. En efecto, sean~$T$ una órbita de~$G$ y~$U$ un abierto
+afín que la contiene. La intersección de los transformados de~$U$ por
+\ifthenelse{\boolean{orig}}{los~$g$ $G$}{los~$g$ de~$G$}
+es entonces un abierto~$U'$ estable por~$G$, que contiene a~$T$ y está
+contenido en el abierto afín~$U$. Como, dentro de~$U$, toda parte finita
+posee un sistema fundamental de entornos abiertos afines, existe un entorno
+abierto afín~$V$ de~$T$ contenido en~$U'$. Sus transformados por
+\ifthenelse{\boolean{orig}}{los~$g$ $G$}{los~$g$ de~$G$}
+son, pues, afines y están contenidos en~$U'$, que es \emph{separado}; por
+tanto, su intersección~$U''$ es un abierto afín, invariante por~$G$, que
+contiene a~$T$.
+--- Sentado esto, la condición considerada en~\Ref{V.1.8} es
+\emph{necesaria}, pues se toman las imágenes inversas~$X_i$ de abiertos
+afines~$Y_i$ que recubren~$Y$. Es suficiente porque, por~\Ref{V.1.1}, pueden
+construirse entonces los cocientes $Y_i=X_i/G$; en cada~$Y_i$, la imagen de
+$X_i\cap X_j$ es un abierto~$Y_{ij}$ que se identifica con~$X_{ij}/G$
+por~\Ref{V.1.4}. En particular, se deducen isomorfismos
+$Y_{ij}\isomto Y_{ji}$ que permiten pegar los~$Y_i$ para construir~$Y$.
+Serre prefiere construir directamente el espacio topológico cociente~$Y$
+de~$X$ por~$G$, dotarlo del haz $p_*(\cal{O}_X)^G$ y comprobar que~$Y$ se
+convierte en un preesquema y que se está entonces bajo las condiciones
+de~\Ref{V.1.3}.
+
+\setcounter{proposition}{6}
+
+\begin{corollaire}
+\label{cor:V.1.7}
+Si la acción de~$G$ sobre~$X$ es admisible, también lo es la de todo subgrupo
+$H$ de~$G$ (por tanto, $X/H$ existe).
+\end{corollaire}
+
+Esto puede comprobarse también directamente en la situación de~\Ref{V.1.3},
+observando que siempre puede suponerse que~$X$ es afín sobre algún~$Z$ y que
+los $s\in G$ actúan por $Z$-automorfismos (se toma, por ejemplo, $Z=Y$). En
+efecto:
+
+\begin{corollaire}
+\label{cor:V.1.8}
+Supongamos que~$X$ es afín sobre~$Z$ y que las operaciones de~$G$ son
+$Z$-automorfismos. Entonces la acción de~$G$ sobre~$X$ es admisible. Si~$X$
+está definido por un haz cuasicoherente~$\cal{A}$ de álgebras, $Y$ está
+definido por el haz~$\cal{A}^G$ de invariantes de~$\cal{A}$ por~$G$.
+\end{corollaire}
+
+\begin{proposition}
+\label{V.1.9}
+Supongamos que la acción de~$G$ sobre~$X$ es admisible y que $X/G=Y$ es un
+preesquema sobre~$Z$. Consideremos un morfismo de cambio de base $Z'\to Z$ y
+pongamos $X'=X\times_Z Z'$, $Y'=Y\times_Z Z'$, de modo que~$G$ sigue
+actuando, por transporte de estructura, sobre~$X'$, y el morfismo
+$p'\colon X'\to Y'$ es invariante. Si~$Z'$ es \emph{plano} sobre~$Z$,
+entonces~$p'$ sigue satisfaciendo las hipótesis
+\ifthenelse{\boolean{orig}}
+{de~\Ref{V.1.3}}
+{de~\Ref{V.1.3},}
+\ie $\cal{O}_{Y'}\to p_*'(\cal{O}_{X'})^G$ es un isomorfismo (pues~$p'$ es
+afín en cualquier caso). Por consiguiente, la acción de~$G$ sobre~$X'$ es
+admisible y
+$(X/G)\times_Z Z'\thickapprox (X\times_Z Z')/G$.
+\end{proposition}
+
+Puede suponerse evidentemente que $Z=Y$, y la cuestión se reduce al caso en
+que, además, $Y$ e~$Y'$ son afines. Hay que demostrar que, si~$B$ es el
+subanillo de invariantes de la acción de~$G$ sobre~$A$ y si~$B'$ es un
+$B$-álgebra plana sobre~$B$, entonces~$B'$ es la subálgebra de invariantes de
+$A'=A\otimes_B B'$. Esto es inmediato, pues la sucesión exacta
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+$$
+0 \to B \lto{i} A \lto{j} A^{(G)}
+$$
+(donde el último término denota una potencia de~$A$ y $j(x)$ es el sistema
+de los $s\cdot x-x$, $s\in G$) sigue siendo exacta al tensorizar por
+\ifthenelse{\boolean{orig}}
+{$A'$}
+{$B'$}.
+
+Debe advertirse que la hipótesis de planitud era esencial para la validez
+del resultado; en particular, si~$Y'$ es un subpreesquema cerrado de
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$Y$}
+(por ejemplo, incluso un punto cerrado de
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$Y$})
+y~$X'$ es su imagen inversa en~$X$, entonces, en general, $Y'$ \emph{no se
+identifica} con~$X'/G$. Veremos que, no obstante, sí se identifica cuando~$X$
+es étale sobre~$Y$.
+
+Para terminar, demos un formalismo tan cómodo como trivial. Sea~$Y$ un
+preesquema. Como en la categoría de los preesquemas existen las sumas
+disjuntas, para todo conjunto~$E$ puede considerarse el preesquema suma de
+una familia $(Y_i)_{i\in E}$ de preesquemas, todos idénticos a~$Y$; este
+preesquema se denotará por~$Y\times E$.
+\marginpar{110}
+Está caracterizado por la fórmula
+\begin{equation*}
+\label{eq:V.1.*}
+\tag{$*$} \Hom(Y\times E,Z) = \Hom(E,\Hom(Y,Z)),
+\end{equation*}
+donde el segundo~$\Hom$ denota, evidentemente, el conjunto de aplicaciones
+del conjunto~$E$ en el conjunto~$\Hom(Y,Z)$. Hay un morfismo canónico
+$$
+Y\times E\to Y
+$$
+que hace de~$Y\times E$ un preesquema sobre~$Y$. Como los productos fibrados
+conmutan con las sumas disjuntas (en la categoría de los preesquemas), si~$Y$
+es un preesquema sobre otro~$Z$, se tiene, para un cambio de base $Z'\to Z$:
+$$
+(Y\times E)\times_Z Z'=(Y\times_Z Z')\times E
+$$
+(fórmula especialmente útil si $Z=Y$). Por otra parte, se deduce
+trivialmente de la definición que
+$$
+(Y\times E)\times F=Y\times(E\times F)
+=(Y\times E)\times_Y(Y\times F)
+$$
+(aunque la última fórmula resulta también de la conmutatividad señalada más
+arriba).
+
+Para~$Y$ fijo, puede considerarse $Y\times E$ como un funtor de~$E$, con
+valores en los preesquemas sobre~$Y$; según la fórmula anterior, este funtor
+conmuta con los productos finitos. Esto permite, por ejemplo, asociar a todo
+grupo ordinario~$G$ un esquema en grupos $Y\times G$ sobre~$Y$, que será
+finito sobre~$Y$ si
+\ifthenelse{\boolean{orig}}{$Y$ lo es}{$G$ es finito},
+\ifthenelse{\boolean{orig}}{etc...}{etc.}
+Más generalmente, este funtor es «exacto por la izquierda», pero no tendremos
+que utilizar aquí este hecho. También conmuta trivialmente con las sumas
+disjuntas y es «exacto por la derecha», como se ve de inmediato en la fórmula
+de definición~\eqref{eq:V.1.*}. En particular, si el grupo finito~$G$ actúa
+por la derecha sobre el conjunto~$E$, entonces actúa por la derecha sobre
+$Y\times E$, y se tiene
+$$
+(Y\times E)/G = Y\times (E/G),
+$$
+donde, de hecho, el cociente del primer miembro satisface las condiciones
+de~\Ref{V.1.3} (esto es inmediato).

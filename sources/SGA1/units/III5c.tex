@@ -1,0 +1,47 @@
+
+Procediendo paso a paso, se ve, pues, que si todos los~$\H^1(Y_0,\cal{G}_n)$
+son nulos (donde $\cal{G}_n=g_0^*(\goth{g}_{X_0/S_0})\otimes\gr_{\cal{IO}_Y}^{n}(\cal{O}_Y)$), entonces, partiendo de un~$g_k$ cualquiera, puede prolongarse sucesivamente a~$g_{k+1},\dots$. En particular, si~$\cal{I}$ es nilpotente, podrá hallarse una prolongación~$g$ de~$g_k$ a~$Y$. La condición de anulación de los~$\H^1$ se cumple, en particular, si~$Y_0$ es afín. Se obtiene, por tanto:
+
+\begin{corollaire}
+\label{III.5.5}
+En
+\marginpar{75}
+el enunciado del teorema~\Ref{III.3.1}, se obtiene una condición necesaria y suficiente equivalente a las demás suponiendo que el~$Y'$ que interviene en~\textup{(ii)} (o~\textup{(ii~bis)}) sea afín, y exigiendo la existencia de una \emph{prolongación global}~$g$ de~$g_0$ a todo~$Y'$.
+\end{corollaire}
+
+Obsérvese que la demostración de~\Ref{III.3.1} no podía darnos directamente este resultado.
+
+Un caso importante es aquel en que~$Y$ es \emph{plano} sobre~$S$; se tiene entonces
+\begin{equation*}
+\gr^n(\cal{O}_Y)=\gr^n(\cal{O}_S)\otimes_{\cal{O}_{S_0}}\cal{O}_{Y_0},
+\end{equation*}
+y cuando, además, los~$\gr^n(\cal{O}_S)$ son \emph{localmente libres sobre}
+\ifthenelse{\boolean{orig}}
+{~$S$}
+{~$S_0$},
+se obtiene
+\begin{equation*}
+\cal{G}_n=
+\SheafHom_{\cal{O}_{Y_0}}(g_0^*(\it{\Omega}_{X_0/S_0}^1),\cal{O}_{Y_0})
+\otimes_{\cal{O}_{S_0}}\gr^n(\cal{O}_S),
+\end{equation*}
+o también, si~$\it{\Omega}_{X_0/S_0}^1$ es asimismo localmente libre (por ejemplo, si~$X$ es liso sobre~$S$),
+\begin{equation*}
+\cal{G}_n=g_0^*(\goth{g}_{X_0/S_0})
+\otimes_{\cal{O}_{S_0}}\gr^n(\cal{O}_S).
+\end{equation*}
+Si, por ejemplo, $S$ es afín,
+de anillo~$A$, y~$\cal{I}$ está definido por un ideal~$I$ de~$A$, se obtiene
+\begin{equation*}
+\H^i(Y_0,\cal{G}_n)=\H^i(Y_0,\cal{G}_0)\otimes_A\gr_I^n(A)
+\end{equation*}
+para todo~$i$ (en efecto, la cuestión es local sobre~$S_0$, y se reduce al caso en que se tensoriza por un módulo libre). \emph{En este caso, la anulación de~$\H^1(Y_0,\cal{G}_0)$ implica que todas las obstrucciones a las prolongaciones sucesivas de~$g_n$ son nulas}. Se obtiene, pues:
+
+\begin{corollaire}
+\label{III.5.6}
+Sean $(S,X,Y,\cal{I},g_n)$ como antes; supóngase además que~$X$ es liso sobre~$S$, que~$Y$ es plano sobre~$S$, que~$S$ es afín y que los~$\gr^n(\cal{O}_S)=\cal{I}^n/\cal{I}^{n+1}$ son localmente libres. Entonces la obstrucción para construir~$g_{n+1}$ se encuentra en~$\H^1(Y_0,\cal{G}_0)\otimes_A\gr_I^{n+1}(A)$ (donde~$A$ es el anillo de~$S$ e~$I$ el ideal de~$A$ que define~$\cal{I}$), poniendo
+\begin{equation*}
+\cal{G}_0=g_0^*(\goth{g}_{X_0/S_0}).
+\end{equation*}
+Si~$\H^1(Y_0,\cal{G}_0)=0$, entonces~$g_n$ puede prolongarse a un $\widehat{S}$-morfismo $\widehat{g}\colon\widehat{Y}\to\widehat{X}$.
+\end{corollaire}

@@ -1,0 +1,261 @@
+\begin{theoreme}
+\label{IX.5.1}
+Sea $g\colon S'\to S$ un morfismo de preesquemas que sea un morfismo de
+descenso efectivo para la categoría fibrada de recubrimientos étales de
+preesquemas (\cf \Ref{IX.4.9} y~\Ref{IX.4.12}). Supongamos que~$S$ es conexo
+y que~$S'$, su cuadrado fibrado~$S''$ y su cubo fibrado~$S'''$ son sumas de
+preesquemas conexos (como ocurre, por ejemplo, si~$S'$ es de tipo finito
+sobre~$S$ localmente noetheriano y conexo). Elijamos, como antes, un punto
+geométrico en cada componente conexa de~$S'$,~$S''$ y~$S'''$, ciertas clases
+de caminos, un~$s_0'\in E'$ y, para cada~$s'\in E'$, un
+\ifthenelse{\boolean{orig}}
+{$s'\in E''$}
+{$s''\in E''$}
+cuyas dos imágenes en~$E'$ sean~$s_0'$ y~$s'$. ($E'$,~$E''$ y~$E'''$
+designan, respectivamente, los conjuntos de componentes conexas de~$S'$,
+~$S''$ y~$S'''$). Entonces el grupo fundamental de~$S$ en el punto geométrico
+imagen de~$s_0'$ es canónicamente isomorfo al grupo de tipo galoisiano
+engendrado por los~$\pi_{s'}=\pi_1(S',\underline{s}')$ ($s'\in E'$) y por
+generadores~$g_{s''}$ ($s''\in E''$), sometidos a las relaciones
+~\Ref{eq:IX.5.a},~\Ref{eq:IX.5.b} y~\Ref{eq:IX.5.c} anteriores, en las que
+intervienen los elementos de los grupos
+$\pi_{s''}=\pi_1(S'',\underline{s}'')$ y los elementos~$a_i^{s'''}$
+($i=1,2,3$, $s'''\in E'''$) introducidos más arriba.
+\end{theoreme}
+
+\begin{corollaire}
+\label{IX.5.2}
+Supongamos que~$S'$ y~$S''$ no tienen más que un número finito de componentes
+conexas y que los grupos fundamentales de las componentes conexas de~$S'$
+son topológicamente finitamente generados. Entonces el grupo fundamental de
+~$S$ es topológicamente finitamente generado.
+\end{corollaire}
+
+Así,
+\marginpar{248}
+demostraremos más adelante que el grupo fundamental de un esquema proyectivo
+normal sobre un cuerpo algebraicamente cerrado es topológicamente finitamente
+generado. Utilizando el lema de Chow y la normalización de los esquemas
+algebraicos, se seguirá que el mismo resultado es cierto para todo esquema
+propio sobre un cuerpo algebraicamente cerrado.
+
+\begin{corollaire}
+\label{IX.5.3}
+Supongamos que~$S'$,~$S''$ y~$S'''$ no tienen más que un número finito de
+componentes conexas, que los grupos fundamentales de las componentes conexas
+de~$S'$ son topológicamente de \emph{presentación finita}, y que los grupos
+fundamentales de las componentes conexas de~$S''$ son topológicamente
+\emph{finitamente generados}. Entonces el grupo fundamental de~$S$ es
+topológicamente de \emph{presentación finita}.
+\end{corollaire}
+
+Obsérvese que
+\ifthenelse{\boolean{orig}}{\Ref{IX.4.9}}{\Ref{IX.4.10}}
+puede expresarse, al restringirlo a los \emph{recubrimientos} étales,
+diciendo que \emph{un morfismo finito, radicial y sobreyectivo de preesquemas
+noetherianos induce un isomorfismo de los grupos fundamentales}; en términos
+figurados, se puede decir, pues, que el grupo fundamental es un
+\emph{invariante topológico} para los preesquemas.
+Más generalmente, mediante~\Ref{IX.5.1} se puede explicitar el efecto sobre
+el grupo fundamental de operaciones sobre los preesquemas, tales como el
+«pinzamiento» de un preesquema a lo largo de un conjunto finito de puntos,
+que tiene un significado topológico sencillo. Se obtiene, por ejemplo:
+
+\begin{corollaire}
+\label{IX.5.4}
+Sean $g\colon S'\to S$ un morfismo finito de presentación finita y~$T$ un
+subconjunto discreto de~$S$. Para cada~$s\in S$, sea~$n(s)$ el «número geométrico de
+puntos» de la fibra~$g^{-1}(s)$ (que puede describirse también como el grado
+separable de~$g^{-1}(s)$ sobre~$\kres(s)$, suma de los grados separables de sus
+extensiones residuales). Supongamos que, para~$s\in S-T$, se tiene~$n(s)=1$. Para cada
+~$s\in T$, sea~$K_s$ una extensión algebraicamente cerrada de~$\kres(s)$,
+sea~$I_s$ el conjunto de los puntos geométricos de~$S'$ con valores en~$K_s$
+(un conjunto con~$n(s)$ elementos), sea~$I_s'$ el complementario de un punto
+elegido de~$I_s$ y, finalmente, sea~$I'$ la unión de los~$I_s'$. Supongamos
+que~$S'$ es conexo. Entonces el grupo fundamental de~$S$ es isomorfo al grupo
+de tipo galoisiano engendrado por el grupo fundamental de~$S'$ y por
+generadores~$g_i$ ($i\in I'$), sin relaciones suplementarias.
+\end{corollaire}
+
+Los
+\marginpar{249}
+detalles de la demostración se dejan al lector; el enunciado obtenido no es
+más que la traducción, al lenguaje de la teoría de grupos, del hecho de que la
+categoría~$C$ de los recubrimientos étales de~$S$ es equivalente a la
+categoría de los recubrimientos étales~$X'$ de~$S'$, \emph{provistos}, para
+cada~$s\in T$, de un sistema transitivo de biyecciones entre las~$n(s)$ fibras
+de~$X'$ en los puntos de~$g^{-1}(s)$ con valores en~$K_s$. (En esta forma
+intrínseca, naturalmente, ya no es necesario suponer que~$S'$ es conexo).
+
+\begin{exemple}
+\label{IX.5.5}
+Se demuestra fácilmente que la curva racional~$\PP^1_k$ sobre un cuerpo
+algebraicamente cerrado~$k$ es simplemente conexa\footnote{\Cf
+\Ref{XI.1.1}.}. Por tanto, el grupo fundamental de una curva racional
+completa que tiene exactamente un punto doble con~$n$ ramas analíticas es el
+grupo de tipo galoisiano libre engendrado por~$n-1$ generadores. Por ejemplo,
+en el caso de un punto doble ordinario se obtiene el grupo fundamental
+~$\hat\ZZ$, como se anunció en~(\Ref{I.11}~a)). En cambio, la existencia de
+una cúspide (que es un punto «geométricamente unirramoso») no influye en el
+grupo fundamental.
+\end{exemple}
+
+\begin{corollaire}
+\label{IX.5.6}
+Sea $g\colon S'\to S$ un morfismo de preesquemas universalmente submersivo,
+con fibras geométricamente conexas, siendo~$S$ conexo. Entonces~$S'$ es
+conexo y, eligiendo un punto geométrico~$s'$ de~$S'$ y denotando por~$s$ su
+imagen en~$S$, el homomorfismo
+$$
+\pi_1(S',s')\to \pi_1(S,s)
+$$
+es \emph{sobreyectivo}. Si~$g$ es un morfismo de descenso efectivo para la
+categoría fibrada de los recubrimientos étales de preesquemas
+(\cf \emph{\Ref{IX.4.12}}), introduzcamos el punto geométrico
+~$s^{\prime\prime}=\diag(s')$ de~$S^{\prime\prime}=S'\times_S S'$ y los dos
+homomorfismos
+$$
+p_{1*},p_{2*}\colon \pi_1(S^{\prime\prime},s^{\prime\prime}) \to
+\pi_1(S',s')
+$$
+inducidos por las dos proyecciones. Entonces~$\pi_1(S,s)$ es isomorfo al
+conúcleo de este par de homomorfismos en la categoría de los grupos de tipo
+galoisiano, es decir, al cociente de~$\pi_1(S',s')$ por el subgrupo normal
+cerrado engendrado por los
+\marginpar{250}
+elementos de la forma
+$p_{1*}(g^{\prime\prime})p_{2*}(g^{\prime\prime})^{-1}$, con
+$g^{\prime\prime}\in \pi_1(S^{\prime\prime},s^{\prime\prime})$.
+\end{corollaire}
+
+En efecto, por~\Ref{IX.3.4} se sabe que el funtor
+$X\mto X\times_SS'$ de los recubrimientos étales de~$S$ en los
+recubrimientos étales de~$S'$ es plenamente fiel, lo que equivale a que el
+homomorfismo de grupos fundamentales sea un epimorfismo (\Ref{V.6.9}). La
+última afirmación es consecuencia inmediata de la descripción de
+~\Ref{IX.5.1}.
+
+\begin{remarque}
+\label{IX.5.7}
+No se sabe actualmente si el grupo fundamental de un esquema propio sobre un
+cuerpo algebraicamente cerrado~$k$ es topológicamente de presentación
+finita\footnote{Esto parece muy improbable en el caso de las curvas lisas de
+género~$g\geq 2$ en característica~$p>0$. En cambio, cuando se sustituye
+~$\pi_1$ por su mayor cociente primo con~$p$, parece que las técnicas bien
+conocidas permiten dar una respuesta afirmativa, incluso sin suponer que el
+esquema sea propio. \Cf un trabajo en preparación de J.P\ptbl Murre.}. Utilizando
+~\Ref{IX.5.3}, una técnica bien conocida de secciones hiperplanas y la
+desingularización de las superficies normales, se reduce al caso de una
+\emph{superficie lisa sobre}~$k$. Esto permite, al menos, demostrar por
+métodos trascendentes que la respuesta es afirmativa en característica~$0$
+(sin necesidad de admitir la triangulabilidad de las variedades algebraicas
+singulares). En característica~$p>0$, la dificultad principal parece residir
+en el caso de las curvas, cuyo grupo fundamental solo se sabe que es un
+cociente del que aparece en el caso clásico (\cf el exposé siguiente), pero
+el núcleo por el que se toma el cociente se conoce muy mal.
+\end{remarque}
+
+\begin{remarque}
+\label{IX.5.8}
+Además de~\Ref{IX.5.4} y~\Ref{IX.5.6}, se podrían explicitar otros casos
+particulares en los que~\Ref{IX.5.1} adopta una forma especialmente sencilla.
+Un caso interesante es aquel en que~$S$ es el cociente de~$S'$ por un grupo
+finito de automorfismos~$\Gamma$. \emph{Entonces la categoría de los
+recubrimientos étales
+\ifthenelse{\boolean{orig}}{de~$S'$}{de~$S$}
+es equivalente a la categoría de los recubrimientos étales~$X'$ de~$S'$ en
+los que el grupo~$\Gamma$ actúa de modo compatible con su acción sobre~$S'$,
+de manera que para cada~$s'\in S'$ y cada~$g\in\Gamma_{s'}$} (donde
+~$\Gamma_{s'}$ designa \emph{el grupo de inercia} de~$s'$ en~$\Gamma$),
+\emph{$g$ actúa trivialmente sobre la fibra}~$X_{s'}^\prime$. Si~$S'$ es conexo,
+este enunciado se interpreta del modo siguiente. Sea~$C'_0$ la categoría de
+los recubrimientos étales de~$S'$ en los que~$\Gamma$ actúa de modo compatible
+con su acción sobre~$S'$ (pero sin satisfacer necesariamente la condición
+anterior sobre los grupos de inercia de los puntos de~$S'$). Se ve fácilmente
+que es una categoría galoisiana (\Ref{V.5}) y que, para
+\marginpar{251}
+cada punto geométrico~$a'$ de~$S'$, el funtor fibra
+$X'\mto X_{a'}'$ sobre~$C'_0$ es un funtor fundamental. Sea
+~$\pi_1(S',\Gamma;a')=G$ el grupo de automorfismos de este funtor, provisto de
+su topología habitual. Se tiene entonces una sucesión exacta canónica
+$$
+e\to \pi_1(S',a')\to G\to \Gamma\to e
+$$
+(caso particular de~\Ref{V.6.13}, donde se toma por~$S$ el recubrimiento
+trivial~$S'\times\Gamma$ de~$S'$ definido por~$\Gamma$, sobre el cual se hace
+actuar~$\Gamma$ de modo evidente). Además, para cada punto geométrico~$b'$ de
+~$S'$, se tiene un isomorfismo
+$\pi_1(S',\Gamma;b')\to G=\pi_1(S',\Gamma;a')$, definido salvo un
+automorfismo interior procedente de~$\pi_1(S',a')$; y, como hay un
+homomorfismo evidente de~$\Gamma_{b'}$ al primer miembro, se obtiene un homomorfismo
+$$
+u_{b'}\colon \Gamma_{b'}\to G \quoi,
+$$
+definido salvo un automorfismo interior (procedente
+\ifthenelse{\boolean{orig}}
+{de~$\pi_1(S',a')$,}
+{de~$\pi_1(S',a')$),}
+cuyo compuesto con el homomorfismo canónico~$G\to\Gamma$ es la inclusión
+canónica~$\Gamma_{b'}\to\Gamma$. Hecho esto, \emph{el grupo fundamental
+~$\pi_1(S,a)$ es canónicamente isomorfo al grupo cociente de
+~$G=\pi_1(S',\Gamma;a')$ por el subgrupo normal cerrado engendrado por las
+imágenes de los homomorfismos~$\Gamma_{b'}\to G$}. En particular, la imagen de
+~$\pi_1(S',a')$ en~$\pi_1(S,a)$ es un subgrupo normal, y el cociente
+correspondiente es isomorfo a un cociente de~$\Gamma$. Además, se puede
+reducir el número de «relaciones» introducidas considerando, para cada
+~$g\in\Gamma$, $g\neq e$, el subpreesquema~$S'_g$ de coincidencias de los
+automorfismos
+\ifthenelse{\boolean{orig}}{$\id_S$ y~$g$ de~$S$}{$\id_{S'}$ y~$g$ de~$S'$},
+eligiendo un punto geométrico~$b'_{g,i}$ en cada componente conexa de~$S'_g$
+y, después, uno de los homomorfismos correspondientes
+~$\pi_1(S',\Gamma;b'_{g,i})\to G$, de donde se obtienen levantamientos
+~$\bar{g}_i$ de~$g$ en~$G$. Basta entonces tomar el cociente de~$G$ por el
+subgrupo normal cerrado de~$G$ engendrado por los~$\bar{g}_i$.
+
+Cuando~$a'$ es fijo por~$\Gamma$, se ve fácilmente que~$\Gamma$ actúa de modo
+natural sobre~$\pi_1(S',a')$ y que~$G$ se identifica con el producto
+semidirecto correspondiente. Identificando entonces~$\Gamma$
+\ifthenelse{\boolean{orig}}
+{a}
+{con}
+un subgrupo de~$G$, se ve que entre las relaciones
+\marginpar{252}
+introducidas más arriba, al tomar~$b'=a'$, aparecen «$g=e$» para
+~$g\in\ifthenelse{\boolean{orig}}{I}{\Gamma}$. Por tanto, \emph{si~$S'$ tiene
+un punto geométrico~$a'$ fijo por}~$\ifthenelse{\boolean{orig}}{I}{\Gamma}$
+(es decir, un punto~$s'$ cuyo grupo de inercia es~$\Gamma$), \emph{entonces
+~$\pi_1(S,a)$ es un grupo cociente del grupo cociente de tipo galoisiano de
+~$\pi_1(S',a')$ obtenido «haciendo triviales» las acciones de~$\Gamma$ sobre
+~$\pi_1(S',a')$; y es incluso isomorfo a este último grupo si se supone que,
+para cada~$g\in\ifthenelse{\boolean{orig}}{G}{\Gamma}$, el lugar de inercia
+~$S_g'$ es conexo y, por tanto, pasa por el punto subyacente de~$a'$}.
+Esta última afirmación está, en efecto, contenida en la segunda descripción
+dada más arriba de las relaciones que se han de imponer a~$G$.
+
+Este último resultado se aplica, en particular, si se toma por~$S'$ la
+potencia cartesiana~$X^n$ de un preesquema conexo sobre un cuerpo
+algebraicamente cerrado, y por~$\Gamma$ el grupo simétrico
+~$\Gamma={\goth {S}}_n$, que actúa de la manera habitual, con lo que~$S$ es la
+producto simétrico \ifthenelse{\boolean{orig}}{\nieme}{de grado~$n$}
+\ifthenelse{\boolean{orig}}{de~$S$}{de~$X$}.
+Tomando por~$a'$ un punto geométrico cuyo punto subyacente pertenece a la
+diagonal, se cumplen las condiciones anteriores, pues todos los lugares de
+inercia~$S_g'$ contienen la diagonal. Utilizando el hecho, demostrado en el
+exposé siguiente, de que si~$X$ es propio y conexo sobre~$k$, el grupo
+fundamental de~$X^n$ se identifica con~$\pi_1(X)^n$, se obtiene el siguiente
+resultado curioso: \emph{si~$X$ es propio y conexo sobre un cuerpo
+algebraicamente cerrado~$k$, el grupo fundamental de su producto simétrico
+\ifthenelse{\boolean{orig}}{\nieme}{de grado~$n$}, $n\geq 2$, es isomorfo a la abelianización del grupo fundamental
+de~$X$}. (Ignoro si se conoce el hecho análogo en topología algebraica; debería
+poder establecerse mediante el mismo método de descenso). Tomemos, por
+ejemplo, por~$X$ la curva racional~$X=\PP^1_k$; se obtiene una
+\ifthenelse{\boolean{orig}}{\Nieme}{enésima} demostración de
+que~$\PP^r_k$ es simplemente conexo, utilizando que~$\PP^1_k$ lo es. Tomemos
+ahora por~$X$ una curva no singular sobre~$k$ y sea~$n\geq 2g-1$, de modo que
+~$\Symm^n(X)$ está fibrado sobre la jacobiana~$J$, con fibras espacios
+proyectivos, y tiene, por tanto (como se verá mediante los resultados de los
+dos exposés siguientes), el mismo grupo fundamental que~$J$. Se recupera así,
+sin una reducción por etapas, el conocido hecho de que \emph{el grupo fundamental de la
+jacobiana de~$X$ es isomorfo a la abelianización del grupo fundamental de
+~$X$}.
+\end{remarque}

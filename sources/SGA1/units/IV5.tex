@@ -1,0 +1,280 @@
+
+\section{Criterios locales de planitud}
+\label{IV.5}
+
+\begin{proposition}
+\label{IV.5.1}
+Sean~$A$ un anillo provisto de un ideal~$I$ y~$M$ un $A$-módulo.
+Supongamos que
+$$
+\Tor_1^A(M,A/I^n)=0 \qquad \text{para $n>0$};
+$$
+entonces el homomorfismo canónico sobreyectivo
+\begin{equation*}
+\label{eq:IV.5.1.*}
+\tag{$*$} {\gr_I^0(M)\otimes_{A/I}\gr_I(A)\to\gr_I(M)}
+\end{equation*}
+es un isomorfismo. El recíproco es cierto si~$I$ es nilpotente.
+\end{proposition}
+
+La hipótesis significa que los homomorfismos
+$$
+I^n\otimes_A M\to I^nM
+$$
+son isomorfismos, de donde se sigue inmediatamente que los homomorfismos
+$$
+I^n/I^{n+1}\otimes_A M\to I^nM/I^{n+1}M
+$$
+son isomorfismos. Recíprocamente, supongamos que se cumple esta condición
+y que~$I$ es nilpotente; demostremos que~$\Tor_1^A(M,A/I^n)=0$ para todo
+$n$. Esto es cierto para~$n$ grande; procedamos por inducción descendente
+sobre~$n$, suponiéndolo demostrado para~$n+1$. Se tiene un diagrama
+conmutativo
+$$
+\xymatrix{ & M\otimes I^{n+1}\ar[r]\ar[d] & M\otimes I^n\ar[r]
+\ar[d] & M\otimes(I^n/I^{n+1})\ar[r]\ar[d] & 0 \\ 0\ar[r] &
+MI^{n+1}\ar[r] & MI^n\ar[r] & MI^n/MI^{n+1}\ar[r] & 0 }
+$$
+cuyas filas son exactas.
+\marginpar{96}
+Por hipótesis, la última flecha vertical es un isomorfismo, y la hipótesis
+de inducción significa asimismo que lo es la primera flecha vertical. Lo
+mismo vale, por tanto, para la flecha vertical intermedia, lo que termina
+la demostración.
+
+Serre aisló la proposición siguiente durante el Seminario; permite
+simplificaciones sustanciales en esta sección.
+\begin{proposition}
+\label{IV.5.2}
+Sean~$A\to B$ un homomorfismo de anillos y~$M$ un $A$-módulo. Son
+equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] Para todo $B$-módulo~$N$, se tiene $\Tor_1^A(M,N)=0$.
+\item[(ii)] $\Tor_1^A(M,B)=0$ y $M_{(B)}=M\otimes_A B$ es plano
+sobre~$B$.
+\end{enumerate}
+\end{proposition}
+
+Se tiene un isomorfismo funtorial
+$$
+M\otimes_A N=(M\otimes_A B)\otimes_B N
+$$
+que expresa el primer miembro, considerado como funtor en~$M$, como
+compuesto de los dos funtores $M\mto M\otimes_A B$ y
+$P\mto P\otimes_B N$. Como el primero transforma módulos libres sobre~$A$
+en módulos libres sobre~$B$, y por tanto proyectivos en proyectivos, se
+tiene la sucesión espectral de los funtores compuestos
+$$
+\Tor_n^A(M,N)\From\Tor_p^B(\Tor_q^A(M,B),N),
+$$
+de donde resulta una sucesión exacta para los términos de grado bajo
+$$
+0\from\Tor_1^B(M\otimes_A B,N)\from\Tor_1^A(M,N)
+\from\Tor_1^A(M,B)\ifthenelse{\boolean{orig}}{\otimes_A}{\otimes_B}N.
+$$
+Si se cumple~(i), entonces se concluye de esta sucesión exacta que
+$\Tor_1^B(M\otimes_A B,N)=0$ para todo~$N$, es decir,
+$M\otimes_A B$ es plano sobre~$B$, de donde~(ii). Si, recíprocamente, se
+cumple~(ii), los términos que flanquean a~$\Tor_1^A(M,N)$ en la sucesión
+exacta son nulos, y se obtiene~(i).
+
+\begin{corollaire}
+\label{IV.5.3}
+Supongamos que~$B=A/I$; entonces las condiciones precedentes equivalen a
+la siguiente:
+\begin{enumerate}
+\item[(iii)] $\Tor_1^A(M,N)=0$ para todo $A$-módulo~$N$ aniquilado por
+una potencia de~$I$.
+\end{enumerate}
+\end{corollaire}
+
+En efecto, (i) dice que esto vale cuando~$N$ está aniquilado por~$I$. Se
+deduce~(iii) aplicando la hipótesis a los~$I^nN/I^{n+1}N$.
+
+\begin{corollaire}
+\label{IV.5.4}
+Bajo las condiciones de~\Ref{IV.5.3}, las condiciones consideradas
+implican que
+\marginpar{97}
+el homomorfismo funtorial
+\begin{equation*}
+\label{eq:IV.5.*}
+\tag{$*$} {\gr_I^0(M)\otimes_{A/I}\gr_I(A)\to\gr_I(M)}
+\end{equation*}
+es un isomorfismo y que~$M\otimes_A A/I$ es plano sobre~$A/I$.
+\end{corollaire}
+
+Basta aplicar~(iii) y
+\ifthenelse{\boolean{orig}}{\eqref{IV.5.1}}{\Ref{IV.5.1}}.
+Utilizando el recíproco de~\Ref{IV.5.1} cuando~$I$ es nilpotente, se
+obtiene:
+\begin{corollaire}
+\label{IV.5.5}
+Sean~$A$ un anillo provisto de un ideal nilpotente~$I$ y~$M$ un
+$A$-módulo. Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $M$ es plano sobre~$A$.
+\item[(ii)] $M\otimes_A A/I$ es plano sobre~$A/I$ y
+$\Tor_1^A(M,A/I)=0$.
+\item[(iii)] $M\otimes_A A/I$ es plano sobre~$A/I$ y el homomorfismo
+canónico~\eqref{eq:IV.5.*} sobre los graduados asociados es un
+isomorfismo.
+\end{enumerate}
+\end{corollaire}
+
+Estas son, respectivamente, las condiciones (iii) y (ii) precedentes y
+las condiciones del corolario~\Ref{IV.5.4}.
+
+No supongamos ya que~$I$ sea nilpotente. Entonces, a priori, solo se
+tienen en~\Ref{IV.5.5} las implicaciones
+(i)$\To$(ii)$\To$(iii). Por otra parte, como la condición~(iii) permanece
+estable al pasar al cociente por una potencia de~$I$, se ve, en virtud
+de~\Ref{IV.5.5}, que implica
+\begin{enumerate}
+\item[(iv)] \emph{Para todo entero
+\ifthenelse{\boolean{orig}}{$n$}{$n>0$},
+$M\ifthenelse{\boolean{orig}}{\otimes}{\otimes_A}A/I^n$ es plano
+sobre~$A/I^n$.}
+\end{enumerate}
+Nos proponemos dar condiciones bajo las cuales puede deducirse~(i), es
+decir, que~$M$ es plano sobre~$A$. Afirmo que basta para ello que~$A$ sea
+noetheriano y que~$M$ satisfaga la condición de finitud siguiente:
+\emph{para todo módulo de tipo finito~$N$ sobre~$A$, $M\otimes_A N$ es
+separado para la topología $I$-preádica}. (Bastaría verificarlo cuando~$N$
+es un ideal de tipo finito de~$A$). En efecto, demostremos que, bajo estas
+condiciones, si~$N'\to N$ es un monomorfismo de módulos de tipo finito,
+$M\otimes_A N'\to M\otimes_A N$ es un monomorfismo. Basta mostrar que el
+núcleo está contenido en todos los
+$I^n(M\otimes_A N')=\Im(M\otimes_A I^nN'\to M\otimes_A N')$, o, lo que
+equivale a lo mismo, en todos los
+$\Im(M\otimes_A V'_n\to M\otimes_A N')=
+\Ker(M\otimes_A N'\to M\otimes_A(N'/V'_n))$, donde~$V'_n$ recorre un
+sistema fundamental numerable de entornos de~$0$ en~$N'$ (provisto de su
+topología $I$-ádica). Por el teorema de Krull, la topología $I$-ádica
+de~$N'$ es inducida por la de~$N$; se puede tomar, por tanto,
+$V'_n=N'\cap I^nN$. Consideremos entonces el diagrama conmutativo
+$$
+\xymatrix{M\otimes_A N'\ar[r]\ar[d] & M\otimes_A(N'/V'_n)\ar[d]
+\\ M\otimes_A N\ar[r] & M\otimes_A(N/I^nN)}.
+$$
+\marginpar{98}%
+Como~$N'/V'_n$ y~$N/I^nN$ están aniquilados por~$I^n$, el segundo
+homomorfismo vertical se identifica con el obtenido del homomorfismo
+\emph{inyectivo} $N'/V'_n\to N/I^nN$ tensorizando sobre~$A/I^n$ con el
+$(A/I^n)$-módulo \emph{plano} $M\otimes_A A/I^n$; es, por tanto,
+\emph{inyectivo}. En consecuencia, el núcleo de
+$M\otimes_A N'\to M\otimes_A N$ está contenido en el de
+$M\otimes_A N'\to M\otimes_A(N'/V'_n)$, como se quería.
+
+La condición de «finitud» considerada sobre~$M$ se cumple, en particular,
+si~$M$ es un módulo de tipo finito sobre una $A$-álgebra noetheriana
+\ifthenelse{\boolean{orig}}{,}{}~$B$ tal que~$IB$ esté contenido en el
+radical de Jacobson de~$B$:
+en efecto, entonces~$M\otimes_A N$ es un módulo de tipo finito sobre~$B$
+para todo módulo de tipo finito~$N$ sobre~$A$, y por Krull es separado
+para la topología $I$-ádica, que es su topología $(IB)$-ádica. Se obtiene
+así:
+
+\begin{theoreme}
+\label{IV.5.6}
+Sean~$A\to B$ un homomorfismo de anillos noetherianos, $I$ un ideal de~$A$
+tal que~$IB$ esté contenido en el radical de Jacobson de~$B$ y~$M$ un
+$B$-módulo de tipo finito. Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $M$ es plano sobre~$A$.
+\item[(ii)] $M\otimes_A A/I$ es plano sobre~$A/I$ y
+$\Tor_1^A(M,A/I)=0$.
+\item[(iii)] $M\otimes_A A/I$ es plano sobre~$A/I$ y el homomorfismo
+canónico
+$$
+\gr_I^0(M)\otimes_{A/I}\gr_I(A)\to\gr_I(M)
+$$
+es un isomorfismo.
+\item[(iv)] Para todo entero
+\ifthenelse{\boolean{orig}}{$n$}{$n>0$}, $M\otimes_A A/I^n$ es plano
+sobre~$A/I^n$.
+\end{enumerate}
+\end{theoreme}
+
+Este resultado se aplica sobre todo cuando~$A$ y~$B$ son anillos
+\emph{locales} noetherianos, $A\to B$ es un homomorfismo local e~$I$ es
+un ideal de~$A$ contenido en su ideal maximal (y~\Ref{IV.5.6} puede
+reducirse de inmediato a este caso). Un caso interesante es aquel en que
+$A/I$ es un cuerpo, es decir, $I$ es maximal; entonces la condición de que
+$M\otimes_A A/I$ sea plano sobre~$A/I$ es automática. Además, como los
+$A/I^n$ son en tal caso anillos locales artinianos, la condición~(iv)
+significa que los~$M\otimes_A A/I^n$ son \emph{libres} sobre~$A/I^n$.
+
+\begin{corollaire}
+\label{IV.5.7}
+Sea
+\marginpar{99}
+$A\to B$ un homomorfismo local de anillos locales noetherianos y sea
+$u\colon M'\to M$ un homomorfismo de $B$-módulos de tipo finito.
+Supongamos que~$M$ es plano sobre~$A$. Son equivalentes las condiciones
+siguientes:
+\begin{enumerate}
+\item[(i)] $u$ es inyectivo y~$\Coker u$ es plano sobre~$A$.
+\item[(ii)] $u\otimes_A k\colon M'\otimes_A k\to M\otimes_A k$ es
+inyectivo.
+\end{enumerate}
+(Aquí~$k$ denota el cuerpo residual de~$A$).
+\end{corollaire}
+
+(i)$\To$(ii) en virtud de~\Ref{IV.1.1}; demostremos el recíproco. En
+primer lugar, $u$ es inyectivo, pues basta verificarlo en los graduados
+asociados, donde resulta de un cuadrado conmutativo que el lector
+escribirá. Sea~$M''$ su conúcleo; se tiene, por tanto, una sucesión exacta
+$$
+0\to M'\to M\to M''\to0,
+$$
+de donde la sucesión exacta de los~$\Tor$, teniendo en cuenta la
+hipótesis~(ii) y~$\Tor_1^A(M,k)=0$, da la relación
+$\Tor_1^A(M'',k)=0$; por el teorema~\Ref{IV.5.6}, $M''$ es plano
+sobre~$A$.
+
+\begin{corollaire}
+\label{IV.5.8}
+Bajo las condiciones de~\Ref{IV.5.6}, sea~$J$ un ideal de~$B$ que
+contiene a~$IB$ y está contenido en el radical de Jacobson. Sean
+$\hat A$ la completación
+\ifthenelse{\boolean{orig}}{$I$-ádicas}{$I$-ádica} de~$A$ y~$\hat B$
+y~$\hat M$ las completaciones $J$-ádicas de~$B$ y~$M$. Para que~$M$ sea
+plano sobre~$A$, es necesario y suficiente que
+\ifthenelse{\boolean{orig}}{$M$}{$\hat M$} sea plano sobre~$\hat A$.
+\end{corollaire}
+
+(N.B. la suficiencia resultaría ya fácilmente de~\Ref{IV.3.2}). Se
+utiliza el criterio~(iii) de~\Ref{IV.5.6} en la situación~$(A,B,I,M)$ y
+en la situación~$(\hat A,\hat B,I\hat A,\hat M)$. Se comprueba que las
+condiciones obtenidas en ambos casos son equivalentes gracias
+a~\Ref{IV.3.2}.
+
+\begin{corollaire}
+\label{IV.5.9}
+Sean~$A\to B\to C$ homomorfismos locales de anillos locales
+noetherianos y~$M$ un $C$-módulo de tipo finito (N.B. $C$ interviene
+únicamente para poder imponer una condición de finitud a~$M$).
+Supongamos que~$B$ es plano sobre~$A$. Sea~$k$ el cuerpo residual de~$A$.
+Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $M$ es plano sobre~$B$.
+\item[(ii)] $M$ es plano sobre~$A$ y~$M\otimes_A k$ es plano
+sobre~$B\otimes_A k$.
+\end{enumerate}
+\end{corollaire}
+
+La implicación (i)$\To$(ii) es trivial; demostremos (ii)$\To$(i). Se
+aplica el criterio~(iii) de~\Ref{IV.5.6} a~$(B,C,\goth{m}B=I,M)$. Como
+$M\otimes_B(B/I)=M\otimes_B(B\otimes_A k)=M\otimes_A k$, la primera
+condición de este criterio significa precisamente que~$M\otimes_A k$ es
+plano sobre~$B\otimes_A k$, perfecto.
+\marginpar{100}
+La segunda condición del criterio se cumple porque~$M$ es plano sobre~$A$
+y~$B$ es plano sobre~$A$, por una fórmula de asociatividad del producto
+tensorial. --- Naturalmente, remitiéndose a~\Ref{IV.5.5} en lugar de
+a~\Ref{IV.5.6}, se obtiene un enunciado análogo sin condición noetheriana
+ni de finitud, si se supone, en cambio, que el ideal~$\goth{m}$ de~$A$ es
+nilpotente. (El hecho de que se haya tomado~$\goth{m}$ maximal no ha
+intervenido; pero, en cierto sentido, el caso «$\goth{m}$ maximal» es «el
+mejor posible»).

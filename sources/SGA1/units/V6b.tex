@@ -1,0 +1,183 @@
+
+\begin{proposition}
+\label{V.6.4}
+Sea~$X$ un objeto punteado conexo de~$\cal C$, asociado a un subgrupo
+abierto~$U$ de~$\pi_F$. Para que
+\ifthenelse{\boolean{orig}}{$u$}{$U$}
+contenga a~$u(\pi_{F'})$ (\resp al subgrupo normal cerrado engendrado
+por~$u(\pi_{F'})$), es necesario y suficiente que~$H(X)$ admita una
+sección punteada (\resp esté completamente descompuesto).
+\end{proposition}
+
+Se llamará \emph{sección} ---sobrentendido: sobre el objeto final--- de un
+objeto~$X$ de una categoría galoisiana~$\cal C$ a un morfismo del objeto
+final~$e_{\cal C}$ en~$X$, lo que equivale a dar un elemento~$a$ de~$F(X)$
+invariante por~$\pi_F$; si~$X$ es punteado, se dice que se tiene una
+\emph{sección punteada} si es compatible con las estructuras punteadas de
+$X$ y~$e_{\cal C}$, \ie si~$a$ es precisamente el
+\ifthenelse{\boolean{orig}}
+{objeto marcado}
+{elemento marcado}
+de~$F(X)$. Tal sección es, pues, única, y existe si y solo si el
+\ifthenelse{\boolean{orig}}
+{objeto marcado}
+{elemento marcado}
+de~$F(X)$ es invariante por~$\pi_F$. Por último, se dice que un objeto de
+una categoría galoisiana está \emph{completamente descompuesto}
+\index{completamente descompuesto (objeto)|hyperpage}%
+\index{descompuesto (objeto completamente)|hyperpage}%
+si es isomorfo a una suma de objetos finales, \ie si~$\pi_F$ actúa
+trivialmente sobre~$F(X)$, condición evidentemente más fuerte que la
+existencia de una sección punteada cuando~$X$ es punteado. La
+Proposición~\Ref{V.6.4} resulta inmediatamente de las definiciones y
+observaciones anteriores.
+
+\begin{corollaire}
+\label{V.6.5}
+Para
+\marginpar{138}
+que~$u$ sea trivial, es necesario y suficiente que, para todo objeto~$X$
+de~$\cal C$, $H(X)$ esté completamente descompuesto.
+\end{corollaire}
+
+\begin{proposition}
+\label{V.6.6}
+Sea~$X'$ un objeto punteado conexo de~$\cal C'$, asociado a un subgrupo
+abierto~$U'$ de~$\pi_{F'}$. Para que~$U'$ contenga a~$\Ker u$, es necesario
+y suficiente que exista un objeto punteado conexo~$X$ de~$\cal C$ y un
+homomorfismo punteado de la componente conexa punteada~$X'_0$ de~$H(X)$
+en~$X'$ (por tanto, que
+\ifthenelse{\boolean{orig}}{$X$}{$X'$}
+sea isomorfo, como objeto punteado, a un cociente de la componente conexa
+neutra de la imagen inversa de un objeto punteado de~$\cal C$). Si~$u$ es
+sobreyectivo, la condición anterior equivale también a la siguiente:
+\ifthenelse{\boolean{orig}}{$X$}{$X'$}
+es isomorfo a un objeto de la forma~$H(X)$, donde~$X$ es un objeto punteado
+de~$\cal C$.
+\end{proposition}
+
+(Se llama \emph{componente conexa neutra}
+\index{neutra (componente conexa de un objeto punteado)|hyperpage}%
+de un objeto punteado~$X$ de una categoría galoisiana~$\cal C$ al único
+subobjeto conexo punteado de~$X$; en virtud de~\Ref{V.5.3}, corresponde a
+la órbita bajo~$\pi_F$ del punto marcado de~$F(X)$). Como el hecho de que
+$U'$ contenga a~$\Ker u$ no depende del punto elegido en~$X'$ (pues elegir
+otro punto equivale a reemplazar
+\ifthenelse{\boolean{orig}}{$U$}{$U'$}
+por un subgrupo conjugado), se obtiene:
+
+\begin{corollaire}
+\label{V.6.7}
+Para que~$U'$ contenga a~$\Ker u$, es necesario y suficiente que exista un
+objeto~$X$ de~$\cal C$ (que puede suponerse conexo) y un morfismo de una
+componente conexa de~$H(X)$ en~$X'$. Si~$u$ es sobreyectivo, esto significa
+también que~$X'$ es isomorfo a un objeto de la forma~$H(X)$.
+\end{corollaire}
+
+\begin{corollaire}
+\label{V.6.8}
+Para que~$u$ sea inyectivo, es necesario y suficiente que, para todo
+objeto~$X'$ de~$\cal C'$, exista un objeto~$X$ de~$\cal C$ y un
+homomorfismo de una componente conexa de~$H(X)$ en~$X'$.
+\end{corollaire}
+
+\begin{proposition}
+\label{V.6.9}
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] El homomorfismo $u\colon\pi_{F'}\to\pi_F$ es sobreyectivo.
+\item[(ii)] Para todo objeto conexo~$X$ de~$\cal C$, $H(X)$ es conexo.
+\item[(iii)] El funtor~$H$ es plenamente fiel.
+\end{enumerate}
+\end{proposition}
+
+Esta última condición significa que, para dos objetos~$X$, $Y$ de~$\cal C$,
+la aplicación natural
+$$
+\Hom(X,Y)\to\Hom(H(X),H(Y))
+$$
+es biyectiva.
+
+\begin{corollaire}
+\label{V.6.10}
+Para
+\marginpar{139}
+que~$u$ sea un isomorfismo, es necesario y suficiente que~$H$ sea una
+equivalencia de categorías, o, equivalentemente, que se verifiquen las dos
+condiciones siguientes:
+\begin{enumerate}
+\item[a)] para todo objeto conexo~$X$ de~$\cal C$, $H(X)$ es conexo;
+\item[b)] todo objeto de~$\cal C'$ es isomorfo a un objeto de la
+forma~$H(X)$.
+\end{enumerate}
+\end{corollaire}
+
+\begin{proposition}
+\label{V.6.11}
+Sean $H\colon\cal C\to\cal C'$ y
+\ifthenelse{\boolean{orig}}
+{$H'\colon\cal C\to\cal C''$}
+{$H'\colon\cal C'\to\cal C''$}
+funtores exactos entre categorías galoisianas; sea~$F''$ un funtor
+fundamental sobre~$\cal C''$, pongamos $F'=F''H'$ y $F=F'H$, y consideremos
+los homomorfismos asociados
+$$
+u'\colon\pi_{F''}\to\pi_{F'}\qquad
+u\colon\pi_{F'}\to\pi_F.
+$$
+Para que
+\ifthenelse{\boolean{orig}}
+{$\Ker u\subset\Im u'$}
+{$\Ker u\supset\Im u'$},
+\ie para que~$uu'$ sea el homomorfismo trivial, es necesario y suficiente
+que, para todo objeto~$X$ de~$\cal C$, $H'(H(X))$ esté completamente
+descompuesto. Para que
+\ifthenelse{\boolean{orig}}
+{$\Ker u\supset\Im u'$}
+{$\Ker u\subset\Im u'$},
+es necesario y suficiente que, para todo objeto punteado conexo~$X'$ de
+$\cal C'$ tal que~$H'(X')$ admita una sección punteada, exista un objeto~$X$
+de~$\cal C$ y un homomorfismo de una componente conexa de~$H(X)$ en~$X'$.
+\end{proposition}
+
+La primera afirmación resulta de la última afirmación de~\Ref{V.6.4}. La
+segunda resulta de la conjunción de~\Ref{V.6.4} y~\Ref{V.6.6}.
+
+\begin{remarque}
+\label{V.6.12}
+En general, bajo las condiciones de~\Ref{V.6.8}, no es cierto que~$X'$ sea
+isomorfo a un objeto de la forma~$H(X)$. Puede demostrarse que, para que
+todo objeto conexo (y, por tanto, todo objeto) de~$\cal C'$ sea isomorfo a
+un objeto de la forma~$H(X)$, es necesario y suficiente que~$u$ sea un
+isomorfismo de~$\pi_{F'}$ sobre un subgrupo \emph{factor directo}
+de~$\pi_F$. Sin embargo, en la práctica se construye directamente un
+homomorfismo $\pi_F\to\pi_{F'}$
+\ifthenelse{\boolean{orig}}
+{inverso por la derecha}
+{inverso por la izquierda}
+de~$u$ mediante un funtor exacto conveniente de~$\cal C'$ en~$\cal C$.
+\end{remarque}
+
+\begin{proposition}
+\label{V.6.13}
+Sean~$\cal C$ una categoría galoisiana provista de un funtor fundamental~$F$,
+$S$ un objeto conexo de~$\cal C$ y~$\cal C'$ la categoría de los objetos
+de~$\cal C$ sobre~$S$. Entonces~$\cal C'$ es una categoría galoisiana, y el
+funtor $X\mto H(X)=X\times S$ de~$\cal C$ en~$\cal C'$ es exacto. Sea
+$a\in F(S)$, y sea~$F'$ el funtor de~$\cal C'$ en la categoría de los
+conjuntos finitos definido por
+$$
+F'(X')=\text{preimagen de~$a$ por }F(X')\to F(S).
+$$
+Entonces se tiene un isomorfismo $F\cong F'\circ H$, y el homomorfismo
+correspondiente
+$$
+u\colon\pi_{F'}\to\pi_F
+$$
+\marginpar{140}%
+es un isomorfismo de~$\pi_{F'}$ sobre el subgrupo abierto~$U$ de~$\pi_F$
+estabilizador del elemento marcado~$a$ de
+\ifthenelse{\boolean{orig}}{$F(X)$}{$F(S)$}.
+\end{proposition}
+
+La demostración se deja al lector.

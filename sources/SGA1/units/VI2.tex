@@ -1,0 +1,210 @@
+\section{Categorías sobre otra categoría}
+\label{VI.2}
+
+Sea $\cal{E}$ una categoría en~$\Univ$; es, por tanto, un objeto de~$\Cat$, y
+se puede considerar la categoría
+$\Cat_{/\cal{E}}$
+\label{indnot:fh}\oldindexnot{$\Cat_{/\cal{E}}$|hyperpage}%
+de los «objetos de~$\Cat$ sobre~$\cal{E}$». Un objeto de esta categoría es,
+pues, un funtor
+$$
+p\colon \cal{F}\to\cal{E}
+$$
+También se dice que la categoría~$\cal{F}$, provista de tal funtor, es una
+\emph{categoría sobre}~$\cal{E}$, o una $\cal{E}$\emph{-categoría}. Se llamará,
+por tanto, $\cal{E}$-funtor de una categoría~$\cal{F}$ sobre~$\cal{E}$ en una
+categoría~$\cal{G}$ sobre~$\cal{E}$ a un funtor
+$$
+f\colon\cal{F}\to\cal{G}
+$$
+tal que
+$$
+qf=p
+$$
+donde $p$ y $q$ son los funtores de proyección de~$\cal{F}$ y~$\cal{G}$,
+respectivamente. El conjunto de los $\cal{E}$-funtores~$f$ de~$\cal{F}$ en
+$\cal{G}$ está, por tanto, en correspondencia biunívoca con el conjunto de las
+flechas de origen~$\cal{F}$ y extremo~$\cal{G}$ en~$\Cat_{/\cal{E}}$, sin
+\marginpar{149}
+que se trate por ello de una identidad (pues el dato de un~$f$ como el anterior
+no determina $\cal{F}$ y $\cal{G}$ como categorías sobre~$\cal{E}$); pero, por
+supuesto, como en cualquier otra categoría~$\cal{C}_{/S}$, se cometerá
+habitualmente el abuso de lenguaje consistente en identificar los
+$\cal{E}$-funtores (en el sentido precisado más arriba) con flechas de una
+categoría~$\Cat_{/\cal{E}}$.
+
+Denotaremos por
+$$
+\Hom_{\cal{E}}(\cal{F},\cal{G})
+$$
+el conjunto de los $\cal{E}$-funtores de~$\cal{F}$ en~$\cal{G}$. Por supuesto,
+un compuesto de $\cal{E}$-funtores es un $\cal{E}$-funtor (la composición en
+cuestión corresponde, por definición, a la composición de las flechas
+de~$\Cat_{/\cal{E}}$).
+
+Consideremos ahora dos $\cal{E}$-funtores
+$$
+f,g\colon \cal{F}\to\cal{G}
+$$
+y una transformación natural de funtores:
+$$
+u\colon f\to g
+$$
+Se dice que $u$ es un $\cal{E}$-\emph{homomorfismo}, o un
+«\emph{homomorfismo de $\cal{E}$-funtores}», si para todo
+$\xi\in\Ob(\cal{F})$ se tiene
+$$
+q(u(\xi))=\id_{p(\xi)} \quoi\text{,}
+$$
+en palabras: poniendo
+\ifthenelse{\boolean{orig}}
+{$S=p(\xi)=qf(\xi)=qg(\xi)\in\Ob\cal{E}$,}
+{$S=p(\xi)=qf(\xi)=qg(\xi)\in\Ob(\cal{E})$,}
+el morfismo
+$$
+u(\xi)\colon f(\xi)\to g(\xi)
+$$
+de~$\cal{G}$ es un $\id_S$-morfismo. (En general, para todo morfismo
+$\alpha\colon T \to S$ de~$\cal{E}$ y toda categoría~$\cal{G}$ sobre~$\cal{E}$,
+un morfismo~$v$ de~$\cal{G}$ se llama $\alpha$-\emph{morfismo} si
+$q(v)=\alpha$, donde $q$ denota el funtor de proyección
+$\cal{G}\to \cal{E}$). Si se tiene un tercer $\cal{E}$-funtor
+$h\colon \cal{F}\to \cal{G}$ y un $\cal{E}$-homomorfismo $v\colon g\to h$,
+entonces $vu$ es también un $\cal{E}$-homomorfismo. Así,
+\marginpar{150}
+\emph{los $\cal{E}$-funtores de~$\cal{F}$ en~$\cal{G}$ y los
+$\cal{E}$-homomorfismos entre ellos forman una subcategoría de la categoría
+$\SheafHom(\cal{F},\cal{G})$ de todos los funtores de~$\cal{F}$ en~$\cal{G}$,
+que se llamará categoría de los $\cal{E}$-funtores de~$\cal{F}$ en~$\cal{G}$ y
+se denotará por}
+$$
+\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})
+$$
+\label{indnot:fi}\oldindexnot{$\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$|hyperpage}%
+Es también la subcategoría núcleo del par de funtores
+\begingroup
+\shorthandoff{<>}% Spanish babel otherwise treats Xy-pic's bend delimiters as shorthands.
+$$
+\xymatrix@C=.5cm{R,S\colon\SheafHom(\cal{F},\cal{G})
+\ar@<2pt>[r]\ar@<-2pt>[r]&\SheafHom(\cal{F},\cal{E})}\quoi\text{,}
+$$
+\endgroup
+donde $R$ es el funtor constante definido por el objeto~$p$ de
+$\SheafHom(\cal{F},\cal{E})$, y $S$ es el funtor $f\mto q\circ f$ definido por
+$q\colon\cal{G}\to\cal{E}$.
+
+Para terminar estas generalidades, queda definir las operaciones naturales de
+composición entre las categorías $\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$
+mediante la composición de $\cal{E}$-funtores. En otras palabras, se quiere
+definir un
+«funtor de composición»:
+\begin{equation*}
+\label{eq:VI.2.i}
+\tag{i} {\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})\times
+\SheafHom_{\cal{E}/-}(\cal{G},\cal{H})\to
+\SheafHom_{\cal{E}/-}(\cal{F},\cal{H})}
+\end{equation*}
+cuando $\cal{F}$, $\cal{G}$ y $\cal{H}$ son tres categorías sobre~$\cal{E}$,
+de modo que este funtor induzca, en los objetos, la aplicación de composición
+$(f,g)\mto gf$ de los $\cal{E}$-funtores
+$f\colon\cal{F}\to\cal{G}$ y $g\colon \cal{G}\to\cal{H}$. Para ello,
+recordemos que se define un funtor canónico:
+\begin{equation*}
+\label{eq:VI.2.ii}
+\tag{ii}
+{\SheafHom(\cal{F},\cal{G})\times\SheafHom(\cal{G},\cal{H})\to
+\SheafHom(\cal{F},\cal{H})}
+\end{equation*}
+que, en los objetos, no es sino la aplicación de composición $(f,g)\mto gf$ de
+funtores y que transforma una flecha~$(u,v)$, donde
+$$
+u\colon f\to f'\quoi,\quad v\colon g\to g'
+$$
+son flechas de~$\SheafHom(\cal{F},\cal{G})$ y de
+$\SheafHom(\cal{G},\cal{H})$, respectivamente, en la flecha
+$$
+v*u\colon gf\to g'f'
+$$
+\label{indnot:fj}\oldindexnot{$v*u$|hyperpage}%
+definida por la relación:
+\marginpar{151}
+$$
+v*u(\xi)=v(f'(\xi))\cdot g(u(\xi))=g'(u(\xi))\cdot v(f(\xi))
+$$
+Es bien sabido que así se obtiene efectivamente una transformación natural
+de~$gf$ en~$g'f'$ y que (para $f,g$ y $u,v$ variables) se obtiene de este modo
+un funtor~\eqref{eq:VI.2.ii}, es decir, que se tiene
+\begin{equation*}
+\label{eq:VI.2.I}
+\tag{I} {\id_g*\id_f=\id_{gf}\quoi,}
+\end{equation*}
+\begin{equation*}
+\label{eq:VI.2.II}
+\tag{II} {(v'*u')\circ(v*u)=(v'\circ v)*(u'\circ u)}
+\end{equation*}
+Recordemos también que existe una fórmula de asociatividad para las
+composiciones canónicas~\eqref{eq:VI.2.ii}, expresada, por una parte, por la
+asociatividad $(hg)f=h(gf)$ de la composición de funtores y, por otra, por la
+fórmula
+\begin{equation*}
+\label{eq:VI.2.III}
+\tag{III} {(w*v)*u=w*(v*u)}
+\end{equation*}
+para las composiciones horizontales de transformaciones naturales (donde
+$u\colon f\to f'$ y $v\colon g\to g'$ son como antes, y se supone dada además
+una transformación natural $w\colon h\to h'$ de los funtores
+$h,h'\colon \cal{H}\to\cal{K}$). Afirmamos ahora que
+\emph{cuando~$\cal{F}$ y $\cal{G}$ son $\cal{E}$-categorías, el funtor de
+composición canónico}~\eqref{eq:VI.2.ii}
+\emph{induce un funtor}~\eqref{eq:VI.2.i}. Como ya se sabe que el compuesto de
+dos $\cal{E}$-funtores es un $\cal{E}$-funtor, esto equivale a decir que
+\emph{cuando $u\colon f\to f'$ y $v\colon g\to g'$ son homomorfismos de
+$\cal{E}$-funtores, entonces $v*u\colon gf\to g'f'$ es también un homomorfismo
+de $\cal{E}$-funtores.} Esto resulta, en efecto, inmediatamente de las
+definiciones. Como las operaciones de composición~\eqref{eq:VI.2.i} son
+inducidas por las operaciones de composición~\eqref{eq:VI.2.ii}, satisfacen la
+misma propiedad de
+asociatividad, expresada también por las fórmulas $(hg)f=h(gf)$ y
+$(w*v)*u=w*(v*u)$ para $\cal{E}$-funtores y $\cal{E}$-homomorfismos de
+$\cal{E}$-funtores.
+
+Para completar el formulario~\eqref{eq:VI.2.I}, \eqref{eq:VI.2.II},
+\eqref{eq:VI.2.III}, recordemos también las fórmulas:
+\begin{equation*}
+\label{eq:VI.2.IV}
+\tag{IV} {v*\id_{\cal{F}}=v\quad\text{y}\quad\id_{\cal{G}}*u=u}\quoi,
+\end{equation*}
+donde
+\marginpar{152}
+para abreviar se escribe $v*f$ o
+\ifthenelse{\boolean{orig}}{$u*g$}{$g*u$} en lugar de~$v*u$, cuando $u$,
+respectivamente $v$, es el automorfismo identidad de~$f$, respectivamente
+de~$g$.
+
+De la definición de las operaciones de composición~\eqref{eq:VI.2.i} se sigue
+que
+$\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$ \emph{es un funtor en
+\ifthenelse{\boolean{orig}}
+{$\cal{E}$,~$\cal{G}$,}
+{$\cal{F}$,~$\cal{G}$,}
+de la categoría producto ${\Cat_{/\cal{E}}}^\circ\times\Cat_{/\cal{E}}$ en la
+categoría~$\Cat$}. En efecto, si $g\colon \cal{G}\to\cal{G}_1$ es un
+$\cal{E}$-funtor, es decir, un objeto de
+$\SheafHom_{\cal{E}/-}(\cal{G},\cal{G}_1)$, entonces, haciendo
+$\cal{H}=\cal{G}_1$ en~\eqref{eq:VI.2.i}, le corresponde un funtor
+$$
+g_*\colon\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})\to
+\SheafHom_{\cal{E}/-}(\cal{F},\cal{G}_1)
+$$
+De manera análoga, para un $\cal{E}$-funtor
+$f\colon \cal{F}_1\to \cal{F}$ se define un funtor
+$$
+f^*:\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})\to
+\SheafHom_{\cal{E}/-}(\cal{F}_1,\cal{G})
+$$
+Para abreviar, estos funtores se denotan también por los símbolos
+$f\mto g\circ f$ y $g\mto g\circ f$, respectivamente (que, en realidad,
+designan únicamente las aplicaciones correspondientes en los conjuntos de
+objetos). De la propiedad de asociatividad indicada más arriba se sigue que,
+de este modo, se obtiene efectivamente el funtor anunciado
+$\Cat_{/\cal{E}}^\circ\times\Cat_{/\cal{E}}\to\Cat$.

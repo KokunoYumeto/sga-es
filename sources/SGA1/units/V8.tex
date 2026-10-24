@@ -1,0 +1,64 @@
+\section{Caso de un preesquema base normal}
+\label{V.8}
+\marginpar{143}%
+\begin{proposition}
+\label{V.8.1}
+Sea~$S$ el espectro de un cuerpo~$k$, y sea~$\Omega$ una extensión
+algebraicamente cerrada de~$k$ que define un punto geométrico~$a$ de~$S$
+con valores en~$\Omega$. Sea~$\bar{k}$ la clausura separable de~$k$
+en~$\Omega$. Entonces existe un isomorfismo canónico de~$\pi_1(S,a)$
+sobre el grupo de Galois topológico de~$\bar{k}/k$.
+\end{proposition}
+
+Sea~$k'$ la clausura algebraica de~$k$ en~$\Omega$; corresponde, pues, a un
+punto geométrico~$b$ de~$S$, con valores en~$k'$. El homomorfismo natural
+de funtores~$F_b\to F_a$ es evidentemente un isomorfismo, pues todo
+$k$-homomorfismo de una extensión finita separable de~$k$ en~$\Omega$
+toma necesariamente sus valores en~$\bar{k}$ y, con mayor razón, en~$k'$.
+Por otra parte, el grupo~$\pi'$ de los $k$-automorfismos de~$k'$ actúa de
+manera evidente sobre~$F_b$, de donde se obtiene un homomorfismo
+$\pi'\to\Aut(F_b)\isomto\Aut(F_a)=\pi_1(S;a)$.
+Por otra parte, es bien sabido que el homomorfismo natural de~$\pi'$ en el
+grupo~$\pi$ de los automorfismos de~$\bar{k}/k$ es un isomorfismo. Se
+obtiene así un homomorfismo canónico~$\pi\to\pi_1(S;a)$; queda por demostrar
+que es un isomorfismo. En efecto, este homomorfismo es inyectivo, pues un
+elemento del núcleo es un automorfismo de~$\bar{k}/k$ que induce la identidad
+en toda subextensión finita separable y, por tanto, es trivial. Este
+homomorfismo es sobreyectivo, pues si~$X$ es un recubrimiento étale
+\emph{conexo} de~$S$, definido, por tanto, por una \emph{extensión} finita
+separable~$L/k$, entonces~$\pi$ actúa transitivamente sobre el conjunto de
+los $k$-homomorfismos de~$L$ en~$k'$,
+\ifthenelse{\boolean{orig}}{como bien sabido}{como es bien sabido}.
+
+\begin{proposition}
+\label{V.8.2}
+Sean~$S$ un preesquema conexo, localmente noetheriano y normal,
+$K=\kres(s)$ su cuerpo de funciones $=$ el cuerpo residual en su punto
+genérico~$s$, y~$\Omega$ una extensión algebraicamente cerrada de~$K$ que
+define un punto geométrico~$a'$ de~$S'=\Spec(K)$ y un punto geométrico~$a$
+de~$S$. Entonces el homomorfismo
+$\pi_1(S';a')\to\pi_1(S;a)$ es sobreyectivo. Cuando se identifica el primer
+grupo con el grupo de Galois de la clausura separable~$\bar{K}$ de~$K$
+en~$\Omega$ (\cf~\Ref{V.8.1}), el núcleo del homomorfismo anterior
+corresponde, por la teoría de Galois, a la subextensión de~$\bar{K}/K$ que
+es el compuesto de las extensiones finitas de~$K$ en~$\Omega$ no ramificadas
+sobre~$S$.
+\end{proposition}
+
+La primera afirmación significa que la imagen inversa sobre~$S'$ de un
+recubrimiento étale conexo~$X$ de~$S$ es conexa, \ie que~$X$ es íntegro;
+esto no es sino~\Ref{I.10.1}. El núcleo del homomorfismo anterior se
+interpreta entonces como el conjunto de los automorfismos de~$\bar{K}/K$
+que inducen la identidad sobre los conjuntos~$F_a(X)$,
+\marginpar{144}%
+donde puede suponerse conexo el recubrimiento étale~$X$ de~$S$. Pero esto
+significa que tal automorfismo induce la identidad en las subextensiones
+finitas de~$\bar{K}/K$ no ramificadas sobre~$S$, lo que demuestra la última
+afirmación.
+
+\begin{remarquestar}
+Gracias a esta interpretación del grupo fundamental del preesquema normal~$S$
+en términos de la
+\ifthenelse{\boolean{orig}}{teoría de los Galois usual}{teoría de Galois usual},
+la definición se conocía desde hacía mucho tiempo en este caso.
+\end{remarquestar}

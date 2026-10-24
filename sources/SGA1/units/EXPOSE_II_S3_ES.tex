@@ -1,0 +1,27 @@
+\section{Propiedades de permanencia}
+\label{II.3}
+
+\begin{proposition}
+\label{II.3.1}
+Sea $f\colon X\to Y$ un morfismo, sea $x\in X$ y sea $y=f(x)$. Supóngase que $f$ es liso en~$x$. Para que $\cal{O}_x$ sea reducido (\resp regular, \resp normal), es necesario y suficiente que $\cal{O}_y$ lo sea.
+\end{proposition}
+
+En efecto, este enunciado es conocido cuando $X$ es de la forma $Y[t_1,\dots,t_n]$, y se ha demostrado en~(I, \no \Ref{I.9}) para un morfismo étale; el caso general se deduce inmediatamente gracias a la definición~\Ref{II.1.1}.
+
+No detallaremos aquí las demás propiedades de permanencia, que resultan ya de la sola planitud, o del hecho de que $X$ sea localmente cuasifinito y plano sobre un $Y$-preesquema de la forma $Y[t_1,\dots,t_n]$ (o, como
+\marginpar{35}
+diremos, de que $X$ sea
+\ifthenelse{\boolean{orig}}{Cohen--Macauley}{Cohen--Macaulay}\ % corrección ortográfica ya incorporada por la autoridad.
+\index{Cohen--Macaulay (esquema de)|hyperpage}%
+sobre~$Y$). Señalemos solamente que de este último hecho se sigue que
+\begin{equation}
+\label{eq:II.3.1}
+{\dim\cal{O}_x=\dim\cal{O}_y+n-d,\quad
+\prof\cal{O}_x=\prof\cal{O}_y+n-d},
+\end{equation}
+donde $n$ es la dimensión de la fibra de~$f$ en~$x$, y $d$ el grado de trascendencia de~$\kres(x)$ sobre~$\kres(y)$; de donde (poniendo $\coprof=\dim-\prof$)\footnote{Para estas fórmulas, \cf EGA~IV~6.1 y~6.3.}
+\begin{equation}
+\label{eq:II.3.2}
+{\coprof\cal{O}_x=\coprof\cal{O}_y}.
+\end{equation}
+De ello se sigue, por ejemplo, que $\cal{O}_x$ es Cohen--Macaulay (\resp no tiene componentes embebidas) si y solo si lo mismo ocurre con~$\cal{O}_y$.

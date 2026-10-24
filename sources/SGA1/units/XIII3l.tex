@@ -1,0 +1,78 @@
+
+\begin{corollaire}
+\label{XIII.3.4}
+Sean $k$ un cuerpo de característica $p\geqslant0$, $p'$ el conjunto de
+los números primos distintos de~$p$ y $f\colon X\to k$ un morfismo
+coherente. Supongamos que se cumple una de las condiciones siguientes:
+\begin{enumerate}
+\item[a)] $f$ es de tipo finito y los esquemas de tipo finito de dimensión
+$\leqslant\dim X$ sobre una clausura algebraica de~$k$ son
+desingularizables.
+\item[b)] Los esquemas de tipo finito sobre una clausura algebraica de~$k$
+son desingularizables.
+\end{enumerate}
+Entonces $f$ es universalmente localmente $1$-asférico para~$p'$.
+\end{corollaire}
+
+El caso a) resulta de~\Ref{XIII.3.3}. En el caso b), como la cuestión es
+local sobre~$X$, puede suponerse que~$X$ es afín; por paso al límite
+(SGA~4 XV~1.3), se reduce al caso en que~$X$ es de tipo finito sobre~$k$.
+
+\begin{corollaire}
+\label{XIII.3.5}
+Sean
+\marginpar{414}
+$S$ un esquema irreducible con punto genérico~$s$ y $f\colon X\to S$ un
+morfismo de presentación finita. Supongamos que los esquemas de tipo finito
+de dimensión $\leqslant\dim X_s$ sobre una clausura
+algebraica~$\overline{k}$ de~$\kres(s)$ son fuertemente desingularizables
+\textup{(SGA~5 I~3.1.5)}. Si~$\LL$ designa el conjunto de los números primos
+distintos de las características residuales de~$S$, puede encontrarse un
+abierto no vacío~$S_1$ de~$S$ tal que, para toda especialización
+$\bar{s}_1\to\bar{s}_2$ de puntos geométricos de~$S_1$, el morfismo de
+especialización~\eqref{XIII.2.10}
+$$
+\pi_1^{\LL}(X_{\bar{s}_1})\to\pi_1^{\LL}(X_{\bar{s}_2})
+$$
+sea biyectivo.
+\end{corollaire}
+
+Según~\Ref{XIII.3.1} y~\Ref{XIII.3.3}, tras restringir~$S$ a un abierto no
+vacío puede suponerse que~$f$ es localmente $1$-asférico para~$\LL$, y que,
+para todo haz constante finito de~$\LL$-grupos~$F$ sobre~$X$, $(F,f)$ es
+cohomológicamente propio en dimensión $\leqslant 1$. Resulta entonces
+de~\Ref{XIII.1.14} que, para toda especialización
+$\bar{s}_1\to\bar{s}_2$ de puntos geométricos de~$S_1$, el morfismo de
+especialización
+$$
+\left(\R^1 f_* F\right)_{\bar{s}_2} \to \left(\R^1 f_*
+F\right)_{\bar{s}_1}
+$$
+es biyectivo. El corolario no es sino la traducción de lo anterior en
+términos de grupos fundamentales.
+
+\section{Sucesiones exactas de homotopía}\label{XIII.4}\setcounter{subsection}{-1}
+\subsection{}
+\label{XIII.4.0}
+Sean $X$ y $S$ dos esquemas conexos, $f\colon X\to S$ un morfismo, $a$ un
+punto geométrico de~$X$ y $\LL$ un conjunto de números primos. Sea~$K$ el
+núcleo del homomorfismo canónico $\pi_1(X,a)\to\pi_1(S,a)$ y~$N$ el menor
+prosubgrupo normal de~$K$ tal que $K/N$ sea un grupo pro-$\LL$,
+denotado por~$K^{\LL}$. Entonces $N$ es normal en~$\pi_1(X,a)$, y se denota por
+$$
+\pi_1'(X,a)
+$$
+\label{indnot:mj}\oldindexnot{$\pi_1'(X,a)$|hyperpage}%
+el
+\marginpar{415}
+cociente de~$\pi_1(X,a)$ por~$N$. Si~$a$ es un punto geométrico de una
+fibra geométrica~$X_{\bar{s}}$, los morfismos canónicos
+$$
+\pi_1(X_{\bar{s}},a)\to \pi_1(X,a) \to
+\pi_1(S,a)
+$$
+permiten definir morfismos canónicos
+$$
+\pi_1^{\LL}(X_{\bar{s}},a)\lto{u} \pi_1'(X,a) \lto{v} \pi_1(S,a)
+$$
+Se tiene $vu=0$.

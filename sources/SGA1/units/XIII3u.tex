@@ -1,0 +1,67 @@
+
+\setcounter{proposition}{7}% adaptación del contador autónomo: el rótulo fuente siguiente es XIII.4.8
+\begin{corollaire} \label{XIII.4.8}
+Las hipótesis son las de~\Ref{XIII.4.7.4}, pero se supone además que
+$\pi_1(S,a)=1$. Entonces se tiene un isomorfismo
+\begin{equation*}
+\label{eq:XIII.4.8.*} \tag{$*$}
+{}\pi_1^\LL(X,a)\isomto\pi_1^\LL(X_{\bar{s}},a)_K.
+\end{equation*}
+En particular, si $\pi_1^\LL(X_{\bar{s}},a)$ es topológicamente de
+presentación finita y si $K$ actúa sobre~$\pi_1^\LL(X_{\bar{s}},a)$ a
+través de un grupo finitamente generado, entonces $\pi_1^\LL(X,a)$ es
+topológicamente de presentación finita.
+\end{corollaire}
+
+El isomorfismo~\eqref{eq:XIII.4.8.*} se demostró
+en~\Ref{XIII.4.7.4}. Supongamos que $\pi_1^\LL(X_{\bar{s}},a)$ es el
+cociente del grupo pro-$\LL$ libre con $n$ generadores
+$L(x_1,\dots,x_n)$ por el subgrupo normal cerrado engendrado por los
+elementos $y_1,\dots,y_p$ de~$L(x_1,\dots,x_n)$, y supongamos que $K$
+actúa a través de un grupo engendrado por los elementos
+$k_1,\dots,k_q$. Si, para cada $i\in[1,n]$ y $j\in[1,q]$, se denota
+por~$z_{ij}$ un elemento de~$L(x_1,\dots,x_n)$ que levanta el elemento
+$(k_j\cdot x_i)x_i^{-1}$, entonces $\pi_1^\LL(X_{\bar{s}},a)_K$ es el
+cociente de~$L(x_1,\dots,x_n)$ por el subgrupo normal cerrado engendrado
+por los elementos $(y_i)_{i\in[1,p]}$ y
+$(z_{ij})_{i\in[1,n],j\in[1,q]}$.
+
+\ifthenelse{\boolean{orig}}
+{\setcounter{proposition}{5}}
+{}
+
+\begin{remarques}
+\label{rem:XIII.4.6}
+a) Las condiciones a) a e) de~\Ref{XIII.4.7} se satisfacen cuando
+$S$ es un esquema normal conexo, $U$ un abierto denso de~$S$ con
+inmersión cuasicompacta, y $f$ un morfismo propio de
+presentación finita cuyas fibras son geométricamente conexas e
+irreducibles en todo punto~$t$ de~$T$, siendo además~$f$ separable,
+\marginpar{427}
+liso en los puntos de~$X_U\cup g(T)$, siendo~$\LL$ el conjunto de los
+números primos distintos de las características residuales de~$S$, y
+siendo~$X$ regular en todo punto de~$X_t$. La condición a) se deduce,
+en efecto, de SGA~4 XV~4.1 y 1.4; las condiciones b) y d) se deducen
+de~\Ref{XIII.1.4} y SGA~4 XV~2.1 y XVI~5.2. Finalmente, e) se deduce de
+\ifthenelse{\boolean{orig}}
+{SGA~XIV~1.11}
+{SGA~2 XIV~1.11}.
+\par\smallskip
+b) El corolario~
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.4.5}}
+{\Ref{XIII.4.8}}
+se aplica para calcular el grupo fundamental $\pi_1^{p'}(X)$ de una
+superficie~$X$ propia y lisa sobre
+un cuerpo separablemente cerrado~$k$ de característica~$p$
+($p'$~designa el conjunto de los números primos distintos de~$p$).
+El método nos fue comunicado por J.P\ptbl \textsc{Murre}; consiste en
+reducirse, haciendo una explosión de~$X$, al caso en que se tiene una
+fibración $X\to\PP^1_k$ y un abierto~$U$ de~$\PP^1_k$ que satisface
+las hipótesis de~\Ref{XIII.4.7} (véase SGA~7 para más detalles). El
+mismo método puede utilizarse más generalmente (\loccit) para demostrar
+que, si~$X$ es un $k$-esquema conexo de tipo finito y si los esquemas
+de tipo finito de dimensión $\leq\dim X$ sobre una clausura algebraica
+de~$k$ son fuertemente desingularizables (SGA~5 I~3.1.5), entonces
+$\pi_1^{p'}(X)$ es topológicamente de presentación finita.
+\end{remarques}

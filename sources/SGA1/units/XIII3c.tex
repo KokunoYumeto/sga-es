@@ -1,0 +1,137 @@
+\shorthandoff{<>}% Babel español trata como abreviaturas los delimitadores de curvatura de Xy-pic.
+
+\Subsection*{2) Caso de un haz de conjuntos constructible}
+
+Sea $F$ un haz de conjuntos constructible sobre~$X$. Según
+SGA~4 IX~2.14~(ii), puede encontrarse una familia finita de morfismos
+$p_i \colon Z_i \to X$ y, sobre cada $Z_i$, un haz de conjuntos
+constante finito $C_i$, de modo que se tenga un monomorfismo
+\marginpar{399}
+$$
+j \colon F \to \prod_{i} {p_i}_* C_i =G \quoi.
+$$
+Según~1)\kern2pt a), puede suponerse, tras restringir $S$ a un abierto
+no vacío, que los $(C_i,fp_i)$ son cohomológicamente propios relativamente
+a~$S$ en dimensión $\leqslant 0$ y que los $f_*{p_i}_*C_i$ son
+constructibles. De ello se concluye ya que $(G,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión $\leqslant 0$
+\eqref{XIII.1.9}, y por tanto que $(F,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant -1$, y que $f_*F$ es
+constructible. Sea~$K$ la suma amalgamada $K= G \coprod_{F} G$;
+como $F$ y $G$ son constructibles, también lo es~$K$. De lo anterior
+se concluye, pues, que, tras restringir $S$ a un abierto no vacío, puede
+suponerse que $(K,f)$ es cohomológicamente propio relativamente a~$S$
+en dimensión $\leqslant -1$. Resulta entonces de
+\Ref{XIII.1.13}~1) que $(F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$.
+
+\Subsection*{3) Caso de los haces de grupos constantes}
+
+Si $F$ es un haz de grupos constante sobre~$X$, se denota por $\Phi$ el
+stack de los torsores bajo~$F$.
+
+3) 1. Demostremos primero que, tras restringir $S$ a un abierto no
+vacío, para todo haz de grupos constante $F$ sobre~$X$, de orden primo
+con las características residuales de~$S$, $(F,f)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant 0$, y que
+$f_*\Phi$ es constructible.
+
+Para ello se reduce al caso en que $X$ es liso sobre~$S$. Tras efectuar
+una extensión finita de~$\kres(s)$, lo cual es lícito porque puede
+factorizarse como una extensión étale seguida de una extensión
+radicial, puede encontrarse un morfismo propio sobreyectivo
+$p_s \colon X_{1s}\to X_s$, donde $X_{1s}$ es un esquema liso
+\ifthenelse{\boolean{orig}}
+{sobre~$S$}
+{sobre~$s$}
+de la misma dimensión que $X_s$ y, tras restringir $S$ a un abierto no
+vacío, puede suponerse que $p_s$ procede de un morfismo propio
+sobreyectivo $p \colon X_1 \to X$, donde $X_1$ es un esquema liso
+sobre~$S$
+\marginpar{400}
+(EGA~IV 9.6.1 y 12.1.6). Sean $X_2=X_1 \times_X X_1$ y
+$q \colon X_2 \to X$ el morfismo canónico. Se tiene un diagrama exacto
+de stacks sobre~$X$
+$$
+\xymatrix@C=.5cm{\Phi \ar[r] & p_*p^* \Phi \ar@<2pt>[r]\ar@<-2pt>[r] &
+q_*q^*\Phi }
+$$
+(\Ref{XIII.1.11}~2)). Como se supone demostrado el teorema en el caso
+liso, se ve ante todo que puede suponerse que $f_*p_*p^*\Phi$ es
+constructible; lo mismo vale, pues, para $f_*\Phi$
+(\Ref{XIII.3.1.1} más adelante). Además, según
+\Ref{XIII.1.6}~2), puede suponerse que $(p_*p^*\Phi,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$; de ello resulta que $(\Phi,f)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant -1$. Puede
+suponerse entonces que $(q_*q^*\Phi,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant -1$, y ello implica que
+$(\Phi,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ (\Ref{XIII.1.12}~1)).
+
+Se reduce después, como en 1)\kern2pt2, al caso en que $X$ es liso y
+afín sobre~$S$. Sea entonces
+$$
+\xymatrix{ X \ar[r]^{i} \ar[d]_{f} & P \ar[ld]^{q} \\ Y }
+$$
+una compactificación de~$X$, donde $i$ es una inmersión abierta
+dominante y $q$ un morfismo propio. Como $\dim P_s=\dim X_s$, puede
+aplicarse la hipótesis de resolución de singularidades a
+$P_{\overline s}$. Tras efectuar una extensión étale y una extensión
+radicial de~$S$, puede encontrarse un morfismo propio
+$r \colon Z \to P$, donde $Z$ es liso sobre~$S$,
+$r^{-1}(X)\simeq X$, y donde $r^{-1}(X)$ es el complementario en~$Z$
+de un divisor de cruzamientos normales relativamente a~$S$. Todo
+torsor bajo~$F$ está entonces moderadamente ramificado sobre~$Z$
+relativamente a~$S$ (\Ref{XIII.2.3}~b)). Resulta, pues, de
+\Ref{XIII.2.7} que $(F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$, lo que demuestra la afirmación.
+
+\ifthenelse{\boolean{orig}}
+{3) \textbf{2. Reducción\marginpar{401} al caso en que $X$ es liso sobre~$S$}}%
+{\newpage 3) 2. Reducción\marginpar{401} al caso en que $X$ es liso sobre~$S$.}%
+\par\nopagebreak
+Tras efectuar una extensión finita de~$\kres(s)$, puede encontrarse un
+morfismo propio sobreyectivo
+\ifthenelse{\boolean{orig}}
+{$p_s\colon X_{1s}\to X$}
+{$p_s\colon X_{1s}\to X_s$},
+donde~$X_{1s}$ es un esquema liso sobre~$s$, y puede suponerse que
+$p_s$ procede de un morfismo propio sobreyectivo
+$p\colon X_1 \to X$, donde $X_1$ es liso sobre~$S$.
+Supongamos demostrado el teorema para $fp$ y demostrémoslo para~$f$.
+Sea $F$ un haz de grupos constante finito sobre~$X$, de orden primo con
+las características residuales de~$S$, y sea $\Phi$ el stack de los
+torsores bajo~$F$. Sean $X_2=X_1 \times_X X_1$,
+$X_3=X_1 \times_X X_1 \times_X X_1$, y sean
+$q\colon X_2 \to X$ y $r\colon X_3 \to X$ los morfismos canónicos.
+Según \Ref{XIII.1.11}~2), se tiene un diagrama exacto de stacks
+$$
+\xymatrix@C=.5cm{\Phi \ar[r] & p_*p^*\Phi \ar@<2pt>[r]\ar@<-2pt>[r] &
+q_*q^*\Phi \ar@<4pt>[r] \ar[r] \ar@<-4pt>[r] & r_*r^*\Phi}\quoi.
+$$
+Para demostrar que $(\Phi,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 1$, basta demostrar que lo mismo vale
+para~$(p_*p^*\Phi,f)$, que $(q_*q^*\Phi, f )$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant 0$ y que
+$(r_*r^*\Phi,f)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant -1$ (\Ref{XIII.1.12}~2)). Según~3)\kern.3em 1
+anterior, puede suponerse que, para todo haz de grupos constante
+finito~$F$, $(q^*\Phi,fq)$, $(q^*\Phi,q)$, $(r^*\Phi,fr)$ y
+$(r^*\Phi,r)$ son cohomológicamente propios relativamente a~$S$ en
+dimensión $\leqslant 0$. Resulta entonces de \Ref{XIII.1.6}~2) que
+$(q_*q^*\Phi,f)$ y $(r_*r^*\Phi,f)$ son cohomológicamente propios
+relativamente a~$S$ en dimensión $\leqslant 0$. Como se supone
+demostrado el teorema en el caso liso, $(p^*\Phi,fp)$ y
+$(p^*\Phi,p)$, y por tanto también $(p_*p^*\Phi,f)$
+(\Ref{XIII.1.6}~2)), son cohomológicamente propios relativamente a~$S$
+en dimensión $\leqslant 1$. Esto demuestra que $(\Phi,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 1$.
+
+Además, $f_*p_*p^*\Phi$ es $1$-constructible por hipótesis;
+\ifthenelse{\boolean{orig}}
+{según \Ref{XIII.3.1},}
+{según~3)\kern.3em 1 anterior,}
+puede suponerse que $f_*q_*q^*\Phi$ es constructible; resulta, pues,
+de \Ref{XIII.3.1.1} más adelante que $f_*\Phi$ es $1$-constructible.

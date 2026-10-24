@@ -1,0 +1,983 @@
+
+\clearpage
+\pageoriginale
+
+\SGAExposeBookmark{XII}{Cuádricas}
+\begin{center}
+{\large\textbf{SGA 7}}\\[1.5em]
+{\Large\underline{EXPOSÉ XII}}\\[2.5em]
+{\Large\underline{CUÁDRICAS}}\\[1.5em]
+{\large\underline{por P. DELIGNE}}
+\end{center}
+
+\bigskip
+\noindent 0.0. La presente exposición reúne varios resultados bien conocidos
+sobre las cuádricas que necesitaremos para demostrar la fórmula de
+Picard--Lefschetz.
+
+\medskip
+\noindent 0.1. Sea $m$ una sección de un $\mathcal O_S$-módulo $M$ sobre
+un esquema $S$. Diremos que $m$ es \underline{no nula en ningún punto} de
+$S$ si, para todo $s\in S$, la imagen de $m$ en el espacio vectorial sobre
+$k(s)$, $M_s$, obtenido de $M$ por el cambio de base
+$\{s\}\longrightarrow S$, es no nula. Emplearemos la misma terminología
+cuando $S=\operatorname{Spec}(A)$ y $m$ sea un elemento de un
+$A$-módulo $M$.
+
+\bigskip
+\noindent\underline{1. Formas cuadráticas}
+
+\medskip
+\noindent 1.1. Sea $S=\operatorname{Spec}(A)$ un esquema afín, sea $V$ un
+$A$-módulo localmente libre de rango $n$, y sea $Q$ una forma cuadrática
+sobre $V$ (Bourbaki, \emph{Algèbre}, cap.~9, §3, n.º 4). Recordemos que
+$Q$ se llama \underline{no degenerada} si la forma bilineal asociada
+
+\begin{equation*}
+\Phi(x,y)=Q(x+y)-Q(x)-Q(y)
+\end{equation*}
+
+es no degenerada, es decir, si induce un isomorfismo de $V$ sobre su dual
+$V^*$. Si $2$ no es invertible en $A$, esto solo puede ocurrir cuando $n$
+es par (loc. cit.).
+
+\pageoriginale
+
+Las formas cuadráticas sobre $V$ forman un $A$-módulo proyectivo; una forma
+cuadrática $Q$ es «no nula en ningún punto» de $S$ (0.1) si y solo si los
+elementos $Q(v)$ engendran el ideal unidad de $A$.
+
+La notación $\mathbb P(V)$ se emplea en el sentido de EGA; recordemos que,
+si $A$ es un cuerpo, $\mathbb P(V)$ es el espacio proyectivo cuyo conjunto
+de puntos racionales es el cociente $(V^*\setminus\{0\})/A^*$.
+
+La forma cuadrática $Q$ se identifica con una sección del haz invertible
+$\mathcal O(2)$ sobre el espacio proyectivo $\mathbb P(V^*)$ sobre $S$.
+Cuando $Q$ no es nula en ningún punto, la ecuación («homogénea») $Q=0$
+define un subesquema de $\mathbb P(V^*)$, plano y puramente de dimensión
+relativa $n-2$ sobre $S$. Este esquema se llama la \underline{cuádrica
+definida por $Q$}. La forma $Q$ se llama \underline{ordinaria} si no es
+nula en ningún punto de $S$ y la cuádrica que define es lisa sobre $S$.
+
+La forma $Q$ es ordinaria si y solo si toda forma obtenida a partir de ella
+por extensión de escalares de $A$ a un cuerpo es ordinaria. Si $A$ es un
+cuerpo, entonces:
+
+\begin{enumerate}[label=\alph*),leftmargin=2.5em]
+\item si $n$ es par o $\operatorname{char}(A)\ne2$, $Q$ es ordinaria si y
+solo si $Q$ es no degenerada;
+
+\item si $n$ es impar y $\operatorname{char}(A)=2$, $Q$ es ordinaria si y
+solo si el núcleo $N$ de la forma bilineal (alternada) asociada $\Phi$
+tiene dimensión uno y $Q$ no se anula sobre $N$.
+\end{enumerate}
+
+\medskip
+\noindent\underline{Proposición 1.2.}\quad
+\underline{Si $Q$ es ordinaria y $n=2m$ (respectivamente, $n=2m+1$),
+entonces, localmente para la topología étale sobre $S$, $V$ posee una base
+$e_1,\ldots,e_n$ tal que}
+
+\pageoriginale
+
+\begin{equation*}
+Q\!\left(\sum_{i=1}^{n}x_i e_i\right)
+=\sum_{i=1}^{\sisi{m-1}{m}}x_i x_{i+m}
+\end{equation*}
+
+\noindent\underline{(respectivamente,}
+
+\begin{equation*}
+Q\!\left(\sum_{i=1}^{n}x_i e_i\right)
+=\sum_{i=1}^{\sisi{m-1}{m}}x_i x_{i+m}
+  +\lambda x_{2m+1}^{2},
+\qquad (\lambda\text{ invertible}).\underline{)}
+\end{equation*}
+
+
+Demostramos 1.2 por inducción sobre $m$. Si $m=0$, la afirmación es clara.
+Si $m>0$, la cuádrica de ecuación $Q=0$ es lisa sobre $S$ y tiene fibras
+geométricas no vacías; por tanto, posee secciones localmente para la
+topología étale. Localmente, tal sección está definida por un elemento
+$e\in V$, no nulo en ningún punto de $\operatorname{Spec}(A)$, con
+$Q(e)=0$. En ningún punto de $S$ pertenece $e$ al núcleo de $\Phi$; por
+consiguiente, localmente puede encontrarse un $f'$ tal que
+$\Phi(e,f')=1$. Si
+
+\begin{equation*}
+f=-Q(f')e+\sisi{f}{f'},
+\end{equation*}
+
+entonces
+
+\begin{equation*}
+Q(e)=Q(f)=0,\qquad \Phi(e,f)=1.
+\end{equation*}
+
+
+Si $V_2$ es el complemento ortogonal del submódulo $V_1$ engendrado por
+$e$ y $f$, entonces $V=V_1\oplus V_2$, y la conclusión se deduce aplicando
+la hipótesis de inducción a $V_2$.
+
+\medskip
+\noindent 1.3. Para la definición y las propiedades principales del
+álgebra de Clifford de $Q$, remitimos a Bourbaki, \emph{Algèbre}, cap.~9,
+§9. Designamos por $\rho$ la aplicación canónica de $V$ en $C(Q)$.
+
+\medskip
+\noindent\underline{Lema 1.3.1.}\quad
+\underline{Bajo las hipótesis de 1.1, para todo $\lambda\in A$ existe un
+único homomorfismo}
+
+\begin{equation*}
+[\lambda]\colon C^+(\lambda Q)\longrightarrow C^+(Q)
+\end{equation*}
+
+\underline{tal que, para $x,y\in V$,}
+
+\begin{equation*}
+[\lambda]\bigl(\rho(x)\rho(y)\bigr)
+=\lambda\rho(x)\rho(y).
+\end{equation*}
+
+\pageoriginale
+
+Este homomorfismo se induce al pasar al cociente por el endomorfismo
+$[\lambda]$ de la parte par $T^+(V)$ del álgebra tensorial de $V$, que
+actúa como $\lambda^r$ sobre $T^{2r}(V)$. En efecto,
+
+\begin{equation*}
+[\lambda]\bigl(x\otimes x-\lambda Q(x)\bigr)
+=\lambda\bigl(x\otimes x-Q(x)\bigr).
+\end{equation*}
+
+Supongamos que $Q$ no es nula en ningún punto de $S$. El lema 1.3.1 define
+entonces un sistema transitivo de isomorfismos entre las álgebras
+$C^+(\lambda Q)$ para $\lambda\in A^*$.
+
+Por consiguiente, el álgebra $C^+(Q)$ solo depende (salvo isomorfismo
+único) de $V$ y de $Q$ salvo multiplicación por un factor; en otras
+palabras, $C^+(Q)$ solo depende de $V$ y del subesquema de
+$\mathbb P(V^*)$ de ecuación $Q=0$. Toda homotecia de razón invertible es
+un automorfismo del par $(V,X\subset\mathbb P(V^*))$; se comprueba que estos
+automorfismos actúan trivialmente sobre $C^+(V,X)$. Se sigue que el álgebra
+$C^+(V,X)$ solo depende del par de esquemas
+$X\subset\mathbb P(V^*)$ sobre $A$. La designaremos por
+$C^+(X,\mathbb P(V^*))$.
+
+\medskip
+\noindent 1.4. Sea $V$ un $A$-módulo localmente libre de rango $2m>0$, y
+sea $Q$ una forma cuadrática no degenerada sobre $V$. Supongamos dada una
+descomposición $V=W_1\oplus W_2$ en dos subespacios totalmente singulares.
+La forma $Q(w_1+w_2)$ pone entonces a $W_1$ y $W_2$ en dualidad perfecta.
+Recordemos que, para $f\in W_2$ (identificado con $W_1^*$), la contracción
+por $f$ es el endomorfismo de grado $-1$ de $\bigwedge W_1$ definido por
+
+\begin{equation*}
+f\mathbin{\lrcorner}(e_1\wedge\cdots\wedge e_p)
+=\sum_{i=1}^{p}(-1)^{\sisi{i}{i-1}}\langle e_i,f\rangle
+\sisi{e_0}{e_1}\wedge\cdots\wedge\widehat e_i\wedge\cdots\wedge e_p.
+\end{equation*}
+
+
+Demos al $A$-módulo $\bigwedge W_1$ la $\mathbb Z/2$-graduación para la
+cual
+
+\pageoriginale
+
+\begin{equation*}
+(\bigwedge W_1)^+=\bigoplus_i\bigwedge^{2i}W_1,
+\qquad
+(\bigwedge W_1)^-=\bigoplus_i\bigwedge^{2i+1}W_1.
+\end{equation*}
+
+El álgebra $\operatorname{End}(\bigwedge W_1)$ queda entonces
+$\mathbb Z/2$-graduada: sus endomorfismos pares (respectivamente, impares)
+son los que preservan la graduación (respectivamente, tienen grado uno
+módulo dos).
+
+Remitimos a Bourbaki, \emph{Algèbre}, cap.~9, §9, n.º 4, para la
+demostración de que existe un único isomorfismo $s$ de álgebras
+$\mathbb Z/2$-graduadas de $C(Q)$ sobre
+$\operatorname{End}(\bigwedge W_1)$ tal que
+
+\begin{equation*}
+s\bigl(\rho((e,0))\bigr)=e\wedge(-),
+\qquad
+s\bigl(\rho((0,f))\bigr)=f\mathbin{\lrcorner}(-).
+\end{equation*}
+
+Designemos provisionalmente por $e(W_1,W_2)$ el elemento de $C^+(Q)$ tal
+que $s(e(W_1,W_2))$ sea la identidad sobre $(\bigwedge W_1)^+$ y cero
+sobre $(\bigwedge W_1)^-$. El centro $Z(Q)$ de $C^+(Q)$ es isomorfo a
+$A\oplus A$, estando definida esta descomposición por los idempotentes
+$e(W_1,W_2)$ y $1-e(W_2,W_1)$. Además, $C^+(Q)$ es un álgebra de matrices
+sobre $Z(Q)$.
+
+De esto y de 1.2 se deduce, como en loc. cit.:
+
+\medskip
+\noindent\underline{Proposición 1.5.}\quad
+\underline{Bajo las hipótesis de 1.1, si $n=2m>0$ y $Q$ es no degenerada,
+entonces el centro $Z(Q)$ de $C^+(Q)$ es un álgebra étale, localmente libre
+de rango dos sobre $A$, y $C^+(Q)$ es un álgebra de Azumaya sobre $Z(Q)$.}
+
+\medskip
+\noindent 1.6. Sean $V$ y $Q$ como en 1.4, y sea $W$ un sumando directo
+totalmente singular de $V$, localmente libre de rango $m$. Sea $W'_1$ un
+complemento de $W$, de modo que $V=W\oplus W'_1$. Todo complemento $W'_2$
+de $W$ se identifica con el grafo de una aplicación $u:W'_1\to W$. La
+forma $\Phi$ pone a $W$ y $W'_1$ en dualidad, por lo que $u$ está
+determinada de manera única por la forma bilineal sobre $W'_1$
+
+\pageoriginale
+
+\begin{equation*}
+B(x,y)=\Phi(x,u(y)),
+\end{equation*}
+
+y $W'_2$ es totalmente singular si y solo si
+
+\begin{equation*}
+B(x,x)=-Q(x)
+\end{equation*}
+
+sobre $W'_1$. Como tales formas $B$ existen siempre, $W$ posee
+complementos totalmente singulares. Elegido uno de ellos, digamos $W'$, el
+conjunto de los complementos totalmente singulares $W'_0$ de $W$ se
+identifica con el conjunto de las formas alternadas sobre $W'$, o
+equivalentemente con el conjunto de las secciones del espacio afín
+$\mathbb E(\bigwedge^2W')$ sobre $S$.
+
+Para cada sección $x$ de $\mathbb E(\bigwedge^2W')$, sea $W'_0(x)$ el
+complemento correspondiente de $W$ y sea $e(x)=e(W,W'_0(x))$. La función
+$x\mapsto e(x)$ es compatible con toda extensión de escalares y define,
+por tanto, un morfismo de $S$-esquemas
+
+\begin{equation*}
+e:\mathbb E(\bigwedge^2W')\longrightarrow
+\operatorname{Spec}(Z(Q)).
+\end{equation*}
+
+El $S$-esquema $\mathbb E(\bigwedge^2W')$ es plano, con fibras
+geométricamente conexas, mientras que $\operatorname{Spec}(Z(Q))$ es
+étale sobre $S$. Por tanto, el morfismo $e$
+\sisi{se factoriza a través de una sección del espacio afín
+$\mathbb E(\bigwedge^2W')$}{se factoriza a través de $S$, y por ello a
+través de una sección de $\operatorname{Spec}(Z(Q))$ sobre $S$};
+equivalentemente, $e(x)$ es independiente de $x$.
+
+
+Esto justifica la notación siguiente.
+
+\medskip
+\noindent\underline{Notación 1.7.}\quad
+\underline{Para $W$ como arriba y cualquier complemento totalmente
+singular $W'$ de $W$, designaremos por $e(W)$ el idempotente
+$e(W,W')\in Z(Q)$.}
+
+\medskip
+\noindent 1.8. Hemos visto en \sisi{1.6}{1.3} que, para $\lambda$
+invertible, $C^+(Q)$ se identifica con $C^+(\lambda Q)$. Un argumento de
+continuidad análogo al precedente muestra que esta identificación lleva
+
+\begin{equation*}
+e(W)\in Z(Q)\qquad\text{a}\qquad e(W)\in Z(\lambda Q).
+\end{equation*}
+
+
+\pageoriginale
+
+\medskip
+\noindent 1.9. Recordemos que, si $B$ y $C$ son dos álgebras
+$\mathbb Z/2$-graduadas, la multiplicación en su producto tensorial
+graduado $B\otimes' C$ se define por la regla de Koszul
+
+\begin{equation*}
+(b_1\otimes c_1)(b_2\otimes c_2)
+=(-1)^{\deg(c_1)\deg(b_2)}b_1b_2\otimes c_1c_2
+\end{equation*}
+
+cuando los $b_i$ y $c_i$ son homogéneos.
+
+Si $(V_1,Q_1)$ y $(V_2,Q_2)$ son dos módulos cuadráticos, entonces
+
+\begin{equation*}
+C(Q_1\oplus Q_2)=C(Q_1)\otimes' C(Q_2)
+\end{equation*}
+
+(Bourbaki, loc. cit.).
+
+Si $P$ y $Q$ son dos $A$-módulos $\mathbb Z/2$-graduados, localmente
+libres y de tipo finito, identificamos las álgebras
+$\mathbb Z/2$-graduadas
+$\operatorname{End}(P)\otimes'\operatorname{End}(Q)$ y
+$\operatorname{End}(P\otimes Q)$ poniendo, para $u,v,p,q$ homogéneos,
+
+\begin{equation*}
+(u\otimes v)(p\otimes q)
+=(-1)^{\deg(v)\deg(p)}u(p)\otimes v(q).
+\end{equation*}
+
+\medskip
+\noindent\underline{Lema 1.10.}\quad
+\underline{Sea $(V,Q)$ el módulo cuadrático suma de dos módulos
+cuadráticos $(V_1,Q_1)$ y $(V_2,Q_2)$, donde $V_i$ es localmente libre de
+rango $2m_i$ y $Q_i$ es no degenerada. Sea
+$V_i=W_i\oplus W'_i$ una descomposición de $V_i$ en dos subespacios
+totalmente singulares $(i=1,2)$. Entonces el diagrama}
+
+\begin{center}
+\small
+\begin{tikzcd}[column sep=large,row sep=large]
+C(Q) \arrow[rr,dash,"\sim"] \arrow[d,dash,"\wr"]
+  & {} & C(Q_1)\otimes' C(Q_2) \arrow[d,equal] \\
+\operatorname{End}(\bigwedge(W_1\oplus W_2))
+  \arrow[r,phantom,"\simeq"]
+  & \operatorname{End}(\bigwedge W_1\otimes\bigwedge W_2)
+  \arrow[r,phantom,"\simeq"]
+  & \operatorname{End}(\bigwedge W_1)\otimes'
+    \operatorname{End}(\bigwedge W_2)
+\end{tikzcd}
+\end{center}
+
+\underline{es conmutativo.}
+
+\pageoriginale
+
+La verificación se deja al lector. De este lema se deduce inmediatamente
+que
+
+\begin{equation}\tag{1.10.1}
+e(W_1\oplus W_2)
+=e(W_1)e(W_2)+(1-e(W_1))(1-e(W_2)).
+\end{equation}
+
+\medskip
+\noindent 1.11. La construcción siguiente está tomada de Micali y
+Villamayor. Si $p:Z\longrightarrow S$ es un recubrimiento étale doble de
+$S$, puede considerarse $Z$ como un $\mathbb Z/2$-torsor sobre $S$.
+Designemos por $*$ la suma de torsores; para una sección $s$ de $Z$, sea
+$e(s)$ el idempotente de $p_*\mathcal O_Z$ que vale uno sobre $s$ y cero
+en los demás puntos. Con las notaciones de 1.10, existe un único
+isomorfismo
+
+\begin{equation}\tag{1.11.1}
+\operatorname{Spec}(Z(Q_1))*\operatorname{Spec}(Z(Q_2))
+\longrightarrow\operatorname{Spec}(Z(Q)),
+\end{equation}
+
+cuyo morfismo de adición subyacente es
+
+\begin{equation*}
++:\operatorname{Spec}(Z(Q_1))\times_S\operatorname{Spec}(Z(Q_2))
+\longrightarrow\operatorname{Spec}(Z(Q)),
+\end{equation*}
+
+y que, después de todo cambio de base, satisface
+
+\begin{equation*}
+e(s+t)=e(s)e(t)+(1-e(s))(1-e(t)).
+\end{equation*}
+
+Si $s(W)$ es la sección de $\operatorname{Spec}(Z(Q))$ tal que
+$e(s(W))=e(W)$, la fórmula (1.10.1) se convierte en
+
+\begin{equation*}
+s(W_1\oplus W_2)=s(W_1)+s(W_2).
+\end{equation*}
+
+\medskip
+\noindent\underline{Proposición 1.12.}\quad
+\underline{Sea $A$ un cuerpo, sea $V$ un espacio vectorial de dimensión
+$2m>0$ sobre $\sisi{V}{A}$, sea $Q$ una forma cuadrática no degenerada
+sobre $V$, y sean $W_1,W_2$ dos subespacios totalmente isótropos de $V$,
+de dimensión $m$. Entonces $e(W_1)=e(W_2)$ si y solo si
+$\dim(W_1/(W_1\cap W_2))$ es par.}
+
+
+\pageoriginale
+
+(Cf. Bourbaki, \emph{Algèbre}, cap.~9, §6, ejercicio~28.) Sea
+$e_1,\ldots,e_m,f_1,\ldots,f_m$ una base de $V$ tal que
+
+\begin{enumerate}[label=\alph*),leftmargin=2.5em]
+\item $Q(\sum_i x_i e_i+\sum_i y_i f_i)=\sum_i x_i y_i$;
+\item $W_1$ está engendrado por los $e_i$;
+\item $W_2$ está engendrado por $(e_i)_{1\leq i\leq s}$ y
+$(f_i)_{s<i\leq m}$.
+\end{enumerate}
+
+Entonces $V$ es la suma de los $V_i=Ae_i+Af_i$, y
+
+\begin{equation*}
+W_\alpha=\bigoplus_i(W_\alpha\cap V_i),
+\qquad \alpha=1,2.
+\end{equation*}
+
+La fórmula de adición 1.11 reduce, por tanto, la demostración al caso
+$\dim V=2$. Si $W_1=W_2$, la afirmación es clara. En caso contrario, si
+$W_1=Ae$ y $W_2=Af$ con $\Phi(e,f)=1$, entonces
+$e(W_1)=fe$ y $e(W_2)=ef=1-fe$.
+
+\bigskip
+\noindent\underline{2. Cuádricas}
+
+\medskip
+\noindent 2.1. Sea $k$ un cuerpo algebraicamente cerrado y $V$ un espacio
+vectorial de dimensión $n+2$ sobre $k$. Una cuádrica lisa de dimensión
+$n$ sobre $k$ es un $k$-esquema $X$ isomorfo al subesquema de
+$\mathbb P(V^*)$ definido por la ecuación $Q=0$, para alguna forma
+cuadrática ordinaria $Q$ sobre $k$.
+
+\medskip
+\noindent\underline{Observación 2.2.}\quad
+Para $n=0,1,2$, $X$ es una cuádrica lisa de dimensión $n$ sobre $k$ si y
+solo si
+
+\begin{equation*}
+\begin{array}{rcl}
+n=0 &:& X\simeq\operatorname{Spec}(k)\amalg\operatorname{Spec}(k),\\[1ex]
+n=1 &:& X\simeq\mathbb P^1_k,\\[1ex]
+n=2 &:& X\simeq\mathbb P^1_k\times\mathbb P^1_k.
+\end{array}
+\end{equation*}
+
+\pageoriginale
+
+\medskip
+\noindent\underline{Lema 2.3.}\quad
+\underline{Con las notaciones de 2.1, supongamos que $X$ está definida por
+$Q=0$.}
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em]
+\item $\Omega_X^n\simeq\mathcal O_X(-n)$.
+
+\item
+\begin{equation*}
+\operatorname{Pic}(X)\simeq
+\begin{cases}
+0, & n=0,\\
+\mathbb Z, & n=1;\ \mathcal O_X(1)\text{ es el cuadrado de un generador},\\
+\mathbb Z\oplus\mathbb Z, & n=2,\\
+\mathbb Z, & n\geq3;\ \mathcal O_X(1)\text{ es un generador}.
+\end{cases}
+\end{equation*}
+
+\item $H^i(X,\mathcal O_X)=0$ para $i>0$, y
+$H^1(X,\mathcal O_X(1))=0$.
+
+\item La aplicación natural
+\begin{equation*}
+H^0\bigl(\mathbb P(V^*),\mathcal O_{\mathbb P(V^*)}(1)\bigr)
+=V^*\xrightarrow{\sim}H^0(X,\mathcal O_X(1))
+\end{equation*}
+es un isomorfismo; y, para $n>0$, $H^0(X,\mathcal O_X)=k$.
+\end{enumerate}
+
+La afirmación (i) se deduce del hecho de que el haz conormal de $X$ en
+$\mathbb P(V^*)$ es $\mathcal O_X(-2)$ y de que el haz canónico de
+$\mathbb P^r$ es $\mathcal O(-r-1)$. La afirmación (ii) se deduce de 2.2
+cuando $n\leq2$, y de SGA~2, XII, 3.7 cuando $n\geq3$. Finalmente, (iii)
+y (iv) se deducen de FAC, n.º 78.
+
+\medskip
+\noindent\underline{Definición 2.4.}\quad
+\underline{Una cuádrica lisa de dimensión $n$ sobre un esquema $S$ es un
+$S$-esquema $f:X\longrightarrow S$, propio y liso sobre $S$, cuyas fibras
+geométricas son cuádricas lisas.}
+
+Para $n=0$, una cuádrica lisa de dimensión cero sobre $S$ no es otra cosa
+que un recubrimiento étale doble de $S$. Para $n=1$, no es otra cosa que
+una variedad de Severi--Brauer de dimensión uno sobre $S$.
+
+\medskip
+\noindent 2.5. Sea $\rho:X\longrightarrow S$ una cuádrica lisa de
+dimensión $n$ sobre $S$. Por 2.3(i), el inverso del haz invertible
+$\Omega^n_{X/S}$ es amplio.
+
+\pageoriginale
+
+Por \sisi{2.3(ii)}{2.3(iii)}, el esquema de Picard
+$\operatorname{Pic}_{X/S}$ es liso sobre $S$ (porque
+$H^2(X,\mathcal O_X)=0$), no ramificado sobre $S$ (porque
+$H^1(X,\mathcal O_X)=0$), y esencialmente propio sobre $S$ (porque $X/S$
+es liso). Por tanto, localmente sobre $S$ para la topología étale, es un
+grupo discreto constante con la estructura descrita en
+\sisi{2.3(iii)}{2.3(ii)}.
+
+
+En particular, si $X$ posee una sección, existe un haz invertible $L$ sobre
+$X$ tal que $L^{\otimes(-n)}$ y $\Omega^n_{X/S}$ tienen la misma imagen en
+$\operatorname{Pic}_{X/S}$; dos cualesquiera de tales haces son localmente
+isomorfos sobre $S$. Por 2.3(iii) y [1], 0.5, p.~19,
+$\sisi{p}{\rho}_*L$ es localmente libre y su formación conmuta con todo
+cambio de base. Por consiguiente, $\rho_*L$ es localmente libre de rango
+$n+2$, la aplicación $\rho^*\rho_*L\longrightarrow L$ es sobreyectiva, y
+la aplicación canónica
+\begin{equation*}
+X\longrightarrow\mathbb P(\rho_*L)
+\end{equation*}
+es una inmersión cerrada. Identifica a $X$ con un divisor relativo de grado
+dos en $\mathbb P(\rho_*L)$; localmente sobre $S$, $X$ es la cuádrica en
+$\mathbb P(\rho_*L)$ definida por una forma cuadrática ordinaria sobre
+$(\rho_*L)^*$, única salvo un factor invertible.
+
+
+\medskip
+\noindent 2.6. Supongamos que $n>0$. Si $L_1$ y $L_2$ son dos haces
+invertibles del tipo considerado arriba, localmente sobre $S$ existe un
+isomorfismo $u:L_1\xrightarrow{\sim}L_2$. Es único salvo un factor
+invertible, pues $\rho_*\mathcal O_X=\mathcal O_S$ por 2.3(iv). Por
+consiguiente, todos los isomorfismos $u:L_1\xrightarrow{\sim}L_2$ inducen
+el mismo isomorfismo
+\begin{equation*}
+\mathbb P(u):\mathbb P(\rho_*L_1)\xrightarrow{\sim}
+\mathbb P(\rho_*L_2).
+\end{equation*}
+Así, $\mathbb P(\rho_*L_1)$ es canónicamente isomorfo a
+$\mathbb P(\rho_*L_2)$ y solo depende de $X/S$, no de la elección de $L$.
+Lo designamos por $P(X)$.
+
+\pageoriginale
+
+El espacio proyectivo $P(X)$ está definido localmente sobre $S$ para la
+topología étale. Por descenso define una variedad de Severi--Brauer sobre
+$S$, designada también por $P(X)$, en la que $X$ es un divisor relativo de
+grado dos.
+
+Localmente sobre $S$, el par $X\hookrightarrow P(X)$ define un álgebra de
+Clifford $C^+(X,P(X))$ (1.3). El descenso proporciona un álgebra sobre $S$,
+que designamos simplemente por $C^+(X)$.
+
+\medskip
+\noindent 2.7. Supongamos que $n=2m>0$. El centro $Z$ de $C^+(X)$ es
+entonces una $\mathcal O_S$-álgebra que define un recubrimiento étale doble
+$Z(X)$ de $S$.
+
+Un \underline{generador} de $X$ es un subesquema $D$ de $X$ que es un
+subespacio lineal de dimensión $m$ en $P(X)$.
+
+Localmente sobre $S$, cuando $P(X)\simeq\mathbb P(V^*)$ y $X$ está definida
+por $Q=0$, un generador $D$ de $X$ se identifica, por definición, con un
+submódulo $W(D)$ de $V$, localmente sumando directo, totalmente singular y
+de rango $m+1$. Por 1.8, el idempotente $e(W(D))$ del centro de $C^+(X)$
+solo depende de $D\subset X$. Sea $e(D)$ la sección correspondiente de
+$Z(X)$, a saber, aquella sobre la que $e(W(D))$ vale uno.
+
+Los generadores de $X/S$ son los $S$-puntos de un esquema
+$\operatorname{Gen}(X)$ proyectivo sobre $S$, y $e$ define un morfismo de
+$S$-esquemas
+
+\begin{equation}\tag{2.7.1}
+e:\operatorname{Gen}(X)\longrightarrow Z(X).
+\end{equation}
+
+Cuando $n=0$, ponemos $Z(X)=X$, llamamos generador de $X$ a una sección de
+$X$, y definimos $e$ como la identidad.
+
+\pageoriginale
+
+\medskip
+\noindent\underline{Proposición 2.8.}\quad
+\underline{Bajo las hipótesis de 2.7,
+$p:\operatorname{Gen}(X)\longrightarrow S$ es proyectivo y liso, y
+(2.7.1) es su factorización de Stein.}
+
+La cuestión es local para la topología étale sobre $S$. Localmente, si $D$
+es un generador, por 1.6 los generadores $D'$ disjuntos de $D$ se
+identifican con los $S$-puntos de un espacio afín apropiado sobre $S$. De
+este modo, $\operatorname{Gen}(X)$ está recubierto por subesquemas abiertos
+lisos sobre $S$.
+
+Para demostrar que las fibras geométricas de $e$ son geométricamente
+conexas, basta considerar el caso en el que $S$ es el espectro de un cuerpo
+algebraicamente cerrado $k$ y $X$ está definida por $Q=0$ en
+$\mathbb P(V^*)$.
+
+Sean $W_1$ y $W_2$ dos subespacios totalmente isótropos de rango $m+1$ en
+$V$ tales que $e(W_1)=e(W_2)$, es decir, tales que
+$W_1/(W_1\cap W_2)$ tiene dimensión par (1.12). Procediendo como en 1.12,
+se obtiene una descomposición ortogonal
+\begin{equation*}
+V=V_0\oplus\bigoplus_i V_i
+\end{equation*}
+tal que
+\begin{enumerate}[label=\alph*),leftmargin=2.5em]
+\item $W_\alpha=(W_\alpha\cap V_0)\oplus
+  \displaystyle\bigoplus_i(W_\alpha\cap V_i)$ para $\alpha=1,2$;
+\item $W_1\cap V_0=W_2\cap V_0$;
+\item $\dim V_i=4$ y
+  $V_i=(W_1\cap V_i)\oplus(W_2\cap V_i)$.
+\end{enumerate}
+Queda demostrar que $W_1\cap V_i$ y $W_2\cap V_i$ pertenecen a la misma
+familia conexa de subespacios totalmente singulares maximales de $V_i$.
+En otras palabras, la afirmación se reduce al caso de las cuádricas de
+dimensión dos. Una cuádrica tal es isomorfa a
+$\mathbb P^1\times\mathbb P^1$, y sus generadores son los subesquemas
+$\{t\}\times\mathbb P^1$ y $\mathbb P^1\times\{t\}$; la proposición es
+entonces evidente.
+
+\pageoriginale
+
+\bigskip
+\noindent\underline{3. Cohomología de las cuádricas}
+
+\medskip
+\noindent 3.1. Sea $p:X\longrightarrow S$ una cuádrica lisa de dimensión
+$n$ sobre $S$, y sea $\ell$ un número primo invertible sobre $S$.
+Designaremos por
+\begin{equation*}
+\eta\in H^0\bigl(S,R^{\sisi{1}{2}}p_*\mathbb Z_\ell(1)\bigr)
+\end{equation*}
+la «clase de cohomología de una sección hiperplana». Localmente sobre $S$
+para la topología étale, $P(X)\simeq\mathbb P(V^*)$; por definición,
+$\eta$ es entonces la imagen en
+$H^0(S,R^2p_*\mathbb Z_\ell(1))$ de la primera clase de Chern
+\begin{equation*}
+c_1(\mathcal O(1))\in H^2(X,\mathbb Z_\ell(1)).
+\end{equation*}
+
+
+\medskip
+\noindent 3.2. Supongamos que $n=2m$. Un generador $D$ de $X$ define
+entonces una clase de cohomología
+$c\ell'(D)\in H^n(X,\mathbb Z_\ell(m))$, cuya imagen en
+$H^0(S,R^np_*\mathbb Z_\ell(m))$ se designa por $c\ell(D)$. Por 2.8,
+esta última solo depende de la sección $e(D)$ de $Z(X)$. Se obtiene así un
+morfismo de haces étale sobre $S$
+\begin{equation}\tag{3.2.1}
+c\ell:Z(X)\longrightarrow R^np_*\mathbb Z_\ell(m).
+\end{equation}
+
+\medskip
+\noindent\underline{Teorema 3.3.}\quad
+\underline{Sea $p:X\longrightarrow S$ una cuádrica lisa de dimensión $n$
+sobre $S$, y sea $\ell$ un número primo invertible sobre $S$.}
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em]
+\item $R^{2i+1}p_*\mathbb Z_\ell=0$.
+
+\pageoriginale
+
+\item Si $0\leq2i<n$ (respectivamente, si $n<2i\leq2n$), entonces
+$R^{2i}p_*\mathbb Z_\ell(i)$ es canónicamente isomorfo al haz constante
+$\mathbb Z_\ell$, y está engendrado por $\eta^i$ (respectivamente, por
+$\eta^i/2$).
+
+\item Si $n=2m$, la aplicación deducida de (3.2.1),
+\begin{equation}\tag{\sisi{3.2.1}{3.3.1}}
+\mathbb Z_\ell^{Z(X)}\longrightarrow R^np_*\mathbb Z_\ell(m),
+\end{equation}
+es un isomorfismo. Si $\alpha$ y $\beta$ son dos secciones disjuntas de
+$Z(X)$ (supuesto isomorfo a $S\amalg S$, como ocurre localmente), entonces
+\begin{align*}
+\text{(a)}\quad &\eta^m=c\ell(\alpha)+c\ell(\beta),\\[1ex]
+\text{(b)}\quad &
+\begin{cases}
+\operatorname{Tr}(c\ell(\alpha)^2)
+=\operatorname{Tr}(c\ell(\beta)^2)=1,
+& c\ell(\alpha)c\ell(\beta)=0,\quad m\text{ par},\\[1ex]
+c\ell(\alpha)^2=c\ell(\beta)^2=0,
+& \operatorname{Tr}(c\ell(\alpha)c\ell(\beta))=1,
+  \quad m\text{ impar},
+\end{cases}\\[1ex]
+\text{(c)}\quad &\eta\bigl(c\ell(\alpha)-c\ell(\beta)\bigr)=0.
+\end{align*}
+\end{enumerate}
+
+
+Las afirmaciones (i) y (ii) solo se recuerdan como referencia (XI, 1.6,
+completado por XI, 2.6 cuando $2i+1=n$ en (i)).
+
+Basta verificar (iii) cuando $S$ es el espectro de un cuerpo
+algebraicamente cerrado $k$ (incluso podría tomarse
+$S=\operatorname{Spec}(\mathbb C)$).
+
+\underline{Fórmula (a).} Podemos suponer que $X$ es la cuádrica de
+$\mathbb P^{\sisi{m+1}{2m+1}}(k)$ de ecuación
+\begin{equation*}
+\sum_{i=0}^{m}x_i x_{i+m+1}=0.
+\end{equation*}
+La clase $\eta^m$ es la clase de cohomología de la sección plana definida
+por
+\begin{equation*}
+x_i=0\qquad(0\leq i<m),
+\end{equation*}
+y este ciclo es la suma de los generadores $D_1,D_2$ definidos por
+
+\pageoriginale
+
+\begin{align*}
+D_1:&\quad x_i=0 &&(0\leq i\leq m),\\
+D_2:&\quad x_i=0 &&(0\leq i<m),\qquad x_{2m+1}=0.
+\end{align*}
+Por 1.12, $e(D_1)\neq e(D_2)$, y por tanto
+\begin{equation*}
+\eta^m=c\ell(D_1)+c\ell(D_2)
+=c\ell(\alpha)+c\ell(\beta).
+\end{equation*}
+
+
+\underline{Fórmula (b).} Si los generadores $D_1,D_2$ son disjuntos
+(respectivamente, se cortan transversalmente en un punto), entonces
+$c\ell(D_1)c\ell(D_2)=0$ (respectivamente,
+$\operatorname{Tr}(c\ell(D_1)c\ell(D_2))=1$). Por 1.12, cuando $m$ es par
+se tiene $e(D_1)\neq e(D_2)$ (respectivamente,
+$e(D_1)=e(D_2)$); cuando $m$ es impar se tiene $e(D_1)=e(D_2)$
+(respectivamente, $e(D_1)\neq e(D_2)$). De ello se deduce la fórmula (b).
+
+\underline{Fórmula (c).} Es clara cuando $n=0$. En caso contrario, por
+(ii), basta demostrar
+\begin{equation*}
+\eta^m\bigl(c\ell(\alpha)-c\ell(\beta)\bigr)=0.
+\end{equation*}
+En efecto,
+\begin{equation*}
+\operatorname{Tr}\!\left(
+\eta^m(c\ell(\alpha)-c\ell(\beta))\right)
+=\operatorname{Tr}\!\left(c\ell(\alpha)^2-c\ell(\beta)^2\right)=0.
+\end{equation*}
+
+\underline{Verificación.} Cuando $m$ es par,
+\begin{equation*}
+2=\operatorname{Tr}(\sisi{\eta^2}{\eta^{2m}})
+=\operatorname{Tr}\!\left(
+\sisi{c\ell(\alpha^2)}{c\ell(\alpha)^2}
++2c\ell(\alpha)c\ell(\beta)+c\ell(\beta)^2\right)=1+1;
+\end{equation*}
+cuando $m$ es impar,
+\begin{equation*}
+2=\operatorname{Tr}(\sisi{\eta^2}{\eta^{2m}})
+=\operatorname{Tr}\!\left(c\ell(\alpha)^2
++2c\ell(\alpha)c\ell(\beta)+c\ell(\beta)^2\right)=2.
+\end{equation*}
+
+
+Que (3.3.1) es un isomorfismo se deduce ahora del hecho de que las dos
+formas bilineales en dos variables
+\begin{equation*}
+B(x,y)=x_1y_2+x_2y_1,
+\qquad
+B(x,y)=x_1y_1+x_2y_2
+\end{equation*}
+tienen discriminante $\pm1$.
+
+\pageoriginale
+
+\medskip
+\noindent\underline{Verificación 3.4.}\quad
+Sea $X$ una cuádrica lisa de dimensión $n$ sobre un cuerpo finito
+$\mathbb F_q$. En vista de 3.3, la fórmula de las trazas de Lefschetz da
+la fórmula clásica
+\begin{equation*}
+\#X(\mathbb F_q)=
+\begin{cases}
+\displaystyle\sum_{i=0}^{n}q^i,
+  & n\text{ impar},\\[2ex]
+\displaystyle\sum_{i=0}^{n}q^i+\varepsilon q^m,
+  & n=2m,\quad \varepsilon=\pm1.
+\end{cases}
+\end{equation*}
+Cuando $n$ es par, $\varepsilon=1$ si $X$ es desplegada, es decir, si posee
+un generador racional, y $\varepsilon=-1$ en caso contrario.
+
+\medskip
+\noindent 3.5. Sea $f:X\longrightarrow S$ una cuádrica lisa de dimensión
+$n=2m$. La \underline{parte primitiva} de
+$R^nf_*\mathbb Z_\ell(m)$ es el complemento ortogonal de $\eta^m$; con
+las notaciones de 3.3, está engendrada por
+$c\ell(\alpha)-c\ell(\beta)$. El \underline{cociente primitivo} de
+$R^nf_*\mathbb Z_\ell(m)$ es el cociente por
+$\mathbb Z_\ell\eta^m$. La parte y el cociente primitivos de
+$R^nf_*\mathbb Z_\ell$ se obtienen tensorizando con
+$\mathbb Z_\ell(-m)$.
+
+\medskip
+\noindent 3.6. Sea $V$ un fibrado vectorial localmente libre de rango
+$n+2$ sobre $S$, y sea $X$ la cuádrica lisa sobre $S$ definida por una
+forma cuadrática ordinaria $Q$ sobre $V$. Sea además $H$ un hiperplano de
+$\mathbb P(V^*)$ que corta transversalmente a $X$, y pongamos
+$X^o=X-H$. Los esquemas $X$ e $Y=X\cap H$ son cuádricas lisas sobre $S$,
+de dimensiones $n$ y $n-1$. Esto permite emplear 3.3 para calcular la
+cohomología de $X^o=X-Y$.
+
+\pageoriginale
+
+\begin{equation}\tag{3.6.1}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+X^o \arrow[r,hook] \arrow[rd,"f"']
+  & X \arrow[d,"p"]
+  & Y \arrow[l,hook] \arrow[ld,"q"]\\
+{} & S & \mathord{.}
+\end{tikzcd}
+\end{equation}
+
+Si $n=0$, entonces $Y=\varnothing$ y $X=X^o$. Supongamos que $n>0$.
+Tenemos dos sucesiones exactas largas duales entre sí:
+\begin{equation}\tag{3.6.2}
+\cdots\xrightarrow{\partial}R^if_!\mathbb Z_\ell
+\longrightarrow R^ip_*\mathbb Z_\ell
+\xrightarrow{r_i}R^iq_*\mathbb Z_\ell\longrightarrow\cdots
+\end{equation}
+y
+\begin{equation}\tag{3.6.3}
+\cdots\xrightarrow{\partial}R^{i-2}q_*\mathbb Z_\ell(-1)
+\longrightarrow R^ip_*\mathbb Z_\ell
+\longrightarrow R^if_*\mathbb Z_\ell\longrightarrow\cdots.
+\end{equation}
+
+Para $n$ par, el homomorfismo de restricción $r_i$ es un isomorfismo para
+$i\neq n,2n$; para $n$ impar, es un isomorfismo para $i\neq n-1$. Si
+$n=2m$ y $\alpha$ es la clase de cohomología de un generador, entonces
+\begin{equation*}
+r_n(\alpha)=\tfrac12\eta^m,
+\end{equation*}
+de modo que $r_n$ es sobreyectivo y su núcleo es la parte primitiva de
+$R^np_*\mathbb Z_\ell$. Si $\sisi{r}{n}=2m+1$, entonces
+$r_{2m}(\eta^m)=\eta^m$, por lo que $r_{2m}$ es inyectivo y su conúcleo es
+el cociente primitivo de $R^{2m}q_*\mathbb Z_\ell$. Se sigue que
+$R^if_!\mathbb Z_\ell=0$ para $i\neq n,2n$, y que
+$R^if_!\mathbb Z_\ell$ es un $\mathbb Z_\ell$-haz torcido constante,
+libre de rango uno, para $i=n,2n$. Por dualidad, o a partir de
+\sisi{(3.5.3)}{(3.6.3)}, se muestra asimismo que
+$R^if_*\mathbb Z_\ell=0$ para $i\neq0,n$, que
+$f_*\mathbb Z_\ell=\mathbb Z_\ell$, y que
+$R^nf_*\mathbb Z_\ell$ tiene rango uno.
+
+
+Supongamos que $n=2m$ y conservemos las notaciones de 3.3.
+
+\pageoriginale
+
+\begin{center}
+\small
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r]
+ & R^nf_!\mathbb Z_\ell(m) \arrow[r] \arrow[d,"\varphi"]
+ & R^np_*\mathbb Z_\ell(m) \arrow[r] \arrow[d,equal]
+ & R^nq_*\mathbb Z_\ell(m) \arrow[r]
+ & 0\\
+0
+ & R^nf_*\mathbb Z_\ell(m) \arrow[l]
+ & R^np_*\mathbb Z_\ell(m) \arrow[l]
+ & R^{n-2}q_*\mathbb Z_\ell(m-1) \arrow[l]
+ & 0\mathord{.} \arrow[l]
+\end{tikzcd}
+\end{center}
+
+El haz $R^nf_!\mathbb Z_\ell(m)$ posee entonces dos generadores naturales
+opuestos $\pm\delta$, cuyas imágenes en
+$R^np_*\mathbb Z_\ell(m)$ son
+$\pm(c\ell(\alpha)-c\ell(\beta))$. Por 3.3(iii)(b),
+\begin{equation*}
+\operatorname{Tr}(\delta^2)
+=(c\ell(\alpha)-c\ell(\beta))^2=(-1)^m\cdot2,
+\end{equation*}
+y $\pm\varphi(\delta)$ es el doble de los generadores duales naturales
+$\pm\delta'$ de $R^nf_*\mathbb Z_\ell(m)$, a saber, las imágenes opuestas
+de $c\ell(\alpha)$ y $c\ell(\beta)$.
+
+Supongamos ahora que $n=2m+1$ y apliquemos a $Y$ las notaciones de 3.3.
+
+\begin{center}
+\footnotesize
+\begin{tikzcd}[column sep=small,row sep=large]
+0 \arrow[r]
+ & R^{2m}p_*\mathbb Z_\ell(m) \arrow[r]
+ & R^{2m}q_*\mathbb Z_\ell(m) \arrow[r,"\partial"]
+ & R^nf_!\mathbb Z_\ell(m) \arrow[r] \arrow[d,"\varphi"]
+ & 0\\
+{}
+ & R^{2m+2}p_*\mathbb Z_\ell(\sisi{m}{m+1})
+ & R^{2m}q_*\mathbb Z_\ell(m) \arrow[l]
+ & R^nf_*\mathbb Z_\ell(m+1) \arrow[l]
+ & 0\mathord{.} \arrow[l]
+\end{tikzcd}
+\end{center}
+
+
+El haz $R^nf_!\mathbb Z_\ell(m)$ posee entonces dos generadores naturales
+opuestos $\pm\delta$, a saber,
+$\partial c\ell(\alpha)$ y $\partial c\ell(\beta)$. Se tiene
+\begin{equation*}
+\delta\,\varphi(\delta)=\delta^2
+=(\partial c\ell(\alpha))^2
+=\partial\bigl(c\ell(\alpha)\,\partial c\ell(\alpha)\bigr)=0,
+\end{equation*}
+y por tanto $\varphi(\delta)=0$. Por otra parte,
+$R^nf_*\mathbb Z_\ell(m+1)$ posee dos generadores naturales opuestos
+$\pm\delta'$, cuyas imágenes en $R^{2m}q_*\mathbb Z_\ell(m)$ son
+$\pm(c\ell(\alpha)-c\ell(\beta))$, y
+$\operatorname{Tr}(\delta\delta')=\pm1$.
+
+\pageoriginale
+
+Estos resultados se reúnen en la tabla siguiente.
+
+\medskip
+\noindent\underline{Tabla 3.7.}\quad
+\underline{Cohomología de las cuádricas afines de dimensión $n$,
+$X^o=X-Y$.}
+
+\medskip
+\noindent\textbf{A.} La cohomología es sin torsión. Los números de Betti
+no nulos son
+\begin{align*}
+\text{cohomología ordinaria:}\quad &b_0=b_n=1,\\
+\text{cohomología con soporte propio:}\quad &b_{2n}=b_n=1,
+\end{align*}
+salvo que $b_0=2$ cuando $n=0$.
+
+\medskip
+\noindent\textbf{B.} Si $n=2m>0$, entonces
+\begin{align*}
+R^nf_!\mathbb Z_\ell(m)
+  &=\text{la parte primitiva de }R^{2m}p_*\mathbb Z_\ell(m),\\
+R^nf_*\mathbb Z_\ell(m)
+  &=\text{el cociente primitivo de }R^{2m}p_*\mathbb Z_\ell(m).
+\end{align*}
+Si $n=2m+1$, entonces
+\begin{align*}
+R^nf_!\mathbb Z_\ell(m)
+  &=\text{el cociente primitivo de }R^{2m}q_*\mathbb Z_\ell(m),\\
+R^nf_*\mathbb Z_\ell(m+1)
+  &=\text{la parte primitiva de }R^{2m}q_*\mathbb Z_\ell(m).
+\end{align*}
+Localmente, estos grupos poseen generadores naturales definidos salvo el
+signo; $\delta$ designa los de la cohomología con soporte propio, y
+$\delta'$ los de la cohomología ordinaria.
+
+\medskip
+\noindent\textbf{C.} La aplicación
+\begin{equation*}
+\varphi:R^nf_!\mathbb Z_\ell\longrightarrow R^nf_*\mathbb Z_\ell
+\end{equation*}
+es nula cuando $n$ es impar, y envía $\pm\delta$ sobre
+$\pm2\delta'$ cuando $n>0$ es par. Además,
+\begin{equation*}
+\operatorname{Tr}(\delta\delta')=\pm1,
+\qquad
+\operatorname{Tr}(\delta^2)=
+\begin{cases}
+0, & n=2m+1,\\
+(-1)^m\cdot2, & n=2m.
+\end{cases}
+\end{equation*}
+
+\medskip
+\noindent\underline{Verificación 3.8.}\quad
+La cuádrica afín compleja $S$ en $\mathbb C^n$ de ecuación
+$\sum_i z_i^2=1$ es difeomorfa al fibrado tangente a la esfera real
+$S\cap\mathbb R^n$. Esto concuerda con A y C.
+
+\bigskip
+\begin{center}
+\underline{BIBLIOGRAFÍA}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{MumfordGIT}
+D. Mumford, \emph{Geometric Invariant Theory}, Ergebnisse \textbf{34},
+Springer-Verlag, 1965.
+\end{thebibliography}

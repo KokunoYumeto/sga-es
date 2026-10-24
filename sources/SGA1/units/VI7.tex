@@ -1,0 +1,231 @@
+\section{Categorías con clivaje sobre~$\mathcal{E}$}
+\label{VI.7}
+
+\begin{definition}
+\label{VI.7.1} Sea $\cal{F}$ una categoría sobre~$\cal{E}$. Se llama
+\emph{clivaje}
+\index{clivaje|hyperpage}%
+de~$\cal{F}$ sobre~$\cal{E}$ a una función que asigna a todo
+$f\in\Fl(\cal{E})$ un funtor de imagen inversa por~$f$ en~$\cal{F}$,
+denotado por~$f^*$. El clivaje se dice \emph{normalizado}
+\index{clivaje normalizado|hyperpage}%
+\index{normalizado (clivaje)|hyperpage}%
+si $f=\id_S$ implica $f^*=\id_{\cal{F}_S}$. Se llama
+\emph{categoría con clivaje} (\resp \emph{categoría con clivaje
+normalizado})
+\index{categoría con clivaje (\resp con clivaje normalizado)|hyperpage}%
+a una categoría $\cal{F}$ sobre~$\cal{E}$ dotada de un clivaje
+(\resp de un clivaje normalizado).
+\end{definition}
+
+Es evidente que $\cal{F}$ admite un clivaje si y solo si $\cal{F}$ es
+prefibrada sobre~$\cal{E}$, y en tal caso $\cal{F}$ admite un clivaje
+normalizado. El conjunto de los clivajes sobre~$\cal{F}$ está en
+correspondencia biunívoca con el conjunto de los subconjuntos $K$ de
+$\Fl(\cal{F})$ que satisfacen las condiciones siguientes:
+\begin{enumerate}
+\item[a)] Los $\alpha\in K$ son morfismos cartesianos.
+\item[b)] Para todo morfismo $f\colon T\to S$ en~$\cal{E}$ y todo
+$\xi\in\Ob(\cal{F}_S)$, existe un único $f$-morfismo en~$K$ de destino
+$\xi$.
+\end{enumerate}
+
+Para que el clivaje definido por~$K$ sea normalizado, es necesario y
+suficiente que $K$ satisfaga además la condición
+\begin{enumerate}
+\item[c)] Los morfismos identidad de~$\cal{F}$ pertenecen a~$K$.
+\end{enumerate}
+
+Los
+\marginpar{171}
+morfismos que son elementos de~$K$ podrán llamarse
+\emph{\og morfismos de transporte\fg}
+\index{transporte (morfismo de)|hyperpage}%
+para el clivaje considerado.
+
+La noción de isomorfismo de categorías con clivaje sobre~$\cal{E}$ es
+clara. Más generalmente, pueden definirse los morfismos de
+$\cal{E}$-categorías con clivaje como los funtores de
+$\cal{E}$-categorías $\cal{F}\to\cal{G}$ que aplican los morfismos de
+transporte en morfismos de transporte.
+(Estos son, en particular, funtores cartesianos). De este modo, las
+categorías con clivaje sobre~$\cal{E}$ son los objetos de una categoría,
+la \emph{categoría de las categorías con clivaje sobre}~$\cal{E}$. El
+lector explicitará la existencia de productos, ligada al hecho siguiente:
+si una categoría sobre~$\cal{E}$ es producto de categorías $\cal{F}_i$
+sobre~$\cal{E}$, provista cada una de un clivaje, entonces $\cal{F}$ queda
+dotada del clivaje natural correspondiente. Se deja asimismo al lector
+explicitar la noción de cambio de base en las categorías con clivaje.
+
+Denotaremos por $\alpha_f(\xi)$ el morfismo canónico
+$$
+\alpha_f(\xi)\colon f^*(\xi)\to\xi.
+$$
+Como ya se ha dicho, es funtorial en~$\xi$, es decir, se tiene una
+transformación natural
+$$
+\alpha_f\colon i_Tf^*\to i_S,
+$$
+donde, para todo $S\in\Ob(\cal{E})$, $i_S$ denota el funtor de inclusión
+$$
+i_S\colon\cal{F}_S\to\cal{F}
+$$
+
+Consideremos ahora morfismos
+$$
+f\colon T\to S\quad\text{ y }\quad g\colon U\to T
+$$
+en~$\cal{E}$, y sea $\xi\in\Ob(\cal{F}_S)$. Existe entonces un único
+$U$-morfismo
+$$
+c_{f,g}(\xi)\colon g^*f^*(\xi)\to(fg)^*(\xi)
+$$
+que hace
+\marginpar{172}
+conmutativo el diagrama
+$$
+\xymatrix{
+f^*(\xi) \ar[d]_{\alpha_f(\xi)} & & \ar[ll]_{\alpha_g(f^*(\xi))}
+g^*(f^*(\xi)) \ar[d]^{c_{f,g}(\xi)} \\
+\xi & & \ar[ll]^{\alpha_{fg}(\xi)} (fg)^*(\xi) }
+$$
+(en virtud de la definición de~$(fg)^*(\xi)$). Para $\xi$ variable,
+este morfismo es funtorial; es decir, se tiene una transformación natural
+$$
+c_{f,g}\colon g^*f^*\to(fg)^*
+$$
+de funtores $\cal{F}_S\to\cal{F}_U$. Observemos inmediatamente:
+\begin{proposition}
+\label{VI.7.2} Para que la categoría con clivaje $\cal{F}$
+sobre~$\cal{E}$ sea fibrada, es necesario y suficiente que los
+$c_{f,g}$ sean isomorfismos.
+\end{proposition}
+
+Tomando para~$f$ un isomorfismo y para~$g$ su inverso, y considerando los
+isomorfismos $c_{f,g}$ y $c_{g,f}$, se concluye:
+\begin{corollaire}
+\label{VI.7.3} Si $\cal{F}$ es una categoría \emph{fibrada con clivaje}
+sobre~$\cal{E}$, entonces, para todo isomorfismo $f\colon T\to S$ en
+$\cal{E}$, $f^*$ es una equivalencia de categorías
+$\cal{F}_S\to\cal{F}_T$.
+\end{corollaire}
+
+\begin{proposition}
+\label{VI.7.4} Sea $\cal{F}$ una categoría con clivaje sobre~$\cal{E}$.
+Se tiene
+
+$\qquad\qquad A)\qquad
+\left\{\begin{array}{ccc}c_{f,\id_T}(\xi)&=&\alpha_{\id_T}(f^*(\xi))\\
+c_{\id_S,f}(\xi)&=&f^*(\alpha_{\id_S}(\xi))
+\end{array}\right.$
+
+\smallskip
+$\qquad\qquad B)\qquad c_{f,gh}(\xi)\cdot
+c_{g,h}(f^*(\xi))=c_{fg,h}(\xi)\cdot h^*(c_{f,g}(\xi))$
+
+\noindent(En
+\marginpar{173}
+estas fórmulas, $f,g,h$ denotan morfismos
+$$
+V\to U\to T\to S
+$$
+y $\xi$ un objeto de~$\cal{F}_S$).
+\end{proposition}
+
+La primera y la segunda relación, en el caso de un clivaje normalizado,
+adoptan la forma más sencilla
+\begin{equation*}
+\label{eq:VI.7.A'}\quad A')\qquad {c_{f,\id_T}=\id_{f^*},\quad
+c_{\id_S,f}=\id_{f^*}.\qquad\qquad\qquad\qquad\qquad\qquad}
+\end{equation*}
+
+En cuanto a la tercera, puede visualizarse mediante la conmutatividad del
+diagrama
+\begin{equation*}
+\label{eq:VI.7.D} \tag{$D$}
+\begin{split}
+\xymatrix@C=2.2cm{
+h^*g^*f^*(\xi) \ar[r]^-{c_{g,h}(f^*(\xi))} \ar[d]_{h^*(c_{f,g}(\xi))}
+& (gh)^*(f^*(\xi)) \ar[d]^{c_{f,gh}(\xi)} \\
+h^*(fg)^*(\xi) \ar[r]_-{c_{fg,h}(\xi)} & (fgh)^*(\xi) }
+\end{split}
+\end{equation*}
+En el caso de las categorías
+\ifthenelse{\boolean{orig}}
+{fibradas,}
+{fibradas}
+(donde los $c_{f,g}$ son isomorfismos), esta conmutatividad puede expresarse
+intuitivamente por el hecho de que \emph{la utilización sucesiva de los
+isomorfismos de la forma $c_{f,g}$ no conduce a \og identificaciones
+contradictorias\fg}. También puede escribirse esta fórmula sin el argumento
+$\xi$, utilizando el producto de convolución de transformaciones naturales:
+$$
+c_{fg,h}\circ (h^**c_{f,g})=c_{f,gh}\circ(c_{g,h}*f^*).
+$$
+
+\ifthenelse{\boolean{orig}}
+{\ignorespaces}
+{\enlargethispage{.5cm}}
+La demostración de las dos primeras fórmulas de~\Ref{VI.7.4} es trivial;
+esbocemos la de la tercera. Para ello, consideremos, además del cuadrado
+$(D)$, el cuadrado de transformaciones naturales:
+\begin{equation*}
+\label{eq:VI.7.D'} \tag{$D'$}
+\begin{split}
+\xymatrix@C=2cm{
+g^*f^*(\xi) \ar[r]^-{\alpha_g(f^*(\xi))}
+\ar[d]_{c_{f,g}(\xi)} & f^*(\xi) \ar[d]^{\alpha_f(\xi)} \\
+(fg)^*(\xi) \ar[r]_-{\alpha_{fg}(\xi)} & \xi }
+\end{split}
+\end{equation*}
+que
+\marginpar{174}
+es conmutativo por definición de $c_{f,g}(\xi)$. Consideremos el diagrama
+obtenido uniendo los vértices de~$(D)$ a los vértices correspondientes de
+$(D')$ mediante las transformaciones naturales de la forma~$\alpha$:
+$$
+\begin{array}{ll}
+\alpha_h(g^*f^*(\xi)),&\alpha_{gh}(f^*(\xi))\\
+\alpha_h((fg)^*(\xi)),&\alpha_{fgh}(\xi).
+\end{array}
+$$
+Las cuatro caras laterales del cubo así obtenido son también conmutativas:
+para la de la izquierda, esto se debe a que la columna izquierda de~$(D)$
+se deduce de la columna izquierda de~$(D')$
+\ifthenelse{\boolean{orig}}{por aplicación de~$h$}{por aplicación de~$h^*$}%
+, y a que $\alpha_h$ es una transformación natural; para las otras tres,
+no es sino la definición de las operaciones~$c$ de los tres lados restantes
+de~$(D)$. Así, las cinco caras del cubo distintas de la cara superior son
+conmutativas. Se sigue que los dos $(fgh)$-morfismos
+$h^*g^*f^*(\xi)\to(fgh)^*(\xi)$ definidos por~$(D)$ tienen el mismo
+compuesto con $\alpha_{fgh}(\xi)\colon(fgh)^*(\xi)\to\xi$; por tanto, son
+iguales por definición de~$(fgh)^*$.
+
+Para lo que sigue, limitémonos a las categorías con clivaje
+\emph{normalizado}. Una categoría tal da lugar a los objetos siguientes:
+\begin{enumerate}
+\item[a)] Una aplicación $S\mto\cal{F}_S$ de~$\Ob(\cal{E})$ en~$\Cat$.
+\item[b)] Una aplicación $f\mto f^*$ que asigna a todo
+$f\in\Fl(\cal{E})$, de fuente~$T$ y destino~$S$,
+\ifthenelse{\boolean{orig}}
+{una}
+{un}
+funtor $f^*\colon\cal{F}_S\to\cal{F}_T$.
+\item[c)] Una aplicación $(f,g)\mto c_{f,g}$ que asigna a todo par de
+flechas $(f,g)$ de~$\cal{E}$ una transformación natural
+$c_{f,g}\colon g^*f^*\to(fg)^*$.
+\end{enumerate}
+
+Además, estos datos satisfacen las condiciones expresadas en las fórmulas
+$A')$ y~$B)$ dadas más arriba. (N.B. Si no nos hubiéramos limitado al caso
+de un clivaje normalizado, habría sido necesario introducir un dato
+suplementario, a saber, una función $S\mto\alpha_S$ que asocia a todo objeto
+$S$ de~$\cal{E}$ una transformación natural
+$\alpha_S\colon(\id_S)^*\to\id_{\cal{F}_S}$; la condición $A')$ sería
+entonces sustituida por la condición~$A)$).
+
+Vamos
+\marginpar{175}
+a mostrar ahora cómo puede reconstruirse (salvo isomorfismo único) la
+categoría con clivaje normalizado $\cal{F}$ sobre~$\cal{E}$ a partir de los
+objetos precedentes.

@@ -1,0 +1,233 @@
+Situémonos ahora bajo las condiciones de~\Ref{X.2.4}, donde se tiene un
+homomorfismo de especialización
+$$
+\pi_1(\overline X_1,\overline a_1)\to\pi_1(\overline X_0,\overline
+a_0)
+$$
+que es \emph{sobreyectivo}, relativo a un morfismo propio y separable
+$f\colon X\to Y$. Queremos precisar el núcleo de este homomorfismo. Procediendo
+como en la demostración de~\Ref{X.2.4}, se ve que en esta cuestión siempre
+podemos suponer que~$Y$ es el espectro de un \emph{anillo de valoración
+discreta~$V$, completo y de cuerpo residual algebraicamente cerrado} (pues
+siempre puede encontrarse un anillo semejante y un morfismo de su espectro~$Y'$
+en~$Y$ cuya imagen sea~$\{y_0,y_1\}$). Se tiene entonces
+$X_0=\overline X_0$,~$\kres(y_0)=k=$ cuerpo residual de~$V$ y
+$\kres(y_1)=K=$ cuerpo de fracciones de~$V$. Sea~$K_s$ la clausura separable
+de~$K$, sea~$\overline K$ su clausura algebraica y, para todo subanillo~$W$ de
+$\overline K$ que contenga a~$V$, pongamos~$X_W=X\otimes_VW$. En particular,
+se tiene
+$$
+X_V=\ifthenelse{\boolean{orig}}{V}{X}, \qquad X_K=X_1, \qquad X_{\overline K}=\overline X_1.
+$$
+Por otra parte, el morfismo canónico~$\overline X_1=X_{\overline K}\to X_{K_s}$
+induce un isomorfismo en los grupos fundamentales (\Ref{IX.4.11}); por
+consiguiente, teniendo en cuenta el isomorfismo~\Ref{X.2.1}
+$\pi_1(X_0)\to\pi_1(X)$, quedamos reducidos a estudiar el homomorfismo
+sobreyectivo
+$$
+\pi_1(X_{K_s})\to\pi_1(X)
+$$
+asociado
+\marginpar{281}
+al morfismo canónico~$X_{K_s}\to X$. Determinar el núcleo de este último
+equivale a resolver el problema siguiente: \emph{se tiene un recubrimiento
+principal conexo~$Z_{K_s}$ de~$X_{K_s}$, de grupo~$G$} (asociado, pues, a un
+homomorfismo de~$\pi_1(X_{K_s})$ en~$G$); \emph{determinar en qué condiciones
+es isomorfo a la imagen inversa de un recubrimiento principal~$Z$ de~$X$ de
+grupo~$G$.}
+
+Observemos primero que~$K_s$ es la unión filtrante creciente de sus
+subextensiones finitas~$K'$ sobre~$K$ y que, por tanto,~$Z_{K_s}$ es isomorfo a
+la imagen inversa de un recubrimiento principal~$Z_{K'}$ de~$X_{K'}$ para un
+$K'$ conveniente (adviértase, sin embargo, que para~$K'$ fijado,~$Z_{K'}$ no
+queda determinado de manera única). Decir que~$Z_{K_s}$ es isomorfo a la
+imagen inversa de un recubrimiento principal~$Z$ de~$X$ significa que existe una
+subextensión finita~$K''\supset K'$ de~$K_s$ tal que
+$Z_{K''}=Z_{K'}\otimes_{K'}K''$ sea isomorfo a~$Z\otimes_VK''$. Para una
+subextensión finita~$K'$ de~$K_s$, designemos ahora por~$V'$ el normalizado
+de~$V$ en~$K'$, que es un anillo de valoración discreta completo, de cuerpo
+residual~$k$. Así, el morfismo canónico~$X_{V'}\to X_V$ induce un isomorfismo
+en las fibras sobre los puntos cerrados de~$Y=\Spec(V)$ y
+$Y'=\Spec(V')$. Resulta entonces de~\Ref{X.2.1}, aplicado a~$X_V$ y~$X_{V'}$,
+que el homomorfismo inducido en los grupos fundamentales
+$\pi_1(X_{V'})\to\pi_1(X_V)$ es un isomorfismo; o, de manera equivalente, que
+todo recubrimiento principal de~$X_{V'}$ es la imagen inversa de un
+recubrimiento principal de~$X_V$, determinado salvo isomorfismo. Esto implica
+el lema siguiente:
+
+\begin{lemme}
+\label{X.3.7}
+Sea~$Z_{K'}$ un recubrimiento principal conexo de~$X_{K'}$ de grupo~$G$, y sea
+\ifthenelse{\boolean{orig}}
+{$Z_{K}$}
+{$Z_{K_s}$}
+su imagen inversa sobre~$X_{K_s}$\quoi. Para que este último sea isomorfo a la
+imagen inversa de un recubrimiento principal~$Z$ de~$X$, es necesario y
+suficiente que exista una extensión finita~$K''\supset K'$ de~$K$ en~$K_s$ tal
+que el recubrimiento principal~$Z_{K''}$ de~$X_{K''}$ esté inducido por un
+recubrimiento principal de~$X_{V''}$.
+\end{lemme}
+
+Supongamos, en particular, que los~$X_{V''}$ sean normales (para ello basta,
+por ejemplo, que~$X_0$ sea normal y, a fortiori, que~$X_0$ sea simple,
+\cf \Ref{I.9.1}).
+\marginpar{282}
+Como son conexos, son, pues, irreducibles. Sean~$L$ el cuerpo de funciones
+racionales de~$X$ y~$X_{K}$,~$L'$ el de~$X_{V'}$ y~$X_{K'}$, y~$L''$ el de
+$X_{V''}$ y~$X_{K''}$\quoi. Bajo las condiciones de~\Ref{X.3.7},~$Z_{K'}$
+define una extensión finita separable~$R'$ de~$L'$, y~$Z_{K''}$ define la
+extensión~$R''=R'\otimes_{L'}L'' = R'\otimes_{K'}K''$. La condición
+considerada en~\Ref{X.3.7} significa también que existe una extensión finita
+separable~$K''$ de~$K'$ tal que~$R''=R'\otimes_{K'}K''$ no esté
+\emph{ramificada} sobre el esquema normal~$X_{V''}$, de cuerpo
+$L''=L'\otimes_{K'}K''$, y no solamente sobre la parte abierta~$X_{K''}$
+de~$X_{V''}$.
+
+Supondremos en adelante que~$f\colon X\to Y$ es un morfismo \emph{liso}; por
+tanto, los morfismos~$X_{V'}\to\Spec(V')$ son lisos y los esquemas~$X_{V'}$
+son \emph{regulares}. Obsérvese que la fibra del punto cerrado de~$\Spec(V')$
+en~$X_{V'}$ es irreducible y de codimensión~$1$. Sea~$\goth{o'}$ su anillo
+local, que es, pues, un anillo de valoración discreta de cuerpo~$L'$ y de
+cuerpo residual isomorfo al cuerpo de funciones racionales de~$X_0$, y por
+tanto de la misma característica que~$k$. Definamos análogamente~$\goth{o''}$
+en~$L''$; es evidentemente el normalizado de
+\ifthenelse{\boolean{orig}}
+{$\goth{o''}$}
+{$\goth{o'}$}
+en~$L''$. Se deduce entonces del teorema de pureza~\Ref{X.3.1} o~\Ref{X.3.3}
+que, para que~$R''$ no esté ramificada sobre~$X_{V''}$, es necesario y
+suficiente que~$R''$ no esté ramificada sobre~$\goth{o''}$, normalizado de
+$\goth{o'}$ en~$L''$.
+
+Observemos ahora que si~$u'$ es un uniformizante de~$V'$, también lo es
+de~$\goth{o'}$. Si~$n$ es un entero primo a la característica~$p$ de~$k$,
+\ifthenelse{\boolean{orig}}
+{}
+{tras ampliar primero~$K'$ de modo que contenga las raíces $n$-esimas de la
+unidad,}
+y si se toma
+\ifthenelse{\boolean{orig}}
+{$K''=K'[t]/(t^n-u)$}
+{$K''=K'[t]/(t^n-u')$},
+entonces
+\ifthenelse{\boolean{orig}}
+{$K'$}
+{$K''$}
+es una extensión galoisiana finita de~$K'$ y~$L''$ es isomorfo a
+$L'[t]/(t^n-u')$; por tanto, está moderadamente ramificada sobre~$\goth{o'}$ y
+su grupo de inercia tiene orden~$n$. Supongamos entonces que~$G$ \emph{tiene
+orden primo a~$p$}; esto implica que~$R'$ está moderadamente ramificada
+sobre~$\goth{o'}$. Tomemos para~$n$ un múltiplo, primo a~$p$, del orden del
+grupo de inercia de~$R'$ sobre~$\goth{o'}$ (por ejemplo,
+$n=[G\colon e]$). Aplicando el
+\ifthenelse{\boolean{orig}}
+{lema de \textsc{Abhyankar}}
+{lema de \textsc{Abhyankar}}~\Ref{X.3.6},
+se ve que se satisface la condición considerada en~\Ref{X.3.7}.
+
+Esto demuestra el teorema siguiente:
+
+\begin{theoreme}
+\label{X.3.8}
+Sean~$f\colon X\to Y$ un morfismo propio y liso, de fibras
+\marginpar{283}%
+geométricamente conexas, con~$Y$ localmente noetheriano, e~$y_0$ e~$y_1$ dos
+puntos de~$Y$ tales que
+\ifthenelse{\boolean{orig}}
+{$y_0\in\overline{y_1}$}
+{$y_0\in\overline{\{y_1\}}$};
+sean~$\overline{X}_0$ y~$\overline{X}_1$ las fibras geométricas
+correspondientes y considérese el homomorfismo de especialización
+\eqref{X.2.4}~$\pi_1(\overline X_1)\to\pi_1(\overline X_0)$. Este
+homomorfismo es sobreyectivo, y todo homomorfismo continuo de
+$\pi_1(\overline X_1)$ en un grupo finito~$G$ de orden primo a la
+característica~$p$ de~$\kres(y_0)$ proviene de un homomorfismo de
+$\pi_1(\overline{X}_0)$ en~$G$.
+\end{theoreme}
+
+En otros términos:
+
+\begin{corollaire}
+\label{X.3.9}
+Si~$\kres(y_0)$ tiene característica cero, el homomorfismo de especialización
+es un isomorfismo. Si
+\ifthenelse{\boolean{orig}}
+{$p>0$}
+{$\kres(y_0)$ tiene característica $p>0$},
+entonces el núcleo del homomorfismo de especialización está contenido en la
+intersección de los núcleos de los homomorfismos continuos de
+$\pi_1(\overline X_1)$ en grupos finitos de orden primo a~$p$ (o, de manera
+equivalente, en el subgrupo normal cerrado engendrado por un $p$-subgrupo de
+Sylow del grupo de tipo galoisiano~$\pi_1(\overline X_1)$). Por consiguiente,
+si
+\ifthenelse{\boolean{orig}}
+{$\pi_1(X_1)^{(p)}$}
+{$\pi_1(\overline X_1)^{(p)}$}
+designa el grupo cociente de~$\pi_1(\overline X_1)$ por el subgrupo cerrado
+precedente, y si se define análogamente~$\pi_1(\overline X_0)^{(p)}$, el
+homomorfismo de especialización induce un \emph{isomorfismo}
+$$
+\pi_1(\overline X_1)^{(p)}\isomto \pi_1(\overline X_0)^{(p)}
+$$
+\end{corollaire}
+
+Obsérvese que la demostración de~\Ref{X.3.8} es puramente algebraica.
+Procediendo como en~\Ref{X.2.6}, se concluye \emph{por vía trascendente}:
+
+\begin{corollaire}
+\label{X.3.10}
+Sea~$X_0$ una curva propia, lisa y conexa de género~$g$ sobre un cuerpo
+algebraicamente cerrado de característica~$p$. Con la notación introducida
+en~\Ref{X.3.9}, el grupo~$\pi_1(X_0)^{(p)}$ es isomorfo a~$\Gamma^{(p)}$,
+donde~$\Gamma$ es el grupo de tipo galoisiano engendrado por los generadores
+$s_i,~t_i$ ($1\le i\le g$), ligados por la relación
+$$
+(s_1t_1s_1^{-1}t_1^{-1})\cdots (s_gt_gs_g^{-1}t_g^{-1})=1
+$$
+\end{corollaire}
+
+\begin{remarques}
+\label{X.3.11}
+\marginpar{284}
+Cuando~$\kres(y_0)$ tiene característica cero, el resultado~\Ref{X.3.9} es bien
+conocido por vía trascendente. Obsérvese que la demostración de~\Ref{X.3.10}
+recurre al teorema de pureza en el caso de característica mixta, pero
+solamente para anillos de dimensión~2, caso en el que la demostración de dicho
+teorema es fácil y se ha recordado en el texto.
+\end{remarques}
+
+\begin{sgabibliography}{0}{X.4}
+
+\bibitem[1]{X.1} K\ptbl \textsc{Kodaira}, On compact analytic surfaces,
+\ifthenelse{\boolean{orig}}
+{Princeton University Press, 1960.}
+{Ann.\ of Math.\ \textbf{71} (1960), p\ptbl 111--152.}
+
+\bibitem[2]{X.2} S\ptbl \textsc{Lang} y
+\ifthenelse{\boolean{orig}}{J.P\ptbl}{J-P\ptbl}%
+\textsc{Serre}, Sur les rev\^etements non ramifi\'es des vari\'et\'es
+alg\'ebriques,
+\ifthenelse{\boolean{orig}}
+{Amer.\ Journ. of Math., pp\ptbl 319--330, 1957.}
+{Amer.\ J.\ Math.\ \textbf{79} (1957), p\ptbl319--330.}
+
+\bibitem[3]{X.3} M\ptbl \textsc{Nagata},
+On the purity of branch loci in regular local rings,
+\ifthenelse{\boolean{orig}}
+{Illinois Journal of Math., p\ptbl 328--333, 1959.}
+{Illinois J.\ Math. \textbf{3} (1959), p\ptbl 328--333.}
+
+\bibitem[4]{X.4}
+\ifthenelse{\boolean{orig}}{J.P\ptbl}{J-P\ptbl}%
+\textsc{Serre}, Rev\^etements ramifi\'es du plan projectif (d'apr\`es
+S\ptbl Abhyankar), S\'eminaire Bourbaki, Mai 1960.
+
+\bibitem[5]{X.5} O\ptbl \textsc{Zariski},
+On the purity of the branch locus of algebraic functions,
+\ifthenelse{\boolean{orig}}
+{Proc.\ Nat.\ Acad.\ Sc.\ USA, t\ptbl 44, p\ptbl 791--796, 1958.}
+{Proc.\ Nat.\ Acad.\ Sc.\ USA  \textbf{44} (1958), p\ptbl 791--796.}
+
+\bibitem[6]{X.6} O\ptbl \textsc{Zariski},
+Algebraic surfaces, Ergebnisse... 1948, Chelsea (New York).
+\end{sgabibliography}

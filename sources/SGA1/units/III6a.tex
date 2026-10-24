@@ -1,0 +1,90 @@
+
+\section{Prolongación infinitesimal global de los $S$-esquemas lisos}
+\label{III.6}
+
+Bajo las condiciones del teorema~\Ref{III.4.1}, se trata de averiguar si existe un preesquema~$X$ liso sobre~$Y$ tal que $X\times_YY_0$ sea $Y_0$-isomorfo a~$X_0$, sabiendo que tal esquema «existe localmente sobre~$X_0$». Retomando el método de construcción paso a paso, se llega a sustituir la letra~$Y$ por~$S$, a suponer dado un subpreesquema cerrado~$S_0$ de~$S$ definido por un haz de ideales~$\cal{I}$ (que ya no es necesario suponer localmente nilpotente), a introducir los subpreesquemas cerrados~$S_n$ de~$S$ definidos por los~$\cal{I}^{n+1}$ y a suponer dado un preesquema~$X_n$ liso sobre~$S_n$. Se busca un $S_{n+1}$-preesquema~$X_{n+1}$ «que se reduzca a~$X_n$», es decir, provisto de un isomorfismo
+\begin{equation*}
+X_{n+1}\times_{S_{n+1}}S_n\isomfrom X_n,
+\end{equation*}
+que sea \emph{liso} sobre~$S_{n+1}$ (o, lo que equivale a lo mismo por~\Ref{II.2.1}, \emph{plano} sobre~$S_{n+1}$). Como se señaló en el \No\Ref{III.4}, dar un objeto de este tipo equivale a dar un haz de álgebras~$\cal{B}$ sobre~$f^{-1}(\cal{O}_{S_{n+1}})$ (donde~$f$ es la aplicación continua subyacente al morfismo estructural $X_n\to S_n$), provisto de una aumentación $\cal{B}\to\cal{O}_{X_n}$ compatible con la aumentación $f^{-1}(\cal{O}_{S_{n+1}})\to f^{-1}(\cal{O}_{S_n})$ y que satisfaga dos condiciones (a) y (b) que no volveremos a escribir; nos limitaremos a observar que son de \emph{naturaleza local} sobre el espacio topológico subyacente a~$X_n$. Por~\Ref{III.4.1} se sabe que existe una solución localmente. Además, es única salvo isomorfismo (no único), al menos localmente. Comencemos por precisar este punto:
+
+\begin{proposition}
+\label{III.6.1}
+Sea
+\marginpar{78}
+$X_{n+1}$ sobre~$S_{n+1}$ que se reduzca a~$X_n$ sobre~$S_n$. Entonces el haz (sobre el espacio topológico subyacente a~$X_n$, o también a~$X_0$) de los $S_{n+1}$-automorfismos de~$X_{n+1}$ que inducen la identidad sobre~$X_n$ es canónicamente isomorfo a
+\begin{equation*}
+\cal{G}=\goth{g}_{X_0/S_0}\otimes_{\cal{O}_{S_0}}
+\gr_{\cal{I}}^{n+1}(\cal{O}_S)
+\end{equation*}
+(como haz de grupos).
+\end{proposition}
+
+En efecto, por~\Ref{III.5.4} y~\Ref{III.4.2}, este haz es un haz homogéneo principal bajo~$\cal{G}$. Como está provisto de una sección privilegiada (el automorfismo identidad de~$X_{n+1}$), se identifica, pues, como haz de conjuntos con~$\cal{G}$. Hay que comprobar que esta identificación es compatible con las estructuras de grupo. Esto es fácil y, por lo demás, un caso particular de un resultado más general sobre la compatibilidad de las estructuras de fibrados principales de~\Ref{III.5.1} y~\Ref{III.5.3} con la composición de morfismos (resultado que no enunciamos aquí, pero que deberá figurar en el \emph{hyperplodoque}).
+
+En particular, el haz sobre~$X_0$ de los gérmenes de automorfismos de~$X_{n+1}$, con las estructuras explicitadas, es \emph{conmutativo}. Se sigue que, si~$X_{n+1}'$ es otra solución del problema, isomorfa a~$X_{n+1}$ sobre el abierto~$U$ de~$X_0$, el isomorfismo de~$\SheafAut(X_{n+1})|U$ sobre~$\SheafAut(X_{n+1}')|U$ deducido, por transporte de estructura, de un isomorfismo $X_{n+1}|U\isomto X_{n+1}'|U$ \emph{no depende} de la elección de este último. (No es, por lo demás, sino el isomorfismo identidad de~$\cal{G}$ cuando se identifican uno y otro haz de automorfismos con~$\cal{G}$ gracias a~\Ref{III.6.1}).
+
+De~\Ref{III.6.1} se deduce:
+
+\begin{corollaire}
+\label{III.6.2}
+Sean~$X_{n+1}$ y~$X_{n+1}'$ lisos sobre~$S_{n+1}$ y «que se reduzcan a~$X_n$». Entonces el haz (sobre el espacio subyacente a~$X_0$) de los $S_{n+1}$-isomorfismos de~$X_{n+1}$ sobre~$X_{n+1}'$ que inducen la identidad sobre~$X_n$ es, de manera natural, un haz homogéneo principal bajo~$\cal{G}$.
+\end{corollaire}
+
+Esto expresa, en efecto, que~$X_{n+1}$ y~$X_{n+1}'$ son localmente isomorfos y que el haz de gérmenes de automorfismos del primero es~$\cal{G}$.
+
+Obsérvese ahora que, en virtud de~\Ref{III.4.1}, siempre puede hallarse un recubrimiento~$(U_i)$
+\marginpar{79}
+de~$X_n$ por abiertos, que pueden suponerse afines, y para todo~$i$ un esquema liso~$X^i$ sobre~$S_{n+1}$ que se reduzca
+\ifthenelse{\boolean{orig}}{a~$U_i=U_{in}$.}{a~$U_i$.}
+Supongamos, para simplificar, que~$X_n$ es \emph{separado}; entonces los~$U_{ij}=U_i\cap U_j$ siguen siendo abiertos \emph{afines} de~$X_n$. Como el~$\H^1$ de un abierto de este tipo, con valores en el haz cuasicoherente~$\cal{G}$, es nulo, se deduce por
+\ifthenelse{\boolean{orig}}{}{el}
+corolario~\Ref{III.6.2} que~$X^i|U_{ij}$ es isomorfo a~$X^j|U_{ij}$; sea
+$$
+f_{ji}\colon X^i|U_{ij}\isomto X^j|U_{ij}
+$$
+un isomorfismo de este tipo. Está determinado salvo una sección de~$\cal{G}$ sobre~$U_{ij}$.
+Pongamos, para toda terna de índices:
+$$
+f_{ji}^{(k)}=f_{ji}|U_{ijk}\quad\text{donde }U_{ijk}=U_i\cap U_j\cap U_k.
+$$
+Si se tuviera
+\begin{equation*}
+\label{eq:III.6.1}
+\tag{1} {f_{kj}^{(i)}f_{ji}^{(k)}=f_{ki}^{(j)},}
+\end{equation*}
+se seguiría que los~$X^i$ «se pegan» mediante los~$f_{ji}$ y, por tanto, que definen una solución~$X=X_{n+1}$ del problema planteado. Más generalmente, existe una solución de este tipo si pueden modificarse los~$f_{ji}$ en unos~$f_{ji}'$:
+\begin{equation*}
+\label{eq:III.6.2}
+\tag{2} {f_{ji}'=f_{ji}g_{ji}\quad (g_{ji}\in\Gamma(U_{ij},\cal{G}))}
+\end{equation*}
+de modo que los~$f_{ji}'$ satisfagan la condición de transitividad anterior. Esta condición suficiente para la existencia de una solución es también necesaria, como se ve recordando que una solución~$X$ de este tipo debe ser isomorfa a~$X^i$ sobre cada~$U_i$. Esto permite elegir isomorfismos
+$$
+f_i\colon X|U_i\isomto X^i
+$$
+y definir
+$$
+f_{ji}'=(f_j|U_{ij})(f_i|U_{ij})^{-1}\colon X^i|U_{ij}\isomto X^j|U_{ij}
+$$
+que satisfacen la condición de pegado.
+
+Ahora bien, pongamos
+\begin{equation*}
+\label{eq:III.6.3}
+\tag{3}
+\ifthenelse{\boolean{orig}}
+{{f_{ijk}=(f_{ki}^{(j)})^{-1}f_{kj}^if_{ji}^k,}}
+{{f_{ijk}=(f_{ki}^{(j)})^{-1}f_{kj}^{(i)}f_{ji}^{(k)},}}
+\end{equation*}
+que es un automorfismo de~$X^i|U_{ijk}$, que identificaremos con una sección de~$\cal{G}$ gracias a~\Ref{III.6.1}. Se comprueba, mediante un pequeño cálculo formal que se deja al lector, que es un $2$-\emph{cociclo}~$f$ del recubrimiento abierto
+\marginpar{80}
+$\cal{U}=(U_i)$ con coeficientes en~$\cal{G}$. El mismo cálculo muestra que, bajo~\eqref{eq:III.6.2}, la condición de pegado~\eqref{eq:III.6.1} \emph{para los}~$f_{ij}'$ equivale a la fórmula
+\begin{equation*}
+\label{eq:III.6.4}
+\tag{4} {f=dg,}
+\end{equation*}
+donde~$g=(g_{ij})$ se considera una $1$-cocadena de~$\cal{U}$ con coeficientes en~$\cal{G}$. Por tanto, \emph{la condición necesaria y suficiente para la existencia de una solución del problema es que sea nula la clase de cohomología en~$\H^2(\cal{U},\cal{G})$ definida por el cociclo~\eqref{eq:III.6.3}}. Obsérvese, además, que, como~$\cal{U}=(U_i)$ es un recubrimiento afín de~$X_0$, que es un \emph{esquema}, $\H^2(\cal{U},\cal{G})$ se identifica con~$\H^2(X_0,\cal{G})$. Es inmediato, por lo demás, que la clase de cohomología así obtenida en~$\H^2(X_0,\cal{G})$ no depende del recubrimiento afín considerado. La llamaremos \emph{clase de obstrucción a la prolongación de~$X_n$ a un esquema~$X_{n+1}$ liso sobre~$S_{n+1}$}.
+
+Supongamos nula esta obstrucción. Entonces un razonamiento esbozado antes muestra que toda solución~$X=X_{n+1}$ es isomorfa a una solución obtenida por pegado a partir de isomorfismos~$f_{ji}'$, que pueden suponerse de la forma~\eqref{eq:III.6.2}; la condición de pegado no es otra que
+\ifthenelse{\boolean{orig}}{\eqref{eq:III.6.3}}{\eqref{eq:III.6.4}}.
+El conjunto de los~$g$ admisibles es, pues, un espacio homogéneo principal bajo el grupo~$\mathrm{Z}^1(\cal{U},\cal{G})$ de los $1$-cociclos de~$\cal{U}$ con coeficientes en~$\cal{G}$. Además, se comprueba inmediatamente que \emph{dos cocadenas~$g$ y~$g'$} (tales que $dg=dg'=f$) \emph{definen soluciones isomorfas si y solo si el cociclo~$g-g'$ es de la forma~$dh$}, donde $h=(h_i)\in\mathrm{C}^0(\cal{U},\cal{G})$. Se obtiene, por tanto:

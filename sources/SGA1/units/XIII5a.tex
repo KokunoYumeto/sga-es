@@ -1,0 +1,48 @@
+
+\section{Apéndice I: Variaciones sobre el lema de Abhyankar}
+\label{XIII.5}
+\index{lema de Abhyankar|hyperpage}%
+Este apéndice contiene distintas variantes del lema de Abhyankar.
+
+\begin{proposition}
+\label{XIII.5.1} Sean $X=\Spec A$ un esquema local regular,
+$D=\sum_{1\leq i\leq r} \divisor f_i$ un divisor de cruzamientos
+normales, donde los $f_i$ son elementos del ideal maximal de~$A$ que
+forman parte de un sistema regular de parámetros. Sean $n_i$,
+$1\leq i\leq r$, enteros
+\ifthenelse{\boolean{orig}}{$\geq 0$}{$>0$}, y pongamos
+$$
+X'=X[T_1,\dots,T_r]/(T_1^{n_1}-f_1,\dots,T_r^{n_r}-f_r),
+$$
+\ifthenelse{\boolean{orig}}
+{$U'=U\times_X X'$.}
+{Sea $U=X-\Supp D$ y pongamos $U'=U\times_X X'$.}
+Entonces $X'$ es regular y $U'$ es el complemento
+en~$X'$ del divisor de cruzamientos normales
+$\sum_{1\leq i\leq r}\divisor T_i$. Si los enteros $n_i$ son primos
+\marginpar{428}
+con la característica residual $p$ de~$X$, $U'$ es un recubrimiento
+étale conexo de~$U$, moderadamente ramificado relativamente
+a~$D$ \textup{(\Ref{XIII.2.3}~c))}.
+\end{proposition}
+
+En efecto, $X'$ es el espectro de un anillo local $A'$ cuyo ideal
+maximal está engendrado por $T_1,\dots,T_r$.
+\ifthenelse{\boolean{orig}}
+{\ignorespaces}
+{(Puede suponerse que $r=\dim(A)$.)}
+Como $A'$ es finito y plano sobre~$A$, y por tanto de dimensión $r$,
+$A'$ es regular (EGA~$0_{\textup{IV}}$~17.1.1) y los $T_i$ forman un
+sistema regular de parámetros de~$A'$. Supongamos que los $n_i$ son
+primos con~$p$. Como todos los $f_i$ son invertibles sobre~$U$, el
+hecho de que $U'$ sea étale sobre~$U$ se deduce de
+\ifthenelse{\boolean{orig}}
+{I~\Ref{I.7.4}}
+{\Ref{I.7.4}}.
+Además, $U'$ está moderadamente ramificado relativamente a~$D$; sea,
+en efecto, $x_i$ el punto genérico de~$V(f_i)$, $\bar{R}$ la
+localización estricta de~$R=\cal{O}_{X,x_i}$ y $\bar{K}$ el cuerpo de
+fracciones de~$\bar{R}$. Entonces la $\bar{K}$-álgebra que
+representa $U'|\bar{K}$ se obtiene del cuerpo
+$\bar{K}[T_i]/(T_i^{n_i}-f_i)$ mediante una extensión no ramificada;
+por tanto, está moderadamente ramificada sobre~$\bar{R}$.

@@ -1,0 +1,277 @@
+\section{Descenso de propiedades topológicas}
+\label{VIII.4}
+
+\begin{theoreme}
+\label{VIII.4.1}
+Sean $g\colon Y'\to Y$ un morfismo y $Z$ un subconjunto de~$Y$.
+Supongamos que~$g$ es plano y que existe un morfismo
+cuasicompacto~$f\colon X\to Y$ tal que~$Z=f(X)$ (N.B.: si $Y$ es
+noetheriano, esta última condición está implicada por
+\ifthenelse{\boolean{orig}}
+{$Z$ es constructible}
+{«$Z$ es constructible»}). Entonces se tiene
+$$
+g^{-1}(\overline{Z})=\overline{g^{-1}(Z)}\quoi.
+$$
+\end{theoreme}
+
+\ifthenelse{\boolean{orig}}
+{Puede suponerse~$Y$ afín y después $Y'$ afín. Como $Y$ es afín,
+$X$ es una \emph{reunión
+\marginpar{206}
+finita de abiertos afines~$X_{i}$ y, reemplazando~$X$ por la suma de
+los~$X_{i}$, puede suponerse asimismo que~$X$ es afín. Sean~$A,A',B$ los
+anillos de~$Y,Y',X$, sea $B'=B\otimes_{A}A'$ el de
+$X'=X\times_{Y}Y'$, sea $I$ el núcleo de~$A\to B$ y sea $I'$ el núcleo
+de~$A'\to B'$. Así, los subconjuntos cerrados de~$Y$ y~$Y'$ definidos
+por estos ideales son, respectivamente, la adherencia de~$Z=f(X)$ y la
+adherencia de~$Z'=f'(X')=g^{-1}(Z)$. Se quiere probar que esta última es
+igual a~$g^{-1}(\overline{Z})$, lo que resultará de~$I'=IA'$; a su vez,
+esta igualdad es consecuencia de la planitud de~$A'$ sobre~$A$.}}
+{Puede suponerse~$Y$ afín y después $Y'$ afín. Como $Y$ es afín,
+$X$ es una reunión
+\marginpar{206}
+finita de abiertos afines~$X_{i}$ y, reemplazando~$X$ por la suma de
+los~$X_{i}$, puede suponerse asimismo que~$X$ es afín. Sean~$A,A',B$ los
+anillos de~$Y,Y',X$, sea $B'=B\otimes_{A}A'$ el de
+$X'=X\times_{Y}Y'$, sea $I$ el núcleo de~$A\to B$ y sea $I'$ el núcleo
+de~$A'\to B'$. Así, los subconjuntos cerrados de~$Y$ y~$Y'$ definidos
+por estos ideales son, respectivamente, la adherencia de~$Z=f(X)$ y la
+adherencia de~$Z'=f'(X')=g^{-1}(Z)$. Se quiere probar que esta última es
+igual a~$g^{-1}(\overline{Z})$, lo que resultará de~$I'=IA'$; a su vez,
+esta igualdad es consecuencia de la planitud de~$A'$ sobre~$A$.}
+
+\begin{corollaire}
+\label{VIII.4.2}
+Sean $g\colon Y'\to Y$ un morfismo plano y cuasicompacto y $Z'$ un
+subconjunto cerrado de~$Y'$ saturado para la relación de equivalencia
+conjuntista definida por~$g$. Entonces
+$Z'=g^{-1}(\overline{g(Z')})$.
+\end{corollaire}
+
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+En efecto, se tiene $Z'=g^{-1}(Z)$, con~$Z=g(Z')$. Puede aplicarse
+entonces~\Ref{VIII.4.1}, observando que la condición impuesta a~$Z$ en
+\Ref{VIII.4.1} se satisface tomando como~$X$ el preesquema~$Z'$ provisto de
+la estructura reducida inducida por~$Y'$. (El hecho de que~$g$ sea
+cuasicompacto asegura entonces que el morfismo inducido
+$f\colon Z'\to Y$ sea cuasicompacto).
+
+El enunciado~\Ref{VIII.4.2} significa también que \emph{la topología de
+~$g(Y')$ inducida por~$Y$ es la topología cociente de la de~$Y'$}. En
+particular:
+
+\begin{corollaire}
+\label{VIII.4.3}
+Sea $g\colon Y'\to Y$ un morfismo fielmente plano y cuasicompacto. Entonces
+$g$ hace de~$Y$ un espacio topológico cociente de~$Y'$; es decir, para un
+subconjunto~$Z$ de~$Y$, $Z$ es cerrado (\resp abierto) si y solo si lo es
+$Z'=g^{-1}(Z)$.
+\end{corollaire}
+
+Recordemos ahora que dos elementos
+\ifthenelse{\boolean{orig}}
+{$a,b$, de~$Y'$}
+{$a,b$ de~$Y'$}
+tienen la misma imagen en~$Y$ si y solo si
+\ifthenelse{\boolean{orig}}
+{son}
+{son}
+de la forma $p_{1}(c),p_{2}(c)$ para un elemento conveniente~$c$ de
+$Y''=Y'\times_{Y}Y'$. Se sigue que, si $g$ es sobreyectivo, se tiene un
+diagrama \emph{exacto} de conjuntos
+$$
+\xymatrix@C=.5cm{\cal{P}(Y)\ar[r] & \cal{P}(Y')\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\cal{P}(Y'')}\quoi,
+$$
+donde, para todo conjunto~$E$, se denota por~$\cal{P}(E)$ el conjunto de
+sus subconjuntos. Sentado esto, \Ref{VIII.4.3} puede interpretarse también
+del modo siguiente:
+
+\begin{corollaire}[Descenso de los subconjuntos abiertos \resp cerrados]
+\label{VIII.4.4}
+Sea
+\marginpar{207}%
+\index{descenso de los subconjuntos abiertos (\resp cerrados)|hyperpage}%
+$g\colon Y'{\to} Y$ como en~\Ref{VIII.4.3}. Para todo preesquema~$X$, sea
+$\Ouv(X)$ \resp $\Fer(X)$ el conjunto de sus subconjuntos abiertos \resp
+el conjunto de sus subconjuntos cerrados. Entonces se tienen diagramas
+\emph{exactos} de aplicaciones entre conjuntos (deducidos de~$g$ y de las
+dos proyecciones de~$Y''=Y'\times_{Y}Y'$):
+\vspace*{-5pt}
+\begin{gather*}
+\xymatrix@C=.5cm{\Ouv(Y)\ar[r] & \Ouv(Y')\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\Ouv(Y'')}\\[-3pt]
+\xymatrix@C=.5cm{\Fer(Y)\ar[r] & \Fer(Y')\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\Fer(Y'')}
+\end{gather*}
+\end{corollaire}
+
+Se tiene el complemento siguiente de~\Ref{VIII.4.3}:
+
+\begin{corollaire}
+\label{VIII.4.5}
+Sea $g\colon Y'\to Y$ como en~\Ref{VIII.4.3}, y sea~$Z$ un subconjunto
+de~$Y$ tal que exista un morfismo cuasicompacto~$f\colon X\to Y$ de
+imagen~$Z$ (por ejemplo, $Z$ constructible e~$Y$ noetheriano). Para que
+$Z$ sea un subconjunto localmente cerrado de~$Y$, es necesario y suficiente
+que $Z'=g^{-1}(Z)$ sea un subconjunto localmente cerrado de~$Y'$.
+\end{corollaire}
+
+Basta probar la suficiencia. Sea $Y_{1}$ el subpreesquema cerrado de~$Y$
+dado por la adherencia de~$Z$ provista de la estructura reducida inducida,
+y sea~$Y_{1}'=Y_{1}\times_{Y}Y'$ el subpreesquema cerrado de~$Y'$ imagen
+inversa de~$Y_{1}$. Su conjunto subyacente es la imagen inversa
+$g^{-1}(Y_{1})=g^{-1}(\overline{Z})$ y, por tanto, es igual, en virtud
+de~\Ref{VIII.4.1}, a~$\overline{Z'}$. Como $Z'$ es localmente cerrado
+en~$Y'$, es abierto en~$\overline{Z'}$ y, por tanto, abierto en~$Y_{1}'$.
+Ahora bien, este último es fielmente plano y cuasicompacto sobre~$Y_{1}$;
+por~\Ref{VIII.4.3} se concluye que~$Z$ es abierto en~$Y_{1}$, es decir,
+en~$\overline{Z}$, lo que significa que $Z$ es localmente cerrado.
+
+\begin{corollaire}
+\label{VIII.4.6}
+Sea $g\colon S'\to S$ un morfismo fielmente plano y cuasicompacto,
+$f\colon X\to Y$ un~$S$-morfismo y $f'\colon X'\to Y'$ el
+$S'$-morfismo que se deduce de él por cambio de base. Supongamos que~$f'$
+es una aplicación abierta (\resp una aplicación cerrada, \resp
+\ifthenelse{\boolean{orig}}
+{cuasicompacta}
+{cuasicompacta}
+y un homeomorfismo sobre su imagen, \resp un homeomorfismo); entonces~$f$
+tiene la misma propiedad.
+\end{corollaire}
+
+Como $Y'$ es fielmente plano y cuasicompacto sobre~$Y$, puede suponerse
+$Y=S$. Sea~$Q$
+\marginpar{208}
+un subconjunto de~$X$. Se tiene entonces (denotando por~$h$ el morfismo de
+proyección $X'\to X$):
+$$
+g^{-1}(f(Q))=f'(h^{-1}(Q))\quoi.
+$$
+
+Si $Q$ es abierto (\resp cerrado), lo mismo sucede con~$h^{-1}(Q)$ y, por
+tanto, también con~$f'(h^{-1}(Q))$ si se supone que~$f'$ es una aplicación
+abierta (\resp cerrada); por la fórmula precedente y~\Ref{VIII.4.3}, lo
+mismo sucede entonces con~$f(Q)$. Esto demuestra las dos primeras
+afirmaciones de~\Ref{VIII.4.6}. Queda por examinar el caso en que~$f'$ es
+un homeomorfismo sobre su imagen, y demostrar entonces que~$f$ es un
+homeomorfismo sobre su imagen. (El caso de un homeomorfismo resultará
+entonces de~\Ref{VIII.3.1}). En virtud
+\ifthenelse{\boolean{orig}}
+{de~\Ref{VIII.3.1}}
+{de~\Ref{VIII.3.2}}
+$f$ es inyectivo; queda por probar que la aplicación $X\to f(X)$ es
+abierta. Se sabe ya que~$f$ es cuasicompacto en virtud
+de~\Ref{VIII.3.3}. Basta probar que, para todo subconjunto cerrado~$Z$
+de~$X$, se tiene $Z=f^{-1}(\overline{f(Z)})$; esto equivale a la fórmula
+análoga para las imágenes inversas por la aplicación sobreyectiva
+$h\colon X'\to X$, es decir, a
+$$
+\ifthenelse{\boolean{orig}}
+{Z'=f'^{-1}(g^{-1}(\overline{f(Z)})}
+{Z'=f'^{-1}(g^{-1}(\overline{f(Z)}))}\quoi,
+$$
+donde se pone $Z'=h^{-1}(Z)$. Ahora bien, en virtud de~\Ref{VIII.4.1}
+aplicado al subconjunto~$f(Z)$ de~$Y$, se tiene
+$g^{-1}(\overline{f(Z)})=\overline{g^{-1}(f(Z))}$, y la fórmula que hay
+que demostrar equivale a
+$$
+Z'=f'^{-1}(\overline{f'(Z')})\quoi,
+$$
+la cual resulta de la hipótesis de que~$f'$ es un homeomorfismo sobre su
+imagen.
+
+N.B.: en este último razonamiento, suponiendo ya que~$f$ es cuasicompacto,
+no se ha utilizado que~$g$ sea cuasicompacto, sino solamente que
+\ifthenelse{\boolean{orig}}
+{$g'$}
+{$g$}
+es fielmente plano. Por tanto, bajo esta hipótesis puede descenderse la
+propiedad «homeomorfismo sobre su imagen» o «homeomorfismo», o también,
+gracias al razonamiento precedente, la propiedad «$f'$ es cuasicompacto y
+hace de~$f'(X')$ un espacio topológico cociente de~$X'$».
+
+Diremos que un morfismo~$f\colon X\to Y$ de preesquemas es
+\emph{universalmente abierto} (\resp \emph{universalmente cerrado},
+\resp \emph{universalmente bicontinuo},
+\ifthenelse{\boolean{orig}}{etc...}{etc.})
+\index{universalmente abierto (\resp universalmente cerrado, \resp
+universalmente bicontinuo, etc.)|hyperpage}%
+si, para todo cambio de base~$Y'\to Y$, $f'\colon X'\to Y'$ es un
+morfismo abierto (\resp cerrado, \resp un
+\ifthenelse{\boolean{orig}}
+{homeom.}
+{homeomorfismo}
+sobre su espacio imagen). Se deduce entonces de~\Ref{VIII.4.6}:
+
+\begin{corollaire}
+\label{VIII.4.7}
+Bajo
+\marginpar{209}
+las condiciones de~\Ref{VIII.4.6}, para que~$f$ sea universalmente
+abierto (\resp universalmente cerrado, \resp un homeomorfismo universal
+sobre su imagen, \resp un homeomorfismo universal), es necesario y
+suficiente que~$f'$ lo sea.
+\end{corollaire}
+
+\begin{corollaire}
+\label{VIII.4.8}
+Bajo las condiciones de~\Ref{VIII.4.6}, para que~$f$ sea separado
+(\resp propio), es necesario y suficiente que~$f'$ lo sea.
+\end{corollaire}
+
+Decir que~$f$ es separado significa que el morfismo diagonal
+$X\to X\times_{Y}X$ es cerrado, o también universalmente cerrado, y, por
+tanto, la primera afirmación
+\ifthenelse{\boolean{orig}}
+{}
+{de}
+~\Ref{VIII.4.8} resulta de~\Ref{VIII.4.7}. Decir que~$f$ es propio
+significa que~$f$ satisface las condiciones: a)~$f$ es de tipo finito;
+b)~$f$ es separado; c)~$f$ es universalmente cerrado. La condición a)
+desciende bien en virtud de~\Ref{VIII.3.3}; la b), también, por lo que
+acaba de verse; finalmente, la c), asimismo, por~\Ref{VIII.4.7}.
+
+\begin{remarques}
+\label{VIII.4.9}
+Recordemos que, cuando $g\colon Y'\to Y$ es un morfismo plano de tipo
+finito, con~$Y$ localmente noetheriano, entonces~$g$ es un morfismo
+abierto
+(\ifthenelse{\boolean{orig}}{VI~6.6}{\Ref{IV.6.6}}),
+lo que es un resultado más preciso que~\Ref{VIII.4.3}. Obsérvese, sin
+embargo, que, si~$f$ es un morfismo fielmente plano y cuasicompacto de
+preesquemas noetherianos, entonces~$f$ no es, en general, un morfismo
+abierto. Sea, por ejemplo, $Y$ un esquema irreducible cuyo punto
+genérico~$y$ no sea abierto (por ejemplo, una curva algebraica), y tomemos
+como~$Y'$ el esquema suma~$Y\amalg\Spec(\kres(y))$. Entonces la imagen por
+el morfismo estructural~$Y'\to Y$ del subconjunto
+abierto~$\Spec(\kres(y))$ no es un subconjunto abierto de~$Y$. El lector
+observará asimismo que diversos enunciados de la presente exposición se
+vuelven falsos si se abandona en ellos la hipótesis de que el morfismo
+fielmente plano considerado sea también cuasicompacto. El caso típico que
+refuta los enunciados es aquel en que se toma como~$Y'$ el esquema suma de
+los espectros de los anillos locales de los puntos de~$Y$. Por ejemplo,
+tomando de nuevo como~$Y$ una curva algebraica irreducible y como~$Z$ el
+subconjunto de~$Y$ reducido al punto genérico, su imagen inversa en~$Y'$ es
+abierta sin que~$Z$ sea abierto.
+\end{remarques}
+
+\setcounter{subsection}{9}
+\subsection{}
+\label{VIII.4.10}
+Diversos
+\marginpar{210}
+enunciados de la presente exposición siguen siendo válidos reemplazando la
+hipótesis de que~$Y'$ sea plano sobre~$Y$ por la siguiente: existe un
+\ifthenelse{\boolean{orig}}
+{módulo}
+{módulo}
+de tipo finito~$F$ sobre~$Y'$, de soporte~$Y'$, plano con respecto a~$Y$;
+la hipótesis de planitud fiel se reemplazará entonces por la precedente,
+más la hipótesis de que~$Y'\to Y$ sea sobreyectivo. Esto se aplica a las
+dos primeras afirmaciones de~\Ref{VIII.1.10}, a~\Ref{VIII.3.3},
+\Ref{VIII.3.5}, \Ref{VIII.4.1} y, por consiguiente, a todos los resultados
+del presente número.

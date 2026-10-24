@@ -1,0 +1,113 @@
+
+\section{Relaciones con los módulos libres}
+\label{IV.4}
+
+\begin{proposition}
+\label{IV.4.1}
+Sean~$A$ un anillo, $I$ un ideal de~$A$ y~$M$ un $A$-módulo.
+Supongamos que se cumple una de las dos hipótesis siguientes:
+\begin{enumerate}
+\item[(a)] $I$ es nilpotente.
+\item[(b)] $A$ es noetheriano, $I$ está contenido en el radical de
+Jacobson de~$A$ y~$M$ es de tipo finito.
+\end{enumerate}
+Para que~$M$ sea libre sobre~$A$, es necesario y suficiente que
+$M\otimes_A A/I$ sea libre sobre~$A/I$ y que
+$\Tor_1^A(M,A/I)=0$.
+\end{proposition}
+
+La necesidad es clara;
+\marginpar{94}
+demostremos la suficiencia. Sea~$(e_i)$ una familia
+de elementos de~$M$ cuya imagen en~$M\otimes_A A/I=M/IM$ define una base
+sobre~$A/I$ (la familia es finita en el caso~(b)). Sea~$L$ el $A$-módulo
+libre construido sobre el mismo conjunto de índices. Se tiene entonces un
+homomorfismo~$L\to M$ tal que el funtor~$T$ de tensorización por~$A/I$
+induce un isomorfismo~$T(L)\isomto T(M)$. Si~$Q$ es el conúcleo de
+$L\to M$, se tiene~$T(Q)=0$, de donde~$Q=0$ por Nakayama (válido bajo
+cualquiera de las condiciones~(a) y~(b)). Por tanto, $L\to M$ es
+sobreyectivo. Sea~$R$ su núcleo; se tiene una sucesión exacta
+$$
+0\to R\to L\to M\to0.
+$$
+Como~$\Tor_1^A(M,A/I)=0$, se obtiene una sucesión exacta
+$0\to T(R)\to T(L)\to T(M)\to0$, de donde~$T(R)=0$ y, de nuevo,
+\ifthenelse{\boolean{orig}}{$T(R)=0$}{$R=0$}
+por Nakayama (teniendo en cuenta que, en el caso~(b), $R$ es de tipo
+finito porque~$A$ se supuso noetheriano).
+
+\ifthenelse{\boolean{orig}}
+{\begin{corollairestar}}
+{\begin{corollaire}\label{IV.4.2}}
+La condición~$\Tor_1^A(M,A/I)=0$ puede sustituirse por la siguiente: el
+homomorfismo canónico sobreyectivo
+\begin{equation*}
+\ifthenelse{\boolean{orig}}
+{\gdef\IVFourStarLabel{eq:IV.2.*}}
+{\gdef\IVFourStarLabel{eq:IV.4.*}}
+\label{\IVFourStarLabel}
+\tag{$*$} {\gr_I^0(M)\otimes_{A/I}\gr_I(A)\to\gr_I(M)}
+\end{equation*}
+es un isomorfismo.
+\ifthenelse{\boolean{orig}}
+{\end{corollairestar}}
+{\end{corollaire}}
+
+En efecto, si~$M$ es libre, esto se cumple sin duda. Hay que demostrar,
+pues, que si~$M\otimes_A A/I$ es libre sobre~$A/I$ y se cumple la condición
+sobre los graduados asociados, entonces~$M$ es libre. Se retoma la
+demostración anterior construyendo~$L\to M$. La hipótesis implica que este
+homomorfismo induce un isomorfismo entre los graduados asociados; por
+tanto, su núcleo está contenido en la intersección de los~$I^nL$ y es nulo
+(como es trivial en~(a) y bien conocido en~(b)). c.q.d.
+
+\ifthenelse{\boolean{orig}}{\refstepcounter{subsection}}{}
+
+\begin{corollaire}
+\label{IV.4.3}
+Supongamos que~$A/I$ es un cuerpo. Entonces son equivalentes las condiciones
+siguientes sobre~$M$:
+\begin{enumerate}
+\item[(i)] $M$ es libre.
+\item[(ii)] $M$ es proyectivo.
+\item[(iii)] $M$ es plano.
+\item[(iv)] $\Tor_1^A(M,A/I)=0$.
+\item[(v)] El homomorfismo canónico~\eqref{\IVFourStarLabel}
+es biyectivo.
+\end{enumerate}
+\end{corollaire}
+
+En efecto, en el caso considerado, $M\otimes_A A/I$ es automáticamente
+libre.
+
+El resultado anterior es válido en los dos casos siguientes:
+\begin{enumerate}
+\item[(a)] $M$ es un módulo \emph{arbitrario} sobre un anillo local~$A$
+cuyo ideal maximal~$I$ es \emph{nilpotente} (por ejemplo, un anillo local
+artiniano).
+\item[(b)] $M$ es un módulo \emph{de tipo finito} sobre un anillo
+\emph{local noetheriano}.
+\end{enumerate}
+
+Recordemos, a modo de referencia:
+\marginpar{95}
+\begin{corollaire}
+\label{IV.4.4}
+Supongamos que~$A$ es un dominio \emph{local noetheriano}, de ideal
+maximal~$\goth{m}=I$, cuerpo residual~$k=A/I$ y cuerpo de
+fracciones~$K$. Sea~$M$ un módulo de tipo finito sobre~$A$. Entonces las
+condiciones equivalentes anteriores~\textup{(i)} a~\textup{(v)} son
+también equivalentes a
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+\begin{enumerate}
+\item[(vi)] $M\otimes_A K$ y~$M\otimes_A k$ son espacios vectoriales de
+la misma dimensión (es decir, el rango de~$M$ sobre~$A$ es igual al número
+mínimo de generadores del $A$-módulo~$M$).
+\end{enumerate}
+\end{corollaire}
+
+La demostración es inmediata; se deja al lector la tarea de generalizar al
+caso en que~$A$ solo se supone reducido: hay que exigir entonces que los
+rangos de~$M$ en los ideales primos minimales de~$A$ sean iguales a la
+dimensión del espacio vectorial~$M\otimes_A k$.

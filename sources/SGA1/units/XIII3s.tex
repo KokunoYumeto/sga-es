@@ -1,0 +1,89 @@
+
+\subsection{}
+\label{XIII.4.7} Sea
+$$
+\xymatrix@C=1.2cm{
+X \ar[d]_-f&\ar[l] X_U \ar[d]_-{f_U}& \ar[l]X_{\bar{s}}\ar[d] \\
+S&\ar[l] U &\ar[l]\bar{s}
+}
+$$
+un
+\marginpar{423}
+diagrama cuyos cuadrados son cartesianos, donde $S$ es un esquema conexo
+por arcos (SGA~4 IX~2.12), $U$ un abierto conexo de~$S$ y~$\bar{s}$ un
+punto geométrico de~$U$. Sean~$a$ un punto geométrico de~$X_{\bar{s}}$
+y~$\LL$ un conjunto de números primos. Sea~$g$ una sección de~$f$ y
+supongamos que se satisfacen las condiciones siguientes:
+\begin{enumerate}
+\item[a)] El morfismo $f$ es $0$-acíclico, localmente $0$-acíclico,
+y, para todo recubrimiento étale $S'$ de~$S$ y todo recubrimiento
+étale $E$ de~$X\times_S S'$, cociente de un recubrimiento galoisiano
+cuyo grupo es un~$\LL$-grupo, $(E,f_{(S')})$ es cohomológicamente propio
+relativamente a~$S'$ en dimensión $\leq 0$.
+\item[b)] El morfismo $f_U$ es localmente $1$-asférico para~$\LL$ y,
+para todo haz constante finito de~$\LL$-grupos~$F$ sobre~$X_U$, $(F,f_U)$
+es cohomológicamente propio en dimensión $\leq 1$ y las fibras de
+$\R^1 f_{U*}F$ son finitas.
+\end{enumerate}
+
+Se deduce entonces de~\Ref{XIII.4.1} y~\Ref{XIII.4.3} el diagrama
+conmutativo siguiente, cuyas filas son exactas:
+\begin{equation*}
+\label{eq:XIII.4.7.0} \tag{\thesubsection.0} {}
+\begin{array}{c}
+\xymatrix{
+1 \ar[r]& \pi_1^{\LL}(X_{\bar{s}},a) \ar[r]\ar@{=}[d]& \pi'_1(X_U,a) \ar[r]\ar[d]& \pi_1(U,a)\ar[r]\ar[d]& 1 \\
+&\pi_1^{\LL}(X_{\bar{s}},a) \ar[r]&\pi'_1(X,a) \ar[r]& \pi_1(S,a) \ar[r]& 1
+}
+\end{array}
+\end{equation*}
+
+Gracias a la sección~$g$, se tienen morfismos
+\ifthenelse{\boolean{orig}}
+{$\pi_1(U,a)\to\pi'_1(X_U,a)$ $\pi_1(S,a)\to\pi'_1(X,a)$;}
+{$$\pi_1(U,a)\to\pi'_1(X_U,a),\quad \pi_1(S,a)\to\pi'_1(X,a)\,\;$$}
+de ellos se deduce un morfismo de la suma amalgamada de~$\pi_1(S,a)$ y
+$\pi'_1(X_U,a)$ sobre~$\pi_1(U,a)$ en~$\pi'_1(X,a)$:
+\begin{equation*}
+\label{eq:XIII.4.7.1} \tag{\thesubsection.1} {}
+\varphi\colon\pi=\pi_1(S,a)\coprod_{\pi_1(U,a)}\pi'_1(X_U,a)\to\pi'_1(X,a).
+\end{equation*}
+Supongamos que se satisface la condición siguiente:
+\begin{enumerate}
+\item[c)] Si $T=S-U$, se tiene $\prof \et_T(S)\geq 2$ (SGA~2 XIV~1.1).
+\end{enumerate}
+Entonces, el funtor que a un recubrimiento étale de~$S$ le hace
+corresponder su restricción a~$U$ es plenamente fiel (SGA~2 XVI~1.4).
+Se sigue que el morfismo $\pi_1(U,a)\to\pi_1(S,a)$ es sobreyectivo
+(\Ref{V.6.9}), y del
+\marginpar{424}
+diagrama~\eqref{eq:XIII.4.7.0} se deduce que lo mismo ocurre con el
+morfismo $\pi'_1(X_U,a)\to\pi'_1(X,a)$; con mayor razón, $\varphi$ es un
+epimorfismo. Sea
+\begin{equation*}
+\label{eq:XIII.4.7.2} \tag{\thesubsection.2} {}
+K=\Ker(\pi_1(U,a)\to\pi_1(S,a)).
+\end{equation*}
+El grupo~$\pi$ de~\eqref{eq:XIII.4.7.1} se identifica con el cociente de
+\ifthenelse{\boolean{orig}}
+{$\pi'_1(X_U,a)$ por el subgrupo normal cerrado engendrado por la imagen~$L$
+de~$K$ en~$\pi'_1(X_U,a)$.}
+{$\pi'_1(X_U,a)$ por el subgrupo normal cerrado~$L$ engendrado por la imagen
+de~$K$ en~$\pi'_1(X_U,a)$.}
+Consideremos $\pi'_1(X_U,a)$ como producto
+semidirecto de~$\pi_1(U,a)$ por~$\pi_1^\LL (X_{\bar{s}},a)$. El grupo~$K$
+actúa entonces por automorfismos interiores sobre
+$\pi_1^\LL (X_{\bar{s}},a)$, y el cociente
+$\pi=\pi'_1(X_U,a)/L$ se identifica con el producto semidirecto de
+$\pi_1(U,a)/K=\pi_1(S,a)$ por el grupo
+$\pi_1^\LL(X_{\bar{s}},a)_K$ de coinvariantes de
+$\pi_1^{\LL}(X_{\bar{s}},a)$ bajo la acción de~$K$. Finalmente, se tiene un
+epimorfismo
+\begin{equation*}
+\label{eq:XIII.4.7.3} \tag{\thesubsection.3} {}
+\varphi\colon\pi=\pi_1^\LL(X_{\bar{s}},a)_K\cdot\pi_1(S,a)\to\pi'_1(X,a).
+\end{equation*}
+\label{indnot:ml}\oldindexnot{$\pi_1^\LL(X_{\bar{s}},a)_K$|hyperpage}%
+
+La proposición siguiente da condiciones bajo las cuales el morfismo
+$\varphi$ es un isomorfismo.

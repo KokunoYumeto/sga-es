@@ -1,0 +1,130 @@
+
+\section{Automorfismos y morfismos de recubrimientos étales}
+\label{V.3}
+
+\begin{proposition}
+\label{V.3.1}
+Sea~$X$ étale, separado y de tipo finito sobre un preesquema~$Y$ localmente
+noetheriano, y sea~$G$ un grupo finito que actúa sobre~$X$ por
+$Y$-automorfismos. Entonces la acción de~$G$ es admisible y el preesquema
+cociente~$X/G$ es étale sobre~$Y$.
+\end{proposition}
+
+No se supone que~$X$ sea finito sobre~$Y$; sin embargo, $X$ es
+cuasiproyectivo sobre~$Y$, de donde se sigue la existencia de~$X/G$
+por~\Ref{V.1.8}. Demostremos primero:
+
+\begin{corollaire}
+\label{V.3.2}
+El morfismo $X\to X/G$ es étale.
+\end{corollaire}
+
+Puede suponerse, evidentemente, que~$G$ actúa transitivamente sobre el
+conjunto de las componentes conexas de~$X$ y, después, considerando el
+estabilizador de una componente conexa, que~$X$ es incluso conexo. Por último,
+puede suponerse que la acción de~$G$ es fiel. Pero entonces se ve, como
+en~\Ref{V.2.4}, que~$G$ actúa sin inercia; por~\Ref{V.2.3} se sigue que
+$X\to X/G$ es étale. Se concluye gracias al lema siguiente.
+
+\begin{lemme}[remordimiento por el Exposé I]
+\label{V.3.3}
+Sean $X\to X'\to Y$ morfismos de tipo finito, sea~$x$ un punto de~$X$ y sean
+$x'$ e~$y$ sus imágenes. Supongamos que~$Y$ es localmente noetheriano. Si dos
+de los tres morfismos considerados son étales en los puntos señalados, también
+lo es el tercero.
+\end{lemme}
+
+Solo queda considerar el caso en que $X\to X'$ y $X\to Y$ son étales en~$x$,
+y demostrar que $X'\to Y$ lo es en~$x'$ (que es el caso que necesitamos
+\marginpar{117}
+para~\Ref{V.3.1}). Mediante una extensión plana conveniente de la base~$Y$, se
+reduce la cuestión al caso en que la extensión residual
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)/\kappa(y)$}
+{$\kres(x)/\kres(y)$}
+es trivial. Consideremos los homomorfismos
+$\cal{O}_y\to\cal{O}_{x'}\to\cal{O}_x$ y los homomorfismos obtenidos al pasar
+a las completaciones. La hipótesis significa que
+$\hat{\cal{O}_y}\to\hat{\cal{O}_x}$ y
+$\hat{\cal{O}_{x'}}\to\hat{\cal{O}_x}$ son isomorfismos; por tanto,
+$\hat{\cal{O}_y}\to\hat{\cal{O}_{x'}}$ también es un isomorfismo, lo que
+demuestra el lema.
+
+\begin{corollaire}
+\label{V.3.4}
+Si~$X$ es finito y étale sobre~$Y$, entonces~$X/G$ es finito y étale
+sobre~$Y$.
+\end{corollaire}
+
+\begin{proposition}
+\label{V.3.5}
+Sean~$X$ y~$X'$ dos recubrimientos étales de~$Y$. Todo $Y$-morfismo
+$f\colon X\to X'$ se factoriza como la composición de un morfismo étale
+sobreyectivo $X\to X''$ y la inmersión canónica $X''\to X'$ de un subconjunto
+$X''$ de~$X'$ que es a la vez abierto y cerrado.
+\end{proposition}
+
+Se sabe por~\Ref{I.4.8} que~$f$ es étale y, por tanto, un morfismo abierto. Por
+otra parte, como~$X$ es finito sobre~$Y$, $f$ es cerrado; así,
+$f(X)=X''$ es un subconjunto a la vez abierto y cerrado de~$X'$. Esto concluye
+la demostración. (N.B.: habría bastado que~$X'$, en vez de ser un recubrimiento
+étale, fuese no ramificado sobre~$Y$.)
+
+\begin{corollaire}
+\label{V.3.6}
+Con las notaciones precedentes,
+\ifthenelse{\boolean{orig}}
+{$X\to X'$ es un epimorfismo estricto en la categoría de los preesquemas, y
+$X'\to X''$ es un monomorfismo (incluso un monomorfismo estricto) en dicha
+categoría}
+{$X\to X''$ es un epimorfismo estricto en la categoría de los preesquemas, y
+$X''\to X'$ es un monomorfismo (incluso un monomorfismo estricto) en dicha
+categoría}.
+\end{corollaire}
+
+Por definición, la primera afirmación significa que la sucesión de morfismos
+\begingroup
+\shorthandoff{<>}% Spanish babel otherwise treats Xy-pic's bend delimiters as shorthands.
+$$
+\xymatrix@C=.7cm{X \times_{X''} X \ar@<2pt>[r]^-{\pr_1}
+\ar@<-2pt>[r]_-{\pr_2} & X \ar[r] & X''}
+$$
+\endgroup
+es exacta. Esto resulta de que $X\to X''$ es finito y fielmente plano, como se
+ve fácilmente (\cf Grothendieck, \loccit). La afirmación dual para
+$X''\to X'$ es aún más inmediata.
+
+El Corolario~\Ref{V.3.6} nos será útil para la teoría del grupo fundamental en
+el número siguiente. Quienes no gusten de la noción de epimorfismo estricto
+pueden sustituir el Corolario~\Ref{V.3.6} por la variante que prefieran.
+Aprovechemos solamente la ocasión para señalar que una factorización
+\marginpar{118}
+$f=f'f''$, con~$f''$ epimorfismo estricto y~$f'$ monomorfismo, es
+necesariamente única salvo isomorfismo único (en cualquier categoría). Sin
+embargo, puede existir al mismo tiempo una factorización $f=f_1f_2$ con las
+propiedades duales: $f_2$ es un epimorfismo y~$f_1$ un monomorfismo estricto
+(también única salvo isomorfismo único), que no sea isomorfa a la anterior.
+Basta tomar, por ejemplo, la categoría de los espacios vectoriales topológicos
+(separados, si así se desea) y un morfismo $u\colon X\to X'$ tal que~$u(X)$ no
+sea cerrado.
+
+\begin{proposition}
+\label{V.3.7}
+Sean~$Y$ un preesquema \emph{conexo} localmente noetheriano, $y$ un punto
+de~$Y$ y~$\mathit{\Omega}$ una extensión algebraicamente cerrada
+\ifthenelse{\boolean{orig}}
+{de~$\kappa(y)$}
+{de~$\kres(y)$}.
+Para todo~$X$ sobre~$Y$, denotemos por~$X(\Omega)$ el conjunto de los puntos
+de~$X$ con valores en~$\Omega$. Sean~$X$ y~$X'$ recubrimientos étales de~$Y$,
+y sea $u\colon X\to X'$ un $Y$-morfismo tal que la aplicación correspondiente
+$X(\Omega)\to X'(\Omega)$ sea una biyección. Entonces~$u$ es un isomorfismo.
+\end{proposition}
+
+Se reduce inmediatamente al caso en que~$X'$ es conexo. Como $X\to X'$ es
+finito y étale, el número geométrico de puntos de una fibra de $X\to X'$ es
+constante y es igual a~$1$ si y solo si el morfismo considerado es un
+isomorfismo. Ahora bien, ese número es también el número de elementos de una
+fibra de $X(\Omega)\to X'(\Omega)$, de donde se sigue la conclusión.
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%

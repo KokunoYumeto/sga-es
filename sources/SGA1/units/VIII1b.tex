@@ -1,0 +1,188 @@
+\begin{corollaire}
+\label{VIII.1.5}
+Sea $N$ un~$A$-módulo. Entonces la sucesión de aplicaciones entre
+conjuntos
+$$
+\xymatrix@C=.5cm{N\ar[r] & N'\ar@/^2pt/[r]\ar@/_2pt/[r] & N''}
+$$
+es exacta.
+\end{corollaire}
+
+Sea, en efecto, $A_{1}$ una~$A$-álgebra fielmente plana. Para demostrar
+que la sucesión considerada es exacta, basta probar que lo es la sucesión
+que se deduce de ella por el cambio de anillos~$A\to A_{1}$. Ahora bien,
+esta última, como se ve inmediatamente, es la correspondiente al
+\ifthenelse{\boolean{orig}}
+{$A$-módulo}
+{$A_1$-módulo}
+$N_{1}=N\otimes_{A}A_{1}$ y a la $A_{1}$-álgebra
+$A_{1}'=A_{1}\otimes_{A}A'$. Basta, pues, hallar un $A_{1}$ fielmente
+plano sobre~$A$ tal que $\Spec(A_{1}')\to \Spec(A_{1})$ sea un morfismo
+de descenso estricto para~$\cal{F}$. En efecto, basta tomar $A_{1}=A'$,
+pues entonces el morfismo anterior admite un morfismo inverso por la derecha y,
+por tanto, en virtud de~\cite{VIII.D}, es un morfismo de descenso efectivo
+para cualquier categoría fibrada sobre~$\Sch$.
+
+Queda, por último, demostrar que, si $N'$ es un~$A'$-módulo provisto de
+un dato de descenso para~$A\to A'$, es decir, de un isomorfismo
+$$
+\varphi\colon N_{1}'\isomto N_{2}'
+$$
+entre los dos módulos deducidos de
+\ifthenelse{\boolean{orig}}
+{~$N$}
+{~$N'$}
+por los cambios de anillos
+$\xymatrix@C=.5cm{A'\ar@/^2pt/[r]\ar@/_2pt/[r] & A'\otimes_{A}A'}$,
+entonces
+\marginpar{199}
+$N'$ es isomorfo, junto con su dato de descenso, a un módulo de la forma
+$N\otimes_{A}A'$. Teniendo en cuenta~\Ref{VIII.1.5}, se ve fácilmente
+que este enunciado equivale al siguiente:
+
+\begin{lemme}
+\label{VIII.1.6}
+Sea $N'$ un~$A'$-módulo provisto de un dato de descenso relativamente
+a~$A\to A'$ (donde $A'$ es una $A$-álgebra). Sea $N$ el sub-$A$-módulo
+de~$N'$ formado por los~$x$ tales que
+$\varphi(x\otimes_{A'}1_{A'})=1_{A'}\otimes_{A'}x$, y consideremos el
+homomorfismo canónico
+$$
+N\otimes_{A}A'\to N'\quoi,
+$$
+(que es entonces compatible con los datos de descenso). Si $A'$ es
+fielmente plana sobre~$A$, este homomorfismo es un isomorfismo.
+\end{lemme}
+
+Demostremos el lema. Sea de nuevo $A_{1}$ una $A$-álgebra fielmente
+plana. Para demostrar que el morfismo considerado es un isomorfismo,
+basta probar que pasa a serlo después del cambio de anillos
+\ifthenelse{\boolean{orig}}
+{$A_{1}\to A$.}
+{$A\to A_1$.}
+Ahora bien, usando la planitud de~$A_{1}$ sobre~$A$, se ve que el
+homomorfismo así obtenido no es otro que el que se obtendría directamente
+en términos del módulo~$N'\otimes_{A}A_{1}$
+sobre~$A_{1}'=A'\otimes_{A}A_{1}$, provisto del dato de descenso relativamente
+a~$A_{1}\to A_{1}'$ que se deduce canónicamente, por cambio de anillos,
+del que estaba dado sobre~$N'$. Así, basta hallar un~$A_{1}$ fielmente
+plano sobre~$A$ tal que $\Spec(A_{1}')\to \Spec(A_{1})$ sea un morfismo
+de descenso efectivo para~$\cal{F}$. Se toma entonces, como antes,
+$A_{1}=A'$. Esto concluye la demostración de~\Ref{VIII.1.6} y, con ella,
+la demostración de~\Ref{VIII.1.1}.
+
+\begin{corollaire}[Descenso de secciones de módulos]
+\label{VIII.1.7}
+\index{descenso de secciones de módulos|hyperpage}%
+Sea $g\colon S'\to S$ un morfismo de preesquemas fielmente plano y
+cuasicompacto. Para todo módulo cuasicoherente~$G$ sobre~$S$, sean $G'$ y
+$G''$ sus imágenes inversas sobre~$S'$ y $S''=S'\times_{S}S'$, y
+consideremos el diagrama de homomorfismos de módulos sobre~$S$:
+$$
+\xymatrix@C=.5cm{G\ar[r] & g_*(G')\ar@/^2pt/[r]\ar@/_2pt/[r] & h_*(G'')}
+$$
+(donde $h\colon S''\to S$ es el morfismo estructural). Este diagrama es
+\emph{exacto}.
+\end{corollaire}
+
+En
+\marginpar{200}
+efecto, esto significa que, para todo abierto~$U$ de~$S$, el diagrama
+correspondiente formado por las secciones sobre~$U$ es exacto. Puede
+suponerse, evidentemente, que $U=S$, y la exactitud en cuestión es
+entonces un caso particular de~\Ref{VIII.1.2}, obtenido tomando
+$F=\mathcal{O}_{S}$.
+
+Como el funtor imagen inversa de módulos es exacto por la derecha, se
+deduce formalmente de~\Ref{VIII.1.1}:
+
+\begin{corollaire}[Descenso de módulos cociente]
+\label{VIII.1.8}
+\index{descenso de módulos cociente|hyperpage}%
+Con las notaciones de~\Ref{VIII.1.7}, sea además, para todo módulo
+cuasicoherente~$F$ sobre un preesquema, $\Quot(F)$ el conjunto de los
+módulos cociente cuasicoherentes de~$F$. Con esta convención, el diagrama
+de aplicaciones entre conjuntos
+$$
+\xymatrix@C=.5cm{\Quot(G)\ar[r] & \Quot(G')\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\Quot(G'')}
+$$
+es exacto.
+\end{corollaire}
+
+(Evidentemente, se tendría el mismo enunciado con los submódulos en lugar
+de los módulos cociente, pues unos y otros se corresponden
+biunívocamente). Tomando, en particular, $G=\mathcal{O}_{S}$, se obtiene:
+
+\begin{corollaire}[Descenso de subpreesquemas cerrados]
+\label{VIII.1.9}
+\index{descenso de subpreesquemas cerrados|hyperpage}%
+Para todo preesquema~$X$, sea $H(X)$ el conjunto de los subpreesquemas
+cerrados de~$X$. Con esta notación y bajo las condiciones
+de~\Ref{VIII.1.7}, el siguiente diagrama de aplicaciones entre conjuntos
+$$
+\xymatrix@C=.5cm{H(S)\ar[r] & H(S')\ar@/^2pt/[r]\ar@/_2pt/[r] & H(S'')}
+$$
+\emph{es exacto}.
+\end{corollaire}
+
+Conviene completar el teorema~\Ref{VIII.1.1} con el resultado siguiente:
+
+\begin{proposition}[Descenso de propiedades de módulos]
+\label{VIII.1.10}
+\index{descenso de propiedades de módulos|hyperpage}%
+Sean $g\colon S'\to S$ un morfismo fielmente plano y cuasicompacto, y
+$F$ un módulo cuasicoherente sobre~$S$. Para que~$F$ sea de tipo finito,
+\resp de presentación finita, \resp localmente libre y de tipo finito,
+es necesario y suficiente que su imagen inversa $F'$ sobre~$S'$ lo sea.
+\end{proposition}
+
+Solo hay que demostrar la suficiencia. Puede suponerse, evidentemente,
+que~$S$ es afín,
+\marginpar{201}
+y, reemplazando entonces~$S'$ por
+\ifthenelse{\boolean{orig}}
+{la}
+{una}
+suma de abiertos afines que recubren~$S'$, se queda reducido al caso en
+que~$S'$ es también afín. Nuestro enunciado equivale entonces al
+siguiente:
+
+\begin{corollaire}
+\label{VIII.1.11}
+Sean $A$ un anillo, $A'$ una~$A$-álgebra fielmente plana, $M$
+un~$A$-módulo y $M'$ el~$A'$-módulo $M\otimes_{A}A'$. Para que~$M$ sea de
+tipo finito (\resp de presentación finita, \resp localmente libre de tipo
+finito), es necesario y suficiente que~$M'$ lo sea.
+\end{corollaire}
+
+En efecto, se tiene $M=\varinjlim_i M_{i}$, donde los~$M_{i}$ son los
+submódulos de tipo finito de~$M$. Por consiguiente,
+$M'=\varinjlim_i M_{i}'$, y, si $M'$ es de tipo finito, $M'$ es igual a
+uno de los~$M_{i}'$; por planitud fiel, $M$ es entonces igual a~$M_{i}$ y,
+por tanto, $M$ es de tipo finito. En consecuencia, existe una sucesión
+exacta
+$$
+0\to R\to L\to M\to 0\quoi,
+$$
+con $L$ libre de tipo finito, de donde se obtiene una sucesión exacta
+$$
+0\to R'\to L'\to M'\to 0\quoi,
+$$
+con $L'$ libre de tipo finito. Así pues, si $M'$ es de presentación
+finita, $R'$ es de tipo finito; por lo que precede, $R$ es de tipo finito
+y, por tanto, $M$ es de presentación finita. Por último, decir que~$M$ es
+localmente libre y de tipo finito significa que es de presentación
+finita y plano (\cf \Ref{IV} en el caso noetheriano; el caso general se
+deja al lector). Como cada una de estas propiedades desciende, lo mismo
+ocurre con su conjunción, lo que concluye la demostración.
+
+\begin{remarque}
+\label{VIII.1.12}
+La conjunción de~\Ref{VIII.1.1} y~\Ref{VIII.1.10} muestra que el
+enunciado~\Ref{VIII.1.1} sigue siendo válido cuando se reemplaza la
+categoría fibrada~$\cal{F}$ por la subcategoría fibrada formada por los
+módulos cuasicoherentes de tipo finito, \resp de presentación finita,
+\resp localmente libres de tipo finito, \resp localmente libres de rango
+dado~$n$.
+\end{remarque}

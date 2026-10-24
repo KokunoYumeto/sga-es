@@ -1,0 +1,84 @@
+
+\begin{remarques}
+\label{II.4.14}
+El criterio~(iii) del teorema~\Ref{II.4.10} merece llamarse \emph{criterio jacobiano de lisura}.
+\index{criterio jacobiano de lisura|hyperpage}%
+\index{jacobiano (criterio de lisura)|hyperpage}%
+\index{lisura (criterio jacobiano de)|hyperpage}%
+Este permite reconocer, teóricamente, si un $S$-preesquema dado $Y$ es liso sobre~$S$ en un punto $x$ de~$Y$, pues siempre existe un entorno de~$x$ en~$Y$ isomorfo a un subpreesquema de un $S$-preesquema liso $X$, por ejemplo $X=S[t_1,\dots,t_n]$. Es, por otra parte, para $X=S[t_1,\dots,t_n]$, $S=\Spec(A)$, como suele enunciarse el criterio jacobiano (naturalmente, en el caso clásico considerado por Zariski, $A$ era
+\marginpar{44}
+un cuerpo). Se deja al lector formular el enunciado correspondiente a un ideal $J$ de~$A[t_1,\dots,t_n]$ y a un ideal primo que lo contenga, al que así se llega. Señalemos que, al parecer, en la actualidad (y sobre todo desde que Nagata consiguió generalizar por métodos no diferenciales el teorema de Zariski según el cual el conjunto de puntos regulares de un esquema algebraico es abierto), el criterio jacobiano apenas presenta interés salvo en la forma en que lo damos aquí (es decir, utilizando exclusivamente diferenciales \emph{relativas}, y no diferenciales \emph{absolutas}, esto es, relativas al anillo de constantes absolutas $\ZZ$). Como ocurre con frecuencia, la consideración de las diferenciales es aquí más cómoda que la de las derivaciones. Señalemos finalmente que, si $Y$ es liso sobre~$S$ en $x$, de dimensión relativa
+\ifthenelse{\boolean{orig}}{$n$}{$m$},
+entonces existe un entorno abierto de~$x$ en~$Y$ isomorfo a un subpreesquema de $X=S[t_1,\dots,t_n]$, con $n=m+1$, como resulta de la definición y
+\ifthenelse{\boolean{orig}}{de~\Ref{I.7.6}).}{de~(\Ref{I.7.6}).}
+
+Sean $A$ un anillo noetheriano, $x_i$ ($1\leq i\leq n$) elementos de~$A$, y $J$ el ideal engendrado por los $x_i$. Se dice que los $x_i$ forman un \emph{sistema regular de generadores}
+\index{regular (sistema de generadores)|hyperpage}%
+\index{sistema regular de generadores|hyperpage}%
+de~$J$ si el homomorfismo sobreyectivo canónico
+\[
+(A/J)[t_1,\dots,t_n]\to\gr^J(A)
+\]
+definido por los $x_i$ (donde el segundo miembro designa el anillo graduado asociado a $A$, filtrado por las potencias de~$J$) es un \emph{isomorfismo}. Esta condición significa también que
+\begin{enumerate}
+\item[(i)] el homomorfismo sobreyectivo canónico
+\[
+S_{A/J}(J/J^2)\to\gr^J(A)
+\]
+(donde el primer miembro designa el álgebra simétrica del $A/J$-módulo $J/J^2$) es un isomorfismo, y
+\item[(ii)] $J/J^2$ es libre y admite como base las clases de los $x_i\bmod J^2$.
+\end{enumerate}
+En esta forma se ve que, si $J\neq A$, los $x_i$ forman un \emph{sistema minimal de generadores} de~$J$, y que \emph{cualquier otro sistema minimal de generadores} de~$J$ \emph{es un sistema regular de generadores} (nótese que «minimal» se toma en sentido estricto: número mínimo de elementos, sentido que solo equivale a «minimal para la inclusión» cuando $A$ es local); por otra parte, si $J=A$, todo sistema de generadores de~$J$ es regular.
+
+La
+\marginpar{45}
+condición de regularidad de un sistema de generadores de un ideal es estable por localización respecto de cualquier conjunto multiplicativamente cerrado. Por otra parte, se ve enseguida que, para que $(x_i)$ sea un sistema minimal de generadores de~$J$, basta ya con que, para todo ideal \emph{maximal $\goth m$ que contenga a $J$}, los $x_i$ definan un sistema regular de generadores de~$JA_{\goth m}$ en $A_{\goth m}$. Esto nos reduce al caso en que $A$ es un anillo local de ideal maximal $\goth m$ y los $x_i$ pertenecen a $\goth m$. \emph{Entonces los $x_i$ forman un sistema regular de generadores de~$J$ si y solo si forman una $A$-sucesión en el sentido de Serre}\footnote{Ahora diremos más bien «sucesión $A$-regular», \cf EGA $0_{\textup{IV}}$~15.1.7 y 15.1.11.}, es decir, si para todo $i$ tal que $1\leq i\leq n$, $x_i$ no es divisor de cero en
+\ifthenelse{\boolean{orig}}{$A/(x_1,\dots,x_i)A$.}{$A/(x_1,\dots,x_{i-1})A$.}
+
+Finalmente, en el caso en que $A$ sea un álgebra sobre un anillo $B$ y $A/J$ sea isomorfo como $B$-álgebra a~$B$ (de modo que $J$ sea el núcleo de un homomorfismo de $B$-álgebras $A\to B$), los $x_i$ forman un sistema regular de generadores de~$J$ si y solo si el homomorfismo canónico
+\[
+B[[t_1,\dots,t_n]]\to\hat{A}
+\]
+definido por los $x_i$ (donde el segundo miembro designa la completación separada $\varprojlim A/J^{n+1}$ de~$A$ para la topología definida por las potencias de~$J$) es un \emph{isomorfismo} (en todo caso, es \emph{sobreyectivo}).
+
+Todos estos hechos son bien conocidos y, salvo pequeñas diferencias, figuran sin duda en el curso de álgebra conmutativa de Serre redactado por Gabriel. (Allí se encuentran otras $N$ caracterizaciones de las $A$-sucesiones cuando $A$ es un anillo local).
+
+Sea $J$ un ideal de un anillo noetheriano $A$. Diremos que $J$ es un \emph{ideal regular}
+\index{ideal regular|hyperpage}%
+\index{regular (ideal)|hyperpage}%
+si, para todo ideal primo $\goth p$ de~$A$, $JA_{\goth p}$ admite un sistema regular de generadores. Evidentemente, basta comprobarlo para $\goth p\supset J$ y, además, se puede restringir a $\goth p$ maximal. Más generalmente, sea $\cal{J}$ un ideal sobre un preesquema localmente noetheriano $X$; se dice que $\cal{J}$ es un \emph{ideal regular} si, para todo $x\in X$, $\cal{J}_x$ es un ideal de $\cal{O}_x$ que admite un sistema regular de generadores. Esto equivale a la conjunción de las dos condiciones siguientes:
+\begin{enumerate}
+\item[(a)] El homomorfismo sobreyectivo canónico
+\[
+\ifthenelse{\boolean{orig}}
+{S_{\cal{O}/\cal{J}}(\cal{J}/\cal{J}^2)\to\gr^{\cal{J}}(\cal{O}_X)}
+{S_{\cal{O}_X/\cal{J}}(\cal{J}/\cal{J}^2)\to\gr^{\cal{J}}(\cal{O}_X)}
+\]
+es un isomorfismo, y
+\item[(b)] el haz de $\cal{O}_X/\cal{J}$-módulos $\cal{J}/\cal{J}^2$ es localmente libre.
+\end{enumerate}
+
+Se
+\marginpar{46}
+dice entonces también que el subpreesquema $Y$ de~$X$ definido por $\cal{J}$ (por tanto, tal que $\cal{O}_Y$, prolongado por cero, sea isomorfo a $\cal{O}_X/\cal{J}$) está \emph{inmerso regularmente}
+\index{inmerso regularmente (preesquema)|hyperpage}%
+en~$X$, y se define del mismo modo (de manera evidente) la noción de morfismo que es una \emph{inmersión regular},
+\index{inmersión regular|hyperpage}%
+\index{regular (inmersión)|hyperpage}%
+(\resp \emph{regular en un punto $x$}), es decir, un morfismo de inmersión $Y\to X$ que identifica $Y$ (\resp un entorno conveniente de $x$) con un subpreesquema cerrado inmerso regularmente en un abierto de~$X$. (No se debe decir «subpreesquema regular», pues esto significaría que los anillos locales de~$Y$ son regulares). Finalmente, unas secciones $x_i$ de~$\cal{J}$ se llaman \emph{sistema regular de generadores} si, para todo $x\in X$, los elementos correspondientes de~$\cal{O}_x$ forman un sistema regular de generadores de~$\cal{J}_x$ (terminología compatible con la introducida para los generadores de un ideal de un anillo). Esto significa también que el homomorfismo sobreyectivo canónico
+\[
+\cal{O}_Y[t_1,\dots,t_n]\to\gr^{\cal{J}}(\cal{O}_X)
+\]
+definido por los $x_i$ es un isomorfismo. Si se sabe de antemano que el ideal $\cal{J}$ es regular, esto significa también, sencillamente, que en todo punto $x$ \emph{de~$Y$}, los $x_i$ definen una \emph{base} de~$\cal{J}/\cal{J}^2$ sobre~$\cal{O}_{Y,x}$. (Nótese que esta condición es vacía si $Y$ es vacío). Así, para que $\cal{J}$ admita un sistema regular de generadores, es necesario y suficiente que $\cal{J}$ sea regular y que el $\cal{O}_Y$-módulo $\cal{J}/\cal{J}^2$ sea globalmente libre (y no solo localmente libre), es decir, que el homomorfismo canónico $S_{\cal{O}_Y}(\cal{J}/\cal{J}^2)\to\gr^{\cal{J}}(\cal{O}_X)$ sea sobreyectivo y que el $\cal{O}_Y$-módulo $\cal{J}/\cal{J}^2$ sea globalmente libre.
+
+Un \emph{anillo aumentado se dice regular}
+\index{anillo aumentado regular|hyperpage}%
+\index{regular (anillo aumentado)|hyperpage}%
+si el ideal de aumento es regular. Así, si $A$ es un anillo local considerado como aumentado sobre su cuerpo residual $k$, entonces $A$ es un anillo local regular si y solo si es un anillo aumentado regular.
+
+(A decir verdad, parece que era innecesario comenzar con el sorites preliminar para los anillos; conviene empezar directamente con los haces. Si se quiere algo en el caso noetheriano, es la definición adoptada aquí ---a priori menos restrictiva que la dada mediante las $A$-sucesiones de Serre--- la que parece preferible para las necesidades del cálculo diferencial. Naturalmente, para hacer bien las cosas, habría que desarrollar también al menos una parte de la teoría de los morfismos lisos en el marco no noetheriano\footnote{Como se dice en el prefacio, esto ya se ha hecho, \cf EGA IV~17, 18}, probablemente
+\marginpar{47}
+partiendo del criterio jacobiano, de modo que se obtengan, si es posible, todas las propiedades formales esenciales de los morfismos lisos y de los morfismos étale, es decir, lisos y cuasifinitos; solo los recíprocos recurrirían a hipótesis noetherianas).
+\end{remarques}
+
+Después de estos largos preliminares terminológicos, un pequeño teorema:

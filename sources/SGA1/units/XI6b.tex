@@ -1,0 +1,175 @@
+
+Consideremos, por otra parte, el $S$-grupo~$(\ZZ/p\ZZ)_S$ definido por el
+grupo finito ordinario~$\ZZ/p\ZZ$. Hemos dicho que, para todo $S$-grupo~$G$,
+los homomorfismos de $S$-grupos de~$(\ZZ/p\ZZ)_S$ en~$G$ corresponden
+biyectivamente a las secciones de~$G$ sobre~$S$ cuya potencia $p$-ésima es la
+sección unidad. Cuando~$G=\GG_{a\,S}$, corresponden
+\marginpar{307}
+por tanto a secciones cualesquiera de~$G$ sobre~$S$. Tomando, en particular,
+la sección de~$\GG_{a\,S}$ sobre~$S$ que corresponde a la sección unidad del
+haz de anillos~$\cal{O}_S$, se obtiene un homomorfismo de $S$-grupos
+$$
+\ifthenelse{\boolean{orig}}
+{i\colon(\ZZ/p\ZZ)\to\GG_{a\,S}}
+{i\colon(\ZZ/p\ZZ)_S\to\GG_{a\,S}}
+$$
+
+\begin{proposition}
+\label{XI.6.7}
+La sucesión de homomorfismos de $S$-grupos
+$$
+\ifthenelse{\boolean{orig}}
+{0\to(\ZZ/p\ZZ)_S\to\GG_{a\,S}\to G_{a\,S}\to 0}
+{0\to(\ZZ/p\ZZ)_S\to\GG_{a\,S}\to \GG_{a\,S}\to 0}
+$$
+es exacta (en el sentido de~\Ref{XI.4}). (Se la llama la \emph{sucesión
+exacta de Artin--Schreier} sobre~$S$).
+\index{Artin--Schreier (sucesión exacta de)|hyperpage}%
+\end{proposition}
+
+Basta demostrarlo sobre el cuerpo primo~$k=\ZZ/p\ZZ$. Basta observar que el
+homomorfismo~$\wp^*\colon k[t]\to k[t]$ definido por
+$\wp^*(t)=t-t^p$ hace de~$k[t]$ un módulo libre de rango~$p$ sobre~$k[t]$;
+con mayor precisión, $k[t]$ es un módulo libre sobre~$k[s]$, donde
+$s=t-t^p$, con base formada por los~$t^i$ ($0\leq i\leq p-1$).
+
+Utilizando~\Ref{XI.4.5} y~\Ref{XI.5.3}, se concluye:
+
+\begin{proposition}
+\label{XI.6.8}
+Se tiene una sucesión exacta canónica
+\begin{multline*}
+0\to\H^0(S,\ZZ/p\ZZ)\to\H^0(S,\cal{O}_S)\to\H^0(S,\cal{O}_S)\to
+\H^1(S,\ZZ/p\ZZ)\\
+\to\H^1(S,\cal{O}_S)\to\H^1(S,\cal{O}_S),
+\end{multline*}
+de donde se obtiene una sucesión exacta
+$$
+0\to\H^0(S,\cal{O}_S)/\wp\H^0(S,\cal{O}_S)\to
+\H^1(S,\ZZ/p\ZZ)\to\H^1(S,\cal{O}_S)^F\to 0,
+$$
+(donde el exponente~$F$ del último término denota el subgrupo de los
+invariantes por el endomorfismo~$F$, igual al núcleo de~$\wp=\id-F$).
+\end{proposition}
+
+Explicitemos además dos casos extremos:
+
+\begin{corollaire}
+\label{XI.6.9}
+Supongamos que~$\H^1(S,\cal{O}_S)^F=0$, por ejemplo, que~$S$ sea un esquema
+afín. Entonces, poniendo~$A=\H^0(S,\cal{O}_S)$, se tiene un isomorfismo
+canónico
+$$
+\H^1(S,\ZZ/p\ZZ)\isomto A/\wp A.
+$$
+\end{corollaire}
+
+Esta es la \emph{teoría de Artin--Schreier} en su forma clásica, al menos
+cuando
+\ifthenelse{\boolean{orig}}
+{$A$}
+{$S$}
+es el espectro de un cuerpo.
+
+\begin{corollaire}
+\label{XI.6.10}
+Supongamos que se verifica la igualdad
+\marginpar{308}%
+$\wp\H^0(S,\cal{O}_S)\mkern1mu{=}\mkern1mu\H^0(S,\cal{O}_S)$; por
+ejemplo, que~$\H^0(S,\cal{O}_S)$ sea un
+\ifthenelse{\boolean{orig}}
+{compuesto}
+{producto}
+de cuerpos algebraicamente cerrados, o que~$S$ sea propio sobre un cuerpo
+algebraicamente cerrado. Entonces se tiene un isomorfismo canónico
+$$
+\H^1(S,\ZZ/p\ZZ)\isomto\H^1(S,\cal{O}_S)^F
+$$
+\end{corollaire}
+
+\begin{remarques}
+\label{XI.6.11}
+El último enunciado se debe a
+\ifthenelse{\boolean{orig}}{J.P\ptbl}{J-P\ptbl}%
+Serre~\cite{XI.9}. También es posible desarrollar una teoría análoga para
+el grupo estructural~$\ZZ/p^n\ZZ$, con~$n$ cualquiera, utilizando en lugar
+de~$\GG_a$ el esquema en grupos de Witt~$\WW_n$, \cf \loccit Obsérvese que,
+en característica~$p>0$, la teoría de Kummer ya no da información sobre los
+recubrimientos principales de orden~$p$, pues~$\bbmu_p$ es entonces un grupo
+«infinitesimal», \,\ie radicial sobre la base, y, por tanto, sin relación
+directa con~$\ZZ/p\ZZ$; así, a primera vista, la teoría de estos recubrimientos
+ya no puede abordarse (cuando, para fijar las ideas,~$S$ es un esquema propio
+sobre un cuerpo algebraicamente cerrado) mediante la teoría del esquema de
+Picard como en~\Ref{XI.6.6}. Sin embargo, si se recuerda que el espacio
+tangente de Zariski en el origen de
+\ifthenelse{\boolean{orig}}
+{$\mathbf{Pic}_{S/K}$}
+{$\mathbf{Pic}_{S/k}$}
+\kern1pt\footnote{Para la definición de
+\ifthenelse{\boolean{orig}}
+{$\mathbf{Pic}_{S/K}$}
+{$\mathbf{Pic}_{S/k}$},
+\cf A. Grothendieck, Sém. Bourbaki~\No 232 (febrero de 1962).} se identifica
+con~$\H^1(S,\cal{O}_S)$, se constata que \emph{el conocimiento del esquema en
+grupos~${_p}\mathbf{Pic}_{S/k}$, núcleo de la multiplicación por~$p$ en
+$\mathbf{Pic}_{S/k}$, implica el de~$\H^1(S,\ZZ/p\ZZ)$ tanto como el
+de~$\H^1(S,\bbmu_p)$; obsérvese que implica también el
+de~$\H^1(S,\bbalpha_p)$}, donde~$\bbalpha_p$ denota el esquema en grupos
+infinitesimal sobre el cuerpo primo, núcleo de~$F\colon\GG_a\to\GG_a$ (que
+también puede describirse como el espectro del álgebra envolvente restringida
+de la $p$-álgebra de Lie trivial de dimensión~$1$): en efecto, la sucesión
+exacta~\Ref{XI.4.5} da aquí
+$$
+\H^1(S,\bbalpha_p)\simeq\Ker
+(F\colon\H^1(S,\cal{O}_S)\to\H^1(S,\cal{O}_S)),
+$$
+y, más generalmente, denotando por~$\bbalpha_{p^n}$ el núcleo en~$\GG_a$ del
+$n$-ésimo iterado de~$F$, se tendrá
+$$
+\H^1(S,\bbalpha_{p^n})\simeq\Ker(F^n\colon\H^1(S,\cal{O}_S)\to
+\H^1(S,\cal{O}_S)).
+$$
+
+De hecho, el conocimiento de~${_p}\mathbf{Pic}_{S/k}$ equivale al
+de~$\H^1(S,G)$ para todo grupo algebraico
+\marginpar{309}
+conmutativo finito anulado por~$p$; más generalmente, el conocimiento
+de~${_{p^n}}\mathbf{Pic}_{S/k}$ equivale al de~$\H^1(S,G)$ para todo grupo
+algebraico conmutativo finito~$G$ anulado por~$p^n$, en virtud del teorema
+siguiente, que engloba, en el caso considerado, tanto la teoría de Kummer
+como
+\ifthenelse{\boolean{orig}}
+{la de Artin--Schreier}
+{la de Artin--Schreier}
+:
+
+Sea~$G$ un grupo algebraico finito sobre~$k$, y sea
+$D(G)=\SheafHom_{k\textup{-grupos}}(G,\GG_m)$ su \emph{dual de Cartier} (cuya
+álgebra afín tiene como espacio subyacente el espacio vectorial dual del
+álgebra afín de~$G$, \,\ie la hiperálgebra de~$G$ en el sentido de
+Dieudonné--Cartier); entonces se tiene un isomorfismo canónico
+\begin{equation}\label{eqXI.6.11}\tag{$*$}
+\H^1(S,G)\simeq\Hom_{k\textup{-grupos}}(D(G),\mathbf{Pic}_{S/k}).
+\end{equation}
+(N.B. $S$ es un esquema propio sobre~$k$ algebraicamente cerrado, tal que
+$\H^0(S,\cal{O}_S)=k$). Esta fórmula también puede expresarse diciendo que
+el \og verdadero grupo fundamental\fg{} de~$S$ al que se aludía en
+\Ref{XI.2}, una vez abelianizado, es isomorfo al límite proyectivo de
+los~$D(P_i)$, donde~$P_i$ recorre los subgrupos algebraicos \emph{finitos}
+de~$\mathbf{Pic}_{S/k}$, que se denotará por
+\ifthenelse{\boolean{orig}}
+{$T^\bbullet(\mathbf{Pic}_{X/k})$}
+{$T^\bbullet(\mathbf{Pic}_{S/k})$}.
+Cuando~$S$ es una variedad abeliana, se vio en~\Ref{XI.2.1} que este grupo
+es también isomorfo al \og verdadero\fg{} módulo de Tate
+$T_{\bbullet}(S)=\varprojlim\, {{_n}S}$, y el
+isomorfismo~\eqref{eqXI.6.11} se escribe entonces de manera más llamativa
+$$
+\Ext^1(A,G)\simeq\Hom(D(G),B),
+$$
+siendo~$A$ una variedad abeliana,~$B$ su dual y~$G$ un grupo algebraico
+finito sobre~$k$. Los resultados que acabamos de indicar pueden generalizarse,
+además, al caso en que~$k$ se sustituye por un preesquema base cualquiera, y
+a otros grupos de coeficientes~$G$ distintos de los grupos finitos.
+\end{remarques}
+

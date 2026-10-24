@@ -1,0 +1,138 @@
+\setcounter{subsection}{7}
+\subsection{}
+\label{X.2.8}
+La última afirmación
+\ifthenelse{\boolean{orig}}
+{\Ref{X.2.6}}
+{de~\Ref{X.2.6}}
+deja de ser válida en característica~$p>0$, como se ve ya en el caso de las
+curvas elípticas. Como se ha señalado anteriormente, no sabemos si el grupo
+fundamental de~$X_0$ es topológicamente de presentación finita; parece por
+completo improbable.
+
+\setcounter{proposition}{8}
+\begin{theoreme}
+\label{X.2.9}
+Sean~$k$ un cuerpo algebraicamente cerrado y~$X$ un esquema propio y conexo
+sobre~$k$. Entonces el grupo fundamental de~$X$ es topológicamente de
+generación finita.
+\end{theoreme}
+
+Procedemos
+\marginpar{274}
+por inducción sobre~$n=\dim X$; la afirmación es trivial para~$n\le 0$.
+Supongamos, pues, que~$n>0$ y que el teorema está demostrado en dimensiones
+~$n'<n$. Por el lema de Chow (EGA~II 5.6.2), existe un esquema proyectivo~$X'$
+sobre~$k$ y un morfismo sobreyectivo~$X'\to X$. Puede suponerse claramente
+que~$X'$ es reducido y, pasando a su normalización, normal. Gracias a la teoría
+del descenso, basta probar que los grupos fundamentales de las componentes
+conexas de~$X'$ son topológicamente de generación finita
+(\Ref{IX.5.2}). Quedamos reducidos así al caso en que~$X$ es \emph{proyectivo}
+y \emph{normal}. Si~$n=1$, basta aplicar~\Ref{X.2.6}. Si~$n\ge 2$, considérese
+una inmersión proyectiva~$X\to\PP_k^r$ y una sección de hiperplano~$Y=X\cdot H$
+\ifthenelse{\boolean{orig}}
+{(dotado}
+{(dotada}
+de la estructura reducida inducida), tal que
+\ifthenelse{\boolean{orig}}
+{$Y\ne X$}
+{$Y\ne X$,}
+\ie $H\not\supset X$. Se tiene entonces~$\dim Y<n$ y, teniendo en cuenta la
+hipótesis de inducción, basta probar que~$\pi_1(Y)\to\pi_1(X)$ es
+\emph{sobreyectivo}. Más generalmente:
+
+\begin{lemme}
+\label{X.2.10}
+Sean~$X$ un preesquema propio sobre un cuerpo algebraicamente cerrado~$k$ y
+~$g\colon X\to\PP_k^r$ un morfismo. Supongamos que~$X$ es irreducible y normal
+y que~$\dim g(X)\ge 2$. Sean~$H$ un hiperplano de~$\PP_k^r$ y
+~$Y=X\times_{\PP_k^r}H$. Entonces~$Y$ es conexo y el homomorfismo
+~$\pi_1(Y)\to\pi_1(X)$ es sobreyectivo.
+\end{lemme}
+
+Estas afirmaciones se deducen, en efecto, de la siguiente:
+
+\begin{corollaire}
+\label{X.2.11}
+Bajo las hipótesis anteriores, sean~$X'$ un recubrimiento étale conexo de~$X$ y
+~$Y'=X'\times_XY=X'\times_{\PP_k^r}H$ el recubrimiento inducido sobre~$Y$.
+Entonces~$Y'$ es conexo.
+\end{corollaire}
+
+Como~$X$ es normal,~$X'$ es normal y, por ser conexo,~$X'$ es irreducible;
+además, su imagen en~$\PP_k^r$ tiene dimensión~$\ge 2$. Un conocido lema de
+Zariski (llamado «\emph{teorema de Bertini}») implica, por tanto, que si
+~$H_1'$ es el hiperplano genérico de~$\PP_k^r$, definido sobre una extensión
+~$K$ de~$k$, entonces
+\ifthenelse{\boolean{orig}}
+{$X'\times_{\PP^r}H_1$}
+{$X'\times_{\PP^r}H_1'$}
+es universalmente irreducible y, por tanto, universalmente conexo sobre~$K$.
+El teorema de conexidad de Zariski (EGA~III 4) implica entonces que para
+\emph{todo} hiperplano~$H$ (definido sobre una extensión cualquiera de~$k$),
+~$X'\times_{\PP^r}H$ es geométricamente conexo. Esto termina la demostración
+de~\Ref{X.2.11} y, por consiguiente, la de~\Ref{X.2.9}.
+
+\begin{corollaire}[Lang--Serre]
+\label{X.2.12}
+Bajo
+\marginpar{275}
+las hipótesis de~\Ref{X.2.9}, para todo grupo finito~$G$, el conjunto de clases,
+salvo isomorfismo, de recubrimientos principales de~$X$ con grupo~$G$ es finito.
+\end{corollaire}
+
+\begin{remarque}
+\label{X.2.13}
+Bajo las hipótesis de~\Ref{X.2.10}, cuando~$\dim g(X)\ge 3$ (al menos cuando
+~$g$ es una inmersión y~$X$ es regular), probaremos un resultado más preciso,
+conocido en geometría algebraica con el nombre de «\emph{teorema de Lefschetz}»:
+~$\pi_1(Y)\to\pi_1(X)$ \emph{es un isomorfismo}.\footnote{\Cf el seminario
+SGA~2 (1962), que siguió a este%
+\ifthenelse{\boolean{orig}}
+{.}
+{, teorema X~3.10.}}
+En los casos clásicos hay enunciados análogos para los grupos de homología y
+los grupos de homotopía superiores, que tarde o temprano habrán de quedar
+abarcados por la geometría algebraica abstracta. Ni siquiera para la
+cohomología de Hodge~$\H^p(X,\Omega^q)$ parece haberse estudiado aún la
+cuestión; por lo demás, es poco probable que para esta última los teoremas de
+Lefschetz subsistan sin cambio en característica~$p>0$.
+\end{remarque}
+
+\iforig
+\else
+\begin{remarqueMR}
+\label{X.2.14}
+Sea~$R$ un anillo de valoración discreta completo, de cuerpo residual
+algebraicamente cerrado~$\kres$ de característica~$p>0$ y cuerpo de
+fracciones~$K$, y sea~$Y$ una curva propia, lisa y conexa de género~$g$
+sobre~$R$. Se tiene, pues, un morfismo de especialización sobreyectivo
+~$\sp : \pi_1(Y_{\overline{K}})\to\pi_1(Y_{\kres})$.
+Ya se ha observado que, si~$K$ tiene característica~0,~$\sp$ no es un
+isomorfismo cuando~$g\geq1$. Supongamos que~$K$ tiene característica~$p$, de
+modo que~$R$ es isomorfo al anillo de series formales~$\kres[[T]]$.
+
+En igual característica~$p>0$, el grupo fundamental no queda determinado por
+el género~$g$, como se ve ya en las curvas elípticas, que pueden ser ordinarias
+o supersingulares. Citemos el resultado reciente de A\ptbl Tamagawa (todavía
+inédito). Si~$G$ es un grupo profinito, se denota por~$G^{\res}$ el grupo
+profinito cociente de~$G$ que es límite proyectivo de los cocientes topológicos
+finitos resolubles de~$G$.
+
+\begin{theoremstar}[A\ptbl Tamagawa]
+Supongamos que~$g\geq2$, que la fibra especial~$Y_{\kres}$ es definible sobre
+un cuerpo finito y que el morfismo
+~$\sp^{\res}:\pi_1(Y_{\overline{K}})^{\res}\to
+\pi_1(Y_{\kres})^{\res}$ inducido por~$\sp$ al pasar al cociente es biyectivo.
+Entonces la curva~$Y$ es constante sobre~$R$.
+\end{theoremstar}
+
+Obsérvese que el grupo de Galois de~$\overline{K}/K$ es resoluble. El enunciado
+anterior también puede expresarse así: supongamos que todo recubrimiento finito
+étale~$X_K\to Y_K$ de la fibra genérica~$Y_K$, galoisiano con grupo de Galois
+resoluble, tiene reducción potencialmente buena (es decir, se extiende a un
+recubrimiento finito étale de~$Y$ después de sustituir eventualmente~$R$ por
+su normalización en una extensión finita de~$K$). Entonces~$Y$ es constante
+sobre~$R$.
+\end{remarqueMR}
+\fi

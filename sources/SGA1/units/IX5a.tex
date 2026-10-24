@@ -1,0 +1,227 @@
+\section{Traducción en términos del grupo fundamental}
+\label{IX.5}
+
+Sea
+$$
+g\colon S'\to S
+$$
+un \emph{morfismo de descenso efectivo} para la categoría fibrada de los
+\emph{recubrimientos étales} de preesquemas; por ejemplo, un morfismo propio,
+sobreyectivo y de presentación finita~\eqref{IX.4.12},
+o un morfismo fielmente plano y cuasicompacto. Introduzcamos, como de
+costumbre,~$S''$ y~$S'''$, y denotemos por~$\cal{C}$,~$\cal{C}'$,
+~$\cal{C}''$ y~$\cal{C}'''$ las categorías de los recubrimientos étales de
+~$S$,~$S'$,~$S''$ y~$S'''$, respectivamente. Se tiene entonces un diagrama
+$2$-exacto de categorías
+\begin{equation*}
+\label{eq:IX.5.*}
+\tag{$*$}
+\xymatrix@C=.5cm{
+{\cal{C}} \ar[r]^-{~p^*} & {\cal{C}'}
+\ar@/^2pt/[rr]^{p_1^*,p_2^*} \ar@/_2pt/[rr] && {\cal{C}''}
+\ar@/^4pt/[rrr]^{p_{21}^*,p_{32}^*,p_{31}^*} \ar[rrr] \ar@/_4pt/[rrr] &&&
+{\cal{C}'''}
+}
+\end{equation*}
+correspondiente al diagrama
+$$
+\xymatrix@C=.5cm{ S & \ar[l]_-{~p} S' && \ar@/^2pt/[ll] \ar@/_2pt/[ll]_-{p_1,p_2}
+S'' &&& \ar@/^4pt/[lll] \ar[lll] \ar@/_4pt/[lll]_{p_{21},p_{32},p_{31}} S'''.
+}
+$$
+Supongamos
+\marginpar{243}
+que los preesquemas~$S$,~$S'$,~$S''$ y~$S'''$ son sumas disjuntas de
+preesquemas conexos, como ocurre, en particular, si son localmente conexos y,
+con mayor razón, si son localmente noetherianos (por ejemplo, si~$S'$ es de
+tipo finito sobre~$S$ localmente noetheriano). Las categorías~$\cal{C}$,
+~$\cal{C}'$, …, de~\eqref{eq:IX.5.*} son entonces categorías
+multigaloisianas~\Ref{V.9}, descritas cada una por una familia de grupos
+topológicos compactos totalmente disconexos, a saber, los grupos
+fundamentales de las componentes conexas de los preesquemas~$S$,~$S'$,
+~$S''$ y~$S'''$. Para simplificar, supondremos que~$S$ es conexo y daremos un
+procedimiento de cálculo de su grupo fundamental en términos de la categoría
+fibrada formada por~$\cal{C}'$,~$\cal{C}''$ y~$\cal{C}'''$, explicitada
+convenientemente mediante los grupos fundamentales que describen estas
+categorías. El lector observará que el procedimiento esbozado vale, de hecho,
+en el marco general de las categorías multigaloisianas (que no tienen por qué
+proceder de preesquemas dados~$S$,~$S'$,~$S''$ y~$S'''$). Es, por lo demás,
+el análogo del procedimiento bien conocido para calcular el grupo fundamental
+de un espacio topológico~$S$, unión localmente finita de subespacios
+cerrados~$S_i$ (o unión arbitraria de subespacios abiertos~$S_i$), mediante
+los grupos fundamentales de las componentes
+\ifthenelse{\boolean{orig}}
+{de los~$X_i$}
+{de los~$S_i$}
+y de las componentes de los~$S_i\cap S_j$. Naturalmente, la situación análoga
+para los preesquemas cae dentro del marco general del descenso, introduciendo
+el preesquema~$S'$, suma de los~$S_i$, y el morfismo canónico
+$g\colon S'\to S$.
+
+Pongamos
+$$
+E'=\pi_0(S'), \quad E''=\pi_0(S''), \quad E'''=\pi_0(S'''),
+$$
+donde~$\pi_0$ designa el funtor «conjunto de las componentes conexas». Como
+los productos fibrados de~$S'$ sobre~$S$ forman un objeto simplicial de
+~$\Sch$, el funtor~$\pi_0$ lo transforma en un conjunto simplicial del cual
+~$E'$,~$E''$ y~$E'''$ son las componentes de dimensiones~$0$,~$1$ y~$2$.
+Habremos
+de utilizar las aplicaciones simpliciales
+$$
+q_i=\pi_0(p_i),\quad(i=1,2)\quad\text{y}
+\quad q_{ij}=\pi_0(p_{ij}),\quad (i,j)=(2,1),(3,2),(3,1),
+$$
+puestas de manifiesto en el diagrama
+\begin{equation*}
+\label{eq:IX.5.1}
+\tag{1} {\xymatrix@C=.5cm{ E' && \ar@/^2pt/[ll] \ar@/_2pt/[ll]_{q_1,q_2} E'' &&&
+\ar@/^4pt/[lll] \ar[lll] \ar@/_4pt/[lll]_{q_{21},q_{32},q_{31}} E'''. }}
+\end{equation*}
+Los elementos
+\marginpar{244}
+de~$E'$ se denotarán con una prima, como~$s'$; los de~$E''$ \resp los de
+~$E'''$ se denotarán con~$''$ \resp con~$'''$. Que~$S$ sea conexo se expresa por
+$\pi_0(K)=0$, donde~$K$ es el conjunto simplicial definido por
+$g\colon S'\to S$, o también por el hecho de que la relación de equivalencia
+en~$E'$ engendrada por el par de aplicaciones~$(q_1,q_2)$ es transitiva.
+
+Elegiremos, de una vez por todas, un elemento~$s_0'$ de~$E'$ y, para cada
+~$s'$ de~$E'$, un elemento~$\overline{s'}\in E''$ tal que\footnote{Debe
+advertirse que el elemento~$\overline{s'}$, cuya existencia se admite
+implícitamente, no existe en todos los casos. Por consiguiente, el
+teorema~\Ref{IX.5.1}, tal como está enunciado, no se aplica en todos los casos.
+Sin embargo, no es difícil, inspirándose en el texto, modificar su enunciado
+de modo que proporcione un método de cálculo aplicable en todos los casos. En
+particular, los corolarios de dicho teorema son válidos tal cual.}
+$$
+q_1(\overline{s'})=s_0', \quad q_2(\overline{s'})=s',
+$$
+poniendo así de manifiesto la conexidad de~$S$. Para cada~$s'\in E'$, elijamos
+un punto geométrico~$\underline{s}'$ en la componente conexa~$s'$ de~$S'$;
+este punto intervendrá, de hecho, mediante el funtor fibra~$F_{s'}'$ asociado
+sobre la categoría multigaloisiana~$\cal{C}'$. El grupo de automorfismos de
+este funtor, es decir, el grupo fundamental de~$S'$ en~$\underline{s}'$, se
+denotará por~$\pi_{s'}$. Elijamos del mismo modo puntos~$\underline{s}''$ y
+~$\underline{s}'''$, y por tanto funtores~$F_{s''}''$ y~$F_{s'''}'''$, de
+donde se obtienen los grupos fundamentales~$\pi_{s''}$ y~$\pi_{s'''}$. Así,
+$$
+\pi_{s'}=\pi_1(S',\underline{s}'), \quad
+\pi_{s''}=\pi_1(S'',\underline{s}''), \quad
+\pi_{s'''}=\pi_1(S''',\underline{s}''').
+$$
+Para todo~$s''\in E''$, $p_1(\underline{s}'')$ pertenece a la misma
+componente conexa que~$\underline{q_1(s'')}$; existe, pues, un isomorfismo de
+funtores
+\ifthenelse{\boolean{orig}}
+{$F''_{s''}\circ p_1^* F'_{s'}$}
+{$F''_{s''}\circ p_1^*\isomto F'_{q_1(s'')}$}
+(es decir, una «clase de caminos» de~$p_1(\underline{s}'')$ a
+~$\underline{q_1(s'')} $). La misma observación se aplica a~$q_2$ y a los
+~$q_{ij}$. Elijamos todas estas clases de caminos:
+$$
+F''_{s''}\circ p_i^*\isomto F'_{q_i(s'')},\quad F_{s'''}'''\circ
+p_{ij}^*\isomto
+\ifthenelse{\boolean{orig}}{F'''_{q_{ij}(s''')}}{F''_{q_{ij}(s''')}},
+$$
+(para
+\marginpar{245}
+$i=1,2$ y $(i,j)=(2,1),(3,2),(3,1)$). Se obtienen, en particular,
+homomorfismos de grupos
+\begin{equation*}
+\label{eq:IX.5.2}
+\tag{2} {q_i^{s''}\colon \pi_{s''}\to\pi_{q_i(s'')},\quad
+q_{ij}^{s'''}\colon \pi_{s'''}\to\pi_{q_{ij}(s''')},}
+\end{equation*}
+(con los mismos valores de~$i$ y~$(i,j)$). Recordemos, finalmente, que en la
+estructura con clivaje de la categoría fibrada con fibras~$\cal{C}'$,
+~$\cal{C''}$ y~$\cal{C'''}$ figuran también isomorfismos de funtores
+$$
+p_{21}^*p_1^*\isomto p_{31}^*p_1^*,\quad p_{21}^*p_2^*\isomto
+p_{32}^*p_1^*,\quad p_{31}^*p_2^*\isomto p_{32}^*p_2^*,
+$$
+deducidos de sendos isomorfismos de ambos miembros con los~$u_i^*$
+~($i=1,2,3$), donde los~$u_i$ son las tres proyecciones de~$S'''$ en~$S'$.
+Al explicitar estos datos, para cada~$s'''$ se obtiene un elemento bien
+determinado
+\begin{equation*}
+\label{eq:IX.5.3}
+\tag{3} {a_i^{s'''}\in\pi_{v_i(s''')},}
+\end{equation*}
+(donde los~$v_i$, $i=1,2,3$, son las tres aplicaciones~$E'''\to E'$ definidas
+por~$v_i=\pi_0(u_i)$), sometido además a las condiciones
+$$
+q_1^{s_1''}q_{21}^{s'''}=\mathrm{int}(a_1^{s'''})
+q_1^{s_2''}q_{31}^{s'''}\qquad (s_1''=q_{21}(s'''),\
+s_2''=q_{31}(s''')),
+$$
+y a las dos condiciones análogas, en las que intervienen~$a_2$ y~$a_3$. El
+lector observará, por lo demás, que los datos~\eqref{eq:IX.5.1},
+~\eqref{eq:IX.5.2} y~\eqref{eq:IX.5.3} permiten reconstruir, salvo equivalencia
+de categorías fibradas, la categoría fibrada considerada, con fibras
+~$\cal{C}'$,~$\cal{C}''$ y~$\cal{C}'''$. Deben permitir, pues, reconstruir en
+principio~$\cal{C}$ salvo equivalencia y, por tanto, su grupo fundamental salvo
+isomorfismo. Determinaremos, en realidad, el grupo fundamental en el punto
+geométrico~$p(\underline{s}_0')$ de~$S$, es decir, el grupo de automorfismos
+de~$F'_{s_0'}\circ p^*$.
+
+Obsérvese que dar un objeto~$X'$ de~$\cal{C}'$ equivale esencialmente a dar
+conjuntos finitos~$X'_{s'}$ ($s'\in E'$) sobre los que los~$\pi_{s'}$ actúan
+continuamente. Un
+\marginpar{246}
+dato de pegado sobre tal objeto equivale entonces a dar, para cada
+~$s''\in E''$, una biyección
+$$
+\varphi_{s''}\colon X'_{q_1(s'')}\isomto X'_{q_2(s'')}
+$$
+compatible con las acciones de~$\pi_{s''}$ sobre ambos miembros por medio de
+los homomorfismos~$q_i^{s''}\colon \pi_{s''}\to\pi_{q_i(s'')}$. Tomando
+primero los~$s''$ de la forma~$\overline{s'}$, se ve que tal dato define
+biyeciones
+$$
+\psi_{s'}\colon X'_{s_0'}=F_0'(X')\to X_{s'}'
+$$
+lo que permite identificar todos los~$X'_{s'}$ con el mismo conjunto
+~$F_0'(X')=X'_{s_0'}$, sobre el cual actuarán desde ese momento todos los
+grupos~$\pi_{s'}$. Hecho esto, las biyecciones~$\varphi_{s''}$ corresponderán
+a biyecciones
+$$
+g_{s''}\colon F_0'(X')\isomto F_0'(X'),
+$$
+sometidas, por una parte, a las relaciones de conmutación con~$\pi_{s''}$
+\begin{equation*}
+\label{eq:IX.5.a}
+\tag*{a)} {g_{s''}q_1^{s''}(g'')=q_2^{s''}(g'')g_{s''}\qquad (s''\in E'',\ g''\in\pi_{s''}),}
+\end{equation*}
+y, por otra, a las relaciones
+\begin{equation*}
+\label{eq:IX.5.b}
+\tag*{b)} {g_{\overline{s'}}=g_{\overline{s_0'}}\qquad (s'\in E'),}
+\end{equation*}
+que expresan cómo habíamos identificado entre sí los
+~$\ifthenelse{\boolean{orig}}{X_{s'}}{X_{s'}'}$. Al explicitar
+la condición para que tal dato de pegado sea, en efecto, un dato de descenso,
+se obtienen las relaciones
+\begin{equation*}
+\label{eq:IX.5.c}
+\tag*{c)} {a_3^{s'''}g_{q_{31}(s''')}a_1^{s'''}=
+g_{q_{32}(s''')}a_2^{s'''}g_{q_{21}(s''')}\qquad (s'''\in E''').}
+\end{equation*}
+
+Esto proporciona una equivalencia entre la categoría de los objetos de
+~$\cal{C}'$ provistos de un
+\marginpar{247}
+dato de descenso y la categoría de los conjuntos finitos sobre los que actúan
+continuamente los grupos~$\pi_{s'}$, provistos además de biyecciones
+~$g_{s''}$ que satisfacen las relaciones~\Ref{eq:IX.5.a},
+~\Ref{eq:IX.5.b} y~\Ref{eq:IX.5.c}. Sea entonces~$G$ el grupo engendrado por
+los grupos~$\pi_{s'}$ y los nuevos generadores~$g_{s''}$, sometidos a las
+relaciones~\Ref{eq:IX.5.a},~\Ref{eq:IX.5.b} y~\Ref{eq:IX.5.c}, y sea~$\pi$
+el grupo límite proyectivo de los cocientes de~$G$ por los subgrupos de índice
+finito cuyas imágenes inversas en los grupos~$\pi_{s'}$ sean subgrupos
+abiertos. También se dice que~$\pi$ es el \emph{grupo de tipo galoisiano
+engendrado por los~$\pi_{s'}$ y los~$g_{s''}$, sometido a las
+relaciones~\Ref{eq:IX.5.a},~\Ref{eq:IX.5.b} y~\Ref{eq:IX.5.c}}. Se comprueba
+de inmediato que la categoría considerada es asimismo equivalente a la
+categoría de conjuntos finitos sobre los que el grupo topológico~$\pi$ actúa
+continuamente. Esto demuestra el enunciado siguiente:

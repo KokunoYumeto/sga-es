@@ -1,0 +1,61 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sga72-es}[2026/08/21 Spanish SGA 7 II edition support]
+
+\RequirePackage{ifthen}
+\RequirePackage{xspace}
+\RequirePackage[normalem]{ulem}
+
+\let\SGAMathUnderline\underline
+\renewcommand{\underline}[1]{%
+  \ifmmode
+    \SGAMathUnderline{#1}%
+  \else
+    \uline{#1}%
+  \fi}
+
+\newboolean{original}
+\ifdefined\SGAOrigMode
+  \setboolean{original}{true}
+\else
+  \setboolean{original}{false}
+\fi
+
+\newcommand{\sisi}[2]{\ifthenelse{\boolean{original}}{#1}{#2}}
+\newcommand{\SGABranchLabel}{%
+  \ifthenelse{\boolean{original}}{diplomática/original}{corregida/actual}}
+
+\providecommand{\SGA}{\textup{SGA}\xspace}
+
+\newcounter{pageoriginal}
+\newcommand{\pageoriginale}{%
+  \refstepcounter{pageoriginal}%
+  \marginpar{\footnotesize\textbf{\thepageoriginal}}\xspace}
+\let\pageoriginaled\pageoriginale
+
+\newcommand{\SGAUnsealedPlaceholder}[1]{%
+  \clearpage
+  \thispagestyle{empty}%
+  \null\vfill
+  \begin{center}
+    \textbf{MARCADOR EDITORIAL NO SELLADO}\par
+    \medskip
+    Unidad: \texttt{#1}\par
+    Rama: \SGABranchLabel\par
+    \medskip
+    No contiene todavía transcripción ni traducción admitida.
+  \end{center}
+  \vfill\null
+  \clearpage
+}
+
+\newcommand{\SGAExposeBookmark}[2]{%
+  \pdfbookmark[0]{Exposé #1 -- #2}{sga72.expose.#1}}
+\makeatletter
+\newcommand{\SGAExposeChapter}[2]{%
+  \Hy@bookmarksfalse
+  \chapter[#2]{#2}%
+  \Hy@bookmarkstrue
+  \SGAExposeBookmark{#1}{#2}}
+\makeatother
+
+\endinput

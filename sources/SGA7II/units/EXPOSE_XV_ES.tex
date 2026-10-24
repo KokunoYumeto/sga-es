@@ -1,0 +1,1725 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XV}{La fórmula de Picard--Lefschetz}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XV}\par
+\vspace{2em}
+{\Large\underline{La fórmula de Picard--Lefschetz}}\par
+\vspace{1.5em}
+{\large por P. Deligne}
+\end{center}
+
+\medskip
+\noindent\textbf{Contenido de la fuente}
+\begin{center}
+\begin{tabular}{@{}llr@{}}
+\S1. & Singularidades cuadráticas ordinarias (formas canónicas) & 2\\
+1.1 & Recordatorios & 2\\
+1.2 & Singularidades cuadráticas ordinarias & 4\\
+1.3 & Módulos de singularidades cuadráticas & 10\\
+\S2. & Cálculo de los ciclos evanescentes en un caso cuadrático
+  ordinario estándar & 13\\
+2.1 & Preliminar: cohomología de un cono & 13\\
+2.2 & Ciclos evanescentes & 17\\
+\S3. & La fórmula de Picard--Lefschetz & 23\\
+3.1 & Resultados preliminares & 23\\
+3.2 & Dimensión relativa par & 24\\
+3.3 & Dimensión relativa impar & 26\\
+3.4 & Resumen & 31
+\end{tabular}
+\end{center}
+
+\pageoriginale
+
+\section*{1. Singularidades cuadráticas ordinarias (formas canónicas)}
+
+En esta sección retomamos los resultados de VI 6, adoptando un punto de
+vista ``henseliano'' en lugar de ``formal''. Damos formas canónicas para
+las singularidades cuadráticas ordinarias y sus deformaciones, en las
+que pueden ponerse localmente para la topología étale.
+
+Estos resultados se deducen fácilmente de VI 6, del teorema de la
+función implícita (en la forma de Tougeron) y del teorema de R. Elkik
+sobre los módulos henselianos versales de singularidades aisladas. En
+el momento del seminario oral, este último aún no estaba disponible;
+se había demostrado un teorema más débil, que cubría únicamente el caso
+de las intersecciones completas (lo cual nos bastaba), y que no se
+publicará.
+
+\subsection*{1.1. Recordatorios}
+
+\subsubsection*{1.1.1.}
+Sea $f:X\longrightarrow S$ un morfismo, con $X$ localmente descriptible
+por $p$ ecuaciones en el espacio afín relativo $\mathbb A_S^{n+p}$ de
+dimensión $n+p$ sobre $S$. El ideal jacobiano $J^n(X/S)$ se definió en
+VI 5. Si $X$ es el subesquema cerrado de $\mathbb A_S^{n+p}$ definido
+por las ecuaciones $f_i=0$ $(1\leq i\leq p)$, es el haz de ideales
+engendrado por los menores de orden $p\times p$ de la matriz jacobiana
+$(\partial f_i/\partial x_j)$. El teorema siguiente es bien conocido.
+Un caso particular de su análogo formal se demuestra en Bourbaki,
+\emph{Alg\`ebre commutative}, III, \S4, n\textsuperscript{o}~6,
+Corolario 3 del Teorema 2; el análogo $C^\infty$ se demuestra en
+Tougeron, \emph{Id\'eaux de fonctions diff\'erentiables} (tesis,
+Rennes, mayo de 1967); el caso considerado aquí se trata en Artin,
+\emph{Algebraic approximation of structures over complete local
+rings}, Publ. Math. IHES \underline{36} (volumen de Zariski), Lema 5.10.
+
+\subsubsection*{Teorema 1.1.2 (Tougeron--Artin).}
+\underline{Sea $S$ el espectro de un anillo local henseliano $A$, sea
+$f:X\to S$ un morfismo como en 1.1.1, sean $a$ e $I$ dos ideales
+propios de $A$, y sea $\delta'$ un haz de ideales de $X$ contenido en
+$J^n(X/S)$. Supongamos que $I$ es de tipo finito. Sea $s$ una sección
+de $f$ sobre $S/I$, es decir, $s\in X(A/I)$. Denotemos también por
+$s^*\delta'^2$ el ideal de $A$ imagen inversa del ideal
+$s^*\delta'^2$ de $A/I$.}
+
+\underline{Si $(s^*\delta'^2)\,a\supset I$, existe una sección
+$s_1\in X(A)$ de $f$}
+
+\pageoriginale
+
+\underline{congruente con $s$ módulo $(s^*\delta')\,a$.}
+
+\subsubsection*{1.1.3.}
+Sea $S$ el espectro de un anillo local henseliano, de punto cerrado
+$s$. Sea $X'_0$ un esquema de tipo finito sobre $k(s)$, liso fuera de
+un punto cerrado $x_0$, y sea $X_0$ el henselizado de $X'_0$ en $x_0$.
+Nos interesan los sistemas
+\begin{center}
+\begin{tikzcd}[column sep=large,row sep=large]
+X_0 \arrow[r,hook] \arrow[d]
+  & X \arrow[d]
+  & {} \\
+s \arrow[r,hook]
+  & T \arrow[r]
+  & S
+\end{tikzcd}
+\end{center}
+del tipo siguiente:
+\begin{enumerate}[label=(\alph*),leftmargin=2.6em]
+\item $T$ es local henseliano y esencialmente de presentación finita
+sobre $S$ (I 0.0.5); el morfismo $T\to S$ es local e induce un
+isomorfismo de cuerpos residuales;
+
+\item $X$ es local henseliano, plano y esencialmente de presentación
+finita sobre $T$;
+
+\item la fibra especial de $X/T$ está dotada de un $k(s)$-isomorfismo
+con $X_0$.
+\end{enumerate}
+Estas son las \underline{$S$-deformaciones henselianas} de $X_0$. Un
+\underline{morfismo} de $(X,T)$ a $(X',T')$ es un diagrama conmutativo
+de $S$-esquemas
+\begin{center}
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[r] \arrow[d] & X' \arrow[d] \\
+T \arrow[r] & T'
+\end{tikzcd}
+\end{center}
+que induce la identidad de $X_0$ al pasar a las fibras especiales. Una
+deformación $X/T$ se llama \underline{versal} (minimalmente versal) si:
+\begin{enumerate}[label=(\alph*),leftmargin=2.6em]
+\item para todo morfismo $X''/T''\longrightarrow X'/T'$ para el cual
+$T''\to T'$ es una inmersión cerrada, la aplicación
+\[
+\operatorname{Hom}(X'/T',X/T)
+\longrightarrow\operatorname{Hom}(X''/T'',X/T)
+\]
+es sobreyectiva. En particular, tomando $X''/T''=X_0/s$, se tiene
+$\operatorname{Hom}(X'/T',X/T)\ne\varnothing$;
+
+\item para $T'=\operatorname{Spec}(k(s)[\varepsilon]/(\varepsilon^2))$,
+la aplicación de ``imagen inversa''
+\[
+\operatorname{Hom}(T',T)\longrightarrow
+\{\text{clases de isomorfismo de deformaciones de $X_0$ sobre $T'$}\}
+\]
+es biyectiva.
+\end{enumerate}
+
+\pageoriginale
+
+\subsubsection*{Teorema 1.1.4 (R. Elkik).}
+\underline{Existe una $S$-deformación henseliana versal de $X_0$ (y es
+única salvo isomorfismo no único). Si $S$ es noetheriano, una
+deformación $X/T$ es de este tipo si y solo si $X$ induce sobre la
+completación $\widehat T$ de $T$ una $S$-deformación formal versal de
+$X_0$ (una deformación formal minimalmente versal; VI 1.9 y VI 4).}
+
+Para la demostración de este delicado teorema, remitimos a R. Elkik
+(seminario de la ENS, 1971/72).
+
+\subsection*{1.2. Singularidades cuadráticas ordinarias}
+
+Sea $y$ un punto cerrado de un esquema $Y$ de tipo finito sobre un
+cuerpo $k$ de característica $p$, y sea $n$ la dimensión de $Y$ en $y$.
+
+\subsubsection*{Definición 1.2.1 (= VI 6.6).}
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em]
+\item \underline{Si $k$ es algebraicamente cerrado, se dice que $y$ es
+un punto cuadrático ordinario de $Y$ si la completación
+$\widehat{\mathcal O}_{Y,y}$ del anillo local de $Y$ en $y$ es isomorfa
+al cociente de $k[[x_1,\ldots,x_{n+1}]]$ por el ideal engendrado por una
+única serie formal $f$ que puede escribirse}
+\begin{equation}\tag{\sisi{4.2.1}{1.2.1.1}}
+f(\underline X)=Q(\underline X)\sisi{=}{+}
+\text{términos de orden }>2,
+\end{equation}
+\underline{donde $Q(\underline X)$ es una forma cuadrática ordinaria.}
+
+\item \underline{Si $\bar k$ es una clausura algebraica de $k$, se dice
+que $y$ es un punto cuadrático ordinario de $Y$ si los puntos de
+$\bar Y=Y\otimes_k\bar k$ situados encima de $y$ son puntos cuadráticos
+ordinarios de $\bar Y$.}
+\end{enumerate}
+
+\subsubsection*{1.2.2.}
+Reemplazando ``forma cuadrática ordinaria'' por ``forma cuadrática no
+degenerada'' en esta definición, se obtiene la noción de
+\underline{punto cuadrático no degenerado} (VI 6.0). Un punto $y$ es un
+punto cuadrático no degenerado de $Y$ si y solo si es un punto
+cuadrático ordinario y o bien $p\ne2$, o bien
+
+\pageoriginale
+
+$n$ es impar.
+
+\subsubsection*{Ejemplo 1.2.3.}
+Sea $Q(\underline X)$ una forma cuadrática no degenerada en $n+1$
+variables sobre $k$. Sea $Y_0$ el cono cuadrático de
+$\mathbb A_k^{n+1}$ de ecuación $Q=0$. Entonces el origen, denotado por
+$y_0$, es un punto cuadrático no degenerado de $Y_0$.
+
+\subsubsection*{Ejemplo 1.2.4.}
+Supongamos que $p=2$ y $n=2m$. Sea $a\in k$, y sea $Q$ el polinomio
+\[
+Q(\underline X)=(X_0^2-a)
+ +\sum_{0<i\leq j\leq2m}a_{ij}x_ix_j.
+\]
+Supongamos que la forma cuadrática en $2m$ variables
+$\sum_{0<i\leq j}a_{ij}x_ix_j$ es no degenerada, y denotemos por $y_0$
+el punto cerrado de $\mathbb A_k^{n+1}$ de coordenadas
+$(\sqrt a,0,\ldots,0)$. Entonces $y_0$ es un punto cuadrático ordinario
+del subesquema cerrado $Y_0\subset\mathbb A_k^{n+1}$ de ecuación $Q=0$.
+
+\subsubsection*{Ejemplo 1.2.5.}
+Sea $k'$ una extensión separable finita de $k$, y sea $Y_0$ un
+$k'$-esquema del tipo considerado en 1.2.3 (respectivamente, 1.2.4). Si
+$Y_0$ se considera como $k$-esquema, entonces $y_0$ es un punto
+cuadrático no degenerado (respectivamente, ordinario) de $Y_0$. La
+extensión $k'/k$ se identifica con la mayor subextensión separable de
+$k(y_0)/k$.
+
+\subsubsection*{Teorema 1.2.6.}
+\underline{Supongamos que $y$ es un punto cuadrático ordinario del
+$k$-esquema $Y$, y sea $k'$ la mayor subextensión separable de
+$k(y)/k$. Existen entonces un $k'$-esquema
+$Y_0\subset\mathbb A_{k'}^{n+1}$ del tipo de 1.2.3 o 1.2.4 y un
+$k$-isomorfismo $\varphi$ entre el henselizado $Y_{(y)}$ de $Y$ en $y$
+y el henselizado $Y_{0(y_0)}$ de $Y_0$ en $y_0$.}
+
+Obsérvese primero que existe un entorno étale $Y'$ de $y$ en $Y$
+\begin{center}
+\begin{tikzcd}[row sep=large,column sep=large]
+{} & Y'\arrow[d]\\
+y\arrow[ur,hook]\arrow[r,hook]&Y
+\end{tikzcd}
+\end{center}
+que es un $k'$-esquema. En efecto, $Y_{(y)}$ es canónicamente un
+$k'$-esquema.
+
+\pageoriginale
+
+Reemplazando $(k,Y,y)$ por $(k',Y',y)$, nos reducimos al caso
+$k=k'$, es decir, al caso en que $k(y)/k$ es una extensión radicial.
+
+El $k(y)$-espacio vectorial $(\Omega^1_{Y/k})_y$ tiene dimensión
+$n+1$. Basta comprobarlo después de extender los escalares de $k(y)$
+a su clausura algebraica y completar en $y$, donde es inmediato. Por
+tanto, un entorno de $y$ en $Y$ es un subesquema cerrado de un
+$k$-esquema liso $Z$ de dimensión $n+1$. Además, reemplazando $Y$ y
+$Z$ por entornos adecuados de $y$, el ideal de $\mathcal O_Z$ que
+define $Y$ es principal (por el mismo argumento anterior), digamos de
+ecuación $f$.
+
+\subsubsection*{Lema 1.2.7.}
+\underline{Supongamos que $y$ es un punto cuadrático no degenerado de
+$Y$ y que $k(y)/k$ es radicial. Entonces, en un entorno de $y$,
+$J^n_{Y/k}$ (1.1.1) está engendrado por un elemento, soportado en $y$,
+y es de rango uno sobre $k$. En particular, $k(y)=k$.}
+
+Basta demostrar la primera afirmación después de pasar a una clausura
+algebraica de $k$ y completar en $y$. Entonces es inmediata por cálculo
+directo: con la notación de 1.2.1, el lema de Nakayama muestra que los
+$\partial f/\partial x_i$ (y por tanto, con mayor razón, $f$ y los
+$\partial f/\partial x_i$) engendran el ideal maximal.
+
+Demostremos 1.2.6 cuando $y$ es no degenerado. Podemos y vamos a
+suponer que $k(y)=k$, que $Y$ está definido por una ecuación $f$ en un
+esquema liso $Z$, y que existe un morfismo étale
+\[
+x:Z\longrightarrow\mathbb A_k^{n+1}
+\]
+(un ``sistema de coordenadas locales $x_i$'') que lleva $y$ a $0$.
+Existe entonces una forma cuadrática no degenerada $Q$ en $n+1$
+variables tal que, en $y$,
+\[
+f=Q(x_i)+\text{términos de orden }>2.
+\]
+Sea $Y_0$ el esquema definido por $Q$ como en
+\sisi{4.3}{1.2.3}.
+
+\underline{Sobre $Y$}, el sistema $(x_i)$ es una ``solución aproximada''
+de la ecuación $Q(x_i)=0$: si $\mathfrak m$ es el ideal que define
+$y$, entonces
+\[
+Q(x_i)\in\mathfrak m^3\qquad\text{sobre }Y.
+\]
+
+\pageoriginale
+
+Como $Q$ es no degenerada, el ideal de $\mathbb A_k^{n+1}$ engendrado
+por los $\partial Q/\partial x_i$ es el ideal maximal en $0$, y su
+imagen inversa por $x=(x_i):Y\to\mathbb A_k^{n+1}$ es $\mathfrak m$.
+Por el teorema de la función implícita 1.1.2 (aplicado con
+$a=\mathfrak m$ y $\delta'=J$), existen sobre el henselizado $Y_{(y)}$
+funciones $x'_i$, congruentes con los $x_i$ módulo $\mathfrak m^2$,
+que satisfacen $Q(x'_i)=0$. Proporcionan el isomorfismo buscado entre
+$Y_{(y)}$ y $Y_{0(y_0)}$.
+
+\subsubsection*{Lema 1.2.8.}
+\underline{Supongamos que $y$ es un punto cuadrático ordinario
+degenerado ($p=2$ y $n$ par), y que $k(y)/k$ es radicial. Entonces, en
+un entorno de $y$, $T^1_{Y/k}$ está engendrado por un elemento,
+soportado en $y$, y es de rango dos sobre $k$. En particular, o bien
+$k(y)=k$, o bien $k(y)$ es isomorfo a $k(\sqrt a)$ para algún
+$a\in k$, $a\notin k^2$.}
+
+Procedamos como en 1.2.7. Con la notación de 1.2.1, basta comprobar que
+\[
+\dim_k\left(
+k[[x_1,\ldots,x_{n+1}]]\big/
+  (f,\partial f/\partial x_i)
+\right)=2.
+\]
+En coordenadas adecuadas $x_0,x_1,\ldots,x_{2m}$, la serie formal $f$
+puede escribirse
+\[
+f=x_0^2+\sum_{i=1}^m x_ix_{i+m}+R,
+\qquad\operatorname{ord}(R)\geq3.
+\]
+Sea $\mathfrak n'$ el ideal engendrado por $f$ y los
+$\partial f/\partial x_i$, sea $\mathfrak n$ el ideal engendrado por
+$x_0^2$ y los $x_i$ para $i\ne0$, y sea $\mathfrak q$ el ideal
+maximal. Demostremos que $\mathfrak n=\mathfrak n'$. Claramente,
+$\mathfrak n'\subset\mathfrak n$, y por Nakayama basta comprobar que
+\[
+\mathfrak n'+\mathfrak n\mathfrak q=\mathfrak n.
+\]
+Módulo $\mathfrak n\mathfrak q$, se tiene $f\equiv x_0^2$; módulo
+$\mathfrak n\mathfrak q+(x_0^2)$, se tiene
+\[
+\frac{\partial f}{\partial x_i}\equiv x_{i+m},
+\qquad
+\frac{\partial f}{\partial x_{i+m}}\equiv x_i
+\qquad(1\leq i\leq m),
+\]
+lo que demuestra la afirmación.
+
+Bajo las hipótesis de 1.2.8, si $k=k(y)$, denotaremos por $a$ un
+cuadrado cualquiera de $k$.
+
+\pageoriginale
+
+\subsubsection*{Lema 1.2.9.}
+\underline{Sea $V$ un fibrado vectorial sobre un esquema $S$, y sea
+$T$ un subesquema cerrado de $\mathbb A_S(V)$ localmente libre de
+rango dos sobre $S$. Entonces $T$ está contenido en una y solo una
+recta de $\mathbb A_S(V)$.}
+
+La cuestión es local para la topología fppf sobre $S$, por lo que
+podemos suponer que $T/S$ tiene una sección. Por traslación, podemos
+suponer que $T$ contiene la sección cero. Sea $\mathfrak n$ el ideal
+de $T$ que define $0$; es localmente libre de rango uno sobre $S$.
+Toda forma lineal homogénea $v\in V$ sobre $\mathbb A_S(V)$ define un
+elemento de $\mathfrak n$, y por tanto un epimorfismo
+$V\twoheadrightarrow\mathfrak n$. Su núcleo define la recta buscada.
+
+\subsubsection*{1.2.10.}
+En particular, si $A$ es un subesquema cerrado radicial de rango dos
+del espacio afín $\mathbb A_k^{n+1}$ sobre un cuerpo $k$ de
+característica $2$, existe un $a\in k$ tal que, en coordenadas afines
+adecuadas, $A$ tiene ecuaciones
+\[
+x_0^2-a=0,
+\qquad x_i=0\quad(1\leq i\leq n).
+\]
+Basta tomar los $x_i$ que se anulan sobre la recta definida por $A$.
+
+\subsubsection*{1.2.11.}
+Demostremos 1.2.6 para $y$ degenerado ($p=2$ y $n=2m$). Podemos y
+vamos a suponer que $k(y)=k(\sqrt a)$, que $Y$ está definido por una
+ecuación $f$ en un esquema liso $Z$, y que existe un sistema de
+coordenadas locales en $y$
+\[
+x=(x_i)_{0\leq i\leq2m}:
+Z\longrightarrow\mathbb A_k^{2m+1}
+\]
+que lleva $y$ al punto cerrado $(\sqrt a,0,\ldots,0)$, tal que, en un
+entorno de $y$,
+\[
+J^n_{Y/k}\simeq
+\mathcal O_Y/(x_0^2-a,x_1,\ldots,x_{2m}).
+\]
+Tras reemplazar $f$ por un múltiplo adecuado, se tiene
+\[
+f=(x_0^2-a)+
+ \sum_{1\leq i\leq j\leq2m}a_{ij}x_ix_j+R,
+\]
+donde
+\begin{enumerate}[label=(\alph*),leftmargin=2.6em]
+\item la forma cuadrática en $2m$ variables
+$\sum a_{ij}x_ix_j$ es no degenerada;
+\item después de extender los escalares a $\bar k$, $R$ tiene orden al
+menos $3$ en $x_0-\sqrt a$ y los $x_i$.
+\end{enumerate}
+
+\pageoriginale
+
+Sea $Y_0$ definido, como en 1.2.4, por
+\[
+Q=x_0^2-a+\sum a_{ij}x_ix_j.
+\]
+
+\underline{Sobre $Y$}, el sistema $(x_i)$ puede considerarse de nuevo
+como una solución aproximada de $Q(X_i)=0$. Esta vez, el ideal $\delta$,
+imagen inversa por $x$ del ideal engendrado por los
+$\partial Q/\partial X_i$, satisface
+$\mathcal O_Y/\delta\simeq J^n_{Y/k}$; en $y$ es
+\[
+\delta=(x_0^2-a,(x_i)_{1\leq i}).
+\]
+Sea $\mathfrak q$ el ideal maximal que define $y$. Para concluir como
+en el caso no degenerado aplicando el teorema de la función implícita,
+queda verificar que
+\begin{equation}\tag{1.2.11.1}
+Q(x_i)\equiv0\pmod{\delta^2\mathfrak q}
+\qquad\underline{\text{sobre }Y}.
+\end{equation}
+Sea $\bar{\mathfrak q}$ el ideal que define $y$ después de extender
+los escalares a una clausura algebraica de $k$. Se comprueba que
+\[
+\delta^2\bar{\mathfrak q}\cap\mathcal O_{Y,y}
+=\delta^2\mathfrak q.
+\]
+Basta, por tanto, verificar \sisi{(4.11.1)}{(1.2.11.1)} tras extender
+los escalares a $\bar k$; podemos suponer que $a=0$. En $y$ se tiene
+entonces
+\[
+\delta^2\mathfrak q=
+(x_0^5,(x_0^3x_i)_{1\leq i},
+ (x_0x_ix_j)_{1\leq i,j},
+ (x_ix_jx_k)_{1\leq i,j,k}).
+\]
+Se sigue que $\delta^2\mathfrak q\supset\mathfrak q^5$ y que
+\[
+x_0^2f\equiv x_0^4\pmod{\delta^2\mathfrak q},
+\qquad
+\delta^2\mathfrak q+(x_0^2f)\supset\mathfrak q^4,
+\]
+\[
+x_0f\equiv x_0^3
+ \pmod{\delta^2\mathfrak q+\mathfrak q^4},
+\qquad
+\delta^2\mathfrak q+(x_0f)\supset\mathfrak q^3.
+\]
+
+\pageoriginale
+
+Por último,
+\[
+Q(x_i)\equiv0
+\pmod{\delta^2\mathfrak q+(f)}
+\qquad\underline{\text{sobre }Z},
+\]
+lo cual es (1.2.11.1).
+
+\subsubsection*{Observación 1.2.12.}
+Sea $Q$ una forma cuadrática no necesariamente homogénea, no nula,
+en $n+1$ variables, y supongamos que el subesquema cerrado
+$Y\subset\mathbb A_k^{n+1}$ de ecuación $Q$ tiene una singularidad
+cuadrática ordinaria en un punto $y$. Un cambio lineal no homogéneo de
+variables pone entonces $Y$ en la forma 1.2.3 o 1.2.4. En el caso no
+degenerado, $k(y)=k$, y basta situar $y$ en el origen. En el caso
+degenerado, basta que el soporte de $T^1_{Y/k}$ esté sobre la recta
+$x_i=0$ $(1\leq i\leq2m)$ (cf. 1.2.9).
+
+\subsection*{1.3. Módulos de singularidades cuadráticas}
+
+La proposición siguiente resulta del teorema 1.1.4 de R. Elkik y de
+cálculos explícitos que se dejan al lector (y que están esencialmente
+contenidos en VI 6).
+
+\subsubsection*{Proposición 1.3.1.}
+\underline{Sea $S=\operatorname{Spec}(A)$ un esquema local henseliano
+de punto cerrado $s$, y sea
+$Y_0\subset\mathbb A_{k(s)}^{n+1}$ un esquema del tipo descrito en
+1.2.3 o 1.2.4.}
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em]
+\item \underline{Supongamos que $Y_0$ es del tipo descrito en 1.2.3,
+definido por la ecuación}
+\[
+Q(\underline X)=\sum_{i\leq j}\bar a_{ij}x_i x_j=0
+\qquad(\bar a_{ij}\in k(s)),
+\]
+\underline{y levantemos los $\bar a_{ij}$ a elementos $a_{ij}$ de
+$A$. Entonces el $S$-esquema henseliano versal de deformaciones de la
+singularidad de $Y_0$ en $y_0$ es}
+\[
+T=\operatorname{Spec}(A\{b\}),
+\]
+\underline{siendo la deformación versal el henselizado en $y_0$ del
+$T$-esquema $Y\subset\mathbb A_T^{n+1}$ de ecuación}
+
+\pageoriginale
+
+\[
+\sum a_{ij}x_i x_j-b=0.
+\]
+
+\item \underline{Supongamos que $Y_0$ es del tipo descrito en 1.2.4,
+definido por la ecuación}
+\[
+Q(\underline x)=(x_0^2-\bar a)+\sum\bar a_{ij}x_i x_j=0
+\qquad(\bar a,\bar a_{ij}\in k(s)),
+\]
+\underline{y levantemos los $\bar a_{ij}$ y $\bar a$ a elementos
+$a_{ij}$ y $a$ de $A$. Entonces el $S$-esquema henseliano versal de
+deformaciones de la singularidad de $Y_0$ en $y_0$ es}
+\[
+T=\operatorname{Spec}(A\{b,c\}),
+\]
+\underline{siendo la deformación versal el henselizado en $y_0$ del
+$T$-esquema $Y\subset\mathbb A_T^{n+1}$ de ecuación}
+\[
+(x_0^2-a)+\sum a_{ij}x_i x_j+b x_0+c=0.
+\]
+\end{enumerate}
+
+El corolario siguiente resulta inmediatamente de 1.2.6 y 1.3.1.
+
+\subsubsection*{Corolario 1.3.2.}
+\underline{Sea $S=\operatorname{Spec}(A)$ un esquema local henseliano
+de punto cerrado $s$, y sea $f:X\to S$ un morfismo plano de
+presentación finita. Supongamos que, en el punto cerrado $x$ de $X_s$,
+el esquema $X_s$ tiene una singularidad cuadrática ordinaria, que
+$k(x)$ es radicial sobre $k(s)$ y que $X_s$ tiene dimensión $n$.}
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.6em]
+\item Si $x$ es no degenerado, \underline{existen una forma cuadrática
+no degenerada $Q$ en $n+1$ variables con coeficientes en $A$, y un
+elemento $b$ del ideal maximal de $A$, tales que el $S$-esquema
+henselizado de $X$ en $x$ es isomorfo al henselizado en el origen del
+subesquema cerrado de $\mathbb A_S^{n+1}$ de ecuación $Q-b=0$, como en
+1.3.1(i).}
+
+\item Si $x$ es degenerado
+($n=2m$, $\operatorname{char}(k(s))=2$), \underline{existe una forma
+cuadrática no homogénea en $n+1$ variables con coeficientes en $A$}
+\begin{equation}\tag{\sisi{4.14.2}{1.3.2.1}}
+Q(\underline X)=\sisi{x_0}{x_0^2}+b x_0+c+
+ \sum_{1\leq i\leq j\leq 2m}a_{ij}x_i x_j,
+\end{equation}
+
+\pageoriginale
+
+\underline{tal que $b$ pertenece al ideal maximal, la forma cuadrática
+$\sum a_{ij}x_i x_j$ en $2m$ variables es no degenerada, y el
+$S$-esquema henselizado de $X$ en $x$ es isomorfo al henselizado en
+$(\sqrt c,0,\ldots,0)$ del subesquema cerrado de
+$\mathbb A_S^{n+1}$ de ecuación $Q=0$.}
+\end{enumerate}
+
+\subsubsection*{Observación 1.3.3.}
+En el caso (i), supongamos que el henselizado de $X_s$ en $x$ es
+isomorfo, mediante un isomorfismo $\varphi$, al henselizado en $O$ del
+subesquema cerrado $X_0\subset\mathbb A_k^{n+1}$ de ecuación
+\[
+\sum\bar a_{ij}x_i x_j=0,
+\]
+y supongamos que los $a_{ij}$ levantan los $\bar a_{ij}$. Se puede
+tomar entonces
+\[
+Q=\sum a_{ij}x_i x_j.
+\]
+
+En el caso (ii), supongamos que el henselizado de $X_s$ en $x$ es
+isomorfo, mediante un isomorfismo $\varphi$, al henselizado en
+$(\sqrt a,0,\ldots,0)$ del subesquema cerrado
+$X_0\subset\mathbb A_k^{n+1}$ de ecuación
+\[
+(x_0^2+\bar a)+\sum\bar a_{ij}x_i x_j=0,
+\]
+y supongamos que los $a_{ij}$ levantan los $\bar a_{ij}$. Se puede
+tomar entonces
+\[
+Q=x_0^2+b x_0+c+\sum a_{ij}x_i x_j,
+\qquad c\equiv\bar a\pmod{\mathfrak m_A}.
+\]
+En ambos casos, el isomorfismo prometido en 1.3.2 puede elegirse como
+una prolongación de $\varphi$.
+
+\subsubsection*{Corolario 1.3.4.}
+\underline{Sea $f:X\to S$ como en 1.3.2. Existe un entorno $U$ de $x$
+en $X$ tal que los puntos no lisos de $f$ contenidos en $U$ son puntos
+cuadráticos ordinarios de sus fibras respectivas.}
+
+\pageoriginale
+
+\section*[2. Ciclos evanescentes: caso cuadrático ordinario]{2. Cálculo de los ciclos evanescentes en un caso cuadrático
+ordinario estándar}
+
+\subsection*{2.1. Preliminar: cohomología de un cono}
+
+\subsubsection*{2.1.1.}
+Sea $Y\subset\mathbb P^r$ una variedad proyectiva sobre un cuerpo
+algebraicamente cerrado $k$. Utilizamos la notación siguiente.
+
+El cono afín sobre $Y$ se denota por $X\subset\mathbb A^{r+1}$, y su
+vértice por $O$;
+
+$X_{(O)}$ es el henselizado de $X$ en $O$;
+
+$X^*=X-\{O\}$ y $X^*_{(O)}=X_{(O)}-\{O\}$;
+
+$X_1\subset\mathbb P^{r+1}$ es el cono proyectivo sobre $Y$, de modo
+que $X=X_1-Y$;
+
+$\widetilde X$, $\widetilde X_{(O)}$ y $\widetilde X_1$ son los
+estallidos de $X$, $X_{(O)}$ y $X_1$ en $O$;
+
+$Y_0$ es la imagen inversa de $O$ en $\widetilde X$,
+$\widetilde X_{(O)}$ o $\widetilde X_1$;
+
+$h:\widetilde X_1\to Y$ es la proyección natural;
+
+$y_0,y_\infty:Y\to\widetilde X_1$ son las secciones de $h$ cuyas
+imágenes son $Y_0$ e $Y$;
+
+$F$ es un grupo abeliano de torsión de orden primo con la
+característica de $k$. Todos los grupos de cohomología considerados a
+continuación tienen coeficientes en $F$, que no se indicarán.
+
+El objetivo de esta subsección es relacionar la cohomología de
+$X^*_{(O)}$ con la de $Y$.
+
+\subsubsection*{Proposición 2.1.2.}
+\underline{Existen isomorfismos}
+\[
+\text{(i)}\qquad
+H^i(X)\xrightarrow{\ \sim\ }H^i(\{O\})=
+\begin{cases}
+F,& i=0,\\
+0,& i>0;
+\end{cases}
+\]
+\[
+\text{(ii)}\qquad
+H^i_{\{O\}}(X)\xrightarrow{\ \sim\ }H^i_c(X).
+\]
+Esta proposición se demuestra mediante un argumento de homotopía, que
+formalizamos ahora.
+
+Sean $k$ un cuerpo algebraicamente cerrado, $U$ y $V$ dos $k$-esquemas,
+$\Lambda$ un anillo de torsión de orden primo con la característica de
+$k$, y
+\[
+K\in\operatorname{Ob}D^+(U,\Lambda),
+\qquad L\in\operatorname{Ob}D^+(V,\Lambda).
+\]
+
+\pageoriginale
+
+Por un ``morfismo'' $f$ de $(U,K)$ a $(V,L)$ entendemos un par formado
+por un morfismo $f:U\to V$ y un morfismo $\varphi:f^*L\to K$. Tal
+morfismo induce
+\[
+f^*:H^*(V,L)\longrightarrow H^*(U,K).
+\]
+
+Se dice que dos ``morfismos'' $f_0$ y $f_1$ son homotópicos si existen
+un $k$-esquema conexo $T$ de tipo finito, dos puntos $0$ y $1$ de $T$,
+y un ``morfismo'' $H$ de $(U\times T,\operatorname{pr}_1^*K)$ a
+$(V,L)$ cuyas fibras en $0$ y $1$ inducen $f_0$ y $f_1$.
+
+\subsubsection*{Lema 2.1.3.}
+\underline{Si $f_0$ es homotópico a $f_1$, entonces
+$f_0^*=f_1^*$.}
+
+Existe una sucesión de puntos $0=x_0,x_1,\ldots,x_n=1$ de $T$,
+curvas lisas conexas $\Gamma_i$, y morfismos $a_i:\Gamma_i\to T$
+tales que $x_i$ y $x_{i+1}$ pertenecen a la imagen de $a_i$. Para
+construir las $\Gamma_i$, normalicemos un subesquema cerrado conexo de
+dimensión uno de $T$ que contenga $0$ y $1$. Esto nos reduce al caso en
+que $T$ es una curva lisa. Consideremos el cuadrado conmutativo
+\begin{center}
+\begin{tikzcd}[row sep=large,column sep=large]
+U\times T \arrow[r,"\operatorname{pr}_1"]
+  \arrow[d,"\operatorname{pr}_2"']
+  & U \arrow[d,"f"] \\
+T \arrow[r,"t"'] & k .
+\end{tikzcd}
+\end{center}
+Por cambio de base liso, aplicado a $t$, se tiene
+\[
+t^*Rf_*K\xrightarrow{\ \sim\ }
+R\operatorname{pr}_{2*}(\operatorname{pr}_1^*K).
+\]
+La aplicación $f_i^*$ $(i=0,1)$ se factoriza, por tanto, por
+\begin{center}
+\begin{tikzcd}[row sep=large,column sep=large]
+H^n(V,L) \arrow[r,"H^*"]
+  & H^n(U\times T,\operatorname{pr}_1^*K) \arrow[r]
+  & H^0\bigl(T,R^n\operatorname{pr}_{2*}
+      (\operatorname{pr}_1^*K)\bigr)
+      \arrow[dd,"\text{fibra en }i"] \\
+{} & H^0\bigl(T,t^*H^n(U,K)\bigr) \arrow[ur,"\wr"] & {} \\
+{} & {} & H^n(U,K) \arrow[ul,"\wr"']
+\end{tikzcd}
+\end{center}
+
+\pageoriginale
+
+y es, por consiguiente, independiente de $i$.
+
+\subsubsection*{2.1.3.}
+Demostremos 2.1.2. La multiplicación escalar proporciona una homotopía
+entre la aplicación identidad de $X$ y la aplicación constante de $X$ a
+$X$ de valor $O$; esto demuestra (i).
+
+Utilizando multiplicaciones escalares cuyos factores tienden al
+infinito, se ve que $Y$ es un retracto por deformación de $X_1^*$. La
+afirmación (ii) resulta entonces del lema de los cinco y del diagrama
+\begin{center}
+\begin{tikzcd}[row sep=large,column sep=large]
+{} \arrow[r,"\partial"]
+  & H^i_{\{O\}}(X) \arrow[r] \arrow[d]
+  & H^i(X_1) \arrow[r] \arrow[d,equal]
+  & H^i(X_1^*) \arrow[r,"\partial"] \arrow[d,"\wr"']
+  & {} \\
+{} \arrow[r,"\partial"]
+  & H^i_c(X) \arrow[r]
+  & H^i(X_1) \arrow[r]
+  & H^i(Y) \arrow[r,"\partial"]
+  & {} .
+\end{tikzcd}
+\end{center}
+
+\subsubsection*{Corolario 2.1.4.}
+\[
+H^i(X^*)\xrightarrow{\ \sim\ }H^i(X^*_{(O)}).
+\]
+En efecto, apliquemos el lema de los cinco a
+\begin{center}
+\begin{tikzcd}[row sep=large,column sep=large]
+{} \arrow[r]
+  & H^i_{\{O\}}(X) \arrow[r] \arrow[d,"\wr"]
+  & H^i(X) \arrow[r]
+      \arrow[d,"\wr"',"{(2.1.2(i))}"]
+  & H^i(X^*) \arrow[r] \arrow[d]
+  & {} \\
+{} \arrow[r]
+  & H^i_{\{O\}}(X_{(O)}) \arrow[r]
+  & H^i(X_{(O)}) \arrow[r]
+  & H^i(X^*_{(O)}) \arrow[r]
+  & {} .
+\end{tikzcd}
+\end{center}
+
+\subsubsection*{2.1.5.}
+Las sucesiones espectrales de Leray para las restricciones de $h$ a
+$\widetilde X_1-Y_0$ y $\widetilde X_1-Y$ muestran que las aplicaciones
+de restricción
+\[
+H^i(\widetilde X_1-Y_0)\xrightarrow{\ \sim\ }H^i(Y),
+\qquad
+H^i(\widetilde X)\xrightarrow{\ \sim\ }H^i(Y_0)=H^i(Y)
+\]
+son isomorfismos. Bajo estos isomorfismos, las sucesiones exactas largas
+de cohomología de los pares $(\widetilde X_1-Y_0,Y)$ y
+$(\widetilde X_1-Y,Y_0)$ forman las filas del diagrama
+
+\pageoriginale
+
+\begin{equation}\tag{2.1.5.1}
+\begin{tikzcd}[column sep=large]
+H^{i-1}(X^*) \arrow[r] \arrow[d,equal]
+  & H^{i-2}(Y)(-1) \arrow[r,"\eta"'] \arrow[d,equal]
+  & H^i(Y) \arrow[r] \arrow[d,dash,"-1"]
+  & H^i(X^*) \arrow[r] \arrow[d,equal]
+  & {} \\
+H^{i-1}(X^*) \arrow[r]
+  & H^{i-2}(Y)(-1) \arrow[r,"-\eta"']
+  & H^i(Y) \arrow[r]
+  & H^i(X^*) \arrow[r]
+  & {} .
+\end{tikzcd}
+\end{equation}
+
+\subsubsection*{Lema 2.1.6.}
+\underline{Las flechas denotadas por $\eta$ y $-\eta$ en (2.1.5.1)
+son productos cup con la clase de cohomología de una sección
+hiperplana. El diagrama (2.1.5.1) es conmutativo.}
+
+La primera afirmación resulta de que $\eta$ (respectivamente,
+$-\eta$) es la restricción a $Y$ (respectivamente, a $Y_0\simeq Y$)
+de la clase de cohomología del haz invertible $\mathcal O(Y)$
+(respectivamente, $\mathcal O(Y_0)$) sobre $\widetilde X_1-Y_0$
+(respectivamente, $\widetilde X_1-Y$).
+
+Utilicemos la sucesión espectral de Leray para $h$. Las dos filas de
+(2.1.5.1) se obtienen aplicando el funtor $H(Y,-)$ a los triángulos
+distinguidos
+\begin{center}
+\small
+\begin{tikzcd}[column sep=normal]
+{} & y_{\infty*}Ry_\infty^!F \arrow[r]
+  & R(h|\widetilde X_1-Y_0)_*F
+      \arrow[r,"\text{\textcircled{\scriptsize 1}}"]
+  & R(h|X^*)_*F \arrow[r,"\text{\textcircled{\scriptsize 2}}"]
+  & {} \\
+\text{y}
+  & y_{0*}Ry_0^!F \arrow[r]
+  & R(h|\widetilde X_1-Y)_*F \arrow[r]
+  & R(h|X^*)_*F \arrow[r]
+  & {} .
+\end{tikzcd}
+\end{center}
+Los haces de cohomología no nulos de los complejos en los vértices de
+estos triángulos aparecen en los grados $(2)$, $(0)$ y $(0$ y $1)$.
+Por tanto, las flechas \textcircled{\scriptsize 1} y
+\textcircled{\scriptsize 2} están determinadas por su efecto sobre los
+haces de cohomología. Esto nos reduce al caso en que $Y$ es un punto,
+que se deja al lector.
+
+\subsubsection*{2.1.7.}
+La sucesión exacta larga del par $(\widetilde X_{(O)},Y_0)$ es un
+análogo local de la segunda fila de (2.1.5.1). Se tiene
+\[
+H^i(\widetilde X_{(O)})\xrightarrow{\ \sim\ }H^i(Y_0)
+\]
+por cambio de base propio para el morfismo
+$\widetilde X_{(O)}\to X_{(O)}$. La sucesión exacta larga en cuestión
+puede escribirse
+
+\pageoriginale
+
+\begin{equation}\tag{\sisi{2.1 7.1}{2.1.7.1}}
+\begin{tikzcd}[column sep=large]
+H^{i-1}(X^*_{(O)}) \arrow[r]
+  & H^{i-2}(Y_0)(-1) \arrow[r,"-\eta"]
+  & H^i(Y_0) \arrow[r]
+  & H^i(X^*_{(O)}) & {} \\
+H^{i-1}(X^*) \arrow[r] \arrow[u,"\wr"]
+  & H^{i-2}(Y)(-1) \arrow[r,"-\eta"] \arrow[u,equal]
+  & H^i(Y) \arrow[r] \arrow[u,equal]
+  & H^i(X^*) \arrow[u,dash,"\wr"]
+  & {} ,
+\end{tikzcd}
+\end{equation}
+siendo la segunda fila de este diagrama conmutativo la segunda fila de
+(2.1.5.1).
+
+El lema técnico siguiente se utilizará en 2.2.7.
+
+\ifthenelse{\boolean{original}}
+  {\subsubsection*{Lema 2.7.8.}}
+  {\subsubsection*{Lema 2.1.8.}}
+\begin{center}
+\footnotesize
+\begin{tikzcd}[column sep=normal]
+H^{n-1}(Y_0) \arrow[d,equal]
+  & H^{n-1}(\widetilde X) \arrow[l,"\sim"'] \arrow[r]
+  & H^{n-1}(X^*) \arrow[r]
+  & H^n_{\{x\}}(X) \arrow[r]
+  & H^n_c(X_s) \arrow[d,equal] \\
+H^{n-1}(Y) \arrow[rrrr,"\partial"]
+  & {} & {} & {} & H^n_c(X_s)
+\end{tikzcd}
+\end{center}
+\underline{es anticonmutativo.}
+
+Por 2.1.7, esto equivale a demostrar la conmutatividad de
+\begin{center}
+\begin{tikzcd}[column sep=large,row sep=large]
+H^{n-1}(X_1-\{O\}) \arrow[r,"\partial"] \arrow[d,"\wr"]
+  & H^n_{\{O\}}(X_1)=H^n_{\{O\}}(X) \arrow[d] \\
+H^{n-1}(Y) \arrow[r,"\partial"]
+  & H^n_c(X).
+\end{tikzcd}
+\end{center}
+Esto es formal.
+
+\subsection*{2.2. Ciclos evanescentes}
+
+\subsubsection*{2.2.1.}
+Sea $S$ un trait henseliano, y sean $s,\eta,\bar s,\bar\eta$ como en
+XIII, 0.2.5. Pongamos $\Lambda=\mathbb Z/k$, donde $k$ es primo con
+la característica residual de $S$. Sea $\mathbb A^{n+1}_S$ el espacio
+afín estándar de dimensión $n+1$ sobre $S$, y sea $X$ el subesquema
+cerrado de $\mathbb A^{n+1}_S$ definido por una ecuación cuadrática
+$Q=0$ no nula módulo un uniformizante:
+
+\pageoriginale
+
+\[
+Q(\underline x)=\sum_{i\leq j}a_{ij}x_ix_j+\sum_i b_ix_i+c.
+\]
+Consideremos $\mathbb A^{n+1}_S$ como el complemento en
+$\mathbb P^{n+1}_S$ del hiperplano del infinito $H$. Entonces $X$ se
+obtiene de la cuádrica $X_1\subset\mathbb P^{n+1}_S$ de ecuación
+homogénea
+\begin{equation}\tag{2.2.1.1}
+\sum_{i\leq j}a_{ij}x_ix_j+\sum_i b_ix_iz+cz^2=0
+\end{equation}
+quitando $Y=X_1\cap H$.
+
+Hacemos las hipótesis siguientes:
+
+\begin{enumerate}
+\item[(a)] $Y$ es una cuádrica lisa sobre $S$, es decir, la forma
+cuadrática $\sum_{i\leq j}a_{ij}x_ix_j$ es ordinaria;
+
+\item[(b)] la cuádrica $\sisi{X'_s}{X_s}$ es singular, es decir,
+$X_{\bar s}$ es un cono cuadrático.
+\end{enumerate}
+
+Denotemos por $x_0$ el punto singular de $X_s$, y sea $f:X\to S$ la
+proyección.
+
+\subsubsection*{Observación 2.2.2.}
+Si $x_0$ es un punto racional, una traslación lo lleva al origen de las
+coordenadas. Si $x_0=0$, los $b_i$ y $c$ son divisibles por un
+uniformizante.
+
+El subesquema $A$ de $X_s$ definido por las ecuaciones
+$\partial Q/\partial x_i$ está concentrado en $x_0$. Salvo en el caso
+excepcional en que $k(s)$ tiene característica $2$ y $n+1$ es par, este
+esquema tiene grado uno sobre $k(s)$ y, por tanto, $x_0$ es racional.
+En el caso excepcional es ramificado sobre $k(s)$ y de rango $2$, de
+modo que $k(x_0)$ es o bien $k(s)$, o bien una extensión cuadrática
+puramente inseparable de $k(s)$. Las afirmaciones sobre $A$ se comprueban
+más fácilmente tras pasar a la clausura algebraica $k(\bar s)$ de
+$k(s)$.
+
+\subsubsection*{Proposición 2.2.3.}
+\underline{Bajo las hipótesis de 2.2.1, los morfismos}
+
+\pageoriginale
+
+\[
+H^i(X_{\bar\eta},\Lambda)
+ \xrightarrow{\ \sim\ }
+\mathbb H^i\bigl(X_{\bar s},R\psi_{\bar\eta}(\Lambda)\bigr)
+ \xrightarrow{\ \sim\ }
+R^i\psi_{\bar\eta}(\Lambda)_{x_0}
+\]
+\[
+H_c^i(X_{\bar\eta},\Lambda)
+ \xleftarrow{\ \sim\ }
+\mathbb H_c^i\bigl(X_{\bar s},R\psi_{\bar\eta}(\Lambda)\bigr)
+ \xleftarrow{\ \sim\ }
+\mathbb H^i_{\{x_0\}}\bigl(X_{\bar s},R\psi_{\bar\eta}(\Lambda)\bigr)
+\]
+\underline{son isomorfismos.}
+
+Que las flechas de la izquierda sean isomorfismos resulta de 2.1.8.6
+y 2.1.10.5; la afirmación para las flechas de la derecha es un
+corolario de 2.1.2. En efecto, existe un triángulo distinguido
+\[
+(\Lambda\text{ sobre }X_{\bar s})[0]
+ \longrightarrow R\psi_{\bar\eta}(\Lambda)
+ \longrightarrow R\Phi_{\bar\eta}(\Lambda),
+\]
+y 2.1.2 se aplica a $(\Lambda\text{ sobre }X_{\bar s})$, mientras que
+$R\Phi_{\bar\eta}(\Lambda)$ está soportado en $x_0$.
+
+\subsubsection*{Corolario 2.2.4.}
+\underline{Si la fibra genérica geométrica $X_{\bar\eta}$ es singular,
+es decir, si sigue siendo un cono cuadrático, entonces todos los haces
+$R^i\Phi(\Lambda)$ son nulos.}
+
+Por 2.1.2,
+\[
+\Lambda=H^{\sisi{o}{0}}(X_{\bar s},\Lambda)
+ \xrightarrow{\ \sim\ }H^{\sisi{o}{0}}(X_{\bar\eta},\Lambda),
+\qquad
+0=H^i(X_{\bar s},\Lambda)=H^i(X_{\bar\eta},\Lambda)
+\quad(i>0).
+\]
+Se aplica entonces la sucesión exacta larga XIII, 2.1.8.9 (válida por
+XIII, 2.1.9).
+
+\subsubsection*{2.2.5.}
+Supongamos ahora que
+\[
+(*)\qquad\text{la fibra genérica $X_\eta$ es lisa.}
+\]
+Para simplificar, supondremos también que $S$ es estrictamente
+henseliano. Los haces de ciclos evanescentes se calculan fácilmente con
+ayuda de 2.2.3 y XII, 3.7. La cohomología con coeficientes en $\Lambda$
+considerada aquí resulta de la cohomología $\ell$-ádica del pasaje
+citado mediante la fórmula de coeficientes universales (cf. 2.1.13).
+Los resultados son los siguientes.
+
+\medskip
+\noindent\underline{A. Cohomología sin soportes.}
+
+Se tiene $R^i\psi_{\sisi{\eta}{\bar\eta}}(\Lambda)=0$ para
+$i\ne0,n$.
+
+\pageoriginale
+
+\begin{enumerate}
+\item[1)] \underline{Si $n\ne0$:}
+$\psi_{\bar\eta}(\Lambda)=\Lambda$. Además,
+$R^n\psi_{\bar\eta}(\Lambda)$ es isomorfo (no canónicamente) al haz
+$\Lambda$ sobre $x_0$, prolongado por cero a $X_s$.
+
+\item[2)] \underline{Para $n$ arbitrario:}
+incluso cuando $n=0$, se comprueba que
+$R^i\Phi_{\bar\eta}(\Lambda)=0$ para $i\ne n$, y que
+$R^n\Phi_{\bar\eta}(\Lambda)$ es isomorfo (no canónicamente) al haz
+$\Lambda$ sobre $x_0$, prolongado por cero a $X_s$.
+\end{enumerate}
+
+\medskip
+\noindent\underline{B. Cohomología con soporte en $x_0$.}
+
+Se tiene
+\[
+H^i_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda)\bigr)=0
+\qquad(i\ne n,2n).
+\]
+Se dispone, además, de un morfismo traza
+\begin{equation}\tag{2.2.5.1}
+\operatorname{tr}:
+H^{2n}_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(n))\bigr)
+\longrightarrow\Lambda.
+\end{equation}
+\underline{Si $n\ne0$:} el morfismo (2.2.5.1) es un isomorfismo.
+Además,
+\[
+H^n_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(n))\bigr)
+\]
+es isomorfo (no canónicamente) a $\Lambda$.
+
+\medskip
+\noindent\underline{C. Dualidad.}
+Para
+\[
+a\in R^n\psi_{\bar\eta}(\Lambda)_{x_0},
+\qquad
+b\in H^n_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(n))\bigr),
+\]
+pongamos $(a,b)=\operatorname{Tr}(a\wedge b)$, donde
+$\operatorname{Tr}$ es el morfismo XIII, 2.2.6
+\[
+\operatorname{Tr}:
+H^{2n}_{\{x_0\}}\bigl(X_s,R\psi_{\sisi{\eta}{\bar\eta}}(\Lambda(n))\bigr)
+\longrightarrow\Lambda.
+\]
+Resulta de la dualidad de Poincaré sobre $X_{\bar\eta}$ y de los
+isomorfismos 2.2.3 que $(a,b)$ proporciona una dualidad perfecta entre
+los $\Lambda$-módulos libres
+\[
+R^n\psi_{\bar\eta}(\Lambda)_{x_0}
+\quad\text{y}\quad
+H^n_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(n))\bigr).
+\]
+
+\medskip
+\noindent\underline{D. $n=2m>0$.}
+
+Por XII, 3.7, los grupos
+\[
+H^n_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(m))\bigr)
+\quad\text{y}\quad
+R^n\psi_{\bar\eta}(\Lambda(m))_{x_0}
+\]
+tienen generadores naturales, definidos salvo signo; denotémoslos por
+$\delta$ y $\delta'$, respectivamente. Sea $\phi$ la aplicación natural
+del primero de estos grupos al segundo. Los signos de $\delta$ y
+$\delta'$ pueden normalizarse de modo que
+\begin{equation}\tag{2.2.5.2}
+(\delta',\delta)=1;
+\end{equation}
+entonces
+
+\pageoriginale
+
+\begin{equation}\tag{2.2.5.3}
+\phi(\delta)=(-1)^m\,2\,\delta'.
+\end{equation}
+
+Sea $Z$ la extensión cuadrática separable de $k(\eta)$ que es el centro
+de la parte par del álgebra de Clifford de la forma cuadrática
+(2.2.1.1), y sea $\epsilon$ el carácter correspondiente, de orden $1$
+o $2$, del grupo de inercia $I$. Para $\sigma\in I$, se tiene
+\begin{equation}\tag{2.2.5.4}
+\sigma\delta=\epsilon(\sigma)\delta
+\end{equation}
+y
+\begin{equation}\tag{2.2.5.5}
+\sigma\delta'=\epsilon(\sigma)\delta'.
+\end{equation}
+Las fórmulas (2.2.5.2), (2.2.5.3) y (2.2.5.4), en cohomología con
+coeficientes en $\mathbb Z/2k$, implican que la variación es
+\begin{equation}\tag{2.2.5.6}
+\operatorname{Var}(\sigma)(a)=
+\frac{\epsilon(\sigma)-1}{2}\,(-1)^m\,
+\sisi{(a\delta)}{(a,\delta)}\,\delta.
+\end{equation}
+
+\medskip
+\noindent\underline{E. $n=2m+1$---Ciclos evanescentes.}
+
+Por XII, 3.7, los grupos
+\[
+H^n_{\{x_0\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(m))\bigr)
+\quad\text{y}\quad
+R^n\psi_{\bar\eta}(\Lambda(m+1))_{x_0}
+\]
+tienen generadores naturales, definidos salvo signo; denotémoslos por
+$\delta$ y $\delta'$, respectivamente. Con la notación de D, sus signos
+pueden normalizarse de modo que
+\begin{equation}\tag{2.2.5.7}
+(\delta',\delta)=1;
+\end{equation}
+entonces
+\begin{equation}\tag{2.2.5.8}
+\phi(\delta)=0.
+\end{equation}
+
+\medskip
+\noindent\underline{F. $n=2m+1$---La variación.}
+
+El grupo de inercia $I$ actúa trivialmente sobre la cohomología de
+$X_\eta$. Esto resulta de XII, 3.7 y del hecho de que $I$ actúa
+trivialmente sobre la cohomología de $Y_\eta$, pues $Y$ es propio y
+liso sobre $S$.
+
+Para $\sigma$ en el grupo de inercia se tiene necesariamente
+\begin{equation}\tag{2.2.5.9}
+D(\sigma)(\delta')=\lambda(\sigma)\delta,
+\qquad \lambda(\sigma)\in\Lambda(1).
+\end{equation}
+La fórmula de aditividad (XIII, 1.4.3.4) se convierte en
+\[
+\lambda(\sigma\tau)=\lambda(\sigma)+\lambda(\tau).
+\]
+Sea
+\[
+\epsilon:I\longrightarrow\Lambda(1)=\mu_k
+\]
+el homomorfismo tal que
+
+\pageoriginale
+
+\[
+\sigma\bigl(\sqrt[k]{t}\bigr)
+=\epsilon(\sigma)\sqrt[k]{t}
+\]
+para un uniformizante $t$. En vista de la estructura del grupo de
+inercia moderada, $\lambda$ es necesariamente un múltiplo de $\epsilon$.
+La fórmula (2.2.5.9) puede reescribirse
+\begin{equation}\tag{2.2.5.10}
+\operatorname{Var}(\sigma)(a)
+=\lambda_X\epsilon(\sigma)\sisi{(a\delta)}{(a,\delta)}\delta
+\end{equation}
+para cierto $\lambda_X\in\Lambda$ (que depende de $X/S$).
+Determinaremos $\lambda_X$ más adelante.
+
+\subsubsection*{2.2.6.}
+Daremos una descripción local para la topología étale de los ciclos
+$\delta$ y $\delta'$ de D y E.
+
+El caso de $n$ par es fácil. Si $2\nmid k$
+($\Lambda=\mathbb Z/k$), entonces $\pm\delta$ está caracterizado por
+(2.2.5.3) y (2.2.5.4), es decir, por
+\begin{equation}\tag{2.2.6.1}
+(\delta,\delta)=(-1)^m\,2.
+\end{equation}
+En general, $\pm\delta$ es la imagen de cualquier ciclo
+$\widetilde\delta$, en cohomología con coeficientes en
+$\mathbb Z/2^ak$ para $a$ suficientemente grande, que satisface
+(2.2.6.1).
+
+Supongamos que $n$ es impar. Entonces $x_0$ es un punto racional
+(2.2.2). Sea $X_{s(0)}$ el henselizado de $X_s$ en $x_0$, sea
+$\widetilde X_{s(0)}$ su estallido en $x_0$, sea $Y_0$ la imagen
+inversa de $x_0$ en $\widetilde X_{s(0)}$ (una cuádrica), y pongamos
+\[
+X^*_{s(0)}=X_{s(0)}-\{x_0\}
+=\widetilde X_{s(0)}-Y_0.
+\]
+Consideremos la aplicación compuesta (cf. XIII, 2.4.6.1)
+\begingroup
+\small
+\begin{equation}\tag{2.2.6.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+H^{n-1}(Y_0,\Lambda(m))
+  & H^{n-1}(\widetilde X_{s(0)},\Lambda(m))
+      \arrow[l,"\sim"'] \arrow[r]
+  & H^{n-1}(X^*_{s(0)},\Lambda(m)) \arrow[d] \\
+{}
+  & H^n_{\{\sisi{x}{x_0}\}}\bigl(X_s,R\Psi_{\bar\eta}(\Lambda(m))\bigr)
+  & H^n_{\{x_0\}}(X_s,\Lambda(m)) \arrow[l]
+\end{tikzcd}
+\end{equation}
+\endgroup
+
+\subsubsection*{Lema 2.2.7.}
+\underline{La aplicación (2.2.6.2) identifica
+$H^n_{\{\sisi{x}{x_0}\}}(X_s,R\Psi_{\bar\eta}(\Lambda(m)))$ con el
+cociente primitivo de la cohomología de dimensión media de la cuádrica
+$Y_0$ de dimensión $2m$; las dos clases $\pm\delta$}
+
+\pageoriginale
+
+\underline{son las imágenes de los generadores naturales de este
+cociente primitivo.}
+
+Los ciclos $\pm\delta$ están caracterizados por sus imágenes en
+$H_c^{\sisi{i}{n}}(X_{\bar\eta},\Lambda(m))$. Utilizando (2.1.7.1),
+basta, por tanto, demostrar que la aplicación compuesta
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-1}(Y_0,\Lambda(m))
+  & H^{n-1}(\widetilde X_s,\Lambda(m))
+      \arrow[l,"\sim"'] \arrow[r]
+  & H^{n-1}(X_s^*,\Lambda(m)) \arrow[d] \\
+H_c^n(X_{\bar\eta},\Lambda(m))
+  & H_c^n(X_s,\Lambda(m)) \arrow[l,"\operatorname{sp}"']
+  & H^n_{\{x_0\}}(X_s,\Lambda(m)) \arrow[l]
+\end{tikzcd}
+\end{center}
+envía los generadores distinguidos del cociente primitivo del primer
+grupo a los generadores distinguidos del último grupo.
+
+Apliquemos 2.1.8. Salvo signo, la aplicación puede reescribirse
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-1}(Y_s,\Lambda(m)) \arrow[r,"\partial"] \arrow[d,equal]
+  & H_c^n(X_s,\Lambda(m)) \arrow[d] \\
+H^{n-1}(Y_{\bar\eta},\Lambda(m)) \arrow[r]
+  & H_c^n(X_{\bar\eta},\Lambda(m)),
+\end{tikzcd}
+\end{center}
+y de ello resulta 2.2.7.
+
+\section*{3. La fórmula de Picard--Lefschetz}
+
+\subsection*{3.1. Resultados preliminares}
+
+\subsubsection*{3.1.1.}
+Sea $S$ un trait henseliano y sea $f:X\to S$ un morfismo plano de tipo
+finito, puramente de dimensión relativa $n$. Supongamos que la fibra
+especial $X_s$ es lisa salvo en un conjunto finito de puntos $\Sigma'$,
+en los cuales $X_s$ tiene una singularidad cuadrática ordinaria.
+
+\pageoriginale
+
+Sea $\Sigma$ el conjunto de puntos $x\in\Sigma'$ tales que la fibra
+genérica $X_\eta$ es lisa en un entorno de $x$. Por último, sea
+$\Lambda$ un anillo de torsión cuyo orden es primo con la característica
+residual de $S$.
+
+\subsubsection*{Proposición 3.1.2.}
+\begin{enumerate}
+\item[(i)] \underline{Los haces $R^i\Phi(\Lambda)$ son nulos para
+$i\ne n$.}
+
+\item[(ii)] \underline{El haz $R^n\Phi(\Lambda)$ es
+\sisi{el único}{nulo} fuera de $\Sigma$. Su restricción a $\Sigma$ es
+un haz de $\Lambda$-módulos de rango uno.}
+
+\item[(iii)] \underline{Para todo punto geométrico $\bar x$ de
+$\Sigma$, el emparejamiento $(a,b)$ de 2.2.5(C) pone en dualidad los
+$\Lambda$-módulos}
+\[
+\bigl(R^n\psi(\Lambda)\bigr)_{\bar x}
+\quad\text{y}\quad
+H^n_{\{\bar x\}}\bigl(
+\sisi{R^n\psi_{\bar\eta}(\Lambda)}
+{X_{\bar s},R\psi_{\bar\eta}(\Lambda)}\bigr)
+\]
+\underline{. Son libres de rango uno si $n\ne0$, y de rango dos si
+$n=0$.}
+\end{enumerate}
+
+Las afirmaciones de 3.1.2 son locales para la topología étale. Por
+tanto, basta tratar el caso en que $S$ es estrictamente henseliano y
+$X$ es la hipersuperficie del espacio afín relativo
+$\mathbb A^{n+1}_S$ definida por una ecuación cuadrática que satisface
+2.2.1(a) y (b) (aplicando 1.3.2).
+
+El morfismo $f$ es liso en todo punto de $X_s-\Sigma'$, por lo que
+$R\Phi=0$ fuera de $\Sigma'$. Por 2.2.4, $R\Phi$ se anula incluso fuera
+de $\Sigma$. Podemos suponer ahora 2.2.5(*); las afirmaciones (ii) y
+(iii) resultan entonces de 2.2.5(A), (B) y (C).
+
+\subsection*{3.2. Dimensión relativa par}
+
+Conservamos la notación de 3.1 y tomamos $n=2m$ par. Para simplificar,
+suponemos que $S$ es estrictamente henseliano (el caso general se
+obtendría por descenso).
+
+\subsubsection*{Proposición 3.2.1.}
+\begin{enumerate}
+\item[(i)] \underline{Para $x\in\Sigma$, el grupo
+$H^n_{\{x\}}\bigl(
+\sisi{R^n\psi_{\bar\eta}(\Lambda(m))}
+{X_s,R\psi_{\bar\eta}(\Lambda(m))}\bigr)$ tiene un generador natural
+$\delta$, bien definido salvo signo, caracterizado por ser natural en
+$\Lambda$ y por satisfacer}
+
+\pageoriginale
+
+\[
+(\delta,\delta)=(-1)^m\,2.
+\]
+\underline{Para $n=0$, añádase la condición
+$\operatorname{Tr}(\delta)=0$.}
+
+\item[(ii)] \underline{Para un carácter adecuado, independiente de
+$\Lambda$,}
+\[
+\varepsilon_x:I\longrightarrow\{\pm1\}
+\]
+\underline{del grupo de inercia $I$, la variación es}
+\[
+\operatorname{Var}(\sigma)(a)
+=(-1)^m\left(\frac{\varepsilon_x(\sigma)-1}{2}\right)
+\sisi{(a\delta)}{(a,\delta)}\delta
+\]
+\underline{para $a\in R^n\Phi_{\bar\eta}(\Lambda(m))$. En
+consecuencia,}
+\[
+\sigma(\delta)=\varepsilon_x(\sigma)\delta.
+\]
+\end{enumerate}
+
+Pasando al límite inverso, basta tratar el caso universal
+$\Lambda=\mathbb Z_\ell$. Salvo signo, solo un $\delta$ puede entonces
+satisfacer las condiciones de (i). Como en 3.1.2, nos reducimos al caso
+2.2.5(*) y aplicamos 2.2.5(D).
+
+\subsubsection*{Complemento 3.2.2.}
+Supongamos que, en $x\in\Sigma$, el henselizado $X_{(x)}$ de $X$ en
+$x$ es isomorfo al henselizado en $x_0$ del esquema proyectivo $Q$ de
+ecuación
+\[
+\sum_{i\leq j}a_{ij}x_ix_j=0.
+\]
+Entonces el carácter $\varepsilon_x$ está definido por la extensión
+cuadrática separable $Z(C^+(Q))$ del cuerpo de fracciones. Esto resulta
+de 2.2.5(D).
+
+\subsubsection*{3.2.3.}
+En característica residual distinta de $2$, el Complemento 3.2.2 puede
+hacerse más explícito. En este caso, $I$ tiene un único carácter no
+trivial $\varepsilon$ de orden $2$. Para un uniformizante $t$, se tiene
+\[
+\sigma(\sqrt t)=\varepsilon(\sigma)\sqrt t.
+\]
+Por otra parte, $X_{(x)}$ es entonces isomorfo al henselizado en $0$ de
+un esquema afín
+
+\pageoriginale
+
+\[
+\sum a_{ij}x_ix_j=b,
+\]
+donde $b$ pertenece al ideal maximal y
+$Q(x)=\sum a_{ij}x_ix_j$ es no degenerada. El ideal $(b)$ define la
+imagen del subesquema de $X_{(x)}$ que es el soporte de
+$J^n_{X_{(x)}/S}$. El centro del álgebra de Clifford es isomorfo a
+\[
+k(\eta)\left(\left((-1)^{m+1}2b\det(a_{ij})\right)^{1/2}\right)
+\]
+(Bourbaki, \emph{Alg\`ebre}, cap. 9, \S9,
+n\textsuperscript{o}~4, observación final), de donde
+\[
+\varepsilon_x=\varepsilon^{v(b)}.
+\]
+La variación es nula si $b$ tiene valuación par; en caso contrario,
+$\varepsilon_x=\varepsilon$.
+
+\subsection*{3.3. Dimensión relativa impar}
+
+Para demostrar la fórmula de Picard--Lefschetz en dimensión relativa
+impar, tendremos que reducirnos al caso trascendente tratado en XIV,
+3.2.1.1. El argumento de especialización necesario nos obliga a trabajar
+sobre una base que ya no es unidimensional. Utilizaremos argumentos
+\emph{ad hoc} adaptados al caso preciso que necesitamos: no dispongo de
+una teoría utilizable sobre una base de dimensión mayor que uno, y he
+preferido no cubrir mi ignorancia con generalidades.
+
+\subsubsection*{3.3.1.}
+Sea $S=\operatorname{Spec}(A)$ un esquema estrictamente local
+noetheriano, y sea $f:X\to S$ un morfismo plano de tipo finito,
+puramente de dimensión relativa $n$, cuya fibra especial $X_s$ no tiene
+más puntos no lisos que puntos cuadráticos no degenerados. Sea $s$ el
+punto cerrado de $S$, sea $X_s$ la fibra especial y sea
+$x_0\in X_s$ un punto singular.
+
+Por 1.3.2(i), en un entorno de $x_0$ el esquema $X/S$ es localmente
+isomorfo a un $S$-esquema definido en $\mathbb A^{n+1}_S$ por una
+ecuación $Q-b=0$, donde $b$ pertenece al ideal maximal y $Q$ es una
+forma cuadrática no degenerada. El ideal $(b)$ de $A$ solo depende de
+$(X/S,x_0)$: en un entorno de $x_0$ existe una sección
+\[
+s\in X(A/(b))
+\]
+de $X$ sobre $\operatorname{Spec}(A/(b))$ tal que
+\[
+J^n_{X/S}\simeq
+\mathcal O_{s(\operatorname{Spec}(A/(b)))}.
+\]
+Denotamos esta sección por $s_x$, y por $b(x)$ un generador cualquiera
+de $(b)$.
+
+\pageoriginale
+
+\subsubsection*{3.3.2.}
+Supongamos que $S$ es normal, y sea $b\in A$. Si $n$ es invertible en
+$A$ y $b\ne0$, denotemos por $\varepsilon_b^{(n)}$ el homomorfismo
+siguiente del grupo de Galois del cuerpo de fracciones de $A$ en
+$\mathbb Z/(n)(1)$:
+\[
+\varepsilon_b^{(n)}(\sigma)
+= (\sigma\sqrt[n]{b})/\sqrt[n]{b}.
+\]
+Se tiene
+\[
+\bigl(\varepsilon_b^{(nm)}\bigr)^m=\varepsilon_b^{(n)}.
+\]
+Si $\Lambda$ es una $\mathbb Z/n$-álgebra, denotamos de nuevo por
+$\varepsilon_b$ la composición
+\[
+\operatorname{Gal}\longrightarrow\mathbb Z/(n)(1)
+\longrightarrow\Lambda(1).
+\]
+Es independiente de $n$.
+
+El carácter $\varepsilon_b$ se factoriza por
+\[
+\pi_1\bigl(S-(\text{el subesquema }b=0)\bigr).
+\]
+
+\subsubsection*{3.3.3.}
+Supongamos que $S$ es un trait estrictamente henseliano y que $n$ es
+impar, $n=2m+1$. Sea $x$ un punto singular de $X_s$ en un entorno del
+cual $X_\eta$ es liso, y sea $X_1/S$ un subesquema de
+$\mathbb A^{n+1}_S$ de ecuación $Q-b=0$, como en 1.3.2(i). La
+hipótesis sobre $x$ significa que $b$, aunque nulo módulo el ideal
+maximal, no es nulo.
+
+Sea $X_{s(x)}$ el henselizado de $X_s$ en $x$, sea
+$\widetilde X_{s(x)}$ el estallido de $X_s$ en $x$, sea $Y$ la
+cuádrica imagen inversa de $x$, y pongamos
+\[
+\sisi{\widetilde X^*_{s(x)}}{X^*_{s(x)}}
+=X_{s(x)}-\{x\}=\widetilde X_{s(x)}-Y.
+\]
+El morfismo compuesto
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-1}(Y,\Lambda(m))
+  & H^{n-1}(\widetilde X_{s(x)},\Lambda(m))
+      \arrow[l,"\sim"'] \arrow[r]
+  & H^{n-1}(X^*_{s(x)},\Lambda(m)) \arrow[d] \\
+{}
+  & H^n_{\{x\}}\bigl(X_s,R\Psi_{\bar\eta}(\Lambda(m))\bigr)
+  & H^n_{\{x\}}(X_s,\Lambda(m)) \arrow[l]
+\end{tikzcd}
+\end{center}
+identifica el último grupo con el cociente primitivo (XII, 3.5) de la
+cohomología de la cuádrica $Y$. En efecto, esto resulta de 2.2.7 en
+una situación localmente isomorfa. Las imágenes de los dos generadores
+naturales de este cociente (las clases de cohomología de las familias de
+generatrices de $Y$) son los dos vectores de base
+\[
+\pm\delta\in
+H^n_{\{x\}}\bigl(X_s,R\Psi_{\bar\eta}(\Lambda(m))\bigr).
+\]
+
+\pageoriginale
+
+\subsubsection*{3.3.4.}
+Volvamos a las hipótesis más generales de 3.3.1, con $n=2m+1$. Para
+todo punto singular $x$ de $X_s$, denotaremos todavía por
+$\pm\delta_x$ las secciones de $R^nf_!\Lambda(m)$ sobre $S$ que son
+imágenes de los generadores del cociente primitivo de
+$H^{n-1}(Y,\Lambda(m))$ (con la misma notación anterior) por el
+morfismo compuesto
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-1}(Y,\Lambda(m))
+  & H^{n-1}(\widetilde X_{s(x)},\Lambda(m))
+      \arrow[l,"\sim"'] \arrow[r]
+  & H^{n-1}(X^*_{s(x)},\Lambda(m)) \arrow[d] \\
+H^0\bigl(S,R^nf_!\Lambda(m)\bigr)
+  & H_c^n(X_s,\Lambda(m)) \arrow[l,"\sim"']
+  & H^n_{\{x\}}(X_s,\Lambda(m)) \arrow[l]
+\end{tikzcd}
+\end{center}
+La clase $\pm\delta_x$ es el \underline{ciclo evanescente} en $x$.
+
+Cuando $S$ es un trait, la clase
+\[
+\pm\delta\in H_c^n(X_{\bar\eta},\Lambda(m))
+\]
+es la imagen, mediante XIII, 2.1.8.4, de la clase de 3.3.3
+\[
+\pm\delta\in
+H^n_{\{x\}}\bigl(X_s,R\Psi_{\bar\eta}(\Lambda(m))\bigr).
+\]
+
+Demostraremos simultáneamente los dos resultados siguientes.
+
+\subsubsection*{Proposición 3.3.5.}
+\underline{Sea $S$ un trait henseliano y sea $X/S$ como en 3.3.3. La
+variación viene dada por}
+\[
+\operatorname{Var}(\sigma)(a)
+=(-1)^{m+1}\varepsilon_{b(x)}(\sigma)(a,\delta)\delta.
+\]
+
+\subsubsection*{Proposición 3.3.6.}
+\underline{Sea $S$ estrictamente local y regular, y sea
+$f:X\to S$ un morfismo propio y plano de dimensión relativa
+$n=2m+1$ tal que $X_s$ tenga exactamente un punto no liso $x$, que se
+supone cuadrático no degenerado. Supongamos además que $b(x)$ es un
+parámetro. Entonces Galois actúa sobre la cohomología de la fibra
+genérica geométrica mediante}
+\[
+\sigma(a)=a+(-1)^{m+1}
+\varepsilon_{b(x)}(\sigma)(a,\delta_x)\delta_x.
+\]
+
+\medskip
+\noindent\textup{(A)}
+Sea $k$ un cuerpo algebraicamente cerrado de característica $0$, y sea
+$S$ el henselizado
+
+\pageoriginale
+
+de $\operatorname{Spec}(k[T])$ en $0$. Demostremos 3.3.5 cuando $b(x)$
+es un uniformizante.
+
+Por el principio de Lefschetz, nos reducimos al caso $k=\mathbb C$.
+Como la cuestión es local, podemos suponer que $f:X\to S$ se obtiene
+por cambio de base de la aplicación
+\[
+\sum_i z_i^2:\mathbb C^{n+1}\longrightarrow\mathbb C.
+\]
+La construcción anterior de $\pm\delta$ tiene un análogo trascendente
+en cohomología entera. Mediante XIV, 2.1, la clase $\pm\delta$
+corresponde, por tanto, a un ciclo evanescente trascendente, imagen de
+\[
+\pm\delta_{\mathrm{cl}}
+\in H^n_{\{0\}}\bigl(X_0,R\Psi_{\mathrm{cl}\eta}(\mathbb Z)\bigr).
+\]
+Por XIV, 2.1 y la propiedad correspondiente de los ciclos algebraicos
+$\pm\delta$, la imagen de $\pm\delta_{\mathrm{cl}}$ en
+\[
+H^n_{\{0\}}\bigl(X_0,R\Psi_{\mathrm{cl}\eta}(\mathbb Z)\bigr)
+\otimes\mathbb Z_\ell
+\]
+es un generador de este grupo. Así, $\pm\delta_{\mathrm{cl}}$ son los
+dos generadores de
+$H^n_{\{0\}}(X_0,R\Psi_{\mathrm{cl}\eta}(\mathbb Z))$, y coinciden con
+los ciclos evanescentes de XIV, 3.2. Por consiguiente, la fórmula 3.3.5
+resulta de XIV, 3.2.11. En rigor, habría que comprobar la compatibilidad
+entre el isomorfismo de XIV, 2.1 y los productos cup y las trazas.
+
+\medskip
+\noindent\textup{(B)}
+Demostremos 3.3.6 para $X/S$ como en (A), suponiendo además que $X/S$
+es propio. Esto resulta de XIII, 2.4.6.2.
+
+\medskip
+\noindent\textup{(C)}
+Sea $p$ un número primo, y sea $S_0$ el henselizado estricto de
+$\operatorname{Spec}(\mathbb Z[T])$ en $(p,T)$. Demostremos 3.3.6 para
+$X/S_0$ tal que $b(x)=T$.
+
+La restricción del haz $R^if_*\Lambda$ al henselizado estricto de
+$\operatorname{Spec}(\mathbb Z[T])$ en $(T)$ está regida por (B). Este
+haz es localmente constante sobre el complemento del divisor liso
+$T=0$, que tiene característica mixta. Por tanto, (C) resulta de (B) y
+del lema de Abhyankar.
+
+\par\medskip
+\noindent\textup{(D)}
+En al menos un caso al que se aplica (C), $\delta_x$ no es un elemento
+de torsión en cohomología $\ell$-ádica.
+
+\pageoriginale
+
+Sea $S_1$ el henselizado estricto de $\operatorname{Spec}(\mathbb Z)$
+en $(p)$, y sea $V\subset\mathbb P^r/S_1$ una variedad proyectiva lisa
+sobre $S_1$, puramente de dimensión relativa $n+1$. Supongamos que
+existe un pincel de Lefschetz de secciones hiperplanas para la fibra
+especial $V_p$ de $V/S_1$ (XVII, 2.5). Este pincel está definido por
+una recta $d'$ en la fibra especial del espacio proyectivo
+$\check{\mathbb P}^{r}/S_1$ dual de
+$\mathbb P^r/S_1$. Levantemos $d'$ a una recta $d$ de
+$\check{\mathbb P}^{r}/S_1$, y sea $X\to d$ el pincel de secciones
+hiperplanas de $V$ parametrizadas por $d$ (XVIII, 3.1). El lugar
+excepcional $\Delta$ de $d$ es étale sobre $S_1$ (XVII, 6). Tras una
+localización étale en un punto de $\Delta_p\subset d$, se obtiene, por
+tanto, una situación de tipo (C).
+
+Para comprobar que $\delta_x$ no es de torsión, basta hacerlo tras
+extender los escalares de $S_1$ a $\mathbb C$. Tomemos
+$V=\mathbb P^{n+1}$ con la inmersión proyectiva definida por
+$\mathcal O(N)$. Para $N\ge2$, se aplica XVII, 2.5 (en este caso
+particular es válido para todo $N$). Utilizamos entonces el lema
+siguiente.
+
+\subsubsection*{Lema 3.3.7.}
+\underline{Para un pincel de Lefschetz de hipersuperficies de grado
+$N$ suficientemente grande en $\mathbb P^{n+1}(\mathbb C)$ (basta
+$N\ge3$), un ciclo evanescente en cohomología $\mathbb Q_\ell$ no es
+nulo.}
+
+Este lema resulta de la teoría de los pinceles de Lefschetz, por ejemplo
+de XVIII, 6.6.1. No hay circularidad al utilizar aquí este resultado de
+XVIII, basado en la ``fórmula de Picard--Lefschetz'', puesto que ya se
+dispone de (A). También puede utilizarse la variante más directa y
+puramente trascendente XIX, n\textsuperscript{o}~4, que solo depende de
+XIV, 3.2.
+
+\medskip
+\noindent\textup{(E)}
+Demostremos 3.3.5 en característica residual $p$ para
+$(X/S,x\in X_s)$.
+
+Sea $X_0/S_0$ como en (D). Por 1.3.2(i), existe un morfismo
+$g:S\to S_0$ tal que el henselizado en $x_0$ de
+\[
+g^*X_0=X_0\times_{S_0}S
+\]
+es $S$-isomorfo al henselizado de $X$ en $x$. Basta, por tanto,
+demostrar 3.3.5 para $g^*X_0$. Por cambio de base a partir de (C) para
+$X_0/S_0$, se obtiene
+\[
+\sigma(a)=a-(-1)^m
+\varepsilon_{b(x)}(\sigma)(a,\delta_x)\delta_x
+\]
+
+\pageoriginale
+
+en $H^n(X_{0\bar\eta})$, para $\sigma$ en el grupo de inercia. Sea
+$\pi$ un uniformizante y comparemos esta fórmula con (2.2.5.9), donde
+$\varepsilon=\varepsilon_\pi$. Se obtiene
+\[
+\lambda_X\varepsilon_\pi(\sigma)(a,\delta_x)\delta_x
+=-(-1)^m\varepsilon_{b(x)}(\sigma)(a,\delta_x)\delta_x
+\]
+en $H^n(X_{0\bar\eta})$. Como $\delta_x$ no es de torsión, podemos
+cancelar $(a,\delta_x)\delta_x$ en esta identidad. La fórmula
+(2.2.5.9), con el valor resultante de $\lambda_X$, es precisamente
+3.3.5.
+
+\medskip
+\noindent\textup{(F) Demostración de 3.3.6 en el caso general.}
+
+El caso general de 3.3.6 se reduce al caso general de 3.3.5 del mismo
+modo que (B) y (C) se reducen a (A).
+
+\subsection*{3.4. Resumen}
+
+Las Proposiciones 3.1.2, 3.2.1, 3.2.2, 3.2.3 y 3.3.5 constituyen la
+``fórmula de Picard--Lefschetz''. Esta fórmula es el análogo algebraico
+de XIV, 3.2.11, pero adopta formas muy distintas según la paridad de la
+dimensión relativa.
+
+En el caso más interesante, en que $X/S$ es propio, los resultados se
+resumen como sigue.
+
+\subsubsection*{Teorema 3.4 (fórmula de Picard--Lefschetz).}
+\underline{Sea $S$ un trait estrictamente henseliano y sea
+$f:X\to S$ un morfismo propio y plano, puramente de dimensión relativa
+$n=2m$ o $2m+1$. Supongamos que $X_\eta$ es liso y que $X_s$ solo tiene
+singularidades cuadráticas ordinarias. Sea $\Sigma$ el lugar singular
+de $X_s$.}
+
+\begin{enumerate}
+\item[(i)] \underline{A cada $x\in\Sigma$ se asocia un ciclo
+evanescente}
+\[
+\pm\delta_x\in H_n(X_{\bar\eta})(m).
+\]
+\underline{Los $\delta_x$ son ortogonales dos a dos. Cuando $n$ es par,}
+\[
+(\delta_x,\delta_x)=(-1)^m\,2.
+\]
+
+\item[(ii)] \underline{Existen isomorfismos}
+\[
+H^i(X_s)\xrightarrow{\ \sim\ }H^i(X_{\bar\eta})
+\]
+\underline{para $i\ne n,n+1$, y una sucesión exacta}
+
+\pageoriginale
+
+{\small
+\[
+0\longrightarrow H^n(X_s)
+ \longrightarrow H^n(X_{\bar\eta})
+ \xrightarrow{\,((\,\cdot\,,\delta_x))_{x\in\Sigma}\,}
+ \bigoplus_{x\in\Sigma}\Lambda(n-m)
+ \longrightarrow H^{n+1}(X_s)
+ \longrightarrow H^{n+1}(X_{\bar\eta})
+ \longrightarrow0.
+\]
+}
+
+\item[(iii)] \underline{Se definen caracteres locales del grupo de
+inercia $I$:}
+\[
+\begin{array}{lll}
+n\text{ par}:&\varepsilon_x:I\longrightarrow\{\pm1\},\\[2pt]
+n\text{ impar}:&\varepsilon_x:I\longrightarrow\Lambda(1).
+\end{array}
+\]
+\underline{Cuando $X$ es regular en $x$, estos caracteres son
+sobreyectivos; cuando $x$ es no degenerado, son, respectivamente, el
+único carácter de orden $2$ y el carácter canónico.}
+
+\underline{La acción del grupo de inercia $I$ viene dada por}
+\[
+n=2m\qquad
+\sigma(a)=a+(-1)^m\sum_{x\in\Sigma}
+ \frac{\varepsilon_x(\sigma)-1}{2}
+ \sisi{(a\delta_x)}{(a,\delta_x)}\delta_x,
+\]
+\[
+n=2m+1\qquad
+\sigma(a)=a-(-1)^m\sum_{x\in\Sigma}
+ \varepsilon_x(\sigma)\sisi{(a\delta_x)}{(a,\delta_x)}\delta_x.
+\]
+\underline{En particular,}
+\[
+\begin{array}{lll}
+n\text{ par}:&\sigma(\delta_x)=\varepsilon_x(\sigma)\delta_x,\\[2pt]
+n\text{ impar}:&\sigma(\delta_x)=\delta_x.
+\end{array}
+\]
+\end{enumerate}

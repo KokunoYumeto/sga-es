@@ -1,0 +1,161 @@
+
+\begin{remarque}
+\label{V.2.5}
+\ifthenelse{\boolean{orig}}
+{La hipótesis de que~$G$ actúa fielmente no es evidentemente por superflua}
+{La hipótesis de que~$G$ actúa fielmente evidentemente no es superflua}
+en el Corolario~\Ref{V.2.4}. Lo mismo ocurre con la hipótesis de que~$X$ es
+conexo, como se ve, por ejemplo, tomando $X=Y\times E$, donde~$E$ es un
+conjunto finito, y tomando como~$G$ el grupo de permutaciones de~$E$: $G$
+actúa con mucha inercia; no obstante,
+$(Y\times E)/G=Y\times(E/G)=Y$, y~$X$ es étale sobre~$Y$. Tomando como~$G$
+un grupo estrictamente menor que el grupo simétrico de~$E$, pero que actúe
+transitivamente sobre~$E$, se ve que habrá también $Y$-automorfismos de~$X$
+que no proceden de~$G$.
+\end{remarque}
+
+El ejemplo típico de un grupo~$G$ que actúa sin inercia es el de
+$Y\times G$, sobre el cual se hace actuar~$G$ mediante sus traslaciones por
+la derecha sobre el factor~$G$: un $Y$-preesquema~$X$ con grupo de operadores
+por la derecha~$G$ se dice \emph{trivial} si es isomorfo a~$Y\times G$.
+
+Para relacionar
+\ifthenelse{\boolean{orig}}{el preesquemas}{los preesquemas}
+con grupos finitos de operadores y la noción de fibrado principal en una
+categoría (relación que no necesitaremos, por lo demás, en el resto del
+seminario, pero que es importante en otros contextos), son útiles las
+consideraciones siguientes. Fijamos un preesquema base~$Y$ y nos situamos
+\ifthenelse{\boolean{orig}}{en el categoría}{en la categoría}
+de los $Y$-preesquemas. Si~$G$ es un grupo
+\marginpar{114}
+finito, pondremos para abreviar $G_Y=Y\times G$; se trata, pues, de un
+esquema en grupos finito sobre~$Y$ (\cf \numero 1), y si~$X$ es un
+$Y$-preesquema, se tiene
+$$
+X\times_YG_Y=X\times G
+$$
+(misma referencia). Dar un $Y$-morfismo $X\times_YG_Y\to X$ equivale, por
+tanto, a dar un $Y$-morfismo $X\times G\to X$, \ie a dar, para todo
+$g\in G$, un $Y$-morfismo $T_g\colon X\to X$. Se comprueba inmediatamente
+que, para que los~$T_g$ definan sobre~$X$ una estructura de preesquema con
+grupo de operadores por la derecha~$G$ (\ie $T_{gg'}=T_{g'}T_g$ y
+\ifthenelse{\boolean{orig}}{$T_e=\id_x$}{$T_e=\id_X$}),
+es necesario y suficiente que el $Y$-morfismo correspondiente
+$X\times_YG_Y\to X$ defina sobre~$X$ una estructura de $Y$-preesquema con
+acción del $Y$-esquema en grupos~$G_Y$ (en el sentido general de los objetos
+con acción de un $\cal{C}$-grupo en una categoría~$\cal{C}$). Supongamos que
+así ocurre. Recordemos que~$X$ se dice \emph{formalmente homogéneo principal}
+\index{formalmente homogéneo principal (preesquema)|hyperpage}%
+bajo~$G_Y$\kern1pt\footnote{Ahora se dice más bien que~$X$ es un
+pseudotorsor bajo~$G_Y$.} si el morfismo canónico
+$$
+X\times_YG_Y\to X\times_YX
+$$
+cuyas componentes son, respectivamente, $\pr_1$ y el morfismo de acción
+$\pi\colon X\times_YG_Y\to X$, es un isomorfismo. En este caso,
+identificando el primer miembro con~$X\times G$, el morfismo considerado es
+el que asocia a todo $g\in G$ el morfismo
+$$
+(\id_X,T_g)=(\id_X\times_YT_g)\Delta_{X/Y}\colon X\to X\times_YX.
+$$
+Por consiguiente, decir que~$X$ es formalmente homogéneo principal bajo~$G_Y$
+significa también que $X\times_YX$ es isomorfo a la suma disjunta de los
+transformados de la diagonal por los elementos $(e,g)$ de~$G\times G$ (que
+actúan sobre~$X\times_YX$ de manera evidente), donde~$e$ designa el elemento
+neutro de~$G$. Si no se quiere distinguir entre izquierda y derecha y se
+desea una fórmula que siga siendo aplicable al producto de más de dos
+factores idénticos a~$X$, puede formularse la condición diciendo que el
+morfismo canónico
+$$
+X\times_G(G\times G)\to X\times_YX
+$$
+obtenido asociando al par $(g,g')$ el morfismo
+$$
+(T_g,T_{g'})=(T_g\times_YT_{g'})\Delta_{X/Y}\colon X\to X\times_YX
+$$
+y haciendo actuar~$G$ por la izquierda sobre~$G\times G$ mediante el
+homomorfismo diagonal
+$$
+s(g,g')=(sg,sg'),
+$$
+es un \emph{isomorfismo}.
+
+La
+\marginpar{115}
+noción de \emph{espacio homogéneo principal}
+\index{homogéneo principal (preesquema, fibrado)|hyperpage}%
+se obtiene de la de espacio formalmente homogéneo principal añadiendo un
+axioma suplementario que asegure que el «cociente» de~$X$ por~$G_Y$ existe y
+es precisamente el objeto unidad a la derecha de la categoría, aquí~$Y$.
+Este axioma puede variar según el contexto, y a menudo se explicita de la
+manera más cómoda (en el yoga del «descenso») exigiendo que el objeto con
+operadores se vuelva «trivial», \ie isomorfo al producto
+$X\times_YG_Y$ (en este caso, $X\times G$), tras un cambio de base adecuado,
+de tipo especificado (de modo que, en la práctica, permita la técnica del
+descenso; \cf Grothendieck, \emph{Technique de descente et théorèmes
+d'existence en Géométrie Algébrique}, Sém. Bourbaki \No190, pp. 26--28)%
+\footnote{\Cf exp\ptbl\ \Ref{VIII} para la teoría del descenso plano.}.
+En este orden de ideas, señalemos aquí la caracterización de los fibrados
+homogéneos principales de grupo~$G$ (en el sentido de~\loccit):
+
+\begin{proposition}
+\label{V.2.6}
+Sean~$Y$ un preesquema localmente noetheriano y~$X$ un $Y$-preesquema con un
+grupo finito de operadores~$G$ que actúa por la derecha. Las condiciones
+siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $X$ es finito sobre~$Y$, $Y=X/G$, y los grupos de inercia de los
+puntos de~$X$ se reducen al elemento neutro.
+\item[(ii)] Existe un cambio de base fielmente plano y cuasicompacto
+$Y_1\to Y$ tal que $X_1=X\times_YY_1$ sea un $Y_1$-preesquema con operadores
+trivial, \ie isomorfo a~$Y_1\times G$.
+\item[(ii~bis)] Como en (ii), pero siendo $Y_1\to Y$ finito, étale y
+sobreyectivo.
+\item[(iii)] $X$ es formalmente homogéneo principal bajo~$G_Y$, y es
+fielmente plano y cuasicompacto sobre~$Y$.
+\end{enumerate}
+\end{proposition}
+\textit{Demostración.} (i)$\To$(ii~bis). Se toma $Y_1=X$, observando que
+$X\to Y$ es, en efecto, finito, étale por~\Ref{V.2.3} y sobreyectivo.
+Demostremos que~$X_1$ es entonces trivial sobre~$Y_1$,
+\ifthenelse{\boolean{orig}}
+{lo que resultará del}
+{como se deduce del}
+
+\begin{corollaire}
+\label{V.2.7}
+Si se verifica \textup{(i)} y~$X$ admite una sección sobre~$Y$, entonces~$X$
+es un espacio con operadores trivial.
+\end{corollaire}
+
+En efecto, esta sección permite definir un $G$-morfismo $\ifthenelse{\boolean{orig}}{X}{Y}\times G\to X$,
+sobreyectivo porque~$G$ es transitivo sobre las fibras de~$X$, inyectivo
+porque~$G$ actúa sin inercia y, por último, isomorfismo local en virtud
+de~\Ref{I.5.3}, pues~$X$ es étale sobre~$Y$. Por tanto, es un isomorfismo.
+
+(ii~bis)
+\marginpar{116}
+implica trivialmente (ii), que implica (i), pues los ingredientes de (i) son
+«invariantes» por extensión fielmente plana y cuasicompacta de la base
+(\cf el Seminario Bourbaki citado anteriormente para «finito»; para los
+grupos de inercia se aplica~\Ref{V.2.1}, y para $Y=X/G$, un recíproco
+de~\Ref{V.1.9} en el caso de un cambio de base \emph{fielmente plano}, que
+habíamos olvidado explicitar).
+
+\ifthenelse{\boolean{orig}}
+{Hemos demostrado (i)$\To$(iii) al pasar demostrando (i)$\To$(ii~bis).}
+{Al demostrar (i)$\To$(ii~bis), se demostró también
+(i)$\To$(iii).}
+Finalmente, (iii)$\To$(ii), pues la primera hipótesis de (iii) significa
+precisamente que~$X$ se vuelve trivial al hacer el cambio de base $Y_1=X$;
+de aquí (ii), ya que~$X$ es fielmente plano y cuasicompacto sobre~$Y$.
+
+\begin{definition}
+\label{V.2.8}
+Un $Y$-preesquema~$X$ con grupo de operadores por la derecha~$G$ que satisface
+las condiciones equivalentes de~\Ref{V.2.6} se llama \emph{recubrimiento
+principal de~$Y$, de grupo de Galois~$G$}.
+\index{grupo de Galois de un recubrimiento principal|hyperpage}%
+\index{principal (recubrimiento)|hyperpage}%
+\index{recubrimiento principal|hyperpage}%
+\end{definition}

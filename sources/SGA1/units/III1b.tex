@@ -1,0 +1,54 @@
+
+\begin{proposition}
+\label{III.1.5}
+Sea $A\to B$ un homomorfismo local de anillos locales, con extensión residual \emph{trivial}. Para que $B$ sea formalmente lisa sobre~$A$, es necesario y suficiente que $\overline{B}$ sea isomorfa a un álgebra de series formales sobre~$\overline{A}$.
+\end{proposition}
+
+Solo queda demostrar la necesidad, y puede suponerse que $A$ y $B$ son completos. Sea $\goth{m}$ (respectivamente $\goth{n}$) el ideal maximal de~$A$ (respectivamente de~$B$), y sean $t_1,\dots,t_n$ elementos de~$\goth{n}$ que determinan una base del espacio vectorial
+$$
+(\goth{n}/\goth{n}^2)/\Im(\goth{m}/\goth{m}^2)=
+\goth{n}/(\goth{n}^2+\goth{m}B)
+$$
+Estos elementos determinan, por tanto, un homomorfismo de $A$-álgebras locales
+$$
+B_1=A[[t_1,\dots,t_n]]\to B
+$$
+Probemos
+\marginpar{61}
+que es un isomorfismo. Basta probar que, para toda potencia $\goth{m}^q$ de~$\goth{m}$, se obtiene un isomorfismo al reducir módulo~$\goth{m}^q$ (pues $B_1$ y $B$ son los límites proyectivos de los correspondientes anillos reducidos módulo~$\goth{m}^q$, al variar~$q$). Como $B$ y $B_1$ son $A$-módulos planos, los graduados asociados a la filtración $\goth{m}$-ádica se obtienen tensorizando con $\gr(A)$, sobre~$k=A/\goth{m}$, los anillos $B_1/\goth{m}B_1$ y, respectivamente, $B/\goth{m}B$; por tanto, se reduce a demostrar que $B_1/\goth{m}B_1\to B/\goth{m}B$ es un isomorfismo. Teniendo en cuenta~\Ref{III.1.3}, el problema queda así reducido al caso en que $A$ es un \emph{cuerpo}~$k$. Por otra parte, si $A'$ es una $A$-álgebra local finita libre tal que $B\otimes_A A'$ sea un álgebra de series formales sobre~$A'$ (N.B. Esta álgebra es local, pues la extensión residual de~$B$ sobre~$A$ es trivial), para probar que $B_1\to B$ es un isomorfismo basta probar que lo es $B_1\otimes_A A'\to B\otimes_A A'$. Esto reduce el problema al caso en que $B$ ya es un álgebra de series formales (habría sido preciso comenzar por esta reducción, antes de pasar al caso de un cuerpo base). Pero entonces $B$ es un anillo local regular con cuerpo de coeficientes~$k$, y es bien sabido (e inmediato al considerar los graduados asociados a las filtraciones $\goth{n}_1$-ádica y $\goth{n}$-ádica sobre~$B_1$ y~$B$) que $B_1\to B$ es un isomorfismo, lo que concluye la demostración.
+
+\begin{corollaire}
+\label{III.1.6}
+Si $B$ es formalmente lisa sobre~$A$, existe una $A$-álgebra local finita $A'$ tal que las componentes locales de
+$\overline{B}\otimes_{\overline{A}}\overline{A'}=\overline{(B\otimes_A A')}$
+sean isomorfas a álgebras de series formales sobre~$\overline{A'}$.
+\end{corollaire}
+En efecto, si $L/k$ es la extensión residual de~$B/A$, se considera una extensión $k'/k$ tal que las extensiones residuales de la $k'$-álgebra $L\otimes_k k'$ sean triviales. Sea $A'$ una $A$-álgebra finita libre tal que $A'/\goth{m}A'=k'$ (se sabe que existe una; por ejemplo, se reduce paso a paso al caso en que $k'/k$ es monógena, y entonces se levantan a~$A$ los coeficientes del polinomio minimal de un generador de~$k'$ sobre~$k$). Es local. Entonces las extensiones residuales de~$B\otimes_A A'$ en sus ideales maximales sobre el cuerpo residual~$k'$ de~$A'$ son triviales, y se concluye mediante~\Ref{III.1.5}.
+
+\begin{corollaire}
+\label{III.1.7}
+Sea $A\to B$ un homomorfismo local de anillos locales. Para que $B$ sea formalmente lisa sobre~$A$, es necesario y suficiente que $B$ sea plana sobre~$A$ y que $B/\goth{m}B$ sea formalmente lisa sobre~$k=A/\goth{m}$.
+\end{corollaire}
+Efectuando una extensión local finita libre adecuada $A'$ de~$A$ y usando~\Ref{III.1.4}~(ii), se reduce al caso en que la extensión residual de~$B/A$ es trivial.
+\marginpar{62}
+Por otra parte, se sabe por~\Ref{III.1.4}~(i) y~\Ref{III.1.3} que las condiciones enunciadas son necesarias. Para la suficiencia, basta observar que la demostración de~\Ref{III.1.5} prueba, bajo las hipótesis formuladas aquí, que $B$ es un álgebra de series formales sobre~$A$ (suponiendo, como es lícito, que $A$ y $B$ son completos).
+
+\begin{remarque}
+\label{III.1.8}
+No sería difícil desarrollar, para los homomorfismos formalmente lisos, el análogo de todas las propiedades de los morfismos lisos estudiadas en~\Ref{II}. Sin embargo, para las propiedades diferenciales esto exige modificar la definición habitual de las diferenciales de Kähler (\cf \Ref{I.1}), sustituyendo los productos tensoriales ordinarios por productos tensoriales completados. Nos limitamos aquí a evocar estos abismos, pues lo precedente basta para nuestro propósito.
+
+Queda establecer el vínculo entre la lisura formal y la noción de lisura desarrollada en~\Ref{II} (y de la que aún no hemos hecho uso alguno):
+\end{remarque}
+
+\begin{proposition}
+\label{III.1.9}
+Sea $A\to B$ un homomorfismo local, siendo $B$ una localización de una $A$-álgebra de tipo finito. Para que $B$ sea lisa sobre~$A$, es necesario y suficiente que sea formalmente lisa sobre~$A$.
+\end{proposition}
+
+Mediante~\Ref{III.1.7} y~\Ref{II.2.1}, se reduce al caso en que $A$ es un cuerpo.
+
+Mediante~\Ref{III.1.4}~(ii) y~\Ref{II.4.13}, una extensión adecuada $k'$ de~$k$ reduce el problema al caso en que la extensión residual de~$B/k$ es trivial. En virtud de
+\ifthenelse{\boolean{orig}}
+{\Ref{III.1.5} (respectivamente \Ref{II.5.2})}
+{\Ref{II.5.2} (respectivamente \Ref{III.1.5})},
+$B$ es entonces lisa sobre~$k$ (respectivamente, formalmente \emph{lisa sobre}~$k$) si y solo si $B$ es un anillo local regular (respectivamente, si su completación es un álgebra de series formales sobre~$k$). Ahora bien, es bien sabido que estas dos condiciones son equivalentes (pues la extensión residual es trivial).

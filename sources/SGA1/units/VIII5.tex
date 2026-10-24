@@ -1,0 +1,332 @@
+\section{Descenso de morfismos de preesquemas}
+\label{VIII.5}
+
+\begin{proposition}
+\label{VIII.5.1}
+Sea $g\colon S'\to S$ un morfismo de preesquemas.
+\begin{enumerate}
+\item[a)] Supongamos que~$g$ es sobreyectivo y que el homomorfismo
+$$
+g^*\colon \mathcal{O}_{S}\to g_*(\mathcal{O}_{S'})
+$$
+es inyectivo. Entonces~$g$ es un epimorfismo en la categoría de los
+preesquemas, e incluso en la categoría de los espacios anillados.
+\item[b)] Supongamos que~$g$ es sobreyectivo y hace de~$S$ un espacio
+topológico cociente de~$S'$. Sea~$S''=S'\times_{S}S'$ y sea
+$h\colon S''\to S$ el morfismo estructural; consideremos el diagrama de
+homomorfismos canónico:
+$$
+\xymatrix@C=.5cm{\mathcal{O}_{S} \ar[r] &
+g_*(\mathcal{O}_{S'})\ar@/^2pt/[r]\ar@/_2pt/[r] &
+h_*(\mathcal{O}_{S''})}\quoi,
+$$
+y supongamos que este diagrama es \emph{exacto}. Entonces~$g$ es un
+epimorfismo efectivo
+\index{epimorfismo efectivo|hyperpage}%
+en la categoría de los preesquemas (y también en la categoría de los
+espacios anillados), es decir, el diagrama
+$$
+\xymatrix@C=.5cm{S & S'\ar[l] & S''\ar@/^2pt/[l]\ar@/_2pt/[l]}
+$$
+es exacto.
+\end{enumerate}
+\end{proposition}
+
+\subsubsection*{Demostración} a) Hay que demostrar que un morfismo de
+espacios anillados~$f\colon S\to Z$ queda determinado cuando se conoce
+$fg$. Ahora bien, como~$g$ es sobreyectivo, se conoce la aplicación entre
+conjuntos~$f_{0}$ subyacente a~$f$; queda por determinar el homomorfismo
+de haces de anillos~$\mathcal{O}_{Z}\to \mathcal{O}_{S}$ o, lo que es lo
+mismo, el homomorfismo
+\marginpar{211}
+de haces de anillos
+$$
+u\colon f_{0}^{-1}(\mathcal{O}_{Z})\to \mathcal{O}_{S}
+$$
+definido por~$f$. Se conoce ya el homomorfismo
+$$
+(fg)_{0}^{-1}(\mathcal{O}_{Z})=
+g_{0}^{-1}(f_{0}^{-1}(\mathcal{O}_{Z}))\to \mathcal{O}_{S'}
+$$
+definido por~$fg$ o, lo que es lo mismo, se dispone de un homomorfismo
+$$
+f_{0}^{-1}(\mathcal{O}_{Z})\to
+g_{0*}(\mathcal{O}_{S'})=g_*(\mathcal{O}_{S'})\quoi.
+$$
+Se comprueba inmediatamente que este último no es sino el compuesto de
+$g^*\colon \mathcal{O}_{S}\to g_*(\mathcal{O}_{S'})$ y de~$u$; como
+$g^*$ es inyectivo, $u$ queda determinado cuando se conoce~$g^*u$.
+[N.B.: evidentemente, no se ha utilizado que~$g\colon S'\to S$ sea un
+morfismo de preesquemas; el enunciado valdría para un morfismo cualquiera
+de espacios anillados. La misma observación vale para b), tanto en la
+categoría de los espacios anillados como en la de los espacios localmente
+anillados. Obsérvese también que, si~$g$ es un morfismo de
+preesquemas no necesariamente sobreyectivo, pero tal que
+$g^*\colon \mathcal{O}_{S}\to g_*(\mathcal{O}_{S'})$ sea inyectivo,
+entonces, para dos morfismos~$f_{1},f_{2}$ de~$S$ en un
+\emph{esquema}~$Z$ tales que~$f_{1}g=f_{2}g$, se tiene $f_{1}=f_{2}$. En
+efecto, si~$I$ es el ideal sobre~$S$ que define el subpreesquema de~$S$ de
+las coincidencias de~$f_{1},f_{2}$ (imagen inversa del subpreesquema
+diagonal de~$Z\times Z$ por~$(f_{1},f_{2})$), se ve que~$I$ está contenido
+en~$\Ker(g^*)$].
+
+b) Hay que demostrar que, para todo espacio anillado~$Z$, el diagrama
+siguiente de aplicaciones
+$$
+\xymatrix@C=.5cm{\Hom(S,Z)\ar[r] & \Hom(S',Z)\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\Hom(S'',Z)}
+$$
+es exacto, y que lo mismo sucede cuando~$Z$ es un espacio localmente
+anillado y uno se limita a los homomorfismos de espacios localmente
+anillados. Como ya se sabe por a) que la primera aplicación es
+inyectiva, queda por ver que, si~$f'\colon S'\to Z$ es un homomorfismo de
+espacios anillados tal que~$f'p_{1}=f'p_{2}$,
+\marginpar{212}
+entonces~$f'$ es de la forma~$fg$, donde~$f\colon S\to Z$ es un
+homomorfismo de espacios anillados. Como~$g$ es sobreyectivo, resulta
+entonces evidente que, si~$f'$ es un morfismo de espacios localmente
+anillados, lo mismo sucederá con~$f$.
+
+De la hipótesis sobre~$f'$ resulta que la aplicación entre conjuntos
+subyacente~$f_{0}'$ es constante sobre las fibras de la
+aplicación~$g_{0}$; como esta última es sobreyectiva, $f_{0}'$ se
+factoriza de manera única como~$f_{0}'=f_{0}g_{0}$, donde
+$f_{0}\colon S\to Z$ es una aplicación, necesariamente continua porque
+$g_{0}$ identifica~$S$ con un espacio topológico cociente de~$S'$.
+Consideremos ahora el homomorfismo
+$$
+f_{0}^{-1}(\mathcal{O}_{Z})\to g_*(\mathcal{O}_{S'})
+$$
+deducido del homomorfismo~$(f_{0}g_{0})^{-1}(\mathcal{O}_{Z})\to
+\mathcal{O}_{S'}$ correspondiente a~$f'$. La hipótesis
+$f'p_{1}=f'p_{2}$ se interpreta entonces diciendo que los compuestos del
+homomorfismo precedente con los dos homomorfismos
+$\xymatrix@C=.5cm{g_*(\mathcal{O}_{S'})\ar@/^2pt/[r]\ar@/_2pt/[r] &
+h_*(\mathcal{O}_{S''})}$ son iguales; por la hipótesis b), aquel se
+factoriza, por tanto, a través de un morfismo
+$$
+f_{0}^{-1}(\mathcal{O}_{Z})\to \mathcal{O}_{S}\quoi.
+$$
+Este último define un morfismo de espacios anillados~$f\colon S\to Z$,
+que es el morfismo buscado.
+
+\begin{theoreme}
+\label{VIII.5.2}
+Sea $\cal{F}$ la categoría fibrada de las flechas en la categoría~$\Sch$
+de los preesquemas \textup{(\Ref{VI.11}.a)}. Entonces todo
+morfismo~$g\colon S'\to S$ fielmente plano y cuasicompacto es un morfismo
+de descenso para~$\cal{F}$ (o también, como se dice, un morfismo de
+descenso en~$\Sch$).
+\index{descenso (morfismo de)|hyperpage}%
+\end{theoreme}
+
+Esto significa lo siguiente: sea~$S''=S'\times_{S}S'$ y, para dos
+preesquemas~$X,Y$ sobre~$S$, consideremos sus imágenes inversas~$X',Y'$ sobre
+$S'$ y sus imágenes inversas~$X'',Y''$ sobre~$S''$; se obtiene un diagrama
+de aplicaciones
+$$
+\xymatrix@C=.5cm{\Hom_{S}(X,Y)\ar[r] &
+\Hom_{S'}(X',Y')\ar@/^2pt/[r]\ar@/_2pt/[r] & \Hom_{S''}(X'',Y'')}\quoi;
+$$
+sentadas estas notaciones, \Ref{VIII.5.2} significa que este diagrama es
+exacto. Obsérvese que
+\marginpar{213}
+no es cierto, en general, que~$g$ sea un morfismo de descenso efectivo,
+es decir, que para todo preesquema~$X'$ sobre~$S'$, todo dato de descenso
+sobre~$X'$ con respecto a~$g\colon S'\to S$ sea efectivo. La cuestión de
+la efectividad, a menudo delicada, se examinará en el
+\No~\Ref{VIII.7}.
+
+Se ha visto en~\cite{VIII.D} (teniendo en cuenta que en~$\Sch$ existen los
+productos fibrados) que el enunciado~\Ref{VIII.5.2} equivale al siguiente:
+
+\begin{corollaire}
+\label{VIII.5.3}
+Todo morfismo fielmente plano y cuasicompacto de preesquemas es un
+epimorfismo efectivo universal.
+\end{corollaire}
+
+Como un morfismo fielmente plano y cuasicompacto sigue siéndolo tras toda
+extensión de la base, se reduce uno a demostrar que es un epimorfismo
+efectivo. Se aplica entonces el criterio~\Ref{VIII.5.1} b), que da el
+resultado buscado teniendo en cuenta~\Ref{VIII.4.3} y~\Ref{VIII.1.7}.
+
+\begin{corollaire}
+\label{VIII.5.4}
+Sea $g\colon S'\to S$ un morfismo fielmente plano y cuasicompacto,
+$f\colon X\to Y$ un~$S$-morfismo y $f'\colon X'\to Y'$ el
+$S'$-morfismo que se deduce de él por el cambio de base~$S'\to S$. Para
+que~$f$ sea un isomorfismo, es necesario y suficiente que~$f'$ lo sea.
+\end{corollaire}
+
+En efecto, si $f'$ es un isomorfismo, es también un isomorfismo para las
+estructuras de descenso naturales sobre~$X',Y'$; como el
+funtor~$X\mto X'$ de~$\Sch_{/S}$ en la categoría de los preesquemas
+sobre~$S'$ provistos de un dato de descenso con respecto a~$g$ es plenamente
+fiel por~\Ref{VIII.5.2}, se obtiene la conclusión buscada.
+
+\begin{corollaire}
+\label{VIII.5.5}
+Bajo las condiciones de~\Ref{VIII.5.4}, para que~$f$ sea una inmersión
+cerrada (\resp una inmersión abierta, \resp una inmersión cuasicompacta),
+\ifthenelse{\boolean{orig}}
+{es necesario y suficiente}
+{es necesario y suficiente}
+que~$f'$ lo sea.
+\end{corollaire}
+
+Puede suponerse, como de costumbre, $Y=S$, y solo hay que demostrar la
+suficiencia. Obsérvese que el hecho de que~$X'/Y'$ esté provisto de un dato
+de descenso con respecto a~$g\colon Y'\to Y$ y que el morfismo
+estructural~$f'\colon X'\to Y'$ sea una inmersión y, por tanto, un
+monomorfismo, implica que los dos subobjetos de~$Y''$ obtenidos como
+imágenes
+\marginpar{214}
+inversas de~$X'/Y'$ por una y otra proyección de~$S''$ en~$S'$ son los
+mismos. Si~$f'$ es una inmersión cerrada, de~\Ref{VIII.1.9} resulta que
+existe un subpreesquema cerrado~$X_{1}$ de~$Y$ cuya imagen inversa por
+$g\colon Y'\to Y$ es~$X'$. Por la unicidad de la solución de un problema
+de descenso con respecto a un morfismo de descenso para~$\cal{F}$,
+\ifthenelse{\boolean{orig}}
+{}
+{se}
+sigue que~$X_{1}$ es $Y$-isomorfo a~$X$; por tanto,
+$f\colon X\to Y$ es una inmersión cerrada. Se procede del mismo modo para
+una inmersión abierta, utilizando~\Ref{VIII.4.4}. Finalmente, si~$f'$ es
+una inmersión cuasicompacta, $f$ es cuasicompacto en virtud
+de~\Ref{VIII.3.3}; puede aplicarse entonces al subconjunto~$f(X)$ de~$Y$
+el criterio~\Ref{VIII.4.5}, que demuestra que~$f(X)$ es localmente cerrado,
+pues su imagen inversa~$f'(X')$ en~$Y'$ lo es. Reemplazando entonces~$Y$
+por un subconjunto abierto en el que~$f(X)$ sea cerrado, se reduce uno al
+caso en que~$f'$ es una inmersión cerrada; por lo anterior, también lo
+es~$f$.
+
+\begin{corollaire}
+\label{VIII.5.6}
+Bajo las condiciones de~\Ref{VIII.5.4}, para que~$f$ sea afín, es necesario
+y suficiente que~$f'$ lo sea.
+\end{corollaire}
+
+Se procede como en~\Ref{VIII.5.5}, utilizando~\Ref{VIII.2.1} (también
+puede utilizarse el criterio cohomológico de Serre [EGA II 5.2], que
+demuestra~\Ref{VIII.5.6} sin utilizar ninguna técnica de descenso).
+
+\begin{corollaire}
+\label{VIII.5.7}
+Bajo las condiciones de~\Ref{VIII.5.4}, para que~$f$ sea entero (\resp
+finito, \resp finito y localmente libre), es necesario y suficiente
+que~$f'$ lo sea.
+\end{corollaire}
+
+Solo hay que demostrar la suficiencia y, como de costumbre, puede
+suponerse $Y=S$, con $Y$ afín e~$Y'$ afín. Como la hipótesis implica que
+$f'$ es afín, lo mismo sucede con~$f$ por~\Ref{VIII.5.6}; por tanto, $X$
+y, en consecuencia, $X'$ son afines. Sean~$A,A',B,B'=B\otimes_{A}A'$ los
+anillos de~$Y,Y',X,X'$. Se tiene $B=\varinjlim_i B_{i}$, donde~$B_{i}$
+recorre las sub-$A$-álgebras de~$B$ que son de tipo finito sobre~$A$; de
+aquí $B'=\varinjlim_i B_{i}'$, donde las~$B_{i}'$ son subálgebras de tipo
+finito de la $A'$-álgebra~$B'$. Si $B'$ es entero
+\ifthenelse{\boolean{orig}}
+{sobre~$A$,}
+{sobre~$A'$,}
+las~$B_{i}'$ son módulos de tipo finito sobre~$A'$; como $A'$ es fielmente
+plano sobre~$A$, las~$B_{i}$ son módulos de tipo finito sobre~$A$, es decir,
+$B$ es entero sobre~$A$. Se ve del mismo modo que, si~$B'$ es finito
+sobre~$A'$, $B$ lo es sobre~$A$. La misma conclusión vale para «localmente
+libre de tipo finito»; \cf \Ref{VIII.1.11}.
+
+\begin{corollaire}
+\label{VIII.5.8}
+Bajo
+\marginpar{215}
+las condiciones de~\Ref{VIII.5.4}, supongamos~$f$ cuasicompacto y sean
+$\mathcal{L}$ un haz invertible sobre~$X$ y~$\mathcal{L}'$ su imagen
+inversa sobre~$X'$. Para que~$\mathcal{L}$ sea amplio (\resp muy amplio)
+con respecto a~$f$, es necesario y suficiente
+\ifthenelse{\boolean{orig}}
+{que~$f'$}
+{que~$\cal{L}'$}
+sea amplio (\resp muy amplio) con respecto a~$f'$.
+\end{corollaire}
+
+Solo hay que demostrar la suficiencia. La hipótesis sobre
+\ifthenelse{\boolean{orig}}
+{$\mathcal{L}$}
+{$\mathcal{L}'$}
+implica, en todo caso, que~$f'$ es separado; por~\Ref{VIII.4.8}, $f$ es
+separado. Como~$f$ es cuasicompacto y~$g\colon Y'\to Y$ es plano, el
+cálculo de las imágenes directas mediante recubrimientos afines demuestra
+que se tienen isomorfismos
+$$
+g^*(f_*(\mathcal{L}^{\otimes n}))\isomto
+f_*'(\mathcal{L}'^{\otimes n})
+$$
+para todo entero~$n$ y, por tanto, un isomorfismo
+$$
+g^*(\mathcal{S})\isomto \mathcal{S}'\quoi,
+$$
+donde~$\mathcal{S}$ (\resp $\mathcal{S}'$) denota el álgebra graduada
+cuasicoherente sobre~$Y$ (\resp sobre~$Y'$) suma directa de
+los~$f_*(\mathcal{L}^{\otimes n})$ (\resp de
+los~$f_*'(\mathcal{L}'^{\otimes n})$) para~$n\geq 0$. Obsérvese que, para
+todo~$n\geq 0$, el conúcleo del homomorfismo
+canónico~$f'^*(\mathcal{S}_{n}')\to \mathcal{L}'^{\otimes n}$ es la
+imagen inversa por~$X'\to X$ del conúcleo de
+$f^*(\mathcal{S}_{n})\to \mathcal{L}^{\otimes n}$; por tanto, su
+soporte~$Z_{n}'$ es la imagen inversa del soporte~$Z_{n}$. Si
+\ifthenelse{\boolean{orig}}
+{$f$}
+{$\cal{L}'$}
+es amplio, la intersección de los~$Z_{n}'$ es vacía; como~$X'\to X$ es
+sobreyectivo, la intersección de los~$Z_{n}$ es vacía, es decir, se tiene
+un morfismo canónico
+$$
+j\colon X\to \Proj(\mathcal{S})
+$$
+(EGA~II 3). Además, el morfismo análogo
+$$
+j'\colon X'\to \Proj(\mathcal{S}')
+$$
+no es sino el que se deduce del precedente mediante el cambio de
+base~$Y'\to Y$ (\loccit). Sentado esto, decir que~$\mathcal{L}'$ es amplio
+con respecto a~$f'$ significa que~$j'$ es una inmersión, necesariamente
+cuasicompacta, además, porque~$f'$ es cuasicompacto. Por
+\Ref{VIII.5.5}, $j$ es, por tanto, una inmersión, es decir,
+$\mathcal{L}$ es amplio con respecto a~$f$. --- Se procede de manera
+enteramente análoga en el caso «muy
+\marginpar{216}
+amplio», limitándose arriba a~$n=1$ y reemplazando la consideración de
+$\Proj(\mathcal{S})$ por la del fibrado proyectivo
+$\mathcal{P}(\mathcal{S}_{1})$ asociado a~$\mathcal{S}_{1}$.
+
+Recordemos (EGA~II 5.1.1) que un morfismo cuasicompacto~$f$ se llama
+\emph{cuasiafín} si, para todo abierto afín~$U$ de~$Y$, $f^{-1}(U)$ es un
+preesquema isomorfo a un subesquema abierto de un esquema afín. Se
+demuestra (\loccit) que equivale a decir que~$\mathcal{O}_{X}$ es amplio
+(o también muy amplio) con respecto a~$f$. Por tanto, \Ref{VIII.5.8}
+implica:
+
+\begin{corollaire}
+\label{VIII.5.9}
+Bajo las condiciones de~\Ref{VIII.5.4} y suponiendo~$f$ cuasicompacto,
+para que~$f$ sea cuasiafín, es necesario y suficiente que~$f'$ lo sea.
+\end{corollaire}
+
+\begin{remarques}
+\label{VIII.5.10}
+El ejemplo de variedad no proyectiva de Hironaka muestra que puede tenerse
+un morfismo propio~$f\colon X\to Y$ de variedades algebraicas no singulares
+(con~$Y$ proyectiva), tal que~$Y$ sea reunión de dos abiertos~$Y_{i}$ para
+los cuales~$X_{i}=X\times_{Y}Y_{i}$ sea proyectivo sobre~$Y_{i}$, pero sin
+que~$f$ sea proyectivo. Poniendo entonces $Y'=Y_{1}\amalg Y_{2}$, $Y'$ es
+fielmente plano y cuasicompacto (e incluso cuasifinito) sobre~$Y$,
+$f'\colon X'\to Y'$ es proyectivo, pero~$f$ no lo es. Hay que tener
+cuidado, por tanto: para aplicar~\Ref{VIII.5.8} y deducir del hecho de
+que~$f'$ sea proyectivo la misma conclusión sobre~$f$, hay que disponer ya
+sobre~$X'$ de un haz invertible~$\mathcal{L}'$ amplio para~$f'$,
+\emph{provisto de un dato de descenso con respecto a}~$X'\to X$ (lo que
+permite considerar~$\mathcal{L}'$ como la imagen inversa de un haz
+invertible~$\mathcal{L}$ sobre~$X$, que será entonces amplio para~$f$
+gracias a~\Ref{VIII.5.8}). No obstante, cuando~$g\colon S'\to S$ es finito
+y localmente libre, véase~\Ref{VIII.7.7}.
+\end{remarques}

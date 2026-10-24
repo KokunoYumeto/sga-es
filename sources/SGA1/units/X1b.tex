@@ -1,0 +1,165 @@
+\setcounter{subsection}{5}% Preserve the source-visible paragraph number X.1.6 in the standalone class.
+\subsection{}
+\ifthenelse{\boolean{orig}}
+{\label{X.I.6}}
+{\label{X.1.6}}
+\setcounter{proposition}{6}% The source paragraph occupies item 1.6 in the shared theorem sequence.
+Supongamos todavía que~$f$ es propio y separable, pero no hagamos ya ninguna
+hipótesis sobre~$f_*(\cal{O}_X)$, que corresponderá a un recubrimiento étale
+~$Y'$ bien determinado de~$Y$, provisto además, sobre~$b$, del punto~$b'$
+imagen de~$a$. Aplicando entonces~\Ref{X.1.4} al morfismo canónico~$X\to Y'$,
+y suponiendo~$f$ sobreyectivo, la sucesión exacta~\Ref{X.1.4} se sustituye por
+la siguiente, análoga a la sucesión exacta de homotopía de los espacios
+fibrados en topología algebraica:
+$$
+\pi_1(\overline X_y,\overline a)\to \pi_1(X,a)\to \pi_1(Y,b)\to
+\pi_0(\overline X_y,\overline a)\to \pi_0(X,a)\to \pi_0(Y,b)\to e.
+$$
+Por supuesto, en~\Ref{X.1.4} no puede afirmarse en general que el
+homomorfismo~$\pi_1(\overline X_y,\overline a)\to \pi_1(X,a)$ sea inyectivo;
+en topología algebraica su núcleo es la imagen de~$\pi_2(Y,b)$, y también en
+geometría algebraica habría que introducir grupos de homotopía en todas las
+dimensiones y la sucesión exacta de homotopía completa para un morfismo propio
+que satisfaga hipótesis convenientes (por ejemplo, ser un morfismo
+\ifthenelse{\boolean{orig}}
+{liso.}
+{liso).}
+En la actualidad no se dispone de ningún resultado en este sentido, salvo una
+definición razonable (si no definitiva) de los grupos de homotopía superiores.
+
+\begin{corollaire}
+\label{X.1.7}
+Sean~$k$ un cuerpo algebraicamente cerrado y~$X$ e~$Y$ dos preesquemas conexos
+sobre~$k$; supongamos~$X$ propio sobre~$k$ e~$Y$ localmente
+\marginpar{265}
+noetheriano. Sean~$a$ un punto geométrico de~$X$ y~$b$ un punto geométrico
+de~$Y$, con valores en una misma extensión algebraicamente cerrada~$K$ de~$k$;
+consideremos el punto geométrico~$c=(a,b)$ de~$X\times_k Y$ y el homomorfismo
+~$\pi_1(X\times_k Y,c)\to \pi_1(X,a)\times\pi_1(Y,b)$ deducido de los
+homomorfismos de grupos fundamentales asociados a las dos proyecciones
+~$X\times_k Y\to X$ y~$X\times_k Y\to Y$. El homomorfismo precedente es un
+\emph{isomorfismo}.
+\end{corollaire}
+
+Supongamos primero~$K=k$. Pongamos~$Z=X\times_k Y$, consideremos la proyección
+~$f\colon Z\to Y$ y el punto subyacente~$y$ del punto geométrico~$b$ de~$Y$,
+y apliquemos a esta situación el resultado~\Ref{X.1.4}. Obsérvese para ello
+que, tras pasar a~$X_\red$ (lo que no cambia los grupos fundamentales
+considerados), puede suponerse~$X$ reducido y, por tanto, separable sobre~$k$;
+así,
+\ifthenelse{\boolean{orig}}
+{$Z$ es separable sobre~$k$}
+{$Z$ es separable sobre~$Y$},
+y tiene evidentemente fibras geométricamente conexas (pues~$X$ es conexo). La
+fibra geométrica de~$Z$ en~$b$ es canónicamente isomorfa a
+~$X\otimes_k K=X$. Por otra parte, como el compuesto de los morfismos
+~$X\to Z\to X$ es la identidad, se ve que
+~$\pi_1(X,a)\to \pi_1(Z,c)$ es inyectivo, y~\Ref{X.1.4} nos da una sucesión
+exacta:
+$$
+e\to \pi_1(X,a)\to \pi_1(Z,c)\to \pi_1(Y,b)\to e.
+$$
+Por otra parte, se tiene la sucesión exacta canónica:
+$$
+e\to \pi_1(X,a)\to \pi_1(X,a)\times \pi_1(Y,b)\to \pi_1(Y,b)\to e,
+$$
+donde los dos homomorfismos escritos son la inyección canónica y la proyección
+canónica. Por último, se tiene un homomorfismo de la primera sucesión exacta en
+la segunda mediante los morfismos identidad en los términos extremos y el
+homomorfismo canónico~$\pi_1(Z,c)\to \pi_1(X,a)\times\pi_1(Y,b)$ en los
+términos medios. La conmutatividad del diagrama así obtenido se comprueba de
+inmediato. Como los homomorfismos en los términos extremos son isomorfismos,
+ocurre lo mismo con los términos medios, lo que prueba~\Ref{X.1.7} en este
+caso.
+
+Cuando ya no se supone~$K=k$, solo se obtiene un isomorfismo
+$$
+\pi_1(Z,c)\to \pi_1(X\otimes_k K,a)\times \pi_1(Y,b),
+$$
+\marginpar{266}%
+y~\Ref{X.1.7} equivale entonces al caso particular siguiente:
+
+\begin{corollaire}
+\label{X.1.8}
+Sean~$X$ un esquema propio y conexo sobre un cuerpo algebraicamente cerrado
+~$k$,~$k'$ una extensión algebraicamente cerrada de~$k$,~$a'$ un punto
+geométrico de~$X\otimes_k k'$ y~$a$ su imagen en~$X$. Entonces el
+homomorfismo canónico~$\pi_1(X\otimes_k k',a')\to \pi_1(X,a)$ es un
+\emph{isomorfismo}.
+\end{corollaire}
+
+Que este homomorfismo sea sobreyectivo equivale a decir que, si~$X'$ es un
+recubrimiento étale conexo de~$X$, entonces~$X'\otimes_k k'$ es también
+conexo, y resulta inmediatamente del hecho de que~$k$ es algebraicamente
+cerrado; es también un caso particular
+\ifthenelse{\boolean{orig}}
+{\Ref{IX.3.4}.}
+{de~\Ref{IX.3.4}.}
+La hipótesis de que~$X$ sea propio no ha intervenido todavía. Dicho esto, la
+inyectividad del homomorfismo considerado significa también lo siguiente:
+\emph{todo recubrimiento étale de~$X\otimes_k k'$ es isomorfo a la imagen
+inversa de un recubrimiento étale de~$X$.} Es esencialmente un sorites comprobar
+que puede encontrarse una subálgebra sobre~$k$,~$A$, de
+\ifthenelse{\boolean{orig}}
+{$K$}
+{$k'$},
+de tipo finito sobre~$k$, y un recubrimiento étale de~$X\otimes_k A$ cuya
+imagen inversa sobre~$X\otimes_k k'$ sea isomorfa al recubrimiento dado. Sea,
+pues,~$Y=\Spec(A)$, que es un~$k$-esquema íntegro de tipo finito y tiene, por
+tanto, puntos racionales sobre~$k$. Apliquemos entonces~\Ref{X.1.7} al grupo
+fundamental de~$X\times Y$ en un punto~$(a,b)$ racional sobre~$k$: se obtiene
+que todo recubrimiento étale conexo de~$X\times Y$ es isomorfo a un cociente
+de un recubrimiento~$X'\times Y'$, donde~$X'$ e~$Y'$ son recubrimientos
+galoisianos étale de~$X$ y~$Y$, de grupos~$G$ y~$G'$, por un subgrupo~$H$
+de~$G\times G'$. Esto implica que la imagen inversa de este recubrimiento de
+~$X\times Y$ sobre~$X\times Y'$ es isomorfa a un recubrimiento de la forma
+~$X_1'\times Y'$, donde~$X_1'$ es un recubrimiento étale de~$X$. Si~$L$ es
+el cuerpo de funciones de~$Y$, igual al cuerpo de fracciones de~$A$ en~$k'$,
+el recubrimiento étale de~$X\otimes_k L$ inducido por el recubrimiento dado de
+~$X\times_k Y$ es tal que existe una extensión finita separable~$L'$ de~$L$
+para la cual la imagen inversa de dicho recubrimiento sobre~$X\otimes_k L'$
+es isomorfa a~$X_1'\otimes_k L'$. Ahora bien, como~$k'$ es algebraicamente
+cerrado, puede suponerse que la extensión~$L'$ de~$L$ está contenida en~$k'$.
+Esto prueba que el recubrimiento étale dado de~$X\otimes_k k'$ es isomorfo a
+~$X_1'\otimes_k k'$, c.q.d.
+
+La forma explícita señalada de paso para los recubrimientos étale de un
+producto
+\marginpar{267}
+~$X\times_k Y$ implica de inmediato el resultado siguiente:
+
+\begin{corollaire}
+\label{X.1.9}
+Sean~$k$ un cuerpo algebraicamente cerrado,~$X$ e~$Y$ dos preesquemas
+localmente noetherianos sobre~$k$,~$Z=X\times_k Y$ su producto y~$Z'$ un
+recubrimiento étale de~$Z$. Para todo punto~$y\in Y$ racional sobre~$k$, sea
+~$i_y \colon \Spec(k)\to Y$ el morfismo canónicamente asociado,
+~$j_y=\id_X\times_k i_y$ el morfismo correspondiente~$X\to Z$. Sea, por
+último,~$X_y'$ el recubrimiento étale de~$X$ imagen inversa de~$Z'$ por~$j_y$.
+Supongamos~$Y$ conexo y~$X$ o~$Y$ propio sobre~$k$. Entonces los
+recubrimientos~$X_y'$ de~$X$ son todos isomorfos.
+\end{corollaire}
+
+De manera figurada, puede decirse que \emph{una familia de recubrimientos
+étale de~$X$, parametrizada por un preesquema conexo~$Y$, es constante si~$X$
+o el preesquema de parámetros~$Y$ es propio sobre~$k$.}
+
+\begin{remarques}
+\label{X.1.10}
+Los corolarios~\Ref{X.1.7} a~\Ref{X.1.9} se deben a
+Lang--Serre~\cite{X.2} en el caso de los esquemas algebraicos normales. (Su
+trabajo fue la motivación inicial de la teoría del grupo fundamental
+desarrollada en este Seminario). Como observaron estos autores, estos
+resultados dejan de ser ciertos cuando se abandona la hipótesis de que sean
+propios, al menos en característica~$p>0$. Tomando, por ejemplo, como~$X$ la
+recta afín~$X=\Spec(k[t])$, no es difícil ver que los recubrimientos de~$X$,
+parametrizados por la recta afín~$Y=\Spec(k[s])$, definidos por las ecuaciones
+$$
+x^p - x = st,
+$$
+son étale y no isomorfos dos a dos. Esto contradice~\Ref{X.1.9} y, con mayor
+razón,~\Ref{X.1.7}; se ve igualmente que, si~$s$ se considera como un elemento
+trascendente sobre~$k$ en una extensión algebraicamente cerrada~$K$ de~$k$,
+se obtiene un recubrimiento étale~$X'$ de~$X\otimes_kK$ que no procede de un
+recubrimiento étale de~$X$.
+\end{remarques}

@@ -1,0 +1,104 @@
+
+\section{Prolongación infinitesimal global de los morfismos}
+\label{III.5}
+
+Sean~$T$ un espacio topológico, $\cal{G}$ un haz de grupos
+\ifthenelse{\boolean{orig}}
+{sobre~$X$}
+{sobre~$T$},
+\ifthenelse{\boolean{orig}}{$P$}{$\cal{P}$}
+un haz de conjuntos sobre~$T$ sobre el que opera~$\cal{G}$ (por la derecha, para fijar ideas). Se dice que~$\cal{P}$ es \emph{formalmente homogéneo principal}
+\index{formalmente homogéneo principal (haz)|hyperpage}%
+bajo~$\cal{G}$ si el conocido homomorfismo
+$$
+\cal{G}\times\cal{P}\to\cal{P}\times\cal{P}
+$$
+de haces de conjuntos, deducido de la operación de~$\cal{G}$ sobre~$\cal{P}$, es un \emph{isomorfismo}. Equivale a decir que, para todo $x\in T$, $\cal{P}_x$ es \emph{vacío o un espacio homogéneo principal} bajo el grupo ordinario~$\cal{G}_x$, o también que, para todo abierto~$U$ de~$T$, $\cal{P}(U)$ es vacío o un espacio homogéneo principal bajo el grupo ordinario~$\cal{G}(U)$. Se dice que
+\ifthenelse{\boolean{orig}}{$P$}{$\cal{P}$}
+es un \emph{haz homogéneo principal}
+\index{homogéneo principal (haz)|hyperpage}%
+\ifthenelse{\boolean{orig}}{bajo~$G$}{bajo~$\cal{G}$}
+si lo es formalmente y si, además, los~$\cal{P}_x$ no son vacíos (en otros términos, si \emph{todos} los~$\cal{P}_x$ son espacios homogéneos principales, y por tanto no vacíos, bajo los~$\cal{G}_x$).
+\marginpar{71}
+\footnote{Parece preferible adoptar el término más breve y expresivo
+\ifthenelse{\boolean{orig}}{«\emph{torsor bajo}~$G$»}{«\emph{torsor bajo}~$\cal{G}$»},
+introducido en la tesis de J\ptbl\ \textsc{Giraud}.}
+Recuérdese que el conjunto de las clases (salvo isomorfismo) de haces homogéneos principales bajo~$\cal{G}$ se identifica con el conjunto de cohomología~$\H^1(T,\cal{G})$, que es también el grupo de cohomología usual de~$T$ con coeficientes en~$\cal{G}$ cuando~$\cal{G}$ es conmutativo. Se tiene así, para todo~$\cal{P}$ homogéneo principal, una clase característica $c(\cal{P})\in\H^1(T,\cal{G})$, cuya trivialidad es necesaria y suficiente para que~$\cal{P}$ sea trivial (es decir, isomorfo a~$\cal{G}$, sobre el que~$\cal{G}$ opera por traslaciones a la derecha), o también para que~$\cal{P}$ tenga una sección.
+
+\begin{proposition}
+\label{III.5.1}
+Sean~$S$ un preesquema, $X$ e~$Y$ preesquemas sobre~$S$, $Y_0$ un subpreesquema cerrado de~$Y$ definido por un haz de ideales~$\cal{J}$ sobre~$Y$ \emph{de cuadrado nulo}. Sea~$g_0$ un $S$-morfismo de~$Y_0$ en~$X$, y sea~$\cal{P}(g_0)$ el haz sobre~$Y$ cuyas secciones sobre un abierto~$U$ son las prolongaciones $g\colon U\to X$ de~$g_0|_{U\cap Y_0}$ a un $S$-morfismo~$g$. Entonces~$\cal{P}(g_0)$ es, de manera natural, un haz \emph{formalmente homogéneo principal} bajo el haz de grupos conmutativo
+$$
+\cal{G}=\SheafHom_{\cal{O}_{Y_0}}(g_0^*(\it{\Omega}^1_{X/S}),\cal{J}).
+$$
+\end{proposition}
+
+Pongamos~$\cal{P}=\cal{P}(g_0)$. Debemos definir, para todo abierto~$U$ de~$Y$, una aplicación
+$$
+\cal{P}(U)\times\cal{G}(U)\to\cal{P}(U)
+$$
+de modo que: (a) para $g\in\cal{P}(U)$ fijo, la aplicación $s\mto gs$ de~$\cal{G}(U)$ en~$\cal{P}(U)$ sea biyectiva; (b) $\cal{P}(U)$ se convierta en un conjunto con grupo de operadores~$\cal{G}(U)$; (c) las aplicaciones precedentes sean compatibles con los operadores de restricción para un abierto $V\subset U$. La verificación de~(c) será trivial; para simplificar, puede suponerse, pues, que~$U=Y$. La verificación de~(b) (que, si se quiere, es de naturaleza local) se dejará al lector; nos limitaremos, por tanto, para un $g\in\cal{P}(Y)$ dado, a definir una biyección natural de~$\cal{G}(Y)$ sobre~$\cal{P}(Y)$. Se supone ya dado, pues, un $S$-morfismo $g\colon Y\to X$, y se busca una biyección canónica
+\begin{equation*}
+\label{eq:III.5.1.*}
+\tag{$*$}
+\Hom_{\cal{O}_{Y_0}}(g_0^*(\it{\Omega}^1_{X/S}),\cal{J})\isomto
+\cal{P}(Y),
+\end{equation*}
+donde~$\cal{P}(Y)$ es el conjunto de los $S$-morfismos $g'$ de~$Y$ en~$X$ que inducen el mismo morfismo $g_0\colon Y_0\to X$ que~$g$. Dar un tal~$g'$ equivale a dar un $S$-morfismo $h\colon Y\to X\times_S X$ tal que ${\pr}_1\circ h=g$ y $h\circ i=(g_0,g_0)$, donde
+\marginpar{72}
+\ifthenelse{\boolean{orig}}
+{${\pr}_1\colon X\times_S X$}
+{${\pr}_1\colon X\times_S X\to X$}
+es la primera proyección, $i\colon Y_0\to Y$ la inmersión canónica, y $(g_0,g_0)\colon Y_0\to X\times_S X$ es el morfismo $\Delta_{X/S}g_0$ de
+\ifthenelse{\boolean{orig}}{componente}{componentes}
+$g_0,g_0$:
+\begingroup
+\shorthandoff{>}% Spanish babel otherwise treats the Xy-pic arrow tip as a shorthand.
+$$
+\xymatrix@C=2.2cm{ X\times_S X \ar[d]_{{\pr}_1} & Y_0
+\ar[l]_-{h_0=(g_0,g_0)} \ar[d]^i \\ X & Y \ar[l]_-g
+\ar@{-->}[lu]_-h }
+$$
+\endgroup
+Como~$h_0$ se factoriza por la inmersión diagonal~$\Delta_{X/S}$ y~$Y$ está en el entorno infinitesimal de primer orden de~$Y_0$ (es decir, $\cal{J}^2=0$), los~$h$ buscados se factorizan necesariamente, y de manera única, por el entorno infinitesimal de primer orden de la diagonal. Este se identifica (como $X$-preesquema gracias a~${\pr}_1$) con el espectro~$X'$ del haz de álgebras $\cal{O}_X+\it{\Omega}^1_{X/S}$ (donde el segundo sumando se considera un ideal de cuadrado nulo), y el morfismo diagonal $X\to X'$ corresponde a la aumentación canónica de este haz de álgebras. Pongamos $Y'=X'\times_XY$ y $Y'_0=Y'\times_YY_0=X'\times_XY_0$, de modo que los~$h$ buscados están en correspondencia biunívoca con las secciones~$u$ de~$Y'$ sobre~$Y$ que prolongan una sección dada~$u_0$ de~$Y'_0$ sobre~$Y_0$. Puede, además, identificarse~$Y'$ con el espectro del haz de álgebras sobre~$Y$ $\cal{A}=g^*(\cal{O}_X+\it{\Omega}^1_{X/S})=\cal{O}_Y+g^*(\it{\Omega}^1_{X/S})$, y~$Y'_0$
+\ifthenelse{\boolean{orig}}
+{con el haz de álgebras}
+{con el espectro del haz de álgebras}
+$\cal{A}_0=\cal{A}\otimes_{\cal{O}_Y}\cal{O}_{Y_0}=\cal{O}_{Y_0}+g_0^*(\it{\Omega}^1_{X/S})$.
+Entonces la sección~$u_0$ es la definida por la aumentación canónica
+\ifthenelse{\boolean{orig}}
+{de~$A_0$ en~$\cal{O}_{Y_0}$}
+{de~$\cal{A}_0$ en~$\cal{O}_{Y_0}$}.
+Por tanto, $\cal{P}(Y)$ se identifica con el conjunto de los homomorfismos de álgebras $\cal{A}\to\cal{O}_Y$ que inducen la aumentación canónica $\cal{A}_0\to\cal{O}_{Y_0}$. Ahora bien, los homomorfismos de álgebras $\cal{A}\to\cal{O}_Y$
+\ifthenelse{\boolean{orig}}{se corresponde}{se corresponden}
+biunívocamente con los homomorfismos de módulos
+\ifthenelse{\boolean{orig}}
+{$\cal{M}\to\cal{A}$}
+{$\cal{M}\to\cal{O}_Y$}
+(poniendo, para simplificar, $\cal{M}=g^*(\it{\Omega}^1_{X/S})$), y nos interesan los que inducen el homomorfismo \emph{nulo} $\cal{M}_0\to\cal{O}_{Y_0}$ (donde $\cal{M}_0=\cal{M}\otimes_{\cal{O}_Y}\cal{O}_{Y_0}$), es decir, los que envían~$\cal{M}$ al ideal~$\cal{J}$ de la aumentación. Se obtiene, pues, el conjunto $\Hom_{\cal{O}_Y}(\cal{M},\cal{J})=\Hom_{\cal{O}_{Y_0}}(\cal{M}_0,\cal{J})$
+(puesto que~$\cal{J}$ es anulado por~$\cal{J}$). Esta es la biyección canónica buscada~\eqref{eq:III.5.1.*}.
+
+Teniendo en cuenta la implicación (i)$\To$(iii) de~\Ref{III.3.1}, se obtiene:
+
+\begin{corollaire}
+\label{III.5.2}
+\marginpar{73}
+Si~$X$ es liso sobre~$S$ (al menos en los puntos de~$g_0(Y_0)$), entonces~$\cal{P}$ es incluso un \emph{haz homogéneo principal} bajo el haz de grupos conmutativo~$\cal{G}$, que en este caso puede escribirse también
+\begin{equation*}
+\cal{G}=g_0^*(\goth{g}_{X/S})\otimes_{\cal{O}_{Y_0}}\cal{J},
+\end{equation*}
+donde~$\goth{g}_{X/S}$
+\label{indnot:cb}\oldindexnot{$\goth{g}_{X/S}$|hyperpage}%
+es el haz sobre~$X$ dual de~$\it{\Omega}_{X/S}^1$, es decir, el \emph{haz tangente}
+\index{haz tangente|hyperpage}%
+\index{tangente (haz)|hyperpage}%
+(o \emph{haz de derivaciones})
+\index{derivaciones (haz de)|hyperpage}%
+\index{haz de derivaciones|hyperpage}%
+de~$X$ respecto de~$S$. (Esta última fórmula proviene del hecho de que~$\it{\Omega}_{X/S}^1$ es entonces
+\ifthenelse{\boolean{orig}}
+{libre de tipo finito}
+{localmente libre de tipo finito}).
+\end{corollaire}
+
+En particular, a este haz homogéneo principal le corresponde una clase de cohomología en~$\H^1(Y_0,\cal{G})$, cuya anulación es necesaria y suficiente para la existencia de un $S$-morfismo~$g$ que prolongue~$g_0$. Y si existe tal prolongación, el conjunto de todas las prolongaciones posibles es un espacio homogéneo bajo el grupo~$\H^0(Y_0,\cal{G})$.

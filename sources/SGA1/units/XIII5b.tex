@@ -1,0 +1,77 @@
+
+\begin{proposition}[Lema de Abhyankar absoluto]
+\label{XIII.5.2}
+\index{Abhyankar absoluto (lema de)|hyperpage}%
+Sea $X$ un esquema local regular,
+$$
+D=\sum_{1\leq i\leq r} \divisor f_i
+$$
+un divisor de cruzamientos normales como en~\Ref{XIII.5.1},
+$Y=\Supp D$, $U=X-Y$. Sea~$V$ un recubrimiento étale de~$U$
+moderadamente ramificado relativamente a~$D$. Si $x_i$ es el punto
+genérico del cerrado $V(f_i)$, $\cal{O}_{X,x_i}$ es un anillo de
+valoración discreta con cuerpo de fracciones $K_i$, y se tiene
+$V|K_i=\Spec(\prod_{j\in J_i}L_j)$, donde los $L_j$ son extensiones
+finitas separables de~$K_i$; denotemos por $n_j$ el orden del grupo de
+inercia de una extensión galoisiana generada por $L_j$, y por $n_i$
+el m.c.m. de los $n_j$ cuando $j$ recorre~$J_i$. Si se pone
+$$
+X'=X[T_1,\dots,T_r]/(T_1^{n_1}-f_1,\dots,T_r^{n_r}-f_r),
+$$
+$U'=U_{(X')}$, $V'=V_{(X')}$, etc., el recubrimiento étale $V'$
+de~$U'$ se prolonga, de manera única salvo isomorfismo único, a un
+recubrimiento étale de~$X'$, y los $n_i$ son primos con la
+característica residual $p$ de~$X$.
+\end{proposition}
+
+La unicidad se deduce de que $X'$ es normal \eqref{XIII.5.1}; en
+efecto,
+\marginpar{429}
+un recubrimiento étale de~$X'$ que prolonga $V'$ es isomorfo a la
+normalización de~$X'$ en la fibra de~$V'$ en el punto genérico
+de~$X'$ \eqref{I.10.2}. Si $\bar{x}'$ es un punto geométrico de~$Y'$,
+se denota por $\bar{X}'$ la localización estricta de~$X'$ en
+$\bar{x}'$, y se pone $\bar{V}'=V'_{(\bar{X}')}$, etc. Por descenso,
+habida cuenta de la unicidad, basta demostrar que, para todo punto
+geométrico $\bar{x}'$ de~$Y'$, el recubrimiento étale $\bar{V}'$
+de~$\bar{U}'$ se prolonga a~$\bar{X}'$. Puesto que un recubrimiento
+étale de un abierto del esquema regular~$X'$ que contiene todos los
+puntos~$x'$ tales que $\dim\cal{O}_{X',x'}\leq 1$ se prolonga
+\ifthenelse{\boolean{orig}}
+{a todo~$X$}
+{a todo~$X'$}
+(SGA~2 XIV~1.11), basta incluso limitarse a los puntos
+$\bar{x}'$ que se proyectan sobre un punto maximal de~$Y'$. Ahora
+bien, en tal punto $\bar{x}'$, el hecho de que $\bar{V}'$ se prolongue
+a un recubrimiento étale de~$\bar{X}'$ se deduce de~\Ref{X.3.6}.
+
+Demostremos que los $n_i$ son primos con~$p$. En efecto, si no fuera
+así, se tendría, por ejemplo, $p|n_1$. Tras reemplazar $X$ por
+\ifthenelse{\boolean{orig}}
+{$X[T_1,\dots,T_r]/(T_1^{n_1/p}-f_1,T_2^{n_2}-f_2,\dots,T_r^{n_r}-f_r)$,}
+{$$X[T_1,\dots,T_r]/(T_1^{n_1/p}-f_1,T_2^{n_2}-f_2,\dots,T_r^{n_r}-f_r),$$}
+se reduce al caso en que $X'=X[T_1]/(T_1^p-f_1)$. Basta demostrar que
+$V$ se prolonga a un recubrimiento étale de~$X$, pues entonces se
+tendrá $n_1=1$, en contra de la hipótesis. Para ello puede suponerse
+que $X$ es estrictamente local. Sea $Z$ el subesquema cerrado de~$X$
+de ecuación $p=0$, y sea $Z_1=Z\cap X_{f_1}$; $Z_1$ es un abierto no
+vacío de~$Z$. Por lo que precede, el recubrimiento étale $V'$ de~$U'$
+se prolonga a un recubrimiento étale $W'$ de~$X'$. Sean $W''_1$ y
+$W''_2$ las imágenes inversas de~$W'$ por las dos proyecciones
+$X''=X'\times_X X'\rightrightarrows X'$, y demostremos que el
+isomorfismo de descenso $u\colon W''_1|U''\to W''_2|U''$ se prolonga
+a un $X''$-morfismo $W''_1\to W''_2$, que será necesariamente un dato
+de descenso sobre~$W'$ relativamente a~$X'\to X$. Sea $Z''$
+(\resp $Z''_1$) la imagen inversa de~$Z$ (\resp $Z_1$) en~$X''$. Como
+el morfismo $Z''\to Z$ es radicial, existe un isomorfismo
+$v\colon W''_1|Z''\to W''_2|Z''$ que prolonga el isomorfismo
+$u|Z''_1$. Pero, como $X$ es henseliano, se tiene una biyección
+$$
+\Hom_{X''}(W''_1,W''_2)\simeq\Hom_{Z''}(W''_1|Z'',W_2''|Z''),
+$$
+de donde se obtiene un morfismo $w\colon W''_1\to W''_2$ que levanta
+a~$v$. El subesquema a la vez abierto
+\marginpar{430}
+y cerrado de~$X''$ sobre el cual coinciden $u$ y $w$ contiene
+$Z''_1$; por tanto, es igual a~$X''$, y de aquí se sigue que $V$ se
+prolonga a~$X$.

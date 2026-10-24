@@ -1,0 +1,1754 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XVII}{Pinceles de Lefschetz: teorema de existencia}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XVII}\par
+\vspace{2em}
+{\Large\underline{Pinceles de Lefschetz: teorema de existencia}}\par
+\vspace{1.5em}
+{\large por N. M. Katz}
+\end{center}
+
+\section*{0. Introducción}
+
+En la presente exposición (que, en el seminario oral, precedía a los
+Exposés XIV y XV, consagrados a la fórmula de Picard--Lefschetz)
+introducimos los ``pinceles de Lefschetz'' de secciones hiperplanas de
+un esquema proyectivo y liso, y damos condiciones para su existencia.
+En la exposición siguiente haremos de ellos un estudio cohomológico
+elemental, basado en la estructura conocida de la cohomología de las
+variedades explotadas. El hecho de que ciertas hipótesis sobre los
+pinceles de Lefschetz que tendremos que introducir se satisfagan a
+menudo resultará de la fórmula de Picard--Lefschetz del Exposé XV, de
+naturaleza menos elemental que los resultados de la presente exposición y
+del siguiente.
+
+Ciertos desarrollos de la presente exposición y de la siguiente se expondrán
+en otra parte, en un marco más general (esquemas de base generales,
+hipótesis de cuasiproyectividad en lugar de proyectividad, etc.):
+en particular, el estudio precohomológico de los pinceles de secciones
+hiperplanas, y especialmente de los pinceles de Lefschetz, en EGA V,
+y el estudio cohomológico de los esquemas explotados en
+
+\pageoriginale
+
+el Exposé VII de Jouanolou en SGA 5. El lector encontrará asimismo en
+EGA V demostraciones en las que la persecución intrínseca de diagramas
+reemplaza el uso de coordenadas, predilecto del redactor del presente
+exposición.
+
+Deseo agradecer a P. Deligne y P. Griffiths la ayuda que me prestaron
+en la concepción de esta exposición. En toda ella, $k$ designa un cuerpo
+algebraicamente cerrado, salvo mención expresa en contrario.
+
+\section*{1. Recordatorio sobre las singularidades cuadráticas
+(cf. VI, 6)}
+
+\subsubsection*{1.1.}
+Sea $Y$ un $k$-esquema puramente de dimensión
+$\sisi{n}{n-1}$.\footnote{La impresión dice primero ``de dimensión
+$n$'' y, en la presentación como hipersuperficie que sigue, impone
+$n=1+\dim Y$. Esta última es la convención utilizada por la hessiana
+y la forma normal mostradas.}
+Un punto cerrado $y\in Y$ se llama una
+\underline{singularidad cuadrática ordinaria} de $Y$ si:
+\begin{enumerate}
+\item[(a)] el completado $\widehat{\mathcal O}_{Y,y}$ del anillo local
+de $Y$ en $y$ es isomorfo a
+\[
+k[[T_1,\ldots,T_n]]/(Q(T)),
+\]
+el cociente del anillo de series formales en
+$n=1+\dim Y$ variables por el ideal engendrado por un elemento
+$Q(T)$;
+\item[(b)] $Q$ comienza en grado dos, y la subvariedad de
+$\mathbb P^{n-1}_k$ definida por la anulación de la parte homogénea de
+grado dos de $Q(T)$ es lisa sobre $k$ si $n\geq2$, mientras que la
+parte de grado dos de $Q(T)$ es no nula si $n=1$.
+\end{enumerate}
+
+Si la característica de $k$ es distinta de dos, \underline{o} si $n$
+es par, la condición (b) equivale a:
+
+\pageoriginale
+
+\begin{enumerate}
+\item[(b$'$)] $Q$ comienza en grado dos y su matriz hessiana
+\[
+\left(
+\frac{\partial^2Q}{\partial T_i\partial T_j}(0)
+\right)_{1\leq i,j\leq n}
+\]
+es inversible.
+\end{enumerate}
+Esto se deduce del criterio jacobiano de lisitud.
+
+La forma estándar de la parte homogénea de grado dos $Q_2$ de una
+serie $Q$ que satisface (b), obtenible mediante un cambio lineal de
+variables, es
+\begin{equation}\tag{1.1.1}
+\left\{
+\begin{aligned}
+Q_2(T)&=\sum_{i=1}^{n/2}T_{2i-1}T_{2i}
+&&\text{si $n$ es par},\\[1ex]
+Q_2(T)&=T_n^2+\sum_{i=1}^{(n-1)/2}T_{2i-1}T_{2i}
+&&\text{si $n$ es impar}.
+\end{aligned}
+\right.
+\end{equation}
+Esto resulta de la teoría de las formas cuadráticas (Bourbaki,
+\emph{Algèbre}, cap.~X).
+
+\subsubsection*{1.2.}
+Un punto cerrado $y\in Y$ que satisface (a) y (b) se llama una
+\underline{singularidad cuadrática no degenerada}. Puesto que el
+determinante de la matriz hessiana es idénticamente nulo en
+característica dos cuando $n$ es impar, las singularidades cuadráticas
+no degeneradas presentadas en $n$ variables solo existen si $n$ es
+par o si la característica de $k$ es distinta de dos; en esos casos
+son precisamente las singularidades cuadráticas ordinarias.
+
+\pageoriginale
+
+\section*{2. Pinceles de Lefschetz: enunciado de los resultados}
+
+\subsubsection*{2.1.}
+Denotemos por $\mathbb P^r$ el espacio proyectivo de dimensión $r$
+sobre $k$, por $\check{\mathbb P}^{r}$ el espacio proyectivo
+\underline{dual} de los hiperplanos de $\mathbb P^r$, y por
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})$ la variedad de rectas
+de $\check{\mathbb P}^{r}$. Un punto
+$D\in\operatorname{Gr}(1,\check{\mathbb P}^{r})$ se llama un
+\underline{pincel de hiperplanos} de $\mathbb P^r$. Considerando $D$
+como una recta de $\check{\mathbb P}^{r}$, escribimos, por abuso de
+notación, $D=\{H_t\}_{t\in D}$, donde los $H_t$ son los hiperplanos
+de $\mathbb P^r$ que constituyen los puntos de la recta $D$.
+
+El \underline{eje de $D$} es la subvariedad lineal de codimensión dos
+de $\mathbb P^r$ que es la intersección $H_0\cap H_\infty$ de dos
+miembros distintos cualesquiera del pincel. Considerando este eje
+como un punto de $\operatorname{Gr}(r-2,\mathbb P^r)$, la variedad de
+subvariedades lineales de dimensión $r-2$ de $\mathbb P^r$, la
+aplicación que envía $D$ a su eje es el conocido isomorfismo de
+ortogonalidad
+\[
+\operatorname{Gr}(1,\check{\mathbb P}^{r})
+\xrightarrow{\ \sim\ }
+\operatorname{Gr}(r-2,\mathbb P^r).
+\]
+
+\subsubsection*{2.2.}
+Sea $X$ un $k$-esquema propio, liso e irreducible, de dimensión
+$n\geq1$, provisto de una inmersión
+$X\hookrightarrow\mathbb P^r$. Un pincel
+$D=\{H_t\}_{t\in\sisi{\mathbb P}{D}}$ de hiperplanos de
+$\mathbb P^r$ se llama un \underline{pincel de Lefschetz} (con
+respecto a esta inmersión) si:
+\begin{enumerate}
+\item[(a)] el eje de $D$ corta transversalmente a $X$
+(EGA IV, 17.13.7);
+\item[(b)] existe un abierto denso $U\subset D$ tal que, para todo
+$t\in U$, el hiperplano $H_t$ corta transversalmente a $X$;
+\item[(c)] para $t_0\in D-U$, el hiperplano $H_{t_0}$ corta
+transversalmente a $X$ salvo en
+
+\pageoriginale
+
+un punto, que es un punto singular cuadrático ordinario de
+$X\cap H_{t_0}$.
+\end{enumerate}
+Veremos más abajo, en 3.2.1, que los pinceles de Lefschetz forman un
+\underline{abierto} de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})$.
+
+\subsubsection*{2.3.}
+La inmersión $X\hookrightarrow\mathbb P^r$ se llama una
+\underline{inmersión de Lefschetz} si los pinceles de Lefschetz
+forman un abierto denso de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})$.\footnote{Más
+exactamente, forman un abierto denso en el conjunto de puntos cerrados
+de $\operatorname{Gr}(1,\check{\mathbb P}^{r})$. En lo que sigue nos
+permitiremos tales abusos de lenguaje.}
+
+\subsubsection*{2.4.}
+Recordemos ahora la noción de \underline{múltiplo de una inmersión
+dada} $X\hookrightarrow\mathbb P^r$. Es el compuesto de esta inmersión
+con la $d$-ésima inmersión
+\sisi{de Segre}{de Veronese}\footnote{La impresión la llama inmersión
+de Segre $d$-ésima; la aplicación monomial mostrada es la inmersión de
+Veronese.}
+\[
+S_d:\mathbb P^r\hookrightarrow
+\mathbb P^{\binom{r+d}{d}-1},
+\qquad
+(X_0,\ldots,X_r)\longmapsto(\ldots,X^W,\ldots),
+\]
+donde
+\[
+X^W=X_0^{W_0}\cdots X_r^{\sisi{W_0}{W_r}},
+\qquad W_0+\cdots+W_r=d.
+\]
+Así, una ``sección de $X$ por una hipersuperficie de grado $d$'' para
+la inmersión dada---en inglés, una \emph{hypersurface section of
+degree $d$}---no es sino una
+
+\pageoriginale
+
+sección hiperplana para el $d$-ésimo múltiplo de dicha inmersión.
+
+\subsubsection*{Teorema 2.5.}
+\underline{Sea $X$ irreducible, propio y liso sobre $k$, de dimensión
+$n\geq1$, provisto de una inmersión
+$i:X\hookrightarrow\mathbb P^r$. Entonces:}
+\begin{enumerate}
+\item[2.5.1.] \underline{todo múltiplo $d$-ésimo de $i$, con
+$d\geq2$, es una inmersión de Lefschetz;}
+\item[2.5.2.] \underline{si $k$ tiene característica cero, la
+inmersión dada $i$ es una inmersión de Lefschetz.}
+\end{enumerate}
+La demostración se divide en varias partes, que siguen.
+
+\section*{3. La variedad dual}
+
+\subsubsection*{3.1.}
+Sea $I$ el ideal de $\mathbb P^r$ que define $X$. Denotemos por
+$N=I/I^2$ el haz conormal, localmente libre de rango $r-n$ sobre $X$,
+y por $\mathbb P(N)$ el fibrado proyectivo sobre $X$ formado por las
+rectas de $\check N$. (Si $X=\mathbb P^r$, el fibrado
+$\mathbb P(N)$ es vacío.) El fibrado $\mathbb P(N)$ se identifica con
+la subvariedad de $X\times\check{\mathbb P}^{r}$ formada por los pares
+$(x,H)$ tales que $H$ es tangente a $X$ en $x$, mediante la aplicación
+\[
+\nu:\mathbb P(N)\longrightarrow X\times\check{\mathbb P}^{r}.
+\]
+Más explícitamente,
+\begin{equation}\tag{3.1.1}
+\mathbb P(I/I^2)_x\ni F\longmapsto
+\left(x,\text{ el hiperplano de ecuación }
+\sum_i\frac{\partial F}{\partial X_i}(x)T_i=0\right),
+\end{equation}
+donde $F$ designa una sección local de $I/I^2$. Definimos
+\begin{equation}\tag{3.1.2}
+\varphi:\mathbb P(N)\longrightarrow\check{\mathbb P}^{r}
+\end{equation}
+como el compuesto
+\[
+\mathbb P(N)\xrightarrow{\nu}
+X\times\check{\mathbb P}^{r}
+\xrightarrow{\operatorname{pr}_2}\check{\mathbb P}^{r}.
+\]
+
+\pageoriginale
+
+\subsubsection*{3.1.3.}
+Denotemos por $\check X$ la imagen de $\varphi$. Es el conjunto de
+hiperplanos que no cortan transversalmente a $X$, y se llama la
+\underline{variedad dual} de $X$ para la inmersión
+$i:X\hookrightarrow\mathbb P^r$.
+
+\subsubsection*{Proposición 3.1.4.}
+\underline{La variedad dual $\check X$ es irreducible y propia, de
+dimensión a lo sumo $r-1$.}
+
+\noindent\underline{Demostración.}
+Es la imagen por $\varphi$ de $\mathbb P(N)$, que es irreducible de
+dimensión $r-1$ si $X\ne\mathbb P^r$, y vacío si $X=\mathbb P^r$.
+
+\subsubsection*{Observación 3.1.5.}
+La interpretación de $\mathbb P(N)$ puede precisarse como sigue. Sea
+$\mathcal Y\subset X\times\check{\mathbb P}^{r}$ el subesquema de
+incidencia cuya fibra sobre todo punto
+$H\in\check{\mathbb P}^{r}(k)$ es $X\cap H$. Es inmediato que
+$\mathcal Y$ es liso de dimensión $n+r-1$, por ser un fibrado
+proyectivo de dimensión relativa $r-1$ sobre $X$. Por tanto,
+$\mathcal Y\to\check{\mathbb P}^{r}$ hace de $\mathcal Y$ una
+intersección completa relativa de dimensión relativa virtual
+$(n+r-1)-r=n-1$.
+
+El \underline{subesquema jacobiano}
+\[
+J_{n-1}(\mathcal Y/\check{\mathbb P}^{r})
+\]
+(VI, 5.2) es precisamente $\mathbb P(N)$. La formación del subesquema
+jacobiano de una intersección completa relativa es compatible con todo
+cambio de base. En consecuencia, para toda recta
+$D\subset\check{\mathbb P}^{r}$, el subesquema jacobiano
+$J_{n-1}(\widetilde X/D)$, donde
+\[
+\widetilde X=\mathcal Y\times_{\check{\mathbb P}^{r}}D,
+\]
+es precisamente
+$\mathbb P(N)\times_{\check{\mathbb P}^{r}}D$.
+
+\subsubsection*{Proposición 3.2.}
+\underline{El subconjunto $B\subset\check X$ formado por los
+hiperplanos $H$ tales que $X\cap H$ tiene un único punto singular, y
+que ese punto}
+
+\pageoriginale
+
+\underline{es una singularidad cuadrática ordinaria, es abierto.}
+
+Este es un caso particular de XV, 1.3.2, basado en la teoría de los
+``módulos henselianos'' de R. Elkik (XV, 1.1.4). El caso en que se
+restringe a puntos cuadráticos \underline{no degenerados}---es decir,
+cuando $\operatorname{car}(k)\ne2$ \underline{o}
+$n=\dim X$ es par---también se deduce inmediatamente de 3.3, cuya
+demostración no utiliza 3.2.
+
+\subsubsection*{Corolario 3.2.1.}
+\underline{Bajo las hipótesis de 3.2, sea $F=\check X-B$, un cerrado
+de $\check X$. Entonces los pinceles de Lefschetz forman un abierto de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})$, y las condiciones
+siguientes son equivalentes:}
+\begin{enumerate}
+\item[3.2.2.] \underline{la inmersión dada
+$i:X\hookrightarrow\mathbb P^r$ es una inmersión de Lefschetz;}
+\item[3.2.3.] \underline{existe un pincel de Lefschetz de hiperplanos
+para la inmersión dada;}
+\item[3.2.4.] \underline{la codimensión de $F$ en
+$\check{\mathbb P}^{r}$ es al menos dos.}
+\end{enumerate}
+
+\noindent\underline{Demostración.}
+Una recta $D\subset\check{\mathbb P}^{r}$ es un pincel de Lefschetz si
+y solo si:
+\begin{enumerate}
+\item[(3.2.5)] el eje de $D$ corta transversalmente a $X$;
+\item[(3.2.6)] $D$ no está contenida en
+$\sisi{X}{\check X}$;
+\item[(3.2.7)] $D$ no corta a $F$.
+\end{enumerate}
+
+\pageoriginale
+
+Las condiciones (3.2.5) y (3.2.6) definen abiertos de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})$ y, como $F$ es cerrado,
+lo mismo sucede con (3.2.7); por tanto, los pinceles de Lefschetz
+forman un abierto. Puesto que $\dim X\leq r-1$, el abierto (3.2.6) es
+no vacío y, por consiguiente, denso. El abierto (3.2.5) también es no
+vacío y denso. En efecto, elijamos un hiperplano $H$ que corte
+transversalmente a $X$; tal $H$ existe porque $\dim X\leq r-1$.
+Como $\dim(X\cap H)\leq r-1$, existe un hiperplano $G$ que corta
+transversalmente a $X\cap H$, y la recta $D$ que pasa por $H$ y $G$
+tiene entonces un eje que corta transversalmente a $X$.
+
+Así, la inmersión es de Lefschetz si y solo si el abierto (3.2.7) es
+no vacío y, por tanto, denso. Como $F$ es cerrado, esto ocurre si y
+solo si $F$ tiene codimensión al menos dos en
+$\check{\mathbb P}^{r}$ (cf. EGA V, o Mumford,
+\emph{Introduction to Algebraic Geometry}, p.~88, Cor.~3).
+
+\subsubsection*{Corolario 3.2.8.}
+\underline{Bajo las hipótesis de 3.2, supongamos que
+$i:X\hookrightarrow\mathbb P^r$ es una inmersión de Lefschetz. Sea
+$H_0$ un hiperplano que corta transversalmente a $X$, y sea
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})_{H_0}$ la subvariedad de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})$ formada por las rectas
+que pasan por $H_0$. Entonces los pinceles de Lefschetz que pasan por
+$H_0$ forman un abierto denso de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})_{H_0}$.}
+
+\noindent\underline{Demostración.}
+Por 3.2.1, dichos pinceles forman un abierto de
+$\operatorname{Gr}(1,\check{\mathbb P}^{r})_{H_0}$. El argumento que
+acabamos de dar para demostrar que los abiertos (3.2.5) y (3.2.6) son
+no vacíos muestra que sus intersecciones con esta subvariedad también
+son no vacías. Queda por demostrar que existen rectas que pasan por
+$H_0$ y no cortan a $F$.
+
+\pageoriginale
+
+Para ello, sea $T\subset\check{\mathbb P}^{r}$ un hiperplano que no
+contiene a $H_0$. Existe un isomorfismo
+\begin{center}
+\begin{tikzcd}[column sep=huge]
+\operatorname{Gr}(1,\check{\mathbb P}^{r})_{H_0}
+  & T \arrow[l,"\sim"']\\
+\substack{\text{la recta que pasa por}\\ H_0\text{ y }\tau}
+  & \tau \arrow[l,mapsto]
+\end{tikzcd}
+\end{center}
+de modo que $\operatorname{Gr}(1,\check{\mathbb P}^{r})_{H_0}$
+``es'' un espacio proyectivo de dimensión $r-1$. Las rectas de este
+espacio que pasan por un punto de $F$ forman un cerrado de dimensión a
+lo sumo $r-2$, pues son la imagen del morfismo
+\begin{center}
+\begin{tikzcd}[column sep=huge]
+F \arrow[r] & \operatorname{Gr}(1,\check{\mathbb P}^{r})_{H_0}\\
+f \arrow[r,mapsto] &
+  \substack{\text{la recta que pasa por }H_0\\\text{y por }f}.
+\end{tikzcd}
+\end{center}
+
+\subsubsection*{Proposición 3.3.}
+\underline{El morfismo
+$\varphi:\mathbb P(N)\to\check{\mathbb P}^{r}$ no está ramificado en
+un punto cerrado $(x_0,H)$ si y solo si $x_0$ es una singularidad
+cuadrática no degenerada (1.2) de $X\cap H$. En particular, el
+subconjunto de $\mathbb P(N)$ formado por los puntos $(x,H)$ tales que
+$x$ es una singularidad cuadrática no degenerada de $X\cap H$ es
+abierto.}
+
+\pageoriginale
+
+\noindent\underline{Demostración de la Proposición 3.3.}
+Podemos limitarnos al caso $X\ne\mathbb P^r$. Las dos propiedades cuya
+equivalencia se afirma son independientes de la elección particular de
+coordenadas, de modo que podemos describirlas mediante coordenadas
+elegidas de una manera muy especial. Como $X$ es una subvariedad lisa
+de $\mathbb P^r$ de dimensión $n\geq1$, elijamos coordenadas homogéneas
+$X_0,\ldots,X_r$ tales que:
+\begin{enumerate}
+\item[3.3.1.] el punto $x_0\in\mathbb P^r$ sea
+$(1,0,\ldots,0)$;
+\item[3.3.2.] poniendo $x_i=X_i/X_0$ para $i=1,\ldots,r$, de modo que
+$\widehat{\mathcal O}_{\mathbb P^r,x_0}$ se identifique con
+$k[[x_1,\ldots,x_r]]$, el ideal que define la traza de $X$ en
+$\operatorname{Spec}\widehat{\mathcal O}_{\mathbb P^r,x_0}$ esté
+engendrado por elementos $g_i$ $(i=1,\ldots,r-n)$ que, en el
+completado, tengan la forma
+\[
+g_i=x_{n+i}-h_i(x_1,\ldots,x_n),
+\qquad i=1,\ldots,r-n,
+\]
+donde los $h_i$ son series únicamente en $x_1,\ldots,x_n$ y
+pertenecen al cuadrado del ideal maximal de
+$k[[x_1,\ldots,x_n]]$;
+\item[3.3.3.] mediante (3.1.1), el hiperplano $H$ provenga de
+$g_{\sisi{n-r}{r-n}}$.
+\end{enumerate}
+
+Pongamos $V=\operatorname{Spec}(\widehat{\mathcal O}_{X,x_0})$.
+De 3.3.2 se deduce una trivialización
+\[
+(I/I^2)|_V\simeq\mathcal O_V^{r-n}
+\]
+dada por
+\begin{equation}\tag{3.3.4}
+(\Lambda_1,\ldots,\Lambda_{r-n})\longmapsto
+\sum_{i=1}^{\sisi{n-r}{r-n}}\Lambda_i g_i.
+\end{equation}
+Junto con 3.3.3, esto proporciona un entorno $W$ de $(x_0,H)$
+
+\pageoriginale
+
+en $\mathbb P(N)|_V$ y un isomorfismo
+$V\times\mathbb A^{r-n-1}\simeq W$, dado por
+\begin{equation}\tag{3.3.5}
+\begin{aligned}
+V\times\mathbb A^{r-n-1}&\longrightarrow\mathbb P(I/I^2)|_V,\\
+(v,(\lambda_1,\ldots,\lambda_{r-n-1}))&\longmapsto
+\left(v,\left[g_{r-n}+
+\sum_{i=1}^{r-n-1}\lambda_i g_i\right]\right),
+\end{aligned}
+\end{equation}
+donde $\lambda_i=\Lambda_i/\Lambda_{r-n}$.
+
+En particular, el completado del anillo local de $\mathbb P(N)$ en
+$(x_0,H)$ se identifica con
+\[
+k[[x_1,\ldots,x_n,\lambda_1,\ldots,\lambda_{r-n-1}]].
+\]
+Expresemos ahora $\varphi$ en estas coordenadas, al nivel de los
+completados:
+\begin{equation}\tag{3.3.6}
+\varphi(x,\lambda)
+=\text{el hiperplano de ecuación }
+\sum_{i=0}^{\sisi{n+r}{r}}\varphi_i(x,\lambda)T_i=0.
+\end{equation}
+Como el hiperplano imagen contiene al punto $x$, cuyas coordenadas
+homogéneas son
+\begin{equation}\tag{3.3.7}
+x=(1,x_1,\ldots,x_n,h_1(x),\ldots,h_{r-n}(x)),
+\end{equation}
+se tiene
+\begin{equation}\tag{3.3.8}
+\varphi_0(x,\lambda)
+=-\sum_{i=1}^{n}x_i\varphi_i(x,\lambda)
+ -\sum_{j=1}^{r-n}h_j(x)\varphi_{n+j}(x,\lambda)
+\end{equation}
+en $\widehat{\mathcal O}_{\mathbb P(N),(x_0,H)}$. Además, por (3.1.1),
+si
+\[
+D_i=\frac{\partial}{\partial x_i}\in
+\operatorname{Der}_k(
+\widehat{\mathcal O}_{\mathbb P^r,x_0},
+\widehat{\mathcal O}_{\mathbb P^r,x_0}),
+\]
+entonces, para $1\leq i\leq r$,
+\begin{equation}\tag{3.3.9}
+\varphi_i(x,\lambda)
+=D_i\!\left(g_{r-n}+
+\sum_{j=1}^{r-n-1}\lambda_jg_j\right)(x)
+\quad\text{en }\widehat{\mathcal O}_{\mathbb P(N),(x_0,H)}.
+\end{equation}
+
+\pageoriginale
+
+Recordando que $g_i=x_{n+i}-h_i(x_1,\ldots,x_n)$, se obtiene
+\begin{equation}\tag{3.3.10}
+\varphi_i(x,\lambda)
+=-\frac{\partial}{\partial x_i}
+\left(h_{r-n}+\sum_{j=1}^{r-n-1}\lambda_jh_j\right),
+\qquad 1\leq i\leq n,
+\end{equation}
+\begin{equation}\tag{3.3.11}
+\sisi{\varphi_i(x,\lambda)=\lambda_i,\quad1\leq i\leq n}
+{\varphi_{n+j}(x,\lambda)=\lambda_j,\quad1\leq j\leq r-n-1},
+\end{equation}
+y
+\begin{equation}\tag{3.3.12}
+\varphi_r(x,\lambda)=1.
+\end{equation}
+\footnote{La impresión da rangos incompatibles en (3.3.11). Las
+coordenadas de (3.3.5), la fórmula de coeficientes (3.3.9) y el bloque
+identidad de la matriz jacobiana impresa fuerzan los índices de la
+rama corregida.}
+
+Sea $\mathfrak m$ el ideal maximal de
+$\widehat{\mathcal O}_{\mathbb P(N),(x_0,H)}$. Puesto que
+$h_i\equiv0\pmod{\mathfrak m^2}$ para $i=1,\ldots,r-n$, se obtiene
+\begin{equation}\tag{3.3.13}
+\varphi_0(x,\lambda)\equiv0\pmod{\mathfrak m^2}
+\end{equation}
+y
+\begin{equation}\tag{3.3.14}
+\varphi_i(x,\lambda)
+\equiv-\frac{\partial h_{r-n}}{\partial x_i}
+\pmod{\mathfrak m^2},
+\qquad i=1,\ldots,n.
+\end{equation}
+Reuniendo (3.3.11)--(3.3.14), la matriz jacobiana de $\varphi$ en
+$(x_0,H)$ tiene la forma por bloques
+
+\pageoriginale
+
+\begin{equation}\tag{3.3.15}
+J_{(x_0,H)}(\varphi)=
+\left(
+\begin{array}{c|c}
+0_{1\times n} & 0_{1\times(r-n-1)}\\ \hline
+-\operatorname{Hess}(h_{r-n})(0) & 0_{n\times(r-n-1)}\\ \hline
+0_{(r-n-1)\times n} & I_{r-n-1}\\ \hline
+0_{1\times n} & 0_{1\times(r-n-1)}
+\end{array}
+\right).
+\end{equation}
+Por tanto, $\varphi$ no está ramificado en $(x_0,H)$ si y solo si la
+matriz hessiana
+\[
+\left(
+\frac{\partial^2h_{r-n}}{\partial x_i\partial x_j}(0)
+\right)_{1\leq i,j\leq n}
+\]
+es inversible. Por otra parte, 3.3.2 y 3.3.3 muestran que el completado
+del anillo local de $X\cap H$ en $x_0$ es
+\begin{equation}\tag{3.3.16}
+k[[x_1,\ldots,x_n]]/
+\bigl(h_{r-n}(x_1,\ldots,x_n)\bigr),
+\end{equation}
+
+\pageoriginale
+
+y se concluye mediante la Definición 1.2.
+
+\subsubsection*{Ejemplo 3.4.}
+Supongamos que $X$ es una hipersuperficie de $\mathbb P^r$, definida
+por una ecuación homogénea $F(X_0,\ldots,X_r)=0$. Entonces
+$\mathbb P(N)=X$, y en coordenadas homogéneas
+$\varphi:X\to\check{\mathbb P}^{r}$ viene dado por
+\begin{equation}\tag{3.4.1}
+\varphi(X_0,\ldots,X_r)=
+\left(
+\frac{\partial F}{\partial X_0},\ldots,
+\frac{\partial F}{\partial X_r}
+\right).
+\end{equation}
+Este es el \underline{morfismo de Gauss}.
+
+He aquí un ejemplo en el que $\varphi$ está ramificado en todas partes.
+Sea $p$ la característica de $k$, sea $r\geq1$, y tomemos la
+hipersuperficie $X$ de ecuación
+\begin{equation}\tag{3.4.2}
+\sum_{i=0}^{r}X_i^{p^r+1}=0.
+\end{equation}
+Entonces
+\begin{equation}\tag{3.4.3}
+\varphi(X_0,\ldots,X_r)
+=(X_0^{p^r},\ldots,X_r^{p^r}).
+\end{equation}
+Así, $\check X$ se reduce a un punto si $p=0$, mientras que si $p>0$
+se tiene $\check X\simeq X$ y $\varphi$ es el morfismo de Frobenius.
+De 3.3 (o de 3.5.0 más abajo) se deduce que, si $p>2$, la inmersión
+considerada no es una inmersión de Lefschetz.
+
+Volvamos al caso general.
+
+\pageoriginale
+
+\subsubsection*{Proposición 3.5.}
+\underline{Supongamos que el morfismo
+$\varphi:\mathbb P(N)\to\check{\mathbb P}^{r}$ es genéricamente no
+ramificado (es decir, no está ramificado en todas partes). Entonces
+$\varphi$ induce un morfismo birracional de $\mathbb P(N)$ sobre
+$\check X$. Más precisamente, los tres abiertos siguientes de
+$\sisi{X}{\check X}$ son idénticos:}
+\begin{enumerate}
+\item[(a)] \underline{el mayor abierto sobre el que $\check X$ es
+liso;}
+\item[(b)] \underline{el mayor abierto $V\subset\check X$ tal que
+$\varphi$ induce un isomorfismo
+$\varphi^{-1}(V)\xrightarrow{\sim}V$;}
+\item[(c)] \underline{el abierto (cf. 3.2) formado por los
+hiperplanos $H$ tales que $X\cap H$ tiene un único punto singular,
+siendo este una singularidad cuadrática no degenerada.}
+\end{enumerate}
+
+\subsubsection*{Corolario 3.5.0.}
+\underline{Supongamos que $\operatorname{car}(k)\ne2$ o que $\dim X$
+es par. La inmersión dada es una inmersión de Lefschetz si y solo si
+se cumple una de las dos condiciones siguientes:}
+\begin{enumerate}
+\item[(a)] $\varphi$ \underline{es genéricamente no ramificado;}
+\item[(b)] $\dim\check X\leq r-2$.
+\end{enumerate}
+
+En efecto, la suficiencia resulta del criterio (3.2.4). En el caso
+(a), la Proposición 3.5 identifica $F$ con el lugar singular de
+$\check X$, por lo que
+\[
+\dim F<\dim\check X=r-1;
+\]
+en el caso (b), el criterio es inmediato. Recíprocamente, supongamos
+que $D$ es un pincel de Lefschetz y que $\dim\check X=r-1$. Existe un
+punto $H\in D\cap\check X$, y 3.3 junto con la Definición 2.2(c)
+muestra que $\varphi$ no está ramificado en los puntos de
+$\varphi^{-1}(H)$. Por tanto, es genéricamente no ramificado.
+
+\noindent\underline{Demostración de la Proposición 3.5.}
+La hipótesis implica
+\[
+\dim\check X=\dim\mathbb P(N)=r-1,
+\]
+y por 3.2 $\check X$ es una hipersuperficie irreducible de
+$\check{\mathbb P}^{r}$.
+
+\pageoriginale
+
+Sea $R$ el lugar de ramificación de $\varphi$. Por hipótesis, es un
+cerrado de $\mathbb P(N)$ de dimensión a lo sumo $r-2$; por tanto,
+$\varphi(R)$ es un cerrado de $\check X$ de dimensión a lo sumo
+$r-2$. Sea $V'$ el abierto denso
+\begin{equation}\tag{3.5.1}
+V'=(\check X-\varphi(R))\cap
+   (\check X-\operatorname{Sing}(\check X))
+\end{equation}
+de $\check X$, y denotemos por $F$ su complementario:
+\begin{equation}\tag{3.5.1.1}
+F=\varphi(R)\cup\operatorname{Sing}(\check X).
+\end{equation}
+
+Demostremos primero que $\varphi$ induce un isomorfismo
+$\varphi^{-1}(V')\simeq V'$ construyendo una inversa
+$\psi:V'\to\varphi^{-1}(V')$. Consideremos
+$\varphi^{-1}(V')$ inmerso en $X\times V'$ mediante (3.1.1), de modo
+que $\varphi$ es la segunda proyección. Construir $\psi$ equivale
+entonces a construir un morfismo $\psi_1:V'\to\mathbb P^r$ que haga
+conmutativo el diagrama
+\begin{equation}\tag{3.5.2}
+\begin{tikzcd}[column sep=huge]
+\varphi^{-1}(V') \arrow[r,"\varphi"] \arrow[d]
+  & V' \arrow[d,"\psi_1"]\\
+X \arrow[r,hook] & \mathbb P^r
+\end{tikzcd}
+\end{equation}
+y poner después
+$\psi(v)=(\psi_1(v),v)\in\mathbb P^r\times V'$.
+
+Para toda hipersuperficie de un espacio proyectivo, el morfismo de
+Gauss (3.4.1) está definido en cada punto liso. Apliquemos esto a la
+hipersuperficie $\check X\subset\check{\mathbb P}^{r}$. Como $V'$
+está contenido
+
+\pageoriginale
+
+en el lugar liso $V$ de $\check X$, el morfismo de Gauss proporciona
+\begin{equation}\tag{3.5.3}
+\psi_1:V'\longrightarrow
+\check{\check{\mathbb P}}^{r}\simeq\mathbb P^r.
+\end{equation}
+Queda comprobar que (3.5.2) conmuta. Sea $(x_0,H_0)$ un punto cerrado
+de $\varphi^{-1}(V')$. Debemos demostrar que $x_0$, considerado como
+hiperplano de $\check{\mathbb P}^{r}$, es tangente a $\check X$ en
+$H_0$; en otras palabras, que la tangencia de $H_0$ a $X$ en $x_0$
+implica la tangencia de $x_0$ a $\check X$ en $H_0$.
+
+Como $\varphi$ no está ramificado en $(x_0,H_0)$ y $\check X$ es liso
+en $H_0=\varphi(x_0,H_0)$, su diferencial es un isomorfismo
+\begin{equation}\tag{3.5.4}
+d\varphi:
+T_{\mathbb P(N),(x_0,H_0)}
+\xrightarrow{\sim}T_{\check X,H_0}.
+\end{equation}
+La primera parte de la demostración queda entonces concluida por el
+lema siguiente.
+
+\subsubsection*{Lema 3.6 (Euler).}
+\underline{Sea $(x_0,H_0)$ un punto cerrado de $\mathbb P(N)$, y sea
+$T_L$ el fibrado tangente del hiperplano
+$L\subset\check{\mathbb P}^{r}$ definido por $x_0$. Entonces, dentro
+de $T_{\check{\mathbb P}^{r},H_0}$,}
+\[
+d\varphi\bigl(T_{\mathbb P(N),(x_0,H_0)}\bigr)
+\subset T_{L,H_0}.
+\]
+
+\noindent\underline{Demostración.}
+Elijamos coordenadas homogéneas $X_0,\ldots,X_r$ sobre $\mathbb P^r$
+en las que $x_0$ sea el punto
+$\underline A=(A_0,\ldots,A_r)$.
+
+\pageoriginale
+
+Un punto de $T_{X,x_0}$ es un punto de $\mathbb P^r$ con valores en
+$k[\epsilon]/(\epsilon^2)$ de la forma
+\begin{equation}\tag{3.6.1}
+\underline A+\epsilon\underline B,
+\end{equation}
+tal que, para toda sección local $H$ de $I$,
+\begin{equation}\tag{3.6.2}
+\sum_{i=0}^{r}B_i
+\frac{\partial H}{\partial X_i}(\underline A)=0.
+\end{equation}
+Elijamos además una sección local $H$ de $I$ que dé lugar a $H_0$
+mediante (3.1.1). Como $\mathbb P(N)$ es localmente trivial sobre
+$X$, un punto de $T_{\mathbb P(N),(x_0,H_0)}$ puede representarse por
+\begin{equation}\tag{3.6.3}
+(\underline A+\epsilon\underline B,\ H+\epsilon F),
+\end{equation}
+donde $F$ es una sección local de $I$ y $\underline A,\underline B$
+son como arriba. Su imagen por $\varphi$ es el hiperplano sobre
+$k[\epsilon]/(\epsilon^2)$ de ecuación
+\begin{equation}\tag{3.6.4}
+\sum_{i=0}^{r}
+\frac{\partial(H+\epsilon F)}{\partial X_i}
+(\underline A+\epsilon\underline B)T_i=0.
+\end{equation}
+Por tanto, la afirmación equivale a
+\begin{equation}\tag{3.6.5}
+\sum_{i=0}^{r}A_i
+\frac{\partial(H+\epsilon F)}{\partial X_i}
+(\underline A+\epsilon\underline B)=0.
+\end{equation}
+Como $\epsilon^2=0$, la fórmula de Taylor da
+\begin{equation}\tag{3.6.6}
+\frac{\partial(H+\epsilon F)}{\partial X_i}
+(\underline A+\epsilon\underline B)
+=\frac{\partial H}{\partial X_i}(\underline A)
++\epsilon\frac{\partial F}{\partial X_i}(\underline A)
++\epsilon\sum_{j=0}^{r}B_j
+\frac{\partial^2H}{\partial X_j\partial X_i}(\underline A).
+\end{equation}
+
+\pageoriginale
+
+Basta, pues, verificar las tres fórmulas siguientes:
+\begin{equation}\tag{3.6.7}
+\sum_{i=0}^{r}A_i
+\frac{\partial H}{\partial X_i}(\underline A)=0,
+\end{equation}
+\begin{equation}\tag{3.6.8}
+\sum_{i=0}^{r}A_i
+\frac{\partial F}{\partial X_i}(\underline A)=0,
+\end{equation}
+y
+\begin{equation}\tag{3.6.9}
+\sum_{i,j=0}^{r}A_iB_j
+\frac{\partial^2H}{\partial X_i\partial X_j}(\underline A)=0.
+\end{equation}
+Como $H$ y $F$ son homogéneos de grado cero, la fórmula de Euler da
+\begin{equation}\tag{3.6.10}
+\sum_iX_i\frac{\partial H}{\partial X_i}=0,
+\qquad
+\sum_iX_i\frac{\partial F}{\partial X_i}=0.
+\end{equation}
+Puesto que $\partial H/\partial X_j$ es homogéneo de grado $-1$, la
+misma fórmula da
+\[
+\sum_iX_i\frac{\partial^2H}{\partial X_i\partial X_j}
+=-\frac{\partial H}{\partial X_j}.
+\]
+En consecuencia, (3.6.9) se convierte en
+\begin{equation}\tag{3.6.11}
+-\sum_jB_j\frac{\partial H}{\partial X_j}(\underline A)=0,
+\end{equation}
+que es precisamente (3.6.2).
+
+Esto demuestra que $\varphi$ induce un isomorfismo
+\begin{equation}\tag{3.6.12}
+\varphi^{-1}(V')\xrightarrow{\sim}V',
+\end{equation}
+
+\pageoriginale
+
+cuya inversa es $\psi$. Observemos ahora que el morfismo
+\begin{equation}\tag{3.6.13}
+\left\{
+\begin{aligned}
+\psi &:V'\longrightarrow
+  \mathbb P^r\times V'\subset\mathbb P^r\times\check X,\\
+\psi(v)&=(\psi_1(v),v)
+\end{aligned}
+\right.
+\end{equation}
+se extiende a un morfismo
+\begin{equation}\tag{3.6.14}
+\left\{
+\begin{aligned}
+\widetilde\psi &:V\longrightarrow\mathbb P^r\times V,\\
+\widetilde\psi(v)&=(\widetilde\psi_1(v),v),
+\end{aligned}
+\right.
+\end{equation}
+donde
+\begin{equation}\tag{3.6.15}
+\widetilde\psi_1:V\longrightarrow\mathbb P^r
+\end{equation}
+es el morfismo de Gauss, ahora considerado como definido sobre todo
+$V$.
+
+Acabamos de demostrar
+\begin{equation}\tag{3.6.16}
+\psi(V')\subset\mathbb P(N).
+\end{equation}
+Como $V'$ es denso en $V$ y $\mathbb P(N)$ es cerrado en
+$\mathbb P^r\times\check X$, esto implica
+\begin{equation}\tag{3.6.17}
+\widetilde\psi(V)\subset\mathbb P(N).
+\end{equation}
+De hecho, es claro que incluso
+\begin{equation}\tag{3.6.18}
+\widetilde\psi(V)\subset\varphi^{-1}(V).
+\end{equation}
+De nuevo por continuidad, las identidades
+
+\pageoriginale
+
+\[
+\psi\circ\varphi=\operatorname{id}_{\varphi^{-1}(V')},
+\qquad
+\varphi\circ\psi=\operatorname{id}_{V'}
+\]
+se extienden a
+\[
+\widetilde\psi\circ\varphi=\operatorname{id}_{\varphi^{-1}(V)},
+\qquad
+\varphi\circ\widetilde\psi=\operatorname{id}_{V}.
+\]
+Por tanto, los abiertos de 3.5(a) y 3.5(b) son idénticos.
+
+Demostremos ahora que los abiertos de 3.5(a) y 3.5(c) son idénticos.
+Por 3.3, este último es el subconjunto $U\subset\check X$ definido por
+\begin{equation}\tag{3.6.19}
+U=\left\{H\in\check X\ \middle|\
+\begin{array}{l}
+\varphi^{-1}(H)\text{ consta de un único punto, y}\\
+\varphi\text{ no está ramificado en dicho punto}
+\end{array}
+\right\}.
+\end{equation}
+El esquema $\varphi^{-1}(U)$ es normal, pues es liso, y el morfismo
+inducido
+\[
+\varphi:\varphi^{-1}(U)\longrightarrow U
+\]
+es birracional, como ya se ha demostrado; es radicial por la
+definición de $U$, y propio. Es, por tanto, la normalización de $U$.
+En particular, $U$ es geométricamente unirrama. Como este morfismo
+no está ramificado, EGA IV, 18.10.1 muestra que es étale; EGA IV,
+18.10.18 muestra entonces que es una inmersión abierta. En
+consecuencia, es un isomorfismo y $U$ es liso. Esto demuestra
+$3.5(c)\subset3.5(a)$.
+
+\pageoriginale
+
+La fórmula (3.6.19) hace evidente la inclusión
+$3.5(b)\subset3.5(c)$, y la igualdad
+$3.5(a)=3.5(b)$ concluye la demostración.
+
+\subsubsection*{3.7.}
+El Teorema 2.5 es verdadero cuando $\operatorname{car}(k)\ne2$, y
+también cuando $X$ tiene dimensión par.
+
+\noindent\underline{Demostración.}
+Teniendo en cuenta 3.5.0 y 3.3, basta verificar la afirmación
+siguiente:
+
+\medskip
+\noindent(3.7.1) Para todo punto cerrado $x_0\in X$ y todo entero
+$d\geq2$, existe una hipersuperficie $H$ de grado $d$, tangente a
+$X$ en $x_0$, tal que $x_0$ es una singularidad cuadrática ordinaria
+de $X\cap H$.
+
+Elijamos coordenadas homogéneas $X_0,\ldots,X_r$ tales que
+$x_0=(1,0,\ldots,0)$ y que las funciones $X_i/X_0$,
+$i=1,\ldots,n$, sean coordenadas locales sobre $X$ cerca de $x_0$.
+Podemos tomar por $H$ la hipersuperficie de ecuación
+\begin{equation}\tag{3.7.1.1}
+H=X_0^{d-2}\sum_{i=1}^{n}X_i^2
+\qquad\text{si }\operatorname{car}(k)\ne2,
+\end{equation}
+o
+\begin{equation}\tag{3.7.1.2}
+H=X_0^{d-2}\sum_{i=1}^{n/2}X_iX_{n/2+i}
+\qquad\text{si }n\text{ es par}.
+\end{equation}
+Si $n$ es impar, bajo la primera hipótesis, la elección estándar
+equivalente consignada en la fuente es
+\begin{equation}\tag{3.7.1.3}
+H=X_0^{d-2}
+\left(X_n^2+
+\sum_{i=1}^{\lfloor n/2\rfloor}
+X_iX_{\lfloor n/2\rfloor+i}\right).
+\end{equation}
+
+\pageoriginale
+
+Para la afirmación 2.5.2, observemos que o bien $\varphi$ es
+genéricamente no ramificado, en cuyo caso se aplica 3.5.0, o bien está
+ramificado en todas partes. En característica cero, este último caso
+implica
+$\dim\sisi{X}{\check X}\leq r-2$, de modo que el criterio (3.2.4) se
+cumple automáticamente.\footnote{La impresión lleva
+$\dim X\leq r-2$. La alternativa del Corolario 3.5.0 y el criterio
+invocado requieren $\dim\check X\leq r-2$.}
+
+\section*{4. El caso general}
+
+Esbozaremos otro método de demostración de 2.5, válido en toda
+característica, admitiendo el enunciado siguiente, próximo a 3.1 y
+caso particular de XV, 1.1.4.
+
+\medskip
+\noindent(4.1) \underline{El subconjunto de $\mathbb P(N)$ formado
+por los puntos $(x,H)$ tales que $x$ es una singularidad cuadrática
+ordinaria de $X\cap H$ es abierto.}
+
+Observemos que 4.1 se deduce de 3.3, salvo cuando
+$\operatorname{car}(k)=2$ y $\dim X$ es impar.
+
+\subsubsection*{4.1.1.}
+Sea $R_1$ el cerrado complementario del abierto 4.1 en $\mathbb P(N)$,
+y sea
+\[
+F_1=\varphi(R_1)\subset\check X\subset\check{\mathbb P}^{r}
+\]
+su imagen.
+
+\subsubsection*{Lema 4.1.2.}
+\underline{Si el abierto 4.1 es no vacío, entonces
+$\operatorname{codim}_{\check{\mathbb P}^{r}}(F_1)\geq2$.}
+
+\noindent\underline{Demostración.}
+Por hipótesis,
+\[
+\dim R_1<\dim\mathbb P(N)=r-1,
+\]
+y $F_1=\varphi(R_1)$.
+
+\subsubsection*{4.1.3.}
+Sea $F_2$ la parte de $\check X$ formada por los hiperplanos tangentes
+a $X$ en al menos dos puntos. Observemos que $F_2$ no es
+
+\pageoriginale
+
+cerrado, pero que
+\begin{equation}\tag{4.1.4}
+\overline{F_2}\subset F_1\cup F_2.
+\end{equation}
+Esto se debe a que $F_1\cup F_2=F$ (cf. 3.2) es cerrado. La inclusión
+(4.1.4) ``dice'' que una \underline{confluencia} de dos singularidades
+no es una singularidad cuadrática ordinaria. En todo caso, la
+construcción de 4.2.4 mostrará que $F_2$ es constructible.
+
+Para demostrar 2.5.1 aplicaremos el criterio 3.2.4. Necesitamos saber
+que
+\[
+\operatorname{codim}_{\check{\mathbb P}^{r}}(F_1)\geq2
+\quad\text{y}\quad
+\operatorname{codim}_{\check{\mathbb P}^{r}}(F_2)\geq2.
+\]
+Por una parte, $\sisi{3.8.1}{3.7.1}$ y 4.1.2 muestran que, tras
+reemplazar la inmersión dada por su múltiplo $d$-ésimo, $d\geq2$, se
+tiene
+\[
+\operatorname{codim}_{\check{\mathbb P}^{r}}
+(\sisi{F_2}{F_1})\geq2.
+\]
+\footnote{La impresión dice ``3.8.1'' y $F_2$ en esta frase. La
+construcción cuadrática ordinaria es (3.7.1), y el Lema 4.1.2 se
+aplica a $F_1$; la Proposición 4.2 proporciona la afirmación requerida
+para $F_2$.}
+Así, 2.5.1 quedará demostrado una vez conocida la proposición
+siguiente.
+
+\subsubsection*{Proposición 4.2.}
+\underline{Sea $X$ una subvariedad lisa e irreducible de
+$\mathbb P^r$, de dimensión $n\geq1$. Para todo entero $d\geq2$, la
+parte $F_2$ de}
+\[
+\check{\mathbb P}^{N}
+=\check{\mathbb P}^{\binom{\sisi{n}{r}+d}{d}-1}
+\]
+\underline{formada por las hipersuperficies de grado $d$ de
+$\mathbb P^r$ tangentes a $X$ en al menos dos puntos tiene
+codimensión al menos $2$ en $\check{\mathbb P}^{N}$.}
+\footnote{La impresión lleva $\binom{n+d}{d}-1$ aquí y
+$\binom{r+d}{d}-d$ en la Proposición 4.3. La inmersión de Veronese de
+grado $d$ definida en 2.4 da
+$N=\binom{r+d}{d}-1$ en ambos lugares.}
+
+\subsubsection*{4.2.1.}
+Comencemos por el caso especial $d=2$ y $X$ una subvariedad lineal
+de $\mathbb P^r$. Basta encontrar una recta de
+$\check{\mathbb P}^{N}$ que no corte a $F$ (cf. 3.2.4). Elijamos
+coordenadas homogéneas $X_0,\ldots,X_r$ sobre $\mathbb P^r$ tales que
+$X$ esté definida por
+
+\pageoriginale
+
+\[
+X_{n+1}=\cdots=X_r=0,
+\]
+y coordenadas homogéneas $(\lambda,\mu)$ sobre $\mathbb P^1$.
+
+Si $n$ es par, $n=2k$, tomamos el pincel de cuádricas
+\begin{equation}\tag{4.2.2}
+H_{(\lambda,\mu)}
+=\lambda X_0^2+(\lambda X_k+\mu X_0)X_{2k}
+ +\sum_{i=1}^{k-1}(\lambda X_i+\mu X_{i+1})X_{k+i}.
+\end{equation}
+Si $n$ es impar, $n=2k+1$, tomamos el pincel
+\begin{equation}\tag{4.2.3}
+H_{(\lambda,\mu)}
+=(\lambda X_1+\mu X_0)X_0
+ +\sum_{i=1}^{k}(\lambda X_{2i}+\mu X_i)X_{2i+1}.
+\end{equation}
+En ambos casos se comprueba que $X\cap H_{(\lambda,\mu)}$ es liso
+para $(\lambda,\mu)\ne(0,1)$, mientras que
+$X\cap H_{(0,1)}$ tiene un único punto singular, que además es una
+singularidad cuadrática ordinaria. Por tanto, el pincel no corta a
+$F$.
+
+\subsubsection*{4.2.4.}
+Sea $\operatorname{Btg}^{d}(X)$ la subvariedad de
+\[
+\check{\mathbb P}^{N}\times
+\bigl((X\times X)-\Delta(X\times X)\bigr)
+\]
+formada por las ternas $(H,x_1,x_2)$ tales que $H$ es una
+hipersuperficie de grado $d$ de $\mathbb P^r$, tangente a $X$ en
+$x_1$ y en $x_2$, con $x_1\ne x_2$. La imagen de
+$\operatorname{Btg}^{d}(X)$ por $\operatorname{pr}_1$ es el conjunto
+$F_2$ de la Proposición 4.2, de modo que basta demostrar
+\begin{equation}\tag{4.2.5}
+\dim\operatorname{Btg}^{d}(X)\leq N-2
+\quad\text{si $d\geq3$, o si $d=2$ y $X$ no es lineal.}
+\end{equation}
+
+Para ello, sea $\operatorname{Lin}(X\times X)$ la subvariedad de
+$(X\times X)-\Delta(X\times X)$ dada por
+\begin{equation}\tag{4.2.6}
+\begin{aligned}
+\operatorname{Lin}(X\times X)
+&=\bigl\{(x_1,x_2)\in X\times X\mid x_1\ne x_2,\\[-1ex]
+&\hspace{6em}\text{la recta engendrada por $x_1,x_2$ es tangente a
+$X$ en $x_1$}\bigr\}\\
+&=\bigl\{(x_1,x_2)\in X\times X\mid x_1\ne x_2,\\[-1ex]
+&\hspace{6em}x_2\in X\cap\operatorname{Tg}_X(x_1)\bigr\}.
+\end{aligned}
+\end{equation}
+
+\pageoriginale
+
+Es evidente que:
+
+\medskip
+\noindent(4.2.7) \underline{Si $X$ no es una subvariedad lineal de
+$\mathbb P^r$, entonces}
+\[
+\dim\operatorname{Lin}(X\times X)<2\dim X.
+\]
+Por consiguiente, para demostrar (4.2.5) basta mostrar que las fibras
+del morfismo
+\begin{equation}\tag{4.2.8}
+\operatorname{Btg}^{d}(X)
+\xrightarrow{\ \operatorname{pr}_{2,3}\ }
+(X\times X)-\Delta(X\times X),
+\end{equation}
+consideradas como subvariedades de $\check{\mathbb P}^{N}$, tienen
+\begin{equation}\tag{4.2.9}
+\left\{
+\begin{array}{ll}
+\text{codimensión al menos $2\dim X+1$}
+ &\text{sobre $\operatorname{Lin}(X\times X)$},\\[1ex]
+\text{codimensión al menos $2\dim X+2$}
+ &\text{sobre $(X\times X)-\Delta(X\times X)
+                 -\operatorname{Lin}(X\times X)$.}
+\end{array}
+\right.
+\end{equation}
+La afirmación (4.2.9) se deduce de la proposición siguiente tomando
+por $L_i$ el espacio tangente a $X$ en $x_i$, para $i=1,2$.
+
+\subsubsection*{Proposición 4.3.}
+\underline{Sean $x_1$ y $x_2$ dos puntos cerrados distintos de
+$\mathbb P^r$, y sean $L_1$ y $L_2$ dos subespacios lineales de
+$\mathbb P^r$ tales que $x_1\in L_1$ y $x_2\in L_2$. En el espacio}
+\[
+\check{\mathbb P}^{N}
+=\check{\mathbb P}^{\binom{r+d}{d}-\sisi{d}{1}}
+\]
+\underline{de las hipersuperficies de grado $d$, el subespacio lineal
+formado por las hipersuperficies tangentes a $L_1$ en $x_1$ y a
+$L_2$ en $x_2$ tiene codimensión}
+\[
+\left\{
+\begin{aligned}
+\dim L_1+\dim L_2+2,
+&\quad\text{si $d\geq3$, o si $d=2$ y $L_1\cap L_2$ no contiene}\\[-0.2ex]
+&\quad\text{la recta $(x_1,x_2)$ que pasa por $x_1,x_2$},\\[1ex]
+\dim L_1+\dim L_2+1,
+&\quad\text{si $d=2$ y $L_1\cap L_2$ contiene la recta $(x_1,x_2)$.}
+\end{aligned}
+\right.
+\]
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Para $d\geq3$ hay que demostrar que
+$\dim L_1+\dim L_2+2$ condiciones lineales son independientes. Basta,
+pues, tratar el caso $L_1=L_2=\mathbb P^r$, es decir, determinar
+cuántas condiciones imponen a una hipersuperficie ser singular en
+$x_1$ y en $x_2$. Elijamos coordenadas homogéneas tales que
+\[
+x_1=(1,0,\ldots,0),\qquad x_2=(0,1,0,\ldots,0).
+\]
+La hipersuperficie de ecuación $\sum_WA_WX^W=0$ es singular en
+$(1,0,\ldots,0)$ si y solo si se anulan todos los coeficientes de los
+monomios $X_0^{d-1}X_i$, $i=0,\ldots,r$; es singular en
+$(0,1,0,\ldots,0)$ si y solo si se anulan todos los coeficientes de
+los monomios $X_1^{d-1}X_i$, $i=0,\ldots,r$. Para $d\geq3$, todos
+estos monomios son distintos, lo que demuestra la afirmación en este
+caso.
+
+Para $d=2$, el mismo cálculo da
+\[
+\operatorname{codim}\geq\dim L_1+\dim L_2+1,
+\]
+porque el monomio $X_0X_1$ se cuenta dos veces.
+
+Supongamos primero que $L_1\cap L_2$ no contiene la recta
+$(x_1,x_2)$. Nos reducimos al caso $L_1=\mathbb P^r$ y $L_2$ un
+hiperplano de $\mathbb P^r$ que no contiene $(x_1,x_2)$. Elijamos
+coordenadas homogéneas $X_0,\ldots,X_r$ tales que
+\[
+x_1=(1,0,\ldots,0),\qquad
+\sisi{x_1}{x_2}=(0,1,0,\ldots,0),\qquad L_2=(X_0=0).
+\]
+Una cuádrica $\sum_{i\leq j}A_{ij}X_iX_j$ es singular en
+$(1,0,\ldots,0)$ si y solo si $A_{0j}=0$ para $j=0,\ldots,r$, y es
+tangente a
+
+\pageoriginale
+
+$X_0=0$ en $(0,1,\ldots,0)$ si y solo si
+$A_{\sisi{i}{1}j}=0$ para $j=1,\ldots,r$. En conjunto son
+\[
+2r+1=\dim L_1+\dim L_2+2
+\]
+condiciones independientes.
+
+Finalmente, supongamos que $L_1\cap L_2$ contiene la recta
+$(x_1,x_2)$. Nos reducimos al caso $L_1=L_2=(x_1,x_2)$. En
+coordenadas homogéneas con
+\[
+x_1=(1,0,\ldots,0),\qquad x_2=(0,1,0,\ldots,0),
+\]
+la cuádrica $\sum_{i\leq j}A_{ij}X_iX_j$ pasa por
+$(1,0,\ldots,0)$ y es tangente allí a $L_1$ si y solo si
+$A_{00}=A_{01}=0$. Pasa por $(0,1,0,\ldots,0)$ y es tangente allí a
+$L_2$ si y solo si $A_{11}=A_{01}=0$. Por tanto, solo hay
+\[
+3=\dim L_1+\dim L_2+1
+\]
+condiciones.
+
+\section*{5. El grado de la variedad dual por un método
+``elemental''}
+
+(Cf. XVIII, 3.2 para otro método cuando $\dim X$ es par
+\underline{o} $\operatorname{car}(k)\ne2$.)
+
+Seguimos utilizando las notaciones de 2.2; por tanto,
+$X\hookrightarrow\mathbb P^r$ es una subvariedad lisa e irreducible
+de dimensión $n$.
+
+\subsubsection*{5.1.}
+Consideremos primero el morfismo (3.1.1)
+\begin{equation}\tag{5.1.0}
+\nu:\mathbb P(N)\longrightarrow X\times\check{\mathbb P}^{r}
+\end{equation}
+desde un punto de vista más funtorial. Por definición, el haz conormal
+$\check N$ figura en la sucesión exacta
+
+\pageoriginale
+
+de haces coherentes sobre $X$
+\begin{equation}\tag{5.1.1}
+0\longrightarrow\check N
+\longrightarrow\Omega^1_{\mathbb P^r/k}|_X
+\longrightarrow\Omega^1_X
+\longrightarrow0.
+\end{equation}
+Por otra parte, escribiendo las formas diferenciales de $\mathbb P^r$
+en coordenadas homogéneas, se obtiene una sucesión exacta de haces
+sobre $\mathbb P^r$
+\begin{equation}\tag{5.1.2}
+0\longrightarrow\Omega^1_{\mathbb P^r/k}
+\longrightarrow\mathcal O_{\mathbb P^r}(-1)^{r+1}
+\longrightarrow\mathcal O_{\mathbb P^r}
+\longrightarrow0.
+\end{equation}
+Su restricción a $X$ es, por tanto, la sucesión exacta
+\begin{equation}\tag{5.1.3}
+0\longrightarrow\Omega^1_{\mathbb P^r/k}|_X
+\longrightarrow\mathcal O_X(-1)^{r+1}
+\longrightarrow\mathcal O_{\sisi{\mathbb P^r}{X}}
+\longrightarrow0.
+\end{equation}
+\footnote{La impresión conserva el último término como
+$\mathcal O_{\mathbb P^r}$ después de restringir la sucesión a $X$;
+el término restringido es $\mathcal O_X$.}
+Combinando (5.1.1) y (5.1.3) se obtiene una inclusión
+\begin{equation}\tag{5.1.4}
+\check N\lhook\joinrel\longrightarrow\mathcal O_X(-1)^{r+1},
+\end{equation}
+que, por transposición, da una sobreyección
+\begin{equation}\tag{5.1.5}
+\mathcal O_X(1)^{r+1}\longrightarrow N.
+\end{equation}
+Se obtiene así una inmersión cerrada
+\begin{equation}\tag{5.1.6}
+\alpha:\mathbb P(N)
+\longrightarrow\mathbb P\bigl(\mathcal O_X(1)^{r+1}\bigr)
+\simeq X\times\check{\mathbb P}^{r},
+\end{equation}
+que es precisamente (5.1.0).
+
+\pageoriginale
+
+\subsubsection*{5.2. La idea del cálculo.}
+
+Supongamos desde ahora que
+$\check X=\varphi(\mathbb P(N))$ tiene dimensión $r-1$, y es por tanto
+una hipersuperficie de $\check{\mathbb P}^{r}$. El cálculo de su grado
+se hace naturalmente introduciendo las clases de Chern [1].
+
+Para toda variedad proyectiva lisa $T$, denotemos por
+$\operatorname{CH}(T)$ su anillo de Chow, graduado por la codimensión.
+Para $z\in\operatorname{CH}(T)$, escribimos
+\[
+\int_Tz
+\]
+para el grado de su componente de dimensión cero. La clase en
+$\operatorname{CH}^1(T)$ de un haz inversible $\mathcal L$ sobre $T$
+se denotará también por $\mathcal L$ cuando no pueda surgir confusión
+(por ejemplo, bajo el signo de integral).
+
+Sea $L$ la clase de una recta en
+$\operatorname{CH}(\check{\mathbb P}^{r})$. Entonces
+\begin{equation}\tag{5.2.1}
+\deg(\check X)
+=\int_{\check{\mathbb P}^{r}}L\cdot\check X.
+\end{equation}
+Conjuntísticamente, $\check X$ es la imagen de $\mathbb P(N)$ por
+$\varphi$ (3.1.2). Sin embargo, desde el punto de vista de la imagen
+directa propia
+\[
+\varphi_*:\operatorname{CH}(\mathbb P(N))
+\longrightarrow\operatorname{CH}(\check{\mathbb P}^{r}),
+\]
+se tiene
+\[
+\varphi_*[\mathbb P(N)]=\deg(\varphi)[\check X].
+\]
+
+\pageoriginale
+
+Por consiguiente, (5.2.1) se convierte en
+\begin{equation}\tag{5.2.2}
+\deg(\check X)
+=\frac{1}{\deg(\varphi)}
+\int_{\check{\mathbb P}^{r}}L\cdot\varphi_*[\mathbb P(N)].
+\end{equation}
+Aquí, por abuso de notación, $\varphi$ en $\deg(\varphi)$ designa el
+morfismo $\mathbb P(N)\to\check X$ inducido por (3.1.2); su grado es un
+entero no negativo, tomado igual a cero precisamente cuando
+$\dim\sisi{X}{\check X}<r-1=\dim\mathbb P(N)$.\footnote{La impresión
+lleva $\dim X<r-1$. La condición para que el morfismo inducido hacia la
+variedad dual sea genéricamente finito es $\dim\check X=r-1$.}
+La fórmula de proyección reescribe (5.2.2) como
+\begin{equation}\tag{5.2.3}
+\deg(\check X)
+=\frac{1}{\deg(\varphi)}
+\int_{\mathbb P(N)}\varphi^*(L).
+\end{equation}
+
+Sea $\eta\in\operatorname{CH}(\check{\mathbb P}^{r})$ la clase de un
+hiperplano. Como $L=\eta^{r-1}$, la ecuación (5.2.3) se convierte en
+\begin{equation}\tag{5.2.4}
+\deg(\check X)
+=\frac{1}{\deg(\varphi)}
+\int_{\mathbb P(N)}\bigl(\varphi^*(\eta)\bigr)^{r-1}.
+\end{equation}
+Calculemos ahora concretamente $\varphi^*(\eta)$.
+
+Sean $\xi$ (respectivamente, $\tau$) el haz inversible canónico
+$\mathcal O_{\mathbb P(N)}(1)$ sobre $\mathbb P(N)$ (respectivamente,
+$\mathcal O_{\mathbb P(\mathcal O_X(1)^{r+1})}(1)$ sobre
+$\mathbb P(\mathcal O_X(1)^{r+1})$). Por funtorialidad, (5.1.6) da
+\begin{equation}\tag{5.2.5}
+\alpha^*(\tau)=\xi.
+\end{equation}
+
+\pageoriginale
+
+Bajo la identificación
+\[
+\mathbb P\bigl(\mathcal O_X(1)^{r+1}\bigr)
+\simeq X\times\check{\mathbb P}^{r},
+\]
+y escribiendo $H=\mathcal O_X(1)$, se tiene evidentemente
+\begin{equation}\tag{5.2.6}
+\tau=\operatorname{pr}_1^*(H)\otimes\operatorname{pr}_2^*(\eta).
+\end{equation}
+Sea $\pi:\mathbb P(N)\to X$ el morfismo estructural. Entonces
+\[
+\pi=\operatorname{pr}_1\circ\alpha,\qquad
+\varphi=\operatorname{pr}_2\circ\alpha.
+\]
+Aplicando $\alpha^*$ a (5.2.6) y utilizando (5.2.5), se obtiene
+\begin{equation}\tag{\sisi{5.2.6}{5.2.6$'$}}
+\xi=\alpha^*(\tau)=\pi^*(H)\otimes\varphi^*(\eta).
+\end{equation}
+\footnote{La impresión numera tanto esta fórmula como la precedente
+(5.2.6); la prima distingue la segunda aparición en la rama
+corregida.}
+Así, en $\operatorname{CH}(\mathbb P(N))$,
+\begin{equation}\tag{5.2.7}
+\varphi^*(\eta)=\xi-\pi^*(H),
+\end{equation}
+y (5.2.3) se convierte en
+\begin{equation}\tag{5.2.8}
+\deg(\check X)
+=\frac{1}{\deg(\varphi)}
+\int_{\mathbb P(N)}\bigl(\xi-\pi^*(H)\bigr)^{r-1}.
+\end{equation}
+El segundo miembro de (5.2.8) se calcula mediante el lema siguiente
+(cf. 5.3.3).
+
+\subsubsection*{Lema 5.3.}
+\underline{Sean $X$ una variedad cuasiproyectiva lisa y conexa de
+dimensión $n$, y $M$ un haz localmente libre de rango finito $a$
+sobre $X$. Denotemos por $\xi$ el haz inversible
+$\mathcal O_{\mathbb P(M)}(1)$ sobre $\mathbb P(M)$,}
+
+\pageoriginale
+
+\underline{y por $\pi:\mathbb P(M)\to X$ el morfismo estructural.
+Recordemos que $\operatorname{CH}(\mathbb P(M))$ es un
+$\operatorname{CH}(X)$-módulo libre, vía $\pi^*$, con base
+$1,\xi,\ldots,\xi^{a-1}$, donde $\xi$ satisface}
+{\small
+\begin{equation}\tag{5.3.1}
+\xi^a-C_1\xi^{a-1}+C_2\xi^{a-2}-C_3\xi^{a-3}+\cdots=0,
+\end{equation}
+}
+\underline{siendo los $C_i$ las clases de Chern de $M$ en
+$\operatorname{CH}(X)$. Pongamos
+$C(M)=1+C_1+C_2+\cdots$, la clase de Chern total de $M$; es un
+elemento inversible de $\operatorname{CH}(X)$. Entonces:}
+\begin{enumerate}
+\item[(i)] \underline{se tiene}
+\begin{equation}\tag{5.3.2}
+\pi_*\!\left(\frac{\xi^{a-1}}{1+\xi}\right)
+=\frac{1}{C(M)};
+\end{equation}
+\item[(ii)] \underline{sea
+$F(T)\in\operatorname{CH}(X)[T]$ un polinomio tal que el coeficiente
+de $T^i$ sea homogéneo de grado $n+a-1-i$. Entonces $F(\xi)$ tiene
+grado máximo $n+a-1=\dim\mathbb P(M)$ en
+$\operatorname{CH}(\mathbb P(M))$. Se tiene}
+\begin{equation}\tag{5.3.3}
+\int_{\mathbb P(M)}F(\xi)
+=(-1)^{a-1}\int_X\frac{F(-1)}{C(M)}.
+\end{equation}
+\end{enumerate}
+
+\noindent\underline{Demostración.}
+Comencemos deduciendo (5.3.3) de (5.3.2). Escribamos
+\begin{equation}\tag{5.3.4}
+\frac{1}{C(M)}=\sum_{j\geq0}b_j,\qquad
+b_0=1,\qquad b_j\in\operatorname{CH}^j(X),\qquad
+b_j=0\quad\text{para }j<0.
+\end{equation}
+
+\pageoriginale
+
+Entonces (5.3.2) equivale a
+\begin{equation}\tag{5.3.5}
+\pi_*(\xi^{a-1+j})=(-1)^jb_j
+\qquad\text{siempre que }a-1+j\geq0,
+\end{equation}
+pues $\pi_*(\xi^q)=0$ para $q<a-1$ por razones de dimensión.
+
+Por linealidad, basta demostrar (5.3.3) cuando
+$F(T)=uT^{a-1+j}$, con $u\in\operatorname{CH}^{n-j}(X)$ homogéneo.
+Por (5.3.5) y la fórmula de proyección,
+\begin{equation}\tag{5.3.6}
+\begin{aligned}
+\int_{\mathbb P(M)}F(\xi)
+&=\int_{\mathbb P(M)}\pi^*(u)\xi^{a-1+j}\\
+&=\int_Xu\,\pi_*(\xi^{a-1+j})
+=(-1)^j\int_Xu\,b_j.
+\end{aligned}
+\end{equation}
+Por otra parte,
+\begin{equation}\tag{5.3.7}
+\begin{aligned}
+(-1)^{a-1}\int_X\frac{F(-1)}{C(M)}
+&=(-1)^{a-1}\int_X
+  \frac{(-1)^{a-1+j}u}{C(M)}\\
+&=(-1)^j\int_X\sum_i u\,b_i.
+\end{aligned}
+\end{equation}
+Como $\deg u=n-j$ y $\deg b_i=i$, se tiene
+\[
+\int_Xu\,b_i=0\qquad\text{para }i\ne j.
+\]
+Así, (5.3.7) se reduce a
+\begin{equation}\tag{5.3.8}
+(-1)^{a-1}\int_X\frac{F(-1)}{C(M)}
+=(-1)^j\int_Xu\,b_j,
+\end{equation}
+lo que demuestra la implicación anunciada.
+
+Queda demostrar (5.3.2), o equivalentemente (5.3.5).
+
+\pageoriginale
+
+Por razones de dimensión,
+\[
+\pi_*(\xi^j)=0\qquad\text{si }j<a-1,
+\]
+mientras que
+\[
+\pi_*(\xi^{a-1})=1_X
+\]
+por la razón geométrica de que $\xi^{a-1}$ corta cada fibra en un
+punto. La fórmula de proyección da, por tanto,
+\begin{equation}\tag{5.3.9}
+\sisi{\displaystyle
+\pi_*\!\left(\sum_{j=0}^{a-1}\pi^*(U_i)\xi^i\right)=U_{j-i}}
+{\displaystyle
+\pi_*\!\left(\sum_{i=0}^{a-1}\pi^*(U_i)\xi^i\right)=U_{a-1}}.
+\end{equation}
+\footnote{La fórmula impresa mezcla los índices $i,j$ y lleva
+$U_{j-i}$ en el segundo miembro. Las dos identidades de imagen directa
+inmediatamente precedentes fuerzan el coeficiente $U_{a-1}$.}
+Por (5.3.9), la afirmación (5.3.5) resulta del lema siguiente, en el
+que $\xi$ se reemplaza por $T$ y $C_i$ por $S_i$, teniendo en cuenta
+(5.3.1).
+
+\subsubsection*{Lema 5.4.}
+\underline{Sea $a>0$ un entero y sea
+$A=\mathbb Z[[X_1,\ldots,X_a]]$ el anillo de series formales en $a$
+indeterminadas. Sea $B$ la $A$-álgebra}
+\[
+B=A[[T]]\bigg/\left(\prod_{i=1}^{a}(T-X_i)\right).
+\]
+\underline{Entonces $B$ es un $A$-módulo libre con base
+$1,T,\ldots,T^{a-1}$:}
+\begin{equation}\tag{5.4.1}
+B=AT^{a-1}\oplus AT^{a-2}\oplus\cdots\oplus A.
+\end{equation}
+
+\pageoriginale
+
+\underline{Sea $S_i\in A$ la $i$-ésima función simétrica elemental}
+\[
+S_i=\sum_{1\leq\alpha_1<\cdots<\alpha_i\leq a}
+X_{\alpha_1}\cdots X_{\alpha_i},
+\]
+\underline{de modo que}
+\begin{equation}\tag{5.4.2}
+\sum_{i=0}^{a}(-1)^iS_iT^{a-i}=0
+\qquad\text{en }B.
+\end{equation}
+\underline{El elemento $1+S_1+\cdots+S_a$ es inversible en $A$;
+escribamos su inversa como}
+\begin{equation}\tag{5.4.3}
+\frac{1}{\sum_{i=0}^{a}S_i}
+=\sum_{j\geq0}b_j,
+\qquad b_j\text{ homogéneo de grado }j\text{ en }A,
+\qquad b_0=1.
+\end{equation}
+\underline{Para cada entero $j\geq0$, definamos un elemento homogéneo
+$a_j\in A$ de grado $j$ escribiendo, mediante (5.4.1),}
+\begin{equation}\tag{5.4.4}
+T^{a-1+j}
+=a_jT^{a-1}+{}?\,T^{a-2}+{}?\,T^{a-3}+\cdots+{}?,
+\qquad ?\in A.
+\end{equation}
+\underline{Entonces, para todo $j\geq0$,}
+\begin{equation}\tag{5.4.5}
+a_j=(-1)^jb_j.
+\end{equation}
+
+\noindent\underline{Demostración.}
+En vista de la definición (5.4.3) de los $b_j$, basta demostrar
+
+\pageoriginale
+
+\begin{equation}\tag{5.4.6}
+\left\{
+\begin{aligned}
+a_0&=1,\\
+\sum_{i=0}^{a}(-1)^iS_i\,a_{j-i}&=0
+&&\text{si }j>0.
+\end{aligned}
+\right.
+\end{equation}
+Es evidente que $a_0=1$. Para $j>0$ fijo, la segunda relación se
+obtiene tomando el coeficiente de $T^{a-1}$, mediante (5.4.1), en la
+relación
+\begin{equation}\tag{5.4.7}
+\sisi{\displaystyle\sum_{i=0}}{\displaystyle\sum_{i=0}^{a}}
+(-1)^iS_iT^{a-1+j-i}=0
+\qquad\text{en }B.
+\end{equation}
+\footnote{La impresión omite la cota superior $a$ en (5.4.7); la
+relación es (5.4.2) multiplicada por $T^{j-1}$.}
+Esta relación se obtiene multiplicando (5.4.2) por $T^{j-1}$, lo que
+demuestra el lema.
+
+\subsubsection*{Corolario 5.5.}
+\underline{Se tiene}
+\begin{equation}\tag{5.5.1}
+\deg(\check X)
+=\frac{(-1)^n}{\deg(\varphi)}
+\int_X\frac{(1+H)^{r-1}}{C(N)}.
+\end{equation}
+
+\noindent\underline{Demostración.}
+Se aplica (5.3.3), con $M=N$ el haz normal de
+$X\hookrightarrow\mathbb P^r$, a (5.2.8).
+
+Para una variedad cuasiproyectiva lisa $S$, escribamos
+\begin{equation}\tag{5.5.2}
+C(S)\underset{\mathrm{def}}{=}C(T_S)
+\end{equation}
+para su clase de Chern total, donde $T_S$ denota el fibrado tangente
+de $S$.
+
+\pageoriginale
+
+Dualizando la sucesión exacta (5.1.2), se obtiene
+\begin{equation}\tag{5.5.3}
+C(\mathbb P^r)=(1+H)^{r+1}
+\qquad\text{en }\operatorname{CH}(\mathbb P^r).
+\end{equation}
+Dualizando la sucesión exacta (5.1.1), se obtiene
+\begin{equation}\tag{5.5.4}
+C(N)\,C(X)=C(\mathbb P^r)|_X
+\qquad\text{en }\operatorname{CH}(X).
+\end{equation}
+Combinando (5.5.3) y (5.5.4), la fórmula (5.5.1) se convierte en:
+
+\subsubsection*{Corolario 5.6.}
+\underline{Se tiene}
+\begin{equation}\tag{5.6.1}
+\deg(\check X)
+=\frac{(-1)^{\sisi{r}{n}}}{\deg(\varphi)}
+\int_X\frac{C(X)}{(1+H)^2}.
+\end{equation}
+\footnote{La impresión lleva $(-1)^r$. La sustitución de (5.5.3) y
+(5.5.4) en (5.5.1) no altera su signo $(-1)^n$; la fórmula (5.7.3)
+que sigue confirma el mismo exponente.}
+
+\subsubsection*{5.7.}
+Para una variedad proyectiva lisa $S$, definimos su
+\underline{característica de Euler--Poincaré} por
+\begin{equation}\tag{5.7.1}
+\chi(S)=\int_SC(S).
+\end{equation}
+
+\subsubsection*{Proposición 5.7.2.}
+\underline{Sean $Y$ una sección hiperplana lisa de $X$ y $\Delta$ una
+sección lisa de $X$ por un subespacio lineal de codimensión dos de
+$\mathbb P^r$. Entonces}
+\begin{equation}\tag{5.7.3}
+\deg(\check X)
+=\frac{(-1)^n}{\deg(\varphi)}
+\bigl[\chi(X)+\chi(\Delta)-2\chi(Y)\bigr].
+\end{equation}
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Sea $i:Y\hookrightarrow X$ la inclusión. Se tiene
+\[
+N_{Y/X}=H|_Y=i^*H.
+\]
+La sucesión exacta
+\[
+0\longrightarrow T_Y
+\longrightarrow i^*T_X
+\longrightarrow i^*H
+\longrightarrow0
+\]
+da, por tanto,
+\begin{equation}\tag{5.7.4}
+C(Y)=i^*\!\left(\frac{C(X)}{1+H}\right).
+\end{equation}
+De ahí
+\[
+\chi(Y)=\int_Yi^*\!\left(\frac{C(X)}{1+H}\right),
+\]
+y la fórmula de proyección da
+\begin{equation}\tag{5.7.5}
+\chi(Y)
+=\int_Xi_*i^*\!\left(\frac{C(X)}{1+H}\right)
+=\int_X\frac{H\,C(X)}{1+H}.
+\end{equation}
+Iterando este cálculo para $\Delta$, se obtiene
+\begin{equation}\tag{5.7.6}
+\begin{aligned}
+\chi(\Delta)
+&=\int_Y\frac{H\,C(Y)}{1+H}\\
+&=\int_Yi^*\!\left(
+  \frac{H}{1+H}\cdot\frac{C(X)}{1+H}
+  \right)
+=\int_X\frac{H^2C(X)}{(1+H)^2}.
+\end{aligned}
+\end{equation}
+Por consiguiente,
+\[
+\begin{aligned}
+\chi(X)-2\chi(Y)+\chi(\Delta)
+&=\int_XC(X)\left[
+1-\frac{2H}{1+H}+\frac{H^2}{(1+H)^2}
+\right]\\
+&=\int_X\frac{C(X)}{(1+H)^2}.
+\end{aligned}
+\]
+Junto con (5.6.1), esto demuestra la proposición.
+
+\pageoriginale
+
+\section*{6. El caso de una base general}
+
+\subsubsection*{6.1.}
+Sean $S$ un esquema y $\bar s$ un punto geométrico de $S$, definido
+por una clausura algebraica del cuerpo residual $k(s)$ para un punto
+$s\in S$. Sean $\mathbb P^r_S$ el espacio proyectivo de dimensión
+$r$ sobre $S$, $\check{\mathbb P}^{r}_S$ su espacio proyectivo dual,
+y
+\[
+I\subset\mathbb P^r_S\times_S\check{\mathbb P}^{r}_S
+\]
+la variedad de incidencia. Sea
+$D\subset\check{\mathbb P}^{r}_S$ una recta definida por un punto con
+valores en $S$ de la grassmanniana apropiada, y sea $\Delta$ el eje
+del pincel de hiperplanos correspondiente (cf. 2.1).
+
+Sea $X$ un $S$-esquema propio y liso, puramente de dimensión
+$n\geq1$, provisto de una inmersión proyectiva
+$X\hookrightarrow\mathbb P^r_S$. Pongamos
+\[
+\widetilde X=(X\times_SD)\cap I.
+\]
+Así, $\widetilde X$ es el esquema sobre $D$ cuyas fibras son las
+secciones hiperplanas de $X$ parametrizadas por $D$; sea
+$u:\widetilde X\to D$ la proyección.
+
+Utilizamos un subíndice $\bar s$ para denotar el cambio de base por
+$\bar s\to S$. Supongamos que $\Delta_{\bar s}$ es transversal a
+$X_{\bar s}$. Entonces, sobre un entorno $U$ de $s$ en $S$,
+$\Delta$ es transversal a $X$. En lo que sigue reemplazamos $S$ por
+este entorno y escribimos $U=S$. El esquema $\widetilde X$ es
+entonces liso sobre $S$, y un entorno en $\widetilde X$ de la imagen
+inversa de $\Delta$ es liso sobre $D$.
+
+Supongamos además que una de las secciones hiperplanas de
+$X_{\bar s}$ pertenecientes al pincel $D_{\bar s}$ es lisa. Tras
+reemplazar de nuevo $S$ por un entorno apropiado de $s$, el subesquema
+cerrado $F\subset\widetilde X$ definido por el ideal jacobiano
+$J^{n-1}(\widetilde X/D)$ es finito y plano sobre $S$.
+
+\pageoriginale
+
+\subsubsection*{6.2.}
+El \underline{lugar excepcional} del pincel $D$ es el divisor de
+Cartier relativo $E$ de $D/S$ definido por el
+$\mathcal O_D$-módulo finito y plano $u_*\mathcal O_F$. Localmente
+sobre $D$, si
+\[
+\mathcal O_D^m\xrightarrow{\ v\ }\mathcal O_D^m
+\longrightarrow u_*\mathcal O_F\longrightarrow0
+\]
+es una presentación de $u_*\mathcal O_F$, entonces $E$ tiene ecuación
+$\det(v)=0$. La formación de $E$ conmuta con todo cambio de base.
+
+El divisor $E_{\bar s}$ sobre $D_{\bar s}$ puede escribirse
+\[
+E_{\bar s}=\sum_Pn(P)[P],
+\]
+donde $n(P)$ es la suma de las colongitudes del ideal jacobiano
+$J^{n-1}(\widetilde X/D)$ en los puntos críticos de $u$ que se
+aplican en $P$.
+
+\subsubsection*{Proposición 6.3.}
+\underline{Supongamos que $D_{\bar s}$ es un pincel de Lefschetz de
+secciones hiperplanas de $X_{\bar s}$ y que
+$\operatorname{car}k(s)\ne2$ o que $n$ es par. Existe un entorno $U$
+de $s$ en $S$ tal que:}
+\begin{enumerate}
+\item[(a)] \underline{para todo punto geométrico $\bar t$ de $U$,
+$D_{\bar t}$ es un pincel de Lefschetz de secciones hiperplanas de
+$X_{\bar t}$;}
+\item[(b)] \underline{sobre $U$, el lugar excepcional $E$ es étale
+sobre $S$.}
+\end{enumerate}
+Para demostrar (a) y (b), basta observar que, bajo estas hipótesis,
+$D_{\bar s}$ satisface la condición 2.2(c) si y solo si el divisor
+$E_{\bar s}$ es reducido. Invocando 3.3, se podría utilizar solamente
+la implicación más fácil de izquierda a derecha.
+
+\subsubsection*{6.3 (caso excepcional).}
+\footnote{La impresión repite el número 6.3 después de la Proposición
+6.3.}
+La proposición es falsa en el caso excepcional recién mencionado.
+No obstante, si $S$ tiene característica dos y $n$ es impar, existe
+un entorno $U$ de $s$ sobre el cual se cumple (a), y se puede definir
+un divisor $E'$ étale sobre $U$ tal que $E=2E'$. No utilizaremos este
+resultado.
+
+\subsection*{Referencias}
+
+\noindent[1] A. Grothendieck, \emph{La théorie des classes de Chern},
+Bull. Soc. Math. France \textbf{86} (1958), 137--154.

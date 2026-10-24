@@ -1,0 +1,257 @@
+
+\section{Propiedad de ser cohomológicamente propio}
+\label{XIII.1}
+\setcounter{subsection}{-1}
+\subsection{}
+\label{XIII.1.0}
+Sean~$S$ un esquema y $f \colon X \to Y$ un morfismo de
+$S$-esquemas. Si~$S'$ es un $S$-esquema, consideremos el diagrama
+siguiente, en el que todos los cuadrados son cartesianos:
+\marginpar{347}
+\begin{equation*}
+\label{eq:XIII.1.0.1}
+\tag{\thesubsection.1}
+\begin{array}{c}
+\xymatrix{ X \ar[d]_f & \ar[l]_h X'
+\ar[d]^{f'} \\ Y \ar[d] & \ar[l]_g Y' \ar[d] \\ S & \ar[l] \,S'. }
+\end{array}
+\end{equation*}
+
+Si~$Y_1$ es un esquema étale sobre~$Y$, pongamos $X_1 =
+X \times_Y Y_1$, $Y_1' = Y' \times_Y Y_1$, y consideremos el
+cuadrado cartesiano
+\begin{equation*}
+\label{eq:XIII.1.0.2}
+\tag{\thesubsection.2}
+\begin{array}{c}
+\xymatrix{ X_1 \ar[d]_{f_1} & \ar[l]_{h_1}
+X_1' \ar[d]^{f_1'} \\ Y_1 & \ar[l]^{g_1} \,Y_1'. }
+\end{array}
+\end{equation*}
+
+\begin{definition}
+\label{XIII.1.1}
+Sea~$F$ un stack sobre~$X$. Se dice que~$(F,f)$ es
+\emph{cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$}
+\index{cohomológicamente propio|hyperpage}%
+\index{propiedad de ser cohomológicamente propio|hyperpage}%
+(\resp en dimensión $\leqslant 0$, \resp en dimensión $\leqslant 1$)
+si, para todo $S$-esquema~$S'$, el funtor canónico (definido de manera
+evidente mediante la propiedad universal de la imagen inversa de stacks)
+$$
+g^* f_* F \to f'_* h^* F \qquad\text{ (\cf 1.0.1)}
+$$
+es fiel (\resp plenamente fiel, \resp una equivalencia de categorías).
+\end{definition}
+
+Si no hay confusión posible respecto de~$S$, en particular si~$S=Y$, se
+dice cohomológicamente propio en lugar de cohomológicamente propio
+relativamente a~$S$.
+
+\setcounter{subsection}{1}% Conservar el número visible XIII.1.2 de la fuente.
+\subsection{}
+\label{XIII.1.2}
+Sea~$F$ un haz de conjuntos sobre~$X$; sea~$\Phi$ el stack en categorías
+discretas asociado a~$F$, \ie el stack cuya fibra sobre todo esquema~$X_1$
+étale sobre~$X$ es la categoría discreta cuyo conjunto de objetos es
+$F(X_1)$. Se dice que~$(F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant -1$ (\resp en dimensión $\leqslant 0$) si
+$(\Phi,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ (\resp en dimensión $\leqslant 1$).
+
+El
+\marginpar{348}
+morfismo canónico
+\begin{equation*}
+\label{eq:XIII.1.2.1}
+\tag{\thesubsection.1} { g^* f_* F \to f'_* h^* F }
+\end{equation*}
+induce, al pasar a los stacks en categorías discretas asociados, el
+morfismo canónico
+$$
+g^* f_* \Phi \to f'_* h^* \Phi \text{.}
+$$
+Por consiguiente, decir que~$(F,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant -1$ (\resp en dimensión
+$\leqslant 0$) equivale a decir que, para todo $S$-esquema~$S'$, el
+morfismo~\eqref{eq:XIII.1.2.1} es inyectivo (\resp biyectivo).
+
+\subsection{}
+\label{XIII.1.3}
+Sea~$F$ un haz de grupos sobre~$X$ y~$\Phi$ el stack de los torsores
+sobre~$X$ bajo~$F$ \cite[II 2.3.2]{XIII.1}. Se dice que~$(F,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp $\leqslant 0$, \resp $\leqslant 1$) si
+$(\Phi,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp $\leqslant 0$, \resp $\leqslant 1$). La condición
+de ser cohomológicamente propio puede explicitarse como sigue.
+
+\begingroup
+\setcounter{proposition}{0}% La fuente numera esta proposición dentro del párrafo XIII.1.3.
+\renewcommand{\theproposition}{\thesubsection.\arabic{proposition}}
+\renewcommand{\theHproposition}{\theHsubsection.\arabic{proposition}}
+\begin{subproposition}
+\label{XIII.1.3.1}
+Las notaciones son las de~\eqref{eq:XIII.1.0.1} y
+\eqref{eq:XIII.1.0.2}. Sea~$F$ un haz de grupos sobre~$X$. Se denota por
+$F'$ (\resp $F_1$, \resp $F_1'$, etc.) la imagen inversa de~$F$ sobre~$X'$
+(\resp sobre~$X_1$, \resp sobre~$X_1'$, etc.). Entonces las condiciones
+siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $(F,f)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant -1$ (\resp $\leqslant 0$, \resp $\leqslant 1$).
+\item[(ii)] Para todo morfismo $S' \to S$, para todo esquema~$Y_1$ étale
+sobre~$Y$ y para todo torsor~$P$ sobre~$X_1$ bajo~$F_1$, si
+$\leftexp{P\mkern-4mu}{F}_1$ denota el grupo torcido de~$F_1$ por~$P$
+\textup{\cite[II 4.1.2.3]{XIII.1}}, el morfismo canónico
+$$
+a_0 \colon g_1^*(f_{1 *}(\leftexp{P\mkern-4mu}{F}_1)) \to f'_{1
+*}(\leftexp{P'\mkern-6mu}{F}'_1)
+$$
+es inyectivo (\resp $a_0$ es biyectivo y el morfismo canónico
+$$
+a_1 \colon g^*(\R^1 f_* F) \to \R^1 f'_* F'
+$$
+es
+\marginpar{349}
+inyectivo, \resp $a_0$ y~$a_1$ son biyectivos).
+\item[(ii~bis)] Para todo morfismo $S' \to S$, para todo esquema~$Y_1$
+étale sobre~$Y$, para todo torsor~$P$ sobre~$X_1$ bajo~$F_1$ y para todo
+torsor~$R$ bajo~$\leftexp{P\mkern-4mu}{F}_1$, el morfismo canónico
+$$
+\alpha_0 \colon g_1^*(f_{1 *}R) \to f'_{1 *} R'
+$$
+es inyectivo (\resp $\alpha_0$ es biyectivo, \resp los morfismos
+$\alpha_0$ y
+$$
+\alpha_1 \colon g_1^*(\R^1 f_{1 *}(\leftexp{P\mkern-4mu}{F}_1)) \to \R^1
+f'_{1 *}(\leftexp{P'\mkern-6mu}{F}'_1)
+$$
+son biyectivos).
+\end{enumerate}
+\end{subproposition}
+\endgroup
+
+\subsubsection*{Demostración}
+(i)$\To$(ii~bis). Según~\cite[II 4.2.5]{XIII.1}, todo torsor~$R$
+bajo~$\leftexp{P\mkern-4mu}{F}_1$ es de la forma $R = Q
+\overset{F_1}{\wedge} P^\circ$, donde~$Q$ es un torsor bajo~$F_1$ y
+$P^\circ$ el opuesto de~$P$. Se tiene entonces $R' \simeq Q'
+\overset{F'_1}{\wedge} {P'}^\circ$. Sea~$\Phi$ el stack de los torsores
+bajo~$F$, y sean~$x$, $y$ (\resp $x'$, $y'$) los objetos de la categoría
+fibra~$(g^* f_* \Phi)_{Y_1'}$ (\resp $(f'_*
+\Phi')_{Y_1'}$) asociados a~$P$, $Q$ (\resp $P'$, $Q'$). Se tiene la
+relación
+$$
+Q\overset{F_1}{\wedge} P^\circ \simeq \SheafHom_{F_1}(P,Q) \text{,}
+$$
+y de ella se deducen los isomorfismos canónicos
+$$
+\SheafHom_{Y'_1}(x,y) \simeq g_1^* f_{1 *}(Q
+\overset{F_1}{\wedge} P^\circ) \text{,}\quad \SheafHom_{Y_1'}(x',y')
+\simeq f'_{1 *}(Q' \overset{F'_1}{\wedge}{P'}^\circ)\text{.}
+$$
+Por consiguiente, el morfismo~$\alpha_0$ se identifica con el morfismo
+$$
+\SheafHom_{Y'_1}(x,y) \to \SheafHom_{Y'_1}(x',y') \text{,}
+$$
+de donde se sigue que, si~$(F,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant -1$, $\alpha_0$ es inyectivo,
+y que, si~$(F,f)$ es cohomológicamente propio en dimensión $\leqslant 0$,
+$\alpha_0$ es biyectivo.
+
+Supongamos ahora que~$(F,f)$ sea cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 1$, \ie que el morfismo canónico
+\marginpar{350}
+$$
+\varphi \colon g^* f_* \Phi \to f'_* \Phi'
+$$
+sea una equivalencia. Sea~$G$ el haz de los subgerbes maximales del stack
+$f_* \Phi$ \hbox{\cite[III~2.1.8]{XIII.1}}; se tiene entonces un
+isomorfismo $G \simeq \R^1 f_* F$. Como~$g^* G$ es el haz de los subgerbes
+maximales de~$g^* f_* \Phi$ \cite[III 2.1.5.5]{XIII.2}, el morfismo
+$\alpha_1$ se obtiene a partir de~$\varphi|Y'_1$ tomando los haces de los
+subgerbes maximales, y por tanto es un isomorfismo.
+
+(ii~bis)$\To$(ii). Basta demostrar que, si los morfismos~$\alpha_0$ son
+biyectivos, entonces los morfismos~$a_1$ son inyectivos. Sean~$Y'_1$ un
+esquema étale sobre~$Y'$, y~$s$ y~$t$ dos elementos de
+$g^*(\R^1 f_* F)(Y'_1)$ que tienen la misma imagen en
+$\R^1 f'_* F'(Y'_1)$; demostremos que~$s=t$. La afirmación es local para
+la topología étale de~$Y'_1$ y, teniendo en cuenta la definición de la
+imagen inversa $g^*(\R^1 f_* F)$, puede suponerse que~$Y'_1$ es la imagen
+inversa de un esquema~$Y_1$ étale sobre~$Y$ y que~$s$ y~$t$ provienen de
+torsores~$P$ y~$Q$ sobre~$X_1$. La hipótesis sobre~$s$ y~$t$ significa
+entonces que las imágenes inversas~$P'$ y~$Q'$ de~$P$ y~$Q$ sobre~$X'_1$
+son localmente isomorfas para la topología étale de~$Y'_1$. Si se pone
+$R = \SheafHom_{F_1}(P,Q)$, el hecho de que el morfismo
+$$
+g_1^* f_{1 *} R \to f'_{1 *} R'
+$$
+sea biyectivo demuestra que~$P$ y~$Q$ son localmente isomorfos para la
+topología étale de~$Y_1$, y por tanto que~$s=t$.
+
+(ii)$\To$(i). Para demostrar que~$\varphi$ es fiel (\resp plenamente fiel),
+basta demostrar que, si~$Y_1$ es un esquema étale sobre~$Y$, si~$P$, $Q$
+son dos torsores sobre~$X_1$ bajo~$F_1$, y si~$x$, $y$ (\resp $x'$, $y'$)
+son los objetos de~$(g^* f_* \Phi)_{Y'_1}$ (\resp $(f'_* \Phi')_{Y'_1}$)
+asociados a~$P$, $Q$ (\resp $P'$, $Q'$), el morfismo
+$$
+a \colon \Hom(x,y) \to \Hom(x',y')
+$$
+es inyectivo (\resp biyectivo). Ahora bien, $a$ se identifica con el
+morfismo canónico
+$$
+\H^0(Y'_1,g^*_1 f_{1 *} (Q \overset{F_1}{\wedge} P^\circ)) \to
+\H^0(Y'_1, f'_{1 *}(Q' \overset{F'_1}{\wedge} {P'}^\circ))\text{.}
+$$
+Si
+\marginpar{351}
+se tiene $\Hom(x,y) \neq \emptyset$, entonces $Q \overset{F_1}{\wedge}
+P^\circ$ es un torsor bajo~$\leftexp{P\mkern-4mu}{F}_1$ localmente trivial
+sobre~$Y_1$; de ello se sigue que $f_{1 *}(Q \overset{F_1}{\wedge}
+P^\circ)$ es un torsor bajo~$f_{1*}(\leftexp{P\mkern-4mu}{F}_1)$ y que
+$g^*_1 f_{1 *} (Q \overset{F_1}{\wedge} P^\circ)$ es un torsor trivial.
+El morfismo~$a$ se identifica entonces con el morfismo canónico
+$$
+\H^0(\ifthenelse{\boolean{orig}}{Y_1}{Y'_1},
+g^*_1 f_{1 *}(\leftexp{P\mkern-4mu}{F}_1)) \to \H^0 (Y'_1,
+f'_{1 *}(\leftexp{P'\mkern-6mu}{F}'_1)) \text{.}
+$$
+Lo mismo sucede si~$\Hom(x',y') \neq \emptyset$ y~$a_1$ es inyectivo,
+pues entonces $Q' \overset{F'_1}{\wedge} {P'}^\circ$ es trivial, y de la
+inyectividad de~$a_1$ se sigue que~$P$ y~$Q$ son localmente isomorfos
+sobre~$Y_1$. Se concluye que, si~$a_0$ es inyectivo (\resp si~$a_0$ es
+biyectivo y~$a_1$ inyectivo), $\varphi$ es fiel (\resp plenamente fiel).
+
+Queda por demostrar que, si~$a_0$ y~$a_1$ son biyectivos, el funtor
+$\varphi$ es esencialmente sobreyectivo. Sean~$Y''$ un esquema étale
+sobre~$Y'$, $X'' = X' \times_{Y'} Y''$, y~$P''$ un torsor sobre~$X''$ bajo
+$F'' = F'|X''$. Se demostrará que existe un elemento~$x$ de
+$(g^* f_* \Phi)_{Y''}$ cuya imagen en~$(f'_* \Phi')_{Y''}$ es isomorfa
+a~$P''$. Sea~$p''$ la clase de~$P''$. Como~$a_1$ es sobreyectivo, pueden
+hallarse un morfismo étale sobreyectivo $Y''_1 \to Y''$, un morfismo étale
+$Y_1 \to Y$ tal que exista un morfismo $Y''_1 \to Y'_1$, y un torsor~$P_1$
+sobre~$X_1$ bajo~$F_1$ cuya imagen inversa~$P''_1$ sobre~$X''_1$ sea
+isomorfa a la imagen inversa de~$P''$. Utilizando que~$\varphi$ es
+plenamente fiel, se ve que el objeto~$x_1$ de~$(g^* f_*
+\Phi)_{Y''_1}$ que corresponde a~$P''_1$ está provisto de un dato de
+descenso relativamente a~$Y''_1 \to Y''$, y por tanto proviene de un
+elemento~$x$ de~$(g^* f_* \Phi)_{Y''}$. Como la imagen de~$x$ en
+$(f'_* \Phi')_{Y''}$ es~$P''$, esto demuestra que~$\varphi$ es
+esencialmente sobreyectivo y concluye la demostración.
+
+\setcounter{proposition}{3}% El ejemplo siguiente ocupa el ítem XIII.1.4 de la secuencia fuente.
+\begin{exemple}
+\label{XIII.1.4}
+Sea $f \colon X \to Y$ un morfismo propio. Se sigue de~\cite[VII
+2.2.2]{XIII.2} que, para todo stack ind-finito~$F$ sobre~$X$, el par
+$(F,f)$ es cohomológicamente propio (relativamente a~$Y$) en dimensión
+$\leqslant 1$. En particular, para todo haz de conjuntos (\resp todo haz de
+grupos, \resp todo haz de grupos ind-finito) $F$ sobre~$X$, $(F,f)$ es
+cohomológicamente
+\marginpar{352}
+propio en dimensión $\leqslant 0$ (\resp en dimensión $\leqslant 0$,
+\resp en dimensión $\leqslant 1$).
+\end{exemple}

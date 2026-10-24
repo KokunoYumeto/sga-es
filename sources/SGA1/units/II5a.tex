@@ -1,0 +1,108 @@
+
+\section{Caso de un cuerpo base}
+\label{II.5}
+\marginpar{52}
+
+\begin{proposition}
+\label{II.5.1}
+Sean $k$ un cuerpo, $X$ un preesquema de tipo finito sobre~$k$, $x$ un punto de~$X$ y $n$ la dimensión de~$X$ en~$x$, y sea
+\ifthenelse{\boolean{orig}}
+{$f\colon X\to\Spec k[t_1,\dots,tn]=Y$}
+{$f\colon X\to\Spec k[t_1,\dots,t_n]=Y$}
+un morfismo definido por elementos
+\ifthenelse{\boolean{orig}}
+{$f_i\in\Gamma(X:\cal{O}_X)$.}
+{$f_i\in\Gamma(X,\cal{O}_X)$.}
+Las condiciones siguientes son equivalentes (e implican que $X$ es liso sobre~$k$ en $x$ y, con mayor razón, regular en $x$ por~\Ref{II.3.1}):
+\begin{enumerate}
+\item[(i)] $f$ es étale en $x$.
+\item[(ii)] Los $df_i$ forman una base de~$\it{\Omega}_{X/k}^1$ en $x$.
+\item[(iii)] Los $df_i$ engendran $\it{\Omega}_{X/k}^1$ en $x$.
+\end{enumerate}
+\end{proposition}
+
+Como (i) implica que $X$ es liso sobre~$k$ en $x$, la implicación (i)$\To$(ii) es un caso particular de~\Ref{II.4.8}; (ii)$\To$(iii) es trivial, y queda probar (iii)$\To$(i). Ahora bien, si se cumple (iii), $f$ es neto en $x$ por el lema~\Ref{II.4.1}; por tanto, sustituyendo $x$ por un entorno abierto, es cuasifinito y, por razones de dimensión, dominante. Como $Y$ es regular, se sigue que $f$ es étale por (\Ref{I.9.5}~(ii)) o (\Ref{I.9.11}).
+
+\begin{corollaire}
+\label{II.5.2}
+Bajo las hipótesis preliminares de~\Ref{II.5.1}, supongamos que
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+es una extensión \emph{finita separable} de~$k$ y que los $f_i$ ($1\leq i\leq n$) definen elementos de~$\goth{m}_x$. Entonces las condiciones anteriores equivalen a:
+\begin{enumerate}
+\item[(iv)] Los $f_i$ forman un sistema de generadores de~$\goth{m}_x$ (o, equivalentemente, los $f_i$ módulo $\goth{m}_x^2$ forman una base de~$\goth{m}_x/\goth{m}_x^2$ sobre
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}).
+\end{enumerate}
+\end{corollaire}
+
+En efecto, (iv)$\To$(iii) en virtud de la sucesión exacta
+\begin{equation}
+\label{eq:II.5.1}
+\ifthenelse{\boolean{orig}}
+{\goth{m}_x/\goth{m}_x^2\to\it{\Omega}_{\cal{O}_x/k}^1\to
+\it{\Omega}_{\kappa(x)/k}^1\to 0}
+{\goth{m}_x/\goth{m}_x^2\to\Omega_{\cal{O}_x/k}^1\to
+\Omega_{\kres(x)/k}^1\to 0}.
+\end{equation}
+Además,
+\ifthenelse{\boolean{orig}}
+{$\Omega_{\kappa(x)/k}^1=0$, pues $\kappa(x)$ es étale sobre~$k$. Por otra parte, (ii) implica (iv), ya que, como $X$ y $\Spec(\kappa(x))$ son lisos sobre~$k$ en $x$, en la sucesión exacta anterior puede ponerse un $0$ a la izquierda por~\Ref{II.4.10}~(iv).}
+{$\Omega_{\kres(x)/k}^1=0$, pues $\kres(x)$ es étale sobre~$k$. Por otra parte, (ii) implica (iv), ya que, como $X$ y $\Spec(\kres(x))$ son lisos sobre~$k$ en $x$, en la sucesión exacta anterior puede ponerse un $0$ a la izquierda por~\Ref{II.4.10}~(iv).}
+
+\begin{corollaire}
+\label{II.5.3}
+Sea $x$ un punto de~$X$, de tipo finito sobre~$k$. Si $X$ es liso sobre~$k$ en $x$, entonces $\cal{O}_x$ es regular; el recíproco es cierto si
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+es una extensión finita separable de~$k$.
+\end{corollaire}
+
+En
+\marginpar{53}
+efecto, el recíproco se deduce de~\Ref{II.5.2}, tomando un sistema regular $(f_i)$ de generadores de~$\goth{m}_x$. (N.B. En lugar de~\Ref{II.5.2}, también puede invocarse el teorema~\Ref{II.4.15}). Se concluye:
+
+\begin{proposition}
+\label{II.5.4}
+Sea $X$ un preesquema de tipo finito sobre~$k$. Si $X$ es liso sobre~$k$, entonces es regular; el recíproco es cierto si $k$ es perfecto.
+\end{proposition}
+
+Para el recíproco, obsérvese que, por~\Ref{II.5.3}, $X$ es liso sobre~$k$ en todo punto cerrado y, por tanto, en todas partes, pues el conjunto de puntos en los que es liso es abierto.
+
+\begin{theoreme}
+\label{II.5.5}
+Sean $X$ un preesquema de tipo finito sobre~$k$, $x$ un punto de~$X$, $n$ la dimensión de~$X$ en $x$ y $k'$ una extensión perfecta de~$k$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $X$ es liso sobre~$k$ en~$x$.
+\ifthenelse{\boolean{orig}}
+{\item[(ii)] $\Omega_{X/k}^1$ es libre de rango $n$ en~$x$.
+\item[(ii~bis)] $\Omega_{X/k}^1$ está engendrado por $n$}
+{\item[(ii)] $\it{\Omega}_{X/k}^1$ es libre de rango $n$ en~$x$.
+\item[(ii~bis)] $\it{\Omega}_{X/k}^1$ está engendrado por $n$}
+elementos en~$x$.
+\item[(iii)] $X$ es diferencialmente liso sobre~$k$ en $x$.
+\item[(iv)] Existe un entorno abierto $U$ de~$x$ tal que $U\otimes_k k'$ es regular (es decir, los anillos locales de sus puntos son regulares).
+\end{enumerate}
+\end{theoreme}
+
+Se tiene (i)$\To$(ii) por~\Ref{II.4.3}~(ii), (ii)$\To$(ii~bis) trivialmente y (ii~bis)$\To$(i) gracias a~\Ref{II.5.1}. Como $X$ es plano sobre~$k$, se tiene (i)$\Leftrightarrow$(iii) por~\Ref{II.4.18}. Se tiene (i)$\To$(iv), pues la lisura es invariante por extensión de la base e implica regularidad; y (iv)$\To$(i), porque la proposición~\Ref{II.5.4} muestra que $U\otimes_k k'$ es liso sobre~$k'$ y, por tanto, $U$ es liso sobre~$k$ por~\Ref{II.4.13}.
+
+Tomando como $x$ el punto genérico de~$X$, supuesto irreducible, se obtiene:
+
+\begin{corollaire}
+\label{II.5.6}
+Sea $K$ un anillo local artiniano obtenido por localización de un álgebra de tipo finito sobre el cuerpo~$k$ (por ejemplo, $K$ puede ser una extensión de tipo finito de~$k$), y sea $n$ el grado de trascendencia
+\ifthenelse{\boolean{orig}}{sobre~$K$}{sobre~$k$}
+de su cuerpo residual. Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $K$ es una extensión finita separable de una extensión puramente trascendente $k(t_1,\dots,t_n)$ de~$k$.
+\item[(ii)]
+\marginpar{54}
+\ifthenelse{\boolean{orig}}{$\it{\Omega}^1_{X/k}$}{$\Omega^1_{K/k}$}
+es un $K$-módulo libre de rango~$n$.
+\item[(ii~bis)]
+\ifthenelse{\boolean{orig}}{$\it{\Omega}^1_{X/k}$}{$\Omega^1_{K/k}$}
+es un $K$-módulo que admite $n$ generadores.
+\item[(iii)] La completación $O'$ de~$K\otimes_k K$ para la topología definida por las potencias del ideal de aumentación $K\otimes_k K\to K$ es un álgebra aumentada «regular» sobre~$K$, es decir, isomorfa a un álgebra de series formales sobre~$K$ (N.B. Si $K$ es un cuerpo, esto equivale a decir que $O'$ es un anillo local regular).
+\item[(iv)] $K$ es una extensión separable de~$k$.
+\end{enumerate}
+\end{corollaire}
+
+En efecto, siempre puede considerarse $K$ como el anillo local del punto genérico de un esquema irreducible de tipo finito~$X$ sobre~$k$, y las condiciones consideradas son las condiciones del mismo nombre de~\Ref{II.5.5}, tomando en~(iv) como~$k'$ una extensión algebraicamente cerrada de~$k$. Solo la implicación «$K$ separable sobre~$k$» $\To$ «$X$ liso sobre~$k$ en~$x$» requiere una demostración. Por~\Ref{II.4.13}, uno se reduce inmediatamente al caso en que el cuerpo base es~$k'$, por tanto algebraicamente cerrado, y existe entonces un punto $a$ de~$X$ racional sobre~$k$. Pero $X$ es liso sobre~$k$ en~$a$ por~\Ref{II.5.4}; con mayor razón, es liso sobre~$k$ en el punto genérico~$x$, c.q.d.\footnote{\Cf los Errata al final del presente Exposé II (p\ptbl \pageref{II.fin.errata}).}

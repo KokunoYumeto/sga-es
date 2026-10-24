@@ -1,0 +1,105 @@
+\shorthandoff{<>}% Babel español trata como abreviaturas los delimitadores de curvatura de Xy-pic.
+
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{0}
+\begin{sublemme}
+\label{XIII.3.1.1}
+Sean $S$ un esquema localmente noetheriano y
+$$
+\xymatrix@C=.5cm{ \Phi \ar[r]^p & \Phi_1 \ar@<0.6ex>[rr]^{p_1}
+\ar@<-0.6ex>[rr]_{p_2} && \Phi_2 }
+$$
+un diagrama exacto de stacks sobre~$S$ \eqref{XIII.1.10.1}. Si $\Phi_1$
+es constructible, lo mismo ocurre con~$\Phi$. Si, para todo esquema
+$S'$ étale sobre~$S$ y todo par
+\ifthenelse{\boolean{orig}}
+{de objeto}
+{de objetos}
+$x_1,~y_1$ de~$(\Phi_1)_{S'}$, el haz $\SheafHom_{S'}(x_1,y_1)$ es
+constructible, entonces, para todo par de objetos $x,~y$ de
+$\Phi_{S'}$, lo mismo ocurre con~$\SheafHom_{S'}(x,y)$. Supongamos que
+$\Phi_1$ es $1$-constructible (\Ref{XIII.0}) y que $\Phi_2$ es
+constructible; entonces $\Phi$ es $1$-constructible.
+\end{sublemme}
+
+Para todo esquema $S'$ étale sobre~$S$ y todo objeto $x$ de
+$\Phi_{S'}$, se tiene un monomorfismo
+$$
+\SheafAut_{S'}(x)\to\SheafAut_{S'}(p(x)).
+$$
+Resulta, pues, de SGA~4 IX~2.9 que, si $\Phi_1$ es constructible,
+lo mismo ocurre con~$\Phi$, y la segunda afirmación del lema se
+demuestra del mismo modo.
+
+Supongamos ahora que $\Phi_1$ es $1$-constructible y que $\Phi_2$ es
+constructible. El morfismo $p$ induce entre los haces de los subgerbes
+maximales un morfismo
+$$
+\varphi\colon S\Phi\to S\Phi_1.
+$$
+Sea $G$ la imagen de~$S\Phi$ por~$\varphi$; según SGA~4 IX~2.9,
+$G$ es un haz constructible. Puede encontrarse, por tanto, un haz
+representable por un $S$-esquema étale de tipo finito~$T$ y un
+epimorfismo
+$$
+a\colon T\to G
+$$
+(SGA~4 IX~2.7).
+\marginpar{407}
+Además, puede elegirse~$T$ de modo que la imagen~$y$ de la sección
+identidad de~$T(T)$ por~$a$ esté definida por un objeto~$x_1$ de
+$(\Phi_1)_T$ de la forma $x_1=p(x)$, donde $x\in\Phi_T$.
+
+Basta demostrar que, para todo punto $s$ de~$S$, existe un abierto no
+vacío~$U$ de~$\overline{\{ s\} }$ tal que $S\Phi|U$ sea localmente
+constante y constructible. Sean $s\in S$, $\overline{s}$ un punto
+geométrico sobre~$s$ y $\overline{y}_1,\dots,\overline{y}_n$ los
+elementos de~$G_{\overline{s}}$. Por definición de~$T$, existen
+morfismos $h_i\colon\overline{s}\to T$ tales que
+$h_i^*(y)=\overline{y}_i$. Sea $S'$ el producto fibrado sobre~$S$ de
+$n$ esquemas isomorfos a~$T$, sea $h\colon\overline{s}\to S'$ el
+producto fibrado de los~$h_i$, y sean $y_i$ (\resp $x_i$) la imagen
+inversa de~$y$ (\resp $x$) por la $i$-ésima proyección de~$S'$ sobre~$T$.
+Sea $F_i$ el subhaz de~$S\Phi |S'$ que es la imagen inversa de~$y_i$, y demostremos
+que los~$F_i$ son constructibles. El haz~$F_i$ es un cociente del haz
+$F'_i$ tal que, para todo esquema~$S''$ étale sobre~$S'$, se tiene
+\begin{multline*}
+F'_i(S'') = \{\text{clases, salvo isomorfismo, de}
+\ifthenelse{\boolean{orig}}
+{\text{ objeto $z$ de $\Phi_{S''}$ provisto}}
+{\text{ objetos $z$ de $\Phi_{S''}$ provistos}}\\
+\ifthenelse{\boolean{orig}}
+{\text{ de un isomorfismo $i\colon p(z)\simeq p(x_i|S'')$}.}
+{\text{ de un isomorfismo $i\colon p(z)\simeq p(x_i|S'')$}\}.}
+\end{multline*}
+Basta demostrar que los~$F_i'$ son constructibles. Ahora bien, si se
+pone $z_i=p_1p(x_i)$, $z_i'=p_2p(x_i)$, se tiene un monomorfismo
+$$
+\Psi_i\colon F'_i\to\SheafIsom_{S'}(z_i,z_i'),
+$$
+obtenido asociando, a todo esquema~$S''$ étale sobre~$S'$ y a todo
+objeto~$z$ de~$\Phi_{S''}$ provisto de un isomorfismo
+$i\colon p(z)\simeq p(x_i|S'')$, el isomorfismo de~$z_i$ en~$z_i'$
+definido por la condición de que el diagrama
+$$
+\xymatrix@C=1.2cm{
+p_1p(z) \ar[r]^-{p_1(i)}\ar[d]_-j& z_i\ar[d]\\ p_2p(z) \ar[r]^-{p_2(i)}& z'_i
+}
+$$
+sea conmutativo ($j$ es el morfismo canónico asociado al diagrama
+exacto).
+\marginpar{408}
+
+El morfismo~$\Psi_i$ es inyectivo, pues decir que dos objetos $z,~z'$,
+provistos de isomorfismos $i\colon p(z)\isomto
+p(x_i|S''),~i'\colon p(z')\isomto p(x_i|S'')$, definen el mismo
+elemento de~$\SheafIsom_{S''}(z_i,z'_i)$ equivale a decir que
+$p_1(i'^{-1}i)=p_2(i'^{-1}i)$, es decir, que $i'^{-1}i$ proviene de
+un isomorfismo $z\to z'$. Como el haz~$F'_i$ es un subhaz de
+$\SheafIsom_{S'}(z_i,z'_i)$, es constructible.
+
+Como puede encontrarse un abierto no vacío~$U$ de~$\overline{\{s\}}$
+tal que $y_1|U,\dots,y_n|U$ engendren~$G$, resulta del
+lema~\Ref{XIII.6.1.2} que figura más abajo que $S\Phi |U$ es
+constructible; por tanto, tras restringir~$U$, $S\Phi |U$ es localmente
+constante y constructible.

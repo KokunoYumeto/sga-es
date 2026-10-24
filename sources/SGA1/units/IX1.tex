@@ -1,0 +1,166 @@
+\chapter[Descenso de los morfismos étales]{Descenso de los morfismos étales.\\ Aplicación al grupo fundamental}
+\label{IX}
+\marginpar{228}
+
+\section{Recordatorio sobre los morfismos étales}
+\label{IX.1}
+
+Vamos a repasar aquí las propiedades de los morfismos étales (desarrolladas
+en~\Ref{I}) que vamos a utilizar, aprovechando la ocasión para eliminar de
+la teoría las hipótesis noetherianas superfluas. El lector observará que,
+aun cuando solo interesen los esquemas noetherianos, la técnica del descenso
+lleva a introducir esquemas no noetherianos (tales como
+$\Spec(\widehat{A}\otimes_{A}\widehat{A})$, donde~$A$ es un anillo local
+noetheriano); para poder aplicar el lenguaje de las categorías fibradas,
+importa definir nociones como la de morfismo étale,
+\ifthenelse{\boolean{orig}}{etc...}{etc.}, sin introducir en ellas ninguna
+restricción noetheriana.
+El lector que no desee comprobar ni admitir que los enunciados siguientes
+son verdaderos sin hipótesis noetherianas podrá limitarse a admitirlos bajo
+las hipótesis noetherianas de~\Ref{I}, con tal de introducir esas mismas
+hipótesis noetherianas en los enunciados de los números siguientes y de
+utilizar la definición~\Ref{IX.1.1} que se da a continuación para los
+esquemas no noetherianos que aparecen en los razonamientos.
+
+\begin{definition}
+\label{IX.1.1}
+Sean~$f\colon X\to S$ un morfismo de preesquemas y~$x$ un punto de~$X$.
+Se dice que~$f$ es \emph{étale en}~$x$,
+\index{étale (morfismo, álgebra)|hyperpage}%
+o que~$X$ es étale sobre~$S$ en~$x$, si existen un entorno abierto
+afín~$U$ de~$s=f(x)$, un entorno abierto afín~$V$ de~$x$ situado sobre~$U$,
+un esquema afín \emph{noetheriano}~$U_{0}$, un~$U_{0}$-esquema
+afín~$V_{0}$, \emph{étale} en el sentido de~\eqref{I}, un
+morfismo~$U\to U_{0}$ y un
+$U$-isomorfismo
+$$
+V\isomto V_{0}\times_{U_{0}}U\quoi.
+$$
+\end{definition}
+
+Se observará
+\marginpar{229}
+que, cuando~$S$ es localmente noetheriano, esta terminología coincide con
+la de~\loccit Se dirá asimismo que~$f$ \emph{es étale}, o que~$X$
+\emph{es étale sobre}~$S$, si~$f$ es étale en todo punto~$x$ de~$X$.
+Con estas definiciones, las proposiciones siguientes se reducen sin
+dificultad al caso noetheriano, donde se demuestran en~\Ref{I.4},
+\Ref{I.5} y~\Ref{I.7}. Para más detalles, el lector podrá consultar
+EGA~IV\footnote{Más precisamente, EGA~IV 17,~18.}.
+
+\begin{remarques}
+\label{IX.1.2}
+Si~$f$ es étale en~$x$, entonces~$f$ es «\emph{de presentación finita
+en}~$x$» (\Ref{VIII.3.5}), el anillo local de~$x$ en la fibra
+$f^{-1}(s)$ es una \emph{extensión finita separable} de~$\kres(s)$ y,
+finalmente, $f$ es \emph{plano en}~$x$. Puede demostrarse que la recíproca
+es cierta; por tanto, la definición~\Ref{IX.1.1} es la misma que cuando~$S$
+es localmente noetheriano, salvo que debe reemplazarse la condición «de
+tipo finito en~$x$» por «de presentación finita en~$x$». Como la
+demostración de este resultado es delicada, no hemos querido adoptar aquí
+esta definición de la noción de morfismo étale, que no se presta
+directamente a la demostración de las propiedades que siguen.
+\end{remarques}
+
+Observemos primero que se tiene trivialmente:
+\begin{proposition}
+\label{IX.1.3}
+Si~$f\colon X\to S$ es étale, entonces todo morfismo~$f'\colon X'\to S'$
+que se deduce de él mediante un cambio de base~$S'\to S$ es también étale.
+\end{proposition}
+
+Puede decirse, por tanto, que los morfismos étales forman una
+\emph{subcategoría fibrada} de la categoría de las flechas en~$\Sch$
+\ifthenelse{\boolean{orig}}
+{(\cf \Ref{VI.11}~a)}
+{(\cf \Ref{VI.11}~a))}. El objeto de la presente exposición es estudiar
+las propiedades de exactitud de esta categoría fibrada sobre~$\Sch$.
+\begin{proposition}
+\label{IX.1.4}
+Sea~$f\colon X\to S$ un morfismo de preesquemas. Para que sea una inmersión
+abierta es necesario y suficiente que sea étale y radicial.
+\end{proposition}
+
+\Cf \Ref{I.5.1}. Se deduce que, si~$X$ es étale sobre~$S$, toda sección
+de~$X$ sobre~$S$ es una inmersión abierta; utilizando de nuevo~\Ref{IX.1.4},
+se obtiene:
+\begin{corollaire}
+\label{IX.1.5}
+Sea~$X$ un $S$-preesquema étale. Entonces existe una correspondencia
+biunívoca entre el conjunto de las secciones de~$X$ sobre~$S$ y el conjunto
+de las partes
+\marginpar{230}
+abiertas~$\Gamma$ de~$X$ tales que el morfismo~$\Gamma\to S$ inducido por
+el morfismo estructural sea \emph{radicial} y \emph{sobreyectivo}.
+\end{corollaire}
+
+Si, además, $X$ está separado sobre~$S$, $\Gamma$ será una parte de~$X$ a la
+vez abierta y cerrada, pero esto poco importa. --- Efectuando un cambio de
+base evidente, puede ponerse~\Ref{IX.1.5} bajo la forma aparentemente más
+general siguiente:
+\begin{corollaire}
+\label{IX.1.6}
+Sean~$X$ e~$Y$ dos $S$-preesquemas, siendo~$Y$ étale sobre~$S$. Entonces la
+aplicación~$f\mto\Gamma_f$ que asocia a todo $S$-morfismo~$f$ de~$X$ en~$Y$
+la parte de~$X\times_S Y$ subyacente al grafo de~$f$ es una biyección de
+$\Hom_S(X,Y)$ sobre
+\ifthenelse{\boolean{orig}}
+{el conjunto de las partes abiertas de~$\Gamma$ de~$X\times_S Y$}
+{el conjunto de las partes abiertas~$\Gamma$ de~$X\times_S Y$}
+tales que el morfismo~$\Gamma\to X$ inducido por~$\pr_1$ sea
+\emph{radicial} y \emph{sobreyectivo}.
+\end{corollaire}
+
+\begin{proposition}
+\label{IX.1.7}
+Sea~$S_0$ el subpreesquema de~$S$ definido por un ideal cuasicoherente
+formado por elementos nilpotentes, es decir, tal que~$S_0$ tenga el mismo
+conjunto subyacente que~$S$. Entonces el funtor~$X\mto X\times_S S_0$ de
+la categoría de los preesquemas étales sobre~$S$ a la categoría de los
+preesquemas étales sobre~$S_0$ es una equivalencia de categorías.
+\end{proposition}
+
+El hecho de que este funtor sea plenamente fiel es una consecuencia
+inmediata de~\Ref{IX.1.6}. El hecho de que sea esencialmente sobreyectivo
+está contenido en~\Ref{I.8.3}. Se observará que, en la equivalencia
+anterior, $X$ es de tipo finito, es decir, cuasifinito sobre~$S$
+(respectivamente finito, es decir, un recubrimiento étale de~$S$), si y
+solo si~$X_0$ satisface la condición análoga sobre~$S_0$; la misma
+observación vale para la condición de separación. Estos hechos son
+inmediatos y están contenidos también en~\Ref{IX.2.4} más abajo.
+
+\begin{corollaire}
+\label{IX.1.8}
+Sea~$A$ un anillo local noetheriano completo de cuerpo residual~$k$.
+Entonces el funtor~$B\mto B\otimes_A k$ es una equivalencia entre la
+categoría de las álgebras finitas y étales sobre~$A$ y la categoría de las
+álgebras finitas y étales sobre~$k$ (es decir, productos finitos de
+extensiones finitas separables de~$k$).
+\end{corollaire}
+
+\begin{proposition}
+\label{IX.1.9}
+Para que~$X$ sea un \emph{recubrimiento étale} de~$S$, es decir, finito y
+étale sobre~$S$, es necesario y suficiente que~$X$ sea $S$-isomorfo al
+espectro de un álgebra~$\cal{A}$ sobre~$S$ que sea un módulo localmente
+libre de tipo finito y tal que, para todo
+\marginpar{231}
+$s\in S$, $\cal{A}_s\otimes_{\cal{O}_s}\kres(s)$ sea un álgebra separable
+sobre~$\kres(s)$ y, por tanto, en este caso un producto directo de
+extensiones finitas separables de~$\kres(s)$.
+\end{proposition}
+
+Por último, el resultado siguiente es de naturaleza menos elemental, pues
+es la conjunción de~\Ref{I.8.4} y del \emph{teorema de existencia para
+haces en geometría algebraica} (EGA~III~5; \cf también \cite{IX.1},
+teor\ptbl 3).
+
+\begin{theoreme}
+\label{IX.1.10}
+Sean~$S$ el espectro de un anillo local noetheriano completo, $X$ un
+$S$-esquema propio y~$X_0$ la fibra de~$X$ en el punto cerrado de~$S$ (de
+modo que~$X_0$ es un subesquema cerrado de~$X$). Entonces el funtor de
+restricción~$X'\mto X'\times_X X_0$ es una equivalencia entre la categoría
+de los recubrimientos étales de~$X$ y la categoría de los recubrimientos
+étales de~$X_0$.
+\end{theoreme}

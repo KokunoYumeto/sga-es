@@ -1,0 +1,339 @@
+\section[Categorías fibradas y categorías prefibradas]{Categorías fibradas y
+categorías prefibradas. Productos y cambio de base en ellas}
+\label{VI.6}
+
+\begin{definition}
+\label{VI.6.1}
+Una categoría $\cal{F}$ sobre~$\cal{E}$ se llama una
+\emph{categoría fibrada}
+\index{fibrada (categoría)|hyperpage}%
+(y se dice entonces que el funtor $\cal{F}\to\cal{E}$ es un
+\emph{fibrado})
+\index{fibrado (funtor)|hyperpage}%
+si satisface los dos axiomas siguientes:
+\begin{itemize}
+\item{$\Fib_{\mathrm{I}}$}
+\marginpar{165}
+Para todo morfismo $f\colon T\to S$ en~$\cal{E}$, existe el funtor de
+imagen inversa por~$f$ en~$\cal{F}$.
+\item{$\Fib_{\mathrm{II}}$} El compuesto de dos morfismos cartesianos es
+cartesiano.
+\end{itemize}
+Una categoría $\cal{F}$ sobre~$\cal{E}$ que satisface la condición
+$\Fib_{\mathrm{I}}$ se llama una \emph{categoría prefibrada sobre~$\cal{E}$}.
+\index{prefibrada (categoría)|hyperpage}%
+\end{definition}
+
+Si~$\cal{F}$ es una categoría fibrada (\resp prefibrada) sobre~$\cal{E}$,
+una subcategoría $\cal{G}$ de~$\cal{F}$ se llama una
+\emph{subcategoría fibrada}
+\index{subcategoría fibrada (\resp prefibrada)|hyperpage}%
+(\resp una \emph{subcategoría prefibrada}) si es una categoría fibrada
+(\resp prefibrada) sobre~$\cal{E}$ y, además, el funtor de inclusión es
+cartesiano. Si, por ejemplo, $\cal{G}$ es una subcategoría \emph{plena}
+de~$\cal{F}$, se ve que esto significa que, para todo morfismo
+$f\colon T\to S$ en~$\cal{E}$ y todo $\xi\in\Ob(\cal{G}_S)$,
+$f^*_{\cal{F}}(\xi)$ es $T$-isomorfo a un objeto de~$\cal{G}_T$. Otro
+caso interesante es el siguiente: siendo $\cal{F}$ una categoría fibrada
+sobre~$\cal{E}$, consideremos la subcategoría $\cal{G}$ de~$\cal{F}$ que
+tiene los mismos objetos y cuyos morfismos son los morfismos
+\emph{cartesianos} de~$\cal{F}$; en particular, los morfismos de
+$\cal{G}_S$ son los isomorfismos de~$\cal{F}_S$. Se ve inmediatamente que
+es, en efecto, una subcategoría fibrada de~$\cal{F}$, pues en la biyección
+$$
+\Hom_T(\eta',\eta) \isomto \Hom_f(\eta',\xi)
+$$
+relativa a un $f$-morfismo cartesiano $\alpha$ en~$\cal{F}$, a los
+$T$-isomorfismos del primer miembro corresponden los morfismos cartesianos
+del segundo. Por definición, las secciones cartesianas
+$\cal{E}\to\cal{F}$
+\ifthenelse{\boolean{orig}}{(corresponden}{corresponden}
+entonces biunívocamente a los $\cal{E}$-funtores cualesquiera
+$\cal{E}\to\cal{G}$ (pero obsérvese que el funtor natural
+$$
+\SheafHom_{\cal{E}/-}(\cal{E},\cal{G})\to
+\SheafHom_\cart(\cal{E},\cal{F})=
+\varprojLim(\cal{F}/\cal{E})
+$$
+es fiel, pero en general no es plenamente fiel, es decir, no es un
+isomorfismo).
+
+\begin{remarquesstar}
+Sea $\cal{F}$ una categoría sobre~$\cal{E}$. Las condiciones siguientes
+son equivalentes:~(i)~Todos los morfismos de~$\cal{F}$ son cartesianos;
+(ii)~$\cal{F}$ es una categoría fibrada sobre~$\cal{E}$ y las
+$\cal{F}_S$ son grupoides%
+\ifthenelse{\boolean{orig}}{,}{}
+(es decir, todo morfismo en~$\cal{F}_S$ es un isomorfismo). Se dice
+entonces que $\cal{F}$ es una categoría \emph{fibrada en grupoides}
+\index{fibrada en grupoides|hyperpage}%
+\marginpar{166}
+sobre~$\cal{E}$. Son estas las que se encuentran sobre todo en la
+\og teoría de los espacios de módulos\fg. Si $\cal{E}$ es un grupoide, se
+demuestra que las condiciones~(i) y~(ii) equivalen también a la siguiente:
+(iii)~$\cal{F}$ es un grupoide y el funtor de proyección
+$p\colon\cal{F}\to\cal{E}$ es transportable (\cf \Ref{VI.4.4}). Por
+ejemplo, si $\cal{E}$ y $\cal{F}$ son grupoides tales que
+\ifthenelse{\boolean{orig}}
+{$\Ob \cal{E}$ y $\Ob \cal{F}$}
+{$\Ob(\cal{E})$ y $\Ob(\cal{F})$}
+se reducen a un punto, de modo que $\cal{E}$ y $\cal{F}$ quedan definidos,
+salvo isomorfismo, por grupos $E$ y $F$, y el funtor
+$p\colon\cal{F}\to\cal{E}$ queda definido por un homomorfismo de grupos
+$p\colon F\to E$, entonces $\cal{F}$ está
+\ifthenelse{\boolean{orig}}{fibrado}{fibrada}
+sobre~$\cal{E}$ si y solo si $p$ es sobreyectivo, es decir, si $p$ define
+una \emph{extensión} del grupo $E$ por el grupo $G=\Ker p$.
+\end{remarquesstar}
+
+\begin{proposition}
+\label{VI.6.2}
+Sea $F\colon\cal{F}\to\cal{G}$ una $\cal{E}$-equivalencia. Para que
+$\cal{F}$ sea una categoría fibrada (\resp prefibrada) sobre~$\cal{E}$,
+es necesario y suficiente que $\cal{G}$ lo sea.
+\end{proposition}
+
+Se deduce fácilmente de las definiciones y de la observación señalada más
+arriba, según la cual un morfismo
+\ifthenelse{\boolean{orig}}{$\alpha x$}{$\alpha$}
+en~$\cal{F}$ es cartesiano si y solo si $F(\alpha)$ lo es.
+
+\begin{proposition}
+\label{VI.6.3}
+Sean $\cal{F}_1$, $\cal{F}_2$ dos categorías sobre~$\cal{E}$, y sea
+$\alpha=(\alpha_1,\alpha_2)$ un morfismo en
+$\cal{F}=\cal{F}_1\times_{\cal{E}}\cal{F}_2$. Para que $\alpha$ sea
+cartesiano, es necesario y suficiente que sus componentes lo sean.
+\end{proposition}
+
+Sea, en efecto, $\xi_i$ el destino y $\eta_i$ la fuente de~$\alpha_i$, y
+sea $f\colon T\to S$ el morfismo de~$\cal{E}$ tal que $\alpha_1$ y
+$\alpha_2$ sean $f$-morfismos. Para todo
+$\eta'=(\eta'_1,\eta'_2)$ en~$\cal{F}_T$, se tiene un diagrama conmutativo
+$$
+\xymatrix{ \Hom_T(\eta',\eta) \ar[r] \ar[d] & \Hom_f(\eta',\xi) \ar[d]
+\\ \Hom_T(\eta'_1,\eta_1)\times\Hom_T(\eta'_2,\eta_2) \ar[r] &
+\Hom_f(\eta'_1,\xi_1)\times \Hom_f(\eta'_2,\xi_2) }
+$$
+donde las flechas verticales son biyecciones. Por tanto, si una de las
+flechas horizontales es una biyección, también lo es la otra. Esto muestra
+ya que, si $\alpha_1$, $\alpha_2$ son cartesianos (y, por tanto, la segunda
+flecha horizontal es biyectiva), entonces $\alpha$ lo es. El recíproco se
+ve tomando en el diagrama anterior $\eta'_i=\eta_i$, de donde
+$\Hom_T(\eta'_i,\eta_i)\neq\emptyset$: primero para $i=2$, lo que prueba
+que $\alpha_1$ es cartesiano, y luego para $i=1$, lo que prueba que
+$\alpha_2$ es cartesiano.
+
+\begin{corollaire}
+\label{VI.6.4}
+Sea
+\marginpar{167}
+$\cal{F}=\cal{F}_1\times_{\cal{E}}\cal{F}_2$, y sea $F=(F_1,F_2)$ un
+$\cal{E}$-funtor $\cal{G}\to\cal{F}$. Para que
+\ifthenelse{\boolean{orig}}{$\cal{F}$}{$F$}
+sea cartesiano, es necesario y suficiente que $F_1$ y $F_2$ lo sean. Se
+obtiene así un isomorfismo de categorías
+$$
+\SheafHom_\cart(\cal{G}, \cal{F}_1 \times_{\cal{E}} \cal{F}_2) \isomto
+\SheafHom_\cart(\cal{G},\cal{F}_1)
+\times\SheafHom_\cart(\cal{G},\cal{F}_2)
+$$
+y, en particular (tomando $\cal{G}=\cal{E}$), un isomorfismo de categorías
+$$
+\varprojLim(\cal{F}_1 \times_{\cal{E}}
+\cal{F}_2/\cal{E}) \isomto
+\varprojLim(\cal{F}_1/\cal{E}) \times
+\varprojLim(\cal{F}_2/\cal{E})
+$$
+\end{corollaire}
+
+\begin{corollaire}
+\label{VI.6.5}
+Sean $\cal{F}_1$ y $\cal{F}_2$ dos categorías fibradas (\resp prefibradas)
+sobre~$\cal{E}$; entonces su producto fibrado
+$\cal{F}=\cal{F}_1\times_{\cal{E}}\cal{F}_2$ es una categoría fibrada
+(\resp prefibrada) sobre~$\cal{E}$.
+\end{corollaire}
+
+Estos resultados se extienden, por lo demás, al producto fibrado de una
+familia cualquiera de categorías sobre~$\cal{E}$.
+
+\begin{proposition}
+\label{VI.6.6}
+Sean $\cal{F}$ una categoría sobre~$\cal{E}$, con funtor de proyección
+$p$, y $\lambda\colon\cal{E}'\to\cal{E}$ un funtor; consideremos
+$\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'$ como una categoría
+sobre~$\cal{E}'$ mediante el funtor de proyección
+$p'=p\times_{\cal{E}}\id_{\cal{E}'}$. Sea $\alpha'$ un morfismo
+de~$\cal{F}'$. Para que $\alpha'$ sea un morfismo cartesiano, es necesario
+y suficiente que su imagen $\alpha$ en~$\cal{F}$ lo sea.
+\end{proposition}
+
+La demostración es inmediata y se deja al lector.
+
+\begin{corollaire}
+\label{VI.6.7}
+Para todo funtor cartesiano $F\colon\cal{F}\to\cal{G}$ de categorías
+sobre~$\cal{E}$, el funtor $F'=F\times_{\cal{E}}\cal{E}'$ de
+$\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'$ en
+$\cal{G}'=\cal{G}\times_{\cal{E}}\cal{E}'$ es cartesiano.
+\end{corollaire}
+
+Por consiguiente, el funtor $\SheafHom_{\cal{E}}(\cal{F},\cal{G})\to
+\SheafHom_{\cal{E}'}(\cal{F}',\cal{G}')$ considerado en
+\ifthenelse{\boolean{orig}}{\ignorespaces}{el}
+\No \Ref{VI.3} induce un funtor
+$$
+\SheafHom_\cart(\cal{F},\cal{G})\to
+\SheafHom_\cart(\cal{F}',\cal{G}') \rm{;}
+$$
+en otras palabras, para $\cal{F}$, $\cal{G}$ fijas, \emph{puede
+considerarse}
+$$
+\SheafHom_\cart(\cal{F}\times_{\cal{E}}\cal{E}',
+\cal{G}\times_{\cal{E}}\cal{E}')
+$$
+\emph{como
+\marginpar{168}
+un funtor en~$\cal{E}'$, de la categoría
+${\Cat_{/\cal{E}}}^\circ$ en~$\Cat$}. Si se hacen variar asimismo
+$\cal{F}$, $\cal{G}$, se obtiene%
+\ifthenelse{\boolean{orig}}{,}{}
+un funtor de la categoría ${\Cat_{/\cal{E}}}^\circ\times\big(
+\Cat^\cart_{/\cal{E}}\big)^\circ\times\Cat^\cart_{/\cal{E}}$
+en~$\Cat$. Al tener en cuenta el isomorfismo
+$$
+\Hom_{\cal{E}'}(\cal{F}',\cal{G}') \isomto
+\Hom_\cal{E}(\cal{F}\times_\cal{E}\cal{E}',\cal{G})
+$$
+considerado en el~\No \Ref{VI.3}, los $\cal{E}'$-funtores cartesianos
+de~$\cal{F}'$ en~$\cal{G}'$ corresponden a los $\cal{E}$-funtores
+$\cal{F}\times_\cal{E}\cal{E}'\to\cal{G}$ que transforman todo morfismo
+cuya primera proyección es un morfismo cartesiano de~$\cal{F}$ en un
+morfismo cartesiano de~$\cal{G}$. Tomando $\cal{F}=\cal{E}$, se obtiene
+(tras un cambio de notación):
+
+\begin{corollaire}
+\label{VI.6.8}
+$\varprojLim(\cal{F}'/\cal{E}')$ es isomorfa a la subcategoría plena de
+$\SheafHom_{\cal{E}/-}(\cal{E}',\cal{F})$ formada por los
+$\cal{E}$-funtores $\cal{E}'\to\cal{F}$ que transforman los morfismos
+cualesquiera en morfismos cartesianos.
+En particular, si $\cal{F}$ es una categoría fibrada y
+$\tilde{\cal{F}}$ es la subcategoría de~$\cal{F}$ cuyos morfismos son
+los morfismos cartesianos de~$\cal{F}$, entonces se tiene una biyección
+$$
+\Ob \varprojLim(\cal{F}'/\cal{E}') \isomto
+\Hom_{\cal{E}/-}(\cal{E}',\tilde{\cal{F}}) \rm{.}
+$$
+\end{corollaire}
+
+Esto precisa la manera en que la expresión
+$\varprojLim(\cal{F}\times_{\cal{E}}\cal{E}'/\cal{E}')$ debe considerarse
+como un funtor en~$\cal{E}'$ y en~$\cal{F}$, de la categoría
+${\Cat_{/\cal{E}}}^\circ\times\Cat^\cart_{/\cal{E}}$ en la categoría
+$\Cat$. Más adelante se verá una dependencia funtorial más completa con
+respecto a~$\cal{E}'$, cuando se exija que $\cal{F}$ sea una categoría
+fibrada.
+
+\begin{corollaire}
+\label{VI.6.9}
+Sea $\cal{F}$ una categoría fibrada (\resp prefibrada) sobre~$\cal{E}$;
+entonces $\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'$ es una categoría
+fibrada (\resp prefibrada) sobre~$\cal{E}'$.
+\end{corollaire}
+
+\begin{proposition}
+\label{VI.6.10} Sean $\cal{F}$, $\cal{G}$ categorías prefibradas
+sobre~$\cal{E}$, y sea $F$ un $\cal{E}$-funtor cartesiano de~$\cal{F}$
+en~$\cal{G}$. Para que $F$ sea fiel,
+\marginpar{169}
+\ifthenelse{\boolean{orig}}
+{\resp plenamente fiel, (\resp una $\cal{E}$-equivalencia)}
+{(\resp plenamente fiel, \resp una $\cal{E}$-equivalencia)}
+es necesario y suficiente que, para todo
+\ifthenelse{\boolean{orig}}
+{$S\in\Ob \cal{E}$,}
+{$S\in\Ob(\cal{E})$,}
+el funtor inducido $F_S\colon\cal{F}_S\to\cal{G}_S$ sea fiel
+(\resp plenamente fiel, \resp una equivalencia).
+\end{proposition}
+
+Demostración inmediata a partir de las definiciones.
+
+Para terminar este número, damos algunas propiedades de las categorías
+fibradas que utilizan el axioma $\Fib_{\mathrm{II}}$.
+\begin{proposition}
+\label{VI.6.11} Sea $\cal{F}$ una categoría prefibrada sobre~$\cal{E}$.
+Para que $\cal{F}$ sea fibrada, es necesario y suficiente que satisfaga la
+condición siguiente:
+
+$\Fib_{\mathrm{II}}'$: Sea $\alpha\colon\eta\to\xi$ un morfismo
+cartesiano en~$\cal{F}$ sobre el morfismo $f\colon T\to S$ de~$\cal{E}$.
+Para todo morfismo $g\colon U\to T$ en~$\cal{E}$ y todo
+\ifthenelse{\boolean{orig}}
+{$\zeta\in\Ob \cal{F}_U$,}
+{$\zeta\in\Ob(\cal{F}_U)$,}
+la aplicación $u\mto\alpha\circ u$:
+$$
+\Hom_g(\zeta,\eta)\to\Hom_{fg}(\zeta,\xi)
+$$
+es biyectiva.
+\end{proposition}
+
+En otras palabras, en una categoría \emph{fibrada} sobre~$\cal{E}$, los
+diagramas cartesianos se caracterizan por una propiedad a priori más
+fuerte que la de la
+\ifthenelse{\boolean{orig}}
+{definición, (que se obtiene tomando $g=\id_T$ en}
+{definición (que se obtiene tomando $g=\id_T$ en}
+el enunciado precedente).
+\begin{corollaire}
+\label{VI.6.12} Sean $\cal{F}$ una categoría sobre~$\cal{E}$ y $\alpha$
+un morfismo en~$\cal{F}$. Para que $\alpha$ sea un isomorfismo, es
+necesario que $p(\alpha)=f$ sea un isomorfismo y que $\alpha$ sea
+cartesiano; el recíproco es cierto si $\cal{F}$ está fibrada
+sobre~$\cal{E}$.
+\end{corollaire}
+
+En efecto, si $\alpha$ es un isomorfismo, evidentemente también lo es
+$f=p(\alpha)$; para todo
+\ifthenelse{\boolean{orig}}
+{$\eta'\in\Ob\cal{F}_T$,}
+{$\eta'\in\Ob(\cal{F}_T)$,}
+la aplicación $u\mto\alpha\circ u$
+$$
+\Hom(\eta',\eta)\to\Hom(\eta',\xi)
+$$
+es biyectiva; como $f$ es un isomorfismo, se ve inmediatamente
+\ifthenelse{\boolean{orig}}{que un}{que un}
+elemento del primer miembro es un $T$-morfismo si y solo si su imagen en el
+segundo es un $f$-morfismo; se obtiene, por tanto, una biyección
+$$
+\Hom_T(\eta',\eta)\to\Hom_f(\eta',\xi)
+$$
+lo
+\marginpar{170}
+que prueba la primera afirmación. Recíprocamente, supongamos que $f$ es un
+isomorfismo y que $\alpha$ satisface la condición enunciada en
+\ifthenelse{\boolean{orig}}{$\Fib_{\mathrm{II}'}$}{$\Fib_{\mathrm{II}}'$}
+(lo que significa, cuando $\cal{F}$ está
+\ifthenelse{\boolean{orig}}
+{fibrado}
+{fibrada}
+sobre~$\cal{E}$, que $\alpha$ es cartesiano); entonces se ve
+inmediatamente que, para todo
+\ifthenelse{\boolean{orig}}
+{$\zeta\in\Ob\cal{F}$}
+{$\zeta\in\Ob(\cal{F})$}%
+, la aplicación $u\mto\alpha\circ u$ de~$\Hom(\zeta,\eta)$ en
+$\Hom(\zeta,\xi)$ es biyectiva; por tanto, $\alpha$ es un isomorfismo.
+\begin{corollaire}
+\label{VI.6.13} Sean $\alpha\colon\eta\to\xi$ y
+$\beta\colon\zeta\to\eta$ dos morfismos componibles en la categoría
+$\cal{F}$ fibrada sobre~$\cal{E}$. Si $\alpha$ es cartesiano, entonces
+$\beta$ lo es si y solo si $\alpha\beta$ lo es.
+\end{corollaire}
+
+Se utiliza la definición de los morfismos cartesianos en la forma reforzada
+de~\Ref{VI.6.11}.

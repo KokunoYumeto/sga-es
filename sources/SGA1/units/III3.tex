@@ -1,0 +1,71 @@
+
+\section[Prolongación infinitesimal local de los morfismos]{Prolongación infinitesimal local de los morfismos en un $S$-esquema liso}
+\label{III.3}
+
+\begin{theoreme}
+\label{III.3.1}
+Sea $f\colon X\to Y$ un morfismo localmente de tipo finito. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $f$ es liso.
+\item[(ii)] Para todo preesquema~$Y'$ sobre~$Y$, todo subpreesquema cerrado~$Y'_0$ de~$Y'$ con el mismo espacio subyacente que~$Y'$, todo $Y$-morfismo $g_0\colon Y'_0\to X$ y todo $z\in Y'_0$, existen un entorno abierto~$U$ de~$z$ en~$Y'$ y una prolongación~$g$ de $g_0|_{Y'_0\cap U}$ a un $Y$-morfismo $U\to X$.
+\item[(ii~bis)] Para $Y'$, $Y'_0$ y~$z$ como en \textup{(ii)}, poniendo $X'=X\times_Y Y'$ y $X'_0=X\times_Y Y'_0$, toda sección de~$X'_0$ sobre~$Y'_0$ se prolonga a una sección de~$X'$ sobre un entorno abierto~$U$ de~$z$.
+\item[(iii)] Para todo $Y$-esquema~$Y'$ que sea el espectro de un anillo local artiniano finito sobre algún~$\cal{O}_y$ ($y\in Y$), todo subpreesquema cerrado no vacío~$Y'_0$ de~$Y'$ y todo $Y$-morfismo $g_0\colon Y'_0\to X$, existe un $Y$-morfismo $g\colon Y'\to X$ que prolonga~$g_0$.
+\item[(iii~bis)] Para $Y'$, $Y'_0$ como en \textup{(iii)}, poniendo $X'=X\times_Y Y'$ y $X'_0=X\times_Y Y'_0$, toda sección de~$X'_0$ sobre~$Y'_0$ se prolonga a una sección de~$X'$ sobre~$Y'$.
+\end{enumerate}
+\end{theoreme}
+
+\subsubsection*{Demostración}
+La equivalencia entre~(ii) y~(ii~bis), por una parte, y entre~(iii) y~(iii~bis), por otra, es trivial, al igual que la implicación (ii)$\To$(iii). Queda, pues, demostrar (i)$\To$(ii) y (iii)$\To$(i).
+
+(i)$\To$(ii). Sea $x=g_0(z)$. Reemplazando~$X$ por un entorno abierto conveniente de~$x$ y~$Y'$ por el preesquema inducido en la imagen inversa de ese abierto por~$g_0$, puede suponerse que~$X$ es étale sobre~$Y[t_1,\dots,t_n]$. Consideremos el $Y$-morfismo compuesto $Y'_0\to X\to Y[t_1,\dots,t_n]$; está definido por~$n$ secciones del haz~$\cal{O}_{Y'_0}$, que pueden prolongarse, en un entorno de~$z$, a secciones de~$\cal{O}_{Y'}$. Puede suponerse, por tanto, que
+\marginpar{68}
+el morfismo considerado se ha prolongado a un
+\ifthenelse{\boolean{orig}}
+{$Y$-morfismo $Y'\to Y'_0$}
+{$Y$-morfismo $Y'\to Y[t_1,\dots,t_n]$}.
+En virtud de~(\Ref{I.5.6}), existe entonces un único $Y$-morfismo $g\colon Y'\to X$ que levanta el anterior y prolonga al mismo tiempo~$g_0$, como se quería demostrar.
+
+(iii)$\To$(i). Como el conjunto de los puntos en los que~$f$ es liso es abierto, basta demostrar que contiene todo $x\in X$ que sea \emph{cerrado} en su fibra. Sea $y=f(x)$; entonces~$\cal{O}_x$ es una $\cal{O}_y$-álgebra, localización de un álgebra de tipo finito, con extensión residual finita. Por otra parte, la hipótesis~(iii) implica que todo homomorfismo de~$\cal{O}_x$ en un álgebra~$A/J$, donde~$A$ es un álgebra local artiniana finita sobre~$\cal{O}_y$ y~$J$ un ideal contenido en su radical, se levanta a un homomorfismo de~$\cal{O}_x$ en el álgebra~$A$ (teniendo en cuenta que
+\ifthenelse{\boolean{orig}}
+{un morfismo de un $\Spec(B)$, con~$B$ local, en~$X$ está determinado biunívocamente por un homomorfismo local de un~$\cal{O}_x$ ($x\in X$) en~$B$}
+{un morfismo $\Spec(B)\to X$, con~$B$ local y cuyo punto cerrado se envía a~$x$, está determinado biunívocamente por un homomorfismo local $\cal{O}_x\to B$}).
+Por~\Ref{III.2.1} se sigue que~$\cal{O}_x$ es formalmente lisa sobre~$\cal{O}_y$ y, por tanto, lisa sobre~$\cal{O}_y$ en virtud de~\Ref{III.1.9}.
+
+\begin{corollaire}
+\label{III.3.2}
+Sea $f\colon X\to Y$ como en~\Ref{III.3.1}. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $f$ es étale.
+\item[(ii)] Se cumple la condición~\textup{(ii)} de~\Ref{III.3.1}, con \emph{unicidad} de la prolongación~$g$ de~$g_0$ a~$U$.
+\item[(iii)] Se cumple la condición~\textup{(iii)} de~\Ref{III.3.1}, con \emph{unicidad} de~$g$.
+\end{enumerate}
+\end{corollaire}
+
+Basta observar, en la demostración anterior de (i)$\To$(ii), que solo puede haber unicidad (cuando~$Y'_0$ no coincide con~$Y'$ en un entorno de~$z$) si~$n=0$, condición que se sabe suficiente.
+
+\begin{corollaire}
+\label{III.3.3}
+Sea~$X$ un preesquema localmente de tipo finito sobre un anillo local \emph{completo}~$A$, sea~$y$ el punto cerrado de~$Y=\Spec(A)$
+\ifthenelse{\boolean{orig}}
+{y sea~$x$ un punto de~$f^{-1}(y)$}
+{, denótese por $f\colon X\to Y$ el morfismo estructural, y sea~$x$ un punto de~$f^{-1}(y)$}
+\emph{racional}
+\ifthenelse{\boolean{orig}}
+{sobre~$\kappa(y)$}
+{sobre~$\kres(y)$}.
+Si~$X$ es \emph{liso sobre~$A$ en~$x$}, existe una sección~$s$ de~$X$ sobre~$Y$ «que pasa por~$x$», es decir, tal que $s(y)=x$.
+\end{corollaire}
+
+En particular, si~$X$ es liso sobre~$A$, la aplicación natural
+$$
+\Gamma(X/Y)\to\Gamma(X\otimes_A k/k)
+$$
+de las secciones de~$X$ sobre~$Y$ en el conjunto de los puntos de la fibra $f^{-1}(y)=X\otimes_A k$ racionales sobre~$k$ es sobreyectiva. Este hecho era especialmente conocido y utilizado cuando~$A$ es un anillo de valoración discreta y~$X$
+\marginpar{69}
+es propio sobre~$A$ (de hecho, proyectivo sobre~$A$); en tal caso, las secciones de~$X$ sobre~$Y$ (es decir, los «puntos de~$X$ con valores en~$A$») se identifican también con las secciones racionales, es decir, con los puntos de $X\otimes_A K=X_K$ (que es un esquema propio y
+\ifthenelse{\boolean{orig}}{simple}{liso}
+sobre~$K$) con valores en $K=$ cuerpo de fracciones
+\ifthenelse{\boolean{orig}}
+{de~$A$}
+{de~$A$,}
+es decir, con los puntos de~$X$ racionales sobre~$K$.

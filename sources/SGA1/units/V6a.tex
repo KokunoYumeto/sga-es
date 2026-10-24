@@ -1,0 +1,175 @@
+
+\section{Funtores exactos entre categorías galoisianas}
+\label{V.6}
+
+\begin{proposition}
+\label{V.6.1}
+Sean $\cal{C}$ y $\cal{C'}$ dos categorías galoisianas,
+$H\colon \cal{C}\to \cal{C'}$ un funtor covariante, $F'$ un funtor
+fundamental sobre~$\cal{C'}$ y $F=F'\circ H$. Son equivalentes las
+condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $H$ es \emph{exacto}, \ie exacto por la izquierda y exacto
+por la derecha.
+\item[(ii)] $H$ es exacto por la izquierda, transforma sumas finitas en
+sumas finitas y epimorfismos en epimorfismos (o, equivalentemente,
+objetos $\not\approx\emptyset_{\cal C}$ en objetos
+$\not\approx\emptyset_{\cal C'}$).
+\item[(iii)] $F$ es un funtor fundamental sobre~$\cal C$.
+\end{enumerate}
+\end{proposition}
+
+La implicación (i)$\To$(ii) es un hecho general de la teoría de categorías. Además,
+la primera forma dada a (ii) implica la segunda, como se ve observando que,
+si~$X$ es un objeto de~$\cal C$, entonces
+$X\not\approx\emptyset_{\cal C}$ \sss\ el morfismo
+$X\to e_{\cal C}$ es un epimorfismo; se observará que~$F$, al suponerse
+exacto por la izquierda, transforma $e_{\cal C}$ en~$e_{\cal C'}$. La
+segunda forma dada a (ii) implica (iii), pues~$F$, al ser exacto por la
+izquierda y, por tanto, prorepresentable, satisface el criterio (iii)
+de~\Ref{V.5.6}. Por último, (iii) implica (i), como se sigue de que~$F$ es
+exacto y ``conservativo'' (\ie satisface el axioma (G~6) del
+\No~\Ref{V.4}).
+
+Sea entonces~$\Gamma$ el grupoide fundamental de~$\cal C$ y~$\Gamma'$ el
+de~$\cal C'$. Así, si
+\marginpar{135}
+$H$ es exacto, entonces $F'\mto F'\circ H$ es un funtor del
+grupoide~$\Gamma'$ en el grupoide~$\Gamma$, que denotaremos por~$\tH$:
+$$
+\tH(F')(X)=F'(H(X)).
+$$
+También puede escribirse, con la notación $F(X)=E_X(F)$ introducida en el
+\ifthenelse{\boolean{orig}}
+{\No~\Ref{V.6}:}
+{\No~\Ref{V.5}:}
+$$
+\ifthenelse{\boolean{orig}}
+{E_{H(X)}(F')=E_X(\tH(F'))}
+{E_{H(X)}(F')=E_X(\tH(F')).}
+$$
+Esta última fórmula muestra, teniendo en cuenta~\Ref{V.5.8}
+o~\Ref{V.4.1}, que el funtor exacto~$H$ queda determinado (salvo
+isomorfismo único) cuando se conoce el funtor correspondiente~$\tH$.
+Fijemos un~$F'$ y sea $F=\tH(F')$; entonces~$\tH$ define un homomorfismo
+de~$\pi_{F'}=\Aut(F')$ en~$\pi_F=\Aut(F)$:
+$$
+\tH\colon\pi_{F'}\to\pi_F
+\qquad(F=\tH(F')=F'\circ H).
+$$
+Por otra parte, la fórmula anterior muestra (teniendo en cuenta~\Ref{V.5.8})
+que este homomorfismo tiene la propiedad siguiente: para todo conjunto
+finito~$E$ sobre el que~$\pi_F$ actúa continuamente, el grupo~$\pi_{F'}$
+actúa también \emph{continuamente} por medio del homomorfismo anterior
+$\pi_{F'}\to\pi_F$. Aplicándolo a los cocientes de~$\pi_F$ por sus
+subgrupos normales abiertos, se ve que la condición anterior significa
+también que el homomorfismo considerado es continuo. Recíprocamente,
+démonos un objeto~$F$ de~$\Gamma$, un objeto~$F'$ de~$\Gamma'$ y un
+homomorfismo continuo
+$$
+u\colon\pi_{F'}\to\pi_F.
+$$
+Le corresponde entonces un funtor de~$\cal C(\pi)$ en~$\cal C(\pi')$,
+manifiestamente exacto; por tanto, en virtud de~\Ref{V.4.1}, le corresponde
+un funtor $H$ de~$\cal C$ en~$\cal C'$ que es exacto y tal que
+$\tH\colon\pi_{F'}\to\pi_F$ es precisamente~$u$. En lugar de partir de un
+homomorfismo de grupos, también puede partirse de un \emph{funtor}
+$$
+U\colon\Gamma'\to\Gamma
+$$
+tal que, para \emph{todo} $F'\in\Gamma'$ (o para \emph{un}
+$F'\in\Gamma'$, lo que es lo mismo), el homomorfismo correspondiente
+$\pi_{F'}\to\pi_F$ sea continuo: tal funtor es isomorfo a un funtor de la
+forma~$\tH$, donde $H\colon\cal C\to\cal C'$ es un funtor exacto
+determinado salvo isomorfismo único. Así:
+
+\begin{corollaire}
+\label{V.6.2}
+Para
+\marginpar{136}
+que un funtor $H\colon\cal C\to\cal C'$ de categorías galoisianas sea
+exacto, es necesario y suficiente que existan equivalencias
+$\cal C(\pi)\to\cal C$ y
+\ifthenelse{\boolean{orig}}
+{$\cal C'\to\cal C(\pi)$}
+{$\cal C'\to\cal C(\pi')$}
+que transformen el funtor~$H$ en el funtor
+$\cal C(\pi)\to\cal C(\pi')$ asociado a un homomorfismo de grupos
+topológicos $\pi'\to\pi$.
+\end{corollaire}
+
+\begin{corollaire}
+\label{V.6.3}
+Sean $\cal C$ y $\cal C'$ dos categorías galoisianas y sean~$\Gamma$ y
+$\Gamma'$ sus grupoides fundamentales. Entonces la categoría de los
+funtores exactos de~$\cal C$ en~$\cal C'$ es equivalente a la categoría de
+los funtores $U\colon\Gamma'\to\Gamma$ que tienen la propiedad siguiente:
+para todo $F'$ de~$\Gamma'$ (o para \emph{un} $F'$ de~$\Gamma'$, lo que es
+lo mismo), poniendo $F=U(F')$, el homomorfismo
+$$
+\pi_{F'}=\Aut(F')\to\pi_F=\Aut(F)
+$$
+definido por~$U$ es continuo.
+\end{corollaire}
+
+Consideremos el progrupo fundamental~$\Pi$ de~$\cal C$. Entonces un funtor
+exacto~$H$ lo transforma en un progrupo $H(\Pi)$ de~$\cal C'$. Vamos a
+definir un homomorfismo
+$$
+\Pi'\to H(\Pi)
+$$
+(donde~$\Pi'$ es el progrupo fundamental de~$\cal C'$), mediante la
+condición de que, para todo objeto~$F'$ de~$\Gamma'$, el homomorfismo
+correspondiente
+$$
+F'(\Pi')=\pi_{F'}\to F'(H(\Pi))=\pi_F\qquad
+\ifthenelse{\boolean{orig}}
+{\text{(donde $F=F'\circ H=\tH(F')$)};}
+{\text{(donde $F=F'\circ H=\tH(F')$)}}
+$$
+sea el homomorfismo natural
+$$
+\Aut(F')\to\Aut(F'\circ H).
+$$
+Como este último es funtorial en~$F'$, define efectivamente, en virtud
+de~\Ref{V.5.8}, un homomorfismo de proobjetos, y de hecho de progrupos,
+en~$\cal C'$. Este homomorfismo se llama \emph{asociado} al funtor~$H$.
+
+Sea ahora~$H'$ un segundo funtor exacto, de la categoría galoisiana
+$\cal C'$ en una categoría galoisiana~$\cal C''$. Es inmediato que
+$$
+{}^t(H'H)=\tH\,\tH'
+$$
+(N.B.: se trata de una identidad de funtores, y no solamente de un
+isomorfismo canónico). Hay una propiedad de transitividad análoga para los
+homomorfismos asociados de los progrupos fundamentales.
+
+Vamos
+\marginpar{137}
+a interpretar ahora las propiedades del funtor exacto~$H$ en términos del
+homomorfismo correspondiente
+$$
+u\colon\pi_{F'}\to\pi_F\qquad
+\ifthenelse{\boolean{orig}}
+{\text{(donde $F'=F'\circ H$)}.}
+{\text{(donde $F=F'\circ H$)}.}
+$$
+Conviene introducir la noción de \emph{objeto punteado}
+\index{punteado (objeto)|hyperpage}%
+de la categoría galoisiana~$\cal C$ (provista de su funtor fundamental~$F$):
+es, por definición, un objeto~$X$ de~$\cal C$ provisto de un elemento~$a$
+de~$F(X)$. Se interpreta, pues, como un conjunto finito sobre el que
+$\pi_F$ actúa continuamente por la izquierda, provisto de un punto~$a$.
+Por tanto, los objetos punteados \emph{conexos} de~$\cal C$ se identifican,
+en virtud de~\Ref{V.5.3}, con los subgrupos abiertos de~$\pi_F$. Si~$U$ y
+$V$ son dos de tales subgrupos, correspondientes a objetos punteados
+conexos~$X$ e~$Y$ de~$\cal C$, entonces existe un homomorfismo punteado
+de~$X$ en~$Y$ si y solo si $U\subset V$, y dicho homomorfismo es entonces
+único. Por supuesto, el funtor~$H$ transforma objetos punteados en objetos
+punteados (pues $F=F'\circ H$). Obsérvese, por otra parte, que un subgrupo
+cerrado de un grupo como~$\pi_F$ es la intersección de los subgrupos
+abiertos que lo contienen; por consiguiente,
+\ifthenelse{\boolean{orig}}{\ignorespaces}{si}
+$M$ y~$N$ son dos subgrupos cerrados, entonces $M\subset N$ si y solo si
+todo subgrupo abierto que contiene a~$N$ contiene también a~$M$. Gracias a
+estas observaciones se demuestran fácilmente los resultados siguientes:

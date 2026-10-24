@@ -1,0 +1,182 @@
+
+\section[Comparación de las propiedades de un esquema]{Comparación de las propiedades de un esquema y del espacio
+analítico \hbox{asociado}}
+\label{XII.2}
+
+\begin{proposition}
+\label{XII.2.1}
+Sean~$X$ un $\CC$-esquema localmente de tipo finito, $X^{\an}$ el espacio
+analítico asociado y~$n$ un entero. Consideremos la propiedad~$P$ de ser
+\begin{itemize}
+\item[(i)] no vacío
+\item[(i')] discreto
+\item[(ii)] de Cohen--Macaulay
+\item[(iii)] $(\mathrm{S}_n)$
+\item[(iv)] regular
+\item[(v)] $(\mathrm{R}_n)$
+\item[(vi)] normal
+\item[(vii)] reducido
+\item[(viii)] de dimensión~$n$.
+\end{itemize}
+Entonces, para que~$X$ posea la propiedad~$P$, es necesario y suficiente que
+también la posea~$X^{\an}$.
+\end{proposition}
+
+Sea $\varphi\colon X^{\an}\to X$ el morfismo canónico. La afirmación~(i)
+resulta de la igualdad $|X^{\an}|=X(\CC)$
+\ifthenelse{\boolean{orig}}
+{\eqref{XIII.1.1}}
+{\eqref{XII.1.1}}%
+~y del hecho de que~$X$ es de Jacobson (EGA~IV~10.4.8). Decir que~$X$
+(\resp $X^{\an}$) es discreto equivale a decir que $\dim X=0$
+(\resp $\dim X^{\an}=0$ según~\cite[\no19~\S 4~cor\ptbl 6]{XII.4}); por
+tanto, (i') resulta de~(viii).
+
+Sea~$P$ una de las propiedades (ii) a~(vii). Para que~$X$ posea la
+propiedad~$P$, es necesario y suficiente que~$P$ se verifique en cada punto
+cerrado de~$X$; en efecto, como~$X$ es excelente (EGA~IV~7.8.6~(iii)), el
+conjunto de los puntos
+\marginpar{317}
+en los que~$X$ verifica~$P$ es abierto (\loccit) y, si este abierto contiene
+todos los puntos cerrados, es igual a todo~$X$. Decir que~$X$
+(\resp $X^{\an}$) posee la propiedad~$P$ equivale, pues, a decir que, para
+todo punto~$x$ de~$X^{\an}$, el anillo local
+$\cal{O}_{X,\varphi(x)}$ (\resp $\cal{O}_{X^{\an},x}$) posee la propiedad~$P$.
+Como el hecho de que un anillo local excelente posea la propiedad~$P$ puede
+comprobarse tras pasar a la completación, la proposición resulta de los
+isomorfismos
+$\widehat{\cal{O}}_{X,\varphi(x)}\isomto\widehat{\cal{O}}_{X^{\an},x}$ en
+los casos (ii) a~(vii). Lo mismo sucede en el caso~(viii), teniendo en cuenta
+las relaciones
+$$
+\dim X=\sup_x~\dim \cal{O}_{X,\varphi(x)}\qquad \dim
+X^{\an}=\sup_x~\dim \cal{O}_{X^{\an},x}
+$$
+donde $x\in X^{\an}$. Esto concluye la demostración.
+
+\begin{proposition}
+\label{XII.2.2}
+Sean~$X$ un $\CC$-esquema localmente de tipo finito,
+$\varphi\colon X^{\an}\to X$ el morfismo canónico y~$T$ un subconjunto
+localmente constructible de~$X$. Entonces se tiene la relación
+$$
+\varphi^{-1}(\overline{T})=\overline{\varphi^{-1}(T)}.
+$$
+\end{proposition}
+
+Podemos suponer que~$T$ es un abierto denso de~$X$. Sea~$H$ el subesquema
+cerrado reducido de~$X$ cuyo espacio subyacente es $X-T$; el espacio
+asociado~$H^{\an}$ es un subespacio analítico cerrado de~$X^{\an}$ cuyo
+espacio subyacente es $X^{\an}-\varphi^{-1}(T)$. Debemos demostrar que todo
+punto~$x$ de~$H^{\an}$ pertenece a~$\overline{\varphi^{-1}(T)}$. Ahora bien,
+en tal punto~$x$, el germen de espacio analítico~$(X^{\an},x)$ contiene el
+subgermen~$(H^{\an},x)$, y este está definido por un
+\ifthenelse{\boolean{orig}}
+{Ideal}
+{ideal}%
+~no nilpotente de~$\cal{O}_{X^{\an},x}$. Del teorema de los ceros
+\cite[\no19~\S 4~cor\ptbl 3]{XII.4} resulta entonces que todo entorno abierto
+de~$x$ contiene puntos de~$X^{\an}$ que no pertenecen a~$H^{\an}$, lo cual
+demuestra que $x\in\overline{\varphi^{-1}(T)}$.
+
+\begin{corollaire}
+\label{XII.2.3}
+Sean
+\marginpar{318}
+$X$ un $\CC$-esquema localmente de tipo finito,
+$\varphi\colon X^\an\to X$ el morfismo canónico y~$T$ un subconjunto
+localmente constructible de~$X$. Para que~$T$ sea abierto (\resp cerrado,
+\resp denso), es necesario y suficiente que lo mismo ocurra con
+$\varphi^{-1}(T)$.
+\end{corollaire}
+
+El corolario resulta de~\Ref{XII.2.2} y del hecho de que, como~$X$ es un
+esquema de Jacobson (EGA~IV~10.4.8), dos subconjuntos localmente
+constructibles de~$X$ que tienen la misma traza sobre el subconjunto muy
+denso~$X(\CC)$ son iguales.
+
+\begin{proposition}
+\label{XII.2.4}
+Sea~$X$ un $\CC$-esquema localmente de tipo finito. Para que~$X$ sea conexo
+(\resp irreducible), es necesario y suficiente que también lo sea~$X^\an$.
+\end{proposition}
+
+Supongamos que~$X^\an$ es conexo (\resp irreducible). La imagen~$X(\CC)$
+de~$X^\an$ en~$X$ es entonces conexa (\resp irreducible). De ello resulta
+que~$X$ es conexo (\resp irreducible), pues los subconjuntos cerrados de~$X$
+y de~$X(\CC)$ se corresponden biyectivamente (EGA~IV~10.1.2).
+
+Recíprocamente, supongamos que~$X$ es conexo (\resp irreducible) y demostremos
+que lo mismo ocurre con~$X^\an$. Podemos limitarnos al caso en que~$X$ es
+irreducible. Supongamos, en efecto, que~$X$ es conexo. Dado un punto~$x$
+de~$X$, el conjunto de los puntos $y\in X$ para los cuales existe una
+sucesión finita de subesquemas cerrados irreducibles $X_1,\dots,X_n$ de~$X$,
+con $x\in X_1$, $y\in X_n$ y $X_i\cap X_{i+1}\neq\emptyset$ para
+$1\leq i\leq n-1$, es a la vez abierto y cerrado y, por tanto, igual a todo
+~$X$. Para una sucesión $X_1,\dots,X_n$ como la precedente, se tiene también
+$X_{i}^\an\cap X_{i+1}^\an\neq\emptyset$ para $1\leq i\leq n-1$; si se supone
+demostrado que los~$X_{i}^\an$ son conexos, lo mismo ocurre entonces
+con~$X^\an$.
+
+Supondremos
+\marginpar{319}
+en adelante que~$X$ es irreducible. Podemos suponer además que~$X$ es afín.
+En efecto, si $(U_i)_{i\in I}$ es un recubrimiento de~$X$ por abiertos
+afines, dos cualesquiera de estos abiertos tienen intersección no vacía y,
+por tanto, la misma propiedad se verifica para el recubrimiento
+$(U_{i}^\an)_{i\in I}$ de~$X^\an$; si se supone demostrado que los~$U_{i}^\an$
+son irreducibles, lo mismo ocurre entonces con~$X^\an$.
+
+Podemos suponer además que~$X$ es normal. Sea, en efecto, $\tilde X$ la
+normalización de~$X$; como el morfismo $\tilde X\to X$ es sobreyectivo,
+también lo es $\tilde X^\an\to X^\an$, lo cual demuestra que, si
+$\tilde X^\an$ es irreducible, también lo es~$X^\an$.
+
+Supondremos en adelante que~$X$ es afín y normal. Como los anillos locales
+de~$X^\an$ son íntegros, decir que~$X^\an$ es irreducible equivale a decir
+que es conexo. En efecto, si~$\cal{F}$ es un subconjunto analítico cerrado
+de~$X^\an$, el conjunto de los puntos~$x$ de~$X^\an$ en los que
+$\codim_x(\cal{F},X^\an)=0$ es un subconjunto analítico cerrado de~$X^\an$
+\cite[\no20 A cor\ptbl 1]{XII.4} que también es abierto; si~$X^\an$ es
+conexo, esto demuestra que, si $\cal{F}\neq X^\an$, entonces~$\cal{F}$ es
+nunca denso y, por tanto, que~$X^\an$ es irreducible. Quedamos así reducidos
+a demostrar que~$X^\an$ es conexo.
+
+Sea
+$$
+i\colon X\to P
+$$
+una compactificación de~$X$, donde~$P$ es un $\CC$-esquema proyectivo normal
+e~$i$ una inmersión abierta dominante. De~\cite[\no12~th\ptbl 1]{XII.10}
+resulta entonces que~$P^\an$ es conexo. Como~$X^\an$ se obtiene quitando
+de~$P^\an$ un subconjunto analítico cerrado nunca denso, de~\Ref{XII.2.5}
+más abajo resulta que~$X^\an$ también es conexo.
+
+\begin{lemme}
+\label{XII.2.5}
+Sean
+\marginpar{320}
+$\cal{P}$ un espacio analítico normal conexo y~$\cal{Y}$ un subconjunto
+analítico cerrado nunca denso. Entonces $\cal{X}=\cal{P}-\cal{Y}$ es conexo.
+\end{lemme}
+
+Cuando~$\cal{Y}$ es de codimensión~$\geq2$, la afirmación resulta
+de~\cite[\no3~prop\ptbl 4]{XII.11}. En el caso general, quitando si es
+necesario de~$\cal{P}$ un subconjunto analítico cerrado de
+codimensión~$\geq2$, podemos suponer que~$\cal{P}$ y~$\cal{Y}$ (considerado
+como subespacio analítico reducido de~$\cal{P}$) son regulares. Según el
+teorema de las funciones implícitas, todo punto~$y$ de~$\cal{Y}$ posee un
+entorno~$\cal{U}$ isomorfo a una bola de un espacio afín~$\cal{E}^{n}$, de modo
+que~$\cal{U}\cap\cal{Y}$ esté definido por la anulación de cierto número de
+funciones coordenadas. Esto demuestra que
+$\cal{U}-\cal{U}\cap\cal{Y}$ es conexo y, por tanto, también lo
+es~$\cal{X}$.
+
+\begin{corollaire}
+\label{XII.2.6}
+Sea~$X$ un $\CC$-esquema localmente de tipo finito; el morfismo
+$$
+\pi_0(X^{\an})\to\pi_0(X)
+$$
+inducido por el morfismo canónico $X^\an\to X$ es biyectivo.
+\end{corollaire}

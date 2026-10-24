@@ -1,0 +1,38 @@
+\renewcommand{\baselinestretch}{1.1}\normalfont
+\chapter*{Introducción}
+\thispagestyle{empty}
+\label{I.0}
+
+En la primera parte de esta introducción damos algunas precisiones acerca del contenido del presente volumen; en la segunda, acerca del conjunto del «\emph{Seminario de Geometría Algebraica del Bois Marie}», del cual el presente volumen constituye el primer tomo.
+
+\let\oldthesubsection\thesubsection
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\setcounter{secnumdepth}{2}
+\subsection{}
+\label{I.introduction.1}
+
+El presente volumen expone los fundamentos de una teoría del grupo fundamental en geometría algebraica desde el punto de vista «kroneckeriano», que permite tratar en pie de igualdad tanto el caso de una variedad algebraica en el sentido usual como, por ejemplo, el de un anillo de enteros de un cuerpo de números. Este punto de vista solo puede expresarse satisfactoriamente en el lenguaje de los esquemas, y utilizaremos libremente tanto este lenguaje como los principales resultados expuestos en los tres primeros capítulos de los \emph{Elementos de geometría algebraica} de J.\ \textsc{Dieudonné} y A.\ \textsc{Grothendieck} (citados en lo sucesivo como EGA). El estudio del presente volumen del «\emph{Seminario de Geometría Algebraica del Bois Marie}» no requiere otros conocimientos de geometría algebraica y puede, por tanto, servir de introducción a sus técnicas actuales para quien desee familiarizarse con ellas.
+
+Las exposiciones \Ref{I} a \Ref{XI} de este libro reproducen textualmente, casi sin cambios, las notas mimeografiadas del seminario oral, que fueron distribuidas por el \emph{Institut des Hautes Études Scientifiques\footnote{Así como las notas de los seminarios que siguieron a este. Como este modo de distribución resultó a la larga impracticable e insuficiente, todos los «\emph{Seminarios de Geometría Algebraica del Bois Marie}» aparecerán en lo sucesivo en forma de libro, como el presente volumen.}}. Nos hemos limitado a añadir algunas notas al pie al texto primitivo, corregir algunas erratas y efectuar un ajuste terminológico; en particular, el término «morfismo simple» fue sustituido entretanto por «morfismo liso», que no da lugar a las mismas confusiones.
+
+Las exposiciones \Ref{I} a \Ref{IV} presentan las nociones locales de morfismo \emph{étale} y morfismo \emph{liso}; apenas utilizan el lenguaje de los esquemas, expuesto en el capítulo~I de los \emph{Elementos}\footnote{Ahora se dispone de un estudio más completo en los \emph{Elementos}, cap.~IV, \S\S~17 y 18.}. La exposición~\Ref{V} presenta la descripción axiomática del grupo fundamental de un esquema, útil incluso en el caso clásico en que dicho esquema se reduce al espectro de un cuerpo, donde se obtiene una reformulación muy cómoda de la teoría de Galois usual. Las exposiciones \Ref{VI} y \Ref{VIII} presentan la \emph{teoría del descenso}, que ha adquirido una importancia creciente en geometría algebraica durante los últimos años y que podría prestar servicios análogos en geometría analítica y en topología. Debe señalarse que la exposición VII no llegó a redactarse y que su sustancia se halla
+\ifthenelse{\boolean{orig}}
+{incorporado}
+{incorporada}
+en un trabajo de J.\ Giraud (\emph{Méthode de la Descente}, Bull.\ Soc.\ Math.\ France, Mémoire~2, 1964, viii + 150~p.). En la exposición \Ref{IX} se estudia más específicamente el descenso de los morfismos étales, con lo que se obtiene un enfoque sistemático de los teoremas de tipo \textsc{Van Kampen} para el grupo fundamental, que aparecen aquí como simples traducciones de teoremas de descenso. Se trata esencialmente de un procedimiento para calcular el grupo fundamental de un esquema conexo~$X$, provisto de un morfismo propio y sobreyectivo, digamos $X'\to X$, en términos de los grupos fundamentales de las componentes conexas de~$X'$ y de los productos fibrados~$X'\times_X X'$, $X'\times_X X'\times_X X'$, así como de los homomorfismos inducidos entre esos grupos por los morfismos simpliciales canónicos entre los esquemas anteriores. La exposición~\Ref{X} ofrece la teoría de la \emph{especialización del grupo fundamental} para un morfismo propio y liso; su resultado más notable consiste en determinar, salvo pequeños matices, el grupo fundamental de una curva algebraica lisa en característica $p>0$ a partir del resultado conocido por vía trascendente en característica cero. La exposición~\Ref{XI} da algunos ejemplos y complementos; en particular, explicita en términos cohomológicos la teoría de los recubrimientos de \emph{\textsc{Kummer}} y la de \emph{\textsc{Artin}-\textsc{Schreier}}. Para otros comentarios sobre el texto, véase la \emph{Advertencia} de la versión mimeografiada, que sigue a la presente Introducción.
+
+Desde la redacción, en 1961, del presente Seminario, M.\ \textsc{Artin} y yo hemos desarrollado, en colaboración, el lenguaje de la \emph{topología étale} y una teoría cohomológica correspondiente, expuesta en la parte SGA~4, «Cohomología étale de los esquemas», del \emph{Seminario de Geometría Algebraica}, que aparecerá en la misma serie que el presente volumen. Este lenguaje y los resultados ya disponibles proporcionan una herramienta particularmente flexible para estudiar el grupo fundamental, que permite comprender mejor y superar algunos de los resultados aquí expuestos. Convendría, pues, rehacer por completo la teoría del grupo fundamental desde este punto de vista (todos los resultados fundamentales figuran, de hecho, ya en \emph{loc. cit.}). Eso era lo proyectado para el capítulo de los \emph{Elementos} dedicado al grupo fundamental, que debía contener además varios desarrollos que no pudieron encontrar cabida aquí, basados en la técnica de resolución de singularidades: el cálculo del «grupo fundamental local» de un anillo local completo en términos de una resolución de singularidades adecuada de dicho anillo; fórmulas de Künneth locales y globales para el grupo fundamental sin suponer que los morfismos sean propios (cf.\ exposición \Ref{XIII}); y los resultados de M.\ \textsc{Artin} sobre la comparación de los grupos fundamentales locales de un anillo local henseliano excelente y de su completado (SGA~4~XIX). Señalemos asimismo la necesidad de desarrollar una teoría del grupo fundamental de un topos, que abarque a la vez la teoría topológica ordinaria, su versión semisimplicial, la variante «profinita»
+\ifthenelse{\boolean{orig}}
+{desarrollado}
+{desarrollada}
+en la exposición~\Ref{V} del presente volumen y la variante prodiscreta, algo más general, de SGA~3~X~7 (adaptada al caso de esquemas no normales y no unirramos). En espera de una refundición completa de la teoría desde esta perspectiva, la exposición \Ref{XIII} de la Sra.\ \textsc{Raynaud}, que utiliza el lenguaje y los resultados de SGA~4, pretende mostrar las posibilidades que estos ofrecen en algunas cuestiones típicas, generalizando en particular ciertos resultados de la exposición~\Ref{X} a esquemas relativos no propios. Allí se da, en particular, la estructura del grupo fundamental «primo con $p$» de una curva algebraica no completa en
+\ifthenelse{\boolean{orig}}
+{car.}
+{característica}
+arbitraria (que yo había
+\ifthenelse{\boolean{orig}}
+{anunciado}
+{anunciado}
+en 1959, pero cuya demostración no se había publicado hasta ahora).
+
+Pese a estas numerosas lagunas e imperfecciones (otros dirán: a causa de ellas), pienso que el presente volumen podrá ser útil tanto a quien desee familiarizarse con la teoría del grupo fundamental como en calidad de obra de referencia, mientras se redacta y publica un texto que no incurra en las críticas que acabo de enumerar.

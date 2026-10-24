@@ -1,0 +1,151 @@
+\chapterspace{-2}
+\chapter{Ejemplos y complementos}
+\label{XI}
+\marginpar{285}
+
+\section{Espacios proyectivos, variedades unirracionales}
+\label{XI.1}
+
+\begin{proposition}
+\label{XI.1.1}
+Sean $k$ un cuerpo algebraicamente cerrado y $X=\PP_k^r$ el espacio
+proyectivo de dimensión $r$ sobre~$k$. Entonces $X$ es \emph{simplemente
+conexo,} es decir, $\pi_1(X)=0$.
+\end{proposition}
+
+Para $r=0$, esto es trivial. Si $r=1$, hay que demostrar que, si $X'$ es
+un recubrimiento étale conexo no vacío de~$X=\PP_k^1$, entonces
+$X'\isomto X$. La fórmula del género nos da aquí, si~$g$ y $g'$ son
+los géneros de~$X$ y~$X'$:
+$$
+1-g' = d(1-g)\quoi,
+$$
+donde $d$ es el grado de~$X'$ sobre~$X$. Como $g=0$, se tendrá entonces
+$1-g'=d$, lo cual exige $d=1$, puesto que $g'\ge 0$; esto demuestra
+$X'\isomto X$. Cuando $r\ge 2$, se procede por inducción
+sobre~$r$, suponiendo que $\PP^{r'}$ es simplemente conexo para
+$r'<r$. Aplicando esto a un hiperplano de~$\PP^r$ y utilizando
+(\Ref{X.2.10}), resulta que $\PP^r$ es simplemente conexo. Otra
+demostración: en virtud de (\Ref{X.1.7}), se tiene
+$\pi_1(\PP^1\times\cdots\times \PP^1) = \pi_1(\PP^1)\times\cdots
+\times \pi_1(\PP^1)$; por tanto, $(\PP^1)^r$ es simplemente conexo,
+pues $\PP^1$ lo es, y entonces $\PP^r$ es simplemente conexo en virtud
+de la invariancia birracional del grupo fundamental (\Ref{X.3.4}). Esta
+demostración prueba, más generalmente:
+
+\begin{corollaire}
+\label{XI.1.2}
+Sea $X$ un esquema propio y normal sobre un cuerpo algebraicamente
+cerrado~$k$; si $X$ es una variedad racional, es decir, si es íntegro y
+su cuerpo de funciones es una extensión puramente trascendente de~$k$,
+entonces $X$ es simplemente conexo.
+\end{corollaire}
+
+Este resultado se aplica, en particular, a las variedades grassmannianas y,
+más
+\marginpar{286}%
+generalmente, a las variedades~$G/H$, donde $G$ es un grupo lineal conexo
+sobre~$k$ y $H$ un subgrupo algebraico que contiene un subgrupo de Borel
+\ifthenelse{\boolean{orig}}
+{de~$B$.}
+{de~$G$.}
+
+Recordemos que se llama variedad \emph{unirracional sobre~$k$}
+\index{variedad unirracional|hyperpage}%
+a un esquema propio e íntegro sobre~$k$ cuyo cuerpo de funciones $K$
+está contenido en una extensión puramente trascendente~$K'$ de~$k$,
+finita sobre~$K$ (es decir, que tiene el mismo grado de trascendencia
+sobre~$k$ que~$K$), o, equivalentemente, si existe una aplicación racional
+dominante $f\colon\PP_k^r\to X$, con $r=\dim X$. Si $X$ es normal,
+se deduce de las consideraciones que preceden a \Ref{X.3.4} que, para todo
+recubrimiento étale conexo $X'$ de~$X$, de cuerpo~$L/K$, el álgebra
+$L\otimes_K K'$ sobre~$K'$ no está ramificada sobre el modelo~$\PP^r$ y,
+por tanto, está completamente descompuesta en virtud de~\Ref{X.1.1}; esto
+muestra que $L$ es $K$-isomorfo a una subextensión de~$K'/K$. Teniendo en
+cuenta \Ref{V.8.2}, queda demostrado:
+
+\begin{corollaire}
+\label{XI.1.3}
+El grupo fundamental de una variedad unirracional normal sobre un cuerpo
+algebraicamente cerrado es finito.
+\end{corollaire}
+
+(N.B. Obsérvese que, en la definición de «unirracional», no era necesario
+suponer que $K'/K$ fuera finita).
+
+\ifthenelse{\boolean{orig}}
+{\begin{remarques}
+\label{XI.1.4}
+Naturalmente, los resultados de este número son bien conocidos. Por otra
+parte,
+\ifthenelse{\boolean{orig}}{J.P\ptbl}{J-P\ptbl}%
+Serre demostró~\cite{XI.10} que, cuando $X$ es una variedad proyectiva
+unirracional lisa sobre un cuerpo algebraicamente cerrado de
+\emph{característica cero,} $X$ es simplemente conexa. Su demostración es
+trascendente, en el sentido de que utiliza el teorema de simetría de Hodge,
+y se ignora si este resultado se extiende a la característica~$p>0$.
+Parece, además, que no se conoce ningún ejemplo de variedad unirracional
+lisa sobre~$k$ que no sea ya racional.
+\end{remarques}}
+{\begin{remarques}
+\label{XI.1.4}
+Naturalmente, los resultados de este número son bien conocidos. Por otra
+parte,
+\ifthenelse{\boolean{orig}}{J.P\ptbl}{J-P\ptbl}%
+Serre demostró~\cite{XI.10} que, cuando $X$ es una variedad proyectiva
+unirracional lisa sobre un cuerpo algebraicamente cerrado de
+\emph{característica cero,} $X$ es simplemente conexa. Su demostración es
+trascendente, en el sentido de que utiliza el teorema de simetría de Hodge.
+
+\lcrochetbf Añadido en 2003 (MR) Limitémonos al caso de un cuerpo
+algebraicamente cerrado $k$ de característica $p\geq 0$. En característica
+$p>0$, la definición de $k$-variedad unirracional dada más arriba es la de
+$k$-variedad débilmente unirracional, por oposición a la de $k$-variedad
+fuertemente unirracional, en la que se supone además que $K'$ es una
+extensión separable de~$K$.
+
+En dimensión $2$, existen superficies proyectivas y lisas, débilmente
+unirracionales, cuyo grupo fundamental (finito por \Ref{XI.1.3}) no es
+trivial y que, por tanto, no son racionales (T\ptbl Shioda, On
+unirationality of supersingular surfaces, Math.~Ann. \textbf{225} (1977),
+p\ptbl155--159.). En cambio, una superficie fuertemente unirracional es
+racional: esto resulta del criterio de racionalidad de Castelnuovo,
+extendido a la característica $p>0$ por O\ptbl Zariski (\cf J-P\ptbl Serre,
+Sém. Bourbaki \no146, 1957 y {\OE}uvres--Collected papers, vol\ptbl 1,
+p\ptbl 467).
+
+Sobre el cuerpo $\CC$ de los números complejos, se conocen ejemplos de
+variedades proyectivas y lisas de \hbox{dimensión $\geq 3$} que son
+unirracionales y no racionales (\cf P\ptbl Deligne, Variétés
+unirationnelles non rationnelles [d'après M\ptbl Artin et D\ptbl Mumford],
+Sém.\ Bourbaki \no402, 1971-72, Lecture Notes vol\ptbl 317). Este es, en
+particular, el caso de una hipersuperficie cúbica lisa del espacio
+proyectivo $\PP^4$. Algunos de estos ejemplos se extienden a característica
+$>0$ y proporcionan variedades fuertemente unirracionales no racionales
+(\cf J.P\ptbl Murre, Reduction of the proof of the non-rationality of a non
+singular cubic threefold to a result of Mumford, Compositio Math.
+\textbf{27} (1973), p\ptbl63--82).
+
+Sea $V$ una $k$-variedad proyectiva, normal e íntegra. Se dice que $V$ es
+racionalmente conexa si existen un $k$-esquema íntegro de tipo finito $T$ y
+un $k$-morfismo $F : T\times\PP^1\to V$ tales que el morfismo
+\begin{equation}\tag*{(1)}
+\begin{split}
+T \times\PP^1\times\PP^1&\to V\times V\\
+(t, u, u')&\mto(F(t,u), F(t,u'))
+\end{split}
+\end{equation}
+sea dominante. En particular, por dos puntos racionales suficientemente
+generales de~$V$ pasa una curva racional. La terminología se justifica por
+el hecho de que, si $V$ es racionalmente conexa, se pueden unir dos puntos
+racionales mediante una cadena finita de curvas racionales. Si $k$ tiene
+característica $p>0$, se refuerza la definición anterior exigiendo que la
+aplicación (1) sea genéricamente lisa. Se obtiene así la noción de variedad
+racionalmente conexa separable. Por tanto, las variedades unirracionales son
+racionalmente conexas y, en característica $p>0$, las variedades
+fuertemente unirracionales son racionalmente conexas separables. J\ptbl
+Kollár demostró que las variedades racionalmente conexas separables tienen
+grupo fundamental algebraico trivial (\cf O\ptbl Debarre, Variétés
+rationnellement connexes [d'après T\ptbl Graber, J\ptbl Harris, J\ptbl
+Starr et A.J\ptbl de~Jong], Sém. Bourbaki \no906, 2001-2002).\rcrochetbf
+\end{remarques}}

@@ -1,0 +1,241 @@
+
+\section{Morfismos planos y conjuntos abiertos}
+\label{IV.6}
+
+Recordemos primero algunos resultados sobre los conjuntos constructibles,
+demostrados también en unas notas en circulación del Seminario
+Dieudonné--Rosenlicht sobre los esquemas\footnote{\Cf EGA~0$_\mathrm{III}$~9,
+EGA~IV~1.8 y~1.10.}.
+
+Sea~$X$ un espacio topológico. Se dice, siguiendo a Chevalley, que un
+subconjunto de~$X$ es \emph{constructible}
+\index{constructible (subconjunto)|hyperpage}%
+si es una unión finita de subconjuntos localmente cerrados.
+
+\begin{lemme}
+\label{IV.6.1}
+Sea~$X$ un espacio topológico noetheriano y sea~$Z$ un subconjunto de~$X$.
+Para que~$Z$ sea constructible es necesario y suficiente que, para todo
+subconjunto cerrado irreducible~$Y$ de~$X$, $Z\cap Y$
+\ifthenelse{\boolean{orig}}{no es}{no sea} denso en~$Y$ o
+\ifthenelse{\boolean{orig}}{contiene}{contenga} un subconjunto abierto no
+vacío del espacio~$Y$.
+\end{lemme}
+
+De ello se deduce, utilizando un lema bien conocido de álgebra conmutativa:
+
+\begin{lemme}[Chevalley]
+\label{IV.6.2}
+Sea $f\colon X\to Y$ un morfismo de tipo finito de preesquemas, con~$Y$
+noetheriano. Entonces $f(X)$ es constructible.
+\end{lemme}
+
+\begin{lemme}
+\label{IV.6.3}
+Sean~$X$ un espacio topológico noetheriano en el que todo subconjunto cerrado
+irreducible admite un punto genérico, $U$ un subconjunto constructible de~$X$ y
+$x\in X$. Para que~$U$ sea un entorno de~$x$ es necesario y suficiente que
+toda generalización~$y$ de~$x$ (\ie todo $y\in X$ tal que $x\in\bar y$)
+pertenezca a~$U$.
+\end{lemme}
+
+En particular:
+
+\begin{corollaire}
+\label{IV.6.4}
+Sea~$X$ un espacio topológico noetheriano en el que todo subconjunto cerrado
+irreducible admite un punto genérico, y sea~$U$ un subconjunto de~$X$. Para que
+$U$ sea abierto es necesario y suficiente que satisfaga las dos condiciones
+siguientes:
+\begin{enumerate}
+\item[(a)] $U$ contiene toda generalización de cada uno de sus puntos;
+\item[(b)] si $x\in U$, entonces
+\marginpar{101}
+$U\cap\bar x$ contiene un subconjunto abierto no vacío del espacio~$\bar x$.
+\end{enumerate}
+\end{corollaire}
+
+En efecto, $U$ es necesariamente constructible gracias a~\Ref{IV.6.1}, y se
+aplica el criterio~\ifthenelse{\boolean{orig}}{\Ref{IV.6.2}}{\Ref{IV.6.3}},
+que demuestra que~$U$ es un entorno de cada uno de sus puntos.
+
+\begin{corollaire}
+\label{IV.6.5}
+Sea $f\colon X\to Y$ un morfismo de tipo finito de preesquemas, con~$Y$
+localmente noetheriano, sea~$x$ un punto de~$X$ y sea~$y=f(x)$. Para que~$f$
+transforme \ifthenelse{\boolean{orig}}{toda}{todo} entorno de~$x$ en un
+entorno de~$y$ es necesario y suficiente que, para toda generalización~$y'$
+de~$y$, exista una generalización~$x'$ de~$x$ tal que $f(x')=y'$.
+\end{corollaire}
+
+Puede suponerse evidentemente que~$X$ e~$Y$ son afines y, por tanto,
+noetherianos. La condición es suficiente, pues basta demostrar que $f(X)$ es
+un entorno de~$y$; ahora bien, $f(X)$ es constructible
+por~\ifthenelse{\boolean{orig}}{\Ref{IV.6.1}}{\Ref{IV.6.2}}, y basta aplicar
+el criterio~\Ref{IV.6.3}.
+La condición es necesaria: sea $Y'=\overline{y'}$ y sea~$F$ la unión de las
+componentes irreducibles de~$f^{-1}(Y')$ que no contienen a~$x$. Entonces
+$X-F$ es un entorno abierto de~$x$, por lo que su imagen es un entorno de~$y$
+y, con mayor razón, contiene a~$y'$; existe, pues, $x'_1\in X-F$ tal que
+$f(x'_1)=y'$. Consideremos una componente irreducible de~$f^{-1}(Y')$ que
+contenga a~$x'_1$; contiene necesariamente a~$x$ (pues, de lo contrario,
+estaría contenida en~$F$). Sea~$x'$ su punto genérico. Es una generalización
+de~$x$, y $f(x')$ es una generalización de $f(x'_1)=y'$ contenida en~$Y'$;
+por tanto, es igual a~$y'$, c.q.d.
+
+\begin{theoreme}
+\label{IV.6.6}
+Sean $f\colon X\to Y$ un morfismo localmente de tipo finito, con~$Y$
+localmente noetheriano, y~$F$ un haz coherente sobre~$X$, de soporte~$X$ y
+plano con respecto a~$Y$. Entonces~$f$ es un morfismo abierto (\ie
+transforma abiertos en abiertos).
+\end{theoreme}
+
+Basta demostrar el criterio~\Ref{IV.6.5} para todo punto $x\in X$. Ahora
+bien, las generalizaciones~$x'$ de~$x$ corresponden a los ideales primos
+de~$\cal O_x$, y las generalizaciones~$y'$ de~$y$ corresponden a los ideales
+primos de~$\cal O_y$; hay que comprobar, por tanto, que todo ideal primo
+de~$\cal O_y$ es la contracción de
+\ifthenelse{\boolean{orig}}{una}{un} ideal primo de~$\cal O_x$.
+Ahora bien, $F_x$ es un $\cal O_x$-módulo no nulo y plano
+sobre~$\cal O_y$, por tanto fielmente plano sobre~$\cal O_y$
+por~\Ref{IV.2.2}. Puede aplicarse entonces~\Ref{IV.2.3}, lo que concluye la
+demostración.
+
+\begin{remarquesstar}
+Como la planitud se conserva por extensión de la base, se ve que, bajo las
+condiciones de~\ifthenelse{\boolean{orig}}{\Ref{IV.6.5}}{\Ref{IV.6.6}}, $f$
+es incluso \emph{universalmente abierto}.
+Ignoro, sin embargo, si, cuando~$Y$ es íntegro y~$X$ es de tipo finito
+sobre~$Y$, la restricción de~$f$ a toda componente~$X_i$ de~$X$ es un
+morfismo abierto, o siquiera equidimensional\footnote{La respuesta a la segunda pregunta es
+afirmativa y la respuesta a la primera es negativa incluso si~$f$ es étale;
+\cf EGA~IV~12.1.1.5 y EGA~Err$_{\rm IV}$~33.}, \ie cuyas fibras tienen
+todas sus componentes de la misma dimensión (solo se sabe que~$X_i$
+\emph{domina} a~$Y$).
+\marginpar{102}
+La pregunta está relacionada con la siguiente: sea $A\to B$ un homomorfismo
+local de anillos locales noetherianos, tal que~$B$ sea plano sobre~$A$ y
+$\goth mB$ sea un ideal de definición de~$B$ (lo que implica, además, que
+$\dim B=\dim A$). ¿Es cierto que, para todo ideal primo minimal~$\goth p_i$
+de~$B$, se tiene $\dim B/\goth p_i=\dim B$? Señalemos únicamente que la
+respuesta a la primera pregunta es negativa cuando se sustituye la hipótesis
+de planitud de~\ifthenelse{\boolean{orig}}{\Ref{IV.6.5}}{\Ref{IV.6.6}} por
+la sola hipótesis de que~$f$ sea universalmente abierto.
+\end{remarquesstar}
+
+\begin{lemme}
+\label{IV.6.7}
+Sean~$A$ un dominio noetheriano, $B$ un $A$-álgebra de tipo finito y~$M$ un
+$B$-módulo de tipo finito. Entonces existe un elemento no nulo~$f$ de~$A$
+tal que~$M_f$ sea un módulo libre (y, con mayor razón, plano) sobre~$A_f$.
+\end{lemme}
+
+Sea~$K$ el cuerpo de fracciones de~$A$; entonces $B\otimes_A K$ es un
+álgebra de tipo finito sobre~$K$, y $M\otimes_A K$ un módulo de tipo finito
+sobre esta última. Sea~$n$ la dimensión del soporte de este módulo;
+razonaremos por inducción sobre~$n$.
+Si $n<0$\ifthenelse{\boolean{orig}}{}{,}
+\ie si $M\otimes_A K=0$, tomando un número finito de generadores de~$M$
+sobre~$B$, se ve que existe un $f\in A$ que anula estos generadores y, por
+tanto, a~$M$; de aquí $M_f=0$, y hemos terminado. Supongamos que $n\geq0$.
+Se sabe que el $B$-módulo~$M$ admite una serie de composición cuyos
+cocientes sucesivos son isomorfos a módulos $B/\goth p_i$, donde los
+$\goth p_i$ son ideales primos de~$B$.
+Como una extensión de módulos libres es libre, se reduce al caso en que el
+propio~$M$ es de la forma~$B/\goth p$, o bien idéntico a~$B$, siendo~$B$ un
+$A$-álgebra \emph{íntegra}. Aplicando el lema de normalización de Noether a
+la $K$-álgebra $B\otimes_A K$, se ve fácilmente que existe un elemento no
+nulo~$f$ de~$A$ tal que~$B_f$ sea entero sobre el subanillo
+$A_f[t_1,\dots,t_n]$, donde los~$t_i$ son indeterminadas. Puede suponerse ya
+\ifthenelse{\boolean{orig}}{}{que }$B$ es entero sobre
+$C=A[t_1,\dots,t_n]$; es, por tanto, un $C$-módulo de tipo finito sin
+torsión.
+Sea~$m$ su rango; existe entonces una sucesión exacta de $C$-módulos:
+$$
+0\to C^m\to B\to M'\to0
+$$
+donde~$M'$ es un $C$-módulo de torsión. Se sigue que la dimensión de Krull
+del $C\otimes_A K$-módulo $M'\otimes_A K$ es estrictamente menor que la
+dimensión~$n$ de~$C\otimes_A K$. Por la hipótesis de inducción, después de
+localizar con respecto a un elemento no nulo conveniente~$f$ de~$A$, puede
+suponerse que~$M'$ es un $A$-módulo
+\marginpar{103}
+libre. Por otra parte, $C^m$ es un $A$-módulo libre. Por tanto, $B$ es
+entonces un $A$-módulo libre, y hemos terminado.
+
+\begin{lemme}
+\label{IV.6.8}
+Sean~$A$ un anillo noetheriano, $B$ un álgebra de tipo finito sobre~$A$,
+$M$ un $B$-módulo de tipo finito, $\goth p$ un ideal primo de~$B$ y~$\goth q$
+su contracción a~$A$. Supongamos que~$M_{\goth p}$ es plano
+sobre~$A_{\goth q}$ (o sobre~$A$, lo que es lo mismo). Entonces existe un
+$g\in B-\goth p$ tal que
+\begin{enumerate}
+\item[(a)] $(M/\goth qM)_g$ es plano sobre~$A/\goth q$.
+\item[(b)] $\Tor_1^A(M,A/\goth q)_g=0$.
+\end{enumerate}
+\end{lemme}
+
+En efecto, aplicando~\Ref{IV.6.7} a
+$(A/\ifthenelse{\boolean{orig}}{\goth(q)}{\goth q},B/\goth qB,
+M/\goth qM)$, se ve primero que existe un $f\in A-\goth q$ tal que
+$(M/\goth qM)_f$ sea plano sobre~$A/\goth q$.
+Por otra parte, como $M_{\goth p}$ es plano sobre~$A$, se tiene
+$\Tor_1^A(M,A/\goth q)_{\goth p}=
+\Tor_1^A(M_{\goth p},A/\goth q)=0$; puesto que
+$\Tor_1^A(M,A/\goth q)$ es un $B$-módulo de tipo finito, existe un
+$g\in B-\goth p$ tal que se cumple~(b). Puede entonces suponerse que se
+cumple a la vez~(a), sustituyendo~$g$ por~$gf$, lo que demuestra el
+\ifthenelse{\boolean{orig}}{corolario}{lema}.
+
+\begin{corollaire}
+\label{IV.6.9}
+Con las notaciones de~\Ref{IV.6.8}, para todo ideal primo~$\goth p'$ de~$B$
+que contenga a~$\goth p$ y no contenga a~$g$, $M_{\goth p'}$ es plano
+sobre~$A$ (o, lo que es lo mismo, sobre~$A_{\goth q'}$, donde~$\goth q'$ es
+la contracción de~$\goth p'$ a~$A$).
+\end{corollaire}
+
+Basta aplicar el criterio~\Ref{IV.5.6}~(ii) al sistema
+$(A,B_{\ifthenelse{\boolean{orig}}{\goth q'}{\goth p'}},\goth q,
+M_{\ifthenelse{\boolean{orig}}{\goth q'}{\goth p'}})$, utilizando la
+localización de los~$\Tor$.
+
+\begin{theoreme}
+\label{IV.6.10}
+Sea $f\colon X\to Y$ un morfismo de tipo finito, con~$Y$ localmente
+noetheriano, y sea~$F$ un haz coherente sobre~$X$. Sea~$U$ el conjunto de
+los puntos $x\in X$ tales que~$F_x$ sea plano sobre~$\cal O_{f(x)}$.
+Entonces~$U$ es un conjunto \emph{abierto}.
+\end{theoreme}
+
+\subsubsection*{Demostración}
+Puede suponerse que~$X$ e~$Y$ son afines, de anillos~$B$ y~$A$, y, por
+tanto, que~$F$ está definido por un $B$-módulo~$M$ de tipo finito. Se aplica
+el criterio~\Ref{IV.6.4}. La condición~(a) se satisface trivialmente
+por~\Ref{IV.1.2}~(i); queda por comprobar la condición~(b)
+de~\Ref{IV.6.4}. Esto es lo que se ha hecho en el lema~\Ref{IV.6.8} y
+\ifthenelse{\boolean{orig}}{}{el }corolario~\Ref{IV.6.9}.
+
+En muchas cuestiones basta la forma más débil siguiente del
+teorema~\Ref{IV.6.10} (que se sigue ya del lema~\Ref{IV.6.7} y no requiere,
+por tanto, ni la técnica
+\marginpar{104}
+de los constructibles ni el teorema~\Ref{IV.5.6}):
+
+\begin{corollaire}
+\label{IV.6.11}
+Bajo las condiciones de~\Ref{IV.6.10}, si se supone que~$Y$ es íntegro,
+existe un abierto no vacío~$V$ de~$Y$ tal que~$F$ sea plano con respecto
+a~$Y$ en todos los puntos de~$f^{-1}(V)$.
+\end{corollaire}
+
+En efecto, el conjunto abierto~$U$ contiene la fibra del punto genérico
+de~$Y$ (pues el anillo local de este punto es un cuerpo); por tanto, contiene
+un abierto de la forma~$f^{-1}(V)$, ya que~$X$ es de tipo finito sobre~$Y$.
+De~\Ref{IV.6.11} se deduce también fácilmente el resultado siguiente, donde
+se supone que~$Y$ es noetheriano (pero no necesariamente íntegro): existe
+una partición de~$Y$ en subconjuntos localmente cerrados~$Y_i$ tales que,
+dotando a~$Y_i$ de la estructura reducida inducida, el haz inducido por~$F$
+en cada $X_i=X\times_Y Y_i$ sea plano con respecto a~$Y_i$.

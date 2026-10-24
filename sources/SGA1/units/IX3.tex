@@ -1,0 +1,125 @@
+\section{Descenso de morfismos de preesquemas étales}
+\label{IX.3}
+
+\begin{proposition}
+\label{IX.3.1}
+Sean~$g\colon S'\to S$ un morfismo \emph{sobreyectivo} de preesquemas,
+$X$ e~$Y$ dos preesquemas sobre~$S$, y~$X'$, $Y'$ sus preimágenes
+sobre~$S'$. Si~$Y$ es no ramificado sobre~$S$, entonces la aplicación
+canónica
+$$
+\Hom_S(X,Y) \to \Hom_{S'}(X',Y')
+$$
+es inyectiva.
+\end{proposition}
+
+En efecto, en virtud de~\Ref{IX.1.6}, un $S$-morfismo
+$f\colon X\to Y$ queda determinado cuando se conoce el conjunto subyacente
+a su grafo~$\Gamma$, que es una parte de~$Z=X\times_SY$. Como
+$$
+Z'=Z\times_SS'=X'\times_{S'}Y' \to Z
+$$
+es sobreyectivo (pues~$S'\to S$ lo es), esta parte~$\Gamma$ queda
+determinada cuando se conoce su preimagen en~$X'\times_{S'}Y'$, que no es
+otra que el conjunto subyacente al grafo de~$f'$. De ahí la conclusión.
+
+Una parte~$\Gamma$ de~$Z$ es el grafo de un $S$-morfismo
+$f\colon X\to Y$ si y solo si es abierta y si el morfismo inducido por
+$\pr_1$ de~$\Gamma$ en
+\ifthenelse{\boolean{orig}}
+{$Y$}
+{$X$}
+es radicial
+\marginpar{234}
+y sobreyectivo; \cf \Ref{IX.1}. Cuando se verifica la primera propiedad,
+la segunda se verifica si y solo si la preimagen~$\Gamma'$ de~$\Gamma$ en
+$Z'$ satisface la misma condición (\Ref{VIII.3.1}). Si, por último, se sabe
+que~$Z'\to Z$ es submersivo, lo que sucede en particular si~$S'\to S$ es
+universalmente submersivo, entonces~$\Gamma$ es abierta si y solo si lo
+es~$\Gamma'$.
+
+Así, el conjunto~$\Hom_S(X,Y)$ está entonces en correspondencia biunívoca
+con el conjunto de las partes abiertas~$\Gamma'$ de~$Z'$ tales que el
+morfismo de proyección
+\ifthenelse{\boolean{orig}}
+{$\pr_1\colon Z'\to X'$}
+{$\pr_1\colon \Gamma'\to X'$}
+sea radicial y sobreyectivo (es decir, que correspondan a un $S'$-morfismo
+$f'\colon X'\to Y'$), y que estén saturadas para la relación de
+equivalencia definida por~$Z'\to Z$; es decir, cuyas dos preimágenes en
+$Z''=Z'\times_Z Z'=Z\times_S S''$ (donde~$S''=S'\times_S S'$), por una y
+otra proyección, sean iguales. Ahora bien, estas últimas son los grafos de
+los dos $S''$-morfismos~$X''\to Y''$ deducidos de~$f'$ por cambio de base,
+mediante una y otra proyección~$S''\to S'$. Hemos obtenido así:
+
+\begin{proposition}
+\label{IX.3.2}
+Sean~$g\colon S'\to S$ un morfismo \emph{universalmente submersivo} de
+preesquemas, $S''=S'\times_S S'$, $X$ e~$Y$ dos $S$-preesquemas, $X'$ e
+$Y'$ sus preimágenes sobre~$S'$, y~$X''$, $Y''$ sus preimágenes
+sobre~$S''$. Si~$Y$ es étale sobre~$S$, el siguiente diagrama canónico de
+aplicaciones es exacto:
+$$
+\xymatrix@C=.5cm{ {\Hom_S(X,Y)} \ar[r] & {\Hom_{S'}(X',Y')}
+\ar@/^2pt/[r]\ar@/_2pt/[r] & {\Hom_{S''}(X'',Y'')}. }
+$$
+\end{proposition}
+
+Tomando~$X$ e~$Y$ étales sobre~$S$, se obtiene el enunciado siguiente, que,
+por lo demás, vuelve a dar~\Ref{IX.3.2} (incluso restringiéndose a~$X=S$,
+caso al que siempre puede reducirse~\Ref{IX.3.2} mediante el cambio de base
+$X\to S$):
+
+\begin{corollaire}
+\label{IX.3.3}
+Un morfismo universalmente submersivo de preesquemas es un morfismo de
+descenso para la categoría fibrada de los preesquemas étales sobre otros.
+\end{corollaire}
+
+Ignoro, por lo demás, si es necesariamente un morfismo de descenso
+\emph{efectivo} para la categoría fibrada en cuestión, incluso añadiendo la
+hipótesis de que~$S$ sea noetheriano y~$g$ de tipo finito, y limitándose a
+los recubrimientos étales. No obstante, en el apartado siguiente daremos
+criterios útiles de efectividad.
+
+\begin{corollaire}
+\label{IX.3.4}
+Sea
+\marginpar{235}
+$g\colon S'\to S$ un morfismo universalmente submersivo cuyas fibras
+$g^{-1}(s)$ sean \og geométricamente conexas\fg,
+\index{geometricamente conexo@geométricamente conexo|hyperpage}%
+es decir, tales que, para toda extensión~$K/\kres(s)$,
+$g^{-1}(s)\otimes_{\kres(s)}K$ sea conexo. Entonces~$S'$ es conexo si~$S$
+lo es. El funtor de la categoría de los preesquemas étales sobre~$S$ en la
+\ifthenelse{\boolean{orig}}
+{categorías}
+{categoría}
+de los preesquemas étales sobre~$S'$ definido por~$g$ es plenamente fiel.
+\end{corollaire}
+
+Una parte de~$S'$ que sea a la vez abierta y cerrada está saturada para la
+relación de equivalencia conjuntista definida por~$g$, puesto que las
+fibras son conexas; por tanto, es la preimagen de una parte de~$S$, que es
+necesariamente abierta y cerrada porque~$g$ es submersivo. Así pues, si~$S$
+es conexo, $S'$ lo es. Esto implica también el resultado siguiente: el
+compuesto~$fg$ de dos morfismos con fibras universalmente conexas,
+\index{universalmente conexo: sinónimo de geométricamente conexo|hyperpage}%
+siendo~$f$ universalmente submersivo, tiene fibras universalmente conexas;
+si~$S_1'$ y~$S_2'$ sobre~$S$ tienen fibras universalmente conexas, lo mismo
+ocurre con~$S_1'\times_S S_2'$. En particular, bajo las condiciones
+de~\Ref{IX.3.4}, $S''$ tiene fibras universalmente conexas sobre~$S$. Sean
+entonces~$X$ e~$Y$ étales sobre~$S$, y sea~$u'$ un $S'$-morfismo de~$X'$ en
+$Y'$; demostremos que es compatible con los datos de descenso (lo cual
+entraña la conclusión buscada gracias a~\Ref{IX.3.3}). Sean, en efecto,
+$u_1''$ y~$u_2''$ los dos $S''$-morfismos~$X''\to Y''$ deducidos de~$u'$.
+El subpreesquema de~$S''$ de coincidencia de~$u_1''$ y~$u_2''$ es un
+subpreesquema abierto inducido, cerrado fibra a fibra, como preimagen del
+preesquema diagonal de~$Y''$ sobre~$S''$\kern1pt\footnote{Obsérvese que las
+fibras de
+\ifthenelse{\boolean{orig}}
+{$S'$ sobre~$S$}
+{$Y$ sobre~$S$}
+están separadas.}. Por tanto, es la preimagen de una parte de~$S$. Como
+contiene la diagonal en~$S''$, coincide con~$S''$, de donde
+$u_1''=u_2''$, cqfd.

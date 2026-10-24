@@ -1,0 +1,87 @@
+
+\setcounter{subsubsection}{3}
+
+\begin{subproposition}
+\label{XIII.4.7.4} Las notaciones son las de~\Ref{XIII.4.7}. Se supone
+que, además de las condiciones \textup{a), b), c)}, se satisfacen las
+condiciones siguientes:
+\begin{enumerate}
+\item[d)] Para todo punto $t$ de~$T=S-U$, el morfismo $f$ es localmente
+$1$-asférico para~$\LL$ en $g(t)$.
+\item[e)] Para todo punto $t\in T$, toda componente irreducible de la
+fibra $X_t$ contiene a~$g(t)$ y, para todo punto $x$ de
+$X_t-\{g(t)\}$ que no sea maximal, se tiene
+$$
+\prof\hop_x(X)\geq 3 \quad\textup{(SGA~2 XIV~1.2)}
+$$
+y el anillo $\cal{O}_{X,x}$ es noetheriano.
+\end{enumerate}
+
+Entonces el morfismo~\eqref{eq:XIII.4.7.3} es un isomorfismo.
+\end{subproposition}
+
+Como se ha dicho anteriormente, el grupo~$\pi$ se identifica con el
+cociente de~$\pi'_1(X_U,a)$ por el subgrupo normal cerrado~$L$ engendrado
+por la imagen de~$K$ \eqref{eq:XIII.4.7.2} en~$\pi'_1(X_U,a)$. Esto
+equivale a decir que~$\pi$ clasifica los
+\marginpar{425}
+recubrimientos principales~$Z$ de~$X_U$ tales que $g^{-1}_U(Z)$ se
+prolonga a un recubrimiento étale de~$S$, y que inducen sobre
+$X_{\bar{s}}$ un recubrimiento obtenido por extensión del grupo
+estructural a partir de un recubrimiento principal cuyo grupo es un
+$\LL$-grupo. Para demostrar que~$\varphi$ es un isomorfismo, basta
+demostrar que tal recubrimiento~$Z$ se prolonga a todo~$X$.
+
+Demostremos primero que~$Z$ se prolonga a un recubrimiento étale de un
+abierto que contiene a~$X_U$ y~$g(S)$. Sea~$W$ un esquema étale sobre~$X$
+cuya imagen contiene a~$X_U$ y~$g(S)$, y pongamos $W_U=W\times_S U$. Del
+hecho de que el morfismo $W\to S$ es $0$-acíclico y de la relación
+$\mathrm{prof}.\,\et_T S\geq 2$ resulta que se tiene
+$$
+\mathrm{prof}.\,\et_{(W-W_U)} W\geq 2
+$$
+(SGA~2 XIV~1.13); por consiguiente, si $Z|W_U$ se prolonga a un
+recubrimiento étale de~$W$, dicha prolongación es única salvo isomorfismo
+único. De ello resulta que el problema de prolongar~$Z$ a un entorno de
+$g(S)\cup X_U$ es local para la topología étale en un entorno de los
+puntos de~$g(T)$. Si~$t$ es un punto de~$T$, pongamos $x=g(t)$ y denotemos
+por~$\bar{X}$ (\resp por~$\bar{S}$) la localización estricta de~$X$ en
+$\bar{x}$ (\resp de~$S$ en~$\bar{t}$), por
+$\bar{U}=U\times_S\bar{S}$, por $\bar{X}_U=\bar{X}\times_X X_U$ y por
+$\bar{g}\colon\bar{S}\to\bar{X}$ el morfismo deducido de~$g$. Basta
+demostrar que, para todo punto~$t$ de~$T$, la imagen inversa~$\bar{Z}$
+de~$Z$ sobre~$\bar{X}_U$ se prolonga a~$\bar{X}$ o, lo que equivale a lo
+mismo, es trivial. Ahora bien, por definición de~$Z$, la imagen inversa
+de~$\bar{Z}$ sobre~$\bar{U}$ es trivial. Para demostrar que~$\bar{Z}$ es
+trivial, basta demostrar que es de la forma $\bar{f}^*_U E$, donde~$E$ es
+un recubrimiento principal de~$\bar{U}$; en efecto, se tendrá
+$E\simeq\bar{g}^*_U\bar{f}^*_U E\simeq\bar{g}^*_U\bar{Z}$, de donde se
+sigue el resultado, puesto que $\bar{g}^*_U\bar{Z}$ es trivial. Ahora
+bien, como el morfismo~$\bar{f}_U$ es $0$-acíclico y localmente
+$0$-acíclico, para demostrar que~$\bar{Z}$ proviene de~$\bar{U}$ basta
+demostrar que, para todo punto geométrico algebraico sobre un
+punto de~$\bar{U}$, que puede suponerse que es el punto~$\bar{s}$,
+\ifthenelse{\boolean{orig}}
+{$\bar{Z}|X_{\bar{s}}$}
+{$\bar{Z}|\bar{X}_{\bar{s}}$}
+es trivial (SGA~4 XV~1.15). Pero, como
+\ifthenelse{\boolean{orig}}
+{$\bar{Z}|X_{\bar{s}}$}
+{$\bar{Z}|\bar{X}_{\bar{s}}$}
+se obtiene por extensión del grupo estructural a
+partir de un recubrimiento principal cuyo grupo es un~$\LL$-grupo, esto
+resulta del hecho de que el morfismo~$\bar{f}$ es $1$-asférico para~$\LL$.
+
+Hemos
+\marginpar{426}
+demostrado, por tanto, que existe un entorno abierto~$V$ de
+$g(S)\cup X_U$ tal que~$Z$ se prolonga a un recubrimiento étale~$Z_V$
+de~$V$. Demostremos que~$Z_V$ se prolonga a todo~$X$. Basta ver que, para
+todo punto~$x$ de~$X-V$, se tiene
+$$
+\prof\hop_x X\geq 3.
+$$
+Ahora bien, esto resulta de la hipótesis~e) y del hecho de que un punto
+$x$ de~$X-V$ no puede ser maximal en su fibra~$X_t$, pues, como toda
+componente irreducible de~$X_t$ contiene a~$g(t)$, todo punto maximal
+de~$X_t$ pertenece a~$V$.

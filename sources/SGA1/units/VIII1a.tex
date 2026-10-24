@@ -1,0 +1,192 @@
+\chapterspace{-2}
+\chapter{Descenso fielmente plano}
+\label{VIII}
+\marginpar{195}
+
+\section{Descenso de módulos cuasicoherentes}
+\label{VIII.1}
+
+Sea $\Sch$
+\label{indnot:hb}\oldindexnot{$\Sch$|hyperpage}%
+la categoría de los preesquemas. Procediendo como en~\Ref{VI.11}.b,
+se obtiene que la categoría de los pares~$(X,F)$ formados por un
+preesquema~$X$ y un módulo~$F$ sobre~$X$ (donde los morfismos se definen,
+como en \loccit, mediante la noción de imagen directa de un módulo por un
+morfismo de espacios anillados) puede considerarse como una categoría
+fibrada sobre~$\Sch$; el funtor de cambio de base relativo a un morfismo
+$f\colon X\to Y$ de~$\Sch$ es el funtor de imagen inversa de módulos
+por~$f$. (Obsérvese que la categoría fibra en~$X\in\Ob(\Sch)$ de la
+categoría fibrada anterior es la categoría \emph{opuesta} a la categoría
+de los módulos sobre~$X$). Como la imagen inversa de un módulo
+cuasicoherente es cuasicoherente, se ve que la subcategoría plena de la
+categoría de los pares~$(X,F)$ formada por aquellos para los que $F$ es
+cuasicoherente es una subcategoría fibrada de la categoría fibrada
+anterior. (En cambio, si no se imponen hipótesis sobre~$f$, la imagen
+directa de un módulo cuasicoherente no es, en general, un módulo
+cuasicoherente). Llamaremos simplemente a esta categoría fibrada la
+\emph{categoría fibrada de los módulos cuasicoherentes sobre los
+preesquemas}.
+
+Recordemos, por otra parte, que un morfismo~$f\colon X\to Y$ de espacios
+anillados se llama \emph{fielmente plano}
+\index{fielmente plano (morfismo)|hyperpage}%
+\index{plano (morfismo fielmente)|hyperpage}%
+si es \emph{plano} (\ie si, para todo~$x\in X$,
+$\mathcal{O}_{X,x}$ es un módulo plano sobre~$\mathcal{O}_{Y,f(x)}$,
+\eqref{IV}) y \emph{sobreyectivo}. Se dice que $f$ es un morfismo
+\emph{cuasicompacto} si la imagen inversa por~$f$ de toda parte
+cuasicompacta es cuasicompacta; cuando $f$ es un morfismo de
+preesquemas, esto significa también que la imagen inversa por~$f$ de un
+abierto afín de~$Y$ es reunión \emph{finita} de abiertos afines de~$X$.
+
+\begin{theoreme}
+\label{VIII.1.1}
+Sea
+\marginpar{196}
+$\cal{F}$ la categoría fibrada de los módulos cuasicoherentes sobre los
+preesquemas. Sea
+\ifthenelse{\boolean{orig}}
+{$g\colon S''\to S$}
+{$g\colon S'\to S$}
+un morfismo de preesquemas fielmente plano y cuasicompacto. Entonces $g$
+es un morfismo de descenso efectivo para~$\cal{F}$.
+\index{descenso efectivo (morfismo de)|hyperpage}%
+\end{theoreme}
+
+Recordemos\footnote{Admitiremos aquí la teoría general del descenso
+\ifthenelse{\boolean{orig}}
+{expuesta expuesta con detalle}
+{expuesta con detalle}
+en el artículo de J\ptbl\ \textsc{Giraud} citado en la nota
+\eqref{footnotegiraud} al pie de la página del Aviso, trabajo que en lo
+sucesivo citaremos como \cite{VIII.D}. \Cf también \cite{VIII.2} para una
+exposición sucinta.} que esto significa dos cosas:
+
+\begin{corollaire}[Descenso de homomorfismos de módulos]
+\label{VIII.1.2}
+\index{descenso de homomorfismos de módulos|hyperpage}%
+Sean $g\colon S'\to S$ un morfismo de preesquemas fielmente plano y
+cuasicompacto, $F$ y $G$ dos módulos cuasicoherentes sobre~$S$, $F'$ y
+$G'$ sus imágenes inversas sobre~$S'$, y, finalmente, $F''$ y $G''$ sus
+imágenes inversas sobre~$S''=S'\times_{S}S'$. Consideremos el diagrama de
+aplicaciones de conjuntos definido por los funtores de cambio de base
+por~$g$, $p_{1}$ y $p_{2}$ (donde $\xymatrix@C=.5cm{p_{1},p_{2}\colon
+S'\times_{S}S'\ar@/^2pt/[r]\ar@/_2pt/[r]&S'}$ son las dos proyecciones):
+$$
+\xymatrix@C=.5cm{\Hom_{S}(F,G)\ar[r] &
+\Hom_{S'}(F',G')\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\Hom_{S''}(F'',G'').}
+$$
+Este diagrama es exacto, \ie identifica biyectivamente el primer conjunto
+con el igualador de las dos aplicaciones escritas del segundo conjunto
+en el tercero.
+\end{corollaire}
+
+En otros términos, el funtor de cambio de base
+\ifthenelse{\boolean{orig}}
+{por~$f$,}
+{por~$g$,}
+$F\mto F'$, define un funtor \emph{plenamente fiel} de la categoría de
+los módulos cuasicoherentes sobre~$S$ en la categoría de los módulos
+cuasicoherentes sobre~$S'$ provistos de un dato de descenso relativo
+\ifthenelse{\boolean{orig}}
+{a~$f$.}
+{a~$g$.}
+Además:
+
+\begin{corollaire}[Descenso de módulos]
+\label{VIII.1.3}
+\index{descenso de módulos|hyperpage}%
+Para todo módulo cuasicoherente~$F'$ sobre~$S'$, todo dato de descenso
+sobre~$F'$ relativo a~$g$ es \emph{efectivo},
+\index{dato de descenso efectivo|hyperpage}%
+\ie $F'$, con su dato de descenso, es isomorfo a la imagen inversa por~$g$
+de un módulo cuasicoherente sobre~$S$ (determinado salvo isomorfismo único
+en virtud de~\Ref{VIII.1.2}).
+\end{corollaire}
+
+En otros términos, el funtor plenamente fiel anterior es incluso una
+\emph{equivalencia}. En la práctica, esto significa que dar un módulo
+cuasicoherente sobre~$S$ equivale a dar un módulo cuasicoherente sobre
+$S'$ provisto de un dato de descenso relativo a~$g$.
+
+\subsubsection*{Demostración de~\Ref{VIII.1.1}}
+Sea
+\marginpar{197}
+primero $T$ un $S$-preesquema $S$-isomorfo a la suma disjunta de una
+familia
+\ifthenelse{\boolean{orig}}
+{de abiertos}
+{de abiertos}
+inducidos~$S_{i}$ de~$S$ que recubren~$S$. Es entonces evidente que el
+morfismo estructural~$T\to S$ es un morfismo de descenso efectivo
+para~$\cal{F}$ (esto significa precisamente que dar un módulo
+cuasicoherente~$F$ sobre~$S$ equivale a dar módulos cuasicoherentes~$F_{i}$
+sobre los~$S_{i}$ e isomorfismos de pegado~$\varphi_{ji}\colon
+F_{i}|S_{i}\cap S_{j}\to F_{j}|S_{i}\cap S_{j}$ que satisfacen la
+\ifthenelse{\boolean{orig}}
+{conocida condición de cocadenas}
+{conocida condición de cociclo}.
+En virtud de~VII,~8
+se sigue que, para comprobar que $g\colon S'\to S$ es un morfismo de
+descenso efectivo para~$\cal{F}$, basta comprobarlo para el morfismo
+$g_{T}\colon T'=T\times_{S}S'\to T$ deducido de~$g$ mediante el cambio de
+base~$T\to S$. (Obsérvese que la hipótesis sobre~$T\to S$ permanece
+estable bajo cualquier cambio de base, de modo que $T\to S$ es, de
+hecho, un morfismo \emph{universal} de descenso efectivo para~$\cal{F}$).
+Tomando como~$S_{i}$ abiertos afines que recubren~$S$, quedamos reducidos al
+caso en que~$S$ es afín.
+
+Entonces $S'$ es reunión finita de abiertos afines y, tomando el
+$S$-esquema suma disjunta de estos, se obtiene un $S$-esquema afín~$S_{1}$
+y un $S$-morfismo~$S_{1}\to S'$ plano y sobreyectivo. Por tanto, $S_{1}$ es
+también fielmente plano sobre~$S$. Así, si se demuestra que un morfismo
+afín y fielmente plano es un morfismo de descenso efectivo para~$\cal{F}$
+y, por tanto, un morfismo universal de descenso estricto para~$\cal{F}$
+(pues la hipótesis es estable bajo cambio de base), se concluye, en
+particular, que el morfismo estructural~$S_{1}\to S$ es un morfismo
+universal de descenso estricto para~$\cal{F}$; y, como existe un
+$S$-morfismo~$S_{1}\to S'$, resultará, por \cite{VIII.D}, que
+$g\colon S'\to S$ es, en efecto, un morfismo de descenso estricto
+para~$\cal{F}$.
+
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+Quedamos, pues, reducidos al caso en que~$g$ es un morfismo afín y, como
+se ha visto, se puede suponer además que~$S$ es afín; por tanto,
+\emph{podemos suponer que $S$ y $S'$ son afines}. En este caso,
+\Ref{VIII.1.2} equivale al
+
+\begin{lemme}
+\label{VIII.1.4}
+Sean $A$ un anillo, $A'$ una $A$-álgebra fielmente plana, $M$ y $N$ dos
+$A$-módulos, $M'$ y $N'$ los $A'$-módulos obtenidos mediante el cambio
+de anillos~$A\to A'$, y $M''$,$N''$ los
+$A''=A'\otimes_{A}A'$-módulos obtenidos mediante el cambio de
+anillos~$A\to A''$. Entonces la sucesión de aplicaciones de conjuntos
+$$
+\xymatrix@C=.5cm{\Hom_{A}(M,N)\ar[r] &
+\Hom_{A'}(M',N')\ar@/^2pt/[r]\ar@/_2pt/[r] &
+\Hom_{A''}(M'',N'')}
+$$
+es exacta.
+\end{lemme}
+
+Como
+\marginpar{198}
+el homomorfismo~$N\to N'$ es inyectivo (pues $A'$ es fielmente plano
+sobre~$A$), se ve que la primera flecha es inyectiva. Queda demostrar que
+si un
+\ifthenelse{\boolean{orig}}
+{$A'$ homomorfismo}
+{$A'$-homomorfismo}
+$u'\colon M'\to N'$ es compatible con los datos de descenso, entonces
+proviene de un $A$-homomorfismo~$u\colon M\to N$. Ahora bien, esto
+significa sencillamente que $u'$ aplica el subconjunto~$M$ de~$M'$ en el
+subconjunto~$N$ de~$N'$ (la aplicación inducida~$u\colon M\to N$ será
+entonces automáticamente $A$-lineal, pues $u'$ es $A'$-lineal, y se ve
+igualmente que $u'$ es necesariamente igual a~$u\otimes_{A}A'$). Si
+$x\in M$, entonces $u'(x)$ pertenece al igualador del par de aplicaciones
+$\xymatrix@C=.5cm{N'\ar@/^2pt/[r]\ar@/_2pt/[r] & N''}$. Quedamos, pues,
+reducidos, para demostrar~\Ref{VIII.1.4},
+al caso particular siguiente (correspondiente al caso~$M=A$):

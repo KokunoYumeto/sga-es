@@ -1,0 +1,55 @@
+\chapter{Categorías fibradas y descenso}
+\label{VI}
+\marginpar{145}%
+
+\setcounter{section}{-1}
+\section{Introducción}
+
+Contrariamente a lo anunciado en la introducción de la exposición
+anterior, resultó imposible efectuar el descenso en la categoría de los
+preesquemas, aun en casos particulares, sin haber desarrollado antes con
+suficiente cuidado el lenguaje del descenso en las categorías generales.
+
+La noción de «descenso» proporciona el marco general para todos los
+procedimientos de «pegado» de objetos y, por consiguiente, de «pegado» de
+categorías. El caso más clásico de pegado corresponde al dato de un espacio
+topológico~$X$ y de un recubrimiento de~$X$ por abiertos~$X_i$; si para cada~$i$
+se da un espacio fibrado (digamos)~$E_i$ sobre~$X_i$, y para cada par~$(i,j)$
+un isomorfismo~$f_{ji}$ de~$E_i|X_{ij}$ sobre~$E_j|X_{ij}$ (donde se pone
+$X_{ij}=X_i\cap X_j$), de modo que estos isomorfismos satisfacen una conocida
+condición de transitividad
+(escrita abreviadamente~$f_{kj}f_{ji}=f_{ki}$), se sabe que existe un espacio
+fibrado~$E$ sobre~$X$, determinado salvo isomorfismo por la condición de que
+existan isomorfismos~$f_i\colon E|X_i\isomto E_i$ que satisfagan las relaciones
+$f_{ji}=f_jf_i^{-1}$ (con el abuso de notación habitual). Sea~$X'$ la suma
+topológica de los~$X_i$, que es, por tanto, un espacio fibrado sobre~$X$ (es decir,
+dotado de una aplicación continua~$X'\to X$). El dato de los~$E_i$ puede
+interpretarse de manera más concisa como un espacio fibrado~$E'$ sobre~$X'$,
+y el dato de los~$f_{ji}$ como un isomorfismo entre las dos imágenes inversas
+(por las dos proyecciones canónicas)~$E''_1$ y~$E''_2$ de~$E'$ sobre
+$X''=X'\times_X X'$; la condición de pegado puede escribirse entonces como
+una identidad entre isomorfismos de los espacios fibrados~$E'''_1$ y~$E'''_3$
+sobre el producto fibrado triple~$X'''=X'\times_X X'\times_X X'$ (donde
+$E'''_i$ designa la imagen inversa de~$E'$ sobre~$X'''$ por la proyección
+canónica de índice~$i$). La construcción de~$E$ a partir de~$E'$ y de~$f$ es
+un caso típico
+\marginpar{146}%
+de procedimiento de «descenso». Por otra parte, partiendo de un espacio
+fibrado~$E$ sobre~$X$, se dice que
+\ifthenelse{\boolean{orig}}{$X$}{$E$} es «localmente trivial», de fibra~$F$,
+si existe un recubrimiento abierto~$(X_i)$ de~$X$ tal que los~$E|X_i$ sean
+isomorfos a~$F\times X_i$, o, lo que es equivalente, tal que la imagen inversa
+$E'$ de~$E$ sobre~$X'=\coprod_i X_i$ sea isomorfa a~$X'\times F$.
+
+Así, tanto la noción de «pegado» de objetos como la de «localización» de una
+propiedad están ligadas al estudio de ciertos tipos de «cambios de base»
+$X'\to X$. En geometría algebraica, muchos otros tipos de cambio de base, y
+en particular los morfismos~$X'\to X$ fielmente planos, deben considerarse
+como correspondientes a un procedimiento de «localización» relativo a los
+preesquemas, u otros objetos, «sobre»~$X$. Este tipo de localización se utiliza
+tanto como la simple localización topológica (que, por otra parte, es un caso
+particular de aquel). Lo mismo sucede (en menor medida) en geometría analítica.
+
+La mayoría de las demostraciones, que se reducen a verificaciones, se omiten
+o solo se esbozan; cuando procede, precisamos los diagramas menos evidentes
+que aparecen en una demostración.

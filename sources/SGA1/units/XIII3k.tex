@@ -1,0 +1,109 @@
+\shorthandoff{<>}% Babel español trata como abreviaturas los delimitadores de curvatura de Xy-pic.
+
+\begin{theoreme}
+\label{XIII.3.3}
+Sean $S$ un esquema irreducible con punto genérico~$s$ y
+$f\colon X\to S$ un morfismo de presentación finita. Supongamos que los
+esquemas de tipo finito de dimensión $\leqslant\dim X_s$ sobre una clausura
+algebraica~$\bar{k}$ de
+\ifthenelse{\boolean{orig}}
+{$k$}
+{$\kres(s)$}
+son desingularizables \textup{(EGA~IV 7.9.1)}. Entonces, si~$\LL$ designa
+el conjunto de los números primos distintos de las características
+residuales de~$S$, puede encontrarse un abierto no vacío~$S_1$ de~$S$ tal
+que el morfismo~$f|S_1$ sea universalmente localmente $1$-asférico
+para~$\LL$.
+\end{theoreme}
+
+Puede suponerse que~$S$ es íntegro y que~$X$ es reducido (SGA~4 VIII~1.1).
+Por paso al límite, puede suponerse que~$S$ es noetheriano. Además, para
+demostrar el teorema basta hacerlo tras una extensión finita de la base
+$S_1\to S$, donde~$S_1$ es un esquema íntegro y~$S_1\to S$ es composición
+de extensiones étale y de extensiones radiciales sobreyectivas.
+
+Demostremos primero que, tras restringir~$S$ a un abierto no vacío, $f$ es
+universalmente localmente $0$-acíclico. Tras efectuar una extensión
+radicial de~$\kres(s)$, puede suponerse que el morfismo
+$(X_s)_\red\to s$ es separable; por tanto, tras restringir~$S$ a un abierto
+no vacío y efectuar una extensión radicial sobreyectiva de~$S$, puede
+suponerse que el morfismo~$f$ es plano con fibras geométricas separables
+(EGA~IV 12.1.1), lo que implica que~$f$ es
+\ifthenelse{\boolean{orig}}
+{universalmente $0$-acíclico}
+{universalmente localmente $0$-acíclico}
+(SGA~4 XV~4.1).
+
+Demostremos que, tras restringir~$S$ a un abierto no vacío, $f$ es
+universalmente localmente $1$-asférico para~$\LL$. Tras efectuar una
+\marginpar{412}
+extensión finita de~$\kres(s)$, lo cual es lícito porque dicha extensión
+puede factorizarse como una extensión étale seguida de una extensión
+radicial, puede
+encontrarse un morfismo propio sobreyectivo $p_s\colon Y_s\to X_s$, donde
+$Y_s$ es un esquema liso sobre
+\ifthenelse{\boolean{orig}}
+{$S$}
+{$s$},
+de la misma dimensión que~$X_s$, y puede suponerse que~$p_s$ proviene de
+un morfismo propio sobreyectivo $p\colon Y\to X$, donde~$Y$ es un esquema
+liso sobre~$S$ (EGA~IV 9.6.1 y 12.1.6). Basta demostrar que, tras restringir
+$S$ a un abierto no vacío, para todo diagrama de cuadrados cartesianos
+$$
+\xymatrix{ S''\ar[d]_i & X ''\ar[d]^j\ar[l]_{f''} \\ S'\ar[d] &
+X'\ar[d]\ar[l]_{f'} \\ S & X, \ar[l]_f }
+$$
+donde~$i$ es étale de presentación finita, y para todo haz de
+ind-$\LL$-grupos~$F$ sobre~$S''$, si~$\Phi$ es el stack de los torsores
+bajo~$F$, entonces el morfismo canónico
+$$
+{f'}^*i_*\Phi \to j_*{f''}^*\Phi
+$$
+es una equivalencia. Sean $Z=Y\times_XY,
+T=Y\times_XY\times_XY$. Se tiene de manera natural un diagrama
+conmutativo
+$$
+\xymatrix{ S'' \ar[d]_i & X''\ar[l]_{f''}\ar[d]_j &
+Y''\ar[l]_{p''}\ar[d] & Z''\ar[d]\ar@<-.4ex>[l]\ar@<.4ex>[l] &
+T''\ar[d]\ar[l]\ar@<-.8ex>[l]\ar@<.8ex>[l] \\ S' \ar[d] & X'
+\ar[l]_{f'}\ar[d] & Y'\ar[d]\ar[l]_{p'}&
+Z'\ar[d]\ar@<-.4ex>[l]\ar@<.4ex>[l] &
+T'\ar[d]\ar[l]\ar@<-.8ex>[l]\ar@<.8ex>[l] \\ S & X\ar[l]_f & Y\ar[l]_p
+& Z\ifthenelse{\boolean{orig}}{'}{}\ar@<-.4ex>[l]\ar@<.4ex>[l]
+& T\ifthenelse{\boolean{orig}}{'}{}\ar[l]\ar@<-.8ex>[l]\ar@<.8ex>[l]
+}
+$$
+Sean
+\marginpar{413}%
+$q\colon Z\to X$ y $r\colon T\to X$ los morfismos canónicos; las
+notaciones $q',r',q'',r''$ tienen un sentido evidente. Según
+\Ref{XIII.1.11}~2), se tiene el siguiente diagrama esencialmente
+conmutativo, cuyas filas son exactas:
+$$
+\ifthenelse{\boolean{orig}}
+{\xymatrix{ f'^* i_*\Phi \ar[r]\ar[d]_a &
+p'_*p'^*(f'^*i_x\Phi)\ar[d]_b\ar@<-.4ex>[r]\ar@<.4ex>[r] &
+q'_*q'^*(f'^*i_*\Phi)\ar[d]_c\ar[r]\ar@<-.8ex>[r]\ar@<.8ex>[r]&
+r'_*r'^*(f'^*i_*\Phi)\ar[d]_d \\ j_*f''^*\Phi \ar[r]&
+j_*p''_*p''^*(f''^*\Phi)\ar@<-.4ex>[r]\ar@<.4ex>[r] &
+j_*q''_*q''^*(f''^*\Phi)\ar[r]\ar@<-.8ex>[r]\ar@<.8ex>[r]&
+j_*r''_*r''^*(f''^*\Phi) }}
+{\xymatrix{ f'^* i_*\Phi \ar[r]\ar[d]_a &
+p'_*p'^*(f'^*i_*\Phi)\ar[d]_b\ar@<-.4ex>[r]\ar@<.4ex>[r] &
+q'_*q'^*(f'^*i_*\Phi)\ar[d]_c\ar[r]\ar@<-.8ex>[r]\ar@<.8ex>[r]&
+r'_*r'^*(f'^*i_*\Phi)\ar[d]_d \\ j_*f''^*\Phi \ar[r]&
+j_*p''_*p''^*(f''^*\Phi)\ar@<-.4ex>[r]\ar@<.4ex>[r] &
+j_*q''_*q''^*(f''^*\Phi)\ar[r]\ar@<-.8ex>[r]\ar@<.8ex>[r]&
+j_*r''_*r''^*(f''^*\Phi) }}
+$$
+Como~$Y$ es liso sobre~$S$, el morfismo~$fp$ es universalmente localmente
+$1$-asférico para~$\LL$
+\ifthenelse{\boolean{orig}}
+{(SGA~XV~2.1),}
+{(SGA~4 XV~2.1),}
+y de~\cite[VII 2.1.7]{XIII.2} resulta que~$b$ es una equivalencia de
+categorías. Por otra parte, tras restringir~$S$ a un abierto no vacío,
+puede suponerse que los morfismos $Z\to S$ y $T\to S$ son universalmente
+localmente $0$-acíclicos. Resulta de ello que los funtores~$c$ y~$d$ son
+plenamente fieles, y el diagrama anterior muestra entonces que~$a$ es una
+equivalencia, lo que concluye la demostración.

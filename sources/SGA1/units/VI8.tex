@@ -1,0 +1,244 @@
+\section[Categoría con clivaje definida por un pseudofuntor]{Categoría con clivaje definida por un pseudofuntor
+$\mathcal{E}^\circ\to\Cat$} \label{VI.8}
+
+Llamemos, para abreviar, \emph{pseudofuntor} de~$\cal{E}^\circ$
+a~$\Cat$ (habría que decir pseudofuntor \emph{normalizado}) a un
+conjunto de datos a), b), c) como los anteriores, que satisfacen las
+condiciones $A')$ y~$B)$. En el número precedente hemos asociado a una
+categoría con clivaje normalizado sobre~$\cal{E}$ un pseudofuntor
+$\cal{E}^\circ\to\Cat$; aquí vamos a indicar la construcción inversa.
+Dejaremos al lector la verificación de la mayor parte de los detalles, así
+como del hecho de que estas construcciones son efectivamente inversas entre
+sí. Con mayor precisión, convendría considerar los pseudofuntores
+$\cal{E}^\circ\to\Cat$ como los objetos de una nueva categoría y demostrar
+que nuestras construcciones proporcionan equivalencias, cuasi-inversas
+entre sí, entre esta última y la categoría de las categorías con clivaje
+sobre~$\cal{E}$ definida en el número precedente.
+
+Pongamos
+$$
+\cal{F}_\circ=\underset{S\in\Ob(\cal{E})}\coprod
+\ifthenelse{\boolean{orig}}
+{\Ob\cal{F}(S),}
+{\Ob(\cal{F}(S)),}
+$$
+la suma disjunta de los conjuntos
+\ifthenelse{\boolean{orig}}
+{$\Ob\cal{F}(S)$}
+{$\Ob(\cal{F}(S))$}
+(N.B. escribiremos aquí $\cal{F}(S)$ y no $\cal{F}_S$ para el valor en el
+objeto $S$ de~$\cal{E}$ del pseudofuntor dado, a fin de evitar confusiones
+de notación más adelante). Tenemos, pues, una aplicación evidente:
+$$
+p_\circ\colon\cal{F}_\circ\to\Ob\cal{E}.
+$$
+Sean
+$$
+\ifthenelse{\boolean{orig}}
+{\xi}
+{\overline{\xi}}
+=(S,\xi),\quad \overline{\eta}=(T,\eta)\qquad\qquad
+\text{(con $\xi\in\Ob\cal{F}(S)$, $\eta\in\Ob\cal{F}(T)$)}
+$$
+dos elementos de~$\cal{F}_\circ$, y sea $f\in\Hom(T,S)$; pondremos
+$$
+h_f(\overline{\eta},\overline{\xi})=\Hom_{\cal{F}(T)}(\eta,f^*(\xi)).
+$$
+\marginpar{176}%
+Si además tenemos un morfismo $g\colon U\to T$ en~$\cal{E}$ y un
+$\zeta\in\Ob\cal{F}(U)$, definimos una aplicación, denotada por
+$(u,v)\mto u\circ v$:
+$$
+h_f(\overline{\eta},\overline{\xi})\times
+h_g(\overline{\zeta},\overline{\eta})\to
+h_{fg}(\overline{\zeta},\overline{\xi}),
+$$
+es decir, una aplicación
+$$
+\Hom_{\cal{F}(T)}(\eta,f^*(\xi))\times\Hom_{\cal{F}(U)}(\zeta,g^*(\eta))
+\to \Hom_{\cal{F}(U)}(\zeta,(fg)^*(\xi)),
+$$
+mediante la fórmula
+$$
+u\circ v=c_{f,g}(\xi)\cdot g^*(u)\cdot v,
+$$
+es decir, $u\circ v$ es el compuesto de la sucesión
+$$
+\zeta
+\ifthenelse{\boolean{orig}}
+{\lto{u}}
+{\lto{v}}
+g^*(\eta)\lto{g^*(u)}
+g^*f^*(\xi)\lto{c_{f,g}(\xi)} (fg)^*(\xi).
+$$
+Pondremos, por otra parte,
+$$
+h(\overline{\eta},\overline{\xi})=\underset{f\in\Hom(T,S)}\coprod
+h_f(\overline{\eta},\overline{\xi}),
+$$
+y las aplicaciones de composición precedentes definen aplicaciones
+$$
+h(\overline{\eta},\overline{\xi})\times
+h(\overline{\zeta},\overline{\eta})\to
+h(\overline{\zeta},\overline{\xi}),
+$$
+mientras que la definición de los $h(\overline{\eta},\overline{\xi})$
+implica una aplicación evidente:
+$$
+p_{\overline{\eta},\overline{\xi}}\colon
+h(\overline{\eta},\overline{\xi})\to \Hom(T,S).
+$$
+Dicho esto, se verifican los puntos siguientes:
+\begin{enumerate}
+\item[1)] La composición entre elementos de los
+\ifthenelse{\boolean{orig}}
+{$h(\eta,\xi)$}
+{$h(\overline{\eta},\overline{\xi})$}
+es \emph{asociativa}.
+\item[2)]
+\marginpar{177}
+Para todo
+\ifthenelse{\boolean{orig}}
+{$\overline{\xi}=(\xi,S)$}
+{$\overline{\xi}=(S,\xi)$}
+en~$\cal{F}_\circ$, consideremos el elemento
+\ifthenelse{\boolean{orig}}
+{}
+{identidad}
+de
+$$
+\ifthenelse{\boolean{orig}}
+{h_{\id_S}(\overline{\xi},\overline{\xi})=
+\Hom_{\cal{F}_S}(\id_S^*(\xi),\xi)=\Hom_{\cal{F}_S}(\xi,\xi),}
+{h_{\id_S}(\overline{\xi},\overline{\xi})=
+\Hom_{\cal{F}(S)}(\id_S^*(\xi),\xi)=\Hom_{\cal{F}(S)}(\xi,\xi),}
+$$
+y su imagen en $h(\overline{\xi},\overline{\xi})$. Este elemento es un
+\emph{elemento neutro} por la izquierda y por la derecha para la
+composición entre elementos de los
+$h(\overline{\eta},\overline{\xi})$.
+
+Esto muestra ya que \emph{se obtiene una categoría} $\cal{F}$ al poner
+$$
+\Ob\cal{F}=\cal{F}_\circ,\quad \Fl{\cal{F}}=
+\ifthenelse{\boolean{orig}}
+{\underset{\xi,\overline{\eta}\in\cal{F}_\circ} \coprod
+h(\overline{\eta},\overline{\xi}).}
+{\underset{\overline{\xi},\overline{\eta}\in\cal{F}_\circ}
+\coprod h(\overline{\eta},\overline{\xi}).}
+$$
+(N.B. no se puede tomar simplemente como $\Fl\cal{F}$ la \emph{unión}
+de los conjuntos $h(\overline{\eta},\overline{\xi})$, pues estos no son
+necesariamente disjuntos). Además:
+\item[3)] Las aplicaciones $p_\circ\colon \Ob\cal{F}\to\Ob\cal{E}$ y
+$p_1=(p_{\overline{\eta},\overline{\xi}})\colon\Fl\cal{F}\to\Fl{\cal{E}}$
+definen un \emph{funtor} $p\colon\cal{F}\to\cal{E}$. De este modo,
+$\cal{F}$ se convierte en una categoría sobre~$\cal{E}$; además, la
+aplicación evidente
+$h_f(\overline{\eta},\overline{\xi})\to
+\Hom(\overline{\eta},\overline{\xi})$ induce una \emph{biyección}
+$$
+h_f(\overline{\eta},\overline{\xi})\isomto
+\Hom_f(\overline{\eta},\overline{\xi}).
+$$
+\item[4)] Las aplicaciones evidentes
+$$ \Ob\cal{F}(S)\to\cal{F}_\circ=\Ob\cal{F},\qquad \Fl\cal{F}(S)\to
+\Fl\cal{F},
+$$
+donde la segunda viene definida por las aplicaciones evidentes
+$$
+\Hom_{\cal{F}(S)}(\xi,\xi')=
+h_{\id_S}(\overline{\xi},\overline{\xi}')\to
+\Hom(\overline{\xi},\overline{\xi}')
+$$
+definen un \emph{isomorfismo}
+$$
+i_S \colon \cal{F}(S)\isomto\cal{F}_S.
+$$
+\item[5)] Para todo objeto $\overline{\xi}=(S,\xi)$ de~$\cal{F}$ y todo
+morfismo $f\colon T\to S$ de~$\cal{E}$, consideremos
+\marginpar{178}
+el elemento $\overline{\eta}=(T,\eta)$ de~$\cal{F}_T$, con
+$\eta=f^*(\xi)$, y el elemento $\alpha_f(\xi)$ de
+$\Hom(\overline{\eta},\overline{\xi})$, imagen de~$\id_{f^*(\xi)}$ por
+el morfismo
+$\Hom_{\cal{F}(T)}(f^*(\xi),f^*(\xi))=
+h_f(\overline{\eta},\overline{\xi})
+\to \Hom_f(\overline{\eta},\overline{\xi})$. \emph{Este elemento es
+cartesiano y es la identidad de $\overline{\xi}$ si} $f=\id_S$; en otros
+términos, el conjunto de los $\alpha_f(\xi)$ define un
+\emph{clivaje normalizado de~$\cal{F}$ sobre} $\cal{E}$. Además, por
+construcción, es conmutativo el diagrama de funtores
+$$
+\xymatrix{
+\cal{F}(S) \ar[r]^{f^*} \ar[d]_{i_S} & \cal{F}(T) \ar[d]^{i_T} \\
+\cal{F}_S \ar[r]^{f^*_{\cal{F}}} & \cal{F}_T }
+$$
+donde $f^*_{\cal{F}}$ es el funtor imagen inversa por~$f$, relativo al
+clivaje considerado sobre~$\cal{F}$. Finalmente:
+\item[6)] las transformaciones naturales $c_{f,g}$ dadas con el
+pseudofuntor son llevadas, mediante los isomorfismos $i_S$, a las
+transformaciones naturales $c_{f,g}$ asociadas al clivaje de~$\cal{F}$.
+\end{enumerate}
+
+Nos limitamos a dar la verificación de 1) (que es, si acaso, menos trivial
+que las demás). Basta probar la asociatividad de la composición entre los
+\ifthenelse{\boolean{orig}}
+{objetos}
+{elementos}
+de conjuntos de la forma $h_f(\overline{\eta},\overline{\xi})$.
+Consideremos, pues, en~$\cal{E}$ morfismos
+$$
+S\lfrom{f} T\lfrom{g} U\lfrom{h} V
+$$
+y objetos
+$$
+\xi,\ \eta,\ \zeta,\ \tau
+$$
+en $\cal{F}(S),\cal{F}(T),\cal{F}(U),\cal{F}(V)$, respectivamente, y,
+por último, elementos
+$$
+\begin{array}{ccc}
+u\in
+h_f(\overline{\eta},\overline{\xi})&=&\Hom_{\cal{F}(T)}(\eta,f^*(\xi))\\
+v\in
+h_g(\overline{\zeta},\overline{\eta})&=&\Hom_{\cal{F}(U)}(\zeta,g^*(\eta))\\
+w\in
+h_h(\overline{\tau},\overline{\zeta})&=&\Hom_{\cal{F}(V)}(\tau,h^*(\zeta)).
+\end{array}
+$$
+Queremos
+\marginpar{179}
+probar la fórmula
+$$
+(u\circ v)\circ w = u\circ (v\circ w),
+$$
+que es una igualdad en
+$\Hom_{\cal{F}(V)}(\tau,(fgh)^*(\xi))$. En virtud de las definiciones,
+los dos miembros de esta igualdad se obtienen componiendo a lo largo de
+los contornos superior e inferior, respectivamente, del diagrama
+siguiente:
+$$
+\xymatrix{
+\tau \ar[r]^w \ar[drr]_{v\circ w} & h^*(\zeta)
+\ar[r]^{h^*(v)} \ar@/^1.4pc/[rrrrr]^{h^*(u\circ v)} & h^*g^*(\eta)
+\ar[rr]^{h^*g^*(u)}
+\ar[d]_{c_{g,h}(\eta)} & & h^*g^*f^*(\xi) \ar[rr]^{h^*(c_{f,g}(\xi))}
+\ar[d]^{c_{g,h}(f^*(\xi))} & & h^*(fg)^*(\xi) \ar[d]^{c_{fg,h}(\xi)} \\
+& & (gh)^*(\eta) \ar[rr]^{(gh)^*(u)} & & (gh)^*f^*(\xi)
+\ar[rr]^{c_{f,gh}(\xi)} & & (fgh)^*(\xi) }
+$$
+Ahora bien, el cuadrado central es conmutativo porque $c_{g,h}$ es una
+transformación natural, y el cuadrado de la derecha es conmutativo en
+virtud de la condición~$B)$ para un pseudofuntor. De aquí se sigue el
+resultado anunciado.
+
+Naturalmente, queda por precisar, cuando el pseudofuntor considerado
+proviene ya de una categoría con clivaje normalizado $\cal{F}'$
+sobre~$\cal{E}$, cómo se obtiene un isomorfismo natural entre $\cal{F}'$
+y~$\cal{F}$. Dejamos el detalle al lector.
+
+Dejamos también al lector la interpretación, en términos de
+pseudofuntores, de la noción de imagen inversa de una categoría con
+clivaje $\cal{F}$ sobre~$\cal{E}$ por un funtor de cambio de base
+$\cal{E}'\to\cal{E}$.

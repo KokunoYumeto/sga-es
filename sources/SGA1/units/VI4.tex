@@ -1,0 +1,140 @@
+\section[Categorías fibra]{Categorías fibra; equivalencia de
+$\mathcal{E}$-categorías}
+\label{VI.4}
+
+Sea~$\cal{F}$ una categoría sobre~$\cal{E}$, y sea $S\in
+\Ob({\cal{E}})$. Se llama \emph{categoría fibra de}~$\cal{F}$
+en~$S$
+\index{categoría fibra|hyperpage}%
+a la subcategoría~$\cal{F}_S$
+\label{indnot:fn}\oldindexnot{$\cal{F}_S$|hyperpage}%
+de~$\cal{F}$ que es imagen inversa de la
+\marginpar{159}
+subcategoría puntual de~$\cal{E}$ definida por~$S$. Por tanto, los objetos
+de~$\cal{F}_S$ son los objetos~$\xi$ de~$\cal{F}$ tales que $p(\xi)=S$, y
+sus morfismos son los morfismos~$u$ de~$\cal{F}$ tales que
+$p(u)=\id_S$, es decir, los $S$-morfismos en~$\cal{F}$. Naturalmente,
+$\cal{F}_S$ es canónicamente isomorfa al producto fibrado
+$\cal{F}\times_{\cal{E}}\{S\}$, donde~$\{S\}$ designa la subcategoría
+puntual de~$\cal{E}$ definida por~$S$, provista de su funtor de inclusión
+en~$\cal{E}$. Se deduce de ello (habida cuenta de la transitividad del cambio
+de base) que, si se efectúa el cambio de base
+$\lambda\colon\cal{E}'\to\cal{E}$, entonces, para todo
+$S'\in\Ob(\cal{E}')$, \emph{la proyección $\pr_1\colon
+\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'\to\cal{F}$ induce un
+isomorfismo}
+$$
+\cal{F}'_{S'}\to\cal{F}_S\qquad(\text{donde $S=\lambda(S')$})%
+\ifthenelse{\boolean{orig}}{}{.}
+$$
+
+\begin{proposition}
+\label{VI.4.1} Sea $f\colon\cal{F}\to\cal{G}$ un
+$\cal{E}$-funtor. Si~$f$ es plenamente fiel, entonces, para todo cambio de
+base $\cal{E}'\to\cal{E}$, el funtor correspondiente
+$f'\colon\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'\to\allowbreak
+\cal{G}'=\cal{G}\times_{\cal{E}}\cal{E}'$ es plenamente fiel.
+\end{proposition}
+
+La comprobación es inmediata; más generalmente, puede demostrarse que todo
+límite proyectivo de
+\ifthenelse{\boolean{orig}}{funtor}{funtores}
+plenamente
+\ifthenelse{\boolean{orig}}{fiel}{fieles}
+(aquí,~$f$ y los funtores identidad en~$\cal{E},\cal{E}'$) es un funtor
+plenamente fiel.
+
+Obsérvese que la afirmación análoga a~4.1,
+\ifthenelse{\boolean{orig}}{o}{donde}
+«plenamente fiel» se sustituye por «equivalencia de categorías», es falsa ya
+para~$\cal{G}=\cal{E}$. Sin embargo:
+
+\begin{proposition}
+\label{VI.4.2} Sea $f\colon\cal{F}\to\cal{G}$ un
+$\cal{E}$-funtor. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] Existe un $\cal{E}$-funtor $g\colon\cal{G}\to\cal{F}$ y
+$\cal{E}$-isomorfismos
+$$
+gf\isomto\id_{\cal{F}},\quad fg\isomto\id_{\cal{G}}
+\ifthenelse{\boolean{orig}}{}{.}
+$$
+\item[(ii)] Para toda categoría $\cal{E}'$ sobre~$\cal{E}$, el funtor
+$$
+f'=f\times_{\cal{E}}\cal{E}'\colon\cal{F}'=\cal{F}
+\times_{\cal{E}}\cal{E}'\to\cal{G}'=\cal{G}\times_{\cal{E}}\cal{E}'
+$$
+es una equivalencia de categorías.
+\item[(iii)]
+\marginpar{160}
+$f$ es una equivalencia de categorías y, para todo $S\in\Ob(\cal{E})$, el
+funtor $f_S\colon\cal{F}_S\to\cal{G}_S$ inducido por~$f$ es una equivalencia
+de categorías.
+\item[(iii~bis)] $f$ es plenamente fiel y, para todo $S\in\Ob(\cal{E})$ y
+todo
+\ifthenelse{\boolean{orig}}
+{$\eta\in\Ob\cal{G}_S$,}
+{$\eta\in\Ob(\cal{G}_S)$,}
+existen un $\xi\in\Ob(\cal{F}_S)$ y un $S$-isomorfismo
+\ifthenelse{\boolean{orig}}
+{$u\colon f((\xi)\to\eta$.}
+{$u\colon f(\xi)\to\eta$.}
+\end{enumerate}
+\end{proposition}
+
+\subsubsection*{Demostración} Evidentemente, (i) implica que~$f$ es una
+equivalencia de categorías (noción que se define mediante la misma condición,
+pero sin exigir que los isomorfismos de funtores sean $\cal{E}$-morfismos).
+Por otra parte, de las funtorialidades del número anterior se deduce que la
+condición~(i) se conserva después del cambio de base
+$\cal{E}'\to\cal{E}$. Por consiguiente, (i)$\To$(ii). Evidentemente,
+(ii)$\To$(iii), pues basta tomar $\cal{E}'=\cal{E}$ y
+$\cal{E}'=\{S\}$. Es aún más trivial que (iii)$\To$(iii~bis); queda por
+probar que (iii~bis)$\To$(i). Para ello, elijamos, para todo
+$\eta\in\Ob(\cal{G})$, un $g(\eta)\in\Ob(\cal{F})$ y un isomorfismo
+$u(\eta)\colon f(g(\eta))\to\eta$ tal que $q(u(\eta))=\id_S$, donde
+$S=q(\eta)$. Esto es posible gracias a la segunda condición de (iii~bis).
+Como es bien sabido e inmediato, el hecho de que~$f$ sea plenamente fiel
+implica que~$g$ puede considerarse, de manera única, como un funtor de
+$\cal{G}$ en~$\cal{F}$, de modo que los~$u(\eta)$ definan una transformación
+natural (y, por tanto, un isomorfismo)
+$u\colon fg\isomto\id_{\cal{G}}$. Además, por construcción,~$g$ es un
+$\cal{E}$-funtor y~$u$ un $\cal{E}$-homomorfismo. A los datos anteriores
+corresponde entonces un isomorfismo funtorial
+$v\colon gf\to\id_{\cal{F}}$, definido por la condición $f*v=u*f$, y se
+comprueba inmediatamente que también es un $\cal{E}$-morfismo, cqfd.
+
+\begin{definition}
+\label{VI.4.3} Si se cumplen las condiciones anteriores, se dice que~$f$ es
+una equivalencia de categorías sobre~$\cal{E}$, o una
+$\cal{E}$-equivalencia.
+\end{definition}
+
+\begin{corollaire}
+\label{VI.4.4} Supongamos que el funtor de proyección
+$p\colon\cal{F}\to\cal{E}$ es un funtor transportable, es decir, que para
+todo isomorfismo $\alpha\colon T\to S$ en~$\cal{E}$ y todo objeto~$\xi$
+de~$\cal{F}_T$, existe un isomorfismo~$u$ en~$\cal{F}$ de fuente~$\xi$ tal
+que $p(u)=\alpha$. Entonces todo $\cal{E}$-funtor
+$f\colon\cal{F}\to\cal{G}$ que sea una equivalencia de categorías es una
+$\cal{E}$-equivalencia.
+\end{corollaire}
+
+Se deduce
+\marginpar{161}
+del criterio (iii~bis).
+
+\begin{corollaire}
+\label{VI.4.5} Sea $f\colon\cal{F}\to\cal{G}$ una
+$\cal{E}$-equivalencia. Entonces, para toda categoría~$\cal{H}$
+sobre~$\cal{E}$, los funtores correspondientes:
+\begin{align*}
+\SheafHom_{\cal{E}/-}(\cal{G},\cal{H})&\to
+\SheafHom_{\cal{E}/-}(\cal{F},\cal{H})\\
+\SheafHom_{\cal{E}/-}(\cal{H},\cal{F})
+&\to\SheafHom_{\cal{E}/-}(\cal{H},\cal{G})
+\end{align*}
+(\cf \No \Ref{VI.2}) son equivalencias de categorías.
+\end{corollaire}
+
+Esto se deduce del criterio~(i) mediante el razonamiento habitual.

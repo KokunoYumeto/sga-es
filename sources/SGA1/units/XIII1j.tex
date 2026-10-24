@@ -1,0 +1,187 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo los delimitadores de curvatura de Xy-pic.
+\begin{proposition}
+\label{XIII.1.13}
+Sea $f \colon X \to Y$ un $S$-morfismo.
+\begin{enumerate}
+\item[1)] Sea
+$$
+\xymatrix@C=.5cm{ F \ar[r] & G \ar@<2pt>[r] \ar@<-2pt>[r] & H }
+$$
+un diagrama exacto de haces de conjuntos sobre~$X$. Supongamos que
+$(G,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ y que $(H,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant -1$. Entonces $(F,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$.
+
+\item[2)] Sea
+\marginpar{363}
+$F \to G$ un monomorfismo de haces de grupos sobre~$X$. Si $Y_1$ es un
+esquema étale sobre~$Y$, se pone $X_1 = Y_1 \times_Y X$, y se denota por
+$f_1$ (\resp $F_1$, \resp $G_1$) la imagen inversa de~$f$ (\resp $F$,
+\resp $G$) sobre~$Y_1$ (\cf \Ref{eq:XIII.1.0.2}). Supongamos que
+$(G,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ (\resp en dimensión $\leqslant 1$) y que, para todo
+esquema $Y_1$ étale sobre~$Y$ y todo torsor $Q$ bajo $G_1$,
+$(Q/F_1,f_1)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant -1$ (\resp en dimensión $\leqslant 0$). Entonces
+$(F,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ (\resp en dimensión $\leqslant 1$).
+
+\item[3)] Sea $F \to G$ un monomorfismo de haces de grupos sobre~$X$.
+Supongamos que $(F,f)$ es cohomológicamente propio relativamente a~$S$
+en dimensión $\leqslant 1$ y que $(G,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$. Entonces, para todo
+torsor $Q$ bajo~$G$, $(Q/F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$.
+\end{enumerate}
+\end{proposition}
+
+\subsubsection*{Demostración}
+1) Sea $\Phi$ (\resp $\Phi_1$, \resp $\Phi_2$) el stack en categorías
+discretas asociado a~$F$ (\resp $G$, \resp $H$), y sea $\Phi_3$ el stack
+final sobre~$X$. Se tiene entonces un diagrama exacto
+$$
+\xymatrix@C=.5cm{ \Phi \ar[r] & \Phi_1 \ar@<2pt>[r] \ar@<-2pt>[r] &
+\Phi_2 \ar@<4pt>[r] \ar[r] \ar@<-4pt>[r] & \Phi_3 }
+\text{.}
+$$
+Por hipótesis, $(\Phi_1,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 1$ y $(\Phi_2,f)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant 0$
+\eqref{XIII.1.2}. Como $(\Phi_3,f)$ es evidentemente cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant -1$, se deduce
+de~\Ref{XIII.1.12} que $(\Phi,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 1$, \ie que $(F,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$.
+
+\smallskip
+2) Demostremos primero que, si $(G,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$ y si los
+$(Q/F_1,f_1)$ son cohomológicamente propios relativamente a~$S$ en
+\marginpar{364}
+dimensión $\leqslant -1$, entonces $(F,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$. Según
+\Ref{XIII.1.3.1}, basta demostrar que, para todo esquema $Y_1$ étale
+sobre~$Y$ y todo torsor $P$ sobre~$X_1$ bajo~$F_1$,
+$(\leftexp{P\mkern-4mu}{F}_1,f_1)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$ cuando se considera
+$\leftexp{P\mkern-4mu}{F}_1$ como haz de conjuntos, y que el morfismo
+canónico
+$$
+d \colon g^*(\R^1 f_* F) \to \R^1 f'_* F'
+$$
+es inyectivo. La primera afirmación se deduce inmediatamente de 1),
+pues, si $Q$ denota el torsor obtenido de~$P$ por extensión del grupo
+estructural $F_1 \to G_1$, se tiene un isomorfismo
+$\leftexp{Q}{G}_1 / \leftexp{P\mkern-4mu}{F}_1 \isomto Q/F_1$.
+
+Demostremos que $d$ es inyectivo. Basta demostrar que, si $Y_1$ es un
+esquema étale sobre~$Y$, si $P$ y $\tilde{P}$ son dos torsores bajo
+$F_1$ cuyas imágenes inversas $P'$ y~$\tilde{P}'$ sobre~$X'_1$ son
+isomorfas, entonces, tras efectuar una extensión étale sobreyectiva
+de~$Y_1$, $P$ y~$\tilde{P}$ se vuelven isomorfos. Elijamos un
+isomorfismo $p' \colon P' \isomto \tilde{P}'$. Sean $Q$
+(\resp~$\tilde{Q}$) el torsor obtenido de~$P$ (\resp $\tilde{P}$) por
+extensión del grupo estructural $F_1 \to G_1$. Las imágenes inversas
+$Q'$ (\resp $\tilde{Q}'$) de~$Q$ (\resp $\tilde{Q}$) sobre~$X'_1$ se
+obtienen de~$P'$ (\resp $\tilde{P}'$) por
+\ifthenelse{\boolean{orig}}
+{extensión}
+{la extensión}
+del grupo estructural $F'_1 \to G'_1$; sea
+$q' \colon Q' \isomto \tilde{Q}'$ el isomorfismo que se obtiene del
+mismo modo a partir de~$p'$. Como $(G,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$, puede suponerse, tras
+efectuar una extensión étale sobreyectiva de~$Y_1$, que $q'$ es la
+imagen de un isomorfismo $q \colon Q \isomto \tilde{Q}$. Al torsor~$P$
+(\resp~$\tilde{P}$) se asocia una sección $x$ de~$Q/F_1$ (\resp una
+sección $\tilde{x}$ de~$\tilde{Q}/F_1$), y, para que $P$ y
+$\tilde{P}$ sean isomorfos, es necesario y suficiente que exista un
+isomorfismo $Q \isomto \tilde{Q}$ tal que el isomorfismo
+$$
+e \colon \H^0(X_1,Q/F_1) \to \H^0(X_1,\tilde{Q}/F_1)
+$$
+que induce lleve $x$ a~$\tilde{x}$. Tomamos el isomorfismo~$q$. Las
+secciones $e(x)$ y $\tilde{x}$ de~$\H^0(X_1,\tilde{Q}/F_1)$ tienen la
+misma imagen en~$\H^0(X'_1,\tilde{Q}'/F'_1)$. Como
+$(\tilde{Q}/F_1,f_1)$ es cohomológicamente propio relativamente a~$S$
+en dimensión $\leqslant -1$,
+\marginpar{365}
+tras efectuar una extensión étale sobreyectiva de~$Y_1$, se tiene
+efectivamente $e(x)=\tilde{x}$, lo que demuestra la inyectividad de~$d$.
+
+Para concluir la demostración, queda demostrar que, si $(G,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 1$, y si, para todo esquema $Y_1$ étale sobre~$Y$ y todo
+torsor $Q$ sobre~$X_1$ bajo
+\ifthenelse{\boolean{orig}}
+{$F_1$}
+{$G_1$},
+$(Q/F_1,f_1)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant 0$, entonces el morfismo $d$ es sobreyectivo. Sea
+$P'$ un torsor sobre~$X'_1$ bajo~$F'_1$, y sea $Q'$ el torsor bajo
+$G'_1$ obtenido a partir de~$P'$ por extensión del grupo estructural.
+Dar~$P'$ equivale a dar~$Q'$ y una sección
+$x'$ de~$\H^0(X'_1,Q'/F'_1)$. Se deduce entonces de la sobreyectividad
+del morfismo
+$$
+g^*(\R^1 f_* G) \to \R^1 f'_* G'
+$$
+que, tras efectuar una extensión étale sobreyectiva de~$Y_1$, existe
+un torsor $Q$ bajo~$G_1$ cuya imagen inversa sobre~$X'_1$ es isomorfa
+a~$Q'$. Utilizando que $(Q/F_1,f_1)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$, puede suponerse
+asimismo que existe un elemento $x$ de~$\H^0(X_1,Q/F_1)$ cuya imagen
+en~$\H^0(X'_1,Q'/F'_1)$ es~$x'$. Los datos de~$Q$ y~$x$ determinan un
+torsor $P$ bajo~$F_1$, cuya imagen inversa sobre
+\ifthenelse{\boolean{orig}}
+{$X_1$}
+{$X'_1$}
+es isomorfa a~$P'$, lo que demuestra la sobreyectividad de~$d$.
+
+\smallskip
+3) Demostremos que $(Q/F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant -1$, \ie que, para todo $S$-esquema
+$S'$, para todo esquema $Y_1$ étale sobre~$Y$, si $x$ y~$\tilde{x}$
+son dos elementos de~$\H^0(X_1,Q_1/F_1)$ cuyas imágenes $x'$ y
+$\tilde{x}'$ en~$\H^0(X'_1,Q'_1/F'_1)$ son iguales, entonces, tras
+una extensión sobreyectiva de~$Y_1$, se tiene $x=\tilde{x}$. A~$x$
+(\resp~$\tilde{x}$) se asocia un torsor $P$ (\resp~$\tilde{P}$) bajo
+$F_1$, tal que $Q_1$ se obtiene de~$P$ (\resp~$\tilde{P}$) por la
+extensión $F_1 \to G_1$ del grupo estructural. De la igualdad
+$x'=\tilde{x}'$ se deduce que existe un isomorfismo
+$u' \colon P' \isomto \tilde{P}'$ tal que el isomorfismo inducido
+sobre~$Q'_1$ por~$u'$ es la identidad. Como $(F,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$, se deduce que,
+\marginpar{366}
+tras una extensión étale sobreyectiva de~$Y_1$, existe un isomorfismo
+$u \colon P \to \tilde{P}$ que levanta~$u'$; el hecho de que $(G,f)$
+sea cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ implica entonces que $x=\tilde{x}$.
+
+Demostremos que $(Q/F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$. Sean $Y''$ un esquema étale sobre
+$Y'$ y $x''$ un elemento de~$\H^0(X'',Q''/F'')$. A~$x''$ se asocia un
+torsor $P''$ sobre~$X''$ bajo~$F''$. Como $(F,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 1$, pueden encontrarse morfismos étale sobreyectivos
+$Y''_1 \to Y''$ y $Y_1 \to Y$, tales que existe un morfismo
+$Y''_1 \to Y'_1$, y un torsor $P$ sobre~$X_1$ bajo~$F_1$ cuya imagen
+inversa sobre~$X''_1$ es isomorfa a la imagen inversa de~$P''$. Del
+hecho de que $(G,f)$ es cohomológicamente propio relativamente a~$S$
+en dimensión $\leqslant 0$ se deduce entonces que pueden elegirse
+$Y''_1$ y $Y_1$ de modo que el torsor obtenido de~$P$ por extensión
+del grupo estructural $F_1 \to G_1$ sea isomorfo a~$Q_1$; a~$P$
+corresponde un elemento $x$ de~$\H^0(X_1,Q_1/F_1)$, cuya imagen en
+$\H^0(X''_1,Q''_1/F''_1)$
+\ifthenelse{\boolean{orig}}
+{es isomorfa a}
+{es igual a}
+la imagen inversa de~$x''$,
+lo que concluye la demostración.
+\endgroup

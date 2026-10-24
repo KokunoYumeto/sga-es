@@ -1,0 +1,75 @@
+\shorthandoff{<>}% Babel español trata como abreviaturas los delimitadores de curvatura de Xy-pic.
+
+\begin{corollaire}
+\label{XIII.3.2}
+Sean $k$ un cuerpo de característica $p\geq 0$, $p'$ el conjunto de los
+números primos distintos de~$p$ y $f\colon X\to k$ un morfismo coherente.
+\begin{enumerate}
+\item[1)] Para todo haz de conjuntos~$F$, $(F,f)$ es cohomológicamente
+propio en dimensión $\leqslant 0$.
+\item[2)] Supongamos que se cumple una de las dos condiciones siguientes:
+\begin{enumerate}
+\item[a)] $f$ es de tipo finito y los esquemas de tipo finito de dimensión
+$\leqslant\dim X$ sobre una clausura algebraica de~$k$ son fuertemente
+desingularizables.
+\item[b)] Los esquemas de tipo finito sobre una clausura algebraica de~$k$
+son
+\marginpar{410}
+fuertemente desingularizables.
+\end{enumerate}
+Entonces, para todo haz de ind-$p'$-grupos~$F$, $(F,f)$ es
+cohomológicamente propio en dimensión $\leqslant 1$.
+\end{enumerate}
+\end{corollaire}
+
+Sea $F$ un haz de conjuntos (\resp de ind-$p'$-grupos). Según
+SGA~4 IX~2.7.2, puede escribirse~$F$ como límite inductivo filtrante
+$$
+F=\varinjlim F_i,
+$$
+donde los~$F_i$ son haces de conjuntos (\resp de ind-$p'$-grupos)
+constructibles. Como $f$ es coherente, $f_*$ (\resp $\R^1f_*$) conmuta
+con los límites inductivos (SGA~4 VII~3.3). Si se sabe que los~$(F_i,f)$
+son cohomológicamente propios en dimensión $\leqslant 0$ (\resp que todo
+haz de conjuntos es cohomológicamente propio en dimensión $\leqslant 0$
+y que los~$(F_i,f)$ son cohomológicamente propios en dimensión
+$\leqslant 1$), lo mismo valdrá para~$(F,f)$. Puede suponerse, por tanto,
+que~$F$ es constructible.
+
+Si se supone que~$f$ es de tipo finito (\resp que satisface la condición
+a)), el resultado se sigue de~\Ref{XIII.3.1}~1)\kern2pt b) (\resp de
+\Ref{XIII.3.1}~2)\kern2pt b)). Demostremos ahora~\Ref{XIII.3.2} sin
+suponer ya que~$f$ sea de tipo finito. Para todo esquema~$S'$ sobre~$k$
+y todo punto geométrico~$\overline{s}$ de~$S'$, se denota por
+$\overline{k}$ (\resp $\overline{S'}$) la localización estricta de~$k$
+en~$\overline{s}$ (\resp de~$S'$ en~$\overline{s}$), por~$\overline{X}$
+la imagen inversa de~$X$ sobre~$\overline{k}$, y se considera el cuadrado
+cartesiano
+$$
+\xymatrix@C=1.2cm{
+\overline{X}\ar[d]_-{\overline{f}}&\ar[l]_g \overline{X'}\ar[d]^-{\overline{f}'}\\ \overline{k}&\ar[l]\overline{S'}
+}
+$$
+Basta demostrar que, para todo~$S'$ y todo~$\overline{s}$, el morfismo
+canónico
+$$
+\H^0(\overline{X},\overline{F})\to
+\H^0(\overline{X'},\overline{F'})\qquad
+\text{(\resp $\H^1(\overline{X},\overline{F})\to
+\H^1(\overline{X'},\overline{F'})$)}
+$$
+es un isomorfismo. Basta demostrar que se tienen las relaciones
+\marginpar{411}
+\begin{equation*}
+\label{eq:XIII.3.*}
+\tag{$*$} \overline{F}\simeq g_*g^*\overline{F}\qquad
+\ifthenelse{\boolean{orig}}
+{\text{(\resp $\R^1g_*(g^*\overline{F}))=0$).}}
+{\text{(\resp $\R^1g_*(g^*\overline{F})=0$).}}
+\end{equation*}
+Ahora bien, en esta forma la cuestión es local sobre~$X$ para la topología
+étale. Puede suponerse, por tanto, que~$X$ es afín; por paso al límite,
+puede suponerse que~$X$ es de tipo finito sobre~$k$. Se sabe entonces que
+$(F,f)$ es cohomológicamente propio en dimensión $\leqslant 0$ (\resp
+$\leqslant 1$), y que lo mismo ocurre al reemplazar~$X$ por un esquema
+étale de tipo finito sobre~$X$, lo que demuestra~\eqref{eq:XIII.3.*}.

@@ -1,0 +1,3576 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XVIII}{Estudio cohomológico de los pinceles de Lefschetz}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XVIII}\par
+\vspace{2em}
+{\Large\underline{Estudio cohomológico de los pinceles de Lefschetz}}\par
+\vspace{1.5em}
+{\large por N. Katz\footnote{Según unas notas sucintas de Grothendieck.}}
+\end{center}
+
+\section*{Sumario}
+
+\noindent 1. La cohomología de un fibrado proyectivo. \hfill 2
+
+\noindent 2. La cohomología de las variedades explotadas. \hfill 4
+
+\noindent 3. La explosión asociada a un pincel. \hfill 13
+
+\noindent 4. La cohomología de la explosión asociada a un pincel. \hfill 17
+
+\noindent 5. Estudio cohomológico del morfismo
+$\rho:\widetilde X\longrightarrow\mathbb P^1$ asociado a un pincel.
+\hfill 24
+
+\noindent\quad 5.1. El homomorfismo de restricción
+$H^*(\widetilde X)\longrightarrow H^*(Y)$. \hfill 24
+
+\noindent\quad 5.2. El ``teorema de Lefschetz vache'' (LV). \hfill 27
+
+\noindent\quad 5.3. La condición (A). \hfill 33
+
+\noindent\quad 5.8. El homomorfismo de Griffiths. \hfill 47
+
+\noindent\quad 5.9. Un ejemplo en el que no se verifica la hipótesis (A).
+\hfill 57
+
+\noindent 6. Aplicaciones de la teoría local de los ciclos evanescentes
+(Picard--Lefschetz). \hfill 58
+
+\pageoriginale
+
+\section*{Introducción}
+
+En la presente exposición damos la estructura cohomológica elemental de los
+pinceles de Lefschetz. Las secciones 1--4 recogen los hechos ``bien
+conocidos'' sobre la estructura cohomológica de los fibrados proyectivos
+y de las explosiones. En la sección 5 efectuamos el estudio anunciado
+en el título, suponiendo que $X$ satisface el ``teorema de Lefschetz
+vache'' (5.2) y que el pincel $D$ en cuestión satisface cierta condición
+(A), de naturaleza local sobre $D$ (5.3). Los resultados principales
+son 5.6, 5.7 y 5.8.7; este último interviene de manera esencial en la
+demostración del teorema de Griffiths del Exposé XX. En la última
+sección, de naturaleza claramente menos elemental, nos apoyamos en el
+Exposé XIII de SGA 1, debido a Mme Raynaud, sobre el
+\underline{grupo fundamental moderado}, y en la
+\underline{fórmula de Picard--Lefschetz} (XVI), para demostrar:
+\begin{enumerate}
+\item[(1)] la condición (A) se satisface con frecuencia (6.3, 6.4);
+\item[(2)] salvo cuando $\dim(X)$ es impar y la característica es $2$,
+el grupo de monodromía de un pincel de Lefschetz actúa irreduciblemente
+sobre la ``cohomología evanescente'' y transitivamente, salvo el signo,
+sobre el conjunto de los
+
+\pageoriginale
+
+``ciclos evanescentes locales'' asociados, mediante la fórmula de
+Picard--Lefschetz, a los diversos ``puntos críticos'' del pincel
+(6.6 y 6.7).
+\end{enumerate}
+
+\section*{1. La cohomología de un fibrado proyectivo}
+
+\subsubsection*{Teorema 1.1 (Deligne).}
+\underline{Sea $f:X\longrightarrow S$ un morfismo propio, sea $\ell$ un
+número primo invertible sobre $S$, sea
+$u\in H^2(X,\mathbb Z_\ell(1))$ (respectivamente,
+$u\in H^2(X,\mathbb Q_\ell(1))$) una clase de cohomología sobre $X$, y
+sea $\mathfrak F$ un $\mathbb Z_\ell$-haz (respectivamente, un
+$\mathbb Q_\ell$-haz) sobre $X$. Supongamos que existe un entero $n$
+tal que, para todo entero $j$ y todo entero $i>0$, la aplicación}
+\begin{equation}\tag{1.1.1}
+R^{n-i}f_*\bigl(\mathfrak F(j)\bigr)
+\xrightarrow{\ \wedge u^i\ }
+R^{n+i}f_*\bigl(\mathfrak F(j+i)\bigr)
+\end{equation}
+\underline{es un isomorfismo de $\mathbb Z_\ell$-haces
+(respectivamente, de $\mathbb Q_\ell$-haces) sobre $S$. Entonces, para
+todo morfismo $g:S\longrightarrow T$, la sucesión espectral de Leray}
+\[
+E_2^{p,q}=R^pg_*R^qf_*(\mathfrak F)
+\Longrightarrow R^{p+q}(gf)_*(\mathfrak F)
+\]
+\underline{degenera.}
+
+La demostración se encuentra en [1, Prop.~2.4]. Obsérvese que, gracias
+al teorema de cambio de base para un morfismo propio (SGA 4 XII, 5.2),
+la hipótesis puede verificarse fibra por fibra.
+
+\pageoriginale
+
+\subsubsection*{Teorema 1.2 (cf. SGA 5 VII, 2.2.1).}
+\underline{Sea $\mathcal E\longrightarrow X$ un fibrado vectorial,
+localmente libre de rango $1+r$. Denotemos por
+$f:\mathbb P(\mathcal E)\longrightarrow X$ el fibrado proyectivo
+definido por $\mathcal E$, y por
+$u\in H^2(\mathbb P(\mathcal E),\mathbb Z_\ell(1))$ la primera clase de
+Chern del haz invertible canónico
+$\mathcal O_{\mathbb P(\mathcal E)}(1)$. Para $\ell$ primo invertible
+sobre $X$, se tiene:}
+\begin{enumerate}
+\item[(a)] \underline{la sucesión espectral}
+\begin{equation}\tag{1.2.1}
+E_2^{p,q}=H^p\bigl(X,R^qf_*\mathbb Z_\ell\bigr)
+\Longrightarrow
+H^{p+q}\bigl(\mathbb P(\mathcal E),\mathbb Z_\ell\bigr)
+\end{equation}
+\underline{degenera;}
+\item[(b)] \underline{la aplicación}
+\begin{equation}\tag{1.2.2}
+\bigoplus_{0\leq j\leq \sisi{n}{r}}
+\sisi{H^{q-2-j}\bigl(X,\mathbb Z_\ell(-j)}
+      {H^{q-2j}\bigl(X,\mathbb Z_\ell(-j)\bigr)}
+\longrightarrow
+H^q\bigl(\mathbb P(\mathcal E),\mathbb Z_\ell\bigr),
+\qquad
+(\tau_{q-2j})_j\longmapsto
+\sum_j f^*(\tau_{q-2j})\wedge u^j
+\end{equation}
+\underline{es un isomorfismo.}
+\end{enumerate}
+\footnote{En (1.2.2), la impresión da la cota superior $n$, el grado
+$q-2-j$ y omite un paréntesis final. El rango $1+r$, la aplicación
+definida y la demostración que sigue exigen $0\leq j\leq r$ y $q-2j$.}
+
+\noindent\underline{Demostración.}
+Las fibras de $f$ son espacios proyectivos de dimensión $r$, y se sabe
+que
+\begin{equation}\tag{1.2.3}
+R^if_*\mathbb Z_\ell
+\xleftarrow[\ \sim\ ]{\ \wedge^{i/2}u\ }
+\begin{cases}
+\mathbb Z_\ell\left(-\dfrac{i}{2}\right),
+  & \text{si $i$ es par y $0\leq i\leq2r$},\\[2ex]
+0, & \text{en otro caso}.
+\end{cases}
+\end{equation}
+El teorema 1.1 se aplica a $(f,\ell,u,\mathbb Z_\ell,r)$, lo que
+demuestra (a). Según (1.2.3),
+
+\pageoriginale
+
+\begin{equation}\tag{1.2.4}
+E_2^{a,b}=
+\begin{cases}
+H^a\left(X,\mathbb Z_\ell\left(-\dfrac b2\right)\right),
+  & \text{si $b$ es par y $0\leq b\leq2r$},\\[2ex]
+0, & \text{en otro caso}.
+\end{cases}
+\end{equation}
+Por tanto, el graduado asociado de
+$H^q(\mathbb P(\mathcal E),\mathbb Z_\ell)$ para la filtración
+procedente de la sucesión espectral es
+\[
+\bigoplus_{0\leq j\leq r}
+H^{q-2j}\bigl(X,\mathbb Z_\ell(-j)\bigr).
+\]
+Si dotamos esta suma directa de la filtración
+\[
+F^i=
+\bigoplus_{\substack{0\leq j\leq r\\q-2j\leq i}}
+H^{q-2j}\bigl(X,\mathbb Z_\ell(-j)\bigr),
+\]
+la aplicación (1.2.2) es compatible con las filtraciones e induce la
+identidad sobre los graduados asociados. Esto demuestra (b).
+
+\section*{2. La cohomología de las variedades explotadas
+(cf. SGA 5 VII, 8)}
+
+\subsubsection*{2.1.}
+Sean $X$ un esquema liso sobre un cuerpo $k$ y
+$\Delta\subset X$ un subesquema liso en todo punto, de codimensión
+$1+r$. Se sabe (EGA IV, 19.4.9) que existe un esquema
+\underline{liso} $\widetilde X$, provisto de un morfismo proyectivo
+\begin{equation}\tag{2.1.1}
+f:\widetilde X\longrightarrow X,
+\end{equation}
+tal que, poniendo
+\begin{equation}\tag{2.1.2}
+\widetilde\Delta=f^{-1}(\Delta)
+=\Delta\times_X\widetilde X,
+\end{equation}
+$f$ induce un isomorfismo
+\begin{equation}\tag{2.1.3}
+f|_{\widetilde X-\widetilde\Delta}:
+\widetilde X-\widetilde\Delta
+\xrightarrow{\ \sim\ }X-\Delta,
+\end{equation}
+y existe un $\Delta$-isomorfismo entre $\widetilde\Delta$ y
+
+\pageoriginale
+
+$\check{\mathbb P}(\underline N_{\Delta/X})$, el fibrado proyectivo de
+rectas del fibrado normal $\underline N_{\Delta/X}$ de $\Delta$ en $X$.
+Se tiene, pues, un diagrama conmutativo:
+\begin{equation}\tag{2.1.4}
+\begin{tikzcd}[row sep=huge,column sep=small]
+\widetilde\Delta
+  \arrow[rd,"f|_{\widetilde\Delta}"']
+  & \simeq &
+\check{\mathbb P}(\underline N_{\Delta/X})
+  \arrow[ld,"\text{proyección canónica}"]\\
+{} & \Delta & {}
+\end{tikzcd}.
+\end{equation}
+
+\subsubsection*{2.1.5.}
+En el caso especial
+\[
+X=\operatorname{Spec}(A),\qquad
+\Delta=\operatorname{Spec}(A/I),\qquad
+I=(g_0,\ldots,g_r),
+\]
+$\widetilde X$ se obtiene por el procedimiento de Hopf
+(cf. EGA IV, 19.4.11). Se define un morfismo de $X-\Delta$ en
+$\mathbb P^r$ mediante
+\[
+x\in X-\Delta\longmapsto
+\bigl(g_0(x),\ldots,g_r(x)\bigr)\in\mathbb P^r,
+\]
+y se considera su gráfica $\Gamma$ inmersa en
+$X\times\mathbb P^r$. Se define entonces $\widetilde X$ como la
+adherencia esquemática de $\Gamma$ en $X\times\mathbb P^r$, y el
+morfismo $f:\widetilde X\longrightarrow X$ se obtiene como el compuesto
+\[
+\widetilde X\lhook\joinrel\longrightarrow
+X\times\mathbb P^r\xrightarrow{\ \operatorname{pr}_1\ }X.
+\]
+
+\subsubsection*{2.1.6.}
+Análogamente (cf. de nuevo EGA IV, 19.4.11), si $X$ es proyectivo y
+$\Delta$ es la intersección de $X$ con $1+r$ hipersuperficies, de
+ecuaciones $G_i=0$, $i=0,\ldots,r$, se considera otra vez el morfismo
+\[
+X-\Delta\longrightarrow\mathbb P^r,\qquad
+x\longmapsto\bigl(G_0(x),\ldots,G_r(x)\bigr),
+\]
+y se obtiene $\widetilde X$ como la adherencia de su gráfica en
+$X\times\mathbb P^r$. Concretamente, en términos de las coordenadas
+
+\pageoriginale
+
+homogéneas $\lambda_0,\ldots,\lambda_r$ de $\mathbb P^r$,
+$\widetilde X$ es el subesquema de $X\times\mathbb P^r$ definido por
+\begin{equation}\tag{2.1.6.1}
+\lambda_iG_j(X)-\lambda_jG_i(X),
+\qquad 0\leq i<j\leq r.
+\end{equation}
+Estas ecuaciones muestran que $(x,\lambda)$ pertenece a
+$\widetilde\Delta$ si y solo si $x\in\Delta$; en otras palabras,
+$\check{\mathbb P}(\underline N_{\Delta/X})$ es el fibrado proyectivo
+trivial
+\begin{equation}\tag{2.1.6.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+\check{\mathbb P}(\underline N_{\Delta/X})
+  \arrow[rr,phantom,"\simeq"]
+  \arrow[dr,"\text{proyección canónica}"']
+  & {} &
+\Delta\times\mathbb P^r
+  \arrow[dl,"\sisi{\operatorname{pr}_i}{\operatorname{pr}_1}"]\\
+{} & \Delta & {}
+\end{tikzcd}.
+\end{equation}
+\footnote{La impresión etiqueta la proyección derecha de (2.1.6.2)
+como $\operatorname{pr}_i$. Su blanco es $\Delta$, y la misma
+proyección se etiqueta $\operatorname{pr}_1$ en (2.1.6.3).}
+Se tiene el diagrama conmutativo
+\begin{equation}\tag{2.1.6.3}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Delta\times\mathbb P^r
+  \arrow[r,"\sim"]
+  \arrow[dr,"\operatorname{pr}_1"]
+&
+\widetilde\Delta
+  \arrow[r,hook]
+  \arrow[d,"f|_{\widetilde\Delta}"]
+&
+\widetilde X
+  \arrow[r,hook]
+  \arrow[d,"f"]
+&
+X\times\mathbb P^r
+  \arrow[dl,"\operatorname{pr}_1"]
+\\
+{} & \Delta \arrow[r,hook] & X & {}
+\end{tikzcd},
+\end{equation}
+y la inclusión compuesta
+$\Delta\times\mathbb P^r\hookrightarrow X\times\mathbb P^r$ se obtiene
+de $\Delta\hookrightarrow X$ por cambio de base.
+
+\subsubsection*{Teorema 2.2.}
+\underline{Sean $X$ liso sobre un cuerpo $k$, $\Delta$ un subesquema
+liso en todo punto de codimensión $1+r$, y
+$f:\widetilde X\longrightarrow X$ la explosión de $X$ a lo largo de
+$\Delta$. Entonces:}
+
+\medskip
+\noindent(2.2.1) \underline{La sucesión espectral de Leray}
+\[
+E_2^{p,q}=H^p\bigl(X,R^qf_*\mathbb Z_\ell\bigr)
+\Longrightarrow
+H^{p+q}\bigl(\widetilde X,\mathbb Z_\ell\bigr)
+\]
+\underline{degenera.}
+
+\pageoriginale
+
+\medskip
+\noindent(2.2.2) \underline{Existe un isomorfismo aditivo}
+\[
+\begin{aligned}
+H^q(\widetilde X,\mathbb Z_\ell)
+&\xleftarrow{\ \sim\ }
+H^q(X,\mathbb Z_\ell)\oplus
+\frac{H^q(\widetilde\Delta,\mathbb Z_\ell)}
+     {\operatorname{Im}H^q(\Delta,\mathbb Z_\ell)}
+\\
+&\simeq
+\left(\bigoplus_{j=1}^{r}
+H^{q-2j}(\Delta,\mathbb Z_\ell(-j))\right)
+\oplus H^q(X,\mathbb Z_\ell).
+\end{aligned}
+\]
+
+\noindent\underline{Demostración.}
+Sea
+\begin{equation}\tag{2.2.3}
+g:\widetilde\Delta\longrightarrow\Delta
+\end{equation}
+la restricción de $f$ a $\widetilde\Delta$, y sean
+\begin{equation}\tag{2.2.4}
+\left\{
+\begin{aligned}
+j&:\Delta\hookrightarrow X,\\
+i&:\widetilde\Delta\hookrightarrow\widetilde X
+\end{aligned}
+\right.
+\end{equation}
+las inclusiones, de modo que se tiene el diagrama conmutativo
+\begin{equation}\tag{2.2.5}
+\begin{tikzcd}[column sep=huge,row sep=large]
+\widetilde X \arrow[d,"f"'] &
+\widetilde\Delta \arrow[l,"i"'] \arrow[d,"g"]\\
+X & \Delta \arrow[l,"j"']
+\end{tikzcd}.
+\end{equation}
+Este induce un homomorfismo entre las sucesiones espectrales de Leray
+para los morfismos $f$ y $g$, con el haz $\mathbb Z_\ell$ sobre
+$\widetilde X$ y $\widetilde\Delta$:
+\begin{equation}\tag{2.2.6}
+E_s^{p,q}(f)\xrightarrow{\ (i^*,j^*)\ }E_s^{p,q}(g).
+\end{equation}
+Por otra parte, como $f$ induce un isomorfismo de
+$\widetilde X-\widetilde\Delta$ sobre $X-\Delta$, el teorema de cambio
+de base propio da
+
+\pageoriginale
+
+\begin{equation}\tag{2.2.7}
+R^qf_*\mathbb Z_\ell\simeq
+\begin{cases}
+\mathbb Z_\ell,&q=0,\\[1ex]
+j_*R^qg_*\mathbb Z_\ell,&q>0.
+\end{cases}
+\end{equation}
+Por tanto,
+\begin{equation}\tag{2.2.8}
+E_2^{p,q}(f)
+\xrightarrow[\ \sim\ ]{\ (i^*,j^*)\ }
+E_2^{p,q}(g)
+\qquad(q\ne0).
+\end{equation}
+Demostraremos por inducción sobre $s$ que
+\begin{equation}\tag{2.2.9}
+E_s^{p,q}(f)
+\xrightarrow[\ \sim\ ]{\ (i^*,j^*)\ }
+E_s^{p,q}(g)
+\qquad(q\ne0,\ s\geq2)
+\end{equation}
+y
+\begin{equation}\tag{2.2.10}
+d_s^{p,q}(f)=0\qquad(s\geq2).
+\end{equation}
+Admitamos por el momento la fórmula
+\begin{equation}\tag{2.2.11}
+d_s^{p,s-1}(f)=0\qquad(s\geq2,\ \text{para todo }p).
+\end{equation}
+
+Comencemos con $s=2$. Tenemos un diagrama conmutativo
+\begin{equation}\tag{2.2.12}
+\begin{tikzcd}[column sep=huge,row sep=large]
+E_2^{p,q}(f)
+  \arrow[r,"{(i^*,j^*)}"]
+  \arrow[d,"{d_2^{p,q}(f)}"]
+&
+E_2^{p,q}(g)
+  \arrow[d,"{0=d_2^{p,q}(g)}"]
+\\
+E_2^{p+2,q-1}(f)
+  \arrow[r,"{(i^*,j^*)}"]
+&
+E_2^{p+2,q-1}(g)
+\end{tikzcd}.
+\end{equation}
+Para $q\leq0$, se tiene $E_2^{p+2,q-1}(f)=0$, luego
+$d_2^{p,q}(f)=0$. Para $q=1$, la fórmula (2.2.11) da
+$d_2^{p,1}(f)=0$. Para $q>1$, las flechas horizontales de (2.2.12)
+son isomorfismos, mientras que $d_2^{p,q}(g)=0$ por 1.2 y 2.1.4.
+Esto demuestra (2.2.10) para $s=2$, y (2.2.9) para $s=2$ es
+precisamente (2.2.8).
+
+Supongamos conocidas (2.2.9) y (2.2.10) para cierto $s\geq2$.
+La hipótesis (2.2.10) implica
+$E_s^{p,q}(f)\simeq E_{s+1}^{p,q}(f)$, y por 1.2 se tiene
+$E_s^{p,q}(g)\simeq E_{s+1}^{p,q}(g)$. Resulta el diagrama conmutativo
+
+\pageoriginale
+
+\begin{equation}\tag{2.2.13}
+\begin{tikzcd}[column sep=huge,row sep=large]
+E_s^{p,q}(f)
+  \arrow[r,"{(i^*,j^*)}"]
+  \arrow[d,"\wr"']
+&
+E_s^{p,q}(g)
+  \arrow[d,"\wr"]
+\\
+E_{s+1}^{p,q}(f)
+  \arrow[r,"{(i^*,j^*)}"]
+&
+E_{s+1}^{p,q}(g)
+\end{tikzcd},
+\end{equation}
+que demuestra (2.2.9) para $s+1$. Para deducir (2.2.10) para
+$s+1$, consideremos
+\begin{equation}\tag{2.2.14}
+\begin{tikzcd}[column sep=huge,row sep=large]
+E_{s+1}^{p,q}(f)
+  \arrow[r,"{(i^*,j^*)}"]
+  \arrow[d,"{d_{s+1}^{p,q}(f)}"]
+&
+E_{s+1}^{p,q}(g)
+  \arrow[d,"{0=d_{s+1}^{p,q}(g)}"]
+\\
+E_{s+1}^{p+s+1,q-s}(f)
+  \arrow[r,"{(i^*,j^*)}"]
+&
+E_{s+1}^{p+s+1,q-s}(g)
+\end{tikzcd}.
+\end{equation}
+Para $q\leq s-1$, se tiene
+$E_{s+1}^{p+s+1,q-s}(f)=0$, luego $d_{\sisi{s}{s+1}}^{p,q}(f)=0$. Para
+$q=s$, se aplica (2.2.11), y para $q>s$ las flechas horizontales de
+(2.2.14) son isomorfismos y $d_{s+1}^{p,q}(g)=0$ por 1.2.
+\footnote{En este punto la impresión escribe $d_s^{p,q}(f)=0$, aunque
+el paso inductivo y el diagrama (2.2.14) conciernen a
+$d_{s+1}^{p,q}(f)$.}
+
+Queda verificar (2.2.11), lo que significa que el homomorfismo de borde
+compuesto
+\begin{equation}\tag{2.2.15}
+E_2^{p,0}(f)\longrightarrow E_3^{p,0}(f)
+\longrightarrow E_4^{p,0}(f)\longrightarrow\cdots
+\longrightarrow E_\infty^{p,0}(f)
+\end{equation}
+es un isomorfismo; es decir, que
+\begin{equation}\tag{2.2.16}
+f^*:H^p(X,\mathbb Z_\ell)
+\longrightarrow H^p(\widetilde X,\mathbb Z_\ell)
+\end{equation}
+
+\pageoriginale
+
+es inyectivo. Pero tiene un inverso a izquierda, a saber, el
+\underline{homomorfismo de Gysin} (SGA 5 IV)
+\begin{equation}\tag{2.2.17}
+f_*:H^p(\widetilde X,\mathbb Z_\ell)
+\longrightarrow H^p(X,\mathbb Z_\ell),
+\end{equation}
+que satisface
+\begin{equation}\tag{2.2.18}
+f_*f^*=\mathrm{id}.
+\end{equation}
+Esto resulta de la fórmula de proyección y de que $f_*(1)=1$, pues $f$
+es birracional y, por tanto, de grado uno. Así queda demostrado (2.2.1).
+
+Para (2.2.2), al pasar a cohomología en el diagrama (2.2.5) se obtiene
+\begin{equation}\tag{2.2.19}
+\begin{tikzcd}[row sep=huge,column sep=huge]
+H^p(\widetilde X,\mathbb Z_\ell)
+  \arrow[r,"i^*"]
+&
+H^p(\widetilde\Delta,\mathbb Z_\ell)
+\\
+H^p(X,\mathbb Z_\ell)
+  \arrow[r,"j^*"]
+  \arrow[u,"f^*"']
+&
+H^p(\Delta,\mathbb Z_\ell)
+  \arrow[u,"g^*"']
+\end{tikzcd},
+\end{equation}
+y, por tanto, un morfismo
+\begin{equation}\tag{2.2.20}
+\frac{H^p(\widetilde X,\mathbb Z_\ell)}
+     {f^*H^p(X,\mathbb Z_\ell)}
+\xrightarrow{\ (i^*,j^*)\ }
+\frac{H^p(\widetilde\Delta,\mathbb Z_\ell)}
+     {g^*H^p(\Delta,\mathbb Z_\ell)}.
+\end{equation}
+Denotemos por $F^i$ las filtraciones sobre
+$H^\bullet(\widetilde X,\mathbb Z_\ell)$ y
+$H^\bullet(\widetilde\Delta,\mathbb Z_\ell)$ procedentes de las
+sucesiones espectrales de Leray. Entonces (2.2.20) se reescribe
+
+\pageoriginale
+
+\begin{equation}\tag{2.2.21}
+\frac{H^p(\widetilde X,\mathbb Z_\ell)}
+     {F^pH^p(\widetilde X,\mathbb Z_\ell)}
+\xrightarrow{\ (i^*,j^*)\ }
+\frac{H^p(\widetilde\Delta,\mathbb Z_\ell)}
+     {\sisi{H^pF^p}{F^pH^p}(\widetilde\Delta,\mathbb Z_\ell)}.
+\end{equation}
+\footnote{En el denominador derecho de (2.2.21), la impresión invierte
+la notación y da $H^pF^p$; la filtración de la frase precedente y del
+miembro izquierdo es $F^pH^p$.}
+Por (2.2.9), la aplicación inducida por (2.2.21) sobre los graduados
+asociados es un isomorfismo, por lo que (2.2.20) es un isomorfismo.
+Por otra parte, (2.2.18) da una descomposición en suma directa
+\begin{equation}\tag{2.2.22}
+\begin{tikzcd}[column sep=7em]
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+  \arrow[r,shift right=1.2ex,
+    "f_*\oplus(1-f^*f_*)"']
+&
+H^\bullet(X,\mathbb Z_\ell)\oplus\operatorname{Ker} f_*
+  \arrow[l,shift right=1.2ex,
+    "f^*+\text{inclusión}"']
+\end{tikzcd},
+\end{equation}
+y (1.2.2) da la descomposición
+\begin{equation}\tag{2.2.23}
+\frac{H^\bullet(\widetilde\Delta,\mathbb Z_\ell)}
+     {g^*H^\bullet(\Delta,\mathbb Z_\ell)}
+\xleftarrow{\ \sim\ }
+\bigoplus_{1\leq j\leq r}
+H^{\bullet-2j}(\Delta,\mathbb Z_\ell(-j)).
+\end{equation}
+Combinando el isomorfismo (2.2.20) y las descomposiciones (2.2.22) y
+(2.2.23), se obtiene (2.2.2).
+
+\subsubsection*{Observación 2.2.24.}
+Esbocemos una segunda demostración de (2.2.2), claramente más sencilla,
+válida cuando $X$ es \underline{propio} sobre $k$. Más generalmente,
+sin hipótesis alguna sobre $X$, se obtiene el resultado correspondiente
+(2.2.26) en cohomología con soportes propios. Las sucesiones exactas de
+cohomología con soportes propios, denotada $H_c^\bullet$, para los pares
+$(\widetilde X,\widetilde\Delta)$ y $(X,\Delta)$ forman un diagrama
+conmutativo
+
+\pageoriginale
+
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=small,row sep=large]
+(2.2.25) \& {} \arrow[r] \&
+H_c^i(\widetilde X-\widetilde\Delta,\mathbb Z_\ell)
+  \arrow[r] \&
+H_c^i(\widetilde X,\mathbb Z_\ell)
+  \arrow[r] \&
+H_c^i(\widetilde\Delta,\mathbb Z_\ell)
+  \arrow[r] \&
+H_c^{i+1}(\widetilde X-\widetilde\Delta,\mathbb Z_\ell)
+\\
+(2.2.26) \& {} \arrow[r] \&
+H_c^i(X-\Delta,\mathbb Z_\ell)
+  \arrow[r]
+  \arrow[u,"\wr" left] \&
+H_c^i(X,\mathbb Z_\ell)
+  \arrow[r]
+  \arrow[u,hook,"f^*" right] \&
+H_c^i(\Delta,\mathbb Z_\ell)
+  \arrow[r]
+  \arrow[u,hook,"g^*" right] \&
+H_c^{i+1}(X-\Delta,\mathbb Z_\ell)
+  \arrow[u,"\wr" left]
+\end{tikzcd}}
+\end{center}
+El cociente del complejo acíclico (2.2.25) por el subcomplejo acíclico
+(2.2.26) da el complejo \underline{acíclico}
+\begin{equation}\tag{2.2.27}
+\longrightarrow0\longrightarrow
+\frac{H_c^i(\widetilde X,\mathbb Z_\ell)}
+     {f^*H_c^i(X,\mathbb Z_\ell)}
+\longrightarrow
+\frac{H_c^i(\widetilde\Delta,\mathbb Z_\ell)}
+     {g^*H_c^i(\Delta,\mathbb Z_\ell)}
+\longrightarrow0\longrightarrow.
+\end{equation}
+Así, sin considerar sucesiones espectrales, se ve que (2.2.20) es un
+isomorfismo. Los argumentos anteriores se aplican entonces y dan (2.2.2).
+
+\subsubsection*{Corolario 2.3.}
+\underline{Pongamos}
+\[
+b_q(X)=\dim_{\mathbb Q_\ell}H^q(\sisi{\chi}{X},\mathbb Q_\ell),
+\qquad
+\chi(X)=\sum_q(-1)^qb_q(X).
+\]
+\underline{Entonces}
+\begin{equation}\tag{2.3.1}
+b_q(\widetilde X)
+=b_q(X)+\sum_{j=1}^{r}b_{\sisi{q-j}{q-2j}}(\Delta),
+\end{equation}
+\begin{equation}\tag{2.3.2}
+\chi(\widetilde X)=\chi(X)+r\,\chi(\Delta).
+\end{equation}
+
+\pageoriginale
+
+\section*{3. La explosión asociada a un pincel}
+
+\subsection*{3.1.}
+Sea $X$ proyectivo, liso e irreducible sobre un cuerpo algebraicamente
+cerrado $k$, de dimensión $\sisi{u}{n}$, y sea
+$D=\{H_\tau\}_{\tau\in\mathbb P^1}$ un pincel de hipersuperficies cuyo
+eje corta transversalmente a $X$ en $\Delta$. Consideremos la explosión
+de $X$ a lo largo de $\Delta$, que describiremos explícitamente.
+
+En términos de ecuaciones, sean $(\lambda,\mu)$ coordenadas homogéneas
+de $\mathbb P^1$, y sean $F$ y $G$ dos formas lineales tales que
+$F=G=0$ defina el eje del pincel. Este se escribe
+\begin{equation}\tag{3.1.1}
+\lambda F-\mu G.
+\end{equation}
+Por definición, $\Delta$ es la intersección de $X$ con la subvariedad
+lineal $G=F=0$. Por 2.1.6,
+\begin{equation}\tag{3.1.2}
+\widetilde X
+=\{(x,(\lambda,\mu))\in X\times\mathbb P^1
+       \mid \lambda F-\mu G=0\};
+\end{equation}
+es la adherencia esquemática, en $X\times\mathbb P^1$, de la gráfica
+de la aplicación
+\begin{equation}\tag{3.1.3}
+\begin{tikzcd}[row sep=large,column sep=huge]
+X-\Delta \arrow[r] & \mathbb P^1 \\
+x \arrow[r] & (G(x),F(x)).
+\end{tikzcd}
+\end{equation}
+La gran ventaja de $\widetilde X$ es que es proyectivo, pues está
+inmerso en $X\times\mathbb P^1$, y liso, pues $\Delta$ lo es, sobre
+$k$, y admite un morfismo $\rho$ hacia $\mathbb P^1$, a saber
+\begin{equation}\tag{3.1.4}
+\rho:\widetilde X\longrightarrow X\times\mathbb P^1
+\xrightarrow{\operatorname{pr}_2}\mathbb P^1,
+\end{equation}
+cuyas fibras son las secciones hiperplanas de $X$ por los miembros del
+pincel:
+\[
+\rho^{-1}(t)=X_t\overset{\mathrm{def}}{=}X\cdot H_t.
+\]
+
+\pageoriginale
+
+\subsection*{3.2. El grado de la variedad dual: método topológico}
+
+Supongamos además que el pincel de 3.1 es tal que
+\begin{equation}\tag{3.2.1}
+X_t\text{ es liso para todo }t\text{ contenido en un abierto no vacío
+de }\mathbb P^1,
+\end{equation}
+y
+\begin{equation}\tag{3.2.2}
+\begin{aligned}
+&\text{si $X_t$ es singular, no tiene más que singularidades cuadráticas}\\
+&\text{no degeneradas (XVII 1.1).}
+\end{aligned}
+\end{equation}
+Estas condiciones se verifican en particular para un
+\underline{pincel de Lefschetz} (XVII 2.21) si
+$\operatorname{char}k\ne2$ o si $X$ tiene dimensión par.
+
+Sean $\eta$ el punto genérico de $\mathbb P^1$, $\bar\eta$ un punto
+geométrico sobre él, $n=\dim X$, y $\chi$ la característica de
+Euler--Poincaré con coeficientes en $\mathbb Q_\ell$. La fórmula de
+Euler--Poincaré XVI 2.1, aplicada al morfismo $\sisi{S}{\rho}$, da
+\begin{equation}\tag{3.2.3}
+\chi(\widetilde X)
+=\chi(\mathbb P^1)\,\chi(X_{\bar\eta})
+ +(-1)^{\sisi{\eta}{n}}
+\sum_{\substack{\text{puntos singulares}\\
+                  \text{de las fibras}}}1,
+\end{equation}
+que, teniendo en cuenta (2.2.2), se reescribe
+\begin{equation}\tag{3.2.4}
+(-1)^{\sisi{\eta}{n}}
+\left[\begin{array}{c}
+\text{número total de}\\[3pt]
+\text{puntos singulares}
+\end{array}\right]
+=\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta}).
+\end{equation}
+Obsérvese que la cantidad
+$\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta})$ es independiente de la
+elección particular del pincel. Depende únicamente de la inmersión de
+$X$ en algún $\mathbb P^r$, e incluso solo de la clase de Chern de
+$\mathcal O_X(1)$; cf. XVII, 5.7.5 y 5.7.6.
+
+\pageoriginale
+
+\subsubsection*{3.2.5.}
+Hagamos explícito lo anterior en un caso concreto. Tomemos
+$X=\mathbb P^2$ y un pincel $\{H_\tau\}$ de curvas planas de grado $d$
+que satisfaga 3.1, (3.2.1) y (3.2.2). Entonces
+\begin{equation}\tag{3.2.6}
+\begin{array}{ll}
+\chi(X)=3 & \text{(por 1.2)},\\[4pt]
+\chi(X_{\bar\eta})=-d(d-3) & \text{(cf. SGA 5 VII, 7.3)},\\[4pt]
+\chi(\Delta)=d^2.&
+\end{array}
+\end{equation}
+Por tanto,
+\begin{equation}\tag{3.2.7}
+\text{el número total de puntos singulares es }3(d-1)^2.
+\end{equation}
+Tomemos el caso particular $d=3$ y consideremos la familia de curvas
+elípticas, en característica distinta de $3$,
+\begin{equation}\tag{3.2.8}
+X^3+Y^3+Z^3+3\mu XYZ.
+\end{equation}
+Las cuatro fibras singulares están sobre
+$\mu^3=\sisi{1}{-1}$ y $\mu=\infty$, respectivamente,\footnote{La
+impresión afirma que los parámetros finitos son las raíces cúbicas de
+la unidad. Con el signo positivo de (3.2.8), la factorización de Hesse
+da $\mu^3=-1$; las raíces cúbicas de $+1$ corresponden al polinomio
+con coeficiente $-3\mu$.}
+y cada fibra singular es la unión de tres rectas:
+\begin{equation}\tag{3.2.9}
+\begin{tikzcd}[row sep=4.5em,column sep=4.5em]
+{} & {} \arrow[dl,dash,shorten <=-9mm,shorten >=-9mm]
+        \arrow[dr,dash,shorten <=-9mm,shorten >=-9mm] & {} & {} \\
+{} \arrow[rr,dash,shorten <=-11mm,shorten >=-11mm] & {} & {} & {,}
+\end{tikzcd}
+\end{equation}
+Tiene exactamente tres puntos singulares, todos ellos singularidades
+cuadráticas no degeneradas. En conjunto se obtienen doce puntos
+singulares, lo que verifica (3.2.7) en este ejemplo.
+
+\pageoriginale
+
+\subsubsection*{Proposición 3.2.10.}
+\underline{Sea $X\hookrightarrow\mathbb P^r$ una inmersión de Lefschetz}
+(XVII 2.3), \underline{y supongamos que $n=\dim X$ es par, o que
+$\operatorname{char}k\ne2$. Entonces todo pincel de Lefschetz,
+considerado como una recta de $\check{\mathbb P}^{r}$, corta a
+$\check X$ en}
+\begin{equation}\tag{3.2.11}
+(-1)^n
+\bigl[\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta})\bigr]
+\end{equation}
+\underline{puntos, y lo corta transversalmente} (EGA IV, 17.13.7).
+
+\noindent\underline{Demostración.}
+Por hipótesis, toda singularidad de una fibra del pincel de Lefschetz
+es cuadrática no degenerada; por tanto, (3.2.4) muestra que el número
+de fibras singulares del pincel $D$, cada una con exactamente un punto
+singular, es (3.2.11). Ahora bien, $X_\tau$ es singular si y solo si
+$\tau\in\check X\cap D$.
+
+Para ver la transversalidad de la intersección, obsérvese que
+(3.2.11) es \underline{independiente} del pincel de Lefschetz elegido.
+Como el pincel genérico es de Lefschetz, (3.2.11) es el grado de
+$\check X$, es decir, su grado como hipersuperficie de
+$\check{\mathbb P}^{r}$, tomado por convenio igual a $0$ si
+$\dim\check X\leq r-2$. Si una recta $D$ corta una hipersuperficie de
+grado $d>0$ en $d$ puntos distintos $x_i$
+($\sisi{i\leq i\leq d}{1\leq i\leq d}$), la intersección es
+necesariamente transversal. En efecto, la multiplicidad de
+intersección
+\[
+\mu_i=\sisi{\operatorname{rg}}{\operatorname{length}}_{x_i}
+      (D\cap\check X)
+\]
+es al menos $1$, mientras que $\sum_{i=1}^d\mu_i=d$. Por tanto,
+$\mu_i=1$ para todo $i$; equivalentemente, $D\cap\check X$ es liso,
+lo cual es precisamente la transversalidad.
+
+\pageoriginale
+
+\subsubsection*{Observación 3.2.12.}
+Para un pincel de Lefschetz $D$ del que ya se supone que corta
+transversalmente a $\check X$ (condición que, en todo caso, satisface
+todo $D$ suficientemente general), el resultado 3.2.10 también puede
+considerarse como la conjunción de XVII 5.7.2 y del hecho
+$\deg\varphi=1$ contenido en XVII 3.5. Por supuesto, el hecho probado
+aquí de que \underline{todo} pincel de Lefschetz $D$ corta
+transversalmente a $\check X$, mediante la fórmula de Euler--Poincaré
+XVI 2.1, también puede verificarse directamente y de modo elemental,
+utilizando que el eje de $D$ corta transversalmente a $X$.
+
+\section*{4. La cohomología de la explosión asociada a un pincel}
+
+\subsection*{4.1.}
+Retomamos la situación de 3.1, resumida por el diagrama conmutativo
+(cf. 2.1.6.3):
+\begin{equation}\tag{4.1.1}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,row sep=huge,column sep=huge]
+X\times\mathbb P^1
+  \& \widetilde X
+      \arrow[l,hook',"f\times\rho"]
+      \arrow[d,"f"]
+      \arrow[dl,"\rho"']
+  \& \widetilde\Delta
+      \arrow[l,hook',"i"]
+      \arrow[d,"g"]
+      \arrow[r,"{(g,\rho_i)}","\sim"']
+  \& \Delta\times\mathbb P^1 \\
+\mathbb P^1 \& X \& \Delta\arrow[l,hook',"j"] \& {}
+\end{tikzcd}}
+\end{equation}
+Comencemos por precisar (2.2.2) en este caso.
+
+\subsection*{Proposición 4.2.}
+\underline{Bajo las hipótesis de 3.1:}
+
+\smallskip
+\noindent
+\textup{(4.2.1)} \underline{Los homomorfismos de
+$\mathbb Z_\ell$-módulos}
+\[
+\begin{tikzcd}[column sep=huge]
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+  \arrow[r,shift left=.7ex,"f_*\oplus(1-f^*f_*)"]
+& H^\bullet(X,\mathbb Z_\ell)\oplus
+   \operatorname{Ker}\!\left(f_*:H^\bullet(\widetilde X,\mathbb Z_\ell)
+       \to H^\bullet(X,\mathbb Z_\ell)\right)
+  \arrow[l,shift left=.7ex,"f^*+\operatorname{incl}"']
+\end{tikzcd}
+\]
+\underline{son isomorfismos inversos uno de otro.}
+
+\pageoriginale
+
+\smallskip
+\noindent
+\textup{(4.2.2)} \underline{Los homomorfismos de
+$\mathbb Z_\ell$-módulos}
+\[
+\begin{tikzcd}[column sep=huge]
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+  \arrow[r,shift left=.7ex,
+    "f_*\oplus(\sisi{}{ -}g_*i^*)"]
+& H^\bullet(X,\mathbb Z_\ell)\oplus
+   H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+  \arrow[l,shift left=.7ex,"f^*+i_*g^*"']
+\end{tikzcd}
+\]
+\underline{son isomorfismos inversos uno de otro.}
+\footnote{La impresión omite el signo menos ante $g_*i^*$ en
+(4.2.2), (4.2.6), (4.2.9) y (4.2.10). El lema 4.3 da
+$g_*i^*i_*g^*=-\mathrm{id}$, y el propio cálculo impreso del producto
+utiliza $-g_*i^*$; se restituye el signo de manera coherente.}
+
+\smallskip
+\noindent
+\textup{(4.2.3)} \underline{La estructura de álgebra sobre}
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)),
+\]
+\underline{transportada mediante (4.2.2) desde el producto cup sobre}
+$H^\bullet(\widetilde X,\mathbb Z_\ell)$,
+\underline{se expresa, para}
+\[
+a,b\in H^\bullet(X,\mathbb Z_\ell),
+\qquad
+x,y\in H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)),
+\]
+\underline{por las fórmulas}
+\begin{equation}\tag{4.2.3.1}
+(0\oplus x)\wedge(0\oplus y)
+=-j_*(xy)\oplus2xy\,c_1(\mathcal O_\Delta(1)),
+\end{equation}
+\begin{equation}\tag{4.2.3.2}
+(a\oplus0)\wedge(b\oplus0)=ab\oplus0,
+\end{equation}
+\begin{equation}\tag{4.2.3.3}
+(a\oplus0)\wedge(0\oplus y)=0\oplus j^*(a)y,
+\end{equation}
+\begin{equation}\tag{4.2.3.4}
+(0\oplus x)\wedge(b\oplus0)=0\oplus xj^*(b).
+\end{equation}
+\underline{En particular, si}
+\[
+a\oplus x\in H^\bullet(X,\mathbb Z_\ell)
+  \oplus H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\]
+y
+\[
+b\oplus y\in H^{2n-\bullet}(X,\mathbb Z_\ell)
+  \oplus H^{2n-2-\bullet}(\Delta,\mathbb Z_\ell(-1)),
+\]
+
+\pageoriginale
+
+\underline{entonces}
+\begin{equation}\tag{4.2.3.5}
+(a\oplus x)\wedge(b\oplus y)=ab-j_*(xy).
+\end{equation}
+En otras palabras, la matriz total de intersección de
+$H^\bullet(\widetilde X,\mathbb Z_\ell)$ es
+\[
+\left(
+\begin{array}{c|c}
+\begin{array}{c}
+\text{matriz total de}\\[-1pt]
+\text{intersección sobre $X$}
+\end{array} & 0\\ \hline
+0 &
+-\begin{array}{c}
+\text{matriz total de}\\[-1pt]
+\text{intersección sobre $\Delta$}
+\end{array}
+\end{array}
+\right).
+\]
+
+\noindent\underline{Demostración.}
+Ya hemos demostrado (4.2.1); véase (2.2.22). Para (4.2.2), obsérvese
+primero que, como $g:\widetilde\Delta\to\Delta$ es un fibrado en rectas
+proyectivas, la sucesión
+\begin{equation}\tag{4.2.4}
+0\longrightarrow H^\bullet(\Delta,\mathbb Z_\ell)
+\xrightarrow{g^*}H^\bullet(\widetilde\Delta,\mathbb Z_\ell)
+\xrightarrow{g_*}H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\longrightarrow0
+\end{equation}
+es exacta por (1.2.2). Junto con (2.2.26), esto da el diagrama
+conmutativo de sucesiones exactas
+\begin{equation}\tag{4.2.5}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=huge]
+0\arrow[r]
+  \&H^\bullet(X,\mathbb Z_\ell)
+       \arrow[r,"f^*"]\arrow[d,"j^*" right]
+  \&H^\bullet(\widetilde X,\mathbb Z_\ell)
+       \arrow[r,"g_*i^*"]\arrow[d,"i^*" right]
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[r]\arrow[d,equal]
+  \&0\\
+0\arrow[r]
+  \&H^\bullet(\Delta,\mathbb Z_\ell)
+       \arrow[r,"g^*"]
+  \&H^\bullet(\widetilde\Delta,\mathbb Z_\ell)
+       \arrow[r,"g_*"]
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[r]
+  \&0.
+\end{tikzcd}}
+\end{equation}
+
+\pageoriginale
+
+Teniendo en cuenta la escisión (4.2.1), se obtiene el isomorfismo
+\begin{equation}\tag{4.2.6}
+f_*\oplus(\sisi{}{ -}g_*i^*):
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+\xrightarrow{\sim}
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)).
+\end{equation}
+El transpuesto de (4.2.5), tras invertir los grados
+$\bullet\mapsto2n-\bullet$, da el diagrama conmutativo de sucesiones
+exactas
+\begin{equation}\tag{4.2.7}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=large]
+0
+  \&H^\bullet(X,\mathbb Z_\ell)\arrow[l]
+  \&H^\bullet(\widetilde X,\mathbb Z_\ell)\arrow[l,"f_*"']
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[l,"i_*g^*"']
+  \&0\arrow[l]\\
+0
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-2))
+       \arrow[l]\arrow[u,"j_*"']
+  \&H^{\bullet-2}(\widetilde\Delta,\mathbb Z_\ell(-1))
+       \arrow[l,"g_*"']\arrow[u,"i_*"']
+  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+       \arrow[l,"g_*"']\arrow[u,equal]
+  \&0\arrow[l]
+\end{tikzcd}}
+\end{equation}
+y, por tanto, el isomorfismo
+\begin{equation}\tag{4.2.8}
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow[\sim]{\ f^*+i_*g^*\ }
+H^\bullet(\widetilde X,\mathbb Z_\ell).
+\end{equation}
+Queda demostrar que el compuesto
+\begin{equation}\tag{4.2.9}
+\begin{aligned}
+&H^\bullet(X,\mathbb Z_\ell)\oplus
+ H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+ \xrightarrow{\ f^*+i_*g^*\ }
+ H^\bullet(\widetilde X,\mathbb Z_\ell)\\[-2pt]
+&\hspace{55mm}\xrightarrow{\ f_*\oplus(\sisi{}{ -}g_*i^*)\ }
+ H^\bullet(X,\mathbb Z_\ell)\oplus
+ H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\end{aligned}
+\end{equation}
+es la identidad. Ahora bien,
+\[
+f_*f^*=\mathrm{id}\quad\text{sobre }H^\bullet(X,\mathbb Z_\ell)
+\quad\text{por (2.2.18),}
+\]
+\[
+g_*i^*f^*=0\quad\text{por (4.2.5)},\qquad
+f_*i_*g^*=0\quad\text{por (4.2.7)}.
+\]
+Por consiguiente, basta demostrar
+\begin{equation}\tag{4.2.10}
+\sisi{}{ -}g_*i^*i_*g^*(x)=x
+\quad\text{para }x\in H^\bullet(\Delta,\mathbb Z_\ell(-1)).
+\end{equation}
+
+\pageoriginale
+
+Para verificar (4.2.10), obsérvese primero que
+$i:\widetilde\Delta\hookrightarrow\widetilde X$ es la inclusión de una
+subvariedad lisa de codimensión uno. Por tanto (SGA 5 VII),
+\begin{equation}\tag{4.2.11}
+i^*i_*(x)=c_1(\underline N_{\widetilde\Delta/\widetilde X})\,x,
+\end{equation}
+y
+\begin{equation}\tag{4.2.12}
+i_*(x)i_*(y)
+=i_*\!\left(xy\,c_1(\underline N_{\widetilde\Delta/\widetilde X})\right).
+\end{equation}
+Escribamos
+$\xi_X=\mathcal O_X(1)$,
+$\xi_\Delta=\mathcal O_\Delta(1)$ y
+$\xi_{\mathbb P^1}=\mathcal O_{\mathbb P^1}(1)$.
+Por EGA II, 8.1.7, si $\widetilde{\mathfrak J}$ es el ideal de
+$\widetilde\Delta$ en $\widetilde X$, entonces
+\begin{equation}\tag{4.2.13}
+\begin{aligned}
+\underline{\check N}_{\widetilde\Delta/\widetilde X}
+&\simeq\widetilde{\mathfrak J}/\widetilde{\mathfrak J}^{\,2}
+ \simeq\widetilde{\mathfrak J}
+       \otimes_{\mathcal O_{\widetilde X}}
+       \mathcal O_{\widetilde\Delta}\\
+&\simeq\mathcal O_{\widetilde X}(1)
+       \otimes_{\mathcal O_{\widetilde X}}
+       \mathcal O_{\widetilde\Delta}
+ =\mathcal O_{\widetilde\Delta}(1).
+\end{aligned}
+\end{equation}
+Aquí $\widetilde\Delta$ se considera como
+$\mathbb P(\mathfrak J/\mathfrak J^2)$, donde $\mathfrak J$ es el
+ideal de $\Delta$ en $X$. Como $\Delta$ es la intersección de $X$ con
+dos hiperplanos dados, existe un isomorfismo canónico
+\[
+\mathfrak J/\mathfrak J^2\simeq\mathcal O_\Delta^{\,2}(-1),
+\]
+que induce
+\[
+\widetilde\Delta=\mathbb P(\mathfrak J/\mathfrak J^2)
+\simeq\mathbb P(\mathcal O_\Delta^{\,2}(-1))
+\xrightarrow[\sim]{\alpha}
+\mathbb P(\mathcal O_\Delta^{\,2})
+\simeq\Delta\times\mathbb P^1.
+\]
+El isomorfismo canónico $\alpha$ de EGA II, 4.1.4, lleva el fibrado
+tautológico en
+\[
+(\rho i)^*\mathcal O_{\mathbb P^1}(1)
+\otimes g^*\mathcal O_\Delta(-1).
+\]
+En consecuencia, (4.2.13) se convierte en
+\begin{equation}\tag{4.2.14}
+\underline{\check N}_{\widetilde\Delta/\widetilde X}
+\simeq(\rho i)^*\mathcal O_{\mathbb P^1}(1)
+       \otimes g^*\mathcal O_\Delta(-1).
+\end{equation}
+
+\pageoriginale
+
+\subsection*{Lema 4.3.}
+\underline{Se tiene}
+\[
+c_1(\underline N_{\widetilde\Delta/\widetilde X})
+=g^*c_1(\xi_\Delta)-(\rho i)^*c_1(\xi_{\mathbb P^1}).
+\]
+Volvamos a la demostración de (4.2.10). Por (4.2.11) y el lema 4.3,
+basta probar
+\[
+g_*\!\left(g^*(x)\left[(\rho i)^*c_1(\xi_{\mathbb P^1})
+                       -g^*c_1(\xi_\Delta)\right]\right)=x.
+\]
+Por (4.2.4), $g_*g^*=0$, mientras que
+\[
+\begin{tikzcd}[column sep=huge]
+\widetilde\Delta\arrow[r,"g\times\rho_i","\sim"']
+  &\Delta\times\mathbb P^1,
+\end{tikzcd}
+\]
+de modo que
+\begin{equation}\tag{4.3.1}
+g_*\!\left(g^*(x)(\rho i)^*c_1(\xi_{\mathbb P^1})\right)=x,
+\end{equation}
+y, por tanto,
+\begin{equation}\tag{4.3.2}
+g_*\!\left(g^*(x)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)
+=-x.
+\end{equation}
+
+Calculemos ahora la estructura de álgebra sobre
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\]
+transportada desde el producto cup mediante (4.2.2). Sean $a,b$
+elementos de $H^\bullet(X,\mathbb Z_\ell)$ y $x,y$ elementos de
+$H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))$. Comencemos con (4.2.3.1)
+y escribamos
+\[
+(0\oplus x)\wedge(0\oplus y)=A\oplus B.
+\]
+Por (4.2.12) y (4.3.2),
+\[
+\begin{aligned}
+A
+&=f_*\!\left((i_*g^*x)(i_*g^*y)\right)\\
+&=f_*i_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=j_*g_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)
+=-j_*(xy).
+\end{aligned}
+\]
+
+\pageoriginale
+
+Asimismo,
+\[
+\begin{aligned}
+B
+&=-g_*i^*\!\left((i_*g^*x)(i_*g^*y)\right)\\
+&=-g_*i^*i_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=-g_*\!\left(g^*(xy)c_1(\underline N_{\widetilde\Delta/\widetilde X})^2\right).
+\end{aligned}
+\]
+El lema 4.3 da
+\[
+\begin{aligned}
+c_1(\underline N_{\widetilde\Delta/\widetilde X})^2
+&=g^*\!\left(c_1(\xi_\Delta)^2\right)
+ -2g^*c_1(\xi_\Delta)(\rho i)^*c_1(\xi_{\mathbb P^1}),
+\end{aligned}
+\]
+porque $c_1(\xi_{\mathbb P^1})^2=0$. Por (4.2.4) y (4.3.1),
+\[
+B=0+2xy\,c_1(\xi_\Delta),
+\]
+lo que demuestra (4.2.3.1). La fórmula (4.2.3.2) expresa que $f^*$ es
+un homomorfismo de álgebras.
+
+Para demostrar (4.2.3.3), la fórmula de proyección muestra que
+$\operatorname{Ker}f_*$ es estable por multiplicación por
+$\operatorname{im}f^*$. Por tanto,
+\[
+(a\oplus0)\wedge(0\oplus y)=0\oplus C,
+\]
+donde
+\begin{equation}\tag{4.3.3}
+C=-g_*i^*\!\left(f^*(a)i_*g^*(y)\right).
+\end{equation}
+Usando (4.3.2),
+\[
+\begin{aligned}
+C
+&=-g_*\!\left(i^*f^*(a)g^*(y)
+      c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=-g_*\!\left(g^*j^*(a)g^*(y)
+      c_1(\underline N_{\widetilde\Delta/\widetilde X})\right)\\
+&=j^*(a)y.
+\end{aligned}
+\]
+Esto demuestra (4.2.3.3). Finalmente, (4.2.3.4) se deduce de
+(4.2.3.3) por la conmutatividad graduada del producto cup.
+
+\pageoriginale
+
+\section*[5. Morfismo asociado a un pincel]{\texorpdfstring{5. Estudio cohomológico del morfismo
+$\rho:\widetilde X\longrightarrow\mathbb P^1$ asociado a un pincel}{5. Estudio cohomológico del morfismo rho de X tilde a P1 asociado a un pincel}}
+
+\subsection*{\texorpdfstring{5.1. El homomorfismo de restricción
+$H^*(\widetilde X)\longrightarrow H^*(Y)$}{5.1. El homomorfismo de restricción en cohomología}}
+
+Denotemos por $Y$ una de las fibras lisas de
+$\rho:\widetilde X\to\mathbb P^1$, digamos
+\[
+Y=\rho^{-1}(t_0)=X\mathbin{\cdot}H_{t_0}.
+\]
+Se tiene el diagrama conmutativo
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=huge]
+\mathbb P^1
+  \& {} \& \widetilde X\arrow[ll,"\rho"']\arrow[d,"f"]
+  \& {} \& \widetilde\Delta
+       \arrow[ll,hook',"i"]\arrow[d,"g"]
+       \arrow[r,phantom,"\simeq"]
+  \& \Delta\times\mathbb P^1 \\
+\mathrm{Sp}(k)=\{t_0\}\arrow[u,hook]
+  \& {} \& X
+  \& {} \& \Delta
+       \arrow[ll,hook',"j"]
+       \arrow[ur,hook,"{\ell=\mathrm{id}\times\{t_0\}}"']
+       \arrow[dlll,hook,"h"]
+  \& {} \\
+{} \& Y\arrow[ul]\arrow[uur,"k"]\arrow[ur,"m"']
+  \& {} \& {} \& {} \& {}
+\end{tikzcd}}
+\end{center}
+
+\pageoriginale
+
+\subsection*{Proposición 5.1.1.}
+\underline{Bajo las hipótesis de (3.1), designando $Y$ una fibra lisa:}
+
+\smallskip
+\noindent
+\textup{(5.1.2)} \underline{El homomorfismo de restricción}
+\[
+k^*:H^\bullet(\widetilde X,\mathbb Z_\ell)
+   \longrightarrow H^\bullet(Y,\mathbb Z_\ell)
+\]
+\underline{se expresa, mediante (4.2.2), por}
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow{\ m^*+\sisi{h^*}{h_*}\ }
+H^\bullet(Y,\mathbb Z_\ell).
+\]
+\footnote{La impresión da $m^*+h^*$ en (5.1.2); el grado y la fórmula
+de intersección transversal (5.1.5) exigen el morfismo de Gysin $h_*$.}
+
+\noindent
+\textup{(5.1.3)} \underline{La aplicación de Gysin}
+\[
+k_*:H^{\bullet-2}(Y,\mathbb Z_\ell(-1))
+   \longrightarrow H^\bullet(\widetilde X,\mathbb Z_\ell)
+\]
+\underline{se expresa por}
+\[
+H^{\bullet-2}(Y,\mathbb Z_\ell(-1))
+\xrightarrow{\ m_*\oplus(-h^*)\ }
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1)).
+\]
+
+\noindent\underline{Demostración.}
+Los subesquemas lisos $\widetilde\Delta$ e $Y$ de $\widetilde X$ se
+cortan transversalmente en $\Delta$; en otras palabras, el cuadrado de
+esquemas lisos
+\begin{equation}\tag{5.1.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Delta\arrow[r,"\ell"]\arrow[d,hook,"h"]
+  &\widetilde\Delta\arrow[d,hook,"i"]\\
+Y\arrow[r,"k"']&\widetilde X
+\end{tikzcd}
+\end{equation}
+es cartesiano. Por tanto, implica la fórmula [SGA 5, IV]
+\begin{equation}\tag{5.1.5}
+h_*\ell^*=k^*i_* ,\qquad \ell_*h^*=i^*k_*.
+\end{equation}
+
+\pageoriginale
+
+El compuesto
+\[
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow{\ f^*+i_*g^*\ }
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+\xrightarrow{\ k^*\ }
+H^\bullet(Y,\mathbb Z_\ell)
+\]
+es la suma de $k^*f^*=m^*$ y
+$k^*i_*g^*=h_*\ell^*g^*$, por (5.1.5). Como
+$g\ell=\mathrm{id}_\Delta$, esto demuestra (5.1.2).
+
+El compuesto
+\[
+H^{\bullet-2}(Y,\mathbb Z_\ell(-1))
+\xrightarrow{\ k_*\ }
+H^\bullet(\widetilde X,\mathbb Z_\ell)
+\xrightarrow{\ f_*\oplus(-g_*i^*)\ }
+H^\bullet(X,\mathbb Z_\ell)\oplus
+H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
+\]
+es la suma de
+\[
+f_*k_*=m_*
+\qquad\text{y}\qquad
+-g_*i^*k_*=-g_*\ell_*h^*=-h^*,
+\]
+lo que demuestra (5.1.3).
+
+\subsection*{Corolario 5.1.6.}
+\underline{Bajo las hipótesis de 5.1.1, para $i\leq n-1$, las imágenes
+de}
+\[
+m^*:H^i(X,\mathbb Z_\ell)\longrightarrow H^i(Y,\mathbb Z_\ell)
+\]
+\underline{y de}
+\[
+k^*:H^i(\widetilde X,\mathbb Z_\ell)
+   \longrightarrow H^i(Y,\mathbb Z_\ell)
+\]
+\underline{son iguales.}
+
+\noindent\underline{Demostración.}
+Por el teorema de Lefschetz débil para secciones hiperplanas
+(SGA 5, VII, 7.1), para $i\leq n-1$ la aplicación
+\begin{equation}\tag{5.1.7}
+H^{i-2}(X,\mathbb Z_\ell(-1))
+\xrightarrow{\ j^*\ }
+H^{i-2}(\Delta,\mathbb Z_\ell(-1))
+\end{equation}
+es un isomorfismo. Así, por (5.1.2), la imagen de $k^*$ es la suma de
+la imagen de $m^*$ y de la imagen del compuesto
+\[
+H^{i-2}(X,\mathbb Z_\ell(-1))
+\xrightarrow{\ j^*\ }
+H^{i-2}(\Delta,\mathbb Z_\ell(-1))
+\xrightarrow{\ h_*\ }
+H^i(Y,\mathbb Z_\ell).
+\]
+
+\pageoriginale
+
+Pero la fórmula de proyección da
+\[
+\begin{aligned}
+h_*j^*(x)
+ &=h_*\bigl(h^*m^*(x)\bigr)
+  =m^*(x)h_*(1)
+  =\xi_Y\,m^*(x)\\
+ &=m^*(x\xi_X),
+ \qquad\text{pues }m^*(\xi_X)=\xi_Y.
+\end{aligned}
+\]
+Por consiguiente, $\operatorname{Im}k^*\subset\operatorname{Im}m^*$,
+y la inclusión inversa resulta directamente de (5.1.2).
+
+\subsection*{5.2. El teorema de Lefschetz fuerte (LV)}
+
+\subsubsection*{5.2.1.}
+Sea $S$ proyectivo de dimensión $n$ sobre el cuerpo algebraicamente
+cerrado $k$, y sea $S\hookrightarrow\mathbb P$ una inmersión
+proyectiva. Denotemos por
+\[
+u\in H^2(S,\mathbb Z_\ell(1))
+\]
+la clase de cohomología de una sección hiperplana. Así, $u$ es la
+imagen inversa por $S\hookrightarrow\mathbb P$ de la primera clase de
+Chern de $\mathcal O_{\mathbb P}(1)$ en
+$H^2(\mathbb P,\mathbb Z_\ell(1))$. Escribamos
+\[
+L_S:H^\bullet(S,\mathbb Q_\ell(j))
+   \longrightarrow H^{\bullet+2}(S,\mathbb Q_\ell(j+1))
+\]
+para la multiplicación por $u$.
+
+\subsubsection*{5.2.2.}
+\underline{Se dice que $S$, provisto de $u$, satisface (LV), el teorema
+de Lefschetz fuerte, si, para todo (o para un) entero $j$ y todo entero
+$i>0$, las aplicaciones}
+\[
+L_S^i:H^{n-i}(S,\mathbb Q_\ell(j))
+\longrightarrow H^{n+i}(S,\mathbb Q_\ell(i+j))
+\]
+\underline{son isomorfismos.}
+
+\pageoriginale
+
+\subsubsection*{5.2.2.1.}
+Se conjetura que esta condición se cumple cuando $S$ es liso. Es
+verdad cuando $k$ tiene característica cero [6]. El teorema de
+especialización [SGA 4, XVI, 2.2] da entonces la misma conclusión
+cuando $S$, junto con su inmersión proyectiva, se levanta a
+característica cero. En particular, se cumple para una intersección
+completa lisa. También se sabe para $S$ liso de dimensión a lo sumo
+dos [2], y para una variedad abeliana, ya sea directamente
+(Lieberman [4] y [2]), ya sea por el teorema de Mumford [5], según el
+cual una variedad abeliana polarizada se levanta, junto con su
+polarización, a característica cero.
+
+Recordemos que, para una variedad proyectiva $S$ y $i\leq n$, la parte
+primitiva de la cohomología se define por
+\begin{equation}\tag{5.2.2.2}
+\operatorname{Prim}^i(S,\mathbb Q_\ell(j))
+=\operatorname{Ker}\!\left(
+L^{n-i+1}:H^i(S,\mathbb Q_\ell(j))
+\longrightarrow
+H^{2n-i+2}\bigl(S,\mathbb Q_\ell(
+  \sisi{j+2n-2i+2}{j+n-i+1})\bigr)
+\right).
+\end{equation}
+\footnote{La potencia $L^{n-i+1}$ aumenta el giro de Tate en $n-i+1$; la
+impresión da en el blanco el giro de Tate $j+2n-2i+2$.}
+Si $S$ satisface (LV), para $i\leq n$ se tiene la descomposición
+\begin{equation}\tag{5.2.2.3}
+H^i(S,\mathbb Q_\ell(j))
+\xleftarrow[\sim]{\ 1+L\ }
+\operatorname{Prim}^i(S,\mathbb Q_\ell(j))
+\oplus H^{i-2}(S,\mathbb Q_\ell(j-1)).
+\end{equation}
+
+\subsection*{Proposición 5.2.3.}
+\underline{Sea $X$ liso y proyectivo y supongamos que satisface (LV).
+Sea $\tau:Y\hookrightarrow X$ la inclusión de una sección hiperplana
+lisa. Entonces}
+\begin{equation}\tag{5.2.3.1}
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+=\operatorname{Ker}\!\left(
+\tau^*:H^n(X,\mathbb Q_\ell(j))
+\longrightarrow H^n(Y,\mathbb Q_\ell(j))
+\right).
+\end{equation}
+\noindent\underline{Demostración.}
+La fórmula de proyección para $\tau:Y\to X$ da el diagrama conmutativo
+
+\pageoriginale
+
+\begin{equation}\tag{5.2.3.2}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^n(X,\mathbb Q_\ell(j))
+  \arrow[rr,"L"]\arrow[dr,"\tau^*"']
+  & {} &
+H^{n+2}(X,\mathbb Q_\ell(j+1))
+  \arrow[dl,"\tau_*"]\\
+{} & H^n(Y,\mathbb Q_\ell(j)) & {}
+\end{tikzcd}.
+\end{equation}
+Por dualidad y Lefschetz débil,
+\[
+\tau_*:H^n(Y,\mathbb Q_\ell(j))
+\longrightarrow H^{n+2}(X,\mathbb Q_\ell(j+1))
+\]
+es la transpuesta de un isomorfismo y, por tanto, es un isomorfismo.
+De aquí resulta la afirmación.
+
+\subsection*{Lema 5.2.4.}
+\underline{Sean $X$ liso y proyectivo y
+$\tau:Y\hookrightarrow X$ la inclusión de una sección hiperplana lisa.
+Entonces $X$ satisface (LV) si y solo si se cumplen las dos condiciones
+siguientes:}
+
+\smallskip
+\noindent
+\textup{5.2.4.1.} \underline{$Y$ satisface (LV).}
+
+\smallskip
+\noindent
+\textup{5.2.4.2.} \underline{La restricción del producto cup sobre
+$H^{n-1}(Y,\mathbb Q_\ell)$ al subespacio
+$\operatorname{Im}H^{n-1}(X,\mathbb Q_\ell)$ es no degenerada.}
+
+\noindent\underline{Demostración.}
+Se tiene
+\begin{equation}\tag{5.2.4.3}
+\left\{
+\begin{aligned}
+L_X&=\tau_*\tau^*,\\[1ex]
+L_Y&=\tau^*\tau_* \qquad\text{(por 4.2.11),}
+\end{aligned}
+\right.
+\end{equation}
+
+\pageoriginale
+
+y, en consecuencia,
+\begin{equation}\tag{5.2.4.4}
+L_X^{i+1}=\tau_*L_Y^i\tau^*.
+\end{equation}
+En el diagrama conmutativo
+\begin{equation}\tag{5.2.4.5}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-i-1}(X,\mathbb Q_\ell(j))
+  \arrow[r,"L_X^{i+1}"]\arrow[d,"\tau^*"]
+  &H^{n+i+1}(X,\mathbb Q_\ell(j+i+1))\\
+H^{n-1-i}(Y,\mathbb Q_\ell(j))
+  \arrow[r,"L_Y^i"]
+  &H^{n-1+i}(Y,\mathbb Q_\ell(j+i))\arrow[u,"\tau_*"']
+\end{tikzcd}
+\end{equation}
+$\tau^*$ es un isomorfismo para $i\geq1$ por Lefschetz débil, y
+$\tau_*$ es un isomorfismo por dualidad. Por tanto, $X$ satisface
+(LV) si y solo si $Y$ satisface (LV) y
+\begin{equation}\tag{5.2.4.6}
+L_X:H^{n-1}(X,\mathbb Q_\ell(j))
+\longrightarrow H^{n+1}(X,\mathbb Q_\ell(j+1))
+\end{equation}
+es un isomorfismo.
+
+Queda identificar (5.2.4.6) con 5.2.4.2. Sean
+$a,b\in H^{n-1}(X,\mathbb Q_\ell(j))$. Por dualidad de Poincaré sobre
+$X$, (5.2.4.6) equivale a la no degeneración de la forma bilineal
+\begin{equation}\tag{5.2.4.7}
+\begin{aligned}
+H^{n-1}(X,\mathbb Q_\ell(j))\times
+H^{n-1}(X,\mathbb Q_\ell(j))
+&\longrightarrow H^{2n}\bigl(X,\mathbb Q_\ell(
+  \sisi{2j+2}{2j+1})\bigr),\\
+(a,b)&\longmapsto a\,L_X(b).
+\end{aligned}
+\end{equation}
+Pero, por (5.2.4.3) y la fórmula de proyección,
+\[
+aL_X(b)=a\tau_*\tau^*(b)
+=\tau_*\bigl(\tau^*(a)\tau^*(b)\bigr).
+\]
+Esto demuestra la equivalencia.
+
+\pageoriginale
+
+\subsection*{Corolario 5.2.5.}
+\underline{Sea $X$ liso y proyectivo de dimensión $n$, y sea
+$\tau:Y\hookrightarrow X$ la inclusión de una sección hiperplana lisa.
+Supongamos que $X$ satisface (LV). Entonces, para $q\geq n$, la
+aplicación}
+\[
+\tau^*:H^q(X,\mathbb Q_\ell(j))
+\longrightarrow H^q(Y,\mathbb Q_\ell(j))
+\]
+\underline{es sobreyectiva.}
+
+\noindent\underline{Demostración.}
+Por (5.2.4.3), para $i\geq0$ se tiene
+\[
+L_Y^{i+1}=\tau^*L_X^i\tau_*,
+\]
+y, por tanto, el diagrama conmutativo
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^{n-i}(X,\mathbb Q_\ell(j+1))
+  \arrow[r,"L_X^i"]
+  &H^{\sisi{n-i}{n+i}}(X,\mathbb Q_\ell(j+i+1))
+    \arrow[d,"\tau^*"]\\
+H^{n-i-2}(Y,\mathbb Q_\ell(j))
+  \arrow[u,"\tau_*"']\arrow[r,"L_Y^{i+1}"]
+  &H^{n+i}(Y,\mathbb Q_\ell(j+i+1)).
+\end{tikzcd}
+\end{center}
+Esto da el resultado buscado.
+
+\pageoriginale
+
+\subsection*{Lema 5.2.6.}
+\underline{Sea $f:F\to B$ un morfismo liso y propio, con $B$ conexo.
+Sea $\mathcal O_F(1)$ un haz invertible relativamente amplio sobre
+$F$, y dotemos cada fibra geométrica $F_{\bar b}$ del haz invertible
+amplio inducido por $\mathcal O_F(1)$. Si una fibra geométrica
+satisface (LV), todas las demás también lo satisfacen.}
+
+\noindent\underline{Demostración.}
+Sea $\xi_F\in H^2(F,\mathbb Z_\ell(1))$ la primera clase de Chern de
+$\mathcal O_F(1)$. Esta clase y sus potencias
+$\xi_F^i\in H^{\sisi{ii}{2i}}(F,\mathbb Z_\ell(i))$ inducen, mediante
+el producto cup, los homomorfismos
+\begin{equation}\tag{5.2.6.1}
+\xi_F^i:R^{n-i}f_*\mathbb Q_\ell(j)
+\longrightarrow R^{n+i}f_*\mathbb Q_\ell(j+i),
+\end{equation}
+donde $n$ es la dimensión relativa de las fibras. Por cambio de base
+propio [SGA 4, XII, 5.2], todas las fibras geométricas satisfacen (LV)
+si y solo si todas las aplicaciones (5.2.6.1) son isomorfismos.
+Por el teorema de especialización [SGA 4, XVI, 2.2], los haces
+$R^if_*\mathbb Q_\ell(j)$ son constantes torcidos. Por tanto, las
+aplicaciones (5.2.6.1) son isomorfismos si y solo si lo son sobre un
+punto geométrico dado.
+
+\subsection*{Corolario 5.2.7.}
+\underline{Sea $X$ liso y proyectivo. Si una sección hiperplana lisa
+satisface (LV), toda sección hiperplana lisa lo satisface.}
+
+\noindent\underline{Demostración.}
+La familia universal de secciones hiperplanas lisas de $X$ satisface
+las hipótesis del \sisi{lema 5.2.5}{lema 5.2.6}.
+
+\pageoriginale
+
+\subsection*{5.3. La condición (A)}
+
+\subsubsection*{5.3.1.}
+Sea
+\[
+\rho:\widetilde X\longrightarrow\mathbb P^1
+\]
+la ``fibración'' asociada a un pincel cuyo eje corta transversalmente
+a $X$ y cuya fibra genérica se supone lisa.
+
+Sea $U$ un abierto no vacío de $\mathbb P^1$ sobre el cual $\rho$ es
+liso, y sea
+\begin{equation}\tag{5.3.1.1}
+\nu:U\hookrightarrow\mathbb P^1
+\end{equation}
+la inclusión. Como los haces $R^i\rho_*\mathbb Q_\ell(j)$ son
+\underline{constantes torcidos sobre $U$}, los haces
+\[
+\nu_*\nu^*R^i\rho_*\mathbb Q_\ell(j)
+\]
+son esencialmente \underline{independientes} de la elección de $U$;
+los homomorfismos canónicos de ``adjunción''
+\begin{equation}\tag{5.3.2}
+R^i\rho_*\mathbb Q_\ell(j)
+\longrightarrow
+\nu_*\nu^*R^i\rho_*\mathbb Q_\ell(j)
+\end{equation}
+también son independientes de la elección de $U$.
+
+\subsubsection*{5.3.3.}
+Obsérvese que, para un pincel \underline{arbitrario} de secciones
+hiperplanas, el teorema de Lefschetz débil implica que, para
+$i\leq n-2$, la inmersión
+\[
+\widetilde X\overset{(f\times\rho)}{\hookrightarrow}
+X\times\mathbb P^1
+\]
+da un isomorfismo de haces sobre $\mathbb P^1$
+\[
+R^i\rho_*\mathbb Q_\ell(j)
+\xleftarrow{\ \sim\ }
+H^i(X,\mathbb Q_\ell(j))_{\mathbb P^1},
+\qquad i\leq n-2.
+\]
+
+\pageoriginale
+
+En otras palabras, $R^i\rho_*\mathbb Q_\ell(j)$ es constante para
+$i\leq n-2$ y, con mayor razón, las aplicaciones (5.3.2) son
+isomorfismos para $i\leq n-2$.
+
+\subsubsection*{5.3.4.}
+La teoría local de los ciclos evanescentes y, en particular, la
+\underline{fórmula de Picard--Lefschetz} [SGA 7, XV, 3.4], muestra que,
+\underline{para un pincel de Lefschetz, los homomorfismos (5.3.2) son
+isomorfismos para $i\ne n$ y son sobreyectivos para $i=n$}.
+
+\subsubsection*{5.3.5.}
+Se dice que $\rho$, o el pincel del que procede,
+\underline{satisface la condición (A)} si \underline{todos} los
+homomorfismos (5.3.2) son isomorfismos; equivalentemente, si lo son
+para todo $i$ con $j=0$.
+
+Veremos más adelante (6.3, 6.4) que la condición (A) tiene una fuerte
+tendencia a cumplirse.
+
+\subsection*{Lema 5.4.}
+\underline{Supongamos que una sección hiperplana lisa de $X$ (y por
+tanto todas, por el corolario 5.2.7) satisface (LV), por ejemplo porque
+$X$ satisface (LV), cf. el lema 5.2.4, y supongamos que $\rho$ satisface
+la condición (A). Entonces toda fibra, incluidas las fibras singulares,
+satisface (LV), y los haces $R^i\rho_*\mathbb Q_\ell(j)$ son constantes
+para $i\ne n-1$.}
+
+\noindent\underline{Demostración.}
+Denotemos por
+\[
+L:R^i\rho_*\mathbb Q_\ell(j)
+\longrightarrow R^{i+2}\rho_*\mathbb Q_\ell(j+1)
+\]
+la multiplicación por
+$f^*c_1(\mathcal O_X(1))\in
+H^2(\widetilde X,\mathbb Z_\ell(1))$; fibra por fibra, esta es la
+operación considerada en (5.2.1). Por hipótesis, sobre $U$ se tiene
+
+\pageoriginale
+
+el isomorfismo
+\begin{equation}\tag{5.4.1}
+\nu^*(L^i):
+\nu^*R^{n-1-i}\rho_*\mathbb Q_\ell(j)
+\overset{\sim}{\longrightarrow}
+\nu^*R^{n-1+i}\rho_*\mathbb Q_\ell(j+i)
+\end{equation}
+para todo $i>0$ y todo $j$. Aplicando el funtor $\nu_*$ se obtienen los
+\underline{isomorfismos}
+\begin{equation}\tag{5.4.2}
+(\nu_*\nu^*)L^i:
+\nu_*\nu^*R^{n-1-i}\rho_*\mathbb Q_\ell(j)
+\overset{\sim}{\longrightarrow}
+\nu_*\nu^*R^{n-1+i}\rho_*\mathbb Q_\ell(j+i).
+\end{equation}
+En virtud de (A), estos se identifican con los morfismos
+\begin{equation}\tag{5.4.3}
+L^i:R^{n-1-i}\sisi{\rho^*}{\rho_*}\mathbb Q_\ell(j)
+\overset{\sim}{\longrightarrow}
+R^{n-1+i}\rho_*\mathbb Q_\ell(j+i).
+\end{equation}
+La conclusión resulta de 5.3.3.
+
+\subsubsection*{5.4.4.}
+Sea $Y$ una fibra lisa de
+$\rho:\widetilde X\to\mathbb P^1$. Por Lefschetz débil, la aplicación
+de restricción
+\[
+H^{n-1}(X,\mathbb Q_\ell(j))
+\overset{m^*}{\hookrightarrow}
+H^{n-1}(Y,\mathbb Q_\ell(j))
+\]
+es inyectiva. Vimos en 5.2.4 que, si $X$ satisface (LV), el producto
+cup sobre $H^{n-1}(Y,\mathbb Q_\ell(j))$ sigue siendo no degenerado al
+restringirlo a $m^*H^{n-1}(X,\mathbb Q_\ell(j))$. El complemento
+ortogonal de $H^{n-1}(X,\mathbb Q_\ell(j))$ en
+$H^{n-1}(Y,\mathbb Q_\ell(j))$ es, por tanto, un subespacio
+complementario; siguiendo la terminología clásica, se llama
+\underline{espacio de cohomología evanescente de $Y$}.
+
+Sea $\nu:U\hookrightarrow\mathbb P^1$ un abierto no vacío sobre el que
+$\rho$ es liso. El subhaz correspondiente de
+$\nu_*\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j)$, el
+\underline{haz de cohomología evanescente}
+$E^{n-1}\rho_*\mathbb Q_\ell(j)$ sobre $\mathbb P^1$, se define por
+
+\pageoriginale
+
+\begin{equation}\tag{5.4.4.1}
+E^{n-1}\rho_*\mathbb Q_\ell(j)
+=\nu_*\left\{
+\begin{array}{l}
+\text{el complemento ortogonal en }
+\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j)\text{ del}\\[1ex]
+\text{subhaz constante }H^{n-1}(X,\mathbb Q_\ell(j))_U
+\end{array}
+\right\}.
+\end{equation}
+Es claro que este haz es independiente de la elección de $U$.
+
+\subsection*{Lema 5.5.}
+\underline{Supongamos que $X$ satisface (LV) y que las aplicaciones
+(5.3.2) son isomorfismos para $i=n-1$, por ejemplo porque $\rho$
+procede de un pincel de Lefschetz, cf. 5.3.4. Entonces se tiene una
+descomposición en suma directa}
+\begin{equation}\tag{5.5.1}
+R^{n-1}\rho_*\mathbb Q_\ell(j)
+\simeq
+H^{n-1}(X,\mathbb Q_\ell(j))_{\mathbb P^1}
+\oplus E^{n-1}\rho_*\mathbb Q_\ell(j).
+\end{equation}
+\noindent\underline{Demostración.}
+Por (LV), sobre $U$ se tiene una descomposición
+\begin{equation}\tag{5.5.2}
+\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j)
+\simeq
+H^{n-1}(X,\mathbb Q_\ell(j))_U
+\oplus \nu^*E^{n-1}\rho_*\mathbb Q_\ell(j),
+\end{equation}
+a la que se aplica $\nu_*$.
+
+\subsection*{Teorema 5.6.}
+\underline{Sea $X$ una variedad proyectiva, lisa e irreducible que
+satisface (LV) (5.2.2). Sea $\{H_\tau\}$ un pincel de hiperplanos cuyo
+miembro genérico y cuyo eje cortan transversalmente a $X$, en $X_\eta$
+y en $\Delta$, respectivamente. Supongamos que la proyección
+$\rho:\widetilde X\to\mathbb P^1$ satisface la
+\sisi{condición (5.3.2)}{condición (A)}. Entonces:}
+\footnote{La impresión dice ``condición (5.3.2)'', pero (5.3.2) es la
+familia de aplicaciones de adjunción; la condición (A) se define a
+partir de ellas en 5.3.5.}
+
+\smallskip
+\noindent
+\textup{(5.6.1)}\quad
+\underline{la sucesión espectral de Leray}
+\[
+E_2^{p,q}=H^p(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+\Longrightarrow H^{\sisi{m+q}{p+q}}(\widetilde X,\mathbb Q_\ell)
+\]
+\underline{degenera.}
+\footnote{La convergencia impresa lleva $H^{m+q}$; el bigrado y el
+enunciado paralelo del teorema 5.6.8 exigen $H^{p+q}$.}
+
+\noindent
+\textup{(Nota.)}\quad
+\underline{Esto sigue siendo válido si, en vez de suponer que $X$
+satisface (LV), solo se supone que lo satisface una sección hiperplana
+lisa $Y$.}
+
+\pageoriginale
+
+\subsubsection*{5.6.2.}
+\underline{Denotemos por $\eta$ el punto genérico de $\mathbb P^1$,
+por $\bar\eta$ el punto genérico geométrico, por $X_{\bar\eta}$ la fibra
+genérica geométrica de $\rho$, y por $\pi$ el grupo de Galois de
+$k(\bar\eta)/k(\eta)$.}
+
+\underline{Para $q\ne n-1$ se tienen isomorfismos canónicos}
+\begin{align}
+E_2^{\sisi{o}{0},q}
+ &=H^0(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+ \simeq H^q(X_{\bar\eta},\mathbb Q_\ell),
+ \tag{5.6.2.1}\\
+E_2^{2,q}
+ &=H^2(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+ \simeq H^q(X_{\bar\eta},\mathbb Q_\ell(-1)),
+ \tag{5.6.2.2}\\
+E_2^{p,q}
+ &=H^p(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)=0,
+ \qquad p\ne0,2.
+ \tag{5.6.2.3}
+\end{align}
+\underline{Para $q=n-1$ se tiene}
+\begin{align}
+E_2^{0,n-1}
+ &=H^0(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+ \simeq H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)^\pi
+ \simeq H^{n-1}(X,\mathbb Q_\ell),
+ \tag{5.6.2.4}\\
+E_2^{2,n-1}
+ &=H^2(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+ \simeq H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(-1))^\pi
+ \simeq H^{n-1}(X,\mathbb Q_\ell(-1)).
+ \tag{5.6.2.5}
+\end{align}
+\underline{(El valor restante $E_2^{1,n-1}$ se hallará en 5.7.)}
+
+\noindent\underline{Demostración.}
+Por (5.4.3), se aplica el teorema 1.1 y se obtiene (5.6.1). Las tres
+primeras fórmulas resultan de que $R^q\rho_*\mathbb Q_\ell$ es constante
+para $q\ne n-1$ (lema 5.4); para (5.6.2.3) se usa además que
+$\mathbb P^1$ es simplemente conexa.
+
+\pageoriginale
+
+El primer isomorfismo de (5.6.2.4) resulta de
+\[
+R^{n-1}\rho_*\mathbb Q_\ell
+\overset{\sim}{\longrightarrow}
+\nu_*\nu^*R^{n-1}\rho_*\mathbb Q_\ell.
+\]
+En efecto,
+\[
+H^0(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+\simeq H^0(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell),
+\]
+y $\nu^*R^{n-1}\rho_*\mathbb Q_\ell$ es un haz constante torcido sobre
+$U$, por lo que corresponde al $\pi$-módulo
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$. El segundo isomorfismo de
+(5.6.2.4) resulta de la degeneración junto con el corolario 5.1.6.
+
+Pasemos a (5.6.2.5). Sea $F^\bullet$ la filtración sobre
+$H^\bullet(\widetilde X,\mathbb Q_\ell)$ definida por la sucesión
+espectral. Por degeneración,
+$F^2H^{n+1}(\widetilde X,\mathbb Q_\ell)=E_2^{2,n-1}$ y
+$\operatorname{gr}^1H^{n+1}(\widetilde X,\mathbb Q_\ell)=E_2^{1,n}=0$.
+Por tanto,
+\begin{align}
+E_2^{2,n-1}
+ &=F^1H^{n+1}(\widetilde X,\mathbb Q_\ell) \notag\\
+ &=\operatorname{Ker}\!\left(
+ H^{n+1}(\widetilde X,\mathbb Q_\ell)
+ \longrightarrow H^0(\mathbb P^1,R^{n+1}\rho_*\mathbb Q_\ell)
+ \right) \notag\\
+ &\overset{(A)}{=}
+ \operatorname{Ker}\!\left(
+ k^*:H^{n+1}(\widetilde X,\mathbb Q_\ell)
+ \longrightarrow H^{n+1}(X_{\bar\eta},\mathbb Q_\ell)
+ \right).
+\tag{5.6.3}
+\end{align}
+Por (5.1.2), $k^*$ se escribe
+\begin{equation}\tag{5.6.4}
+H^{n+1}(X,\mathbb Q_\ell)
+\oplus H^{n-1}(\Delta,\mathbb Q_\ell(-1))
+\xrightarrow{\ m^*+h_*\ }
+H^{n+1}(X_{\bar\eta},\mathbb Q_\ell).
+\end{equation}
+Usando (5.2.2.3), se convierte en
+\begin{equation}\tag{5.6.5}
+\begin{split}
+&\operatorname{Prim}^{n-1}(X,\mathbb Q_\ell(-1)\sisi{}{)}
+\oplus H^{n-3}(X,\mathbb Q_\ell(-2))
+\oplus H^{n-1}(\Delta,\mathbb Q_\ell(-1))\\
+&\hspace{35mm}\xrightarrow{\ m^*L+m^*L^2\sisi{}{+}h_*\ }
+H^{n+1}(X_{\bar\eta},\mathbb Q_\ell\sisi{}{)}.
+\end{split}
+\end{equation}
+\footnote{La impresión de (5.6.5) omite varios paréntesis finales y el
+signo más ante la aplicación $h_*$ del tercer sumando. Los tres
+sumandos fuente y (5.6.4) fuerzan la aplicación de tres términos.}
+
+La aplicación
+\[
+H^{n-3}(X,\mathbb Q_\ell(-2))
+\xrightarrow{\ m^*L^2\ }
+H^{n+1}(X_{\bar\eta},\mathbb Q_\ell)
+\]
+es un isomorfismo por (LV), ya que
+$m^*L_X^2=L_{X_{\bar\eta}}^2m^*$. De ahí que el núcleo de
+\sisi{(5.6.8)}{(5.6.5)} se identifique, mediante
+$\operatorname{pr}_1\oplus\operatorname{pr}_3$, con
+
+\pageoriginale
+
+\[
+\operatorname{Prim}^{n-1}(X,\mathbb Q_\ell(-1))
+\oplus H^{n-1}(\Delta,\mathbb Q_\ell(-1)).
+\]
+Por (LV) y Lefschetz débil,
+\[
+H^{n-1}(\Delta,\mathbb Q_\ell(-1))
+\xleftarrow[\sim]{\,L\,}
+H^{n-3}(\Delta,\mathbb Q_\ell(-2))
+\xleftarrow[\sim]{\ }
+H^{n-3}(X,\mathbb Q_\ell(-2)).
+\]
+Junto con (5.2.2.3), esto da
+\begin{equation}\tag{5.6.6}
+E_2^{2,n-1}\simeq H^{n-1}(X,\mathbb Q_\ell(-1)).
+\end{equation}
+El otro isomorfismo de (5.6.2.5) se deduce torciendo (5.6.2.4).
+
+\subsubsection*{Observación 5.6.7.}
+La afirmación (5.6.1) puede demostrarse bajo hipótesis bastante más
+débiles, como me explicó Deligne:
+
+\subsection*{Teorema 5.6.8.}
+\underline{Sea $X$ liso de dimensión $n$ sobre un cuerpo
+algebraicamente cerrado $k$, y sea}
+\[
+\rho:X\longrightarrow\mathbb P^1_k
+\]
+\underline{un morfismo proyectivo cuya fibra genérica es lisa.
+Supongamos que:}
+
+\smallskip
+\noindent
+\textup{(5.6.8.1)}\quad
+\underline{la fibra genérica geométrica, dotada de la restricción del
+haz invertible relativamente amplio $\mathcal O_X(1)$, satisface (LV);}
+
+\smallskip
+\noindent
+\textup{(5.6.8.2)}\quad
+\underline{las aplicaciones (5.3.2) son isomorfismos para $i\ne n$ y
+son sobreyectivas para $i=n$ (condición que se satisface, en
+particular, si $\rho$ procede de un pincel de Lefschetz, cf. 5.3.4).
+Entonces la sucesión espectral de Leray}
+\[
+E_2^{p,q}=H^p(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+\Longrightarrow H^{p+q}(X,\mathbb Q_\ell)
+\]
+\underline{degenera.}
+
+\smallskip
+\noindent
+\underline{Observación.}
+El mismo teorema, con la misma demostración, vale sustituyendo
+$\mathbb P^1_k$ por una curva proyectiva, lisa e irreducible cualquiera.
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Para la demostración identificaremos el haz $\mathbb Q_\ell(1)$ con
+$\mathbb Q_\ell$, lo que es posible porque $k$ es algebraicamente
+cerrado. Podemos suponer que $X$ es conexo y que $\rho$ es
+\underline{sobreyectivo}; por tanto, es plano, con fibras de dimensión
+$n-1$. Sea
+\[
+\xi_X\in H^2(X,\mathbb Q_\ell)
+\]
+la primera clase de Chern de $\mathcal O_X(1)$, y sea
+\[
+\nu:U\hookrightarrow\mathbb P^1
+\]
+la inclusión de un abierto de lisura de $\rho$. Por (5.6.8.1) y el
+lema 5.2.6, las aplicaciones de producto cup
+\[
+\xi_X^i:
+\nu^*R^{n-1-i}\rho_*\mathbb Q_\ell
+\longrightarrow
+\nu^*R^{n-1+i}\rho_*\mathbb Q_\ell
+\]
+son isomorfismos para $i\geq1$. Aplicando $\nu_*$ y usando (5.6.8.2)
+se obtienen, para $i\geq2$, los isomorfismos
+\begin{equation}\tag{5.6.8.3}
+\xi_X^i:R^{n-1-i}\rho_*\mathbb Q_\ell
+\overset{\sim}{\longrightarrow}
+R^{n-1+i}\rho_*\mathbb Q_\ell,
+\end{equation}
+y, para $i=1$, el isomorfismo
+\begin{equation}\tag{5.6.8.4}
+\xi_X:R^{n-2}\rho_*\mathbb Q_\ell
+\overset{\sim}{\longrightarrow}
+\nu_*\nu^*R^n\rho_*\mathbb Q_\ell.
+\end{equation}
+Este último se factoriza como
+\begin{equation}\tag{5.6.8.5}
+R^{n-2}\rho_*\mathbb Q_\ell
+\xrightarrow{\ \xi_X\ }
+R^n\rho_*\mathbb Q_\ell
+\xrightarrow{\ \text{adjunción}\ }
+\nu_*\nu^*R^n\rho_*\mathbb Q_\ell.
+\end{equation}
+
+\pageoriginale
+
+Por consiguiente, se tiene una descomposición canónica
+\begin{equation}\tag{5.6.8.6}
+R^n\rho_*\mathbb Q_\ell
+\xleftarrow[\sim]{\ \xi_X+\operatorname{incl}\ }
+R^{n-2}\rho_*\mathbb Q_\ell\oplus
+\operatorname{Local}^n\mathbb Q_\ell,
+\end{equation}
+donde
+\begin{equation}\tag{5.6.8.7}
+\operatorname{Local}^n\mathbb Q_\ell
+=\operatorname{Ker}\!\left(
+R^n\rho_*\mathbb Q_\ell
+\longrightarrow\nu_*\nu^*R^n\rho_*\mathbb Q_\ell
+\right).
+\end{equation}
+El haz $\operatorname{Local}^n\mathbb Q_\ell$ está concentrado en los
+puntos de $\mathbb P^1$ donde la fibra de $\rho$ no es lisa.
+Combinando este hecho con (5.6.8.3), se obtiene
+\begin{equation}\tag{5.6.8.8}
+\xi_X^{\sisi{1}{i+1}}:
+H^j(\mathbb P^1,R^{n-2-i}\rho_*\mathbb Q_\ell)
+\overset{\sim}{\longrightarrow}
+H^j(\mathbb P^1,R^{\sisi{n-1+i}{n+i}}\rho_*\mathbb Q_\ell),
+\qquad \sisi{i\geq1,\ j\geq1}{i\geq0,\ j\geq1}.
+\end{equation}
+\footnote{La impresión de (5.6.8.8) tiene un desplazamiento impar de
+grado, etiqueta la aplicación solo como $\xi_X$ y comienza en $i=1$.
+La forma corregida viene impuesta por (5.6.8.3), (5.6.8.6), la flecha
+inferior del cuadrado siguiente y la especialización posterior
+$E_2^{1,n-2}\simeq E_2^{1,n}$.}
+
+Demostremos ahora la degeneración. Como $E_2^{p,q}=0$ salvo para
+$p=0,1,2$, basta probar que todos los diferenciales
+\[
+d_2:H^0(\mathbb P^1,R^i\rho_*\mathbb Q_\ell)
+\longrightarrow H^2(\mathbb P^1,R^{i-1}\rho_*\mathbb Q_\ell)
+\]
+son nulos. Para $q\leq n-1$, pongamos
+\begin{equation}\tag{5.6.8.9}
+\operatorname{Prim}(E_2^{p,q})
+=\operatorname{Ker}\!\left(
+\xi_X^{n-q}:E_2^{p,q}\longrightarrow E_2^{p,2n-q}
+\right).
+\end{equation}
+Las fórmulas (5.6.8.3) y (5.6.8.6), y en particular la inyectividad de
+\[
+\xi_X:H^p(\mathbb P^1,R^{n-2}\rho_*\mathbb Q_\ell)
+\longrightarrow H^p(\mathbb P^1,R^n\rho_*\mathbb Q_\ell),
+\]
+dan, para $q\leq n-1$, la descomposición
+\begin{equation}\tag{5.6.8.10}
+E_2^{p,q}
+\xleftarrow[\sim]{\ 1+\xi_X+\xi_X^2+\cdots\ }
+\operatorname{Prim}(E_2^{p,q})
+\oplus\operatorname{Prim}(E_2^{p,q-2})
+\oplus\operatorname{Prim}(E_2^{p,q-4})
+\oplus\cdots.
+\end{equation}
+
+\pageoriginale
+
+Para probar que
+\[
+d_2^{p,q}=0\qquad(q\leq n-1),
+\]
+consideremos el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\operatorname{Prim}(E_2^{p,q})
+  \arrow[r,"\xi_X^{n-q}=0"]
+  \arrow[d,"d_2^{p,q}"]
+&
+E_2^{p,2n-q}
+  \arrow[d,"d_2^{p,2n-q}"]
+\\
+E_2^{p+2,q-1}
+  \arrow[r,"\xi_X^{n-1-(q-1)}","\sim"']
+&
+E_2^{p+2,2n-q-1}.
+\end{tikzcd}
+\]
+La flecha inferior es un isomorfismo por (5.6.8.8). El diagrama
+muestra que $d_2^{p,q}$ anula $\operatorname{Prim}(E_2^{p,q})$ para
+$q\leq n-1$, y (5.6.8.10) muestra entonces que $d_2$ anula
+$E_2^{p,q}$ para $q\leq n-1$. Por (5.6.8.3), también lo anula para
+$q\geq n+1$. Solo queda demostrar que
+\[
+d_2^{0,n}:E_2^{0,n}\longrightarrow E_2^{2,n-1}
+\]
+es nulo, o equivalentemente que
+\begin{equation}\tag{5.6.8.12}
+\dim E_3^{2,n-1}=\dim E_2^{2,n-1}.
+\end{equation}
+Ya hemos probado
+\begin{equation}\tag{5.6.8.13}
+\dim E_2^{p,q}=\dim E_3^{p,q}
+\qquad\text{para }(p,q)\ne(0,n),(2,n-1),
+\end{equation}
+y, por razones de grado,
+\begin{equation}\tag{5.6.8.14}
+E_3^{p,q}=E_\infty^{p,q}
+\qquad\text{para todo par }(p,q).
+\end{equation}
+
+\pageoriginale
+
+De ello resulta
+\[
+b_i(X)=\dim H^i(X,\mathbb Q_\ell)
+=\sum_{p+q=i}\dim E_3^{p,q}.
+\]
+Teniendo en cuenta (5.6.8.13), se obtiene
+\begin{equation}\tag{5.6.8.15}
+b_{n-1}(X)
+=\dim E_2^{\sisi{c}{0},n-1}
+ +\dim E_2^{1,n-2}
+ +\sisi{\dim_2^{2,n-3}}{\dim E_2^{2,n-3}}
+\end{equation}
+y
+\begin{equation}\tag{5.6.8.16}
+b_{n+1}(X)
+=\dim E_2^{0,n+1}
+ +\dim E_2^{1,n}
+ +\dim E_3^{2,n-1}.
+\end{equation}
+La dualidad de Poincaré da
+\begin{equation}\tag{5.6.8.17}
+b_{n-1}(X)=b_{n+1}(X).
+\end{equation}
+Por (5.6.8.8),
+\[
+\dim E_2^{1,n}=\dim E_2^{1,n-2}.
+\]
+Así, (5.6.8.17) muestra que basta conocer
+\begin{align}
+\dim E_2^{2,n-3}&=\dim E_2^{0,n+1},
+\tag{5.6.8.18}\\
+\dim E_2^{0,n-1}&=\dim E_2^{2,n-1}.
+\tag{5.6.8.19}
+\end{align}
+Estas fórmulas resultan de (5.6.8.2), de la dualidad de Poincaré para
+las fibras lisas de $\rho$ y del lema siguiente, aplicado a
+$\mathbb P^1$ y a los haces $R^{n-3}\rho_*\mathbb Q_\ell$ y
+$R^{n-1}\rho_*\mathbb Q_\ell$.
+
+\pageoriginale
+
+\subsection*{Lema 5.6.9.}
+\underline{Sea $D$ una curva lisa, conexa y propia sobre un cuerpo
+algebraicamente cerrado $k$. Sea $i:\eta\hookrightarrow D$ la inclusión
+del punto genérico, y sea $F$ un $\mathbb Q_\ell$-haz constructible
+sobre $D$ tal que
+$F\overset{\sim}{\longrightarrow}i_*i^*F$. Entonces}
+\[
+H^2(D,F)\simeq H^0(D,\check F(-1))^\vee,
+\]
+\underline{donde $\check F\simeq i_*((i^*F)^\vee)$.}
+
+\subsection*{Corolario 5.6.10.}
+\textup{(Utiliza Picard--Lefschetz.)}
+\underline{Sea $\rho:\widetilde X\to\mathbb P^1$ la ``fibración''
+procedente de un pincel de Lefschetz, y supongamos que las fibras lisas
+satisfacen (LV). Entonces}
+\begin{equation}\tag{5.6.10.1}
+H^i(X_{\bar\eta},\mathbb Q_\ell)^\pi
+=\operatorname{Im}\!\left(
+H^i(X,\mathbb Q_\ell)\longrightarrow
+H^i(X_{\bar\eta},\mathbb Q_\ell)
+\right).
+\end{equation}
+\noindent\underline{Demostración.}
+Por 5.3.4, que utiliza la fórmula de Picard--Lefschetz, el teorema
+5.6.8 se aplica y da
+\[
+H^i(X_{\bar\eta},\mathbb Q_\ell)^\pi
+=\operatorname{Im}\!\left(
+H^i(\widetilde X,\mathbb Q_\ell)\longrightarrow
+H^i(X_{\bar\eta},\mathbb Q_\ell)
+\right).
+\]
+Queda comprobar que $H^i(X,\mathbb Q_\ell)$ y
+$H^i(\widetilde X,\mathbb Q_\ell)$ tienen la misma imagen en
+$H^i(X_{\bar\eta},\mathbb Q_\ell)$. Esto vale para $i\leq n-1$ por el
+corolario 5.1.6, y para $i\geq n$ por el corolario 5.2.5.
+
+Pasemos ahora al cálculo más importante.
+
+\subsection*{Teorema 5.7.}
+\underline{Bajo las hipótesis de 5.6, pongamos}
+\[
+\begin{aligned}
+E^{n-2}(\Delta,\mathbb Q_\ell(j))
+&=\underline{\text{el complemento ortogonal en }}
+H^{n-2}(\Delta,\mathbb Q_\ell(j))\\
+&\qquad\underline{\text{de la imagen de }}
+H^{n-2}(X,\mathbb Q_\ell(j)).
+\end{aligned}
+\]
+\underline{Esta es la parte ``evanescente'' de la cohomología de
+$\Delta$, cf. 5.4.4. Entonces se tiene una descomposición en suma
+directa} (cf. 4.2)
+\begin{equation}\tag{5.7.1}
+E_2^{1,n-1}
+=H^1(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell)
+\xleftarrow[\;f^*+i_*g^*\;]{\sim}
+\operatorname{Prim}^n(X,\mathbb Q_\ell)
+\oplus E^{n-2}(\Delta,\mathbb Q_\ell(-1)).
+\end{equation}
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Por degeneración,
+\[
+E_2^{1,n-1}\simeq
+F^1H^n(\widetilde X,\mathbb Q_\ell)
+\big/F^2H^n(\widetilde X,\mathbb Q_\ell).
+\]
+Por (A),
+\begin{equation}\tag{5.7.2}
+F^1H^n(\widetilde X,\mathbb Q_\ell)
+=\ker\!\left(
+k^*:H^n(\widetilde X,\mathbb Q_\ell)\longrightarrow
+H^n(X_{\bar\eta},\mathbb Q_\ell)
+\right),
+\end{equation}
+lo que, por (5.1.2), se identifica con
+\[
+\ker\!\left(
+H^n(X,\mathbb Q_\ell)
+\oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1))
+\xrightarrow{\;m^*+\sisi{h^*}{h_*}\;}
+H^n(X_{\bar\eta},\mathbb Q_\ell)
+\right).
+\]
+Bajo (LV), $k^*$ también se escribe
+\begin{equation}\tag{5.7.3}
+\operatorname{Prim}^n(X,\mathbb Q_\ell)
+\oplus H^{n-2}(X,\mathbb Q_\ell(-1))
+\oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1))
+\xrightarrow{\;m^*+m^*L+h_*\;}
+H^n(X_{\bar\eta},\mathbb Q_\ell),
+\end{equation}
+y la aplicación central
+\begin{equation}\tag{5.7.4}
+H^{n-2}(X,\mathbb Q_\ell(-1))
+\xrightarrow{\;m^*L\;}
+H^n(X_{\bar\eta},\mathbb Q_\ell)
+\end{equation}
+es un isomorfismo (cf. 5.2.3 y (5.2.2.3)). Denotando por
+\begin{equation}\tag{5.7.5}
+\wp:H^n(X,\mathbb Q_\ell)\longrightarrow
+\operatorname{Prim}^n(X,\mathbb Q_\ell)
+\end{equation}
+la proyección sobre la parte primitiva, obtenemos
+\begin{equation}\tag{5.7.6}
+F^1H^n(\widetilde X,\mathbb Q_\ell)
+\xrightarrow[\;\wp f_*\oplus(-g_*\sisi{2^*}{i^*})\;]{\sim}
+\operatorname{Prim}^n(X,\mathbb Q_\ell)
+\oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1)).
+\end{equation}
+\footnote{La etiqueta impresa de (5.7.6) lleva $2^*$ tras $g_*$.
+La descomposición inversa de la explosión (4.2.2), utilizada aquí,
+exige $i^*$.}
+Por (5.6.2.2) y degeneración,
+\begin{equation}\tag{5.7.7}
+F^2H^n(\widetilde X,\mathbb Q_\ell)
+\simeq E_2^{2,n-2}
+\simeq H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1)).
+\end{equation}
+
+\pageoriginale
+
+Por otra parte, la inclusión de
+$F^2H^{\sisi{N}{n}}(\widetilde X,\mathbb Q_\ell)
+=H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))$
+en $H^n(\widetilde X,\mathbb Q_\ell)$ es la aplicación de Gysin $k_*$.
+En rigor, la aplicación de Gysin solo está definida como una aplicación
+\[
+\sisi{H^{i-2}(X_{\bar\eta},\mathbb Q_\ell)}
+      {H^{i-2}(X_{\bar\eta},\mathbb Q_\ell(-1))}
+\longrightarrow
+H^i(X\times_k k(\bar\eta),\mathbb Q_\ell),
+\]
+pero, en virtud del isomorfismo canónico (SGA 4, XII, 5.4)
+\[
+H^i(X,\mathbb Q_\ell)\xrightarrow{\sim}
+H^i(X\otimes_kK,\mathbb Q_\ell)
+\]
+para todo cuerpo algebraicamente cerrado $K/k$, esperamos que el lector
+nos permita este abuso.
+
+Por (5.1.3), la aplicación de Gysin se expresa como
+\begin{equation}\tag{5.7.8}
+H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+\xrightarrow{\;m_*\oplus(-h^*)\;}
+H^n(X,\mathbb Q_\ell)
+\oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1)).
+\end{equation}
+Por Lefschetz débil,
+\[
+m_*H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+=m_*m^*H^{n-2}(X,\mathbb Q_\ell(-1))
+=L_XH^{n-2}(X,\mathbb Q_\ell(-1))
+\]
+es el complemento ortogonal de la parte primitiva. Por tanto, se tiene
+el diagrama conmutativo
+\begin{equation}\tag{5.7.9}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+F^2H^n(\widetilde X,\mathbb Q_\ell)
+  \arrow[r,hook]
+& F^1H^n(\widetilde X,\mathbb Q_\ell)
+  \arrow[d,"\wp f_*\oplus(-g_*i^*)","\wr"']
+\\
+H^{n-2}(X_{\bar\eta},\mathbb Q_\ell(-1))
+  \arrow[u,"k_*"',"\wr"]
+  \arrow[r,"0\oplus h^*"]
+& \operatorname{Prim}^n(X,\mathbb Q_\ell)
+  \oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1)).
+\end{tikzcd}
+\end{equation}
+Esto demuestra (5.7.1).
+
+\pageoriginale
+
+\subsection*{Observación 5.7.10.}
+En 5.7, la hipótesis (A) puede sustituirse por la hipótesis más débil
+de que, para $q=n$, las aplicaciones
+\begin{equation}\tag{5.7.11}
+H^q(\widetilde X,\mathbb Q_\ell)\longrightarrow
+H^0(\mathbb P^1,R^q\rho_*\mathbb Q_\ell)
+\end{equation}
+y
+\begin{equation}\tag{5.7.12}
+H^q(\widetilde X,\mathbb Q_\ell)\longrightarrow
+H^q(X_{\bar\eta},\mathbb Q_\ell)
+\end{equation}
+tengan el mismo núcleo, como muestra la demostración. Sin esta
+condición, la conclusión puede fallar; cf. 5.9.
+
+\section*{5.8. El homomorfismo de Griffiths}
+
+\subsection*{5.8.1.}
+Sea $f:T\to S$ un morfismo de esquemas. La sucesión espectral de Leray
+define una filtración $(F^i)$ sobre los grupos
+$H^\bullet(T,\mathbb Q_\ell(j))$. Se define
+\begin{equation}\tag{5.8.1.1}
+\operatorname{Prim}^\bullet(T/S,\mathbb Q_\ell(j))
+=F^1H^\bullet(T,\mathbb Q_\ell(j)).
+\end{equation}
+Como la sucesión espectral de Leray está situada en el primer cuadrante,
+se tiene
+\begin{equation}\tag{5.8.1.2}
+E_\infty^{0,\bullet}\lhook\joinrel\longrightarrow E_2^{0,\bullet},
+\end{equation}
+y, por tanto,
+\begin{equation}\tag{5.8.1.3}
+\operatorname{Prim}^\bullet(T/S,\mathbb Q_\ell(j))
+=\ker\!\left(
+H^\bullet(T,\mathbb Q_\ell(j))
+\longrightarrow H^0(S,R^\bullet f_*\mathbb Q_\ell(j))
+\right).
+\end{equation}
+Por la misma razón,
+\begin{equation}\tag{5.8.1.4}
+E_\infty^{1,\bullet}\lhook\joinrel\longrightarrow E_2^{1,\bullet}.
+\end{equation}
+
+\pageoriginale
+
+El compuesto
+\begin{equation}\tag{5.8.1.5}
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Prim}^i(T/S,\mathbb Q_\ell(j))
+=F^1H^i(T,\mathbb Q_\ell(j))
+  \arrow[r]
+&
+\operatorname{gr}^1H^i(T,\mathbb Q_\ell(j))
+=E_\infty^{1,i-1}
+  \arrow[d,hook]
+\\
+{}
+&
+H^1(S,R^{i-1}f_*\mathbb Q_\ell(j))
+=E_2^{1,i-1}
+\end{tikzcd}
+\end{equation}
+se denotará
+\begin{equation}\tag{5.8.1.6}
+U^i:\operatorname{Prim}^i(T/S,\mathbb Q_\ell(j))
+\longrightarrow
+H^1(S,\sisi{R^{\bullet-1}}{R^{i-1}}f_*\mathbb Q_\ell(j)).
+\end{equation}
+\footnote{La impresión pone un punto en la línea de base en lugar del
+índice de grado de (5.8.1.6). La fuente y el blanco de (5.8.1.5)
+determinan $R^{i-1}f_*$.}
+
+\subsection*{5.8.2.}
+Sea ahora $X$ proyectivo, liso e irreducible, y sea $D=\{H_\tau\}$ un
+pincel de hiperplanos cuyo miembro genérico y cuyo eje cortan
+transversalmente a $X$. Sea
+$U\xrightarrow{\nu}\mathbb P^1$ un abierto no vacío sobre el que la
+proyección $\rho:\widetilde X\to\mathbb P^1$ es lisa, y pongamos
+$\widetilde X|_U=\widetilde X\times_{\mathbb P^1}U$. Se tiene
+\begin{equation}\tag{5.8.2.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+{}
+&
+\widetilde X
+  \arrow[dl,"f"']
+  \arrow[d,"\rho"]
+&
+\widetilde X|_U
+  \arrow[l,"\alpha"']
+  \arrow[d,"\rho|_U"]
+\\
+X
+&
+\mathbb P^1
+&
+U\arrow[l,"\nu"'].
+\end{tikzcd}
+\end{equation}
+
+\pageoriginale
+
+Como $\rho|_U:\widetilde X|_U\to U$ es propio y liso, el teorema de
+especialización para la cohomología (SGA 4 XVI, 2.2) da
+\begin{equation}\tag{5.8.2.2}
+\operatorname{Prim}^\bullet(\widetilde X|_U/U,\mathbb Q_\ell(j))
+=\ker\!\left(
+H^\bullet(\widetilde X|_U,\mathbb Q_\ell(j))
+\longrightarrow H^\bullet(X_{\bar\eta},\mathbb Q_\ell(j))
+\right).
+\end{equation}
+Por consiguiente, en virtud de (5.2.3.1), se tiene:
+
+\subsection*{Proposición 5.8.2.3.}
+\underline{Bajo las hipótesis de 5.8.2, para
+$x\in H^n(X,\mathbb Q_\ell(j))$, son equivalentes:}
+\begin{equation}\tag{5.8.2.4}
+x\in\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+\quad\Longleftrightarrow\quad
+\alpha^*f^*(x)\in
+\operatorname{Prim}^n(\widetilde X|_U/U,\mathbb Q_\ell(j)).
+\end{equation}
+\underline{Si además $\rho$ satisface la hipótesis (A) de 5.3,
+entonces}
+\begin{equation}\tag{5.8.2.5}
+x\in\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+\quad\Longleftrightarrow\quad
+f^*(x)\in
+\operatorname{Prim}^n(\widetilde X/\mathbb P^1,\mathbb Q_\ell(j)).
+\end{equation}
+
+\noindent\underline{Demostración.}
+La fórmula (5.8.2.4) ya está demostrada. Para (5.8.2.5), la hipótesis
+(A) implica
+\[
+H^0(\mathbb P^1,R^n\rho_*\mathbb Q_\ell(j))
+\xrightarrow[\nu^*]{\sim}
+H^0(U,\nu^*R^n\rho_*\mathbb Q_\ell(j)).
+\]
+Así, \sisi{[}{}$f^*(x)$ es primitivo relativamente a
+$\mathbb P^1\sisi{\alpha}{}$\sisi{]}{}
+\sisi{implica que}{si y solo si}
+$\alpha^*f^*(\sisi{\alpha}{x})$ es primitivo relativamente a $U$.
+\footnote{La última implicación impresa contiene un $\alpha$ extraño
+tras $\mathbb P^1$ y sustituye la clase $x$ por $\alpha$ en
+$\alpha^*f^*(x)$. La equivalencia precedente y el isomorfismo de
+restricción determinan la frase corregida.}
+
+\subsection*{Definición 5.8.3.}
+\underline{En la situación de 5.8.2, el homomorfismo compuesto}
+\begin{equation}\tag{5.8.3.1}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+  \arrow[r,"\alpha^*f^*"]
+  \arrow[dr,"\operatorname{Grif}"']
+&
+\operatorname{Prim}^n(\widetilde X|_U/U,\mathbb Q_\ell(j))
+  \arrow[d,"U^n"]
+\\
+{}
+&
+H^1(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j))
+\end{tikzcd}
+\end{equation}
+\underline{se llama homomorfismo de Griffiths para $X$, relativo al
+pincel dado $D$.}
+\footnote{La tinta junto a la flecha vertical no es legible de forma
+independiente. La aplicación queda, sin embargo, determinada por
+(5.8.1.6): la etiqueta de grado $n$ es $U^n$.}
+
+\pageoriginale
+
+Añadamos al diagrama (5.8.2.1) la familia constante sobre $U$ de fibra
+$X$:
+\begin{equation}\tag{5.8.3.2}
+\begin{tikzcd}[row sep=large,column sep=large]
+{}
+&
+\widetilde X
+  \arrow[dl,"f"']
+  \arrow[dd]
+&
+\widetilde X|_U
+  \arrow[l,"\alpha"']
+  \arrow[r,"f\times\rho|_U"]
+  \arrow[dd,"\rho|_U"]
+&
+X\times U
+  \arrow[ddl,"\operatorname{pr}_2"]
+\\
+X&{}&{}&{}
+\\
+{}
+&
+\mathbb P^1
+&
+U\arrow[l,"\nu"']
+&
+.
+\end{tikzcd}
+\end{equation}
+
+\subsection*{Teorema 5.8.4.}
+\underline{Supongamos que $X$ satisface (LV) (5.2.2), y que $\rho$
+satisface la hipótesis (A) (5.3). Entonces, para todo abierto no vacío
+$U\xrightarrow{\nu}\mathbb P^1$ de lisura de $\rho$, el homomorfismo de
+Griffiths ``módulo la parte fija'', que por definición es el compuesto}
+\begin{equation}\tag{5.8.4.1}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,row sep=huge,column sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+  \arrow[r,"\operatorname{Grif}"]
+\&
+H^1(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j))
+  \arrow[d]
+\\
+{}
+\&
+H^1(U,\sisi{}{\nu^*}E^{n-1}\rho_*\sisi{(}{}\mathbb Q_\ell(j))
+\simeq
+\dfrac{H^1(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j))}
+{(f\times\rho|_U)^*
+ H^1(U,H^{n-1}(X,\mathbb Q_\ell(j))_U)}
+\end{tikzcd}}
+\end{equation}
+\underline{es inyectivo.}
+\footnote{La impresión omite $\nu^*$ del haz inferior en (5.8.4.1)
+y deja sin cerrar su paréntesis de coeficientes. (5.8.4.3) y el mismo
+nodo inferior de (5.8.4.4) dan la lectura corregida.}
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Por (5.5.1), sobre $\mathbb P^1$ se tiene
+\begin{equation}\tag{5.8.4.2}
+R^{n-1}\rho_*\mathbb Q_\ell(j)
+\simeq
+H^{n-1}(X,\mathbb Q_\ell(j))_{\mathbb P^1}
+\oplus E^{n-1}\rho_*\mathbb Q_\ell(j),
+\end{equation}
+y sobre $U$,
+\begin{equation}\tag{5.8.4.3}
+\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j)
+\simeq
+H^{n-1}(X,\mathbb Q_\ell(j))_U
+\oplus \nu^*E^{n-1}\rho_*\mathbb Q_\ell(j).
+\end{equation}
+Esto permite reescribir (5.8.4.1) como
+\begin{equation}\tag{5.8.4.4}
+\begin{tikzcd}[row sep=huge,column sep=large]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+  \arrow[r,"\operatorname{Grif}"]
+&
+H^1(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j))
+  \arrow[d]
+\\
+{}
+&
+H^1(U,\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)).
+\end{tikzcd}
+\end{equation}
+Por (5.7.1), la aplicación, definida gracias a la hipótesis (A),
+\begin{equation}\tag{5.8.4.5}
+u:\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+\longrightarrow
+H^1(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell\sisi{}{(j)})
+\end{equation}
+es inyectiva. Como $\mathbb P^1$ es simplemente conexa, (5.8.4.2) da
+\begin{equation}\tag{5.8.4.6}
+H^1(\mathbb P^1,R^{n-1}\rho_*\mathbb Q_\ell\sisi{}{(j)})
+\simeq
+H^1(\mathbb P^1,E^{n-1}\rho_*\mathbb Q_\ell(j)).
+\end{equation}
+\footnote{La impresión omite el giro de Tate $(j)$ de los blancos de
+(5.8.4.5) y del miembro izquierdo de (5.8.4.6), aunque el dominio y
+la descomposición (5.8.4.2) lo conservan.}
+Podemos, pues, completar (5.8.4.4) en un cuadrado conmutativo.
+
+\pageoriginale
+
+\begin{equation}\tag{5.8.4.7}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+  \arrow[r,"\operatorname{Grif}"]
+  \arrow[d,hook,"u"]
+&
+H^1(U,\nu^*R^{n-1}\rho_*\mathbb Q_\ell(j))
+  \arrow[d]
+\\
+H^1(\mathbb P^1,E^{n-1}\rho_*\mathbb Q_\ell(j))
+  \arrow[r,"\nu^*"]
+&
+H^1(U,\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)).
+\end{tikzcd}
+\end{equation}
+Solo queda ver que la flecha inferior es inyectiva. Esto resulta de
+\begin{equation}\tag{5.8.4.8}
+E^{n-1}\rho_*\mathbb Q_\ell(j)
+\simeq
+\nu_*\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)
+\end{equation}
+y del siguiente lema bien conocido.
+
+\subsection*{Lema 5.8.5.}
+\underline{Sea $\nu:A\to B$ un morfismo de topos, y sea $F$ un haz
+sobre $A$. Entonces la aplicación canónica}
+\begin{equation}\tag{5.8.5.1}
+H^1(B,\nu_*F)\longrightarrow H^1(A,F)
+\end{equation}
+\underline{es inyectiva.}
+
+\noindent\underline{Demostración.}
+En una sucesión espectral del primer cuadrante,
+\begin{equation}\tag{5.8.5.2}
+E_2^{1,0}\simeq E_\infty^{1,0}.
+\end{equation}
+Por tanto, para la sucesión espectral de Leray
+\[
+E_2^{p,q}=H^p(B,R^q\nu_*F)
+\Longrightarrow H^{p+q}(A,F),
+\]
+
+\pageoriginale
+
+se tiene
+\begin{equation}\tag{5.8.5.3}
+E_2^{1,0}=H^1(B,\nu_*F)
+\simeq E_\infty^{1,0}
+=F^1H^1(A,F).
+\end{equation}
+Tomando $F=\nu^*E$, con $E$ un haz sobre $B$, se obtiene
+\begin{equation}\tag{5.8.5.4}
+H^1(B,\nu_*\nu^*E)
+\lhook\joinrel\longrightarrow
+H^1(A,\nu^*E).
+\end{equation}
+
+\subsection*{5.8.6.}
+Sea $L/k(\eta)$ una extensión finita del cuerpo de funciones racionales
+de $\mathbb P^1$, y pongamos
+\begin{equation}\tag{5.8.6.1}
+S=\text{la normalización de $\mathbb P^1$ en $L$}.
+\end{equation}
+Hagamos el cambio de base $S\to\mathbb P^1$ en (5.8.3.2):
+\begin{equation}\tag{5.8.6.1 bis}
+\begin{tikzcd}[column sep=huge,row sep=large]
+{} & \widetilde X \arrow[dl,"f"] \arrow[dd,"\rho"]
+& \widetilde X_S \arrow[l,"\alpha_S"'] \arrow[dd,"\rho_S"] \\
+X&{}&{} \\
+{} & \mathbb P^1 & S\arrow[l,"\pi"'] .
+\end{tikzcd}
+\end{equation}
+Para toda inmersión abierta $V\xhookrightarrow{\mu}S$ sobre la que
+$\rho_S$ es lisa, el cambio de base por
+$V\xrightarrow{\pi\mu}\mathbb P^1$ en (5.8.3.2) da
+\begin{equation}\tag{5.8.6.2}
+\begin{tikzcd}[column sep=huge,row sep=large]
+{} & \widetilde X \arrow[dl,"f"] \arrow[dd,"\rho"]
+& \widetilde X_V \arrow[l,"\alpha_V"'] \arrow[dd,"\rho_V"]
+  \arrow[dr,"f\times\rho_V"] &{} \\
+X&{}&{}&X\times V\arrow[dl,"\operatorname{pr}_2"] \\
+{} & \mathbb P^1 & V\arrow[l,"\pi\mu"'] &{} .
+\end{tikzcd}
+\end{equation}
+
+\pageoriginale
+
+Se sigue teniendo (cf. (5.8.2.3))
+\begin{equation}\tag{5.8.6.3}
+\alpha_V^*f^*\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+\subset
+\operatorname{Prim}^n(\widetilde X_V/V,\mathbb Q_\ell(j)),
+\end{equation}
+de modo que puede hablarse de nuevo del homomorfismo de Griffiths
+\begin{equation}\tag{5.8.6.4}
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+\xrightarrow{\operatorname{Grif}}
+H^1(V,R^{n-1}\rho_{V*}\mathbb Q_\ell(j)).
+\end{equation}
+
+\subsection*{Corolario 5.8.7.}
+\underline{Con la notación precedente y bajo las hipótesis de 5.8.4,
+el homomorfismo de Griffiths ``módulo la parte fija'', es decir, el
+compuesto}
+\begin{equation}\tag{5.8.7.1}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&,column sep=huge,row sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+  \arrow[r,"\operatorname{Grif}"]
+\& H^1(V,R^{n-1}\rho_{V*}\mathbb Q_\ell(j)) \arrow[d] \\
+{}
+\& H^1(V,(\pi\mu)^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+\simeq
+\dfrac{H^1(V,R^{n-1}\rho_{V*}\mathbb Q_\ell(j))}
+{(f\times\rho_V)^*H^1(V,H^{n-1}(X,\mathbb Q_\ell(j))_V)}
+\end{tikzcd}}
+\end{equation}
+\underline{es inyectivo.}
+
+\pageoriginale
+
+\noindent\underline{Demostración.}
+Por el teorema de especialización para la cohomología,
+\[
+R^{n-1}\rho_{V*}\mathbb Q_\ell(j)
+=(\pi\mu)^*R^{n-1}\rho_*\mathbb Q_\ell(j).
+\]
+Así, la descomposición (5.8.4.2) reescribe (5.8.7.1) como
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+  \arrow[r,"\operatorname{Grif}"]
+& H^1(V,(\pi\mu)^*R^{n-1}\rho_*\mathbb Q_\ell(j)) \arrow[d] \\
+{}
+& H^1(V,(\pi\mu)^*E^{n-1}\rho_*\mathbb Q_\ell(j)).
+\end{tikzcd}
+\]
+Basta, pues, demostrar la inyectividad de
+\begin{equation}\tag{5.8.7.3}
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j))
+\longrightarrow
+H^1(V,\mu^*\pi^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+\end{equation}
+para inmersiones abiertas $V\xhookrightarrow{\mu}S$ arbitrariamente
+pequeñas. Nos reducimos al caso
+\[
+\left\{
+\begin{aligned}
+U&\xhookrightarrow{\nu}\mathbb P^1
+   &&\text{abierto sobre el que $\rho$ es lisa},\\
+V&\xrightarrow{\pi_U}U
+   &&\text{normalización de $U$ en $L$}.
+\end{aligned}
+\right.
+\]
+Del cuadrado cartesiano
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+V\arrow[r,hook,"\mu"]\arrow[d,"\pi_U"']
+&S\arrow[d,"\pi"]\\
+U\arrow[r,hook,"\nu"]
+&\mathbb P^1
+\end{tikzcd}
+\]
+
+\pageoriginale
+
+se obtiene
+\[
+\mu^*\pi^*E^{n-1}\rho_*\mathbb Q_\ell(j)
+=\pi_U^*\nu^*E^{n-1}\rho_*\mathbb Q_\ell\sisi{}{(j)}.
+\]
+Por tanto, (5.8.7.3) se factoriza como
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\operatorname{Prim}^n(X,\mathbb Q_\ell(j)) \arrow[r]
+&H^1(U,\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+  \arrow[d,"\pi_U^*"] \\
+{}
+&H^1(V,\pi_U^*\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)).
+\end{tikzcd}
+\]
+Por (5.8.4), basta verificar que
+\[
+\pi_U^*:H^1(U,\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+\longrightarrow
+H^1(V,\pi_U^*\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j))
+\]
+es inyectiva. Como $\pi_U:V\to U$ es finita y plana, la teoría de la
+traza [SGA 4 XVII, 6.2] proporciona, para todo $\mathbb Q_\ell$-haz
+$F$ sobre $U$, por ejemplo
+$F=\nu^*E^{n-1}\rho_*\mathbb Q_\ell(j)$, una aplicación
+\[
+\operatorname{tr}_{\pi_U}:H^1(V,\pi_U^*\sisi{}{F})
+\longrightarrow H^1(U,F\sisi{(j)}{})
+\]
+tal que
+\[
+\sisi{\operatorname{tr}_{\pi}\circ\pi^*}
+{\operatorname{tr}_{\pi_U}\circ\pi_U^*}
+=\deg(\pi_U)\,\operatorname{id}.
+\]
+Se sigue que $H^*(U,F)\to H^*(V,\pi_U^*F)$ es inyectiva, y termina la
+demostración.
+\footnote{La impresión omite el giro de Tate $(j)$ en una fórmula de cambio
+de base y la transcripción congelada corrompe la fuente y el blanco de
+la traza. Las fórmulas mostradas son las identidades estándar de
+imagen inversa y traza finita plana utilizadas en la conclusión.}
+
+\pageoriginale
+
+\subsection*{5.9. Un ejemplo en el que no se satisface la hipótesis (A)}
+
+Sea $X$ una superficie cuádrica lisa de $\mathbb P^3$. Entonces $X$
+satisface (LV) (5.2.4). Tomemos un pincel, de Lefschetz si se quiere,
+de \underline{hiperplanos} cuyo miembro genérico y cuyo eje cortan
+transversalmente a $X$. Entonces, como me hizo observar Deligne,
+\underline{la proyección}
+\[
+\rho:\widetilde X\longrightarrow\mathbb P^1
+\]
+\underline{no satisface (A)}. En efecto, $R^2\rho_*\mathbb Q_\ell$ no
+es constante: las fibras singulares son cónicas singulares y, por
+tanto, reducibles; en un pincel de Lefschetz cada una es la unión de
+dos rectas que se cortan en un punto, que es la definición en este
+caso sencillo. Así,
+\[
+\dim_{\mathbb Q_\ell}H^2(\text{fibra singular},\mathbb Q_\ell)=2,
+\]
+mientras que
+\[
+\dim_{\mathbb Q_\ell}H^2(\text{fibra lisa},\mathbb Q_\ell)=1.
+\]
+
+Además, aquí es falsa la conclusión del teorema 5.8.4. Sea
+$U\xhookrightarrow{\nu}\mathbb P^1$ un abierto no vacío sobre el que
+$\rho$ es lisa. Como las fibras de $\rho$ sobre $U$ son curvas lisas de
+género cero,
+\[
+\nu^*R^1\rho_*\mathbb Q_\ell=0
+\]
+y, por tanto,
+\[
+H^1(U,\nu^*R^1\rho_*\mathbb Q_\ell)=0.
+\]
+En consecuencia, el homomorfismo de Griffiths
+\[
+\operatorname{Prim}^2(X,\mathbb Q_\ell)
+\xrightarrow{\operatorname{Grif}}
+H^1(U,\nu^*R^1\rho_*\mathbb Q_\ell)
+\]
+es nulo. Pero, sobre una superficie cuádrica,
+\[
+\dim_{\mathbb Q_\ell}\operatorname{Prim}^2(X,\mathbb Q_\ell)=1.
+\]
+Asimismo falla aquí la conclusión de 5.7.
+
+\pageoriginale
+
+\section*[6. Ciclos evanescentes (Picard--Lefschetz)]{\texorpdfstring{6. Aplicación de la teoría local de los ciclos evanescentes
+(Picard--Lefschetz)}{6. Aplicación de la teoría local de los ciclos evanescentes (Picard--Lefschetz)}}
+
+\subsection*{Proposición 6.1.}
+
+Sea $Z$ una hipersuperficie del espacio proyectivo $\mathbb P^r_k$,
+$r\geq2$, donde $k$ es un cuerpo algebraicamente cerrado. Sea
+\[
+i_o:D_o\lhook\joinrel\longrightarrow\mathbb P^r
+\]
+la inclusión de una recta que no corta a $Z$ más que en su lugar liso
+y que la corta transversalmente. Elijamos un punto geométrico $\bar a$
+de $D_o-D_o\cap Z$, y denotemos por
+\[
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\]
+el cociente de $\pi_1(D_o-D_o\cap Z,\bar a)$ que clasifica los
+recubrimientos étale de $D_o-D_o\cap Z$ moderadamente ramificados en
+todo punto de $D_o\cap Z$. Entonces:
+
+\pageoriginale
+
+\subsubsection*{6.1.1.}
+
+El homomorfismo canónico
+\begin{equation}\tag{6.1.1.1}
+i_{o*}:\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a)
+\end{equation}
+es sobreyectivo.
+
+\subsubsection*{6.1.2.}
+
+Toda elección de un punto geométrico
+$\bar x_o\in D_o\cap Z$ y de un ``camino'' en $D_o$ desde $\bar x_o$
+hasta $\bar a$ determina un homomorfismo
+\begin{equation}\tag{6.1.2.1}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a),
+\end{equation}
+cuya imagen es ``el'' grupo de inercia en $\bar x_o$. Al componer este
+morfismo con $i_{o*}$ se obtiene un homomorfismo
+\begin{equation}\tag{6.1.2.2}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a).
+\end{equation}
+Si $Z$ es irreducible, todos estos homomorfismos son conjugados entre
+sí.
+
+\subsubsection*{Demostración.}
+
+Sea $T$ el subesquema de la grassmanniana formado por las rectas de
+$\mathbb P^r$ que
+\begin{enumerate}[label=(\roman*)]
+\item pasan por $\bar a$;
+\item no cortan a $Z$ más que en su lugar liso, y la cortan allí
+  transversalmente.
+\end{enumerate}
+Sea $\eta$ su punto genérico y sea
+\[
+i_\eta:D_\eta\longrightarrow\mathbb P^r\otimes_k k(\eta)
+\]
+la recta correspondiente (por tanto, una recta que ``une $\bar a$ con
+el punto genérico de $\mathbb P^r_k$''). Elijamos asimismo un punto
+geométrico $\bar\eta$ sobre $\eta$, y denotemos por $D_{\bar\eta}$ la
+recta ``geométrica'' correspondiente. Sea $o\in T$ el punto
+correspondiente a la recta dada $D_o$.
+
+\pageoriginale
+
+Por [SGA 1, XIII 2.8], existe un homomorfismo de especialización
+(dependiente de un camino en $T$ desde $\bar\eta$ hasta $o$, y por
+tanto definido salvo conjugación)
+\begin{equation}\tag{6.1.3}
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\xrightarrow{\ \bar\eta\longrightarrow o\ }
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\end{equation}
+con las propiedades siguientes.
+
+\subsubsection*{6.1.4.}
+
+Los homomorfismos de monodromía local (6.1.2.1)
+\[
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+\]
+se obtienen componiendo la flecha de especialización (6.1.3) con los
+homomorfismos de monodromía local para $D_{\bar\eta}$:
+\begin{equation}\tag{6.1.4.1}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\xrightarrow{\ \bar\eta\longrightarrow o\ }
+\pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a).
+\end{equation}
+
+\subsubsection*{6.1.5.}
+
+El diagrama siguiente es conmutativo:
+\begingroup
+\small
+\begin{equation}\tag{6.1.5}
+\begin{tikzcd}[column sep=large,row sep=large]
+{} & \pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a) & {} \\
+\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)
+  \arrow[ur,"i_{\eta*}"]
+& {}
+& \pi_1^{\mathrm{mod}}(D_o-D_o\cap Z,\bar a)
+  \arrow[ul,"i_{o*}"'] \\
+{} & \pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+  \arrow[uu,"i_{\bar\eta*}"']
+  \arrow[ul]
+  \arrow[ur,"\bar\eta\longrightarrow o"'] & {} .
+\end{tikzcd}
+\end{equation}
+\endgroup
+
+\pageoriginale
+
+Admitamos esto por el momento y demostremos primero 6.1.1. Por la
+conmutatividad de 6.1.5 basta probar que
+\[
+i_{\bar\eta*}:
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a)
+\]
+es sobreyectivo. Para ello basta demostrar que el homomorfismo análogo
+de los grupos fundamentales ordinarios
+\begin{equation}\tag{6.1.6}
+\sisi{i_{\bar\eta}}{i_{\bar\eta*}}:
+\pi_1(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\longrightarrow
+\pi_1(\mathbb P^r-Z,\bar a)
+\end{equation}
+es sobreyectivo. En otras palabras, para todo recubrimiento étale
+$E\to\mathbb P^r-Z$ con $E$ conexo (y por tanto irreducible, pues
+$\mathbb P^r-Z$ es liso y, en consecuencia, unirrama
+[EGA IV, 18.10.3]), su imagen inversa
+\[
+E_{\bar\eta}
+=E\times_{\mathbb P^r-Z}(D_{\bar\eta}-D_{\bar\eta}\cap Z)
+\]
+sobre $D_{\bar\eta}-D_{\bar\eta}\cap Z$ debe seguir siendo
+geométricamente irreducible. Basta aplicar la variante siguiente del
+teorema de Bertini ([EGA V, referencia dejada en blanco en la fuente])
+al compuesto
+$E\to\mathbb P^r-Z\lhook\joinrel\longrightarrow\mathbb P^r$ y a $s=1$.
+
+\subsubsection*{6.1.6.1. Teorema de Bertini.}
+
+Sea $k$ un cuerpo, sea $\mathbb P^r=\mathbb P^r_k$ y sea
+$f:X\to\mathbb P^r$ un morfismo no constante, donde $X$ es un esquema
+algebraico geométricamente irreducible. Para cada entero
+$s<\dim\overline{f(X)}$, denotemos por $L_t$ el subespacio lineal
+\underline{genérico} de codimensión $s$ de $\mathbb P^r$. Entonces
+$X_t=f^{-1}(L_t)$ es geométricamente irreducible.
+
+Demostremos ahora 6.1.2. Por 6.1.4 y la conmutatividad de (6.1.5), basta
+probar que todos los homomorfismos de monodromía local (6.1.3)
+\underline{para} $D_{\bar\eta}$,
+
+\pageoriginale
+
+\begin{equation}\tag{6.1.7.1}
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a),
+\end{equation}
+se vuelven conjugados tras componerlos con el homomorfismo
+\begin{equation}\tag{6.1.7.2}
+\pi_1^{\mathrm{mod}}(D_{\bar\eta}-D_{\bar\eta}\cap Z,\bar a)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a).
+\end{equation}
+Para probarlo, observemos que, para toda extensión de Galois finita
+$K$ de $k(\eta)$, con
+\[
+k(\eta)\subset K\subset k(\bar\eta),
+\]
+el esquema
+\[
+D_K\stackrel{\mathrm{def}}{=}D_\eta\times_{k(\eta)}K
+\]
+es un recubrimiento étale de $D_\eta$. Por tanto,
+$D_K-D_K\cap Z$ es un recubrimiento moderado de
+$D_\eta-D_\eta\cap Z$, y
+$\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)$ actúa sobre el
+esquema $D_K\cap Z$. Tomamos $K$ suficientemente grande para que todo
+punto de $D_K\cap Z$ sea $K$-racional; esto es posible porque, por
+hipótesis, $D_\eta\cap Z$ es étale sobre $k(\eta)$.
+
+Queda demostrar que
+$\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)$ actúa
+\underline{transitivamente} sobre los puntos de $D_K\cap Z$. Esto
+probará que los homomorfismos compuestos de inercia local
+\[
+\prod_{\ell\ne\operatorname{char}(k)}\mathbb Z_\ell(1)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)
+\]
+asociados a los distintos puntos de $D_K\cap Z$ son conjugados. Ahora
+bien, la acción sobre $D_K\cap Z$ se factoriza por el cociente canónico
+\[
+\pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)
+\longrightarrow
+\pi_1(\eta,\bar\eta)
+=\sisi{\operatorname{Gal}(\,/k(\eta))}
+{\operatorname{Gal}\bigl(k(\bar\eta)/k(\eta)\bigr)}.
+\]
+
+\pageoriginale
+
+La acción de
+$\operatorname{Gal}\bigl(k(\bar\eta)/k(\eta)\bigr)$ sobre
+$D_K\cap Z$ es la compatible con la inclusión
+\[
+D_K\cap Z\lhook\joinrel\longrightarrow\mathbb P^r_k\times_k K,
+\]
+donde el grupo de Galois actúa sobre $\mathbb P^r_k\times_k K$
+únicamente por el segundo factor. Se sigue que la afirmación deseada
+equivale a que $D_\eta\cap Z$ tenga un solo punto, es decir, a que sea
+el espectro de un \underline{cuerpo}. En términos elementales, esto no
+es sino el hecho siguiente, de tipo Bertini (se toma para $Z$ una
+ecuación afín $F=0$ y se supone que $\bar a$ es el origen).
+
+\subsubsection*{Hecho 6.1.8.}
+
+Sea $k$ un cuerpo algebraicamente cerrado, sea $r\ge2$ y sea
+$F(X_1,\ldots,X_r)\in k[X_1,\ldots,X_r]$ un polinomio irreducible.
+Entonces
+\[
+G(T)=F(X_1T,\ldots,X_rT)\in k(X_1,\ldots,X_r)[T]
+\]
+es irreducible como polinomio en $T$ con coeficientes en
+$k(X_1,\ldots,X_r)$.
+
+Esto termina la demostración de 6.1.2.
+
+\subsubsection*{Observación 6.1.9.}
+
+Otro método para demostrar 6.1.2, válido bajo condiciones
+considerablemente más generales, consistiría simplemente en establecer
+una compatibilidad general para los ``homomorfismos de monodromía'':
+los homomorfismos compuestos de 6.1.2 son conjugados del homomorfismo de
+monodromía relativo al punto genérico de $Z$, y por tanto son conjugados
+entre sí.
+
+\pageoriginale
+
+\subsubsection*{Corolario 6.1.10.}
+
+Sea $X$ una variedad proyectiva, lisa y conexa, de dimensión $n$ sobre
+un cuerpo algebraicamente cerrado $k$. Supongamos que
+$n=\dim X$ es par, o que
+$\sisi{\operatorname{card}(k)}{\operatorname{char}(k)}\ne2$. Sea $D$
+un pincel de Lefschetz para $X$, sea $\eta$ su punto genérico y sea
+$\bar\eta$ un punto geométrico sobre $\eta$. Entonces la representación
+natural de $\pi_1(D-D\cap\check X,\bar\eta)$ sobre
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ se factoriza por
+$\pi_1^{\mathrm{mod}}(D-D\cap\check X,\bar\eta)$. Si esta
+representación no es trivial, entonces $D\cap\check X\ne\varnothing$ y
+el grupo de inercia en todo punto de $D\cap\check X$ actúa no
+trivialmente.
+
+\subsubsection*{Demostración.}
+
+Si $\dim(\check X)\le r-2$, entonces $D\cap\check X$ es vacío y no hay
+nada que demostrar, pues $\mathbb P^1$ es simplemente conexa. En caso
+contrario, $\check X$ es una hipersuperficie de $\mathbb P^r$
+[XVII, 3.1.4], y 6.1.1 se aplica por 3.2.10 y XVII 3.5, tomando
+$Z=\check X$ y $D_o=D$. El hecho de que la acción de $\pi_1$ sobre
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ sea moderada se estableció en la
+teoría local mediante la fórmula de Picard--Lefschetz [XV, 3.4], que
+recordaremos más abajo. Finalmente, el hecho no trivial de que
+$\pi_1^{\mathrm{mod}}(D-D\cap\check X,\bar\eta)$ está engendrado por
+los grupos de inercia en los distintos puntos de $D\cap\check X$
+[SGA 1, XIII 2.10] da la conclusión.
+
+Utilizaremos ahora el resultado precedente para estudiar la condición
+(A) de (5.3.5). Recordemos primero la consecuencia siguiente de la
+fórmula de Picard--Lefschetz [XV, 3.4].
+
+\pageoriginale
+
+\subsubsection*{Proposición 6.2.}
+
+Sea $X$ una variedad proyectiva, lisa y conexa, de dimensión $n$ sobre
+el cuerpo algebraicamente cerrado $k$. Sea $D$ un pincel de Lefschetz,
+sea $\eta$ su punto genérico y sea $\bar\eta$ un punto geométrico sobre
+$\eta$. Entonces el pincel $D$ satisface la condición (A) si y solo si
+el grupo de inercia en todo punto de $D\cap\check X$ actúa no
+trivialmente sobre $H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$.
+
+\subsubsection*{Teorema 6.3.}
+
+Bajo las hipótesis de 6.2 se tiene:
+
+\medskip
+\noindent
+\textup{(6.3.1)} Si $n=\dim X$ es impar, todo pincel de Lefschetz para
+$X$ satisface la condición (A).
+
+\medskip
+\noindent
+\textup{(6.3.2)} Supongamos que $n=\dim X$ es par, o que
+$\operatorname{char}(k)\ne2$. Entonces son equivalentes las condiciones
+siguientes:
+\begin{enumerate}
+\item[(i)] $D$ no satisface la condición (A) de (5.3.5);
+\item[(ii)] $\pi_1(D-D\cap\check X)$ actúa trivialmente sobre
+  $H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$, y
+  $D\cap\check X\ne\varnothing$;
+\item[(iii)] existe un punto de $D\cap\check X$ cuyo grupo de inercia
+  actúa trivialmente sobre $H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$;
+\item[(iv)] el haz $R^{n-1}\rho_*\mathbb Q_\ell$ es constante sobre
+  $D$, y $D\cap\check X$ no es vacío;
+\item[(v)] la restricción
+  $R^{n-1}\rho_*\mathbb Q_\ell\vert_U$ es constante sobre $U$, donde
+  $U$ es un abierto no vacío de $D$ sobre el que $\rho$ es lisa, y
+  $\rho$ no es lisa.
+\end{enumerate}
+
+\noindent
+\textup{(6.3.3)} Si, además, $X$ satisface la condición (LV) de
+(5.2.2), las condiciones (i)--(v) son asimismo equivalentes a:
+\begin{enumerate}
+\item[(vi)] la aplicación de restricción
+\[
+H^{n-1}(X,\mathbb Q_\ell)
+\longrightarrow H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)
+\]
+es sobreyectiva (y por tanto un isomorfismo por el teorema de Lefschetz
+débil).
+\end{enumerate}
+
+\subsubsection*{Demostración.}
+
+La afirmación 6.3.1 resulta de XV 3.4. Para las equivalencias de 6.3.2,
+(i) equivale a (iii) por 6.2, (ii) a (iii) por 6.1.6, (ii) a (v) por
+tautología y (iv) a (v) por 5.3.4. Finalmente, si $X$ satisface la
+condición (LV), 5.6.10 da la equivalencia de (ii) y (vi).
+
+\pageoriginale
+
+\subsubsection*{Observación 6.3.4.}
+
+La condición (A) no depende de la elección del pincel de Lefschetz
+$D$, sino únicamente de la inmersión (de Lefschetz)
+$i:X\longrightarrow\mathbb P^r$ considerada. Esto es claro por (6.3.1)
+si $\dim X$ es impar. Si $\dim X$ es par, la condición (A) significa
+también que el sistema local sobre $\mathbb P^r-\check X$ formado por
+los $H^{n-1}(X\cap H_s,\mathbb Q_\ell)$ es constante. Esto resulta del
+criterio (ii), del hecho de que el sistema local considerado está
+moderadamente ramificado en el punto genérico de $\check X$ y de la
+sobreyectividad de (6.1.2).
+
+\subsubsection*{Corolario 6.4.}
+
+Bajo las hipótesis de 6.2, supongamos
+\sisi{que $n=\dim X$ es par, o que $\operatorname{char}(k)\ne2$ y que
+$X$ satisface la condición (LV)}
+{que ($n=\dim X$ es par o $\operatorname{char}(k)\ne2$) y que $X$
+satisface la condición (LV)}.
+Entonces existe un entero $d_o$ tal que, para $d\ge d_o$, todo pincel de
+
+\pageoriginale
+
+Lefschetz de secciones de $X$ por hipersuperficies de grado $d$
+satisface la condición (A).
+
+\subsubsection*{Demostración.}
+
+Por la equivalencia (i)$\Longleftrightarrow$(vi) de (6.3.2), basta
+probar que, si $Y(d)$ denota una sección hipersuperficie lisa de $X$ de
+grado $d$, entonces
+\begin{equation}\tag{6.4.1}
+\dim H^{n-1}(Y(d),\mathbb Q_\ell)\longrightarrow\infty
+\qquad\text{cuando }d\longrightarrow\infty.
+\end{equation}
+En efecto, se tiene el resultado preciso siguiente.
+
+\subsubsection*{Lema 6.4.2.}
+
+Sea $X$ una variedad proyectiva, lisa y conexa, de dimensión $n\ge1$
+sobre un cuerpo algebraicamente cerrado $k$, y denotemos por $Y(d)$ una
+sección hipersuperficie de grado $d$. Entonces existe un polinomio
+$f(T)\in\mathbb Z[T]$ tal que
+\begin{align}
+f(T)&=\deg(X)T^n+\text{un polinomio de grado a lo sumo }n-1,
+  \tag{6.4.2.1}\\
+f(d)&=\dim H^{n-1}(Y(d),\mathbb Q_\ell)\qquad(d\ge1).
+  \tag{6.4.2.2}
+\end{align}
+
+\subsubsection*{Demostración.}
+
+Por XVII 5.7.5, si $C(X)$ denota la clase de Chern total de $X$ y $H$
+la primera clase de Chern de un hiperplano, la característica de
+Euler--Poincaré de $Y(d)$ es
+\begin{equation}\tag{6.4.2.3}
+\sisi{\chi(Y(d)}{\chi(Y(d))}
+=\int_X\frac{dH\,C(X)}{1+dH}
+=\sum_{i=1}^{n}(-1)^{i-1}d^i\int_X H^iC_{n-i}.
+\end{equation}
+
+\pageoriginale
+
+Por otra parte, la dualidad de Poincaré y Lefschetz débil dan
+\begin{equation}\tag{6.4.2.4}
+\chi(Y(d))
+=(-1)^{n-1}\dim H^{n-1}(Y(d),\mathbb Q_\ell)
++2\sum_{i\ge1}(-1)^{n-1-i}
+  \dim H^{n-1-i}(X,\mathbb Q_\ell).
+\end{equation}
+Al combinar (6.4.2.3) y (6.4.2.4) se obtiene el resultado.
+
+\subsection*{6.5. Recordatorio de la fórmula de Picard--Lefschetz
+(XV 3.4)}
+
+Sea $S$ el espectro de un anillo de valoración estrictamente
+henseliano, con punto genérico $\eta$, punto genérico geométrico
+$\bar\eta$ y punto cerrado $s$. Sea
+\[
+\rho:X\longrightarrow S
+\]
+un morfismo propio, donde $X$ es un esquema regular conexo de dimensión
+$n$. Supongamos que $\rho$ es liso salvo en un único punto $x$ de la
+fibra especial, y que $x$ es una singularidad cuadrática ordinaria de
+dicha fibra.
+
+Denotemos por $I$ el grupo de inercia de $S$ en $s$. Por XV 3.4, $I$
+actúa trivialmente sobre $H^i(X_{\bar\eta},\mathbb Q_\ell)$ para
+$i\ne n-1$, y su acción sobre
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ se describe como sigue.
+
+\subsubsection*{6.5.1.}
+
+Si $n=2m+1$, entonces $I$ actúa a través de un cociente isomorfo a
+$\mathbb Z/2\mathbb Z$ (si $\operatorname{char}(k)\ne2$, existe un solo
+cociente de este tipo). Existe un elemento
+\[
+\delta\in H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m)),
+\]
+determinado de manera única salvo signo y llamado el ciclo
+\underline{evanescente en $s$}, tal que
+
+\pageoriginale
+
+\begin{equation}\tag{6.5.1.1}
+\delta\cdot\delta=(-1)^m2
+\quad\text{en}\quad
+H^{2n-2}(X_{\bar\eta},\mathbb Q_\ell(n-1))\simeq\mathbb Q_\ell.
+\end{equation}
+El elemento no trivial $\sigma$ de $\mathbb Z/2\mathbb Z$ actúa sobre
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ mediante la simetría
+\begin{equation}\tag{\sisi{6.5.2.2}{6.5.1.2}}
+\sigma x=x-(-1)^m(x\cdot\delta)\delta.
+\end{equation}
+Aquí $x\cdot\delta$ pertenece a
+$H^{2n-2}(X_{\bar\eta},\mathbb Q_\ell(m))\simeq\mathbb Q_\ell(-m)$,
+de modo que $(x\cdot\delta)\delta$ define un elemento de
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$.
+
+\subsubsection*{6.5.2.}
+
+Si $n=2m+2$, entonces $I$ actúa a través de su cociente canónico
+$\mathbb Z_\ell(1)$. Existe un elemento
+\[
+\delta\in
+\sisi{H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m)}
+{H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))},
+\]
+determinado canónicamente salvo signo y llamado el ciclo
+\underline{evanescente en $s$}, tal que
+$\sigma\in\mathbb Z_\ell(1)$ actúa sobre
+$x\in H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ mediante la transvección
+\begin{equation}\tag{6.5.2.1}
+\sigma(x)=x-(-1)^m\sigma\,(x\cdot\delta)\delta.
+\end{equation}
+En efecto, $x\cdot\delta$ pertenece a
+$H^{2n-2}(X_{\bar\eta},\mathbb Q_\ell(m))
+\simeq\mathbb Q_\ell(-m-1)$. Su multiplicación por
+$\sigma\in\mathbb Z_\ell(1)$ da, pues, un elemento
+$\sigma(x\cdot\delta)\in\mathbb Q_\ell(-m)$, cuyo producto por
+$\delta\in H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))$ pertenece a
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$.
+
+Volvamos a la situación global.
+
+\subsubsection*{Teorema 6.6.}
+
+Sea $X$ una variedad proyectiva, lisa y conexa, de dimensión $n$ sobre
+un cuerpo algebraicamente cerrado $k$. Supongamos que $n$ es par o que
+$\operatorname{char}(k)\ne2$. Sea $D$ un pincel de Lefschetz para $X$,
+sea $\eta$ su punto genérico, sea $\bar\eta$ un punto geométrico sobre
+$\eta$, y sean $s_1,\ldots,s_N$ los puntos de $D\cap\check X$.
+
+\pageoriginale
+
+Para cada $i$, elijamos un isomorfismo $\ell_i$ entre $\bar\eta$ y el
+punto genérico geométrico de $S_i$, el henselizado estricto de $D$ en
+$s_i$. Por medio de $\ell_i$, sea $I_i$ el grupo de inercia
+\sisi{de $\delta_i$ en $S_i$}{en $s_i$}, que actúa sobre
+$H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(j))$, y sea $\delta_i$ el ciclo
+evanescente en $s_i$ definido en 6.5. Así,
+\[
+\delta_i\in
+\sisi{H^{n-1}(X,\mathbb Q_\ell(m)}
+{H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))},
+\qquad
+m=\begin{cases}
+(n-1)/2,& n\text{ impar},\\
+n/2-1,& n\text{ par}.
+\end{cases}
+\]
+Elijamos los $\ell_i$ de modo que los subgrupos
+\[
+I_i\subset
+\pi=\pi_1^{\mathrm{mod}}(D-D\cap\check X,\bar\eta)
+\]
+engendren topológicamente $\pi$, como permite SGA 1, XIII 2.10.
+Entonces:
+
+\medskip
+\noindent
+\textup{6.6.1.} Si $X$ satisface la condición (LV), el espacio de
+cohomología evanescente
+\[
+\sisi{E^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m)}
+{E^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))}
+\stackrel{\mathrm{def}}{=}
+H^{n-1}(X,\mathbb Q_\ell(m))^\perp
+\subset H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))
+\]
+(cf. 5.4.4) está engendrado por los ciclos evanescentes
+$\delta_i$, $i=1,\ldots,N$.
+
+\medskip
+\noindent
+\textup{6.6.2.} Los ciclos evanescentes $\delta_i$ son conjugados,
+salvo signo, bajo el grupo de monodromía global
+$\pi_1(D-D\cap\check X)$.
+
+\subsubsection*{Demostración.}
+
+Para 6.6.1, la fórmula de Picard--Lefschetz 6.5 y el hecho de que los
+$I_i$ engendran $\pi=\pi_1(D-D\cap\check X)$ dan
+
+\pageoriginale
+
+\begin{equation}\tag{6.6.3}
+H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))^\pi
+=\bigl\langle\delta_1,\ldots,\delta_N\bigr\rangle^\perp
+\quad\text{en }H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m)).
+\end{equation}
+Por 5.6.10,
+\begin{equation}\tag{6.6.4}
+H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))^\pi
+=\operatorname{Im}\bigl(
+H^{n-1}(X,\mathbb Q_\ell(m))
+\longrightarrow H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))
+\bigr).
+\end{equation}
+Al tomar ortogonales en (6.6.3) se obtiene 6.6.1.
+
+Para 6.6.2, observemos simplemente que el ciclo evanescente $\delta_i$
+está determinado salvo signo por la representación del grupo de
+inercia en $s_i$. Apliquemos 6.1.2, que da la conjugación en
+$\pi_1^{\mathrm{mod}}(\check{\mathbb P}^{r}-\check X,\bar\eta)$ de los
+homomorfismos compuestos de inercia
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+\mathbb Z_\ell(1) \arrow[r]
+  & \pi_1^{\mathrm{mod}}(D-D\cap\check X,\bar\eta) \arrow[d] & {}\\
+{}
+  & \pi_1^{\mathrm{mod}}(\check{\mathbb P}^{r}-\check X,\bar\eta) & .
+\end{tikzcd}
+\end{center}
+Por consiguiente, los ciclos evanescentes determinados por estos
+homomorfismos son conjugados salvo signo por elementos de
+$\pi_1^{\mathrm{mod}}(\check{\mathbb P}^{r}-\check X,\bar\eta)$.
+La demostración termina por 6.1.1, que da la sobreyección
+\[
+\pi_1^{\mathrm{mod}}(D-D\cap\check X)
+\longrightarrow
+\pi_1^{\mathrm{mod}}(\check{\mathbb P}^{r}-\check X).
+\]
+
+\pageoriginale
+
+\subsubsection*{Corolario 6.7.}
+
+Bajo las hipótesis de 6.6, supongamos que $X$ satisface la condición
+(LV). Entonces:
+
+\medskip
+\noindent
+\textup{6.7.1.} La representación de
+$\pi_1(D-D\cap\check X)$ sobre
+$E^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$ es absolutamente irreducible.
+
+\medskip
+\noindent
+\textup{6.7.2.} Si $n$ es par, todo subgrupo de índice finito de
+$\pi_1(D-D\cap\check X)$ actúa de manera absolutamente irreducible
+sobre $E^{n-1}(X_{\bar\eta},\mathbb Q_\ell)$.
+
+\subsubsection*{Demostración.}
+
+Podemos reemplazar el módulo considerado por su giro de Tate
+\[
+E=E^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m)).
+\]
+Sea $\bar E=E\otimes_{\mathbb Q_\ell}\bar{\mathbb Q}_\ell$, y elijamos
+$0\ne\chi\in\bar E$. Para probar 6.7.1 debemos mostrar que el subespacio
+$\bar{\mathbb Q}_\ell$-lineal de $\bar E$ engendrado por $\chi$ y sus
+conjugados bajo $\pi$ es todo $\bar E$. Por 6.6.1 y 6.6.2 basta probar
+que este subespacio contiene uno de los ciclos evanescentes $\delta_i$.
+
+Como $X$ satisface (LV), la restricción de la forma del producto cup a
+\[
+H^{n-1}(X,\mathbb Q_\ell(m))
+\lhook\joinrel\longrightarrow
+H^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))
+\]
+es no degenerada; por tanto, también lo es su restricción al ortogonal
+$E^{n-1}(X_{\bar\eta},\mathbb Q_\ell(m))$. Por 6.6.1 existe, pues, al
+menos un $i$ tal que
+\[
+\chi\cdot\delta_i\ne0.
+\]
+Para este $i$, 6.5 proporciona un elemento $\sigma_i$ del grupo de
+inercia en $s_i$ tal que
+\begin{equation}\tag{6.7.3}
+\sigma_i(\chi)-\chi
+=\text{un múltiplo no nulo de }\delta_i.
+\end{equation}
+Esto prueba 6.7.1.
+
+\pageoriginale
+
+Para 6.7.2, $n-1$ es impar, luego
+$\delta_i\cdot\delta_i=0$. Al iterar 6.5.2 se obtiene, para todo $k$,
+\begin{equation}\tag{6.7.4}
+\sigma_i^k(\chi)
+=\sisi{X}{\chi}
++k\,\sigma_i(\sisi{x}{\chi}\cdot\delta_i)\delta_i.
+\end{equation}
+Así, un subespacio $\mathbb Q_\ell$-lineal $M$ de $E$ es estable bajo
+la acción de $\pi$ si y solo si lo es bajo un subgrupo de índice finito:
+ambas condiciones equivalen a
+\[
+\chi\in M
+\quad\Longrightarrow\quad
+\delta_i\in M\quad\text{para todo $i$ tal que }
+\chi\cdot\delta_i\ne0.
+\]
+La afirmación se reduce, por tanto, a 6.7.1.
+
+\subsection*{Bibliografía}
+
+\begin{description}
+\item[{[1]}] P. Deligne, \emph{Théorème de Lefschetz et critères de
+dégénérescence de suites spectrales}, Publ. Math. IHÉS \textbf{35}
+(1968), 259--278.
+
+\item[{[2]}] S. Kleiman, \emph{Algebraic cycles and the Weil
+conjectures}, en \emph{Dix exposés sur la cohomologie des schémas},
+North-Holland, 1968.
+
+\item[{[3]}] S. Lefschetz, \emph{L'analyse situs et la géométrie
+algébrique}, Gauthier-Villars, París, 1924.
+
+\item[{[4]}] D. Lieberman, \emph{Higher Picard Varieties}, Amer. J.
+Math. \textbf{\sisi{15}{90}} (4) (1968), 1165--1199.
+
+\item[{[5]}] D. Mumford, inédito.
+
+\item[{[6]}] A. Weil, \emph{Variétés kählériennes}, Hermann, París,
+1958.
+\end{description}

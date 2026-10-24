@@ -1,0 +1,208 @@
+
+\section{Teoremas de comparación de los recubrimientos étales}
+\label{XII.5}
+\setcounter{subsection}{-1}
+\subsection{}
+\label{XII.5.0}
+Precisemos la noción de recubrimiento finito de un espacio analítico.
+\index{recubrimiento finito de un espacio analítico|hyperpage}%
+Si $\othercal{X}$ es un espacio analítico, se dice que un espacio analítico
+$\othercal{X}'$ finito sobre~$\othercal{X}$ es un recubrimiento finito de
+$\othercal{X}$ si cada componente irreducible de~$\othercal{X}'$ domina
+una componente irreducible de~$\othercal{X}$.
+
+
+\begin{theoreme}[«Teorema de existencia de Riemann»]
+\label{XII.5.1}
+\index{Riemann (teorema de existencia de)|hyperpage}%
+\index{teorema de existencia de Riemann|hyperpage}%
+Sea $X$ un $\CC$-esquema localmente de tipo finito y sea $X^{\an}$
+el espacio analítico asociado a~$X$. El funtor $\Psi$ que asigna
+a cada recubrimiento étale finito $X'$ de~$X$ el espacio
+$X^{\prime\an}$ es una equivalencia
+\marginpar{333}
+de la categoría de los recubrimientos étale finitos de~$X$ en
+la categoría de los recubrimientos étale finitos de~$X^{\an}$.
+\end{theoreme}
+
+1) \emph{El funtor $\Psi$ es plenamente fiel.} Sean $X'$ y
+$X''$ dos recubrimientos étale finitos de~$X$ y demostremos que
+la aplicación canónica
+\begin{equation*}
+\label{eq:XII.5.*}
+\tag{$*$} { \Hom_{X}(X',X'') \to
+\Hom_{X^{\an}}(X^{\prime\an},X^{\prime\prime\an}) }
+\end{equation*}
+es biyectiva. Podemos suponer que $X'$ es conexo. Dar un
+$X$-morfismo de~$X'$ en $X''$ equivale a dar una
+componente conexa $X_i$ de~$X'\times_XX''$ tal que el morfismo
+$X_i\to X'$ inducido por la primera proyección sea un
+isomorfismo. Como las componentes conexas de~$X'\times_XX''$
+corresponden biyectivamente a las componentes conexas de
+$X^{\prime\an}\times_{X^{\an}}X^{\prime\prime\an}$~\eqref{XII.2.6}, y un
+morfismo $X_i\to X'$ es un isomorfismo
+\ifthenelse{\boolean{orig}}
+{si y solo si}
+{si y solo si}%
+~lo es $X_i^{\an}\to X^{\prime\an}$, queda demostrada la
+biyectividad de~\eqref{eq:XII.5.*}.
+
+2) \emph{El funtor $\Psi$ es esencialmente sobreyectivo.} Sea
+$\othercal{X}'$ un recubrimiento étale finito de~$X^{\an}$ y demostremos
+que existe un recubrimiento étale $X'$ de~$X$ junto con
+un isomorfismo $X^{\prime\an}\isomto\othercal{X}'$. En vista de~1), la
+cuestión es local sobre~$X$ y podemos suponer, por tanto, que $X$ es afín.
+
+a) Reducción al caso en que $X$ es normal. Podemos suponer que $X$
+es reducido. Supongamos, en efecto, demostrado el teorema
+para $X_{\red}$. El funtor que a un recubrimiento étale
+finito $X'$ de~$X$ le asigna el recubrimiento étale finito
+$X^{\prime\an}_{\red}$ de~$X_{\red}^{\an}$ es entonces una equivalencia.
+Como se obtiene componiendo $\Psi$ con el funtor $\Theta$ que
+a un recubrimiento étale finito de~$X^{\an}$ le asigna su imagen
+inversa sobre~$X_{\red}^{\an}$, y $\Theta$ es plenamente
+fiel, se sigue que $\Psi$ es una equivalencia de categorías.
+
+Podemos
+\marginpar{334}
+suponer que $X$ es normal. Sea, en efecto, $\widetilde{X}$ la
+normalización de~$X$ y sea $p\colon\widetilde{X}\to X$ el morfismo
+canónico. Como $p$ es finito, $p$ es un morfismo de descenso
+efectivo para la categoría de los recubrimientos
+étales~(\Ref{IX.4.7}). Supuesto demostrado el teorema
+para $\widetilde{X}$, pongamos
+$\widetilde{\othercal{X}'}=\othercal{X}'\times_{X^{\an}}\widetilde{X}^{\an}$.
+Existen un recubrimiento étale $\widetilde{X}'$ de
+$\widetilde{X}$ y un isomorfismo $\widetilde{X}'{}^{\an}\simeq
+\widetilde{\othercal{X}'}$. Resulta entonces de~1) que el dato
+de descenso natural sobre~$\widetilde{\othercal{X}'}$ se levanta
+a un dato de descenso sobre~$\widetilde{X}'$ relativo a
+$\widetilde{X}\to X$; esto prueba la existencia de un recubrimiento
+étale $X'$ de~$X$ y de un isomorfismo
+$i\colon X^{\prime\an}\times_{X^{\an}}\widetilde{X}^{\an}\simeq
+\widetilde{\othercal{X}'}$, cuyas imágenes inversas por las dos
+proyecciones de
+$\widetilde{X}^{\an}\times_{X^{\an}}\widetilde{X}^{\an}$ son iguales.
+Según~\Ref{IX.3.2}, cuya demostración vale en el caso analítico,
+el morfismo $\widetilde{X}^{\an}\to X^{\an}$ es un morfismo de descenso
+para la categoría de los recubrimientos étales y, por consiguiente,
+$i$ procede de un isomorfismo $X^{\prime\an}\simeq\othercal{X}'$.
+
+b) Reducción al caso en que $X$ es regular. Sean $U$
+el abierto de los puntos regulares de~$X$, $i\colon U\to X$ e
+$i^{\an}\colon U^{\an}\to X^{\an}$ los morfismos canónicos; como
+$X$ es normal, se tiene $\codim(X-U,X)\geq2$. Supongamos que existe un
+recubrimiento étale $U'$ de~$U$ tal que
+$U^{\prime\an}\simeq\othercal{X}'|U^{\an}$ y demostremos que entonces $U'$ se
+prolonga en un recubrimiento étale $X'$ de~$X$ tal que
+$X^{\prime\an}\simeq\othercal{X}'$. Basta ver que $U'$ se prolonga
+en un recubrimiento étale $X'$ de~$X$; se tendrá entonces un
+isomorfismo $X^{\prime\an}|U^{\an}\simeq\othercal{X}'|U^{\an}$. Pero si
+$\cal{F}$ y $\cal{G}$ son los haces coherentes de álgebras
+sobre~$\cal{O}_{X^{\an}}$ que definen, respectivamente, $\othercal{X}'$ y
+$X^{\prime\an}$, la normalidad de~$X$ y la desigualdad
+$\codim(X-U,X)\geq2$ implican que los morfismos canónicos
+$$
+\cal{F}\to i_*^{\an}(\cal{F}|U^{\an}) \qquad
+\cal{G}\to i_*^{\an}(\cal{G}|U^{\an})
+$$
+son
+\marginpar{335}
+isomorfismos \cite[\no 3~prop\ptbl 4]{XII.11}. Se deduce que $\cal{F}$
+y $\cal{G}$, y por tanto también $X^{\prime\an}$ y $\othercal{X}'$, son
+isomorfos.
+
+Sea $\varphi\colon X^{\an}\to X$ el morfismo canónico. Como el problema
+de prolongar $U'$ a~$X$ es local sobre~$X$, basta demostrar que, para
+cada punto $y$ de~$X^{\an}-U^{\an}$, el recubrimiento étale
+$U'_{\varphi(y)}=U'\times_X\Spec\cal{O}_{X,\varphi(y)}$ de
+$U_{\varphi(y)}=U\times_X\Spec\cal{O}_{X,\varphi(y)}$ se prolonga a
+$\Spec\cal{O}_{X,\varphi(y)}$. Sea $H$ la
+$\cal{O}_U$-álgebra coherente que define $U'$. El morfismo canónico
+$$
+\alpha\colon(i_*H)^{\an}\to i_*^{\an}(H^{\an})=\cal{F}
+$$
+define un morfismo de haces de módulos sobre
+$\Spec\cal{O}_{X^{\an},y}$:
+$$
+\alpha_y\colon(i_*H)^{\an}_y\to\cal{F}_y\quoi,
+$$
+cuya restricción a
+$U_y=U_{\varphi(y)}\times_{\Spec\cal{O}_{X,\varphi(y)}}
+\Spec\cal{O}_{X^{\an},y}$ es un isomorfismo. Esto demuestra que
+$H|U_y$ es trivial y, por tanto, que $U'_{\varphi(y)}$ se prolonga a
+$\Spec\cal{O}_{X,\varphi(y)}$.
+
+c) Caso en que $X$ es afín y regular. Sea
+$$
+j\colon X\to P
+$$
+una compactificación de~$X$, donde $P$ es un $\CC$-esquema
+proyectivo y $j$ una inmersión abierta dominante. Gracias al
+teorema de resolución de singularidades~\cite{XII.8}, se pueden
+encontrar un esquema regular $R$ y un morfismo proyectivo
+$r\colon R\to P$ tales que $r$ induzca un isomorfismo
+$r^{-1}(X)\simeq X$ y $r^{-1}(X)$ sea el complementario en~$R$
+de un divisor con cruzamientos normales. Sea
+\marginpar{336}
+$$
+k\colon X\to R
+$$
+la inmersión canónica. Vamos a demostrar que existe un recubrimiento
+finito normal~\eqref{XII.5.0} $\othercal{R}'$ de~$R^{\an}$ que prolonga
+el recubrimiento étale $X^{\prime\an}$. Según la
+Proposición~\Ref{XII.5.3} siguiente, tal recubrimiento es único; el
+problema de prolongar $X^{\prime\an}$ es, por tanto, local sobre~$R^{\an}$
+en un entorno de~$R^{\an}-X^{\an}$. Ahora bien, cada punto de
+$R^{\an}-X^{\an}$ tiene un entorno abierto $\othercal{V}$ isomorfo a una
+bola de un espacio afín $\othercal{E}^n$, tal que
+$\othercal{V}-\othercal{V}\cap X^{\an}$ está definido por la anulación de
+las primeras $p$ funciones coordenadas $z_1,\dots,z_p$, con
+$0\leq p\leq n$. El grupo fundamental de
+$\othercal{U}=\othercal{V}\cap X^{\an}$ es isomorfo a~$\ZZ^p$, y todo
+recubrimiento étale de~$\othercal{U}$ es cociente de un recubrimiento de
+la forma
+$$
+\othercal{U}''=\othercal{U}[T_1,\dots,T_p]/
+(T_1^{n_1}-z_1,\dots,T_p^{n_p}-z_p)\quoi,
+$$
+donde los $n_i$ son enteros $>0$, por un subgrupo $H$ del grupo de
+Galois $\ZZ/n_1\ZZ\times\cdots\times\ZZ/n_p\ZZ$ de~$\othercal{U}''$.
+Ahora bien, $\othercal{U}''$ se prolonga en el recubrimiento regular
+$$
+\othercal{V}''=\othercal{V}[T_1,\dots,T_p]/
+(T_1^{n_1}-z_1,\dots,T_p^{n_p}-z_p)\quoi,
+$$
+de~$\othercal{V}$ sobre el cual actúa $H$, y el cociente de
+$\othercal{V}''$ por $H$ es la prolongación buscada.
+
+La demostración concluye entonces gracias a~\Ref{XII.4.6}.
+El recubrimiento $\othercal{R}'$ procede de un recubrimiento finito $R'$
+de~$R$; la restricción de~$R'$ a~$X$ es un recubrimiento $X'$ de
+$X$ tal que $X^{\prime\an}\simeq\othercal{X}'$, y según
+\Ref{XII.3.1}(iii), $X'$ es un recubrimiento étale de~$X$.
+
+\begin{corollaire}
+\label{XII.5.2}
+Sea
+\marginpar{337}%
+$X$ un $\CC$-esquema conexo localmente de tipo finito,
+sea $\varphi\colon X^{\an}{\to}X$ el morfismo canónico y sea $x$ un
+punto de~$X^{\an}$. Sea $\pi_1(X^{\an},x)$ el grupo fundamental del
+espacio topológico $X^{\an}$ en~$x$, y sea $\pi_1(X,\varphi(x))$ el
+grupo fundamental del esquema $X$ en~$\varphi(x)$
+\textup{(\Ref{V.7})}. Entonces $\pi_1(X,\varphi(x))$ es canónicamente
+isomorfo a la completación de~$\pi_1(X^{\an},x)$ para la topología de los
+subgrupos de índice finito.
+\end{corollaire}
+
+En efecto, sea $\cal{C}$ la categoría de los recubrimientos étale finitos
+de~$X^{\an}$, sea $F$ el funtor de~$\cal{C}$ en~$\Ens$ que a cada
+recubrimiento étale finito $\othercal{X}'$ de~$X^{\an}$ le asigna el
+conjunto de los puntos de~$\othercal{X}'$ situados sobre~$x$, y sea
+$\widehat{\pi}_1(X^{\an},x)$ el grupo profinito asociado a~$\cal{C}$ y~$F$
+como en~\Ref{V.4}. Como todo recubrimiento étale finito de~$X^{\an}$
+es cociente del recubrimiento universal por un subgrupo de índice finito,
+$\widehat{\pi}_1(X^{\an},x)$ no es sino la completación de
+$\pi_1(X^{\an},x)$ para la topología de los subgrupos de índice finito.
+El corolario resulta, pues, de~\Ref{XII.5.1} y~\Ref{V.6.10}.

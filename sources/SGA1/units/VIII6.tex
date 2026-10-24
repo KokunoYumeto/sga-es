@@ -1,0 +1,126 @@
+\section[Aplicación a los morfismos finitos y cuasifinitos]{Aplicación a los morfismos finitos y cuasifinitos\protect\footnotemark}
+\label{VIII.6}
+\footnotetext{\Cf EGA IV 18.12 para generalizaciones a preesquemas no necesariamente localmente noetherianos}
+
+Vamos a demostrar los dos teoremas siguientes:
+
+\begin{theoreme}
+\label{VIII.6.1}
+Sea~$f\colon X\to Y$ un morfismo \emph{propio con fibras finitas}, con~$Y$
+localmente noetheriano. Entonces~$f$ es finito.
+\end{theoreme}
+
+\begin{theoreme}
+\label{VIII.6.2}
+Sea~$f\colon X\to Y$ un morfismo \emph{cuasifinito} y \emph{separado},
+con~$Y$ localmente noetheriano. Entonces~$f$ es cuasiafín y, a fortiori,
+cuasiproyectivo.
+\end{theoreme}
+
+\begin{remarques}
+\label{VIII.6.3}
+El
+\marginpar{217}
+teorema~\Ref{VIII.6.1} es bien conocido y se debe a Chevalley en el caso de
+las variedades algebraicas; también se encontrará una demostración sencilla
+en [EGA III 4], que utiliza el «teorema de las funciones holomorfas». La
+demostración dada aquí no utiliza este último teorema, sino la teoría del
+descenso; la damos como obsequio al lector, pues se obtiene «gratis» al mismo
+tiempo que la de~\Ref{VIII.6.2}. Recordemos también ([EGA III 4] o
+\cite{VIII.1}) que la forma global del \emph{Main Theorem} de Zariski,
+deducida del «teorema de las funciones holomorfas», afirma que, si
+$f\colon X\to Y$ es cuasifinito y \emph{cuasiproyectivo}, siendo~$Y$
+noetheriano, entonces~$X$ es $Y$-isomorfo a un subpreesquema abierto de un
+$Y$-preesquema \emph{finito}~$Z$. La conjunción del \emph{Main Theorem} y
+de~\Ref{VIII.6.2} se enuncia, por tanto, así:
+\end{remarques}
+
+\begin{corollaire}
+\label{VIII.6.4}
+Sea~$f\colon X\to Y$ un morfismo cuasifinito y separado, con~$Y$
+noetheriano. Entonces~$X$ es $Y$-isomorfo a un subpreesquema abierto de un
+$Y$-preesquema finito~$Z$.
+\end{corollaire}
+
+Otra consecuencia interesante de~\Ref{VIII.6.2} para la teoría del descenso
+se dará junto con~\Ref{VIII.7.9}.
+
+\subsubsection*{Demostración de~\Ref{VIII.6.1} y~\Ref{VIII.6.2}}
+Admitiremos el hecho siguiente, cuya demostración es
+fácil\footnote{\Cf EGA IV 8}:
+
+\begin{lemme}
+\label{VIII.6.5}
+Sea~$X$ un preesquema de tipo finito sobre~$Y$ localmente noetheriano, y
+sea~$y\in Y$. Para que exista un entorno abierto~$U$ de~$y$ tal que~$X|U$
+sea finito (\resp cuasiafín, \resp\ ...) sobre~$U$, es necesario y suficiente
+que~$X\times_{Y}\Spec(\mathcal{O}_{y})$ sea finito (\resp cuasiafín,
+\resp\ ...) sobre~$\Spec(\mathcal{O}_{y})$.
+\end{lemme}
+
+Como, por otra parte, la propiedad de~$f\colon X\to Y$ de ser finito,
+\resp cuasiafín, es local sobre~$Y$, para demostrar~\Ref{VIII.6.1}
+y~\Ref{VIII.6.2} se reduce uno al caso en que~$Y$ es el espectro de un anillo
+local y, a fortiori, tiene dimensión finita. (N.B.: se llama
+\emph{dimensión de un preesquema}~$Y$ al supremo de las dimensiones de Krull
+de sus anillos locales). Procedemos por inducción sobre
+$$
+n=\dim(Y)\quoi,
+$$
+siendo la afirmación
+\marginpar{218}
+trivial para~$n<0$. Podemos suponer, por tanto, $n\geq 0$ y demostrada la
+afirmación para las dimensiones~$n'<n$. Puede suponerse de nuevo que~$Y$ es
+el espectro de un anillo local noetheriano~$A$, de dimensión~$n$. Obsérvese
+que las hipótesis hechas en~\Ref{VIII.6.1} y~\Ref{VIII.6.2} son estables por
+cambio de base (ya se ha hecho uso de ello en la reducción inicial); seguirán
+siendo ciertas tras el cambio de base~$\Spec(\widehat{A})\to \Spec(A)$. Como
+este último es fielmente plano y cuasicompacto, los
+enunciados~\Ref{VIII.5.7} y~\Ref{VIII.5.9} reducen la cuestión al caso en
+que~$A$ es, además, completo. Utilizando entonces el hecho de que todo anillo
+local noetheriano~$B$ sobre~$A$ que es cuasifinito sobre~$A$ es finito
+sobre~$A$, y el hecho de que~$X$ es separado sobre~$Y$ y la fibra sobre~$y$ está formada por
+puntos aislados, se obtiene una descomposición
+$$
+X=X'\amalg X''
+$$
+en la que~$X'$ es \emph{finito} sobre~$Y$ y la fibra de~$X''$ en~$y$ es
+vacía. Si~$X$ es propio sobre~$Y$, lo mismo sucede con~$X''$; su imagen en
+$Y$ es, por tanto, cerrada y, como no contiene a~$y$, es vacía. Así,
+$X''=\emptyset$ y, por consiguiente, $X=X'$, lo que demuestra que~$X$ es
+finito sobre~$Y$ y prueba~\Ref{VIII.6.1} (N.B.: aquí es inútil la hipótesis
+de inducción). Si~$X$ es cuasifinito sobre~$Y$, $X''$ también lo es; ahora
+bien, $X''$ se encuentra de hecho sobre
+\ifthenelse{\boolean{orig}}
+{el abierto~$Y-(y)$}
+{el abierto~$Y-\{ y\}$}
+de~$Y$, \emph{que tiene dimensión} $<n$. En virtud de la hipótesis de
+inducción, $X''$ es cuasiafín
+\ifthenelse{\boolean{orig}}
+{sobre~$Y-(y)$,}
+{sobre~$Y-\{ y\}$,}
+y, por tanto, también sobre~$Y$; evidentemente, lo mismo sucede con~$X'$ y,
+por consiguiente, con su suma~$X$, lo que prueba~\Ref{VIII.6.2}.
+
+\begin{remarque}
+\label{VIII.6.6}
+Los teoremas~\Ref{VIII.6.1} y~\Ref{VIII.6.2} siguen siendo válidos si ya no
+se supone~$Y$ localmente noetheriano, con tal de precisar que se supone~$f$
+de presentación finita
+\ifthenelse{\boolean{orig}}
+{(\cf \Ref{VIII.3.6}).}
+{(\cf \Ref{VIII.3.6}).}
+En efecto, todavía puede suponerse~$Y$ afín; se comprueba entonces sin
+dificultad que la situación~$f\colon X\to Y$
+\ifthenelse{\boolean{orig}}
+{se deduce,}
+{se deduce,}
+mediante un cambio de base~$Y\to Y_{0}$, de una situación
+$f_{0}\colon X_{0}\to Y_{0}$ que satisface las mismas hipótesis que~$f$,
+con~$Y_{0}$ \emph{noetheriano}. Por tanto, según el
+resultado~\Ref{VIII.6.1} \resp \Ref{VIII.6.2}, $f_{0}$ es finito
+\resp cuasiafín y, en consecuencia, lo mismo sucede con~$f$. Este género de
+razonamiento resulta útil a menudo para librarse de hipótesis noetherianas
+\marginpar{219}
+(que siempre acaban siendo molestas en las aplicaciones).
+\end{remarque}

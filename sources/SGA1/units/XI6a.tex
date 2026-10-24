@@ -1,0 +1,225 @@
+
+\section[Aplicación a los recubrimientos principales]{Aplicación a los
+recubrimientos principales: teorías de Kummer y de Artin--Schreier}
+\label{XI.6}
+
+
+\begin{proposition}
+\label{XI.6.1}
+Sean~$S$ un preesquema y~$n$ un entero~$>0$; sea
+$u_n\colon\GG_{m\,S}\to\GG_{m\,S}$ el homomorfismo de elevación a la
+potencia $n$-ésima, y sea~$\bbmu_{n\,S}$
+\label{indnot:kb}\oldindexnot{$\bbmu_{n\,S}$|hyperpage}%
+su núcleo. Entonces~$\bbmu_{n\,S}$ es finito y localmente libre de rango~$n$
+sobre~$S$, y es étale sobre~$S$ si y solo si, para todo~$s\in S$, la
+característica de~$s$ es prima con~$n$. La sucesión de homomorfismos
+$$
+0\to \bbmu_{n\,S}\to\GG_{m\,S}\lto{u_n}\GG_{m\,S}\to 0
+$$
+es exacta en el sentido de~\Ref{XI.4}. (La llamaremos la \emph{sucesión
+exacta de Kummer}
+\index{Kummer (sucesión exacta de)|hyperpage}%
+sobre~$S$, relativa al entero~$n$).
+\end{proposition}
+
+Se tiene
+\marginpar{303}
+$$
+\GG_m=\Spec\cal{O}_S[t,t^{-1}],
+$$
+y~$u_n$ corresponde al homomorfismo~$u_n$ de las
+$\cal{O}_S$-álgebras afines, dado por
+$$
+u_n(t)=t^n,
+$$
+por otra parte, la sección unidad de~$\GG_{m\,S}$ corresponde al
+homomorfismo de aumento de $\cal{O}_S$-álgebras dado por
+$$
+\varepsilon(t)=1,
+$$
+cuyo núcleo es, por tanto, el
+\ifthenelse{\boolean{orig}}
+{ideal}
+{ideal}
+principal~$(t-1)$. La imagen de este último por~$u_n$ es, pues, el ideal
+principal~$(1-t^n)$, y se obtiene
+$$
+\bbmu_{n\,S}=\Spec\cal{O}_S[t]/(1-t^n),
+$$
+lo que muestra, en particular, que~$\bbmu_{n\,S}$ es finito sobre~$S$ y está
+definido por un álgebra sobre~$S$ que es libre de rango~$n$, con base formada
+por los~$t^i$ ($0\leq i\leq n-1$). Para que sea étale en~$s\in S$, es
+necesario y suficiente que el álgebra reducida~$k[t]/(1-t^n)$, donde
+$k=\kres(s)$, obtenida adjuntando formalmente las raíces $n$-ésimas de la
+unidad a~$k$, sea separable sobre~$k$, \,\ie que las raíces de~$1-t^n$ en una
+clausura algebraica de~$k$ sean todas distintas, lo cual equivale a que~$n$
+sea primo con la característica. Por último, para demostrar que la sucesión
+de homomorfismos de~\Ref{XI.6.1} es exacta, en virtud del
+criterio~\Ref{XI.4.2} se reduce uno a probar que
+\ifthenelse{\boolean{orig}}
+{$v$}
+{$u_n$}
+es fielmente plano. Podemos suponer, evidentemente, que~$S$ es afín de
+anillo~$A$, de modo que~$\GG_{m\,S}$ es afín de anillo
+$B=A[t,t^{-1}]$; basta comprobar que~$u_n$ hace de~$B$ un módulo libre de
+rango~$n$ sobre~$B$, o, lo que es lo mismo, que~$u_n$ es inyectivo y que
+$A[t,t^{-1}]$ es un módulo libre de rango~$n$ sobre~$A[t^n,t^{-n}]$. En
+efecto, se comprueba fácilmente que los~$t^i$ ($0\leq i\leq n-1$) forman
+una base del primero sobre el segundo, lo que termina la demostración.
+
+\begin{definition}
+\label{XI.6.2}
+Se
+\marginpar{304}
+llama a~$\bbmu_{n\,S}$ el \emph{grupo de Kummer de rango~$n$ sobre~$S$}, y
+se llama \emph{recubrimiento principal de Kummer de rango
+\ifthenelse{\boolean{orig}}
+{$n\,S$}
+{$n$ sobre~$S$}}
+a todo fibrado homogéneo principal sobre~$S$ cuyo grupo es el grupo de
+Kummer de rango~$n$.
+\end{definition}
+
+El conjunto de estos recubrimientos es un grupo, denotado por
+$\H^1(S,\bbmu_{n\,S})$ o, simplemente, por~$\H^1(S,\bbmu_n)$. Obsérvese que
+la formación del grupo de Kummer de rango~$n$ sobre~$S$ es compatible con la
+extensión de la base, de modo que~$\bbmu_{n\,S}$ proviene por extensión de la
+base del \emph{grupo de Kummer absoluto~$\bbmu_n$} sobre~$\Spec(\ZZ)$.
+
+Denotemos por~$(\ZZ/n\ZZ)_S$ el $S$-grupo definido por el grupo finito
+ordinario~$\ZZ/n\ZZ$. Si~$G$ es un $S$-grupo cualquiera, los homomorfismos
+de $S$-grupos~$u$ de~$(\ZZ/n\ZZ)_S$ en~$G$ corresponden biyectivamente, y
+de manera compatible con el cambio de base, a las secciones de~$G$ sobre~$S$
+cuya potencia $n$-ésima es la sección unidad, haciendo corresponder a~$u$ la
+imagen por~$u$ de la sección de~$(\ZZ/n\ZZ)_S$ sobre~$S$ definida por el
+generador~$1\bmod n\ZZ$ de~$\ZZ/n\ZZ$. Dicho esto:
+
+\begin{corollaire}
+\label{XI.6.3}
+Si~$\bbmu_{n\,S}$ es étale sobre~$S$, se obtiene así una correspondencia
+biyectiva entre los isomorfismos de $S$-grupos
+$(\ZZ/n\ZZ)_S\isomto\bbmu_{n\,S}$ y las secciones de~$\cal{O}_S$ que son
+de orden exactamente~$n$ en cada componente conexa de~$S$ (una sección tal
+se llamará «raíz primitiva $n$-ésima de la unidad sobre~$S$»). Por tanto,
+para que~$\bbmu_{n\,S}$ sea isomorfo, como $S$-grupo, a~$(\ZZ/n\ZZ)_S$, es
+necesario y suficiente que sea étale
+\ifthenelse{\boolean{orig}}
+{sobre~$S$}
+{sobre~$S$,}
+\ie que las características residuales de~$S$ sean primas con~$n$, y que
+exista una raíz primitiva $n$-ésima de la unidad sobre~$S$.
+\end{corollaire}
+
+Esto explica el papel que desempeñan en la teoría clásica de Kummer la
+hipótesis de que el cuerpo base (que desempeña el papel de~$S$) tenga
+característica prima con~$n$ y contenga las raíces $n$-ésimas de la unidad,
+y la elección de una raíz primitiva $n$-ésima de la unidad. Una vez que se
+dispone del lenguaje de los esquemas, ya no hay por qué imponerse estas
+hipótesis, y conviene razonar directamente sobre~$\bbmu_n$ en vez
+de~$\ZZ/n\ZZ$. Así, la conjunción de~\Ref{XI.6.1}, \Ref{XI.4.5}
+y~\Ref{XI.5.3} nos da la relación general siguiente entre la teoría de los
+recubrimientos principales de Kummer y la de los grupos de Picard:
+
+\begin{proposition}
+\label{XI.6.4}
+Sea
+\marginpar{305}
+$S$ un preesquema. Se tiene una sucesión exacta canónica
+$$
+\textstyle
+0\to\H^0(S,\bbmu_n)\to\H^0(S,\cal{O}^*_S)\to
+\H^0(S,\cal{O}^*_S)\to\H^1(S,\bbmu_n)\to
+\H^1(S,\cal{O}^*_S)\to\H^1(S,\cal{O}^*_S),
+$$
+de donde, poniendo
+\ifthenelse{\boolean{orig}}
+{$\H^1(S,\cal{O}_S)=\Pic(S)$,}
+{$\H^1(S,\cal{O}_S^*)=\Pic(S)$,}
+y denotando, para todo grupo abeliano~$A$, por~${_n}A$ y~$A_n$ el núcleo y
+el conúcleo de la multiplicación por~$n$ en~$A$, se obtiene la sucesión exacta
+$$
+0\to
+\ifthenelse{\boolean{orig}}
+{\H^0(S,\cal{O}_S)^*_n}
+{\H^0(S,\cal{O}_S^*)_n}
+\to\H^1(S,\bbmu_n)\to
+{\sideset{_n}{}\Pic}(S)\to 0.
+$$
+\end{proposition}
+
+Vamos a explicitar dos casos importantes en los que uno u otro término
+extremo de esta sucesión exacta es nulo:
+
+\begin{corollaire}
+\label{XI.6.5}
+Supongamos que~$\sideset{_n}{}\Pic(S)=0$ (por ejemplo, que~$S$ sea el
+espectro de un anillo local o de un anillo factorial), y sea~$A$ el anillo
+$\H^0(S,\cal{O}_S)$. Entonces se tiene un isomorfismo canónico
+$$
+\H^1(S,\bbmu_n)\isomto A^*/{A^*}^n.
+$$
+\end{corollaire}
+
+Este es esencialmente el enunciado clásico de la teoría de Kummer cuando~$S$
+es el espectro de un cuerpo.
+
+\begin{corollaire}
+\label{XI.6.6}
+Supongamos que todo elemento de~$\H^0(S,\cal{O}_S)$ es una potencia
+$n$-ésima; por ejemplo, que~$\H^0(S,\cal{O}_S)$ sea un
+\ifthenelse{\boolean{orig}}
+{compuesto}
+{producto}
+de cuerpos algebraicamente cerrados, o que~$S$ sea reducido y propio sobre
+un cuerpo algebraicamente cerrado~$k$. Entonces se tiene un isomorfismo
+canónico
+$$
+\H^1(S,\bbmu_n)\isomto\sideset{_n}{}\Pic(S).
+$$
+\end{corollaire}
+
+En particular, cuando~$S$ es propio y conexo sobre un cuerpo algebraicamente
+cerrado~$k$, esto relaciona el grupo fundamental de~$S$ con los puntos de
+orden finito del esquema de Picard~$P$ de~$S$ sobre~$k$; así, para~$n$ primo
+con la característica, se tiene un isomorfismo
+$$
+\Hom(\pi_1(S),\ZZ/n\ZZ)\simeq {_n P}(k)
+$$
+que se utiliza a menudo en geometría
+\marginpar{306}
+algebraica. Como aplicación, cuando la componente conexa~$P^0$ de~$P$ es un
+esquema en grupos completo, de dimensión~$g$, se ve, utilizando los
+resultados recordados en~\Ref{XI.2} y la finitud del grupo de torsión de
+\ifthenelse{\boolean{orig}}
+{Néron--Sévéri}
+{Néron--Severi}
+que, para todo número primo~$\ell$ distinto de la característica, la
+componente $\ell$-primaria del grupo fundamental abelianizado~$\pi_1(S)$ es
+un módulo de tipo finito y de rango~$2g$ sobre el anillo~$\ZZ_\ell$ de los
+enteros $\ell$-ádicos (y, además, libre excepto, a lo sumo, para un número
+finito de valores de~$\ell$). Como observó Serre, esto permite demostrar,
+bajo ciertas condiciones, que cuando~$X$ es un esquema plano y proyectivo
+sobre~$S$ conexo, los esquemas de Picard de las fibras de~$X$ tienen todos
+la misma dimensión, aplicando el teorema de semicontinuidad
+(\Ref{X.2.3}); el argumento de Serre se aplica siempre que exista el esquema
+de Picard de~$X$ sobre~$S$ y los esquemas de Picard conexos de las fibras
+de~$X$ sobre~$S$ sean esquemas en grupos propios, por ejemplo cuando las
+fibras geométricas de~$X$ sobre~$S$ sean normales (manteniéndose~$X$ plano y proyectivo
+sobre~$S$), en particular si~$X$ es liso y proyectivo sobre~$S$.
+
+Sea ahora~$p$ un número primo, y supongamos que~$S$ es un preesquema de
+característica~$p$, \,\ie tal que~$p\cdot\cal{O}_S=0$. Entonces el
+homomorfismo de elevación a la potencia $p$-ésima en~$\cal{O}_S$ es aditivo,
+y el morfismo correspondiente, obtenido reemplazando~$S$ por un~$T$ variable
+sobre~$S$,
+$$
+F\colon\GG_{a\,S}\to\GG_{a\,S}
+$$
+es, por tanto, un homomorfismo de $S$-grupos, llamado el \emph{homomorfismo
+de Frobenius}. (N.B. Un morfismo tal está definido para todo $S$-preesquema
+$G$ que provenga por extensión de la base de un preesquema~$G_0$ sobre el
+cuerpo primo~$\ZZ/p\ZZ$, y este morfismo es un homomorfismo de grupos si~$G_0$
+es un preesquema en grupos). Pondremos
+$$
+\wp=\id-F\colon\GG_{a\,S}\to\GG_{a\,S}.
+$$

@@ -1,0 +1,118 @@
+
+\begingroup
+\setcounter{proposition}{11}% Conservar el número visible XIII.2.12 de la fuente.
+\begin{corollaire}
+\label{XIII.2.12}
+Sea $X$ una curva propia, lisa y conexa de género $g$ sobre un cuerpo
+separablemente cerrado $k$ de característica $p\geq 0$. Sea $U$ el abierto
+obtenido al quitar de~$X$ $n$ puntos cerrados distintos
+$a_1,\dots,a_n$. Entonces el grupo fundamental moderadamente ramificado
+$\pi_1^{\tame}(U)$ \eqref{XIII.2.1.3} puede ser engendrado por $2g+n$
+elementos $x_i,y_i,\sigma_j$, con $1\leq i\leq g$ y
+$1\leq j\leq n$, de modo que $\sigma_j$ sea un generador de un grupo
+de inercia correspondiente a~$a_j$, y se tenga la relación
+\begin{equation*}
+\label{eq:XIII.2.12.*}
+\tag{$*$} \prod_{1\leq i\leq
+g}(x_iy_ix^{-1}_iy^{-1}_i)\cdot\prod_{1\leq j\leq n}\sigma_j=1.
+\end{equation*}
+Para todo grupo finito $G$ \emph{de orden primo con} $p$,
+engendrado por elementos $\overline{x}_i,\overline{y}_i,
+\overline{\sigma}_j$ que satisfacen la relación
+\eqref{eq:XIII.2.12.*}, existe un recubrimiento étale de~$U$, de grupo
+$G$, correspondiente a un homomorfismo $\pi_1^{\tame}(U)\to G$ que
+\marginpar{393}%
+envía $x_i,y_i,\sigma_j$ a~$\overline{x}_i,\overline{y}_i,
+\overline{\sigma}_j$, respectivamente. En otros términos, si $p'$ denota
+el conjunto de los números primos distintos de~$p$, $\pi_1^{p'}(U)$ es el
+grupo pro-$p'$ engendrado por los generadores $x_i,y_i,\sigma_j$, sujetos
+a la única relación~\eqref{eq:XIII.2.12.*}.
+\end{corollaire}
+
+\subsubsection*{Demostración}
+Podemos suponer que $k$ es algebraicamente cerrado. Supongamos primero que
+$k$ tiene característica cero. Existe entonces una subextensión
+algebraicamente cerrada $k'$ de~$k$, de grado de trascendencia finito
+sobre~$\QQ$, tal que $X$ provenga por extensión de escalares de una curva
+propia y lisa $X'$ definida sobre~$k'$, y podemos suponer que los puntos
+$a_1,\dots,a_n$ provienen de puntos racionales $a'_1,\dots,a'_n$ de~$X'$.
+Como $k'$ tiene grado de trascendencia finito sobre~$\QQ$, se puede hallar
+una inmersión de~$k'$ en el cuerpo de los números complejos $\CC$; sea
+$\widetilde{U}=U'\times_{k'}\CC$. Sea $k''$ una extensión algebraicamente
+cerrada de~$k'$ tal que existan morfismos sobre~$k'$ de~$k$ y de~$\CC$
+en~$k''$. Si $g'\colon U'\to k'$ es el morfismo estructural y
+\ifthenelse{\boolean{orig}}
+{si $\cal F$ es un haz de grupos constante finito sobre~$U''$}
+{si $\cal F'$ es un haz de grupos constante finito sobre~$U'$},
+se deduce de~\Ref{XIII.2.9} que los morfismos de especialización
+$$
+(\R^1g'_*\cal{F}')_{\CC}\to(\R^1g'_*\cal{F}')_{k''}
+\from(\R^1g'_*\cal{F}')_k
+$$
+son isomorfismos. En términos de grupos fundamentales, esto demuestra que
+se tiene un isomorfismo, definido salvo automorfismo interior,
+$$
+\pi_1(U)\to\pi_1(\widetilde{U}),
+$$
+y está claro que este isomorfismo transforma un grupo de inercia relativo
+a un punto de~$X'-U'$ en un grupo de inercia relativo al mismo punto.
+Por tanto, podemos suponer que $k=\CC$. En este último caso, del teorema
+de existencia de Riemann (\Ref{XII.5.2}) resulta que el grupo fundamental
+$\pi_1(U)$ no es sino la completación, para la topología de los subgrupos
+de índice finito, del grupo fundamental del espacio analítico asociado
+a~$U$. Ahora bien, este último puede calcularse por métodos trascendentes
+\cite[ch\ptbl 7
+\S 47]{XIII.3};
+\marginpar{394}%
+puede ser engendrado por $2g+n$ elementos $x_i,y_i,\sigma_j$ tales que
+$\sigma_j$ sea la imagen de un generador
+\ifthenelse{\boolean{orig}}
+{del grupo fundamental local $\pi_1(D_j)$ de un pequeño disco centrado
+en~$a_j$}
+{del grupo fundamental local $\pi_1(D_j-\{a_j\})$, donde $D_j$ es un
+pequeño disco centrado en~$a_j$},
+\ie un generador de un grupo de inercia correspondiente al punto $a_j$,
+y estos elementos satisfacen la única relación \eqref{eq:XIII.2.12.*}.
+
+Si ahora $k$ tiene característica $p>0$, se puede hallar un anillo de
+valoración discreta completo $A$, con cuerpo residual $k$ y cuerpo de
+fracciones $K$ de característica cero, y un esquema conexo $X_1$, propio
+y liso sobre~$S=\Spec A$, tal que
+$X_1\times_S\Spec k\simeq X$ (\Ref{III.7.4}). Los puntos $a_j$ se
+levantan entonces a secciones $s_j$ de~$X_1$ sobre~$S$; sea $Y_{1j}$ el
+subesquema cerrado reducido cuyo espacio subyacente es $s_j(S)$, sea $Y_1$
+la unión de los $Y_{1j}$, sea $U_1=X_1-Y_1$ y sea
+$g_1\colon U_1\to S$ el morfismo estructural. Sean $\overline K$ una
+extensión algebraicamente cerrada de~$K$,
+\ifthenelse{\boolean{orig}}
+{}
+{$\overline X=X_1\times_S\overline K$ y}
+$\overline U=U_1\times_S\overline K$. Si $C$ es un grupo constante finito,
+se deduce de~\Ref{XIII.2.8} que el morfismo de especialización
+$$
+(\R^1g_{1*}C_{U_1})_k\to(\R^1g_{1*}C_{U_1})_{\overline K}
+$$
+es inyectivo, e incluso biyectivo si $C$ es de orden primo con~$p$.
+Ahora bien, esto significa, en términos de grupos fundamentales, que el
+morfismo de especialización
+\ifthenelse{\boolean{orig}}
+{\eqref{XIII.1.10}}
+{\eqref{XIII.2.10}}
+$$
+\pi\colon \pi_1(\overline U)\to\pi^{\tame}_1(U)
+$$
+es sobreyectivo, y que el morfismo de especialización
+$$
+\pi^{p'}_1(\overline U)\to\pi^{p'}_1(U)
+$$
+es biyectivo. Por último, si $x_i,y_i,\sigma_j$ son generadores de
+$\pi_1(\overline U)$ tales que $\sigma_j$ sea un generador de un grupo de
+inercia correspondiente al punto $b_j=Y_{1j}(\overline K)$ de~$\overline X$,
+entonces, según
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.1.11}}
+{\Ref{XIII.2.11}},
+$\pi(\sigma_j)$ es un generador de un grupo de inercia correspondiente
+a~$a_j$, lo cual concluye la demostración.
+
+\endgroup

@@ -1,0 +1,58 @@
+
+En la aplicación de los métodos de la geometría formal, la situación es casi siempre la siguiente: se dan dos $S$-preesquemas $X$ e~$Y$ y un haz de ideales coherente~$\cal{I}$ sobre~$S$; se denota por~$S_n$ el subpreesquema cerrado de~$S$ definido por~$\cal{I}^{n+1}$, y se pone
+\begin{equation*}
+X_n=X\times_S S_n\quoi,\quad Y_n=Y\times_S S_n.
+\end{equation*}
+Se supone dado un $S_n$-morfismo
+\begin{equation*}
+g_n\colon Y_n\to X_n
+\end{equation*}
+(o, lo que equivale a lo mismo, un $S$-morfismo $Y_n\to X$, o también un $S_{n+1}$-morfismo $Y_n\to X_{n+1}$, puesto que tal morfismo induce necesariamente $Y_n\to X_n$), y se busca prolongarlo a un $S_{n+1}$-morfismo
+\begin{equation*}
+g_{n+1}\colon Y_{n+1}\to X_{n+1}.
+\end{equation*}
+(Si puede continuarse indefinidamente, se obtiene, pues, un morfismo $\widehat{Y}\to\widehat{X}$ entre los preesquemas formales completados de~$Y$ y~$X$ respecto de los ideales
+\ifthenelse{\boolean{orig}}
+{$\cal{IO}_X$ y~$\cal{IO}_Y$.)}
+{$\cal{IO}_Y$ y~$\cal{IO}_X$.)}
+Puede aplicarse~\Ref{III.5.1} sustituyendo allí $(S,X,Y,Y_0,g_0)$ por $(S_{n+1},X_{n+1},Y_{n+1},Y_n,g_n)$. El haz~$\cal{G}$ se convierte aquí en el haz de homomorfismos de módulos de~$g_n^*(\it{\Omega}_{X_{n+1}/S_{n+1}}^1)$ en~$\cal{J}=\cal{I}^{n+1}\cal{O}_Y/\cal{I}^{n+2}\cal{O}_Y$. Como~$\cal{J}$ es anulado por~$\cal{IO}_Y$, puede sustituirse entonces~$g_n^*(\it{\Omega}_{X_{n+1}/S_{n+1}}^1)$
+\marginpar{74}
+por el haz que induce sobre~$Y_0$, a saber, $h_0^*(\it{\Omega}_{X/S}^1)$, donde~$h_0$ es el compuesto $Y_0\to Y_n\to X_{n+1}$, o también el compuesto $Y_0\to X_0\to X_{n+1}$, donde $g_0\colon Y_0\to X_0$ es inducido por~$g_n$. Como la imagen inversa de~$\it{\Omega}_{X_{n+1}/S_{n+1}}^1$ sobre~$X_0=X_{n+1}\times_{S_{n+1}}S_0$ es~$\it{\Omega}_{X_0/S_0}^1$, se ve que también se tiene
+\begin{equation*}
+\cal{G}=\SheafHom_{\cal{O}_{Y_0}}
+(g_0^*(\it{\Omega}_{X_0/S_0}^1),
+\cal{I}^{n+1}\cal{O}_Y/\cal{I}^{n+2}\cal{O}_Y).
+\end{equation*}
+Se obtiene, pues, el
+
+\begin{corollaire}
+\label{III.5.3}
+Sean~$S,X,Y,\cal{I},g_n$ como antes, y sea~$\cal{P}(g_n)$ el haz sobre~$Y$ cuyas secciones sobre un abierto~$U$ son
+\ifthenelse{\boolean{orig}}
+{las prolongaciones~$g_{n+1}$ de~$g_n$ a un $S_{n+1}$-morfismo $Y_{n+1}\to X_{n+1}$}
+{las prolongaciones $g_{n+1}\colon U_{n+1}\to X_{n+1}$ de $g_n|_{U_n}$, donde $U_m=U\times_S S_m$}.
+Entonces
+\ifthenelse{\boolean{orig}}{$\cal{P}$}{$\cal{P}(g_n)$}
+es un haz formalmente homogéneo principal bajo el haz de grupos
+\begin{equation*}
+\cal{G}=\SheafHom_{\cal{O}_{Y_0}}
+(g_0^*(\it{\Omega}_{X_0/S_0}^1),
+\gr_{\cal{IO}_Y}^{n+1}(\cal{O}_Y)).
+\end{equation*}
+\end{corollaire}
+
+En particular:
+
+\begin{corollaire}
+\label{III.5.4}
+Si, además, $X$ es liso sobre~$S$ (al menos en los puntos de~$g_0(Y_0)$), entonces
+\ifthenelse{\boolean{orig}}{$\cal{P}$}{$\cal{P}(g_n)$}
+es incluso un haz homogéneo principal.
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+En particular, define una clase de obstrucción en~$\H^1(Y_0,\cal{G})$, cuya anulación es necesaria y suficiente para la existencia de una prolongación global~$g_{n+1}$ de~$g_n$. Y si existe tal prolongación, el conjunto de todas las prolongaciones globales es un espacio homogéneo principal bajo~$\H^0(Y_0,\cal{G})$. Por último, en el caso considerado, el haz~$\cal{G}$ puede escribirse también
+\begin{equation*}
+\cal{G}=g_0^*(\goth{g}_{X_0/S_0})\otimes_{\cal{O}_{Y_0}}
+\gr_{\cal{IO}_Y}^{n+1}(\cal{O}_Y).
+\end{equation*}
+\end{corollaire}

@@ -1,0 +1,172 @@
+\section[Una sucesión exacta fundamental]{Una sucesión exacta fundamental. Descenso por morfismos con
+fibras relativamente conexas}
+\label{IX.6}
+\marginpar{253}
+
+\begin{theoreme}
+\label{IX.6.1}
+Sean~$S$ el espectro de un anillo artiniano~$A$ con cuerpo residual~$k$,
+~$\overline{k}$ una clausura algebraica de~$k$,~$X$ un~$S$-preesquema,
+~$X_0=X\otimes_A k$,~$\overline{X}_0=X\otimes_A\overline{k}$,
+~$\overline{a}$ un punto geométrico
+\ifthenelse{\boolean{orig}}{de~$\overline{X}$}{de~$\overline{X}_0$},
+~$a$ su imagen en~$X$ y~$b$ su imagen en~$S$. Supongamos que~$X_0$ es
+cuasicompacto y \emph{geométricamente conexo} sobre~$k$ (N.B.: si~$X$ es
+propio sobre~$S$, esto significa que~$\H^0(X_0,\cal{O}_{X_0})$ es un anillo
+artiniano \emph{local} cuyo cuerpo residual es \emph{radicial} sobre~$k$).
+Entonces la sucesión de homomorfismos canónicos
+$$
+e\mto \pi_1(\overline{X}_0,\overline{a})\to
+\pi_1(X,a)\to\pi_1(S,b)\to e
+$$
+es exacta, y se tiene
+$$
+\pi_1(S,b)\isomfrom \pi_1(k,\overline{k})=\text{grupo de Galois
+de~$\overline{k}$ sobre~$k$.}
+$$
+\end{theoreme}
+
+Como los grupos fundamentales no cambian al eliminar los elementos
+nilpotentes, podemos suponer que~$A=k$, lo cual hace ya evidente el último
+isomorfismo. Sea~$k'$ la clausura separable de~$k$ en~$\overline{k}$,
+consideremos~$X'=X\otimes_k k'$ y sea~$a'$ la imagen de~$\overline{a}$
+en~$X'$. Se tiene una sucesión de homomorfismos canónicos
+$$
+e\mto \pi_1(\overline{X}_0,\overline{a})\to
+\pi_1(X',a')\to\pi_1(S',b')\to e
+$$
+(donde~$S'=\Spec(k')$). Por último, el diagrama
+$$
+\xymatrix{ S & X \ar[l] & \overline{X}_0 \ar[l] \\ S' \ar[u] &
+X'\ar[u] \ar[l] & \overline{X}_0 \ar[l] \ar@{=}[u]. }
+$$
+da un homomorfismo canónico de esta sucesión en la correspondiente a~$X/k$.
+Por otra parte, se ve que este homomorfismo de sucesiones de grupos es un
+isomorfismo, como resulta de~\Ref{IX.4.11}. Quedamos, pues, reducidos a probar
+que la segunda sucesión es exacta, es decir, podemos suponer que~$k$ es
+\emph{perfecto}. Sean entonces~$k_i$ las subextensiones galoisianas finitas
+de~$k$ en~$\overline{k}$, pongamos~$X_i=X\otimes_k k_i$ y sea~$a_i$ la
+imagen de~$\overline{a}$ en~$X_i$. Dejamos al lector
+\ifthenelse{\boolean{orig}}
+{\ignorespaces}
+{la tarea}
+de comprobar que el homomorfismo natural
+$$
+\pi_1(\overline{X}_0,\ifthenelse{\boolean{orig}}{a}{\overline{a}})
+\isomto \varprojlim\pi_1(X_i,a_i)
+$$
+\marginpar{254}%
+es un isomorfismo. Esto significa simplemente que todo recubrimiento étale
+de~\ifthenelse{\boolean{orig}}{$\overline{X}$}{$\overline{X}_0$} procede de
+un recubrimiento étale de algún~$X_i$, y que este último es esencialmente
+único, salvo pasar a un~$X_j$,~$j\geq i$.
+Por otra parte, sea~$\pi_i$ el grupo de Galois de~$k_i$ sobre~$k$, es decir,
+el grupo opuesto al grupo de los~$S$-automorfismos de~$S_i=\Spec(k_i)$.
+Como el funtor~$S'\mto X\times_S S'$ de los recubrimientos étale de~$S$ en
+los recubrimientos étale de~$X$ es plenamente fiel~\eqref{IX.3.4}, se
+sigue que~$\pi_i$ es también isomorfo al grupo opuesto al grupo de los
+~$X$-automorfismos del recubrimiento principal conexo~$X_i$ de~$X$. Resulta,
+por tanto, de~\Ref{V.6.13} que se tiene una sucesión exacta
+$$
+e\mto \pi_1(X_i,a_i)\to \pi_1(X,a)\to\pi_i\to e.
+$$
+Pasando al límite proyectivo sobre~$i$ en estas sucesiones exactas, se obtiene
+una sucesión exacta (pues estamos en la categoría de los grupos de tipo
+galoisiano), que no es otra que la sucesión considerada en~\Ref{IX.6.1}.
+Esto termina la demostración.
+
+La traducción de la exactitud por la derecha en~\Ref{IX.6.1} al lenguaje
+geométrico es la siguiente:
+
+\begin{corollaire}
+\label{IX.6.2}
+Con las notaciones precedentes, sea~$X'$ un recubrimiento étale de~$X$ y sea
+~$\overline{X'}_0$ el recubrimiento étale correspondiente de
+~$\overline{X}_0$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] Existe un~$S'$ étale sobre~$S$ y un~$X$-isomorfismo
+$X'\isomto X\times_S S'$ (entonces~$S'$ queda determinado salvo isomorfismo
+único en virtud de~\Ref{IX.3.4}).
+\item[(ii)] $\overline{X}_0'$ está completamente descompuesto sobre
+~$\overline{X}_0$.
+
+Si~$X'$ es conexo, estas condiciones equivalen también a:
+\item[(ii~bis)] $\overline{X}_0'$ posee una sección sobre~$\overline{X}_0$.
+\end{enumerate}
+\end{corollaire}
+
+(N.B.: Este último complemento es esencial; la equivalencia de~(i) y~(ii)
+solo significa que~$\pi_1(S,b)$ es el grupo cociente de~$\pi_1(X,a)$ por el
+subgrupo
+\marginpar{255}
+normal cerrado engendrado por la imagen de
+~$\pi_1(\overline{X}_0,\overline{a})$, y no por esta imagen misma). Bajo las
+condiciones precedentes, diremos que~$X'$ es un recubrimiento
+\emph{geométricamente trivial}
+\index{geométricamente trivial (recubrimiento)|hyperpage}%
+de~$X$.
+
+\begin{remarque}
+\label{IX.6.3}
+En el enunciado~\Ref{IX.6.1} no puede sustituirse~$\overline{k}$ por una
+extensión algebraicamente cerrada cualquiera de~$k$, ni siquiera si se supone
+ya que~$k$ es algebraicamente cerrado. En otras palabras, no es cierto en
+general que, si~$X$ es un esquema algebraico conexo sobre un cuerpo
+algebraicamente cerrado~$k$, su grupo fundamental permanezca inalterado al
+sustituir~$k$ por una extensión algebraicamente cerrada. Esto es falso ya, por
+ejemplo, en característica~$p>0$ para la recta afín sobre~$k$, a causa de los
+fenómenos de «ramificación superior» en el punto del infinito, que introducen
+una estructura «continua» en el grupo fundamental. Veremos, sin embargo, en el
+exposé siguiente que tales fenómenos no pueden producirse si~$X$ es
+\emph{propio} sobre~$k$. Demostraremos también por métodos trascendentes que
+ocurre lo mismo si~$k$ es de característica cero.
+\end{remarque}
+
+\begin{corollaire}
+\label{IX.6.4}
+Supongamos que~$a$ está localizado en un punto~$x\in X$ racional sobre~$k$ (o,
+más generalmente, cuyo cuerpo residual es radicial sobre~$k$). Entonces la
+sucesión exacta~\Ref{IX.6.1} es escindida.
+\end{corollaire}
+
+Podemos suponer~$S=\Spec(k)$. Si~$x$ es racional sobre~$k$, corresponde a una
+sección~$S\to X$ de~$X$ sobre~$S$, que lleva~$b$ en~$a$ y define un
+homomorfismo~$\pi_1(S,b)\to\pi_1(X,a)$ que es la escisión buscada. Si
+~$\kres(x)$ es radicial sobre~$k$, nos reducimos al caso precedente mediante
+la extensión de base~$\Spec(\kres(x))\to\Spec(k)$.
+
+\begin{theoreme}
+\label{IX.6.5}
+Sean~$f\colon X\to S$ un morfismo propio y sobreyectivo de presentación
+finita, con fibras geométricamente conexas,~$X'$ un preesquema de presentación
+finita y propio sobre~$X$,~$s$ un punto de~$S$,~$F=X_s$ la fibra de~$X$ en
+~$s$, y~$F_1'$ una componente conexa de la fibra~$F'=X'_s$ de~$X'$ en~$s$.
+Para que existan un entorno abierto~$X_1'$ de~$F_1'$ en~$X'$, un
+~$S$-esquema étale~$S_1'$ y un~$X$-isomorfismo
+$X_1'\isomto S_1'\times_S X$, es necesario y suficiente que~$X'$ sea étale
+sobre~$X$ en los puntos de~$F_1'$ y que~$F_1'$ sea un recubrimiento
+geométricamente trivial de~$F$.
+\end{theoreme}
+
+La
+\marginpar{256}
+necesidad de la condición es trivial, por lo que resta probar la suficiencia.
+Nos reducimos fácilmente al caso en que~$S$ es noetheriano. Consideremos la
+factorización de Stein~$X\to T\to S$ de~$f$, donde~$T$ es el espectro del
+álgebra~$f_*(\cal{O}_X)$ sobre~$S$. Como las fibras de~$X$ sobre~$S$ son
+geométricamente conexas y~$f$ es sobreyectivo, el morfismo~$T\to S$ es finito,
+sobreyectivo y radicial; por consiguiente, según~\eqref{IX.4.10}, todo~$T'$
+étale sobre~$T$ procede por imagen inversa de un~$S'$ étale sobre~$S$.
+Esto nos reduce a
+\ifthenelse{\boolean{orig}}
+{probar~\Ref{IX.6.5}.}
+{probar~\Ref{IX.6.5}}
+reemplazando allí~$S$ por~$T$, es decir, al caso en que suponemos
+~$f_*(\cal{O}_X)=\cal{O}_S$. Consideremos entonces la factorización de Stein
+~$X'\to S'\to S$ del morfismo propio~$h\colon X'\to S$, donde~$S'$ es el
+espectro del álgebra~$h_*(\cal{O}_{X'})$. Los morfismos~$X'\to X$ y
+~$X'\to S'$ definen un morfismo canónico
+$$
+X'\to X\times_S S',
+$$
+y nuestra afirmación está contenida en la siguiente:

@@ -1,0 +1,123 @@
+
+\begin{proposition}
+\label{II.4.9}
+Sean $X$ un $S$-preesquema, $Y$ un subpreesquema cerrado de~$X$ definido por un haz coherente $\cal{J}$ de ideales sobre~$X$, $x$ un punto de~$X$, $g_i$ ($1\leq i\leq n$) secciones de~$\cal{O}_X$ que definen un $S$-morfismo
+\[
+g\colon X\to S[t_1,\dots,t_n]=X',
+\]
+y, por último, $p$ un entero, $0\leq p\leq n$. Se supone que $X$ es \emph{liso sobre~$S$ en $x$}. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] Existe un entorno abierto $X_1$ de~$x$ en~$X$ tal que $g|X_1$ es \emph{étale} y $Y_1=Y\cap X_1$ (la traza de~$Y$ sobre~$X_1$) es la \emph{imagen inversa} del subpreesquema cerrado $Y'=S[t_{p+1},\dots,t_n]$ de $X'=S[t_1,\dots,t_n]$ (es decir, los $g_i$ ($1\leq i\leq p$) engendran $\cal{J}|X_1$):
+\[
+\xymatrix{Y_1 \ar[d] \ar[r] & X_1 \ar[d]^{\hbox{étale}} \\
+Y'=S[t_{p+1},\dots,t_n] \ar[r] & X'=S[t_1,\dots,t_n].}
+\]
+\item[(ii)]
+$Y$
+\marginpar{40}
+es \emph{liso sobre~$S$ en $x$}; los $g_i$ ($1\leq i\leq p$) definen \emph{elementos de} $\cal{J}_x$; los $\rd g_i(x)$ ($1\leq i\leq n$) forman una \emph{base de} $\it{\Omega}^1_{X/S}(x)$ sobre~$\kres(x)$; y los $\rd g'_i(x)$ ($p+1\leq i\leq n$) forman una \emph{base de} $\it{\Omega}^1_{Y/S}(x)$ sobre~$\kres(x)$ (donde $g'_i$ denota la restricción de $g_i$ a~$Y$; las diferenciales se toman con respecto a~$S$).
+\item[(iii)] Los $g_i$ ($1\leq i\leq p$) definen un \emph{sistema de generadores} de~$\cal{J}_x$, y los $\rd g_i(x)$ ($1\leq i\leq n$) forman una \emph{base de} $\it{\Omega}^1_{X/S}(x)$ sobre~$\kres(x)$.
+\item[(iv)] $Y$ es \emph{liso sobre~$S$} en $x$; los $g_i$
+\ifthenelse{\boolean{orig}}{\ignorespaces}{($1\leq i\leq p$)}
+forman un \emph{sistema minimal de generadores de} $\cal{J}_x$; y los $\rd g'_i(x)$ ($p+1\leq i\leq n$) forman una \emph{base de} $\it{\Omega}^1_{Y/S}(x)$ sobre~$\kres(x)$.
+\end{enumerate}
+
+Además, bajo estas condiciones, $\cal{J}/\cal{J}^2$ es un módulo libre sobre~$Y$ en $x$, que admite como \emph{base en $x$} las clases de los $g_i$ ($1\leq i\leq p$), \emph{y el homomorfismo} canónico $\cal{J}/\cal{J}^2\to\it{\Omega}^1_{X/S}\otimes\cal{O}_Y$ es \emph{universalmente inyectivo en $x$}.
+\end{proposition}
+
+\begin{remarquestar}
+Esto implica que $p$ queda bien determinado por las demás condiciones: como el \emph{rango} del módulo libre $\cal{J}/\cal{J}^2$ sobre~$Y$ en $x$; como el \emph{número mínimo de generadores} de~$\cal{J}_x$ sobre~$X$; o, finalmente, por el hecho de que la dimensión relativa de~$Y$ respecto de~$S$ en $x$ es $n-p$.
+\end{remarquestar}
+
+\subsubsection*{Demostración}
+Supongamos primero que se cumple (i). Entonces, por (\Ref{I.4.6}~(iii)), $Y_1$ es étale sobre~$Y'$; por definición, es por tanto liso sobre~$S$ en $x$ (de dimensión relativa $n-p$), y lo mismo ocurre con~$Y$. De~\Ref{II.4.8} se sigue que los $\rd g_i$ ($1\leq i\leq n$) forman una base de~$\it{\Omega}^1_{X/S}$ en $x$, y que los $\rd g'_i$ ($p+1\leq i\leq n$) forman una base de~$\it{\Omega}^1_{Y/S}$ en $x$. La sucesión exacta~\eqref{eq:II.4.3} implica entonces que los $g_i$ ($1\leq i\leq p$) son linealmente independientes en $\cal{J}/\cal{J}^2$ (considerado como módulo sobre~$Y$) en $x$; como los $g_i$ ($1\leq i\leq p$) engendran $\cal{J}_x$, se sigue que los $g_i\bmod\cal{J}_x^2$ forman una \emph{base de} $\cal{J}/\cal{J}^2$ en $x$. Esto implica, por una parte, que los $g_i$ ($1\leq i\leq p$) forman un sistema \emph{minimal} de generadores de~$\cal{J}_x$ y, por otra, que el homomorfismo $\cal{J}/\cal{J}^2\to\it{\Omega}^1_{X/S}\otimes\cal{O}_Y$ de~\eqref{eq:II.4.3} es universalmente inyectivo en $x$ (pues lleva una base de un módulo libre en $x$ a una parte de una base de un módulo libre en $x$; nótese que se trata de $Y$-módulos). Esto prueba que (i) implica (ii), (iii), (iv), así como las últimas afirmaciones de la proposición~
+\ifthenelse{\boolean{orig}}{\Ref{I.4.9}}{\Ref{II.4.9}}.
+
+(iii) implica (i) en virtud del corolario~
+\ifthenelse{\boolean{orig}}{\Ref{I.4.8}}{\Ref{II.4.8}}.
+
+(ii)
+\marginpar{41}
+implica (i). En efecto, la primera hipótesis de (ii) significa que (reemplazando, si es preciso, $X$ por un entorno abierto de $x$ en $X$) $g$ induce un morfismo $h\colon Y\to Y'$. Según~\Ref{II.4.8}, las otras dos hipótesis de (ii) significan que $g$ es étale en $x$ y que $h$ es étale en $x$. Sea entonces $Y''$ la imagen inversa de~$Y'$ por $g$. Así, $Y$ es un subpreesquema cerrado de~$Y''$, el cual es étale sobre~$Y'$ en $x$ por (\Ref{I.4.6}~(iii)), pues $g$ es étale en $x$. Por tanto, el morfismo de inmersión $Y\to Y''$ es él mismo étale (\Ref{I.4.8}) y, en consecuencia, una inmersión abierta (\Ref{I.5.8} o \Ref{I.5.2}); reemplazando de nuevo $X$ por un entorno abierto conveniente $X_1$ de~$x$, se obtiene (i).
+
+Lo anterior establece la equivalencia de las condiciones
+\ifthenelse{\boolean{orig}}{(i) (ii) (iii)}{(i), (ii), (iii)},
+y el hecho de que implican (iv). Falta probar que (iv)$\To$(ii), lo cual es inmediato (teniendo en cuenta que $\it{\Omega}^1_{X/S}$ es libre sobre~$X$ en $x$) una vez que se sabe que el hecho de que $Y$ sea liso sobre~$S$ en $x$ implica que $\cal{J}/\cal{J}^2$ es libre sobre~$Y$ en $x$ y que el homomorfismo $\cal{J}/\cal{J}^2\to\it{\Omega}^1_{X/S}\otimes\cal{O}_Y$ es universalmente inyectivo en $x$. Este último punto está incluido en el
+
+\begin{theoreme}
+\label{II.4.10}
+Sean $X$ un $S$-preesquema liso, $Y$ un subpreesquema cerrado de~$X$ definido por un haz coherente $\cal{J}$ de ideales sobre~$X$, y $x$ un punto de~$X$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $Y$ es \emph{liso sobre~$S$ en $x$}.
+\item[(ii)] Existen un entorno abierto $X_1$ de~$x$ en~$X$ y un $S$-morfismo \emph{étale}
+\[
+g\colon X_1\to X'=S[t_1,\dots,t_n]
+\]
+tal que $Y_1=Y\cap X_1$ (la traza de~$Y$ sobre~$X_1$) sea el subpreesquema de~$X_1$ que es \emph{imagen inversa} por $g$ del subpreesquema cerrado $Y'=S[t_{p+1},\dots,t_n]$ de $X'=S[t_1,\dots,t_n]$, para un $p$ conveniente.
+\item[(iii)] Existen \emph{generadores $g_i$ ($1\leq i\leq p$) de~$\cal{J}_x$} tales que los $\rd g_i$ formen parte de una base de~$\it{\Omega}^1_{X/S}$ en $x$ (o, lo que es equivalente, tales que los $\rd g_i(x)$ en $\it{\Omega}^1_{X/S}(x)$ sean linealmente independientes sobre~$\kres(x)$).
+\item[(iv)] El haz $\cal{J}/\cal{J}^2$ es libre sobre~$Y$ en $x$, y el homomorfismo canónico
+\[
+\rd\colon\cal{J}/\cal{J}^2\to\it{\Omega}^1_{X/S}\otimes\cal{O}_Y
+\]
+es universalmente inyectivo en~$x$; o, lo que es equivalente, la sucesión de homomorfismos canónicos
+\[
+0\to\cal{J}/\cal{J}^2\to\it{\Omega}^1_{X/S}\otimes\cal{O}_Y\to
+\it{\Omega}^1_{Y/S}\to 0
+\]
+es exacta en $x$, y $\it{\Omega}^1_{Y/S}$ es localmente libre en~$x$.
+\end{enumerate}
+\end{theoreme}
+
+\subsubsection*{Demostración}
+Ya
+\marginpar{42}
+sabemos, por lo anterior, que (ii) implica (i), (iii), (iv). Probemos que (i)$\To$(ii) (lo que concluirá al mismo tiempo la demostración
+\ifthenelse{\boolean{orig}}{de~\Ref{I.4.9})}{de~\Ref{II.4.9}).}
+En virtud del teorema~\Ref{II.4.3}~(ii), los dos últimos términos de la sucesión exacta~\eqref{eq:II.4.3} son módulos libres sobre~$Y$. Como las imágenes en $\it{\Omega}^1_{X/S}\otimes_{\cal{O}_X}\cal{O}_Y$ de los $\rd g$ ($g\in\cal{O}_X$) engendran este módulo en $x$, y sus imágenes en $\it{\Omega}^1_{Y/S}$ engendran por tanto este último en~$x$, se pueden encontrar $g_i$ ($p+1\leq i\leq n$) en $\cal{O}_X$ tales que los $\rd g'_i$ formen una base de~$\it{\Omega}^1_{Y/S}$; luego, por la exactitud de~\eqref{eq:II.4.3}, se puede completar el sistema de los $\rd g_i$ ($p+1\leq i\leq n$) hasta una base del término intermedio con elementos de la forma $\rd g_i$ ($1\leq i\leq p$), donde los $g_i$ ($1\leq i\leq p$) \emph{pertenecen a $\cal{J}_x$}. Los $g_i$ provienen de secciones de~$\cal{O}_X$ sobre un entorno de~$x$ en $X$, que podemos suponer igual a~$X$. Estamos entonces bajo la condición
+\ifthenelse{\boolean{orig}}{\Ref{II.4.8}~(ii)}{\Ref{II.4.9}~(ii)},
+y hemos establecido que esta implica la condición
+\ifthenelse{\boolean{orig}}{\Ref{II.4.8}~(i)}{\Ref{II.4.9}~(i)},
+de donde se sigue~\Ref{II.4.10}~(ii).
+
+La implicación (iii)$\To$(ii) en~\Ref{II.4.10} se sigue inmediatamente de la implicación (iii)$\To$(i) en
+\ifthenelse{\boolean{orig}}{\Ref{II.4.8}}{\Ref{II.4.9}}.
+Así,
+\ifthenelse{\boolean{orig}}{(i) (ii) (iii)}{(i), (ii), (iii)}
+son equivalentes e implican (iv). Finalmente, es trivial que (iv) implica (iii), teniendo en cuenta que unos $g_i\in\cal{J}_x$ que forman una base de~$\cal{J}_x\bmod\cal{J}_x^2$ engendran $\cal{J}_x$ (Nakayama).
+
+Además, la demostración precedente muestra lo siguiente:
+\begin{corollaire}
+\label{II.4.11}
+Sean $X$ un $S$-preesquema, $Y$ un subpreesquema cerrado definido por un haz coherente $\cal{J}$ de ideales sobre~$X$, y $x$ un punto de~$Y$. Supongamos que \emph{$X$ e $Y$ son lisos sobre~$S$ en $x$}. Sean $g_i$ secciones de~$\cal{J}$ ($1\leq i\leq p$). Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] Los $g_i$ \emph{engendran} $\cal{J}_x$ y los $\rd g_i(x)$ son \emph{linealmente independientes} en $\it{\Omega}^1_{X/S}(x)$
+\ifthenelse{\boolean{orig}}{sobre~$(x)$.}{sobre~$\kres(x)$.}
+\item[(ii)] Los $g_i\bmod\cal{J}^2$ forman una base de $\cal{J}/\cal{J}^2$ en $x$.
+\item[(iii)] Los $g_i$ forman un sistema minimal de generadores de~$\cal{J}_x$.
+\item[(iv)] Se pueden encontrar otras secciones $g_i$ ($p+1\leq i\leq n$) de~$\cal{O}_X$ sobre un entorno $X_1$
+\ifthenelse{\boolean{orig}}{de~$X$}{de~$x$ en~$X$},
+que, junto con las anteriores, definan un morfismo \emph{étale} $X_1\to X'=S[t_1,\dots,t_n]$ tal que $Y_1=Y\cap X_1$ sea la \emph{imagen inversa} por $g$ del subpreesquema cerrado $Y'=S[t_{p+1},\dots,t_n]$ de~$X'=S[t_1,\dots,t_n]$.
+\end{enumerate}
+\end{corollaire}
+
+En
+\marginpar{43}
+particular:
+
+\begin{corollaire}
+\label{II.4.12}
+Sean $X$ un $S$-preesquema, $F$ una sección de~$\cal{O}_X$, $Y$ el subpreesquema de los ceros de~$F$ (definido por el ideal coherente $F\cdot\cal{O}_X$), y $x$ un punto de~$Y$. Supongamos que $X$ es simple sobre~$S$ en $x$. Para que $Y$ sea liso sobre~$S$ en $x$, es necesario y suficiente que, o bien $F$ sea nulo en un entorno de $x$, o bien $\rd F(x)\neq0$ (donde $\rd F(x)$ designa la imagen de $\rd F$ en el espacio vectorial $\it{\Omega}^1_{X/S}(x)$ sobre~$\kres(x)$).
+\end{corollaire}
+
+Es suficiente por~\Ref{II.4.10}, criterio~(iii). Es necesario porque, como $\cal{J}$ está engendrado por un elemento, hace falta primero que $\cal{J}/\cal{J}^2$ en el punto $x$ sea libre de rango $\leq1$. Si este rango es $0$, es decir, si $\cal{J}/\cal{J}^2=0$ en $x$, se sigue que $\cal{J}=0$ en $x$ por Nakayama, es decir, $F$ es nulo en un entorno de~$x$. Si este rango es $1$, entonces $F$ forma un sistema minimal de generadores de~$\cal{J}$ en $x$, y se concluye por~\Ref{II.4.11}, equivalencia de (i) y~(iii).
+
+\begin{corollaire}
+\label{II.4.13}
+Sean $Y$ un $S$-preesquema localmente de tipo finito, $S'$ un $S$-preesquema \emph{plano}, $Y'=Y\times_S S'$, $x'$ un punto de~$Y'$ y $x$ su imagen canónica en~$Y$. Para que $Y$ sea liso sobre~$S$
+\ifthenelse{\boolean{orig}}{en~$X$}{en~$x$},
+es necesario y suficiente que $Y'$ sea liso sobre~$S'$ en~$x'$. En particular, si $S'\to S$ es plano y sobreyectivo, $Y$ es liso sobre~$S$
+\ifthenelse{\boolean{orig}}{\emph{sss}}{si y solo si\ }
+$Y'$ es liso sobre~$S'$.
+\end{corollaire}
+
+Solo hay que demostrar la suficiencia (la necesidad se vio en~\Ref{II.1.3}~(ii)). Podemos suponer (reemplazando $Y$ por un entorno conveniente de~$x$ y $Y'$ por su imagen inversa) que $Y$ es afín de tipo finito sobre~$S$ afín; por tanto, $Y$ es isomorfo a un subpreesquema cerrado de un esquema $X=S[t_1,\dots,t_n]$. En consecuencia, $Y'$ se identifica con un subpreesquema cerrado de~$X'=X\times_S S'$. Como $X$ es liso sobre~$S$, también $X'$ es liso sobre~$S'$, y se pueden aplicar los criterios de lisura~\Ref{II.4.10}. Aquí, el criterio~(iv) da inmediatamente el resultado.

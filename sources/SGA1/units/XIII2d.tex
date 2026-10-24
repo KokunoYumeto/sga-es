@@ -1,0 +1,294 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\begin{theoreme}
+\label{XIII.2.4}
+Sean
+\marginpar{380}
+$f\colon X\to S$ un $S$-esquema, $D$ un divisor sobre~$X$
+de cruzamientos normales relativamente a~$S$ \eqref{XIII.2.1},
+$Y=\Supp D$, $U=X-Y$, e $i\colon U\to X$ la inmersión canónica. Sea $F$
+un haz de conjuntos (\resp de grupos) sobre~$U$ que satisfaga una de las
+condiciones siguientes:
+\begin{enumerate}
+\item[a)] $F$ es, localmente para la topología étale \emph{sobre}
+$X$ y sobre~$S$, la imagen inversa de un haz de conjuntos (\resp de un
+haz de grupos constructible) sobre~$S$.
+\item[b)] $F$ es localmente constante y constructible sobre~$U$, y está
+moderadamente ramificado sobre~$X$ relativamente a~$S$.
+\end{enumerate}
+Entonces se tienen las conclusiones siguientes:
+\begin{enumerate}
+\item[1)]$(F,i)$ es cohomológicamente propio relativamente a~$S$
+en dimensión $\leq 0$ (\resp para todo morfismo $h\colon S'\to S$, si
+$i'\colon U'\to X'$ es la imagen inversa de~$i$ sobre~$S'$, si $F'=F|U'$
+y si $k=h_{(X)}$, el morfismo canónico
+$$
+\Psi\colon k^*(\R^1_{\tame}i_*F)\to\R^1_{\tame}i_*'F'
+$$
+es un isomorfismo).
+
+Si $F$ es un haz de grupos primo con las características
+residuales de~$S$
+\ifthenelse{\boolean{orig}}
+{(\Ref{XIII.2.3}.b))}
+{(\Ref{XIII.2.3}.b)}
+(moderadamente
+ramificado sobre~$X$ relativamente a~$S$), entonces $(F,i)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión $\leq 1$.
+\item[2)]Si $F$ es un haz de conjuntos (\resp de grupos)
+constructible, $i_*F$ (\resp $\R^1_{\tame}i_*F$) es constructible.
+\end{enumerate}
+\end{theoreme}
+
+\subsubsection*{Demostración}
+Para todo $S$-esquema $S'$, consideremos el diagrama siguiente,
+en el que todos los cuadrados son cartesianos:
+$$
+\xymatrix{ U \ar[dd]_-g \ar[dr]^-i & & & U'\ar[lll] \ar[dd]_{\hbox{\raise10mm\hbox{$g'$}}}
+\ar[dr]^-{i'}& \\ & X \ar[dl]_{f\mkern-8mu} & & & X'\ar[lll]_{k\hspace*{1cm}} \ar[dl]_{f'\mkern-10mu} \\ S
+& & & S'\ar[lll]_-h & & }
+$$
+Como
+\marginpar{381}
+la cuestión es local sobre~$X$ para la topología étale, puede suponerse
+que $D$ es un divisor de cruzamientos normales estrictos relativamente
+a~$S$ \eqref{XIII.2.1}; además, tras restringir si es preciso $X$ a un
+entorno de~$Y$, puede suponerse que $X$ es liso sobre~$S$.
+
+\subsubsection*{Demostración de~\Ref{XIII.2.4}~\textup{1)}}
+\setcounter{subsection}{4}% Los párrafos numerados pertenecen al Teorema XIII.2.4.
+\setcounter{subsubsection}{0}% Comenzar visiblemente por XIII.2.4.1.
+\subsubsection{}
+\label{XIII.2.4.1}
+\emph{Caso de un haz de conjuntos que satisface} a). Puede suponerse que
+$F=g^*G$, donde $G$ es un haz sobre~$S$. Se deduce entonces de
+(SGA~4 XVI~3.2) que el morfismo canónico
+\begin{equation*}
+\label{eq:XIII.2.4.1.1}
+\tag{\thesubsubsection.1} f^*G\to i_*F
+\end{equation*}
+es un isomorfismo. Para todo $S$-esquema $h\colon S'\to S$, se tiene
+asimismo un isomorfismo $f'^*G'\to i_*'F'$; por consiguiente, el morfismo
+canónico
+$$
+\varphi\colon k^*(i_*F)\to i_*'F'
+$$
+se identifica con el isomorfismo natural
+$$
+k^*f^*G\simeq f'^*G'
+$$
+
+\subsubsection{}
+\label{XIII.2.4.2}
+\emph{Caso de un haz de conjuntos que satisface} b). Hay que demostrar
+que $\varphi$ es un isomorfismo, y para ello basta comprobarlo en cada
+punto geométrico $\overline{x}'$ de~$X'$. Sea $\overline{S}$
+(\resp $\overline{X}$, \resp $\overline{S'}$, \resp $\overline{X'}$)
+la localización estricta de~$S$ (\resp de~$X$, \resp de~$S'$,
+\resp de~$X'$) en $\overline{x}'$, y pongamos
+$\overline{U}=U_{(\overline{X})}$,
+$\overline{U'}=U_{(\overline{X'})}$, etc. El morfismo
+\ifthenelse{\boolean{orig}}
+{$\varphi_{\overline{x}}$}
+{$\varphi_{\overline{x}'}$}
+se identifica con el morfismo canónico
+$$
+\overline{\varphi}\colon \H^0(\overline{U},\overline{F})\to
+\H^0(\overline{U'}, \overline{F'})
+$$
+Puede encontrarse un recubrimiento principal $V$ de~$\overline{U}$, del
+tipo que figura en~\Ref{XIII.5.4}, tal que la imagen inversa de
+$\overline{F}$ sobre~$V$ sea un haz constante de valor $C$. Si
+$\Pi$ es el grupo de Galois de~$V$ sobre~$\overline{U}$, $\Pi$
+actúa sobre~$\overline{F}|V$, y se tiene
+\begin{equation*}
+\label{eq:XIII.2.4.2.1}
+\tag{\thesubsubsection.1}
+\ifthenelse{\boolean{orig}}
+{\H^0(U,F))\simeq \H^0(V,C_V)^{\Pi}}
+{\H^0(\overline{U},\overline{F})\simeq \H^0(V,C_V)^{\Pi}}
+\end{equation*}
+\label{indnot:mh}\oldindexnot{$\H^0(V,C_V)^{\Pi}$|hyperpage}%
+donde el segundo miembro designa el conjunto de los elementos
+de~$\H^0(V,C_V)$
+\marginpar{382}
+invariantes bajo la acción de~$\Pi$. Como
+$V'=V\times_{\overline{U}}\overline{U'}$ es un recubrimiento
+principal de~$\overline{U'}$, de grupo de Galois $\Pi'\simeq \Pi$, se ve que
+el morfismo $\overline{\varphi}$ se obtiene, tomando los invariantes
+bajo la acción de~$\Pi$, a partir del morfismo canónico
+$$
+\H^0(V,C_V)\to \H^0(V',C_{V'}).
+$$
+Como $V$ y $V'$ son conexos \eqref{XIII.5.4}, este morfismo, y por tanto
+también $\overline{\varphi}$, es un isomorfismo.
+
+Obsérvese que, si además $F$ es un haz de grupos y $P$ es un torsor
+sobre~$\overline{U}$ bajo $\overline{F}$, moderadamente ramificado
+relativamente a~$D$, se deduce de la demostración precedente y
+de~\Ref{XIII.2.2} que
+$(\leftexp{P}{\overline{F}},\overline{i})$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leq 0$.
+
+\subsubsection{}
+\label{XIII.2.4.3}
+\emph{Caso de un haz de grupos.} Para demostrar que $\Psi$ es un
+isomorfismo, basta probar que, para todo punto geométrico
+$\overline{y}'$ de~$Y'$, el morfismo
+$$
+\Psi_{\overline{y}'}\colon
+(k^*(\R^1_{\tame}i_*F))_{\overline{y}'}\to (\R^1_{\tame}
+i_*'F')_{\overline{y}'}
+$$
+es un isomorfismo. Ahora bien, según~\Ref{XIII.2.1.2},
+$\Psi_{\overline{y}'}$ se identifica con el morfismo canónico
+$$
+\overline{\Psi}\colon
+\H^1_{\tame}(\overline{U},\overline{F})\to
+\H^1_{\tame}(\overline{U'},\overline{F'}).
+$$
+Sean $\widetilde{U}$ el recubrimiento universal moderadamente
+ramificado de~$\overline{U}$ \eqref{XIII.2.1.3} y $\widetilde{F}$
+la imagen inversa de~$\overline{F}$ sobre~$\widetilde{U}$. De
+\Ref{XIII.5.7} en el caso a) y de~\Ref{XIII.5.5} en el caso b) resulta
+que $\H^1_{\tame}(\overline{U},\overline{F})$ se identifica con el
+subconjunto de~$\H^1(\overline{U},\overline{F})$ formado por las clases
+de torsores bajo~$\overline{F}$ cuya imagen inversa sobre~$\widetilde{U}$
+es trivial. Por otra parte, un razonamiento
+\ifthenelse{\boolean{orig}}
+{clásico}
+{clásico (\cf \Ref{IX.5}, p\ptbl\pageref{page-300})}
+muestra que el conjunto de los elementos
+de~$\H^1(\overline{U},\overline{F})$ cuya imagen inversa
+sobre~$\widetilde{U}$ es trivial se identifica con
+$\H^1(\pi_1^{\tame}(\overline{U}),\H^0(\widetilde{U},\widetilde{F})).$
+Se obtiene así un isomorfismo canónico
+\begin{equation*}
+\label{eq:XIII.2.4.3.1} \tag{\thesubsubsection.1} {}
+\H^1_{\tame}(\overline{U},\overline{F})\isomto
+\H^1(\pi_1^{\tame}(\overline{U}),\H^0(\widetilde{U},\widetilde{F})).
+\end{equation*}
+
+Por consiguiente, el morfismo $\overline{\Psi}$ se identifica con el
+morfismo canónico
+$$
+\H^1(\pi_1^{\tame}(\overline{U}),\H^0(\widetilde{U},\widetilde{F}))
+\to
+\H^1(\pi_1^{\tame}(\overline{U'}),\H^0(\widetilde{U}',\widetilde{F}')).
+$$
+Demostremos
+\marginpar{383}
+que este morfismo es un isomorfismo. El morfismo
+$\pi_1^{\tame}(\overline{U'})\to\pi_1^{\tame}(\overline{U})$
+es un isomorfismo por~\Ref{XIII.5.6}, y lo mismo ocurre con el morfismo
+$\H^0(\widetilde{U},\widetilde{F})\to\allowbreak
+\H^0(\widetilde{U}',\widetilde{F}')$. En efecto, esto es evidente en el
+caso b), pues $\widetilde{F}$ es constante y $\widetilde{U}$ y
+$\widetilde{U}'$ son conexos. En el caso a), sea $\overline{G}$ un haz
+de grupos constructible sobre~$\overline{S}$ tal que
+$\overline{F}=\overline{g}^*\overline{G};$ como los morfismos
+$\widetilde{U}\to\overline{S}$ y
+$\widetilde{U}'\to\overline{S'}$ son $0$-acíclicos
+\eqref{XIII.5.7}, se tiene
+$$
+\H^0(\widetilde{U},\widetilde{F})\simeq
+\H^0(\overline{S},\overline{G}) \simeq
+\H^0(\overline{S'},\overline{G'})\simeq
+\H^0(\widetilde{U}',\widetilde{F}'),
+$$
+lo que implica que $\Psi$ es un isomorfismo. La última afirmación
+de~\Ref{XIII.2.4}~1) se deduce de lo anterior, teniendo en cuenta
+\Ref{XIII.2.3}~b).
+
+\subsubsection*{Demostración de~\Ref{XIII.2.4}~\textup{2)}}
+
+El caso de un haz de conjuntos constructible que satisface a) se deduce
+inmediatamente de~\eqref{eq:XIII.2.4.1.1}. Sea $F=g^*G$ un haz de grupos
+que satisface a), donde $G$ es un haz constructible; puede suponerse que
+$S$ es afín; sea $(S_j)_{j\in J}$
+\ifthenelse{\boolean{orig}}
+{una familia finita de subesquemas cerrados reducidos de~$S$}
+{una familia finita de subesquemas localmente cerrados reducidos de~$S$}
+cuya unión recubre~$S$, y tal que la imagen inversa de~$G$ sobre~$S_j$
+sea un haz localmente constante. Teniendo en cuenta
+\Ref{XIII.2.4}~1), para establecer que $\R^1_{\tame}i_*F$ es
+constructible basta comprobarlo después del cambio de base
+$S_j\to S$, para cada $j\in J$. Quedamos así reducidos al caso~b),
+en el que $F$ es localmente constante.
+
+Supongamos en adelante que $F$ es un haz de conjuntos o de grupos que
+satisface b). Como la cuestión es local para la topología étale sobre~$X$,
+puede suponerse que $X$ es de presentación finita sobre~$S$ y, por paso
+al límite, que $X$ y $S$ son noetherianos.
+
+Sea $D=\sum_{1\leq i\leq r}\divisor f_i$, donde, para cada punto
+$x$ de~$\Supp D$, si $I(x)$ es el conjunto de los $i$ tales que
+$f_i(x)=0$, el subesquema $V((f_i)_{i\in I(x)})$ es liso sobre~$S$ de
+codimensión $\card I(x)$ en~$X$. Sea $\mathcal{P}$ el conjunto de las
+partes de~$[ 1,r ]$ y, para cada $I\in\mathcal{P}$, pongamos
+$$
+X_I=\textstyle\Big(\bigcap_{i\in I}V(f_i)\Big)\cap\Big(\bigcap_{i\not\in I}X_{f_i}\Big).
+$$
+Sea
+\marginpar{384}
+$z$ un punto de~$X_I$. Tras restringirnos primero a un entorno étale
+de~$z$, pueden encontrarse un abierto $W$ de~$X$ que contiene a~$z$ y un
+recubrimiento principal $V$ de~$U\cap W$, moderadamente ramificado
+sobre~$W$ relativamente a~$S$, del tipo considerado
+en~\Ref{XIII.5.6.1}, tal que la imagen inversa de~$F$ sobre~$V$ sea
+un haz constante de valor~$C$. Sea $\pi$ el grupo de Galois del
+recubrimiento~$V$. Para todo punto geométrico $\overline{x}$
+\ifthenelse{\boolean{orig}}
+{de~$X_I$}
+{de~$X_I\cap W$}
+se tiene entonces, por~\eqref{eq:XIII.2.4.2.1},
+$$
+\H^0(\overline{U},\overline{F})\simeq \H^0(V,C_V)^{\pi}.
+$$
+De ello resulta que $i_*F|X_I\cap W$ es localmente constante
+(SGA~4 IX~2.13) y, por consiguiente, $i_*F$ es constructible.
+
+Demostremos, por último, que, si $F$ es un haz de grupos localmente
+constante, $\R^1_{\tame}i_*F|_{X_I}$ es constructible. Si
+$\overline{x}$ es un punto geométrico
+\ifthenelse{\boolean{orig}}
+{de~$X$}
+{de~$X_I$},
+se obtuvo en~\eqref{eq:XIII.2.4.3.1} la expresión
+$$
+\H^1_{\tame}(\overline{U},\overline{F})\isomto
+\H^1(\pi^{\tame}_1(\overline{U}),\H^0(\widetilde{U},\widetilde{F})).
+$$
+Si $p$ es la característica residual de~$\overline{X}$, se tiene,
+por~\Ref{XIII.5.6},
+$\pi_1^{\tame}(\overline{U})=\prod_{l\neq p }\ZZ_l(1)^{\card I}$.
+Denotemos por $\LL$ el conjunto de los números primos que dividen el
+orden del grupo finito $\H^0(\widetilde{U},\widetilde{F})$, y sea
+$K=\prod_{l\in\LL -\{p\}\cap\LL }\ZZ_l(1)^{\card I}$. De
+\cite[I \S5 ex.2]{XIII.4} resulta que se tiene
+$$
+\H^1_{\tame}(\overline{U},\overline{F})\simeq
+\H^1(K,\H^0(\widetilde{U},\widetilde{F})).
+$$
+Como $K$ está topológicamente generado por un número finito de elementos y
+$\H^0(\widetilde{U},\widetilde{F})$ es finito, se deduce en primer lugar
+que las fibras del haz $\R^1_{\tame}i_*F|_{X_I}$ son finitas. Por otra
+parte, el conjunto $\LL$ no depende del punto $\overline{x}$. Para todo
+$q\in\LL$, sea $X_{I,q}$ el cerrado de~$X_I$ definido por la ecuación
+$q=0$, y sea
+\ifthenelse{\boolean{orig}}
+{$X_{I'}$}
+{$X_I'$}
+el abierto de~$X_I$ complementario de la unión de los $X_{I,q}$. Entonces
+$\R^1_{\tame}i_*F|_{X_{I,q}}$ y $\R^1_{\tame}i_*F|_{X_I'}$ son
+localmente constantes; en efecto, una flecha de especialización de puntos
+geométricos de~$X_{I,q}$ (\resp de
+\ifthenelse{\boolean{orig}}
+{$X_{I'}$}
+{$X_I'$})
+induce un isomorfismo sobre los grupos $K$ \eqref{XIII.5.6.1}, y por tanto
+también sobre los conjuntos
+$\H^1_{\tame}(\overline{U},\overline{F})$; puede aplicarse entonces
+SGA~4 IX~2.13.
+\endgroup

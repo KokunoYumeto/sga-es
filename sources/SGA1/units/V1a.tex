@@ -1,0 +1,170 @@
+
+\section{Preesquema con grupo finito de operadores; preesquema cociente}
+\label{V.1}
+
+Sean $X$ un preesquema y $G$ un grupo finito que actúa sobre~$X$ por
+automorfismos, por la derecha para fijar ideas. Si $X$ es afín de anillo $A$,
+$G$ actúa, por tanto, por automorfismos a la izquierda sobre~$A$.
+
+Para todo preesquema $Z$, $G$ actúa a la izquierda sobre el conjunto
+$\Hom(X,Z)$; por consiguiente, puede considerarse el conjunto
+$$
+\Hom(X,Z)^G
+$$
+de los morfismos invariantes por~$G$. Este conjunto depende funtorialmente
+de~$Z$, y cabe preguntarse si este funtor es «representable», 
+\ie isomorfo a un funtor $Z\mto\Hom(Y,Z)$.
+\marginpar{106}
+
+Esto significa que pueden hallarse un preesquema $Y$ y un morfismo invariante
+por~$G$
+$$
+p\colon X\to Y
+$$
+tales que, para todo~$Z$, la aplicación correspondiente $g\mto gp$
+$$
+\Hom(Y,Z)\to \Hom(X,Z)^G
+$$
+sea biyectiva. Se dice entonces que $(Y,p)$ es un
+\emph{preesquema cociente}
+\index{cociente (preesquema)|hyperpage}%
+de~$X$ \ifthenelse{\boolean{orig}}{por~$g$}{por~$G$}
+(está determinado salvo isomorfismo único).
+
+\begin{proposition}
+\label{V.1.1}
+Sean $A$ un anillo sobre el que el grupo finito $G$ actúa a la izquierda,
+$B=A^G$ el subanillo de invariantes de~$A$, $X=\Spec(A)$ e $Y=\Spec(B)$, y
+sea $p\colon X\to Y$ el morfismo canónico (evidentemente invariante
+por~$G$). Entonces:
+\begin{enumerate}
+\item[(i)] $A$ es entero sobre~$B$, \ie $p$ es un morfismo
+\emph{entero}.
+\item[(ii)] El morfismo $p$ es sobreyectivo, sus fibras son las órbitas
+de~$G$ y la topología de~$Y$ es el cociente de la de~$X$.
+\item[(iii)] Sean $x\in X$, $y=p(x)$ y $G_x$ el estabilizador de~$x$.
+Entonces
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)$ es una extensión algebraica cuasigaloisiana de $\kappa(y)$ y
+la aplicación canónica de~$G_x$ en el grupo
+$\Gal(\kappa(x)/\kappa(y))$ de los $\kappa(y)$-automorfismos de
+$\kappa(x)$}
+{$\kres(x)$ es una extensión algebraica cuasigaloisiana de $\kres(y)$ y
+la aplicación canónica de~$G_x$ en el grupo
+$\Gal(\kres(x)/\kres(y))$ de los $\kres(y)$-automorfismos de
+$\kres(x)$}
+es \ifthenelse{\boolean{orig}}{sobreyectivo.}{sobreyectiva.}
+\item[(iv)] $(Y,p)$ es un preesquema cociente de~$X$ por~$G$.
+\end{enumerate}
+\end{proposition}
+
+Los enunciados
+\ifthenelse{\boolean{orig}}
+{(i) (ii) (iii)}
+{(i), (ii), (iii)}
+son bien conocidos en álgebra conmutativa\footnote{\Cf N. Bourbaki,
+Alg. Comm. Chap\ptbl~5, \S~1 y \S~2, th\ptbl~2.} y solo se recuerdan aquí,
+salvo la afirmación sobre la topología, que procede del siguiente hecho
+general, consecuencia fácil del teorema de Cohen--Seidenberg: un morfismo
+entero es cerrado (\ie transforma conjuntos cerrados en conjuntos cerrados).
+Observemos enseguida lo siguiente:
+
+\begin{corollaire}
+\label{V.1.2}
+Bajo las condiciones anteriores, el homomorfismo natural
+$$\cal{O}_Y{\to} p_*(\cal{O}_X)^G$$
+es un isomorfismo.
+\end{corollaire}
+
+Esto resulta inmediatamente de la fórmula
+$$
+(S^{-1}A)^G = S^{-1}(A^G),
+$$
+válida para toda parte multiplicativamente estable~$S$ de~$B=A^G$
+(fórmula que admite una versión con módulos y que se enuncia, más
+generalmente, para un cambio de base $A\to A'$ que sea \emph{plano}),
+\ifthenelse{\boolean{orig}}{aplicado}{aplicada}
+al caso en que~$S$ está engendrada por un elemento~$f$ de~$B$.
+
+La afirmación~(ii) y el cor\ptbl~\Ref{V.1.2} implican fácilmente~(iv); más
+generalmente, se tiene lo siguiente:
+
+\begin{proposition}
+\label{V.1.3}
+Sean
+\marginpar{107}
+$X$ un preesquema con un grupo finito de automorfismos~$G$ y
+$p\colon{}X\to{}Y$ un morfismo afín invariante tal que
+$\cal{O}_Y\isomto p_*(\cal{O}_X)^G$. Entonces siguen siendo válidas las
+conclusiones
+\ifthenelse{\boolean{orig}}
+{\textup{(i) (ii) (iii) (iv)}}
+{\textup{(i), (ii), (iii), (iv)}}
+de~\Ref{V.1.1}.
+\end{proposition}
+
+En efecto, para
+\ifthenelse{\boolean{orig}}
+{(i) (ii) (iii)}
+{(i), (ii), (iii),}
+puede suponerse que~$Y$, y por tanto~$X$, es afín; si $B,A$ son sus anillos,
+la hipótesis implica $B=A^G$, y basta aplicar~\Ref{V.1.1}. Para~(iv), se
+utilizan~(ii) y $\cal{O}_Y=p_*(\cal{O}_X)^G$.
+
+\begin{corollaire}
+\label{V.1.4}
+Bajo las condiciones de~\Ref{V.1.3}, para todo abierto~$U$ de~$Y$, $U$ es
+un cociente de $X|U=p^{-1}(U)$ por~$G$.
+\end{corollaire}
+
+En efecto, $p^{-1}(U)\to{}U$, inducido por~$p$, satisface las mismas
+hipótesis que~$p$.
+
+Si ahora~$X$ es un $Z$-preesquema y las operaciones de~$G$ son
+$Z$-automorfismos, entonces, por~(iv), $Y$ es un $Z$-preesquema. Dicho esto:
+
+\begin{corollaire}
+\label{V.1.5}
+Para que $X$ sea afín, \resp separado sobre~$Z$, es necesario y suficiente
+que~$Y$ lo sea. Si $X$ es de tipo finito sobre~$Z$, es \emph{finito}
+sobre~$Y$; si además~$Z$ es localmente noetheriano, $Y$ es de tipo finito
+sobre~$Z$.
+\end{corollaire}
+
+Como $X$ es afín y, con mayor razón, separado sobre~$Y$, si $Y$ es afín,
+\resp separado sobre~$Z$, también lo es~$X$. Recíprocamente, supongamos que
+$X$ es afín sobre~$Z$ y probemos que~$Y$ lo es: gracias a~\Ref{V.1.4} puede
+suponerse que~$Z$ es afín, y la cuestión se reduce a demostrar que si~$X$ es
+afín, también lo es~$Y$, lo cual resulta de la determinación explícita de~$Y$
+como
+\ifthenelse{\boolean{orig}}{$\Spec(A)^G$}{$\Spec(A^G)$}
+efectuada en~\Ref{V.1.1}.
+Del mismo modo, como $p\colon{}X\to{}Y$ es entero, y por tanto
+universalmente cerrado, y es sobreyectivo, se sigue que, si~$X$ es separado
+sobre~$Z$, también lo es~$Y$ (¡lema que convendría enunciar por separado!);
+en efecto, en el diagrama
+$$
+\xymatrix@C=1.5cm{ X \times_ZX\ar[r]^-{p\times_Zp} & Y\times_ZY \\
+X \ar[u]^{\Delta_{X/Z}}\ar[r]^{p} & Y \ar[u]_{\Delta_{Y/Z}} }
+$$
+el morfismo $X\times_ZX\to Y\times_ZY$ es cerrado, por lo que transforma la
+diagonal (cerrada) de~$X\times_ZX$ en una parte cerrada de~$Y\times_ZY$, que
+no es sino la diagonal de este último, pues~$p$ es sobreyectivo.
+--- Si $X$ es de tipo finito sobre~$Z$, lo es con mayor razón sobre~$Y$ y,
+por consiguiente, es finito sobre~$Y$ (pues el morfismo $X\to Y$ ya es
+entero).
+Supongamos además que~$Z$ es localmente noetheriano y probemos que~$Y$ es de
+tipo finito sobre~$Z$. Gracias a~\Ref{V.1.4} puede suponerse que~$Z$ es afín.
+Como el espacio topológico~$X$ es cuasicompacto y
+$p\colon X\to Y$ es sobreyectivo, $Y$ es
+\ifthenelse{\boolean{orig}}{tambien}{también}
+cuasicompacto y, por tanto, unión finita de abiertos
+\marginpar{108}
+afines; por~\Ref{V.1.4}, la cuestión se reduce al caso en que~$Y$ es afín y,
+por tanto, también~$X$. Ahora bien, el anillo~$A$ de~$X$ es un álgebra de
+tipo finito sobre el anillo noetheriano~$C$ de~$Z$, y se sabe que
+$B=A^G$ también es un álgebra de tipo finito sobre~$C$ (pues $A$ será
+entera, y por tanto finita, sobre una subálgebra~$B'$ de~$B$ de tipo finito
+sobre~$C$; como~$B'$ es noetheriana, el álgebra~$B$ también es
+\ifthenelse{\boolean{orig}}{finito}{finita}
+sobre~$B'$, y por consiguiente es de tipo finito sobre~$C$).

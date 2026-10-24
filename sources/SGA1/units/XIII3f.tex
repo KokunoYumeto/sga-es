@@ -1,0 +1,109 @@
+
+4) 2. Caso general.\par\nopagebreak
+Se ve, utilizando el lema~\Ref{XIII.6.1.1}, 4)\kern2pt1 y
+\ifthenelse{\boolean{orig}}
+{1)\kern2pt a),}
+{1)\kern2pt b),}
+que, tras restringir $S$ a un abierto no vacío, puede suponerse que
+$S(f_*\Phi)$ es constructible y que $(S\Phi,f)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant 0$. Puede entonces
+encontrarse un haz representable por un $Y$-esquema étale de tipo
+finito~$T$ y un epimorfismo
+$$
+a \colon T \to S(f_*\Phi)\quoi.
+$$
+Se retoman las notaciones de 4)\kern2pt1 y se pone además
+$Z=T\times_Y T$, $X_Z=X\times_Y Z$; se denota por
+$f_Z \colon X_Z \to Z$ el morfismo canónico. Puede suponerse que~$T$
+se ha elegido de modo que la imagen~$q$ de la sección identidad de~$T(T)$
+por~$a$ esté definida por un objeto~$p$ de
+$(f_*\Phi)_T=\Phi_{X_T}$. Sean $p_1$ y $p_2$ (\resp $q_1$ y $q_2$)
+las imágenes inversas de~$p$ (\resp $q$) por las dos proyecciones
+de~$Z$ en~$T$. Tras restringir $S$ a un abierto no vacío, puede
+suponerse que $(\SheafAut_{X_T}(p),f_T)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 1$, que
+$(\SheafHom_{X_Z}(p_1,p_2),f_Z)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$, y que
+$f_{T*}(\SheafAut_{X_T}(p))$ y
+$f_{Z*}(\SheafHom_{X_Z}(p_1,p_2))$ son constructibles
+\ifthenelse{\boolean{orig}}
+{(a)\kern2pt1) y 4)\kern2pt1)).}
+{(1)\kern2pt b) y 4)\kern2pt1)).}
+
+Se deduce en primer lugar que, para todo esquema $Y_1$ étale sobre~$Y$
+y para todo par de objetos $y$, $y_1$ de~$(f_*\Phi)_{Y_1}$, el haz
+$\SheafAut_{Y_1}(y)$ (\resp $\SheafHom_{Y_1}(y,y_1)$) es
+constructible, pues tal haz es, localmente para la topología étale
+de~$Y_1$, imagen inversa de~$f_{T*}(\SheafAut_{X_T}(p))$
+(\resp de~$f_{Z*}(\SheafHom_{X_Z}(p_1,p_2))$).
+
+Queda por demostrar que $(\Phi,f)$ es cohomológicamente propio
+relativamente
+\marginpar{405}
+a~$S$ en dimensión $\leqslant 1$. Para ello basta demostrar que,
+\ifthenelse{\boolean{orig}}
+{para todo $S'$-esquema~$S$ y para todo punto geométrico
+$\overline{y}'$ de~$Y$, si se denota por~$\overline{Y}$ la localización
+estricta de~$Y$ en~$y'$, $\overline{X}=X\times_Y\overline{Y}$, etc.,}
+{para todo $S$-esquema~$S'$ y para todo punto geométrico
+$\overline{y}'$ de~$Y'$, si $\overline{y}$ denota su imagen en~$Y$ y
+$\overline{Y}$ (\resp $\overline{Y'}$) denota la localización estricta
+de~$Y$ en~$\overline{y}$ (\resp de~$Y'$ en~$\overline{y}'$), y se pone
+$\overline{X}=X\times_Y\overline{Y}$,
+$\overline{X'}=X'\times_{Y'}\overline{Y'}$, etc.,}
+entonces el funtor canónico
+$$
+\overline{\varphi} \colon \Phi(\overline{X}) \to
+\Phi'(\overline{X'})
+$$
+es una equivalencia de categorías.
+
+Demostremos que~$\overline{\varphi}$ es plenamente fiel. Sean
+$x$, $y \in \Phi(\overline{X})$, y sean $x'$, $y'$ sus imágenes en
+$\Phi'(\overline{X'})$; demostremos que el morfismo canónico
+\begin{equation*}
+\label{eq:XIII.4.*} \tag{$*$} {\Hom_{\overline{X}}(x,y)
+\to \Hom_{\overline{X'}}(x',y') }
+\end{equation*}
+es biyectivo. Por definición de~$T$, existen dos morfismos de
+$\overline{Y}$ en~$T$ tales que $x$ e~$y$ son las imágenes inversas
+de~$p$ por esos dos morfismos. Esto equivale a decir que existe un
+morfismo $\overline{Y} \to Z$ y, por tanto, un morfismo
+$h\colon \overline{X} \to X_Z$ tal que
+$$
+h^*(p_1)=x \qquad h^*(p_2)=y.
+$$
+Por consiguiente, se tiene un isomorfismo canónico
+$$
+\SheafHom_{\overline{X}}(x,y)=h^*(\SheafHom_{X_Z}(p_1,p_2) )\quoi.
+$$
+Pero, teniendo en cuenta que $(\SheafHom_{X_Z}(p_1,p_2),f_Z)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$, se ve que lo mismo vale para
+$(\SheafHom_{\overline{X}}(x,y),\overline{f})$, lo que demuestra que
+el morfismo~\eqref{eq:XIII.4.*} es biyectivo.
+
+Demostremos que~$\overline{\varphi}$ es esencialmente sobreyectivo. Sea
+$x'\in \Phi'(\overline{X'})$. Como $(S\Phi,f)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leqslant 0$, el morfismo
+canónico
+$$
+\H^0(\overline{X},\overline{S\Phi}) \to
+\H^0(\overline{X'},\overline{S\Phi}')
+$$
+es biyectivo. Sea $G'$ el subgerbe maximal de~$\Phi'$ generado
+por~$x'$; existe entonces un subgerbe maximal~$G$ de
+$\overline{\Phi}$ cuya imagen inversa sobre~$\overline{X'}$ es~$G'$.
+Según 4)\kern2pt1, $(G,\overline{f})$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 1$; por consiguiente, el
+funtor canónico
+$$
+G(\overline{X}) \to G'(\overline{X'})
+$$
+\marginpar{406}%
+es una equivalencia de categorías, lo que demuestra la existencia
+de un objeto~$x$ de~$\Phi(\overline{X})$ cuya imagen en
+\ifthenelse{\boolean{orig}}
+{$\Phi'(X')$}
+{$\Phi'(\overline{X'})$}
+es isomorfa a~$x'$ y concluye la demostración del teorema.

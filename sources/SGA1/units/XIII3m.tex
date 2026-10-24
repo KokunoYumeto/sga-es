@@ -1,0 +1,83 @@
+
+\begin{proposition}
+\label{XIII.4.1}
+\setcounter{subsection}{\value{proposition}}% sincroniza la etiqueta visible XIII.4.1.1
+Sean $S$ un esquema conexo y $f\colon X\to S$ un morfismo localmente
+$0$-acíclico \textup{(SGA~4 XV~1.11)}; supongamos además que~$f$ es
+$0$-acíclico (lo que, cuando~$f$ es coherente, equivale a decir que las
+fibras geométricas de~$f$ son conexas \textup{(SGA~4 XV~1.16)}). Sea~$\LL$
+un conjunto de números primos. Si~$S'$ es un esquema étale sobre~$S$, se
+denotan por~$X'$ y~$f'$ las imágenes inversas de~$X$ y~$f$ sobre~$S'$.
+Supongamos que, para todo recubrimiento étale~$S'$ de~$S$ y para todo
+recubrimiento étale~$E$ de~$X'$, cociente de un recubrimiento galoisiano
+cuyo grupo es un~$\LL$-grupo, $(E,f')$ es cohomológicamente propio
+relativamente a~$S'$ en dimensión $\leqslant 0$ y~$f'_*E$ es constructible.
+Entonces, si~$\bar{s}$ es un punto geométrico de~$S$ y~$a$ un punto
+geométrico de la fibra~$X_{\bar{s}}$, la sucesión de homomorfismos de grupos
+\begin{equation*}
+\label{eq:XIII.4.1.1}
+\tag{\thesubsection.1}
+\pi_1^{\LL}(X_{\bar{s}},a)\lto{u} \pi_1'(X,a)\lto{v}\pi_1(S,a)\to1
+\end{equation*}
+es exacta.
+\end{proposition}
+
+Este enunciado generaliza X.\Ref{X.1.4}, cuya demostración vamos a repetir.
+
+Demostremos primero que~$v$ es sobreyectivo. Basta demostrar que, para todo
+recubrimiento étale conexo~$S'$ de~$S$, $X'$ también es conexo
+(\Ref{V.6.9}). Sea~$C$ un conjunto con al menos dos elementos. Del hecho
+de que~$f$ es $0$-acíclico resulta que el morfismo canónico
+$$
+\H^0(S',C_{S'})\to \H^0(X',C_{X'})
+$$
+es biyectivo; por tanto, $X'$ es conexo, de donde se sigue la sobreyectividad
+de~$v$.
+
+Por
+\marginpar{416}
+definición de~$K^{\LL}$ \eqref{XIII.4.0}, se tiene la sucesión exacta
+$$
+1\to K^{\LL} \to \pi_1'(X,a)\to \pi_1(S,a)\to 1
+$$
+Sean $\widetilde{S}$ el recubrimiento universal de~$S$ y
+$\widetilde{X}=\widetilde{S}\times_SX$; el grupo~$K^{\LL}$ clasifica los
+recubrimientos galoisianos~$P$ cuyo grupo es un~$\LL$-grupo y para los
+cuales existen un recubrimiento étale~$S'$ de~$S$ y un recubrimiento
+galoisiano~$Q$ de~$X'=X\times_SS'$ tales que se tiene un isomorfismo
+$P\simeq Q\times_{X'}\widetilde{X}$. Para que la sucesión
+\eqref{eq:XIII.4.1.1} sea exacta, es necesario y suficiente que el morfismo
+canónico
+$$
+\pi_1^{\LL}(X_{\bar{s}},a)\to K^{\LL}
+$$
+sea sobreyectivo. Según la interpretación de~$K^{\LL}$, esto equivale a
+decir que, para todo recubrimiento étale~$S'$ de~$S$ y para todo
+recubrimiento galoisiano~$Q$ de~$X'$ cuyo grupo es un~$\LL$-grupo, si
+$P=Q\times_{X'}\widetilde{X}$ es conexo, entonces $Q|X_{\bar{s}}$ es
+conexo. Demostremos que se cumple esta última condición. Sean, en efecto,
+$S'$ un recubrimiento étale de~$S$ y~$Q$ un recubrimiento galoisiano de~$X'$
+cuyo grupo es un~$\LL$-grupo~$F$, tal que~$Q|X_{\bar{s}}$ es disconexo, y
+demostremos que, tras reemplazar~$S'$ por un recubrimiento étale, $Q$ pasa
+a ser disconexo. Existe un subgrupo~$G$ de~$F$, distinto de~$F$, y un
+torsor~$R$ bajo~$G|X_{\bar{s}}$ tal que~$Q|X_{\bar{s}}$ se obtiene, por
+extensión del grupo estructural $G\to F$, a partir de~$R$. El recubrimiento
+étale
+$E=Q/G$ de~$X'$ es tal que~$E|X_{\bar{s}}$ tiene una sección. Según
+\Ref{XIII.1.16},
+\ifthenelse{\boolean{orig}}
+{$f_*E$}
+{$f'_*E$}
+es localmente constante y constructible y, tras reemplazar~$S'$ por un
+recubrimiento étale, puede incluso suponerse que
+\ifthenelse{\boolean{orig}}
+{$f_*E$}
+{$f'_*E$}
+es constante.
+Como~$(E,f')$ es cohomológicamente propio relativamente a~$S'$ en dimensión
+$\leqslant0$ y~$\H^0(X_{\bar{s}},E|X_{\bar{s}})$ no es vacío, se ve que~$E$
+tiene una sección. Pero esto demuestra que~$Q$ es disconexo, lo que
+concluye la demostración.
+
+De~\Ref{XIII.4.1} se deduce el lema siguiente, que se utilizará
+en~\Ref{XIII.4.6}.

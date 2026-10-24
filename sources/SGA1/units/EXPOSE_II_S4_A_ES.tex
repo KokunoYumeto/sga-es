@@ -1,0 +1,159 @@
+
+\section{Propiedades diferenciales de los morfismos lisos}
+\label{II.4}
+Para simplificar, nos restringiremos esencialmente al cálculo diferencial de orden~$1$ y nos limitaremos a dar indicaciones rápidas para los órdenes superiores (donde los resultados son igual de sencillos).
+
+Para la definición del haz de $1$-diferenciales $\it{\Omega}^1_{X/Y}$ de un $Y$-preesquema $X$, \cf (I~\No\Ref{I.1}). Supongamos que $X$ e $Y$ son $S$-preesquemas y que el morfismo estructural $f\colon X\to Y$ es un $S$-morfismo. Entonces $f$ define un homomorfismo de módulos (compatible con $f$)
+\begin{equation}
+\label{eq:II.4.1}
+{f^*\colon \it{\Omega}^1_{Y/S}\to\it{\Omega}^1_{X/S}}
+\end{equation}
+es decir, $\it{\Omega}^1_{X/S}$ es \emph{contravariante} en el $S$-preesquema $X$. Por otra parte,~\eqref{eq:II.4.1} equivale a un homomorfismo de módulos sobre~$X$
+\begin{equation*}
+\label{eq:II.4.1bis}
+\tag{4.1\textrm{bis}}
+{f^*\big(\it{\Omega}^1_{Y/S}\big)\to\it{\Omega}^1_{X/S}}
+\end{equation*}
+que, a falta de una notación mejor, se denota también por $f^*$ y se inserta en una sucesión exacta canónica de homomorfismos de módulos
+\begin{equation}
+\label{eq:II.4.2}
+{f^*\big(\it{\Omega}^1_{Y/S}\big)\to
+\it{\Omega}^1_{X/S}\to\it{\Omega}^1_{X/Y}\to 0}.
+\end{equation}
+Todos estos homomorfismos se definen por la condición de ser de naturaleza local (lo que reduce al caso afín) y de conmutar con los operadores $\rd$. La exactitud de~\eqref{eq:II.4.2} es clásica e inmediata y, en el caso afín, se traduce en la sucesión exacta siguiente (correspondiente a un homomorfismo $B\to C$ de $A$-álgebras):
+\begin{equation*}
+\label{eq:II.4.2bis}
+\tag{4.2\textrm{bis}}
+{\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}\to\Omega^1_{C/B}\to 0}.
+\end{equation*}
+
+\begin{lemme}
+\label{II.4.1}
+Sea
+\marginpar{36}
+$f\colon X\to Y$ un morfismo de $S$-preesquemas. Si $f$ es no ramificado (\resp étale), entonces
+$f^*\big(\it{\Omega}^1_{Y/S}\big)\to\it{\Omega}^1_{X/S}$
+es sobreyectivo (\resp un isomorfismo). El recíproco es cierto en el caso «no ramificado» si se supone que $f$ es localmente de tipo finito.
+\end{lemme}
+
+El caso no ramificado resulta de la sucesión exacta~\eqref{eq:II.4.2} y de (\Ref{I.3.1}), pero el caso étale también puede verse directamente. Consideremos el diagrama
+\begin{equation*}
+\xymatrix@C=1.5cm{
+X \ar[r]^-{\Delta_{X/Y}} & X\times_Y X \ar[d] \ar[r] &
+X\times_S X \ar[d] \\ & Y \ar[r]^-{\Delta_{Y/S}} & Y\times_S Y
+}
+\end{equation*}
+en el que $X\times_Y X$ se identifica con el producto fibrado de $Y$ y $X\times_S X$ sobre $Y\times_S Y$. Como $f$ es no ramificado, $X\to X\times_Y X$ es una inmersión abierta; por tanto, el haz conormal de la inmersión compuesta $\Delta_{X/S}$ de esta última con $X\times_Y X\to X\times_S X$ es isomorfo a la imagen inversa sobre~$X$ del haz conormal de la inmersión $X\times_Y X\to X\times_S X$. Por otra parte, en el caso étale, $X\to Y$ es plano, luego $X\times_S X\to Y\times_S Y$ es plano; por consiguiente, el haz conormal de la inmersión $X\times_Y X\to X\times_S X$ es isomorfo a la imagen inversa del haz conormal de la inmersión $Y\to Y\times_S Y$, es decir, a la imagen inversa de~$\it{\Omega}^1_{Y/S}$. De aquí se sigue la conclusión.
+
+\begin{lemme}
+\label{II.4.2}
+Sea $X=Y[t_1,\dots,t_n]$, donde $Y$ es un $S$-preesquema. Entonces la sucesión de homomorfismos canónicos
+\[
+0\to f^*\big(\it{\Omega}^1_{Y/S}\big)\to
+\it{\Omega}^1_{X/S}\to\it{\Omega}^1_{X/Y}\to 0
+\]
+es exacta y $\it{\Omega}^1_{X/Y}$ es libre con base $\rd_{X/Y}t_i$.
+\end{lemme}
+
+La verificación (puramente afín) es inmediata. (Nótese que ya conocemos la exactitud de~\eqref{eq:II.4.2}).
+
+Combinando estos dos enunciados con la definición~\Ref{II.1.1}, se obtiene:
+
+\begin{theoreme}
+\label{II.4.3}
+Sea $f\colon X\to Y$ un morfismo liso de $S$-preesquemas. Entonces:
+\begin{enumerate}
+\item[(i)] La sucesión de homomorfismos canónicos
+\[
+0\to f^*\big(\it{\Omega}^1_{Y/S}\big)\to
+\it{\Omega}^1_{X/S}\to\it{\Omega}^1_{X/Y}\to 0
+\]
+es exacta.
+\item[(ii)] $\it{\Omega}^1_{X/Y}$ es localmente libre y su rango $n$ en $x$ es igual a la dimensión relativa de~$f$ en~$x$.
+\end{enumerate}
+\end{theoreme}
+
+\begin{corollaire}
+\label{II.4.4}
+El homomorfismo
+\marginpar{37}
+$f^*\big(\it{\Omega}^1_{Y/S}\big)\to\it{\Omega}^1_{X/S}$ es inyectivo, y su imagen en $\it{\Omega}^1_{X/S}$ es localmente un sumando directo.
+\end{corollaire}
+
+Sea $u\colon F\to G$ un homomorfismo de módulos sobre el preesquema $X$. Se dice que es \emph{universalmente inyectivo}
+\index{universalmente inyectivo (morfismo de módulos)|hyperpage}%
+en $x\in X$ si el homomorfismo $F_x\to G_x$ de $\cal{O}_x$-módulos es inyectivo y sigue siéndolo después de tensorizar con cualquier $\cal{O}_x$-álgebra (o, lo que por lo demás es equivalente, con cualquier $\cal{O}_x$-módulo). Basta, por ejemplo, con que exista un entorno abierto $U$ de~$x$ tal que $u$ induzca un isomorfismo de $F|U$ sobre un sumando directo de $G|U$; esta condición es también necesaria cuando $F$ y $G$ son libres (y de tipo finito) en un entorno de~$x$. Más precisamente, en este caso son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $u$ es inyectivo en $x$ y $\Coker u$ es libre en $x$;
+\item[(ii)] existe un entorno abierto $U$ de~$x$ tal que $u$ induzca un isomorfismo de $F|U$ sobre un sumando directo de $G|U$;
+\item[(iii)] $u$ es universalmente inyectivo en $x$;
+\item[(iv)] el homomorfismo
+\ifthenelse{\boolean{orig}}
+{$\cal{F}_x\otimes\kres(x)\to\cal{G}_x\otimes\kres(x)$}
+{$F_x\otimes\kres(x)\to G_x\otimes\kres(x)$}
+sobre las «fibras restringidas» inducido por $u$ es inyectivo;
+\item[(v)] el homomorfismo transpuesto $\check{G}\to\check{F}$ es sobreyectivo en el punto $x$ (o, lo que es equivalente, en un entorno de~$x$).
+\end{enumerate}
+(Demostración circular: (iv)$\To$(v) resulta de Nakayama; por otra parte, (v)$\To$(i),
+\ifthenelse{\boolean{orig}}{puesto que un}{pues un}
+haz cociente localmente libre es necesariamente un sumando directo). Geométricamente, la situación considerada significa que $u$ corresponde a un isomorfismo del fibrado vectorial cuyo haz de secciones
+\ifthenelse{\boolean{orig}}{es~$\cal{F}$,}{es~$F$,}
+sobre un subfibrado del fibrado vectorial análogo definido por $G$. Naturalmente, para ello no basta con que
+\ifthenelse{\boolean{orig}}{$\cal{F}\to\cal{G}$}{$F\to G$}
+sea inyectivo.
+
+\begin{corollaire}
+\label{II.4.5}
+Sea $f\colon X\to Y$ un morfismo de $S$-preesquemas, localmente de tipo finito; sean $x\in X$, $y=f(x)$ y $s$ la proyección de $x$ e $y$ sobre~$S$. Supongamos que $Y$ es liso sobre~$S$ en $y$. Son equivalentes las condiciones:
+\begin{enumerate}
+\item[(i)] $f$ es liso en $x$.
+\item[(ii)] $X$ es liso sobre
+\ifthenelse{\boolean{orig}}{$Y$}{$S$}
+en~$x$, y $f^*\big(\it{\Omega}^1_{Y/S}\big)\to\it{\Omega}^1_{X/S}$ es universalmente inyectivo en~$x$, es decir, es un homomorfismo inyectivo en~$x$ y su conúcleo $\it{\Omega}^1_{X/Y}$ es libre
+\ifthenelse{\boolean{orig}}{en~$x$).}{en~$x$.}
+\end{enumerate}
+\end{corollaire}
+
+La necesidad resulta de~\Ref{II.1.3}~(iii) y de~\Ref{II.4.3}~(i),\,(ii). Probemos la suficiencia. Como los $\rd g$ ($g\in\cal{O}_x$) engendran el módulo $\it{\Omega}^1_{X/Y}$ en $x$, se pueden encontrar
+\marginpar{38}
+$g_i$ ($1\le i\le n$) tales que las imágenes de los $\rd g_i$ en $\big(\it{\Omega}^1_{X/Y}\big)_x$ formen una base de este módulo. Tomando $X$ suficientemente pequeño, podemos suponer que los $g_i$ provienen de secciones de~$\cal{O}_X$ y definen, por tanto, un $Y$-morfismo $g\colon X\to Y'=Y[t_1,\dots,t_n]$. Utilizando la hipótesis y el lema~\Ref{II.4.2}, se ve fácilmente que el homomorfismo correspondiente $g^*\big(\it{\Omega}^1_{Y'/S}\big)\to\it{\Omega}^1_{X/S}$ es biyectivo en $x$, lo que nos reduce a demostrar el
+
+\begin{corollaire}
+\label{II.4.6}
+Sea $f\colon X\to Y$ un morfismo de $S$-preesquemas lisos. Para que $f$ sea étale en $x\in X$, es necesario y suficiente que $f^*\big(\it{\Omega}^1_{Y/S}\big)\to\it{\Omega}^1_{X/S}$ sea un isomorfismo en $x$.
+\end{corollaire}
+
+Por~\Ref{II.4.1} sabemos que es necesario, y la misma condición implica, por ese lema, que $f$ es no ramificado en $x$. En virtud de~\Ref{II.2.2}, nos reducimos al caso $S=\Spec(k)$. Como $Y$ es liso sobre~$k$, es regular y, con mayor razón, normal; en virtud de (\Ref{I.9.5}~(ii)), nos reducimos a probar que $\cal{O}_y\to\cal{O}_x$ es inyectivo, o bien que $\cal{O}_y$ y $\cal{O}_x$ tienen la misma dimensión. Ahora bien, estas dimensiones son, respectivamente, los rangos de $\it{\Omega}^1_{Y/k}$ y $\it{\Omega}^1_{X/k}$ en $y$ \resp $x$, y por la hipótesis son iguales.
+
+\begin{remarques}
+\label{II.4.7}
+Suponiendo que $X$ e $Y$ son lisos sobre~$S$, el criterio~\Ref{II.4.5}~(ii) para la lisura de $f\colon X\to Y$ puede enunciarse también diciendo que, para todo $x\in X$, la aplicación \emph{tangente} (relativa a la base $S$) de~$f$ en $x$, es decir, la transpuesta del homomorfismo de espacios vectoriales de dimensión finita sobre $\kres(x)$ que son las fibras restringidas en $x$ de $f^*\big(\it{\Omega}^1_{Y/S}\big)$ y $\it{\Omega}^1_{X/S}$, es \emph{sobreyectiva}. Esta es una hipótesis muy familiar, en particular entre quienes trabajan con espacios analíticos. La hipótesis de nonsingularidad que suelen imponer (que significa que $X$ e $Y$ son «lisos sobre~$\CC$», \cf \No\Ref{II.5}) parece deberse únicamente al temor que los puntos singulares de las variedades algebraicas o de los espacios analíticos todavía inspiran a muchos geómetras.
+\end{remarques}
+
+Señalemos el siguiente caso particular de~\Ref{II.4.6}:
+\begin{corollaire}
+\label{II.4.8}
+Sean $X$ un $S$-preesquema, $g\colon X\to S[t_1,\dots,t_n]$ un $S$-morfismo definido por las secciones $g_i$ ($1\le i\le n$) de~$\cal{O}_X$, y $x$ un punto de~$X$ tal que $X$ sea liso sobre~$S$ en $x$. Para que $g$ sea étale en $x$, es necesario y suficiente que los $\rd g_i$
+\marginpar{39}
+($1\le i\le n$) formen una base de~$\it{\Omega}^1_{X/S}$ en $x$ (o, lo que es equivalente, que sus imágenes en
+$\it{\Omega}^1_{X/S}(x)=\big(\it{\Omega}^1_{X/S}\big)_x\otimes_{\cal{O}_x}\kres(x)$ formen una base de este espacio vectorial sobre~$\kres(x)$).
+\end{corollaire}
+
+Sean $X$ un preesquema e $Y$ un subpreesquema cerrado de~$X$ definido por un haz coherente $\cal{J}$ de ideales. Entonces $\cal{J}/\cal{J}^2$ puede considerarse como un haz coherente sobre~$Y$ (el \emph{haz conormal}
+\index{conormal (haz)|hyperpage}%
+\index{haz conormal|hyperpage}%
+de~$Y$ en~$X$). Si ahora $X$ es un $S$-preesquema, se tiene una sucesión exacta canónica de haces cuasicoherentes sobre~$Y$
+\begin{equation}
+\label{eq:II.4.3}
+{\cal{J}/\cal{J}^2\lto{\rd}
+\it{\Omega}^1_{X/S}\otimes_{\cal{O}_X}\cal{O}_Y\to
+\it{\Omega}^1_{Y/S}\to 0}
+\end{equation}
+cuya parte derecha no es sino~\eqref{eq:II.4.2} (con los papeles de $X$ e $Y$ intercambiados y teniendo en cuenta que $\it{\Omega}^1_{Y/X}=0$), mientras que el homomorfismo $\cal{J}/\cal{J}^2\to\it{\Omega}^1_{X/S}\otimes_{\cal{O}_X}\cal{O}_Y$ se deduce del homomorfismo (en general no lineal) $g\mapsto\rd g$ pasando a los cocientes. La exactitud de~\eqref{eq:II.4.3} es clásica e inmediata y, en el caso afín, se interpreta mediante la sucesión exacta siguiente (correspondiente a un homomorfismo sobreyectivo $B\to C$ de $A$-álgebras, de núcleo $J$):
+\begin{equation*}
+\label{eq:II.4.3bis}
+\tag{4.3\textrm{bis}}
+{J/J^2\to\Omega^1_{B/A}\otimes_B C\to\Omega^1_{C/A}\to 0\qquad
+(C=B/J)}
+\end{equation*}
+(sucesión exacta que ya se había utilizado implícitamente en la demostración de (\Ref{I.7.2})).

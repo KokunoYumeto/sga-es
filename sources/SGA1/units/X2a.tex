@@ -1,0 +1,283 @@
+\section[Aplicación del teorema de existencia de haces]
+{Aplicación del teorema de existencia de haces: teorema de semicontinuidad
+para los grupos fundamentales de las fibras de un morfismo propio y separable}
+\label{X.2}
+\marginpar{268}
+
+\begin{theoreme}
+\label{X.2.1}
+\ifthenelse{\boolean{orig}}
+{Sean~$Y$ el espectro de un anillo local noetheriano \emph{completo}, de
+cuerpo residual~$\kres$,~$X$ un~$Y$-esquema propio,
+$X_0=X\otimes_A\kres$,~$a_0$ un punto geométrico de~$X_0$ y~$a$ el punto
+geométrico correspondiente de~$X$.}
+{Sean~$A$ un anillo local noetheriano \emph{completo} de cuerpo residual~$k$,
+$Y=\Spec(A)$,~$X$ un~$Y$-esquema propio, $X_0=X\otimes_Ak$,~$a_0$ un punto
+geométrico de~$X_0$ y~$a$ el punto geométrico correspondiente de~$X$.}
+Entonces el homomorfismo canónico~$\pi_1(X_0,a_0)\to\pi_1(X,a)$ es un
+\emph{isomorfismo}.
+\end{theoreme}
+
+No es sino una traducción, al lenguaje del grupo fundamental, del resultado
+recordado en~\Ref{IX.1.10}. Es aquí donde el teorema de existencia
+\ifthenelse{\boolean{orig}}
+{de}
+{de}
+haces en geometría algebraico-formal entra de manera esencial en la teoría del
+grupo fundamental.
+
+Introduzcamos ahora una clausura algebraica~$\bar{k}$ del cuerpo residual~$k$ y
+la fibra geométrica~$\overline X_0=X_0\otimes_k\bar{k}$.
+\ifthenelse{\boolean{orig}}
+{}
+{Elijamos un punto geométrico~$\overline a_0$ de~$\overline X_0$ sobre~$a_0$.}
+Se tiene, pues, la sucesión exacta (\Ref{IX.6.1})
+$$
+\ifthenelse{\boolean{orig}}
+{e\to\pi_1(\overline X_0,\overline a_0)\to\pi_1(X_0,a_0)\to
+\pi_1(k,\bar{k})\to e,}
+{e\to\pi_1(\overline X_0,\overline a_0)\to\pi_1(X_0,a_0)\to
+\pi_1(k,\bar{k})\to e,}
+$$
+por otra parte, se tienen el isomorfismo~\Ref{X.2.1} y el isomorfismo análogo,
+más elemental,
+$$
+\pi_1(k,\bar{k})\to\pi_1(Y,b),
+$$
+donde~$b$ es la imagen de~$a$ en~$Y$. Se obtiene así:
+
+\begin{corollaire}
+\label{X.2.2}
+\ifthenelse{\boolean{orig}}
+{Con las notaciones anteriores, supongamos conexo~$\overline X_0$ y sean
+$\overline a_0$ un punto geométrico de
+$\overline X_0=X_0\otimes_k\bar{k}$,~$a_0$ su imagen en~$X$,}
+{Con las notaciones anteriores, supongamos conexo
+$\overline X_0=X_0\otimes_k\bar{k}$ y sean~$\overline a_0$ un punto geométrico
+de~$\overline X_0$,~$a_0$ su imagen en~$X$,}
+~$b_0$ su imagen en~$Y$. Entonces la sucesión siguiente de homomorfismos
+canónicos
+$$
+\ifthenelse{\boolean{orig}}
+{e\to\pi_1(\overline X_0,\overline a_0)\to\pi_1(X,a_0)\to
+\pi_1(Y,b_0)\to e}
+{e\to\pi_1(\overline X_0,\overline a_0)\to\pi_1(X,a_0)\to
+\pi_1(Y,b_0)\to e}
+$$
+es exacta.
+\end{corollaire}
+
+Compárese esta sucesión con la sucesión exacta~\Ref{X.1.4}, pero obsérvese que
+a)~no ha sido necesario imponer ninguna hipótesis de planitud ni de
+separabilidad sobre las fibras para~$X\to Y$; y b)~se obtiene el complemento
+importante de que \emph{el morfismo
+$\pi_1(\overline X_0,\overline a_0)\to\pi_1(X,a_0)$ es inyectivo}.
+
+Este último hecho permitirá comparar el grupo fundamental de las demás
+\marginpar{269}
+fibras geométricas de~$X$ sobre~$Y$ con el de~$\overline X_0$. Sea, en efecto,
+~$y_1$ un punto cualquiera de~$Y$,~$X_1$ su fibra y~$\overline X_1$ su fibra
+geométrica respecto de una extensión algebraicamente cerrada de~$\kres(y_1)$.
+Sea~$\overline a_1$ un punto geométrico de~$\overline X_1$,~$a_1$ su imagen
+en~$X$ y~$b_1$ su imagen en~$Y$. Elijamos una «clase de caminos» de~$a_1$
+a~$a_0$, de donde se obtiene una clase de caminos de~$b_1$ a~$b_0$ y, por
+tanto, un diagrama conmutativo de homomorfismos:
+$$
+\xymatrix@=.5cm{
+&\pi_1(\overline X_1,\overline a_1) \ar[r] & \pi_1(X,a_1) \ar[r]\ar[d] & \pi_1(Y,b_1) \ar[r]\ar[d] & e \\
+e \ar[r]& \pi_1(\overline X_0,\overline a_0) \ar[r] & \pi_1(X,a_0) \ar[r] &\pi_1(Y,b_0) \ar[r] & e,
+}
+$$
+en el cual las dos flechas verticales indicadas son isomorfismos. Como la
+segunda fila es exacta, se obtiene un homomorfismo canónico, que llamaremos
+\emph{homomorfismo de especialización para el grupo fundamental} (que solo
+depende de la clase de caminos elegida de~$a_1$ a~$a_0$ y está, por tanto,
+\emph{definido módulo un automorfismo interior de}~$\pi_1(X,a_0)$):
+$$
+\pi_1(\overline X_1,\overline a_1)\to
+\pi_1(\overline X_0,\overline a_0).
+$$
+Cuando la primera fila anterior es también exacta, se sigue inmediatamente que
+el homomorfismo de especialización es sobreyectivo. Teniendo en cuenta
+~\Ref{X.1.4}, se obtiene, pues:
+
+\begin{corollaire}
+\label{X.2.3}
+Bajo las hipótesis de~\Ref{X.2.1}, supongamos además que el morfismo
+~$f\colon X\to Y$ es \emph{separable} \eqref{X.1.1} y que~$\overline X_0$ es
+conexo (por tanto, en virtud de~\Ref{X.1.2}, se tiene
+$f_*(\cal{O}_X)=\cal{O}_Y$). Entonces, para toda fibra geométrica
+~$\overline X_1$ de~$X$ sobre~$Y$, provista de un punto geométrico
+~$\overline a_1$, el homomorfismo de especialización
+\index{homomorfismo de especialización para el grupo fundamental|hyperpage}%
+\index{especialización para el grupo fundamental (homomorfismo de)|hyperpage}%
+definido anteriormente es \emph{sobreyectivo}.
+\end{corollaire}
+
+Este es un resultado de \emph{semicontinuidad} para el grupo fundamental, que
+no parece tener todavía un análogo en topología algebraica. Puede enunciarse,
+por lo demás, bajo hipótesis más generales:
+
+\begin{corollaire}
+\label{X.2.4}
+Sean
+\marginpar{270}
+~$f\colon X\to Y$ un morfismo propio de fibras geométricamente conexas,
+con~$Y$ localmente noetheriano;~$y_0$ e~$y_1$ dos puntos de~$Y$ tales que
+$y_0\in\overline{\{y_1\}}$;~$\overline X_0$ y~$\overline X_1$ las fibras
+geométricas de~$X$ correspondientes a extensiones algebraicamente cerradas
+elegidas de~$\kres(y_0)$ y~$\kres(y_1)$; y~$\overline a_0$,
+\resp~$\overline a_1$, un punto geométrico de~$\overline X_0$,
+\resp~$\overline X_1$. Entonces puede definirse de manera natural un
+homomorfismo de especialización
+$$
+\pi_1(\overline X_1,\overline a_1)\to
+\pi_1(\overline X_0,\overline a_0),
+$$
+definido salvo automorfismo interior, y este homomorfismo es \emph{sobreyectivo}
+si~$f$ es un morfismo separable \eqref{X.1.1}.
+\end{corollaire}
+
+En efecto, de~\Ref{X.1.8} se sigue primero que~\Ref{X.2.4} es esencialmente
+independiente de las extensiones algebraicamente cerradas elegidas para los
+cuerpos residuales~$\kres(y_0)$ y~$\kres(y_1)$. Esto permite sustituir~$Y$ por
+un preesquema~$Y'$ sobre~$Y$ que tenga un punto~$y_0'$ (\resp~$y_1'$) sobre
+~$y_0$ (\resp~$y_1$). Se toma entonces por~$Y'$ el espectro del completado del
+anillo local de~$y_0$ en~$Y$, y se aplica~\Ref{X.2.3}.
+
+\begin{remarques}
+\label{X.2.5}
+La conclusión final de~\Ref{X.2.4} sobre la sobreyectividad del homomorfismo de
+especialización, y a fortiori los resultados~\Ref{X.1.3} y~\Ref{X.1.4} de los
+que se deduce, deja de ser cierta si ya no se supone que~$f\colon X\to Y$ es
+un morfismo separable, incluso para esquemas proyectivos sobre un cuerpo
+algebraicamente cerrado de característica~$0$. Más adelante veremos ejemplos
+tanto cuando~$f$ es plano pero~$f$ admite una fibra no separable (aunque~$X$
+e~$Y$ sean lisos sobre~$k$), como cuando las fibras de~$f$ son separables pero~$f$ no
+es plano (por ejemplo, cuando~$f\colon X\to Y$ es un morfismo birracional de
+esquemas íntegros normales); véase~\Ref{XI.3}. En estos ejemplos puede
+ocurrir que el grupo fundamental de la fibra geométrica genérica sea trivial,
+pero no el de una fibra geométrica especial conveniente.
+
+Por otra parte, incluso si~$f\colon X\to Y$ es un morfismo propio y separable
+como en~\Ref{X.2.4}, es frecuente que el homomorfismo de especialización no sea
+\marginpar{271}
+un isomorfismo. Por ejemplo, es fácil dar casos en los que~$\overline X_1$ es
+una curva elíptica no singular (por tanto, su grupo fundamental es conmutativo
+y su componente~$\ell$-primaria, para un número primo~$\ell$ distinto de la
+característica, es isomorfa a~$\ZZ_\ell^2$; véase~\Ref{XI}), mientras que
+~$\overline X_0$ está formada ya por dos curvas racionales no singulares que se
+cortan en dos puntos, ya por dos curvas racionales tangentes en un punto, ya,
+por último, por una curva racional con un punto singular que es una cúspide.
+(Para la clasificación completa de las curvas elípticas degeneradas, véanse
+los trabajos recientes de Kodaira~\cite{X.1} y Néron). En estos casos, el grupo
+fundamental de~$\overline X_0$ es, respectivamente,~$\hat\ZZ$,~$e$,~$e$, y es,
+por tanto, «estrictamente menor» que el de~$\overline X_1$.
+
+Veremos, sin embargo, más adelante, cuando~$f$ es un morfismo \emph{liso}, una
+cota para el núcleo del homomorfismo de especialización que implica, en
+particular, que si~$\kres(y_0)$ tiene característica~0, el homomorfismo de
+especialización es un isomorfismo. Pero incluso para un morfismo liso, si la
+característica de~$\kres(y_0)$ es~$>0$, el homomorfismo de especialización
+puede no ser un isomorfismo, como se ve, por ejemplo, cuando~$X$ es un esquema
+abeliano sobre~$Y$ (incluso de dimensión relativa~$1$),
+\ifthenelse{\boolean{orig}}
+{\cf~\Ref{XI.2}).}
+{\cf~\Ref{XI.2}.}
+Una teoría satisfactoria de la especialización del grupo fundamental debe
+tener en cuenta la «componente continua» del «verdadero» grupo fundamental,
+correspondiente a la clasificación de los recubrimientos principales cuyos
+grupos estructurales son grupos infinitesimales. Con ello cabría esperar que
+los «verdaderos» grupos fundamentales de las fibras geométricas de un morfismo
+liso y propio~$f\colon X\to Y$ formasen un sistema local bien comportado
+sobre~$X$, límite proyectivo de esquemas en grupos finitos y planos sobre~$X$
+\kern1pt\footnote{Esta conjetura sumamente seductora queda, por desgracia,
+refutada por un ejemplo inédito de M\ptbl Artin, ya cuando las fibras de~$f$
+son curvas algebraicas de un género dado~$g\ge 2$.}. Volveremos más adelante
+sobre este punto de vista; nuestro propósito presente es, por el contrario,
+llevar tan lejos como sea posible los fenómenos comunes a la teoría topológica
+y a la teoría esquemática del grupo fundamental.
+\end{remarques}
+
+Sea ahora~$X_0$ una curva propia, lisa y conexa de género~$g$ sobre un cuerpo
+algebraicamente cerrado~$k$. Si~$k$ tiene característica cero, su grupo
+fundamental puede determinarse por métodos trascendentes como sigue. Se sabe
+que~$X_0$ procede por extensión de la base de una curva definida
+\marginpar{272}
+sobre una extensión algebraicamente cerrada de grado de trascendencia finito
+del cuerpo primo~$\QQ$ y, teniendo en cuenta~\Ref{X.1.8}, puede suponerse que
+~$k$ mismo tiene grado de trascendencia finito sobre~$\QQ$. Puede suponerse,
+por tanto, que~$k$ es un subcuerpo del cuerpo~$\CC$ de los números complejos,
+y una nueva aplicación de~\Ref{X.1.8} permite suponer que~$k=\CC$. No es
+difícil comprobar entonces que el grupo fundamental de
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$X_0$}
+es isomorfo a la completación profinita del grupo fundamental del espacio
+topológico asociado
+\ifthenelse{\boolean{orig}}
+{$\tilde X$}
+{$\widetilde X_0$}
+(una superficie compacta orientada de género~$g$), para la topología definida
+por los subgrupos de índice finito\footnote{Esta deducción se explicó en una de
+las exposiciones orales que no fueron redactadas.}. Por otra parte, es clásico
+que el grupo fundamental topológico está engendrado por~$2g$ generadores
+~$s_i,t_i$ ($1\le i\le g$), sujetos a la única relación
+$$
+(s_1t_1s_1^{-1}t_1^{-1})\cdots(s_gt_gs_g^{-1}t_g^{-1})=1.
+$$
+Por tanto, el grupo fundamental de
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$X_0$}
+admite~$2g$ generadores \emph{topológicos}~$s_i,t_i$ ($1\le i\le g$), ligados
+por la única relación anterior.
+
+Supongamos ahora que la característica de~$k$ es~$p>0$. Sea~$A$ el anillo de
+vectores de Witt construido a partir de~$k$, y~$K$ una extensión
+algebraicamente cerrada de su cuerpo de fracciones. Se vio en
+~\Ref{III.7.4} que existe un esquema~$X$ sobre~$Y=\Spec(A)$, propio y liso
+sobre~$Y$, cuya reducción es~$X_0$. Aplicando~\Ref{X.2.3}, se obtiene un
+homomorfismo \emph{sobreyectivo}
+$$
+\pi_1(X_1)\to\pi_1(X_0),
+$$
+donde~$X_1=X\otimes_AK$. Es inmediato\footnote{\Cf EGA~IV 12.2.} que~$X_1$
+es liso sobre~$K$, conexo por~\eqref{X.1.2}, de dimensión~$1$, y que su género
+es igual a~$g$ por la invariancia de la característica de Euler--Poincaré;
+véase EGA~III 7. Como~$K$ tiene característica~$0$, puede aplicársele el
+resultado anterior. Se ha probado así, por \emph{métodos trascendentes}:
+
+\begin{theoreme}
+\label{X.2.6}
+Sea~$X_0$ una curva algebraica lisa, propia y conexa sobre un
+\marginpar{273}
+cuerpo algebraicamente cerrado~$k$, y sea~$g$ su género. Entonces
+~$\pi_1(X_0)$ admite un sistema de~$2g$ generadores topológicos, ligados por la
+relación escrita anteriormente. Si~$k$ tiene característica~$0$,
+~$\pi_1(X_0)$ es además el grupo libre de tipo galoisiano sobre esos generadores
+sujeto a dicha relación.
+\end{theoreme}
+
+\begin{remarques}
+\label{X.2.7}
+En la actualidad, que sepa el redactor, no existe una demostración por métodos
+puramente algebraicos del resultado anterior, salvo para los géneros~$0,1$.
+Para empezar, no se ve en absoluto cómo distinguir en~$\pi_1(X_0)$
+~$2g$ elementos de los que después pudiera esperarse que formasen un sistema de
+generadores topológicos. A este respecto, es más favorable la situación de la
+recta racional privada de~$n$ puntos y el estudio de sus recubrimientos
+moderadamente ramificados en esos puntos, pues los grupos de ramificación en
+los~$n$ puntos proporcionan~$n$ elementos del grupo fundamental estudiado y se
+prueba que lo engendran topológicamente, como veremos más adelante
+\footnote{\Cf Exposición~\Ref{XII}. Incluso estos elementos solo quedan
+determinados módulo conjugación, y conviene elegir \emph{simultáneamente} y con
+cuidado representantes de sus clases.}. Pero ni siquiera en este caso
+particularmente concreto parece conocerse una demostración puramente
+algebraica. Una demostración tal sería, desde luego, sumamente interesante. El
+único hecho relativo al grupo fundamental de una curva que parece admitir una
+demostración puramente algebraica, aparte del teorema débil de finitud
+~\Ref{X.2.12} que Lang--Serre~\cite{X.2} probaron algebraicamente, es la
+determinación de su abelianización mediante la jacobiana, señalada en la última
+línea de~\Ref{IX.5.8}.
+\end{remarques}

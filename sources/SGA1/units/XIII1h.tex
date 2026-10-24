@@ -1,0 +1,57 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo los delimitadores de curvatura de Xy-pic.
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{proposition}}
+\begin{exemples}
+\label{XIII.1.11}
+\begin{enumerate}
+\item[1)] Sea $f \colon X_1 \to X$ un \emph{morfismo de descenso}
+para la categoría de los haces étales sobre esquemas variables (por
+ejemplo, un morfismo universalmente submersivo (SGA~4 VIII~9.3)). Sean
+$X_2 = X_1 \times_X X_1$, $g \colon X_2 \to X$ la proyección canónica
+y~$F$ un haz de conjuntos sobre~$X$. Se deduce entonces de \loccit que
+se tiene una sucesión exacta de haces de conjuntos
+\begin{equation*}
+\label{eq:XIII.1.11.1}
+\tag{\thesubsection.1} { \xymatrix@C=.5cm{ F \ar[r] & f_* f^* F
+\ar@<2pt>[r] \ar@<-2pt>[r] & g_* g^* F \text{.}}
+}
+\end{equation*}
+Si~$\Phi$ es el stack en categorías discretas asociado a~$F$ y~$\Phi_3$
+el stack final sobre~$X$, es decir, el stack cuyas categorías fibra tienen
+un único objeto y un único morfismo, la identidad de ese objeto, decir que
+la sucesión~\eqref{eq:XIII.1.11.1} es exacta equivale a decir que también
+lo es el diagrama de stacks
+$$
+\xymatrix@C=.5cm{ \Phi \ar[r] & f_* f^* \Phi \ar@<2pt>[r]
+\ar@<-2pt>[r] & g_* g^* \Phi \ar[r] \ar@<4pt>[r]
+\ar@<-4pt>[r] & \Phi_3 } \text{.}
+$$
+
+\item[2)]
+Sea
+\marginpar{361}
+$f \colon X_1 \to X$ un \emph{morfismo de descenso efectivo} para la
+categoría de los haces étales sobre esquemas variables (por ejemplo, un
+morfismo propio sobreyectivo, un morfismo entero sobreyectivo o un morfismo
+fielmente plano y localmente de presentación finita (SGA~4 VIII~9.4)). Sean
+$X_2 = X_1 \times_X X_1$, $g \colon X_2 \to X$ la proyección canónica,
+$X_3 = X_1 \times_X X_1 \times_X X_1$, $h \colon X_3 \to X$ el morfismo
+canónico. Sean $\Phi$ un stack sobre~$X$, $\Phi_1 = f_* f^* \Phi$,
+$\Phi_2 = g_* g^* \Phi$ y $\Phi_3 = h_* h^* \Phi$. Se tiene entonces un
+diagrama exacto
+$$
+\xymatrix@C=.5cm{ \Phi \ar[r] & \Phi_1 \ar@<2pt>[r] \ar@<-2pt>[r] &
+\Phi_2 \ar[r] \ar@<4pt>[r] \ar@<-4pt>[r] & \Phi_3 \text{,} }
+$$
+donde las flechas son los morfismos canónicos asociados a las proyecciones.
+
+En efecto, consideremos~$\Phi$ como un stack sobre la categoría~$\Sch_X$
+de los esquemas sobre~$X$, provista de la topología étale. Entonces, según
+\cite[VII 2.2.8]{XIII.2}, $\Phi$ es también un stack para la topología más
+fina sobre~$\Sch_X$ en la que los morfismos cubrientes son los morfismos de
+descenso efectivo para la categoría de los haces étales. De ello se sigue
+inmediatamente la exactitud del diagrama anterior.
+\end{enumerate}
+\end{exemples}
+\endgroup

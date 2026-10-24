@@ -1,0 +1,308 @@
+\section{Cambio de base en las categorías sobre~$\mathcal{E}$}
+\label{VI.3}
+
+Como en~$\Cat$ existen los límites proyectivos (respecto de categorías~$\cal{I}$
+que son elementos de~$\Univ$), lo mismo ocurre en~$\Cat_{/\cal{E}}$; en
+particular, existen allí los productos cartesianos, que se interpretan como
+productos fibrados en~$\Cat$. De acuerdo con las notaciones generales, si
+$\cal{F}$ y $\cal{G}$ son categorías sobre~$\cal{E}$, se denota por
+$$
+\cal{F}\times_{\cal{E}}\cal{G}
+$$
+\label{indnot:fk}\oldindexnot{$\cal{F}\times_{\cal{E}}\cal{G}$|hyperpage}%
+su producto en~$\Cat_{/\cal{E}}$, es decir, su producto fibrado sobre~$\cal{E}$
+en~$\Cat$,
+\marginpar{153}
+considerado como categoría sobre~$\cal{E}$. Así,
+$\cal{F}\times_{\cal{E}}\cal{G}$ está provisto de dos $\cal{E}$-funtores
+$\pr_1$ y $\pr_2$, que definen, para toda categoría $\cal{H}$ sobre~$\cal{E}$,
+una biyección
+$$
+\Hom_{\cal{E}}(\cal{H},\cal{F}\times_{\cal{E}}\cal{G})\isomto
+\Hom_{\cal{E}}(\cal{H},\cal{F})\times\Hom_{\cal{E}}(\cal{H},\cal{G}).
+$$
+Esta biyección procede, además, de un isomorfismo de categorías
+$$
+\SheafHom_{\cal{E}/-}(\cal{H},\cal{F}\times_{\cal{E}}
+\cal{G})\isomto\SheafHom_{\cal{E}/-}(\cal{H},\cal{F})\times
+\SheafHom_{\cal{E}/-}(\cal{H},\cal{G})
+$$
+al tomar los conjuntos de objetos de ambos miembros, donde el funtor escrito es
+el que tiene por componentes los funtores $h\mto\pr_1\circ h$ y
+$h\mto\pr_2\circ h$ del primer miembro en los dos factores del segundo. Se
+deja al lector comprobar que se obtiene efectivamente un isomorfismo (pues el
+hecho análogo es válido, más generalmente, siempre que se tenga un límite
+proyectivo de categorías, y no solo en el caso de un producto fibrado).
+
+Recordemos, además, que (como se dijo en el~\No \Ref{VI.1}):
+\begin{eqnarray*}
+\Ob(\cal{F}\times_\cal{E}\cal{G})&=&
+\Ob(\cal{F})\times_{\Ob(\cal{E})}\Ob(\cal{G})\\
+\Fl(\cal{F}\times_\cal{E}\cal{G})&=&
+\Fl(\cal{F})\times_{\Fl(\cal{E})}\Fl(\cal{G})\quoi,
+\end{eqnarray*}
+y la composición de las flechas se realiza componente a componente.
+
+En lo que sigue, consideraremos un funtor
+$$
+\lambda\colon\cal{E}'\to\cal{E}
+$$
+y, para toda categoría $\cal{F}$ sobre~$\cal{E}$, consideraremos
+$\cal{F}\times_\cal{E}\cal{E}'$ como categoría sobre~$\cal{E}'$ por medio
+de~$\pr_2$; en otras palabras, interpretaremos la operación «producto fibrado»
+como una operación de \emph{«cambio de base»}, y el funtor
+$\lambda\colon\cal{E}'\to\cal{E}$ recibe el nombre de \emph{«funtor de cambio
+de base»}.
+\index{cambio de base (funtor)|hyperpage}%
+\index{funtor de cambio de base|hyperpage}%
+De acuerdo con los hechos generales bien conocidos, se obtiene así un funtor,
+llamado
+\marginpar{154}
+\emph{funtor de cambio de base} para~$\lambda$:
+$$
+\lambda^*\colon\Cat_{/\cal{E}}\to\Cat_{/\cal{E}'}\quoi,
+$$
+\label{indnot:fl}\oldindexnot{$\lambda^*\colon\Cat_{/\cal{E}}\to\Cat_{/\cal{E}'}$|hyperpage}%
+(adjunto al funtor de «restricción de la base» que, a toda categoría~$\cal{F}'$
+sobre~$\cal{E}'$ con funtor de proyección~$p'$, asocia~$\cal{F}'$, considerada
+como categoría sobre~$\cal{E}$ mediante el funtor~$p=\lambda p'$). Como es bien
+sabido en el caso general de un funtor de cambio de base en una categoría, el
+funtor de cambio de base «conmuta con los límites proyectivos» y, en particular,
+«transforma» productos fibrados sobre~$\cal{E}$ en productos fibrados
+sobre~$\cal{E}'$.
+
+Sean $\cal{F}$ y $\cal{G}$ dos categorías sobre~$\cal{E}$; vamos a definir un
+\emph{isomorfismo canónico}:
+\begin{multline*}
+\label{eq:VI.3.i}
+\tag{i}
+\SheafHom_{\cal{E}'/-}(\cal{F}',\cal{G}')\isomto
+\SheafHom_{\cal{E}/-}(\cal{F}\times_{\cal{E}}\cal{E}',\cal{G})\\
+\text{donde }\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'\text{, }
+\cal{G}'=\cal{G}\times_{\cal{E}}\cal{E}'.
+\end{multline*}
+Para ello, consideremos el funtor
+$$
+\pr_1\colon\cal{G}'=\cal{G}\times_{\cal{E}}\cal{E}'\to\cal{G}\quoi,
+$$
+y definamos~\eqref{eq:VI.3.i} por
+$$
+F\mto\pr_1\circ F\quoi,
+$$
+que, a priori, designa un funtor
+\begin{equation*}
+\label{eq:VI.3.ii}
+\tag{ii} {\SheafHom(\cal{F}',\cal{G}')\to\SheafHom(\cal{F}',\cal{G})}
+\end{equation*}
+Solo hay que comprobar, por tanto, que este último induce un funtor en las
+subcategorías~\eqref{eq:VI.3.i} y que dicho funtor es un isomorfismo. Que
+\eqref{eq:VI.3.ii} induce una biyección
+$$
+\Hom_{\cal{E}'/-}(\cal{F}',\cal{G}')\isomto
+\Hom_{\cal{E}/-}(\cal{F}\times_{\cal{E}}\cal{E}',\cal{G})
+$$
+es la propiedad característica del funtor de cambio de base. Queda, pues,
+\marginpar{155}
+probar que, si $F$ y $G$ son $\cal{E}'$-funtores
+$\cal{F}'\to\cal{G}'$, entonces \emph{la aplicación}
+$$
+u\mto\pr_1\circ u
+$$
+\emph{induce una biyección}
+$$
+\Hom_{\cal{E}'}(F,G)\isomto\Hom_{\cal{E}}(\pr_1\circ F,\pr_1\circ
+G)\quoi.
+$$
+La comprobación de este hecho es inmediata y se deja al lector.
+
+De este isomorfismo~\eqref{eq:VI.3.i} y del final del número anterior se deduce
+que
+$$
+\SheafHom_{\cal{E}'/-}(\cal{F}\times_{\cal{E}}\cal{E}',\cal{G}
+\times_{\cal{E}}\cal{E}')
+$$
+\emph{puede considerarse como un funtor en}
+$\cal{E}',\cal{F},\cal{G}$, \emph{de la categoría}
+$\Cat_{/\cal{E}}^\circ\times\Cat_{/\cal{E}}^\circ\allowbreak\times\Cat_{/\cal{E}}$
+\emph{en la categoría}~$\Cat$, isomorfo al funtor definido por la expresión
+$\SheafHom_{\cal{E}/-}(\cal{F}\times_{\cal{E}}\cal{E}',\cal{G})$. En
+particular, para $\cal{F}$ y~$\cal{G}$ fijos, se obtiene un funtor en~$\cal{E}'$,
+\ifthenelse{\boolean{orig}}
+{$\cal{E}'\to\SheafHom_{\cal{E}''/-}(\cal{F}',\cal{G}')=
+\SheafHom_{\cal{E}'/-}(\cal{F}\times_{\cal{E}}
+\cal{E}',\cal{G}\times_{\cal{E}}\cal{E}')$}
+{$\cal{E}'\mto\SheafHom_{\cal{E}'/-}(\cal{F}',\cal{G}')=
+\SheafHom_{\cal{E}'/-}(\cal{F}\times_{\cal{E}}
+\cal{E}',\cal{G}\times_{\cal{E}}\cal{E}')$}, y, en particular, el
+$\cal{E}$-funtor de proyección $\lambda\colon\cal{E}'\to\cal{E}$ define un
+morfismo, es decir, un funtor
+$$
+\lambda^*_{\cal{F},\cal{G}}\colon
+\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})\to
+\SheafHom_{\cal{E}'/-}(\cal{F}',\cal{G}')
+$$
+que vamos a explicitar. En los conjuntos de objetos de ambos miembros, se trata
+de la aplicación
+$$
+f\mto f'=f\times_{\cal{E}}\cal{E}'
+$$
+que expresa la dependencia funtorial de
+$\cal{F}\times_{\cal{E}}\cal{E}'$ respecto del objeto~$\cal{F}$
+sobre~$\cal{E}$. Por otra parte, consideremos dos $\cal{E}$-funtores
+$$
+f,g\colon\cal{F}\to\cal{G}
+$$
+y un homomorfismo de $\cal{E}$-funtores
+$$
+u\colon f\to g\quoi,
+$$
+vamos
+\marginpar{156}
+a explicitar el homomorfismo correspondiente de $\cal{E}'$-funtores:
+$$
+u'\colon f'\to g'\quoi.
+$$
+Para todo
+$$
+\xi'=(\xi,S')\in\Ob(\cal{F}')
+$$
+con
+$$
+\xi\in\Ob(\cal{F}),\quad S'\in\Ob(\cal{E}'),\quad p(\xi)=\lambda(S')=S
+$$
+el morfismo
+$$
+u'(\xi')\colon f'(\xi')=(f(\xi),S')\to g'(\xi')=(g(\xi),S')\quad
+\text{en }\cal{G}'
+$$
+se define mediante la fórmula
+$$
+u'(\xi')=(u(\xi),\id_{S'})
+$$
+(lo cual es, en efecto, un $S'$-morfismo en~$\cal{G}'$, pues
+$q(u(\xi))=\lambda(\id_{S'})=\id_S$).
+
+Consideremos ahora un $\cal{E}$-funtor cualquiera
+$$
+\lambda'\colon\cal{E}''\to\cal{E}'
+$$
+y el funtor correspondiente
+$$
+\SheafHom_{\cal{E}'/-}(\cal{F}\times_{\cal{E}}\cal{E}',
+\cal{G}\times_{\cal{E}}\cal{E}')\to
+\SheafHom_{\cal{E}''/-}(\cal{F}\times_{\cal{E}}\cal{E}'',
+\cal{G}\times_{\cal{E}}\cal{E}'')\quoi,
+$$
+Afirmamos que este funtor no es sino el obtenido por el procedimiento anterior,
+partiendo de~$\cal{F}'$ y $\cal{G}'$ sobre~$\cal{E}'$ y considerando
+$\cal{E}''$ como una categoría sobre~$\cal{E}'$, habida cuenta de los
+isomorfismos de \emph{«transitividad del cambio de base»}:
+$$
+\ifthenelse{\boolean{orig}}
+{\cal{F}'\times_{\cal{E}'}\cal{E}''\isomto \cal{F}''=
+\cal{F}\times_{\cal{E}}\cal{E}''\quad
+\text{y}\quad\cal{G}'\times_{\cal{E}}\cal{E}''\isomto\cal{G}''
+=\cal{G}\times_{\cal{E}}\cal{E}''\quoi,}
+{\cal{F}'\times_{\cal{E}'}\cal{E}''\isomto
+\cal{F}''=\cal{F}\times_{\cal{E}}\cal{E}''\quad
+\text{y}\quad\cal{G}'\times_{\cal{E}'}\cal{E}''\isomto\cal{G}''
+=\cal G\times_{\cal E}\cal E''\quoi,}
+$$
+que implican un isomorfismo canónico
+$$
+\SheafHom_{\cal{E}''/-}(\cal{F}'\times_{\cal{E}'}\cal{E}'',
+\cal{G}'\times_{\cal{E}'}\cal{E}'')\isomto
+\SheafHom_{\cal{E}''/-}(\cal{F}\times_{\cal{E}}\cal{E}'',
+\cal{G}\times_{\cal{E}}\cal{E}'')
+$$
+La
+\marginpar{157}
+comprobación de esta compatibilidad es inmediata y se deja al lector.
+
+Los funtores que se acaban de definir son compatibles con las operaciones de
+composición definidas en el número anterior, en el sentido preciso siguiente:
+si $\cal{F}$, $\cal{G}$ y~$\cal{H}$ son categorías sobre~$\cal{E}$ y se pone
+$$
+\cal{F}'=\cal{F}\times_{\cal{E}}\cal{E}'\quoi,\quad \cal{G}'=
+\cal{G}\times_{\cal{E}}\cal{E}'\quoi,\quad \cal{H}'=
+\cal{H}\times_{\cal{E}}\cal{E}'\quoi,
+$$
+el siguiente diagrama de funtores es conmutativo:
+\ifthenelse{\boolean{orig}}
+{\def\VIthreebase{\cal{E}}}
+{\def\VIthreebase{\cal{E}'}}
+$$
+\xymatrix{ \SheafHom_{\cal{E}/-}(\cal{F},\cal{G})\times
+\SheafHom_{\cal{E}/-}(\cal{G},\cal{H}) \ar[r]
+\ar[d]_{\lambda^*_{\cal{F},\cal{G}}\times \lambda^*_{\cal{G},\cal{H}}}
+& \SheafHom_{\cal{E}/-}(\cal{F},\cal{H})
+\ar[d]^{\lambda^*_{\cal{F},\cal{H}}} \\
+\SheafHom_{\VIthreebase/-}(\cal{F}',\cal{G}')\times
+\SheafHom_{\cal{E}'/-}(\cal{G}',\cal{H}')\ar[r] &
+\SheafHom_{\cal{E}'/-}(\cal{F}',\cal{H}')}
+$$
+donde las flechas horizontales son los funtores de composición definidos en el
+número anterior. Esta conmutatividad se expresa mediante las fórmulas
+$$
+(gf)'=g'f'
+$$
+para $f\in\Hom_{\cal{E}}(\cal{F},\cal{G})$,
+$g\in\Hom_{\cal{E}}(\cal{G},\cal{H})$ (fórmula que expresa simplemente la
+funtorialidad del cambio de base), y mediante la fórmula
+$$
+(v*u)'=v'*u'
+$$
+cuando $u\colon f\to f_1$ es una flecha de
+$\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$, mientras que
+$v\colon g\to g_1$ es una flecha
+de~$\SheafHom_{\cal{E}/-}(\cal{G},\cal{H})$. La comprobación de esta fórmula se
+deduce fácilmente de las definiciones.
+
+En lo que sigue, nos interesaremos sobre todo por
+$\SheafHom_{\cal{E}}(\cal{F},\cal{G})$ (y por ciertas subcategorías notables de
+esta) cuando $\cal{F}=\cal{E}$, e introducimos
+\ifthenelse{\boolean{orig}}{por estas razones}{por esta razón} una notación
+especial:
+$$
+\bf{\Gamma}(\cal{G}/\cal{E})=
+\SheafHom_{\cal{E}}(\cal{E},\cal{G})\quoi,\quad
+\Gamma(\cal{G}/\cal{E})=\Ob(\bf{\Gamma}(\cal{G}/\cal{E}))=
+\ifthenelse{\boolean{orig}}
+{\Hom_{\cal{E}}(\cal{G},\cal{E})\quoi.}
+{\Hom_{\cal{E}}(\cal{E},\cal{G})\quoi.}
+$$
+\label{indnot:fm}\oldindexnot{$\bf{\Gamma}(\cal{G}/\cal{E})$ y $\Gamma(\cal{G}/\cal{E})$|hyperpage}%
+
+\begin{remarquesstar}
+Cuando
+\marginpar{158}
+$\cal{E}$ es una categoría puntual, es decir, cuando $\Ob(\cal{E})$ y
+$\Fl(\cal{E})$ se reducen cada uno a un solo elemento, lo que significa también
+que $\cal{E}$ es un objeto final de la categoría~$\Cat$, el dato de una
+categoría sobre~$\cal{E}$ equivale al dato de una categoría sin más (pues hay
+un único funtor de~$\cal{F}$ en~$\cal{E}$). Más precisamente,
+$\Cat_{/\cal{E}}$ es entonces isomorfa a~$\Cat$. Además, las categorías
+$\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$ no son sino las categorías
+$\SheafHom(\cal{F},\cal{G})$. Recordemos entonces que la fórmula fundamental
+$$
+\Hom(\cal{H},\SheafHom(\cal{F},\cal{G}))\isomto
+\Hom(\cal{F}\times\cal{H},\cal{G})
+$$
+(isomorfismo funtorial en los tres argumentos que figuran en ella) permite
+interpretar $\SheafHom(\cal{F},\cal{G})$ axiomáticamente, en términos internos
+a la categoría~$\Cat$, de manera que el formalismo conocido de las categorías
+$\SheafHom$ aparece como un caso particular de un formalismo válido en
+categorías tales como~$\Cat$, en las que existen «objetos $\SheafHom$ internos»
+(definidos por la fórmula anterior). Hay una interpretación análoga de
+$\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$ cuando se supone de nuevo que
+$\cal{E}$ es arbitraria, mediante la fórmula
+$$
+\Hom(\cal{H},\SheafHom_{\cal{E}/-}(\cal{F},\cal{G}))\isomto
+\Hom_{\cal{E}}(\cal{F}\times\cal{H},\cal{G})
+$$
+(isomorfismo funtorial en los tres argumentos). De este modo, las propiedades
+formales expuestas en los \No \Ref{VI.2},~\Ref{VI.3} son casos particulares de
+resultados más generales, válidos en las categorías en las que existen los
+objetos internos $\SheafHom_{\cal{E}/-}(\cal{F},\cal{G})$ (cuando $\cal{F}$ y~$\cal{G}$
+son dos objetos de la categoría de objetos sobre un tercero~$\cal{E}$).
+\end{remarquesstar}

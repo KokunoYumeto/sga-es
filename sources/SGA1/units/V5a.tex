@@ -1,0 +1,238 @@
+
+\section{Categorías galoisianas}
+\label{V.5}
+\marginpar{127}
+
+\begin{definition}
+\label{V.5.1}
+Se llama \emph{categoría galoisiana}
+\index{galoisiana (categoría)|hyperpage}%
+a una categoría~$\cal{C}$ equivalente a una categoría $\cal{C}(\pi)$, donde
+$\pi$ es un grupo compacto, límite proyectivo de grupos finitos (\ie
+totalmente desconectado).
+
+Para la definición de~$\cal{C}(\pi)$, \cf el comienzo del \No \Ref{V.4}. En
+virtud del teorema~\Ref{V.4.1}, $\cal{C}$ es galoisiana si y solo si
+satisface las condiciones (G~1) a (G~3), y si existe un funtor~$F$ de
+\ifthenelse{\boolean{orig}}{$C$}{$\cal{C}$}
+en la categoría de los conjuntos finitos que satisface las condiciones
+(G~4) a (G~6) (\ie que es \emph{exacto} y \emph{conservativo}, en la
+terminología general). Tal funtor se llamará \emph{funtor fundamental}
+\index{funtor fundamental|hyperpage}%
+de la categoría galoisiana~$\cal{C}$\kern1pt\footnote{Parece preferible
+adoptar el término más expresivo de «funtor fibra».};
+\index{funtor fibra|hyperpage}%
+es prorepresentable por un proobjeto que denotaremos por~$P_F$; un
+proobjeto~$P$ tal que el funtor asociado~$F$ sea fundamental se llama
+\emph{proobjeto fundamental}.
+\index{proobjeto fundamental|hyperpage}%
+De este modo, la categoría de los funtores fundamentales sobre~$\cal{C}$ es
+antiequivalente a la categoría de los proobjetos fundamentales; si~$F$ y~$P$
+se corresponden, el grupo $\Aut F$ es, por tanto, isomorfo al grupo opuesto
+a~$\Aut P$, de modo que el grupo denotado por~$\pi$ en el número precedente
+no es sino
+\ifthenelse{\boolean{orig}}{$\Aut P$}{el grupo opuesto a~$\Aut P$}
+(o, equivalentemente, $\Aut F$). Recordemos que, en el número precedente,
+construimos a partir de un funtor fundamental \emph{dado}~$F$ una
+equivalencia de~$\cal{C}$ con $\cal{C}(\pi)$ (donde $\pi=\Aut(F)$) que
+transforma el funtor~$F$ en el funtor canónico de
+\ifthenelse{\boolean{orig}}{$\cal{C}(\pi)_x$}{$\cal{C}(\pi)$}
+en la categoría de los conjuntos finitos. En el caso modelo
+$\cal{C}=\cal{C}(\pi)$, con~$F$ el funtor canónico, el proobjeto fundamental
+asociado a~$F$ no es sino el sistema proyectivo de los cocientes discretos
+$\pi_i$ de~$\pi$.
+\end{definition}
+
+Puede ser útil explicitar la categoría de los proobjetos de
+$\cal{C}(\pi)$. Se obtiene:
+
+\begin{proposition}
+\label{V.5.2}
+La categoría $\Prodash\cal{C}(\pi)$
+\label{indnot:ed}\oldindexnot{$\Prodash\cal{C}(\pi)$|hyperpage}%
+es canónicamente equivalente a la categoría $\cal{C}'(\pi)$ de los
+espacios compactos y totalmente desconectados sobre los que actúa
+continuamente el grupo topológico~$\pi$.
+\end{proposition}
+
+Como esta última contiene a~$\cal{C}(\pi)$ como subcategoría plena
+(correspondiente a los espacios discretos compactos con operadores) y en
+ella existen los límites proyectivos, se tiene en todo caso un funtor
+canónico $g\colon\Prodash\cal{C}(\pi)\to\cal{C}'(\pi)$, que asocia al
+sistema proyectivo $Q=(Q_i)$ el objeto
+$X=\varprojlim_iQ_i$ de~$\cal{C}'(\pi)$. Para definir un funtor en sentido
+inverso, basta definir un funtor contravariante de~$\cal{C}'(\pi)$ en la
+categoría de los funtores $\cal{C}\to\Ens$ exactos por la izquierda; para
+cada $X\in\cal{C}'(\pi)$ se toma el funtor $h(X)(E)=\Hom(X,E)$
+\marginpar{128}
+(donde $\Hom$ se toma en~$\cal{C}'(\pi)$). De las definiciones se sigue de
+inmediato que los funtores~$h$ y~$g$ son adjuntos entre sí y que~$hg$ es
+canónicamente isomorfo al funtor identidad de~$\Prodash\cal{C}(\pi)$. Para
+probar que~$g$ y~$h$ son cuasiinversos, resta probar que todo objeto de
+$\cal{C}'(\pi)$ es isomorfo a uno de la forma~$g(Q)$, con
+$Q\in\Prodash\cal{C}(\pi)$; en otros términos: \emph{todo espacio~$X$
+compacto y totalmente desconectado, provisto de una acción continua de
+$\pi$, es isomorfo a un límite proyectivo de espacios finitos discretos con
+operadores}. Como~$X$ es el límite proyectivo de sus cocientes finitos
+discretos (como espacio topológico sin operadores), basta probar que entre
+estos cocientes hay un sistema cofinal invariante bajo~$\pi$. Para ello
+basta probar que, dado tal cociente~$X'$, el conjunto de sus transformados
+por las operaciones de~$\pi$ es finito (se tomará entonces el supremo de
+dichos transformados, que será un cociente invariante que domina a~$X'$).
+Equivalentemente, basta hallar un subgrupo normal abierto~$\pi'$ de~$\pi$
+cuyos elementos dejen invariante~$X'$. Ahora bien, $X'$ corresponde a una
+partición finita de~$X$ en abiertos~$X_i$. Por la continuidad y la
+compacidad de~$\pi$, existe un entorno~$V$ del elemento neutro de~$\pi$ tal
+que $s\in V$ implica $s\cdot X_i\subset X_i$ para todo~$i$, y por tanto~$s$
+deja invariante~$X'$. Como los subgrupos normales abiertos de~$\pi$ forman
+un sistema fundamental de entornos del elemento neutro, queda concluida la
+demostración.
+
+Observemos que resulta aún más sencillo ver que la categoría
+$\Ind\cal{C}(\pi)$ es canónicamente equivalente a la categoría de los
+conjuntos sobre los que~$\pi$ actúa continuamente. No necesitaremos aquí
+este hecho.
+
+\begin{proposition}
+\label{V.5.3}
+Sean~$\cal{C}$ una categoría galoisiana, $F$ un funtor fundamental
+\ifthenelse{\boolean{orig}}{sobre~$C$,}{sobre~$\cal{C}$,}
+$P=(P_i)$ el proobjeto asociado, normalizado de la manera habitual. Sea
+\ifthenelse{\boolean{orig}}{$X\in C$;}{$X\in\cal{C}$;}
+para que~$X$ sea conexo, es necesario y suficiente que~$\pi$ actúe
+transitivamente sobre~$E=F(X)$.
+\end{proposition}
+
+Se reduce al caso modelo $\cal{C}=\cal{C}(\pi)$, con~$F$ el funtor
+canónico, donde la afirmación es trivial.
+
+\begin{corollaire}
+\label{V.5.4}
+Son equivalentes las condiciones siguientes sobre~$X$: \textup{(i)} $X$ es
+conexo y $\not\simeq\emptyset_{\cal{C}}$; \textup{(ii)} el grupo~$\pi$ actúa
+transitivamente sobre~$E=F(X)$ y $F(X)\ne\emptyset$; \textup{(iii)} $X$ es
+isomorfo a algún~$P_i$.
+\end{corollaire}
+
+La equivalencia
+\marginpar{129}
+entre (i) y (iii) se deduce también fácilmente del apartado e) del
+\No~\Ref{V.4}.
+
+\begin{proposition}
+\label{V.5.5}
+Sea $Q=(Q_i)_{i\in I}$ un proobjeto
+\ifthenelse{\boolean{orig}}{de~$C$,}{de~$\cal{C}$,}
+normalizado de la manera habitual, y sea~$G$ el funtor correspondiente
+$G(X)=\Hom(Q,X)$ de~$\cal{C}$
+\ifthenelse{\boolean{orig}}{(en~$\Ens$.}{(en~$\Ens$).}
+Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $G$ conmuta con las sumas directas finitas;
+\item[(ii)] $G$ conmuta con la suma de dos objetos;
+\item[(iii)] los~$Q_i$ son conexos y
+\ifthenelse{\boolean{orig}}{$\not\simeq\emptyset_C$}
+{$\not\simeq\emptyset_{\cal{C}}$};
+\item[(iv)] $Q$ es isomorfo a~$\pi/H$, donde~$H$ es un subgrupo cerrado
+de~$\pi$;
+\item[(v)] el funtor~$G$ es isomorfo al funtor $E\mto E^H$ (conjunto de
+los invariantes bajo~$H$) definido por un subgrupo cerrado~$H$ de~$\pi$.
+\end{enumerate}
+\end{proposition}
+
+N.B.: en los enunciados de (iv) y (v) se supone elegido un funtor
+fundamental que permita identificar~$\cal{C}$ con la categoría
+$\cal{C}(\pi)$.
+
+\subsubsection*{Demostración} Podemos suponer
+$\cal{C}=\cal{C}(\pi)$. La implicación (i)$\To$(ii) es trivial, y
+(ii)$\To$(iii) se demuestra como la propiedad d) del \No~\Ref{V.4}.
+Probemos (iii)$\To$(iv). En efecto, se sabe que $\varprojlim_iQ_i$ no es
+vacío, por ser un límite proyectivo de conjuntos finitos no vacíos. Sea~$a$
+un punto de~$\varprojlim_iQ_i$; este define un homomorfismo de espacios con
+operadores
+$$
+\pi\to Q
+$$
+que es \emph{sobreyectivo}, pues para todo~$i$ lo es la composición
+$\pi\to Q\to Q_i$, ya que~$\pi$ actúa transitivamente sobre~$Q_i$ en virtud
+de~\Ref{V.5.3}. Si~$H$ es el subgrupo estabilizador de~$a$, se obtiene así
+un isomorfismo $\pi/H\isomto Q$. Las implicaciones (iv)$\To$(v) y
+(v)$\To$(i) son nuevamente triviales.
+
+\begin{proposition}
+\label{V.5.6}
+Sean~$\cal{C}$ una categoría galoisiana, $P$ un proobjeto fundamental
+de~$\cal{C}$ y~$F$ el funtor fundamental asociado. Sea
+$P'=(P'_i)_{i\in I}$ un proobjeto de~$\cal{C}$ puesto en forma normal, y
+sea~$F'$ el funtor asociado $F'(X)=\Hom(P',X)$ de~$\cal{C}$ en~$\Ens$. Son
+equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $P'\simeq P$, o, equivalentemente, $F'\simeq F$;
+\item[(ii)] $P'$ es fundamental, o, equivalentemente, $F'$ es fundamental;
+\item[(iii)] $F'$ transforma la suma de dos objetos en su suma, y
+$X\not\simeq\emptyset_{\cal{C}}$ implica
+\ifthenelse{\boolean{orig}}{$F(X)\ne\emptyset$}{$F'(X)\ne\emptyset$};
+\item[(iv)]
+\marginpar{130}
+los objetos de~$\cal{C}$ conexos y distintos de~$\emptyset_{\cal{C}}$ son
+exactamente los objetos isomorfos a algún~$P'_i$.
+\end{enumerate}
+\end{proposition}
+
+Se tienen trivialmente (i)$\To$(iii) y (i)$\To$(ii); además,
+(ii)$\To$(iv) en virtud de~\Ref{V.5.4}, aplicado a~$P'$ en lugar de~$P$.
+Por otra parte, (iii) o (iv) implica, en virtud de~\Ref{V.5.5}, que~$P'$ es
+de la forma~$\pi/H$, donde~$H$ es un subgrupo cerrado de~$\pi$. En el caso
+(iii), para cada subgrupo normal abierto~$\pi'$ de~$\pi$ existe un
+$\pi$-homomorfismo $P'=\pi/H\to\pi/\pi'$; de aquí $H\subset\pi'$, luego
+$H=(0)$ y, por consiguiente, (i), cqfd.
+
+\begin{corollaire}
+\label{V.5.7}
+Sea~$\cal{C}$ una categoría galoisiana. Los proobjetos fundamentales son
+isomorfos entre sí, y los funtores fundamentales son isomorfos entre sí.
+\end{corollaire}
+
+En otros términos, \emph{la categoría de los funtores fundamentales es un
+grupoide conexo~$\Gamma$},
+\label{indnot:ef}\oldindexnot{$\Gamma$|hyperpage}%
+que puede llamarse el \emph{grupoide fundamental}
+\index{grupoide fundamental|hyperpage}%
+de la categoría galoisiana~$\cal{C}$. Si $\cal{C}=\cal{C}(\pi)$, el grupo
+de automorfismos de un objeto del grupoide fundamental es isomorfo a~$\pi$,
+y este isomorfismo está bien determinado salvo automorfismo interior.
+(N.B.: se llama \emph{grupoide} a una categoría en la que todos los
+morfismos son isomorfismos, y \emph{grupoide conexo} a un grupoide cuyos
+objetos son todos isomorfos entre sí.) Los proobjetos fundamentales de
+$\cal{C}$ forman un grupoide conexo equivalente al \emph{opuesto} del
+grupoide fundamental. Si~$F,F'$ son dos funtores fundamentales asociados a
+proobjetos fundamentales~$P,P'$, entonces
+$\Hom(F,F')=\Isom(F,F')$ se denota a veces por~$\pi_{F',F}$ y desempeña el
+papel de un «conjunto de \emph{clases de caminos} de~$F$ a~$F'$». En
+particular, $\pi_{F,F}=\pi_F$ no es sino el \emph{grupo fundamental de
+$\cal{C}$} con base~$F$ construido en el número precedente. En cuanto al
+proobjeto~$P$ asociado a~$F$, desempeña el papel de un \emph{recubrimiento
+universal con base~$F$} del objeto final~$e_{\cal{C}}$ de~$\cal{C}$.
+
+Puede resultar cómodo describir~$\cal{C}$ (salvo equivalencia) en términos
+de su grupoide fundamental~$\Gamma$, sin elegir un objeto particular~$F$
+de este último. A cada objeto~$X$ de~$\cal{C}$ se asocia el funtor~$E_X$
+sobre el grupoide fundamental definido por
+$$
+E_X(F)=F(X),
+$$
+con valores en~$\Ens$. (En topología, un funtor de esta clase se conoce con
+el nombre de «sistema local» sobre el grupoide.) $F(X)=E_X(F)$ puede
+llamarse la \emph{fibra} de~$X$ en~$F$, y~$E_X$ el funtor fibra asociado
+a~$X$. El funtor~$E_X$ tiene la propiedad siguiente:
+\marginpar{131}
+\ifthenelse{\boolean{orig}}
+{\emph{\underline{para todo} $F$, $E_X(F)$
+\underline{es un conjunto finito sobre el que el grupo topológico}
+$\pi_F=\Aut(F)$ \underline{actúa continuamente}}}
+{\emph{para todo~$F$, $E_X(F)$ es un conjunto finito sobre el que el grupo
+topológico $\pi_F=\Aut(F)$ actúa continuamente}}.
+Para un funtor covariante dado~$\xi$ del grupoide fundamental en~$\Ens$, la
+condición precedente equivale, por otra parte, a la misma condición para
+\emph{un}~$F$ fijo cualquiera. Sentado esto:

@@ -1,0 +1,48 @@
+
+\begin{proposition}
+\label{III.7.1}
+Sea~$S$ un preesquema provisto de un haz cuasicoherente de ideales~$\cal{I}$, sea~$X$ un preesquema sobre~$S$, sea~$S_n$ el subpreesquema de~$S$ definido por~$\cal{I}^{n+1}$, y sea~$X_n=X\times_SS_n$ (para todo entero~$n$). Sea~$\cal{E}_n$ un haz localmente libre
+\marginpar{85}
+sobre~$X_n$; se pretende prolongarlo a un haz localmente libre~$\cal{E}_{n+1}$ sobre~$X_{n+1}$. Entonces~$\cal{E}_n$ define una clase de obstrucción canónica en~$\H^2(X_0,\cal{G})$, donde~$\cal{G}$ es el haz cuasicoherente dado por la fórmula anterior, clase cuya anulación es necesaria y suficiente para la existencia de un~$\cal{E}_{n+1}$ que prolongue~$\cal{E}_n$. Si esta clase es nula, el conjunto de las clases de soluciones~$\cal{E}_{n+1}$, salvo isomorfismo que induzca la identidad sobre~$\cal{E}_n$, es un espacio homogéneo principal bajo~$\H^1(X_0,\cal{G})$.
+\end{proposition}
+
+Esta proposición da lugar a los corolarios habituales. Señalemos únicamente que, si~$X$ es \emph{plano} sobre~$S$, puede escribirse
+$$
+\cal{G}=\SheafHom_{\cal{O}_{X_0}}(\cal{E}_0,\cal{E}_0)
+\otimes_{\cal{O}_{S_0}}\gr_{\cal{I}}^{n+1}(\cal{O}_S),
+$$
+de donde, si~$S$ es afín de anillo~$A$ y si los~$\cal{I}^n/\cal{I}^{n+1}$ son localmente libres, se obtiene la condición suficiente
+$$
+\H^2(X_0,\cal{G}_0)=0\qquad\text{con}\qquad
+\cal{G}_0=\SheafHom_{\cal{O}_{X_0}}(\cal{E}_0,\cal{E}_0)
+$$
+para la existencia de un~$\cal{E}_{n+1}$ y, por tanto, paso a paso, para la existencia de prolongaciones sucesivas~$\cal{E}_m$ ($m=n,n+1,$
+\ifthenelse{\boolean{orig}}{etc...}{etc.}).
+
+Volviendo a la situación inicial, se obtiene:
+
+\begin{proposition}
+\label{III.7.2}
+Sean~$A$ un anillo local completo y~$\goth{X}$ un esquema formal propio y plano sobre~$A$, tal que~$X_0$ sea proyectivo y que~$\H^2(X_0,\cal{O}_{X_0})=0$. Entonces existe un esquema~$X$ proyectivo sobre~$A$ cuyo completado formal $\goth{m}$-ádico es isomorfo a~$\goth{X}$.
+\end{proposition}
+
+Combinando este resultado con~\Ref{III.6.10}, se obtiene:
+
+\begin{theoreme}
+\label{III.7.3}
+Sean~$A$ un anillo local completo de cuerpo residual~$k$ y~$X_0$ un esquema proyectivo y liso sobre~$k$, tal que
+$$
+\H^2(X_0,\goth{g}_{X_0/k})=\H^2(X_0,\cal{O}_{X_0})=0.
+$$
+Entonces existe un esquema liso y proyectivo~$X$ sobre~$A$ que se reduce a~$X_0$.
+\end{theoreme}
+
+Más generalmente, si se da un~$X_n$ liso sobre~$A_n=A/\goth{m}^{n+1}$ que se reduce a~$X_0$, entonces existe un~$X$ liso y propio sobre~$A$ y un isomorfismo~$X\otimes_AA_n=X_n$.
+
+\begin{corollaire}
+\label{III.7.4}
+Toda curva lisa y propia sobre~$k$ se obtiene por reducción de una curva lisa y propia sobre~$A$.
+\end{corollaire}
+
+Este resultado será el instrumento esencial (junto con el teorema de existencia para haces en geometría formal) para estudiar el grupo fundamental de~$X_0$ por métodos trascendentes.
+\marginpar{86}

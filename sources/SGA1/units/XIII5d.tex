@@ -1,0 +1,42 @@
+
+\begin{proposition}
+\label{XIII.5.4} Sean $f\colon X\to S$ un morfismo de esquemas y
+$D=\sum_{1\leq i\leq r} \divisor f_i$ un divisor de cruzamientos
+normales relativamente a~$S$ \eqref{XIII.2.1}, donde,
+\marginpar{431}
+para cada punto $x$ de~$Y=\Supp D$, si $I(x)\subset[1,r]$ es el conjunto de los $i$
+tales que $f_i(x)=0$, el subesquema $V((f_i)_{i\in I(x)})$ es liso
+sobre~$S$ de codimensión
+\ifthenelse{\boolean{orig}}
+{$\mathrm{card}.\,I(x)$}
+{$\card I(x)$}
+en~$X$. Sea $U=X-Y$. Sean $x$ un punto de~$Y$,
+$X_1=\Spec\cal{O}_{X,x}$, $U_1=U\times_X X_1$, $n_i$, $i\in I(x)$,
+\ifthenelse{\boolean{orig}}
+{enteros}
+{enteros $>0$}, y pongamos
+$$
+X'=X[T_i]_{i\in I(x)}/(T_i^{n_i}-f_i).
+$$
+Entonces, si $x'$ es el punto de~$X'$ situado sobre~$x$, $X'$ es liso
+sobre~$S$ en~$x'$. Si los enteros~$n_i$ son primos con la
+característica~$p$ de~$\kres(x)$, $U'_1=U_1\times_X X'$ es un
+recubrimiento étale conexo de~$U_1$, moderadamente ramificado sobre~$X_1$
+relativamente a
+\ifthenelse{\boolean{orig}}
+{$S_1$}
+{$S$}
+\eqref{XIII.2.1.1}.
+\end{proposition}
+
+Si $s=f(x)$, la fibra geométrica $X'_{\bar{s}}$ es regular en el punto
+$x'$ \eqref{XIII.5.1}; como $X'$ es plano sobre~$S$ en un entorno
+\ifthenelse{\boolean{orig}}
+{de~$Y$}
+{de la imagen inversa de~$Y$ en~$X'$},
+esto demuestra que $X'$ es liso sobre~$S$ en~$x'$
+(EGA~IV~12.1.6). Si los enteros $n_i$ son primos con~$p$, $U'_1$ es un
+recubrimiento étale de~$U_1$ \eqref{I.7.4}; está moderadamente
+ramificado sobre~$X_1$ relativamente a~$S$ porque así ocurre en las
+fibras geométricas sobre cada punto de~$S$ \eqref{XIII.5.1}. Por último,
+el hecho de que $U'_1$ sea conexo se deduce de (SGA~4 XVI~3.2).

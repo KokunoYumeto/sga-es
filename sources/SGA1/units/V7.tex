@@ -1,0 +1,151 @@
+\section{Caso de los preesquemas}
+\label{V.7}
+Sea~$S$ un preesquema localmente noetheriano y \emph{conexo}, y sea
+$$
+a\colon \Spec(\Omega)\to S
+$$
+un punto geométrico de~$S$, con valores en un cuerpo algebraicamente
+cerrado~$\Omega$. Pongamos
+$$
+\cal{C}=\text{categoría de los recubrimientos étales de~$S$}
+$$
+y, para un objeto~$X$ de~$\cal{C}$, \ie un recubrimiento étale~$X$
+de~$S$, pongamos
+$$
+F(X)=\text{conjunto de los puntos geométricos de~$X$ situados sobre~$a$.}
+$$
+Así, $F$ se convierte en un funtor de~$\cal{C}$ en la categoría de los
+conjuntos finitos. Se satisfacen las propiedades (G~1)
+a (G~6): para (G~1), esto está contenido en los sorites de
+\Ref{I.4.6}; (G~2) resulta de~\Ref{V.3.4}; (G~3), de~\Ref{V.3.5};
+(G~4) es trivial por definición; (G~5) resulta de~\Ref{V.3.5} y del
+comienzo del \No~\Ref{V.2}; por último, (G~6) se demuestra
+en~\Ref{V.3.7}. Pueden aplicarse, pues, los resultados de los
+\No~\Ref{V.4}, \Ref{V.5}, \Ref{V.6}. Esto permite, en particular,
+definir un proobjeto~$P$ de~$\cal{C}$ que representa a~$F$, llamado
+\emph{recubrimiento universal de~$S$ en el punto~$a$},
+\index{recubrimiento universal de un preesquema en un punto|hyperpage}%
+y un grupo topológico~$\pi=\Aut(F)=\Aut^0 P$, llamado
+\emph{grupo fundamental de~$S$ en~$a$},
+\index{grupo fundamental de un preesquema en un punto|hyperpage}%
+y denotado por~$\pi_1(S,a)$.
+\label{indnot:eg}\oldindexnot{$\pi_1(S,a)$|hyperpage}%
+El funtor~$F$ define entonces una equivalencia entre la categoría~$\cal{C}$
+y la categoría de los conjuntos finitos sobre los que
+$\pi=\pi_1(S,a)$ actúa continuamente. Esta equivalencia permite interpretar
+las operaciones usuales de límites proyectivos y límites inductivos finitos
+de recubrimientos (productos, productos fibrados, sumas, paso al cociente,
+\ifthenelse{\boolean{orig}}{etc...}{etc.}) en términos de las operaciones
+análogas en~$\cal{C}(\pi)$, \ie de las operaciones evidentes sobre conjuntos
+finitos en los que actúa~$\pi$. Obsérvese además que, como las componentes
+conexas topológicas de un recubrimiento étale son también recubrimientos
+étales, \emph{un objeto~$X$ de~$\cal{C}$ es conexo en~$\cal{C}$ si y solo si
+es topológicamente conexo}; en virtud de~\Ref{V.5.3}, esto significa que
+$\pi_1$ actúa transitivamente sobre~$F(X)$.
+\marginpar{141}%
+Obsérvese que, para que un objeto~$X$ de~$\cal{C}$ sea fielmente plano y
+cuasicompacto sobre~$S$ (puesto que ya es plano y cuasicompacto sobre~$S$),
+es necesario y suficiente que~$X\to S$ sea sobreyectivo, \ie que sea un
+epimorfismo en~$\cal{C}$, o también que~$X\neq\emptyset$. Del
+criterio~\Ref{V.2.6}~(iii) se concluye entonces que~$X$
+\emph{es un recubrimiento principal de
+\ifthenelse{\boolean{orig}}{$X$}{$S$},
+de grupo~$G$, si y solo si es un espacio homogéneo principal bajo~$G$ en
+la categoría~$\cal{C}$}, tal como se definió en el \No~\Ref{V.5}.
+
+Si~$a'$ es otro punto geométrico de~$S$ (correspondiente a un cuerpo
+algebraicamente cerrado~$\Omega'$, que puede ser distinto de~$\Omega$ e
+incluso tener característica distinta), define un funtor fibra
+$F'=F_{a'}$ de~$\cal{C}$ en la categoría de los conjuntos finitos, que
+sigue siendo exacto y, por tanto, es isomorfo a~$F=F_a$. En consecuencia,
+los grupos fundamentales~$\pi_1(S;a)$
+\label{indnot:eg1}\oldindexnot{$\pi_1(S,a)$|hyperpage}%
+al variar~$a$ son isomorfos entre sí. Si se denota por
+$\pi_1(S;a,a')$
+\label{indnot:eh}\oldindexnot{$\pi_1(S;a,a')$|hyperpage}%
+el conjunto de los isomorfismos (o, lo que equivale a lo mismo,
+\ifthenelse{\boolean{orig}}{el conjunto}{el conjunto}
+de los homomorfismos) $F_a\to F_{a'}$ de los funtores fibra asociados,
+se obtiene así un \emph{grupoide} cuyo conjunto de objetos es el conjunto
+de los puntos geométricos de~$S$, siendo los grupos fundamentales los
+grupos de automorfismos de los objetos de dicho grupoide. El conjunto
+$\pi_1(S;a',a)$ puede llamarse \emph{conjunto de las clases de caminos
+de~$a$ a~$a'$}. Estas clases se componen, pues, de manera evidente.
+Por último, puede definirse un progrupo~$\Pi_1^S$ de~$\cal{C}$, que podrá
+llamarse \emph{progrupo fundamental de~$S$}
+\index{progrupo fundamental de un preesquema|hyperpage}%
+o \emph{sistema local de los grupos fundamentales sobre~$S$},
+\index{sistema local de los grupos fundamentales|hyperpage}%
+definido, salvo isomorfismo único, por la condición de que exista un
+isomorfismo, funtorial en el punto geométrico~$a$ de~$S$:
+$$
+F_a(\Pi_1^S)=\pi_1(S;a)
+$$
+(\cf la Observación~\Ref{V.5.10}). En particular, si~$s$ es un punto
+ordinario de~$S$, la fibra de
+\ifthenelse{\boolean{orig}}{$G$}{$\Pi_1^S$}
+en~$s$ es un progrupo sobre~$\kres(s)$, límite proyectivo de grupos finitos
+étales sobre~$\kres(s)$; este progrupo podría llamarse \emph{grupo
+fundamental de~$S$ en el punto ordinario~$s$ de~$S$} y denotarse
+por~$\pi_1(S,s)$. Por definición, estos puntos
+con valores en una extensión algebraicamente cerrada~$\Omega$
+de~$\kres(s)$ son los elementos de~$\pi_1(S;a)$, donde~$a$ es el punto
+geométrico de~$S$ definido por dicha extensión. En particular (tomando
+como~$S$ el espectro de un cuerpo), a todo cuerpo~$k$ se asocia canónica y
+funtorialmente un progrupo sobre~$k$, que podría denotarse por~$\pi_1(k)$,
+límite proyectivo de grupos finitos étales sobre~$k$, cuyos puntos con
+valores en una extensión algebraicamente cerrada~$\Omega$ de~$k$ se identifican
+\marginpar{142}%
+con los elementos del grupo de Galois topológico de~$\bar{k}/k$, donde
+$\bar{k}$ es la
+\ifthenelse{\boolean{orig}}{clausura de Galois}{clausura separable}
+de~$k$ en~$\Omega$ (\cf~\Ref{V.8.1}). Este grupo~$\pi_1(k)$ no parece haber
+atraído todavía la atención de los algebristas.
+
+Sea ahora
+$$
+f\colon S'\to S
+$$
+un morfismo de un preesquema conexo localmente noetheriano a otro;
+sea~$a'$ un punto geométrico de~$S'$ y sea~$a=f(a')$ su imagen directa
+en~$S$. Entonces el funtor de imagen inversa induce un funtor de la
+categoría~$\cal{C}(S)$
+\label{indnot:ei}\oldindexnot{$\cal{C}(S)$|hyperpage}%
+de los recubrimientos étales de~$S$ en la categoría~$\cal{C}(S')$ de los
+recubrimientos étales de~$S'$:
+$$
+f^\bbullet\colon\cal{C}(S)\to\cal{C}(S').
+$$
+Se tiene además un isomorfismo de funtores
+$$
+F_a\cong F_{a'}\circ f^\bbullet,
+$$
+de modo que~$f^\bbullet$ es un funtor \emph{exacto}, al que se aplican los
+resultados del \No~\Ref{V.6}. Se tiene, en particular, un homomorfismo
+canónico
+$$
+u=\pi_1(f;a')\colon\pi_1(S',a')\to\pi_1(S;a)\qquad
+\ifthenelse{\boolean{orig}}{(a'=f(a))}{(a=f(a'))}.
+$$
+\label{indnot:ej}\oldindexnot{$\pi_1(f;a')$|hyperpage}%
+Este homomorfismo permite reconstruir el funtor de imagen inversa como una operación de
+restricción de los grupos de operadores. Las propiedades del
+funtor~$f^\bbullet$ se expresan, pues, de manera sencilla mediante las
+propiedades del homomorfismo de grupos
+\ifthenelse{\boolean{orig}}{asociado}{asociado},
+como se explicitó en el \No~\Ref{V.6}. En particular, si~$S'$ es un
+recubrimiento étale de~$S$, el homomorfismo~$u$ es un isomorfismo
+de~$\pi_1(S',a')$ sobre el subgrupo abierto de~$\pi_1(S,a)$ que define el
+recubrimiento étale conexo punteado~$S'$ de~$S$ (\ie el estabilizador~$U$
+de~$a'\in F_a(S')$ en
+\ifthenelse{\boolean{orig}}{$\pi_1(S;A)$}{$\pi_1(S;a)$}).
+
+Si se quieren interpretar los homomorfismos~$\pi_1(f;a')$ para un punto
+geométrico variable~$a'$, hay que considerar, de acuerdo con lo dicho en
+el \No~\Ref{V.6}, un homomorfismo
+$$
+\Pi_1(f)\colon\Pi_1^{S'}\to f^\bbullet(\Pi_1^S)
+$$
+de progrupos sobre
+\ifthenelse{\boolean{orig}}{$S$}{$S'$},
+y tomar el homomorfismo correspondiente en las fibras geométricas.

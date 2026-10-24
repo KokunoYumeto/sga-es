@@ -1,0 +1,96 @@
+
+\begin{remarques}
+\label{XIII.1.5}
+a) Sea~$F$ un haz de grupos sobre~$X$ tal que~$(F,f)$ sea
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp $\leqslant 0$). Si se considera~$F$ como haz de
+conjuntos, $(F,f)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant -1$ (\resp $\leqslant 0$), pero el recíproco es
+falso.
+
+Sea, por ejemplo, $Y$ el espectro de un anillo de valoración discreta
+estrictamente local, con punto cerrado~$t$ y punto genérico~$s$;
+sea $f\colon X\to Y$ un esquema no vacío sobre~$Y$ cuya fibra cerrada
+sea vacía; sea~$F$ un haz constante no trivial de grupos sobre~$X$; y
+sea~$P$ un torsor bajo~$F$ tal que
+$\H^0(X_s,\leftexp{P\mkern-4mu}{F}|X_s)=1$. Entonces
+$(\leftexp{P\mkern-4mu}{F},f)$ es cohomológicamente propio relativamente
+a~$Y$ en dimensión $\leqslant -1$ cuando se considera
+$\leftexp{P\mkern-4mu}{F}$ como haz de conjuntos. Si se considera
+$\leftexp{P\mkern-4mu}{F}$ como haz de grupos, se tiene un isomorfismo
+${\vphantom{F}}^{P^\circ\mkern-7mu}(\leftexp{P\mkern-4mu}{F})\simeq F$;
+como el morfismo canónico
+$$
+\H^0(X,F)\to\H^0(X_t,F|X_t)=1
+$$
+no es inyectivo, esto demuestra que
+$(\leftexp{P\mkern-4mu}{F},f)$ no es cohomológicamente propio
+relativamente a~$Y$ en dimensión $\leqslant -1$.
+
+b) Supongamos que~$f$ sea coherente (\ie cuasicompacto y
+cuasiseparado). Sea~$F$ un stack sobre~$X$. Para todo punto geométrico
+$\overline{y}$ de~$Y'$, se denota por~$\overline{Y}$ (\resp $\overline{Y'}$)
+la localización estricta de~$Y$ (\resp $Y'$) en~$\overline{y}$, y se pone
+$\overline{X}=X\times_Y\overline{Y}$,
+$\overline{X'}=X'\times_{Y'}\overline{Y'}$, etc. Para que~$(F,f)$ sea
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp $\leqslant 0$, \resp $\leqslant 1$), es necesario
+y suficiente que, para todo $S$-esquema~$S'$ y todo punto geométrico
+$\overline{y}$ de~$Y'$, el funtor canónico
+$$
+\overline{F}(\overline{X})\to\overline{F'}(\overline{X'})
+$$
+sea fiel (\resp plenamente fiel, \resp una equivalencia).
+
+En
+\marginpar{353}
+efecto, si~$S'$ es un $S$-esquema, para que el funtor
+$$
+g^*f_*F\to f'_*F'
+$$
+sea fiel (\resp plenamente fiel, \resp una equivalencia), es necesario
+y suficiente que lo sea el funtor inducido sobre las fibras en los
+distintos puntos geométricos $\overline{y}'$ de~$\overline{Y'}$
+\cite[III 2.1.5.9]{XIII.2}. La afirmación resulta, pues, del cálculo de
+las fibras geométricas de la imagen directa de un stack por un morfismo
+coherente \cite[VII 2.1.5]{XIII.2}.
+
+c) Sea~$F$ un stack sobre~$X$. El hecho de que~$(F,f)$ sea
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp $\leqslant 0$, \resp $\leqslant 1$) es local
+sobre~$Y$ para la topología étale.
+
+Sea~$S'$ un $S$-esquema, y sea~$F'$ la imagen inversa de~$F$ sobre~$X'$
+(\cf \eqref{eq:XIII.1.0.1}). Si~$(F,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 1$, también lo es~$(F',f')$.
+Pero, si~$(F,f)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant -1$ (\resp $\leqslant 0$), no necesariamente sucede
+lo mismo con~$(F',f')$.
+
+Sea, por ejemplo, $S'$ un anillo de valoración discreta,
+$f'\colon E_{S'}\to S'$ el espacio afín sobre~$S'$, $x$ un punto cerrado
+de~$E_{S'}$ situado sobre el punto genérico de~$S'$, y~$F'$ el haz de
+conjuntos sobre~$E_{S'}$ cuya restricción a~$E_{S'}-\{x\}$ es el haz
+constante con un elemento y cuya fibra en un punto geométrico situado
+sobre~$x$ tiene dos elementos. Entonces~$(F',f')$ no es
+cohomológicamente propio relativamente a~$S'$ en dimensión
+$\leqslant -1$. Sean $S=S'[Z]$, $f\colon E_S\to S$ el espacio afín
+sobre~$S$ y~$T$ una parte cerrada de~$X=E_S$ que no interseca el cerrado
+$Z=0$ y tal que~$f(T)$ contiene el punto genérico de~$S$.
+Sean~$G$ la imagen inversa de~$F'$ sobre~$X$ y~$F$ el haz sobre~$X$
+obtenido prolongando~$G|X-T$ por el vacío. Entonces~$(F,f)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$, pero deja de serlo tras el cambio de base $S'\to S$
+definido por~$Z=0$.
+
+d)
+\marginpar{354}
+Sea~$F$ un stack sobre~$X$ tal que~$(F,f)$ sea cohomológicamente propio
+relativamente a~$Y$ en dimensión $\leqslant -1$ (\resp $\leqslant 0$,
+\resp $\leqslant 1$). Entonces, para todo punto geométrico
+$\overline{y}$ de~$Y$, el funtor canónico
+$$
+(f_*F)_{\overline{y}}\to F(X_{\overline{y}})
+$$
+es fiel (\resp plenamente fiel, \resp una equivalencia de categorías).
+\end{remarques}

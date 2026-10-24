@@ -1,0 +1,103 @@
+\section{Universos, categorías, equivalencia de categorías}
+\label{VI.1}
+
+Para evitar ciertas dificultades lógicas, admitiremos aquí la noción de
+\emph{universo}, que es un conjunto «suficientemente grande» para no salir de
+él mediante las operaciones habituales de la teoría de conjuntos; un
+«\emph{axioma de los universos}» garantiza que todo objeto pertenece a algún
+universo. Para más detalles, véase un libro en preparación de C\ptbl Chevalley
+y el conferenciante\footnote{%
+\ifthenelse{\boolean{orig}}
+{Los autores definitivos son C\ptbl Chevalley y P\ptbl Gabriel. El libro debe
+publicarse en el año 2000. \Cf también SGA~4 VI.7.1.}
+{Los autores definitivos son C\ptbl Chevalley y P\ptbl Gabriel. El libro debe
+publicarse en el año 3000. Mientras tanto, \cf también SGA~4 I.}}. Así, el
+símbolo~$\Ens$
+\label{indnot:fb}\oldindexnot{$\Ens$|hyperpage}%
+designa, no la categoría de todos los conjuntos (noción que carece de sentido),
+sino la categoría de los conjuntos que pertenecen a un universo dado (que aquí
+no haremos constar en la notación). Del mismo modo, $\Cat$
+\label{indnot:fc}\oldindexnot{$\Cat$|hyperpage}%
+designará la categoría de las categorías pertenecientes al universo en
+cuestión; los «morfismos» de un objeto~$X$ de~$\Cat$ en otro~$Y$ son, por
+definición, los \emph{funtores} de~$X$ en~$Y$.
+
+Si
+\marginpar{147}
+$\cal{C}$ es una categoría, denotamos por $\Ob(\cal{C})$
+\label{indnot:fd}\oldindexnot{$\Ob(\cal{C})$|hyperpage}%
+\emph{el conjunto de objetos} de~$\cal{C}$, y por~$\Fl(\cal{C})$
+\label{indnot:fe}\oldindexnot{$\Fl(\cal{C})$|hyperpage}%
+\emph{el conjunto de flechas} de~$\cal{C}$ (o morfismos de~$\cal{C}$).
+Escribiremos, por tanto, $X\in\Ob(\cal{C})$, evitando el abuso de notación
+habitual $X\in\cal{C}$. Si $\cal{C}$ y $\cal{C}'$ son dos categorías, un
+\emph{funtor} de~$\cal{C}$ en~$\cal{C}'$ será siempre lo que comúnmente se
+llama un funtor \emph{covariante} de~$\cal{C}$ en~$\cal{C}'$; su dato incluye
+el de la
+\ifthenelse{\boolean{orig}}{categoría de llegada y la categoría de partida}
+{categoría de partida y la categoría de llegada}, $\cal{C}$ y $\cal{C}'$.
+Los funtores de~$\cal{C}$ en~$\cal{C}'$ forman un conjunto, denotado
+$\Hom(\cal{C},\cal{C}')$, que es el conjunto de objetos de una categoría
+denotada $\SheafHom(\cal{C},\cal{C}')$.
+\label{indnot:ff}\oldindexnot{$\SheafHom(\cal{C},\cal{C}')$|hyperpage}%
+Por definición, un \emph{funtor contravariante} de~$\cal{C}$ en~$\cal{C}'$ es
+un funtor de la \emph{categoría opuesta} $\cal{C}^\circ$
+\label{indnot:fg}\oldindexnot{$\cal{C}^\circ$|hyperpage}%
+de~$\cal{C}$ en~$\cal{C}'$.
+
+Admitiremos las nociones de \emph{límite proyectivo} y de \emph{límite
+inductivo} de un funtor $F\colon \cal{I}\to \cal{C}$ y, en particular, los
+casos particulares más habituales de estas nociones: productos cartesianos y
+productos fibrados, las nociones duales de sumas directas y sumas amalgamadas,
+y las propiedades formales habituales de estas operaciones.
+
+Por ejemplo, en la categoría $\Cat$ introducida más arriba, existen los límites
+proyectivos (relativos a categorías~$\cal{I}$ pertenecientes al universo
+elegido); el conjunto de objetos (\resp el conjunto de flechas) de la categoría
+límite proyectivo~$\cal{C}$ de las~$\cal{C}_i$ se obtiene tomando el límite
+proyectivo de los conjuntos de objetos (\resp de los conjuntos de flechas) de
+las categorías~$\cal{C}_i$. El caso más conocido es el producto de una familia
+de categorías. En lo sucesivo utilizaremos constantemente el producto fibrado
+de dos categorías sobre una tercera.
+
+Para todo lo relativo a categorías y funtores, mientras aparece el libro en
+preparación ya mencionado, véase \cite{VI.1} (que es necesariamente muy
+incompleto, incluso en lo que respecta a las generalidades esbozadas en el
+presente número).
+
+Aprovechemos esta ocasión para hacer explícita la noción de equivalencia de
+categorías,
+\index{equivalencia de categorías|hyperpage}%
+que no se expone de manera satisfactoria en~\cite{VI.1}. Se dice que un funtor
+$F\colon\cal{C}\to \cal{C}'$ es \emph{fiel}
+\index{fiel (funtor)|hyperpage}%
+(\resp \emph{plenamente fiel})
+\index{plenamente fiel (funtor)|hyperpage}%
+si, para todo par de objetos~$S$, $T$ de~$\cal{C}$, la aplicación
+$u\mto F(u)$ de~$\Hom(S,T)$ en~$\Hom(F(S),F(T))$ es inyectiva
+(\resp biyectiva). Se dice que $F$ es una \emph{equivalencia} de categorías si
+\marginpar{148}
+$F$ es plenamente fiel y, además, todo objeto~$S'$ de~$\cal{C}'$ es isomorfo a
+un objeto de la forma~$F(S)$. Se demuestra que equivale a decir que existe un
+funtor~$G$ de~$\cal{C}'$ en~$\cal{C}$ \emph{cuasi-inverso de}~$F$, es decir,
+\ifthenelse{\boolean{orig}}
+{tal que $GF$ sea isomorfo a $\id_{\cal{C}}$}
+{tal que $GF$ sea isomorfo a $\id_{\cal{C}}$ y $FG$ a
+$\id_{\cal{C}'}$}. Cuando así ocurre, el dato de un funtor
+$G\colon\cal{C}'\to \cal{C}$ y de un isomorfismo
+$\varphi\colon \ifthenelse{\boolean{orig}}{GF}{FG}\to \id_{\cal{C}'}$
+equivale al dato, para todo $S'\in\Ob(\cal{C}')$, de un par~$(S,u)$ formado por
+un objeto~$S$ de~$\cal{C}$ y un isomorfismo $u\colon F(S)\to S'$, a saber,
+\ifthenelse{\boolean{orig}}{$(G(S),\varphi(S))$}
+{$(G(S'),\varphi(S'))$}. (Con estas notaciones, existe un funtor único
+$\cal{C}'\to\cal{C}$ cuya aplicación en los objetos es la aplicación dada
+\ifthenelse{\boolean{orig}}{$S\mto G(S)$}{$S'\mto G(S')$}, y tal que la
+aplicación \ifthenelse{\boolean{orig}}{$S\mto \varphi(S)$}
+{$S'\mto \varphi(S')$} sea una transformación natural de funtores
+$FG\to\id_{\cal{C}'}$). Por último, si $G$ es un funtor cuasi-inverso de~$F$
+y se eligen isomorfismos $\varphi\colon FG\isomto\id_{\cal{C}'}$ y
+$\psi\colon GF\isomto\id_{\cal{C}}$, entonces las dos condiciones de
+\ifthenelse{\boolean{orig}}{compatibilidades}{compatibilidad} sobre~$\varphi$,
+$\psi$ enunciadas en \cite[I.1.2]{VI.1} son, de hecho, equivalentes entre sí;
+y, para todo isomorfismo~$\varphi$ elegido, existe un único
+isomorfismo~$\psi$ que satisface dichas condiciones.

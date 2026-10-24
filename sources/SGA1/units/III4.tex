@@ -1,0 +1,55 @@
+
+\section{Prolongación infinitesimal local de los $S$-esquemas lisos}
+\label{III.4}
+
+\begin{theoreme}
+\label{III.4.1}
+Sean~$Y$ un preesquema localmente noetheriano, $Y_0$ un subpreesquema cerrado con el mismo espacio subyacente, $X_0$ un $Y_0$-preesquema liso y~$x$ un punto de~$X_0$. Existen entonces un entorno abierto~$U_0$ de~$x$, un preesquema~$X$ liso sobre~$Y$ y un $Y_0$-isomorfismo
+$$
+h\colon U_0\isomto X\times_Y Y_0.
+$$
+Además, si $(U'_0,X',h')$ es otra solución de este problema, «es isomorfa a la primera en un entorno de~$x$».
+\end{theoreme}
+
+Se deja al lector precisar qué se entiende con ello. Puede observarse que, dado~$U_0$, una solución del problema planteado equivale a dar, sobre~$U_0$, un haz de álgebras~$\cal{B}$ sobre~$f_0^{-1}(\cal{O}_Y)$ (donde~$f_0$ es la aplicación continua subyacente al morfismo estructural $U_0\to Y_0$), provisto de un homomorfismo de anillos $\cal{B}\to\cal{O}_{U_0}$ compatible con el homomorfismo
+\ifthenelse{\boolean{orig}}
+{$f^{-1}(\cal{O}_Y)\to f^{-1}(\cal{O}_{Y_0})$}
+{$f_0^{-1}(\cal{O}_Y)\to f_0^{-1}(\cal{O}_{Y_0})$},
+y que satisfaga:
+
+(a) este homomorfismo induce un isomorfismo
+$$
+\ifthenelse{\boolean{orig}}
+{\cal{B}\otimes_{f^{-1}(\cal{O}_Y)} f^{-1}(\cal{O}_{Y_0})\isomto
+\cal{O}_{Y_0}}
+{\cal{B}\otimes_{f_0^{-1}(\cal{O}_Y)} f_0^{-1}(\cal{O}_{Y_0})\isomto
+\cal{O}_{U_0}};
+$$
+
+(b) $U_0$, provisto de~$\cal{B}$, se convierte en un $Y$-preesquema liso.
+
+De este modo, el sentido preciso de la afirmación de unicidad local se hace particularmente evidente.
+
+\subsubsection*{Demostración}
+Puede suponerse ya que~$X_0$ es étale sobre un $Y_0[t_1,\dots,t_n]=Y'_0$. Este último puede considerarse como un subpreesquema cerrado de $Y'=Y[t_1,\dots,t_n]$ con el mismo espacio subyacente. Por~(\Ref{I.8.3}), existe un~$X$ étale sobre~$Y'$ y un $Y'_0$-isomorfismo
+\ifthenelse{\boolean{orig}}
+{$X\times_{Y'}Y'_0\isomto X'$}
+{$X\times_{Y'}Y'_0\isomto X_0$}.
+Con esto queda probada la existencia. Para la unicidad se utiliza la propiedad~\Ref{III.3.1}~\textup{(ii)} de los morfismos lisos, teniendo en cuenta el siguiente lema.
+\marginpar{70}
+
+\begin{lemme}
+\label{III.4.2}
+Sean~$Y$ un preesquema, $Y_0$ un subpreesquema cerrado definido por un haz de ideales~$\cal{J}$ localmente nilpotente, $X$ y~$X'$ dos $Y$-preesquemas y $u\colon X\to X'$ un $Y$-morfismo. Supóngase que~$X$ es plano sobre~$Y$. Para que~$u$ sea un isomorfismo es necesario y suficiente que lo sea $u_0\colon X\times_Y Y_0\to X'\times_Y Y_0$.
+\end{lemme}
+
+La demostración es sencilla: basta pasar al caso afín y considerar los graduados asociados. Obsérvese, además, que el enunciado análogo obtenido sustituyendo «isomorfismo» por «inmersión cerrada» sigue siendo válido, y sin hipótesis de planitud.
+
+\begin{remarque}
+\label{III.4.3}
+Es esencial observar que la prolongación local~$X$ obtenida en~\Ref{III.4.1} \emph{no es canónica}; en otros términos, el isomorfismo local entre dos soluciones no es único, es decir, existen en general $Y$-automorfismos no triviales de~$X$ que inducen la identidad sobre el subpreesquema cerrado $X_0=X\times_Y Y_0$. Por ello, al construir prolongaciones infinitesimales \emph{globales} de preesquemas
+\ifthenelse{\boolean{orig}}
+{simples}
+{lisos},
+cabe esperar la existencia de una obstrucción de naturaleza cohomológica, que se precisará más adelante (\no \Ref{III.6}).
+\end{remarque}

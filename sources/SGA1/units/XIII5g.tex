@@ -1,0 +1,91 @@
+
+\begin{corollaire}
+\label{XIII.5.7}
+Las notaciones son las de~\Ref{XIII.5.6}. Sean $\overline{S}$ la
+localización estricta de~$S$ en~$\overline{x}$,
+$$
+\overline{g}\colon\overline{U}\to\overline{S}
+\quad \text{y} \quad
+\tilde{g}\colon\widetilde{U}\to
+\ifthenelse{\boolean{orig}}
+{\widetilde{S}}
+{\overline{S}}
+$$
+los morfismos canónicos. Entonces los morfismos $\overline{g}$ y
+$\tilde g$ son $0$-acíclicos \textup{(SGA~4 XV~1.3)}. Sean $G$ un haz
+de grupos constructible sobre~$\overline{S}$,
+$F=\overline{g}^*G$ y $P$ un torsor bajo~$F$. Para que $P$ esté
+moderadamente ramificado sobre~$\overline{X}$ relativamente
+a~$\overline{S}$, es necesario y suficiente que su imagen inversa
+$\widetilde{P}$ sobre~$\widetilde{U}$ sea trivial.
+\end{corollaire}
+
+En efecto, para todo esquema
+$\overline{X'}=\overline{X}[T_i]_{i\in I(x)}\big/
+(T_i^{n_i}-f_i)$, donde los $n_i$ son enteros $>0$ primos con~$p$, el
+morfismo $\overline{f}'\colon\overline{X'}\to\overline{S}$ es
+$0$-acíclico. Por tanto, las fibras geométricas de~$\overline{f}'$ en
+los distintos puntos de~$\overline{S}$ son conexas e incluso
+irreducibles. Lo mismo sucede con las fibras geométricas de los
+morfismos $\overline{g}'\colon\overline{U'}\to\overline{S}$, lo que
+demuestra que los $\overline{g}'$, y por tanto también~$\tilde g$, son
+$0$-acíclicos (SGA~4 XV~1.16).
+
+Es claro que un torsor $P$ sobre~$\overline{U}$, bajo~$F$, cuya imagen
+inversa sobre~$\widetilde{U}$ es trivial, está moderadamente ramificado
+sobre~$\overline{X}$ relativamente a~$\overline{S}$. Demostremos el
+recíproco: si $P$ está moderadamente ramificado sobre~$\overline{X}$
+relativamente a~$\overline{S}$, su imagen inversa sobre~$\widetilde{U}$
+es trivial.
+
+Se deduce de (SGA~4 IX~2.14~(ii)) que pueden encontrarse un morfismo
+finito $n\colon S_1\to\overline{S}$, un haz de grupos constante~$C$
+sobre~$S_1$ y un monomorfismo $G\to n_*C$. Consideremos el siguiente
+diagrama conmutativo formado por cuadrados cartesianos:
+$$
+\xymatrix{ \widetilde{U}_{1} \ar[r] \ar[d]_{r} &U_{1} \ar[r]^{g_{1}}
+\ar[d]_{q} &S_{1} \ar[d]_{n} \cr \widetilde{U} \ar[r] &\overline{U}
+\ar[r]^{\overline{g}} &\overline{S} \rlap{\quoi.}\cr }
+$$
+Sean
+\marginpar{435}
+$C_1$ (\resp $\widetilde{C}_1$) la imagen inversa de~$C$ sobre~$U_1$
+(\resp sobre~$\widetilde{U}_1$). Se tiene un diagrama conmutativo en el
+que $i$ y $j$ son isomorfismos (SGA~4 VIII~5.8):
+\begin{equation*}
+\label{eq:XIII.5.7.*}
+\tag{$*$}
+\begin{array}{c}
+\xymatrix{ \H^{1}(\overline{U},q_*C_{1}) \ar[r]^{i}
+\ar[d] &\H^{1}(U_{1},C_{1}) \ar[d] \cr
+\H^{1}(\widetilde{U},r_*\widetilde{C}_{1}) \ar[r]^{j}
+&\H^{1}(\widetilde{U}_{1},\widetilde{C}_{1}) \rlap{\quoi.}\cr }
+\end{array}
+\end{equation*}
+Sea $Q$ el torsor bajo~$q_*C_1$ deducido de~$P$ por extensión del grupo
+estructural $F\to q_*C_1$. Según~\Ref{XIII.2.1.4}, $Q$ está
+moderadamente ramificado sobre~$\overline{X}$ relativamente
+a~$\overline{S}$. Al torsor~$Q$ corresponde, mediante~$i$, un torsor
+$Q_1$ bajo~$C_1$, y es claro que $Q_1$ está moderadamente ramificado
+sobre $X_1=\overline{X}\times_{\overline{S}}S_1$ relativamente a~$S_1$.
+Se deduce entonces de~\Ref{XIII.5.6} que la imagen inversa
+$\widetilde{Q}_1$ de~$Q_1$ sobre~$\widetilde{U}_1$ es trivial, y el
+diagrama~\eqref{eq:XIII.5.7.*} demuestra que la imagen inversa
+$\widetilde{Q}$ de~$Q$ sobre~$\widetilde{U}$ es trivial.
+
+Consideremos el siguiente diagrama conmutativo, cuya segunda fila es
+exacta (SGA~4 XII~3.1):
+\begin{equation*}
+\label{eq:XIII.5.7.**}
+\tag{$**$}
+\begin{array}{c}
+\xymatrix{ \H^{0}(\overline{S},n_*C/G) \ar[r]
+\ar[d]_{k} &\H^{1}(\overline{S},G)\rlap{$~=~1$} \ar[d] \cr
+\H^{0}(\widetilde{U},r_*\widetilde{C}_{1}/\widetilde{F}) \ar[r]
+&\H^{1}(\widetilde{U},\widetilde{F}) \ar[r]
+&\H^{1}(\widetilde{U},r_*\widetilde{C}_{1}) \rlap{\quoi.} \cr }
+\end{array}
+\end{equation*}
+Como el morfismo $\widetilde{U}\to\overline{S}$ es $0$-acíclico,
+$k$ es un isomorfismo. De~\eqref{eq:XIII.5.7.**} se deduce entonces
+que $\widetilde{P}$ es trivial.

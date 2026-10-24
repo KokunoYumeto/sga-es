@@ -1,0 +1,58 @@
+\section{Propiedades de permanencia}
+\label{I.9}
+Sea $A\to B$ un homomorfismo local y étale. Examinamos aquí algunos casos en los que cierta propiedad de~$A$ implica la misma propiedad para~$B$, o recíprocamente.
+\marginpar{16}
+Varias proposiciones de esta índole son ya consecuencias del mero hecho de que $B$ es \emph{cuasifinito} y \emph{plano} sobre~$A$, y nos limitaremos a «recordar» algunas de ellas: $A$ \emph{y} $B$ \emph{tienen la misma dimensión de Krull y la misma profundidad} («codimensión cohomológica» de Serre, según la terminología aún corriente). Se sigue, por ejemplo, que $A$ \emph{es Cohen--Macaulay si y solo si lo es $B$}. Además, para todo ideal primo $\goth{q}$ de~$B$ que induzca $\goth{p}$ sobre~$A$, $B_{\goth{q}}$ seguirá siendo cuasifinito y plano sobre~$A_{\goth{p}}$, siempre que se suponga que $B$ es la localización de un álgebra de tipo finito sobre~$A$ (esto se sigue de que el conjunto de los puntos en los que un morfismo de tipo finito es cuasifinito, \resp plano, es abierto); por otra parte, \emph{todo} ideal primo $\goth{p}$ de~$A$ es inducido por un ideal primo $\goth{q}$ de~$B$ (pues $B$ es \emph{fielmente} plano sobre~$A$). Se sigue, por ejemplo, que \emph{$\goth{p}$ y~$\goth{q}$ tienen la misma altura}; y también que \emph{$A$ no tiene ideales primos embebidos si y solo si $B$ tampoco los tiene}.
+
+Nos limitaremos, pues, a las proposiciones más específicas del caso de los morfismos étales.
+
+\begin{proposition}
+\label{I.9.1}
+Sea $A\to B$ un homomorfismo local étale. Para que $A$ sea regular es necesario y suficiente que $B$ lo sea.
+\end{proposition}
+En efecto, sea $k$ el cuerpo residual de~$A$ y $L$ el de~$B$. Como $B$ es plano sobre~$A$ y
+\ifthenelse{\boolean{orig}}
+{$L=B\otimes_Ak$}
+{$L=B\otimes_Ak$,}
+\ie $\goth{n}=\goth{m}B$ (donde $\goth{m}$ y~$\goth{n}$ son los ideales maximales de~$A$ y~$B$), la filtración $\goth{m}$-ádica de~$B$ es idéntica a su filtración $\goth{n}$-ádica, y se tendrá
+$$
+\gr^*(B)=\gr^*(A)\otimes_kL.
+$$
+Se sigue que $\gr^*(B)$ es un álgebra de polinomios sobre~$L$ si y solo si $\gr^*(A)$ es un álgebra de polinomios sobre~$k$, c.q.d. (N.B.: no se ha utilizado que $L/k$ sea separable.)
+
+\begin{corollaire}
+\label{I.9.2}
+Sea $f\colon X\to Y$ un morfismo étale. Si $Y$ es regular, $X$ también lo es; el recíproco es cierto si $f$ es \ifthenelse{\boolean{orig}}{sobreyectivo.}{sobreyectivo.}% La autoridad corrige el acuerdo francés.
+\end{corollaire}
+
+\setcounter{subsection}{1}
+\setcounter{proposition}{1}
+
+\begin{proposition}
+\label{prop:I.9.2}
+Sea $f\colon X\to Y$ un morfismo étale. Si $Y$ es reducido, $X$ también lo es; el recíproco es cierto si $f$ es sobreyectivo.
+\end{proposition}
+
+Esto equivale al corolario siguiente.
+\begin{corollaire}
+\label{I.9.3}
+Sea $f\colon A\to B$ un homomorfismo local étale, siendo $B$ isomorfa a la localización de un $A$-álgebra de tipo finito.
+\marginpar{17}
+Para que $A$ sea reducido es necesario y suficiente que $B$ lo sea.
+\end{corollaire}
+
+La necesidad es trivial, puesto que $A\to B$ es inyectivo (al ser $B$ fielmente plano sobre~$A$). Para la suficiencia, sean
+\ifthenelse{\boolean{orig}}
+{$p_i$ los ideales primos minimales de~$A$; por hipótesis, la aplicación natural $A\to\prod_iA/p_i$ es inyectiva, de modo que, tensorizando con el $A$-módulo plano $B$, se obtiene que $B\to\prod_iB/p_iB$ es inyectiva, y se reduce a demostrar que los $B/p_iB$ son reducidos. Como $B/p_iB$ es étale sobre~$A/p_i$}
+{$\goth{p}_i$ los ideales primos minimales de~$A$; por hipótesis, la aplicación natural $A\to\prod_iA/\goth{p}_i$ es inyectiva, de modo que, tensorizando con el $A$-módulo plano $B$, se obtiene que $B\to\prod_iB/\goth{p}_iB$ es inyectiva, y se reduce a demostrar que los $B/\goth{p}_iB$ son reducidos. Como $B/\goth{p}_iB$ es étale sobre~$A/\goth{p}_i$},
+se reduce al caso en que $A$ es íntegro. Sea~$K$ su cuerpo de fracciones; como $A\to K$ es inyectivo, también lo es (por ser $B$ plano sobre~$A$) el homomorfismo $B\to B\otimes_AK$, y se reduce a demostrar que este último anillo es reducido. Ahora bien, como $B$ es la localización de un $A$-álgebra de tipo finito, es el anillo local de un punto~$x$ de un esquema de tipo finito y \emph{étale} $X=\Spec(C)$ sobre~$Y=\Spec(A)$; por tanto, $B\otimes_AK$ es una localización (respecto de un conjunto multiplicativamente estable adecuado) del anillo $C\otimes_AK$ de~$X\otimes_AK$. Como $X\otimes_AK$ es étale sobre~$K$, su anillo es un producto finito de cuerpos (extensiones separables de~$K$); por tanto, lo mismo ocurre con~$B\otimes_AK$, c.q.d.
+
+\begin{corollaire}
+\label{I.9.4}
+Sea $f\colon A\to B$ un homomorfismo local étale; supongamos que $A$ es analíticamente reducido
+\index{analíticamente reducido|hyperpage}%
+(\ie que el completado $\hat{A}$ de~$A$ carece de elementos nilpotentes). Entonces $B$ es analíticamente reducido y, \emph{a fortiori}, reducido.
+\end{corollaire}
+
+En efecto, \ifthenelse{\boolean{orig}}{$\hat{B}$}{$\hat{B}$}\ % La autoridad corrige B por \hat B.
+es \emph{finito} y étale sobre~$\hat{A}$, y se aplica~\Ref{I.9.3}.

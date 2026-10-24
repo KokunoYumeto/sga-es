@@ -1,0 +1,62 @@
+
+\ifthenelse{\boolean{orig}}
+{}
+{\begin{remarqueMR}
+\label{XIII.2.13}
+Sean $k$ un cuerpo algebraicamente cerrado de característica $p>0$, $X$ una
+curva algebraica propia y lisa sobre~$k$, conexa, de género $g$, y $U$ un
+abierto afín de~$X$ cuyo complemento consta de $r\geq1$ puntos racionales
+de~$X$. Se dispone del grupo fundamental $\pi_1(U)$, de su cociente
+$\pi_1^{\tame}(U)$, que clasifica los recubrimientos étales finitos de~$U$
+moderadamente ramificados en los puntos de~$X-U$, y del cociente
+$\pi_1^{p'}(U)$ de~$\pi_1^{\tame}(U)$, que clasifica los recubrimientos
+étales galoisianos de~$U$ cuyo grupo de Galois es de orden primo con~$p$.
+
+En (Coverings of algebraic curves, Amer.\ J.~Math.\ \textbf{79}
+(1957), p\ptbl825--856), S\ptbl Abhyankar formuló varias
+conjeturas sobre la estructura de los grupos finitos que son grupos de
+Galois de recubrimientos étales finitos de~$U$.
+
+Las conjeturas relativas a los grupos finitos que aparecen como grupos de
+Galois de recubrimientos étales conexos de~$U$ y cuyo orden es primo con~$p$
+quedan demostradas y precisadas en el corolario \Ref{XIII.2.12}. Antes de abordar
+los cocientes finitos de~$\pi_1(U)$, comencemos por dar algunas indicaciones
+sobre el \og tamaño\fg de este grupo. Sea
+\ifthenelse{\boolean{orig}}
+{$X = \Spec(A)$}
+{$U = \Spec(A)$}.
+Se sabe que $\Hom_{\mathrm{cont}}(\pi_1(U), \ZZ/p\ZZ)$ se describe mediante
+la teoría de Artin--Schreier (cor\ptbl \Ref{XI.6.9}). Este grupo es
+isomorfo a $A/\wp(A)$, donde $\wp$ es la aplicación de~$A$ en~$A$ que envía
+$a$ a~$a^p-a$. Supongamos primero que $U$ es la recta afín $\AA^1$, de
+anillo $k[T]$. Sea~$E$ el conjunto de los elementos de~$k[T]$ de la forma
+$\sum_i a_iT^i$, con $a_i = 0$ cuando $p$ divide a~$i$. Es inmediato que la
+aplicación compuesta $E\to k[T]\to k[T]/\wp k[T]$ es biyectiva. Por tanto,
+los coeficientes $a_i$, $(i,p)=1$, se comportan como coordenadas de un
+espacio que parametriza los recubrimientos cíclicos de grado $p$ de la
+recta afín. En particular, se deduce que $\pi_1(\AA^1)$ no está
+topológicamente generado por un número finito de elementos y que, si se
+efectúa una extensión $k\to k'$ de cuerpos algebraicamente cerrados, el
+morfismo natural $\pi_1(\AA^1\times_kk')\to\pi_1(\AA^1)$, que es
+sobreyectivo, no es biyectivo, a diferencia del caso propio. En el caso
+general, la curva $U$ puede realizarse como esquema finito sobre la recta
+afín, y se concluye que los mismos fenómenos se producen para $\pi_1(U)$
+(y, de hecho, más generalmente, para $\pi_1(V)$, para todo $k$-esquema
+afín conexo $V$, de tipo finito y de dimensión $\geq1$).
+
+Dicho esto, si $G$ es un grupo finito, denotemos por $G^{(p')}$ el mayor
+grupo cociente de~$G$ cuyo orden es primo con~$p$. Para que un grupo finito $G$
+sea un cociente topológico de~$\pi_1(U)$, es necesario que $G^{(p')}$ sea
+un cociente topológico de~$\pi_1^{p'}(U)$, condición que, en principio,
+puede decidirse gracias al corolario \Ref{XIII.2.12}.
+En el artículo citado, Abhyankar conjetura que esta condición necesaria es
+también suficiente. Esta conjetura fue demostrada por M\ptbl Raynaud en el
+caso de la recta afín y por D\ptbl Harbater en el caso general
+(Invent. Math.\ \textbf{116} (1994), p\ptbl425--462 y \textbf{117},
+p\ptbl1--25). Por ejemplo, en el caso de la recta afín
+$\pi_1^{p'}(\AA^1)=1$, y se concluye que un grupo finito $G$ es grupo de
+Galois de un recubrimiento étale conexo de~$\AA^1$ si y solo si
+$G^{(p')} = 1$, es decir, si y solo si $G$ está engendrado por sus
+$p$-subgrupos de Sylow. Así, todo grupo finito simple de orden múltiplo
+de~$p$ cumple esta condición.
+\end{remarqueMR}}

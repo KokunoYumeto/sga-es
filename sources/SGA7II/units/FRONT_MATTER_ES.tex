@@ -1,0 +1,173 @@
+
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{flushleft}
+{\Huge\bfseries Lecture Notes in\\Mathematics\par}
+\vspace{1.5em}
+{\large Editada por A. Dold, Heidelberg, y B. Eckmann, Zúrich\par}
+\vfill
+{\Huge 340\par}
+\vspace{1em}\hrule\vspace{1.5em}
+{\Huge\bfseries Grupos de monodromía\\en geometría algebraica\par}
+\vfill
+\hrule\vspace{1.5em}
+{\Large Springer-Verlag\par}
+{\Large Berlín $\cdot$ Heidelberg $\cdot$ Nueva York 1973\par}
+\end{flushleft}
+\end{titlepage}
+
+\clearpage
+\thispagestyle{empty}
+\null\vfill
+{\small
+\begin{center}
+\hrule\medskip
+Clasificación por materias de la AMS (1970): Primaria: 14D05, 14F20\\
+Secundaria: 14C99, 14G10, 14M10
+\medskip\hrule
+\end{center}
+
+\medskip
+\noindent ISBN 3-540-06433-8 Springer-Verlag Berlín $\cdot$ Heidelberg $\cdot$ Nueva York\par
+\noindent ISBN 0-387-06433-8 Springer-Verlag Nueva York $\cdot$ Heidelberg $\cdot$ Berlín\par
+
+\medskip
+\noindent Esta obra está protegida por derechos de autor. Quedan reservados todos los derechos, tanto si se refiere a la totalidad como a una parte del material, en particular los de traducción, reimpresión, reutilización de ilustraciones, radiodifusión, reproducción mediante fotocopiadora o medios análogos, y almacenamiento en bancos de datos.\par
+\noindent Conforme al § 54 de la Ley alemana de derechos de autor, cuando se hagan copias para un uso distinto del privado deberá abonarse una tasa al editor, cuyo importe se determinará de común acuerdo con este.\par
+\noindent © Springer-Verlag Berlín $\cdot$ Heidelberg 1973. Número de ficha del catálogo de la Library of Congress: 73-11813. Impreso en Alemania.\par
+
+\medskip
+\noindent\textit{El aviso histórico de derechos se conserva; esta publicación no amplía ni sustituye los derechos ni las autorizaciones aplicables.}\par
+
+\medskip
+\noindent Impresión offset: Julius Beltz, Hemsbach/Bergstr.\par
+}
+\vfill\null
+
+\clearpage
+\thispagestyle{empty}
+\begin{center}
+{\Large SEMINARIO DE GEOMETRÍA ALGEBRAICA DEL BOIS-MARIE\par}
+\vspace{1.5em}
+{\large 1967--1969\par}
+\vspace{4em}
+{\Large GRUPOS DE MONODROMÍA EN GEOMETRÍA ALGEBRAICA\par}
+\vspace{1.5em}
+{\Large (SGA 7 II)\par}
+\vspace{5em}
+{\large por P. Deligne y N. Katz\par}
+\end{center}
+\clearpage
+
+\pagenumbering{roman}
+\setcounter{page}{5}
+\chapter*{Introducción}
+
+La primera parte de este seminario, dirigida por A. Grothendieck, apareció en esta misma serie \emph{Lecture Notes in Mathematics} con el núm.~288. De esa primera parte solo tendremos que hacer uso de los resultados de las Exposiciones I y VI (especialmente §§~5, 6).
+
+Los resultados clave de esta segunda parte son la fórmula de Picard--Lefschetz de la Exposición XV y la teoría de los pinceles de Lefschetz de la Exposición XVIII.
+
+Sea $X_t$ una familia de variedades algebraicas dependiente de un parámetro $t$. La fórmula de Picard--Lefschetz describe el comportamiento de la cohomología de $X_t$ en un entorno de un valor $t_0$ del parámetro para el cual $X_t$ adquiere un punto singular cuadrático ordinario: proporciona la diferencia entre las cohomologías de $X_t$ y $X_{t_0}$ y describe la monodromía local cuando $t$ gira alrededor de $t_0$. En el marco trascendente, se debe a Lefschetz~[2] y tiene una interpretación geométrica sencilla (XIV~3.2). Para establecerla en característica arbitraria, hemos tenido que poner en marcha una pesada maquinaria (XII, XIII, XIV), cuyas grandes líneas se ofrecen en las introducciones de las Exposiciones XIII y XIV.
+
+Cuando se toma como familia $X_t$ un pincel suficientemente general de secciones hiperplanas de una variedad proyectiva no singular $X$, la fórmula de Picard--Lefschetz y otras ideas geométricas proporcionan valiosas relaciones entre la cohomología de $X$ y las de sus secciones hiperplanas $X_t$. Estas relaciones solo alcanzan toda su fuerza cuando $X$ verifica el «teorema de Lefschetz \emph{vache}» (LV, teorema fuerte de Lefschetz) (XVIII~5.2.2). Esta condición es automática en característica~0. En dimensión $\geq 3$, la única demostración conocida se basa en la teoría de Hodge de las integrales armónicas (la demostración de Lefschetz del punto crucial, [2], 13, pág.~25, es falsa); sería extremadamente interesante disponer de otra que pudiera generalizarse a característica~$p$.
+
+\clearpage
+
+Las principales aplicaciones son las siguientes.
+
+\medskip
+\noindent\textup{a)} En la Exposición XVI demostramos, en igual característica $p$, una fórmula análoga a la dada por Milnor~[3] para el número de ciclos evanescentes en los puntos críticos aislados de una aplicación
+\[
+f:\mathbb{A}^{n}\longrightarrow\mathbb{A}.
+\]
+
+\noindent\textup{b)} En la Exposición XIX utilizamos métodos de Lefschetz ([2], pág.~106) para demostrar, en particular y en cualquier característica, que si $S$ es una superficie genérica de $\mathbb{P}^{3}$ de grado distinto de $2$ y de $3$, toda curva trazada sobre $S$ es la intersección completa de $S$ con otra superficie de $\mathbb{P}^{3}$.
+
+\noindent\textup{c)} En la Exposición XX, mediante métodos traspuestos de los de Griffiths~[1], probamos la existencia, en cualquier característica, de ciclos algebraicos homológicamente equivalentes a cero, ninguno de cuyos múltiplos es algebraicamente equivalente a cero.
+
+Señalemos además que el método de los pinceles de Lefschetz ha permitido recientemente demostrar, por inducción sobre la dimensión, el resultado siguiente (véase~[4]). Si la variedad proyectiva no singular $X$ sobre $\mathbb{F}_p$ se levanta a característica~0 (con su polarización) y $p\neq 2$, el polinomio característico de Frobenius que actúa sobre
+\[
+H^i\!\left(X\otimes_{\mathbb{F}_p}\overline{\mathbb{F}}_p,\mathbb{Q}_\ell\right)
+\]
+pertenece a $\mathbb{Z}[t]$ y es independiente de $\ell$ ($\ell\neq p$).
+
+Las Exposiciones XXII y XXI son preliminares para XX (y para XIX en característica~2). En XXII estudiamos la reducción módulo~$p$ de la función $\zeta$ de una variedad algebraica sobre $\mathbb{F}_p$ (por un método en el que la teoría de Dwork desempeña un papel esencial), y las propiedades de integrabilidad de los polinomios característicos de Frobenius que actúan sobre los $H^i$. En XXI damos una cota inferior para el nivel de la cohomología de las intersecciones completas genéricas.
+
+Sugiero al lector deseoso de formarse una primera imagen geométrica de la teoría que lea ante todo I, XIV~3.2, XIX~§~4 y la introducción de XIII.
+
+El \emph{Leitfaden} que sigue explica a grandes rasgos la dependencia lógica de las diversas Exposiciones entre sí.
+
+\clearpage
+\noindent[1]\quad P.~A. Griffiths, \emph{On the periods of certain integrals III}, Ann. of Math.\par
+\medskip
+\noindent[2]\quad S. Lefschetz, \emph{L'analysis situs et la géométrie algébrique}, París, 1924, Gauthier-Villars; reproducido en \emph{Selected Papers} (Chelsea).\par
+\medskip
+\noindent[3]\quad J. Milnor, \emph{Singular points of complex hypersurfaces}, Annals of Math. Studies 61, Princeton, 1968.\par
+\medskip
+\noindent[4]\quad J.-L. Verdier (según P. Deligne), \emph{Cohomologie $\ell$-adique}, Séminaire Bourbaki, noviembre de 1972.\par
+
+\vspace{4em}
+\begin{flushright}
+Bures-sur-Yvette, 8 de noviembre de 1972\par
+\medskip
+P. Deligne
+\end{flushright}
+
+\clearpage
+\setcounter{page}{9}
+\chapter*{Índice}
+
+\noindent\textbf{Exposición X}\par
+\noindent\hspace*{2em}Intersecciones sobre superficies regulares\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 1\par
+\medskip
+\noindent\textbf{Exposición XI}\par
+\noindent\hspace*{2em}Cohomología de las intersecciones completas\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 39\par
+\medskip
+\noindent\textbf{Exposición XII}\par
+\noindent\hspace*{2em}Cuádricas\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 62\par
+\medskip
+\noindent\textbf{Exposición XIII}\par
+\noindent\hspace*{2em}El formalismo de los ciclos evanescentes\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 82\par
+\medskip
+\noindent\textbf{Exposición XIV}\par
+\noindent\hspace*{2em}Comparación con la teoría trascendente\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 116\par
+\medskip
+\noindent\textbf{Exposición XV}\par
+\noindent\hspace*{2em}La fórmula de Picard--Lefschetz\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 165\par
+\medskip
+\noindent\textbf{Exposición XVI}\par
+\noindent\hspace*{2em}La fórmula de Milnor\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 197\par
+\medskip
+\noindent\textbf{Exposición XVII}\par
+\noindent\hspace*{2em}Pinceles de Lefschetz: teorema de existencia\par
+\noindent\hspace*{2em}por N. Katz\dotfill 212\par
+\medskip
+\noindent\textbf{Exposición XVIII}\par
+\noindent\hspace*{2em}Estudio cohomológico de los pinceles de Lefschetz\par
+\noindent\hspace*{2em}por N. Katz\dotfill 254\par
+\medskip
+\noindent\textbf{Exposición XIX}\par
+\noindent\hspace*{2em}El teorema de Noether\par
+\noindent\hspace*{2em}por P. Deligne\dotfill 328\par
+\medskip
+\noindent\textbf{Exposición XX}\par
+\noindent\hspace*{2em}El teorema de Griffiths\par
+\noindent\hspace*{2em}por N. Katz\dotfill 341\par
+
+\clearpage
+\noindent\textbf{Exposición XXI}\par
+\noindent\hspace*{2em}El nivel de la cohomología de las intersecciones completas\par
+\noindent\hspace*{2em}por N. Katz\dotfill 363\par
+\medskip
+\noindent\textbf{Exposición XXII}\par
+\noindent\hspace*{2em}Una fórmula de congruencia para la función\par
+\noindent\hspace*{2em}por N. Katz\dotfill 401\par
+
+\clearpage

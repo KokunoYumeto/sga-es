@@ -1,0 +1,94 @@
+\shorthandoff{<>}% Babel español trata como abreviaturas los delimitadores de curvatura de Xy-pic.
+
+\Subsection*{1) Caso de los haces de conjuntos constantes}
+
+1) 1. Reducción al caso en que $X$ es normal sobre~$S$. Sea
+$X_{1\overline{s}}$ la normalización de~$(X_{\overline{s}})_{\red}$;
+tras restringir $S$ a un abierto no vacío y efectuar una extensión
+radicial de~$S$, puede suponerse que $X_{1\overline{s}}$ procede de un
+esquema $X_1$ normal sobre~$S$, y que el morfismo
+$X_{1\overline{s}}\to X_{\overline{s}}$ procede de un morfismo finito
+sobreyectivo $p\colon X_1\to X$ (EGA~IV 8.8.2 y 9.6.1). Supongamos
+demostrado el teorema para $fp$. Tras restringir $S$ a un abierto,
+puede suponerse que, para todo haz de conjuntos constante finito $F$
+sobre~$X$, $(p^*F,fp)$ es cohomológicamente propio relativamente a~$S$
+en dimensión $\leqslant 0$ y que $f_*p_*(p^*F)$ es constructible. Según
+\Ref{XIII.1.9}, $(p_*p^*F,f)$ es entonces cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant 0$. El morfismo
+$$
+F \to p_* p^* F=G
+$$
+es un monomorfismo. De ello resulta ya, pues $f_*F$ es un subhaz
+de~$f_*G$, que $f_*F$ es constructible (SGA~4 IX~2.9~(ii)) y que
+$(F,f)$ es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$.
+
+Sean $X_2=X_1 \times_{X} X_1$ y $q \colon X_2 \to X$ el morfismo
+canónico. Según \Ref{XIII.1.11}~1),
+\marginpar{397}
+se tiene una sucesión exacta
+$$
+\xymatrix@C=.5cm{F \ar[r] & G \ar@<2pt>[r]\ar@<-2pt>[r] & q_*q^*F }.
+$$
+
+Por lo que acaba de demostrarse, aplicado a $fq$ en lugar de~$f$, puede
+suponerse, tras restringir $S$ a un abierto no vacío, que, para todo haz
+de conjuntos constante finito $F$ sobre~$X$, $(q^*F,fq)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión $\leqslant
+-1$, y por tanto que $(q_*q^*F,f)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant -1$. Resulta entonces de
+\Ref{XIII.1.13}~1) que $(F,f)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$.
+
+1) 2. Reducción al caso en que $X$ es normal y afín sobre~$S$.
+
+Sea $U_s$ un abierto afín de~$X_s$, denso en $X_s$. Tras restringir $S$
+a un abierto no vacío, puede suponerse que $U_s\to X_s$ se levanta a una
+inmersión abierta $i\colon U\to X$, esquemáticamente dominante
+relativamente a~$S$ (EGA~IV 8.9.1). Como el morfismo $X\to S$ es
+normal, según SGA~2 XIV~1.18 se tiene:
+$$
+\ifthenelse{\boolean{orig}}
+{\prof \et_{S- U} (X) \ge 2 \quoi ;}
+{\prof \et_{X- U} (X) \ge 2 \quoi ;}
+$$
+por consiguiente, para todo haz de conjuntos constante finito $F$
+sobre~$X$, el morfismo canónico
+$$
+F \to i_*i^*F
+$$
+es un isomorfismo. De ello resulta que, si se supone demostrado el
+teorema para $fi$ y para~$i$, entonces, tras restringir $S$ a un abierto
+no vacío, $(i^*F,i)$ y $(i^*F,fi)$ son cohomológicamente propios
+relativamente a~$S$ en dimensión $\leqslant 0$. Lo mismo vale, pues,
+para~$(F,f)$ (\Ref{XIII.1.6}~2)). Como, además,
+$f_*F=(fi)_*(i^*F)$ es constructible, queda terminada la reducción.
+
+1) 3. Fin de la demostración.
+
+Puede suponerse que $S$ es normal (EGA~IV 7.8.3). Puede encontrarse una
+compactificación de~$X_s$:
+\marginpar{398}
+$$
+\xymatrix{ X_s \ar[r]^{j_s} \ar[d]_{f_s} & P_s \ar[ld]^{g_s} \\ Y_s }
+$$
+donde $j_s$ es una inmersión abierta dominante y $g_s$ un morfismo
+propio; tras efectuar una extensión radicial de~$\kres(s)$ y sustituir
+$P_s$ por su normalización, lo que no modifica $X_s$, puede suponerse
+que $P_s$ es geométricamente normal. Tras restringir $S$ a un abierto
+no vacío y efectuar una extensión radicial sobreyectiva, puede suponerse
+que el diagrama anterior procede de un diagrama
+$$
+\xymatrix{ X \ar[r]^{j} \ar[d]_{f} & P \ar[ld]^{g} \\ Y }
+$$
+donde $P$ es un esquema normal sobre~$S$, $j$ una inmersión abierta
+esquemáticamente dominante relativamente a~$S$ y $g$ un morfismo propio
+(EGA~IV 6.9.1, 9.9.4 y 9.6.1). Para todo haz de conjuntos constante
+finito $F$ sobre~$X$, de valor $C$, $j_*F$ es el haz constante de
+valor~$C$ (SGA~4 \ifthenelse{\boolean{orig}}{}{IX~}2.14.1), y lo mismo
+ocurre tras todo cambio de base $S'\to S$;
+de ello resulta que $(F,j)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$. Lo mismo vale, pues, para~$(F,f)$,
+puesto que $g$ es propio \eqref{XIII.1.8}. Como $g$ es propio,
+$f_*F=g_*C_P$ es constructible, lo que termina la demostración de
+1)\kern2pt a).

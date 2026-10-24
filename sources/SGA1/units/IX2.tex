@@ -1,0 +1,115 @@
+\section{Morfismos submersivos y universalmente submersivos}
+\label{IX.2}
+
+\begin{definition}
+\label{IX.2.1}
+Un morfismo
+\ifthenelse{\boolean{orig}}
+{$g\colon S'\to S$}
+{$f\colon S'\to S$}
+de preesquemas se dice \emph{submersivo}
+\index{submersivo (morfismo)|hyperpage}%
+si es sobreyectivo y hace de~$S$ un espacio topológico cociente
+de~$S'$ (es decir, toda parte~$U$ de~$S$ tal que $f^{-1}(U)$ sea
+abierta es abierta). Se dice que~$f$ es \emph{universalmente
+submersivo}
+\index{universalmente submersivo (morfismo)|hyperpage}%
+si, para todo morfismo~$T\to S$, el morfismo
+$f'\colon T'=S'\times_S T\to T$ deducido de~$f$ por cambio de base es
+submersivo.
+\end{definition}
+
+Es inmediato que el compuesto de dos morfismos submersivos
+(respectivamente universalmente submersivos) es submersivo
+(respectivamente universalmente submersivo), y que un cambio de base de un
+morfismo universalmente submersivo da un morfismo universalmente submersivo
+(pues la definición está hecha precisamente para ello). Si~$fg$ es
+submersivo (respectivamente universalmente submersivo), también lo es~$f$.
+
+\begin{exemples}
+\label{IX.2.2}
+a) Un morfismo sobreyectivo que sea abierto o cerrado es submersivo; por
+tanto, un morfismo sobreyectivo universalmente cerrado o universalmente
+abierto es universalmente submersivo. Por ejemplo, \emph{un morfismo propio
+sobreyectivo es universalmente submersivo}. Por otra parte, \emph{un
+morfismo fielmente plano y cuasicompacto es universalmente submersivo}
+(\Ref{VIII.4.3}). Estos serán para nosotros los dos casos más importantes.
+\end{exemples}
+
+Pueden aplicarse
+\marginpar{232}
+a un morfismo submersivo o universalmente submersivo~$g\colon S'\to S$ los
+razonamientos de~\Ref{VIII.4.3}; se obtiene, en particular:
+\begin{proposition}
+\label{IX.2.3}
+Supongamos que~$g\colon S'\to S$ es submersivo. Entonces el siguiente
+diagrama de aplicaciones es exacto:
+$$
+\xymatrix@C=.5cm{\Ouv (S)\ar[r] &
+\Ouv (S')\ar@/^2pt/[r]\ar@/_2pt/[r] & \Ouv(S''),}
+$$
+donde~$S''=S'\times_S S'$ y~$\Ouv(X)$ designa el conjunto de las partes
+abiertas del preesquema~$X$.
+\end{proposition}
+
+\begin{proposition}
+\label{IX.2.4}
+Sean~$g\colon S'\to S$ un morfismo universalmente submersivo,
+$f\colon X\to Y$ un $S$-morfismo y~$f'\colon X'\to Y'$ el
+$S'$-morfismo que se deduce de él por cambio de base. Para que~$f$ sea
+\ifthenelse{\boolean{orig}}
+{abierta (respectivamente cerrada)}
+{abierto (respectivamente cerrado)}, basta con que~$f'$ lo sea. Para que~$f$
+sea \ifthenelse{\boolean{orig}}
+{universalmente abierta, respectivamente universalmente cerrada,
+respectivamente separada}
+{universalmente abierto, respectivamente universalmente cerrado,
+respectivamente separado}, es necesario y suficiente que~$f'$ lo sea. Si,
+además, $g$ es cuasicompacto y~$f$ localmente de tipo finito, para que~$f$
+sea propio es necesario y suficiente que~$f'$ lo sea.
+\end{proposition}
+
+Para este último punto, obsérvese que, si~$f'$ es propio y, por tanto,
+cuasicompacto, entonces~$f$ es cuasicompacto (\Ref{VIII.3.3}) y, por
+consiguiente, de tipo finito, puesto que es localmente de tipo finito. Por
+otra parte, es separado y universalmente cerrado por lo que precede; luego
+es propio.
+
+\begin{proposition}
+\label{IX.2.5}
+Sea~$S'$ un preesquema de tipo finito sobre el espectro~$S$ de un anillo
+local noetheriano completo. Supongamos que la fibra del punto cerrado~$s$
+de~$S$ sea finita, de modo que los anillos locales de~$S'$ en los puntos
+$s'$ de esta fibra sean finitos sobre~$A=\cal{O}_s$. Sea~$S''$ el esquema
+suma disjunta de los espectros de los~$\cal{O}_{S',s'}$ en cuestión,
+considerado como $S$-esquema finito. Para que~$g\colon S'\to S$ sea
+universalmente submersivo es necesario y suficiente que el morfismo
+estructural~$S''\to S'$ sea sobreyectivo.
+\end{proposition}
+
+Como existe un $S$-morfismo natural~$S''\to S'$ y todo morfismo finito
+sobreyectivo es universalmente submersivo por~\Ref{IX.2.2}, la condición
+enunciada es suficiente. Demostremos, pues, que, si~$S''\to S'$ no es
+sobreyectivo, entonces~$g$ no es universalmente submersivo. En efecto, sea
+$t$ un punto de~$S$ que no pertenece a la
+\marginpar{233}
+imagen de~$S''$; existe entonces
+un $S$-esquema~$T$, espectro de un anillo de valoración discreta, cuya
+imagen en~$S$ es~$\{s,t\}$. Obsérvese que la imagen de~$S''$ en~$S'$ es
+abierta, pues el morfismo~$S''\to S'$ es un isomorfismo local; además, esta
+imagen contiene~$S'_s$ y no corta a~$S'_t$. Se sigue que la preimagen de
+esta última en~$T'=S'\times_S T$ es \emph{abierta} y coincide con la
+preimagen del punto cerrado de~$T$. Esto
+demuestra que~$T'\to T$ no es submersivo y, por tanto, que~$S'\to S$ no es
+universalmente submersivo.
+
+\begin{remarque}
+\label{IX.2.6}
+Utilizando el criterio~\Ref{IV.6.3} para que una parte constructible de un
+espacio noetheriano sea abierta, se obtiene fácilmente el siguiente criterio
+valuativo para que un morfismo~$g\colon S'\to S$ \emph{de tipo finito}, con
+$S$ localmente noetheriano, sea universalmente submersivo: es necesario y
+suficiente que, para todo $S$-esquema~$T$ que sea el espectro de un anillo de
+valoración discreta, poniendo~$T'=S'\times_S T$, la preimagen en~$T'$ del
+punto cerrado de~$T$ no sea abierta.
+\end{remarque}

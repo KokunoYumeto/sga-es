@@ -1,0 +1,52 @@
+Para terminar este número, daremos la interpretación de la noción de recubrimiento étale que corresponde a su imagen intuitiva: debe haber el «número máximo» de puntos por encima del punto considerado $y\in Y$ y, en particular, no debe haber «varios puntos confundidos» por encima de~$y$. Para demostrar los resultados en este sentido con toda la generalidad deseable, admitiremos aquí la proposición~\Ref{I.10.7} que figura más abajo (cuya demostración aparecerá en el multiplodoque, cap.~IV, párr.~15, y utiliza la técnica de los conjuntos constructibles de Chevalley y un poco de teoría del descenso...).
+
+Un morfismo de tipo finito $f\colon X\to Y$ se dice \emph{universalmente abierto} si, para todo cambio de base $Y'\to Y$ (con $Y'$ localmente noetheriano), el morfismo $f'\colon X'=X\times_YY'\to Y'$ es abierto, \ie transforma abiertos en abiertos. Puede uno limitarse, por lo demás, al caso en que $Y'$ es de tipo finito sobre~$Y$ (e incluso al caso en que $Y'$ es de la forma $Y[t_1,\dots,t_r]$, donde los $t_i$ son indeterminadas). Un morfismo universalmente abierto es, \,\emph{a fortiori}, abierto (el recíproco es falso); por otra parte, si $f$ es abierto, siendo $X$ e~$Y$ irreducibles, todas las componentes de todas las fibras de~$f$ tienen la misma dimensión (a saber, la dimensión de la fibra genérica
+\marginpar{24}
+$f^{-1}(z)$, donde $z$ es el punto genérico de~$Y$). Finalmente, si $Y$ es normal, esta última condición implica ya que $f$ es \emph{universalmente} abierto (teorema de Chevalley). Se sigue, por ejemplo, que si $f\colon X\to Y$ es un morfismo \emph{cuasifinito}, con $Y$ normal e irreducible, entonces $f$ es universalmente abierto (o, equivalentemente, abierto) si y solo si toda componente irreducible de~$X$ domina a~$Y$. Recordemos también que, como un morfismo plano de tipo finito es abierto, también es universalmente abierto. Sentados estos preliminares, «recordemos» la siguiente
+
+\begin{proposition}
+\label{I.10.7}
+Sea $f\colon X\to Y$ un morfismo cuasifinito, separado y universalmente abierto. Para todo $y\in Y$, sea $n(y)$ el «número geométrico de puntos de la fibra $f^{-1}(y)$», igual a la suma de los grados separables de las extensiones residuales $\kres(x)/\kres(y)$, para los puntos $x\in f^{-1}(y)$. Entonces la función $y\mto n(y)$ sobre~$Y$ es semicontinua superiormente. Para que sea constante en un entorno del punto~$y$ (\ie para que se tenga $n(y)=n(z_i)$, donde los $z_i$ son los puntos genéricos de las componentes irreducibles de~$Y$ que contienen a~$y$), es necesario que exista un entorno $U$ de~$y$ tal que $X|U$ sea \emph{finito} sobre~$U$.\footnote{\Cf EGA~IV~15.5.1.}
+\end{proposition}
+
+\begin{corollaire}
+\label{I.10.8}
+Si $y\mto n(y)$ es constante e~$Y$ es geométricamente unirramoso,\footnote{Para la definición, \cf más abajo, n.º~\Ref{I.11}, p.~\pageref{I.11}.} las componentes irreducibles de~$X$ son disjuntas.
+\end{corollaire}
+
+\begin{proposition}
+\label{I.10.9}
+Sea $f\colon X\to Y$ un morfismo \emph{étale} separado. Con las notaciones de~\Ref{I.10.7}, la función $y\mto n(y)$ es semicontinua superiormente. Para que sea constante en un entorno del punto~$y$ (\ie para que se tenga $n(y)=n(z_i)$, donde los $z_i$ son los puntos genéricos de las componentes irreducibles de~$Y$ que contienen a~$y$), es necesario y suficiente que exista un entorno abierto $U$ de~$y$ tal que $X|U$ sea finito sobre~$U$, \ie que sea un \emph{recubrimiento étale} de~$U$.
+\end{proposition}
+
+\begin{corollaire}
+\label{I.10.10}
+Para que un morfismo étale separado $f\colon X\to Y$, con $Y$ conexo, sea finito (\ie haga de~$X$ un \emph{recubrimiento étale} de~$Y$), es necesario y suficiente que todas las fibras de~$f$ tengan el mismo número geométrico de puntos.
+\end{corollaire}
+
+En~\ifthenelse{\boolean{orig}}{\Ref{I.10.8}}{\Ref{I.10.7}}\ % La autoridad corrige la referencia 10.8 por 10.7.
+y su corolario no había hipótesis de normalidad sobre~$Y$. Si se añade tal hipótesis, se obtiene el enunciado más fuerte siguiente (tomado con frecuencia como definición de la no ramificación de un recubrimiento):
+
+\begin{theoreme}
+\label{I.10.11}
+Sea
+\marginpar{25}
+$f\colon X\to Y$ un morfismo \emph{cuasifinito} separado. Se supone que~$Y$ es \emph{irreducible}, que toda componente de~$X$ domina a~$Y$ y que $X$ es reducido (\ie que $\cal{O}_X$ no tiene elementos nilpotentes). Sea $n$ el grado de~$X$ sobre~$Y$ (suma de los grados, sobre el cuerpo~$K$ de~$Y$, de los cuerpos $K_i$ de las componentes irreducibles $X_i$ de~$X$). Sea $y$ un punto normal de~$Y$. Entonces el número geométrico $n(y)$ de puntos de~$X$ por encima de~$y$ es $\leq n$, y la igualdad se da si y solo si existe un entorno abierto $U$ de~$y$ tal que $X|U$ sea un \emph{recubrimiento étale} de~$U$.
+\end{theoreme}
+
+\ifthenelse{\boolean{orig}}
+{Siendo trivial el «solo si», demostremos el «si».}
+{La existencia de tal entorno étale implica trivialmente que $n(y)=n$; demostremos el recíproco.}% SGA1-CORR-0013: la autoridad intercambia los nombres de las dos implicaciones.
+Sea $z$ el punto genérico de~$Y$; se tiene $n(z)=$ (suma de los grados separables de los $K_i/K$) $\leq n$ y, por~\Ref{I.10.7}, se tiene $n(y)\leq n(z)\leq n$; la igualdad implica que $X|U$ es \emph{finito} sobre~$U$ para un entorno adecuado~$U$ de~$y$. Puede suponerse, por tanto, que $X$ es finito sobre~$Y$ y que la función $n(y')$ sobre~$Y$ es constante. Por último, según~\Ref{I.10.8}, $X$ es entonces la unión disjunta de sus componentes irreducibles y, para demostrar que es no ramificado en~$y$, se reduce uno al caso en que $X$ es irreducible y, por tanto, íntegro. Finalmente, puede suponerse que $Y=\Spec(\cal{O}_y)$. El teorema se reduce entonces al enunciado clásico siguiente:
+
+\begin{corollaire}
+\label{I.10.12}
+Sean $A$ un anillo local normal (noetheriano, como siempre) de cuerpo de fracciones~$K$; $L$ una extensión finita de~$K$ de grado~$n$ y grado separable~$n_s$; $B$ un subanillo de~$L$, finito sobre~$A$ y de cuerpo de fracciones~$L$; $\goth{m}$ el ideal maximal de~$A$; y $n'$ el grado separable de~$B/\goth{m}B$ sobre~$A/\goth{m}A=k$ ($=$ la suma de los grados separables de las extensiones residuales de este anillo). Se tiene $n'\leq n_s$ y, \,\emph{a fortiori}, $n'\leq n$. Esta última desigualdad es una igualdad si y solo si $B$ es no ramificado ($=$ étale) sobre~$A$.
+\end{corollaire}
+
+Solo queda demostrar que $n'=n$ implica que $B$ es étale sobre~$A$. Recordemos la demostración cuando $k$ es infinito: basta demostrar que $R=B/\goth{m}B$ es separable sobre~$k$; de no ser así, se seguiría (por un lema conocido) que existe un elemento $a$ de~$R$ cuyo polinomio minimal sobre~$k$ tiene grado $>n'$. Este elemento procede de un elemento $x$ de~$B$, cuyo polinomio minimal sobre~$K$ (como elemento de~$L$) tiene grado $\leq n$; por otra parte, este último tiene sus coeficientes en~$A$, pues $A$ es normal, y da, por reducción módulo~$\goth{m}$, un polinomio mónico $F\in k[t]$, de grado $\leq n=n'$, tal que $F(a)=0$, lo cual es absurdo.
+
+En
+\marginpar{26}
+el caso general (pudiendo ser finito~$k$), retomemos el lenguaje geométrico y consideremos $Y'=\Spec(A[t])$, que es fielmente plano sobre~$Y$, y el punto genérico $y'$ de la fibra $\Spec(k[t])$ de~$Y'$ sobre~$y$. Entonces $X$ es neto sobre~$Y$ en~$y$ si y solo si $X'=X\times_YY'=\Spec(B[t])$ es neto en~$y'$ sobre~$Y'$, como se comprueba de inmediato. Por otra parte, por la elección de~$y'$, su cuerpo residual es $k(t)$ y, por tanto, infinito. Como $y'$ es un punto normal de~$Y'$, se reduce uno al caso precedente.
+

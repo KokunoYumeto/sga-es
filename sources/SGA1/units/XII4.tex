@@ -1,0 +1,279 @@
+
+\section[Teoremas de comparación cohomológica]{Teoremas de comparación cohomológica y teoremas de existencia}
+\label{XII.4}
+\marginpar{326}
+
+El objeto de este número es volver a demostrar los resultados de
+\cite[\no 2 th\ptbl 5 y th\ptbl 6]{XII.3}; estos generalizan al caso de un
+esquema propio los teoremas establecidos en \cite[\no 12]{XII.10} cuando
+$X$ es proyectivo, y los extienden al caso relativo. En
+\cite[ch\ptbl VIII \no 3]{XII.7} se demuestran resultados más generales
+relativos a esquemas relativos propios sobre un espacio analítico.
+
+Recordemos que la cohomología de {\v{C}}ech utilizada en
+\cite[\no 12]{XII.10} coincide con la cohomología usual tanto en el caso
+algebraico como en el analítico (EGA~III 1.4.1 y
+\cite[II 5.10]{XII.5}).
+\subsection{}
+\label{XII.4.1}
+\setcounter{proposition}{1}% The first theorem in this source section is XII.4.2.
+Sea $f\colon X\to Y$ un morfismo de~$\CC$-esquemas localmente de tipo
+finito y consideremos el diagrama conmutativo
+$$
+\xymatrix{ X^\an \ar[r]^\varphi \ar[d]_{f^\an} & X \ar[d]^f
+\\ Y^\an \ar[r]^\psi & Y \quoi.}
+$$
+Si $F$ es un $\cal{O}_X$-módulo, para todo entero $p\geq0$ se tienen
+morfismos
+$$
+\R^p f_* F \lto{i} \R^p f_* (\varphi_* F^\an )
+\lto{j} \R^p (f\cdot\varphi)_* F^\an \lto{k} \psi_*
+(\R^p f_*^\an F^\an ) \quoi,
+$$
+donde $i$ se deduce del morfismo canónico $F\to\varphi_*F^\an$, y $j,k$
+son ``homomorfismos de borde'' de sucesiones espectrales de Leray. Al
+compuesto $k.j.i$ se le asocia un morfismo canónico
+\begin{equation*}
+\label{eq:XII.4.1.1}
+\tag{4.1.1} {\theta_p \colon (\R^p f_* F)^\an \to \R^p f_*^\an
+(F^\an )}
+\end{equation*}
+
+\begin{theoreme}
+\label{XII.4.2}
+Sean
+\marginpar{327}
+$f\colon X\to Y$ un morfismo propio de~$\CC$-esquemas localmente de tipo
+finito y $F$ un $\cal{O}_X$-módulo coherente. Entonces, para todo entero
+$p\geq0$, el morfismo~\eqref{eq:XII.4.1.1}
+$$
+\theta_p \colon (\R^p f_* F)^\an \to \R^p f_*^\an (F^\an)
+$$
+es un isomorfismo.
+\end{theoreme}
+
+1) \emph{Caso en que $f$ es proyectivo}. La demostración es análoga a la de
+\cite[\no 13]{XII.10}. Recordémosla brevemente. Nos reducimos al caso en
+que $X$ es un espacio proyectivo
+\ifthenelse{\boolean{orig}}
+{tipo $\PP^r_Y$}
+{de tipo $\PP^r_Y$}%
+~sobre~$Y$. Sean $\cal{Y}=Y^\an$ y $\cal{P}=\PP^r_\cal{Y}$; se demuestra
+primero que
+$$
+f_*^\an \cal{O}_\cal{P} = \cal{O}_\cal{Y} \quoi, \qquad \R^p f_*^\an
+(\cal{O}_\cal{P}) = 0 \qquad \text{para } p>0
+$$
+En efecto, para verificar las relaciones anteriores podemos reducirnos al
+caso en que $\cal{Y}$ es una bola $\cal{B}$ de un espacio afín
+$\cal{E}^n$. Consideremos el ``recubrimiento estándar'' $\{\cal{U}_i\}$
+de~$\cal{P}$ por $r+1$ abiertos isomorfos a
+$\cal{B}\times\cal{E}^r$. Como estos abiertos son de Stein, para todo
+entero $p\geq0$ se tienen isomorfismos
+$$
+\H^p (\{ \cal{U}_i \}, \cal{O}_\cal{P}) \isomto \H^p (\cal{P},
+\cal{O}_\cal{P})
+$$
+Podemos expresar entonces las secciones del haz estructural
+$\cal{O}_\cal{P}$ sobre los abiertos $\cal{U}_i$ y sobre sus intersecciones
+en términos de series de Laurent; un cálculo sencillo demuestra que
+$$
+\H^0 (\cal{P}, \cal{O}_\cal{P} ) \isomto \H^0 (\cal{Y},
+\cal{O}_\cal{Y} ) \quoi, \qquad \H^p (\cal{P}, \cal{O}_\cal{P} ) = 0
+\qquad \text{para } p>0
+$$
+La demostración concluye repitiendo \cite[\no 12 lema~5]{XII.10}, con los
+grupos de cohomología sustituidos por los haces de cohomología.
+
+2)
+\marginpar{328}
+\emph{Caso en que $f$ es propio}. Utilizamos EGA~III 3.1.2 para reducirnos
+al caso proyectivo. Sea $\cal{K}$ la categoría de los
+$\cal{O}_X$-módulos coherentes para los que $\theta_p$ es un isomorfismo
+para todo $p\geq0$. Basta demostrar que, para toda sucesión exacta
+$0\to F'\to F\to F''\to0$ dos de cuyos términos pertenecen a~$\cal{K}$,
+lo mismo ocurre con el tercero; que todo sumando directo de un objeto
+de~$\cal{K}$ pertenece a~$\cal{K}$; y que, para todo punto $x$ de~$X$,
+puede encontrarse un objeto $F$ de~$\cal{K}$ tal que $F_x\neq0$.
+
+\ifthenelse{\boolean{orig}}
+{El primera condición}
+{La primera condición}%
+~resulta de aplicar el lema de los cinco al siguiente diagrama conmutativo,
+cuyas filas son exactas:
+$$
+\xymatrix@=.7cm{ \ar[r] & (\R^p f_* F')^\an \ar[d] \ar[r] &(\R^p f_*
+F)^\an \ar[d] \ar[r] & (\R^p f_* F'')^\an \ar[d] \ar[r] &
+(\R^{p+1} f_* F' )^\an \ar[r] \ar[d] &\, \\ \ar[r] & \R^p
+f_*^\an F'^\an \ar[r] &\R^p f_*^\an F^\an \ar[r] & \R^p
+f_*^\an F''^\an \ar[r] & \R^{p+1} f_*^\an F'^\an \ar[r] &
+\quoi,}
+$$
+y la segunda condición se verifica de manera análoga.
+
+Para verificar la tercera condición, podemos limitarnos al caso en que $X$
+es un esquema irreducible con punto genérico~$x$. Podíamos haber supuesto
+desde el principio que~$Y$
+era noetheriano. Por el lema de Chow (EGA~II 5.6.1), existe un
+$Y$-esquema proyectivo~$X'$ y un morfismo proyectivo sobreyectivo
+$g\colon X'\to X$. Por otra parte, existe un entero~$n$ tal que
+$\R^p g_* (\cal{O}_{X'}(n))=0$ para todo $p>0$ y que el morfismo canónico
+$g^*g_*(\cal{O}_{X'}(n))\to\cal{O}_{X'}(n)$ es sobreyectivo
+(EGA~III 2.2.1). Si ponemos $F=g_*(\cal{O}_{X'}(n))$, el haz~$F$ posee la
+propiedad requerida. En efecto, $F_x\neq0$; además, como la sucesión
+espectral de Leray
+$$
+\R^p f_* (\R^q g_* (\cal{O}_{X'} (n))) \To \R^{p+q}
+(\ifthenelse{\boolean{orig}}{f.g}{f\cdot g})_* (\cal{O}_{X'} (n))
+$$
+es degenerada, se tiene un isomorfismo
+$$
+\R^p f_* F \isomto \R^p (\ifthenelse{\boolean{orig}}{f.g}{f\cdot g})_* (\cal{O}_{X'} (n))
+$$
+\marginpar{329}%
+Como en el caso algebraico, se tiene un isomorfismo canónico
+$$\R^p f_*^\an F^\an \isomto
+\R^p (\ifthenelse{\boolean{orig}}{f.g}{f\cdot g})_*^\an (\cal{O}_{X'}(n)^\an ),$$
+y el diagrama
+$$
+\xymatrix@C=1cm{
+(\R^p f_* F)^\an \ar[d]_{\theta_p} \ar[r]^-{\sim} & (\R^p (\ifthenelse{\boolean{orig}}{f.g}{f\cdot g})_* (\cal{O}_{X'} (n)))^\an \ar[d]_{\psi_p} \\
+\R^p f_*^\an F^\an \ar[r]^-{\sim} & \R^p (\ifthenelse{\boolean{orig}}{f.g}{f\cdot g})_*^\an
+(\cal{O}_{X'}(n)^\an)}
+$$
+es conmutativo. Por~1), $\psi_p$ es un isomorfismo; por tanto, también lo
+es~$\theta_p$, lo cual concluye la demostración.
+
+\begin{corollaire}
+\label{XII.4.3}
+Sean $X$ un $\CC$-esquema propio y $F$ un $\cal{O}_X$-módulo coherente.
+Entonces, para todo entero $p\geq0$, el morfismo canónico
+$$
+\H^p(X,F)\to \H^p(X^{\an},F^{\an})
+$$
+es un isomorfismo.
+\end{corollaire}
+
+\begin{theoreme}
+\label{XII.4.4}
+Sea $X$ un $\CC$-esquema propio. El funtor que asocia a cada
+$\cal{O}_X$-módulo coherente~$F$ su imagen inversa $F^\an$ sobre~$X^\an$
+es una equivalencia de categorías.
+\end{theoreme}
+
+1) \emph{El funtor es plenamente fiel}. Sean, en efecto, $F$ y $G$ dos
+$\cal{O}_X$-módulos coherentes. El morfismo canónico
+$$
+\Hom_{\cal{O}_X}(F,G)\to \Hom_{\cal{O}_{X^{\an}}}(F^{\an},G^{\an})
+$$
+se identifica con el morfismo canónico
+$$
+\H^0(X,\SheafHom_{\cal{O}_X}(F,G))\to
+\H^0(X^{\an},
+\ifthenelse{\boolean{orig}}
+{\SheafHom_{\cal{O}_X}(F,G)}
+{\SheafHom_{\cal{O}_{X^\an}}(F^\an,G^\an)})
+$$
+\marginpar{330}%
+(EGA~$0_{\textup{I}}$~6.7.6). Como $\SheafHom_{\cal{O}_X}(F,G)$ es
+coherente, de~\Ref{XII.4.3} resulta que este morfismo es biyectivo.
+
+2) \emph{El funtor es esencialmente sobreyectivo}. Cuando $X$ es
+proyectivo, la afirmación resulta de \cite[\no 12~th\ptbl 3]{XII.10}. El
+caso general se reduce al anterior mediante el lema de Chow
+(EGA~II~5.6.1). Sean, en efecto, $X'$ un $\CC$-esquema proyectivo,
+$f\colon X'\to X$ un morfismo proyectivo sobreyectivo y $U$ un abierto
+denso de~$X$ tal que $f$ induce un isomorfismo $f^{-1}(U)\simeq U$.
+Razonamos por inducción noetheriana sobre~$X$; podemos, pues, suponer que,
+para todo haz coherente $\cal{G}$ sobre~$X^\an$ para el cual existe un
+subconjunto cerrado $Y$ de~$X$, distinto de~$X$, que satisface
+$Y^\an\supset\Supp\cal{G}$, existe un haz coherente $G$ sobre~$X$ tal que
+$G^\an\simeq\cal{G}$.
+
+Sea $\cal{F}$ un haz coherente de $\cal{O}_{X^\an}$-módulos, y sean
+$\cal{K}$ y $\cal{L}$ los haces coherentes definidos por la exactitud de la
+sucesión
+$$
+0\to\cal{K}\to\cal{F}\to f_*^\an f^{\an *}\cal{F}\to\cal{L}\to 0
+$$
+Como $X'$ es proyectivo, existe un $\cal{O}_{X'}$-módulo coherente $F'$ tal
+que $F'^\an\simeq{f^\an}^*\cal{F}$; de~\Ref{XII.4.2} se deduce entonces
+un isomorfismo $(f_*F')^\an\simeq f_*^\an{f^\an}^*\cal{F}$. Como
+$\cal{K}|U^\an$ y $\cal{L}|U^\an$ son nulos, existen
+$\cal{O}_X$-módulos coherentes $K$ y $L$
+\ifthenelse{\boolean{orig}}
+{tal que}
+{tales que}%
+~$K^\an\simeq\cal{K}$ y $L^\an\simeq\cal{L}$. Por~1), el morfismo
+$f_*^\an{f^\an}^*\cal{F}\to\cal{L}$ procede de un único morfismo
+$f_*F'\to L$; sea $I=\Ker(f_*F'\to L)$. El haz $\cal{F}$ es entonces una
+extensión de~$I^\an$ por~$K^\an$, y basta ver que esta extensión procede
+\marginpar{331}
+por imagen inversa de una extensión de~$I$ por~$K$. Basta, por tanto,
+demostrar que el morfismo canónico
+\begin{equation*}
+\label{eq:XII.4.*}
+\tag{$*$}
+\ifthenelse{\boolean{orig}}
+{\Ext_{\cal{O}_X}^q(I,K)^\an}
+{\Ext_{\cal{O}_X}^q(I,K)}
+\isomto
+\Ext_{\cal{O}_{X^{\an}}}^q(I^{\an},K^{\an})\quad
+\ifthenelse{\boolean{orig}}{q\neq 1}{q=1}
+\end{equation*}
+es biyectivo. Ahora bien, se tienen isomorfismos
+$\mathbf{Ext}_{\cal{O}_X}^q(I,K)^\an\isomto
+\mathbf{Ext}_{\cal{O}_{X^{\an}}}^q(I^{\an},K^{\an})$
+para todo entero $q\geq0$ (EGA~$0_{\textup{III}}$~12.3.5), y un morfismo
+de sucesiones espectrales
+\begingroup
+\shorthandoff{>}% Spanish babel otherwise treats the Xy-pic arrow tip as a shorthand.
+$$
+\xymatrix@R=.7cm@C=.5cm{
+\H^p(X,\mathbf{Ext}_{\cal{O}_X}^q(I,K))\ar@{=>}[r]\ar[d] &
+\Ext_{\cal{O}_X}^{p+q}(I,K)\ar[d]\\
+\H^p(X^{\an},\mathbf{Ext}_{\cal{O}_{X^{\an}}}^q(I^{\an},K^{\an}))\ar@{=>}[r] & \Ext_{\cal{O}_{X^{\an}}}^{p+q}(I^{\an},K^{\an}).
+}
+$$
+\endgroup
+Este morfismo es un isomorfismo porque, por~\Ref{XII.4.3}, lo es en los
+términos $E^{pq}_2$, y esto demuestra la biyectividad de~$(*)$.
+
+\begin{corollaire}
+\label{XII.4.5}
+El funtor que asocia a cada $\CC$-esquema propio $X$ el espacio analítico
+$X^\an$ es plenamente fiel.
+\end{corollaire}
+
+Debemos demostrar que, si $X$ e $Y$ son dos $\CC$-esquemas propios, la
+aplicación canónica
+$$
+\Hom_{\CC}(X,Y)\to\Hom(X^{\an},Y^{\an})
+$$
+es biyectiva. Ahora bien, dar un morfismo de~$X$ en~$Y$ (\resp de
+$X^\an$ en $Y^\an$) equivale a dar su grafo, \ie un subesquema cerrado
+$Z$ de~$X\times Y$ (\resp un subespacio analítico cerrado $\othercal{Z}$
+de~$X^\an\times Y^\an$), tal que la restricción de la primera proyección
+$X\times Y\to X$ a~$Z$ (\resp la de
+$X^\an\times Y^\an\to X^\an$ a~$\othercal{Z}$) sea
+\marginpar{332}
+un isomorfismo. Como dar un subesquema cerrado de~$X\times Y$ (\resp un
+subespacio analítico cerrado de~$X^\an\times Y^\an$) equivale a dar un haz
+coherente de ideales de~$\cal{O}_{X\times Y}$ (\resp de
+$\cal{O}_{X^\an\times Y^\an}$), el corolario resulta de~\Ref{XII.4.4}.
+
+\begin{corollaire}
+\label{XII.4.6}
+Sea $X$ un $\CC$-esquema propio. El funtor que asocia a cada esquema
+finito (\resp finito étale) $X'$ sobre~$X$ el espacio analítico $X'^\an$
+es una equivalencia de la categoría de los esquemas finitos (\resp finitos
+étale) sobre~$X$ con la categoría de los espacios analíticos finitos
+(\resp finitos étale) sobre~$X^\an$.
+\end{corollaire}
+
+En efecto, dar un morfismo finito $X'\to X$ (\resp
+$X'^\an\to X^\an$) equivale a dar un haz coherente de álgebras sobre
+$\cal{O}_X$ (\resp sobre $\cal{O}_{X^\an}$)
+\cite[\no 19~\S 5~th\ptbl 2]{XII.4}. El corolario resulta, pues,
+de~\Ref{XII.4.4} en el caso sin paréntesis, y el caso entre paréntesis se
+deduce de él teniendo en cuenta~\Ref{XII.3.1}~(iii).

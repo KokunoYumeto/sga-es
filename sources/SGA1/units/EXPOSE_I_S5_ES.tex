@@ -1,0 +1,108 @@
+\section{La propiedad fundamental de los morfismos étales}
+\label{I.5}
+
+\begin{theoreme}
+\label{I.5.1}
+Sea $f\colon X\to Y$ un morfismo de tipo finito. Para que $f$ sea una inmersión abierta es necesario y suficiente que sea un morfismo \emph{étale y radicial}.
+\end{theoreme}
+
+Recordemos que radicial
+\index{radicial (morfismo)|hyperpage}%
+significa: inyectivo, con extensiones residuales radiciales (y también \ifthenelse{\boolean{orig}}{se}{se}\ % La autoridad corrige aquí «en» por «on».
+puede recordar que esto significa que el morfismo sigue siendo inyectivo después de todo cambio de base). La necesidad es trivial; queda la suficiencia. Daremos dos demostraciones distintas, la primera más breve y la segunda más elemental.
+
+1) Todo morfismo plano es abierto; por tanto, puede suponerse (sustituyendo $Y$ por~$f(X)$) que $f$ es un \emph{homeomorfismo} \ifthenelse{\boolean{orig}}{sobre}{sobre}. Después de todo cambio de base seguirá siendo cierto que \ifthenelse{\boolean{orig}}{$f$}{$f$}\ % La autoridad corrige aquí $f'$ por $f$.
+es plano, radicial y sobreyectivo, y por tanto un homeomorfismo, \emph{a fortiori} \ifthenelse{\boolean{orig}}{cerrado}{cerrado}.\ % La autoridad corrige aquí el acuerdo de «fermé».
+Así pues, $f$ es \emph{propio}. Por consiguiente, $f$ es \emph{finito} (referencia: teorema de Chevalley) y está definido por un haz coherente $\mathcal{B}$ de álgebras. El haz $\mathcal{B}$ es localmente libre y, además, en virtud de la hipótesis, tiene rango~$1$ en todas partes; por tanto, $X=Y$, c.q.d.
+
+2) Puede suponerse que $Y$ y $X$ son \emph{afines}. Se reduce además fácilmente a demostrar lo siguiente: si $Y=\Spec(A)$, con $A$ local, y si $f^{-1}(y)$ no es vacío (siendo $y$ el punto cerrado de~$Y$), entonces $X=Y$ (en efecto, esto implicará que todo $y\in f(X)$ posee un entorno abierto $U$ tal que $X|U=U$). Se tendrá $X=\Spec(B)$ y queremos demostrar que $A=B$. Para ello se reduce a demostrar la afirmación análoga sustituyendo $A$ por~$\hat A$ y $B$ por $B\otimes_A\hat A$ (teniendo en cuenta que $\hat A$ es fielmente plano sobre~$A$). Puede suponerse, pues, que $A$ es \emph{completo}. Sea $x$ el punto situado sobre~$y$; por el corolario~\Ref{I.2.2}, $\mathcal{O}_x$ es finito sobre~$A$ y, por tanto (al ser plano y radicial sobre~$A$), es idéntico a~$A$. Así pues, $X=Y\amalg X'$ (suma disjunta). Como $X$ es radicial sobre~$Y$, $X'$ es vacío. Hemos terminado.
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+\begin{corollaire}
+\label{I.5.2}
+Sea $f\colon X\to Y$ un morfismo que es una \emph{inmersión cerrada} y es \emph{étale}. Si $X$ es conexo, $f$ es un isomorfismo de~$X$ sobre una componente conexa de~$Y$.
+\end{corollaire}
+
+En efecto, $f$ es también una inmersión abierta. Se deduce:
+
+\begin{corollaire}
+\label{I.5.3}
+Sea
+\marginpar{7}
+$X$ un $Y$-esquema neto, con $Y$ conexo. Entonces toda sección de~$X$ sobre~$Y$ es un isomorfismo de~$Y$ sobre una componente conexa de~$X$. Hay, por tanto, una correspondencia biunívoca entre el conjunto de estas secciones y el conjunto de las componentes conexas $X_i$ de~$X$ tales que la proyección $X_i\to Y$ sea un isomorfismo (o, lo que es equivalente por~\Ref{I.5.1}, sobreyectiva y radicial). En particular, una sección queda determinada por su valor en un punto.
+\end{corollaire}
+
+Solo la primera afirmación requiere demostración; por~\Ref{I.5.2}, basta observar que una sección es una inmersión cerrada (pues $X$ es separado sobre~$Y$) y étale en virtud de~\Ref{I.4.8}.
+
+\begin{corollaire}
+\label{I.5.4}
+Sean $X$ e $Y$ dos preesquemas sobre~$S$, con $X$ neto y separado sobre~$S$ e $Y$ conexo. Sean $f$ y $g$ dos $S$-morfismos de~$Y$ en~$X$, y sea $y$ un punto de~$Y$. Supongamos que $f(y)=g(y)=x$ y que son idénticos los homomorfismos residuales $\kres(x)\to\kres(y)$ definidos por $f$ y~$g$ («$f$ y~$g$ coinciden geométricamente en~$y$»). Entonces $f$ y~$g$ son idénticos.
+\end{corollaire}
+
+Se sigue de~\Ref{I.5.3}, reduciendo al caso $Y=S$ mediante la sustitución de $X$ por $X\times_S Y$.
+
+He aquí una variante particularmente importante de~\Ref{I.5.3}.
+
+\begin{theoreme}
+\label{I.5.5}
+Sean $S$ un preesquema, $X$ e $Y$ dos $S$-preesquemas y $S_0$ un subpreesquema cerrado de~$S$ que tenga el mismo espacio subyacente que~$S$; sean $X_0=X\times_S S_0$ e $Y_0=Y\times_S S_0$ las «restricciones» de~$X$ e~$Y$ a~$S_0$. Supongamos que $X$ es étale sobre~$S$. Entonces la aplicación natural
+$$
+\Hom_S(Y,X)\to\Hom_{S_0}(Y_0,X_0)
+$$
+es \emph{biyectiva}.
+\end{theoreme}
+
+Se reduce de nuevo al caso $Y=S$, y entonces el resultado se sigue de la descripción «topológica» de las secciones de~$X/Y$ dada en~\Ref{I.5.3}.
+
+\begin{scholiestar}
+Este resultado comprende una afirmación de \emph{unicidad} y otra de \emph{existencia} de \emph{morfismos}. También puede expresarse (cuando $X$ e~$Y$ se toman ambos étales sobre~$S$) diciendo que el funtor $X\mto X_0$, de la categoría de los $S$-esquemas étales en la categoría de los $S_0$-esquemas étales, es \emph{plenamente fiel}, \ie establece una \emph{equivalencia} de la primera con una \emph{subcategoría plena} de la segunda. Veremos más adelante que incluso es una equivalencia entre la primera y la segunda (lo que constituirá un teorema de \emph{existencia de $S$-esquemas étales}).
+\end{scholiestar}
+
+La
+\marginpar{8}
+forma siguiente, aparentemente más general, de~\Ref{I.5.5} resulta a menudo cómoda:
+
+\begin{corollaire}[«Teorema de prolongación de levantamientos»]
+\label{I.5.6}
+\index{prolongación de levantamientos (teorema de)|hyperpage}%
+\index{teorema de prolongación de levantamientos|hyperpage}%
+Consideremos un diagrama conmutativo
+$$
+\xymatrix{
+X\ar[d]&\ar[l]Y_0\ar[d]\\
+S&\ar[l]Y
+}
+$$
+de morfismos, donde $X\to S$ es étale e $Y_0\to Y$ es una inmersión cerrada biyectiva. Entonces puede encontrarse un único morfismo $Y\to X$ que haga conmutativos los dos triángulos correspondientes.
+\end{corollaire}
+
+En efecto, sustituyendo $S$ por~$Y$ y $X$ por $X\times_S Y$, se reduce al caso $Y=S$, y entonces se trata del caso particular de~\Ref{I.5.5} con $Y=S$.
+
+Señalemos asimismo la siguiente consecuencia inmediata de~\Ref{I.5.1} (que no hemos \ifthenelse{\boolean{orig}}{dado}{dado}\ % La autoridad corrige «donné» por «donnée».
+como corolario~1 para no interrumpir la línea de ideas desarrollada después de~\Ref{I.5.1}):
+
+\begin{proposition}
+\label{I.5.7}
+Sean $X$ y $X'$ dos preesquemas de tipo finito y planos sobre~$Y$, y sea $g\colon X\to X'$ un $Y$-morfismo. Para que $g$ sea una inmersión abierta (\resp un isomorfismo) es necesario y suficiente que, para todo $y\in Y$, lo sea el morfismo inducido en las fibras
+$$
+g\otimes_Y\kres(y)\colon X\otimes_Y\kres(y)\to X'\otimes_Y\kres(y).
+$$
+\end{proposition}
+
+Basta demostrar la suficiencia; como esta es cierta para la noción de sobreyección, se reduce al caso de una inmersión abierta. Por~\Ref{I.5.1}, hay que comprobar que $g$ es \emph{radicial}, lo cual es trivial, y que es \emph{étale}, lo cual se sigue del corolario~\Ref{I.5.9} que figura más abajo.
+
+\begin{corollaire}
+\label{I.5.8}
+(Debería pasar al \No\Ref{I.3}.) Sean $X$ y $X'$ dos $Y$-preesquemas, $g\colon X\to X'$ un $Y$-morfismo, $x$ un punto de~$X$ e $y$ su proyección sobre~$Y$. Para que $g$ sea cuasifinito (\resp neto) en~$x$ es necesario y suficiente que lo mismo ocurra con $g\otimes_Y\kres(y)$.
+\end{corollaire}
+
+En efecto, las dos álgebras sobre~$k\bigl(g(x)\bigr)$ que hay que examinar para cerciorarse de que se tiene un morfismo cuasifinito, \resp neto, en~$x$ son las mismas para~$g$ y para $g\otimes_Y\kres(y)$.
+
+\begin{corollaire}
+\label{I.5.9}
+Con
+\marginpar{9}
+las notaciones de~\Ref{I.5.8}, supongamos que $X$ y~$X'$ son planos y de tipo finito sobre~$Y$. Para que $g$ sea plano (\resp étale) en~$x$ es necesario y suficiente que $g\otimes_Y\kres(y)$ lo sea.
+\end{corollaire}
+
+Para «plano», el enunciado solo se incluye como recordatorio: es uno de los criterios fundamentales de planitud\footnote{\Cf \Ref{IV.5.9}.}. Para «étale», se deduce de este, teniendo en cuenta~\Ref{I.5.8}.

@@ -1,0 +1,70 @@
+
+\ifthenelse{\boolean{orig}}
+{4) \textbf{Demostración de } 2)\kern2pt b)}
+{\Subsection*{4) Demostración de 2)\kern2pt b)}}
+
+4) 1. Caso en que $\Phi$ es un gerbe.
+
+Puede encontrarse un morfismo étale sobreyectivo de tipo finito $p
+\colon X_1 \to X$, tal que $p^*\Phi$ sea un gerbe trivial. Por
+descenso, como en 3)\kern2pt2, se ve que basta demostrar el teorema
+para $X_1$, $X_1\times_X X_1$ y
+\marginpar{403}
+$X_1\times_X X_1\times_X X_1$. Se reduce, pues, al caso en que
+$\Phi$ es el gerbe de los torsores bajo un haz de grupos
+constructible~$F$, cuyas fibras tienen orden primo con las
+características residuales de~$S$.
+
+Según SGA~4 IX~2.14, puede encontrarse una familia finita de
+morfismos finitos $p_i \colon Z_i \to X$ y, para cada $i$, un
+haz de grupos constante finito $C_i$, de orden primo con las
+características residuales de~$S$, de modo que se tenga un
+\ifthenelse{\boolean{orig}}
+{morfismo}
+{monomorfismo}
+$$
+j\colon F \to \prod_{i} p_{i*}C_i=G \quoi.
+$$
+Sea $\Phi_i$ el stack de los torsores bajo~$C_i$ y $\Psi$ el stack de
+los torsores bajo~$G$. Resulta de 2)\kern2pt a) que, tras restringir
+$S$ a un abierto no vacío, puede suponerse que los $(C_i,fp_i)$ son
+cohomológicamente propios relativamente a~$S$ en dimensión
+$\leqslant 1$ y que los stacks $f_*p_{i*}\Phi_i$ son
+$1$-constructibles. Resulta entonces de~\Ref{XIII.1.9} que los
+$(p_{i*}C_i,f)$ son cohomológicamente propios relativamente a~$S$
+en dimensión $\leqslant 1$; lo mismo vale, por tanto, para~$(G,f)$.
+Además, como $p_{i*}\Phi_i$ es equivalente al stack de los torsores
+bajo el grupo $p_{i*}C_i$ (SGA~4 VIII~5.8), se ve que $f_*\Psi$ es
+$1$-constructible.
+
+Como $\R^1f_*G$ es constructible, puede encontrarse un haz
+representable por un $Y$-esquema étale de tipo finito~$T$ y un
+epimorfismo
+$$
+a \colon T \to \R^1f_*G
+$$
+(SGA~4 IX~2.7); además, puede suponerse que la imagen de la sección
+identidad de~$T(T)$ está definida por un torsor~$Q$ sobre~$X\times_Y
+T=X_T$, bajo~$G|X_T$. Sean $f_T \colon X_T \to T$ el morfismo
+canónico, $F_T=F|X_T$, etc. Según 1)\kern2pt b), tras restringir
+$S$ a un abierto no vacío, puede suponerse que $(Q/F_T,f_T)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ y que $f_{T*}(Q/F_T)$ es constructible. Resulta entonces
+de~\Ref{XIII.3.1.2} que
+\ifthenelse{\boolean{orig}}
+{$f_*\Psi$ es constructible.}
+{$f_*\Phi$ es $1$-constructible.}
+
+Demostremos que $(F,f)$ es cohomológicamente propio relativamente a
+\marginpar{404}
+~$S$ en dimensión $\leqslant 1$. Según \Ref{XIII.1.13}~2), basta
+demostrar que, para todo esquema $Y_1$ étale sobre~$Y$ y para todo
+\ifthenelse{\boolean{orig}}
+{torsor $Q_1$ sobre~$X_1=X\times_Y Y_1$,}
+{torsor $Q_1$ bajo~$G_1$ sobre~$X_1=X\times_Y Y_1$,}
+si
+$f_1 \colon X_1 \to Y_1$ es el morfismo canónico, entonces
+$(Q_1/F_1,f_1)$ es cohomológicamente propio relativamente a~$S$ en
+dimensión $\leqslant 0$. Ahora bien, por definición de~$T$, $Q_1$ es,
+localmente para la topología étale de~$Y_1$, imagen inversa de~$Q$,
+lo que demuestra nuestra reducción.

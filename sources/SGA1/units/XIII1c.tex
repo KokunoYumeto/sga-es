@@ -1,0 +1,64 @@
+
+\begin{proposition}
+\label{XIII.1.6}
+Sean $f\colon X\to Y$ y $g\colon Y\to Z$ dos $S$-morfismos,
+y sea~$\Phi$ un stack sobre~$X$.
+\begin{enumerate}
+\item[1)] Supongamos que $(\Phi,f)$ y $(f_*\Phi,g)$ son
+cohomológicamente propios relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp $\leqslant 0$, \resp $\leqslant 1$). Entonces
+lo mismo ocurre con~$(\Phi,gf)$.
+\item[2)] Supongamos que $(\Phi,gf)$ es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leqslant -1$ (\resp que $(\Phi,gf)$
+es cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 0$ y $(\Phi,f)$ cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant -1$, \resp que $(\Phi,gf)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant 1$ y $(\Phi,f)$ cohomológicamente propio relativamente
+a~$S$ en dimensión $\leqslant 0$). Entonces $(f_*\Phi,g)$ es
+cohomológicamente propio relativamente a~$S$ en dimensión
+$\leqslant -1$ (\resp en dimensión $\leqslant 0$, \resp en dimensión
+$\leqslant 1$).
+\end{enumerate}
+\end{proposition}
+
+Para todo $S$-esquema~$S'$, considérese el diagrama siguiente, en el
+que todos los cuadrados son cartesianos:
+\begingroup
+\renewcommand{\thesubsection}{\theproposition}% La etiqueta fuente pertenece al ítem XIII.1.6.
+\begin{equation*}
+\label{eq:XIII.1.6.1}
+\tag{\thesubsection.1}
+\begin{array}{c}
+\xymatrix{ X' \ar[r]^{f'} \ar[d]_h & Y'
+\ar[r]^{g'} \ar[d]_k & Z' \ar[r] \ar[d]_{m} & S' \ar[d] \\ X \ar[r]^f
+& Y \ar[r]^g & Z \ar[r] & \,S. }
+\end{array}
+\end{equation*}
+\endgroup
+\ifthenelse{\boolean{orig}}
+{el\space}
+{El\space}%
+morfismo canónico
+$$
+m^*(g_*f_*\Phi)\to g'_*f'_*(h^*\Phi)
+$$
+se identifica
+\marginpar{355}
+con el compuesto de los morfismos canónicos
+$$
+m^*(g_*f_*\Phi)\lto{i}g'_*(k^*f_*\Phi)
+\lto{j}g'_*f'_*(h^*\Phi).
+$$
+\begin{enumerate}
+\item[1)] La hipótesis implica que~$i$ y~$j$ son fieles
+(\resp plenamente fieles, \resp equivalencias); por tanto, lo mismo
+ocurre con~$ji$.
+\item[2)] La hipótesis implica que~$ji$ es fiel (\resp que~$ji$ es
+\ifthenelse{\boolean{orig}}
+{plenamnete\space}
+{plenamente\space}%
+fiel y~$j$ fiel, \resp que~$ji$ es una equivalencia y~$j$ plenamente
+fiel); de ello resulta que~$i$ es fiel (\resp plenamente fiel, \resp una
+equivalencia).
+\end{enumerate}

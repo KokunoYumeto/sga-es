@@ -1,0 +1,1936 @@
+
+\clearpage
+\pageoriginale
+
+\SGAExposeBookmark{XIII}{El formalismo de los ciclos evanescentes}
+\begin{center}
+{\large\textbf{SGA 7}}\\[1.5em]
+{\Large\underline{EXPOSÉ XIII}}\\[2.5em]
+{\Large\underline{EL FORMALISMO DE LOS CICLOS EVANESCENTES}}\\[1.5em]
+{\large\underline{por P. DELIGNE}}
+\end{center}
+
+\bigskip
+\noindent\textbf{Índice de la fuente}
+\begin{center}
+\begin{tabular}{@{}llr@{}}
+Introducción && 2\\
+\S1. & Haces de conjuntos & 6\\
+1.1 & Haces galoisianos & 6\\
+1.2 & El topos $Y\times_s S$ & 8\\
+1.3 & El funtor $\Psi$ & 13\\
+1.4 & La variación & 16\\
+\S2. & Ciclos evanescentes & 17\\
+2.1 & El funtor $R\Psi$ & 17\\
+2.2 & Una compatibilidad (morfismos traza) & 26\\
+2.3 & Teorema de finitud (en característica igual a cero) & 29\\
+2.4 & Singularidades aisladas & 30
+\end{tabular}
+\end{center}
+
+\pageoriginale
+
+\bigskip
+\noindent\underline{Introducción}
+
+En esta exposición retomamos el formalismo introducido en el n.º~2 del Exposé~I
+de Grothendieck. El único punto nuevo es la introducción del análogo
+algebraico de la \underline{variación} de la teoría clásica.
+
+La imagen topológica que tengo presente es la siguiente. Sea $X$ un espacio
+analítico, sea $D\subset\mathbb C$ un disco de centro $0$, pongamos
+$D^*=D\setminus\{0\}$ y sea $f:X\longrightarrow D$ un morfismo propio (el
+caso no propio se considerará más adelante). Reemplacemos $D$ por un disco
+suficientemente pequeño de centro $0$, reemplacemos $X$ por la imagen inversa
+de ese pequeño disco y sigamos denotando el resultado por
+$f:X\longrightarrow D$. Según la variante analítica compleja del teorema de
+isotopía de Thom, $f^{-1}(D^*)$ es un fibrado topológico sobre $D^*$. No sé
+si siempre puede construirse un par $(\Gamma,r)$ del tipo que se describe a
+continuación, pero parece verosímil que así sea.
+
+\begin{enumerate}[label=(\alph*),leftmargin=2.6em]
+\item $\Gamma$ es un sistema localmente coherente de trivializaciones locales
+del fibrado $f^{-1}(D^*)$ sobre $D^*$. En otras palabras, $\Gamma$ define una
+trivialización $\pi_1(D^*)$-equivariante de la imagen inversa de $X$ sobre un
+recubrimiento universal $\widetilde D^*$ de $D^*$.
+
+\item $r$ es una retracción de $X$ sobre la fibra especial
+$X_0=f^{-1}(0)$, compatible con $\Gamma$: si, sobre un abierto conexo $U$ de
+$D^*$, $\Gamma$ identifica $X_U=f^{-1}(U)$ con $X_1\times U$, entonces
+$r=r(x_1,u)$ es independiente de $u$.
+\end{enumerate}
+
+Supongamos dado $(X,f,\Gamma,r)$. Sea $t\in D$ y sea
+$X_t=f^{-1}(t)$ la «fibra general». El fibrado $\varphi^*X$, obtenido de
+$X/D$ por cambio de base mediante
+\begin{equation*}
+\varphi:[0,1]\longrightarrow D^*,
+\qquad x\longmapsto \exp(2\pi i x)\,t,
+\end{equation*}
+queda trivializado por $\Gamma$. La \underline{monodromía}
+$T:X_t\longrightarrow X_t$ es el homeomorfismo
+\begin{equation*}
+X_t=(\varphi^*X)_0\xrightarrow[\Gamma]{\sim}
+(\varphi^*X)_1=X_t.
+\end{equation*}
+Sea $r_t:X_t\longrightarrow X_0$ la restricción de $r$ a $X_t$. Entonces
+$r_tT=r_t$. Se reconstruye $(X,f)$ a partir de $(X_t,X_0,T,r_t)$ como sigue:
+\begin{enumerate}[label=(\alph*),leftmargin=2.6em]
+\item se identifican mediante $T$ los extremos $X_t\times\{0\}$ y
+$X_t\times\{1\}$ de $X_t\times[0,1]$, obteniéndose
+$f':X'\longrightarrow S^1$;
+\item $r_t$ define $r':X'\longrightarrow X_0$, y $(X,f)$ se identifica con
+el morfismo de conos
+\begin{equation*}
+\operatorname{cone}(f'):
+\operatorname{cone}(r':X'\longrightarrow X_0)
+\longrightarrow D=\operatorname{cone}(S^1\longrightarrow\mathrm{pt}).
+\end{equation*}
+\end{enumerate}
+
+\pageoriginale
+
+Pongamos $\Psi=(r,f):X\longrightarrow X_0\times D$. Las imágenes directas
+superiores de Leray $R^i\Psi_*\mathbb Z$ satisfacen la condición siguiente:
+
+\begin{quote}
+(*) El espacio $D^*$ está recubierto por abiertos $U$ tales que la
+restricción del haz $F$ a $X_0\times U$ proviene, por imagen inversa, de un
+haz sobre $X_0$.
+\end{quote}
+
+\medskip
+\noindent\underline{Construcción 0.1.}\quad
+\underline{Los haces $F$ sobre $X_0\times D$ que satisfacen (*) se
+identifican con los sistemas $(F_0,F_t,T,\alpha)$ en los que}
+\begin{enumerate}[label=\alph*),leftmargin=2.5em]
+\item \underline{$F_0$ es un haz sobre $X_0$};
+\item \underline{$F_t$ es un haz sobre $X_0$, provisto de una acción del
+generador $T$ de $\pi_1(D^*,t)$};
+\item \underline{$\alpha$ es un morfismo de $F_0$ al haz de invariantes por
+$T$ de $F_t$}.
+\end{enumerate}
+
+Sea $G$ un haz sobre $X_0\times D^*$ que satisface (*), y sea
+$\widetilde D^*$ el recubrimiento universal de $D^*$, con punto base $t$.
+La imagen inversa de $G$ sobre $X_0\times\widetilde D^*$ proviene, de una y
+solo una manera, de un haz $G_t$ sobre $X_0$. El haz $G_t$ está provisto de
+una acción de $\pi_1(D^*,t)$, y $G$ se obtiene de
+$\operatorname{pr}_1^*G_t$ sobre $X_0\times\widetilde D^*$ tomando el
+cociente por $\pi_1(D^*,t)$.
+
+Un haz $F$ sobre $X_0\times D$ queda determinado por
+\begin{enumerate}[label=\arabic*),leftmargin=2.5em]
+\item su restricción $F_0$ a $X_0$;
+\item su restricción $G$ a $X_0\times D^*$;
+\item un morfismo $\alpha:F_0\longrightarrow i^*j_*G$, donde
+$i:X_0\hookrightarrow X_0\times D$ y
+$j:X_0\times D^*\hookrightarrow X_0\times D$.
+\end{enumerate}
+Si $F$ satisface (*), entonces $(G_t,T)$ describe $G$, y de ello se sigue la
+descripción afirmada de $F$.
+
+Para los haces $R^i\Psi_*\mathbb Z$ se tiene
+\begin{equation*}
+(R^i\Psi_*\mathbb Z)_0=
+\begin{cases}
+\mathbb Z, & i=0,\\
+0, & i>0,
+\end{cases}
+\end{equation*}
+mientras que, para $i>0$, los $(R^i\Psi_*\mathbb Z)_t$ merecen el nombre de
+\underline{haces de ciclos evanescentes} (véase la discusión al comienzo del
+párrafo~2 del Exposé~I).
+
+\pageoriginale
+
+Esta discusión solo resulta útil después de afinarla pasando a la categoría
+derivada: los $R^i\Psi_*\mathbb Z$ se obtienen de un objeto de
+$D^+(X_0\times D)$ y, más precisamente, de un objeto
+$R\Psi_*\mathbb Z$ de la categoría derivada de la categoría de los haces
+abelianos sobre $X_0\times D$ que satisfacen (*). Este objeto determina no
+solo los haces de ciclos evanescentes y su monodromía, sino también los
+morfismos clásicos de «variación» (véanse 1.4 y XIV, 3.1).
+
+Definiremos su análogo en geometría algebraica. Si $S$ es un rasgo
+estrictamente henseliano y $f:X\longrightarrow S$ es un morfismo de esquemas,
+definiremos un objeto $R\Psi(\mathbb Z/\ell^n)$ de la categoría derivada de
+la categoría de los haces abelianos sobre el topos producto
+$(X_0)_{\mathrm{et}}\times S_{\mathrm{et}}$. Un haz sobre este topos puede
+interpretarse como un sistema $(F_0,F_t,T,\alpha)$ en el que
+\begin{enumerate}[label=\alph*),leftmargin=2.5em]
+\item[$\alpha$)] $F_0$ es un haz sobre $X_0$;
+\item[$\beta$)] $F_t$ es un haz sobre $X_0$, provisto de una acción continua $T$ del
+grupo de inercia $I$;
+\item[$\gamma$)] $\alpha$ es un morfismo de $F_0$ al haz de invariantes por $I$ de
+$F_t$.
+\end{enumerate}
+
+Tendremos que trabajar en un marco un poco más general que el descrito arriba:
+\begin{enumerate}[label=\alph*),leftmargin=2.5em]
+\item La construcción de $R\Psi(\mathbb Z/\ell^n)$ no exige que $f$ sea
+propio. Para una interpretación topológica se repetiría la construcción
+precedente tras reemplazar $X$ por un entorno de la fibra especial $X_0$.
+
+\item Para construir $R\Psi(\mathbb Z/\ell^n)$ y demostrar sus propiedades,
+hay que considerar no solo el haz constante $\mathbb Z/\ell^n$, sino también
+haces generales e incluso complejos de haces.
+
+\item Cuando no se supone separablemente cerrado el cuerpo residual $k$ del
+rasgo henseliano $S$, hay que reemplazar el topos producto
+$(X_0)_{\mathrm{et}}\times S_{\mathrm{et}}$ por el topos producto fibrado
+\begin{equation*}
+(X_0)_{\mathrm{et}}
+\times_{\operatorname{Spec}(k)_{\mathrm{et}}}S_{\mathrm{et}}.
+\end{equation*}
+El lector al que desagraden los productos $2$-fibrados de topoi puede tomar
+como definición de este topos la descripción galoisiana de 1.2.4.
+\end{enumerate}
+
+\pageoriginale
+
+\medskip
+\noindent 0.2. \underline{Notación y terminología}.
+
+\begin{description}
+\item[(0.2.1) \underline{rasgo}:]
+el espectro de un anillo de valoración discreta.
+
+\item[(0.2.2) \underline{henseliano}:]
+para un esquema, el espectro de un anillo local henseliano.
+
+\item[(0.2.3) \underline{estrictamente henseliano}:]
+para un anillo, henseliano con cuerpo residual separablemente cerrado; para
+un esquema, el espectro de tal anillo.
+
+\item[(0.2.4) \underline{punto geométrico} de $S$:]
+un morfismo $\bar x:\operatorname{Spec}(\bar k)\longrightarrow S$ cuya imagen
+es $x\in S$, donde $k(\bar x)=_{\mathrm{def}}\bar k$ es una clausura
+separable de $\kappa(x)$. Se dice que $\bar x$ está localizado en $x$. Por
+abuso de lenguaje, llamaremos a veces también punto geométrico a un morfismo
+$\bar x:\operatorname{Spec}(\bar k)\longrightarrow S$ cuando $\bar k$ sea
+una extensión separablemente cerrada de $\kappa(x)$; tal morfismo se
+factoriza de manera única a través de un punto geométrico de $S$ en sentido
+propio.
+
+\item[(0.2.5) $s,\eta,\bar s,\bar\eta,\bar S$:]
+Si $S=\operatorname{Spec}(V)$ es un rasgo henseliano, denotaremos normalmente
+por $s$ el punto cerrado de $S$, por $\eta$ su punto genérico, por $\bar\eta$
+un punto geométrico genérico de $S$ (localizado en $\eta$), y por $\bar s$ el
+punto geométrico correspondiente localizado en $s$ (I, 0.0.3). Sea $\bar S$
+el espectro de la normalización de $V$ en $k(\bar\eta)$; su cuerpo residual es
+una extensión inseparable de $k(\bar s)$. Escribiremos
+$\operatorname{Gal}(\bar\eta/\eta)$ para el grupo de Galois de
+$k(\bar\eta)$ sobre $k(\eta)$, y análogamente para $s$. Se tiene una sucesión
+exacta
+\begin{equation*}
+0\longrightarrow I\longrightarrow
+\operatorname{Gal}(\bar\eta/\eta)\longrightarrow
+\operatorname{Gal}(\bar s/s)\longrightarrow0,
+\end{equation*}
+donde $I$ es el grupo de inercia.
+
+\item[(0.2.6) \underline{haz}:]
+sobre un esquema $X$, significa siempre un haz sobre el sitio étale
+$X_{\mathrm{et}}$ de $X$.
+
+\item[(0.2.7) \underline{primo a}:]
+un haz de torsión $F$ sobre un esquema $S$ (o un grupo abeliano de torsión
+$F$) es primo a las características residuales de $S$ si, para todo
+$s\in S$, la multiplicación por el exponente característico de $k(s)$ es un
+automorfismo de $F$.
+\end{description}
+
+\pageoriginale
+
+\bigskip
+\noindent 1. \underline{Haces de conjuntos}
+
+Los haces de ciclos evanescentes se definirán como valores de funtores
+derivados del funtor exacto a izquierda $\Psi$, definido en el n.º~3 para
+todo haz de conjuntos.
+
+\medskip
+\noindent 1.1. \underline{Haces galoisianos}.
+
+\medskip
+\noindent 1.1.1. Sea $Y$ un esquema sobre un cuerpo $k$ de clausura separable
+$\bar k$, y pongamos $\bar Y=Y\otimes_k\bar k$. Sea $G$ un grupo profinito y
+sea
+\begin{equation*}
+u:G\longrightarrow\operatorname{Gal}(\bar k/k)
+\end{equation*}
+un homomorfismo continuo de $G$ al grupo de Galois de $\bar k$ sobre $k$. El
+grupo de Galois $\operatorname{Gal}(\bar k/k)$ actúa por la izquierda sobre
+$\bar Y$ por transporte de estructura. El grupo $G$ actúa sobre $\bar Y$ a
+través de $u$.
+
+Sea $\mathcal F$ un haz de conjuntos sobre (el sitio étale de) $\bar Y$. Una
+acción de $G$ sobre $\mathcal F$ \underline{compatible} con la acción de $G$
+sobre $\bar Y$ es una acción de $G$ por automorfismos del par
+$(\bar Y,\mathcal F)$ que induce la acción dada sobre $\bar Y$. En otras
+palabras, es un sistema de isomorfismos
+\begin{equation*}
+\sigma(g):u(g)_*\mathcal F\longrightarrow\mathcal F
+\end{equation*}
+que satisface $\sigma(gh)=\sigma(g)\,\sigma(h)$. Si $G$ actúa sobre
+$\mathcal F$, entonces, para todo $U$ étale sobre $Y$, con
+$\bar U=U\otimes_k\bar k$ étale sobre $\bar Y$, el grupo $G$ actúa sobre
+$\mathcal F(\bar U)$.
+
+\medskip
+\noindent\underline{Definición 1.1.2.}\quad
+\underline{Diremos que $G$ actúa continuamente sobre $\mathcal F$ si, para
+todo $U$ cuasicompacto y étale sobre $Y$, la acción de $G$ sobre el conjunto
+discreto $\mathcal F(\bar U)$ es continua.}
+
+Sería equivalente considerar únicamente los $U$ afines.
+
+Si $\mathcal F$ es un haz de conjuntos sobre $Y$, con imagen inversa
+$\bar{\mathcal F}$ sobre $\bar Y$, entonces
+$\operatorname{Gal}(\bar k/k)$ actúa sobre $\bar{\mathcal F}$ por transporte
+de estructura, compatiblemente con su acción sobre $\bar Y$.
+
+\medskip
+\noindent\underline{Recordatorio 1.1.3.}
+\begin{enumerate}[label=(\roman*),leftmargin=2.7em]
+\item \underline{La acción de $\operatorname{Gal}(\bar k/k)$ sobre
+$\bar{\mathcal F}$ es continua.}
+
+\pageoriginale
+
+\item \underline{El funtor}
+\begin{equation*}
+\mathcal F\longmapsto\bar{\mathcal F},
+\end{equation*}
+\underline{donde $\bar{\mathcal F}$ está provisto de la acción de
+$\operatorname{Gal}(\bar k/k)$, es una equivalencia de la categoría de los
+haces de conjuntos sobre $Y$ con la categoría de los haces de conjuntos sobre
+$\bar Y$ provistos de una acción continua de $\operatorname{Gal}(\bar k/k)$
+compatible con la acción de $\operatorname{Gal}(\bar k/k)$ sobre $\bar Y$.}
+\end{enumerate}
+
+Escribamos $\bar k$ como límite directo de extensiones galoisianas finitas
+$k_i$. Sean
+\begin{equation*}
+\varphi_i:Y_i=Y\otimes_k k_i\longrightarrow Y,
+\qquad
+\bar\varphi:\bar Y\longrightarrow Y
+\end{equation*}
+las proyecciones. Para $U$ étale sobre $Y$, supuesto afín, pongamos
+$U_i=U\otimes_k k_i$. Entonces
+\begin{equation*}
+\bar{\mathcal F}(\bar U)
+=\varinjlim_i(\varphi_i^*\mathcal F)(U_i).
+\end{equation*}
+Sobre $(\varphi_i^*\mathcal F)(U_i)$, el grupo
+$\operatorname{Gal}(\bar k/k)$ actúa a través de
+$\operatorname{Gal}(k_i/k)$, lo que demuestra (i).
+
+El funtor de (ii) tiene por adjunto a derecha el funtor
+\begin{equation*}
+\mathcal G\longmapsto
+(\bar\varphi_*\mathcal G)^{\operatorname{Gal}(\bar k/k)}.
+\end{equation*}
+Para todo $\mathcal F$ sobre $Y$ se tiene
+\begin{equation*}
+\bar\varphi_*\bar\varphi^*\mathcal F
+=\varinjlim_i\varphi_{i*}\varphi_i^*\mathcal F.
+\end{equation*}
+Por tanto, para demostrar que
+\begin{equation*}
+\mathcal F\xrightarrow{\sim}
+(\bar\varphi_*\bar\varphi^*\mathcal F)^{
+  \operatorname{Gal}(\bar k/k)},
+\end{equation*}
+basta demostrar, para todo $i$, que
+\begin{equation*}
+\mathcal F\xrightarrow{\sim}
+(\varphi_{i*}\varphi_i^*\mathcal F)^{
+  \operatorname{Gal}(k_i/k)}.
+\end{equation*}
+Basta incluso demostrar que esta flecha se convierte en un isomorfismo tras
+extender los escalares de $k$ a $k_i$; entonces
+$\operatorname{Spec}(k_i)$ se convierte en una suma de copias de
+$\operatorname{Spec}(k)$ permutadas de manera simplemente transitiva por
+$\operatorname{Gal}(k_i/k)$, y la afirmación se vuelve trivial.
+
+El funtor exacto de (ii) es, pues, plenamente fiel. Para concluir queda
+comprobar que la flecha
+\begin{equation*}
+\bar\varphi^*(\bar\varphi_*\mathcal G)^{
+  \operatorname{Gal}(\bar k/k)}\longrightarrow\mathcal G
+\end{equation*}
+es un epimorfismo. Sea $\bar\varphi_i:\bar Y\longrightarrow Y_i$. La
+hipótesis implica que
+\begin{equation*}
+\varinjlim_i
+\bar\varphi_i^*(\bar\varphi_{i*}\mathcal G)^{
+  \operatorname{Gal}(\bar k/k_i)}
+\longrightarrow\mathcal G
+\end{equation*}
+\pageoriginale
+
+es un epimorfismo.
+
+Se tiene
+\begin{equation*}
+\bar\varphi^*(\sisi{\varphi_*}{\bar\varphi_*}\mathcal G)^{
+  \operatorname{Gal}(\bar k/k)}
+=
+\bar\varphi_i^*\!\left(
+  \varphi_i^*\varphi_{i*}
+  \left((\bar\varphi_{i*}\mathcal G)^{
+    \operatorname{Gal}(\bar k/k_i)}\right)^{
+    \operatorname{Gal}(k_i/k)}
+\right),
+\end{equation*}
+y la conclusión se sigue observando, mediante el mismo argumento de descenso
+galoisiano que arriba, que para $\mathcal G'$ sobre $Y_i$, provisto de una
+acción de $\operatorname{Gal}(k_i/k)$ compatible con su acción sobre $Y_i$,
+se tiene
+\begin{equation*}
+\varphi_i^*(\varphi_{i*}\mathcal G')^{
+  \operatorname{Gal}(k_i/k)}
+\xrightarrow{\sim}\mathcal G'.
+\end{equation*}
+
+\subsection*{\texorpdfstring{1.2. El topos $Y\times_s S$}{1.2. El topos Y por S sobre s}}
+
+\subsubsection*{1.2.1.}
+Sea $S$ un esquema local henseliano de punto cerrado
+$i:s\hookrightarrow S$. El funtor
+\begin{equation*}
+S'\longmapsto S'\times_Ss=i^*S'
+\end{equation*}
+es una equivalencia de la categoría de los $S$-esquemas finitos étale $S'$ con
+la categoría de los $s$-esquemas finitos étale $s'$ (espectros de
+$k(s)$-álgebras étale). El funtor inverso $\mathrm{sp}^*$, del sitio étale de
+$s$ al sitio étale de $S$, es un morfismo de sitios
+\begin{equation*}
+\mathrm{sp}:S\longrightarrow s,
+\end{equation*}
+el \underline{morfismo de especialización} (véase SGA~4, VIII, 7). Si $s'$ es
+étale sobre $s$, se dice que $\mathrm{sp}^*(s')$ se obtiene de $S$ por
+\underline{extensión del cuerpo residual}. Para un haz $F$ sobre $S$ se tiene
+un isomorfismo funtorial
+\begin{equation}\tag{1.2.1.1}
+\mathrm{sp}_*F=i^*F.
+\end{equation}
+Para todo subesquema abierto $j:U\hookrightarrow S$, o para todo punto
+$j:\eta\hookrightarrow S$, seguiremos escribiendo $\mathrm{sp}$ para el
+morfismo compuesto $\mathrm{sp}\circ j$. Para un haz $F$ sobre $U$
+(respectivamente, sobre $\eta$), se tiene
+\begin{equation}\tag{1.2.1.2}
+\mathrm{sp}_*F=i^*j_*F.
+\end{equation}
+
+\subsubsection*{1.2.2.}
+Sea $S$ un rasgo henseliano, y sean $s,\eta,\bar s,\bar\eta,I$ como en 0.2.5.
+\begin{center}
+\begin{tikzcd}
+s \arrow[r, hook, "i"] & S & \eta \arrow[l, hook, "j"']
+\end{tikzcd}
+.
+\end{center}
+\pageoriginale
+
+He aquí la interpretación galoisiana de los haces sobre $s$, $\eta$ y $S$, y
+del morfismo de especialización.
+
+\begin{enumerate}[label=(\alph*)]
+\item Los haces $F$ sobre $s$ (respectivamente, sobre $\eta$) se identifican,
+mediante $F\mapsto F_{\bar s}$ (respectivamente,
+$F\mapsto F_{\bar\eta}$), con los conjuntos provistos de una acción continua
+de $\operatorname{Gal}(\bar s/s)$ (respectivamente,
+$\operatorname{Gal}(\bar\eta/\eta)$) (SGA~4, VIII, 2.1, o 1.1.3).
+
+\item Un haz $F$ sobre $S$ define haces $F_s=i^*F$ y $F_\eta=j^*F$ sobre
+$s$ y $\eta$, y una flecha de adjunción $F\longrightarrow j_*j^*F$ que induce
+\begin{equation*}
+\varphi:F_s=i^*F\longrightarrow i^*j_*j^*F
+=\mathrm{sp}_*F_\eta.
+\end{equation*}
+Se sabe (SGA~4, IV, 9.5.4) que el funtor
+\begin{equation*}
+F\longmapsto(F_s,F_\eta,\varphi)
+\end{equation*}
+es una equivalencia de la categoría de los haces sobre $S$ con la categoría
+de las ternas $(F_s,F_\eta,\varphi)$, donde $F_s$ es un haz sobre $s$,
+$F_\eta$ es un haz sobre $\eta$, y
+$\varphi:F_s\longrightarrow i^*j_*F_\eta$.
+
+Bajo la equivalencia de (a), el funtor $i^*j_*$ se identifica con el funtor
+de «invariantes por $I$». Así, los haces sobre $S$ se identifican con las
+ternas formadas por un conjunto $F_{\bar s}$ provisto de una acción de
+$\operatorname{Gal}(\bar s/s)$, un conjunto $F_{\bar\eta}$ provisto de una
+acción de $\operatorname{Gal}(\bar\eta/\eta)$, y un morfismo equivariante
+$\varphi:F_{\bar s}\longrightarrow F_{\bar\eta}$.
+
+\item Bajo (a) y (b), los morfismos $\mathrm{sp}$, $j$, $i$ y
+$\mathrm{sp}=\mathrm{sp}\circ j$ se expresan como sigue:
+\begin{equation*}
+\begin{array}{llcl}
+\mathrm{sp}:S\longrightarrow s:\;&
+ \mathrm{sp}^*(F_{\bar s})&=&(F_{\bar s},F_{\bar s},\mathrm{Id}),\\[2pt]
+&\mathrm{sp}_*(F_{\bar s},F_{\bar\eta},\varphi)&=&F_{\bar s},\\[3pt]
+j:\eta\longrightarrow S:\;&
+ j^*(F_{\bar s},F_{\bar\eta},\varphi)&=&F_{\bar\eta},\\[2pt]
+&j_*(F_{\bar\eta})&=&(F_{\bar\eta}^{I},F_{\bar\eta},
+ \text{inclusión}),\\[3pt]
+i:s\longrightarrow S:\;&
+ i^*(F_{\bar s},F_{\bar\eta},\varphi)&=&F_{\bar s},\\[2pt]
+&i_*(F_{\bar s})&=&(F_{\bar s},\{0\},\text{proyección}),\\[3pt]
+\mathrm{sp}=\mathrm{sp}\circ j:\eta\longrightarrow s:\;&
+ \mathrm{sp}^*(F_{\bar s})&=&F_{\bar s},\\[2pt]
+&\mathrm{sp}_*(F_{\bar\eta})&=&F_{\bar\eta}^{I}.
+\end{array}
+\end{equation*}
+\end{enumerate}
+
+\subsubsection*{1.2.3.}
+Sea $S$ un rasgo henseliano como en 1.2.2, y sea $Y$ un esquema sobre $s$.
+Tendremos que trabajar con el $2$-producto fibrado $Y\times_sS$ de los topoi
+étale de $Y$ y $S$ sobre el topos étale de $s$. Por Giraud~[1], este
+$2$-producto fibrado existe, y se comprueba fácilmente que admite la
+descripción galoisiana dada a continuación. Quien prefiera evitar los
+$2$-productos fibrados puede tomar esta descripción como definición.
+
+\pageoriginale
+
+\subsubsection*{Construcción 1.2.4.}
+\underline{Los haces $F$ sobre $Y\times_sS$ se identifican con ternas
+$(F_s,F_\eta,\varphi)$ en las que:}
+\begin{enumerate}[label=(\alph*)]
+\item $F_s$ es un haz sobre $Y$, o equivalentemente un haz $F_{\bar s}$
+sobre $\bar Y=Y\otimes_s\bar s$, provisto de una acción continua de
+$\operatorname{Gal}(\bar s/s)$ compatible con la acción de
+$\operatorname{Gal}(\bar s/s)$ sobre $\bar Y$;
+
+\item $F_\eta$ es un haz $F_{\bar\eta}$ sobre $\bar Y$, provisto de una
+acción continua de $\operatorname{Gal}(\bar\eta/\eta)$ compatible con la
+acción (mediante 1.1.1) de $\operatorname{Gal}(\bar\eta/\eta)$ sobre $\bar Y$;
+
+\item $\varphi$ es un morfismo equivariante de $F_{\bar s}$ a
+$F_{\bar\eta}$.
+\end{enumerate}
+Análogamente, un \underline{haz $F_\eta$ sobre $Y\times_s\eta$} es un objeto
+como en 1.2.4(b). Se tiene un diagrama de topoi
+\begin{equation}\tag{1.2.4.1}
+\begin{tikzcd}[column sep=large, row sep=small]
+Y \arrow[dd] & {} & Y \arrow[r, hook, "i"] \arrow[dd]
+  & Y\times_sS \arrow[dd]
+  & Y\times_s\eta \arrow[l, hook', "j"'] \arrow[dd] & {} \\
+{} & {} \arrow[l, "\mathrm{sp}"'] & {} & {} & {} & {} \\
+s & {} & s \arrow[r, hook, "i"] & S
+  & \eta \arrow[l, hook', "j"'] & {.}
+\end{tikzcd}
+\end{equation}
+El topos $Y\times_sS$ es la unión del subtopos abierto $Y\times_s\eta$ y su
+complementario cerrado $Y$. Las fórmulas de 1.2.2(c) siguen siendo válidas
+para $\mathrm{sp}:Y\times_sS\longrightarrow Y$ (también denotado
+$\mathrm{pr}_1$), $j:Y\times_s\eta\hookrightarrow Y\times_sS$,
+$i:Y\hookrightarrow Y\times_sS$ y
+$\mathrm{sp}:Y\times_s\eta\longrightarrow Y$ (también denotado
+$\mathrm{pr}_1$).
+
+\paragraph{1.2.4.2.}
+Si se toma 1.2.4 como definición de $Y\times_sS$, hay que demostrar mediante
+una construcción directa que, salvo isomorfismo único, $Y\times_sS$ no
+depende de la elección de una clausura separable $k(\bar\eta)$ de $k(\eta)$.
+Esto se hace interpretando el $F_\eta$ de 1.2.4(b) como un funtor que, a cada
+clausura separable $k(\bar\eta)$ de $k(\eta)$ que define una clausura
+separable $k(\bar s)$ de $k(s)$, asocia un haz sobre
+$Y\otimes_{k(s)}k(\bar s)$; el $F_\eta$ de 1.2.4(b) es la restricción de este
+funtor a $\{\bar\eta\}$.
+
+\pageoriginale
+
+\subsubsection*{1.2.5.}
+Todo punto geométrico $\bar x$ de $Y_{\bar s}$ define un punto geométrico
+$(\bar x,\bar\eta)$ de $Y\times_s\eta$, cuyo funtor fibra correspondiente es
+\begin{equation*}
+F_\eta\longmapsto(F_{\bar\eta})_{\bar x}.
+\end{equation*}
+Define puntos geométricos $(\bar x,\bar\eta)$ y $(\bar x,\bar s)$ de
+$Y\times_sS$ mediante
+\begin{equation*}
+F_{(\bar x,\bar\eta)}=(F_{\bar\eta})_{\bar x}
+\qquad\text{y}\qquad
+F_{(\bar x,\bar s)}=(F_{\bar s})_{\bar x}.
+\end{equation*}
+Se comprueba que todos los puntos de los topoi $Y\times_s\eta$ y
+$Y\times_sS$ se obtienen de este modo. No utilizaremos este hecho. También se
+comprueba inmediatamente que estos conjuntos de puntos son conservativos.
+
+\subsubsection*{\texorpdfstring{${}^{*}$Observación 1.2.6.}{Observación 1.2.6.}}
+La construcción de 1.2.5 define una equivalencia de la categoría
+$\operatorname{Point}(Y\times_s\eta)$ (respectivamente,
+$\operatorname{Point}(Y\times_sS)$) de los puntos de $Y\times_s\eta$
+(respectivamente, de $Y\times_sS$) con el $2$-producto fibrado
+\begin{equation*}
+\operatorname{Point}(Y)\times_{\operatorname{Point}(s)}
+\operatorname{Point}(\eta).
+\end{equation*}
+Esta equivalencia se sigue también de que $Y\times_s\eta$ (respectivamente,
+$Y\times_sS$) es un $2$-producto fibrado de topoi.${}^{*}$
+
+\subsubsection*{1.2.7.}
+Por la funtorialidad de los $2$-productos fibrados, el diagrama (1.2.4.1) es
+funtorial en $Y$ y $S$. En particular:
+\begin{enumerate}[label=\alph*)]
+\item Todo morfismo $f:Y\longrightarrow Y'$ de esquemas sobre $s$ induce un
+morfismo de topoi de $Y\times_sS$ a $Y'\times_sS$. Se tiene
+\begin{equation}\tag{1.2.7.1}
+f^*(F_{\bar s},F_{\bar\eta},\varphi)
+=(f^*F_{\bar s},f^*F_{\bar\eta},f^*(\varphi)),
+\end{equation}
+y, cuando $f$ es cuasicompacto,
+\begin{equation}\tag{1.2.7.2}
+f_*(F_{\bar s},F_{\bar\eta},\varphi)
+=(f_*F_{\bar s},f_*F_{\bar\eta},f_*(\varphi)).
+\end{equation}
+Fórmulas análogas son válidas para
+$f:Y\times_s\eta\longrightarrow Y'\times_s\eta$.
+
+\item Todo morfismo suprayectivo de rasgos henselianos
+$f:S'\longrightarrow S$ induce un morfismo de topoi de
+$Y_{s'}\times_{s'}S'$ a $Y\times_sS$.
+
+\pageoriginale
+
+Denotando de nuevo por $f$ el morfismo
+natural $Y_{s'}=Y\otimes_{k(s)}k(s')\longrightarrow Y$, se tiene
+\begin{equation}\tag{1.2.7.3}
+f^*(F_{\bar s},F_{\bar\eta},\varphi)
+=(f^*F_{\bar s},f^*F_{\bar\eta},f^*(\varphi)).
+\end{equation}
+Cuando $f$ es finito, $f_*$ se expresa como una representación inducida.
+\end{enumerate}
+
+\subsubsection*{1.2.8.}
+Sea $f:Y\longrightarrow Y'$ un morfismo separado, localmente de tipo finito,
+entre $s$-esquemas. Se define un funtor de «imagen directa con soporte propio»
+\begin{equation*}
+\begin{aligned}
+f_!: {}&(\text{haces de conjuntos apuntados sobre }Y\times_sS)\\
+&\longrightarrow
+(\text{haces de conjuntos apuntados sobre }Y'\times_sS)
+\end{aligned}
+\end{equation*}
+mediante la fórmula
+\begin{equation}\tag{1.2.8.1}
+f_!(F_{\bar s},F_{\bar\eta},\varphi)
+=(f_!F_{\bar s},f_!F_{\bar\eta},f_!(\varphi)).
+\end{equation}
+Cuando $f$ es una inmersión localmente cerrada, $f_!$ se llama funtor de
+extensión por cero.
+
+Se define un funtor análogo para $Y\times_s\eta$.
+
+\subsubsection*{1.2.9.}
+Sea $f:Y\hookrightarrow Y'$ una inmersión localmente cerrada de
+$s$-esquemas. El funtor $f_!$ posee un adjunto a derecha $f^!$, «secciones con
+soporte en $Y$», que satisface
+\begin{equation}\tag{1.2.9.1}
+f^!(F_{\bar s},F_{\bar\eta},\varphi)
+=(f^!F_{\bar s},f^!F_{\bar\eta},f^!(\varphi)).
+\end{equation}
+Supongamos solamente que $f$ es cuasifinito. El funtor $f_!$ de los haces
+abelianos sobre $Y\times_sS$ a los haces abelianos sobre $Y'\times_sS$ sigue
+teniendo un adjunto a derecha $f^!$, dado por (1.2.9.1) (véase SGA~4, XVIII,
+3.1.8). Si $f$ es étale, entonces $f^!=f^*$.
+
+Se definen funtores análogos para $Y\times_s\eta$.
+
+\pageoriginale
+
+\subsection*{\texorpdfstring{1.3. El funtor $\Psi$}{1.3. El funtor Psi}}
+
+\subsubsection*{1.3.1.}
+Sea $S$ un rasgo henseliano como en 0.2.5, y sea
+$p:X\longrightarrow S$. Nos proponemos definir un funtor exacto a izquierda
+$\Psi$ de los haces sobre $X$ a los haces sobre el topos $X_s\times_sS$
+construido en 1.2. En general, este funtor no es el funtor imagen directa de
+un morfismo de topoi.
+
+Definiremos también
+\begin{equation*}
+\Psi_\eta:(\text{haces sobre }X_\eta)
+\longrightarrow(\text{haces sobre }X_s\times_s\eta).
+\end{equation*}
+
+\subsubsection*{1.3.2.}
+Pongamos $\bar X=X\times_S\bar S$. Se tiene un diagrama cartesiano
+\begin{equation}\tag{1.3.2.1}
+\begin{tikzcd}
+X_{\bar s} \arrow[r, hook, "\bar i"] \arrow[d]
+  & \bar X \arrow[d]
+  & X_{\bar\eta} \arrow[l, hook', "\bar j"'] \arrow[d] \\
+X_s \arrow[r, hook] & X & X_\eta \arrow[l, hook']
+\end{tikzcd}
+\end{equation}
+sobre el diagrama
+\begin{center}
+\begin{tikzcd}
+\bar s \arrow[r, hook] \arrow[d]
+  & \bar S \arrow[d]
+  & \bar\eta \arrow[l, hook'] \arrow[d] \\
+s \arrow[r, hook] & S & \eta \arrow[l, hook']
+\end{tikzcd}
+.
+\end{center}
+Sea $F$ un haz sobre $X_\eta$, con imagen inversa $F_{\bar\eta}$ sobre
+$X_{\bar\eta}$. Pongamos
+\begin{equation}\tag{1.3.2.2}
+\Psi_\eta(F)=\bar i^*\bar j_*F_{\bar\eta}.
+\end{equation}
+Por transporte de estructura, este haz está provisto de una acción continua
+de $\operatorname{Gal}(\bar\eta/\eta)$ compatible con la acción de
+$\operatorname{Gal}(\bar\eta/\eta)$ sobre $X_{\bar s}$. El funtor
+\begin{equation}\tag{1.3.2.3}
+\Psi_\eta:(X_{\eta,\mathrm{et}})^{\sim}
+\longrightarrow(X_s\times_s\eta)^{\sim}
+\end{equation}
+es exacto a izquierda.
+
+\subsubsection*{1.3.3.}
+Sea $F$ un haz sobre $X$, y sean $F_\eta$ y $F_s$ sus restricciones a
+$X_\eta$ y $X_s$. Pongamos
+\pageoriginale
+
+\begin{equation}\tag{1.3.3.1}
+(\Psi(F))_\eta=\Psi_\eta(F_\eta)
+\end{equation}
+y
+\begin{equation}\tag{1.3.3.2}
+(\Psi(F))_s=F_s.
+\end{equation}
+Sea $\bar F$ la imagen inversa de $F$ sobre $\bar X$, y sea $\varphi'$ el
+morfismo de adjunción
+\begin{equation*}
+\varphi':\bar F\longrightarrow\bar j_*\bar j^*\bar F.
+\end{equation*}
+Este morfismo induce
+\begin{equation*}
+\varphi:F_{\bar s}=\bar i^*\bar F
+\longrightarrow
+\bar i^*\bar j_*\bar j^*\bar F
+=(\Psi_\eta(F_\eta))_{\bar\eta}.
+\end{equation*}
+La terna
+\begin{equation*}
+\Psi(F)=((\Psi(F))_s,(\Psi(F))_\eta,\varphi)
+\end{equation*}
+es un haz sobre $X_s\times_sS$. El funtor
+\begin{equation}\tag{1.3.3.3}
+\Psi:(X_{\mathrm{et}})^{\sim}
+\longrightarrow(X_s\times_sS)^{\sim}
+\end{equation}
+es exacto a izquierda.
+
+\subsubsection*{1.3.4.}
+Cuando no haya riesgo de confusión, escribiremos
+\begin{equation*}
+\Psi_\eta(F)=(\Psi(F))_\eta,
+\qquad
+\Psi_{\bar\eta}(F)=(\Psi(F))_{\bar\eta},
+\qquad\text{y}\qquad
+\Psi_{\bar\eta}(F)=(\Psi_\eta(F))_{\bar\eta}.
+\end{equation*}
+
+\subsubsection*{1.3.5.}
+En lo que resta de esta sección enumeramos propiedades de funtorialidad de
+$\Psi$ (véanse 1.2.7--1.2.9). Serán útiles sobre todo en su forma derivada
+(2.1).
+
+Sea $f:X\longrightarrow X'$ un morfismo de $S$-esquemas, que da un diagrama
+\begin{equation}\tag{1.3.5.1}
+\begin{tikzcd}
+X_{\bar s} \arrow[r, hook, "\bar i"] \arrow[d, "f"]
+  & \bar X \arrow[d, "f"]
+  & X_{\bar\eta} \arrow[l, hook', "\bar j"'] \arrow[d, "f"] \\
+X'_{\bar s} \arrow[r, hook, "\bar i"]
+  & \bar X' & X'_{\bar\eta} \arrow[l, hook', "\bar j"']
+\end{tikzcd}
+\end{equation}
+(la barra de su $\bar X$ central superior es visible en el impreso). La
+ambigüedad de la notación de las flechas simplifica las fórmulas
+y no causa confusión: solo una interpretación da sentido a las composiciones
+que siguen. Asimismo, escribimos $\Psi$ para el funtor (1.3.3.3) tanto para
+$X$ como para $X'$.
+
+Los morfismos de funtores que se describen a continuación para $\Psi$ poseen
+variantes para $\Psi_\eta$, que por lo general omitimos enunciar
+explícitamente.
+
+\pageoriginale
+
+\subsubsection*{1.3.6.}
+El morfismo de cambio de base
+$\bar i^*f_*\longrightarrow f_*\bar i^*$ induce un morfismo de funtores
+\begin{equation}\tag{1.3.6.1}
+\Psi f_*\longrightarrow f_*\Psi,
+\end{equation}
+que es un isomorfismo cuando $f$ es propio (SGA~4, XII, 5.1(i)).
+
+El caso esencial es $X'=S$. Se obtiene un morfismo
+\begin{equation}\tag{1.3.6.2}
+f_*\longrightarrow f_*\Psi
+\end{equation}
+cuyo componente esencial es
+\begin{equation}\tag{1.3.6.3}
+\Gamma(X_{\bar\eta},F)
+\longrightarrow
+\Gamma(X_{\bar s},\Psi_{\bar\eta}(F));
+\end{equation}
+este morfismo es un isomorfismo cuando $f$ es propio.
+
+\subsubsection*{1.3.7.}
+El morfismo de cambio de base
+$f^*\bar j_*\longrightarrow\bar j_*f^*$ induce un morfismo de funtores
+\begin{equation}\tag{1.3.7.1}
+f^*\Psi\longrightarrow\Psi f^*.
+\end{equation}
+
+\subsubsection*{1.3.8.}
+Supongamos que $f$ es cuasifinito. Los funtores $f_!$ conmutan con el cambio
+de base; el morfismo $f_!\bar j_*\longrightarrow\bar j_*f_!$ induce un
+morfismo de funtores
+\begin{equation}\tag{1.3.8.1}
+f_!\Psi\longrightarrow\Psi f_!.
+\end{equation}
+Cuando $f$ es finito, este es el inverso de (1.3.6.1).
+
+\subsubsection*{1.3.9.}
+La situación es dual para $f^!$ (suponemos que $f$ es cuasifinito al trabajar
+con haces abelianos, o que es una inmersión al trabajar con haces de conjuntos
+apuntados). Este funtor conmuta con las imágenes directas, y el morfismo
+$\bar i^*f^!\longrightarrow f^!\bar i^*$ induce un morfismo de funtores
+\begin{equation}\tag{1.3.9.1}
+\Psi f^!\longrightarrow f^!\Psi.
+\end{equation}
+Cuando $f$ es étale, este es el inverso de (1.3.7.1).
+
+\pageoriginale
+
+\subsubsection*{1.3.10.}
+Por último, un cambio de base $S'\xrightarrow{f}S$ da un morfismo de cambio
+de base
+\begin{equation}\tag{1.3.10.1}
+f^*\Psi\longrightarrow\Psi f^*.
+\end{equation}
+\subsection*{1.4. La variación}
+
+\subsubsection*{1.4.1.}
+Sea $S$ un rasgo henseliano como en 0.2.5, y sea $Y$ un esquema sobre $s$.
+Sea $\Lambda$ un anillo. Más generalmente, podría tomarse como $\Lambda$ un
+haz de anillos sobre $Y$. Para todo objeto $K$ de la categoría derivada
+$D(Y\times_sS,\Lambda)$ de la categoría de los haces de $\Lambda$-módulos
+sobre $Y\times_sS$, nos proponemos definir un morfismo de
+\underline{variación}.
+
+\subsubsection*{1.4.2.}
+Un complejo de haces de $\Lambda$-módulos $K$ sobre
+$\sisi{X}{Y}\times_sS$ se identifica con una terna
+$(K_s,K_\eta,\varphi)$ en la que
+\begin{enumerate}[label=\alph*)]
+\item $K_s$ (respectivamente, $K_\eta$) es un complejo de haces
+$K_{\bar s}$ (respectivamente, $K_{\bar\eta}$) sobre $\bar Y$, provisto de
+una acción continua de $\operatorname{Gal}(\bar s/s)$ (respectivamente,
+$\operatorname{Gal}(\bar\eta/\eta)$);
+
+\item $\varphi$ es un morfismo equivariante
+$\varphi:K_{\bar s}\longrightarrow K_{\bar\eta}$.
+\end{enumerate}
+Aquí y en lo que sigue mantenemos fijo el esquema $Y$ de 1.4.1; la frase
+inicial impresa de 1.4.2 escribe inadvertidamente $X\times_sS$.
+
+Un complejo $K$ de este tipo es siempre homotópico a un complejo
+$K'=(K'_s,K'_\eta,\varphi')$ tal que $\varphi'$ es inyectivo y la sucesión
+exacta
+\begin{equation}\tag{1.4.2.1}
+0\longrightarrow K'_{\bar s}
+\longrightarrow K'_{\bar\eta}
+\longrightarrow\operatorname{coker}(\varphi')
+\longrightarrow0
+\end{equation}
+es escindida grado por grado. Basta tomar $K'_s=K_s$ y tomar como $K'_\eta$
+la suma directa de $K_\eta$ y el cono de $\mathrm{sp}^*K_s$. Pongamos
+\begin{equation*}
+\Phi(K)=\operatorname{coker}(\varphi').
+\end{equation*}
+La sucesión exacta (1.4.2.1) define un triángulo distinguido
+\begin{equation}\tag{1.4.2.2}
+\begin{tikzcd}[column sep=large, row sep=large]
+{} & \Phi(K) \arrow[dl] & {} \\
+\mathrm{sp}^*K_s \arrow[rr] & {} & K_\eta \arrow[ul]
+\end{tikzcd}
+\end{equation}
+en la categoría $K(Y\times_s\eta,\Lambda)$ de los complejos de haces de
+$\Lambda$-módulos sobre $Y\times_s\eta$, salvo homotopía. Este triángulo solo
+depende de $K\in\operatorname{Ob}K(Y\times_sS,\Lambda)$.
+
+\pageoriginale
+
+La construcción pasa a la categoría derivada y asocia a todo objeto $K$ de
+$D(Y\times_sS,\Lambda)$ un triángulo distinguido de
+$D(Y\times_s\eta,\Lambda)$.
+
+El triángulo (1.4.2.2) es útil sobre todo por la sucesión exacta larga de
+hipercohomología que induce:
+\begin{equation*}
+\cdots\longrightarrow H^i(\bar Y,K_{\bar s})
+\longrightarrow H^i(\bar Y,K_{\bar\eta})
+\longrightarrow H^i(\bar Y,\Phi(K)_{\bar\eta})
+\longrightarrow\cdots.
+\end{equation*}
+
+\subsubsection*{1.4.3.}
+El grupo de inercia $I$ actúa trivialmente sobre $K'_{\bar s}$. Por tanto,
+para todo $\sigma\in I$, el endomorfismo $\sigma-1$ de $K'_{\bar\eta}$
+(notación (1.4.2.1)) se factoriza a través de un morfismo
+\begin{equation*}
+\operatorname{Var}(\sigma):
+\operatorname{coker}(\varphi')\longrightarrow K'_{\bar\eta}.
+\end{equation*}
+Esta construcción pasa a la categoría derivada: para
+$K\in\operatorname{Ob}D(Y\times_sS,\Lambda)$ y $\sigma\in I$, define la
+\underline{variación}
+\begin{equation}\tag{1.4.3.1}
+\operatorname{Var}(\sigma):
+\Phi(K)_{\bar\eta}\longrightarrow K_{\bar\eta}.
+\end{equation}
+Denotando por $q$ la flecha de $K_\eta$ a $\Phi(K)$, se tiene
+\begin{align}
+\sigma&=1+\operatorname{Var}(\sigma)q
+&&\text{sobre }K_{\bar\eta}, \tag{1.4.3.2}\\
+\sigma&=1+q\operatorname{Var}(\sigma)
+&&\text{sobre }\Phi(K)_{\bar\eta}, \tag{1.4.3.3}
+\end{align}
+y
+\begin{equation}\tag{1.4.3.4}
+\operatorname{Var}(\sigma\tau)
+=\operatorname{Var}(\sigma)q\operatorname{Var}(\tau)
+ +\operatorname{Var}(\sigma)+\operatorname{Var}(\tau).
+\end{equation}
+
+\section*{2. Ciclos evanescentes}
+
+\subsection*{\texorpdfstring{2.1. El funtor $R\Psi$}{2.1. El funtor R Psi}}
+
+\subsubsection*{2.1.1.}
+Sea $S$ un rasgo henseliano como en 0.2.5, y sea $\Lambda$ un anillo de
+torsión cuya torsión es prima a la característica residual $p$ de $S$
+(0.2.7). Más generalmente, podría tomarse como $\Lambda$ un haz de torsión
+cuya torsión fuera prima a las características residuales; el caso más
+importante es $\Lambda=\mathbb Z/\ell^n$, con $\ell$ un primo invertible en
+$\mathcal O_S$.
+
+\pageoriginale
+
+Sea $X$ un esquema sobre $S$. El funtor $\Psi$ (respectivamente,
+$\Psi_\eta$) lleva haces de $\Lambda$-módulos sobre $X$ (respectivamente,
+sobre $X_\eta$) a haces de $\Lambda$-módulos sobre $X_s\times_sS$
+(respectivamente, sobre $X_s\times_s\eta$). Sean $R\Psi$ y $R\Psi_\eta$ los
+funtores derivados
+\begin{equation*}
+R\Psi:D^+(X,\Lambda)\longrightarrow D^+(X_s\times_sS,\Lambda),
+\end{equation*}
+\begin{equation*}
+R\Psi_\eta:D^+(X_\eta,\Lambda)
+\longrightarrow D^+(X_s\times_s\eta,\Lambda),
+\end{equation*}
+y sea $R\Phi$ el funtor compuesto $\Phi\circ R\Psi$:
+\begin{equation*}
+R\Phi:D^+(X,\Lambda)
+\longrightarrow D^+(X_s\times_s\eta,\Lambda).
+\end{equation*}
+
+\subsubsection*{2.1.2.}
+Consideremos el diagrama conmutativo (1.3.2.1)
+\begin{equation}\tag{1.3.2.1}
+\begin{tikzcd}
+X_{\bar s} \arrow[r, hook, "\bar i"] \arrow[d]
+  & \bar X \arrow[d]
+  & X_{\bar\eta} \arrow[l, hook', "\bar j"'] \arrow[d] \\
+X_s \arrow[r, hook, "i"] & X & X_\eta \arrow[l, hook', "j"']
+\end{tikzcd}
+\end{equation}
+Si $F$ es un haz inyectivo de módulos sobre $X$, su restricción al subesquema
+abierto $X_\eta$ sigue siendo inyectiva. Si $F_\eta$ es inyectivo sobre
+$X_\eta$, su imagen inversa $F_{\bar\eta}$ es acíclica. Por tanto, las formas
+derivadas de (1.3.3.1) y (1.3.3.2) son
+\begin{equation}\tag{2.1.2.1}
+R\Psi(K)_s=i^*K
+\qquad(K\in\operatorname{Ob}D^+(X,\Lambda)),
+\end{equation}
+\begin{equation}\tag{2.1.2.2}
+R\Psi(K)_\eta=R\Psi_\eta(K_\eta)
+\qquad(K\in\operatorname{Ob}D^+(X,\Lambda)),
+\end{equation}
+y
+\begin{equation}\tag{2.1.2.3}
+R\Psi_\eta(K)_{\bar\eta}
+=\bar i^*R\bar j_*K_{\bar\eta}
+\qquad(K\in\operatorname{Ob}D^+(X_\eta,\Lambda)).
+\end{equation}
+Esto permite escribir, sin conflicto,
+\begin{equation*}
+R\Psi_\eta(K)=(R\Psi(K))_\eta,
+\qquad
+R\Psi_{\bar\eta}(K)=(R\Psi(K))_{\bar\eta},
+\qquad\text{y}\qquad
+R\Psi_{\bar\eta}(K)=(R\Psi_\eta(K))_{\bar\eta}.
+\end{equation*}
+\pageoriginale
+
+Con esta notación, el triángulo distinguido (1.4.2.2) se convierte en
+\begin{equation}\tag{2.1.2.4}
+\begin{tikzcd}[row sep=large, column sep=huge]
+{} & R\Phi(K) \arrow[dl] & {} \\
+\mathrm{sp}^*i^*K \arrow[rr] & {}
+  & R\Psi_\eta(K_{\sisi{s}{\eta}}) \arrow[ul]
+\end{tikzcd}
+.
+\end{equation}
+El término inferior derecho impreso contiene $K_s$; la identidad definitoria
+(2.1.2.2) exige $K_\eta$, como se muestra en la rama corregida.
+
+Para $\sigma\in I$ se tiene un morfismo de \underline{variación}
+\begin{equation}\tag{2.1.2.5}
+\operatorname{Var}(\sigma):R\Phi(K)_{\bar\eta}
+\longrightarrow R\Psi_{\bar\eta}(K).
+\end{equation}
+Los haces $R^i\Phi(\Lambda)$, o más generalmente $R^i\Phi(K)$, son los
+\underline{haces de ciclos evanescentes}.
+
+\subsubsection*{2.1.3.}
+Sea $(\bar x,\bar\eta)$ el punto geométrico de $X_s\times_s\eta$ definido
+por un punto geométrico $\bar x$ de $X_{\bar s}$ (1.2.5). Calculamos la fibra
+de $R\Psi_\eta(K_\eta)$ en $(\bar x,\bar\eta)$ mediante (2.1.2.3) (véase I,
+2.3). El henselizado estricto $X_{(\bar x)}$ de $X$ en $\bar x$ es un esquema
+sobre el henselizado estricto $S_{\mathrm{nr}}$ de $S$, con punto geométrico
+genérico $\eta_{\mathrm{nr}}$.
+
+\subsubsection*{Proposición 2.1.4.}
+\underline{Se tiene}
+\begin{equation*}
+(R\Psi(K_\eta))_{(\bar x,\bar\eta)}
+=R\Gamma\!\left(
+X_{(\bar x)}\times_{\eta_{\mathrm{nr}}}\bar\eta,K
+\right);
+\end{equation*}
+\underline{en particular,}
+\begin{equation*}
+R^i\Psi(K_\eta)_{(\bar x,\bar\eta)}
+=\mathbb H^i\!\left(
+X_{(\bar x)}\times_{\eta_{\mathrm{nr}}}\bar\eta,K
+\right).
+\end{equation*}
+
+Apliquemos SGA~4, XV, 2.1 (el teorema de aciclicidad local de los morfismos
+lisos). Se obtiene la reformulación siguiente.
+
+\subsubsection*{Reformulación 2.1.5.}
+\underline{Si $f$ es liso y $F$ es un haz localmente constante, entonces}
+\begin{equation*}
+R\Phi(F)=0.
+\end{equation*}
+Más generalmente, si $K\in\operatorname{Ob}D^+(X,\Lambda)$, entonces
+$R\Phi(K)=0$ allí donde $f$ es liso y los haces $\mathcal H^i(K)$ son
+localmente constantes. Véase también 2.1.11.
+
+\subsubsection*{2.1.6.}
+Sea $f:Y\longrightarrow Y'$ un morfismo de esquemas sobre $s$. Los funtores
+$f^*$, $f_*$, $f^!$ y $f_!$ (1.2.7--1.2.9) poseen análogos naturales en la
+categoría derivada.
+\begin{enumerate}[label=\alph*)]
+\item El funtor $f^*$ es exacto y, por tanto, se deriva trivialmente.
+
+\pageoriginale
+
+\item El funtor $f_*$ posee un funtor derivado a derecha $Rf_*$. Cuando $f$
+es cuasicompacto, se tiene
+\begin{equation}\tag{2.1.6.1}
+(Rf_*K)_{\bar s}=Rf_{\bar s*}(K_{\bar s})
+\end{equation}
+y
+\begin{equation}\tag{2.1.6.2}
+(Rf_*K)_{\bar\eta}=Rf_{\bar s*}(K_{\bar\eta}).
+\end{equation}
+
+\item Cuando $f$ es cuasifinito, el funtor $f_!$ es exacto y, por tanto, se
+deriva trivialmente. En general, el funtor derivado de $f_!$ es patológico, y
+se procede como en SGA~4, XVII. Supongamos que $f$ es separado y de tipo
+finito y que $Y'$ es noetheriano. Existe entonces [2] una factorización
+$f=\widetilde f\,j$, donde $j$ es una inmersión abierta y $\widetilde f$ es
+propio, y se define
+\begin{equation*}
+Rf_!=R\widetilde f_*\circ j_!.
+\end{equation*}
+Los argumentos de SGA~4, XVII muestran que $Rf_!$ es independiente de la
+elección de la factorización $\widetilde f\,j$. Los análogos de (2.1.6.1) y
+(2.1.6.2) son válidos.
+
+\item Utilizaremos $Rf^!$ únicamente para un morfismo cuasifinito, en cuyo
+caso es el funtor derivado de $f^!$. También aquí son válidos los análogos de
+(2.1.6.1) y (2.1.6.2).
+\end{enumerate}
+
+\subsubsection*{2.1.7.}
+Revisemos ahora las propiedades de funtorialidad de $R\Psi$, es decir,
+derivemos 1.3.5--1.3.10. Sea $f:X\longrightarrow X'$ un morfismo de
+$S$-esquemas, y conservemos la notación de 1.3.5.
+
+El morfismo (1.3.6.1) define
+\begin{equation}\tag{2.1.7.1}
+R\Psi\,Rf_*\longrightarrow Rf_*\,R\Psi.
+\end{equation}
+Por el teorema de cambio de base propio (SGA~4, XII, 5.1),
+\underline{este morfismo es un isomorfismo si $f$ es propio.}
+
+El morfismo (1.3.7.1) define
+\begin{equation}\tag{2.1.7.2}
+f^*R\Psi\longrightarrow R\Psi f^*.
+\end{equation}
+Por el teorema de cambio de base liso (SGA~4, XVI, 1.2),
+\underline{este morfismo es un isomorfismo si $f$ es liso.}
+
+\pageoriginale
+
+El isomorfismo (2.1.7.1) para $f$ propio y el morfismo
+(\sisi{2.1.8.1}{1.3.8.1}) definen un morfismo
+\begin{equation}\tag{2.1.7.3}
+Rf_!R\Psi\longrightarrow R\Psi Rf_!,
+\end{equation}
+que, cuando $f$ es propio, es el inverso de (2.1.7.1). La impresión remite
+por error al caso particular posterior (2.1.8.1).
+
+Cuando $f$ es cuasifinito, (1.3.9.1) se deriva en
+\begin{equation}\tag{2.1.7.4}
+R\Psi Rf^!\longrightarrow Rf^!R\Psi,
+\end{equation}
+que, cuando $f$ es étale, es el inverso de
+(\sisi{2.1.7.1}{2.1.7.2}). La referencia impresa a (2.1.7.1) es incompatible
+con los dos funtores implicados.
+
+Sea $f:S'\longrightarrow S$ un cambio de rasgo, y pongamos
+$X'=X\times_SS'$:
+\begin{center}
+\begin{tikzcd}
+X' \arrow[r, "f"] \arrow[d, "p"'] & X \arrow[d, "p"] \\
+S' \arrow[r, "f"] & S
+\end{tikzcd}
+\end{center}
+(para la ambigüedad de la notación, véase 1.3.5). Supongamos que $f$ es
+suprayectivo. La flecha de cambio de base (1.3.10.1) se deriva en
+\begin{equation}\tag{2.1.7.5}
+f^*R\Psi\longrightarrow R\Psi f^*.
+\end{equation}
+Las mismas afirmaciones son válidas para $R\Psi_\eta$.
+
+\subsubsection*{2.1.8.}
+El caso esencial de (2.1.7.1) y (2.1.7.3) es $X'=S$. Para
+$K\in\operatorname{Ob}D^+(X_{\bar\eta},\Lambda)$ se obtienen entonces
+morfismos
+\begin{equation}\tag{2.1.8.1}
+Rf_*\longrightarrow Rf_*R\Psi
+\end{equation}
+y
+\begin{equation}\tag{2.1.8.2}
+Rf_!R\Psi\longrightarrow Rf_!,
+\end{equation}
+de donde se deducen
+\begin{equation}\tag{2.1.8.3}
+\mathbb H^i(X_{\bar\eta},K)
+\longrightarrow
+\mathbb H^i(X_{\bar s},R\Psi_{\bar\eta}(K))
+\end{equation}
+y
+\begin{equation}\tag{2.1.8.4}
+\mathbb H_c^i(X_{\bar s},R\Psi_{\bar\eta}(K))
+\longrightarrow
+\mathbb H_c^i(X_{\bar\eta},K),
+\end{equation}
+así como la conmutatividad de los diagramas
+
+\pageoriginale
+
+\begin{equation}\tag{2.1.8.5}
+\begin{tikzcd}[column sep=large]
+(R^if_*K)_{\bar s} \arrow[r, "\mathrm{sp}"] \arrow[d]
+  & \mathbb H^i(X_{\bar\eta},K) \arrow[d] \\
+\mathbb H^i(X_{\bar s},K) \arrow[r]
+  & \mathbb H^i(X_{\bar s},R\Psi_{\bar\eta}(K))
+\end{tikzcd}
+\end{equation}
+y
+\begin{equation}\tag{2.1.8.6}
+\begin{tikzcd}[column sep=large]
+\mathbb H_c^i(X_{\bar s},K) \arrow[rr, "\mathrm{sp}"] \arrow[dr]
+  & {} & \mathbb H_c^i(X_{\bar\eta},K) \\
+{} & \mathbb H_c^i(X_{\bar s},R\Psi_{\bar\eta}(K)) \arrow[ur] & {}
+\end{tikzcd}
+.
+\end{equation}
+
+Para $K\in\operatorname{Ob}D^+(X_\eta,\Lambda)$ y $\sigma\in I$, los
+diagramas siguientes son conmutativos:
+\begin{equation}\tag{2.1.8.7}
+\begin{tikzcd}[column sep=small, cells={nodes={font=\small}}]
+\mathbb H^i(X_{\bar\eta},K)
+  \arrow[rr, dash, "\sigma-1"] \arrow[d]
+  & {} & \mathbb H^i(X_{\bar\eta},K) \arrow[d] \\
+\mathbb H^i(X_{\bar s},R\Psi_{\bar\eta}(K)) \arrow[r]
+  & \mathbb H^i(X_{\bar s},R\Phi_{\bar\eta}(K))
+      \arrow[r, "\operatorname{Var}(\sigma)"]
+  & \mathbb H^i(X_{\bar s},R\Psi_{\bar\eta}(K))
+\end{tikzcd}
+\end{equation}
+y
+\begin{equation}\tag{2.1.8.8}
+\begin{tikzcd}[column sep=small, cells={nodes={font=\small}}]
+\mathbb H_c^i(X_{\bar\eta},K)
+  \arrow[rr, "\sigma-1"]
+  & {} & \mathbb H_c^i(X_{\bar\eta},K) \\
+\mathbb H_c^i(\sisi{X_s}{X_{\bar s}},R\Psi_{\bar\eta}(K)) \arrow[r] \arrow[u]
+  & \mathbb H_c^i\bigl(X_{\bar s},R\Phi_{\bar\eta}(K)\sisi{\bigr.}{\bigr)}
+      \arrow[r, "\operatorname{Var}(\sigma)"]
+  & \mathbb H_c^i(X_{\bar s},R\Psi_{\bar\eta}(K)) \arrow[u]
+\end{tikzcd}
+.
+\end{equation}
+En (2.1.8.8), la rama corregida restituye la barra omitida en el término
+inferior izquierdo impreso $X_s$ y el paréntesis de cierre que falta en
+el término inferior central. En (2.1.8.7), en cambio, el conector superior
+está impreso realmente como un trazo sin punta de flecha, mientras que
+(2.1.8.8) tiene una flecha; se conserva esta distinción visible en la fuente.
+
+Cuando $f$ es propio, (2.1.8.1) y (2.1.8.2), así como (2.1.8.3) y (2.1.8.4),
+son isomorfismos mutuamente inversos. El triángulo distinguido (2.1.2.4)
+proporciona una sucesión exacta larga
+\begin{equation}\tag{2.1.8.9}
+\cdots\longrightarrow\mathbb H^i(X_{\bar s},K)
+\longrightarrow\mathbb H^i(X_{\bar\eta},K)
+\longrightarrow\mathbb H^i(X_{\bar s},R\Phi_{\bar\eta}(K))
+\longrightarrow\cdots.
+\end{equation}
+Así, el complejo evanescente $R\Phi(K)$ expresa la diferencia entre las
+cohomologías de las fibras geométricas $X_{\bar s}$ y $X_{\bar\eta}$, con
+coeficientes en la imagen inversa de $K$. Por (2.1.8.7), la variación
+$\operatorname{Var}(\sigma)$ determina la acción del grupo de inercia $I$
+sobre $\mathbb H^i(X_{\bar\eta},K)$. Estos hechos sustentan todas las
+aplicaciones del método de los ciclos evanescentes.
+
+\pageoriginale
+
+La hipótesis de propiedad impuesta arriba a $f$ puede reemplazarse por
+condiciones de regularidad en el infinito sobre $f$ y $K$. Por ejemplo, se
+tiene el resultado siguiente (para
+$K\in\operatorname{Ob}D(X_{\bar\eta},\Lambda)$).
+
+\subsubsection*{Proposición 2.1.9.}
+\underline{Supongamos que $f$ admite una factorización $f=f_1k$}
+\begin{center}
+\begin{tikzcd}[column sep=huge]
+X \arrow[r, hook, "k"] & X_1 \arrow[r, "f_1"] & S,
+\end{tikzcd}
+\end{center}
+\underline{donde $f_1$ es propio y $k$ identifica $X$ con el complementario
+en $X_1$ de un divisor de cruces normales relativo $D$} (por tanto, por
+hipótesis, $f_1$ es liso en un entorno de $D$). \underline{Si, en un entorno
+$U$ de $D$, los haces $\mathcal H^i(K)$ son localmente constantes sobre
+$U\setminus(D\cup X_0)$ y moderadamente ramificados a lo largo del divisor de
+cruces normales $D\cup X_0$, entonces (2.1.8.1) y (2.1.8.2) son
+isomorfismos.}
+
+La sucesión espectral de hipercohomología de $K$ muestra que basta tratar el
+caso en que $K$ consiste en un haz $F_\eta$ situado en grado cero. Tras
+reemplazar $S$ por su normalización en una extensión finita (lo cual está
+permitido, como se ve directamente a partir de las definiciones) y aplicar el
+lema de Abhyankar, podemos suponer que $F_\eta$ es la restricción a $X_\eta$
+de un haz $F$ sobre $X$, localmente constante sobre $U\cap X$ y moderadamente
+ramificado a lo largo de $D$. Con la notación de 2.1.2, sea $\overline F$ la
+imagen inversa de $F$ sobre $\overline X$, y escribamos
+$\bar f:\overline X\longrightarrow\overline S$.
+
+Para demostrar que (2.1.8.1) es un isomorfismo basta demostrar que
+\[
+R\bar f_*\bigl(R\bar j_*\bar j^*\overline F\bigr)
+\]
+conmuta con el cambio de base por $\bar s\longrightarrow\overline S$. En el
+triángulo distinguido
+\[
+\longrightarrow\overline F\longrightarrow
+R\bar j_*\bar j^*\overline F\longrightarrow\Delta\longrightarrow,
+\]
+los haces $\mathcal H^i(\Delta)$ tienen soporte en $X_{\bar s}$; para
+$\Delta$, la afirmación de cambio de base en cuestión es tautológica. Queda,
+pues, demostrar que $R\bar f_*(\overline F)$ conmuta con el cambio de base por
+$\bar s\longrightarrow\overline S$, o bien, teniendo en cuenta el teorema de
+cambio de base para el morfismo propio $f_1$, que $Rk_*(\overline F)$ conmuta
+con el cambio de base $X_{1\bar s}\longrightarrow X_1$. Este es el Lema
+2.1.10 siguiente.
+
+\pageoriginale
+
+Para demostrar que (2.1.8.2) es un isomorfismo basta demostrar, para el haz
+$F$, que la extensión por cero $k_!$ conmuta con el funtor $R\bar j_*$; es
+decir, en un entorno de $D$,
+\[
+R\Phi(k_!F)=0\qquad\text{sobre }X_{1\bar s}.
+\]
+Este es el Lema 2.1.11 siguiente.
+
+\subsubsection*{Lema 2.1.10.}
+\underline{Sea $f:X\longrightarrow S$ liso, sea $D\subset X$ un divisor de
+cruces normales relativo, pongamos
+$U=X-D\mathrel{\mathop{\hookrightarrow}^{j}}X$, y sea $F$ un haz de
+$\Lambda$-módulos sobre $U$, localmente constante y moderadamente ramificado
+a lo largo de $D$. La formación de $Rj_*F$ conmuta con todo cambio de base
+$T\longrightarrow S$.}
+
+La cuestión es local sobre $X$ para la topología étale. Podemos suponer, por
+tanto, que existe un morfismo $g:X'\longrightarrow X$, donde $X'$ es la
+normalización de $X$ en un recubrimiento finito étale suprayectivo
+$g':U'\longrightarrow U$, moderadamente ramificado a lo largo de $D$, tal que
+$g'^*F$ es constante sobre $U'$. Por el lema de Abhyankar, podemos suponer
+además que $X'$ es liso sobre $S$ y que $U'$ es el complementario en $X'$ de
+un divisor de cruces normales relativo $D'$.
+
+El haz $F$ se inyecta en $g'_*g'^*F$, y el conúcleo vuelve a satisfacer las
+hipótesis del lema. Iterando esta construcción (el mismo $g$ sigue sirviendo)
+se obtiene una resolución de $F$ por haces de la forma $g'_*G$, donde $G$ es
+constante y $g'$ es como arriba. Basta, pues, demostrar la afirmación para tal
+haz, o equivalentemente para $(X'/S,D',G)$ con $G$ constante sobre $U'$. Este
+es un caso particular de SGA~5, II, 4.4.
+
+\subsubsection*{Lema 2.1.11.}
+\underline{Sea $S$ un rasgo henseliano, sea $f:X\longrightarrow S$ liso, sea
+$D\subset X$ un divisor de cruces normales relativo, pongamos
+$U=X-D\mathrel{\mathop{\hookrightarrow}^{j}}X$, y sea $F$ un haz de
+$\Lambda$-módulos sobre $U$, localmente constante y moderadamente ramificado
+a lo largo de $D$. Entonces}
+\[
+\underline{R\Phi(j_!F)=0.}
+\]
+
+\pageoriginale
+
+El dévissage utilizado acaba de reducirnos al caso en que $F$ es constante,
+de valor $G$. Podemos suponer que $D$ es la unión de divisores lisos
+$(D_i)_{i\in I}$. Para $J\subset I$, sea $D_J$ la intersección de los $D_i$
+con $i\in J$. El haz $F$ posee una resolución $F^\bullet$ cuyos términos son
+sumas de haces $G_J$, constantes sobre $D_J$ y prolongados por cero a $X$.
+Basta, por tanto, demostrar el lema para uno de tales haces, y esto se sigue
+de (2.1.5), aplicado a $D_J/S$.
+
+Conjeturo que (2.1.7.5) es un isomorfismo cuando $S$ y $S'$ son excelentes.
+He aquí un resultado parcial (véase también 2.4.2).
+
+\subsubsection*{Proposición 2.1.12.}
+\underline{El morfismo (2.1.7.5) es un isomorfismo en los casos siguientes:}
+
+\medskip
+\noindent(a) $S$ es excelente y $S'$ es su completado;
+
+\noindent(b) $S$ y $S'$ tienen característica igual a cero.
+
+En el caso (b), nos reducimos a la situación en que $S$ y $S'$ son
+estrictamente locales y un uniformizante de $S$ sigue siendo un uniformizante
+de $S'$ (se extienden los escalares sin cambiar
+$\bar S'\longrightarrow\bar S$). En ambos casos (a) y (b), denotando con una
+barra la normalización en una clausura separable del cuerpo de fracciones, se
+tiene entonces
+\[
+\bar S'\simeq S'\times_S\bar S.
+\]
+Volviendo a las definiciones, basta demostrar que $S'\longrightarrow S$ es
+universalmente localmente acíclico (aplíquese SGA~4, XVI, 1.1). Esto se sigue
+de I, 0.5.1 (basado en la versión de Artin de la desingularización de Néron) y
+SGA~4, XV, 2.1 (el teorema de aciclicidad local para morfismos lisos).
+
+\subsubsection*{2.1.13.}
+Supongamos que $f:X\longrightarrow S$ es de tipo finito. La dimensión
+cohomológica (SGA~4, XVII, 1.2.9) de $R\Psi$ es entonces a lo sumo
+$\dim(X_\eta)$, como se deduce de 2.1.4 y SGA~4, XIV, 3.2 (véase I, 4.2(i)).
+Por tanto, $R\Psi$ se extiende a toda la categoría derivada,
+\[
+R\Psi:D(X,\Lambda)\longrightarrow D(X_s\times_sS,\Lambda),
+\]
+y lleva $D^-$ en $D^-$. Sea $L\in\operatorname{Ob}D^-(\Lambda)$ un complejo
+acotado superiormente de $\Lambda$-módulos a derecha, y sea
+$K\in\operatorname{Ob}D^-(X,\Lambda)$. Se tiene entonces un isomorfismo
+
+\pageoriginale
+
+\begin{equation}\tag{2.1.13.1}
+L\overset{\mathbf L}{\otimes}_\Lambda R\Psi(K)
+\xrightarrow{\ \sim\ }
+R\Psi\bigl(L\overset{\mathbf L}{\otimes}_\Lambda K\bigr).
+\end{equation}
+Para comprobar (2.1.13.1), se reemplaza primero $L$ por un complejo de
+$\Lambda$-módulos libres. Como $R\Psi$ es triangulado y de dimensión
+cohomológica finita, basta comprobar la afirmación después de reemplazar $L$
+por uno de sus términos. El paso al colímite filtrante nos reduce al caso en
+que $L$ es un módulo libre finito, y luego al caso tautológico $L=\Lambda$.
+
+Se deduce de (2.1.13.1), mediante el argumento habitual (véase SGA~4, XVII,
+5.2.11), que si $K\in\operatorname{Ob}D(X_\eta,\Lambda)$ tiene dimensión de
+Tor finita a lo sumo $d$, donde $d\in\mathbb Z$ (SGA~4, XVII, 4.1.9),
+entonces $R\Psi_\eta(K)$ también tiene dimensión de Tor a lo sumo $d$.
+
+\subsection*{2.2. Una compatibilidad (morfismos traza)}
+
+\subsubsection*{2.2.1.}
+Sea $S$ un rasgo henseliano, y sea
+$u:X_s\longrightarrow Y_s$ un morfismo separado, cuasifinito, plano y de
+presentación finita entre $s$-esquemas. Para todo haz abeliano $F$ sobre
+$Y_s$ se tiene un morfismo traza
+\[
+\operatorname{Tr}_u:u_!u^*F\longrightarrow F
+\]
+(SGA~4, XVII, 6.2.3). Si $F$ es un haz abeliano sobre $Y_s\times_sS$ o sobre
+$Y_s\times_s\eta$, se obtiene un morfismo análogo
+$\operatorname{Tr}_u:u_!u^*F\longrightarrow F$.
+
+Sea ahora $u:X\longrightarrow Y$ un morfismo separado, cuasifinito, plano y
+de presentación finita entre $S$-esquemas. Seguimos escribiendo $u$ para el
+morfismo inducido
+\[
+X_s\times_sS\longrightarrow Y_s\times_sS,
+\]
+y utilizamos $\Psi$ para los funtores de 1.3.3, tanto para $X$ como para $Y$.
+
+\subsubsection*{Proposición 2.2.2.}
+\underline{Para todo haz abeliano $F$ sobre $Y$, el diagrama siguiente es
+conmutativo:}
+\begin{center}
+\begin{tikzcd}[column sep=large, row sep=large]
+u_!u^*\Psi F
+  \arrow[r, "{(1.3.7.1)}"] \arrow[d, "\operatorname{Tr}_u"']
+  & u_!\Psi u^*F \arrow[r, "{(1.3.8.1)}"]
+  & \Psi u_!u^*F \arrow[d, "\operatorname{Tr}_u"] \\
+\Psi F \arrow[rr, equal] & {} & \Psi F.
+\end{tikzcd}
+\end{center}
+\pageoriginale
+
+La verificación se deja al lector. Hay una variante para $\Psi_\eta$ y para
+$F$ sobre $Y_\eta$.
+
+\subsubsection*{2.2.3.}
+Sea $\Lambda$ como en \sisi{2.2.1}{2.1.1}, y sea
+$u:X\longrightarrow Y$ un morfismo cuasifinito y plano entre $S$-esquemas
+separados, de tipo finito y planos:
+\begin{center}
+\begin{tikzcd}[column sep=large, row sep=large]
+X \arrow[rr, "u"] \arrow[dr, "f"'] & {} & Y \arrow[dl, "g"] \\
+{} & S & {}
+\end{tikzcd}
+\end{center}
+La impresión remite aquí a 2.2.1, pero el anillo de coeficientes $\Lambda$ se
+fija en 2.1.1. Seguimos escribiendo $f$ y $g$ para los morfismos
+\[
+X_s\times_sS\longrightarrow S,
+\qquad
+Y_s\times_sS\longrightarrow S,
+\]
+y suponemos que $\dim Y_\eta\leq n$. Para todo
+$K\in\operatorname{Ob}D(S,\Lambda)$ existe un morfismo traza (SGA~4, XVIII,
+2.9)
+\[
+\operatorname{Tr}_f:Rf_!f^*K(n)[2n]\longrightarrow K.
+\]
+
+\subsubsection*{Corolario 2.2.4.}
+\underline{El diagrama siguiente es conmutativo:}
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=large]
+Rg_!u_!u^*R\Psi\,g^*K(n)[2n]
+  \arrow[r, "{(1.3.7.1)}"] \arrow[d, "\operatorname{Tr}_u"']
+  \& Rf_!R\Psi\,f^*K(n)[2n]
+      \arrow[r, "{(2.1.10.1)}"]
+  \& Rf_!f^*K(n)[2n] \arrow[d, "\operatorname{Tr}_f"] \\
+Rg_!R\Psi\,g^*K(n)[2n]
+  \arrow[r, "{(2.1.10.1)}"]
+  \& Rg_!g^*K(n)[2n] \arrow[r, "\operatorname{Tr}_g"]
+  \& K
+\end{tikzcd}}
+\end{center}
+\underline{Si $u$ es étale, (1.3.7.1) es un isomorfismo.}
+
+Omitiendo los argumentos, el diagrama (2.2.4) se desarrolla como sigue:
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
+Rg_!u_!u^*R\Psi\,g^*
+  \arrow[r] \arrow[d, "\operatorname{Tr}_u"']
+  \arrow[rd, phantom, "{(1)}" description]
+  \& Rg_!R\Psi\,u_!u^*g^*
+      \arrow[r] \arrow[d, "\operatorname{Tr}_u"']
+      \arrow[rd, phantom, "{(2)}" description]
+  \& Rg_!u_!u^*g^*
+      \arrow[r, "\sim"] \arrow[d, "\operatorname{Tr}_u"']
+      \arrow[rd, phantom, "{(3)}" description]
+  \& Rf_!f^* \arrow[d, "\operatorname{Tr}_f"] \\
+Rg_!R\Psi\,g^* \arrow[r, equal]
+  \& Rg_!R\Psi\,g^* \arrow[r]
+  \& Rg_!g^* \arrow[r, "\operatorname{Tr}_g"]
+  \& K.
+\end{tikzcd}}
+\end{center}
+\pageoriginale
+
+La conmutatividad de (1) se sigue de 2.2.2; la de (2) es la funtorialidad de
+(2.1.10.2), y la de (3) es la transitividad de la traza (SGA~4, XVIII, 2.9,
+Variante~3).
+
+\subsubsection*{2.2.4.1.}
+Hay un resultado análogo para $\Psi_\eta$ y
+$K\in\operatorname{Ob}D(\eta,\Lambda)$.
+
+\subsubsection*{2.2.5.}
+Sea $\Phi$ un subconjunto de $Y_s$ propio sobre $s$, y denotemos por
+$Rg_\Phi$ el funtor «imagen directa con soporte en $\Phi$». Sea
+$\operatorname{Tr}_g$ el compuesto
+\begin{equation}\tag{2.2.5.1}
+\begin{split}
+\operatorname{Tr}_g:
+\sisi{Rf_\Phi}{Rg_\Phi} R\Psi g^*K(n)[2n]
+&\longrightarrow Rg_!R\Psi g^*K(n)[2n] \\
+&\longrightarrow Rg_!g^*K(n)[2n]
+\longrightarrow K,
+\end{split}
+\end{equation}
+y análogamente para $\Psi_\eta$ y $K\in D(\eta,\Lambda)$. La impresión
+contiene $Rf_\Phi$ como primer funtor de (2.2.5.1); la definición
+inmediatamente anterior y el resto del compuesto exigen $Rg_\Phi$, que se usa
+en la rama corregida.
+
+Si $\Phi$ es un conjunto finito de puntos cerrados, entonces
+\[
+Rg_\Phi\circ u_!=Rf_{u^{-1}\Phi},
+\]
+y por tanto existe un morfismo traza
+\[
+\operatorname{Tr}_u:
+Rf_{u^{-1}\Phi}u^*=Rg_\Phi u_!u^*\longrightarrow Rg_\Phi.
+\]
+Por 2.2.4, el diagrama siguiente es conmutativo:
+\begin{center}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=large]
+Rf_{u^{-1}\Phi}u^*R\Psi\,g^*K(n)[2n]
+  \arrow[r] \arrow[d, "\operatorname{Tr}_u"']
+  \& Rf_{u^{-1}\Phi}R\Psi\,f^*K(n)[2n]
+      \arrow[r, "\operatorname{Tr}_f"]
+  \& K \arrow[d, equal] \\
+Rg_\Phi R\Psi\,g^*K(n)[2n]
+  \arrow[rr, "\operatorname{Tr}_g"']
+  \& {} \& K.
+\end{tikzcd}}
+\end{center}
+
+Supongamos que $u$ es étale, sea $x\in X_s$, y supongamos que $x$ e
+$y=u(x)$ tienen el mismo cuerpo residual. Entonces
+\[
+Rf_{\{x\}}\xrightarrow{\ \sim\ }Rg_{\{\sisi{x}{y}\}}.
+\]
+La impresión contiene $\{x\}$ también a la derecha, pero el soporte para $g$
+está en $Y_s$ y es $\{y\}$, como confirma el diagrama siguiente. Este
+isomorfismo, dado por $\operatorname{Tr}_u$, expresa la localidad étale de la
+cohomología con soporte en $x$. El diagrama
+\begin{equation}\tag{2.2.5.2}
+\begin{tikzcd}[column sep=huge, row sep=large]
+Rf_{\{x\}}R\Psi\,f^*K(n)[2n]
+  \arrow[r, "\operatorname{Tr}_f"] \arrow[d, equal]
+  & K \arrow[d, equal] \\
+Rg_{\{y\}}R\Psi\,g^*K(n)[2n]
+  \arrow[r, "\operatorname{Tr}_g"]
+  & K
+\end{tikzcd}
+\end{equation}
+
+\pageoriginale
+
+es conmutativo.
+
+\subsubsection*{Escolio 2.2.6.}
+La compatibilidad (\sisi{2.3.5.2}{2.2.5.2}) dice que el morfismo traza
+(\sisi{2.3.5.1}{2.2.5.1}), para $\Phi=\{\sisi{x}{y}\}$, es un invariante
+local: solo depende del henselizado del $S$-esquema $X$ en $x$. Lo mismo vale
+para $R\Psi_\eta$. Las referencias impresas a (2.3.5.2) y (2.3.5.1) son las
+inmediatamente anteriores (2.2.5.2) y (2.2.5.1); asimismo,
+$\Phi\subset Y_s$ hace de $\{y\}$, y no del $\{x\}$ impreso, el soporte
+pertinente.
+
+\subsection*{2.3. Teorema de finitud (en característica igual a cero)}
+
+\subsubsection*{Teorema 2.3.1.}
+\underline{Sea $S$ un rasgo henseliano como en 0.2.5, sea $\Lambda$ un anillo
+noetheriano de torsión y sea $f:X\longrightarrow S$ un morfismo de tipo
+finito. Supongamos que $S$ tiene característica igual a cero. Entonces, para
+todo haz constructible de $\Lambda$-módulos $F$ sobre $X_\eta$, los haces
+$R^i\Psi_{\bar\eta}(F)$ sobre $X_{\bar s}$ son constructibles.}
+
+Comenzamos repitiendo el principio de la demostración de SGA~4, XIV, 1.10.
+Apliquemos SGA~4, IX, 2.14(ii). Existe una resolución $F^\bullet$ de $F$
+\begin{center}
+\begin{tikzcd}[column sep=large, row sep=large]
+{} & F \arrow[d] & {} & {} \\
+0 \arrow[r] & F^0 \arrow[r] & F^1 \arrow[r] & \cdots
+\end{tikzcd}
+\end{center}
+por haces de la forma $\bigoplus_i p'_{i*}G_i$, donde
+$p'_i:Y_{i\eta}\longrightarrow X_\eta$ es finito y $G_i$ es un haz
+constructible constante. Podemos suponer reducido $Y_{i\eta}$; sea
+$p_i:Y_i\longrightarrow X$ la normalización de $X$ en $Y_{i\eta}$. Mediante
+la sucesión espectral de la resolución $F^\bullet$ y aplicando (2.1.7.1) en el
+caso elemental del morfismo finito $p_i$, se ve que basta demostrar el teorema
+para cada par $(Y_i,G_i)$.
+
+Demostremos a continuación el teorema cuando $F$ es el haz constante definido
+por un $\Lambda$-módulo $M$. Recordemos que $\Lambda$ es una
+$\mathbb Z/n$-álgebra para cierto $n$. El módulo $M$ puede, por tanto,
+descomponerse por dévissage en módulos $M_i$ sobre
+$\Lambda/\ell_i\Lambda$, donde cada $\ell_i\mid n$ es un primo adecuado.
+Esto nos reduce al caso en que $\Lambda$ es una $\mathbb Z/\ell$-álgebra, con
+$\ell$ primo. La fórmula (2.1.13.1) da entonces
+\[
+M\otimes_{\mathbb Z/\ell}
+R^i\Psi_{\bar\eta}(\mathbb Z/\ell)
+\xrightarrow{\ \sim\ }
+R^i\Psi_{\bar\eta}(M).
+\]
+\pageoriginale
+
+Queda por tratar el haz constante $F=\mathbb Z/\ell$.
+
+Elijamos una sucesión decreciente de subconjuntos cerrados
+\[
+X_\eta=X'_0\supset\cdots\supset X'_n
+\]
+tal que $(X'_i-X'_{i+1})_{\mathrm{red}}$ sea liso sobre $\eta$, y sea
+$X_i=\overline{X'_i}$ la clausura en $X$. El haz constante
+$\mathbb Z/\ell$ se descompone por dévissage en los haces constantes
+$\mathbb Z/\ell$ sobre los estratos $X'_i-X'_{i+1}$, prolongados por cero.
+Así:
+
+\medskip
+\noindent\underline{Reducción 1.}
+Basta demostrar el Teorema 2.3.1 para un haz $j_!\mathbb Z/\ell$, donde
+$j:U\hookrightarrow X_\eta$ es la inclusión de un abierto liso.
+
+Por resolución de singularidades existe un morfismo
+$g:X_1\longrightarrow X$ tal que
+
+\medskip
+\noindent(a) $g$ es propio e induce un isomorfismo
+$g^{-1}(U)\xrightarrow{\sim}U$;
+
+\noindent(b) $X_1$ es regular y $X_1-g^{-1}(U)$ es un divisor de cruces
+normales de $X_1$, unión de divisores regulares $D_\alpha$.
+
+Sea $j_1:g^{-1}(U)\hookrightarrow X_1$. Entonces
+\[
+Rg_*j_{1!}\mathbb Z/\ell=j_!\mathbb Z/\ell.
+\]
+Aplicando (2.1.7.1) y el teorema de finitud SGA~4, XIV, 1.1, se ve que basta
+demostrar el Teorema 2.3.1 para $(X_1,j_{1!}\mathbb Z/\ell)$.
+
+Existe una resolución
+\[
+0\longrightarrow j_{1!}\mathbb Z/\ell
+\longrightarrow\mathbb Z/\ell
+\longrightarrow\bigoplus_\alpha(\mathbb Z/\ell)_{D_\alpha}
+\longrightarrow
+\bigoplus_{\alpha,\beta}
+(\mathbb Z/\ell)_{D_\alpha\cap D_\beta}
+\longrightarrow\cdots,
+\]
+y por tanto:
+
+\medskip
+\noindent\underline{Reducción 2.}
+Basta demostrar el Teorema 2.3.1 para el haz constante $\mathbb Z/\ell$
+sobre un $S$-esquema regular $X$ tal que $X_s$ sea un divisor de cruces
+normales en $X$.
+
+En este último caso se utiliza el cálculo explícito I, 3.3, que a su vez usa
+el teorema de pureza SGA~4, XIX, 3.2 y la hipótesis de característica cero.
+
+\subsection*{2.4. Singularidades aisladas}
+
+\subsubsection*{2.4.1.}
+En toda esta sección suponemos, por simplicidad, que $S$ es un rasgo
+estrictamente henseliano. Sea $\Lambda$ un anillo noetheriano de torsión cuya
+torsión es prima a la característica residual de $S$, sea
+$f:X\longrightarrow S$ un morfismo de tipo finito, y sea $F$ un haz
+constructible de $\Lambda$-módulos sobre $X$. Un punto $x\in X$ se llama
+
+\pageoriginale
+
+punto liso de $(X,F)$ si $f$ es liso en $x$ y $F$ es localmente constante en
+un entorno de $x$. Sea $\Sigma$ el conjunto de los puntos donde $(X,F)$ no
+es liso, y sea $\Sigma_s$ su fibra especial. Sabemos que $R\Phi(F)=0$ fuera
+de $\Sigma_s$.
+
+\subsubsection*{Teorema 2.4.2.}
+\underline{En todo punto aislado $x$ de $\Sigma_s$, los módulos
+$R^i\Phi_{\bar\eta}(F)_x$ son $\Lambda$-módulos de tipo finito e invariantes
+por cambio de rasgo (mediante 2.1.7.1).}
+
+En característica igual a cero, estas afirmaciones se demostraron en 2.1.12
+y 2.3.1 sin suponer que $x$ fuera aislado.
+
+Sea $x$ un punto aislado de $\Sigma_s$. El teorema es local en un entorno de
+$x$, por lo que podemos suponer que $f$ es propio. Se tiene entonces la
+sucesión exacta larga (2.1.8.9)
+\[
+\cdots\longrightarrow H^i(X_s,F)
+\longrightarrow H^i(X_{\bar\eta},F)
+\longrightarrow
+\mathbb H^i\bigl(X_s,R\Phi_{\bar\eta}(F)\bigr)
+\longrightarrow\cdots .
+\]
+En esta sucesión, $H^i(X_s,F)$ y $H^i(X_{\bar\eta},F)$ son invariantes por
+cambio de rasgo y son $\Lambda$-módulos de tipo finito (SGA~4, XIV, 1.1). Los
+módulos $\mathbb H^i(X_s,R\Phi_{\bar\eta}(F))$ tienen, por tanto, las mismas
+propiedades. Recordemos el lema siguiente.
+
+\subsubsection*{Lema 2.4.3.}
+\underline{Sea $(T,\Lambda)$ un topos anillado, sea $Z$ un subtopos cerrado
+de $T$, y sea $i:Z\hookrightarrow T$ la inclusión. Entonces el funtor}
+\[
+i_*:D(Z,\Lambda)\longrightarrow D(T,\Lambda)
+\]
+\underline{es una equivalencia de $D(Z,\Lambda)$ sobre la subcategoría plena
+de $D(T,\Lambda)$ formada por los complejos $K$ para los que
+$\mathcal H^i(K)$ tiene soporte en $Z$.}
+
+En efecto, para tal complejo $K$, el morfismo
+$K\longrightarrow i_*i^*K$ es un cuasi-isomorfismo.
+
+En consecuencia, podemos considerar $R\Phi_{\bar\eta}(F)$ como un objeto de
+\[
+D^b(\Sigma_s,\Lambda)
+=D^b(\Sigma_s\setminus\{x\},\Lambda)\oplus D^b(\{x\},\Lambda).
+\]
+Pasando a un sumando directo, se obtiene que
+\[
+\mathbb H^i\bigl(\{x\},R\Phi_{\bar\eta}(F)\bigr)
+=R^i\Phi_{\bar\eta}(F)_x
+\]
+posee las propiedades enunciadas en 2.4.2. Esto termina la demostración.
+
+\subsubsection*{Observación 2.4.4.}
+La misma demostración muestra que, si $K$ es constructible en
+$D^+(X,\Lambda)$ y $x$ está aislado en el soporte de
+$R\Phi_{\bar\eta}(K)$, entonces los módulos de cohomología del tallo
+$R\Phi_{\bar\eta}(K)_x$ son de tipo finito sobre $\Lambda$. Si, después de
+un cambio de rasgo, $x$ sigue siendo un punto aislado del soporte, estos
+módulos son invariantes por dicho cambio de rasgo.
+
+\pageoriginale
+
+\subsubsection*{2.4.5.}
+Sea $x\in X_s$ un punto aislado donde $(X,F)$ no es liso. Más generalmente,
+sea $K\in\operatorname{Ob}D^b(X,\Lambda)$, y sea $x$ un punto aislado del
+soporte de $R\Phi(K)$. Sea $i:\{x\}\hookrightarrow X_s$ la inclusión. El
+complejo $i_*i^*R\Phi(K)$, que es isomorfo a $R\Phi(K)$ en un entorno de $x$,
+es un sumando directo de $R\Phi(\sisi{F}{K})$ por 2.4.3. Así, para
+$\sigma\in I$, el morfismo de variación induce
+\[
+\operatorname{Var}(\sigma):
+i_*i^*R\Phi_{\bar\eta}(K)\longrightarrow R\Psi_{\bar\eta}(K),
+\]
+es decir,
+\begin{equation}\tag{2.4.5.1}
+\operatorname{Var}(\sigma):
+\bigl(R\Phi_{\bar\eta}(K)\bigr)_x
+\longrightarrow
+R\Gamma_{\{x\}}\bigl(R\Psi_{\bar\eta}(K)\bigr).
+\end{equation}
+El $R\Phi(F)$ impreso en la frase sobre el sumando directo es $R\Phi(K)$ en
+esta formulación general.
+
+\subsubsection*{2.4.6.}
+Supongamos que el soporte $\Sigma$ de $R\Phi(K)$ está formado por un número
+finito de puntos aislados. Para todo $\sigma\in I$, el endomorfismo $\sigma-1$
+de $R\Psi_{\bar\eta}(K)$ es entonces el compuesto representado en el diagrama
+siguiente:
+\begin{equation}\tag{2.4.6.1}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=huge, row sep=huge]
+R\Psi_{\bar\eta}(K)
+  \arrow[r] \arrow[d, "\sigma-1"']
+  \& R\Phi_{\bar\eta}(K)
+     =\displaystyle\bigoplus_{x\in\Sigma}
+       i_{x*}\bigl(R\Phi_{\bar\eta}(K)\bigr)_x
+     \arrow[d, "{\bigoplus i_{x*}\operatorname{Var}(\sigma)}"'] \\
+R\Psi_{\bar\eta}(K)
+  \& \displaystyle\bigoplus_{x\in\Sigma}
+       i_{x*}R\Gamma_{\{x\}}R\Psi_{\bar\eta}(K)
+     \arrow[l]
+\end{tikzcd}}
+\end{equation}
+
+Si $f$ es propio, al aplicar $H^i$ a (2.4.6.1) se obtiene que el endomorfismo
+$\sigma-1$ de $\mathbb H^i(X_{\bar\eta},K)$ es el compuesto
+\begin{equation}\tag{2.4.6.2}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
+\mathbb H^i(X_{\bar\eta},K)
+  \arrow[r, "\sim"] \arrow[d, "\sigma-1"']
+  \& \mathbb H^i\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+     \arrow[r]
+  \& \mathbb H^i\bigl(X_s,R\Phi_{\bar\eta}(K)\bigr)
+     =\displaystyle\bigoplus_{x\in\Sigma}R^i\Phi_{\bar\eta}(K)_x
+     \arrow[d, "{\bigoplus\operatorname{Var}(\sigma)}"'] \\
+\mathbb H^i(X_{\bar\eta},K)
+  \& \mathbb H^i\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+     \arrow[l, "\sim"']
+  \& \displaystyle\bigoplus_{x\in\Sigma}
+     \mathbb H^i_{\{x\}}\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+     \arrow[l]
+\end{tikzcd}}
+\end{equation}
+Esto describe la acción de $I$ sobre $\mathbb H^i(X_{\bar\eta},K)$; sus
+ingredientes esenciales son los morfismos de variación (2.4.5.1), que son
+locales sobre $X$. También se tiene la sucesión exacta larga
+
+\pageoriginale
+
+\begin{equation}\tag{2.4.6.3}
+\longrightarrow \mathbb H^i(X_s,K)
+\longrightarrow \mathbb H^i(X_{\bar\eta},K)
+\longrightarrow \bigoplus_{x\in\Sigma}R^i\Phi_{\bar\eta}(K)_x
+\longrightarrow\cdots .
+\end{equation}
+
+El mismo argumento se aplica cuando $f$ no es necesariamente propio, siempre
+que $(X,K)$ satisfaga 2.1.9. El diagrama (2.4.6.5) siguiente define un
+morfismo
+\begin{equation}\tag{2.4.6.4}
+\operatorname{Var}(\sigma):
+R\Gamma(X_{\bar\eta},K)\longrightarrow R\Gamma_c(X_{\bar\eta},K)
+\end{equation}
+tal que el endomorfismo $\sigma-1$ de $R\Gamma(X_{\bar\eta},K)$
+(respectivamente, de $R\Gamma_c(X_{\bar\eta},K)$) es el compuesto
+$\alpha\operatorname{Var}(\sigma)$ (respectivamente,
+$\operatorname{Var}(\sigma)\alpha$), donde
+\[
+\alpha:R\Gamma_c(X_{\bar\eta},K)\longrightarrow
+R\Gamma(X_{\bar\eta},K).
+\]
+\begin{equation}\tag{2.4.6.5}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=huge, row sep=huge]
+R\Gamma(X_{\bar\eta},K)
+  \arrow[r, "\sim"] \arrow[d, "\operatorname{Var}(\sigma)"']
+  \& R\Gamma\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+     \arrow[r]
+  \& \displaystyle\bigoplus_{x\in\Sigma}
+     \bigl(R\Phi_{\bar\eta}(K)\bigr)_x
+     \arrow[d, "\bigoplus"']
+  \& {} \\
+R\Gamma_c(X_{\bar\eta},K)
+  \arrow[r, "\sim"']
+  \& R\Gamma_c\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+  \& \displaystyle\bigoplus_{x\in\Sigma}
+     R\Gamma_{\{x\}}\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+     \arrow[l]
+  \& .
+\end{tikzcd}}
+\end{equation}
+
+En este caso se tienen asimismo las sucesiones exactas largas
+\begin{equation}\tag{2.4.6.6}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=large]
+\cdots \arrow[r]
+  \& \mathbb H^i_c(X_s,K) \arrow[r] \arrow[d]
+  \& \mathbb H^i_c(X_{\bar\eta},K) \arrow[r] \arrow[d]
+  \& \displaystyle\bigoplus_{x\in\Sigma}
+     \bigl(R^i\Phi_{\bar\eta}(K)\bigr)_x
+     \arrow[r] \arrow[d, equal]
+  \& \cdots \\
+\cdots \arrow[r]
+  \& \mathbb H^i(X_s,K) \arrow[r]
+  \& \mathbb H^i(X_{\bar\eta},K) \arrow[r]
+  \& \displaystyle\bigoplus_{x\in\Sigma}
+     R^i\Phi_{\bar\eta}(K)_x \arrow[r]
+  \& \cdots
+\end{tikzcd}}
+\end{equation}
+
+La referencia impresa (\sisi{2.4.4.1}{2.4.5.1}) en la discusión que sigue a
+(2.4.6.2) es el morfismo de variación (2.4.5.1).
+
+\subsubsection*{2.4.6. (segunda aparición en la fuente)}
+Sea $X_{s(x)}$ el henselizado de $X_s$ en $x$, y pongamos
+\[
+X^*_{s(x)}=X_{s(x)}\setminus\{x\}.
+\]
+Las sucesiones exactas largas de hipercohomología de
+$(X_{s(x)},\{x\})$, con coeficientes en $K_s$,
+$R\Psi_{\bar\eta}(K)$ y $R\Phi_{\bar\eta}(K)$, dan el siguiente diagrama
+conmutativo de sucesiones exactas largas:
+
+\pageoriginale
+
+\begin{equation}\tag{2.4.6.1}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=large]
+{}
+  \& 0 \arrow[r] \arrow[d]
+  \& R^{n-1}\Phi_{\bar\eta}(K)_x \arrow[r] \arrow[d]
+  \& R^{n-1}\Phi_{\bar\eta}(K)_x \arrow[r] \arrow[d]
+  \& 0 \arrow[d]
+  \& {} \\
+{} \arrow[r]
+  \& \mathbb H^{n-1}(X^*_{s(x)},K)
+     \arrow[r, "j"] \arrow[d, equal]
+  \& \mathbb H^n_{\{x\}}(X_s,K) \arrow[r] \arrow[d]
+  \& \underline{H}^{n}(K)_x \arrow[r] \arrow[d]
+  \& \mathbb H^n(X^*_{s(x)},K)
+     \arrow[r] \arrow[d, equal]
+  \& {} \\
+{} \arrow[r]
+  \& \mathbb H^{n-1}(X^*_{s(x)},K)
+     \arrow[r, "j", "{\mbox{\textcircled{1}}}"'] \arrow[d]
+  \& \mathbb H^n_{\{x\}}\bigl(X_s,R\Psi_{\bar\eta}(K)\bigr)
+     \arrow[r] \arrow[d]
+  \& R^n\Psi_{\bar\eta}(K)_x \arrow[r] \arrow[d]
+  \& \mathbb H^n(X_{s(x)},K) \arrow[r] \arrow[d]
+  \& {} \\
+{}
+  \& 0 \arrow[r]
+  \& R^n\Phi_{\bar\eta}(K)_x \arrow[r, equal]
+  \& R^n\Phi_{\bar\eta}(K)_x \arrow[r]
+  \& 0
+  \& {}
+\end{tikzcd}}
+\end{equation}
+La imagen de la flecha \textcircled{1} está contenida en los invariantes por
+la inercia.
+
+La fuente imprime tanto este párrafo como el precedente con el número 2.4.6,
+y ambos diagramas principales con el número (2.4.6.1). Se conservan aquí los
+números repetidos; esta segunda aparición es la citada en el Exposé XV,
+2.2.6.
+
+\renewcommand{\refname}{Bibliografía}
+\begin{thebibliography}{9}
+\bibitem{GiraudClassifyingTopos}
+J.~Giraud, «Classifying topos», pp.~43--56 en
+\emph{Toposes, Algebraic Geometry and Logic},
+Lecture Notes in Mathematics 274, Springer-Verlag, 1971.
+
+\bibitem{NagataImbedding}
+M.~Nagata, «A generalization of the imbedding problem»,
+\emph{J. Math. Kyoto} \textbf{3}, n.º~1 (1963), pp.~89--102.
+\end{thebibliography}

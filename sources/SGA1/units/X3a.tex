@@ -1,0 +1,244 @@
+\section[Aplicación del teorema de pureza]{Aplicación del teorema de pureza:
+teorema de continuidad para los grupos fundamentales de las fibras de un
+morfismo propio y liso}
+\label{X.3}
+
+Recordemos sin demostración\footnote{Para una demostración, \cf SGA~2
+\Ref{X.3.4}.} el
+
+\begin{theoremedepurete}[Zariski--Nagata]
+\label{X.3.1}
+\index{teorema de pureza|hyperpage}%
+Sea~$f\colon X\to Y$ un morfismo cuasifinito y dominante de preesquemas
+íntegros, con~$X$ normal e~$Y$ regular y localmente noetheriano, y sea~$Z$ el
+conjunto de los puntos de~$X$ en los que~$f$ no es étale, \ie en los que~$f$
+está ramificado (ambas condiciones son equivalentes,
+\textup{\Ref{I.9.5}~(ii)}). Si~$Z\ne X$, entonces~$Z$ tiene codimensión~$1$
+en~$X$ en todos sus puntos, \ie para toda componente irreducible~$Z'$ de~$Z$, de
+punto genérico~$z$, la dimensión de Krull de~$\cal{O}_{X,z}$ es igual a~$1$.
+\end{theoremedepurete}
+
+Recordemos que un preesquema se dice \emph{normal}, respectivamente
+\emph{regular}, si sus anillos locales son normales, respectivamente regulares,
+y que la relación~$Z\ne X$ significa también que la extensión finita
+\ifthenelse{\boolean{orig}}
+{$R(Z)/R(X)$}
+{$R(X)/R(Y)$}
+(donde~$R$ denota el cuerpo de funciones racionales) es \emph{separable}.
+Situándonos en el punto genérico~$z$ de una componente~$Z'$ de~$Z$ y
+localizando en el punto~$y$ de~$Y$ situado debajo de~$z$, se obtiene
+\marginpar{276}
+el enunciado equivalente:
+
+\begin{corollaire}
+\label{X.3.2}
+Sean~$A$ un anillo local noetheriano regular y~$A\to B$ un homomorfismo local
+inyectivo tal que~$B$ sea normal, localizado de un álgebra de tipo finito
+sobre~$A$, y \emph{cuasifinito} sobre~$A$; supongamos además que
+$\dim A (=\dim B)\ge 2$ y que, para todo ideal primo~$\goth{p}$ de~$B$
+distinto del ideal maximal,~$B$ sea étale sobre~$A$ en~$\goth{p}$, \ie que
+$B_\goth{p}$ sea étale sobre~$A_\goth{q}$ (donde
+$\goth{q}=A\cap\goth{p}$). Entonces~$B$ es étale sobre~$A$.
+\end{corollaire}
+
+Por lo demás, no es difícil reducir este último enunciado al caso en que~$A$
+es un anillo local \emph{completo}, y por tanto~$B$ es \emph{finito} sobre~$A$.
+Zariski~\cite{X.5} da una demostración sencilla de este resultado, válida en
+el caso de igual característica; el caso general se debe a
+Nagata~\cite{X.3}, quien se apoya en un resultado delicado de Chow. Este último
+no fue verificado por ninguno de los participantes del Seminario y debería ser
+objeto de una exposición ulterior. Señalemos aquí solamente la demostración muy
+sencilla en el caso particular~$\dim A=2$, suficiente para la aplicación más
+importante que haremos de él en este número. Como~$B$ es normal, es un
+$B$-módulo de profundidad (terminología antigua: codimensión cohomológica)
+$\ge 2$; por tanto, es un~$A$-módulo de profundidad~$\ge 2$. Como~$A$ es
+regular de dimensión~$2$, se deduce que~$B$ es un \emph{módulo libre}
+sobre~$A$\kern1pt\footnote{\Cf EGA $0_{\textup{IV}}$ 17.3.4}. Resulta entonces
+de \Ref{I.4.10} que el conjunto de los ideales primos~$\goth{q}$ de~$A$ en
+los que~$B$ está ramificado sobre~$A$ es la parte de~$\Spec(A)$ definida por un
+ideal principal (engendrado por el discriminante de una base de~$B$ sobre~$A$),
+y por consiguiente es vacía si está contenida en el punto cerrado de~$\Spec(A)$.
+Esto demuestra~\Ref{X.3.2} cuando~$\dim A=2$.
+
+Utilizaremos sobre todo~\Ref{X.3.1} bajo la forma equivalente siguiente:
+
+\begin{corollaire}
+\label{X.3.3}
+Sean~$X$ un preesquema regular localmente noetheriano y~$U$ una parte abierta
+de~$X$, complementaria de una parte cerrada~$Z$ de~$X$ de
+codimensión~$\ge 2$. Entonces el funtor~$X'\mto X'\times_XU$ de la categoría
+de los recubrimientos étale de~$X$ en la categoría de los recubrimientos
+étale de~$U$ es una equivalencia
+\marginpar{277}
+de categorías. En particular, si~$a$ es un punto geométrico de~$U$, el
+homomorfismo canónico~$\pi_1(U,a)\to\pi_1(X,a)$ es un isomorfismo.
+\end{corollaire}
+
+La última afirmación es evidentemente consecuencia de la primera; para esta
+última, podemos suponer evidentemente que~$X$ es conexo y, por tanto,
+irreducible. De la normalidad de~$X$ se deduce ya que el funtor
+$X'\mto X'\times_XU$ de la categoría de los recubrimientos localmente libres
+(no necesariamente étale)
+\ifthenelse{\boolean{orig}}
+{de~$X'$}
+{de~$X$}
+en la categoría de los recubrimientos de~$U$ es plenamente fiel, pues lo es el
+funtor~$\cal{E}\mto\cal{E}\vert U$ de la categoría de los Módulos localmente
+libres sobre~$X$ en la categoría de los Módulos localmente libres sobre~$U$.
+Queda, pues, probar que para todo recubrimiento \emph{étale}~$U'$ de~$U$
+existe un recubrimiento étale~$X'$ de~$X$ (necesariamente único por lo que
+precede) tal que~$U'$ sea isomorfo a~$X'\times_XU$. Podemos suponer
+evidentemente que~$U'$ es conexo y, por tanto, irreducible, pues al ser~$U$
+normal,~$U'$ es normal. Sea~$K$ el cuerpo de funciones racionales sobre~$X$ o
+sobre~$U$ (es el mismo), y sea~$K'$ el de~$U'$; entonces~$U'$ se identifica con
+el normalizado de~$U$ en~$K'$, por \Ref{I.10.3}. Sea~$X'$ el normalizado
+de~$X$ en~$K'$ (EGA~II~6.3); entonces
+\ifthenelse{\boolean{orig}}
+{$X'=X\times_XU\cong U'$}
+{$X'\times_XU\cong U'$}.
+Por otra parte,~$X'$ es normal e íntegro, y el morfismo estructural
+$f\colon X'\to X$ es \emph{finito} y dominante (pues~$X$ es normal y~$K'/K$
+es una extensión finita separable). Es étale en
+\ifthenelse{\boolean{orig}}
+{$U'=f^{-1}(U)=X'=f^{-1}(Z)$}
+{$U'=f^{-1}(U)$, y $X'\setminus U'=f^{-1}(Z)$};
+como~$Z$ tiene codimensión~$\ge 2$ en~$X$,~$f^{-1}(Z)$ tiene
+codimensión~$\ge 2$ en~$X'$. Se concluye entonces de~\Ref{X.3.1} que~$X'$ es
+étale sobre~$X$, lo cual termina la demostración.
+
+\medskip
+Sea ahora~$f\colon X\to Y$ una aplicación racional de un preesquema regular
+localmente noetheriano~$X$ en un preesquema~$Y$, y supongamos que~$f$ está
+definida en un abierto~$U$ complementario de una parte cerrada de
+codimensión~$\ge 2$. Entonces~\Ref{X.3.3} proporciona un funtor, definido
+salvo isomorfismo, de la categoría de los recubrimientos étale de~$Y$ en la
+categoría de los recubrimientos étale de~$X$; de ahí, para todo punto
+geométrico~$a$ de~$U$, de imagen~$b$ en~$Y$, un homomorfismo canónico
+$$
+\pi_1(X,a)\to \pi_1(Y,b)
+$$
+(deducido
+\marginpar{278}
+del homomorfismo canónico~$\pi_1(U,a)\to\pi_1(Y,b)$ mediante el isomorfismo
+$\pi_1(U,a)\isomto \pi_1(X,a))$.
+Cuando~$f$ es un morfismo dominante, siendo~$X$ e~$Y$ íntegros de cuerpos de
+funciones~$K$ y~$L$, de modo que~$K$ es una extensión de~$L$, y siendo~$Y$
+normal, estas correspondencias se precisan en términos de extensiones de
+cuerpos observando que, para toda extensión finita~$L'$ de~$L$ no ramificada
+sobre~$Y$, el álgebra~$K'=L'\otimes_LK$ sobre~$K$ no está ramificada
+sobre~$X$.
+
+En particular, estas observaciones muestran que el grupo fundamental de los
+preesquemas regulares, conexos y localmente noetherianos, punteados por puntos
+geométricos situados en codimensión~$\le 1$, es un \emph{funtor} cuando se
+toman como morfismos en esta categoría las aplicaciones racionales dominantes
+definidas en complementarios de partes cerradas de codimensión~$\ge 2$.
+Recordando, por ejemplo, que una aplicación racional de un esquema normal sobre
+un cuerpo~$k$ en un esquema propio sobre~$k$ está definida en el complementario
+de un conjunto de codimensión~$\ge 2$, se obtiene:
+
+\begin{corollaire}[Invariancia birracional del grupo fundamental]
+\label{X.3.4}
+\index{invariancia birracional del grupo fundamental|hyperpage}%
+\index{teorema de invariancia birracional del grupo fundamental|hyperpage}%
+Sean~$k$ un cuerpo,~$X$ e~$Y$ dos esquemas regulares y propios sobre~$k$,
+$f\colon X\to Y$ una aplicación birracional de~$X$ en~$Y$, y~$\Omega$ una
+extensión algebraicamente cerrada del cuerpo de funciones~$K$ de~$X$ que
+permita definir el grupo fundamental de~$X$ y el grupo fundamental de~$Y$.
+Estos grupos son entonces canónicamente isomorfos.
+\end{corollaire}
+
+Esto significa asimismo que, para una extensión finita~$K'$ de~$K$, si no está
+ramificada sobre un «modelo» propio no singular~$X$ de~$K$, tampoco lo está
+sobre ningún otro modelo propio no singular.
+
+\begin{remarque}
+\label{X.3.5}
+Para otras aplicaciones del teorema de pureza, véanse los trabajos
+\ifthenelse{\boolean{orig}}
+{de \textsc{Abhyankar}}
+{de \textsc{Abhyankar}}
+expuestos en~\cite{X.4}, inspirados en los resultados de
+\textsc{Zariski}~\cite[cap\ptbl VIII]{X.6}, demostrados por vía topológica.
+Estos últimos distan mucho de haber sido asimilados por la geometría algebraica
+«abstracta» y merecen nuevos esfuerzos.
+\end{remarque}
+
+Necesitaremos
+\marginpar{279}
+algunos hechos elementales de la teoría de la ramificación. Sean~$V$ un
+anillo de valoración discreta de cuerpo de fracciones~$K$ y cuerpo
+residual~$k$,~$L$ una extensión galoisiana de~$K$ de grupo~$G$, y~$V'$ el
+normalizado de~$V$ en~$L$, que es un módulo libre de rango
+$n=[L{\colon }K]$ sobre~$V$. Sean~$\goth{m'}$ un ideal maximal de~$V'$,
+$G_d$ el subgrupo de~$G$ formado por los elementos que dejan invariante
+$\goth{m'}$, de modo que~$G_d$ opera en la extensión residual
+$k'=V'/\goth{m'}$ de~$k$, y~$G_i$ el subgrupo de los elementos de~$G_d$ que
+operan trivialmente (recordemos que~$G_d$ y~$G_i$ se llaman, respectivamente,
+subgrupos de \emph{descomposición} y de \emph{inercia} de~$G$). Se dice que~$L$
+está \emph{moderadamente ramificada} sobre~$V$
+\ifthenelse{\boolean{orig}}
+{si~$n_i=[G_i{\colon }e]$ es de orden~$p$ primo a la característica de~$k$}
+{si~$n_i=[G_i{\colon }e]$ es primo a la característica~$p$ de~$k$}
+(condición siempre satisfecha si~$k$ tiene característica~0).
+Es bien sabido que~$G_i$ se sumerge entonces canónicamente en el grupo
+${k'}^*$ y, por tanto, es isomorfo al grupo de las raíces
+\ifthenelse{\boolean{orig}}
+{$n_i$-esimas}
+{$n_i$-esimas}
+de la unidad en~${k'}^*$. Esto implica, en particular, que~$G_i$ \emph{es
+cíclico}. El caso típico de esta situación es aquel en que se toma
+$L=K[t]/(t^n-u)$, siendo~$u$ un uniformizante de~$V$ y~$n$ un entero primo
+a~$p$: si~$K$ contiene las raíces \niemes de la unidad,~$L$ es una extensión
+galoisiana totalmente ramificada de~$K$, de grupo de Galois~$G=G_i$ isomorfo
+a~$\ZZ/n\ZZ$.
+
+\begin{lemme}[%
+\ifthenelse{\boolean{orig}}
+{Lema de \textsc{Abhyankar}}
+{Lema de \textsc{Abhyankar}}]
+\label{X.3.6}
+\index{Abhyankar (lema de)|hyperpage}%
+\index{lema de Abhyankar|hyperpage}%
+Sea~$V$ un anillo de valoración discreta de cuerpo de fracciones~$K$, sean~$L$
+y~$K'$ dos extensiones galoisianas de~$K$ \emph{moderadamente ramificadas}
+sobre~$V$, y sean~$n$ y~$m$ los órdenes de los grupos de inercia
+correspondientes
+\ifthenelse{\boolean{orig}}
+{.}
+{,}
+Sea~$L'$ una extensión compuesta de~$L$ y~$K'$ sobre~$K$. Si~$m$ es múltiplo
+de~$n$, entonces~$L'$ no está ramificada sobre los localizados de la clausura
+normal~$V'$ de~$V$ en~$K'$.
+\end{lemme}
+
+Sean, en efecto,~$W'$ el normalizado de~$V'$ en~$L'$,~$\goth{m'}$ un ideal
+maximal de~$V'$,~$\goth{n'}$ un ideal maximal de~$W'$ situado sobre
+\ifthenelse{\boolean{orig}}
+{$\goth{n'}$,}
+{$\goth{m'}$,}
+~$\goth{n}$ el ideal maximal que induce en el normalizado~$W$ de~$V$ en~$L$;
+sean~$G,\ H,\ M$ los grupos de Galois de~$L,\ K',\ L'$ sobre~$K$, y sean
+\ifthenelse{\boolean{orig}}
+{$G_i,\ H_i,\ L_i'$}
+{$G_i,\ H_i,\ M_i$}
+los grupos de inercia correspondientes a los ideales maximales elegidos.
+Entonces~$M$ se sumerge en el producto~$G\times H$ y~$M_i$ en el producto
+$G_i\times H_i$, de modo que las proyecciones~$M\to G$ y~$M\to H$,
+$M_i\to G_i$
+\marginpar{280}
+y~$M_i\to H_i$ sean sobreyectivas (sorites del cuerpo intermedio). Se deduce
+ya, puesto que~$G_i$ y~$H_i$ son por hipótesis cíclicos de órdenes
+\ifthenelse{\boolean{orig}}
+{$m$ y~$n$}
+{$n$ y~$m$}
+primos a~$p$, que~$M_i$ tiene orden primo a~$p$ y, por tanto, es cíclico.
+Como~$m$ es múltiplo de~$n$, los elementos de~$G_i\times H_i$ tienen
+\ifthenelse{\boolean{orig}}
+{potencia $m$-esima nula}
+{potencia $m$-esima igual a la identidad};
+por consiguiente,~$M_i$ tiene orden que divide a~$m$, y por tanto orden igual
+a~$m$, pues~$M_i\to H_i$ es sobreyectivo. Este último homomorfismo es también
+inyectivo. Ahora bien, su núcleo es el grupo de inercia de~$\goth{n'}$ sobre
+$\goth{m'}$, lo cual demuestra que~$L'$ no está ramificada sobre~$K'$ en
+$\goth{n'}$. De ahí el lema.

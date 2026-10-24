@@ -1,0 +1,107 @@
+
+\section[Apéndice II: finitud para las imágenes directas de los stacks]
+{Apéndice II: teorema de finitud para las imágenes directas de los stacks}
+\label{XIII.6}
+
+\begin{proposition}
+\label{XIII.6.1}
+Sean $S$ un esquema localmente noetheriano y $f\colon X\to S$ un
+morfismo. Si $S'$ es un $S$-esquema, se denota por $X'$ (\resp por
+$f'$, etc.) la imagen inversa de~$X$ (\resp de~$f$, etc.) por el
+morfismo $S'\to S$. Supongamos que, para todo
+\marginpar{436}
+esquema $S'$ étale sobre~$S$ y todo haz de conjuntos constructible~$F$
+sobre~$X'$, $f'_*F$ es constructible, y que, para todo haz de grupos
+constructible~$F$ sobre~$X'$, $\R^1f'_*F$ es constructible. Sea $\Phi$
+un stack $1$-constructible sobre~$X$~\eqref{XIII.0}. Entonces $f_*\Phi$
+es $1$-constructible.
+\end{proposition}
+
+Para todo esquema $S'$ étale sobre~$S$ y todo objeto~$x$
+de~$(f_*\Phi)_{S'}$, se tiene un isomorfismo
+$$
+\SheafAut_{S'}(x)\simeq f'_*\SheafAut_{X'}(x)\quoi,
+$$
+donde, en el segundo miembro de la igualdad, $x$ se considera como
+objeto de~$\Phi_{X'}$. Por tanto, las hipótesis implican que $f_*\Phi$
+es constructible. Sea $S\Phi$ el haz de los subgerbes maximales
+de~$\Phi$~\cite[III~2.1.7]{XIII.1}. Como $f_*(S\Phi)$ es constructible,
+puede aplicársele (SGA~4 IX~2.7), y el hecho de que $f_*\Phi$ sea
+$1$-constructible se deduce entonces del lema siguiente.
+
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{0}
+\begin{sublemme}
+\label{XIII.6.1.1}
+Sean $S$ un esquema localmente noetheriano, $f\colon X\to S$ un
+morfismo y $\Phi$ un stack sobre~$X$. Supongamos dados un haz sobre~$S$,
+representable por un $S$-esquema~$T$ étale de tipo finito, un morfismo
+sobreyectivo
+$$
+a\colon T\to f_*(S\Phi)
+$$
+y un objeto~$p$ de la fibra $\Phi_{X_T}$, donde
+$X_T=X\times_ST$, que define en
+$f_*(S\Phi)(T)=\allowbreak S\Phi(X_T)$ un elemento igual a la imagen~$q$
+por~$a$ de la sección identidad de~$T(T)$. Sea
+$f_T\colon X_T\to T$ el morfismo canónico, y supongamos que el haz
+$\R^1f_{T*}(\SheafAut_{X_T}(p))$ es constructible; entonces también
+$S(f_*\Phi)$ es constructible.
+\end{sublemme}
+
+El morfismo canónico $f^*f_*\Phi\to\Phi$ da un morfismo
+$$
+S(f^*f_*\Phi)\simeq f^*(S(f_*\Phi))\to S\Phi,
+$$
+y por tanto un morfismo canónico
+$$
+\varphi\colon S(f_*\Phi)\to f_*(S\Phi).
+$$
+Sean
+\marginpar{437}
+$F=S(f_*\Phi)$ y $G$ la imagen de~$F$ por~$\varphi$; según
+(SGA~4 IX~2.9), $G$ es un haz constructible.
+
+Basta demostrar que, para todo punto~$s$ de~$S$, existe un abierto no
+vacío~$U$
+\ifthenelse{\boolean{orig}}
+{de~$s$}
+{de~$\overline{\{s\}}$}
+tal que $F|U$ sea localmente constante y constructible.
+Sean $s\in S$, $\overline{s}$ un punto geométrico situado sobre~$s$, y
+$\overline{q}_1,\dots,\overline{q}_n$ los elementos de~$G_{\overline{s}}$.
+Por definición de~$T$, existen $S$-morfismos
+\ifthenelse{\boolean{orig}}
+{$h_i\colon\overline{s}\to S'$}
+{$h_i\colon\overline{s}\to T$}
+tales que $\overline{q}_i=h_i^*(q)$. Sean $S'$ el producto fibrado
+sobre~$S$ de $n$ esquemas isomorfos a~$T$, $\overline{s}\to S'$ el
+producto fibrado de los $h_i$, $X'=X\times_SS'$, y $q_i$ (\resp $p_i$)
+la imagen inversa de~$q$ (\resp de~$p$) por la $i$-ésima proyección
+de~$S'$ sobre~$T$. Si $\Psi_i$ es el subgerbe maximal de~$\Phi|X'$
+engendrado por~$p_i$, el haz
+$F_i=\R^1f_*'(\SheafAut_{X'}(p_i))$ no es otro que el haz
+$S(f_*'\Psi_i)$ de los subgerbes maximales de~$f_*'\Psi_i$. En
+particular, la inyección canónica $\Psi_i\to\Phi|X'$ da un morfismo
+$$
+\alpha_i\colon F_i\to F|S'.
+$$
+
+Vamos a demostrar que $\alpha_i$ es una biyección de~$F_i$ sobre la
+imagen inversa de~$q_i$ en~$F|S'$. Para todo esquema $S''$ étale
+sobre~$S'$, toda sección~$y$ de~$F_i(S'')$ tiene por imagen
+$q_i|S''$ en~$F(S'')$, pues, localmente para la topología étale
+sobre~$S''$, $y$ está definida por un objeto~$x$ de~$\Phi_{X''}$
+isomorfo a~$p_i|X''$. Recíprocamente, si $y\in F(S'')$ tiene por imagen
+$q_i|S''$ en~$F(S'')$, localmente para la topología étale sobre~$S''$,
+$y$ está definida por un objeto~$x$ de~$\Phi_{X''}$ isomorfo a~$p_i$;
+por consiguiente, $x$ es un objeto de~$\Psi_{iX''}$ y
+$y\in F_i(S'')$.
+
+La demostración concluye utilizando~\Ref{XIII.6.1.2}. En efecto, puede
+encontrarse un entorno abierto~$U'$ de~$s$ tal que
+$q_1|U',\dots,q_n|U'$ sean secciones de~$G(U')$ y engendren este haz.
+Como $F_i|U'$ y $G|U'$ son constructibles, también $F|U'$ lo es
+según~\Ref{XIII.6.1.2}; tras sustituir, si es preciso, $U$ por un
+abierto más pequeño, $F|U$ es localmente constante, lo que concluye la
+demostración.

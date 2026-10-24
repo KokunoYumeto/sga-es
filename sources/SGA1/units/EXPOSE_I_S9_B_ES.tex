@@ -1,0 +1,108 @@
+\begin{theoreme}
+\label{I.9.5}
+Sea $f\colon A\to B$ un homomorfismo local, siendo $B$ isomorfa a la localización de un $A$-álgebra de tipo finito. Entonces:
+\begin{enumerate}
+\item[(i)] Si $f$ es étale, $A$ es normal si y solo si $B$ lo es.
+\item[(ii)] Si $A$ es normal, $f$ es étale si y solo si $f$ es inyectivo y neto (y entonces $B$ es normal por~\textup{(i)}).
+\end{enumerate}
+\end{theoreme}
+
+Daremos dos demostraciones distintas de~(i). La primera utiliza algunas propiedades de los morfismos planos cuasifinitos (recordadas al comienzo de este número), sin utilizar~\Ref{I.7.6} (y, por tanto, el \emph{Main Theorem}); la segunda demostración hace lo contrario. Por último, para~(ii) parece que se necesita en todo caso el \emph{Main Theorem}.
+
+\subsubsection*{Primera demostración}
+Se utiliza la siguiente condición necesaria y suficiente
+\marginpar{18}
+para la normalidad de un anillo local noetheriano $A$ de dimensión distinta de cero.
+
+\begin{enonce*}{Criterio de Serre}
+\index{Serre (criterio de)|hyperpage}%
+\textup{(i)} Para todo ideal primo $\goth{p}$ de~$A$ de altura~$1$, $A_{\goth{p}}$ es normal (o, lo que es equivalente, regular); \textup{(ii)} para todo ideal primo $\goth{p}$ de~$A$ de altura~$\geq2$, se tiene $\operatorname{profundidad}A_{\goth{p}}\geq2$.\footnote{\Cf EGA~IV~5.8.6.}
+\end{enonce*}
+
+Admitiremos aquí este criterio, que se supone debe figurar en el \ifthenelse{\boolean{orig}}{párr.}{parágrafo} de los morfismos planos. Su principal ventaja es que no supone \emph{a priori} que $A$ sea reducido ni, \emph{a fortiori}, íntegro. Aquí puede suponerse ya que $\dim A=\dim B\neq0$.
+
+Según los recordatorios del comienzo de este número, los ideales primos $\goth{p}$ de~$A$ que tienen altura~$1$ (\resp altura~$\geq2$) son exactamente las contracciones a~$A$ de los ideales primos~$\goth{q}$ de~$B$ que tienen altura~$1$ (\resp altura~$\geq2$). Por último, si $\goth{p}$ y $\goth{q}$ se corresponden, $B_{\goth{q}}$ es étale sobre~$A_{\goth{p}}$ y, por tanto, tiene la misma profundidad que $A_{\goth{p}}$, y es regular si y solo si $A_{\goth{p}}$ lo es (~\Ref{I.9.1}). Aplicando el criterio de Serre, se obtiene que $A$ es normal si y solo si $B$ lo es.
+
+\subsubsection*{Segunda demostración}
+Supongamos que $B$ es normal, y sean $L$ su cuerpo de fracciones y $K$ el de~$A$ ($A$ es íntegro puesto que $B$ lo es). En la demostración de~\Ref{I.9.3} se vio que $B\otimes_AK$ es un producto finito de cuerpos; como está contenido en~$L$, es un cuerpo, y como contiene a~$B$, es~$L$. Todo elemento de~$K$ entero sobre~$A$ es entero sobre~$B$ y, por tanto, pertenece a~$B$, pues \ifthenelse{\boolean{orig}}{$B$}{$B$}\ % La autoridad corrige b por B.
+es normal; pertenece entonces a~$A$, ya que $B\cap K=A$ (como se sigue de que $B$ es fielmente plano sobre~$A$).
+
+Supongamos ahora que $A$ es normal y demostremos que $B$ lo es. En virtud de~\Ref{I.7.6}, se tendrá $B=B'_{\goth{n}}$, donde $B'=A[t]/FA[t]$, siendo $F$ y $\goth{n}$ como en~\Ref{I.7.6}. Entonces $L=B\otimes_AK$ será una localización de~$B'\otimes_AK=K[t]/FK[t]$, y un producto de cuerpos que son extensiones finitas separables de~$K$; este producto (como ocurre siempre que se localiza un anillo artiniano, aquí $B'_K$, respecto de un conjunto multiplicativamente estable) es un factor directo de~$B'_K$. Corresponde, por tanto, a una descomposición $F=F_1F_2$ en~$K[t]$, y el generador de~$L$ correspondiente a~$t$ está ya anulado por~$F_1$. Ahora bien, \emph{como $A$ es normal, los $F_i$ pertenecen a~$A[t]$} (suponiéndolos mónicos). Observando que $B\to L=B\otimes_AK$ es inyectivo (pues $A\to K$ lo es y $B$ es plano sobre~$A$), se sigue que ya se tendrá
+\ifthenelse{\boolean{orig}}{$F_1(u)=0$.}{$F_1(u)=0$, donde $u$ es la clase de~$t$ en~$L$.}
+Suponiendo que $F$ se haya elegido de grado mínimo, se seguirá que $F_2=1$ (N.B.: se tendrá $F'(u)=F'_1(u)F_2(u)+F_1(u)F'_2(u)=F'_1(u)F_2(u)$, puesto que $F_1(u)=0$; de aquí $F'_1(u)\neq0$, puesto que \ifthenelse{\boolean{orig}}{$F'(u)\neq0$.}{$F'(u)\neq0$.)}% La autoridad añade el paréntesis de cierre.
+
+Por
+\marginpar{19}
+tanto, se tiene
+\begin{equation*}
+\label{eq:I.9.5.*}
+\tag{$*$}L=B\otimes_AK=K[t]/FK[t]
+\end{equation*}
+y $F$ es, en consecuencia, un polinomio separable de~$K[t]$ (pero, evidentemente, no es necesariamente separable en~$A[t]$). (N.B.: por el momento solo se ha demostrado, en esencia, que en~\Ref{I.7.6} pueden elegirse $F$ y \ifthenelse{\boolean{orig}}{\ }{$\goth{n}$}\ % La autoridad repone \goth n.
+de modo que ---con las notaciones adoptadas aquí--- \ifthenelse{\boolean{orig}}
+{$B'\to B'_{\goth{n}}=\cal{B}$}
+{$B'\to B'_{\goth{n}}=B$}% La autoridad corrige \cal B por B.
+sea \emph{inyectivo}; para ello se ha utilizado la normalidad de~$A$; no sé si esto sigue siendo cierto sin la hipótesis de normalidad.)
+
+Recordemos ahora el conocido lema, extraído del curso de Serre del año pasado:
+
+\begin{lemme}
+\label{I.9.6}
+Sean $K$ un anillo, $F\in K[t]$ un polinomio mónico separable, $L=K[t]/FK[t]$ y $u$ la clase de~$t$ en~$L$ (de modo que $F'(u)$ es un elemento invertible de~$L$). Entonces se tienen las fórmulas siguientes (donde $n=\deg F$):
+\begin{enumerate}
+\item[] $\trace_{L/K}u^i/F'(u)=0$ si \ifthenelse{\boolean{orig}}{$0\leq i<N-1$,}{$0\leq i<n-1$,}% La autoridad corrige N por n.
+\item[] $\trace_{L/K}u^{n-1}/F'(u)=1$.
+\end{enumerate}
+\end{lemme}
+
+\begin{corollaire}
+\label{I.9.7}
+El determinante de la matriz $(\trace_{L/K}(u^j\cdot u^i/F'(u)))_{0\leq i,j\leq n-1}$ es igual a
+\ifthenelse{\boolean{orig}}{$(-1)^n$}{$(-1)^{n(n-1)/2}$},
+por lo que es invertible en todo subanillo $A$ de~$K$.
+\end{corollaire}
+
+\begin{corollaire}
+\label{I.9.8}
+\ifthenelse{\boolean{orig}}{Sean}{Sean}\ % La autoridad corrige el acuerdo francés.
+$A$ un subanillo de~$K$, $V$ el $A$-módulo engendrado por los $u^i$ ($0\leq i\leq n-1$) en~$L$, y $V'$ el sub-$A$-módulo de~$L$ formado por los $x\in L$ tales que $\trace_{L/K}(xy)\in A$ para todo $y\in V$ (\ie para $y$ de la forma $u^i$, $0\leq i\leq n-1$). Entonces $V'$ es el $A$-módulo que tiene por base los $u^i/F'(u)$ ($0\leq i\leq n-1$).
+\end{corollaire}
+
+\begin{corollaire}
+\label{I.9.9}
+Supongamos que $K$ es el cuerpo de fracciones de un anillo íntegro normal~$A$ y que $F$ tiene sus coeficientes en~$A$. Entonces, con las notaciones de~\Ref{I.9.8}, $V'$ contiene la clausura normal $A'$ de~$A$ en~$L$, que está, por tanto, contenida en $A[u]/F'(u)$ y, \emph{a fortiori}, en $A[u][F'(u)^{-1}]$.
+\end{corollaire}
+
+Apliquemos este último corolario a la situación obtenida en la demostración: como $F'(u)$ es invertible en~$B$, que contiene a~$A[u]$, $B$ contiene a~$A'$. Por el \emph{Main Theorem} (o a partir del hecho de que $B=A[u]_{\goth{n}}$), $B$ es una localización de~$A'$. Como $A'$ es normal, también lo es~$B$.
+
+\subsubsection*{Demostración de \textup{(ii)}}
+Se
+\marginpar{20}
+procede como en la demostración precedente para demostrar que, en~\Ref{I.7.6}, puede elegirse $F$ de modo que siga cumpliéndose~($*$). El único obstáculo \emph{a priori} es que, al no suponerse ya que $B$ es plano sobre~$A$, no puede afirmarse que $B\to L$ sea inyectivo, por lo que el razonamiento solo se aplicará \emph{a priori} a la imagen~$B_1$ de~$B$ por dicho homomorfismo. Se sigue inmediatamente que $B_1$ es plano sobre~$A$ (por ser una localización de un álgebra libre sobre~$A$). En virtud de~\Ref{I.4.8}, el morfismo $B\to B_1$ es étale y, por tanto, un isomorfismo, lo que concluye la demostración.
+
+(Desde el punto de vista de la redacción, habría que invertir el orden de las dos últimas demostraciones y poner en un número aparte los cálculos formales del lema y de sus corolarios.)
+
+\begin{corollaire}
+\label{I.9.10}
+Sea $f\colon X\to Y$ un morfismo étale. Si $Y$ es normal, $X$ lo es; el recíproco es cierto si $f$ es \ifthenelse{\boolean{orig}}{sobreyectivo.}{sobreyectivo.}% La autoridad corrige el acuerdo francés.
+\end{corollaire}
+
+\begin{corollaire}
+\label{I.9.11}
+Sea $f\colon X\to Y$ un morfismo dominante, siendo $Y$ normal y $X$ conexo. Si $f$ es neto, $f$ es étale; por tanto, $X$ es normal y, en consecuencia (por ser conexo), irreducible.
+\end{corollaire}
+
+Sea $U$ el conjunto de los puntos en los que $f$ es étale; es abierto, y basta demostrar que también es cerrado y no vacío. $U$ contiene la imagen inversa del punto genérico de~$Y$ (pues, para un álgebra sobre un cuerpo, no ramificado $=$ étale) y, por tanto (como $X$ domina a~$Y$), no es vacío. Si $x$ pertenece a la adherencia de~$U$, pertenece a la adherencia de una componente irreducible $U_i$ de~$U$ y, por tanto, a una componente irreducible $X_i\overset{\mathrm{def}}{=}\overline{U_i}$ de~$X$ que corta a~$U$; en consecuencia, $X_i$ domina a~$Y$ (pues toda componente de~$U$, plana sobre~$Y$, domina a~$Y$). Por consiguiente, si $y$ es la proyección de~$x$ sobre~$Y$, $\cal{O}_y\to\cal{O}_x$ es \emph{inyectivo} (teniendo en cuenta que $\cal{O}_y$ es íntegro). Como $\cal{O}_y$ es normal y $\cal{O}_y\to\cal{O}_x$ es neto, se concluye mediante~\Ref{I.9.5}(ii).
+
+\begin{corollaire}
+\label{I.9.12}
+Sea $f\colon X\to Y$ un morfismo de tipo finito dominante, con $Y$ normal y $X$ irreducible. Entonces el conjunto de los puntos en los que $f$ es étale es el complemento del soporte de $\Omega^1_{X/Y}$, \ie el complemento del subpreesquema de~$X$ definido por el ideal diferente $\goth{d}_{X/Y}$.
+\end{corollaire}
+
+(Este
+\marginpar{21}
+es el enunciado «menos trivial» al que se aludía en la observación del \No\Ref{I.4}.)
+
+\begin{remarquestar}
+No debe creerse que un recubrimiento étale conexo de un esquema irreducible sea él mismo irreducible cuando no se supone normal la base. Esta cuestión se estudiará en el \No\Ref{I.11}.
+\end{remarquestar}

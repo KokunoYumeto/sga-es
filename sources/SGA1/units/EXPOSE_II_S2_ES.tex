@@ -1,0 +1,82 @@
+\section{Algunos criterios de lisitud de un morfismo}
+\label{II.2}
+
+\begin{theoreme}
+\label{II.2.1}
+Sea $f\colon X\to Y$ un morfismo localmente de tipo finito, sea $x\in X$ y sea $y=f(x)$. Para que $f$ sea liso en~$x$, es necesario y suficiente que \textup{(a)} $f$ sea plano en~$x$, y \textup{(b)} $f^{-1}(y)$ sea liso sobre~$\kres(y)$ en~$x$.
+\end{theoreme}
+
+Como el compuesto de dos morfismos planos es plano y $Y[t_1,\dots,t_n]\to Y$ es un morfismo plano, se ve que liso implica plano; teniendo en cuenta~\Ref{II.1.3}~\textup{(ii)}, esto demuestra la necesidad. Supongamos verificadas \textup{(a)} y~\textup{(b)}; sean $V$ un entorno afín de~$y$, de anillo~$A$, y $U$ un entorno afín de~$x$ situado sobre~$V$, de anillo~$B$. Tomando $U$ suficientemente pequeño, puede suponerse por~\textup{(b)} que existe un $\kres(y)$-morfismo \emph{étale}
+\[
+g\colon U|_{f^{-1}(y)}\longrightarrow\Spec k[t_1,\dots,t_n]\quad (k=\kres(y))
+\]
+definido por $n$ secciones $g_i$ del haz estructural de $U|_{f^{-1}(y)}$. Se comprueba fácilmente que puede suponerse que las~$g_i$ (que a priori son elementos de $B\otimes_Ak=BS^{-1}$, donde $S=A-\goth{p}$ y $\goth{p}$ es el ideal primo de~$A$ correspondiente a~$y$) provienen de secciones del haz estructural de
+\ifthenelse{\boolean{orig}}{$V$}{$U$},\ % rama corregida ya incorporada por la autoridad: U, no V.
+de modo que $g$ está inducido por un morfismo, denotado asimismo por~$g$,
+\[
+\ifthenelse{\boolean{orig}}{g\colon V\to Y[t_1,\dots,t_n]}{g\colon U\to Y[t_1,\dots,t_n]}% rama corregida ya incorporada por la autoridad.
+\]
+(tras multiplicar, si es preciso, las~$g_i$ por un mismo elemento no nulo de~$k$). Ahora bien,
+\ifthenelse{\boolean{orig}}{$V$}{$U$}\ % rama corregida ya incorporada por la autoridad: U.
+es plano sobre~$Y$ por~\textup{(a)}, y lo mismo ocurre con $Y[t_1,\dots,t_n]$; por otra parte, $g$ induce un morfismo étale entre las fibras sobre~$y$, luego $g$ es étale en~$x$ por~(\Ref{I.5.8}), c.q.d.
+
+\begin{corollaire}
+\label{II.2.2}
+Sean $S$ un preesquema, $f\colon X\to Y$ un $S$-morfismo de tipo finito, siendo $Y$ de tipo finito y plano sobre~$S$, $x\in X$, y sea $s$ la proyección de~$x$ sobre~$S$. Para que $f$ sea liso en~$x$, es necesario y suficiente que $X$ sea plano\ifthenelse{\boolean{orig}}{ (o también: liso)}{}\ % SGA1-CORR-0017: la equivalencia impresa es falsa sin suponer Y liso sobre S.
+sobre~$S$ en~$x$, y que el morfismo $f_s\colon X_s\to Y_s$ inducido entre las fibras sobre~$s$ sea liso en~$x$.
+\end{corollaire}
+
+Solo la suficiencia requiere demostración, y resulta del criterio~\Ref{II.2.1}, junto con el criterio de planitud~(\Ref{I.5.9}).
+
+Para
+\marginpar{32}
+enunciar el resultado siguiente, «recordemos» que un morfismo $f\colon X\to Y$ localmente de tipo finito se dice \emph{equidimensional}
+\index{equidimensional (morfismo)|hyperpage}%
+en el punto $x\in X$ si (poniendo $y=f(x)$) puede encontrarse un entorno abierto~$U$ de~$x$, cada una de cuyas componentes domina una componente de~$Y$, tal que, para todo $y'\in Y$, las componentes irreducibles de $f^{-1}(y')\cap U$ tengan todas una misma dimensión, independiente de~$y'$. Basta, por lo demás, tomar en esta condición como~$y'$ los puntos genéricos de las componentes irreducibles de~$Y$ que pasan por~$y$, \emph{y} el propio punto~$y$. Si, por ejemplo, $X$ e~$Y$ son íntegros y $f$ es dominante, la condición significa que las componentes de $f^{-1}(y)$ que pasan por~$x$ tienen la dimensión «correcta», \ie la dimensión de la fibra genérica (recordemos que su dimensión es siempre $\geq$ la de la fibra genérica). Si $f$ es equidimensional en~$x$, la dimensión de su fibra en~$x$ es~$n$, y $g\colon U\to Y'=Y[t_1,\dots,t_n]$ es un $Y$-morfismo definido en un entorno~$U$ de~$x$ que induce sobre las fibras de~$y$ un morfismo cuasifinito en~$x$ (o, lo que equivale a lo mismo, si $g$ es cuasifinito en~$x$), entonces se demuestra que toda componente irreducible de~$U$ que pasa por~$x$ domina una componente irreducible de~$Y'$. Además, en virtud del «lema de normalización», siempre existe un~$g$ tal (y, recíprocamente, si existe un $Y$-morfismo cuasifinito~$g$ de un entorno abierto~$U$ de~$x$ a un $Y$-esquema de la forma $Y'=Y[t_1,\dots,t_n]$, tal que toda componente de~$U$ que pasa por~$x$ domina una componente de~$Y'$, entonces $f$ es equidimensional en~$x$). Sentado esto:
+
+\begin{proposition}
+\label{II.2.3}
+Sean $f\colon X\to Y$ un morfismo localmente de tipo finito, $x$ un punto de~$X$ y $y=f(x)$; supóngase que $\cal{O}_y$ es normal. Para que $f$ sea liso en~$x$, es necesario y suficiente que $f$ sea equidimensional en~$x$ y que $f^{-1}(y)$ sea liso sobre~$\kres(y)$ en~$x$.
+\end{proposition}
+
+Se ve inmediatamente a partir de la definición que un morfismo liso es equidimensional (N.B.: un morfismo plano de tipo finito no es necesariamente equidimensional en~$x$, aunque su fibra en~$x$ sea irreducible). Demostremos el recíproco. Como $f^{-1}(y)$ es liso sobre~$\kres(y)$ en~$x$, puede suponerse (reemplazando si es preciso $X$ por un entorno adecuado de~$x$) que existe un $Y$-morfismo
+\[
+g\colon X\to Y[t_1,\dots,t_n]=Y'
+\]
+que induce un morfismo étale sobre las fibras de~$y$ y, a fortiori, es cuasifinito en~$x$. Por tanto,
+\marginpar{33}
+$g$ es no ramificado y (como $f$ es equidimensional en~$x$) las componentes irreducibles de~$X$ que pasan por~$x$ dominan cada una una componente de~$Y'$; a fortiori, el homomorfismo $\cal{O}_{y'}\to\cal{O}_x$ deducido de~$g$ (donde $y'=g(x)$) es \emph{inyectivo}. Este homomorfismo es además no ramificado, y $\cal{O}_{y'}$ es normal por ser una localización del anillo $\cal{O}_y[t_1,\dots,t_n]$, que es normal porque $\cal{O}_y$ lo es. Por consiguiente, el homomorfismo $\cal{O}_{y'}\to\cal{O}_x$ es étale (\Ref{I.9.5}~\textup{(ii)}).
+
+\begin{remarques}
+\label{II.2.4}
+El enunciado anterior sigue siendo válido si se reemplaza la hipótesis de que $\cal{O}_y$ es normal por la hipótesis, más débil, de que $Y$ es \emph{geométricamente unirramoso} en~$y$ (\cf \Ref{I.11}), pues (\Ref{I.9.5}) vale bajo esta hipótesis. Aprovechemos la ocasión para señalar asimismo que, si el cuerpo residual de un anillo local íntegro~$A$ es algebraicamente cerrado, ser analíticamente irreducible
+\index{analíticamente irreducible|hyperpage}%
+(\ie que $\widehat{A}$ sea íntegro) implica ser geométricamente unirramoso; el recíproco es además cierto en toda categoría de «buenos anillos», más precisamente en una categoría de anillos estable bajo las operaciones usuales y en la que la completación de un anillo local normal sea normal (condición satisfecha, en virtud del «teorema de normalidad analítica» de Zariski, en la categoría de las álgebras afines y sus localizaciones)\footnote{\Cf EGA~IV~7.8.}.
+
+«Recordemos», por último, en el contexto actual, el resultado siguiente, debido a Hironaka\footnote{\Cf EGA~IV~5.12.10.}, que permite a veces asegurarse de que $f^{-1}(y)$ sea un esquema reducido, \ie que sea también lo que numerosos geómetras algebraicos considerarían abusivamente como la fibra (sin multiplicidad) de~$f$ sobre~\ifthenelse{\boolean{orig}}{$x$}{$y$}\ % SGA1-CORR-0015: la fibra f^{-1}(y) está sobre y en Y.
+(a saber, $f^{-1}(y)_{\red}$):
+\end{remarques}
+
+\begin{proposition}
+\label{II.2.5}
+Sean $f\colon X\to Y$ un morfismo dominante de tipo finito de preesquemas reducidos, y $y$ un punto de~$Y$ tal que $\cal{O}_y$ sea regular. Supóngase que todas las componentes de $f^{-1}(y)$ son de multiplicidad~$1$
+\index{componente de multiplicidad~$1$|hyperpage}%
+(\cf la definición más abajo), y que $f^{-1}(y)_{\red}$ es normal. Entonces $f^{-1}(y)$ es reducido y, por tanto, normal; $X$ es normal en todos los puntos de $f^{-1}(y)$; por último, $X$ es plano sobre~$Y$ en todos los puntos de $f^{-1}(y)$.
+\end{proposition}
+Se
+\marginpar{34}
+dice que una componente~$Z$ de $f^{-1}(y)$ es de \emph{multiplicidad}~$1$
+\index{multiplicidad de una componente|hyperpage}%
+si, denotando por~$x$ el punto genérico de~$Z$, se tiene \textup{(i)} $\dim\cal{O}_x=\dim\cal{O}_y$ (\ie que $Z$ no es una «componente excedentaria», es decir, no es «de dimensión demasiado grande»\ifthenelse{\boolean{orig}}{}{)};\ % SGA1-CORR-0016: se cierra la explicación parentética antes de (ii).
+\textup{(ii)} el ideal maximal de~$\cal{O}_x$ está engendrado por el ideal maximal de~$\cal{O}_y$ (que a priori, en virtud de la elección de~$x$, engendra un ideal de definición de~$\cal{O}_x$).
+
+Teniendo en cuenta~\Ref{II.2.3} o~\Ref{II.2.1}, se obtiene, pues:
+
+\begin{corollaire}
+\label{II.2.6}
+Sean $f\colon X\to Y$ un morfismo dominante de tipo finito de preesquemas reducidos, y $y$ un punto de~$Y$ tal que $\cal{O}_y$ sea regular. Para que $f$ sea liso en los puntos de~$X$ situados sobre~$y$, es necesario y suficiente que las componentes de $f^{-1}(y)$ sean de multiplicidad~$1$ y que $f^{-1}(y)_{\red}$ sea liso sobre~$\kres(y)$.
+\end{corollaire}
+
+Esta situación se consideraba sobre todo antiguamente cuando $Y$ era el espectro de un anillo de valoración discreta~$A$, y se designaba comúnmente mediante expresiones tales como: «si la reducción de~$X$ respecto de la valoración dada es bonita»\dots. Además, $X$ designaba entonces un subesquema cerrado (si cabe decirlo) de algún $\PP_K^n$ (siendo $K$ el cuerpo de fracciones de~$A$) y, a falta de un
+\ifthenelse{\boolean{orig}}{\emph{language}}{lenguaje}\ % corrección léxica ya incorporada por la autoridad: langage.
+adecuado, apenas se percibía el papel más intrínseco de un objeto «definido sobre~$A$» (y no solamente sobre~$K$).

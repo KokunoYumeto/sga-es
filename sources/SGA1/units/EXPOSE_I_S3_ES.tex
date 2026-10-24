@@ -1,0 +1,93 @@
+\section{Morfismos no ramificados o netos}
+\label{I.3}
+\begin{proposition}
+\label{I.3.1}
+Sea $f\colon X\to Y$ un morfismo de tipo finito, $x\in X$ y $y=f(x)$. Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] \ifthenelse{\boolean{orig}}
+{$\cal{O}_x/m_y\cal{O}_x$ es una extensión finita separable de~$\kappa(y)$}
+{$\cal{O}_x/\goth{m}_y\cal{O}_x$ es una extensión finita separable de~$\kres(y)$}.
+\item[(ii)] $\mathit{\Omega}^1_{X/Y}$ es nulo en~$x$.
+\item[(iii)] El morfismo diagonal $\Delta_{X/Y}$ es una inmersión abierta en un entorno de~$x$.
+\end{enumerate}
+\end{proposition}
+Para la implicación (i)$\To$(ii), el lema de Nakayama reduce inmediatamente al caso $Y=\Spec(k)$, $X=\Spec(k')$, donde el resultado es bien conocido y, por lo demás, trivial a partir de la definición de separable; (ii)$\To$(iii) se sigue de una caracterización agradable y fácil de las inmersiones abiertas que utiliza a Krull; (iii)$\To$(i), porque se reduce de nuevo al caso $Y=\Spec(k)$ en el que el morfismo diagonal es una inmersión abierta en todas partes. Hay que demostrar entonces que $X$ es finito y de anillo separable sobre~$k$; para ello se reduce al caso en que $k$ es algebraicamente cerrado. Pero entonces todo punto cerrado de~$X$ es aislado (pues coincide con la imagen inversa de la diagonal por el morfismo $X\to X\times_k X$ definido por~$x$), de donde se sigue que $X$ es finito. Puede suponerse entonces que $X$ está reducido a un punto, de anillo~$A$; por tanto, $A\otimes_k A\to A$ es un isomorfismo, de donde $A=k$, c.q.d.
+
+\begin{definition}
+\label{I.3.2}
+\begin{enumerate}
+\item[a)] Se dice entonces que $f$ es \emph{neto},
+\index{neto (morfismo, álgebra)|hyperpage}%
+o también \emph{no ramificado},
+\index{no ramificado (morfismo, álgebra)|hyperpage}%
+en~$x$, o que $X$ es neto, o también no ramificado, en~$x$ sobre~$Y$.
+\item[b)] Sea $A\to B$ un homomorfismo local. Se dice que es \emph{neto}, o \emph{no ramificado}, o que $B$ es un álgebra local \emph{neta}, o \emph{no ramificada}, sobre~$A$, si
+\ifthenelse{\boolean{orig}}
+{$B/r(A)B$ es una extensión finita separable de~$A/r(A)$, \ie si $r(A)B=r(B)$}
+{$B/\goth{r}(A)B$ es una extensión finita separable de~$A/\goth{r}(A)$, \ie si $\goth{r}(A)B=\goth{r}(B)$},
+y $\kres(B)$ es una extensión separable de~$\kres(A)$\kern1pt\footnote{\Cf los remordimientos en \Ref{III.1.2}.}.
+\end{enumerate}
+\end{definition}
+
+\begin{remarquesstar}
+El hecho
+\marginpar{3}
+de que $B$ sea neto sobre~$A$ se reconoce ya en los completados de~$A$ y de~$B$. Neto implica cuasifinito.
+\end{remarquesstar}
+
+\begin{corollaire}
+\label{I.3.3}
+El conjunto de los puntos en los que $f$ es neto es abierto.
+\end{corollaire}
+
+\begin{corollaire}
+\label{I.3.4}
+Sean $X'$ y $X$ dos preesquemas de tipo finito sobre~$Y$, y sea $g\colon X'\to X$ un $Y$-morfismo. Si $X$ es neto sobre~$Y$, el morfismo grafo $\Gamma_g\colon X'\to X'\times_Y X$ es una inmersión abierta.% SGA1-CORR-0004: source has codomain X x_Y X.
+\end{corollaire}
+
+En efecto, es la imagen inversa del morfismo diagonal $X\to X\times_Y X$ por
+$$
+g\times_Y\id_X\colon X'\times_Y X\to X\times_Y X.
+$$
+
+También puede introducirse el ideal anulador $\goth{d}_{X/Y}$
+\label{indnot:af}\oldindexnot{$\goth{d}_{X/Y}$|hyperpage}%
+de~$\mathit{\Omega}^1_{X/Y}$, llamado \emph{ideal diferente}
+\index{diferente (ideal)|hyperpage}%
+\index{ideal diferente|hyperpage}%
+de~$X/Y$; define un subpreesquema cerrado de~$X$ que, como conjunto, es el conjunto de los puntos en los que $X/Y$ está ramificado, \ie no es neto.
+
+\begin{proposition}
+\label{I.3.5}
+\begin{enumerate}
+\item[(i)] Toda inmersión es neta.
+\item[(ii)] El compuesto de dos morfismos netos es neto.
+\item[(iii)] Todo cambio de base de un morfismo neto es neto.
+\end{enumerate}
+\end{proposition}
+
+Esto se ve indistintamente a partir de (ii) o de (iii) (la segunda me parece más divertida). Por supuesto, también puede precisarse dando enunciados puntuales; esto no es más general que en apariencia (salvo en el marco de la definición~b)) y resulta aburrido. Se obtienen, como de costumbre, los corolarios siguientes:
+
+\begin{corollaries}
+\label{I.3.6}
+\begin{enumerate}
+\item[(iv)] El producto cartesiano de dos morfismos netos es neto.
+\item[(v)] Si $gf$ es neto, $f$ es neto.
+\item[(vi)] Si $f$ es neto, $f_{\text{\textup{red}}}$ es neto.
+\end{enumerate}
+\end{corollaries}
+
+\begin{proposition}
+\label{I.3.7}
+Sea $A\to B$ un homomorfismo local; se supone que la extensión residual $\kres(B)/\kres(A)$ es trivial o que $\kres(A)$ es algebraicamente cerrado. Para que $B/A$ sea neto es necesario y suficiente que $\widehat{B}$ sea, como $\widehat{A}$-álgebra, un cociente de~$\widehat{A}$.
+\end{proposition}
+
+\begin{remarquesstar}
+\begin{enumerate}
+\item[--] Cuando no se supone trivial la extensión residual, puede reducirse a este caso mediante una extensión finita plana adecuada de~$A$ que elimine dicha extensión.
+\item[--] Considérese el ejemplo en que $A$ es el anillo local de un punto doble ordinario de una curva y $B$ el de un punto de la normalización: entonces $A\subset B$, $B$ es neto sobre
+\marginpar{4}
+$A$, con extensión residual trivial, y $\widehat{A}\to\widehat{B}$ es sobreyectivo pero \emph{no inyectivo}. Vamos, pues, a reforzar la noción de netitud.
+\end{enumerate}
+\end{remarquesstar}
+

@@ -1,0 +1,53 @@
+\documentclass[11pt,oneside,a4paper]{amsbook}
+
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=-1\fi
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,spanish]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{tikz-cd}
+\usepackage{enumitem}
+\usepackage{ifthen}
+\usepackage{xspace}
+\usepackage[colorlinks,breaklinks,hypertexnames=false,plainpages=false,pdfpagelabels,hyperfootnotes=false]{hyperref}
+\usepackage{sga72-es}
+\AtBeginDocument{\shorthandoff{"<>}}
+
+\hypersetup{
+  pdfhighlight=/N,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue,
+  pdftitle={Grupos de monodromía en geometría algebraica (SGA 7 II) -- edición española},
+  pdfauthor={P. Deligne, N. Katz y colaboradores},
+  pdfkeywords={SGA 7 II, monodromía, geometría algebraica, versión española}
+}
+\ifthenelse{\boolean{original}}
+  {\hypersetup{pdfsubject={Edición española basada en la rama diplomática/original}}}
+  {\hypersetup{pdfsubject={Edición española basada en la rama corregida/actual}}}
+
+\begin{document}
+\input{NOTICE.tex}
+\raggedbottom
+\frontmatter
+\input{units/FRONT_MATTER_ES.tex}
+\mainmatter
+\input{units/EXPOSE_X_ES.tex}
+\input{units/EXPOSE_XI_ES.tex}
+\input{units/EXPOSE_XII_ES.tex}
+\input{units/EXPOSE_XIII_ES.tex}
+\input{units/EXPOSE_XIV_ES.tex}
+\input{units/EXPOSE_XV_ES.tex}
+\input{units/EXPOSE_XVI_ES.tex}
+\input{units/EXPOSE_XVII_ES.tex}
+\input{units/EXPOSE_XVIII_ES.tex}
+\input{units/EXPOSE_XIX_ES.tex}
+\input{units/EXPOSE_XX_ES.tex}
+\input{units/EXPOSE_XXI_ES.tex}
+\input{units/EXPOSE_XXII_ES.tex}
+\end{document}

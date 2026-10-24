@@ -1,0 +1,91 @@
+
+\chapter{Morfismos lisos: propiedades de prolongación}
+\label{III}
+\marginpar{58}
+
+\section{Homomorfismos formalmente lisos}
+\label{III.1}
+
+En~\Ref{II} nos limitamos a considerar homomorfismos de tipo finito y, por consiguiente, en el caso de homomorfismos locales~$A\to B$ de anillos locales, al caso en que~$B$ es isomorfa a una localización de una $A$-álgebra de tipo finito. Este caso es insuficiente para diversas aplicaciones, en particular en geometría formal o en geometría analítica. Por ejemplo, el anillo de series formales~$B=A[[t_1,\dots,t_n]]$ tiene (desde el punto de vista de la geometría formal) las propiedades de un álgebra lisa sobre~$A$. En geometría analítica, lo mismo ocurre con el anillo local de un punto~$(y,z)$ de un producto $Y\times\CC^n$, considerado como álgebra sobre el anillo local de~$y$; además, la completación de esta álgebra es isomorfa al álgebra de series formales en~$n$ indeterminadas sobre la completación del anillo base
+\ifthenelse{\boolean{orig}}{$\cal{O}_x$}{$\cal{O}_y$}.
+Esto conduce a formular la definición siguiente.
+
+\begin{definition}
+\label{III.1.1}
+Sea~$u\colon A\to B$ un homomorfismo local de anillos locales (noetherianos, como recordamos). Se supone que
+\ifthenelse{\boolean{orig}}
+{$\kappa(B)$ es finito sobre~$\kappa(A)$}
+{$\kres(B)$ es finito sobre~$\kres(A)$}.
+Se dice que~$u$ es un \emph{homomorfismo formalmente liso},
+\index{formalmente liso (homomorfismo, álgebra)|hyperpage}%
+\index{liso (formalmente)|hyperpage}%
+o que el álgebra~$B$ es \emph{formalmente lisa sobre}~$A$, si existe una $\overline{A}$-álgebra local
+\ifthenelse{\boolean{orig}}{finita,}{finita~$A'$,}
+libre sobre~$\overline{A}$, tal que las componentes locales del anillo semilocal~$\overline{B}\otimes_{\overline{A}}A'=B'$ sean isomorfas, como $A'$-álgebras, a álgebras de series formales sobre~$A'$\kern1pt\footnote{Para una definición más general y conceptual, motivada por~\Ref{III.2.1} más adelante, \cf EGA~$\mathrm{0}_{\mathrm{IV}}$~19.3.1.}.
+\end{definition}
+(Se denotan por~$\overline{A}$ y $\overline{B}$ las completaciones de~$A$ y~$B$). Como~$B'$ es finito y libre sobre~$\overline{B}$, es efectivamente un anillo semilocal, producto directo de anillos locales completos, cada uno de los cuales sigue siendo un módulo libre sobre~$\overline{B}$ y tiene, por tanto, la misma dimensión que~$\overline{B}$, luego que~$B$. Se sigue que el número de variables~$t_i$ en los anillos de series formales considerados en~\Ref{III.1.1} es igual a $\dim\overline{B}-\dim\overline{A}=\dim B-\dim A$ y, en particular, independiente de la componente local
+\marginpar{59}
+elegida. Se ve de inmediato que también es la dimensión del anillo
+\ifthenelse{\boolean{orig}}
+{$B\otimes k=B/\goth{m}B$}
+{$B\otimes_A k=B/\goth{m}B$},
+donde~$k=A/\goth{m}$ es el cuerpo residual de~$A$; se la llamará \emph{dimensión relativa de}~$B$
+\index{dimensión relativa|hyperpage}%
+\emph{respecto de}~$A$.
+
+\begin{remarques}
+\label{III.1.2}
+Es evidente que la definición~\Ref{III.1.1} solo depende del homomorfismo entre las completaciones $\overline{A}\to\overline{B}$ deducido de~$A\to B$, lo que justifica en cierta medida la terminología. Nos retractamos aquí de la definición~\Ref{I.3.2}~b) y~\Ref{I.4.1}~b), que puede inducir a error, y preferimos decir «formalmente no ramificado»
+\index{formalmente no ramificado (respectivamente neto)|hyperpage}%
+y «formalmente étale»
+\index{formalmente étale|hyperpage}%
+en los casos considerados en esas definiciones, reservando la terminología «no ramificado» y «étale» para el caso en que $B$ es una localización de una $A$-álgebra de tipo finito\footnote{O, mejor, «esencialmente no ramificado», respectivamente «esencialmente étale»; compárese EGA IV 18.6.1.}.
+\index{esencialmente étale|hyperpage}%
+\index{esencialmente no ramificado (respectivamente neto)|hyperpage}%
+El lector comprobará enseguida que «formalmente étale» equivale a «formalmente liso y cuasifinito». Señalemos, por último, que existe una definición razonable de «formalmente liso» sin ninguna hipótesis previa sobre la extensión residual
+\ifthenelse{\boolean{orig}}
+{$\kappa(B)/\kappa(A)$}
+{$\kres(B)/\kres(A)$}
+(que aquí se supone finita), la cual abarca, entre otros, los homomorfismos locales $A\to B$ tales que $B$ sea \emph{plano} sobre~$A$ y $B/\goth{m}B$ sea una \emph{extensión separable} de~$A/\goth{m}=k$ (no necesariamente de tipo finito); por ejemplo, un $p$-anillo de Cohen es formalmente
+\ifthenelse{\boolean{orig}}{simple}{liso}
+sobre el anillo de los enteros $p$-ádicos. En este caso general, es la propiedad de levantamiento de los homomorfismos (compárese~\Ref{III.2.1}) la que debe convertirse en definición. Para las aplicaciones que tenemos en mente, bastará el caso tratado en la definición~\Ref{III.1.1}; en adelante, en «formalmente liso» se sobrentenderá «con extensión residual finita».
+\end{remarques}
+
+\begin{lemme}
+\label{III.1.3}
+Si $B$ es formalmente lisa sobre~$A$, entonces $B$ es plana sobre~$A$.
+\end{lemme}
+
+\ifthenelse{\boolean{orig}}
+{\itshape}{}
+Como la planitud es invariante por completación, puede suponerse que $A$ y $B$ son completos. Como la planitud es invariante por extensión local plana (y, por tanto, fielmente plana) del anillo base, la definición~\Ref{III.1.1} reduce el problema al caso en que $B$ es un álgebra de series formales sobre~$A$. Pero entonces, como $A$-módulo, $B$ es isomorfo a un producto de $A$-módulos isomorfos a~$A$ y, por tanto (al ser noetheriano el anillo base~$A$), es $A$-plano por ser un producto de $A$-módulos planos.
+\ifthenelse{\boolean{orig}}
+{\upshape}{}
+
+\medskip
+Situémonos en las condiciones de~\Ref{III.1.1}. Como las extensiones
+\marginpar{60}
+residuales de las componentes locales de~$B'$ sobre~$A'$ son triviales, se sigue que $L\otimes_k k'$ es una $k'$-álgebra artiniana cuyas componentes locales tienen extensiones residuales triviales (donde $L,\,k,\,k'$ son los cuerpos residuales
+\ifthenelse{\boolean{orig}}
+{de~$A,\,B,\,A'$}
+{de~$B,\,A,\,A'$}).
+Esta condición, necesaria para que la extensión finita libre~$A'$ satisfaga la condición enunciada en~\Ref{III.1.1}, es también suficiente, como resulta inmediatamente de~\Ref{III.1.4}~(i) y~\Ref{III.1.5} más adelante.
+
+\begin{proposition}
+\label{III.1.4}
+Sea $A\to B$ un homomorfismo local de anillos locales, con extensión residual finita
+\ifthenelse{\boolean{orig}}{\ignorespaces}{y}
+sea $A'$ una $A$-álgebra local finita sobre~$A$, de modo que $B'=B\otimes_A A'$ es finita sobre~$B$ y, por tanto, un anillo semilocal asimismo noetheriano. \textup{(i)} Si $B$ es formalmente lisa sobre~$A$, las localizaciones de
+\ifthenelse{\boolean{orig}}{$B$}{$B'$}
+en sus ideales maximales son formalmente lisas sobre~$A'$. \textup{(ii)} El recíproco es cierto si $A'$ es libre sobre~$A$.
+\end{proposition}
+
+Se reduce de inmediato al caso en que $A$ y $B$ son completos.
+
+(i) Sea $A''$ una extensión local finita libre de~$A$ tal que las componentes locales de~$B''=B\otimes_A A''$ sean álgebras de series formales sobre~$A''$. Mediante la extensión de escalares $A''\to A''\otimes_A A'\to A'''$, donde $A'''$ es una componente local de~$A''\otimes_A A'$, se ve que las componentes locales de $B''\otimes_{A''}A'''=B\otimes_A A'''$ son álgebras de series formales sobre~$A'''$. Por otra parte, también se tiene
+\ifthenelse{\boolean{orig}}
+{$B\otimes_AA'''=(B\otimes_A A')\otimes_{A'}A'''=B\otimes_{A'}A'''$}
+{$B\otimes_AA'''=(B\otimes_A A')\otimes_{A'}A'''=B'\otimes_{A'}A'''$};
+además, como $A''$ es libre sobre~$A$, $A''\otimes_A A'$ es libre sobre~$A'$ y, por consiguiente, lo mismo ocurre con~$A'''$, que es un factor directo suyo. Esto prueba que $B'$ es formalmente lisa sobre~$A'$.
+
+(ii) Sea $A''$ una $A'$-álgebra local finita libre tal que las componentes locales de~$B'\otimes_{A'}A''=B\otimes_A A''$ sean álgebras de series formales sobre~$A''$. Como $A'$ es libre sobre~$A$, también lo es~$A''$; por tanto, $B$ es formalmente \emph{lisa} sobre~$A$.

@@ -1,0 +1,51 @@
+
+\begin{sublemme}
+\label{XIII.6.1.2}
+Sean
+\marginpar{438}
+$S$ un esquema localmente noetheriano y $F\to G$ un morfismo
+sobreyectivo de haces
+\ifthenelse{\boolean{orig}}
+{de grupos}
+{de conjuntos}
+sobre~$S$. Sean los $q_i$ una familia finita de secciones de~$G$
+\ifthenelse{\boolean{orig}}
+{sobre~$X$}
+{sobre~$S$}
+que engendran~$G$, y, para cada~$i$, sea $F_i$ el subhaz de~$F$ que es
+la imagen inversa de~$q_i$. Entonces, si $G$ y los $F_i$ son
+constructibles, también $F$ es constructible.
+\end{sublemme}
+
+Para demostrar que $F$ es constructible, basta probar que, para todo
+punto~$s$ de~$S$, existe un entorno abierto~$U$ de~$s$ tal que $F|U$
+sea localmente constante y constructible. Sea, pues, $s$ un punto de~$S$.
+Como los haces $F_i$ y $G$ son constructibles, puede encontrarse un
+entorno abierto~$U$ de~$s$ tal que $F_i|U$ y $G|U$ sean localmente
+constantes. Demostremos entonces que $F|U$ es localmente constante.
+Según (SGA~4 IX~2.13~(i)), basta ver que, si $\overline{s}$ es un punto
+geométrico situado sobre~$s$, $\tilde{s}$ un punto geométrico de~$U$ y
+$\overline{s}\to\tilde{s}$ un morfismo de especialización, el morfismo
+canónico
+$$
+F_{\tilde{s}}\to F_{\overline{s}}
+$$
+es biyectivo.
+
+Consideremos los diagramas conmutativos
+$$
+\xymatrix{ (F_i)_{\tilde{s}} \ar[r]^-{\tilde{a}_i} \ar[d]^{\wr} &
+F_{\tilde{s}} \ar[r]^-{\tilde{a}} \ar[d]_b & G_{\tilde{s}}
+\ar[d]^{\wr}\\ (F_i)_{\overline{s}} \ar[r]^-{\overline{a}_i} &
+F_{\overline{s}} \ar[r]^-{\overline{a}} & G_{\overline{s}} }
+$$
+Sea $\overline{q}_i$ (\resp $\tilde{q}_i$) la imagen inversa de~$q_i$
+en~$G_{\overline{s}}$ (\resp en~$G_{\tilde{s}}$); los morfismos
+$\overline{a}$ y $\tilde{a}$ son sobreyectivos, y el morfismo
+$\overline{a}_i$ (\resp $\tilde{a}_i$) induce una biyección de
+$(F_i)_{\overline{s}}$ (\resp $(F_i)_{\tilde{s}}$) sobre
+\ifthenelse{\boolean{orig}}
+{$\overline{a}^{-1}(q_i)$ (\resp sobre~$\tilde{a}^{-1}(q_i)$)}
+{$\overline{a}^{-1}(\overline{q}_i)$
+(\resp sobre~$\tilde{a}^{-1}(\tilde{q}_i)$)}. Se deduce,
+pues, del diagrama anterior que $b$ es un isomorfismo.

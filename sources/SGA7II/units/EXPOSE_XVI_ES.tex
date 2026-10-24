@@ -1,0 +1,735 @@
+\pageoriginale
+
+\clearpage
+\SGAExposeBookmark{XVI}{La fórmula de Milnor}
+\begin{center}
+{\large SGA 7 --- EXPOSÉ XVI}\par
+\vspace{2em}
+{\Large\underline{La fórmula de Milnor}}\par
+\vspace{1.5em}
+{\large por P. Deligne}
+\end{center}
+
+\medskip
+En esta exposición se transpone a característica $p$ la fórmula dada por
+Milnor [3] (véase también [2]), que permite en ciertos casos calcular
+las dimensiones de espacios de ciclos evanescentes. La demostración
+es de naturaleza global y solo permite tratar el caso ``geométrico''
+de una base que sea un trait henseliano de igual característica con
+cuerpo residual perfecto.
+
+\section*{1. Enunciado del problema}
+
+\subsubsection*{1.1.}
+Sean $S$ un esquema regular puramente de dimensión uno, $s$ un punto
+cerrado de $S$ \underline{con cuerpo residual perfecto},
+$f:X\to S$ un morfismo plano de tipo finito, $x_0$ un punto cerrado
+de la fibra $X_s$ y $\bar x_0$ un punto geométrico de $X$ localizado
+en $x_0$. Supongamos que
+\begin{enumerate}
+\item[(a)] $x_0$ es un \underline{punto aislado de no lisitud} de
+$f$: existen un entero $n$ y un entorno $U$ de $x_0$, puramente de
+dimensión relativa $n$, tal que $U-\{x_0\}$ es liso sobre $S$;
+\item[(b)] $X$ es \underline{regular} en $x_0$.
+\end{enumerate}
+
+Bajo estas hipótesis, $X$ es una intersección completa relativa sobre
+$S$ en $x_0$. Remitimos a VI, 3.10 para la definición de
+$D^1_{X/S}$. En el entorno $U$ de $x_0$ se tiene
+\[
+D^1_{X/S}
+=\mathcal H^1\!\left(R\mathcal Hom(L\Omega_{X/S},\mathcal O_X)\right)
+=\mathcal Ext^1(\Omega^1_{X/S},\mathcal O_X);
+\]
+en este entorno, $D^1_{X/S}$ tiene longitud finita y soporte contenido
+en $\{x_0\}$.
+
+\pageoriginale
+
+\subsubsection*{Definición 1.2.}
+\underline{El número de Milnor
+$\mu=\mu(X/S,\bar x_0)$ de $X/S$ en $\bar x_0$ es la longitud del
+$\mathcal O_{X,x_0}$-módulo definido por $D^1_{X/S}$.}
+
+\subsubsection*{Ejemplo 1.3.}
+Tomemos por $S$ una curva lisa sobre un cuerpo algebraicamente cerrado
+$k$. Reemplazando $X$ por un entorno de $x_0$, podemos suponer que
+$X$ es liso sobre $k$. El complejo cotangente se reduce entonces a la
+resolución siguiente de $\Omega^1_{X/S}$:
+\[
+L\Omega_{X/S}
+=\bigl[f^*\Omega^1_{S/k}\longrightarrow\Omega^1_{X/k}\bigr].
+\]
+Elijamos una coordenada local $t:S\to\mathbb A^1_k$ sobre $S$ en
+$s$ (con $t$ étale en $s$), designemos de nuevo por $f$ el compuesto
+$t\circ f$, y sea $(x_i)_{1\leq i\leq n+1}$ un sistema de
+coordenadas locales sobre $X$ en $x_0$. Entonces, en $x_0$, el módulo
+$f^*\Omega^1_{S/k}$ tiene base $df$, mientras que
+$\Omega^1_{X/k}$ tiene por base los $dx_i$. Por consiguiente,
+$D^1_{X/S}$ se identifica con el cociente de $\mathcal O_X$ por el
+ideal engendrado por los $\partial f/\partial x_i$, y
+\begin{equation}\tag{1.3.1}
+\mu=\dim_k\!\left(
+\mathcal O_{X,x_0}/
+\left(\frac{\partial f}{\partial x_1},\ldots,
+      \frac{\partial f}{\partial x_{n+1}}\right)\right).
+\end{equation}
+Esta es la definición que figura en Milnor.
+
+\subsubsection*{Ejemplo 1.4.}
+Supongamos que $X$ es el subesquema cerrado de $\mathbb A_S^{n+1}$
+definido por una ecuación $g$, y sea
+$i:X\hookrightarrow\mathbb A_S^{n+1}$ la inclusión. El complejo
+cotangente se reduce entonces a
+\[
+\bigl[(g)/(g)^2\longrightarrow
+i^*\Omega^1_{\mathbb A^{n+1}/S}\bigr],
+\]
+y $D^1_{X/S}$ es isomorfo al cociente de $\mathcal O_X$ por el ideal
+engendrado por $(\partial g/\partial x_i)_{1\leq i\leq n+1}$; o,
+equivalentemente, al cociente de $\mathcal O_{\mathbb A^{n+1}}$ por
+el ideal engendrado por $g$ y los $\partial g/\partial x_i$.
+
+\subsubsection*{Ejemplo 1.5.}
+Tomemos por $S$ el espectro de un anillo de valoración discreta $V$
+con cuerpo residual perfecto y cuerpo de fracciones $K$, y sea $X$
+la normalización de $S$
+
+\pageoriginale
+
+en una extensión separable $K'$ de $K$. Por 1.4 y [5], III, 7.14,
+p.~68, $D^1_{X/S}$ es entonces isomorfo al cociente de
+$\mathcal O_X$ por la diferente $\mathfrak d_{X/S}$. Si $\bar x_0$
+es un punto geométrico de $X_s$, localizado en $x_0\in X_s$, su
+número de Milnor es, por tanto,
+\begin{equation}\tag{1.5.1}
+\mu=\operatorname{longitud}
+\bigl(\mathcal O_{X,x_0}/\mathfrak d_{X/S}\bigr).
+\end{equation}
+Sea $\bar s$ un punto geométrico de $S$ localizado en el punto cerrado
+$s$, y sea $d_{K'/K}\in V$ un generador del ideal discriminante, de
+valoración $v(d_{K'/K})$. De (1.5.1) se deduce que
+\begin{equation}\tag{1.5.2}
+v(d_{K'/K})=\sum_{x\in X(\bar s)}\mu(X/S,x).
+\end{equation}
+
+\subsubsection*{1.6.}
+Conservemos las hipótesis de 1.1. Sea $\bar s$ el punto geométrico de
+$S$ imagen de $\bar x_0$, sea $S_{(\bar s)}$ el espectro del
+henselizado estricto de $\mathcal O_{S,s}$ en $\bar s$, y sea
+$X_{(\bar s)}$ la imagen inversa de $X$ sobre $S_{(\bar s)}$.
+Sea $\bar\eta$ el espectro de una clausura algebraica del cuerpo de
+fracciones $k(\eta)$ de $S_{(\bar s)}$, y pongamos
+\[
+I=\operatorname{Gal}(k(\bar\eta)/k(\eta)).
+\]
+
+Sea $\ell$ un número primo distinto de la característica residual de
+$S$. En un entorno de $\bar x_0$ en $X_{\bar s}$, los haces de ciclos
+evanescentes
+\[
+\Phi^i_{\bar\eta}(\mathbb Z/\ell)
+=R^i\Phi_{\bar\eta}(\mathbb Z/\ell)
+\]
+relativos al haz constante $\mathbb Z/\ell$ sobre $X_{(\bar s)}$
+están concentrados en $\bar x_0$. Además, el grupo de inercia $I$
+actúa sobre los espacios vectoriales sobre $\mathbb Z/\ell$
+\[
+\Phi^i_{\bar\eta}(\mathbb Z/\ell)_{\bar x_0}.
+\]
+Estos espacios son de dimensión finita (XIII, 2.4.2).
+
+\subsubsection*{1.7.}
+Sea $I_1$ un cociente finito del grupo de inercia. Recordemos que el
+\underline{carácter de Swan} $\operatorname{Sw}$ de $I_1$ es la
+diferencia $a-u$ entre el carácter de Artin $a$ y el carácter $u$ de
+la representación de aumentación. Recordemos también que, salvo
+isomorfismo, existe un único $\mathbb Z_\ell[I_1]$-módulo proyectivo
+$S(I_1)$ de carácter $\operatorname{Sw}$ (véase [6]).
+
+\pageoriginale
+
+Sea $V$ un espacio vectorial de dimensión finita sobre
+$\mathbb Z/\ell$, provisto de una acción
+$\rho:I\to\operatorname{GL}(V)$, y supongamos que $\rho$ se factoriza
+por $I_1$. La \underline{dimensión salvaje} de $V$ es entonces
+\begin{equation}\tag{1.7.1}
+\dim\operatorname{Sw}(V)
+=\dim_{\mathbb Z/\ell}
+\operatorname{Hom}_{I_1}\!\left(
+S(I_1)\otimes_{\mathbb Z_\ell}
+\mathbb Z/\ell,V\right).
+\end{equation}
+Este entero es independiente de la elección de $I_1$, pues para un
+subgrupo normal $H$ de $I_1$ se tiene $S(I_1/H)\sim S(I_1)_H$.
+
+Ponemos además
+\[
+\dim\operatorname{tot}(V)
+=\dim\operatorname{Sw}(V)+\dim_{\mathbb Z/\ell}(V)
+\]
+y llamamos a este número la \underline{dimensión total} de $V$.
+
+\subsubsection*{Definición 1.8.}
+\underline{Con la terminología de 1.6 y 1.7, se llama número de ciclos
+evanescentes de $X/S$ en $\bar x_0$ (respectivamente, número salvaje
+de ciclos evanescentes; respectivamente, número total de ciclos
+evanescentes) al entero}
+\[
+(-1)^n\dim\Phi_{\bar x_0}
+\underset{\mathrm{def}}{=}
+(-1)^n\sum_i(-1)^i
+\dim\Phi^i_{\bar\eta}(\mathbb Z/\ell)_{\bar x_0},
+\]
+\[
+(-1)^n\dim\operatorname{Sw}\Phi_{\bar x_0}
+\underset{\mathrm{def}}{=}
+(-1)^n\sum_i(-1)^i
+\dim\operatorname{Sw}
+\Phi^i_{\bar\eta}(\mathbb Z/\ell)_{\bar x_0},
+\]
+\[
+\begin{aligned}
+(-1)^n\dim\operatorname{tot}\Phi_{\bar x_0}
+&\underset{\mathrm{def}}{=}
+(-1)^n\sum_i(-1)^i
+\dim\operatorname{tot}
+\Phi^i_{\bar\eta}(\mathbb Z/\ell)_{\bar x_0}\\
+&=(-1)^n\bigl(
+\dim\Phi_{\bar x_0}+\dim\operatorname{Sw}\Phi_{\bar x_0}
+\bigr).
+\end{aligned}
+\]
+
+\subsubsection*{Conjetura 1.9.}
+\underline{Bajo las hipótesis de 1.1, el número de Milnor $\mu$ de
+$X/S$ en $\bar x_0$ es igual al número total de ciclos evanescentes
+de $X/S$ en $\bar x_0$.}
+
+\subsubsection*{Observación 1.10.}
+Sea $S$ un trait henseliano con cuerpo residual imperfecto y sea
+$f:X\to S$
+
+\pageoriginale
+
+un morfismo liso salvo en $x_0\in X_s$. Supongamos que $X$ es regular
+en $x_0$. La definición 1.2 del número de Milnor $\mu$ sigue teniendo
+sentido bajo estas hipótesis, pero ya no tengo una interpretación
+geométrica de $\mu$ que proponer.
+
+\subsubsection*{1.11.}
+En el resto de esta sección, supongamos que
+$S=\operatorname{Spec}(V)$ es un trait henseliano con cuerpo residual
+\underline{algebraicamente cerrado} y punto cerrado $s$, que
+$f:X\to S$ es un morfismo plano de tipo finito, puramente de dimensión
+relativa $n$, que $X$ es regular, que $x_0$ es un punto cerrado de
+$X_s$ y que $X-\{x_0\}$ es liso sobre $S$.
+
+Esto no restringe la generalidad.
+
+\subsubsection*{Proposición 1.12.}
+\underline{Si $n=0$ (es decir, si $X/S$ es finito), la Conjetura 1.9
+es verdadera para $(X/S,x_0)$.}
+
+Podemos suponer que $X$ es la normalización de $S$ en una extensión
+finita $K'$ del cuerpo de fracciones $K$. Por 1.5,
+$\mu=v(d_{K'/K})$.
+
+La extensión $K'$ está definida por un subgrupo abierto $H$ del grupo
+de inercia $I$. Sea $H'\subset H$ un subgrupo abierto normal de $I$,
+y pongamos $I'=I/H'$. Sea $s_{I/H}$ el carácter de la representación
+de permutación de $I'$ sobre $I/H$, sea $a_{I'}$ el carácter de Artin,
+sea $\operatorname{Sw}_{I'}$ el carácter de Swan y sea $u_{I'}$ el
+carácter de la representación de aumentación. Por la
+``Führerdiskriminantenproduktformel'' de Artin, el ideal discriminante
+es el conductor de Artin de $s_{I/H}$ ([5], VI, 3, Corolario 1,
+p.~111):
+\[
+\mu=(a_{I'},s_{I/H})
+=|I'|^{-1}\sum_{i\in I'}a_{I'}(i)s_{I/H}(i).
+\]
+
+\pageoriginale
+
+Se tiene
+\[
+a_{I'}=u_{I'}+\operatorname{Sw}_{I'},
+\qquad
+(u_{I'},s_{I/H})=\#(I/H)-1,
+\]
+y
+\begin{align*}
+(\operatorname{Sw}_{I'},s_{I/H})
+&=\dim_{\mathbb Z/\ell}\operatorname{Hom}_I\!\left(
+S(I')\otimes_{\mathbb Z_\ell}\mathbb Z/\ell,
+(\mathbb Z/\ell)^{I/H}\right)\\
+&=\dim_{\mathbb Z/\ell}\operatorname{Hom}_I\!\left(
+S(I')\otimes_{\mathbb Z_\ell}\mathbb Z/\ell,
+\operatorname{Coker}\bigl(
+\mathbb Z/\ell\longrightarrow(\mathbb Z/\ell)^{I/H}\bigr)
+\right).
+\end{align*}
+Por tanto,
+\[
+\mu=\#(I/H)-1+
+\dim\operatorname{Sw}\operatorname{Coker}\bigl(
+\mathbb Z/\ell\longrightarrow(\mathbb Z/\ell)^{I/H}\bigr).
+\]
+Se comprueba inmediatamente que
+$\Phi^i_{x_0}=0$ para $i\ne0$ y que
+\[
+\Phi^0_{x_0}=\operatorname{Coker}\bigl(
+\mathbb Z/\ell\longrightarrow(\mathbb Z/\ell)^{I/H}\bigr);
+\]
+la fórmula se deduce de ello.
+
+\subsubsection*{Proposición 1.13.}
+\underline{Si $X_s$ presenta en $x_0$ una singularidad cuadrática
+ordinaria, la Conjetura 1.9 es verdadera para $(X/S,x_0)$.}
+
+\medskip
+\noindent\underline{Caso 1: $n=\dim(X_s)=2m-1$.}
+
+El problema es local para la topología étale sobre $X$. Podemos, por
+tanto, suponer que $\sisi{X_s}{X}$ es el subesquema cerrado de
+$\mathbb A_S^{n+1}$ definido por una ecuación
+\[
+f=\sum_{i=1}^{m}x_i x_{i+m}+a=0,
+\]
+donde $a$ pertenece al ideal maximal de $V$ y $x_0$ es el origen de
+las coordenadas. Además, $X$ es regular en $x_0$ si y solo si $a$ es
+un uniformizante. Por 1.4,
+\[
+\mu=\operatorname{longitud}\!\left(
+\mathcal O_{\mathbb A_S^{2m},x_0}/
+\left(f,\frac{\partial f}{\partial x_i}\right)\right)=1.
+\]
+
+\pageoriginale
+
+Por el cálculo de los ciclos evanescentes cuadráticos ordinarios del
+Exposé XV,\footnote{Después de la palabra impresa ``Por'', la fuente
+deja en blanco la referencia esperada. La concentración y la acción de
+inercia enunciadas son el cálculo de ciclos evanescentes cuadráticos
+ordinarios establecido en el Exposé XV.}
+$\Phi^i_{x_0}=0$ para $i\ne n$, y $\Phi^n_{x_0}$ tiene dimensión uno,
+con acción trivial de la inercia. El número salvaje de ciclos
+evanescentes es, por tanto, cero, y el número total es $1$, lo que
+verifica 1.9.
+
+\medskip
+\noindent\underline{Caso 2: $n=\dim(X_s)=2m$ y
+$\operatorname{car}(k(s))\ne2$.}
+
+Bajo estas hipótesis podemos tomar $X\subset\mathbb A_S^{n+1}$
+definido por la ecuación
+\[
+f=\sum_{i=1}^{m}x_i x_{i+m}+x_{2m+1}^2+a=0,
+\]
+donde $a$ es un uniformizante. De nuevo $\mu=1$,
+$\Phi^i_{x_0}=0$ para $i\ne n$, y
+$\sisi{\Phi^i_{x_0}}{\Phi^n_{x_0}}$ tiene dimensión uno. Esta vez el
+grupo de inercia actúa por $\pm1$ sobre $\Phi^n_{x_0}$, de modo
+moderado. El número salvaje de ciclos evanescentes vuelve a ser cero,
+y 1.9 queda verificada.
+
+\medskip
+\noindent\underline{Caso 3: $n=\dim(X_s)=2m$ y
+$\operatorname{car}(k(s))=2$.}
+
+Esta vez podemos tomar $X\subset\mathbb A_S^{n+1}$ definido por
+\[
+f=\sum_{i=1}^{m}x_i x_{i+m}
+ +(x_{2m+1}^2+a x_{2m+1}+b)=0,
+\]
+donde $a$ y $b$ pertenecen al ideal maximal. El esquema $X$ es regular
+si y solo si $b$ es un uniformizante, y su fibra genérica es lisa si
+y solo si $a^2-4b\ne0$.
+
+El número de Milnor de $X/S$ coincide con el de
+$X_0\subset\mathbb A_S^1$ definido por
+\begin{equation}\tag{1}
+x^2+a x+b=0.
+\end{equation}
+Asimismo, $\Phi^i_{x_0}=0$ para $i\ne n$, $\Phi^n_{x_0}$ tiene
+dimensión uno e $I$ actúa sobre él por $\pm1$; el subgrupo de índice
+dos de $I$ que actúa trivialmente corresponde a la extensión de $K$
+definida por (1). El número total de ciclos evanescentes de
+
+\pageoriginale
+
+$X/S$ en $x_0$ coincide, por tanto, con el relativo a $X_0/S$, y la
+validez de 1.9 en este caso se deduce de 1.12. El número de Milnor
+viene dado por (1.5):
+\begin{equation}\tag{1.13.1}
+\mu=v(a^2-4b).
+\end{equation}
+
+\section*{2. El caso ``geométrico''}
+
+Nos proponemos demostrar que la Conjetura 1.9 es verdadera en igual
+característica. El resultado geométrico clave es el siguiente. La
+posibilidad de utilizarlo me fue sugerida por conversaciones con
+B. Saint-Donat.
+
+\subsubsection*{Proposición 2.1.}
+\underline{Sean $S$ una curva proyectiva lisa y conexa sobre un cuerpo
+algebraicamente cerrado $k$, $X$ una variedad propia y lisa sobre
+$k$, puramente de dimensión $n+1$, y $f:X\to S$ un morfismo liso
+fuera de un conjunto finito $F$ de puntos de $X$. Entonces las
+características de Euler--Poincaré, en cohomología étale, de $S$, de
+$X$ y de la fibra genérica geométrica $X_{\bar\eta}$ de $f$
+satisfacen}
+\begin{equation}\tag{2.1.1}
+\chi(X)=\chi(S)\chi(X_{\bar\eta})
+-(-1)^n\sum_{x\in F}\mu(X/S,x).
+\end{equation}
+
+Se sabe que la característica de Euler--Poincaré de $X$ coincide con
+la traza (o integral sobre $X$) de la última clase de Chern del fibrado
+tangente:
+\[
+\chi(X)=\int_Xc_{n+1}(\Theta_X)
+=(-1)^{n+1}\int_Xc_{n+1}(\Omega_X^1).
+\]
+Pongamos
+\[
+\Omega_X^1=\left(\Omega_X^1\otimes
+(f^*\Omega_S^1)^{\otimes-1}\right)\otimes f^*\Omega_S^1.
+\]
+La clase total de Chern del haz inversible $f^*\Omega_S^1$ es la
+imagen inversa de la clase total de Chern de $\Omega_S^1$ sobre $S$:
+
+\pageoriginale
+
+\[
+c^*(f^*\Omega_S^1)=1+f^*c^1(S,\Omega_S^1),
+\]
+y las potencias respecto del producto cup de $c^1$ son nulas:
+\[
+\bigl(f^*c^1(S,\Omega_S^1)\bigr)^n
+=f^*\bigl(c^1(S,\Omega_S^1)^n\bigr)=0
+\qquad(n>1).
+\]
+De ello se deduce que
+\begin{align*}
+c^{n+1}(\Omega_X^1)
+={}&c^n\!\left(\Omega_X^1\otimes
+(f^*\Omega_S^1)^{\otimes-1}\right)
+\smile f^*c_1(S,\Omega_S^1)\\
+&+c^{n+1}\!\left(\Omega_X^1\otimes
+(f^*\Omega_S^1)^{\otimes-1}\right).
+\end{align*}
+
+Si $S$ tiene género $g$, entonces $c_1(S,\Omega_S^1)$ es
+$(2g-2)$ veces la clase de cohomología de cualquier punto cerrado
+$s$ de $S$. Por tanto, si $X_s$ es no singular,
+\begin{align*}
+\mathrm I
+&=\int_Xc^n\!\left(\Omega_X^1\otimes
+(f^*\Omega_S^1)^{\otimes-1}\right)
+\smile f^*c_1(S,\Omega_S^1)\\
+&=(2g-2)\int_Xc^n\!\left(\Omega_X^1\otimes
+(f^*\Omega_S^1)^{\otimes-1}\right)
+\smile f^*\operatorname{cl}(s)\\
+&=(2g-2)\int_{X_s}c^n\!\left(
+X_s,\Omega_X^1\otimes(f^*\Omega_S^1)^{\otimes-1}
+\otimes\mathcal O_{X_s}\right).
+\end{align*}
+Además, sobre $X_s$ el haz $f^*\Omega_S^1$ es isomorfo a
+$\mathcal O_{X_s}$, y
+$\Omega_X^1\otimes_{\mathcal O_X}\mathcal O_{X_s}$ figura en una
+sucesión exacta
+\[
+0\longrightarrow f^*\Omega_S^1\otimes\mathcal O_{X_s}
+\longrightarrow\Omega_X^1\otimes\mathcal O_{X_s}
+\longrightarrow\Omega_{X_s}^1\longrightarrow0.
+\]
+Por consiguiente,
+\[
+c^n\!\left(X_s,\Omega_X^1\otimes
+(f^*\Omega_S^1)^{\otimes-1}\otimes\mathcal O_{X_s}\right)
+=c^n(X_s,\Omega_{X_s}^1),
+\]
+y
+\[
+\mathrm I=(2g-2)\int_{X_s}c^n(X_s,\Omega_{X_s}^1)
+=(-1)^{n+1}\chi(S)\chi(X_s).
+\]
+
+\pageoriginale
+
+La aplicación canónica
+\[
+f^*:f^*\Omega_S^1\longrightarrow\Omega_X^1
+\]
+se identifica con una sección $a$ de
+$\Omega_X^1\otimes(f^*\Omega_S^1)^{\otimes-1}$. Una vez elegidos
+sistemas de coordenadas locales sobre $S$ y $X$, lo que identifica
+este fibrado con $\mathcal O_X^{n+1}$, las coordenadas de $a$ son las
+derivadas parciales $\partial f/\partial x_i$. Por tanto, $a$ solo se
+anula sobre $F$, y por 1.3 la multiplicidad de su cero en $x\in F$ es
+igual al número de Milnor $\mu(X/S,x)$.
+
+Recordemos que si una sección $a$ de un fibrado vectorial $G$ de rango
+$d$ sobre un $k$-esquema propio y liso $X$, puramente de dimensión
+$d$, solo se anula en puntos aislados, entonces
+$\int_Xc^d(G)$ es igual al número de ceros de $a$, contados con sus
+multiplicidades. Aquí se tiene
+\[
+\mathrm{II}=\int_Xc^{n+1}\!\left(
+\Omega_X^1\otimes(f^*\Omega_S^1)^{\otimes-1}\right)
+=\sum_{x\in F}\mu(X/S,x).
+\]
+Reuniendo los términos, se obtiene
+\[
+\chi(X)=(-1)^{n+1}(\mathrm I+\mathrm{II})
+=\chi(S)\chi(X_s)-(-1)^n\sum_{x\in F}\mu(X/S,x),
+\]
+de donde se deduce 2.1, pues
+$\chi(X_s)=\chi(X_{\bar\eta})$.
+
+\subsubsection*{Corolario 2.2.}
+\underline{Bajo las hipótesis precedentes, si $n(X/S,x)$ es el número
+total de ciclos evanescentes de $X/S$ en $x$ (1.8), entonces}
+\[
+\sum_{x\in F}\mu(X/S,x)
+=\sum_{x\in F}n(X/S,x).
+\]
+
+La sucesión espectral de Leray para $f$ proporciona
+\begin{align*}
+\chi(X)
+&=\sum_{p,q}(-1)^{p+q}
+\dim_{\mathbb Z/\ell}H^p(S,R^qf_*\mathbb Z/\ell)\\
+&=\sum_q(-1)^q\chi(S,R^qf_*\mathbb Z/\ell).
+\end{align*}
+
+\pageoriginale
+
+Para todo haz constructible $G$ de $\mathbb Z/\ell$-módulos sobre
+$S$ se tiene ([4] o SGA 5, X, 7.2)
+\[
+\chi(S,G)=\chi(S)\dim_{\mathbb Z/\ell}(G_{\bar\eta})
+-\sum_{s\in S}\varepsilon_s(G),
+\]
+donde, para cada $s\in S$, identificando $\bar\eta$ con la clausura
+algebraica del cuerpo de fracciones del henselizado de $S$ en $s$, se
+tiene
+\[
+\varepsilon_s(G)=
+\dim(G_{\bar\eta})-\dim(G_s)
+\sisi{-}{+}\dim\operatorname{Sw}(G_{\bar\eta}).
+\]
+\footnote{La impresión lleva un signo menos ante el término de Swan.
+El signo más viene impuesto tanto por la fórmula estándar del
+conductor de Artin citada en la frase precedente como por la identidad
+impresa (c), que identifica la suma alternada con la dimensión
+\emph{total} $\dim+\dim\operatorname{Sw}$.}
+
+Para $s\in S$, las sucesiones exactas XIII, 2.4.6.3,
+\[
+\cdots\longrightarrow(R^qf_*\mathbb Z/\ell)_s
+\longrightarrow(R^qf_*\mathbb Z/\ell)_{\bar\eta}
+\longrightarrow\bigoplus_{x\in F(s)}
+\Phi^q_{\bar\eta}(\mathbb Z/\ell)_x
+\longrightarrow\cdots
+\]
+dan
+\begin{align*}
+&\sum_q(-1)^q\left(
+\dim(R^qf_*\mathbb Z/\ell)_{\bar\eta}
+-\dim(R^qf_*\mathbb Z/\ell)_s\right)\\
+&\hspace{4em}=\sum_{x\in F(s)}\sum_q(-1)^q
+\dim\Phi^q_{\bar\eta}(\mathbb Z/\ell)_x,
+\end{align*}
+y
+\[
+\sum_q(-1)^q\dim\operatorname{Sw}
+(R^qf_*\mathbb Z/\ell)_{\bar\eta}
+=\sum_{x\in F(s)}\sum_q(-1)^q
+\dim\operatorname{Sw}\Phi^q_{\bar\eta}(\mathbb Z/\ell)_x.
+\]
+Por consiguiente,
+\begin{equation}\tag{c}
+\sum_q(-1)^q\varepsilon_s(R^qf_*\mathbb Z/\ell)
+=\sum_{x\in F(s)}\dim\operatorname{tot}\Phi_x.
+\end{equation}
+La fórmula de Euler--Poincaré se reduce, pues, a
+\begin{align*}
+\chi(X)
+&=\sum_q(-1)^q\chi(S,R^qf_*\mathbb Z/\ell)\\
+&=\sum_q(-1)^q\left(
+\chi(S)\dim(R^qf_*\mathbb Z/\ell)_{\bar\eta}
+-\sum_s\varepsilon_s(R^qf_*\mathbb Z/\ell)\right)\\
+&=\chi(S)\sum_q(-1)^q
+\dim(R^qf_*\mathbb Z/\ell)_{\bar\eta}
+-\sum_s\sum_q(-1)^q\varepsilon_s(R^qf_*\mathbb Z/\ell)\\
+&=\chi(S)\chi(X_{\bar\eta})
+-\sum_s\sum_{x\in F(s)}\dim\operatorname{tot}\Phi_x\\
+&=\chi(S)\chi(X_{\bar\eta})
+-(-1)^n\sum_{x\in F}n(X/S,x).
+\end{align*}
+
+\pageoriginale
+
+Comparando esta fórmula con (2.1.1), se obtiene 2.2.
+
+\subsubsection*{Corolario 2.3.}
+\underline{Bajo las hipótesis y con las notaciones precedentes,
+supongamos que $x_0\in F$ y que, para todo $x\in F$ distinto de
+$x_0$, la fibra de $f$ que pasa por $x$ presenta en $x$ una
+singularidad cuadrática ordinaria. Entonces}
+\[
+\mu(X/S,x_0)=n(X/S,x_0).
+\]
+Para $x\ne x_0$, la Proposición 1.13 da
+\[
+\mu(X/S,x)=n(X/S,x),
+\]
+y basta aplicar 2.2.
+
+\subsubsection*{Teorema 2.4.}
+\underline{Sean $S$ un trait henseliano de igual característica con
+cuerpo residual perfecto, $f:X\to S$ un morfismo plano de tipo finito
+y $\bar x$ un punto geométrico de $X$ cuya imagen en $X$ es un punto
+cerrado $x$ de $X_s$ que es un punto aislado de no lisitud de $X/S$.
+Supongamos que $X$ es regular en $x$. Entonces el número total (1.8)
+de ciclos evanescentes de $X/S$ en $\bar x$ coincide con el número de
+Milnor $\mu(X/S,x)$.}
+
+Sea $S'$ el trait henseliano deducido de $S$ extendiendo el cuerpo
+residual $k(s)$ a su clausura separable, y pongamos
+$X'=X\times_{\sisi{s}{S}}S'$. La afirmación 2.4 para $X/S$ equivale
+entonces a la afirmación para $X'/S'$. Como $k(s)$ ya se supone
+perfecto, podemos suponer que el cuerpo residual de $S$ es
+algebraicamente cerrado.
+
+Para tal $S$, sea $S'$ su completado y pongamos
+$X'=X\times_{\sisi{s}{S}}S'$. El número de Milnor en $x$ es el mismo
+para $X/S$ y $X'/S'$, y por XIII, 2.4.2 lo mismo vale para el número
+total de ciclos evanescentes. Podemos suponer además que $S$ es
+completo, por tanto isomorfo a $k[[t]]$, con $k$ algebraicamente
+cerrado. Si $X_s$ tiene dimensión $n$ en $x$, se tiene:
+
+\subsubsection*{Proposición 2.5.}
+\underline{Existen una variedad proyectiva lisa $Y$ sobre $k$,
+puramente de dimensión $n+1$, un morfismo
+$f:Y\to\mathbb P^1_k$ liso fuera de un conjunto finito $F$}
+
+\pageoriginale
+
+\underline{de puntos de $Y$, y un punto $y_0\in F$, tales que:}
+\begin{enumerate}
+\item[(a)] \underline{si $y\in F$ y $y\ne y_0$, entonces $y$ es un
+punto singular cuadrático ordinario de la fibra de $f$ que pasa por
+$y$;}
+\item[(b)] \underline{$f(y_0)=0$ y, si
+$a:S\to\mathbb P^1_k$ es el isomorfismo natural entre $S$ y el
+completado de $\mathbb P^1_k$ en $0$, existe un $S$-isomorfismo entre
+el henselizado de $X$ en $x$ y el henselizado de $a^*Y$ en $y_0$.}
+\end{enumerate}
+
+Mostremos que $2.5\Rightarrow2.4$. Por 2.3 y 2.5(a), el número de
+Milnor de $\sisi{Y/T}{Y/\mathbb P^1_k}$ en $y_0$ coincide con el
+número total de ciclos evanescentes. Como antes, XIII, 2.4.2 da el
+mismo resultado para $a^*Y/S$, y por tanto también para $(X/S,x)$,
+que por 2.5(b) es localmente isomorfo a $(a^*Y/S,y_0)$ para la
+topología étale.
+
+Demostremos 2.5. El completado del anillo local $\mathcal O_{X,x}$ es
+isomorfo, como $k[[t]]$-álgebra, a un cociente
+\[
+\widehat{\mathcal O}_{X,x}
+=k[[t,x_1,\ldots,x_{n+1}]]/(f).
+\]
+El teorema de las funciones implícitas XV, 1.1.2 (es decir, [1],
+Lema 5.10) muestra entonces que existe un entero $N$ tal que la
+condición 2.5(b) se cumple siempre que
+\[
+\widehat{\mathcal O}_{Y,y_0}
+\simeq k[[t,x_1,\ldots,x_{n+1}]]/(f_1)
+\]
+como $k[[t]]$-álgebras, con $f_1-f$ en la potencia $N$-ésima
+$\mathfrak m^N$ del ideal maximal de
+$k[[t,x_1,\ldots,x_{n+1}]]$.
+
+Sean $(t_0,t_1)$ y $(x_0,\ldots,x_{n+1})$ los sistemas usuales de
+coordenadas homogéneas sobre $\mathbb P^1$ y $\mathbb P^{n+1}$.
+Tomaremos por $Y/\mathbb P^1$ la subvariedad de
+$\mathbb P^1\times\mathbb P^{n+1}$ definida por una ecuación
+\begin{equation}\tag{2.5.1}
+g(t_0,t_1;x_0,\ldots,x_{n+1})=0,
+\end{equation}
+homogénea de grado $d'$ en $(t_0,t_1)$ y de grado $d''$ en los
+$x_i$. En términos más intrínsecos, $g$ será una sección de
+\[
+\mathcal O(d',d'')=\operatorname{pr}_1^*\mathcal O(d')
+\otimes\operatorname{pr}_2^*\mathcal O(d'').
+\]
+
+\pageoriginale
+
+La condición (b) se cumplirá si
+\begin{equation}\tag{2.5.2}
+g(1,t;1,x_1,\ldots,x_{n+1})\equiv f\pmod{\mathfrak m^N}.
+\end{equation}
+
+Fijemos $d'$ y $d''$. Los $g$ del tipo (2.5.1) son entonces los puntos
+racionales de un espacio afín $A$ sobre $k$. Para
+$u\in\mathbb P^1\times\mathbb P^{n+1}$, designemos por
+$B(u,\sisi{k}{r})$ el espacio afín cuyos puntos son los
+$\sisi{k}{r}$-jets de secciones de $\mathcal O(d',d'')$ en $u$.
+Si $u_0=(1,0;1,0,\ldots,0)$ y $u\ne u_0$, entonces, para $d'$ y
+$d''$ suficientemente grandes, la aplicación de restricción
+\begin{equation}\tag{2.5.3}
+A\longrightarrow B(u_0,N)\times B(u,2),
+\end{equation}
+siempre lineal, es sobreyectiva.
+
+Sea $C(u)\subset B(u,2)$ el conjunto de los $2$-jets que son el
+$2$-jet del germen cero o de un germen $\widetilde h$ tal que
+\begin{enumerate}
+\item[(a)] $u$ pertenece a la variedad $V$ definida por
+$\widetilde h=0$;
+\item[(b)] $u$ no es ni un punto liso ni un punto cuadrático ordinario
+de la fibra de $V/\mathbb P^1$ que pasa por $u$.
+\end{enumerate}
+Se comprueba fácilmente que $C(u)$ es cerrado de codimensión $n+3$
+en $B(u,2)$.
+
+Sea $D$ el subespacio afín de $A$ formado por los $g$ que satisfacen
+(2.5.2). Para $u\ne u_0$, sea $D(u)$ el subespacio de $D$ formado por
+el cero y por los $g$ tales que $g(u)=0$ y $u$ no es ni un punto liso
+ni un punto cuadrático ordinario de la fibra de la variedad $V$
+definida por $g=0$ que pasa por $u$. Si $d'$ y $d''$ son
+suficientemente grandes para que (2.5.3) sea sobreyectiva, entonces
+$D(u)$ tiene codimensión $n+3$ en $D$. La unión de los $D(u)$ para
+$u\ne u_0$ tiene, por tanto, codimensión al menos
+\[
+1=(n+3)-(n+2),
+\]
+y un elemento general $g$ de $D$ no pertenece a ninguno de los
+$D(u)$. Tal elemento resuelve el problema.
+
+\pageoriginale
+
+\subsection*{Bibliografía}
+
+\begin{enumerate}[label={[\arabic*]},leftmargin=3em]
+\item M. Artin, ``Algebraic approximation of structures over complete
+local rings'', \emph{Publ. Math. IHES} \underline{36} (1969)
+(volumen de Zariski).
+\item Lê Dũng Tráng, \emph{Singularités isolées des hypersurfaces
+complexes}, Publ. Centre Math. École Polytechnique, mayo de 1969.
+\item J. Milnor, \emph{Singular Points of Complex Hypersurfaces},
+Princeton University Press, 1968.
+\item M. Raynaud, ``Caractéristique d'Euler--Poincaré d'un faisceau et
+cohomologie des variétés abéliennes'', Séminaire Bourbaki 286,
+febrero de 1965.
+\item J.-P. Serre, \emph{Corps locaux}, Publ. Inst. Math. Univ.
+Nancago VIII, Hermann, 1962.
+\item J.-P. Serre, ``SGA 5, IX. Introduction à la théorie de Brauer'',
+reproducido en \emph{Représentations linéaires des groupes},
+3.\textsuperscript{a} parte, Hermann, París, 1967.
+\end{enumerate}

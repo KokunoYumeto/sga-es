@@ -1,0 +1,313 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\begin{corollaire}
+\label{XIII.2.5}
+Sean
+\marginpar{385}
+$f\colon X\to S$ un morfismo, $D$ un divisor sobre~$X$
+de cruzamientos normales relativamente a~$S$ \eqref{XIII.2.1},
+$Y=\Supp D$, $U=X-Y$, e $i\colon U\to X$ la inmersión
+canónica. Sea $\Phi$ un stack sobre~$U$ y supongamos dados
+morfismos étale sobreyectivos $S_1\to S$ y $X_2\to
+X\times_{S}S_1$, un stack $\Psi$ sobre~$S_1$ y un isomorfismo
+$\Phi|U_2\simeq\Psi|U_2$ (\cf \Ref{XIII.2.2}).
+
+Entonces, para todo morfismo $h\colon S'\to S$, si $k=h_{(X)}$,
+el funtor canónico
+$$
+\varphi\colon k^*i_*\Phi\to i_*'\Phi'
+$$
+es plenamente fiel. Si $\Psi$ es constructible, el funtor
+canónico
+$$
+\psi\colon k^*i_*^{\tame}\Phi\to i_*^{\prime\tame}\Phi'
+$$
+es una equivalencia de categorías.
+
+Además, si el stack $\Psi$ es constructible (\resp si $\Psi$ es
+$1$-constructible \eqref{XIII.0} y $S$ localmente noetheriano),
+$i_*\Phi$ es constructible (\resp
+$i_*^t\Phi$
+es $1$-constructible).
+\end{corollaire}
+
+Demostremos que $\varphi$ es plenamente fiel. Basta ver
+que, para todo punto geométrico $\overline{x}'$ de~$X'$, lo
+mismo ocurre con el funtor
+$$
+\overline{\varphi}\colon
+\Phi(\overline{U})\to\Phi'(\overline{U'})
+$$
+(se retoman las notaciones de~\Ref{XIII.2.4.2}). Sean $a$, $b$ dos
+objetos de~$\Phi(\overline{U})$, y sean $a',\ b'$ sus imágenes por
+$\overline{\varphi}$. Como el morfismo
+$\overline{U}\to\overline{S}$ es localmente $0$-acíclico
+\eqref{XIII.5.7}, se tiene un isomorfismo
+$$
+\H^0(\overline{U},\overline{S\Phi})
+\overset{\sim}{\to}
+\ifthenelse{\boolean{orig}}
+{\H^0(S,\overline{S\Psi})}
+{\H^0(\overline{S},\overline{S\Psi})}.
+$$
+Por consiguiente, $a$ y $b$ provienen por imagen inversa de objetos
+de~$\Psi$, y lo mismo ocurre, por tanto, con
+$F=\SheafHom_{\overline{U}}(a,b)$. Como el haz
+$F'=\SheafHom_{\overline{U'}}(a',b')$ es la imagen inversa
+sobre~$\overline{U'}$ de~$F$, de~\Ref{XIII.2.4.1} resulta que el
+morfismo canónico
+$$
+\H^0(\overline{U},F)\to \H^0(\overline{U'},F')
+$$
+es un isomorfismo, lo que demuestra que $\overline{\varphi}$ es
+plenamente fiel.
+
+Demostremos
+\marginpar{386}
+que, para todo punto geométrico $\overline{x}'$ de~$X'$, el
+funtor
+$$
+\overline{\psi}\colon
+i^{\tame}_*\Phi(\overline{X'})
+\to i_*^{\prime\tame}\Phi'(\overline{X'})
+$$
+es una equivalencia. Por lo anterior,
+$\overline{\psi}$ es plenamente fiel. Demostremos que
+$\overline{\psi}$ es esencialmente sobreyectivo. Sea $a'$ un
+objeto de~$\Phi'(\overline{U'})$ moderadamente
+ramificado sobre~$X'$ relativamente a~$S'$ \eqref{XIII.2.2}, y
+demostremos que es la imagen de un objeto moderadamente
+ramificado de~$\Phi(\overline{U})$. De~\Ref{XIII.2.4}
+1) resulta que el morfismo canónico
+$$
+\H^0(\overline{U},\overline{S}\overline{\Phi})\to
+\H^0(\overline{U'},\overline{S}\overline{\Phi}')
+$$
+es un isomorfismo. Sea $G'$ el subgerbe maximal de~$\Phi'$
+generado por~$a'$; existe entonces un subgerbe maximal~$G$ de
+$\overline{\Phi}$, imagen inversa de un gerbe sobre~$\overline{S}$, tal
+que se tiene
+$$
+\overline{m}^*G\simeq G',
+$$
+donde
+\ifthenelse{\boolean{orig}}
+{$m$}
+{$\overline{m}$}
+es el morfismo $\overline{U'}\to
+\overline{U}$. El funtor canónico
+\begin{equation*}
+\label{eq:XIII.2.5.*}
+\tag{$*$} {\overline{k}^*\overline{i}_*^{\tame}G\to
+\overline{i}_*^{\prime\tame}G'}
+\end{equation*}
+es una equivalencia, pues $G$ se identifica con un gerbe de
+torsores bajo un haz de grupos constructible proveniente de
+$\overline{S}$, y puede aplicarse \Ref{XIII.2.4}~1). De
+\eqref{eq:XIII.2.5.*} resulta entonces que existe un
+objeto $a$ de~$G(\overline{U})$, moderadamente
+ramificado sobre~$X$ relativamente a~$S$, cuya imagen inversa sobre
+$\overline{U'}$ es $a'$, lo que demuestra que $\psi$ es una
+equivalencia.
+
+Si $\Psi$ es constructible, lo mismo ocurre con~$i_*\Phi$; en
+efecto, un objeto $x$ de~$i_*\Phi$ es, localmente para la topología
+étale sobre~$S$, imagen inversa de un objeto $y$ de~$\Psi$; de
+\Ref{eq:XIII.2.4.1.1} resulta, por tanto, que $\SheafAut (x)$ es
+la imagen inversa de~$\SheafAut (y)$, luego es constructible. Finalmente, si
+$\Psi$ es $1$-constructible, lo mismo ocurre con
+$i^{\tame}_*\Phi$ por~\Ref{XIII.6.3} más abajo.
+
+\begin{corollaire}
+\label{XIII.2.6}
+Las
+\marginpar{387}
+notaciones son las de~\Ref{XIII.2.4}. Supongamos que $S$ tiene
+característica cero en todo punto $s$ tal que $Y_s\neq
+\emptyset.$ Entonces, si $\cal{ F}$ es un haz de grupos localmente
+constante y constructible sobre~$U$ (\resp un stack constructible
+sobre~$U$ que, localmente sobre~$X$ y~$S$, es imagen inversa de un
+stack constructible sobre~$S$), $(\cal{ F},i)$ es cohomológicamente
+propio relativamente a~$S$ en dimensión $\leq 1.$
+\end{corollaire}
+
+Como todo haz de conjuntos constructible sobre~$U$ está
+moderadamente ramificado sobre~$X$ relativamente a~$S,$ el
+corolario resulta de~\Ref{XIII.2.4} (\resp \Ref{XIII.2.5}).
+
+\begin{corollaire}
+\label{XIII.2.7}
+Las notaciones son las de~\Ref{XIII.2.4}, pero se da además
+un $S$-esquema $T$, un morfismo propio $p\colon X\to T,$
+y se supone que $X$ y $T$ son de presentación finita sobre~$S$; sea
+$q=pi$. Sea $\cal{ F}$ un haz de conjuntos constructible sobre~$U$
+que satisfaga una de las condiciones \textup{a)} o \textup{b)}
+de~\Ref{XIII.2.4} (\resp un haz de grupos que satisfaga una de las
+condiciones \textup{a)} o \textup{b)} de~\Ref{XIII.2.4},
+\resp un stack sobre~$U$ que, localmente sobre~$X$ y~$S$, es imagen
+inversa de un stack constructible $G$ sobre~$S$). Entonces
+se tienen las conclusiones siguientes:
+\begin{enumerate}
+\item[1)] $(\cal{ F},q)$ es cohomológicamente propio relativamente
+a~$S$ en dimensión $\leq 0$ (\resp para todo morfismo $h\colon
+S^{'}\to S$, si $m=h_{(T)}$, el morfismo canónico
+$$
+\Theta\colon m^*(\R^1_{\tame}q_*\cal{ F})\to
+\R^1_{\tame}q_*^{'}\cal{ F}^{'}
+$$
+es un isomorfismo, \resp
+\ifthenelse{\boolean{orig}}
+{para todo morfismo $S^{'}\to S$,}
+{para todo morfismo $h\colon S^{'}\to S$, si $m=h_{(T)}$,}
+el morfismo canónico
+$$
+\xi \colon m^*(q_*^{\tame}\cal{ F})\to
+{q'}_*^{{\tame}}\cal{F}^{'}
+$$
+es una equivalencia).
+\item[2)] El haz $q_*\cal{ F}$ (\resp el haz
+$\R_{\tame}^1q_*\cal{ F}$, \resp el stack $q_*^{\tame}\cal{ F}$)
+es constructible. En el último caso, si se supone que $S$ es localmente
+noetheriano y que $G$ es $1$-constructible, lo mismo ocurre con
+$q_*^{\tame}\cal{ F}.$
+\end{enumerate}
+\end{corollaire}
+
+La
+\marginpar{388}
+primera parte resulta inmediatamente de~\Ref{XIII.2.4},
+\Ref{XIII.2.5} y de la demostración
+de~\Ref{XIII.1.8}. Demostremos~2). Si $\cal{ F}$ es un haz
+de conjuntos constructible sobre~$U$ que satisface \Ref{XIII.2.4}~a)
+o \Ref{XIII.2.4}~b), de \Ref{XIII.2.4}~2) resulta que
+$i_*\cal{ F}$ es constructible; lo mismo ocurre, por tanto, con
+$q_*\cal{ F}=p_*(i_*\cal{ F})$ (SGA~4 XIV~1.1).
+
+Sea $\cal{F}$ un haz de grupos constructible sobre~$U$
+que satisfaga \Ref{XIII.2.4}~a) o \Ref{XIII.2.4}~b), y demostremos
+que $\R_{\tame}^1q_*\cal{ F}$ es constructible. Por paso al
+límite (EGA~IV 8.10.5 y 17.7.8) y usando~1), puede
+suponerse que $S$ es noetheriano. Sea entonces $\Phi$ el stack sobre~$X$
+cuya fibra sobre todo esquema $X^{'}$ étale sobre~$X$ está formada
+por los torsores sobre~$U^{'}=U\times_{X}X^{'}$, de grupo
+\ifthenelse{\boolean{orig}}
+{$\cal{F}|U$}
+{$\cal{F}|U'$},
+que están moderadamente ramificados sobre
+\ifthenelse{\boolean{orig}}
+{~$X$}
+{~$X'$}
+relativamente a~$S$; se tiene, por tanto,
+$$
+\ifthenelse{\boolean{orig}}
+{S(i_*^{\tame}\Phi)}
+{S(\Phi)}
+\simeq \R_{\tame}^1i_*\cal{ F}
+$$
+y este haz es constructible por~\Ref{XIII.2.4}~2).
+De ello resulta, por
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.6.3}}
+{\Ref{XIII.6.2}}
+más abajo, que $S(p_*\Phi)$
+es constructible, \ie que $\R^1_{\tame}q_*\cal{ F}$ es
+constructible.
+
+Finalmente, si $\cal{ F}$ es un stack sobre~$U$ que, localmente
+sobre~$X$ y $S$, es imagen inversa de un stack constructible sobre~$S,$
+$i_*^{\tame}\cal{ F}$ es constructible, y lo mismo ocurre, por tanto,
+con $q_*^{\tame}\cal{ F}=p_*(i_*^{\tame}\cal{ F})$. Si
+además $S$ es localmente noetheriano y $SG$ es constructible,
+$S(i_*^{\tame}\cal{ F})$ es constructible por~6.3; lo mismo ocurre,
+por tanto, con
+\ifthenelse{\boolean{orig}}
+{$S(q_*i_*^{\tame}\cal{ F})$}
+{$S(p_*i_*^{\tame}\cal{ F})$},
+\ie con
+$S(q_*^{\tame}\cal{ F})$~\Ref{XIII.6.2}.
+
+\begin{corollaire}
+\label{XIII.2.8}
+Sea
+$$
+\xymatrix{ U \ar[r]^{i} \ar[d]_{g} & X \ar[ld]^{f} \\ S }
+$$
+un diagrama conmutativo de esquemas, en el que $U$ es el abierto
+complementario
+\marginpar{389}
+en $X$ de un divisor de cruzamientos normales relativamente a~$S$, y
+$f$ un morfismo \emph{propio} de presentación finita. Sea
+$\LL$ un conjunto de números primos. Supongamos que~$g$ es localmente
+$0$-acíclico (\resp localmente $1$-asférico para $\LL$). Entonces, si
+$\cal{ F}$ es un haz de conjuntos sobre~$U$ (\resp un haz de $\LL$-grupos)
+sobre~$U,$ localmente constante y constructible,
+moderadamente ramificado sobre~$X$ relativamente a~$S$,
+\ifthenelse{\boolean{orig}}
+{$f_*\cal{ F}$ (\resp $\R^1_{\tame}f_*\cal{ F}$)}
+{$g_*\cal{ F}$ (\resp $\R^1_{\tame}g_*\cal{ F}$)}
+es localmente constante y constructible, y
+\ifthenelse{\boolean{orig}}
+{$(\cal{ F},f)$}
+{$(\cal{ F},g)$}
+es cohomológicamente propio
+relativamente a~$S$ en dimensión $\leq 0$ (\resp la formación de
+\ifthenelse{\boolean{orig}}
+{$\R^1_{\tame}f_*\cal{ F}$}
+{$\R^1_{\tame}g_*\cal{ F}$}
+conmuta con todo cambio de base
+$S^{'}\to S$). En el caso sin paréntesis, si $\cal{ F}$ es un
+haz de grupos, para toda especialización $\overline{s}_1
+\to \overline{s}_2$ de puntos geométricos de~$S$, el
+morfismo de especialización
+$$
+\ifthenelse{\boolean{orig}}
+{(\R^1_{\tame}f_*\cal{ F})_{\overline{s}_2}\to
+(\R^1_{\tame}f_*\cal{ F})_{\overline{s}_1}}
+{(\R^1_{\tame}g_*\cal{ F})_{\overline{s}_2}\to
+(\R^1_{\tame}g_*\cal{ F})_{\overline{s}_1}}
+$$
+es inyectivo.
+\end{corollaire}
+El corolario resulta inmediatamente de~
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.2.6}}
+{\Ref{XIII.2.7}}
+y
+de~\Ref{XIII.1.14} (\resp del análogo de~\Ref{XIII.1.14} para
+\ifthenelse{\boolean{orig}}
+{el $\R^1_{\tame}f_*\cal{ F}$}
+{el $\R^1_{\tame}g_*\cal{ F}$},
+que se demuestra como en \loccit).
+
+\begin{corollaire} \label{XIII.2.9}
+Sea
+$$
+\xymatrix{ U \ar[r]^{i} \ar[d]_{g} & X \ar[ld]^{f} \\ S }
+$$
+un diagrama conmutativo de esquemas, en el que $U$ es el abierto
+complementario en~$X$ de un divisor de cruzamientos normales
+relativamente a~$S$, y $f$~un morfismo propio y liso de
+presentación finita. Sea~$\LL $ el conjunto de los números primos
+distintos de las características residuales de~$S$. Sea~$\cal{F}$ un
+haz de~$\LL $-grupos localmente constante y constructible sobre~$U$,
+moderadamente ramificado sobre~$X$ relativamente a~$S$. Entonces
+\ifthenelse{\boolean{orig}}
+{$\R^1 f_*\cal{ F}$}
+{$\R^1 g_*\cal{ F}$}
+es localmente constante y constructible, y
+\ifthenelse{\boolean{orig}}
+{$(\cal{ F},f)$}
+{$(\cal{ F},g)$}
+es cohomológicamente propio
+relativamente
+\marginpar{390}
+a~$S$ en dimensión $\leq 1$.
+\end{corollaire}
+El corolario resulta de~\Ref{XIII.2.8} y del hecho de que se tiene
+\ifthenelse{\boolean{orig}}
+{$\R_{\tame}^1f_*\cal{ F}=\R^1f_*\cal{ F}$}
+{$\R_{\tame}^1g_*\cal{ F}=\R^1g_*\cal{ F}$}
+(\Ref{XIII.2.3}~b)).
+
+\endgroup

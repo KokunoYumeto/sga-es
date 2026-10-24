@@ -1,0 +1,191 @@
+
+\enlargethispage{.5cm}
+\skpt
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo los delimitadores de curvatura de Xy-pic.
+\setcounter{secnumdepth}{3}
+\setcounter{subsubsection}{0}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{proposition}.\arabic{subsubsection}}
+\begin{definitions}
+\label{XIII.1.10}
+
+\subsubsection{}
+\label{XIII.1.10.1}
+Sea $E$ una categoría y consideremos un diagrama
+$$
+\xymatrix@C=.6cm{ \Phi \ar[r]^p & \Phi_1 \ar@<2pt>[r]^{p_1}
+\ar@<-2pt>[r]_{p_2} & \Phi_2 } \text{,}
+$$
+donde $\Phi$, $\Phi_1$, $\Phi_2$ son categorías fibradas sobre~$E$ y las
+flechas son morfismos de categorías fibradas, y sea
+$$
+a \colon p_1 p \isomto p_2 p
+$$
+un isomorfismo de funtores.
+
+Se dice que el diagrama anterior es exacto si se satisface la condición
+siguiente:
+
+a) Para todo par de objetos $x$, $y$ de~$\Phi$ y todo morfismo $f
+\colon p(x) \to p(y)$ tal que $p_1(f) = p_2(f)$ (identificando $p_1p$ y
+$p_2p$ mediante~$a$), existe un único morfismo $g \colon x \to y$ tal que
+$p(g)=f$.
+
+\subsubsection{}
+\label{XIII.1.10.2}
+Consideremos el diagrama
+\ifthenelse{\boolean{orig}}
+{$$
+\xymatrix{ \Phi \ar[r]^p & \Phi_1 \ar@<0.6ex>[r]^{p_1}
+\ar@<-0.6ex>[r]_{p_2} & \Phi_2 \ar@<2ex>[r]^{p_{23}} \ar[r]^{p_{31}}
+\ar@<-0.6ex>[r]_{p_{12}} & \Phi_3 } \text{,}
+$$}
+{$$
+\xymatrix@C=.5cm{ \Phi \ar[r]^p & \Phi_1 \ar@<0.6ex>[rr]^{p_1}
+\ar@<-0.6ex>[rr]_{p_2} && \Phi_2 \ar@<2ex>[rrr]^{p_{23}} \ar[rrr]^{p_{31}}
+\ar@<-0.6ex>[rrr]_{p_{12}} &&& \Phi_3 } \text{,}
+$$}
+donde
+\marginpar{358}
+$\Phi$, $\Phi_i$, $1 \leqslant i \leqslant 3$, son categorías fibradas
+sobre~$E$ y las flechas son morfismos de categorías fibradas. Supongamos
+dados unos isomorfismos de funtores
+$$
+a \colon p_1 p \isomto p_2 p
+$$
+$$
+a_1 \colon p_{31} p_2 \isomto p_{12} p_1 \text{,}\quad a_2 \colon p_{12}
+p_2 \isomto p_{23} p_1 \text{,}\quad a_3 \colon p_{23} p_2 \isomto
+p_{31}p_1
+$$
+tales que el diagrama siguiente sea conmutativo:
+$$
+\xymatrix@C=1.2cm{ p_{23} p_1 p \ar[r]^{\id.a} & p_{23} p_2 p \ar[r]^{a_3.\id}
+& p_{31} p_1 p \ar[d]^{\id.a} \\ p_{12} p_2 p \ar[u]^{a_2.\id} &
+p_{12} p_1 p \ar[l]^{\id.a} & p_{31} p_2 p \ar[l]^{a_1.\id} } \text{.}
+$$
+Identificamos $p_1 p$ con $p_2 p$, $p_{31} p_2$ con $p_{12} p_1$, etc.
+
+Se dice que el diagrama anterior es exacto si se satisfacen las condiciones
+siguientes:
+\begin{enumerate}
+\item[a)] Análoga a la condición a) de~\Ref{XIII.1.10.1}.
+\item[b)] Para todo objeto $x_1$ de~$\Phi_1$ y todo isomorfismo
+$u \colon p_1(x_1) \isomto p_2(x_1)$ tal que
+\begin{equation*}
+\label{eq:XIII.1.10.2.1}
+\tag{\thesubsubsection.1} { \ifthenelse{\boolean{orig}}
+{p_{23}(u) p_{31}(u)}
+{p_{31}(u) p_{23}(u)} = p_{12}(u)^{-1}
+\text{,} }
+\end{equation*}
+existe un objeto $x$ de~$\Phi$ y un isomorfismo $i
+\colon p(x) \isomto x_1$ que hace conmutativo el diagrama
+\begin{equation*}
+\label{eq:XIII.1.10.2.2}
+\tag{\thesubsubsection.2}
+\begin{array}{c}
+{ \xymatrix{ p_1p(x) \ar@{=}[r]
+\ar[d]_{p_1(i)} & p_2p(x) \ar[d]^{p_2(i)} \\ p_1(x_1) \ar[r]^{\sim}_u
+& p_2(x_1) } }
+\end{array}
+\end{equation*}
+\end{enumerate}
+
+\subsubsection{}
+\label{XIII.1.10.3}
+Se define de manera evidente la noción de morfismo de diagramas exactos de
+categorías fibradas sobre una categoría~$E$.
+\end{definitions}
+
+\subsubsection{}
+\label{XIII.1.10.4}
+Utilizaremos
+\marginpar{359}%
+en particular la noción de diagrama exacto cuando~$E$ es un sitio y
+$\Phi$, $\Phi_i$, $1 \leqslant i \leqslant 3$, son stacks sobre~$E$.
+
+Sean $f \colon E \to E'$ un morfismo de sitios y
+\ifthenelse{\boolean{orig}}
+{\begin{equation*}
+\label{eq:XIII.1.10.4.1}
+\tag{\thesubsubsection.1} { \xymatrix{ \Phi \ar[r]^p & \Phi_1
+\ar@<0.6ex>[r]^{p_1} \ar@<-0.6ex>[r]_{p_2} & \Phi_2
+\ar@<2ex>[r]^{p_{23}} \ar[r]^{p_{31}} \ar@<-0.6ex>[r]_{p_{12}} &
+\Phi_3 } }
+\end{equation*}}
+{\begin{equation*}
+\label{eq:XIII.1.10.4.1}
+\tag{\thesubsubsection.1} { \xymatrix@C=.5cm{ \Phi \ar[r]^p & \Phi_1
+\ar@<0.6ex>[rr]^{p_1} \ar@<-0.6ex>[rr]_{p_2} && \Phi_2
+\ar@<2ex>[rrr]^{p_{23}} \ar[rrr]^{p_{31}} \ar@<-0.6ex>[rrr]_{p_{12}} &&&
+\Phi_3 } }
+\end{equation*}}
+un diagrama exacto de stacks sobre~$E$. Por imagen directa se obtiene un
+diagrama
+$$
+\xymatrix@C=.5cm{ f_* \Phi \ar[r] & f_* \Phi_1 \ar@<2pt>[r]
+\ar@<-2pt>[r] & f_* \Phi_2 \ar@<4pt>[r]\ar[r] \ar@<-4pt>[r] &
+f_* \Phi_3 }
+$$
+que evidentemente es exacto.
+
+Si $h \colon E'' \to E$ es un morfismo de sitios, se tiene asimismo un
+diagrama exacto
+\ifthenelse{\boolean{orig}}
+{$$
+\xymatrix{ h^* \Phi \ar[r]^{p''} & h^* \Phi_1
+\ar@<0.6ex>[r]^{p''_1} \ar@<-0.6ex>[r]_{p''_2} & h^* \Phi_2
+\ar@<2ex>[r]^{p''_{23}} \ar[r]^{p''_{31}} \ar@<-0.6ex>[r]_{p''_{12}} &
+h^* \Phi_3 }
+$$}
+{$$
+\xymatrix@C=.5cm{ h^* \Phi \ar[r]^{p''} & h^* \Phi_1
+\ar@<0.6ex>[rr]^{p''_1} \ar@<-0.6ex>[rr]_{p''_2} && h^* \Phi_2
+\ar@<2ex>[rrr]^{p''_{23}} \ar[rrr]^{p''_{31}} \ar@<-0.6ex>[rrr]_{p''_{12}} &&&
+h^* \Phi_3 }
+$$}
+
+Verifiquemos primero la condición~a) de~\Ref{XIII.1.10.2}. Sean
+$F''$ un objeto de~$E''$, $x''$ e~$y''$ dos objetos de~$(h^*
+\Phi)_{F''}$, $x''_1$ e~$y''_1$ sus imágenes respectivas en
+$h^* \Phi_1$, y $x''_2$, $y''_2$ sus imágenes en~$h^*
+\Phi_2$. Sea $u''_1 \colon x''_1 \to y''_1$ un morfismo tal que
+$p''_1(u''_1) = p''_2(u''_1)$, y demostremos que~$u''_1$ proviene de un
+único morfismo $u'' \colon x'' \to y''$. Como la cuestión es local
+sobre~$F''$, podemos suponer que se tienen un objeto $F_1$ de~$E$, un
+morfismo de~$F''$ en la imagen inversa $F''_1$ de~$F_1$ por~$h$, y unos
+objetos $x$, $y$ de~$\Phi_{F_1}$ cuyas imágenes inversas sobre~$F''$
+son $x''$ e~$y''$. Sean $x_1$, $y_1$ (\resp $x_2$, $y_2$) las imágenes
+de~$x$, $y$ en~$\Phi_1$ (\resp en~$\Phi_2$). Podemos suponer que
+$u''_1$ proviene de un morfismo $u_1 \colon x_1 \to y_1$ tal que
+$p_1(u_1) = p_2(u_1)$. Por la exactitud de
+\eqref{eq:XIII.1.10.4.1}, se obtiene un único morfismo $u \colon x
+\to y$ cuya imagen inversa por~$h$ es el morfismo buscado~$u''$.
+
+La
+\marginpar{360}
+condición~b) de~\Ref{XIII.1.10.2} se verifica de manera análoga. Sean
+$x''_1$ un objeto de~$(h^* \Phi_1)_{F''}$ y $u''
+\colon p''_1(x''_1) \to p''_2(x''_1)$ un morfismo que satisface la
+relación
+$$
+\ifthenelse{\boolean{orig}}
+{p''_{23}(u'')p''_{31}(u'')}
+{p''_{31}(u'')p''_{23}(u'')}=p''_{12}(u'')^{-1} \text{,}
+$$
+y demostremos que existe un objeto $x''$ de~$(h^* \Phi)_{F''}$ y
+un isomorfismo $i'' \colon p''(x'') \simeq x''_1$ que hace conmutativo
+un diagrama análogo a~\eqref{eq:XIII.1.10.2.2}. Como la cuestión es
+local sobre~$F''$, podemos suponer que se tienen un objeto $F_1$, un
+morfismo $F'' \to F''_1$ como antes, y un objeto $x_1$
+de~$(\Phi_1)_{F_1}$ cuya imagen inversa en~$(h^* \Phi_1)_{F''}$
+es~$x''_1$. De igual manera, podemos suponer que~$u''$ proviene de un
+morfismo $u \colon p_1(x_1) \to p_2(x_1)$ que satisface
+\ifthenelse{\boolean{orig}}
+{\eqref{eq:XIII.1.10.2.2}}
+{\eqref{eq:XIII.1.10.2.1}}.
+La existencia de un objeto $x$ de~$\Phi_{F_1}$ cuya imagen inversa por~$h$
+sea un objeto~$x''$ que satisfaga lo requerido resulta entonces de la
+exactitud de~\eqref{eq:XIII.1.10.4.1}.
+\endgroup

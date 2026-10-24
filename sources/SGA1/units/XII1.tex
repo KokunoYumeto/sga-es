@@ -1,0 +1,219 @@
+
+\chapterspace{-4}
+\chapter{Geometría algebraica y~geometría~analítica}
+\label{XII}
+\marginpar{311}
+
+\begin{center}
+{Sra. M.\ \textsc{Raynaud}\footnote{A partir de notas inéditas de
+A\ptbl\ Grothendieck.}}
+\end{center}
+\vspace*{1cm}
+
+Siguiendo el procedimiento de~\cite{XII.10}, a todo esquema~$X$ localmente
+de tipo finito sobre el cuerpo de los números complejos~$\CC$ se le asocia
+un espacio analítico~$X^\an$
+\label{indnot:lb}\oldindexnot{$X^\an$|hyperpage}%
+cuyo conjunto subyacente es~$X(\CC)$.
+
+En los números~\Ref{XII.2} y~\Ref{XII.3} de esta exposición damos un
+\og diccionario\fg entre las propiedades usuales de~$X$ y de~$X^\an$, y
+entre las propiedades de un morfismo $f\colon X\to Y$ y las del morfismo
+asociado $f^\an\colon X^\an\to Y^\an$.
+\label{indnot:lc}\oldindexnot{$f^\an$|hyperpage}%
+
+Demostramos después que los teoremas de comparación entre haces coherentes
+sobre~$X$ y sobre~$X^\an$, establecidos en~\cite[\No 12]{XII.10} para una
+variedad proyectiva, siguen siendo válidos cuando~$X$ es un esquema propio.
+
+Por último, en el número~\Ref{XII.5} demostramos la equivalencia entre la
+categoría de los recubrimientos étales finitos de~$X$ y la categoría de los
+recubrimientos étales finitos de~$X^\an$. Como añadido para el lector, damos
+una nueva demostración del teorema de Grauert--Remmert~\cite{XII.6}, que
+utiliza la resolución de singularidades~\cite{XII.8}.
+
+\section{Espacio analítico asociado a un esquema}
+\label{XII.1}
+\marginpar{312}
+
+Sea~$X$ un esquema localmente de tipo finito sobre~$\CC$. Sea~$\Phi$ el
+funtor de la categoría de los espacios analíticos~\cite[\No 9]{XII.4} en la
+categoría de los conjuntos que asocia a un espacio analítico~$\othercal{X}$
+el conjunto de los morfismos de espacios anillados en $\CC$-álgebras
+$\Hom_\CC(\othercal{X},X)$. Se tiene el teorema siguiente:
+
+\begin{theoremedefinition}
+\label{XII.1.1}
+El funtor~$\Phi$ es representable por un espacio analítico~$X^\an$ y un
+morfismo $\varphi\colon X^\an\to X$. Se dice que~$X^\an$ es el espacio
+analítico asociado a~$X$.
+\index{espacio analítico asociado|hyperpage}%
+
+Si~$|X^\an|$ es el conjunto subyacente a~$X^\an$, entonces~$\varphi$ induce
+una biyección de~$|X^\an|$ sobre el conjunto~$X(\CC)$ de los puntos de~$X$
+con valores en~$\CC$. Además, para cada punto~$x$ de~$X^\an$, el morfismo
+$$
+\varphi_x\colon\cal{O}_{X,\varphi(x)}\to\cal{O}_{X^\an,x},
+$$
+que es necesariamente local, induce al pasar a las completaciones un
+isomorfismo
+$$
+\widehat{\varphi}_x\colon\widehat{\cal{O}}_{X,\varphi(x)}\isomto
+\widehat{\cal{O}}_{X^\an,x}
+\ifthenelse{\boolean{orig}}
+{,}
+{.}%
+$$
+En particular, el morfismo~$\varphi$ es plano.
+\end{theoremedefinition}
+
+Obsérvese que el hecho de que~$\varphi$ induzca una biyección de~$X^\an$
+sobre~$X(\CC)$ resulta de la propiedad universal de~$X^\an$. Por otra parte,
+se tienen las afirmaciones siguientes:
+
+\begin{enumerate}
+\item[a)] Si el teorema es cierto para un esquema~$Y$, también lo es para
+todo subesquema~$X$ de~$Y$. Supongamos primero que~$X$ es un subesquema
+abierto de~$Y$; si $\psi\colon Y^\an\to Y$ es el morfismo canónico,
+$\psi^{-1}(X)$ es un abierto
+\marginpar{313}
+de~$Y^\an$
+\ifthenelse{\boolean{orig}}
+{al que se dota}
+{al que se dota}%
+~de la estructura de espacio analítico inducida por la de~$Y^\an$. Como todo
+morfismo de un espacio analítico~$\othercal{X}$ en~$X$ se factoriza a través
+de~$Y^\an$ por la propiedad universal de este último, y por tanto a través
+de~$X^\an$, que es el producto fibrado~$Y^\an\times_YX$, resulta que~$X^\an$
+es el espacio analítico asociado a~$X$. Por último, la afirmación relativa a
+los~$\varphi_x$ es evidente.
+
+Basta ahora considerar el caso en que~$X$ es un subesquema cerrado de~$Y$.
+Sea~$I$ el $\cal{O}_Y$-ideal coherente que define~$X$; entonces
+$I\cdot\cal{O}_{Y^\an}$ es un haz coherente de ideales de~$\cal{O}_{Y^\an}$
+que define un subespacio analítico cerrado~$X^\an$ de~$Y^\an$; como en el
+caso de un subesquema abierto, se ve que~$X^\an$ es el espacio analítico
+asociado a~$X$. Sea $\varphi\colon X^\an\to X$ el morfismo canónico. Para
+todo punto~$x$ de~$X^\an$, el morfismo~$\varphi_x$ no es sino el morfismo
+$$
+\cal{O}_{Y,\psi(x)}/I_{\psi(x)}\to
+\cal{O}_{Y^\an,x}/I_{\psi(x)}\cdot\cal{O}_{Y^\an,x}
+$$
+inducido por~$\psi_x$; su completación
+$$
+\widehat{\varphi}_x\colon
+\widehat{\cal{O}}_{Y,\psi(x)}/I_{\psi(x)}\cdot\widehat{\cal{O}}_{Y,\psi(x)}
+\to\widehat{\cal{O}}_{Y^\an,x}/I_{\psi(x)}\cdot\widehat{\cal{O}}_{Y^\an,x}
+$$
+es un isomorfismo porque~$\widehat\psi_x$ lo es, lo que demuestra~a).
+
+\item[b)] Si se tienen dos $\CC$-esquemas~$X_1$ y~$X_2$ tales que existen
+$X_1^\an$ y~$X_2^\an$, entonces también existe~$(X_1\times X_2)^\an$. Sean,
+en efecto, $\varphi_1\colon X_1^\an\to X_1$ y
+$\varphi_2\colon X_2^\an\to X_2$ los morfismos canónicos, y sean~$p_1$
+y~$p_2$ las dos proyecciones de~$X_1^\an\times X_2^\an$. Se deduce
+formalmente de EGA~I~1.8.1 que~$X_1\times X_2$ es el producto de~$X_1$ y~$X_2$
+en la categoría de los espacios localmente anillados; de ello resulta que
+los morfismos~$\varphi_1\cdot p_1$ y~$\varphi_2\cdot p_2$ definen un
+\marginpar{314}
+morfismo $\varphi\colon X_1^\an\times X_2^\an\to X_1\times X_2$, y que el
+par~$(X_1^\an\times X_2^\an,\varphi)$ representa el funtor
+$\othercal{X}\mto\Hom_\CC(\othercal{X},X_1\times X_2)$.
+
+\item[c)] Si~$\othercal{E}^1$ denota el espacio afín de dimensión~1, es
+decir, el espacio topológico~$\CC$ provisto del haz de funciones holomorfas,
+el funtor%
+\ifthenelse{\boolean{orig}}
+{}
+{{\renewcommand{\thefootnote}{*}\addtocounter{footnote}{-1}\footnote{\lcrochetbf Añadido en 2003: $E^1_\CC$ denota la recta afín (algebraica) sobre~$\CC$.\rcrochetbf}}}
+$\othercal{X}\mto\Hom_\CC(\othercal{X},E^1_\CC)$ es representable por
+$\othercal{E}^1$, siendo el morfismo canónico
+$\varphi\colon\othercal{E}^1\to E^1_\CC$ el morfismo evidente. En efecto,
+darse un morfismo de un espacio analítico~$\othercal{X}$ en~$E^1_\CC$
+equivale a darse un elemento de~$\Gamma(\othercal{X},\cal{O}_\othercal{X})$,
+lo que equivale también a darse un morfismo de~$\othercal{X}$
+en~$\othercal{E}^1$. Se tiene evidentemente una biyección
+$|\othercal{E}^1|\simeq E^1(\CC)$ y, para cada punto
+$x\in\othercal{E}^1$, el morfismo~$\widehat\varphi_x$ no es sino el
+morfismo identidad de un anillo de series formales en una variable
+sobre~$\CC$.
+\end{enumerate}
+
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+De b) y c) se deduce que el teorema es cierto para el espacio afín
+$E^n_\CC$, $n\geq0$. Utilizando~a), se ve que también lo es para todo esquema
+afín~$X$ localmente de tipo finito sobre~$\CC$. Si ya no se supone que~$X$
+sea afín y si~$(X_i)$ es un recubrimiento de~$X$ por abiertos afines, se
+deduce de la propiedad universal y de~a) que los~$X_i^\an$ se pegan y definen
+así el espacio analítico~$X^\an$ asociado a~$X$.
+
+\setcounter{subsection}{1}% Preserve the source-visible paragraph number XII.1.2.
+\subsection{}
+\label{XII.1.2}
+Sea $f\colon X\to Y$ un morfismo de $\CC$-esquemas localmente de tipo finito.
+Si $\varphi\colon X^\an\to X$ y $\psi\colon Y^\an\to Y$ son los morfismos
+canónicos, de la propiedad universal de~$Y^\an$ resulta que existe un único
+morfismo $f^\an\colon X^\an\to Y^\an$ tal que el diagrama
+$$
+\xymatrix{
+X^\an \ar[r]\ar[d]_-{f^\an}& X\ar[d]^-f\\ Y^\an \ar[r]& Y
+}
+$$
+sea
+\marginpar{315}
+conmutativo. Se ha definido, pues, un funtor~$\Phi$ de la categoría de los
+$\CC$-esquemas localmente de tipo finito en la categoría de los espacios
+analíticos.
+
+El funtor~$\Phi$ conmuta con los límites proyectivos finitos. Basta, en
+efecto, ver que~$\Phi$ conmuta con los productos fibrados. Ahora bien, si
+$X$, $Y$ y~$Z$ son esquemas localmente de tipo finito sobre~$\CC$, del hecho
+de que~$X\times_ZY$ sea el producto fibrado de~$X$ y~$Y$ sobre~$Z$ en la
+categoría de los espacios localmente anillados resulta que
+$X^\an\times_{Z^\an}Y^\an$ satisface la propiedad universal que caracteriza
+a~$(X\times_ZY)^\an$.
+
+\subsection{}
+\label{XII.1.3}
+Sean~$X$ un $\CC$-esquema localmente de tipo finito, $X^\an$ el espacio
+analítico asociado y $\varphi\colon X^\an\to X$ el morfismo canónico. Si~$F$
+es un $\cal{O}_X$-módulo, la imagen inversa
+$\varphi^*F=F^\an$ es un haz de módulos sobre~$\cal{O}_{X^\an}$. Se define
+así un funtor de la categoría de los $\cal{O}_X$-módulos en la categoría de
+los módulos sobre~$X^\an$. Este funtor conmuta con los límites inductivos
+(EGA~0~4.3.2). Como el haz~$\cal{O}_{X^\an}$ es coherente
+\cite[\no18~\S 2~th\ptbl 2]{XII.4}, transforma haces coherentes en haces
+coherentes (EGA~0~5.3.11). Se tiene además:
+
+\begingroup
+\setcounter{proposition}{0}% The source numbers this statement inside paragraph XII.1.3.
+\renewcommand{\theproposition}{\thesubsection.\arabic{proposition}}
+\renewcommand{\theHproposition}{\theHsubsection.\arabic{proposition}}
+\begin{subproposition}
+\label{XII.1.3.1}
+El funtor que a un
+\ifthenelse{\boolean{orig}}
+{$\cal{O}_{X^\an}$-módulo}
+{$\cal{O}_X$-módulo}%
+~$F$ asocia su imagen inversa~$F^\an$ sobre~$X^\an$ es exacto, fiel y
+conservativo.
+\end{subproposition}
+\endgroup
+
+La exactitud resulta de que el morfismo $\varphi\colon X^\an\to X$ es plano
+\ifthenelse{\boolean{orig}}
+{\eqref{XIII.1.1}}
+{\eqref{XII.1.1}}.%
+\ Demostremos que el funtor~$F\mto F^\an$ es fiel. Habida cuenta de la
+exactitud, basta demostrar que, si~$F^\an$ es nulo, también lo es~$F$. Ahora
+bien, para todo punto~$x$ de~$X^\an$, se tiene entonces
+$F_{\varphi(x)}\otimes_{\cal{O}_{X,\varphi(x)}}\cal{O}_{X^\an,x}=0$. Como el
+morfismo $\cal{O}_{X,\varphi(x)}\to\cal{O}_{X^\an,x}$ es fielmente plano, se
+tiene $F_{\varphi(x)}=0$ para todo punto cerrado~$\varphi(x)$ de~$X$ y, como
+$X$ es de Jacobson (EGA~IV~10.4.8), esto implica que~$F$ es nulo.
+
+El
+\marginpar{316}
+hecho de que el funtor~$F\mto F^\an$ sea conservativo resulta formalmente de
+la exactitud y la fidelidad.

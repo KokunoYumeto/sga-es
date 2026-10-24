@@ -1,0 +1,149 @@
+Obsérvese que este razonamiento se aplica siempre que se tiene una relación
+de equivalencia (o incluso solo una preequivalencia, \cf \cite{VIII.3}) en un
+preesquema~$X'$, 
+\ifthenelse{\boolean{orig}}
+{finita y localmente libre;}
+{finita y localmente libre;}
+por lo demás, \Ref{VIII.7.6} es también un caso particular del resultado
+análogo para las preequivalencias finitas y localmente libres, \cf \loccit
+La misma observación vale para~\Ref{VIII.7.7} más abajo.
+
+Una vez obtenida la existencia de un abierto cuasiafín saturado~$U'$ que
+contiene~$x'$, también puede recurrirse a~\Ref{VIII.7.9}
+y~\Ref{VIII.7.2}, con lo cual se evita el uso de las normas.
+
+Obsérvese además que, en las condiciones de~\Ref{VIII.7.6}, si el dato de
+descenso sobre~$X'$ es efectivo y~$X'$ proviene de~$X$ sobre~$S$, entonces
+el morfismo~$X'\to X$ es finito, localmente libre y sobreyectivo, pues se
+deduce de~$g$ por el cambio de base~$X\to S$. Se sigue (EGA~II 6.6.4) que,
+si~$X'$ es cuasiproyectivo sobre~$S'$ y, por tanto, sobre~$S$, entonces~$X$
+es cuasiproyectivo sobre~$S$ (se obtiene un haz invertible relativamente
+amplio sobre~$X$ tomando la \emph{norma} de un haz invertible sobre~$X'$
+relativamente amplio sobre~$S$, o sobre~$S'$, lo que viene a ser lo mismo).
+Se obtiene así:
+
+\begin{corollaire}
+\label{VIII.7.7}
+Un morfismo~$g\colon S'\to S$ finito localmente libre y sobreyectivo es un
+morfismo de descenso efectivo para la categoría fibrada de los preesquemas
+cuasiproyectivos sobre otros; \ie para todo~$X'$ cuasiproyectivo sobre~$S'$,
+todo dato de descenso sobre~$X'$ con respecto a~$g$ es efectivo, y el
+$S$-preesquema descendido~$X$ es cuasiproyectivo sobre~$S$.
+\end{corollaire}
+
+\begin{proposition}
+\label{VIII.7.8}
+Sea~$g\colon S'\to S$ un morfismo fielmente plano y cuasicompacto. Entonces
+~$g$ es un morfismo de descenso efectivo para la categoría fibrada de los
+preesquemas~$Z$ cuasicompactos sobre un preesquema~$T$, provistos de un haz
+invertible amplio
+\marginpar{225}
+con respecto a~$T$. En particular, para todo preesquema~$X'$ sobre~$S'$,
+provisto de un dato de descenso con respecto a~$g\colon S'\to S$, y todo haz
+invertible~$\mathcal{L}'$ sobre~$X'$ amplio con respecto a~$S'$, provisto
+también de un dato de descenso con respecto al dado sobre~$X'$ (\ie provisto
+de un isomorfismo entre~$q_{1}^*(\mathcal{L}')$ y~$q_{2}^*(\mathcal{L}')$ que
+satisface la condición habitual de transitividad). Entonces el dato de
+descenso sobre~$X'$ es efectivo, y el haz invertible~$\mathcal{L}$ sobre el
+preesquema descendido~$X$, deducido de~$\mathcal{L}'$ por descenso, es
+amplio con respecto a~$S$.
+\end{proposition}
+
+La demostración es enteramente análoga a la de~\Ref{VIII.5.8}. Obsérvese
+que, en el álgebra graduada cuasicoherente~$\mathcal{S}'$ sobre~$S'$
+definida por~$\mathcal{L}'$, hay un dato de descenso que permite construir,
+gracias a~\Ref{VIII.1.1}, un álgebra graduada
+cuasicoherente~$\mathcal{S}$ sobre~$S$, de donde resulta un
+~$P=\Proj(\mathcal{S})$ sobre~$S$ tal que~$P'=\Proj(\mathcal{S}')$, junto con
+su dato de descenso, se identifica con~$P\times_{S}S'$. Como, por hipótesis,
+~$X'$ se identifica con un abierto de~$P'$, necesariamente estable por el
+dato de descenso sobre~$P'$, el dato de descenso sobre~$X'$ es también
+efectivo y se obtiene el preesquema descendido como un abierto de~$P$. Se
+deja el detalle al lector. --- En particular, tomando
+~$\mathcal{L}'=\mathcal{O}_{X'}$, se obtiene:
+
+\begin{corollaire}
+\label{VIII.7.9}
+Sea~$g\colon S'\to S$ un morfismo fielmente plano y cuasicompacto, y sea
+~$X'$ un preesquema \emph{cuasiafín} sobre~$S'$. Entonces todo dato de
+descenso sobre~$X'$ con respecto a~$g$ es efectivo, y el preesquema
+descendido~$X$ es cuasiafín sobre~$S$.
+\end{corollaire}
+
+En virtud de~\Ref{VIII.6.2}, este resultado se aplica, en particular, si~$S'$
+es localmente noetheriano y~$X'$ es cuasifinito y separado sobre~$S'$; más
+generalmente, si~$S'$ es cualquiera y~$X'$ es de presentación finita,
+cuasifinito y separado sobre~$S'$ (\cf \Ref{VIII.6.6}).
+
+\begin{remarques}
+\label{VIII.7.10}
+Los resultados dados en este número agotan los criterios de efectividad
+conocidos actualmente, y probablemente incluso los criterios útiles
+existentes\footnote{Esta opinión resultó parcialmente errónea; véanse, por
+ejemplo, J.P\ptbl \textsc{Murre}, Sém. Bourbaki 294 (Apéndice), mayo de 1965,
+y resultados especiales (en particular, de \textsc{Néron} y
+\textsc{Raynaud}). Para el descenso de los esquemas en grupos, \cf
+M\ptbl Raynaud, tesis (1968).}. Obsérvense los contraejemplos siguientes en
+apoyo de esta afirmación:
+\begin{enumerate}
+\item[(i)]
+\marginpar{226}
+Si~$S$ es el espectro de un cuerpo y~$S'$ es el espectro de una extensión
+cuadrática galoisiana, puede encontrarse un~$X'$ sobre~$S'$, propio y liso
+sobre~$S'$, de dimensión 3, provisto de un dato de descenso que no es
+efectivo (Serre).
+\item[(ii)] Puede encontrarse un~$S$ que sea el espectro de un anillo local regular de
+dimensión 3 (si se quiere, el anillo local de un esquema algebraico sobre un
+cuerpo de característica dada), un recubrimiento principal~$T$ de~$S$ con
+grupo~$\ZZ/2\ZZ$, tal que, si~$t$ designa uno de los puntos de~$T$ situados
+sobre el punto cerrado~$s$ de~$S$, y
+\ifthenelse{\boolean{orig}}
+{$S'=T-s$,}
+{$S'=T-\{t\}$,}
+pueda encontrarse un~$X'$ \emph{proyectivo} sobre~$S'$, regular, provisto de
+un dato de descenso con respecto a~$g\colon S'\to S$, sin que este dato de
+descenso sea efectivo.
+\end{enumerate}
+
+Para estas construcciones se utiliza el ejemplo de Hironaka de variedades
+no proyectivas. Para~(i), basta utilizar el hecho de que puede encontrarse
+sobre~$k$ un esquema propio y liso~$X_{0}$ de dimensión 3 sobre el cual
+~$G=\ZZ/2\ZZ$ actúa sin inercia y en el que existen dos puntos~$a,b$
+racionales
+\ifthenelse{\boolean{orig}}
+{sobre~$P$,}
+{sobre~$S$,}
+conjugados por la acción de~$G$, que no están contenidos en un abierto afín. Se pone
+entonces~$X'=X_{0}\times_{k}k'$ y se hace actuar~$G$ sobre~$X'$ mediante las
+acciones de~$G$ sobre los dos factores, lo que da un dato de descenso
+sobre~$X'$ con respecto a~$g\colon \Spec(k')\to \Spec(k)$. Por encima de~$a$
+\resp de~$b$, hay exactamente un punto~$a'$ \resp $b'$ (con extensión residual
+cuadrática), y~$a'$ y~$b'$ son conjugados por la acción de~$G$, pues~$X'\to X_{0}$ es
+compatible con las acciones de~$G$. Entonces~$a'$ y~$b'$ no pueden estar
+contenidos en un abierto afín~$U'$, pues, de lo contrario,
+~$U=X_{0}-\Im(X'-U')$ sería un abierto de~$X_{0}$ que contendría~$(a,b)$ y
+cuya imagen inversa en~$X'$ estaría contenida en~$U'$ y sería, por tanto,
+cuasiafín; luego~$U$ sería cuasiafín y, en consecuencia,~$(a,b)$ tendría un
+entorno afín en~$U$.
+
+Para~(ii), se utiliza el hecho de que, en el ejemplo de Hironaka, $X_{0}$ se
+obtiene como preesquema propio sobre un~$k$-esquema proyectivo~$Y$, liso
+sobre~$k$ (el morfismo~$f\colon X_{0}\to Y$ es, por lo demás, birracional,
+pero poco importa); el grupo~$G$ actúa asimismo sobre~$Y$ de manera
+compatible con sus acciones sobre~$X_{0}$; finalmente, poniendo
+\ifthenelse{\boolean{orig}}
+{$S'=Y-f(b)$,}
+{$S'=Y-\{f(b)\}$,}
+~$X'=X_{0}|S'$, $X'$ es proyectivo sobre~$S'$. Entonces~$X_{0}$ está
+provisto de un dato de descenso natural con respecto al morfismo
+\marginpar{227}
+canónico~$Y\to S=Y/G$, gracias a las acciones de~$G$ sobre~$X_{0}$
+compatibles con sus acciones sobre~$Y$. Este dato de descenso no es efectivo,
+pues~$(a,b)$ no está contenido en un abierto afín.
+\ifthenelse{\boolean{orig}}
+{El dato de descenso inducido}
+{El dato de descenso inducido}
+sobre~$X'$ con respecto a~$g\colon S'\to S$ tampoco es entonces efectivo,
+como se comprueba fácilmente.
+\end{remarques}
+

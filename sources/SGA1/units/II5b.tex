@@ -1,0 +1,137 @@
+
+Obsérvese que, cuando $K$ es una extensión de tipo finito de~$k$, la equivalencia entre
+\ifthenelse{\boolean{orig}}
+{(i) (ii) (ii~bis) (iv)}
+{(i), (ii), (ii~bis), (iv)}
+es bien conocida, pero no hemos utilizado ninguna de
+\ifthenelse{\boolean{orig}}{sus}{estas}
+\ifthenelse{\boolean{orig}}{equivalencia}{equivalencias}
+ya conocidas. Naturalmente, la proposición~\Ref{II.5.1} contiene como caso particular el hecho de que una sucesión de elementos~$x_i$ ($1\leq i\leq n$) es
+\ifthenelse{\boolean{orig}}{un}{una}
+«base de trascendencia separante» de~$K$ sobre~$k$ si y solo si los~$dx_i$ forman una base del $K$-módulo $\Omega^1_{K/k}$, hecho también bien conocido.
+
+\begin{corollaire}
+\label{II.5.7}
+Sea $X$ un preesquema de tipo finito sobre un cuerpo~$k$. Para que $X$ sea liso sobre~$k$, es necesario y suficiente que
+\ifthenelse{\boolean{orig}}{$\Omega^1_{X/k}$}{$\it{\Omega}^1_{X/k}$}
+sea localmente libre y que los anillos locales de los puntos genéricos de las componentes irreducibles de~$X$ sean extensiones separables de~$k$ (esta última condición se cumple automáticamente si $k$ es perfecto y $X$ es reducido).
+\end{corollaire}
+
+Puede suponerse que $X$ es conexo; sea $n$ el rango de
+\ifthenelse{\boolean{orig}}{$\Omega^1_{X/k}$}{$\it{\Omega}^1_{X/k}$},
+supuesto localmente libre. Por la hipótesis y~\Ref{II.5.6}, este es también el grado de trascendencia de las extensiones
+\marginpar{55}
+de~$k$ definidas por los anillos locales de los puntos genéricos de~$X$; por tanto, todas las componentes irreducibles de~$X$ tienen dimensión~$n$. Se concluye entonces por~\Ref{II.5.5}.
+
+Debe advertirse que, si $K$ es una extensión finita (no necesariamente separable) de~$k$, entonces $\Omega^1_{K/k}$ es un
+\ifthenelse{\boolean{orig}}{$k$-módulo}{$K$-módulo}
+libre; por tanto, poniendo $X=\Spec(K)$,
+\ifthenelse{\boolean{orig}}{$\Omega^1_{X/k}$}{$\it{\Omega}^1_{X/k}$}
+es un haz localmente libre y $X$ es reducido, sin que $X$ sea necesariamente liso sobre~$k$. Extendiendo entonces los escalares a la clausura algebraica de~$k$, se obtiene un ejemplo análogo en el que $k$ es algebraicamente cerrado, pero $X$, en cambio, no es reducido.
+
+\begin{corollaire}
+\label{II.5.8}
+Sean $X$ un preesquema de tipo finito sobre el cuerpo~$k$, $x$ un punto de~$X$, $n$ la dimensión de~$X$ en~$x$ y $p$ la dimensión
+\ifthenelse{\boolean{orig}}{de~$\cal{O}_x$}{de~$\cal{O}_x$,}
+es decir, la codimensión en $X$ de la adherencia $Y$ de~$x$ en~$X$; así, $n-p$ es el grado de trascendencia de
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+sobre~$k$. Sean $f_i$ ($1\leq i\leq n$) elementos de~$\cal{O}_x$ tales que $f_i\in\goth{m}_x$ para $1\leq i\leq p$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] El germen de morfismo en~$x$
+\[
+X\to\Spec\bigl(k[t_1,\dots,t_n]\bigr)
+\]
+definido por los $f_i$ es étale en~$x$.
+\item[(ii)] Los $f_i$ ($1\leq i\leq p$)
+\ifthenelse{\boolean{orig}}{engendran~$\goth{m}_x$}{engendran~$\goth{m}_x$,}
+es decir, forman un sistema regular de parámetros de~$\cal{O}_x$, y las clases en
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)$ de los~$f_j$ ($p+1\leq j\leq n$) forman una base de trascendencia separante (es decir, los~$d\overline{f}_j$ ($p+1\leq j\leq n$) forman una base de~$\Omega^1_{\kappa(x)/k}$, o bien engendran~$\Omega^1_{\kappa(x)/k}$).}
+{$\kres(x)$ de los~$f_j$ ($p+1\leq j\leq n$) forman una base de trascendencia separante (es decir, los~$d\overline{f}_j$ ($p+1\leq j\leq n$) forman una base de~$\Omega^1_{\kres(x)/k}$, o bien engendran~$\Omega^1_{\kres(x)/k}$).}
+\end{enumerate}
+\end{corollaire}
+
+Supongamos que se cumple~(i). Se sigue que los $df_i(x)$ forman una base de~$\it{\Omega}^1_{X/k}(x)$
+\ifthenelse{\boolean{orig}}{\eqref{II.4.8}}{por~\Ref{II.4.8}};
+por tanto, sus imágenes $d\overline{f}_i(x)$ en
+\ifthenelse{\boolean{orig}}{$\Omega^1_{\kappa(x)/k}$}{$\Omega^1_{\kres(x)/k}$}
+engendran este espacio vectorial
+\ifthenelse{\boolean{orig}}{sobre~$k$}{sobre~$\kres(x)$}.
+Como los $\overline{f}_i$ son nulos para $1\leq i\leq p$, basta tomar los $d\overline{f}_i(x)$ con $p+1\leq i\leq n$. Puesto que el grado de trascendencia de
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+sobre~$k$ es $n-p$, se deduce entonces del corolario~\Ref{II.5.6}, criterio
+\ifthenelse{\boolean{orig}}{(iii)}{(ii~bis)},
+aplicado a
+\ifthenelse{\boolean{orig}}{$K=\kappa(x)$}{$K=\kres(x)$},
+que $Y$ es liso sobre~$k$ en su punto genérico~$x$ y que los $d\overline{f}_i(x)$ ($p+1\leq i\leq n$) forman una \emph{base} de
+\ifthenelse{\boolean{orig}}{$\Omega^1_{\kappa(x)/k}$ sobre~$\kappa(x)$}{$\Omega^1_{\kres(x)/k}$ sobre~$\kres(x)$}.
+Por consiguiente, se cumple la condición~(ii) de~\Ref{II.4.9}, luego también la condición~(iii) y, en particular, los $f_i$ ($1\leq i\leq p$) forman un sistema de generadores de~$\goth{m}_x$. Como
+\marginpar{56}
+$\cal{O}_x$ tiene dimensión~$p$, forman un sistema regular de parámetros en~$x$. Esto prueba~(ii).
+
+Supongamos que se cumple~(ii). En virtud de la sucesión exacta
+\ifthenelse{\boolean{orig}}{\eqref{II.5.1}}{\eqref{eq:II.5.1}},
+se sigue que los $df_i(x)$
+\ifthenelse{\boolean{orig}}{engendran~$\Omega^1_{X/k}$}{engendran~$\it{\Omega}^1_{X/k}(x)$},
+de donde se obtiene~(i) por la prop\ptbl \Ref{II.5.1}.
+
+\begin{corollaire}
+\label{II.5.9}
+Sean $X$ un preesquema de tipo finito sobre el cuerpo~$k$, $x$ un punto de~$X$, $n$ la dimensión de~$X$ en~$x$ y $p$ la dimensión
+\ifthenelse{\boolean{orig}}{de~$\cal{O}_x$}{de~$\cal{O}_x$,}
+es decir, la codimensión de la adherencia~$Y$ de~$x$ en~$X$; así, $n-p$ es el grado de trascendencia de
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+sobre~$k$. Son equivalentes las condiciones siguientes:
+\begin{enumerate}
+\item[(i)] $\cal{O}_x$ es regular y
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+es una extensión separable de~$k$.
+\item[(ii)] $X$ es liso sobre~$k$ en~$x$, y el homomorfismo canónico
+\[
+\ifthenelse{\boolean{orig}}
+{\goth{m}_x/\goth{m}_x^2\to
+\Omega^1_{\cal{O}_x/k}\otimes_{\cal{O}_x}
+\kappa(x)=\it{\Omega}^1_{X/k}(x)}
+{\goth{m}_x/\goth{m}_x^2\to
+\Omega^1_{\cal{O}_x/k}\otimes_{\cal{O}_x}
+\kres(x)=\it{\Omega}^1_{X/k}(x)}
+\]
+es inyectivo.
+\item[(iii)] Existen $f_i\in\cal{O}_x$ ($1\leq i\leq n$), con $f_i\in\goth{m}_x$ para $1\leq i\leq p$, tales que el germen en~$x$ del morfismo de~$X$ a~$\Spec\bigl(k[t_1,\dots,t_n]\bigr)$ definido por los~$f_i$ es étale en~$x$ (es decir, por~\Ref{II.5.1}, tales que los~$df_i(x)$ engendran~$\it{\Omega}^1_{X/k}(x)$).
+\item[(iv)] Existen $f_i\in\cal{O}_x$ ($1\leq i\leq n$) tales que los $f_i$ ($1\leq i\leq p$) engendran~$\goth{m}_x$ y los $df_j(x)$ ($p+1\leq j\leq n$) engendran
+\ifthenelse{\boolean{orig}}{$\Omega^1_{\kappa(x)/k}$ sobre~$\kappa(x)$}{$\Omega^1_{\kres(x)/k}$ sobre~$\kres(x)$}.
+\end{enumerate}
+\end{corollaire}
+
+La equivalencia entre~(iii) y~(iv) se deduce del corolario~\Ref{II.5.8}; estas condiciones equivalen asimismo, por~\Ref{II.4.9}, a que $X$ sea liso sobre~$k$ en~$x$ y a que la condición~(ii)
+\ifthenelse{\boolean{orig}}{de~\Ref{II.4.10},}{de~\Ref{II.4.10}}
+se cumpla. Por tanto, equivalen a que $X$ sea liso sobre~$k$ en~$x$ y a que se cumpla la condición~(iv) de~\Ref{II.4.10}, es decir, a~\Ref{II.5.9}~(ii). O bien, a que $X$ sea liso sobre~$k$ en~$x$ y a que se cumpla la condición~(i) de~\Ref{II.4.10}, que aquí significa simplemente que
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+es separable sobre~$k$. Esto implica~\Ref{II.5.9}~(i); queda probar que~\Ref{II.5.9}~(i) lo implica, es decir, probar el
+
+\begin{corollaire}
+\label{II.5.10}
+Sea~$x$ un punto
+\ifthenelse{\boolean{orig}}{de una preesquema}{de un preesquema~$X$}
+de tipo finito sobre el cuerpo~$k$, tal que
+\ifthenelse{\boolean{orig}}{$\kappa(x)$}{$\kres(x)$}
+sea separable sobre~$k$. Para que $X$ sea liso sobre~$k$ en~$x$, es necesario y suficiente que sea regular en~$x$ (es decir, que el anillo local~$\cal{O}_x$ sea regular).
+\end{corollaire}
+
+En efecto, si así ocurre, es evidente que pueden encontrarse $f_i\in\cal{O}_x$ ($1\leq i\leq n$) que satisfagan la condición~\Ref{II.5.9}~(iv).
+
+\subsection*{Errata}
+\label{II.fin.errata}
+En
+\marginpar{57}
+este número, en la demostración de~\Ref{II.5.6}, se ha utilizado el hecho de que todo esquema reducido no vacío de tipo finito sobre un cuerpo algebraicamente cerrado admite al menos un punto regular (por tanto liso), hecho que suele demostrarse por métodos diferenciales (mediante el teorema de Zariski según el cual el conjunto de puntos regulares de~$X$ es abierto). Si se quiere evitar un círculo vicioso, hay que demostrar que, si $K/k$ es una extensión separable de tipo finito y los $f_i\in K$ son tales que los $d_{K/k}f_i$ forman una base de~$\Omega^1_{K/k}$ ($1\leq i\leq n$), entonces $n$ es el grado de trascendencia de~$K$
+\ifthenelse{\boolean{orig}}{sobre~$k$}{sobre~$k$,}
+es decir, los $f_i$ son algebraicamente independientes. La demostración de este hecho mediante el criterio de
+\ifthenelse{\boolean{orig}}{Mac-Lane}{Mac\kern2pt Lane}
+es bien conocida; \cf Bourbaki, Álgebra, cap\ptbl V, §~9, teorema~2: se toma un polinomio~$g\in k[t_1,\dots,t_n]$ de grado mínimo tal que~$g(f_1,\dots,f_n)=0$; se tiene entonces
+\[
+\sum\frac{dg}{d t_i}(f_1,\dots,f_n)df_i=0,
+\]
+de donde se deduce (puesto que los $df_i$ forman una base de~$\Omega^1_{K/k}$) que los $dg/dt_i$ se anulan en~$(f_1,\dots,f_n)$ y, por la minimalidad de~$g$, son nulos. Por tanto, si $k$ es de característica~$0$, se tiene $g=0$; y si $k$ es de característica~$p\neq0$, se tiene $g=h(t_1^p,\dots,t_n^p)$. Utilizando el criterio de
+\ifthenelse{\boolean{orig}}{Mac-Lane}{Mac\kern2pt Lane},
+se ve que el polinomio~$h\in k[t_1,\dots,t_n]$ también se anula en~$(f_1,\dots,f_n)$, de donde nuevamente $g=0$ por la minimalidad de~$g$.

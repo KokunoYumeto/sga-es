@@ -1,0 +1,94 @@
+\section{Morfismos étales. Recubrimientos étales}
+\label{I.4}
+Admitiremos todo cuanto nos sea necesario acerca de los morfismos planos; estos hechos se demostrarán más adelante cuando corresponda\footnote{\Cf exp\ptbl\ \Ref{IV}.}.
+
+\begin{definition}
+\label{I.4.1}
+\begin{enumerate}
+\item[a)] Sea $f\colon X\to Y$ un morfismo de tipo finito. Se dice que $f$ es \emph{étale}
+\index{étale (morfismo, álgebra)|hyperpage}%
+en~$x$ si $f$ es plano en~$x$ y neto en~$x$. Se dice que $f$ es étale si lo es en todos los puntos. Se dice que $X$ es étale en~$x$ sobre~$Y$, o que es un $Y$-preesquema étale en~$x$, \ifthenelse{\boolean{orig}}{etc...}{etc.}
+\item[b)] Sea $f\colon A\to B$ un homomorfismo local. Se dice que $f$ es étale, o que $B$ es étale sobre~$A$, si $B$ es plano y no ramificado sobre~$A$.\footnote{\Cf los remordimientos en \Ref{III.1.2}.}
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}
+\label{I.4.2}
+Para que $B/A$ sea étale es necesario y suficiente que $\widehat{B}/\widehat{A}$ lo sea.
+\end{proposition}
+
+\marginpar{5}
+En efecto, esto es cierto por separado para «neto» y para «plano».
+
+\begin{corollaire}
+\label{I.4.3}
+Sea $f\colon X\to Y$ de tipo finito y sea $x\in X$. El hecho de que $f$ sea étale en~$x$ solo depende del homomorfismo local $\cal{O}_{f(x)}\to\cal{O}_x$, e incluso únicamente del homomorfismo correspondiente entre los completados.
+\end{corollaire}
+
+\begin{corollaire}
+\label{I.4.4}
+Supongamos que la extensión residual $\kres(A)\to\kres(B)$ es trivial o que $\kres(A)$ es algebraicamente cerrado. Entonces $B/A$ es étale \sss $\widehat{A}\to\widehat{B}$ es un isomorfismo.
+\end{corollaire}
+
+Se combinan la planitud y~\Ref{I.3.7}.
+\begin{proposition}
+\label{I.4.5}
+Sea $f\colon X\to Y$ un morfismo de tipo finito. Entonces el conjunto de los puntos en los que es étale es abierto.
+\end{proposition}
+
+En efecto, esto es cierto por separado para «neto» y para «plano».
+
+Esta proposición muestra que pueden omitirse los enunciados «puntuales» en el estudio de los morfismos de tipo finito que son étales en alguna parte.
+\begin{proposition}
+\label{I.4.6}
+\begin{enumerate}
+\item[(i)] Toda inmersión abierta es étale.
+\item[(ii)] El compuesto de dos morfismos étales es étale.
+\item[(iii)] Cambio de base.
+\end{enumerate}
+\end{proposition}
+
+En efecto, (i) es trivial, y para (ii) y (iii) basta observar que esto es cierto para «neto» y para «plano». A decir verdad, también hay enunciados correspondientes para los homomorfismos locales (sin condición de finitud), que en todo caso deberán figurar en el \emph{multiplodoque} (comenzando por el caso neto).
+
+\begin{corollaire}
+\label{I.4.7}
+El producto cartesiano de dos morfismos étales también lo es.
+\end{corollaire}
+
+\begin{corollaire}
+\label{I.4.8}
+Sean $X$ y $X'$ de tipo finito sobre~$Y$, y sea $g\colon X\to X'$ un $Y$-morfismo. Si $X'$ es no ramificado sobre~$Y$ y $X$ es étale sobre~$Y$, entonces $g$ es étale.
+\end{corollaire}
+
+En efecto, $g$ es el compuesto del morfismo grafo $\Gamma_g\colon X\to X\times_Y X'$, que es una inmersión abierta por~\Ref{I.3.4}, y del morfismo de proyección, que es étale por obtenerse del morfismo étale $X\to Y$ mediante el «cambio de base» $X'\to Y$.
+
+\begin{definition}
+\label{I.4.9}
+Se llama \emph{recubrimiento étale} (\resp neto)
+\index{étale (recubrimiento)|hyperpage}%
+\index{neto (recubrimiento)|hyperpage}%
+\index{recubrimiento étale (respectivamente neto)|hyperpage}%
+de~$Y$ a todo $Y$-esquema $X$ que es finito sobre~$Y$ y étale (\resp neto) sobre~$Y$.
+\end{definition}
+
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.5cm}}%
+La primera condición significa que $X$ está definido por un haz coherente de álgebras $\cal{B}$ sobre~$Y$. La segunda significa entonces que $\cal{B}$ es localmente libre sobre~$Y$ (\resp no impone nada), \emph{y} que, además, para todo $y\in Y$, la fibra $\cal{B}(y)=\cal{B}_y\otimes_{\cal{O}_y}\kres(y)$ es un álgebra separable (= producto finito de extensiones finitas separables) sobre~$\kres(y)$.
+
+\begin{proposition}
+\label{I.4.10}
+Sea $X$ un recubrimiento plano de~$Y$ de grado~$n$ (la definición de este término habría merecido figurar en~\Ref{I.4.9}), definido por un haz coherente localmente libre $\cal{B}$ de álgebras. Se define de la manera bien conocida el homomorfismo traza $\cal{B}\to\cal{A}$ (que es un homomorfismo de $\cal{A}$-módulos, donde $\cal{A}=\cal{O}_Y$). Para que $X$ sea étale es necesario y suficiente que la forma bilineal correspondiente $\trace_{\cal{B}/\cal{A}}xy$ defina un isomorfismo de~$\cal{B}$ sobre~$\check{\cal{B}}$ o, lo que es equivalente, que la \emph{sección discriminante}
+$$
+d_{X/Y}=d_{\cal{B}/\cal{A}}\in
+\Gamma(Y,\tbigwedge^n\check{\cal{B}}\otimes_{\cal{A}}
+\tbigwedge^n\check{\cal{B}})
+$$
+sea invertible, o bien, por último, que el ideal discriminante definido por esta sección sea el ideal unidad.
+\end{proposition}
+En efecto, se reduce al caso $Y=\Spec(k)$, y entonces se trata de un criterio de separabilidad bien conocido, trivial al pasar a la clausura algebraica de~$k$.
+
+\marginpar{6}
+\begin{remarquestar}
+Más adelante se obtendrá un enunciado menos trivial, cuando no se suponga \emph{a priori} que $X$ es plano sobre~$Y$, sino que se formule una hipótesis de normalidad.
+\end{remarquestar}
+

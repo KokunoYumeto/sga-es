@@ -1,0 +1,242 @@
+\section{Criterios de efectividad para un dato de descenso}
+\label{VIII.7}
+
+Consideremos, como de costumbre, un morfismo de preesquemas
+$$
+g\colon S'\to S
+$$
+y un $S'$-preesquema~$X'$. De acuerdo con los hechos
+\ifthenelse{\boolean{orig}}
+{generales~VII,~9,}
+{generales~VII,~9\footnote{Este número no existe; véase la exposición 212
+del Seminario Bourbaki (1962)},}
+dar un dato de descenso sobre~$X'$ con respecto a~$g$ equivale a dar un par
+de equivalencia \cite{VIII.3}:
+$$
+\xymatrix@C=.5cm{ q_{1},q_{2}\colon X''\ar@/^2pt/[r]\ar@/_2pt/[r] & X'}
+$$
+tal que el morfismo estructural~$X'\to S'$ sea compatible con este par y con
+el par de equivalencia
+$$
+\xymatrix@C=.5cm{p_{1},p_{2}\colon
+S''=S'\times_{S}S'\ar@/^2pt/[r]\ar@/_2pt/[r] & S'}
+$$
+definido por~$g$, y tal que los dos cuadrados (o uno de ellos, lo que viene
+a ser lo mismo por simetría) extraídos del diagrama correspondiente
+$$
+\xymatrix{X'\ar[d] & X''\ar@/^2pt/[l]\ar@/_2pt/[l]\ar[d]\\ S' &
+S''\ar@/^2pt/[l]\ar@/_2pt/[l]}
+$$
+(utilizando bien~$p_{1},q_{1}$, bien~$p_{2},q_{2}$)
+\ifthenelse{\boolean{orig}}
+{sean \emph{cartesianos}}
+{sean \emph{cartesianos}}.
+Una solución del problema de descenso planteado por este
+dato de descenso, \ie un objeto~$X$ sobre~$S$ provisto de un
+isomorfismo~$X\times_{S}S'\isomfrom X'$ compatible con los datos de descenso,
+equivale a dar un cuadrado \emph{cartesiano}
+$$
+\xymatrix{X\ar[d] & X'\ar[l]_{h}\ar[d]\\ S & S'\ar[l]_{g}}
+$$
+que satisface~$hq_{1}=hq_{2}$.
+
+Como
+\marginpar{220}
+la clase de los morfismos fielmente planos y cuasicompactos es estable por
+cambio de base, y un morfismo fielmente plano y cuasicompacto es un
+epimorfismo efectivo en virtud de~\Ref{VIII.5.3}, se sigue de la teoría
+general \cite{VIII.D}:
+
+\begin{proposition}
+\label{VIII.7.1}
+Supongamos que~$g\colon S'\to S$ es fielmente plano y cuasicompacto. Para que
+un dato de descenso sobre~$X'$ con respecto a~$g$ sea efectivo, es necesario
+y suficiente que la relación de equivalencia~$R=(q_{1},q_{2})$ que este define
+sea efectiva (\ie que exista el cociente~$X'/R$ y que~$X''$ se convierta en
+el cuadrado fibrado de~$X'$ sobre~$X'/R$), y que el morfismo
+canónico~$X'\to X'/R$ sea fielmente plano y cuasicompacto.
+\end{proposition}
+
+Así, la cuestión de la efectividad de un dato de descenso es un caso
+particular de la cuestión de la efectividad de un grafo de equivalencia, y
+por esta vía pueden obtenerse diversos criterios de efectividad dados en
+este número. Sin embargo, en el contexto del descenso se dispone del
+teorema~\Ref{VIII.2.1}, que implica que \emph{si $X'$ es afín sobre~$S'$,
+todo dato de descenso sobre~$X'$ con respecto a~$g$ es efectivo}; este
+enunciado no tiene análogo para el paso al cociente por un grafo de
+equivalencia plano general. Todos los criterios de efectividad que damos
+aquí pueden considerarse asimismo deducidos del anterior.
+
+Sea~$U'$ un subpreesquema de~$X'$ (o, más generalmente, un subobjeto de~$X'$
+en la categoría~$\Sch$); se dice que~$U'$ es \emph{estable por el dato de
+descenso} sobre~$X'$ si puede dotarse a~$U'$ de un dato de descenso con
+respecto a~$g$ tal que la inmersión~$U'\to X'$ sea compatible con los datos
+de descenso. Esto significa también que las imágenes inversas de~$U'$ en
+~$X''$ por~$q_{1}$ y~$q_{2}$ son iguales (o también, como se dice, que~$U'$
+es \emph{estable por la relación de equivalencia}~$R$); desde luego, el dato
+de descenso en cuestión sobre~$U'$ es entonces único y se llama \emph{dato
+de descenso inducido}
+\index{dato de descenso inducido|hyperpage}%
+por el de~$X'$. Sentado esto:
+
+\begin{proposition}
+\label{VIII.7.2}
+Sea~$(X_{i}')$ un recubrimiento de~$X'$ por abiertos~$X_{i}'$ estables
+\marginpar{221}
+por el dato de descenso. Para que el dato de descenso sobre~$X'$ sea
+efectivo, es necesario y suficiente que lo mismo suceda con los datos de
+descenso inducidos en los~$X_{i}'$.
+\end{proposition}
+
+Esta es, por ejemplo, una consecuencia fácil de~\Ref{VIII.7.1}; se deja al
+lector el detalle de la demostración.
+
+\begin{corollaire}
+\label{VIII.7.3}
+Sea~$(S_{i})$ un recubrimiento abierto de~$S$, y para todo~$i$ sean~$S_{i}'$
+y~$X_{i}'$ deducidos de~$S'$
+\ifthenelse{\boolean{orig}}
+{de}
+{y}
+$X'$ mediante el cambio de base~$S_{i}\to S$. Para que el dato de descenso
+sobre~$X'$ sea efectivo, es necesario y suficiente que, para todo~$i$, el
+dato de descenso sobre~$X_{i}'$ con respecto a
+~$g_{i}\colon S_{i}'\to S_{i}$ sea efectivo.
+\end{corollaire}
+
+Este criterio nos reduce siempre, en la práctica, al caso en que~$S$ es
+afín. En el caso en que~$S'$ también es afín, que es el más frecuente en las
+aplicaciones, se tiene:
+
+\begin{corollaire}
+\label{VIII.7.4}
+Supongamos que~$S$ y~$S'$ son afines. Para que el dato de descenso sobre~$X'$
+sea efectivo, es necesario y suficiente que~$X'$ sea reunión de
+abiertos~$X_{i}'$ afines y estables por el dato de descenso.
+\end{corollaire}
+
+La suficiencia proviene de~\Ref{VIII.7.2} y del hecho de que, si~$X_{i}'$ es
+afín, es afín sobre~$S'$ y puede aplicarse~\Ref{VIII.2.1}. Para la necesidad,
+obsérvese que, si~$X'$ proviene de~$X$ y~$X$ está recubierto por abiertos
+afines~$X_{i}$, entonces los~$X_{i}'=X_{i}\times_{S}S'$ son abiertos afines
+estables por los datos de descenso y recubren~$X'$.
+
+\begin{corollaire}
+\label{VIII.7.5}
+Sea~$g\colon S'\to S$ un morfismo fielmente plano, cuasicompacto y
+\emph{radicial}. Entonces~$g$ es un morfismo de descenso \emph{efectivo},
+\ie para todo~$X'$ sobre~$S'$, todo dato de descenso sobre~$X'$ con respecto
+a~$g\colon S'\to S$ es efectivo.
+\end{corollaire}
+
+En efecto, en virtud de~\Ref{VIII.7.3} puede suponerse que~$S$ es afín; como
+~$S'$ es radicial sobre~$S$ y, por tanto, separado, $S'$ es separado. Por
+otra parte, para todo~$x'\in X'$, la fibra
+~$R(x')=q_{2}(q_{1}^{-1}(x'))$ de la relación de equivalencia conjuntista
+definida
+\marginpar{222}
+por la relación de equivalencia~$R$ se reduce a un punto. En efecto, como~$g$
+es radicial, lo mismo sucede con~$p_{1},p_{2}$, que se deducen de aquel por
+el cambio de base~$S'\to S$, y, por tanto, también con~$q_{1},q_{2}$, que se
+deducen de los anteriores por el cambio de base~$X'\to S''$. Así,
+\emph{todo abierto de~$X'$ es estable} por el dato de descenso. Recubramos
+entonces~$X'$ por abiertos afines~$X_{i}'$; son afines
+\ifthenelse{\boolean{orig}}
+{sobre~$S$}
+{sobre~$S'$}
+puesto que~$S'$ es separado, por lo que el dato de descenso inducido es
+efectivo según~\Ref{VIII.2.1}. Se concluye entonces mediante~\Ref{VIII.7.2}.
+
+Obsérvese que~\Ref{VIII.7.5} da el único caso conocido de un morfismo de
+descenso efectivo en la categoría de los preesquemas, y probablemente sea
+en efecto el único caso, incluso limitándose a los esquemas noetherianos o a
+los esquemas de tipo finito sobre un cuerpo.
+
+Cuando se supone~$S$ localmente noetheriano y~$S'$ de tipo finito sobre~$S$,
+el enunciado~\Ref{VIII.7.5} es también un caso particular del siguiente (que
+generaliza el descenso galoisiano de Weil y el descenso inseparable de
+Cartier):
+
+\begin{corollaire}
+\label{VIII.7.6}
+Sea~$g\colon S'\to S$ un morfismo finito localmente libre (\ie definido por
+un álgebra sobre~$S$ que es un módulo localmente libre de tipo finito) y
+sobreyectivo (por tanto, $g$ es fielmente plano y cuasicompacto, luego es un
+morfismo de descenso). Sea~$X'$ un~$S'$-preesquema provisto de un dato de
+descenso. Para que este dato sea efectivo, es necesario y suficiente que,
+para todo~$x'\in X'$, la fibra~$R(x')=q_{2}(q_{1}^{-1}(x'))$ esté contenida
+en un abierto afín (condición que se satisface automáticamente si~$X'$ es
+cuasiproyectivo sobre~$S'$).
+\end{corollaire}
+
+La observación entre paréntesis proviene del hecho de que, si~$s$ es el
+punto de~$S$ que es imagen de~$x'$, entonces~$R(x')$ es finito y está
+contenido en la
+\ifthenelse{\boolean{orig}}
+{fibra~$X_{s}$,}
+{fibra~$X'_{s}$,}
+por otra parte, como~$X'$ es cuasiproyectivo sobre~$S'$ y~$S'$ es finito
+sobre~$S$, $X'$ es cuasiproyectivo sobre~$S$, lo cual implica que una fibra
+\ifthenelse{\boolean{orig}}
+{de~$X/S$}
+{de~$X'$ sobre~$S$}
+está contenida en un abierto afín.
+
+Como todo subconjunto finito de un esquema afín admite un sistema
+fundamental de entornos afines, se ve que no se pierde la hipótesis al
+restringirse sobre un abierto afín de~$S$; esto, en virtud
+de~\Ref{VIII.7.3}, nos reduce al caso en que~$S$ es afín. En virtud
+de~\Ref{VIII.7.4}, queda por demostrar
+\ifthenelse{\boolean{orig}}
+{que~$X'$}
+{que~$x'$}
+está contenido
+\marginpar{223}
+en un abierto afín \emph{estable} por el dato de descenso. Sea, en efecto,
+~$U$ un abierto afín que contiene~$R(x')$; entonces el saturado
+$$
+\ifthenelse{\boolean{orig}}
+{R(X-U)=q_{2}(q_{1}^{-1}(X-U))}
+{R(X'-U)=q_{2}(q_{1}^{-1}(X'-U))}
+$$
+no corta a~$R(x')$. Por otra parte, como~$q_{2}$ es finito (pues~$g$ y, por
+tanto, $p_{2}$ lo son) y, por consiguiente, cerrado, el segundo miembro es
+un subconjunto cerrado de~$X'$. Sea~$U'$ su complementario en~$X'$; es,
+pues, un abierto \emph{saturado}, y se tiene
+$$
+R(x')\subset U'\subset U
+$$
+con~$U$ afín, aunque~$U'$ no es afín \emph{a priori}. Como el subconjunto
+finito~$R(x')$ del esquema afín~$U$ posee un sistema fundamental de entornos
+afines de la forma~$U_{f}$, se ve, reemplazando~$f$ por su restricción a
+~$U'$, que existe una sección~$f$ de~$\mathcal{O}_{U}$ tal que:
+$$
+R(x')\subset U_{f}',\quad U_{f}'\textrm{ es afín}.
+$$
+Sea entonces~$U''=q_{1}^{-1}(U')=q_{2}^{-1}(U')$; denotemos todavía
+por~$q_{1},q_{2}$ los morfismos inducidos~$U''\to U'$ y consideremos
+$$
+f'=\Norm_{q_{2}}(q_{1}^*(f))\quoi,
+$$
+donde~$\Norm_{q_{2}}$ designa la \emph{norma} con respecto al morfismo
+finito localmente libre~$q_{2}\colon U''\to U'$. La compatibilidad de la
+formación de la norma con el cambio de base implica fácilmente que~$f'$ es
+una sección \emph{invariante}:
+$$
+q_{1}^*(f')=q_{2}^*(f')
+$$
+lo cual implica que~$U_{f'}'$ es un abierto saturado de~$U'$. Más
+precisamente, si~$Z(f')$ designa el conjunto de ceros de una sección~$f'$,
+se obtiene, en virtud de las propiedades de las normas:
+$$
+Z(f')=q_{2}(Z(q_{1}^*(f)))=q_{2}(q_{1}^*(Z(f)))=
+R(U'-U_{f}')\quoi,
+$$
+lo cual
+\marginpar{224}
+implica que~$U_{f'}'=U'-Z(f')$ es saturado, contiene~$R(x')$ y está
+contenido en~$U_{f}'$. Como este último es afín, se sigue que~$U_{f'}'$ lo
+es también (pues es igual a~$(U_{f}')_{f''}$, con
+~$f''=f'|U_{f'}'$). Es, por tanto, un abierto afín saturado que contiene
+~$R(x')$ y, por consiguiente, a~$x'$, lo que concluye la demostración.
+\par

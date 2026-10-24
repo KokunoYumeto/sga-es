@@ -1,0 +1,95 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\setcounter{subsection}{9}% Conservar el número visible XIII.2.10 de la fuente.
+\subsection{}
+\label{XIII.2.10}
+Si $U$ es un esquema conexo, $a$ un punto geométrico de~$U$ y
+$\LL$ un conjunto de números primos, se denota por
+\begin{equation*}
+\label{eq:XIII.2.10.0}
+\tag{2.10.0} \pi_1^{\LL}(U,a)
+\end{equation*}
+\label{indnot:mi}\oldindexnot{$\pi_1^{\LL}(U,a)$|hyperpage}%
+el límite proyectivo de los cocientes finitos de~$\pi_1(U,a)$ cuyos
+órdenes tienen todos sus factores primos en~$\LL$.
+
+Vamos a definir homomorfismos de especialización para el grupo
+fundamental que generalizan X.\Ref{X.2}.
+
+Sea $g\colon U\to S$ un morfismo coherente de fibras geométricamente
+conexas (\resp un morfismo de la forma $g=fi$, donde $f\colon X\to S$
+es un morfismo propio de presentación finita e $i\colon U\to X$ es una
+inmersión abierta tal que $U$ sea el complementario en~$X$ de un divisor
+de cruzamientos normales relativamente a~$S$ (\cf \Ref{XIII.2.8})). Sea
+$\LL$ un conjunto de números primos y supongamos, en el caso sin
+paréntesis, que, para todo $\LL$-grupo constante finito $C$, $(C_U,g)$
+sea cohomológicamente propio relativamente a~$S$ en dimensión $\leq 1$.
+Sea $\overline{s}_1\to\overline{s}_2$ un morfismo de especialización de
+puntos geométricos de~$S$, sea $\overline{S}$ la localización estricta
+de~$S$ en $\overline{s}_2$ y sea
+$\overline{U}=U\times_S\overline{S}$. Se tiene un diagrama conmutativo
+$$
+\ifthenelse{\boolean{orig}}
+{\xymatrix{ U_{\bar{s}_1} \ar[r]^{h_1} \ar[d] & \bar{U}
+\ar[d]^{\bar{g}} & U_{\bar{s}_1} \ar[l]_{h_2} \ar[d] \\ \bar{s}_1
+\ar[r] & \bar{S} & \,\bar{s}_2\,. \ar[l] }}
+{\xymatrix{ U_{\bar{s}_1} \ar[r]^{h_1} \ar[d] & \bar{U}
+\ar[d]^{\bar{g}} & U_{\bar{s}_2} \ar[l]_{h_2} \ar[d] \\ \bar{s}_1
+\ar[r] & \bar{S} & \,\bar{s}_2\,. \ar[l] }}
+$$
+Si $a_1$ es un punto geométrico de~$U_{\bar{s}_1}$ y $a_2$ un
+punto geométrico de~$U_{\bar{s}_2}$, los morfismos $h_1$ y $h_2$
+definen homomorfismos canónicos
+\marginpar{391}%
+\begin{align*}
+\pi_1\colon \pi_1^{\LL}(U_{\bar{s}_1},a_1)&\to
+\pi_1^{\LL}(\bar{U},a_1) & \pi_2\colon
+\pi_1^{\LL}(U_{\bar{s}_2},a_2)&\to \pi_1^{\LL}(\bar{U},a_2)\\
+(\text{\resp} \pi_1\colon \pi_1^\tame (U_{\bar{s}_1},a_1)&\to
+\pi_1^\tame (\bar{U},a_1) & \pi_2\colon
+\pi_1^\tame(U_{\bar{s}_2},a_2)&\to \pi_1^\tame(\bar{U},a_2))
+\end{align*}
+(\Ref{V.7} y~\Ref{eq:XIII.2.1.5.2}). Las hipótesis relativas a la
+propiedad de ser cohomológicamente propio (\resp
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.2.8}}
+{\Ref{XIII.2.7}})
+demuestran que $\pi_2$ es un isomorfismo. Si se elige una clase de
+caminos de~$a_1$ a~$a_2$,
+se obtiene un isomorfismo
+$$
+\pi_{12}\colon \pi_1^{\LL}(\bar{U},a_1)\isomto
+\pi_1^{\LL}(\bar{U},a_2) \quad (\text{\resp} \pi_{12}\colon
+\pi_1^\tame (\bar{U},a_1)\isomto \pi_1^\tame(\bar{U},a_2))
+$$
+de donde resulta un homomorfismo $\pi=\pi_2^{-1}\pi_{12}\pi_1$
+$$
+\pi\colon \pi_1^{\LL}(U_{\bar{s}_1},a_1)\to
+\pi_1^{\LL}(U_{\bar{s}_2},a_2) \quad (\text{\resp}\pi\colon
+\pi_1^\tame (U_{\bar{s}_1},a_1)\to \pi_1^\tame
+(U_{\bar{s}_2},a_2)).
+$$
+Cambiar la clase de caminos de~$a_1$ a~$a_2$ equivale a modificar
+$\pi$ por un automorfismo interior de
+\ifthenelse{\boolean{orig}}
+{$\pi_1^{\LL}(X_{\bar{s}_2},a_2)$ (\resp de
+$\pi_1^\tame(X_{\bar{s}_2},a_2)$)}
+{$\pi_1^{\LL}(U_{\bar{s}_2},a_2)$ (\resp de
+$\pi_1^\tame(U_{\bar{s}_2},a_2)$)}. Se llama
+\emph{homomorfismo de especialización para el grupo fundamental}
+\index{homomorfismo de especialización para el grupo fundamental|hyperpage}%
+\index{especialización para el grupo fundamental (homomorfismo de)|hyperpage}%
+asociado al morfismo $\bar{s}_1\to\bar{s}_2$ y se denota simplemente por
+$$
+\ifthenelse{\boolean{orig}}
+{\pi\colon \pi_1^{\LL}(X_{\bar{s}_1})\to
+\pi_1^{\LL}(X_{\bar{s}_2}) \quad \text{(\resp} \pi\colon
+\pi_1^{\tame}(X_{\bar{s}_1})\to \pi_1^{\tame}(X_{\bar{s}_2}))}
+{\pi\colon \pi_1^{\LL}(U_{\bar{s}_1})\to
+\pi_1^{\LL}(U_{\bar{s}_2}) \quad \text{(\resp} \pi\colon
+\pi_1^{\tame}(U_{\bar{s}_1})\to \pi_1^{\tame}(U_{\bar{s}_2}))}
+$$
+uno de los homomorfismos definidos anteriormente.
+
+\endgroup

@@ -1,0 +1,80 @@
+
+\setcounter{subsection}{6}% sincronización del rótulo visible XIII.4.6.0 de la fuente
+\setcounter{proposition}{5}% sincronización con la numeración visible XIII.4.6 de la fuente
+\begin{proposition}[Fórmula de Künneth]
+\label{XIII.4.6}
+\index{Kunneth (formula de)@K\"unneth (fórmula de)|hyperpage}%
+Sean $k$ un cuerpo separablemente cerrado de característica
+$p\geq 0$, $X$ e~$Y$ dos $k$-esquemas conexos, $a$ un punto
+geométrico de~$X$, $b$ un punto geométrico de~$Y$ y~$c$ un punto
+geométrico de~$X\times_k Y$ situado sobre~$a$ y~$b$. Se supone que se
+satisface una de las dos condiciones siguientes:
+\begin{enumerate}
+\item[a)] $X$ es de tipo finito sobre~$k$ y los esquemas de tipo finito
+sobre una clausura algebraica~$\bar{k}$ de~$k$, de dimensión
+$\leq\dim X$, son fuertemente desingularizables. \textup{(SGA~5 I~3.1.5)}.
+\item[b)] $X$ es cuasicompacto y cuasiseparado y todo esquema de tipo
+finito sobre~$\bar{k}$ es fuertemente desingularizable.
+\end{enumerate}
+
+Entonces, si $p'$ es el conjunto de los números primos distintos de~$p$,
+el morfismo
+\begin{equation*}
+\label{eq:XIII.4.6.0} \tag{\thesubsection.0} {}
+\pi_1^{p'}(X\times_k Y,c)\to\pi_1^{p'}(X,a)\times\pi_1^{p'}(Y,b),
+\end{equation*}
+deducido
+\marginpar{422}
+de los homomorfismos de grupos fundamentales asociados a las proyecciones
+$$
+X\times_k Y\to X \quad \text{y} \quad X\times_k Y\to Y,
+$$
+es un isomorfismo.
+\end{proposition}
+
+Puede suponerse que~$k$ es algebraicamente cerrado y que~$X$ es reducido
+(SGA~4 VIII~1.1). Sean $Z=X\times_k Y$, $g\colon X\to k$ y $f\colon
+Z\to Y$ los morfismos canónicos. El morfismo~$g$, y por tanto también~$f$,
+es universalmente localmente $1$-asférico para~$p'$
+según~
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.3.5}}
+{\Ref{XIII.3.4}}.
+Como~$X$ es conexo, $f$ es
+$0$-acíclico (SGA~4 XV~1.16). Por otra parte, de~\Ref{XIII.3.2} resulta
+que, para todo $p'$-grupo finito~$C$, $(C_X,g)$ es cohomológicamente propio
+relativamente a~$k$ en dimensión $\leq 1$. De ello resulta que~$(C_Z,f)$
+es cohomológicamente propio relativamente a~$Y$ en dimensión $\leq 1$
+(\Ref{XIII.1.5}~c)) y que $f_*C_Z$ y $\R^1f_*C_Z$ son haces constantes.
+Por consiguiente,
+\ifthenelse{\boolean{orig}}
+{$g$}
+{$f$}
+satisface todas las hipótesis de~\Ref{XIII.4.2}. Se tiene, pues, la sucesión
+exacta
+$$
+\pi_1^{p'}(X_b,c)\to\pi_1^{p'}(Z,c)\to\pi_1^{p'}(Y,b)\to 1.
+$$
+Además, el morfismo compuesto
+$$
+\pi_1^{p'}(X_b,c)\to\pi_1^{p'}(Z,c)\to
+\ifthenelse{\boolean{orig}}
+{\pi_1^{p'}(Y,b)}
+{\pi_1^{p'}(X,a)}
+$$
+es un isomorfismo y se tiene, por tanto, la sucesión exacta
+$$
+1\to\pi_1^{p'}(X,a)\to\pi_1^{p'}(Z,c)\to\pi_1^{p'}(Y,b)\to 1.
+$$
+Por otra parte, el morfismo~\eqref{eq:XIII.4.6.0} permite definir
+un morfismo de esta sucesión exacta en la sucesión exacta
+$$
+1\to\pi_1^{p'}(X,a)\to
+\pi_1^{p'}(X,a)\times\pi_1^{p'}(Y,b)
+\ifthenelse{\boolean{orig}}
+{\times}
+{\to}
+\pi_1^{p'}(Y,b)\to 1,
+$$
+y de ello resulta que el morfismo~\eqref{eq:XIII.4.6.0} es un
+isomorfismo.

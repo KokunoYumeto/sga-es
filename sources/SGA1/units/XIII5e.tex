@@ -1,0 +1,101 @@
+
+\begin{proposition}[Lema de Abhyankar relativo]
+\label{XIII.5.5}
+\index{Abhyankar relativo (lema de)|hyperpage}%
+Sean $X$ un $S$-esquema y $D$ un divisor de cruzamientos normales
+relativamente a~$S$, como en~\eqref{XIII.5.4}. Sean
+\ifthenelse{\boolean{orig}}
+{$Y=X-\Supp D$}
+{$Y=\Supp D$},
+$U=X-Y$, $x$ un punto de~$Y$, $X_{1}$ la localización estricta de~$X$
+en un punto geométrico situado sobre~$x$, $U_{1}=U\times_{X}X_{1}$ y
+$V_{1}$ un recubrimiento étale de~$U_{1}$. Se supone que, para todo
+punto maximal $s$ de~$S$, $V_{1\overline{s}}$ está moderadamente
+ramificado sobre $X_{1\overline{s}}$ relativamente a~$\overline{s}$.
+Entonces pueden encontrarse enteros $n_{i}$, primos con la
+característica~$p$ de~$\kres(x)$, con
+$i\in I(x)$, tales que, si se pone
+$$
+X'_{1}=X_{1}[T_{i}]_{i\in I(x)}\big/(T_{i}^{n_{i}}-f_{i})\quoi,
+$$
+$U'_{1}=U_{1}\times_{X_{1}}X'_{1}$, etc., el recubrimiento étale
+$V'_{1}$ de~$U'_{1}$ se prolonga, de manera única salvo isomorfismo
+único, a un recubrimiento étale de~$X'_{1}$. En particular,
+\marginpar{432}
+$V_{1}$ está moderadamente ramificado sobre~$X_{1}$ relativamente a~$S$.
+\end{proposition}
+
+Puede suponerse que $S$ es local noetheriano, con punto cerrado~$f(x)$.
+Para cada punto maximal $s$ de~$S$ y cada $i\in I(x)$, sea $x_{i}$ el
+punto genérico del cerrado $V(f_{i})$ de la fibra $X_{1\overline{s}}$.
+El anillo local $(\cal{O}_{X_{1},x_{i}})_{\red}$ es un anillo de
+valoración discreta con cuerpo de fracciones $K_{i}$, y se tiene
+\ifthenelse{\boolean{orig}}
+{$V_{1}|K_{i}=\Spec(\prod_{j\in J(x_{i})}L_{j})$,}
+{$V_{1}|K_{i}=\Spec(\prod_{j\in J(x_{i})}L_{j})$,}
+donde $L_{j}$ es una extensión finita separable de
+\ifthenelse{\boolean{orig}}
+{$K$}
+{$K_{i}$};
+se denota por $n_{j}$ el orden del grupo de inercia de una extensión
+galoisiana generada por~$L_{j}$, y por $n_{i}$ el m.c.m. de los $n_{j}$
+cuando $s$ recorre los puntos maximales de~$S$ y
+\ifthenelse{\boolean{orig}}
+{$j\in J(x_{i})$.}
+{$j\in J(x_{i})$.}
+
+Elegidos así los $n_{i}$, demostraremos que $V'_{1}$ se prolonga de
+manera única a un recubrimiento étale de~$X'_{1}$. La unicidad se
+deduce de que, como
+\ifthenelse{\boolean{orig}}
+{$X'$ es liso sobre~$S$ en los puntos de~$Y$}
+{$X'$ es liso sobre~$S$ en los puntos de~$Y'$},
+se tiene $\prof\et_{Y'_{1}}(X'_{1})\geqslant 2$ (SGA~4 XVI~3.2 o
+SGA~2 XIV~1.19). Sean $x'_{1}$ un punto de~$Y'_{1}$,
+$\overline{x}'_{1}$ un punto geométrico situado sobre~$x'_{1}$, y
+denotemos por $\overline{X'_{1}}$ la localización estricta de~$X'_{1}$
+en~$\overline{x}'_{1}$, $\overline{U'_{1}}=U'_{1(\overline{X'_{1}})}$,
+etc. Por descenso, habida cuenta de la unicidad, basta demostrar que
+$\overline{V}'_{1}$ se prolonga a~$\overline{X'_{1}}$. Además, puede
+uno limitarse a tomar como $x'_{1}$ los puntos maximales de~$Y'_{1}$;
+en efecto, se tendrá entonces una prolongación de~$V'_{1}$ sobre un
+abierto $W'_{1}$ de~$X'_{1}$ que contiene los puntos maximales
+de~$Y'_{1}$. Ahora bien, si $Z'_{1}=X'_{1}-W'_{1}$, se tiene
+$\codim(Z'_{1s},X'_{1s})\geqslant 2$ cuando $s$ es un punto maximal
+de~$S$, y $\codim(Z'_{1s},X'_{1s})\geqslant 1$,
+$\prof\et_{s}(S)\geqslant 1$ cuando $s$ es un punto de~$S$ que no es
+maximal; el hecho de que $V'_{1}$ se prolongue a todo~$X'_{1}$ se deduce
+entonces de (SGA~2 XIV~1.20). Pero, en un punto geométrico
+$\overline{x}'_{1}$ situado sobre un punto maximal de~$Y'_{1}$,
+\ifthenelse{\boolean{orig}}
+{$X'_{1\red}$}
+{$\overline{X'_{1}}_{\red}$}
+es el espectro de un anillo de valoración discreta, y el hecho de que
+$\overline{V'_{1}}$ se prolongue a~$\overline{X'_{1}}$ se deduce entonces
+de~\Ref{X.3.6}.
+
+Demostremos que los $n_{i}$ son primos con~$p$. En efecto, si no fuera
+así, habría un índice $i_{0}\in I(x)$ tal que $p$ divide a~$n_{i_{0}}$.
+Tras reemplazar, si es preciso, $X$ por
+\ifthenelse{\boolean{orig}}
+{$X_{1}[T_{i_{0}},T_{i}]_{i\in I(x)}\big/
+(T_{i}^{n_{i_{0}}/p}-f_{i_{0}},T_{i}^{n_{i}}-f_{i})$,}
+{$X_{1}[T_{i}]_{i\in I(x)}\big/
+(T_{i_{0}}^{n_{i_{0}}/p}-f_{i_{0}},
+(T_{i}^{n_{i}}-f_{i})_{i\in I(x),\,i\ne i_{0}})$,}
+se reduce al caso en que
+\ifthenelse{\boolean{orig}}
+{$X'_{1}=X_{1}[T]/T^{p}-f_{i_{0}}$}
+{$X'_{1}=X_{1}[T]/(T^{p}-f_{i_{0}})$}.
+Por lo que
+precede, el recubrimiento
+\marginpar{433}
+étale $V'_{1}$ de~$U'_{1}$ se prolonga a un recubrimiento étale $E'_{1}$
+de~$X'_{1}$. Sea $\eta$ el punto cerrado de~$S$; como el morfismo
+$X'_{1\eta}\to X_{1\eta}$ es radicial, $V_{1\eta}$ se prolonga a un
+recubrimiento étale $E_{1\eta}$ de~$X_{1\eta}$. Se deduce entonces,
+como en~\Ref{XIII.5.2}, que $E'_{1}$ está provisto de un dato de descenso
+relativamente al morfismo $X'_{1}\to X_{1}$, que prolonga el dato de
+descenso natural que se tiene sobre~$E'_{1}|U'_{1}$. De aquí resulta que
+$V_{1}$ se prolonga a~$X_{1}$; pero esto implica $n_{i_{0}}=1$, en
+contra de la hipótesis $n_{i_{0}}=p$.

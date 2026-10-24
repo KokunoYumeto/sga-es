@@ -1,0 +1,37 @@
+
+\section[Aplicación a la construcción de esquemas formales...]{Aplicación a la construcción de esquemas formales y de esquemas ordinarios lisos sobre un anillo local completo~$A$}
+\label{III.7}
+
+Los resultados del número precedente permiten a veces demostrar la existencia
+\marginpar{83}
+de un esquema formal $\goth{m}$-ádico sobre un anillo de este tipo, que se reduzca a un esquema liso~$X_0$ dado sobre~$k$. Distinguiremos dos casos:
+
+\medskip
+\noindent a) \emph{$A$ es equicaracterístico} (es el caso, en particular, si~$k$ es de característica~$0$). Se sabe entonces que existe un \emph{cuerpo de coeficientes de}~$A$, es decir, un subcuerpo~$k'$ tal que~$A\to k$ induce un isomorfismo $k'\isomto k$. \emph{Existe entonces incluso un esquema ordinario liso sobre~$A$ que se reduce a~$X_0$}, a saber, $X=X_0\otimes_kA$, donde~$A$ se considera como álgebra sobre~$k$ mediante el homomorfismo $k\to k'\to A$ definido por~$k'$. Conviene observar, sin embargo, que esta construcción no es «natural»; es fácil convencerse (ya en el caso en que $A=k[t]/(t^2)$, álgebra de los números duales) de que otro homomorfismo de levantamiento~$k\to A$ (definido, en este caso, por una derivación absoluta de~$k$ en sí mismo) define un~$X'$ sobre~$A$ que, en general, \emph{no es isomorfo a~$X$} (si~$\H^1(X_0,\goth{g}_{X_0/k})\neq0$). Sería interesante, por lo demás, estudiar (para~$k$ de característica~$0$, o no perfecto y de
+\ifthenelse{\boolean{orig}}
+{car.}
+{característica}~$p>0$) cuáles son los~$X$ lisos sobre~$A$ que se obtienen así y bajo qué condición dos homomorfismos~$k\to A$ definen $A$-esquemas isomorfos. No obstante, la existencia de~$k'$ basta para implicar que la primera obstrucción al levantamiento de~$X_0$, que se encuentra en~$\H^2(X_0,\goth{g}_{X_0/k})\otimes_k\goth{m}/\goth{m}^2$, es necesariamente nula. Naturalmente, una vez levantado~$X_0$ a un~$X_1$ liso sobre~$A/\goth{m}^2$, la nueva obstrucción a la construcción de~$X_2$ no será nula en general: dependerá de un elemento variable de cierto espacio homogéneo principal bajo~$\H^1(X_0,\cal{G}_0)\otimes\goth{m}/\goth{m}^2$ y se encontrará en~$\H^2(X_0,\cal{G}_0)\otimes\goth{m}^2/\goth{m}^3$; convendría estudiar detenidamente la situación\footnote{Sin duda está descrita por la operación corchete de Kodaira--Spencer (cf. Seminario Cartan, 1960/61, Exp\ptbl 4).}.
+
+\medskip
+\noindent b) \emph{$A$ es de característica mixta.} En este caso no se sabe nada (salvo si, por fortuna, $\H^2(X_0,\goth{g}_{X_0/k})=0$, en cuyo caso puede construirse un esquema formal $\goth{m}$-ádico
+\ifthenelse{\boolean{orig}}{simple}{liso}
+sobre~$A$ que se reduzca
+\ifthenelse{\boolean{orig}}{a~$k$}{a~$X_0$}). Incluso si $A=\ZZ/p^2\ZZ$ y si~$X_0$ es un esquema «abeliano» de dimensión~$2$, no se sabe si puede levantarse a un~$X=X_1$ liso sobre~$A$\kern1pt\footnote{Esto ya está demostrado; cf. la nota~\Ref{III.6.6.p24} de la página~\pageref{III.6.6.p24}.}; por otra parte, no se tiene ningún ejemplo de un~$X_0$ del que se haya demostrado que no procede de un esquema ordinario~$X$ liso sobre~$A$. (Tengo la impresión de que tal ejemplo debe existir, con~$X_0$ una superficie proyectiva)\footnote{\label{nIII.3}Desde entonces, J.-P\ptbl Serre ha construido un ejemplo de este tipo
+\ifthenelse{\boolean{orig}}
+{(Proc.\ Nat.\ Acad.\ Sc.\ USA, vol\ptbl 47, \No 1, pp~108--109, 1961)}
+{(Proc.\ Nat.\ Acad.\ Sc.\ USA \textbf{47} (1961), \No 1, pp\ptbl108--109)}, al menos para ciertas dimensiones. D\ptbl Mumford ha dado un ejemplo (no publicado) con una \emph{superficie} algebraica.}. Señalemos simplemente que, por el teorema de Cohen, existe un $p$-anillo de Cohen~$B$ de cuerpo residual~$k$ y un homomorfismo~$B\to A$ que induce el isomorfismo identidad sobre los cuerpos residuales; por consiguiente, el resultado «más fuerte» de levantamiento se obtendría tomando por~$A$
+\marginpar{84}
+un $p$-anillo de Cohen: si existe una solución (ordinaria o formal) sobre un anillo de este tipo, existe una sobre todo anillo local completo de cuerpo residual~$k$. En particular, como para un $p$-anillo de Cohen~$\goth{m}/\goth{m}^2$ se identifica canónicamente con~$k$, se ve que \emph{para todo esquema liso~$X_0$ sobre un cuerpo~$k$ de característica~$p>0$, existe una clase de cohomología en~$\H^2(X_0,\goth{g}_{X_0/k})$}, primera obstrucción al levantamiento de~$X_0$ a un esquema liso sobre un $p$-anillo de Cohen; se ignora si puede ser no nula\footnote{Puede ser no nula, como se señala en la nota~\Ref{nIII.3} de la página~\pageref{nIII.3}.}.
+
+Incluso si se consigue construir paso a paso los~$X_n$ que se reducen a~$X_0$, esto no da, en general, más que un esquema \emph{formal}~$\goth{X}$ liso sobre~$A$, que se reduce a~$X_0$. Cuando~$X_0$ es propio sobre
+\ifthenelse{\boolean{orig}}{~$A$}{~$k$}, queda por determinar si~$\goth{X}$ es de hecho algebraizable, para poder obtener un esquema \emph{ordinario} propio sobre~$A$ y
+\ifthenelse{\boolean{orig}}{simple}{liso}
+sobre~$A$, que se reduzca a~$X_0$. El único criterio conocido (señalado en el Seminario Bourbaki y que figura en los \emph{Éléments}, cap\ptbl III, 4.7.1) es el siguiente: si~$\goth{X}$ es propio sobre~$A$, y si~$\cal{L}$ es un haz invertible sobre~$\goth{X}$ tal que el haz inducido~$\cal{L}_0$ sobre~$X_0$ sea amplio (es decir, una potencia tensorial conveniente~$\cal{L}_0^{\otimes n}$, $n>0$, procede de una inmersión proyectiva de~$X_0$), entonces existen un esquema~$X$ proyectivo sobre~$A$ y un haz invertible amplio sobre~$X$, tales que el par~$(\goth{X},\cal{L})$ se obtenga de ellos por completación $\goth{m}$-ádica. Esto nos lleva, dado un haz localmente libre~$\cal{E}_0$ sobre~$X_0$ (que elegiremos invertible y amplio para nuestro propósito), a prolongarlo a un haz localmente libre~$\cal{E}$ sobre~$\goth{X}$. Para ello, se reduce la cuestión a construir paso a paso haces localmente libres~$\cal{E}_n$ sobre los~$X_n$. La discusión es completamente análoga a la del número~\Ref{III.6} (cf. la observación~\Ref{III.6.4}), y el papel esencial lo desempeña el \emph{haz de automorfismos} de un~$\cal{E}_{n+1}$ que inducen la identidad sobre~$\cal{E}_n$: se demuestra inmediatamente que este haz se identifica con
+\begin{equation*}
+\label{eq:III.7.*}\tag{$*$}{}
+\cal{G}=\SheafHom_{\cal{O}_{X_0}}(\cal{E}_0,
+\cal{E}_0\otimes\gr_{\cal{I}}^{n+1}(\cal{O}_X))=
+\SheafHom_{\cal{O}_{X_0}}(\cal{E}_0,
+\cal{E}_0)\otimes\gr_{\cal{I}}^{n+1}(\cal{O}_X)
+\end{equation*}
+que sigue siendo un haz de grupos conmutativos. Se obtiene:

@@ -1,0 +1,308 @@
+\section{Ejemplos diversos}
+\label{VI.11}
+
+\begin{enumerate}
+
+\item[a)] \textbf{Categorías de flechas de}~$\cal{E}$. Sea
+$\cal{E}$ una categoría. Denotemos por $\mathbf{\Delta^1}$ la categoría
+asociada al conjunto totalmente ordenado de dos elementos $[0,1]$;
+\marginpar{183}
+tiene, pues, dos objetos, 0 y 1, y, además de los dos morfismos identidad,
+una flecha $(0,1)$ con fuente 0 y destino 1. Sea
+$$
+\CatFl(\cal{E})=\SheafHom(\mathbf{\Delta^1},\cal{E});
+$$
+se llama la \emph{categoría de flechas de}~$\cal{E}$. El objeto 1
+de~$\mathbf{\Delta^1}$ define un funtor canónico, llamado
+\emph{funtor codominio},
+$$
+\CatFl(\cal{E})\to \cal{E}
+$$
+(el funtor definido por el objeto 0 de~$\mathbf{\Delta^1}$ se llama
+\emph{funtor dominio}). Para todo objeto $S$ de~$\cal{E}$, la categoría
+fibra $\CatFl(\cal{E})_S$ es canónicamente isomorfa a la categoría
+$\cal{E}_{/S}$ de los objetos de~$\cal{E}$ sobre~$S$.
+
+Consideremos un morfismo $f\colon T\to S$ de $\cal{E}$. Le corresponde
+entonces un funtor canónico
+$$
+f_*\colon \cal{E}_{/T}=\cal{F}_T\to \cal{E}_{/S}=\cal{F}_S
+$$
+y un isomorfismo natural
+$$
+\Hom_S(f_*(\eta),\xi)\isomto\Hom_f(\eta,\xi)
+$$
+que hace de~$f_*$ un funtor de imagen directa para $f$ en~$\cal{F}$.
+Además, en este caso se tiene
+$$
+(\id_S)_*=\id_{\cal{F}_S},\quad (fg)_*=f_*g_*,\quad
+\ifthenelse{\boolean{orig}}
+{c^{f,g}=\id_{(fg)},}
+{c^{f,g}=\id_{(fg)_*},}
+$$
+es decir, $\cal{F}$ está dotada de una coescisión sobre~$\cal{E}$. Con
+mayor razón, $\cal{F}$ es cofibrada sobre~$\cal{E}$. Observemos ahora que
+el conjunto de morfismos de $\cal{F}$ está en correspondencia biunívoca
+con el conjunto de diagramas cuadrados conmutativos de~$\cal{E}$:
+$$
+\xymatrix{
+X\ar[d]_-u&\ar[l]_-{f'}Y\ar[d]^-v\\
+S&\ar[l]_-{f}T
+}
+$$
+Por
+\marginpar{184}
+definición, el morfismo en cuestión es cartesiano si el cuadrado es
+cartesiano en~$\cal{E}$, es decir, si hace de~$Y$ un producto fibrado de
+$X$ y $T$ sobre~$S$. Por tanto, el funtor de imagen inversa
+\ifthenelse{\boolean{orig}}
+{$f$}
+{$f^*$}
+existe si y solo si para todo objeto $X$ sobre~$S$ existe el producto
+fibrado $X\times_ST$. Se deduce de~\Ref{VI.10.1} que, si en~$\cal{E}$
+existe siempre el producto de dos objetos sobre un tercero, es decir, si
+$\cal{F}$ es prefibrada sobre~$\cal{E}$, entonces $\cal{F}$ es incluso
+fibrada sobre~$\cal{E}$.
+
+\medskip
+\item[b)] \textbf{Categoría de prehaces o haces sobre espacios variables}
+
+Sea $\cal{E}=\mathbf{Top}$ la categoría de los espacios topológicos. Si
+$T$ es un espacio topológico, denotaremos por $\cal{U}(T)$ la categoría de
+los abiertos de~$T$, cuyos morfismos son las aplicaciones de inclusión. Si
+$\cal{C}$ es una categoría, un funtor
+$\cal{U}(T)^\circ\to \cal{C}$ se llama un \emph{prehaz} sobre~$T$ con
+valores en~$\cal{C}$, y un \emph{haz} si satisface una condición de
+exactitud por la izquierda que no repetiremos aquí. La \emph{categoría
+$\cal{P}(T)$ de prehaces sobre~$T$ con valores en~$\cal{C}$} es, por
+definición, la categoría $\SheafHom(\cal{U}(T)^\circ,\cal{C})$, y la
+categoría $\cal{F}(T)$ de haces sobre~$T$ con valores en~$\cal{C}$ es la
+subcategoría plena cuyos objetos son los objetos de
+$\SheafHom(\cal{U}(T)^\circ,\cal{C})$ que son haces. Si
+$f\colon T\to S$ es un morfismo de~$\cal{E}$, es decir, una aplicación
+continua de espacios topológicos, la aplicación creciente
+$U\mto f^{-1}(U)$ le hace corresponder un funtor
+$\cal{U}(S)\to\cal{U}(T)$ y, por tanto, un funtor
+$$
+f_*\colon\SheafHom(\cal{U}(T)^\circ,\cal{C})\to
+\SheafHom(\cal{U}(S)^\circ,\cal{C}),
+$$
+llamado \emph{funtor de imagen directa de prehaces por}~$f$. Se ve de
+inmediato que la imagen directa de un haz es un haz; por tanto, el funtor
+\ifthenelse{\boolean{orig}}
+{$f_*\cal{P}(T)\to\cal{P}(S)$}
+{$f_*\colon \cal{P}(T)\to\cal{P}(S)$}
+induce un funtor, denotado también
+\ifthenelse{\boolean{orig}}
+{$f_*\colon\cal{P}(T)\to\cal{P}(S)$.}
+{$f_*\colon\cal{F}(T)\to\cal{F}(S)$.}
+Además, se comprueba trivialmente, por la asociatividad de la composición
+de funtores, que para una segunda aplicación continua $g\colon U\to T$ se
+tiene la identidad
+$$
+\ifthenelse{\boolean{orig}}
+{(gf)_* =g_*f_*,}
+{(fg)_*=f_*g_*,}
+\qquad
+\text{y asimismo}\quad (\id_S)_*=\id_{\cal{P}(S)}.
+$$
+De esta forma se ha obtenido un funtor
+$$
+S\mto \cal{P}(S)
+$$
+\resp $$
+S\mto \cal{F}(S)
+$$
+de
+\marginpar{185}
+$\cal{E}$ en~$\Cat$. En realidad, nos interesa el funtor correspondiente
+$$
+S\mto \cal{P}(S)^\circ,\qquad\resp\qquad S\mto
+\cal{F}(S)^\circ.
+$$
+Define una categoría cofibrada, e incluso coescindida, sobre la categoría
+de los espacios topológicos, que se llama la \emph{categoría cofibrada de
+los prehaces} (\resp \emph{haces}) \emph{con valores en}~$\cal{C}$
+(se sobreentiende: sobre espacios variables). Explicitando la construcción
+del \No~\Ref{VI.8}, se ve que un morfismo de un prehaz $B$ sobre~$T$ en un
+prehaz $A$ sobre~$S$ es un par $(f,u)$ formado por una aplicación continua
+de~$T$ en~$S$ y un morfismo $u\colon A\to f_*(B)$ en la categoría
+$\cal{P}(S)$. Esta descripción vale también para los morfismos de haces,
+pues $\cal{F}$ es una subcategoría plena de~$\cal{P}$.
+
+En los casos más importantes, la categoría $\cal{P}$ y la categoría
+$\cal{F}$ sobre~$\cal{E}$ son también categorías fibradas, es decir, para
+toda aplicación continua los funtores de imagen directa
+$\cal{P}(T)\to\cal{P}(S)$ y $\cal{F}(T)\to\cal{F}(S)$ tienen un funtor
+adjunto, que se denota entonces por $f^*$ y se llama funtor de imagen
+inversa de prehaces \resp funtor de imagen inversa de haces por la
+aplicación continua~$f$. Este funtor existe, por ejemplo, si
+$\cal{C}=\Ens$. Se puede demostrar que el funtor
+$f^*\colon\cal{P}(S)\to\cal{P}(T)$ existe siempre que en~$\cal{C}$
+existan los límites inductivos relativos a diagramas del universo
+considerado. La cuestión es menos fácil para $\cal{F}$; en efecto, incluso
+en el caso $\cal{C}=\Ens$, la imagen inversa de un prehaz que es un haz no
+es, en general, un haz. En otras palabras, el funtor de imagen inversa de
+haces no es isomorfo al funtor inducido por el funtor de imagen inversa de
+prehaces, pese a la notación común $f^*$. Así, $\cal{F}$ es una
+subcategoría cofibrada de~$\cal{P}$, pero no una subcategoría fibrada, es
+decir, \emph{el funtor de inclusión $\cal{F}\to\cal{P}$ no es fibrante}.
+
+La categoría cofibrada $\cal{P}$ puede deducirse de una categoría
+cofibrada, o más bien fibrada, más general, obtenida como sigue. Para toda
+categoría $\cal{U}$ del universo fijado, pongamos
+$$
+\cal{P}(\cal{U})=\SheafHom(\cal{U},\cal{C})
+$$
+y
+\marginpar{186}
+observemos que $\cal{U}\mto\cal{P}(\cal{U})$ es de manera natural un
+funtor contravariante en~$\cal{U}$, de la categoría $\Cat$ en~$\Cat$.
+Define, pues, una categoría escindida sobre~$\cal{E}=\Cat$, que denotaremos
+por $\Cat_{/\!/\cal{C}}$. Los objetos de esta categoría son los pares
+$(\cal{U},p)$ formados por una categoría $\cal{U}$ y un funtor
+$p\colon\cal{U}\to\cal{C}$, y un morfismo de $(\cal{U},p)$ en
+$(\cal{V},q)$ es esencialmente un par $(f,u)$, donde $f$ es un funtor
+$\cal{U}\to\cal{V}$ y $u$ una transformación natural de funtores
+$u\colon p\to qf$. Dejamos al lector la tarea de explicitar la composición
+de los morfismos en $\Cat_{/\!/\cal{C}}$. El funtor de proyección
+$$
+\cal{F}=\Cat_{/\!/\cal{C}}\to\cal{E}=\Cat
+$$
+asocia al par $(\cal{U},p)$ el objeto $\cal{U}$; la categoría fibra en
+$\cal{U}$ es la categoría $\SheafHom(\cal{U},\cal{C})$, salvo isomorfismo.
+Cuando existen en~$\cal{C}$ los límites inductivos, se demuestra fácilmente
+que la categoría fibrada $\Cat_{/\!/\cal{C}}$ sobre~$\Cat$ es también
+cofibrada sobre~$\Cat$, es decir, se puede definir la noción de
+\emph{imagen directa de un funtor} $p\colon\cal{U}\to\cal{C}$ por un
+funtor $f\colon\cal{U}\to\cal{V}$. La categoría de prehaces se deduce de
+la categoría fibrada precedente mediante el cambio de base
+$$
+\mathbf{Top}^\circ\to\Cat
+$$
+(el funtor $S\mto\cal{U}(S)$ definido más arriba), lo que da una categoría
+fibrada sobre~$\mathbf{Top}^\circ$; al pasar a la categoría opuesta se
+obtiene la categoría cofibrada $\cal{P}$ de los prehaces sobre
+$\mathbf{Top}$. La noción de imagen inversa de un funtor corresponde a la
+de imagen directa de un prehaz, y la noción de imagen directa de un funtor,
+a la de imagen inversa de un prehaz.
+
+\medskip
+\item[c)] \textbf{Objetos con operadores sobre un objeto con operadores}
+
+Sea $\cal{F}$ una categoría sobre~$\cal{E}$, y sea $S$ un objeto de
+$\cal{E}$ sobre el que actúa un grupo $G$, por la izquierda para fijar
+ideas. Este objeto con operadores puede interpretarse como correspondiente
+a un funtor $\lambda\colon\cal{E}'\to\cal{E}$ desde la categoría (con un
+único objeto y con $G$ como grupo de endomorfismos) $\cal{E}'$, definida
+por~$G$, a la categoría $\cal{E}$. Por cambio de base define,
+por tanto, una categoría $\cal{F}'$ sobre~$\cal{E}'$, que es fibrada
+\resp cofibrada cuando $\cal{F}$ lo es sobre~$\cal{E}$. Una
+\marginpar{187}
+\ifthenelse{\boolean{orig}}
+{sección de~$\cal{E}'$ sobre~$\cal{F}'$}
+{sección de~$\cal{F}'$ sobre~$\cal{E}'$}
+(necesariamente cartesiana, pues $\cal{E}'$ es un grupoide y todo
+isomorfismo de~$\cal{F}'$ es cartesiano en virtud de~\Ref{VI.6.12}) puede
+interpretarse también como un $\cal{E}$-funtor
+$\cal{E}'\to\cal{F}$ sobre~$\lambda$, o como un objeto con operadores
+$\xi$ en~$\cal{F}$ «sobre» el objeto con operadores~$S$.
+
+\medskip
+\item[d)] \textbf{Pares de funtores adjuntos cuasi-inversos;
+autodualidades}
+
+Cuando la categoría base $\cal{E}$ se reduce a dos objetos $a,b$ y, además
+de las flechas identidad, a dos isomorfismos $f\colon a\to b$ y
+$g\colon b\to a$ inversos entre sí, es decir, cuando $\cal{E}$ es un
+grupoide conexo rígido con dos objetos, una categoría con clivaje
+normalizado sobre~$\cal{E}$ es esencialmente lo mismo que el sistema
+formado por dos categorías $\cal{F}_a$ y $\cal{F}_b$ y un \emph{par de
+funtores adjuntos} $G\colon\cal{F}_a\to\cal{F}_b$ y
+$F\colon\cal{F}_b\to\cal{F}_a$ que sean equivalencias de categorías y,
+por tanto, cuasi-inversos entre sí. Se toman como $\cal{F}_a$ y
+$\cal{F}_b$ las categorías fibra de~$\cal{F}$, como $F$ y $G$ los funtores
+$f^*$ y $g^*$, y los dos isomorfismos
+$$
+u\colon FG\isomto\id_{\cal{F}_a}\qquad v\colon
+GF\isomto\id_{\cal{F}_b}
+$$
+son $c_{g,f}$ y $c_{f,g}$. Las dos condiciones usuales de compatibilidad
+entre $u$ y $v$ no son sino la condición \Ref{VI.7.4}~$B)$ para los
+compuestos $fgf$ y $gfg$. Es fácil demostrar que estas condiciones bastan
+para implicar que se tiene efectivamente un pseudofuntor
+$\cal{E}^\circ\to\Cat$.
+
+Un caso interesante es aquel en que
+$$
+\cal{F}_b=\cal{F}_a^\circ,\quad G=F^\circ,\quad v=u^\circ.
+$$
+Se llama \emph{autodualidad}
+\index{autodualidad|hyperpage}%
+en una categoría $\cal{C}$ al dato de un funtor
+$D\colon\cal{C}\to\cal{C}^\circ$ y de un isomorfismo
+\ifthenelse{\boolean{orig}}
+{$u\colon DD^\circ\isomto\id_{\cal{C}}$,}
+{$u\colon D^\circ D\isomto\id_{\cal{C}}$,}
+tales que $u$ y el isomorfismo
+\ifthenelse{\boolean{orig}}
+{$u^\circ\colon D^\circ D\isomto\id_{\cal{C}^\circ}$}
+{$u^\circ\colon DD^\circ\isomto\id_{\cal{C}^\circ}$}
+hagan de $(D,D^\circ)$ un par de funtores adjuntos, necesariamente
+cuasi-inversos entre sí. Esta condición se escribe
+$$
+D(u(x))=u(D(x))\qquad \text{para todo $x\in\Ob(\cal{C})$.}
+$$
+
+\item[e)]
+\marginpar{188}
+\textbf{Categorías sobre una categoría discreta $\cal{E}$.} Se dice que
+$\cal{E}$ es una \emph{categoría discreta} si toda flecha de ella es una
+flecha identidad, de modo que $\cal{E}$ queda definida, salvo isomorfismo
+único, por el conjunto $I=\Ob(\cal{E})$. El dato de una categoría
+$\cal{F}$ sobre~$\cal{E}$ equivale, pues, salvo isomorfismo único, al dato
+de una familia de categorías $\cal{F}_i$ ($i\in I$), las categorías fibra.
+Toda categoría $\cal{F}$ sobre~$\cal{E}$ es fibrada, todo $\cal{E}$-funtor
+$\cal{F}\to\cal{G}$ es cartesiano y se tiene un isomorfismo canónico
+$$
+\SheafHom_{\cal{E}/-}(\cal{F},\cal{G}) \isomto
+\underset{i}\prod\SheafHom(\cal{F}_i,\cal{G}_i).
+$$
+En particular, se obtiene
+$$
+\bf{\Gamma}(\cal{F}/\cal{E})=\varprojLim\cal{F}/\cal{E}\isomto
+\ifthenelse{\boolean{orig}}
+{\underset{i}\prod \cal{E}_i.}
+{\underset{i}\prod \cal{F}_i.}
+$$
+
+\item[f)] \textbf{Supongamos que $\cal{E}$ tiene exactamente dos objetos
+$S$ y $T$,} y, además de los \textbf{morfismos identidad, un morfismo}
+$f\colon T\to S$. Entonces una categoría $\cal{F}$ sobre~$\cal{E}$ queda
+definida, salvo $\cal{E}$-isomorfismo único, por el dato de dos categorías
+$\cal{F}_S$ y $\cal{F}_T$ y de un bifuntor $H(\eta,\xi)$ sobre
+$\cal{F}_T^\circ\times\cal{F}_S$ con valores en~$\Ens$. En efecto, si
+$\cal{F}$ es una categoría sobre~$\cal{E}$, se le asocian las dos
+categorías fibra $\cal{F}_S$ y $\cal{F}_T$ y el bifuntor
+$H(\eta,\xi)=\Hom_f(\eta,\xi)$. Dejamos al lector la tarea de explicitar la
+construcción en sentido inverso. Para que la categoría considerada sea
+fibrada, o prefibrada, lo que equivale a lo mismo, es necesario y
+suficiente que el funtor $H$ sea representable respecto del argumento
+$\xi$. Para que sea cofibrada, es necesario y suficiente que $H$ sea
+representable respecto del argumento~$\eta$.
+
+\item[g)] Sea $\cal{F}=\cal{C}\times\cal{E}$, considerada como categoría
+sobre~$\cal{E}$ mediante~$\pr_2$. Entonces $\cal{F}$ es fibrada y
+cofibrada sobre~$\cal{E}$, e incluso está dotada de una escisión y una
+coescisión canónicas, correspondientes al funtor constante sobre
+$\cal{E}$, \resp sobre~$\cal{E}^\circ$, con valores en~$\Cat$ y valor
+$\cal{C}$. Se tiene
+$$
+\bf{\Gamma}(\cal{F}/\cal{E})\simeq\SheafHom(\cal{E},\cal{C})
+$$
+y
+\marginpar{189}
+$\varprojLim\cal{F}/\cal{E}$ corresponde a la subcategoría plena formada
+por los funtores $F\colon\cal{E\to\cal{C}}$ que transforman morfismos
+cualesquiera en isomorfismos.
+\end{enumerate}

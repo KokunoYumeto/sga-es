@@ -1,0 +1,452 @@
+
+\section{Condiciones axiomáticas de una teoría de Galois}
+\label{V.4}
+Sea~$\cal{C}$ una categoría y~$F$ un funtor covariante de~$\cal{C}$ en la
+categoría de los conjuntos finitos. Supongamos que se satisfacen las
+condiciones siguientes:
+
+\begin{enumerateb}
+
+\item[(G 1)] $\cal{C}$ tiene un objeto final\footnote{Recordemos que un
+objeto~$e$ de~$\cal{C}$ se llama \emph{objeto final} si, para todo~$X$ de
+$\cal{C}$, $\Hom(X,e)$ tiene exactamente un elemento. Se define de manera
+dual un \emph{objeto inicial} de~$\cal{C}$.}, y existe el producto fibrado de
+dos objetos sobre un tercero en~$\cal{C}$ (este axioma también puede
+enunciarse diciendo que en~$\cal{C}$ existen los límites proyectivos
+finitos).
+
+\item[(G 2)] Existen las sumas finitas en~$\cal{C}$ (y, por tanto, también
+un objeto inicial $\emptyset_{\cal{C}}$, que desempeña el papel del conjunto
+vacío), así como el cociente de un objeto de~$\cal{C}$ por un grupo finito
+de automorfismos.
+
+\item[(G 3)] Sea $u\colon X\to Y$ un morfismo en~$\cal{C}$. Entonces~$u$ se
+factoriza como una composición $X\lto{u'}Y'\lto{u''}Y$, donde~$u'$ es un
+epimorfismo \emph{estricto} y~$u''$ un monomorfismo que es un isomorfismo
+sobre un sumando directo de~$Y$.
+
+\item[(G 4)]
+\marginpar{119}
+El funtor~$F$ es exacto por la izquierda (\ie transforma un objeto final en
+un objeto final y conmuta con los productos
+\ifthenelse{\boolean{orig}}{fibrado}{fibrados}).% SGA1-CORR-0137
+
+\item[(G 5)] $F$ conmuta con las sumas directas finitas, transforma los
+epimorfismos estrictos en epimorfismos y conmuta con el paso al cociente por
+un grupo finito de automorfismos.
+
+\item[(G 6)] Sea $u\colon X\to Y$ un morfismo en~$\cal{C}$ tal que~$F(u)$
+sea un isomorfismo. Entonces~$u$ es un isomorfismo.
+\end{enumerateb}
+
+Nuestro objetivo es construir un grupo topológico~$\pi$, límite proyectivo
+de grupos finitos, y una equivalencia de la categoría~$\cal{C}$ con la
+categoría~$\cal{C}(\pi)$
+\label{indnot:eb}\oldindexnot{$\cal{C}(\pi)$|hyperpage}%
+\emph{de los conjuntos finitos sobre los que} $\pi$ \emph{actúa
+continuamente} (\ie de tal modo que el estabilizador de un punto sea un
+subgrupo abierto, o, de manera equivalente, que exista un grupo cociente
+discreto que ya actúe sobre el conjunto considerado); la equivalencia
+construida transforma el funtor dado~$F$ en el funtor de inclusión evidente
+de~$\cal{C}(\pi)$ en la categoría de los conjuntos finitos. Señalemos desde
+ahora que la categoría~$\cal{C}(\pi)$ construida a partir de un grupo
+topológico~$\pi$, junto con el funtor de inclusión precedente, satisface en
+efecto las condiciones (G 1) a (G 6).
+
+Procedemos en varias etapas.
+\begin{enumerateb}
+\item[a)] \emph{Sea} $u\colon X\to Y$ \emph{un morfismo en} $\cal{C}$.
+\emph{Para que} $u$ \emph{sea un monomorfismo, es necesario y suficiente que}
+$F(u)$ \emph{lo sea}. (Se utilizan (G 1), (G 4) y (G 6).)
+
+En efecto, decir que~$u$ es un monomorfismo significa que la proyección
+$\pr_1\colon X\times_YX\to X$ es un isomorfismo.
+
+\item[b)] \emph{Todo objeto} $X$ \emph{de} $\cal{C}$ \emph{es artiniano}.
+
+En efecto, si $X'\to X''\to X$ son monomorfismos tales que~$F(X')$ y
+$F(X'')$ tienen la misma imagen en~$F(X)$, entonces, por a),
+$F(X')\to F(X'')$ es un isomorfismo; por (G 6), también lo es
+$X'\to X''$.
+
+\item[c)] \emph{El funtor} $F$ \emph{es estrictamente prorepresentable}.
+(\cf Grothendieck, \emph{Technique de descente et théorèmes d'existence en
+Géométrie Algébrique}, II, Séminaire Bourbaki 195, febrero de 1960.)
+
+En efecto, según \loccit prop\ptbl \Ref{V.3.1}, esto resulta de b) y (G 4).
+Por tanto, puede encontrarse un sistema proyectivo sobre un conjunto ordenado
+filtrante~$I$,
+$$
+P=(P_i)_{i\in I},
+$$
+\marginpar{120}%
+en~$\cal{C}$, considerado como proobjeto de~$\cal{C}$, y un isomorfismo
+funtorial
+\begin{equation*}
+\label{eq:V.4.*}\tag{$*$}
+F(X)=\Hom_{\Pro(\cal{C})}(P,X)=\varinjlim_i\Hom_{\cal{C}}(P_i,X).
+\end{equation*}
+Este isomorfismo viene realizado por un elemento
+$$
+\varphi\in\varprojlim_iF(P_i)=F(P).
+$$
+Puede suponerse además que los morfismos de transición
+$\varphi_{ji}\colon P_i\to P_j$ ($i\geq j$) son
+\emph{epimorfismos}, y que \emph{todo epimorfismo} $P_i\to P'$ es
+equivalente a un epimorfismo $P_i\to P_j$ para algún $j\leq i$ adecuado
+(lo que determina el sistema proyectivo~$P$ de manera esencialmente única).
+
+Un objeto $X\in\cal{C}$ se llama \emph{conexo}
+\index{conexo (objeto de una categoría)|hyperpage}%
+si no es isomorfo a la suma de dos objetos de~$\cal{C}$ ninguno de los cuales
+sea isomorfo al objeto inicial~$\emptyset_{\cal{C}}$.
+
+\item[d)] \emph{Los} $P_i$ \emph{son conexos y no son isomorfos a}
+$\emptyset_{\cal{C}}$.
+
+Si~$X$ es un objeto inicial, se tiene $F(X)=\emptyset$ por (G 5), aplicado a
+la suma directa de una familia vacía, y recíprocamente por (G 6). Por tanto,
+si~$X'$ es un objeto de~$\cal{C}$ que no es inicial, \ie tal que
+$F(X')\neq\emptyset$, no existe ningún morfismo de~$X'$ a~$X$. Así, si
+algún~$P_i$ es inicial, entonces~$i$ es un elemento máximo del conjunto
+ordenado filtrante de índices~$I$, y la fórmula~\eqref{eq:V.4.*}
+significaría que $F(X)=\Hom(P_i,X)$ es un conjunto reducido a un elemento
+para todo~$X$, lo cual es absurdo porque
+$F(\emptyset_{\cal{C}})=\emptyset$. Por consiguiente, los~$P_i$ no son
+isomorfos a~$\emptyset_{\cal{C}}$.
+
+Supongamos que $P_i=A\amalg B$; por (G 5), se sigue
+$F(P_i)=F(A)\amalg F(B)$. En particular, el elemento~$a_i$ de~$F(P_i)$ que
+corresponde mediante~\eqref{eq:V.4.*} al morfismo identidad
+$P_i\to P_i$ pertenece a $F(A)\amalg F(B)$, por ejemplo a~$F(A)$. Esto
+significa que existe $j\geq i$ tal que
+$\varphi_{ij}\colon P_j\to P_i$ se factoriza como
+$P_j\to A\to P_i=A\amalg B$, donde la segunda flecha es el morfismo
+canónico. Por tanto, $F(P_j)\to F(P_i)$ se factoriza como
+$F(P_j)\to F(A)\to F(P_i)=F(A)\amalg F(B)$ y, como
+$F(P_j)\to F(P_i)$ es sobreyectivo por (G 5), se sigue que
+$F(B)=\emptyset$; luego~$B$ es isomorfo a~$\emptyset_{\cal{C}}$.
+
+\item[e)]
+\marginpar{121}
+\emph{Todo morfismo} $u\colon X\to Y$ \emph{en} $\cal{C}$, \emph{con} $X$
+\emph{no isomorfo a} $\emptyset_{\cal{C}}$ \emph{e} $Y$ \emph{conexo, es
+un epimorfismo estricto. Todo endomorfismo de un objeto conexo es un
+automorfismo}.
+
+Consideremos la factorización de~$u$ dada por (G 3). Como
+$X\neq\emptyset_{\cal{C}}$, de (G 6) resulta que
+$F(X)\neq\emptyset$, luego $F(Y')\neq\emptyset$, luego
+$Y'\neq\emptyset_{\cal{C}}$; como~$Y$ es conexo, $Y'$ se identifica con~$Y$
+y, por tanto, $u$ es un epimorfismo estricto. Supongamos que~$u$ es un
+endomorfismo del objeto conexo~$X$ y demostremos que es un automorfismo. En
+efecto, puede suponerse que~$X$ no es isomorfo a~$\emptyset_{\cal{C}}$; por
+lo anterior, $u$ es un epimorfismo estricto y, por (G 5), $F(u)$ es un
+epimorfismo. Como~$F(X)$ es un conjunto finito, $F(u)$ es biyectivo. Por
+(G 6), $u$ es un automorfismo.
+
+En particular, \emph{todo endomorfismo de un} $P_i$ \emph{es un
+automorfismo}.
+
+\item[f)] \emph{Las condiciones siguientes sobre un} $P_i$ \emph{son
+equivalentes}: (i) La aplicación inyectiva natural
+$\Hom(P_i,P_i)\to\Hom(P,P_i)\simeq F(P_i)$ es también sobreyectiva, \ie para
+todo $u\colon P\to P_i$ existe $v\colon P_i\to P_i$ tal que
+$u=v\varphi_i$ (donde~$\varphi_i$ es el morfismo canónico
+$P\to P_i$). (ii) El grupo~$\Aut(P_i)$ actúa transitivamente sobre
+$F(P_i)$. (iii)~El grupo~$\Aut(P_i)$ actúa simplemente transitivamente
+sobre~$F(P_i)$.
+
+En efecto, al identificar $\Hom(P,P_i)$ con~$F(P_i)$, la aplicación
+considerada en (i) no es sino $v\mto F(v)(\varphi_i)$. La equivalencia de las
+tres condiciones resulta entonces de que
+$\Hom(P_i,P_i)=\Aut(P_i)$ y de que la aplicación precedente ya es inyectiva.
+
+Un~$P_i$ que satisface las condiciones equivalentes
+\ifthenelse{\boolean{orig}}
+{(i) (ii) (iii)}
+{(i), (ii), (iii)}
+de~f) se llama \emph{galoisiano}.
+\index{galoisiano (objeto)|hyperpage}%
+
+\item[g)] \emph{Para todo} $X$ \emph{de} $\cal{C}$, \emph{existe un}
+$P_i$ \emph{galoisiano tal que todo} $u\in\Hom(P,X)$ \emph{se factoriza
+como} $P\lto{\varphi_i}P_i\longrightarrow X$.
+
+Sea $J=\Hom(P,X)=F(X)$; es un conjunto finito, por lo que existe un~$P_j$ tal
+que todo $u\colon P\to X$ se factoriza como
+\ifthenelse{\boolean{orig}}
+{$P\lto{j}P_j\longrightarrow X$}
+{$P\lto{\varphi_j}P_j\longrightarrow X$},
+o, equivalentemente, tal que el morfismo natural
+$$
+P\to X^J\qquad(J=\Hom(P,X))
+$$
+se factoriza como
+$$
+P\lto{\varphi_j}P_j\to X^J.
+$$
+En virtud de
+\marginpar{122}
+(G~3), el morfismo $P_j\to X^J$ se factoriza como la composición de un
+epimorfismo estricto y un monomorfismo, pudiéndose tomar el primero de la
+forma $\varphi_{ij}\colon P_j\to P_i$. Queda, pues, demostrar que~$P_i$ es
+galoisiano. Sea~$k$ un índice $\geq j$ tal que todo morfismo $P\to P_i$ se
+factoriza por $P\lto{\varphi_k}P_k\longrightarrow P_i$. Obsérvese que el
+morfismo natural $P_k\to X^J$ sigue factorizándose como la composición
+$$
+P_k\lto{\varphi_{ik}}P_i\lto{U}X^J,
+$$
+donde la primera \ifthenelse{\boolean{orig}}{flecha}{flecha} es un epimorfismo
+estricto por e), y la segunda, un monomorfismo. Queremos demostrar que, dado
+un morfismo $\psi\colon P_k\to P_i$, existe un endomorfismo~$v$ de~$P_i$ tal
+que $\psi=v\varphi_{ik}$. Para todo $u\in\Hom(P_i,X)$, consideremos
+$u\psi\in\Hom(P_k,X)$; es de la forma $u'\varphi_{ik}$, con un
+$u'\in\Hom(P_i,X)$ bien determinado. La aplicación $u\mto u'$ de~$J$ en~$J$
+así definida por~$\psi$ es, además, inyectiva, porque~$\psi$ es un
+epimorfismo en virtud de e); por tanto, es biyectiva, pues~$J$ es finito. La
+aplicación biyectiva $u\mto u'$ de~$J$ en~$J$ define entonces un isomorfismo
+$\alpha\colon X^J\isomto X^J$ que hace conmutativo el diagrama
+$$
+\xymatrix{P_k \ar[r]^-{\varphi_{ik}} \ar@{=}[d] & P_i \ar[r]^-U & X^J
+\ar[d]^-{\alpha}_-{\simeq} \\ P_k \ar[r]^{\psi} & P_i \ar[r]^-U & X^J}.
+$$
+De las propiedades de unicidad de la factorización de un morfismo como
+composición de un epimorfismo estricto y un monomorfismo se sigue (pues
+$\psi$ también es un epimorfismo estricto por e)) que puede encontrarse un
+morfismo $v\colon P_i\to P_i$ que haga conmutativo el diagrama, como se
+quería.
+
+Se concluye, en particular, que \emph{los} $P_i$ \emph{galoisianos forman un
+sistema cofinal en el sistema de los} $(P_j)$. Por consiguiente, como para un
+objeto galoisiano~$P_i$ se tiene
+$$
+\Hom(P,P_i)=\Hom(P_i,P_i)=\Aut(P_i),
+$$
+al pasar al límite se obtiene
+$$
+\Hom(P,P)=\varprojlim_i\Hom(P,P_i)=\varprojlim_i\Hom(P_i,P_i)
+=\varprojlim_i\Aut(P_i),
+$$
+donde
+\ifthenelse{\boolean{orig}}
+{\ignorespaces}
+{\enlargethispage{.5cm}}
+\marginpar{123}
+el límite proyectivo se toma sobre los~$P_i$ galoisianos. Además, mediante
+la identificación $\Hom(P,P_i)=F(P_i)$ y teniendo en cuenta que~$F$
+transforma epimorfismos en epimorfismos, se ve que los morfismos de transición
+del sistema proyectivo precedente son sobreyectivos. De todo ello se concluye:
+
+\item[h)] \emph{Se tiene}
+$$
+\Hom(P,P)=\Aut(P)=\varprojlim_iF(P_i)=\varprojlim_i\Aut(P_i),
+$$
+\emph{donde el límite proyectivo se toma sobre los} $P_i$
+\emph{galoisianos}.
+
+En particular, $\Aut(P)$ aparece como límite proyectivo de un sistema
+proyectivo de grupos finitos (cuyos morfismos de transición son
+sobreyectivos); lo dotaremos de la topología de límite proyectivo de las
+topologías discretas. \emph{Denotaremos por}~$\pi$
+\label{indnot:ec}\oldindexnot{$\pi$|hyperpage}%
+\emph{y llamaremos grupo fundamental}
+\index{grupo fundamental de una categoría galoisiana|hyperpage}%
+(de~$\cal{C}$ provista de~$F$) \emph{al grupo opuesto a}~$\Aut(P)$. Este
+grupo actúa, pues, \emph{por la derecha} sobre~$P$; es el límite proyectivo
+de grupos finitos~$\pi_i$ que actúan por la derecha sobre los~$P_i$
+galoisianos, siendo~$\pi_i$ el grupo opuesto a~$\Aut(P_i)$.
+
+Habida cuenta del isomorfismo funtorial
+$$
+F(X)=\Hom(P,X)
+$$
+y de la definición de~$\pi$, se ve que~$\pi$ actúa \emph{por la izquierda}
+sobre~$F(X)$ y, además, de manera continua por g) (pues, con las notaciones
+de g), es en realidad~$\pi_i$ quien actúa sobre~$F(X)$). Es inmediato que,
+para todo morfismo $u\colon X\to Y$ en~$\cal{C}$, el morfismo
+$F(u)\colon F(X)\to F(Y)$ es compatible con las acciones de~$\pi$.
+\emph{Por tanto, en lo sucesivo puede considerarse} $F$ \emph{como un funtor
+covariante}
+$$
+F\colon\cal{C}\to\cal{C}(\pi),
+$$
+\emph{donde} $\cal{C}(\pi)$ \emph{es la categoría de los conjuntos finitos
+sobre los que} $\pi$ \emph{actúa continuamente por la izquierda}.
+
+Definamos ahora un funtor en sentido inverso:
+$$
+G\colon\cal{C}\from\cal{C}(\pi)
+$$
+mediante la fórmula
+$$
+G(E)=P\times_{\pi}E,
+$$
+donde $P\times_{\pi}E$ se define como solución del problema universal
+resumido por
+$$
+\Hom_{\cal{C}}(P\times_{\pi}E,X)\isomto
+\Hom_{\pi}(E,\Hom(P,X))
+$$
+(donde,
+\marginpar{124}
+en el segundo miembro, $\Hom(P,X)=F(X)$ se considera como un conjunto sobre
+el que~$\pi$ actúa por la izquierda). Hay que demostrar la existencia del
+objeto~$P\times_{\pi}E$.
+
+\item[i)] \emph{Sea} $Q$ \emph{un objeto de} $\cal{C}$ \emph{sobre el que
+un grupo finito} $G$ \emph{actúa por la derecha, y sea} $E$ \emph{un conjunto
+finito sobre el que} $G$ \emph{actúa por la izquierda. Entonces}
+\ifthenelse{\boolean{orig}}
+{$G\times_GE$}
+{$Q\times_GE$}
+\emph{existe, y la aplicación canónica}
+$$
+F(Q)\times_GE\to F(Q\times_GE)
+$$
+\emph{es un isomorfismo}.
+
+Como las sumas directas finitas existen en~$\cal{C}$ por (G 2), y~$F$ conmuta
+con ellas por (G 5), se reduce inmediatamente al caso en que~$G$ actúa
+transitivamente sobre~$E$, pues, si los~$E_j$ son las órbitas de~$G$ en~$E$,
+se tendrá
+$$
+Q\times_GE=\underset{j}{\amalg}\,Q\times_GE_j.
+$$
+Sea entonces $a\in E$ y sea~$H$ su estabilizador. Se ve de inmediato a partir
+de la definición que $Q\times_GE$ se identifica con~$Q/H$. De aquí la
+existencia, gracias a (G~2), y la propiedad de conmutación para~$F$, gracias
+a (G~5).
+
+\item[j)] \emph{Sea} $E$ \emph{un objeto de} $\cal{C}(\pi)$, \emph{y sea}
+$P_i$ \emph{galoisiano tal que} $\pi_i$ \emph{ya actúa sobre} $E$.
+\emph{Entonces} $P_i\times_{\pi_i}E$ \emph{existe y se tiene un isomorfismo
+canónico}
+$$
+E\isomto F(P_i\times_{\pi_i}E).
+$$
+\emph{Si} $j\geq i$ \emph{es tal que} $P_j$ \emph{es galoisiano, entonces
+el morfismo canónico} $P_j\times_{\pi_j}E\to\allowbreak
+P_i\times_{\pi_i}E$ \emph{es un isomorfismo}.
+
+La primera afirmación es un caso particular de i), teniendo en cuenta que
+$\pi_i$ actúa simplemente transitivamente sobre~$F(P_i)$, provisto del punto
+marcado~$\varphi_i$; de ahí un isomorfismo
+$F(P_i)\times_{\pi_i}E\simeq E$. Para la segunda afirmación se utiliza, por
+ejemplo, (G 6).
+
+Sea, \ifthenelse{\boolean{orig}}{para}{para} todo~$j$, $\cal{C}_j$ la
+subcategoría plena de~$\cal{C}$ formada por los~$X$ tales que
+$\Hom(P_j,X)\to\Hom(P,X)\simeq F(X)$ sea biyectiva. Por g), se sabe que
+$\cal{C}$ \emph{es la unión filtrante de las} $\cal{C}_j$. Por tanto, para
+$X\in\cal{C}_j$,
+\begin{align*}
+\Hom_{\pi}(E,\Hom(P,X))&\simeq\Hom_{\pi}(E,\Hom(P_j,X))
+\simeq\Hom_{\pi_j}(E,\Hom(P_j,X))\\
+&\simeq\Hom(P_j\times_{\pi_j}E,X),
+\end{align*}
+y,
+\marginpar{125}
+teniendo en cuenta la última afirmación de j), se obtiene un isomorfismo
+funtorial en el objeto~$X$ de~$\cal{C}_j$:
+$$
+\Hom_{\pi}(E,\Hom(P,X))\simeq\Hom(P_i\times_{\pi_i}E,X).
+$$
+Como esto es cierto para todo~$j$ y estos isomorfismos funtoriales, al variar
+$j$, se inducen mutuamente, se concluye:
+
+\item[k)] \emph{En las condiciones de} j), \emph{la composición de los
+morfismos canónicos}
+$$
+E\to\Hom(P_i,P_i\times_{\pi_i}E)\to\Hom(P,P_i\times_{\pi_i}E)
+$$
+\emph{hace de} $P_i\times_{\pi_i}E$ \emph{una solución del problema
+universal que define} $P\times_{\pi}E$, \ie \emph{este último existe y se
+tiene un isomorfismo}
+$$
+P\times_{\pi}E\isomto P_i\times_{\pi_i}E.
+$$
+
+Esto termina la construcción del funtor~$G(E)$. Por otra parte, se tiene un
+morfismo funtorial
+$$
+\alpha\colon\id_{\cal{C}(\pi)}\to FG,
+$$
+\ie un morfismo funtorial en el objeto~$E$ de~$\cal{C}(\pi)$:
+$$
+\alpha(E)\colon E\to FG(E)=F(P\times_{\pi}E),
+$$
+a saber, la composición de los morfismos canónicos
+$$
+E\to F(P)\times_{\pi}E\to F(P\times_{\pi}E)
+$$
+(donde el primero procede del punto marcado $\varphi\in F(P)$). Combinando
+j) y k), se obtiene:
+
+\item[l)] \emph{El morfismo} $\alpha$ \emph{es un isomorfismo}.
+
+Se define del mismo modo un morfismo funtorial
+$$
+\beta\colon GF\to\id_{\cal{C}},
+$$
+\ie un morfismo funtorial en el objeto~$X$ de~$\cal{C}$:
+$$
+\beta(X)\colon P\times_{\pi}F(X)\to X,
+$$
+como
+\marginpar{126}
+el asociado al $\pi$-morfismo
+$$
+F(X)\to\Hom(P,X)
+$$
+inverso del isomorfismo canónico $\Hom(P,X)\isomto F(X)$.
+
+\item[m)] \emph{Las composiciones}
+\begin{gather*}
+F(X)\lto{\alpha(F(X))}FGF(X)\lto{F(\beta(X))}F(X)\\
+G(E)\lto{G(\alpha(E))}GFG(E)\lto{\beta(G(E))}G(E)
+\end{gather*}
+\emph{son los isomorfismos identidad}.
+
+Asno que trota.
+
+Teniendo en cuenta l), se sigue:
+
+\item[n)] \emph{El morfismo} $\beta$ \emph{es un isomorfismo}.
+
+Hemos obtenido así el resultado prometido:
+\end{enumerateb}
+
+\begin{theoreme}
+\label{V.4.1}
+Sea~$\cal{C}$ una categoría que satisface las condiciones \emph{(G 1)},
+\emph{(G 2)} y \emph{(G~3)} del comienzo de este número, y sea~$F$ un
+funtor covariante de~$\cal{C}$ en la categoría de los conjuntos finitos que
+satisface las condiciones \emph{(G 4)}, \emph{(G 5)} y \emph{(G 6)}.
+Entonces las construcciones canónicas precedentes definen equivalencias de
+categorías $F\colon\cal{C}\to\cal{C}(\pi)$ y
+$G\colon\cal{C}(\pi)\to\cal{C}$ cuasiinversas entre sí. Más precisamente,
+existe un proobjeto~$P$ de~$\cal{C}$ y un isomorfismo funtorial
+$F(X)\isomfrom\Hom(P,X)$; $\pi$ es el grupo opuesto al grupo de
+automorfismos de~$P$, dotado de una topología adecuada, de modo que~$\pi$
+actúa continuamente sobre los conjuntos $\Hom(P,X)\simeq F(X)$. Por último,
+$G$ viene dado por $G(E)\simeq P\times_{\pi}E$.
+\end{theoreme}
+
+\begin{remarques}
+\label{V.4.2}
+El enunciado de las condiciones (G 1) a (G 6) se vuelve más sencillo y
+agradable si se sustituyen (G 2) y (G 5), respectivamente, por:
+\begin{enumerateb}
+\item[(G' 2)] Existen los límites inductivos finitos en
+\ifthenelse{\boolean{orig}}{$C$}{$\cal{C}$}.% SGA1-CORR-0144
+\item[(G' 5)] El funtor~$F$ es exacto por la derecha (\ie conmuta con los
+límites inductivos finitos).
+\end{enumerateb}
+Estas condiciones son en apariencia más fuertes que (G~2) y (G~5), pero del
+teorema de estructura~\Ref{V.4.1} resulta inmediatamente que se deducen de
+(G~1) a (G~6). Obsérvese, sin embargo, que en los casos que nos interesarán,
+la comprobación de (G~2) y (G~5) parece, en efecto, más sencilla que la de
+(G'~2) y (G'~5). Ignoro si, en la condición (G~3), podría omitirse que~$u''$
+sea un isomorfismo sobre un sumando directo de~$Y$.
+\end{remarques}

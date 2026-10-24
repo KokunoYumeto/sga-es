@@ -1,0 +1,258 @@
+\section{Funtores sobre una categoría con clivaje}
+\label{VI.12}
+
+Sea $\cal{F}$ una categoría con clivaje normalizado sobre~$\cal{E}$.
+Para todo objeto $S$ de~$\cal{E}$, denotemos por
+$$
+i_S\colon \cal{F}_S\to\cal{F}
+$$
+el funtor de inclusión. Se tiene, pues, una transformación natural, para
+todo morfismo $f\colon T\to S$ de~$\cal{E}$:
+$$
+\alpha_f\colon i_T f^*\to i_S,
+$$
+donde $f^*$ es el funtor de cambio de base
+$\cal{F}_S\to\cal{F}_T$ para $f$ definido por el clivaje. Sea ahora
+$$
+F\colon\cal{F}\to\cal{C}
+$$
+un funtor de~$\cal{F}$ en una categoría $\cal{C}$. Pongamos, para todo
+$S\in\Ob(\cal{E})$,
+$$
+F_S=F\circ i_S\colon\cal{F}_S\to\cal{C}
+$$
+y, para todo $f\colon T\to S$ de~$\cal{E}$,
+$$
+\varphi_f=F*\alpha_f\colon F_T f^*\to F_S.
+$$
+Así, a todo funtor $F\colon\cal{F}\to\cal{C}$ se le asocian una familia
+$(F_S)$ de funtores $\cal{F}_S\to\cal{C}$ y una familia $(\varphi_f)$ de
+transformaciones naturales $F_T f^*\to F_S$. Estas familias satisfacen
+las condiciones siguientes:
+
+a) $\varphi_{\id_S}=\id_{F_S}$.
+
+b) Para dos morfismos $f\colon T\to S$ y $g\colon U\to T$ de~$\cal{E}$,
+es conmutativo el cuadrado de transformaciones naturales
+$$
+\xymatrix@C=2cm{ F_U g^* f^* \ar[r]^-{F_U*c_{f,g}} \ar[d]_{\varphi_g * f^*} &
+F_U(fg)^* \ar[d]^{\varphi_{fg}} \\ F_T f^*\ar[r]^-{\varphi_f} & F_S.}
+$$
+\marginpar{190}%
+La primera relación es inmediata, y la segunda se obtiene aplicando el
+funtor~$F$ al diagrama conmutativo
+$$
+\xymatrix@C=2cm{ g^* f^* (\xi) \ar[r]^-{c_{f,g}(\xi)}
+\ar[d]_{\alpha_g(f^*(\xi))} & (fg)^*(\xi) \ar[d]^{\alpha_{fg}(\xi)}\\
+f^*(\xi) \ar[r]^-{\alpha_f(\xi)}& \xi }
+$$
+para un objeto variable $\xi$ de~$\cal{F}_S$.
+
+Si $G$ es un segundo funtor $\cal{F}\to\cal{C}$, que da lugar a funtores
+$G_S\colon\cal{F}_S\to\cal{C}$ y a transformaciones naturales
+\ifthenelse{\boolean{orig}}
+{$\psi_f\colon G_Tf\to G_S$}
+{$\psi_f\colon G_Tf^*\to G_S$},
+y si $u\colon F\to G$ es una transformación natural, le corresponden las
+transformaciones naturales $u*i_S$:
+$$
+u_S\colon F_S\to G_S,
+$$
+y se comprueba de inmediato que, para todo morfismo $f\colon T\to S$ de
+$\cal{E}$, son conmutativos los cuadrados
+$$
+\begin{array}{c}
+\xymatrix@C=1.5cm{ F_Tf^* \ar[r]^-
+{\ifthenelse{\boolean{orig}}{\phi_f}{\varphi_f}}
+\ar[d]_{u_T * f^*} & F_S
+\ar[d]^{u_S} \\ G_T f^* \ar[r]^-{\psi_f}& G_S}
+\end{array}
+\leqno\quad \textup{c)}
+$$
+
+\begin{proposition}
+\label{VI.12.1}
+Sea $\cal{H}(\cal{F},\cal{C})$ la categoría cuyos objetos son los pares
+formados por familias $(F_S)$
+\ifthenelse{\boolean{orig}}
+{($S\in\Ob(\cal{F})$)}
+{($S\in\Ob(\cal{E})$)}
+de funtores $\cal{F}_S\to\cal{C}$ y familias $(\varphi_f)$
+\ifthenelse{\boolean{orig}}
+{($f\in\Fl(\cal{F})$)}
+{($f\in\Fl(\cal{E})$)}
+de transformaciones naturales $F_Tf^*\to F_S$ que satisfacen las
+condiciones \emph{a) y~b)}, y cuyos morfismos son las familias $(u_S)$
+\ifthenelse{\boolean{orig}}
+{($S\in\Ob(\cal{F})$)}
+{($S\in\Ob(\cal{E})$)}
+de transformaciones naturales
+\marginpar{191}
+$F_S\to G_S$ que verifican la condición de conmutatividad \emph{c)}
+escrita más arriba (la composición de los morfismos se efectúa componiendo
+las transformaciones naturales entre funtores $\cal{F}_S\to\cal{C}$).
+Entonces las dos reglas explicitadas más arriba definen un
+\emph{isomorfismo} $K$ de la categoría
+$\SheafHom(\cal{F},\cal{C})$ con la categoría
+$\cal{H}(\cal{F},\cal{C})$.
+\end{proposition}
+
+Es inmediato que se tiene así un \emph{funtor} de la primera categoría en
+la segunda. Este funtor es plenamente fiel, pues, dados $F,G$, la
+aplicación $\Hom(F,G)\to\allowbreak\Hom(K(F),K(G))$ es manifiestamente
+inyectiva. Para demostrar que es sobreyectiva, basta observar que la
+condición de conmutatividad c) expresa la functorialidad de las
+aplicaciones
+$u(\xi)=u_S(\xi)\colon
+\ifthenelse{\boolean{orig}}
+{F(S)}
+{F(\xi)}
+=F_S(\xi)\to G(\xi)=G_S(\xi)$ para los morfismos de la forma
+$\alpha_f(\xi)$ en~$\cal{F}$. Por otra parte, se tiene la functorialidad
+en cada categoría fibra, es decir, para los morfismos de~$\cal{F}$ que
+son $T$-morfismos ($T\in\Ob(\cal{E})$), de donde resulta la functorialidad
+para todo morfismo de~$\cal{F}$,
+\ifthenelse{\boolean{orig}}
+{puesto que un $f$-morfismo (donde $f\colon T\to S$ es un morfismo en
+($\cal{E}$) es de manera única) un compuesto de un morfismo
+$\alpha_f(\xi)$ y de un $T$-morfismo.}
+{puesto que todo $f$-morfismo (donde $f\colon T\to S$ es un morfismo en
+$\cal{E}$) es, de manera única, un compuesto de un morfismo
+$\alpha_f(\xi)$ y de un $T$-morfismo.}
+Queda por demostrar que el funtor~$K$ es biyectivo sobre los objetos. El
+argumento precedente muestra ya que $K$ es inyectivo sobre los objetos;
+queda probar que es sobreyectivo, es decir, que, si se parte de un sistema
+$(F_S),(\varphi_f)$ que satisface a) y b), y se define una aplicación
+$\Ob\cal{F}\to\Ob\cal{C}$ por
+$$
+F(\xi)=F_S(\xi) \quad\text{para }
+\xi\in\Ob\cal{F}_S\subset\Ob\cal{F}
+$$
+y una aplicación $\Fl(\cal{F})\to\Fl(\cal{C})$ por
+$$
+F(\alpha_f(\xi)u')=\varphi_f(\xi)\,F_T(u'),
+$$
+para todo morfismo $f\colon T\to S$ de~$\cal{E}$, todo objeto $\xi$
+de~$\cal{F}_S$ y todo $T$-morfismo $u'$ con destino $f^*(\xi)$, se
+obtiene un \emph{funtor} $F$ de~$\cal{F}$ en~$\cal{C}$. En efecto, la
+relación $F(\id_\xi)=\id_{F(\xi)}$ es inmediata; queda demostrar la
+multiplicatividad $F(uv)=F(u)F(v)$ cuando se tiene un $f$-morfismo
+$u\colon\eta\to\xi$ y un $g$-morfismo
+\ifthenelse{\boolean{orig}}
+{$v\colon\zeta\to\nu$}
+{$v\colon\zeta\to\eta$},
+con $f\colon T\to S$ y $g\colon U\to T$ morfismos de~$\cal{E}$.
+Poniendo $w=uv$, se tendrá
+$$
+u=\alpha_f(\xi)u'\quoi,\quad v=\alpha_g(\eta)v'\quoi,\quad
+w=\alpha_{fg}(\xi)w'.
+$$
+\marginpar{192}%
+con
+$$
+w'=c_{f,g}(\xi)g^*(u')v'\quad \hbox{(\cf \No \Ref{VI.8})}.
+$$
+
+Con esta notación, hay que demostrar la conmutatividad del contorno
+exterior del diagrama siguiente:
+$$
+\xymatrix{ F_U(\zeta) \ar@/^1.5pc/[rrrrrr]^{F(w')}
+\ar[rr]^{\ifthenelse{\boolean{orig}}{F_u(v')}{F_U(v')}}
+\ar[drr]_{F(v)} & & F_Ug^*(\eta)
+\ar[rr]^{\ifthenelse{\boolean{orig}}{F_ug^*(u')}{F_Ug^*(u')}}
+\ar[d]^{\varphi_g(\eta)} & & F_Ug^*f^*(\xi)
+\ar[rr]^{F_U(c_{f,g}(\xi))}\ar[d]^{\varphi_g(f^*(\xi))}& &
+F_U(fg)^*(\xi) \ar[d]^{\varphi_{fg}(\xi)} \\ & & F_T(\eta)
+\ar@/_1.2pc/[rrrr]_{F(u)} \ar[rr]_{F_T(u')} & & F_Tf^*(\xi)
+\ar[rr]_{\varphi_f(\xi)} & & F_S(\xi) }
+$$
+Ahora bien, el triángulo izquierdo es conmutativo por definición de
+$F(v)$; el cuadrado central es conmutativo porque se deduce del morfismo
+\ifthenelse{\boolean{orig}}
+{$u'\colon \xi\to f(\eta)$}
+{$u'\colon \eta\to f^*(\xi)$}
+mediante la transformación natural $\alpha_g$;
+por último, el cuadrado derecho es conmutativo en virtud de la condición
+b). De ello resulta la conclusión buscada.
+
+Supongamos ahora que $\cal{C}$ es también una categoría con clivaje
+normalizado sobre~$\cal{E}$, que en adelante llamaremos $\cal{G}$, y que
+nos interesan los $\cal{E}$-funtores de~$\cal{F}$ en~$\cal{G}$. Si $F$ es
+uno de tales funtores, induce funtores
+$$
+F_S\colon \cal{F}_S\to\cal{G}_S
+$$
+entre las categorías fibra. Por otra parte, para todo morfismo
+$f\colon T\to S$ de~$\cal{E}$ y todo objeto $\xi$ de~$\cal{F}_S$, el
+$f$-morfismo $F(\alpha_f(\xi))$ se factoriza de manera única por un
+$T$-morfismo
+$$
+\varphi_f(\xi)\colon F_T(f^*_{\cal{F}}(\xi))\to
+f^*_{\cal{G}}(F_S(\xi))
+$$
+(donde el subíndice $\cal{F}$ o $\cal{G}$ indica la categoría con
+clivaje para la que se toma el funtor de imagen inversa), de donde se
+obtiene una transformación natural entre funtores de~$\cal{F}_S$ en
+$\cal{G}_T$:
+$$
+\varphi_f\colon F_T f^*_{\cal{F}}\to f^*_{\cal{G}}F_S.
+$$
+\marginpar{193}%
+Los dos sistemas $(F_S)$ y $(\varphi_f)$ satisfacen las condiciones
+siguientes:
+
+a') $\varphi_{\id_S}=\id_{F_S}$.
+
+b') Para dos morfismos $f\colon T\to S$ y $g\colon U\to T$ de
+$\cal{E}$, es conmutativo el diagrama siguiente de transformaciones
+naturales:
+$$
+\xymatrix{ F_U
+\ifthenelse{\boolean{orig}}{g_F^*f_F^*}{g_{\cal{F}}^*f_{\cal{F}}^*}
+\ar[rr]^{F_U *c_{f,g}^\cal{F}}
+\ar[d]_{\ifthenelse{\boolean{orig}}{\varphi_{g^*}f^*_{\cal{F}}}{\varphi_g*f^*_{\cal{F}}}} & &
+F_U\ifthenelse{\boolean{orig}}{(fg)^*_F}{(fg)^*_{\cal{F}}}
+\ar[dd]^{\varphi_{fg}} \\ g^*_{\cal{G}}F_T
+\ifthenelse{\boolean{orig}}{f^*_F}{f^*_{\cal{F}}}
+\ar[d]_{g^*_{\cal{G}}*\varphi_f} & & \\ g^*_{\cal{G}}f^*_{\cal{G}}F_S
+\ar[rr]^{c_{f,g}^\cal{G}*F_S} & & (fg)^*_{\cal{G}}F_S. }
+$$
+Dejamos al lector su verificación, así como el enunciado y la demostración
+del análogo de la Proposición~\Ref{VI.12.1}; este implica que se obtiene
+así una correspondencia biunívoca entre el conjunto de los
+$\cal{E}$-funtores de~$\cal{F}$ en~$\cal{G}$ y el conjunto de los
+sistemas $(F_S)$,$(\varphi_f)$ que satisfacen las condiciones a') y b')
+anteriores. Por supuesto, en esta correspondencia, los funtores
+cartesianos se caracterizan por la propiedad de que las transformaciones
+$\varphi_f$ son isomorfismos.
+
+\begin{remarquestar}
+Por supuesto, casi siempre conviene razonar directamente con categorías
+fibradas sin utilizar clivajes explícitos, lo cual evita, en particular,
+tener que recurrir, para la noción sencilla de $\cal{E}$-funtor o de
+$\cal{E}$-funtor cartesiano, a una interpretación pesada como la anterior.
+Para evitar pesadeces insoportables y obtener enunciados más intrínsecos,
+\marginpar{194}
+hemos tenido que renunciar a partir, como en~\cite{VI.2}, de la noción de
+categoría con clivaje (llamada «categoría fibrada» en \loccit), que pasa a
+segundo plano en favor de la de categoría fibrada. Es, por lo demás,
+probable que, contrariamente al uso todavía predominante, ligado a antiguos
+hábitos de pensamiento, acabe por resultar más cómodo, en los problemas
+universales, no poner el acento en \emph{una} solución supuestamente elegida
+de una vez por todas, sino situar todas las soluciones en pie de igualdad.
+\end{remarquestar}
+
+\begin{sgabibliography}{0}{VI.13}
+\bibitem[1]{VI.1} A\ptbl \textsc{Grothendieck}, Sur quelques points d'algèbre
+homologique,
+\ifthenelse{\boolean{orig}}
+{Tohoku Math.\ Journal, pp\ptbl 119--221, Vol\ptbl 9, 1957.}
+{T\^ohoku Math.\ J. \textbf{9} (1957) p\ptbl 119--221.}
+
+\bibitem[2]{VI.2} A\ptbl \textsc{Grothendieck}, Technique de descente et
+Théorèmes d'existence,~I, Séminaire Bourbaki~190, diciembre de~1959.
+\end{sgabibliography}
+
+
+\refstepcounter{chapter}
+\addtocontents{toc}{\protect\medskip\protect\par\protect\noindent\protect\textbf{VII: no existe}}

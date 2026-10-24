@@ -1,0 +1,86 @@
+\chapter{Morfismos lisos: generalidades,~propiedades~diferenciales}
+\label{II}
+\marginpar{29}
+
+Las referencias a la exposición~\Ref{I} se indican mediante~I. Recordemos que los anillos son noetherianos y los preesquemas localmente noetherianos.
+
+\section{Generalidades}
+\label{II.1}
+
+Sea $Y$ un preesquema y sean $t_1,\dots,t_n$ indeterminadas. Se pone
+\begin{equation}
+\label{eq:II.1.1}
+Y[t_1,\dots,t_n]=Y\otimes_\ZZ\ZZ[t_1,\dots,t_n]\quoi.
+\end{equation}
+Así, $Y[t_1,\dots,t_n]$ es un $Y$-esquema, afín sobre~$Y$, definido por el haz cuasicoherente de álgebras $\cal{O}_Y[t_1,\dots,t_n]$. Dar una sección de este preesquema sobre~$Y$ equivale, por tanto, a dar $n$ secciones de~$\cal{O}_Y$ (correspondientes a las imágenes de los~$t_i$ por el homomorfismo correspondiente). Si $Y'$ está sobre~$Y$, se tiene
+\begin{equation}
+\label{eq:II.1.2}
+Y[t_1,\dots,t_n]\times_YY'=Y'[t_1,\dots,t_n]\quoi,
+\end{equation}
+(lo que implica que dar un $Y$-morfismo de~$Y'$ en $Y[t_1,\dots,t_n]$ equivale a dar $n$ secciones de~$\cal{O}_{Y'}$); por otra parte, se tiene
+\begin{equation}
+\label{eq:II.1.3}
+\bigl(Y[t_1,\dots,t_n]\bigr)[t_{n+1},\dots,t_m]=Y[t_1,\dots,t_m]\quoi,
+\end{equation}
+en virtud de la fórmula análoga para los anillos de polinomios sobre~$\ZZ$. La fórmula~\eqref{eq:II.1.2} implica que $Y[t_1,\dots,t_n]$ varía funtorialmente con~$Y$.
+
+$Y[t_1,\dots,t_n]$ es de tipo finito y plano sobre~$Y$.
+
+\begin{definition}
+\label{II.1.1}
+Sea $f\colon X\to Y$ un morfismo que hace de~$X$ un $Y$-preesquema. Se dice que $f$ es \emph{liso}\footnote{Terminología antigua: $f$ es \emph{simple}
+\index{simple: sinónimo anticuado de liso|hyperpage}%
+en~$x$, o $x$ es un punto \emph{simple} para~$f$. Esta terminología se prestaba a confusión en diversos contextos (álgebras simples, grupos simples) y hubo que abandonarla.}
+\index{liso (morfismo, álgebra)|hyperpage}%
+en $x\in X$, o que $X$ es \emph{liso sobre~$Y$ en~$x$}, si existen un entero $n\geq0$, un entorno abierto $U$ de~$x$ y un $Y$-morfismo étale $U\to Y[t_1,\dots,t_n]$. Se dice que~$f$ (\resp $X$) es \emph{liso} si es liso en todos los puntos de~$X$. Se dice que un álgebra~$B$ sobre un anillo~$A$ es lisa en un ideal primo $\goth{p}$ de~$B$ si $\Spec(B)$ es liso sobre~$\Spec(A)$ en el punto~$\goth{p}$;
+\marginpar{30}
+se dice que $B$ es lisa sobre~$A$ si lo es en todo ideal primo~$\goth{p}$ de~$B$. Por último, se dice que un homomorfismo local $A\to B$ de anillos locales es liso (o que $B$ es lisa sobre~$A$)\footnote{Es preferible decir entonces, como en EGA~IV~18.6.1, que $B$ es «\emph{esencialmente lisa}» sobre~$A$.}
+\index{esencialmente liso|hyperpage}%
+si $B$ es la localización de un álgebra de tipo finito $B_1$ lisa sobre~$A$.
+\end{definition}
+
+Obsérvese que la noción de lisitud de~$X$ sobre~$Y$ es local sobre~$X$ y sobre~$Y$; si $X$ es liso sobre~$Y$, es localmente de tipo finito sobre~$Y$.
+
+\setcounter{subsection}{0}
+\setcounter{proposition}{0}
+\begin{proposition}
+\label{prop:II.1.1}
+El conjunto de los puntos $x$ de~$X$ en los que $f$ es liso es abierto.
+\end{proposition}
+
+Es trivial a partir de la definición.
+
+\begin{corollaire}
+\label{II.1.2}
+Si $B$ es lisa sobre~$A$ en~$\goth{p}$, entonces es lisa sobre~$A$ en~$\goth{q}$ para todo ideal primo~$\goth{q}$ de~$B$ contenido en~$\goth{p}$.
+\end{corollaire}
+
+\Ref{prop:II.1.1} implica también que las dos últimas definiciones de~\Ref{II.1.1} coinciden en su dominio común de existencia.
+
+\begin{proposition}
+\label{II.1.3}
+\textup{(i)} Un morfismo étale ---en particular, una inmersión abierta o un morfismo identidad--- es liso. \textup{(ii)} Un cambio de base en un morfismo liso da un morfismo liso. \textup{(iii)} El compuesto de dos morfismos lisos es liso.
+\end{proposition}
+
+\textup{(i)} es trivial a partir de la definición; más precisamente:
+
+\begin{corollaire}
+\label{II.1.4}
+étale $=$ cuasifinito $+$ liso.
+\end{corollaire}
+
+\textup{(ii)} se sigue inmediatamente del hecho análogo para los morfismos étales (\Ref{I.4.6}) y para las proyecciones $Y[t_1,\dots,t_n]\to Y$ (\cf \eqref{eq:II.1.2}). Para~\textup{(iii)}, se sigue formalmente de que esto es cierto por separado para «étale» (\Ref{I.4.6}) y para las proyecciones del tipo \ifthenelse{\boolean{orig}}{$Y[t_1,\dots,t_n]$}{$Y[t_1,\dots,t_n]\to Y$}\ % La autoridad repone el morfismo de proyección.
+(\cf \eqref{eq:II.1.3}), junto con los dos hechos citados para~\textup{(ii)}. Supongamos que $Y$ es liso sobre~$Z$ y que $X$ es liso sobre~$Y$; demostremos que $X$ es liso sobre~$Z$. Puede suponerse que $Y$ es étale sobre~$Z[t_1,\dots,t_n]$ y que $X$ es étale sobre~$Y[s_1,\dots,s_m]$; la primera hipótesis implica entonces que $Y[s_1,\dots,s_m]$ es étale sobre
+\[
+Z[t_1,\dots,t_n][s_1,\dots,s_m]
+=\ifthenelse{\boolean{orig}}{Z[t_1,\dots,s_m]}{Z[t_1,\dots,t_n,s_1,\dots,s_m]},
+\]% SGA1-CORR-0014: se conservan los dos bloques completos de variables.
+de modo que $X$ es étale sobre~\ifthenelse{\boolean{orig}}{$Z[t_1,\dots,s_m]$}{$Z[t_1,\dots,t_n,s_1,\dots,s_m]$},\ % SGA1-CORR-0014.
+c.q.d.
+
+\begin{remarque}
+\label{II.1.5}
+El entero $n$ que figura en la def.~\Ref{II.1.1} está bien determinado, pues se comprueba
+\marginpar{31}
+inmediatamente que es la dimensión del anillo local de~$x$ en su fibra $f^{-1}\bigl(f(x)\bigr)$. Se llama «dimensión relativa» de~$X$ sobre~$Y$. Se comporta aditivamente respecto de la composición de morfismos.
+\end{remarque}

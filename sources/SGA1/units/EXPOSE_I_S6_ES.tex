@@ -1,0 +1,26 @@
+\section{Aplicación a las extensiones étales de los anillos locales completos}
+\label{I.6}
+
+Este número es un caso particular de resultados sobre los preesquemas formales que deberán figurar en el \emph{multiplodoque}. No obstante, aquí se sale del paso de manera más económica, \ie sin la determinación local explícita de los morfismos étales del \No\Ref{I.7} (que utiliza el \emph{Main Theorem}). Esta es quizá razón suficiente para mantener el presente número (incluso en el \emph{multiplodoque}) en este lugar.
+
+\begin{theoreme}
+\label{I.6.1}
+Sea $A$ un anillo local completo (noetheriano, por supuesto), de cuerpo residual~$k$. Para cada $A$-álgebra~$B$, sea $R(B)=B\otimes_A k$, considerado como $k$-álgebra; depende, pues, funtorialmente de~$B$. Entonces $R$ define una \emph{equivalencia} entre la categoría de las $A$-álgebras \emph{finitas y étales sobre~$A$} y la categoría de las álgebras \emph{separables de rango finito} sobre~$k$.
+\end{theoreme}
+
+Ante todo, el funtor en cuestión es plenamente fiel, como se sigue del hecho más general siguiente:
+
+\begin{corollaire}
+\label{I.6.2}
+Sean $B$ y $B'$ dos $A$-álgebras finitas sobre~$A$. Si $B$ es étale sobre~$A$, entonces la aplicación canónica
+$$
+\Hom_{\textup{$A$-alg}}(B,B')\to
+\Hom_{\textup{$k$-alg}}\bigl(R(B),R(B')\bigr)
+$$
+es biyectiva.
+\end{corollaire}
+
+Se reduce al caso en que $A$ es artiniano (sustituyendo $A$ por~$A/\goth{m}^n$), y entonces se trata de un caso particular de~\Ref{I.5.5}.
+
+Queda por demostrar que, para toda $k$-álgebra finita y separable (por qué no decir étale, que es más corto) $L$, existe una $B$ étale sobre~$A$ tal que $R(B)$ sea isomorfa a~$L$. Puede suponerse que $L$ es una extensión separable de~$k$; como tal, admite un generador~$x$, \ie es isomorfa a un álgebra $k[t]/Fk[t]$, donde $F\in k[t]$ es un polinomio mónico. Se levanta~$F$ a un polinomio mónico $F_1$ de~$A[t]$ y se toma $B=A[t]/F_1A[t]$.
+

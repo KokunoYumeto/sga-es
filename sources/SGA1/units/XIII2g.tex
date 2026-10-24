@@ -1,0 +1,67 @@
+
+\begingroup
+\shorthandoff{<>}% Babel español trata de otro modo ciertos delimitadores de Xy-pic.
+\setcounter{proposition}{10}% Conservar el número visible XIII.2.11 de la fuente.
+\begin{lemme}
+\label{XIII.2.11}
+Sean $f\colon X\to S$ un morfismo propio de presentación finita,
+$D$ un divisor sobre~$X$ de cruzamientos normales relativamente a~$S$,
+$Y=\Supp D$, $U=X-Y$, $i\colon U\to X$ el morfismo canónico,
+$\bar{s}_1\to\bar{s}_2$ un morfismo de especialización de puntos
+geométricos de~$S$, $y_1$ un punto geométrico de
+$Y_{\bar{s}_1}$, $y_2$ un punto geométrico de
+$Y_{\bar{s}_2}$,
+\ifthenelse{\boolean{orig}}
+{de modo que la proyección $z_1$ de~$y_1$ sobre~$X$ sea una
+generalización de la proyección $z_2$ de~$y_2$.}
+{de modo que la proyección $z_1$ de~$y_1$ sobre~$X$ sea una
+generalización de la proyección $z_2$ de~$y_2$; elijamos además un
+morfismo de especialización $y_1\to y_2$ compatible con ella y
+supongamos que $z_1$ y $z_2$ pertenecen a los mismos componentes
+irreducibles de~$D$.}
+Sea $I_{y_1}$
+un subgrupo de inercia de~$\pi_1^{\tame}(\bar{U}_{\bar{s}_1})$ en
+$y_1$. Entonces la imagen de~$I_{y_{1}}$ por el homomorfismo de
+especialización
+$$
+\pi\colon \pi_1^{\tame}(U_{\bar{s}_1})\to
+\pi_1^{\tame}(U_{\bar{s}_2})
+$$
+es
+\marginpar{392}
+un subgrupo de inercia de~$\pi_1^{\tame}(U_{\overline{s}_2})$
+en~$y_2$.
+\end{lemme}
+
+En efecto, sean $\overline{X}$ (\resp $\widetilde{X}$) la localización
+estricta de~$X$ en $y_2$ (\resp en $y_1$),
+$\overline{U}=U \times_X \overline{X}$
+(\resp $\widetilde{U}=U\times_X \widetilde{X}$). Hay un morfismo
+canónico $\widetilde{U}\to \overline{U}$, y de~
+\ifthenelse{\boolean{orig}}
+{\Ref{XIII.1.10}}
+{\Ref{XIII.2.10}}
+resulta el diagrama conmutativo
+$$
+\xymatrix{ \pi_1^{\tame} \left(\widetilde{U}_{\overline{s}_1} \right)
+\ar[r]^{\pi '} \ar[d] & \pi_1^{\tame} \left(
+\overline{U}_{\overline{s}_2} \right) \ar[d] \\ \pi_1^{\tame} \left(
+U_{\overline{s}_1} \right) \ar[r]^{\pi } & \pi_1^{\tame} \left(
+U_{\overline{s}_2} \right) }
+$$
+donde $\pi'$ es el compuesto del homomorfismo canónico
+$\pi_1^{\tame}(\widetilde{U}_ {\overline{s}_1})\to
+\pi_1^{\tame}(\overline{U}_{\overline{s}_1})$, seguido del homomorfismo de
+especialización. Como
+$\pi_1^{\tame}(\widetilde{U}_{\overline{s}_1})$
+(\resp
+\ifthenelse{\boolean{orig}}
+{$\pi_1^{\tame}(\overline{U}_{\overline{s}_1})$}
+{$\pi_1^{\tame}(\overline{U}_{\overline{s}_2})$})
+es un grupo de inercia de
+$\pi_1^{\tame}(U_{\overline{s}_1})$ en~$y_1$
+(\resp de~$\pi_1^{\tame}(U_{\overline{s}_2})$ en~$y_2$), basta
+demostrar que $\pi'$ es sobreyectivo. Pero esto resulta de la expresión
+obtenida en~\Ref{XIII.5.6}.
+
+\endgroup

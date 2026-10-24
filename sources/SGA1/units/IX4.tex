@@ -1,0 +1,343 @@
+\section{Descenso de preesquemas étales: criterios de efectividad}
+\label{IX.4}
+
+\ifthenelse{\boolean{orig}}{}
+{\enlargethispage{.7cm}}%
+\begin{proposition}
+\label{IX.4.1}
+Sea $g\colon S'\to S$ un morfismo fielmente plano y cuasicompacto.
+Entonces~$g$ es un morfismo de descenso efectivo para la categoría
+fibrada de los preesquemas étales, separados y de tipo finito sobre otros.
+\end{proposition}
+
+En efecto, es un morfismo de descenso para la categoría fibrada en
+cuestión, en virtud de~\Ref{IX.3.3} o de~\Ref{VIII.5.2}, a elección.
+Queda por demostrar que, si~$X'$ es étale, separado y de tipo finito
+sobre~$S'$, y está provisto de un dato de descenso respecto de
+$g\colon S'\to S$, este dato es efectivo en la categoría fibrada en
+cuestión. Ahora bien, se ve fácilmente que, si~$X$ es un preesquema
+sobre~$S$, entonces
+\marginpar{236}
+es étale sobre~$S$ si y solo si lo es sobre~$S'$ (en virtud de la
+Definición~\Ref{IX.1.1} y de \loccit \Ref{VIII.3.6}). Por tanto, es
+étale, separado y de tipo finito sobre~$S$ si y solo si~$X'$ lo es
+sobre~$S'$; \cf por ejemplo,~\Ref{IX.2.4}. Basta, pues, cerciorarse de
+la efectividad del dato de descenso sobre
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$X'$}
+para la categoría fibrada de las flechas de~$\Sch$. Ahora bien,~$X'$ es
+cuasiafín sobre~$S'$ en virtud de~\Ref{VIII.6.2}
+y~\Ref{VIII.6.6}. Se puede concluir entonces utilizando
+\Ref{VIII.7.9}. El lector observará, además, que la demostración
+exige menos si uno se limita a los preesquemas étales y \emph{finitos}
+sobre otros, pues entonces se puede invocar directamente
+\Ref{VIII.2.1}.
+
+\begin{corollaire}
+\label{IX.4.2}
+Sean $g\colon S'\to S$ un morfismo universalmente submersivo, $X'$
+\ifthenelse{\boolean{orig}}
+{unos $S'$-preesquemas}
+{un $S'$-preesquema}
+étale, separado y de tipo finito, provisto de un dato de descenso respecto
+de~$g$; $S_1\to S$ un morfismo fielmente plano y cuasicompacto; y~$S_1'$
+y~$X_1'$ los preesquemas deducidos de~$S'$ y~$X'$ por cambio de base, de
+modo que $S_1'\to S_1$ es universalmente submersivo, $X_1'$ es étale,
+separado y de tipo finito sobre~$S_1'$, y está provisto de un dato de
+descenso respecto de $g_1\colon S_1'\to S_1$. El dato de descenso
+sobre~$X'$ es efectivo si y solo si lo es el dato de descenso sobre~$X_1'$.
+\end{corollaire}
+
+Esto resulta de la teoría del descenso en las categorías~\cite{IX.D},
+teniendo en cuenta~\Ref{IX.4.1} y~\Ref{IX.3.3}.
+
+De manera análoga se demuestra:
+
+\begin{corollaire}
+\label{IX.4.3}
+Sean $g\colon S'\to S$ un morfismo universalmente submersivo, $X'$ un
+$S'$-preesquema étale provisto de un dato de descenso respecto de~$g$, y
+$(S_i)$ un recubrimiento de~$S$ por abiertos. El dato de descenso es
+efectivo si y solo si, para todo~$i$, lo es el dato de descenso
+correspondiente sobre
+\ifthenelse{\boolean{orig}}
+{$X_i'=X\times_S S_i$}
+{$X_i'=X'\times_S S_i$},
+respecto del morfismo
+$g_i\colon S_i'=S'\times_S S_i\to S_i$.
+\end{corollaire}
+
+Este último resultado conduce a aislar un criterio local de efectividad:
+
+\enlargethispage{.3cm}
+\begin{proposition}
+\label{IX.4.4}
+Sea $g\colon S'\to S$ un morfismo de presentación finita en el sentido
+de~\Ref{VIII.3.6},
+\marginpar{237}
+y universalmente submersivo; sea $X'$ un preesquema étale y de
+presentación finita sobre~$S'$, provisto de un dato de descenso respecto
+de~$g$; y sea, finalmente,~$a$ un punto de~$S$. Para que exista un entorno
+abierto~$U$ de~$a$ tal que el dato de descenso correspondiente
+sobre~$X_U'=X'\times_S U$ respecto del morfismo
+$$g_U\colon S_U'=S'\times_S U\to S_U=U$$
+sea efectivo, es necesario y suficiente que el dato de descenso
+correspondiente sobre $X_a'=X'\times_S\Spec(\cal{O}_a)$ respecto del
+morfismo
+$$g_a\colon S_a'=S'\times_S\Spec(\cal{O}_a)\to
+S_a=\Spec(\cal{O}_a),$$
+sea efectivo.
+\end{proposition}
+
+La necesidad es trivial; demostremos la suficiencia. Se dispone, pues, de
+un preesquema étale de tipo finito~$X_a$ sobre~$S_a$, y de un isomorfismo
+\begin{equation*}
+\label{eq:IX.4.*}
+\tag{$*$} {X_a'\isomto X_a\times_{S_a}S_a'}
+\end{equation*}
+compatible con los datos de descenso. De acuerdo con un argumento general
+elemental sobre los preesquemas definidos sobre un límite inductivo de
+anillos (aquí, los anillos~$A_f$, donde~$A$ es el anillo de un entorno
+abierto afín de~$a$ y~$f$ recorre los elementos de~$A$ que no pertenecen
+al ideal primo correspondiente a~$a$), se pueden encontrar un entorno
+abierto~$U$ de~$a$, un preesquema étale de tipo finito~$X_U$ sobre
+$U=S_U$, y un $S_a$-isomorfismo
+$X_a\isomto X_U\times_{S_U}S_a$. Además, tomando~$U$ suficientemente
+pequeño, se puede suponer que el isomorfismo~\eqref{eq:IX.4.*} proviene de
+un isomorfismo
+$$
+X_U'\isomto X_U\times_{S_U} S_U';
+$$
+Este último podría no ser compatible con los datos de descenso; sin
+embargo, tras restringir~$U$, será compatible con ellos. Esto concluye la
+demostración.
+
+\begin{corollaire}
+\label{IX.4.5}
+Bajo las condiciones de~\Ref{IX.4.4}, el dato de descenso sobre~$X'$ es
+efectivo si y solo si, para todo $a\in S$, lo es el dato de descenso
+correspondiente sobre~$X_a'$ respecto del morfismo
+$S_a'=S'\times_S\Spec(\cal{O}_a)\to\Spec(\cal{O}_a)$. Cuando~$S$ es
+localmente noetheriano y~$X'$ está separado sobre~$S'$, en el criterio
+precedente se puede sustituir también~$\cal{O}_a$ por su completación.
+\end{corollaire}
+
+La
+\marginpar{238}
+primera afirmación resulta de~\Ref{IX.4.4} y~\Ref{IX.4.3}; la segunda es
+entonces consecuencia de~\Ref{IX.4.2}. Utilizando de nuevo~\Ref{IX.4.2}
+y el hecho de que, para todo anillo local noetheriano~$A$, se puede
+encontrar un anillo local noetheriano completo~$B$ y un homomorfismo local
+$A\to B$ tales que~$B$ sea plano sobre~$A$ y que $B/\goth{m}B$ sea una
+extensión dada del cuerpo residual $k=A/\goth{m}$ de~$A$, se obtiene:
+
+\begin{corollaire}
+\label{IX.4.6}
+Bajo las condiciones de~\Ref{IX.4.4}, supongamos además que~$X'$ está
+separado sobre~$S'$ y que~$S$ es localmente noetheriano. El dato de
+descenso sobre~$X'$ es efectivo si y solo si, para todo preesquema~$S_1$
+sobre~$S$ que sea espectro de un anillo local completo con cuerpo residual
+algebraicamente cerrado, lo es el dato de descenso correspondiente sobre
+$X_1'=X'\times_S S_1$ respecto del morfismo
+$g_1\colon S_1'\to S_1$.
+\end{corollaire}
+
+\begin{theoreme}
+\label{IX.4.7}
+Sea $g\colon S'\to S$ un morfismo finito, sobreyectivo y de presentación
+finita (esta última hipótesis es consecuencia de las demás si~$S$ es
+localmente noetheriano)\footnote{Se puede demostrar que, de hecho, basta
+que~$g$ sea un morfismo \emph{entero}, reduciéndose al caso del texto
+mediante un procedimiento de paso al límite al estilo de EGA IV~8.}.
+Entonces~$g$ es un morfismo de descenso efectivo para la categoría fibrada
+de los preesquemas étales, separados y de tipo finito sobre otros.
+\end{theoreme}
+
+Hay que demostrar que, si~$X'$ es étale, separado y de tipo finito
+sobre~$S'$, y está provisto de un dato de descenso respecto de~$g$, este
+dato es efectivo. Utilizando~\Ref{IX.4.3}, se reduce fácilmente al caso en
+que~$S$ es noetheriano. Gracias a~\Ref{IX.4.5}, se puede suponer, por
+tanto, que~$S$ es el espectro de un anillo local noetheriano y, con mayor
+razón, que
+$$
+\dim S=n<+\infty.
+$$
+Se razona entonces por inducción sobre~$\dim S=n$; la afirmación es trivial
+para $n<0$. Supongamos, pues, que $n\geq 0$ y que el teorema está
+demostrado para las dimensiones $n'<n$. En virtud de~\Ref{IX.4.6}, se
+reduce al caso en que~$S$ es el espectro de un anillo local completo; por
+tanto,~$S'$ es una unión finita de espectros de anillos locales completos.
+Se tiene entonces
+$$
+X'=X_1'\sqcup X_2'
+$$
+donde~$X_1'$ es \emph{finito} sobre~$S'$ y~$X_2'$ no tiene ningún punto
+sobre ninguno de los puntos cerrados
+\marginpar{239}
+de~$S'$. Consideremos los morfismos
+$$
+\xymatrix@C=.5cm{ q_1,q_2\colon X'' \ar@/^2pt/[r] \ar@/_2pt/[r] & X' }
+$$
+correspondientes al dato de descenso, compatibles con
+$\xymatrix@C=.5cm{p_1,p_2\colon S'' \ar@/^2pt/[r] \ar@/_2pt/[r] & S'}$.
+Se ve inmediatamente que
+$$
+X''=q_i^{-1}(X_1')\sqcup q_i^{-1}(X_2')\quad i=1,2
+$$
+es la descomposición canónica análoga de~$X''$ sobre~$S''$, lo que implica
+$q_1^{-1}(X_1')=\allowbreak q_2^{-1}(X_1')$; por consiguiente,~$X_1'$ y
+$X_2'$ están provistos de datos de descenso inducidos. Sea ahora~$T$ el
+abierto de~$S$ complementario de su punto cerrado; entonces
+$T'=S'\times_S T$ es la parte de~$S'$ complementaria del conjunto de
+puntos cerrados, y~$X_2'$, que se encuentra íntegramente sobre~$T'$, está
+provisto de un dato de descenso respecto del morfismo $T'\to T$ inducido
+por~$g$. Como este último es finito y sobreyectivo, y
+$\dim T<\dim S=n$, este dato de descenso es efectivo por la hipótesis de
+inducción. Se ve, pues, que basta demostrar que el dato de descenso
+sobre~$X_1'$ es efectivo; por tanto, se puede suponer ahora que~$X'$ es
+étale y \emph{finito} sobre~$S'$. (N.B.: el razonamiento por inducción es
+innecesario si en el enunciado~\Ref{IX.4.7} se limita uno a los
+recubrimientos étales). Sea entonces~$S_0$ el espectro del cuerpo residual
+de~$A$, sea $S_0'=S'\times_S S_0$, y definamos análogamente~$S_0''$ y
+$S_0'''$ a partir del cuadrado y el cubo fibrados~$S''$ y~$S'''$ de~$S'$
+sobre~$S$. En virtud de~\Ref{IX.1.8}, los morfismos $S_0\to S$,
+$S_0'\to S'$, etc., inducen equivalencias para las categorías de los
+recubrimientos étales de~$S$ y~$S_0$, por una parte, y de~$S'$ y~$S_0'$,
+por otra, \ifthenelse{\boolean{orig}}{etc...}{etc.} De los argumentos
+formales de la teoría del descenso en las categorías~\cite{IX.D} se deduce
+que $g\colon S'\to S$ es un morfismo de descenso efectivo para la
+categoría fibrada de los recubrimientos étales si y solo si lo es
+$g_0\colon S_0'\to S_0$. Pero este es, en efecto, el caso, por ejemplo
+como caso particular de~\Ref{IX.4.1}. Esto concluye la demostración.
+
+\begin{corollaire}
+\label{IX.4.8}
+La conclusión de~\Ref{IX.4.7} sigue siendo válida si solo se supone que
+$S'\to S$ es universalmente submersivo, de tipo finito y cuasifinito,
+siempre que~$S$ sea localmente noetheriano.
+\end{corollaire}
+
+En
+\marginpar{240}
+efecto, en virtud de~\Ref{IX.4.6}, se puede suponer que~$S$ es el espectro
+de un anillo local noetheriano completo. Entonces, en virtud
+de~\Ref{IX.2.5}, existen un morfismo finito y sobreyectivo $S_1\to S$ y un
+$S$-morfismo $S_1\to S'$. Como $S_1\to S$ es un morfismo universal de
+descenso estricto para la categoría fibrada considerada, en virtud
+de~\Ref{IX.4.7}, y $S'\to S$ es un morfismo universal de descenso para
+dicha categoría, \Ref{IX.4.8} resulta de los argumentos formales
+generales~\cite{IX.D}.
+
+\begin{corollaire}
+\label{IX.4.9}
+Sea $g\colon S'\to S$ un morfismo de tipo finito, sobreyectivo y
+universalmente abierto, con~$S$ localmente noetheriano. Entonces~$g$ es un
+morfismo de descenso efectivo para la categoría fibrada de los
+preesquemas étales, separados y de tipo finito sobre otros.
+\end{corollaire}
+
+Procediendo como en~\Ref{IX.4.7}, se reduce al caso en que~$S$ es el
+espectro de un anillo local noetheriano completo~$A$. Sea~$A_1$ una
+$A$-álgebra finita, de espectro~$S_1$, tal que $S_1\to S$ sea finito y
+\emph{sobreyectivo}, y por tanto un morfismo universal de descenso efectivo
+para la categoría fibrada considerada, gracias a~\Ref{IX.4.7}. Se deduce
+entonces de los teoremas generales~\cite{IX.D} que~$g$ es un morfismo de
+descenso efectivo para la categoría fibrada considerada si y solo si lo es
+el morfismo correspondiente
+$g_1\colon S_1'=S'\times_S S_1\to S_1$. Como este último satisface las
+mismas hipótesis que~$g$, se reduce la cuestión a demostrar~\Ref{IX.4.9}
+para~$S_1$ en lugar de~$S$. Tomando primero como~$A_1$ el producto directo
+de los $A/\goth{p}_i$, para los ideales primos mínimos~$\goth{p}_i$
+de~$A$, se reduce al caso en que~$A$ es un \emph{dominio de integridad}.
+Se demuestra entonces\footnote{\Cf EGA IV~14.3.13 y~14.5.4.} que existe un
+subesquema íntegro~$S_1$ de~$S'$, cuasifinito sobre~$S$ y dominante
+sobre~$S$, que pasa por un punto de la fibra de~$S'$ sobre el punto
+cerrado~$y$ de~$S$ (gracias a que~$S'$ es universalmente abierto y de tipo
+finito sobre el esquema local noetheriano íntegro~$S$, y a que
+$S_y'\neq\emptyset$). Como~$A$ es completo, $S_1$ es finito sobre~$S$ y,
+como domina~$S$, el morfismo $S_1\to S$ es sobreyectivo. Sustituyendo una
+vez más~$S$ por~$S_1$, se reduce al caso en que~$S'$ tiene una sección
+sobre~$S$, caso en el cual el enunciado es trivial.
+
+\begin{theoreme}
+\label{IX.4.10}
+Sea $g\colon S'\to S$ un morfismo finito, radicial, sobreyectivo y de
+presentación finita (esta última condición es superflua si~$S$ es
+localmente noetheriano\footnote{Basta incluso que~$g$ sea entero, radicial
+y sobreyectivo, como se ve mediante una reducción fácil al caso del texto,
+al estilo de EGA~IV~8; \cf SGA~4 VIII~1.1.}).
+\marginpar{241}
+Entonces el funtor de imagen inversa induce una equivalencia de la categoría
+de los preesquemas étales sobre~$S$ con la categoría de los preesquemas
+étales sobre~$S'$.
+\end{theoreme}
+
+Como los morfismos diagonales de~$S'$ en $S'\times_S S'$ y
+$S'\times_S S'\times_S S'$ son inmersiones sobreyectivas y, por tanto,
+inducen en virtud de~\Ref{IX.1.9} equivalencias de las categorías de los
+preesquemas étales sobre~$S'\times_S S'$ \resp
+$S'\times_S S'\times_S S'$ con la categoría de los preesquemas étales
+sobre~$S'$, se deduce de los argumentos formales del descenso~\cite{IX.D}
+que todo~$X'$ étale sobre~$S'$ está provisto de un único dato de descenso
+respecto de $g\colon S'\to S$. Por tanto,~\Ref{IX.3.3} implica que el
+funtor de imagen inversa por~$g$, de la categoría de los preesquemas étales
+sobre~$S$ en la categoría de los preesquemas étales sobre~$S'$, es
+\emph{plenamente fiel}. Queda por demostrar que es esencialmente
+sobreyectivo, es decir, que todo~$X'$ étale sobre~$S'$ es isomorfo a la
+imagen inversa de un~$X$ étale sobre~$S$. Como la cuestión es evidentemente
+local sobre~$S$ \emph{y sobre}~$X'$, se puede suponer que $S$,~$S'$ y~$X'$
+son afines. Pero entonces~$X'$ está separado y es de tipo finito
+sobre~$S'$, y se puede aplicar el criterio de efectividad~\Ref{IX.4.7}.
+
+\begin{corollaire}
+\label{IX.4.11}
+La conclusión de
+\ifthenelse{\boolean{orig}}
+{~\Ref{IX.4.9}}
+{~\Ref{IX.4.10}}
+sigue siendo válida si se sustituye la hipótesis sobre~$g$ por la
+siguiente: $g$ es fielmente plano, cuasicompacto y radicial.
+\end{corollaire}
+
+La misma demostración, invocando~\Ref{IX.4.1} en lugar
+de~\Ref{IX.4.7}.
+
+Se observará que la demostración de~\Ref{IX.4.7} es
+\og elemental\fg{} en cuanto no utiliza los teoremas
+\ifthenelse{\boolean{orig}}
+{}
+{de}
+finitud y de comparación para los morfismos propios (EGA~III~3,~4,~5).
+No sucede ya lo mismo con el resultado siguiente:
+
+\begin{theoreme}
+\label{IX.4.12}
+Sea $g\colon S'\to S$ un morfismo propio, sobreyectivo y de presentación
+finita (esta última hipótesis es consecuencia de la primera si~$S$ es
+localmente noetheriano). Entonces~$g$ es un morfismo de descenso efectivo
+para la categoría fibrada de los recubrimientos étales de preesquemas.
+\end{theoreme}
+
+En virtud de~\Ref{IX.3.3} y de~\Ref{IX.2.2}, se reduce la cuestión a
+demostrar que, para todo recubrimiento étale~$X'$ sobre~$S'$, provisto de
+un dato de descenso respecto de $g\colon S'\to S$, este dato es efectivo.
+Utilizando~\Ref{IX.4.3}, se reduce fácilmente
+\marginpar{242}
+al caso en que~$S$ es noetheriano y, utilizando~\Ref{IX.4.6}, se puede
+suponer, por tanto, que~$S$ es el espectro de un anillo local noetheriano
+\emph{completo}~$A$. Introduzcamos~$S''$ y~$S'''$ como de costumbre; sea
+$S_0$ el espectro del cuerpo residual de~$A$, y sean~$S_0'$,~$S_0''$ y
+$S_0'''$ los preesquemas deducidos de~$S'$,~$S''$ y~$S'''$ por el cambio
+de base $S_0\to S$, es decir, las fibras de~$S'$,~$S''$ y~$S'''$ en el
+punto cerrado de~$S$. Según~\Ref{IX.1.10}, los morfismos $S_0\to S$,
+$S_0'\to S'$, etc., inducen equivalencias de la categoría de los
+recubrimientos étales sobre el esquema de llegada con la categoría de los
+recubrimientos étales sobre el esquema de origen. En consecuencia,
+$g\colon S'\to S$ es un morfismo de descenso estricto para la categoría
+fibrada de los recubrimientos étales de preesquemas si y solo si lo es
+$g_0\colon S_0'\to S_0$, lo que, en efecto, ocurre en virtud
+de~\Ref{IX.4.1}. Esto concluye la demostración de~\Ref{IX.4.12}. (En este
+razonamiento solo se necesitaba de~\Ref{IX.1.10} el hecho de que el funtor
+considerado allí es \emph{plenamente fiel}, lo cual \emph{no} utiliza el
+teorema de existencia de haces coherentes en geometría algebraica.)

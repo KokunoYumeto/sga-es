@@ -1,0 +1,64 @@
+
+\section[Propiedad de levantamiento]{Propiedad de levantamiento característica de los homomorfismos formalmente lisos}
+\label{III.2}
+
+\begin{theoreme}
+\label{III.2.1}
+Sea $A\to B$ un homomorfismo local de anillos locales que define una extensión residual finita. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)]
+\marginpar{63}
+$B$ es formalmente lisa sobre~$A$.
+\item[(ii)] Para todo homomorfismo local $A\to C$, donde $C$ es un anillo local \emph{completo}, todo ideal~$J$ de~$C$ contenido en
+\ifthenelse{\boolean{orig}}
+{$r(C)$}
+{$\goth{r}(C)$},
+y todo $A$-homomorfismo local $B\to C/J$, existe un $A$-homomorfismo (necesariamente local) $B\to C$ que lo levanta.
+\item[(iii)] Para toda $A$-álgebra~$C$ (no necesariamente un anillo noetheriano), todo ideal nilpotente~$J$ de~$C$ y
+\ifthenelse{\boolean{orig}}
+{todo $A$-homomorfismo continuo $B\to C$}
+{todo $A$-homomorfismo continuo $B\to C/J$}
+(es decir, que se anula en una potencia
+\ifthenelse{\boolean{orig}}
+{de~$r(B)$}
+{de~$\goth{r}(B)$}),
+existe un $A$-homomorfismo $B\to C$ (necesariamente también continuo) que lo levanta.
+\item[(iv)] El mismo enunciado que en \textup{(ii)} y \textup{(iii)}, pero siendo~$C$ un anillo local artiniano finito sobre~$A$.
+\item[(iv~bis)] Como \textup{(iv)}, pero suponiendo además que~$J$ es de cuadrado nulo.
+\end{enumerate}
+\end{theoreme}
+
+\begin{remarquestar}
+En lo que resta de este Exposé solo utilizaremos la implicación (iv)$\To$(i), o bien (iv~bis)$\To$(i); la implicación directa (i)$\To$(ii) se demostrará por otro método en el número siguiente cuando~$B$ sea una localización de una $A$-álgebra de tipo finito. Recordemos que, en la «buena» teoría de los teoremas de Cohen\footnote{\Cf EGA $\mathrm{0}_{\textup{IV}}$ 19.3, 19.8}, la propiedad~(ii) o~(iii) pasa a ser la definición de los homomorfismos formalmente lisos, mientras que~\Ref{III.1.1} pasa a ser una propiedad característica válida únicamente cuando la extensión residual es finita. Conviene advertir que ninguna de las propiedades~(ii) y~(iii) es más general que la otra. Podría darse una propiedad equivalente que englobase a ambas introduciendo un anillo linealmente topologizado~$C$, \emph{separado} y \emph{completo}, un ideal \emph{cerrado topológicamente nilpotente} de~$C$ y un homomorfismo continuo $A\to C$ (que hace, por tanto, de~$C$ una $A$-álgebra topológica); dejamos esta modificación al lector.
+\end{remarquestar}
+
+\subsubsection*{Demostración de~\Ref{III.2.1}}
+Demostraremos (i)$\To$(iii)$\To$(ii), y después (iv)$\To$(i). Como (ii)$\To$(iv) es trivial y la equivalencia entre~(iv) y~(iv~bis) se obtiene por una inducción inmediata sobre el entero~$n$ tal que $J^n=0$, esto concluirá la demostración.
+
+(i)$\To$(iii). Una inducción inmediata nos reduce al caso en que $J^2=0$.
+\ifthenelse{\boolean{orig}}
+{Como $C$ es finita sobre~$A$, existe una potencia $\goth{m}^q$ del ideal maximal de~$A$ que anula~$C$.}
+{Como $u$ es continua y $J^2=0$, existe una potencia $\goth{m}^q$ del ideal maximal de~$A$ cuya imagen en~$C$ es nula.}
+Dividiendo por~$\goth{m}^q$ y observando que $B/\goth{m}^qB$ sigue siendo formalmente lisa
+\marginpar{64}
+sobre $A/\goth{m}^q$ por~\Ref{III.1.4}~(i), puede suponerse que~$A$ es artiniano.
+Como $B$ es plana sobre~$A$ por~\Ref{III.1.3}, $B$ \emph{es libre sobre}~$A$, pues~$A$ es artiniano. Existe, por tanto, un \emph{homomorfismo de} $A$-\emph{módulos}
+$$
+w\colon B\to C
+$$
+que levanta el homomorfismo dado $u\colon B\to C/J$. Pongamos
+$$
+f(x,y)=w(xy)-w(x)w(y)\qquad(x,y\in B).
+$$
+Entonces $f(x,y)\in J$ y, por tanto, $f$ es una aplicación $A$-bilineal de~$B\times B$ en~$J$. Para que exista un levantamiento $v\colon B\to C$ de~$u$ que sea un homomorfismo de álgebras, es necesario y suficiente que exista una aplicación $A$-lineal $g\colon B\to J$ tal que $v=w+g$ sea un homomorfismo de álgebras, lo que se escribe
+\begin{align*}
+g(1)&=1-w(1),\\
+\ifthenelse{\boolean{orig}}
+{g(x,y)}
+{g(xy)}-u(x)g(y)-u(y)g(x)&=-f(x,y)\qquad(\text{para }x,y\in B).
+\end{align*}
+Este es un sistema de ecuaciones \emph{lineales} en $\Hom_A(B,J)$, con segundos miembros en~$J$; por tanto, tiene solución si y solo si la tiene el sistema correspondiente en $\Hom_A(B,J)\otimes_A A'$, con segundos miembros en $J'=J\otimes_A A'$, donde~$A'$ designa un álgebra fielmente plana sobre~$A$. Sea ahora~$A'$ una $A$-álgebra local finita y libre tal que $B'=B\otimes_A A'$ sea un álgebra de series formales sobre~$A'$ (N.B. en nuestra demostración puede suponerse que~$A$ y~$B$ son completos, como se comprueba de inmediato). Como $A'$ es libre de tipo finito sobre~$A$, se tiene
+$$
+\Hom_A(B,J)\otimes_A A'=\Hom_{A'}(B',J'),
+$$
+y se comprueba que el sistema de ecuaciones obtenido en $\Hom_{A'}(B',J')$ es el que determina los homomorfismos de $A'$-álgebras $B'\to C'=C\otimes_A A'$ que levantan el homomorfismo $u'\colon B'\to C'/J'$ deducido de~$u$ por extensión de escalares, «corrigiendo» mediante un homomorfismo de $A'$-módulos $g'\colon B'\to J'$ el homomorfismo de $A'$-módulos $w'\colon B'\to C'$ deducido de~$w$ por extensión de escalares. (Obsérvese que~$B$ genera~$B'$ como $A'$-módulo). Quedamos así reducidos a demostrar~(iii) cuando~$B$ es un \emph{álgebra de series formales} sobre~$A$, $B=A[[t_1,\dots,t_n]]$. Levantemos de manera arbitraria las imágenes de los~$t_i$ en~$C/J$ a elementos~$z_i$ de~$C$. Como los $z_i$ módulo~$J$ son nilpotentes (pues $u\colon B\to C/J$ es continua), también lo son los~$z_i$ (ya que~$J$ es nilpotente); por tanto, los~$z_i$ definen un homomorfismo continuo de $A$-álgebras topológicas de~$B$ en~$C$ provisto de la topología discreta, que evidentemente levanta~$u$, como se quería demostrar.

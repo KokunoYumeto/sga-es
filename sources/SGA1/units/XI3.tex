@@ -1,0 +1,142 @@
+\section{Conos proyectivos, ejemplo de Zariski}
+\label{XI.3}
+\marginpar{290}
+
+Sea, como antes y para simplificar, $k$ un cuerpo algebraicamente cerrado,
+y sea $V$ un $k$-esquema proyectivo conexo, subesquema cerrado
+de~$\PP^r_k$, que, si se desea, puede suponerse no singular. Sean
+$Y=\hat C$ el cono proyectivo sobre~$V$, $y_0$ su vértice,
+$X=\hat C_V$ la clausura proyectiva usual del fibrado vectorial
+$C_V=\VV(\cal{O}_V(1))$ asociado a~$\cal{O}_V(1)$ y, por último,
+$$
+f\colon X\to Y
+$$
+el morfismo canónico que contrae a un punto la sección nula $X_0$
+de~$C_V$ en~$X$ (EGA~II~8.6.4). Como $X$ es un fibrado localmente trivial
+sobre~$V$, con fibras $\PP^1$ y, por tanto, simplemente conexas, el
+morfismo $p\colon X\to V$ induce, en virtud
+\ifthenelse{\boolean{orig}}
+{de~(\Ref{XI.4}.)}
+{de~(\Ref{X.1.4})}
+un isomorfismo:
+$$
+\pi_1(X)\isomto\pi_1(V)\quoi.
+$$
+Como $p$ induce un isomorfismo $X_0\to V$, se concluye que
+\emph{un recubrimiento étale de~$X$ está completamente descompuesto si y
+solo si su restricción a~$X_0$ lo está}. Ahora bien, para todo recubrimiento
+étale $Y'$ de~$Y$, la imagen inversa $X'=X\times_Y Y'$ es un recubrimiento
+étale de~$X$ completamente descompuesto sobre la fibra~$X_0$ y, por tanto,
+trivial. Como el homomorfismo $\pi_1(X)\to\pi_1(Y)$ es sobreyectivo
+(\Ref{IX.3.4}), se concluye que
+$$
+\pi_1(Y)=(e)
+$$
+en otras palabras, \emph{todo cono proyectivo es simplemente conexo.}
+(N.B.: en característica~$0$, el mismo resultado sigue siendo válido si se
+toma como~$Y$ el cono afín.)
+
+Supongamos ahora que $V$ es regular, \ie lisa sobre~$k$; entonces $X$ es
+regular y, para una inmersión proyectiva conveniente de~$V$, se obtiene un
+cono proyectivo~$Y$ \emph{normal}. Si $V$ no es simplemente conexa, y por
+tanto tampoco lo es~$X$, sea $X'$ un recubrimiento étale conexo no trivial
+de~$X$. Como las fibras de~$X$ sobre los puntos $y\in Y$ distintos de~$y_0$
+se reducen a un punto, se ve que la restricción de~$X'$ a estas fibras
+(en particular, a la fibra
+\marginpar{291}
+genérica) es trivial; sin embargo,
+\ifthenelse{\boolean{orig}}
+{$X$}
+{$X'$}
+no proviene por imagen inversa de un recubrimiento étale de~$Y$, pues $Y$
+es simplemente conexa y $X'$ estaría completamente descompuesto. Esto
+muestra que (\Ref{X.1.3} y~\Ref{X.1.4}) se vuelven falsos si se sustituye
+la hipótesis de que $f$ es separable por la más débil de que sus fibras son
+esquemas algebraicos separables (o incluso lisos) sobre los~$\kres(s)$.
+Obsérvese asimismo que los grupos fundamentales de las fibras geométricas
+$\overline X_y$ para $y\neq y_0$ se reducen evidentemente a~$(e)$, puesto
+que esas fibras se reducen a un punto, mientras que $\pi_1(X_0)\neq e$;
+por tanto, el teorema de semicontinuidad (\Ref{X.2.4}) también falla
+para~$f$.
+
+Indiquemos, por último, el ejemplo señalado por Zariski que hace fallar
+estos mismos teoremas cuando se sustituye en ellos la hipótesis de que $f$
+es separable por la de que $f$ es plano. Sea $f\colon X\to Y$ un morfismo
+de una superficie proyectiva no singular a la recta racional $Y=\PP^1$,
+tal que
+\ifthenelse{\boolean{orig}}
+{$K=k(x)$}
+{$K=k(X)$}
+sea una extensión «regular», \ie primaria y separable, de~$k(f)$ (\ie la
+fibra genérica geométrica es conexa y separable), y tal que el divisor
+$(f)=X_0-X_\infty$ sea
+\ifthenelse{\boolean{orig}}
+{un múltiplo $n$.º de un divisor}
+{$n$ veces un divisor}
+(donde $n$ es un entero primo con la característica). Es posible construir
+tales ejemplos en toda característica. Sea $X'$ la normalización de~$X$ en
+$K(f^{1/n})$, donde $K=k(X)$ es el cuerpo de funciones de~$X$. De la
+hipótesis sobre~$(f)$ resulta que $X'$ es étale sobre~$X$. Sea $Y'$ el
+normalización de~$Y$ en $k(t)(t^{1/n})$; está ramificada sobre~$Y$ exactamente
+en los puntos $t=0$ y $t=\infty$,
+\ifthenelse{\boolean{orig}}
+{y la restricción $X'|f^{-1}(U)$ es isomorfa a la imagen inversa de~$Y'|U$.}
+{y, poniendo $U=Y-\{0,\infty\}$, la restricción $X'|f^{-1}(U)$ es isomorfa a la imagen inversa de~$Y'|U$.}
+En particular, la restricción de~$X'$ a la fibra genérica \emph{geométrica}
+de~$X$ sobre~$Y$ se descompone completamente. Sin embargo, $X'$ no es
+isomorfo a la imagen inversa de un recubrimiento étale de~$Y$, pues se ve
+enseguida que este último sería necesariamente~$Y'$, lo cual es absurdo
+porque $Y'$ está ramificado sobre~$Y$\kern2pt\footnote{Puede observarse,
+desde el punto de vista de la «topología étale» (SGA~4~VII), que en este
+ejemplo $\R^1(f_{\et})_*(\ZZ/n\ZZ)$ es «no separado» sobre
+\ifthenelse{\boolean{orig}}{$S$}{$Y$}.
+}.
+
+He aquí (siguiendo a Serre) una manera sencilla de realizar las condiciones
+de este ejemplo, inspirada en~\cite[\No 20]{XI.5}: se toma como~$n$ un
+número primo $\geq5$, distinto de la característica, y se hace actuar
+$G=\ZZ/n\ZZ$ sobre $\underline{k}^4$%
+\ifthenelse{\boolean{orig}}
+{}
+{{\renewcommand{\thefootnote}{*}\addtocounter{footnote}{-1}\kern1pt\footnote{\lcrochetbf Añadido en 2003: $\underline{k}^4$ designa el espacio afín de dimensión~$4$ sobre~$k$.\rcrochetbf}}}
+multiplicando las coordenadas por cuatro caracteres distintos de~$G$ (lo
+cual es posible porque $n\geq5$). Entonces $G$ actúa sobre el espacio
+proyectivo $\PP^3_k$, y los únicos puntos fijos por~$G$ son los cuatro
+puntos correspondientes a los ejes coordenados. La superficie $X'$ de
+ecuación
+\ifthenelse{\boolean{orig}}
+{$x^4+y^4+z^4+t^4=0$}
+{$x^n+y^n+z^n+t^n=0$}
+es lisa sobre
+\marginpar{292}
+$k$ (criterio jacobiano) y no contiene ninguno de los puntos fijos; por
+tanto, como $G$ es de orden primo,
+\ifthenelse{\boolean{orig}}
+{actúa sobre~$X$ «sin puntos fijos», \ie $X$ es un recubrimiento principal de~$X=X'/G$ de grupo~$G$.}
+{actúa sobre~$X'$ «sin puntos fijos», \ie $X'$ es un recubrimiento principal de~$X=X'/G$ de grupo~$G$.}
+Sea $g=x/y$ en $k(X')=K'$; es un generador de Kummer de~$K'$ sobre
+$K=k(X)$ si los caracteres elegidos eran~$\chi^i$, $i=0,1,2,3$, con
+$\chi$ un carácter primitivo. Sea $f$ su potencia $n$-ésima, que es un
+elemento de~$K$. Se ve enseguida que $K'$ es una extensión regular
+de~$k(g)$; esto resulta de que la curva plana de ecuación homogénea en
+$U,T,Z$,
+$T^n+Z^n+(1+g^n)U^n=0$, es lisa sobre~$k(g)$ (criterio jacobiano), y de que
+se sabe que toda curva plana es conexa. Por otra parte,
+$k(f)=K\cap k(g)$, pues el segundo miembro es una extensión de~$k(f)$
+contenida en la extensión $k(g)$ de grado primo y
+\ifthenelse{\boolean{orig}}{distinto}{distinto}
+de~$k(g)$ (pues $g\not\in K$). Esto implica que $K$ es una extensión regular
+de~$k(f)$. Finalmente, el divisor de~$f$ sobre~$X$ es $n$ veces un divisor,
+pues su imagen inversa sobre~$X'$ es el divisor de~$g^n$, luego es $n$
+veces un divisor, y puede hacerse el descenso porque $X'$ es étale
+sobre~$X$. Se habría terminado si la aplicación racional
+$f\colon X\to\PP^1$ fuese un morfismo, es decir, si los divisores de los
+ceros y de los polos de~$f$ no se intersecaran. De hecho, se comprueba
+fácilmente (mirando de nuevo sobre~$X'$) que los dos divisores en cuestión
+son respectivamente $n$ veces sendas curvas lisas sobre~$k$ que se cortan transversalmente en
+un punto~$a$. Sustituyendo ahora $X$ por el esquema obtenido mediante una
+explosión en~$a$, siguen verificándose las condiciones anteriores
+($\divisor(f)$ divisible por~$n$, y $k(X_1)=k(X)$ extensión regular de
+\ifthenelse{\boolean{orig}}{$k(X)$}{$k(f)$})
+pero, además, $f$ es un \emph{morfismo} $X_1\to\PP^1$; por tanto, se está
+en las condiciones buscadas.
