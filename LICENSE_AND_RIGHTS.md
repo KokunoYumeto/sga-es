@@ -1,13 +1,9 @@
-# Rights, provenance, attribution and non-endorsement
+# Derechos, procedencia y atribución
 
-Historical copyright notices appearing in reproduced leaves, sources or
-metadata are retained solely as historical provenance. They do not restrict
-this independent mathematical edition or its publication.
+En la medida en que el editor tenga derechos sobre la traducción, las correcciones y la composición producidas por
+IA, quedan dedicados al dominio público bajo CC0 1.0 ([RIGHTS_NOTICE.md](RIGHTS_NOTICE.md)). Esto no afecta a los
+derechos sobre las obras originales ni concede permiso para usarlas.
 
-No blanket public-domain or open-license claim is made. The release preserves
-the factual author/source relationship, credits, bibliographical provenance
-and branch history. It is an independent machine-assisted scholarly edition
-and is not endorsed by the original authors, publishers or institutions.
-
-Zenodo license metadata is deliberately `notspecified`; that value neither
-removes historical attribution nor invents rights in underlying materials.
+Los avisos históricos de copyright de las fuentes se conservan como procedencia. La edición conserva los autores y
+su relación con las fuentes, los créditos, la procedencia bibliográfica y el historial de las ramas. Es una edición
+independiente: no la respaldan los autores originales, sus editores ni las instituciones.

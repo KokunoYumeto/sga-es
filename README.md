@@ -1,42 +1,77 @@
-# Séminaires de Géométrie Algébrique / Seminarios de Geometría Algebraica
+# SGA en español: el *Séminaire de géométrie algébrique du Bois Marie* de Grothendieck (SGA 1–7)
 
-## Fuentes editables
+Una traducción al español del *Séminaire de géométrie algébrique du Bois Marie* (SGA), los seminarios de geometría
+algebraica que Alexander Grothendieck y sus colaboradores dirigieron en el IHÉS entre 1960 y 1969 (SGA 1, SGA 2,
+SGA 3, SGA 4, SGA 5, SGA 6 y SGA 7), junto con el SGA 4½ de Pierre Deligne (1977): trece libros completos, reunidos
+también en un único lector PDF con enlaces entre los volúmenes.
 
-[SGA 1](sources/SGA1/README.md) · [SGA 7 II](sources/SGA7II/README.md). Las fuentes incluyen los textos matemáticos, sus dependencias y las atribuciones de las ediciones originales.
+## Cómo se hizo
 
-## Related editions
+La traducción al español está producida por IA, y también las correcciones, la edición y la composición. Los
+registros conservados no indican con seguridad el modelo que hizo la traducción. La reconstrucción de los lectores,
+las correcciones y la validación de la versión del 23 de septiembre de 2026 (que añade la nueva edición de SGA 4½)
+las hizo OpenAI Codex (GPT-5.6 Sol, esfuerzo Ultra). La versión del 27 de agosto de 2026 aplicó 1.606 correcciones
+aceptadas y unificó la terminología de geometría algebraica según textos matemáticos escritos en español.
 
-Each link goes directly to a peer edition repository; there is no central hub. Coverage describes public releases and may trail local production.
+Varios volúmenes tienen dos ramas: la actual, con las correcciones aceptadas, y la diplomática, que conserva las
+lecturas del texto impreso. El lector acumulado usa la rama actual.
 
-| Edition | Language | Public scope |
+## Estado
+
+La traducción está completa. Puede contener errores.
+
+## Otras ediciones de SGA
+
+- Inglés: [sga-en](https://github.com/KokunoYumeto/sga-en): completa (SGA 1–7 y SGA 4½); de SGA 6, solo la última
+  parte se ha cotejado por completo con el texto francés.
+- Portugués de Brasil: [ega-fga-sga-pt-br](https://github.com/KokunoYumeto/ega-fga-sga-pt-br): SGA 4½ completo;
+  SGA 3, exposiciones VIII y IX; SGA 5, exposiciones III, III B, X y XV.
+- Vietnamita: [ega-fga-sga-vi](https://github.com/KokunoYumeto/ega-fga-sga-vi): todavía sin volúmenes de SGA.
+
+Todas las ediciones de EGA, FGA y SGA de este proyecto figuran en
+[ega-fga-sga](https://github.com/KokunoYumeto/ega-fga-sga).
+
+## Contenido
+
+Los PDF están en la publicación del
+[23 de septiembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-09-23-r20):
+
+- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf)
+  con los trece libros; [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno.
+- Lectores por volumen:
+
+| Volumen | Edición actual | Edición diplomática |
 |---|---|---|
-| [EGA — French](https://github.com/KokunoYumeto/ega-fr) | French | Complete declared EGA I–IV scope |
-| [EGA — English](https://github.com/KokunoYumeto/ega-en) | English | Complete declared EGA 0–IV scope |
-| [EGA/FGA — Spanish](https://github.com/KokunoYumeto/ega-fga-es) | Spanish | Validated partial EGA; FGA tranches A and B |
-| [SGA — Spanish](https://github.com/KokunoYumeto/sga-es) | Spanish | Complete 13-book linked edition |
-| [SGA — English](https://github.com/KokunoYumeto/sga-en) | English | Complete published scope; SGA 6 has mixed source alignment |
-| [EGA/FGA/SGA — Brazilian Portuguese](https://github.com/KokunoYumeto/ega-fga-sga-pt-br) | Brazilian Portuguese | Validated partial release, including complete EGA III-1 and SGA 5 readers |
-| [EGA/FGA/SGA — Vietnamese](https://github.com/KokunoYumeto/ega-fga-sga-vi) | Vietnamese | Validated partial release; current public readers are EGA |
-| [FGA — English (external)](https://github.com/thosgood/fga) | English | Independently maintained external edition |
+| SGA 1 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/01_SGA1_ES_COMPLETE_READER.pdf) | |
+| SGA 2 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/02_SGA2_ES_COMPLETE_READER.pdf) | |
+| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4½ | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/01_SGA4half_ES_Actual.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/04_SGA4half_ES_Diplomatica.pdf) |
+| SGA 5 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
+| SGA 6 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/04_SGA6_ES_COMPLETE_READER.pdf) | |
+| SGA 7, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 7, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
 
-Versión `2026-08-27-r19` · DOI de versión `10.5281/zenodo.22133685` · DOI conceptual estable `10.5281/zenodo.21923955`.
+SGA 3, tomos I y III, solo está en el lector acumulado. Las fuentes LaTeX de todos los volúmenes están en
+[05_SGA_ES_EDITABLE_SOURCES.zip](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-09-23-r20/05_SGA_ES_EDITABLE_SOURCES.zip);
+este repositorio contiene las de [SGA 1](sources/SGA1/README.md) y [SGA 7, tomo II](sources/SGA7II/README.md).
+[SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) describe el alcance de SGA 3.
 
-## Edición española acumulativa completa
+## Fuentes y créditos
 
-El lector enlazado de 4.451 páginas contiene los trece libros en orden canónico: SGA 1; SGA 2; SGA 3, tomos I–III; SGA 4, tomos I–III; SGA 4½; SGA 5; SGA 6; y SGA 7, tomos I–II. SGA 3, tomo I ocupa las páginas 502–1193, tomo II las páginas 1194–1603 y tomo III las páginas 1604–2077.
+- Los volúmenes originales conservan sus autores, participantes y editores, nombrados en cada texto.
+- SGA 1: la edición [arXiv math/0206203v2](https://arxiv.org/abs/math/0206203v2), recomposición LaTeX de los
+  voluntarios del proyecto dirigido por Bas Edixhoven, con las notas de Michel Raynaud y la contribución de la Société
+  mathématique de France.
+- SGA 3, tomo I: el texto matemático original (exposiciones I–VII_B e índice); la presentación editorial de la
+  reedición de 2011 de la Société mathématique de France (pp. v–xviii), obra de sus editores, no forma parte de esta
+  edición.
 
-r19 sucede a r18 (`10.5281/zenodo.22087758`) en el mismo linaje. Integra las 1.606 decisiones terminales ACCEPT de la cadena canónica y normaliza terminología de geometría algebraica contra un corpus nativo español. Conserva 34 activos de r17 byte por byte y sustituye 5 activos bajo los mismos nombres; no añade ni elimina ninguno. El inventario contiene exactamente 39 activos.
+## Derechos
 
-
-Los avisos históricos de copyright son únicamente procedencia. No se afirma dominio público ni licencia abierta general. Se preservan atribución, relaciones entre autores y fuentes, procedencia y no aprobación.
-
-
-## Derechos y autoría
-
-Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Todo aquello sobre lo que el editor tenga derechos en estas ediciones queda dedicado al dominio público bajo CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/deed.es). Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
-
-Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en [NUMDAM](https://www.numdam.org/). Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
-
-Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede [abrir una incidencia en GitHub](https://github.com/KokunoYumeto/sga-es/issues). El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
-
-La traducción al español está producida por IA. Las correcciones, la edición y la composición también están producidas por IA. El responsable de la publicación no tradujo el texto. Se conservan la autoría y las atribuciones de las obras originales y de las contribuciones heredadas; no se atribuyen a la IA. Los modelos documentados se identifican en cada edición.
+En la medida en que el editor tenga derechos sobre la traducción, las correcciones y la composición producidas por
+IA, quedan dedicados al dominio público bajo
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Esto no afecta a los derechos sobre las obras
+originales ni concede permiso para usarlas. Aviso completo: [RIGHTS_NOTICE.md](RIGHTS_NOTICE.md).

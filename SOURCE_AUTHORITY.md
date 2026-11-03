@@ -1,12 +1,21 @@
-# Source authority and translation scope
+# Fuentes y alcance de la traducción
 
-Version `2026-08-27-r19` is the complete cumulative Spanish SGA edition in the existing Zenodo concept `10.5281/zenodo.21923955` and GitHub repository `KokunoYumeto/sga-es`. The 4,451-page reader integrates all thirteen mathematical books in canonical order. Editable sources, reversible correction branches, and audit/provenance evidence remain bound in assets 05 and 06; the global SHA-256 manifest is asset 07.
+La versión `2026-08-27-r19` es la edición española acumulada y completa de SGA en el repositorio
+`KokunoYumeto/sga-es`; la versión `2026-09-23-r20` añade la nueva edición de SGA 4½. El lector de 4.451 páginas
+reúne los trece libros matemáticos en orden canónico. Las fuentes editables, las ramas de corrección reversibles y
+las pruebas de revisión y procedencia están en los archivos 05 y 06 de la publicación; el manifiesto SHA-256 global
+es el archivo 07.
 
-## SGA 3 scope
+## Alcance de SGA 3
 
-SGA 3 Tome I covers the complete original mathematical corpus C005-C616 (Exposés I-VII_B and index). The independently authored 2011 SMF editorial wrapper, printed pp. v-xviii, is outside that edition's scope. Tome II covers Exposés VIII-XVIII and the notation index. Tome III covers its front matter, Exposés XIX-XXVI, and terminal indices. All three are integrated at cumulative pages 502-2077.
+SGA 3, tomo I comprende el texto matemático original completo (exposiciones I–VII_B e índice). La presentación
+editorial de la reedición de 2011 de la Société mathématique de France (pp. v–xviii), obra independiente de sus
+editores, queda fuera de esta edición. El tomo II comprende las exposiciones VIII–XVIII y el índice de notaciones; el
+tomo III, sus preliminares, las exposiciones XIX–XXVI y los índices finales. Los tres ocupan las páginas 502–2077 del
+lector acumulado.
 
-## r19 Canon and terminology revision
+## Revisión r19
 
-
-Historical copyright notices are provenance only and do not restrict this independent mathematical edition or publication. No blanket public-domain or open-license claim is made. Attribution, author/source relationships, provenance, reversible branch history, and non-endorsement are preserved.
+La versión r19 aplicó 1.606 correcciones aceptadas y unificó la terminología de geometría algebraica según textos
+matemáticos escritos en español. Los avisos históricos de copyright se conservan como procedencia; los derechos se
+indican en [RIGHTS_NOTICE.md](RIGHTS_NOTICE.md).

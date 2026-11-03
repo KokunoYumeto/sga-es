@@ -5,7 +5,7 @@ Este paquete publica una edición matemática española independiente y completa
 - la rama corregida/actual, que incorpora únicamente correcciones aceptadas por la custodia canónica;
 - la rama diplomática/original, que conserva las lecturas históricas discutidas.
 
-El componente público consta de cuatro archivos: dos PDF, un ZIP determinista de fuentes y evidencia, y su manifiesto SHA-256. Debe incorporarse únicamente como sucesor de la versión pública factual más reciente de la línea española acumulativa con DOI conceptual `10.5281/zenodo.21923955`. No debe crearse un depósito separado por tomo, exposición o rama.
+El componente público consta de cuatro archivos: dos PDF, un ZIP determinista de fuentes y evidencia, y su manifiesto SHA-256.
 
 El ZIP contiene los 118 archivos compilables de la fuente española, nueve scripts públicos de construcción, auditoría y empaquetado, los seis recibos de unidad/volumen y proyecciones públicas de procedencia y sello. Excluye un recibo interno del proveedor tipográfico ligado a rutas locales, los controles internos ligados a rutas locales, testigos externos, escaneos oficiales, árboles de compilación, auxiliares TeX, renderizados de QA, hojas de contacto, rutas locales absolutas y material privado.
 
