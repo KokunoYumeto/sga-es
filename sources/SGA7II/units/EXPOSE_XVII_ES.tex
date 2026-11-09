@@ -5,7 +5,7 @@
 \begin{center}
 {\large SGA 7 --- EXPOSÉ XVII}\par
 \vspace{2em}
-{\Large\underline{Pinceles de Lefschetz: teorema de existencia}}\par
+{\Large\underline{\underline{Pinceles de Lefschetz: teorema de existencia}}}\par
 \vspace{1.5em}
 {\large por N. M. Katz}
 \end{center}
@@ -54,7 +54,7 @@ y la forma normal mostradas.}
 Un punto cerrado $y\in Y$ se llama una
 \underline{singularidad cuadrática ordinaria} de $Y$ si:
 \begin{enumerate}
-\item[(a)] el completado $\widehat{\mathcal O}_{Y,y}$ del anillo local
+\item[(a)] el completado $\widehat{\underline O}_{Y,y}$ del anillo local
 de $Y$ en $y$ es isomorfo a
 \[
 k[[T_1,\ldots,T_n]]/(Q(T)),
@@ -98,10 +98,10 @@ Q_2(T)&=T_n^2+\sum_{i=1}^{(n-1)/2}T_{2i-1}T_{2i}
 \right.
 \end{equation}
 Esto resulta de la teoría de las formas cuadráticas (Bourbaki,
-\emph{Algèbre}, cap.~X).
+\emph{Algèbre}, cap.~\sisi{X}{IX}).
 
 \subsubsection*{1.2.}
-Un punto cerrado $y\in Y$ que satisface (a) y (b) se llama una
+Un punto cerrado $y\in Y$ que satisface (a) y \sisi{(b)}{(b$'$)} se llama una
 \underline{singularidad cuadrática no degenerada}. Puesto que el
 determinante de la matriz hessiana es idénticamente nulo en
 característica dos cuando $n$ es impar, las singularidades cuadráticas
@@ -114,7 +114,7 @@ son precisamente las singularidades cuadráticas ordinarias.
 \section*{2. Pinceles de Lefschetz: enunciado de los resultados}
 
 \subsubsection*{2.1.}
-Denotemos por $\mathbb P^r$ el espacio proyectivo de dimensión $r$
+Denotemos por $P^r$ el espacio proyectivo de dimensión $r$
 sobre $k$, por $\check{\mathbb P}^{r}$ el espacio proyectivo
 \underline{dual} de los hiperplanos de $\mathbb P^r$, y por
 $\operatorname{Gr}(1,\check{\mathbb P}^{r})$ la variedad de rectas
@@ -236,7 +236,7 @@ como el compuesto
 \[
 \mathbb P(N)\xrightarrow{\nu}
 X\times\check{\mathbb P}^{r}
-\xrightarrow{\operatorname{pr}_2}\check{\mathbb P}^{r}.
+\sisi{\stackrel{\operatorname{pr}_2}{\relbar\joinrel\relbar\joinrel\relbar}}{\xrightarrow{\operatorname{pr}_2}}\check{\mathbb P}^{r}.
 \]
 
 \pageoriginale
@@ -268,7 +268,7 @@ $(n+r-1)-r=n-1$.
 
 El \underline{subesquema jacobiano}
 \[
-J_{n-1}(\mathcal Y/\check{\mathbb P}^{r})
+J_{n-1}(\mathcal Y/\check P^{r})
 \]
 (VI, 5.2) es precisamente $\mathbb P(N)$. La formación del subesquema
 jacobiano de una intersección completa relativa es compatible con todo
@@ -326,11 +326,11 @@ $\sisi{X}{\check X}$;
 Las condiciones (3.2.5) y (3.2.6) definen abiertos de
 $\operatorname{Gr}(1,\check{\mathbb P}^{r})$ y, como $F$ es cerrado,
 lo mismo sucede con (3.2.7); por tanto, los pinceles de Lefschetz
-forman un abierto. Puesto que $\dim X\leq r-1$, el abierto (3.2.6) es
+forman un abierto. Puesto que $\dim\sisi{X}{\check X}\leq r-1$, el abierto (3.2.6) es
 no vacío y, por consiguiente, denso. El abierto (3.2.5) también es no
 vacío y denso. En efecto, elijamos un hiperplano $H$ que corte
-transversalmente a $X$; tal $H$ existe porque $\dim X\leq r-1$.
-Como $\dim(X\cap H)\leq r-1$, existe un hiperplano $G$ que corta
+transversalmente a $X$; tal $H$ existe porque $\dim\check X\leq r-1$.
+Como $\dim\check{(X\cap \sisi{G}{H})}\leq r-1$, existe un hiperplano $G$ que corta
 transversalmente a $X\cap H$, y la recta $D$ que pasa por $H$ y $G$
 tiene entonces un eje que corta transversalmente a $X$.
 
@@ -594,7 +594,7 @@ $\varphi:\mathbb P(N)\to\check{\mathbb P}^{r}$ es genéricamente no
 ramificado (es decir, no está ramificado en todas partes). Entonces
 $\varphi$ induce un morfismo birracional de $\mathbb P(N)$ sobre
 $\check X$. Más precisamente, los tres abiertos siguientes de
-$\sisi{X}{\check X}$ son idénticos:}
+$\sisi{X}{\check X}$ son idénticos}:
 \begin{enumerate}
 \item[(a)] \underline{el mayor abierto sobre el que $\check X$ es
 liso;}
@@ -609,7 +609,7 @@ siendo este una singularidad cuadrática no degenerada.}
 \subsubsection*{Corolario 3.5.0.}
 \underline{Supongamos que $\operatorname{car}(k)\ne2$ o que $\dim X$
 es par. La inmersión dada es una inmersión de Lefschetz si y solo si
-se cumple una de las dos condiciones siguientes:}
+se cumple una de las dos condiciones siguientes}:
 \begin{enumerate}
 \item[(a)] $\varphi$ \underline{es genéricamente no ramificado;}
 \item[(b)] $\dim\check X\leq r-2$.
@@ -696,7 +696,7 @@ La primera parte de la demostración queda entonces concluida por el
 lema siguiente.
 
 \subsubsection*{Lema 3.6 (Euler).}
-\underline{Sea $(x_0,H_0)$ un punto cerrado de $\mathbb P(N)$, y sea
+\underline{Sea $(x_0,H_0)$ un punto cerrado de $\mathbb P(N)$}, \underline{y sea
 $T_L$ el fibrado tangente del hiperplano
 $L\subset\check{\mathbb P}^{r}$ definido por $x_0$. Entonces, dentro
 de $T_{\check{\mathbb P}^{r},H_0}$,}
@@ -1475,7 +1475,7 @@ que $\xi$ se reemplaza por $T$ y $C_i$ por $S_i$, teniendo en cuenta
 (5.3.1).
 
 \subsubsection*{Lema 5.4.}
-\underline{Sea $a>0$ un entero y sea
+\underline{Sea }$a>0$\underline{ un entero y sea
 $A=\mathbb Z[[X_1,\ldots,X_a]]$ el anillo de series formales en $a$
 indeterminadas. Sea $B$ la $A$-álgebra}
 \[
@@ -1489,7 +1489,7 @@ B=AT^{a-1}\oplus AT^{a-2}\oplus\cdots\oplus A.
 
 \pageoriginale
 
-\underline{Sea $S_i\in A$ la $i$-ésima función simétrica elemental}
+\underline{Sea $S_i\in A$ la }$i$-\underline{ésima función simétrica elemental}
 \[
 S_i=\sum_{1\leq\alpha_1<\cdots<\alpha_i\leq a}
 X_{\alpha_1}\cdots X_{\alpha_i},
@@ -1739,7 +1739,7 @@ $D_{\bar s}$ satisface la condición 2.2(c) si y solo si el divisor
 $E_{\bar s}$ es reducido. Invocando 3.3, se podría utilizar solamente
 la implicación más fácil de izquierda a derecha.
 
-\subsubsection*{6.3 (caso excepcional).}
+\subsubsection*{\sisi{6.3}{6.4} (caso excepcional).}
 \footnote{La impresión repite el número 6.3 después de la Proposición
 6.3.}
 La proposición es falsa en el caso excepcional recién mencionado.

@@ -70,7 +70,7 @@ por P. Deligne y demostrado aquí en el apéndice (\S~5).
 \section*{1. La matriz de Hasse--Witt de una intersección completa}
 
 \subsubsection*{Definición 1.0.}
-Un esquema propio sobre un cuerpo $k$ de exponente característico $p$ se
+Un esquema propio\sisi{}{ $X$} sobre un cuerpo $k$ de exponente característico $p$ se
 llama \emph{especial} si la operación aditiva $p$-lineal
 \begin{equation}\tag{1.0.1}
 \mathfrak F_p:\mathcal O_X\longrightarrow\mathcal O_X,
@@ -256,7 +256,7 @@ Las secciones $X\mathbin{\cdot}H_u$ de $X$ por hipersuperficies de grado
 $d$ están parametrizadas por las rectas de $H^0(X,\mathcal O_X(d))$, es
 decir, por
 \begin{equation}\tag{1.3.1}
-U=\mathbb P\bigl(H^0(X,\mathcal O_X(d))\bigr).
+U=\mathbb P\bigl(H^0(X,\mathcal O_X(d))\sisi{}{\bigr)}.
 \end{equation}
 Sobre $U$ tenemos la «sección universal de $X$ por una hipersuperficie de
 grado $d$»
@@ -458,10 +458,10 @@ H^i(X\cdot H,\mathcal O_{X\cdot H})\bigr)\\
 &\stackrel{(1.4.4)}{\equiv}
 \sum_{i=0}^{n-1}(-1)^i
 \operatorname{tr}\bigl(\mathfrak F_q\mid H^i(X,\mathcal O_X)\bigr)\\
-&\quad+(-1)^{n-1}\operatorname{tr}\!\left(
+&\quad+\sisi{(1)^{n-1}}{(-1)^{n-1}}\operatorname{tr}\!\left(
 \mathfrak F_q\ \middle|\
-\frac{H^{n-1}(X\cdot H,\mathcal O_{X\cdot H})}
-{H^{n-1}(X,\mathcal O_X)}\right).
+\left(\frac{H^{n-1}(X\cdot H,\mathcal O_{X\cdot H})}
+{H^{n-1}(X,\mathcal O_X)}\right)\right).
 \end{aligned}
 \end{equation}
 
@@ -513,9 +513,9 @@ H_c^i(\overline X,\mathbb Q_\ell)
 para los grupos de cohomología con soporte propio de
 $\overline X=X\otimes_{\mathbb F_q}\overline{\mathbb F}_q$. Son espacios
 vectoriales de dimensión finita sobre $\mathbb Q_\ell$ en los que actúa
-$\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)$. Sea
+$\operatorname{Gal}(\sisi{}{\overline{\mathbb F}_q}/\mathbb F_q)$. Sea
 \begin{equation}\tag{2.0.2}
-\varphi_q\in\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)
+\varphi_q\in\operatorname{Gal}(\sisi{}{\overline{\mathbb F}_q}/\mathbb F_q)
 \end{equation}
 el automorfismo de Frobenius. Se sabe (SGA~5 XIII~3.2.1) que la función
 zeta de $X$ (XXII~3.0.1) viene dada por
@@ -562,7 +562,7 @@ $T_i\times_{\mathbb F_q}X$ de codimensión $j+d_i$, tales que el
 homomorfismo de $\operatorname{Gal}(\overline{\mathbb F}_q/\mathbb F_q)$-
 módulos
 \begin{equation*}
-\bigoplus_i H^{q-2j}(\overline T_i,\mathbb Q_\ell(-j))
+\bigoplus_i H^{q-2j}(\overline T_i,\mathbb Q_\ell(-j)\sisi{}{)})
 \xrightarrow{\ \oplus_i\operatorname{Cl}(Z_i)\ }
 N^jH^q(\overline X,\mathbb Q_\ell)
 \end{equation*}
@@ -1023,7 +1023,7 @@ V_I\simeq\bigl(V^{\rho(I')}\bigr)_I.
 Reemplazando $V$ por $V^{I'}$, podemos suponer que $I'$ actúa trivialmente
 sobre $V$. Como $G/I$-módulos se tiene
 \[
-I/I'\simeq\mathbb Z_\ell(1).
+\sisi{I'}{I}/I'\simeq\mathbb Z_\ell(1).
 \]
 Sea $T$ un generador topológico de $I/I'$. Para cada $\alpha$, sea
 $V^{(\alpha)}$ el subespacio propio generalizado de $T$ sobre $V$ de
@@ -1312,8 +1312,8 @@ Corolario~5.3.
 \subsubsection*{Teorema 5.6.}
 Sea $N$ un entero, y supongamos disponible la resolución fuerte de
 singularidades en el sentido de Hironaka para los esquemas de tipo finito
-sobre $\mathbb F_q$ de dimensión a lo sumo $N$ (en la actualidad puede
-tomarse, pues, $N=2$ [1]). Sea $f:X\longrightarrow Y$ un morfismo de
+sobre $\mathbb F_q$ de dimensión a lo sumo $N$ (\underline{en la actualidad puede
+tomarse, pues,} $N=2$ [1]). Sea $f:X\longrightarrow Y$ un morfismo de
 esquemas de tipo finito sobre $\mathbb F_q$, y sea $\underline G$ un
 $E$-haz constructible $T$-entero sobre $X$. Si $\dim X\leq N$, entonces
 los $E$-haces $R^if_*\underline G$ sobre $Y$ son $T$-enteros.
@@ -1442,16 +1442,16 @@ componente $D'$ elegida. Esto demuestra el Lema~5.6.1.
 
 Queda tratar las curvas. Bajo las hipótesis del Lema~5.6.1, sea $x$ un
 punto de $X-U$, sea $\mathfrak G$ el grupo de Galois del cuerpo de
-fracciones de $\widehat{\mathcal O}_{x,X}$, y sea $\mathfrak J$ el grupo
+fracciones de $\widehat{\mathcal O}_{x,X}$, y sea $\mathfrak I$ el grupo
 de inercia. Denotemos también por $\underline G$ la representación de
 $\mathfrak G$ definida por el haz, y sea $\bar x$ un punto geométrico de
 $X$ localizado en $x$. Hay isomorfismos de
-$\mathfrak G/\mathfrak J$-módulos galoisianos
+$\mathfrak G/\mathfrak I$-módulos galoisianos
 \[
-(j_*\underline G)_{\bar x}\simeq\underline G^{\mathfrak J},
+(j_*\underline G)_{\bar x}\simeq\underline G^{\mathfrak I},
 \]
 \[
-(R^1j_*\underline G)_{\bar x}\simeq\underline G_{\mathfrak J}(-1),
+(R^1j_*\underline G)_{\bar x}\simeq\underline G_{\mathfrak I}(-1),
 \]
 y
 \[

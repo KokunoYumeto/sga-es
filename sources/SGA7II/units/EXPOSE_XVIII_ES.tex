@@ -77,16 +77,16 @@ Picard--Lefschetz, a los diversos ``puntos críticos'' del pincel
 número primo invertible sobre $S$, sea
 $u\in H^2(X,\mathbb Z_\ell(1))$ (respectivamente,
 $u\in H^2(X,\mathbb Q_\ell(1))$) una clase de cohomología sobre $X$, y
-sea $\mathfrak F$ un $\mathbb Z_\ell$-haz (respectivamente, un
-$\mathbb Q_\ell$-haz) sobre $X$. Supongamos que existe un entero $n$
+sea $\mathfrak F$ un }$\mathbb Z_\ell$-\underline{haz (respectivamente, un
+}$\mathbb Q_\ell$-\underline{haz}) \underline{sobre $X$. Supongamos que existe un entero $n$
 tal que, para todo entero $j$ y todo entero $i>0$, la aplicación}
 \begin{equation}\tag{1.1.1}
 R^{n-i}f_*\bigl(\mathfrak F(j)\bigr)
 \xrightarrow{\ \wedge u^i\ }
 R^{n+i}f_*\bigl(\mathfrak F(j+i)\bigr)
 \end{equation}
-\underline{es un isomorfismo de $\mathbb Z_\ell$-haces
-(respectivamente, de $\mathbb Q_\ell$-haces) sobre $S$. Entonces, para
+\underline{es un isomorfismo de }$\mathbb Z_\ell$-\underline{haces
+(respectivamente, de }$\mathbb Q_\ell$-\underline{haces}) \underline{sobre $S$. Entonces, para
 todo morfismo $g:S\longrightarrow T$, la sucesión espectral de Leray}
 \[
 E_2^{p,q}=R^pg_*R^qf_*(\mathfrak F)
@@ -169,7 +169,7 @@ H^{q-2j}\bigl(X,\mathbb Z_\ell(-j)\bigr).
 Si dotamos esta suma directa de la filtración
 \[
 F^i=
-\bigoplus_{\substack{0\leq j\leq r\\q-2j\leq i}}
+\bigoplus_{\substack{0\leq j\leq r\\q-2j\sisi{\leq}{\geq} i}}
 H^{q-2j}\bigl(X,\mathbb Z_\ell(-j)\bigr),
 \]
 la aplicación (1.2.2) es compatible con las filtraciones e induce la
@@ -606,7 +606,7 @@ El cociente del complejo acíclico (2.2.25) por el subcomplejo acíclico
 \frac{H_c^i(\widetilde X,\mathbb Z_\ell)}
      {f^*H_c^i(X,\mathbb Z_\ell)}
 \longrightarrow
-\frac{H_c^i(\widetilde\Delta,\mathbb Z_\ell)}
+\frac{H_{\sisi{C}{c}}^i(\widetilde\Delta,\mathbb Z_\ell)}
      {g^*H_c^i(\Delta,\mathbb Z_\ell)}
 \longrightarrow0\longrightarrow.
 \end{equation}
@@ -769,7 +769,7 @@ $\operatorname{char}k\ne2$. Entonces todo pincel de Lefschetz,
 considerado como una recta de $\check{\mathbb P}^{r}$, corta a
 $\check X$ en}
 \begin{equation}\tag{3.2.11}
-(-1)^n
+(-1)^{\sisi{\eta}{n}}
 \bigl[\chi(X)+\chi(\Delta)-2\chi(X_{\bar\eta})\bigr]
 \end{equation}
 \underline{puntos, y lo corta transversalmente} (EGA IV, 17.13.7).
@@ -831,7 +831,7 @@ X\times\mathbb P^1
       \arrow[r,"{(g,\rho_i)}","\sim"']
   \& \Delta\times\mathbb P^1 \\
 \mathbb P^1 \& X \& \Delta\arrow[l,hook',"j"] \& {}
-\end{tikzcd}}
+\end{tikzcd}}.
 \end{equation}
 Comencemos por precisar (2.2.2) en este caso.
 
@@ -840,8 +840,8 @@ Comencemos por precisar (2.2.2) en este caso.
 
 \smallskip
 \noindent
-\textup{(4.2.1)} \underline{Los homomorfismos de
-$\mathbb Z_\ell$-módulos}
+\textup{(4.2.1)} \underline{Los homomorfismos de}
+$\mathbb Z_\ell$\underline{-módulos}
 \[
 \begin{tikzcd}[column sep=huge]
 H^\bullet(\widetilde X,\mathbb Z_\ell)
@@ -997,12 +997,12 @@ exactas
        \arrow[l,"i_*g^*"']
   \&0\arrow[l]\\
 0
-  \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-2))
+  \&H^{\bullet-\sisi{2}{4}}(\Delta,\mathbb Z_\ell(-2))
        \arrow[l]\arrow[u,"j_*"']
   \&H^{\bullet-2}(\widetilde\Delta,\mathbb Z_\ell(-1))
        \arrow[l,"g_*"']\arrow[u,"i_*"']
   \&H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
-       \arrow[l,"g_*"']\arrow[u,equal]
+       \arrow[l,"\sisi{g_*}{g^*}"']\arrow[u,equal]
   \&0\arrow[l]
 \end{tikzcd}}
 \end{equation}
@@ -1141,7 +1141,7 @@ elementos de $H^\bullet(X,\mathbb Z_\ell)$ y $x,y$ elementos de
 $H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))$. Comencemos con (4.2.3.1)
 y escribamos
 \[
-(0\oplus x)\wedge(0\oplus y)=A\oplus B.
+(0\oplus x)\sisi{\Lambda}{\wedge}(0\oplus y)=A\oplus B.
 \]
 Por (4.2.12) y (4.3.2),
 \[
@@ -1184,13 +1184,13 @@ Para demostrar (4.2.3.3), la fórmula de proyección muestra que
 $\operatorname{Ker}f_*$ es estable por multiplicación por
 $\operatorname{im}f^*$. Por tanto,
 \[
-(a\oplus0)\wedge(0\oplus y)=0\oplus C,
+(a\oplus0)\sisi{\Lambda}{\wedge}(0\oplus y)=0\oplus C,
 \]
 donde
 \begin{equation}\tag{4.3.3}
 C=-g_*i^*\!\left(f^*(a)i_*g^*(y)\right).
 \end{equation}
-Usando (4.3.2),
+Usando \sisi{(4.3.2)}{(4.2.11)},
 \[
 \begin{aligned}
 C
@@ -1236,7 +1236,7 @@ Se tiene el diagrama conmutativo
   \& {} \\
 {} \& Y\arrow[ul]\arrow[uur,"k"]\arrow[ur,"m"']
   \& {} \& {} \& {} \& {}
-\end{tikzcd}}
+\end{tikzcd}}.
 \end{center}
 
 \pageoriginale
@@ -1390,7 +1390,7 @@ L_S:H^\bullet(S,\mathbb Q_\ell(j))
 para la multiplicación por $u$.
 
 \subsubsection*{5.2.2.}
-\underline{Se dice que $S$, provisto de $u$, satisface (LV), el teorema
+\underline{Se dice que $S$, provisto de} $u$\underline{, satisface (LV), el teorema
 de Lefschetz fuerte, si, para todo (o para un) entero $j$ y todo entero
 $i>0$, las aplicaciones}
 \[
@@ -1456,8 +1456,8 @@ H^n(X,\mathbb Q_\ell(j))
   \arrow[rr,"L"]\arrow[dr,"\tau^*"']
   & {} &
 H^{n+2}(X,\mathbb Q_\ell(j+1))
-  \arrow[dl,"\tau_*"]\\
-{} & H^n(Y,\mathbb Q_\ell(j)) & {}
+  \sisi{\arrow[dl,"\tau_*"]}{}\\
+{} & H^n(Y,\mathbb Q_\ell(j))\sisi{}{\arrow[ur,"\tau_*"']} & {}
 \end{tikzcd}.
 \end{equation}
 Por dualidad y Lefschetz débil,
@@ -1566,7 +1566,7 @@ H^{n-i}(X,\mathbb Q_\ell(j+1))
   &H^{\sisi{n-i}{n+i}}(X,\mathbb Q_\ell(j+i+1))
     \arrow[d,"\tau^*"]\\
 H^{n-i-2}(Y,\mathbb Q_\ell(j))
-  \arrow[u,"\tau_*"']\arrow[r,"L_Y^{i+1}"]
+  \arrow[u,"\tau_*"']\arrow[r,"L_Y^{i+1}"{yshift=7pt},"\sim"]
   &H^{n+i}(Y,\mathbb Q_\ell(j+i+1)).
 \end{tikzcd}
 \end{center}
@@ -1675,8 +1675,8 @@ Veremos más adelante (6.3, 6.4) que la condición (A) tiene una fuerte
 tendencia a cumplirse.
 
 \subsection*{Lema 5.4.}
-\underline{Supongamos que una sección hiperplana lisa de $X$ (y por
-tanto todas, por el corolario 5.2.7) satisface (LV), por ejemplo porque
+\underline{Supongamos que una sección hiperplana lisa de $X$} (\underline{y por
+tanto todas, por el corolario 5.2.7}) \underline{satisface (LV), por ejemplo porque
 $X$ satisface (LV), cf. el lema 5.2.4, y supongamos que $\rho$ satisface
 la condición (A). Entonces toda fibra, incluidas las fibras singulares,
 satisface (LV), y los haces $R^i\rho_*\mathbb Q_\ell(j)$ son constantes
@@ -2453,7 +2453,7 @@ U\arrow[l,"\nu"'].
 Como $\rho|_U:\widetilde X|_U\to U$ es propio y liso, el teorema de
 especialización para la cohomología (SGA 4 XVI, 2.2) da
 \begin{equation}\tag{5.8.2.2}
-\operatorname{Prim}^\bullet(\widetilde X|_U/U,\mathbb Q_\ell(j))
+\operatorname{Prim}^\bullet(\widetilde X|_U/U,\mathbb Q_\ell(j)\sisi{}{)})
 =\ker\!\left(
 H^\bullet(\widetilde X|_U,\mathbb Q_\ell(j))
 \longrightarrow H^\bullet(X_{\bar\eta},\mathbb Q_\ell(j))
@@ -2993,7 +2993,7 @@ homomorfismos de monodromía local para $D_{\bar\eta}$:
 El diagrama siguiente es conmutativo:
 \begingroup
 \small
-\begin{equation}\tag{6.1.5}
+\begin{equation}\notag
 \begin{tikzcd}[column sep=large,row sep=large]
 {} & \pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a) & {} \\
 \pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)

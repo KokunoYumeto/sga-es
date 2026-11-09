@@ -6,7 +6,7 @@
 \begin{center}
 {\large\textbf{SGA 7}}\\[1.5em]
 {\Large\underline{EXPOSÉ XIV}}\\[2.5em]
-{\Large\underline{COMPARACIÓN CON LA TEORÍA TRASCENDENTE}}\\[1.5em]
+{\Large\underline{\underline{COMPARACIÓN CON LA TEORÍA TRASCENDENTE}}}\\[1.5em]
 {\large\underline{por P. DELIGNE}}
 \end{center}
 
@@ -332,7 +332,7 @@ topoi $D\longrightarrow\mathcal D$, que forma parte del diagrama conmutativo
   & \mathcal D^* \arrow[l, hook'] & {}.
 \end{tikzcd}
 \]
-Como en 1.1.1, se comprueba que este topos no cambia cuando se reemplaza $D$
+Como en \sisi{1.1.1}{1.2.1}, se comprueba que este topos no cambia cuando se reemplaza $D$
 por un disco más pequeño o por el espacio tangente a $D$ en $0$.
 
 \pageoriginale
@@ -399,7 +399,7 @@ $Y$ provistos de una acción de $\pi_1(D^*)$;
 
 \subsubsection*{1.2.5.}
 El topos $Y\times\mathcal D$ posee las mismas propiedades de funtorialidad en
-$Y$ que los topoi $Y\times_S S$ del Exposé XIII, y no las enumeraremos. Para
+$Y$ que los topoi $Y\times_s S$ del Exposé XIII, y no las enumeraremos. Para
 fijar la notación, registramos únicamente el diagrama
 
 \pageoriginale
@@ -704,8 +704,8 @@ construcción esbozada en la Introducción del Exposé XIII.
 
 \subsubsection*{1.4.1.}
 Sea $D$ un disco orientado, sea $0\in D$, y pongamos
-$D^*=D\setminus\{0\}$. Un \underline{espacio topológico} $\mathcal X^*$
-sobre $\mathcal D^*$ es un funtor
+$D^*=D\setminus\{0\}$. Un \underline{espacio topológico} $\mathfrak X^*$
+sobre $\mathfrak D^*$ es un funtor
 \[
 (\text{recubrimientos universales de }D^*)
 \longrightarrow(\text{espacios topológicos}).
@@ -713,9 +713,9 @@ sobre $\mathcal D^*$ es un funtor
 Una vez elegido un recubrimiento universal $\widetilde D^*$, esto equivale a
 un espacio topológico $X_\eta$ provisto de una acción de $\pi_1(D^*)$; cuando
 $\widetilde D^*$ es el recubrimiento universal de $(D^*,t)$, lo denotamos por
-$\mathcal X_t^*$.
+$\mathfrak X_t^*$.
 
-Un \underline{haz} sobre $\mathcal X^*$ es un funtor
+Un \underline{haz} sobre $\mathfrak X^*$ es un funtor
 \[
 (\text{recubrimientos universales de }D^*)
 \longrightarrow
@@ -723,26 +723,26 @@ Un \underline{haz} sobre $\mathcal X^*$ es un funtor
 \]
 o, equivalentemente, un haz $\pi_1(D^*)$-equivariante sobre $X_\eta$.
 
-A $\mathcal X^*$ asociamos el espacio topológico
+A $\mathfrak X^*$ asociamos el espacio topológico
 \[
-\beta^*\mathcal X^*
+\beta^*\mathfrak X^*
 =X_\eta\times\widetilde D^*/\pi_1(D^*)
 \]
-sobre $D^*$. Todo haz $F$ sobre $\mathcal X^*$ desciende a un haz
-$\beta^*F$ sobre $\beta^*\mathcal X^*$, dando un diagrama conmutativo de topoi
+sobre $D^*$. Todo haz $F$ sobre $\mathfrak X^*$ desciende a un haz
+$\beta^*F$ sobre $\beta^*\mathfrak X^*$, dando un diagrama conmutativo de topoi
 \[
 \begin{tikzcd}
-\beta^*\mathcal X^* \arrow[r] \arrow[d]
-  & \mathcal X^* \arrow[d] \\
+\beta^*\mathfrak X^* \arrow[r] \arrow[d]
+  & \mathfrak X^* \arrow[d] \\
 D^* \arrow[r, "\beta"]
-  & \mathcal D^*.
+  & \mathfrak D^*.
 \end{tikzcd}
 \]
 
 \subsubsection*{1.4.2.}
-Un \underline{espacio topológico} $\mathcal X$ sobre $\mathcal D$ consiste en
+Un \underline{espacio topológico} $\mathfrak X$ sobre $\mathfrak D$ consiste en
 \begin{enumerate}[label=(\alph*),leftmargin=2.7em]
-\item un espacio topológico $\mathcal X^*$ sobre $\mathcal D^*$;
+\item un espacio topológico $\mathfrak X^*$ sobre $\mathfrak D^*$;
 \item un espacio topológico $X_0$;
 \item un morfismo $\pi_1(D^*)$-invariante
 \[
@@ -751,8 +751,8 @@ Un \underline{espacio topológico} $\mathcal X$ sobre $\mathcal D$ consiste en
 donde $\pi_1(D^*)$ actúa trivialmente sobre $X_0$.
 \end{enumerate}
 
-Un \underline{haz} sobre $\mathcal X$ consiste en un haz $F_0$ sobre $X_0$,
-un haz sobre $\mathcal X^*$ dado por $F_\eta$, y un morfismo equivariante
+Un \underline{haz} sobre $\mathfrak X$ consiste en un haz $F_0$ sobre $X_0$,
+un haz sobre $\mathfrak X^*$ dado por $F_\eta$, y un morfismo equivariante
 \[
 \mathrm{sp}:\mathrm{sp}^*F_0\longrightarrow F_\eta
 \qquad
@@ -765,16 +765,16 @@ Se tiene un diagrama conmutativo
 \[
 \begin{tikzcd}
 X_0 \arrow[r, hook] \arrow[d]
-  & \mathcal X \arrow[d]
-  & \mathcal X^* \arrow[l, hook] \arrow[d] \\
+  & \mathfrak X \sisi{\arrow[d, dash]}{\arrow[d]}
+  & \mathfrak X^* \arrow[l, hook] \arrow[d] \\
 \{0\} \arrow[r, hook]
-  & \mathcal D
-  & \mathcal D^* \arrow[l, hook]
+  & \mathfrak D
+  & \mathfrak D^* \arrow[l, hook]
 \end{tikzcd}
 \]
 y, además, un morfismo de topoi
 \[
-\Psi:\mathcal X\longrightarrow X_0\times\mathcal D.
+\Psi:\mathfrak X\longrightarrow X_0\times\mathfrak D.
 \]
 Se obtiene de la funtorialidad de la construcción precedente aplicada a
 \[
@@ -788,13 +788,13 @@ y satisface
 \]
 Este morfismo induce
 \[
-\Psi_\eta:\mathcal X^*\longrightarrow X_0\times\mathcal D^*.
+\Psi_\eta:\mathfrak X^*\longrightarrow X_0\times\mathfrak D^*.
 \]
 
 \subsubsection*{1.4.3.}
-A un espacio topológico $\mathcal X$ sobre $\mathcal D$ asociamos un espacio
-topológico $X=\beta^*\mathcal X$ sobre $D$ como sigue. A
-$X^*=\beta^*\mathcal X^*$ añadimos la fibra $X_0$ sobre $0$. Un sistema
+A un espacio topológico $\mathfrak X$ sobre $\mathfrak D$ asociamos un espacio
+topológico $X=\beta^*\mathfrak X$ sobre $D$ como sigue. A
+$X^*=\beta^*\mathfrak X^*$ añadimos la fibra $X_0$ sobre $0$. Un sistema
 fundamental de entornos de $x_0\in X_0$ está formado por los conjuntos
 \[
 V\cup
@@ -803,7 +803,7 @@ V\cup
 donde $V$ es un entorno de $x_0$ en $X_0$, $U$ es un entorno de $0$ en $D$ y
 $\widetilde U^*=U\times_D\widetilde D^*$. Sean $j$ (respectivamente, $i$) la
 inclusión de $X^*$ (respectivamente, de $X_0$) en $X$. Para un haz $F$ sobre
-$\mathcal X^*$ se tiene
+$\mathfrak X^*$ se tiene
 \[
 i^*j_*\beta^*F
 =(\mathrm{sp}_*F_\eta)^{\pi_1(D^*)}.
@@ -812,12 +812,12 @@ De ello se sigue un diagrama conmutativo de topoi
 \[
 \begin{tikzcd}
 X \arrow[r, "\beta"] \arrow[d]
-  & \mathcal X \arrow[d] \\
+  & \mathfrak X \arrow[d] \\
 D \arrow[r, "\beta"]
-  & \mathcal D
+  & \mathfrak D
 \end{tikzcd}
 \]
-tal que, para todo haz $F$ sobre $\mathcal X$, existe un isomorfismo
+tal que, para todo haz $F$ sobre $\mathfrak X$, existe un isomorfismo
 \begin{equation}\tag{1.4.3.1}
 \Psi(F)\xrightarrow{\ \sim\ }\Psi(\beta^*F).
 \end{equation}
@@ -827,8 +827,8 @@ tal que, para todo haz $F$ sobre $\mathcal X$, existe un isomorfismo
 \[
 R\Psi\xrightarrow{\ \sim\ }R\Psi\circ\beta^*
 \]
-\underline{entre funtores de $D^+(\mathcal X)$ a
-$D^+(X_0\times\mathcal D)$.}
+\underline{entre funtores de $D^+(\mathfrak X)$ a
+$D^+(X_0\times\mathfrak D)$.}
 
 \pageoriginale
 
@@ -859,7 +859,7 @@ $X_0$ se obtiene de $X_\eta$ contrayendo un subconjunto compacto
 $V\subset X_\eta$ a un punto $0$, siendo $\mathrm{sp}$ la aplicación de
 contracción y trivial la acción de $\pi_1(D^*)$ fuera de $V$. El cambio de
 base propio para $\mathrm{sp}$ da entonces, para
-$K\in\operatorname{Ob}D^+(\mathcal X^*)$,
+$K\in\operatorname{Ob}D^+(\mathfrak X^*)$,
 \begin{equation}\tag{1.4.6.1}
 R\Psi_\eta(\beta^*K)_0=R\Gamma(V,K)
 \end{equation}
@@ -870,7 +870,7 @@ R\Gamma_{\{0\}}R\Psi_\eta(\beta^*K)
 \end{equation}
 siendo este último término cohomología con soportes.
 
-Para $K$ sobre $\mathcal X$, supongamos que
+Para $K$ sobre $\mathfrak X$, supongamos que
 \[
 \mathrm{sp}:\mathrm{sp}^*K_0\longrightarrow K_\eta
 \]
@@ -932,7 +932,7 @@ $\mathbb Z/n\mathbb Z$). Pongamos $X_0=f^{-1}(0)$.
 \pageoriginale
 
 \subsubsection*{2.2.}
-Denotamos por $S^h$ el rasgo henseliano henselizado de $S$ en $0$, y por
+Denotamos por $S^h$ el rasgo henseliano henselizado de $S$ en $O$, y por
 $\eta$ el punto genérico de $S^h$. Se tiene un funtor
 \[
 \begin{aligned}
@@ -951,7 +951,7 @@ R\Psi:D(X,\Lambda)
 \]
 
 \subsubsection*{2.3.}
-Sea $D\subset S_{\mathrm{cl}}$ un disco que contiene $0$. El funtor compuesto
+Sea $D\subset S_{\mathrm{cl}}$ un disco que contiene $O$. El funtor compuesto
 $\Psi_{\mathrm{cl}}$ (o simplemente $\Psi$)
 \[
 \begin{aligned}
@@ -1018,7 +1018,7 @@ natural de $S_{\mathrm{cl}}$-espacios
 a_i:\widetilde D_i\longrightarrow(S_i)_{\mathrm{cl}}.
 \]
 Sea $j_i:U_i\hookrightarrow S_i$ el abierto complementario en $S_i$ de la
-imagen $0$ del punto cerrado de $\overline S$, y sea $i:0\hookrightarrow S_i$.
+imagen $O$ del punto cerrado de $\overline S$, y sea $i:O\hookrightarrow S_i$.
 
 Sea $F$ un haz sobre $X$, y pongamos $F_{\mathrm{cl}}=\varepsilon^*F$.
 Denotamos de nuevo por $j_i$ la inclusión de $X\times_SU_i$ en
@@ -1110,7 +1110,7 @@ basta tratar el caso en que $K$ es un único haz $F$ situado en grado $0$. La
 demostración es exactamente análoga a la del teorema de finitud XIII, 2.3.1.
 Como $R\Psi$ y $R\Psi_{\mathrm{cl}}$ poseen las mismas propiedades de
 varianza, los dévissages allí utilizados (permitiendo contraer $S$) reducen
-el problema al caso en que $X$ es regular, $f^{-1}(0)$ es un divisor de
+el problema al caso en que $X$ es regular, $f^{-1}(O)$ es un divisor de
 cruces normales en $X$, y $F=\mathbb Z/\ell\mathbb Z$. Se compara entonces
 el Exposé I, 3.3 con su análogo trascendente.
 
@@ -1315,13 +1315,18 @@ $f^{-1}(\mathbb R)$ resumen la demostración.
   \node[right] at (-3.08,-1.78) {$D_t$};
   \draw (1.2,.1) rectangle (4.0,2.75);
   \foreach \yy in {.28,.48,2.36,2.56}{\draw (1.2,\yy)--(4.0,\yy);}
+  \draw (1.2,2.24) .. controls (2.0,1.98) and (3.2,1.98) .. (4.0,2.24);
+  \draw (1.2,.60) .. controls (2.0,.88) and (3.2,.88) .. (4.0,.60);
   \draw (1.2,2.15) .. controls (2.05,2.10) and (2.25,1.75) .. (2.60,1.48)
                     .. controls (2.95,1.75) and (3.18,2.10) .. (4.0,2.15);
   \draw (1.2,.72) .. controls (2.05,.76) and (2.28,1.15) .. (2.60,1.48)
                    .. controls (2.93,1.15) and (3.17,.76) .. (4.0,.72);
-  \draw (1.2,1.92)--(2.60,1.48)--(4.0,1.92);
-  \draw (1.2,1.05)--(2.60,1.48)--(4.0,1.05);
-  \draw (1.2,1.48)--(4.0,1.48);
+  \draw (1.2,1.92)--(2.38,1.55);
+  \draw (2.82,1.55)--(4.0,1.92);
+  \draw (1.2,1.05)--(2.38,1.41);
+  \draw (2.82,1.41)--(4.0,1.05);
+  \draw (1.2,1.48)--(2.35,1.48);
+  \draw (2.85,1.48)--(4.0,1.48);
   \fill (2.60,1.48) circle (1.8pt);
   \draw (1.15,-1.45)--(4.05,-1.45);
   \fill (2.60,-1.45) circle (1.8pt);
@@ -1551,7 +1556,7 @@ El isomorfismo (3.1.8.5) proporciona los isomorfismos buscados
 
 \begin{equation}\tag{3.1.8.6}
 R^i\Gamma_{\{0\}}(R\Psi_\eta(\Lambda))
-\simeq H_c^i(V^\circ,\Lambda).
+= H_c^i(V^\circ,\Lambda).
 \end{equation}
 Comprobaremos (C) en 3.1.10.
 
@@ -1584,7 +1589,7 @@ Bajo hipótesis razonables, si $\mathfrak F$ es la familia de cerrados de
 $X$ disjuntos de $Y$, existe un cuasi-isomorfismo
 \[
 \Gamma_{\mathfrak F}(X-Y,\Lambda_X^*)
-\xrightarrow{\ \sim\ }R\Gamma(X\bmod Y,\Lambda).
+\xrightarrow{\ \approx\ }R\Gamma(X\bmod Y,\Lambda).
 \]
 El endomorfismo $T-1$ de $\Gamma(\Lambda_X^*)$, donde $T$ actúa por
 transporte de estructura, es nulo sobre $\Lambda$ (las constantes) y
@@ -1674,13 +1679,13 @@ se calcula a partir del morfismo de complejos
 \Lambda[0]\longrightarrow
 \bar\imath^*\bar\jmath_*(\Lambda^*).
 \]
-Como $\Lambda\xrightarrow{\sim}Rq_*\Lambda$ y
-$\Lambda\xrightarrow{\sim}Rq'_*\Lambda$, puede calcularse igualmente
+Como $\Lambda\xrightarrow{\approx}Rq_*\Lambda$ y
+$\Lambda\xrightarrow{\approx}Rq'_*\Lambda$, puede calcularse igualmente
 mediante una resolución equivariante de $\Lambda$ sobre
 ${}_1\overline B^*$ y el morfismo
 \[
 \Lambda[0]\longrightarrow
-\bar\imath^*{}_1\bar\jmath_*(\Lambda).
+\bar\imath^*{}_1\bar\jmath_*(\sisi{\Lambda}{\Lambda^*}).
 \]
 Bajo (A) y (B), la variación se identifica así con el morfismo compuesto
 \begin{equation}\tag{3.1.10.1}
@@ -1952,7 +1957,7 @@ de la geodésica que determina una distancia $+\pi\theta$ (el signo
 positivo significa ``en el sentido en que apunta el vector''). Para
 $\theta=1$, se alcanza el vector antipodal.
 
-Por 3.1.13, esto da la descripción siguiente de $T$. Sea
+Por \sisi{3.1.13}{3.1.12}, esto da la descripción siguiente de $T$. Sea
 $\varphi:[0,1]\to[0,1]$ una aplicación $C^\infty$ que vale $0$ en un
 entorno de $0$ y $1$ en un entorno de $1$. La aplicación $T$ desplaza
 $u$, a lo largo de la geodésica que $u$ determina, una distancia
@@ -2188,8 +2193,8 @@ $f:X\longrightarrow D$ un morfismo, y consideremos el diagrama de
 \begin{equation}\tag{4.1.1}
 \begin{tikzcd}[column sep=large,row sep=large]
 X_0 \arrow[r,hook,"\bar i"] \arrow[d,equal]
-  & \bar X \arrow[d,"p"']
-  & \bar X^* \arrow[l,hook',"\bar j"'] \arrow[d,"p'"'] \\
+  & \bar X \arrow[d,"p"]
+  & \bar X^* \arrow[l,hook',"\bar j"'] \arrow[d,"p'"] \\
 X_0 \arrow[r,hook,"i"]
   & X
   & X^* \arrow[l,hook',"j"']
@@ -2230,10 +2235,10 @@ p'^{-1}(V-X_0)=\bar j^{-1}p^{-1}(V).
 
 \pageoriginale
 
-En consecuencia, para todo haz coherente $\mathcal F$ sobre
+En consecuencia, para todo haz coherente $\mathfrak F$ sobre
 $\bar X^*$,
 \[
-H^q\bigl(\bar j^{-1}p^{-1}(V),\mathcal F\bigr)=0
+H^q\bigl(\bar j^{-1}p^{-1}(V),\mathfrak F\bigr)=0
 \qquad\text{para }q>0,
 \]
 lo que demuestra la proposición.
@@ -2247,7 +2252,7 @@ lo que demuestra la proposición.
 
 \subsubsection*{Variante 4.4.}
 \underline{Sea $V$ un haz localmente constante de espacios vectoriales
-complejos de dimensión finita sobre $X^*$ (un sistema local complejo).
+complejos de dimensión finita sobre $X^*$} (\underline{un sistema local complejo})\underline{.
 El cuasi-isomorfismo}
 \[
 V\longrightarrow\Omega_{X^*}^*(V)
@@ -2334,7 +2339,7 @@ N(\log z)=1,
 \]
 y
 \[
-N\left(\frac{(\log z)^k}{k!}\right)
+\sisi{N\frac{(\log z)^k}{k!})}{N\left(\frac{(\log z)^k}{k!}\right)}
 =\frac{(\log z)^{k-1}}{(k-1)!},
 \qquad
 (0\text{ para }k=0).
@@ -2480,11 +2485,11 @@ Para $X=D$ y $F=\mathcal O$, 4.10 tiene el corolario elemental siguiente.
 
 \subsubsection*{Corolario 4.11.}
 \underline{Sea $K$ el cuerpo de gérmenes en $0$ de funciones meromorfas
-sobre $D$, y sea $K^m$ (respectivamente, $K^{mu}$ y $K^{mqu}$) la
-$K$-álgebra de gérmenes en $0$ de funciones holomorfas sobre
+sobre $D$, y sea $K^m$} (\underline{respectivamente, $K^{mu}$ y $K^{mqu}$) la}
+$K$-\underline{álgebra de gérmenes en $0$ de funciones holomorfas sobre
 $\widetilde D^*$ que tienen crecimiento moderado en $0$ y determinación
 finita (respectivamente, determinación finita unipotente y determinación
-finita cuasi-unipotente). Entonces las familias siguientes son bases
+finita cuasi-unipotente})\underline{. Entonces las familias siguientes son bases
 sobre $K$:}
 \[
 \begin{array}{lll}
@@ -2653,7 +2658,7 @@ demostración.
 
 \noindent\textup{(ii)}\qquad
 \underline{si $V=\underline{\mathbb C}$:}\quad
-$H^*(U^*,V)=\bigwedge\nolimits^*\mathbb C^d$.
+$H^*(U^*,V)=\stackrel{*}{\Lambda}\mathbb C^d$.
 
 En efecto, $U^*$ tiene el tipo de homotopía de un toro.
 
@@ -2676,18 +2681,18 @@ $H^*(U^*,V)/\eta H^*(U^*,V)$.}
 Utilicemos 4.12(ii) y la identidad
 $d\log f=\sum_i n_i\,dz_i/z_i$. El complejo
 $\Psi_\eta^{mu}(\Omega_{X^*}^*(V))_0$ se identifica con el complejo
-simple $\mathrm{s}K$ asociado (utilizando sumas directas) al bicomplejo
+simple $\underline{\underline{\mathrm{s}}}K$ asociado (utilizando sumas directas) al bicomplejo
 $K$ cuyos términos son
 \[
 K^{-p,n+p}=\frac{(\log f)^p}{p!}\cdot
   (j_*^m\Omega_{X^*}^n(V))_0.
 \]
 Este complejo está situado en un cuadrante malo
-$(p\leq0,q\geq0,p+q\geq0)$. Sin embargo, $\mathrm{s}K$ es el límite
-inductivo de los subcomplejos $\mathrm{s}\,\sigma_{p\geq p_0}(K)$ cuyos
+$(p\leq0,q\geq0,p+q\geq0)$. Sin embargo, $\underline{\underline{\mathrm{s}}}K$ es el límite
+inductivo de los subcomplejos $\underline{\underline{\mathrm{s}}}\,\sigma_{p\geq p_0}(K)$ cuyos
 términos son
 \[
-(\mathrm{s}\,\sigma_{p\geq p_0}K)^n
+(\underline{\underline{\mathrm{s}}}\,\sigma_{p\geq p_0}K)^n
 =\bigoplus_{\substack{p+q=n\\p\geq p_0}}K^{pq},
 \]
 y esto basta para justificar el argumento siguiente.

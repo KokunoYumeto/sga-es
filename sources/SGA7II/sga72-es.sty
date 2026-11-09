@@ -20,7 +20,8 @@
   \setboolean{original}{false}
 \fi
 
-\newcommand{\sisi}[2]{\ifthenelse{\boolean{original}}{#1}{#2}}
+% the branch selector expands to one of its arguments, so it also works in titles, tags and diagram labels
+\ifdefined\SGAOrigMode\newcommand{\sisi}[2]{#1}\else\newcommand{\sisi}[2]{#2}\fi
 \newcommand{\SGABranchLabel}{%
   \ifthenelse{\boolean{original}}{diplomática/original}{corregida/actual}}
 

@@ -6,12 +6,12 @@
 \begin{center}
 {\large\textbf{SGA 7}}\\[1.5em]
 {\Large\underline{EXPOSÉ XI}}\\[2.5em]
-{\Large\underline{COHOMOLOGÍA DE LAS INTERSECCIONES COMPLETAS}}\\[1.5em]
+{\Large\underline{\underline{COHOMOLOGÍA DE LAS INTERSECCIONES COMPLETAS}}}\\[1.5em]
 {\large\underline{por P. DELIGNE}}
 \end{center}
 
 \bigskip
-\noindent\underline{1. Cohomología del espacio proyectivo y de las
+\noindent1. \underline{Cohomología del espacio proyectivo y de las
 intersecciones completas}
 
 Sea $X$ una variedad proyectiva compleja no singular, puramente de dimensión
@@ -114,7 +114,7 @@ $\mathbb V(\underline E)^*$ sobre $\mathbb P(\underline E)$:
 & \mathbb P(\underline E)
   \arrow[dl,"p"]
 \\
-{} & S\arrow[ul,bend right,"e"'] & {}
+{} & S\arrow[ul,bend left,"e"] & {}
 \end{tikzcd}
 \qquad .
 \end{center}
@@ -306,7 +306,7 @@ Para $j=0$, se deduce también de (1.1.10) que
 p_*\Omega^i_{\mathbb P(\underline E)/S}(n)
 =\ker\!\left(\iota_X:
 p_*\bigwedge^i\underline E(n-i)\longrightarrow
-p_*\bigwedge^{i-1}\underline E(n-i+1)\right),
+p_*\bigwedge^{i-1}\underline E(n-i+1)\sisi{\right.}{\right)},
 \end{equation}
 
 y el mismo argumento muestra que $\iota_X$ es inyectivo cuando $n-i\leq0$.
@@ -581,7 +581,7 @@ cuerpo. En efecto, por (iii), para cada $j$ las funciones
 s\longmapsto\dim_{k(s)}H^i(Y_s,\Omega^j_{Y_s})
 \end{equation*}
 
-son constantes sobre $S$, salvo quizá cuando $i=j$; por consiguiente, todas
+son constantes sobre $S$, salvo quizá cuando $\sisi{i=j}{i+j=n}$; por consiguiente, todas
 son constantes, ya que su suma alternada es constante (EGA III, 7.9.2). La
 conclusión se deduce entonces de EGA III, 6.10.5, 7.6.9 y 7.7.5.
 
@@ -655,7 +655,7 @@ SGA 4, XIV, 3.3 muestra entonces, para todo $m$, que la aplicación canónica
 
 \begin{equation*}
 H_Y^q\bigl(\mathbb P(\underline E),\mathbb Z/\ell^m\bigr)
-\longrightarrow H^q(Y,\mathbb Z/\ell^m)
+\longrightarrow H^q(\sisi{Y}{\mathbb P(\underline E)},\mathbb Z/\ell^m)
 \end{equation*}
 
 \pageoriginale
@@ -702,9 +702,9 @@ torsión por 1.6(iv), y del hecho de que $H^0(Y,\Omega_Y^1)=0$ por
 algebraicamente cerrado $k$.}
 
 \begin{enumerate}[label=(\roman*),leftmargin=2.6em]
-\item \underline{Si $\ell$ es primo con la característica de $k$, entonces
-la $\ell$-torsión de $\operatorname{NS}(Y)$ se identifica con la
-$\ell$-torsión de $H^2(Y,\mathbb Z_\ell(1))$.}
+\item \underline{Si} $\ell$ \underline{es primo con la característica de $k$, entonces
+la} $\ell$-\underline{torsión de $\operatorname{NS}(Y)$ se identifica con la}
+$\ell$-\underline{torsión de $H^2(Y,\mathbb Z_\ell(1))$.}
 
 \pageoriginale
 
@@ -868,8 +868,8 @@ Por consiguiente, el miembro izquierdo $I$ de (2.2) puede reescribirse
 I
 &=\sum_{n=0}^{\infty}\sum_{p+q=n}
 \left((-1)^p+(-1)^q h_0^{p,q}(\underline a)\right)y^pz^{p+q+d}\\
-&=\sum_{p,q\geq0}(-1)^p(yz)^pz^qz^d
-+\sum_{p,q\geq0}(-1)^q h_0^{p,q}(\underline a)(yz)^pz^qz^d\\
+&=\sum_{p,q\geq0}(-1)^p(yz)^p\sisi{z.^q}{z^q}z^d
++\sum_{p,q\geq0}(-1)^q h_0^{p,q}(\underline a)(yz)^p\sisi{z.^q}{z^q}z^d\\
 &=z^d\left[\frac{1}{(1+yz)(1-z)}
 +H(\underline a)(yz,-z)\right].
 \end{align*}
@@ -1000,7 +1000,7 @@ p>\left\lfloor
 \frac{p+q+d-\sum_i a_i}{\sup_i(a_i)}
 \right\rfloor.
 \end{equation*}
-\underline{Aquí $\lfloor\ \rfloor$ designa la parte entera del cociente.}
+\underline{Aquí $\lfloor\ \rfloor$ designa la parte entera del cociente}.
 \end{enumerate}
 
 \pageoriginale
@@ -1021,7 +1021,7 @@ demostración se deja al lector.
 \medskip
 \noindent\underline{Lema 2.5.1.}\quad
 \underline{El conjunto de las series formales que satisfacen (*) es
-estable por suma y multiplicación.}
+estable por suma y multiplicación}.
 
 Demostremos primero (ii) en el caso particular de las hipersuperficies
 ($d=1$). Para $p\leq q$, la fórmula buscada puede reescribirse

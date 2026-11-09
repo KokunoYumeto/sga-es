@@ -60,7 +60,7 @@ Recordemos el lema siguiente (SGA 6 IV, Ej.~1.9).
 \underline{Sea} $Z_o$ \underline{un subesquema cerrado de un esquema
 noetheriano} $Z$. \underline{Entonces la inclusión de} $Z_o$ \underline{en}
 $Z$ \underline{induce un isomorfismo del grupo de Grothendieck de la categoría
-de los haces coherentes de} $\underline{O}_{Z_o}$\underline{-módulos sobre el
+de los haces coherentes de} $\sisi{O_{\mathbb{Z}_o}}{\underline{O}_{Z_o}}$\underline{-módulos sobre el
 grupo de Grothendieck de la categoría de los haces coherentes sobre} $Z$
 \underline{con soporte en} $Z_o$.
 
@@ -229,7 +229,7 @@ En virtud de 1.6 (v), (vi),
 =\sum_i a_i\left(D_i,\sum_j a_jD_j-a_i\operatorname{div}f\right)\\
 &=\sum_i a_i\left(D_i,\sum_{j\ne i}(a_j-a_i)D_j-a_iZ\right)\\
 &=\sum_{i\ne j}a_i(a_j-a_i)(D_i,D_j)-\sum_i a_i^2(D_i,Z)\\
-&=-\sum_{i<j}(a_i-a_j)^2(D_i,D_j)-\sum_i a_i^2(D_i,Z).
+&=-\sum_{i<j}(a_i-a_j)^2\sisi{(D_i\ D_j)}{(D_i,D_j)}-\sum_i a_i^2(D_i,Z).
 \end{aligned}
 \end{equation*}
 
@@ -277,6 +277,7 @@ Sea $D$ un divisor $\geq0$ con soporte en $Y$, y sea $N$ su haz conormal:
 D \arrow[rr, "i"] \arrow[dr, swap, "g"] & {} & X \arrow[dl, "f"] \\
 {} & S & {}
 \end{tikzcd}
+\qquad .
 \end{center}
 Se tiene
 \begin{equation}\tag{1.10.2}
@@ -378,6 +379,7 @@ Consideremos el diagrama
 0 \arrow[r] & \underline{O}(-D) \arrow[r] &
 \underline{O} \arrow[r] & \underline{O}_D \arrow[r] & 0
 \end{tikzcd}
+\qquad ,
 \end{center}
 El lema de la serpiente da un isomorfismo entre $\operatorname{Ker}(\psi)$ y
 $\operatorname{Coker}(\varphi)$. Este conúcleo es precisamente la restricción
@@ -513,18 +515,18 @@ demuéstrese que toda componente irreducible reducida es una recta proyectiva de
 autointersección $-2$. Si $X_s=\sum_i n_iD_i$ es la descomposición de $X_s$ en
 divisores irreducibles reducidos, reescríbase esta condición como
 \begin{equation}\tag{*}
-n_i=\frac12\sum_{j\ne i}\sisi{n_i}{n_j}(D_i,D_j).
+n_i=\frac12\sum_{j\ne i}\sisi{n_i}{n_j}(D_i\ D_j).
 \end{equation}
 Por otra parte, $X_s$ es conexo, de modo que:
 
 \medskip
 \noindent (**) Para cualesquiera $i$ y $j$, existe una cadena
 $i=i_1,i_2,\ldots,i_n=j$ tal que
-$(D_{i_k},D_{i_{k+1}})\ne0$.
+$(D_{i_k}\ D_{i_{k+1}})\ne0$.
 
 Hállense ahora todas las soluciones enteras de $(*)+(**)$. Demuéstrese primero
 que, salvo en los casos b2 y c2 de Néron, los números de intersección
-$(D_i,D_j)$ son cero o uno.
+$(D_i D_j)$ son cero o uno.
 
 \section{Intersecciones a la italiana}
 
@@ -678,7 +680,7 @@ Si $t'$ es un sucesor inmediato de $t$, entonces $t'$ es próximo a $t$. Si, en
 una sucesión $(t_i)_{0\leq i\leq n}$, cada $t_{i+1}$ es un sucesor inmediato de
 $t_i$, y si $t_n$ es próximo a $t_0$, entonces todo $t_i$ con $0<i\leq n$ es
 próximo a $t_0$, mientras que $t_n$ no es próximo a $t_i$ para
-$0<i\leq n-1$.
+$0<i\sisi{\leq}{<} n-1$.
 
 \subsection*{2.6}
 Sea $A$ un anillo local noetheriano de dimensión $n$, sea $T$ su espectro, sea
@@ -1296,7 +1298,7 @@ $s$, donde $k(s)$ es una extensión finita de $k$. Podemos considerar de nuevo e
 conjunto $I$ de los esquemas $f:S'\longrightarrow S$ obtenidos de $S$ mediante
 explosiones sucesivas de puntos cerrados, y poner, como en 2.1,
 \begin{equation*}
-S^*=\varinjlim_{S'\in I}\operatorname{Irr}\bigl(f^{-1}(s)\bigr).
+S^*=\varinjlim_{\sisi{s'}{S'}\in I}\operatorname{Irr}\bigl(f^{-1}(s)\bigr).
 \end{equation*}
 El conjunto $S^*$ se denominará de nuevo el conjunto de los
 \underline{puntos de $S$ infinitamente próximos a $s$}.
@@ -1563,7 +1565,7 @@ Enriques.
 \begin{equation}\tag{2.25.1}
 \left\{
 \begin{gathered}
-  \left\{\begin{aligned}y^2&=xz^4,\\ z^3&=x^2,
+  \left\{\begin{aligned}y^2&=xz^{\sisi{4}{2}},\\ z^3&=x^2,
   \end{aligned}\right.\qquad
   \left\{\begin{aligned}(y/z)^2&=(x/z)^3,\\ z&=(x/z)^2,
   \end{aligned}\right.\\[3pt]
@@ -1818,7 +1820,7 @@ de $m_1(s)$.
 
 \medskip
 \noindent\underline{Lema 2.33.}
-\underline{Si $k$ es de característica cero, toda derivación de $A_s$ se
+\underline{Si $k$ es de característica} cero, \underline{toda derivación de $A_s$ se
 extiende a una derivación de $\widetilde A_s$.}
 
 Si $D$ es una derivación de $A_s$, entonces
@@ -1860,7 +1862,7 @@ situados sobre $s$. Cuando $s$ es singular, se tiene
 \end{equation*}
 y
 \begin{equation*}
-\widetilde\tau_0/\tau\overset\sim\longrightarrow
+\widetilde\tau_0/\tau\simeq
 \text{el espacio tangente en el origen de }\widetilde G/G.
 \end{equation*}
 
