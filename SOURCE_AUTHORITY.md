@@ -1,7 +1,8 @@
 # Fuentes y alcance de la traducción
 
 La versión `2026-08-27-r19` es la edición española acumulada y completa de SGA en el repositorio
-`KokunoYumeto/sga-es`; la versión `2026-09-23-r20` añade la nueva edición de SGA 4½. El lector de 4.451 páginas
+`KokunoYumeto/sga-es`; la versión `2026-09-23-r20` añade la nueva edición de SGA 4½, y la versión `2026-11-10-r21` publica SGA 1 y SGA 7
+a partir de las fuentes de este repositorio. El lector de 4.439 páginas
 reúne los trece libros matemáticos en orden canónico. Las fuentes editables, las ramas de corrección reversibles y
 las pruebas de revisión y procedencia están en los archivos 05 y 06 de la publicación; el manifiesto SHA-256 global
 es el archivo 07.
@@ -11,7 +12,7 @@ es el archivo 07.
 SGA 3, tomo I comprende el texto matemático original completo (exposiciones I–VII_B e índice). La presentación
 editorial de la reedición de 2011 de la Société mathématique de France (pp. v–xviii), obra independiente de sus
 editores, queda fuera de esta edición. El tomo II comprende las exposiciones VIII–XVIII y el índice de notaciones; el
-tomo III, sus preliminares, las exposiciones XIX–XXVI y los índices finales. Los tres ocupan las páginas 502–2077 del
+tomo III, sus preliminares, las exposiciones XIX–XXVI y los índices finales. Los tres ocupan las páginas 504–2079 del
 lector acumulado.
 
 ## Revisión r19
