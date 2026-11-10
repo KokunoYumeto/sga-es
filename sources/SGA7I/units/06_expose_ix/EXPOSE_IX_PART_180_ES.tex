@@ -1,0 +1,367 @@
+\par\medskip
+\noindent
+13.4. \underline{Interpretación mediante las} «\underline{estructuras de Hodge
+mixtas}» \underline{de Deligne.}
+
+Volvamos primero al diccionario de 13.1.4, que reformularemos de una
+manera ligeramente distinta, más adecuada para introducir las
+«estructuras de Hodge» pertinentes en la situación presente. Para ello,
+sea $\underline R$ el haz de secciones de $R$ sobre $S$, e introduzcamos
+el $\underline{\mathcal O}_S$-módulo
+
+\begin{equation}\tag{13.4.1}
+ \mathcal E(A)=\mathcal E=
+ \underline R\otimes_{\mathbb Z}\underline{\mathcal O}_S\qquad .
+\end{equation}
+
+\noindent
+Es localmente libre de tipo finito cuando $R$ es localmente constante.
+(Obsérvese que $\mathcal E$ no es necesariamente coherente cuando $R$
+no es localmente constante.) El homomorfismo (13.1.3)
+$\underline R\longrightarrow\underline E$ define entonces un
+homomorfismo canónico
+
+\begin{equation}\tag{13.4.2}
+ \mathcal E=\underline R\otimes_{\mathbb Z}
+ \underline{\mathcal O}_S\longrightarrow\underline E\qquad .
+\end{equation}
+
+\noindent
+Denotamos su núcleo por $\underline F(A)$, o simplemente por
+$\underline F$; se tiene así una sucesión exacta
+
+\begin{equation}\tag{13.4.3}
+ 0\longrightarrow\underline F\longrightarrow\mathcal E
+ \longrightarrow\underline E\qquad .
+\end{equation}
+
+\noindent
+El caso más interesante es aquel en que (13.4.2) es un epimorfismo, es
+decir, aquel en que $R_s$ genera el espacio vectorial complejo $E_s$
+para todo $s\in S$. Se tiene entonces una sucesión exacta
+
+\begin{equation}\tag{13.4.4}
+ 0\longrightarrow\underline F\longrightarrow\mathcal E
+ \longrightarrow\underline E\longrightarrow0\qquad .
+\end{equation}
+
+\noindent
+Si $R$ es localmente constante, esta es una sucesión exacta corta de
+módulos localmente libres sobre $S$. Conocer el par $(E,R)$ equivale
+entonces a conocer el par $(R,\underline F)$, donde $R$ es un grupo
+analítico localmente constante sobre $S$ cuyas fibras son
+$\mathbb Z$-módulos libres de tipo finito, y $\underline F$ es un
+submódulo localmente sumando directo de
+$\mathcal E=\underline R\otimes_{\mathbb Z}
+\underline{\mathcal O}_S$, sometido además a
+
+\begin{equation}\tag{13.4.5}
+ \underline F\cap\underline R=0\qquad .
+\end{equation}
+
+\noindent
+Desde el punto de vista de las estructuras de Hodge, $\mathcal E$ debe
+considerarse filtrado por la «\underline{filtración de Hodge}»
+
+\begin{equation}\tag{13.4.6}
+ \operatorname{Fil}^{\sisi{1}{-1}}(\mathcal E)=\mathcal E,
+ \qquad \operatorname{Fil}^{0}(\mathcal E)=\underline F,
+ \qquad \operatorname{Fil}^{\sisi{-1}{1}}(\mathcal E)=0\qquad .
+\end{equation}
+
+\noindent
+Obsérvese que la sucesión exacta (13.4.3) sigue dependiendo
+funtorialmente del grupo analítico $A$ sobre $S$, y es compatible con
+cualquier cambio de base.
+
+Volviendo ahora a las condiciones de 13.3, pongamos
+
+\begin{equation}\tag{13.4.7}
+ \mathcal E^f=\underline R^f\otimes_{\mathbb Z}
+ \underline{\mathcal O}_S,
+ \qquad
+ \mathcal E^t=\underline R^t\otimes_{\mathbb Z}
+ \underline{\mathcal O}_S\qquad .
+\end{equation}
+
+\noindent
+Estos módulos están definidos sobre un entorno adecuado de $s$, que
+podemos suponer igual a todo $S$, y definen una filtración de
+$\mathcal E$, llamada \underline{filtración por pesos},
+
+\begin{equation}\tag{13.4.8}
+ \mathcal E\supset\mathcal E^f\supset\mathcal E^t\supset0\qquad .
+\end{equation}
+
+\noindent
+Aquí $\mathcal E^t$, $\mathcal E^f$ y $\mathcal E$ deben considerarse
+de pesos $-2$, $-1$ y $0$, respectivamente; se trata, por tanto, de una
+filtración creciente. Al igual que $R^t$, el módulo $\mathcal E^t$
+depende de la elección de un sub-toro $T_o$ de $A_o=A_s$. Puesto que
+$R^f$ y $R^t$ son localmente constantes, \underline{$\mathcal E^f$ y
+$\mathcal E^t$ son localmente libres}; también pueden interpretarse
+como
+
+\begin{equation}\tag{13.4.9}
+ \mathcal E^f=\mathcal E(A^\natural),
+ \qquad \mathcal E^t=\mathcal E(T)\qquad .
+\end{equation}
+
+\noindent
+Aplicando la functorialidad de (13.4.3), cuando varía $A$, a los
+homomorfismos
+
+\begin{equation*}
+ T\longrightarrow A^\natural\longrightarrow A
+\end{equation*}
+
+\noindent
+se ve inmediatamente que $\underline F(A^\natural)$ y $\underline F(T)$
+se identifican, respectivamente, con
+
+\begin{equation}\tag{13.4.10}
+ \underline F(A^\natural)\simeq
+ \underline F^f\stackrel{\mathrm{def}}{=}
+ \underline F\cap\mathcal E^f,
+ \qquad
+ \underline F(T)=\underline F^t=
+ \underline F\cap\mathcal E^t=0\qquad .
+\end{equation}
+
+\noindent
+La última igualdad se deduce inmediatamente de que
+$\underline F(T)=0$ para un toro $T$: en este caso, la sucesión exacta
+de tipo (13.4.3) es
+$0\longrightarrow0\longrightarrow\mathcal E(T)
+\longrightarrow\underline{\operatorname{Lie}}(T)\longrightarrow0$.
+Al mismo tiempo se ve que el homomorfismo compuesto
+
+\begin{equation*}
+ \mathcal E^t\longrightarrow\mathcal E\longrightarrow\underline E
+\end{equation*}
+
+\noindent
+induce un isomorfismo
+
+\begin{equation}\tag{13.4.11}
+ \mathcal E^t\stackrel{\sim}{\longrightarrow}\underline E^t
+ \simeq\underline{\operatorname{Lie}}(T)\qquad .
+\end{equation}
+
+\noindent
+\underline{Supongamos ahora que $R_s$ genera el espacio vectorial
+complejo $E_s$}, como sucede en particular en el caso favorable 13.3.16,
+en el que $A_s$ es una extensión de un grupo abeloide por un toro
+complejo $T_o$. Tras restringir $S$ a un entorno adecuado de $s$, el
+homomorfismo canónico de tipo (13.4.2), con $A$ sustituido por
+$A^\natural$,
+
+\begin{equation*}
+ \mathcal E^f=\mathcal E(A^\natural)
+ \longrightarrow\underline{\operatorname{Lie}}(A^\natural)
+ \simeq\underline E
+\end{equation*}
+
+\noindent
+es un epimorfismo; con mayor razón, también lo es (13.4.2). Tenemos,
+pues, las sucesiones exactas (13.4.4) y
+
+\begin{equation}\tag{13.4.12}
+ 0\longrightarrow\underline F^f\longrightarrow\mathcal E^f
+ \longrightarrow\underline E\longrightarrow0\qquad .
+\end{equation}
+
+\noindent
+En particular,
+
+\begin{equation}\tag{13.4.13}
+ \underline F+\mathcal E^f=\mathcal E\qquad ,
+\end{equation}
+
+\noindent
+pues $\mathcal E/\underline F\simeq\underline E$. Además, como
+$B=A^\natural/T$ es un cociente de \sisi{$A$}{$A^\natural$},
+\footnote{La fuente impresa afirma aquí que $B$ es un cociente de $A$;
+la definición mostrada $B=A^\natural/T$ determina el grupo pretendido.}
+satisface la condición de sobreyectividad análoga y da, por tanto,
+lugar a una sucesión exacta de tipo (13.4.4):
+
+\begin{equation}\tag{13.4.14}
+ 0\longrightarrow\underline F(B)\longrightarrow\mathcal E(B)
+ \longrightarrow\underline{\operatorname{Lie}}(B)
+ \longrightarrow0\qquad .
+\end{equation}
+
+\noindent
+Su interpretación mediante los módulos ya introducidos es inmediata.
+En efecto, por (13.3.12),
+
+\begin{equation}\tag{13.4.15}
+ \left\{
+ \begin{array}{l}
+  \mathcal E(B)\simeq
+  (\underline R^f/\underline R^t)\otimes_{\mathbb Z}
+  \underline{\mathcal O}_S
+  \simeq\mathcal E^f/\mathcal E^t,\\[2ex]
+  \underline{\operatorname{Lie}}(B)
+  \simeq\underline E/\underline E^t.
+ \end{array}
+ \right.
+\end{equation}
+
+\noindent
+De (13.4.11) y de la relación
+$\underline F\cap\mathcal E^t=0$ de (13.4.10) se sigue que
+$\underline F(B)=\ker(\mathcal E^f/\mathcal E^t
+\longrightarrow\underline E/\underline E^t)$ es isomorfo a
+$\underline F^f$ mediante el homomorfismo
+
+\begin{equation}\tag{13.4.16}
+ \underline F^f\simeq\underline F(A^\natural)
+ \stackrel{\sim}{\longrightarrow}\underline F(B)\qquad .
+\end{equation}
+
+\noindent
+Resumamos las propiedades que acabamos de obtener para la filtración
+por pesos (13.4.8), y su relación con la filtración de Hodge (13.4.6)
+de $\mathcal E$ definida por el submódulo $\underline F$, en el caso
+favorable 13.3.16 en el que $A_s$ es una extensión de un grupo analítico
+abeloide $B_o$ por un toro $T_o$. Utilizamos este toro para definir
+$R^t$, de modo que $B$ sea un grupo analítico abeloide sobre $S$.
+
+\medskip
+\noindent
+\underline{Proposición 13.4.17.} \underline{En las condiciones
+precedentes, las filtraciones de Hodge y por pesos sobre}
+$\mathcal E=\underline R\otimes_{\mathbb Z}\underline{\mathcal O}_S$,
+
+\begin{equation}\tag{13.4.17.1}
+ \mathcal E\supset\underline F,
+ \qquad
+ \mathcal E\supset\mathcal E^f\supset\mathcal E^t\supset0,
+\end{equation}
+
+\noindent
+\underline{satisfacen las condiciones siguientes:}
+
+\smallskip
+\noindent
+a) \underline{La filtración por pesos se obtiene, mediante producto
+tensorial sobre $\mathbb Z$ con $\underline{\mathcal O}_S$, de la
+filtración análoga sobre $\underline R$}
+
+\begin{equation*}
+ \underline R\supset\underline R^f\supset\underline R^t\supset0,
+\end{equation*}
+
+\noindent
+\underline{donde $\underline R^f$ y $\underline R^t$ son grupos
+analíticos localmente constantes sobre} $S$, \underline{con valores en
+$\mathbb Z$-módulos libres de tipo finito}, a saber,
+$R_o^f=R_s=\pi_1(A_s)$ y $R_o^t=\pi_1(T_o)$.
+
+\smallskip
+\noindent
+b) \underline{Se tienen las relaciones}
+
+\begin{equation}\tag{*}
+ \underline F\cap\mathcal E^t=0,
+ \qquad \underline F+\mathcal E^f=\mathcal E\qquad .
+\end{equation}
+
+\noindent
+\underline{En otras palabras, la filtración sobre $\mathcal E^t$
+inducida por la filtración de Hodge}, con las convenciones de grados de
+(13.4.6), \underline{está concentrada en grado $-1$}, mientras que la
+filtración sobre $\mathcal E/\mathcal E^f$ inducida por la filtración de
+Hodge está \underline{concentrada en grado $0$}.
+
+\smallskip
+\noindent
+c) \underline{Considérese sobre}
+
+\begin{equation*}
+ \mathcal E^{\mathrm{ab}}
+ \stackrel{\mathrm{def}}{=}\mathcal E^f/\mathcal E^t
+ \simeq\underline R^{\mathrm{ab}}\otimes_{\mathbb Z}
+ \underline{\mathcal O}_S,
+ \qquad
+ \underline R^{\mathrm{ab}}=\underline R^f/\underline R^t
+ \quad\text{(cf. a))},
+\end{equation*}
+
+\noindent
+\underline{la filtración inducida por la filtración de Hodge sobre
+$\mathcal E$}. Está, por tanto, definida por el submódulo
+$\underline F^{\mathrm{ab}}$ de $\mathcal E^{\mathrm{ab}}$ que es la
+imagen de
+
+\begin{equation*}
+ \underline F^f\stackrel{\mathrm{def}}{=}
+ \underline F\cap\mathcal E^f\longrightarrow\mathcal E^{\mathrm{ab}}.
+\end{equation*}
+
+\noindent
+La flecha es un monomorfismo en virtud de la primera relación $(*)$.
+\underline{Entonces el par}
+
+\begin{equation*}
+ \bigl(\underline R^{\mathrm{ab}},
+ \underline F^{\mathrm{ab}}\subset
+ \underline R^{\mathrm{ab}}\otimes_{\mathbb Z}
+ \underline{\mathcal O}_S=\mathcal E^{\mathrm{ab}}\bigr)
+\end{equation*}
+
+\noindent
+\underline{es isomorfo al par}
+$(\underline R(B),\underline F(B))$
+\underline{asociado a un grupo abeloide sobre $S$}, como se explicó
+después de (13.4.4). Por tanto,
+
+\begin{equation*}
+ B\simeq\mathcal E^{\mathrm{ab}}/
+ (F^{\mathrm{ab}}+R^{\mathrm{ab}}),
+\end{equation*}
+
+\noindent
+donde los símbolos sin subrayar denotan los grupos analíticos
+correspondientes sobre $S$.
+
+\medskip
+\noindent
+\underline{Observación 13.4.18.} En la terminología de Deligne [4], la
+conclusión de la proposición precedente, tras restringirse a un abierto
+$U$ de $S$ sobre el que $R$ sea localmente constante, afirma que $R$,
+dotado de las dos filtraciones (13.4.17.1) sobre
+$\mathcal E=\underline R\otimes_{\mathbb Z}\underline{\mathcal O}_S$,
+es una «familia analítica de estructuras de Hodge mixtas sobre $U$».
+La situación que acabamos de describir sirvió de modelo para las
+conjeturas de Deligne sobre la teoría de Néron en dimensiones
+superiores, enunciadas en [9, 9.8--9.13].
+
+Hay, sin embargo, un rasgo importante de la teoría algebraica estudiada
+en el \S~7 que falta en la descripción de 13.4.17. Supongamos que $A$ es
+un grupo abeloide sobre un abierto $U$ complementario de un subconjunto
+analítico $Z$ de $S$ denso en ninguna parte---digamos $Z=\{s\}$ cuando
+$\dim S=1$---, de modo que, por (13.1.5), $R|U$ sea un sistema local
+sobre $U$. Entonces el sistema local $R/R^t$ sobre $U$ debería ser
+\underline{constante}; más precisamente, debería ser dual del sistema
+local ${R'}^f$, donde $R'$ es el grupo analítico, étale sobre $S$, que
+correspondería (como $R$ corresponde a $A$) a un grupo analítico
+adecuado $A'$ sobre $S$ tal que $A'|U$ fuera el grupo abeloide dual de
+$A|U$. En la notación del \S~5, el análogo algebraico es la dualidad
+entre $T_\ell(A_K)/T_\ell(A_K)^t$ y $T_\ell(A'_K)^f$ de (5.5.9), que
+se sigue del teorema de dualidad 5.2.
+
+No sé si tal enunciado es válido bajo las solas hipótesis de 13.4.17,
+ni siquiera si la acción de $\pi_1(U,t)$ sobre $R_t$ es unipotente para
+$t\in U$. Tampoco parece que los métodos ingenuos utilizados en el
+presente párrafo permitan demostrar un resultado semejante, ni aun
+bajo la hipótesis adicional de que $A|U$ esté dotado de una
+«polarización», es decir, de un haz invertible amplio sobre cada fibra.
+Esto es, sin embargo, algo que los «especialistas en grupos
+semisimples» parecen saber demostrar, al menos cuando $S$ es no singular
+de dimensión $1$; véase el informe [9]. En la subsección siguiente
+mostraremos que todo funciona bajo hipótesis de algebraicidad relativa
+sobre $A$, y relacionaremos al mismo tiempo el resultado con la
+construcción del \S~7.

@@ -1,0 +1,146 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2367--2446; índices de escaneo 317--321;
+% folios de fuente 306--310. La familia P_{eta Q_eta}/P_eta x_eta Q_eta
+% se conserva reversiblemente mediante \sisi. La fórmula q_eta^*(E_eta)
+% sigue directamente el escaneo y repara solo la transcripción.
+
+\medskip
+\noindent 7.3.4. \underline{Reducción de las obstrucciones de tipo
+(7.1.2) a las de tipo (7.1.1).}
+
+Supongamos, para fijar ideas, que existe un entero $n>0$ tal que
+$n\Phi=0$, y sea
+\[
+ q\in Q(S)
+\]
+una sección de $Q$. Por abuso de notación, escribamos
+\[
+ q_0\in\Psi(k)
+\]
+para la imagen en $\Psi(k)$ del valor de $q$ en $s$. Considerando
+$E_\eta$ como una extensión de
+$\sisi{P_{\eta Q_\eta}}{P_\eta\times_\eta Q_\eta}$ por
+$\underline G_{mQ_\eta}$ sobre $Q_\eta$, la imagen inversa da una
+extensión
+\[
+ q_\eta^*(E_\eta),\qquad
+ \text{extensión de $P_\eta$ por $\underline G_{m\eta}$},
+\]
+y, por tanto, una obstrucción
+\begin{equation}\tag{7.3.4.1}
+ d_q\overset{\mathrm{def}}{=}
+ d\bigl(q_\eta^*(E_{\sisi{*}{\eta}})\bigr):
+ \Phi\longrightarrow(\mathbb Q/\mathbb Z)_k.
+\end{equation}
+Si $d=d(E_\eta)$, se tiene la relación
+\begin{equation}\tag{7.3.4.2}
+ d_q(x)=d(x,q_0),
+\end{equation}
+válida para todo punto $x$ de $\Phi$ con valores en un esquema $T$
+sobre $k$.
+
+\smallskip
+\noindent 7.3.4.3. Para todo $q\in Q(S)$, esta fórmula determina $d_q$
+a partir del emparejamiento $d$; recíprocamente, permite recuperar
+manifiestamente $d$ a partir de los invariantes $d_q$, al menos cuando
+todo punto de $\Psi$ procede de una sección de $Q$. Por el lema de
+Hensel, esta condición se cumple automáticamente cuando $S$ es
+estrictamente local. El emparejamiento $d$ queda determinado una vez
+conocido sobre la clausura separable de $k$, y su formación conmuta con
+la localización étale sobre $S$ por 7.3.5.3. Así, sustituyendo $S$ por
+su localización estricta si es necesario, la determinación de $d$ se
+reduce a la de los invariantes $d_q$.
+
+En particular, cuando todo punto de $\Psi$ procede de una sección $q$
+de $Q$, el emparejamiento $d$ es nulo —es decir, $E_\eta$ se prolonga
+a una biextensión $E$ de $(P,Q)$ por $\underline G_m$— si y solo si
+$d_q$ es nulo para toda sección $q$ de $Q$, es decir, si y solo si
+$q_\eta^*(E_\eta)$ se prolonga a una extensión de $P$ por
+$\underline G_m$. Sin hipótesis sobre $\Psi$, el criterio análogo
+sigue siendo válido siempre que se permita que los $q$ sean puntos con
+valores en esquemas $S'$ étale y locales sobre $S$.
+
+%%%%%%%%%%  scan idx 319  |  folio 308  %%%%%%%%%%
+
+\smallskip
+\noindent 7.3.4.4. Recíprocamente, partiendo de la situación de 7.1(a),
+la obstrucción (7.1.1) puede interpretarse como una obstrucción de tipo
+(7.1.2): tómese $Q=\mathbb Z_S$ y la biextensión de
+$(P_\eta,\mathbb Z_\eta)$ deducida de $E_\eta$. En efecto, basta aplicar
+la construcción precedente con $q$ igual a la sección $1$ de
+$\mathbb Z_S$.
+
+\medskip
+\noindent 7.3.5. \underline{Efecto de un cambio de base $S'\to S$.}
+Supongamos dado un morfismo local dominante de traits
+\[
+ f:S'\longrightarrow S,
+\]
+y denotemos por $\eta'$ el punto genérico de $S'$, por $s'$ su punto
+cerrado, y pongamos $k'=k(s')$. Si $S=\operatorname{Spec}(V)$ y
+$S'=\operatorname{Spec}(V')$, entonces $V'$ es un anillo de valoración
+discreta que domina al anillo de valoración discreta $V$. Pongamos
+\begin{equation}\tag{7.3.5.1}
+ e(S'/S)=e(V'/V)=
+ \operatorname{longitud}_{V'}(V'/\mathfrak m V'),
+\end{equation}
+donde $\mathfrak m$ es el ideal maximal de $V$.
+
+Sea ahora $P$ como en 7.1(a), sea $E_\eta$ una extensión de $P_\eta$
+por $\underline G_{m\eta}$, pongamos $P'=P\times_S S'$, y sea
+$E'_{\eta'}$ la extensión de $P'_{\eta'}$ por
+$\underline G_{m\eta'}$ obtenida por imagen inversa de $E_\eta$. Con
+la notación de 4.1(a), existe un isomorfismo canónico
+\[
+ \Phi'\overset{\mathrm{def}}{=}P'_0/{P'_0}^{\circ}
+ \simeq\Phi\otimes_k k'\simeq\Phi_{k'},
+\]
+y, por tanto, podemos considerar
+\[
+ d(E_\eta)_{k'}:\Phi'\longrightarrow(\mathbb Q/\mathbb Z)_{k'}.
+\]
+Entonces
+\begin{equation}\tag{7.3.5.2}
+ d(E'_{\eta'})=e(S'/S)\,d(E_\eta)_{k'}.
+\end{equation}
+
+%%%%%%%%%%  scan idx 320  |  folio 309  %%%%%%%%%%
+
+Análogamente, bajo las hipótesis de 7.1(b) y con la notación evidente,
+(7.3.5.2) sigue siendo válida, denotando ahora $d(E_\eta)$ el
+emparejamiento (7.1.2), $d(E_\eta)_{k'}$ el emparejamiento
+\[
+ \Phi'\otimes\Psi'\longrightarrow(\mathbb Q/\mathbb Z)_{k'}
+\]
+obtenido de él por el cambio de base $k\to k'$, y $E'_{\eta'}$ la
+biextensión de $(P'_{\eta'},Q'_{\eta'})$ por
+$\underline G_{m\eta'}$ obtenida de la biextensión $E_\eta$ de
+$(P_\eta,Q_\eta)$ por $\underline G_{m\eta}$ mediante el cambio de
+base $\eta'\to\eta$.
+
+\smallskip
+\noindent 7.3.5.3. Un caso interesante es $e(S'/S)=1$, es decir,
+\[
+ \mathfrak m'=\mathfrak m V',
+\]
+donde $\mathfrak m'$ denota el ideal maximal de $V'$. Esto ocurre, en
+particular, si $V'$ es étale sobre $V$, o si $V'$ es el henselizado, el
+henselizado estricto o el completado de $V$. En este caso, (7.3.5.2)
+dice simplemente que \underline{la formación de la obstrucción (7.1.1),
+respectivamente (7.1.2), conmuta con el cambio de base considerado
+$S'\to S$}.
+
+\smallskip
+\noindent 7.3.5.4. Por otra parte, (7.3.5.2) muestra en el caso general
+que, para toda extensión $E_\eta$ como en 7.1(a) (respectivamente, toda
+biextensión $E_\eta$ como en 7.1(b)), existe un morfismo
+\underline{finito} de traits $S'\to S$ tal que $k(\eta')$ sea una
+extensión separable de $k(\eta)$ y tal que la extensión
+(respectivamente, biextensión) $E'_{\eta'}$ obtenida de $E_\eta$ por
+cambio de base $\eta'\to\eta$ se prolongue a una extensión
+(respectivamente, biextensión) $E'$ sobre todo $S'$. En efecto, basta
+elegir $S'/S$ de modo que $e(S'/S)$ sea múltiplo del entero $n>0$ que
+aparece en 7.1, y siempre puede encontrarse tal extensión con
+$k(\eta')$ separable sobre $k(\eta)$.
+
+%%%%%%%%%%  scan idx 321  |  folio 310  %%%%%%%%%%

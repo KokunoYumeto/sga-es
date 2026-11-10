@@ -1,0 +1,138 @@
+\par\medskip\noindent
+2.5. \underline{Estructura de la categoría
+$\operatorname{BIEXT}(P,Q;G)$}.
+
+Las consideraciones formales generales de [4, n.º~1] proporcionan
+varias consecuencias útiles de la dependencia aditiva de las
+categorías $\operatorname{BIEXT}(P,Q;G)$ respecto de $G$.
+
+2.5.1. En primer lugar, para $G$ fijo, la categoría
+$\operatorname{BIEXT}(P,Q;G)$ está provista de una ley de composición
+que asigna funtorialmente a dos biextensiones $E,E'$ de $(P,Q)$ por
+$G$ una \underline{biextensión producto}, denotada $E.E'$. Esta
+construcción no es sino el análogo del producto usual de dos
+extensiones de un grupo conmutativo por otro. Es compatible con esa
+construcción tanto si $E,E'$ se consideran extensiones de grupos de
+$Q_P$ por $G_P$ como si se consideran extensiones de $P_Q$ por $G_Q$.
+En particular, como torsor bajo $G_{P\times Q}$, $EE'$ es el producto
+
+%%%%%%%%%%  scan idx 177  |  folio 166  %%%%%%%%%%
+
+de los torsores bajo $G_{P\times Q}$ definidos por $E$ y $E'$.
+
+La formación de $E.E'$ es además \underline{asociativa y conmutativa}
+salvo isomorfismos canónicos, y esta ley de composición sobre
+$\operatorname{BIEXT}(P,Q;G)$ posee un objeto neutro bilateral,
+llamado la \underline{biextensión trivial de $(P,Q)$ por $G$}. Puede
+construirse, como en \emph{loc.\ cit.}, a partir de la única
+biextensión $E_0$ de $(P,Q)$ por el grupo nulo $0$, salvo isomorfismo,
+mediante el homomorfismo $0\longrightarrow G$. De esta descripción se
+obtiene inmediatamente otra descripción de la biextensión trivial como
+el torsor trivial
+\[
+ E=P\times Q\times G.
+\]
+Sus dos estructuras de grupo sobre $P$ y sobre $Q$ se obtienen,
+respectivamente, de las estructuras de grupo producto sobre
+$Q\times G$ y $P\times G$ por los cambios de base
+$P\longrightarrow e$ y $Q\longrightarrow e$.
+
+Finalmente, para toda biextensión $E$ de $(P,Q)$ por $G$, puede
+definirse la \underline{biextensión inversa}, denotada $E^{-1}$, junto
+con un isomorfismo de $EE^{-1}$ con la biextensión trivial. Esto
+determina $E^{-1}$ salvo isomorfismo único y hace funtorial su
+dependencia respecto de $E$.
+
+En resumen, la categoría $\operatorname{BIEXT}(P,Q;G)$ se comporta
+como un objeto grupo de la categoría $\mathbf{Cat}$ de categorías,
+salvo que las relaciones de asociatividad, conmutatividad, unidad e
+inversión solo se cumplen salvo isomorfismos especificados. Puede
+llamarse un \underline{pseudogrupo} en la 2-categoría $\mathbf{Cat}$.
+
+%%%%%%%%%%  scan idx 178  |  folio 167  %%%%%%%%%%
+
+2.5.2. Para $P,Q,G$ fijos, las propiedades precedentes implican los
+hechos siguientes. Para toda biextensión $E$ de $(P,Q)$ por $G$, el
+monoide de endomorfismos de $E$ es canónicamente isomorfo al monoide de
+endomorfismos de la biextensión trivial $\underline 1$: a un
+endomorfismo $u$ de $\underline 1$ se le asocia
+$u.\mathrm{id}_E$ sobre $\underline 1.E\simeq E$. El monoide de
+endomorfismos de $\underline 1$ es, de hecho, un
+\underline{grupo conmutativo}, denotado
+\begin{equation}\tag{2.5.2.1}
+ \operatorname{Biext}^{0}(P,Q;G).
+\end{equation}
+Su ley de composición viene dada también por
+$(u,v)\mapsto u.v\in
+\operatorname{End}(\underline 1.\underline 1)
+\simeq\operatorname{End}(\underline 1)$.
+
+Asimismo, la ley de composición $(E,E')\mapsto EE'$ dota al conjunto
+\begin{equation}\tag{2.5.2.2}
+ \operatorname{Biext}^{1}(P,Q;G)
+\end{equation}
+de clases de isomorfismo de biextensiones de $(P,Q)$ por $G$ de una
+estructura de \underline{grupo conmutativo}; el inverso de la clase de
+$E$ es la clase de $E^{-1}$.
+
+2.5.3. Dado un homomorfismo de grupos $G\longrightarrow G'$, el funtor
+correspondiente
+\begin{equation}\tag{2.5.3.1}
+ \operatorname{BIEXT}(P,Q;G)
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;G')
+\end{equation}
+es compatible, salvo isomorfismos canónicos, con las operaciones
+$E.E'$ y $E^{-1}$ de 2.5.1. En consecuencia, las dos aplicaciones
+evidentes
+\begin{equation}\tag{2.5.3.2}
+ \operatorname{Biext}^{i}(P,Q;G)
+ \longrightarrow
+ \operatorname{Biext}^{i}(P,Q;G')
+ \qquad(i=0,1)
+\end{equation}
+son \underline{homomorfismos de grupos}. Además, si $E$ es una
+biextensión de $(P,Q)$ por $G$ y $E'$ la biextensión correspondiente
+por $G'$, el homomorfismo natural
+\begin{equation}\tag{2.5.3.3}
+ \operatorname{Hom}(E,E)=\operatorname{Aut}(E)
+ \longrightarrow
+ \operatorname{Hom}(E',E')=\operatorname{Aut}(E')
+\end{equation}
+es precisamente (2.5.3.2) para $i=0$.
+
+%%%%%%%%%%  scan idx 179  |  folio 168  %%%%%%%%%%
+
+2.5.4. El grupo $\operatorname{Biext}^{0}(P,Q;G)$ admite una
+descripción explícita sencilla. Si $E$ es una biextensión de $(P,Q)$
+por $G$, un automorfismo $u$ de $E$ es ante todo un automorfismo del
+torsor subyacente bajo $G_{P\times Q}$ y, por tanto, viene dado por un
+morfismo
+\[
+ u_0:P\times Q\longrightarrow G
+\]
+mediante la fórmula
+\[
+ u(x)=u_0(j(x))x.
+\]
+La compatibilidad de $u$ con la primera, respectivamente con la
+segunda, estructura de extensión sobre $E$ equivale a la aditividad de
+$u_0$ respecto del segundo, respectivamente del primer, argumento.
+Así, \underline{$u$ es un automorfismo de la estructura de biextensión
+de $E$ si y solo si $u_0$ es bilineal}. Se obtiene una
+\underline{biyección canónica}
+\begin{equation}\tag{2.5.4.1}
+ \operatorname{Biext}^{0}(P,Q;G)
+ \simeq
+ \operatorname{Hom}(P\otimes Q,G).
+\end{equation}
+Se comprueba fácilmente que esta biyección es independiente de $E$,
+que respeta las estructuras de grupo y que es funtorial en $G$ para la
+funtorialidad del primer miembro descrita en (2.5.3.2).
+
+Más adelante determinaremos $\operatorname{Biext}^{1}(P,Q;G)$ y
+veremos que es canónica y funtorialmente en $G$ isomorfo a
+\[
+ \operatorname{Ext}^{1}
+ \bigl(P\overset{\mathbb L}{\otimes}Q,G\bigr).
+\]

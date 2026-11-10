@@ -1,0 +1,93 @@
+2.4. \underline{La categoría $\operatorname{BIEXT}(P,Q,G)$ para
+$P,Q,G$ variables}.
+
+Afirmo que \underline{el funtor canónico (2.3.4) es fibrado} y que
+\underline{el funtor canónico (2.3.5) es cofibrado}. La primera
+afirmación significa, en particular, que si $E$ es una biextensión de
+$(P,Q)$ por $G$, y si
+\[
+ u:P'\longrightarrow P,\qquad v:Q'\longrightarrow Q
+\]
+son morfismos de grupos abelianos, existe una biextensión $E'$ de
+$(P',Q')$ por $G$ y un morfismo de biextensiones
+\[
+ f:E'\longrightarrow E
+\]
+compatible con $u,v,\mathrm{id}_G$, que posee la propiedad universal
+habitual respecto de los morfismos de biextensiones hacia $E$
+compatibles con $u,v,\mathrm{id}_G$.
+
+La segunda afirmación se explicita de manera análoga. En particular,
+si $E$ es una biextensión de \sisi{$(P,G)$}{$(P,Q)$} por $G$, y si
+\[
+ w:G\longrightarrow G'
+\]
+es un morfismo de grupos abelianos,
+
+%%%%%%%%%%  scan idx 175  |  folio 164  %%%%%%%%%%
+
+existe una biextensión $E'$ de $(P,Q)$ por $G'$ y un morfismo de
+biextensiones
+\[
+ g:E\longrightarrow E'
+\]
+compatible con $\mathrm{id}_P,\mathrm{id}_Q,w$, que posee la propiedad
+universal habitual respecto de los morfismos de biextensiones desde
+$E$ compatibles con $\mathrm{id}_P,\mathrm{id}_Q,w$. Dejamos al lector
+la explicitación de las dos construcciones cuya existencia acaba de
+afirmarse; se obtienen fácilmente parafraseando las construcciones
+análogas bien conocidas para extensiones de grupos ordinarios.
+
+Así, para tres grupos abelianos $P,Q,G$ de $\underline T$, escribimos
+\begin{equation}\tag{2.4.1}
+ \operatorname{BIEXT}(P,Q;G)
+\end{equation}
+para la categoría de biextensiones de
+\sisi{$(P;Q)$}{$(P,Q)$} por $G$, definida como la categoría fibra de
+(2.3.3) sobre $(P,Q,G)$ (de modo que sus morfismos son los morfismos
+de biextensiones compatibles con los morfismos identidad de $P,Q,G$).
+Entonces \underline{esta categoría depende covariantemente de $G$ y
+contravariantemente de $P,Q$}. Además, con estas varianzas,
+\underline{la categoría $\operatorname{BIEXT}(P,Q;G)$ depende
+aditivamente de cada uno de los tres argumentos $P,Q,G$}. Para el
+argumento $G$, por ejemplo, esto significa precisamente:
+
+\begin{enumerate}[label=\alph*)]
+\item $\operatorname{BIEXT}(P,Q;0)$ es equivalente a la categoría de
+un solo objeto;
+\item para dos grupos abelianos $G,G'$ de $\underline T$, el funtor
+\begin{equation}\tag{2.4.2}
+ \sisi{\operatorname{BIEXT}(P,G;G\times G')}%
+       {\operatorname{BIEXT}(P,Q;G\times G')}
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;G)\times
+ \operatorname{BIEXT}(P,Q;G')
+\end{equation}
+deducido de las dos proyecciones $G\times G'\longrightarrow G$ y
+$G\times G'\longrightarrow G'$ es una
+\underline{equivalencia de categorías}.
+\end{enumerate}
+En el lenguaje de [4], se dice también que, para $P,Q$ fijos, la
+categoría de biextensiones de $(P,Q)$ por grupos variables $G$ es,
+
+%%%%%%%%%%  scan idx 176  |  folio 165  %%%%%%%%%%
+
+mediante el funtor $E\mapsto G$ inducido por (2.3.5), una
+\underline{categoría cofibrada aditiva} sobre
+$\operatorname{GRAB}(\underline T)$.
+
+\underline{Observación 2.4.3.} En la terminología de \emph{loc.\ cit.},
+la categoría cofibrada precedente no solo es aditiva, sino incluso
+\underline{exacta por la izquierda} [4, 2.2]. No verificaremos aquí
+esta propiedad, pues reaparecerá más adelante en 3.6 como consecuencia
+de hechos más precisos. Señalemos únicamente que la teoría general de
+\emph{loc.\ cit.} permitiría describir la estructura de esta categoría
+cofibrada, salvo equivalencia de categorías fibradas, mediante un
+complejo de cadenas $L_\bullet$ en
+$\operatorname{GRAB}(\underline T)$ que solo depende de $P$ y $Q$.
+Más adelante daremos también una construcción directa de este complejo
+como
+\[
+ P\overset{\mathbb L}{\otimes}Q,
+\]
+el producto tensorial tomado en una categoría derivada.

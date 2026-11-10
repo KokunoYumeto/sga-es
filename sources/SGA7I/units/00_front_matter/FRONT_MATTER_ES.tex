@@ -1,0 +1,208 @@
+% SGA 7, tomo I — traducción española: portada, página de créditos e introducción.
+% UTF-8 sin BOM; finales de línea LF. Fragmento; no se afirma una compilación autónoma.
+% La transcripción de las páginas preliminares del impreso de 1972 (cubierta, guarda editorial, portadas,
+% página de copyright, página de Internet Archive) se conserva en ORIGINAL_FRONT_PAGES_ES.tex, fuera del lector.
+% Los avisos de laguna, obstrucción y procedencia son editoriales, no texto histórico.
+
+\providecommand{\SGASevenSourceGapES}[1]{\textit{[laguna visual: #1]}}
+\providecommand{\SGASevenSourceObstructionES}[1]{\textit{[oculto por #1]}}
+
+% Portada de esta edición.
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2.5cm}
+{\large SEMINARIO DE GEOMETRÍA ALGEBRAICA DE BOIS-MARIE\par}
+\medskip
+{\large 1967--1969\par}
+\vspace{2.2cm}
+{\Huge SGA 7 I\par}
+\vspace{1.2cm}
+{\LARGE Grupos de monodromía\par}
+\smallskip
+{\LARGE en geometría algebraica\par}
+\vspace{2.2cm}
+{\large Dirigido por A.~Grothendieck\par}
+\medskip
+{con la colaboración de M.~Raynaud y D.~S.~Rim\par}
+\vspace{3.5cm}
+{\large Traducción española\par}
+\medskip
+{\sisi{Edición diplomática}{Edición corregida}\par}
+\end{center}
+\clearpage
+
+% Página de créditos (reverso de la portada).
+\thispagestyle{empty}
+\null\vfill
+\begingroup\small
+\noindent\textbf{Edición original.} \textit{Séminaire de Géométrie Algébrique du Bois-Marie 1967--1969 (SGA~7~I).
+Groupes de monodromie en géométrie algébrique}, dirigé par A.~Grothendieck avec la collaboration de M.~Raynaud et
+D.~S.~Rim. Lecture Notes in Mathematics~288, Springer-Verlag, Berlin, Heidelberg, Nueva York, 1972.
+ISBN 3-540-05987-3. \copyright{}~Springer-Verlag Berlin Heidelberg 1972.\par
+\medskip
+\noindent\textbf{Esta edición.} Traducción al español producida por IA a partir del texto francés del impreso de
+1972 (escaneo: Internet Archive, \url{https://archive.org/details/groupesdemonodro0288unse}). Las correcciones y la composición tipográfica también
+están producidas por IA. \sisi{Esta edición diplomática reproduce el texto impreso con sus erratas; la edición
+corregida las enmienda.}{Esta edición corregida enmienda las erratas del impreso; la edición diplomática reproduce
+el texto tal como se imprimió.}\par
+\medskip
+\noindent Los derechos sobre la obra original pertenecen a sus autores o a los representantes o herederos de estos.
+En la medida en que tengamos derechos sobre la transcripción, la traducción, las correcciones y la composición
+tipográfica producidas por IA, estos se dedican al dominio público bajo CC0~1.0. Esta edición se publica con fines
+educativos y sin ánimo de lucro, y no reclamamos ningún derecho que no poseamos. Si usted es titular de derechos sobre
+esta obra y se opone a su publicación aquí, abra una incidencia en GitHub
+(\url{https://github.com/KokunoYumeto/sga-es/issues}) y la retiraremos.\par
+\endgroup
+\clearpage
+
+\pdfbookmark[0]{Introducción}{sga7.introduccion}
+
+% SGA7I-FRONT-ES-P006 — página PDF rectora 7 — Introducción, V impreso inferido.
+\begin{center}
+INTRODUCCIÓN
+\end{center}
+
+Sean $S$ un esquema y $f:X\longrightarrow S$ un morfismo de esquemas. Si $f$ es
+propio y liso, y el número primo $\ell$ es invertible sobre $S$, los grupos de
+cohomología $\ell$-ádica $H^i(X_{\bar s},\mathbb Z_\ell)$ de las fibras geométricas de $f$ forman un sistema
+local $\ell$-ádico sobre $S$. Si solo se supone que $f$ es propio, estos grupos son las fibras
+de un haz $\ell$-ádico $R^i f_*\mathbb Z_\ell$ sobre $S$. La teoría de los ciclos evanescentes relaciona
+la ramificación de este haz sobre $S$ con las singularidades de $f$.
+
+Solo consideraremos el caso en que $S$ es un rasgo henseliano (= espectro de un
+anillo de valoración discreta henseliano). En la práctica, este es el caso esencial. Remito
+a (I 2.1) para una descripción heurística de la teoría. Sean $S=\operatorname{Spec}(V)$, $\bar\eta$
+una clausura algebraica del cuerpo de fracciones $k(\eta)$ de $V$, y $\bar s$ la clausura algebraica
+correspondiente del cuerpo residual $k(s)$ ($k(\bar s)$ es el cuerpo residual de la normalización
+$\bar V$ de $V$ en $k(\bar\eta)$). En el caso particular en que $X$ es propio y plano sobre
+$S$, de dimensión relativa $n$, y en que $f$ solo presenta un punto de no lisitud
+$x\in X_s$, se definen $\operatorname{Gal}(\bar\eta,\eta)$-módulos $\phi^i$, de naturaleza puramente local en un entorno
+de $x$, nulos para $i\notin[0,n]$ (I 4.2), y se construye una sucesión exacta larga
+de $\operatorname{Gal}(\bar\eta,\eta)$-módulos
+
+\[
+\cdots \longrightarrow H^i(X_{\bar s},\mathbb Z_\ell)
+\xrightarrow{\mathrm{sp}} H^i(X_{\bar\eta},\mathbb Z_\ell)
+\longrightarrow \phi^i
+\longrightarrow H^{i+1}(X_{\bar s},\mathbb Z_\ell)
+\longrightarrow \cdots
+\]
+
+(el $\operatorname{Gal}(\bar s,s)$-módulo $H^i(X_{\bar s},\mathbb Z_\ell)$ se considera como un
+$\operatorname{Gal}(\bar\eta,\eta)$-módulo con acción trivial de la inercia; $\mathrm{sp}$ es la flecha de especialización).
+
+Se dan asimismo criterios, válidos por ahora solo en característica
+$0$, para que los $\phi^i$, con $i$ pequeño, sean nulos (por ejemplo, si además $X$ es
+localmente una intersección completa, $\phi^i=0$ para $i\ne n$ (I 4.6)).
+\clearpage
+
+% SGA7I-FRONT-ES-P007 — página PDF rectora 8 — Introducción, VI visible.
+El teorema de monodromía afirma que la acción del subgrupo de inercia $I$
+de $\operatorname{Gal}(\bar\eta,\eta)$ es cuasiunipotente: para $T\in I$, existen enteros $N>0$,
+$M>0$ tales que el endomorfismo $(T^M-I)^N$ de $H^i(X_{\bar\eta},\mathbb Z_\ell)$ sea nulo. Se dan dos
+demostraciones de este teorema. La primera (I.1.2), de naturaleza aritmética, se aplica
+siempre que los grupos de cohomología considerados tengan propiedades de finitud razonables.
+El punto clave es que, cuando $k(s)$ es de tipo finito sobre su subcuerpo
+primo, la acción de $I$ es cuasiunipotente para toda representación $\ell$-ádica de
+$\operatorname{Gal}(\bar\eta,\eta)$. La segunda demostración, más geométrica, requiere la pureza y la resolución
+de singularidades: por ahora solo es válida en característica $0$
+o para un $H^1$. Aporta información valiosa sobre el exponente de nilpotencia
+$N$ ($N\leq i+1$ para un $H^i$). Como se verá más adelante, se presta bien,
+sobre $\mathbb C$, a la comparación con la teoría trascendente.
+
+Estos resultados, aplicados al $H^1$ de las variedades abelianas, es decir, a su módulo
+de Tate, permiten estudiar su reducción módulo $p$. Se dan así dos
+demostraciones del teorema de reducción estable de las variedades abelianas, según el cual,
+tras una ramificación, la fibra especial conexa del modelo de Néron es una extensión de una
+variedad abeliana por un toro. La primera (I. 6) retoma el método de la demostración
+aritmética del teorema de monodromía. La segunda (IX 3.6) se apoya en un
+análisis mucho más fino del modelo de Néron y de sus propiedades de polarización.
+
+Las exposiciones I a V de Grothendieck no fueron redactadas. Se resumieron
+en una exposición I. Los resultados allí enunciados se demuestran de manera sucinta, pero
+esencialmente completa.
+
+La exposición II aplica el método de los lápices de Lefschetz y (I 5.3) al
+estudio del grupo fundamental. Para $S$ una superficie sobre un cuerpo algebraicamente cerrado
+$k$, de exponente característico $p$, se demuestra que el grupo profinito $\pi_1^{(p)}(S,s)$, la completación
+fuera de $p$ del grupo fundamental, es de pro-$(p)$-presentación finita.
+
+Como se explicó anteriormente, las exposiciones III a V no existen.
+\clearpage
+
+% SGA7I-FRONT-ES-P008 — página PDF rectora 9 — Introducción, VII visible.
+La exposición VI contiene, con algunos complementos, la teoría de deformaciones
+de Schlessinger. Se procura tener en cuenta los automorfismos infinitesimales
+de los objetos que se clasifican, y no pasar demasiado bruscamente al funtor de las clases
+de isomorfía de objetos. Se da asimismo una nueva construcción de los
+$\underline{\operatorname{Ext}}^{i}(L_{X/S},-)$ ($L_{X/S}$, complejo cotangente relativo de $X/S$). Esta exposición se utiliza en el
+resto del seminario sobre todo a través del estudio que hace de las deformaciones de las singularidades
+cuadráticas ordinarias.
+
+Las exposiciones VII y VIII están dedicadas a la teoría de las biextensiones. Esta
+teoría desempeña un papel esencial en la exposición IX para expresar qué ocurre con una
+polarización al pasar de una variedad abeliana a uno de sus modelos de Néron.
+Esta exposición IX contiene la demostración del teorema de reducción estable de las variedades
+abelianas y diversas aplicaciones.
+
+La continuación de este seminario, SGA 7 II, por P. Deligne y N. Katz, aparecerá
+posteriormente.
+
+\begin{flushright}
+Bures sur Yvette, mayo de 1972,\\
+P. DELIGNE
+\end{flushright}
+\clearpage
+
+% SGA7I-FRONT-ES-P009 — página PDF rectora 10 — verso en blanco.
+% No hay contenido impreso intencional. Solo se transparenta débilmente el reverso.
+\null
+\clearpage
+
+% SGA7I-FRONT-ES-P010 — página PDF rectora 11 — Índice.
+\begin{center}
+Índice
+\end{center}
+
+\noindent
+Exposición I\par
+\hspace*{2em}Resumen de las primeras exposiciones de A. Grothendieck\par
+\hspace*{2em}redactado por P. Deligne \dotfill 1\par
+
+\medskip
+\noindent
+Exposición II\par
+\hspace*{2em}Propiedades de finitud del grupo fundamental\par
+\hspace*{2em}por Michèle Raynaud \dotfill 25\par
+
+\medskip
+\noindent
+Exposición VI\par
+% Título histórico impreso: Formal deformation theory.
+\hspace*{2em}Teoría formal de deformaciones\par
+\hspace*{2em}por D.S. Rim \dotfill 32\par
+
+\medskip
+\noindent
+Exposición VII\par
+\hspace*{2em}Biextensión de haces de grupos\par
+\hspace*{2em}por A. Grothendieck \dotfill 133\par
+
+\medskip
+\noindent
+Exposición VIII\par
+\hspace*{2em}Complementos sobre las biextensiones. Propiedades generales\par
+\hspace*{2em}de las biextensiones de esquemas en grupos\par
+\hspace*{2em}por A. Grothendieck \dotfill 218\par
+
+\medskip
+\noindent
+Exposición IX\par
+\hspace*{2em}Modelos de Néron y monodromía\par
+\hspace*{2em}por A. Grothendieck \dotfill 313\par
+\clearpage
+
+% SGA7I-FRONT-ES-P011 — página PDF rectora 12 — verso en blanco.
+% No hay contenido impreso intencional. Solo se transparenta débilmente el reverso.
+\null
+\clearpage

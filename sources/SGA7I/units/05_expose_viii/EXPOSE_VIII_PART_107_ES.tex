@@ -1,0 +1,115 @@
+\par\medskip
+\noindent\underline{Proposición 3.4.} \underline{Sea $P$ un esquema
+en grupos liso de presentación finita sobre $S$, con fibras conexas,
+y sea $Q$ un toro sobre $S$. Entonces la categoría de las
+biextensiones de $(P,Q)$ por $\underline G_m$ es equivalente a la
+categoría puntual; es decir,}
+\begin{equation}\tag{3.4.1}
+ \Biext^0(P,Q;\underline G_m)=
+ \Biext^1(P,Q;\underline G_m)=0.
+\end{equation}
+
+\noindent\underline{Demostración.} Pongamos $M=D(Q)$. Este es un grupo
+constante retorcido sobre $S$ cuyas fibras son isomorfas a grupos
+$\mathbb Z^r$ (3.3.3). Por 3.3.2, la categoría considerada es
+equivalente a la categoría de las extensiones de $P$ por $M$. Esta
+categoría es \underline{rígida}: el grupo de automorfismos de todo
+objeto es el grupo trivial.
+
+%%%%%%%%%%  scan idx 271  |  folio 260  %%%%%%%%%%
+
+Esta es la primera igualdad de (3.4.1), que también puede escribirse
+\[
+ \Hom(P,M)=0.
+\]
+Se deduce inmediatamente de que $M$ es étale sobre $S$, mientras que
+$P$ tiene fibras conexas. Queda por demostrar
+\[
+ \Ext^1(P,M)=0,
+\]
+es decir, que toda extensión $E$ de $P$ por $M$ es trivial.
+
+Por la unicidad de una escisión cuando existe, basta demostrar que $E$
+es localmente trivial. Podemos, pues, reducirnos al caso
+$M=\mathbb Z_S^r$, y después a $M=\mathbb Z_S$. Cuando $S$ es el
+espectro de un cuerpo, la conclusión se deduce de 5.5 (i) más abajo.
+(Obsérvese que no utilizaremos 3.4 antes de IX 6, por lo que no hay
+ningún círculo vicioso.) Reduzcamos ahora el caso general a este caso
+particular.
+
+Basta encontrar una sección $f$ de $\sisi{P}{E}$ sobre $P$ tal que
+$f(0)=0$, pues tal sección es necesariamente multiplicativa. En efecto,
+\[
+ f(x+y)-f(x)-f(y)=0:
+\]
+el miembro izquierdo define un morfismo
+$P\times_S P\longrightarrow\mathbb Z_S$ que se anula sobre la sección
+cero de $P\times_S P$. Por tanto, se anula idénticamente, ya que
+$P\times_S P$ tiene fibras conexas (las fibras geométricas de $P$ son
+conexas). La conclusión buscada se deduce ahora del lema siguiente.
+
+\medskip
+\noindent\underline{Lema 3.4.2.} \underline{Sean $S$ un esquema, $P$
+un $S$-esquema liso de presentación finita con fibras geométricamente
+conexas, $Z$ un grupo y $E$ un $Z_P$-torsor (para la topología fppf,
+étale o fpqc; estas nociones son aquí equivalentes, cf. SGA 3 X 5.4).
+Sea $e$ una sección de $P$ sobre $S$, y sea $e'$ una sección de $E$
+sobre $S$ situada sobre $e$ (es decir, una sección de $e^{-1}(E)$
+sobre $S$).}
+
+%%%%%%%%%%  scan idx 272  |  folio 261  %%%%%%%%%%
+
+\underline{El torsor $E$ es trivial si y solo si, para todo $s\in S$,
+el torsor inducido $E_s$ sobre $P_s$ es trivial. En este caso existe
+una única sección $f$ de $E$ sobre $P$ tal que $f\circ e=e'$.}
+
+\noindent\underline{Demostración.} La unicidad es clara. Dos secciones
+$f$ y $g$ de este tipo ``difieren'' en un morfismo
+\[
+ h:P\longrightarrow Z_S,
+ \qquad h\circ e=1,
+\]
+y tal morfismo es constantemente igual a $1$, pues $P$ tiene fibras
+conexas. Además, si existe una sección $f$ de $E$ sobre $P$, siempre
+puede corregirse mediante un morfismo $P\longrightarrow Z_S$
+procedente de un morfismo $z:S\longrightarrow Z_S$, para obtener una
+sección $f'$ que satisfaga $f'\circ e=e'$. Basta elegir $z$ de modo que
+\[
+ f(e(t))=e'(t)z(t).
+\]
+
+Aplicando esta observación fibra a fibra, para todo $s\in S$ obtenemos
+una sección bien determinada $f_s$ de $E_s$ sobre $P_s$ que lleva
+$e_s$ en $e'_s$. Queda por demostrar que los $f_s$ proceden de una
+sección $f$ de $E$ sobre $P$. Equivalentemente (EGA IV 17.9.3), hay
+que demostrar que
+\[
+ U=\bigcup_{s\in S}f_s(P_s)\subset E
+\]
+es abierto en $E$.
+
+Supongamos primero que $S$ es noetheriano. Entonces $U$ es
+constructible. Para verlo, sea $T$, para cada $s\in S$, la clausura de
+$s$, dotada de su estructura inducida reducida. Existe un entorno
+abierto $T'$ de $s$ en $T$ y una sección de $E_{T'}$ sobre $P_{T'}$
+que prolonga $f_s$ y es compatible con las secciones marcadas $e$ y
+$e'$ (como se deduce directamente de EGA IV 8.8.2). Por el criterio de
+EGA IV 1.10.1, queda por demostrar que $U$ es estable por
+generización. El argumento usual que utiliza EGA II 7.1.9 reduce esto
+al caso en que $S$ es el espectro de un anillo de valoración discreta.
+
+%%%%%%%%%%  scan idx 273  |  folio 262  %%%%%%%%%%
+
+Como $P$ es liso sobre $S$, es regular y por tanto normal; y como tiene
+fibras conexas, es conexo. La sección dada de $E$ sobre la fibra
+genérica de $P$ sobre $S$ se prolonga entonces de manera única a una
+sección $f$ de $E$ sobre $P$ (EGA IV 18.10.19 y 18.10.20),
+necesariamente compatible con $e$ y $e'$. Así, en este caso,
+$U=f(P)$ es abierto. Esto prueba 3.4 cuando $S$ es noetheriano. El caso
+general se reduce fácilmente a este mediante los argumentos usuales
+de paso al límite de EGA IV, 8 y 9; dejamos los detalles al lector.
+
+\medskip
+\noindent\underline{Observación 3.4.3.} El lema 3.4.2 puede quedar
+``aplastado'' bajo referencias eruditas, a saber, SGA 4 XV 1.15 (el
+caso $n=1$) y 4.1.

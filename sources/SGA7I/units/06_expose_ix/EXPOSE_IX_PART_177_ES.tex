@@ -1,0 +1,203 @@
+% AUTORIDAD DE FUENTE: Exposé IX (12.8.9)--12.10, líneas francesas
+% 3796--3950; índices de escaneo 491--495, folios 480--484.
+
+\begin{equation}\tag{12.8.9}
+\begin{tikzcd}[row sep=small,column sep=small]
+0 \arrow[r] & P \arrow[rr] \arrow[d,dash,"\wr"]
+ & & F \arrow[r] \arrow[d,dash,"\wr"] & R \arrow[r] & 0 & \\
+& T_\ell(P)^t\simeq
+  \underline{\operatorname{Hom}}
+    \bigl(M,T_\ell(\sisi{\underline{\mathbb G}}{\mathbb G}_{m\underline S})\sisi{}{\bigr)}
+& & T_\ell(P)^f & & & \\
+& & & & & & \\
+0 \arrow[r] & R \arrow[rr] \arrow[d,dash,"\wr"]
+& & E \arrow[r] & Q \arrow[r] \arrow[d,dash,"\wr"] & 0 & \\
+& D(R) & & & M\otimes\mathbb Z_{\ell\,\underline S} & & .
+\end{tikzcd}
+\end{equation}
+
+\noindent
+Obsérvese que $R$ es canónicamente autodual, como se sigue de la
+autodualidad (12.8.7) y de la afirmación de ortogonalidad señalada antes.
+La única diferencia con la construcción citada es que el emparejamiento
+obtenido sobre $M_\ell\times M_\ell$ toma sus valores en el grupo
+\[
+ \bigl(\mathbb G_m(U)/\mathbb G_m(\underline S)\bigr)
+ \otimes_{\mathbb Z}\mathbb Z_\ell,
+\]
+que ya no es canónicamente isomorfo a $\mathbb Z_\ell$, sino a
+$\mathbb Z_\ell^{\,L}$, mediante el isomorfismo
+
+\begin{equation}\tag{12.8.10}
+ \mathbb Z^L\simeq
+ \mathbb G_m(U)/\mathbb G_m(\underline S).
+\end{equation}
+
+\noindent
+Este envía el elemento indexado por $\lambda$ de la base canónica de
+$\mathbb Z^L$ a la clase de $T_{i_\lambda}$ en el segundo miembro, donde
+$T_{i_\lambda}$ es una ecuación del divisor $D_\lambda$. Obtenemos así
+un emparejamiento canónico
+
+\begin{equation}\tag{12.8.11}
+ \underline{u}_\ell:M_\ell\otimes M_\ell
+ \longrightarrow\mathbb Z_\ell^{\,L}\qquad .
+\end{equation}
+
+\noindent
+Es esencialmente inmediato que el emparejamiento de monodromía $u_\ell$
+(12.4.7) sobre $S$ que nos proponemos estudiar es el compuesto de
+$\underline{u}_\ell$ con el homomorfismo
+$\mathbb Z_\ell^{\,L}\longrightarrow\mathbb Z_\ell$ obtenido, por
+producto tensorial con $\mathbb Z_\ell$ sobre $\mathbb Z$, a partir del
+homomorfismo
+
+\begin{center}
+\begin{tikzcd}
+ \mathbb G_m(U)/\mathbb G_m(\underline S)
+   \arrow[r] \arrow[d,dash,"\wr"'] &
+ \mathbb G_m(\eta)/\mathbb G_m(S)
+   \arrow[d,dash,"\wr"'] \\
+ \mathbb Z^L & \mathbb Z
+\end{tikzcd}
+\end{center}
+
+\noindent
+inducido por $g:S\longrightarrow\underline S$ (que envía $\eta$ en
+$U$). Este homomorfismo está dado por un elemento
+
+%%%%%%%%%%  scan idx 492  |  folio 481  %%%%%%%%%%
+
+\begin{equation}\tag{12.8.12}
+ (d_\lambda)_{\lambda\in L}\in\mathbb Z^L,\qquad
+ d_\lambda\geqslant1\quad\text{para todo }\lambda\in L,
+\end{equation}
+
+\noindent
+donde, para cada $\lambda\in L$, $d_\lambda$ es la multiplicidad de la
+imagen inversa en $S$ del divisor $D_\lambda$ de $\underline S$. Depende,
+de hecho, únicamente del completado
+$\widehat{\underline{\mathcal O}}_{X,x_\lambda}$ como $V$-álgebra
+(Exposé VI\sisi{\hspace{3em}}{}). Además, se sabe (Exposé
+VI\sisi{\hspace{3em}}{}) que, para un $\lambda$ dado, se tiene
+$d_\lambda=1$ si y solo si $\sisi{x}{X}$ es \underline{regular} en
+$x_\lambda$. Como en 12.5 hemos supuesto que $X$ es regular, es decir,
+que todos los $d_\lambda$ son iguales a $1$, la aserción 12.5 se sigue
+del lema siguiente, en el que ya no intervienen $X,S,g$.
+
+\medskip
+\noindent
+\underline{Lema} 12.8.13. \underline{Si $\lambda\in L$, el compuesto de
+(12.8.11) con $\operatorname{pr}_\lambda$ es igual a la forma
+$\varphi_{x_\lambda}\otimes\varphi_{x_\lambda}$ de (12.4.4).}
+
+\medskip
+Para demostrar esta última aserción, consideremos el localizado estricto
+completado $\underline S^\lambda$ de $\underline S$ en el punto genérico
+de $\sisi{D}{D_\lambda}$, y pongamos
+\[
+ \underline X^\lambda=
+ \sisi{X}{\underline X}\times_{\sisi{S}{\underline S}}\underline S^\lambda.
+\]
+La fibra especial $\underline X_o^\lambda$ tiene entonces un único punto
+singular $y_\lambda$, que sigue siendo una singularidad cuadrática
+ordinaria. En el emparejamiento de monodromía correspondiente
+
+\begin{equation}\tag{12.8.14}
+ u_\ell^\lambda:M_\ell^\lambda\otimes M_\ell^\lambda
+ \longrightarrow\mathbb Z_\ell\qquad ,
+\end{equation}
+
+\noindent
+$M^\lambda$ tiene, por consiguiente, rango $1$ o $0$. Dejamos al lector
+la verificación de los hechos sencillos siguientes, que explicitan, en
+el caso particular en que los necesitamos, el comportamiento de las
+construcciones precedentes bajo localización.
+
+%%%%%%%%%%  scan idx 493  |  folio 482  %%%%%%%%%%
+
+\medskip
+\noindent
+a) Existe un único subtoro $T_\lambda$ de
+$P\times_{\underline S}D_\lambda$ cuya restricción al punto genérico
+$s_\lambda$ de $D_\lambda$ es el toro maximal de $P_{s_\lambda}$ (que
+tiene dimensión $0$ o $1$).
+
+\medskip
+\noindent
+b) Consideremos el homomorfismo transpuesto $M\longrightarrow M^\lambda$
+sobre los grupos de caracteres de la inclusión
+$T_{\lambda o}\hookrightarrow T_o$, donde $T_o$ es el toro maximal de
+$P_o$, y la forma
+$\varphi_{y_\lambda}:M^\lambda\longrightarrow\mathbb Z$, definida salvo
+signo como en 12.4.3 (sustituyendo $X$ por $\underline X^\lambda$).
+Entonces, salvo signo, el diagrama siguiente es conmutativo:
+
+\begin{equation}\tag{12.8.15}
+\begin{tikzcd}[column sep=huge,row sep=large]
+ M \arrow[rr] \arrow[dr,"\varphi_{x_\lambda}"']
+ & & M^\lambda \arrow[dl,"\sisi{\varphi_{\lambda_\lambda}}{\varphi_{y_\lambda}}"] \\
+ & \mathbb Z & \qquad .
+\end{tikzcd}
+\end{equation}
+
+\noindent
+(En efecto, elegir un orden de las dos ramas de $X_o$ que pasan por
+$x_\lambda$ determina una elección análoga en el punto $y_\lambda$ de
+$\underline X_o^\lambda$ y, para las elecciones así correspondientes,
+el diagrama precedente es conmutativo.)
+
+%%%%%%%%%%  scan idx 494  |  folio 483  %%%%%%%%%%
+
+\medskip
+\noindent
+c) El diagrama siguiente es conmutativo:
+
+\begin{center}
+\begin{tikzcd}[column sep=huge,row sep=large]
+ M_\ell\otimes M_\ell
+   \arrow[rr] \arrow[dr,"\operatorname{pr}_\lambda\underline{u}_\ell"']
+ & & M_\ell^\lambda\otimes M_\ell^\lambda
+   \arrow[dl,"u_\ell^\lambda"] \\
+ & \mathbb Z_\ell & \qquad ,
+\end{tikzcd}
+\end{center}
+
+\noindent
+donde la notación es la de 12.8.13 y (12.8.14). Estas relaciones muestran
+inmediatamente que, para demostrar 12.8.13, basta demostrar la relación
+análoga para $\underline X^\lambda$:
+\[
+ u_\ell^\lambda=
+ (\varphi_{y_\lambda}\otimes\varphi_{y_\lambda})
+ \otimes_{\mathbb Z}\mathbb Z_\ell,
+\]
+que no es otra cosa que 12.5 para $\underline X^\lambda$ sobre
+$\underline S^\lambda$. Ahora bien, $\sisi{\underline S}{\underline
+S^\lambda}$ es un trait de \underline{característica cero}. Esto concluye
+la reducción anunciada.
+
+\medskip
+\noindent
+\underline{Observaciones} 12.9. Obsérvese que esta reducción nos reduce
+simultáneamente al caso en que $X_o$ tiene un solo punto singular, que es
+el caso considerado clásicamente en la fórmula de Picard--Lefschetz.
+Obsérvese también que, en este caso, $X_o$ tiene una o dos componentes
+irreducibles, correspondientes respectivamente a
+$\operatorname{rank}M=1$ y $\operatorname{rank}M=0$ (este último es el
+caso en que la jacobiana de la fibra genérica tiene buena reducción).
+
+%%%%%%%%%%  scan idx 495  |  folio 484  %%%%%%%%%%
+
+\medskip
+\noindent
+12.10. La demostración dada en 12.8 proporciona un resultado más general
+que 12.5, válido sin suponer que $X$ sea regular, introduciendo los
+enteros $d_\lambda\geqslant1$ de (12.8.12): todos los emparejamientos de
+monodromía se deducen entonces del emparejamiento
+
+\begin{equation}\tag{12.10.1}
+ u=\sum_{\lambda\in L}d_\lambda\,
+   \varphi_{x_\lambda}\otimes\varphi_{x_\lambda}:
+   M\otimes M\longrightarrow\mathbb Z\qquad .
+\end{equation}

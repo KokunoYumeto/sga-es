@@ -1,0 +1,93 @@
+%%%%%%%%%%  scan idx 110  |  folio 99  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Lema 4.4.}
+Para todo esquema $X_0$ sobre $k$, existe una sucesión exacta
+canónica
+\[
+0\longrightarrow H^1(X_0,\underline D^0_{X_0})
+\longrightarrow[\underline M_{X_0}(k[\varepsilon])]
+\longrightarrow H^0(X_0,\underline D^1_{X_0}),
+\]
+donde los $\underline D^i_{X_0}$ son los definidos en la sección 3.
+
+\medskip
+\noindent\textit{Demostración.}
+Supongamos primero que $X_0$ es afín, y pongamos
+$\Gamma(X_0,\mathcal O_{X_0})=A_0$. Como se observó en 4.1(b), la
+categoría $\underline M_{X_0}(k[\varepsilon])$ es canónicamente
+equivalente a una categoría $\underline E$ cuyos objetos son
+$k[\varepsilon]$-álgebras planas $A$ dotadas de una aplicación de
+$k[\varepsilon]$-álgebras $j_A:A\longrightarrow A_0$ que induce un
+isomorfismo
+\[
+k\otimes_{k[\varepsilon]}A\sisi{\overset{\sim}{\relbar\joinrel\relbar\joinrel\relbar}}{\xrightarrow{\ \sim\ }}A_0.
+\]
+Equivalentemente, un objeto de $\underline E$ es una $k$-álgebra $A$
+dotada de una sucesión exacta
+\[
+0\longrightarrow A_0\sisi{\overset{\varepsilon}{\relbar\joinrel\relbar\joinrel\relbar}}{\xrightarrow{\ \varepsilon\ }}A
+\sisi{\overset{j_A}{\relbar\joinrel\relbar\joinrel\relbar}}{\xrightarrow{\ j_A\ }}A_0\longrightarrow0
+\]
+en la cual $\varepsilon(A_0)^2=0$ como ideal de $A$.
+
+Una flecha $A_1\longrightarrow A_2$ en $\underline E$, en la primera
+descripción, es una aplicación de $k[\varepsilon]$-álgebras
+$\Phi:A_1\longrightarrow A_2$ tal que
+$j_{A_1}=j_{A_2}\circ\Phi$. En la segunda descripción es una
+aplicación de $k$-álgebras $\Phi:A_1\longrightarrow A_2$ que produce
+un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r]
+& A_0 \arrow[r,"\varepsilon"] \arrow[d,equal]
+& A_1 \arrow[r,"j_{A_1}"] \arrow[d,"\Phi"]
+& A_0 \arrow[r] \arrow[d,equal]
+& 0 \\
+0 \arrow[r]
+& A_0 \arrow[r]
+& A_2 \arrow[r,"j_{A_2}"]
+& A_0 \arrow[r]
+& 0.
+\end{tikzcd}
+\]
+Se sigue que, mediante $\Gamma(X_0,-)$,
+$[\underline M_{X_0}(k[\varepsilon])]$ es canónicamente isomorfo al
+conjunto de clases de isomorfía de extensiones de $k$-álgebras de
+$A_0$ por $A_0$. En otras palabras, existe una biyección canónica
+\[
+[\underline M_{X_0}(k[\varepsilon])]
+\sisi{\overset{\sim}{\relbar\joinrel\relbar\joinrel\relbar}}{\xrightarrow{\ \sim\ }}H^0(X_0,\underline D^1_{X_0})
+\]
+que evidentemente respeta las estructuras de espacio vectorial en
+ambos lados.
+
+%%%%%%%%%%  scan idx 111  |  folio 100  %%%%%%%%%%
+
+En general, para todo abierto afín $U_0\subset X_0$, la restricción y
+el caso afín dan la aplicación compuesta
+\[
+[\underline M_{X_0}(k[\varepsilon])]
+\longrightarrow[\underline M_{U_0}(k[\varepsilon])]
+\xrightarrow{\ \sim\ }H^0(U_0,\underline D^1_{X_0}).
+\]
+Estas aplicaciones dan una aplicación canónica
+\[
+[\underline M_{X_0}(k[\varepsilon])]
+\longrightarrow H^0(X_0,\underline D^1_{X_0}).
+\]
+Su núcleo está formado por las clases de isomorfía de las
+deformaciones localmente triviales de $X_0$ sobre
+$k[\varepsilon]$, es decir, de las deformaciones localmente isomorfas
+a $X_0\otimes_k k[\varepsilon]$. El haz de automorfismos de
+$X_0\otimes_k k[\varepsilon]$ que inducen la identidad sobre $X_0$
+es
+\[
+\underline D^0_{X_0}
+=\underline{\operatorname{Der}}_k
+  (\mathcal O_{X_0},\mathcal O_{X_0}).
+\]
+Las clases de isomorfía de tales deformaciones localmente triviales
+se identifican, por tanto, canónicamente con
+$H^1(X_0,\underline D^0_{X_0})$, lo que da la sucesión exacta
+afirmada. \hfill$\square$

@@ -1,0 +1,178 @@
+%%%%%%%%%%  scan idx 100  |  folio 89  %%%%%%%%%%
+
+\underline{Corolario 3.13.}
+
+\begin{enumerate}[label=(\alph*)]
+\item El $R$-álgebra $A$ es formalmente lisa sobre $R$ si y solo si
+$D^1(A|R,M)=0$ para todo $A$-módulo $M$.
+
+\item Sea $R$ noetheriano y sea $A$ un $R$-álgebra de tipo finito.
+Entonces $A$ es una intersección completa relativa sobre $R$ si y solo
+si $D^2(A|R,M)=0$ para todo $A$-módulo $M$.
+
+\item Sea $R$ noetheriano y sea $A$ un $R$-álgebra de tipo finito.
+Para todo subconjunto multiplicativo $S$ de $A$, hay un isomorfismo
+canónico
+\[
+ D^i(S^{-1}A|R,S^{-1}M)
+ \xrightarrow{\ \sim\ }S^{-1}D^i(A|R,M)
+ \qquad(i\geq0).
+\]
+
+\item Sea $R$ noetheriano y sea $A$ un $R$-álgebra local
+esencialmente de tipo finito. Denotemos por $\widehat A$ la
+completación $\mathfrak m$-ádica de $A$, donde $\mathfrak m$ es el
+ideal maximal de $A$. Entonces, para todo $A$-módulo $E$ de tipo
+finito, hay un isomorfismo canónico
+\[
+ D^1(\widehat A|R,\widehat A\otimes_AE)
+ \xrightarrow{\ \sim\ }
+ \widehat A\otimes_AD^1(A|R,E).
+\]
+\end{enumerate}
+
+\underline{Demostración.}
+
+La parte (a) se deduce inmediatamente de
+$D^1(A|R,M)=\operatorname{Exalcomm}(A|R,M)$.
+
+Para (b), sea $P$ un álgebra de polinomios sobre $R$ en un número
+finito de variables, y sea exacta
+\[
+ 0\longrightarrow I\longrightarrow P\longrightarrow A
+ \longrightarrow0.
+\]
+Después de localizar, podemos suponer que $I$ está generado por una
+sucesión $P$-regular. Entonces $H_1(K_I)=0$, y por tanto
+\[
+ D^2(A|R,M)
+ =\operatorname{Coker}\bigl(
+ H^1(K_I,M)\longrightarrow
+ \operatorname{Hom}_A(H_1(K_I),M)\bigr)=0.
+\]
+Recíprocamente, supongamos que $D^2(A|R,M)=0$ para todo $A$-módulo
+$M$. Elijamos una sucesión exacta
+\[
+ 0\longrightarrow K\longrightarrow F\longrightarrow I
+ \longrightarrow0,
+\]
+donde $F$ es un $P$-módulo libre de tipo finito. Si
+\[
+ K_0=\operatorname{Im}\bigl(\textstyle\bigwedge^2F
+ \longrightarrow\bigwedge^1F\bigr),
+\]
+entonces $H_1(K_I)=K/K_0$. Como
+$D^2(A|R,H_1(K_I))=0$, el morfismo
+\[
+ H^1(K_I,H_1(K_I))
+ \longrightarrow
+ \operatorname{Hom}_A(H_1(K_I),H_1(K_I))
+\]
+es sobreyectivo. En consecuencia, la sucesión exacta
+\[
+ 0\longrightarrow K/K_0\longrightarrow F/IF
+ \longrightarrow I/I^2\longrightarrow0
+\]
+se escinde como sucesión de $A$-módulos. En particular, $I/I^2$ es
+proyectivo. Después de localizar $A$ una vez más, podemos suponer que
+$I/I^2$ es libre y que $F/IF\longrightarrow I/I^2$ es un
+isomorfismo. La sucesión exacta escindida da entonces
+$H_1(K_I)=K/K_0=0$. Así, $I$ está generado por una sucesión
+$P$-regular, de modo que $A$ es una intersección completa relativa
+sobre $R$.
+
+La parte (c) se deduce inmediatamente de 3.12(4) y (6).
+
+%%%%%%%%%%  scan idx 101  |  folio 90  %%%%%%%%%%
+
+Para (d), 3.12(6) da primero isomorfismos canónicos
+\[
+ D^i(A|R,\widehat A\otimes_AE)
+ \xrightarrow{\ \sim\ }
+ \widehat A\otimes_AD^i(A|R,E)
+\]
+para todo $i$. Resta, pues, demostrar que
+\[
+ D^1(\widehat A|R,\widehat A\otimes_AE)
+ \longrightarrow D^1(A|R,\widehat A\otimes_AE)
+\]
+es un isomorfismo. Utilizamos la descripción de $D^1$ en términos de
+extensiones de álgebras.
+
+Sea
+\[
+ 0\longrightarrow\widehat A\otimes_AE\longrightarrow A'
+ \xrightarrow{\ \varphi\ }\widehat A\longrightarrow0
+\]
+una extensión de $R$-álgebras cuya restricción a $A$ se escinde. Como
+$\widehat A\otimes_AE$ es un $\widehat A$-módulo de tipo finito,
+$A'$ es un $R$-álgebra local completa para su topología
+$\mathfrak m'$-ádica, donde $\mathfrak m'$ es el ideal maximal de
+$A'$. Si $\psi:A\longrightarrow A'$ es un morfismo de $R$-álgebras
+que levanta el morfismo canónico $A\longrightarrow\widehat A$,
+entonces $\psi$ se extiende de manera única a un morfismo
+$\widehat\psi:\widehat A\longrightarrow A'$ que satisface
+$\varphi\circ\widehat\psi=\operatorname{id}_{\widehat A}$.
+Esto demuestra que
+\[
+ D^1(\widehat A|R,\widehat A\otimes_AE)
+ \longrightarrow D^1(A|R,\widehat A\otimes_AE)
+\]
+es inyectivo.
+
+%%%%%%%%%%  scan idx 102  |  folio 91  %%%%%%%%%%
+
+Sea ahora
+\[
+ 0\longrightarrow\widehat A\otimes_AE\longrightarrow B
+ \xrightarrow{\ \varphi\ }A\longrightarrow0
+\]
+una extensión de $R$-álgebras, y pongamos
+$\widehat E=\widehat A\otimes_AE$. Afirmamos primero que la topología
+sobre $\widehat E$ inducida por la topología $\mathfrak m_B$-ádica de
+$B$ coincide con su topología de $\widehat A$-módulo. En efecto, como
+$A$ es esencialmente de tipo finito sobre $R$, existe una subálgebra
+$B_0\subset B$ tal que $B_0$ es un $R$-álgebra local esencialmente de
+tipo finito y $\varphi(B_0)=A$. Pongamos $E_0=\widehat E\cap B_0$, y
+denotemos por $\mathfrak m_B$, $\mathfrak m_0$ y $\mathfrak m$ los
+ideales maximales de $B$, $B_0$ y $A$, respectivamente. Entonces
+\[
+ \mathfrak m_B=\mathfrak m_0+\widehat E,
+ \qquad
+ \mathfrak m_B^{n+1}=\mathfrak m_0^{n+1}
+   +\mathfrak m^n\widehat E
+\]
+para todo $n$. Como $B_0$ es noetheriano, el teorema de Artin--Rees
+da un entero $r>0$ tal que, para todo $n\geq r$,
+\begin{align*}
+ \widehat E\cap\mathfrak m_B^{n+1}
+ &=\mathfrak m^n\widehat E
+   +\widehat E\cap\mathfrak m_0^{n+1}\\
+ &=\mathfrak m^n\widehat E
+   +E_0\cap\mathfrak m_0^{n+1}\\
+ &=\mathfrak m^n\widehat E
+   +\mathfrak m^{n+1-r}(E_0\cap\mathfrak m_0^r)
+ \subset\mathfrak m^{n+1-r}\widehat E.
+\end{align*}
+Esto demuestra la afirmación sobre las dos topologías. En particular,
+$\widehat E$ es completo para la topología inducida por la topología
+$\mathfrak m_B$-ádica de $B$, y por tanto la completación da un
+diagrama conmutativo exacto
+\[
+\begin{tikzcd}[column sep=large]
+0 \arrow[r] & \widehat E \arrow[r] \arrow[d,equal]
+& B \arrow[r] \arrow[d]
+& A \arrow[r] \arrow[d] & 0 \\
+0 \arrow[r] & \widehat E \arrow[r]
+& \widehat B \arrow[r]
+& \widehat A \arrow[r] & 0.
+\end{tikzcd}
+\]
+Aquí $\widehat B$ denota la completación $\mathfrak m_B$-ádica de
+$B$. Así,
+\[
+ D^1(\widehat A|R,\widehat E)
+ \longrightarrow D^1(A|R,\widehat E)
+\]
+es sobreyectivo, y la demostración queda completa.
+\hfill$\square$

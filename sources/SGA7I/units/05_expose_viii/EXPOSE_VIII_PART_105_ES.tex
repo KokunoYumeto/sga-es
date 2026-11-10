@@ -1,0 +1,84 @@
+%%%%%%%%%%  scan idx 265  |  folio 254  %%%%%%%%%%
+
+\subsection*{3. Biextensiones de esquemas en grupos $(P,Q)$ por
+$\underline G_m$: generalidades}
+
+En toda esta sección fijamos un esquema de base $S$ y, como se anunció
+en la sección 0, trabajamos en el topos fppf de $S$.
+
+\medskip
+\noindent 3.1. Recordemos primero el ejemplo más importante de un
+grupo $\Biext^1(P,Q;\underline G_m)$: el caso en que $P$ y $Q$ son
+dos esquemas abelianos sobre $S$ y $\Biext^1$ se interpreta como el
+grupo de correspondencias divisoriales sobre $(P,Q)$ (VII 2.9.4). Los
+acoplamientos $\ell$-ádicos de la sección precedente son entonces los
+acoplamientos familiares de la teoría de los esquemas abelianos [1].
+
+\medskip
+\noindent 3.2. Más generalmente, supongamos solamente que $Q$ es un
+esquema abeliano. Es bien sabido (VII 1.3.8) que
+\begin{equation}\tag{3.2.1}
+ \uHom(Q,\underline G_m)=0,
+\end{equation}
+y, por tanto, (1.4) da un isomorfismo canónico
+\begin{equation}\tag{3.2.2}
+ \Biext^1(P,Q;\underline G_m)\simeq\Hom(P,Q^*),
+\end{equation}
+donde
+\begin{equation}\tag{3.2.3}
+ Q^*=\uExt^1(Q,\underline G_m)
+\end{equation}
+es el esquema abeliano dual de $Q$. (Para la representabilidad de
+$Q^*$, debida a M. Raynaud en el caso general, véase [1].)
+
+Cuando $P$ es también un esquema abeliano, se tiene, simétricamente a
+(3.2.2), un isomorfismo canónico
+\begin{equation}\tag{3.2.4}
+ \Biext^1(P,Q;\underline G_m)\simeq\Hom(Q,P^*).
+\end{equation}
+
+%%%%%%%%%%  scan idx 266  |  folio 255  %%%%%%%%%%
+
+Así, el dato de una biextensión $\xi$ de $(P,Q)$ por $\underline G_m$
+puede interpretarse indistintamente como el dato de un homomorfismo
+\[
+ u:P\longrightarrow Q^*
+\]
+o de un homomorfismo
+\[
+ v:Q\longrightarrow P^*.
+\]
+
+Recordemos que un homomorfismo de esquemas abelianos
+$w:A\longrightarrow B$ es un isomorfismo si y solo si, para todo
+entero $n>0$, el homomorfismo inducido
+${}_nw:{}_nA\longrightarrow{}_nB$ es un isomorfismo. En el caso de
+$u$ y $v$ anteriores, ${}_nu:{}_nP\longrightarrow{}_nQ^*$ se
+identifica con el homomorfismo
+${}_nP\longrightarrow D({}_nQ)$ definido por el acoplamiento
+\[
+ \varphi_\xi^n:{}_nP\times{}_nQ\longrightarrow\underline G_m
+\]
+(véase 2.3.11), mientras que ${}_nv:{}_nQ\longrightarrow{}_nP^*$ se
+identifica con el homomorfismo
+${}_nQ\longrightarrow D({}_nP)$ definido por el acoplamiento
+\[
+ \psi_\xi^n:{}_nP\times{}_nQ\longrightarrow\underline G_m.
+\]
+Ahora bien, $\varphi_\xi^n=-\psi_\xi^n$ (2.1.10), de modo que, salvo
+signo, ${}_nu$ y ${}_nv$ son transpuestos uno de otro. Como ${}_nP$ y
+${}_nQ$ son finitos y localmente libres sobre $S$, y por tanto
+satisfacen la dualidad de Cartier, se sigue que ${}_nu$ es un
+isomorfismo si y solo si ${}_nv$ lo es. En consecuencia, $u$ es un
+isomorfismo si y solo si $v$ lo es.
+
+Una formulación equivalente, aunque algo menos simétrica, es la
+siguiente. Considérese la biextensión canónica (la biextensión de
+Weil) de $(P,P^*)$ por $\underline G_m$, correspondiente al
+homomorfismo identidad $v:P^*\longrightarrow P^*$. Entonces el
+homomorfismo canónico correspondiente
+\[
+ u:P\longrightarrow P^{**}
+\]
+es un \underline{isomorfismo}. Este es el \underline{teorema de
+bidualidad} de Barsotti y Cartier.

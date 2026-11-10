@@ -1,0 +1,191 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §7.2 y Lema 7.2.1,
+% líneas 1889--1938; índices de escaneo 413--417, folios 402--406.
+% Las cinco lecturas materiales D/C se conservan mediante \sisi. También
+% se conserva reversiblemente la base de étalidad S/S_n, inequívocamente
+% determinada por el contexto; la cita en blanco del impreso no se inventa.
+
+\medskip
+\noindent
+7.2. Consignemos ahora el siguiente lema.
+
+\medskip
+\noindent
+\underline{Lema 7.2.1.} Sea $S$ el espectro de un anillo noetheriano
+$V$, separado y completo para la topología definida por un ideal
+$\underline m$ de $V$. Sea $C$ la categoría de los esquemas en grupos
+$\Lambda$ sobre $S$, lisos y de tipo finito sobre $S$, tales que
+$\Lambda/\Lambda^o$ sea un esquema en grupos finito étale sobre $S$ y
+$\Lambda^o$ sea una extensión de un esquema abeliano $B$ por un toro
+isotrivial $T$ (SGA~3 IX~1.1).
+
+%%%%%%%%%%  scan idx 414  |  folio 403  %%%%%%%%%%
+
+Sea $C'$ la categoría de los objetos en grupos de la categoría de los
+esquemas formales de tipo finito (EGA~I~\sisi{10.3.3}{10.13.3}) sobre
+$\operatorname{Specf}(\sisi{A}{V})$, y consideremos el funtor
+\[
+ A\longmapsto\widehat A
+\]
+de $C$ en $C'$ que toma el completado formal a lo largo de
+$A_o=A\times_S S_o$, donde
+$S_o=\operatorname{Spec}(V/\underline m)$. Entonces:
+
+\smallskip
+\noindent
+\underline{a) El funtor precedente es plenamente fiel.}
+
+\smallskip
+\noindent
+\underline{b) Sea $\mathcal A$ un objeto de $C'$, liso sobre
+$\widehat S=\operatorname{Specf}(\sisi{A}{V})$}; es decir, supongamos que
+los esquemas ordinarios
+\[
+ A_n=\mathcal A\times_{\widehat S}S_n,
+ \qquad
+ S_n=\operatorname{Spec}(\sisi{A}{V}/\underline m^{n+1}),
+\]
+son lisos sobre $S_n$. Supongamos que $A_o/A_o^o$ es un esquema en
+grupos finito étale sobre $S_o$, y que $A_o^o$ es una extensión de un
+esquema abeliano $B_o$ por un toro isotrivial $T_o$. Pongamos
+\[
+ \mathcal A^o=(A_n^o)_{n\geq0},
+ \qquad
+ \mathcal A/\mathcal A^o=(A_n/A_n^o)_{n\geq0}.
+\]
+\underline{Entonces $\mathcal A/\mathcal A^o$ es finito étale sobre
+$\widehat S$, y $\mathcal A^o$ es, de manera esencialmente única y
+funtorial en $\mathcal A$, una extensión de un esquema abeliano formal
+$\mathcal B$ sobre $\widehat S$ por un toro formal $\mathcal T$ sobre
+$\widehat S$, que se reducen respectivamente a $B_o$ y $T_o$. El esquema
+formal en grupos $\mathcal A$ pertenece a la imagen esencial de
+$C\longrightarrow C'$---o, como diremos también, es
+``algebraizable''---si y solo si $\mathcal B$ es algebraizable.}
+
+\medskip
+\noindent
+7.2.1.1. Observemos primero, sobre un esquema arbitrario $S$, que si
+$A$ es un esquema en grupos liso tal que $A^o$ es una extensión de un
+esquema abeliano por un toro, esta estructura de extensión es
+esencialmente única y es funtorial en $A$ en el sentido evidente. En
+efecto, la afirmación se reduce inmediatamente al hecho de que todo
+morfismo de un toro $T$ a un esquema abeliano $B$ es nulo. Esto es bien
+conocido sobre las fibras geométricas [15], y SGA~3 IX~5.3 da entonces
+la conclusión.
+
+%%%%%%%%%%  scan idx 415  |  folio 404  %%%%%%%%%%
+
+Aplicando el resultado a los sistemas compatibles de esquemas en grupos
+lisos $A_n$ sobre los $S_n$ que aparecen en 7.2.1, se obtiene el
+resultado análogo para los esquemas formales en grupos sobre $S$.
+Además, ya observamos en 7.1 que, si $A_o^o$ es una extensión de un
+esquema abeliano por un toro, lo mismo vale para $A_n^o$. Esto demuestra
+la primera afirmación de b).
+
+\medskip
+\noindent
+7.2.1.2. Supongamos ahora que el esquema formal en grupos $\mathcal A$
+sobre $S$ es de la forma $\widehat A$, con
+$A\in\operatorname{ob}C$. Si $A^o$ es una extensión de un esquema
+abeliano $B$ por un toro $T$, se tiene evidentemente
+$\mathcal B\simeq\widehat B$. Así, la algebraizabilidad de $\mathcal A$
+implica la de $\mathcal B$.
+
+Recíprocamente, supongamos que $\mathcal B$ es algebraizable, es decir,
+que proviene de un esquema abeliano $B$, y demostremos que $\mathcal A$
+es algebraizable. Demostremos primero que
+$\mathcal A^o=(A_n^o)$ es algebraizable. Por VIII~3.7, las extensiones
+$A_n^o$ de $B_n$ por $T_n$ pueden interpretarse como homomorfismos
+\begin{equation}\tag{*}
+ \underline M_n\longrightarrow B'_n,
+\end{equation}
+donde $\underline M_n$ es el grupo constante torcido sobre $S_n$ dual
+de $T_n$ (SGA~3 X~5.7), y $B'_n$ es el esquema abeliano dual de $B_n$.
+La restricción a $S_o$, o a cualquier $S_n$, induce una equivalencia de
+la categoría de los toros isotriviales sobre $S$ con la categoría
+correspondiente sobre $S_o$ (SGA~3 X~3.2). Por tanto, los $T_n$
+provienen de un toro $T$ sobre $S$, determinado salvo isomorfismo único.
+Denotemos por $\underline M$ su grupo dual; su restricción a $S_n$ es
+canónicamente isomorfa a $\underline M_n$.
+
+La isotrivialidad de $T$ significa que $\underline M$ es una unión
+disjunta de $S$-esquemas $\underline M^i$ finitos sobre $S$
+(SGA~3 X~5.11). Se sigue inmediatamente que los homomorfismos $(*)$
+provienen de un único homomorfismo
+\begin{equation}\tag{**}
+ \underline M\longrightarrow B',
+\end{equation}
+
+%%%%%%%%%%  scan idx 416  |  folio 405  %%%%%%%%%%
+
+donde $B'$ es el esquema abeliano dual de $B$. A su vez, este
+homomorfismo se interpreta como una extensión de $B$ por $T$, digamos
+$A^o$, que proporciona evidentemente una algebraización de
+$\mathcal A^o$.
+
+\medskip
+\noindent
+7.2.1.3. Por otra parte, por hipótesis $A_o/A_o^o$ es un esquema en
+grupos finito $\Phi_o$ sobre $\sisi{S}{S_o}$, y los $A_n/A_n^o$ son
+asimismo esquemas en grupos finitos $\Phi_n$ sobre $\sisi{S}{S_n}$;
+son necesariamente étale sobre $\sisi{S}{S_n}$. Existe, por tanto, un
+esquema en grupos étale $\Phi$ sobre $S$, determinado salvo isomorfismo
+único, cuyo completado formal es el esquema formal en grupos
+$\mathcal A/\mathcal A^o$ definido por los $\Phi_n$.
+
+Como $G=A^o$ es divisible, la categoría de las extensiones, como haces
+fppf, de un grupo finito localmente constante sobre $S$, tal como
+$\Phi$, por el esquema en grupos $A^o$ es canónicamente equivalente a
+la categoría de los torsores bajo el haz
+\[
+ H=\underline{\operatorname{Hom}}_{\mathrm{gr}}(\Phi,G),
+\]
+y esta equivalencia es compatible con todo cambio de base. Aplicando la
+misma descripción a las extensiones de $\Phi_n$ por $G_n$ en términos
+de torsores bajo
+\[
+ H_n\simeq
+ \underline{\operatorname{Hom}}_{\mathrm{gr}}(\Phi_n,G_n),
+\]
+los $A_n$ definen un sistema coherente de torsores $P_n$ bajo los
+$H_n$. Como $G$ es una extensión de un esquema abeliano por un toro, se
+deduce fácilmente que $H$ es un esquema en grupos \underline{finito y
+localmente libre sobre $S$}. Por consiguiente, el funtor
+\[
+ P\longmapsto\widehat P=(P_n)
+\]
+es una equivalencia entre la categoría de los torsores sobre $S$ bajo
+$H$ y la categoría de los torsores ``formales'' $\widehat P$ bajo
+$\widehat H$, es decir, de los sistemas coherentes de torsores $P_n$
+bajo los $H_n$.
+
+%%%%%%%%%%  scan idx 417  |  folio 406  %%%%%%%%%%
+
+Así, los $P_n$ definidos por las extensiones $A_n$ provienen de un
+único torsor $P$ sobre $S$ bajo $H$. Obtenemos una extensión $A$ de
+$\Phi$ por $G=A^o$ que algebraiza $\mathcal A$, salvo que resta comprobar
+su representabilidad. Consideremos $A$ como un torsor sobre $\Phi$ bajo
+$A^o_\Phi$. Este torsor se trivializa después del cambio de base por el
+morfismo finito, sobreyectivo y localmente libre
+\[
+ P\times_S\Phi\longrightarrow\Phi,
+\]
+pues el cambio de base $P\longrightarrow S$ escinde la extensión $A$
+de $\Phi$ por $A^o$. Se puede concluir entonces por uno de los muchos
+criterios de Raynaud para la efectividad del descenso
+[23, XI~3.1(6)].
+
+\medskip
+\noindent
+7.2.1.4. Esto termina la demostración de b), y solo queda la afirmación
+de plena fidelidad a). Dejamos al lector la tarea de comprobar que esta
+afirmación está contenida esencialmente en el método de demostración de
+b), o, si lo prefiere, de buscar una demostración directa independiente.
+
+\medskip
+\noindent
+7.2.1.5. Obsérvese que el recurso al delicado resultado de descenso de
+Raynaud resulta innecesario si se supone que $A^o$ es cuasiproyectivo
+sobre $S$, o, equivalentemente, que $B$ es proyectivo sobre $S$. Esta
+condición se cumple, en particular, cuando se parte del esquema formal
+en grupos $\widehat A$ sobre $S$, con $A$ como en 7.1.5. Este es el
+único caso en el que utilizaremos 7.2.1.

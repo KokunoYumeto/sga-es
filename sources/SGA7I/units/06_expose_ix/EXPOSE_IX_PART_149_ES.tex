@@ -1,0 +1,121 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §§7--7.1.6, líneas 1845--1887;
+% índices de escaneo 410--413, folios 399--402. Las tres lecturas
+% materiales D/C del §7.1.3 se conservan reversiblemente mediante \sisi.
+
+\medskip
+\noindent
+7. \underline{La extensión de Raynaud $G^\natural$ sobre $S$ asociada
+al esquema abeliano $A_K$ con reducción semiestable. Dualidad de los
+esquemas abelianos $B,B'$ sobre $S$.}
+
+\medskip
+\noindent
+7.1. Sea $S$ un esquema noetheriano, espectro de un anillo $V$ separado
+y completo para la topología definida por un ideal $\underline m$ de
+$V$. Sea $A$ un esquema en grupos liso sobre $S$, sea $A^o$ su
+componente neutra, y supongamos que $A_o/A_o^o$ es finito (y por tanto
+finito étale) sobre $S_o$, y que $A_o^o$ es una extensión de un esquema
+abeliano por un toro. Como de costumbre, hemos puesto
+$A_n=A\times_S S_n$, donde
+$S_n=\operatorname{Spec}(V/\underline m^{n+1})$. Nos interesará
+principalmente el caso en que $S$ es un rasgo, la fibra genérica $A_K$
+es un esquema abeliano con reducción semiestable sobre $S$, y $A$ es el
+modelo de Néron de $A_K$.
+
+Sea $T_o$ el toro maximal de $A_o$, de modo que
+$B_o=A_o^o/T_o$ sea un esquema abeliano. Se aplica entonces la
+construcción de 5.1 y da un subtoro formal $\widehat T$ del completado
+formal $\widehat A$.
+
+%%%%%%%%%%  scan idx 411  |  folio 400  %%%%%%%%%%
+
+Para todo $n$, el cociente
+\begin{equation}\tag{7.1.1}
+ B_n=A_n^o/T_n
+\end{equation}
+es representable (SGA~3 $\mathrm{VI}_A$~3.2); más precisamente, es un
+esquema plano de tipo finito sobre $S_n$ cuya imagen inversa sobre $S_o$
+es el esquema abeliano $B_o$. Por consiguiente, $B_n$ es un
+\underline{esquema abeliano} sobre $S_n$. Al variar $n$, los $B_n$ se
+obtienen unos de otros por cambio de base y definen, por tanto, un
+\underline{esquema abeliano formal}
+\begin{equation}\tag{7.1.2}
+ \widehat B=(B_n)_{n\geqslant0}\,.
+\end{equation}
+Daremos condiciones que implican que este esquema abeliano formal es
+\underline{algebraizable} (EGA~III~5.4.1), más precisamente, que es el
+completado formal de un esquema abeliano proyectivo sobre $S$, que
+denotaremos entonces por $B$. Según loc. cit., $B$ está determinado
+salvo isomorfismo único (como $S$-esquema; la estructura de grupo de
+$\widehat B$ proviene entonces de manera única de una estructura de
+grupo sobre $B$, de nuevo por loc. cit.). Este esquema abeliano $B$ se
+llamará entonces la \underline{parte abeliana} del esquema $A$, y se
+denotará a veces por $A^{\mathrm{ab}}$.
+
+%%%%%%%%%%  scan idx 412  |  folio 401  %%%%%%%%%%
+
+\medskip
+\noindent
+7.1.3. Por EGA~III~5.4.5, la proyectividad de $\widehat B$ significa
+que se puede encontrar un haz invertible $\widehat{\mathbb M}$ sobre
+$\widehat B$, es decir, una sucesión de haces invertibles $\mathbb M_n$
+sobre los $B_n$ que se pegan al variar $n$, y que sea relativamente
+amplio sobre $S$, es decir, tal que $\mathbb M_o$ sea amplio. La idea
+natural sería partir de un haz invertible amplio
+$\sisi{\mathbb M}{\mathbb L}$ sobre $\sisi{G}{A}$ y demostrar que, para
+todo $n$, su restricción $\mathbb L_n$ a $\sisi{G_n}{A_n}$ es la imagen
+inversa de un haz invertible $\mathbb M_n$ sobre $B_n$. Ignoro si tales
+$\mathbb M_n$ existen necesariamente (y lo dudo mucho). Seguiremos un
+método ligeramente distinto, construyendo una \underline{polarización}
+de $\widehat B$, es decir, un sistema proyectivo de polarizaciones
+$\rho_n$ de los $B_n$ que se pegan. Se sabe [5] que los dobles de estas
+polarizaciones definen canónicamente haces invertibles (simétricos)
+$\mathbb M_n$ sobre los $B_n$. Por su naturaleza canónica, estos haces
+se pegan necesariamente y proporcionan el $\widehat{\mathbb M}$ buscado.
+
+Interpretaremos un elemento de $\operatorname{NS}(B_n/S_n)$ como una
+correspondencia divisorial simétrica sobre $(B_n,B_n)$ [5], es decir,
+como una biextensión de $(B_n,B_n)$ por $\mathbb G_{mS_n}$. Por VIII~3.5,
+estas biextensiones corresponden biyectivamente a biextensiones de
+$(A_n,A_n)$ por $\mathbb G_{mS_n}$. Para obtener un sistema coherente de
+tales biextensiones $W_n$, basta partir de
+\begin{equation}\tag{7.1.4}
+ W,\quad\text{una biextensión simétrica de $(A,A)$ por $\mathbb G_{mS}$},
+\end{equation}
+y tomar los $W_n$ obtenidos a partir de $W$ mediante los cambios de base
+$S_n\longrightarrow S$. Debemos suponer además que el elemento de
+$\operatorname{NS}(B_o)$ definido por $W_o$ es una polarización de
+$B_o$; obtenemos así una polarización de $\widehat B$.
+
+%%%%%%%%%%  scan idx 413  |  folio 402  %%%%%%%%%%
+
+\medskip
+\noindent
+\underline{Proposición 7.1.5.} \underline{Con las notaciones precedentes
+para $S,A,\widehat B$, supongamos que $S$ es normal. Entonces
+$\widehat B$ es algebraizable, y el esquema abeliano $B$ sobre $S$ del
+que proviene es proyectivo sobre $S$.}
+
+Podemos suponer evidentemente que $A=A^o$ y que $S$ es integral. Por
+Raynaud [23, XI~1.13], la hipótesis de que $S$ sea normal implica que
+$A$ es cuasiproyectivo sobre $S$. Elijamos un haz invertible
+relativamente amplio $\mathbb L$ sobre $A$, y formemos el haz invertible
+birigidificado
+\[
+ \delta(\mathbb L)=
+ \pi^*(\mathbb L)\operatorname{pr}_1^*(\mathbb L)^{-1}
+ \operatorname{pr}_2^*(\mathbb L)^{-1}
+\]
+sobre $A\times_S A$, como en VIII~4.12. Puesto que las fibras de $A_o$
+tienen rango unipotente cero, lo mismo vale para las fibras de $A$ (esto
+se deduce fácilmente de 3.1). Por tanto, según VIII~7.5,
+$\delta(\mathbb L)$ define una biextensión $W$ de $(A,A)$, evidentemente
+simétrica, que por VIII~4.13 (es decir, esencialmente por Raynaud
+[23, XI~1.11]) satisface la condición de amplitud requerida en los
+puntos de $S_o$.
+
+\medskip
+\noindent
+\underline{Observación 7.1.6.} Sin suponer que $S$ sea normal, se puede
+demostrar que $\widehat B$ siempre es algebraizable, reduciéndose al
+caso normal como en 13.5.3 a).

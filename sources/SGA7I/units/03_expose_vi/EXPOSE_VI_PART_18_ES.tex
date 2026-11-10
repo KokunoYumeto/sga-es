@@ -1,0 +1,149 @@
+\section*{2. Grupoides cofibrados prorepresentables}
+
+Sea $\underline A$ un grupoide cofibrado sobre
+$\underline C_\Lambda$ que admite un objeto formal mínimamente versal
+$\xi$. En general, $\xi$ por sí solo no determina $\underline A$
+salvo $\underline C_\Lambda$-equivalencia. También es necesario saber
+cuándo dos morfismos
+\[
+ R\mathrel{\substack{\xrightarrow{\ f\ }\\[-.6ex]
+                      \xrightarrow[\ g\ ]{}}}S
+\]
+dan lugar a un $\underline C_\Lambda$-isomorfismo
+$\xi(f)\longrightarrow\xi(g)$, donde $R=P(\xi)$. Como aplicación de
+1.11 y 1.12, consideremos ahora el problema de recuperar $\underline A$
+salvo $\underline C_\Lambda$-equivalencia. Obtenemos una respuesta
+satisfactoria para una clase amplia de grupoides cofibrados.
+
+%%%%%%%%%%  scan idx 61  |  folio 50  %%%%%%%%%%
+
+Muchos grupoides cofibrados que aparecen en la práctica satisfacen una
+propiedad ligeramente más fuerte que la semihomogeneidad; se definirá
+explícitamente en 2.5. Para estudiarlos, conviene reformular la
+discusión anterior en términos de «funtores lisos». Durante toda esta
+sección siguen vigentes la notación y la terminología de la sección
+anterior.
+
+\underline{Definición 2.1.} Sea
+$\varphi:\underline A\longrightarrow\underline B$ un funtor de
+grupoides cofibrados sobre $\underline C_\Lambda$. Decimos que
+$\varphi$ es \underline{liso} si todo morfismo sobreyectivo
+$\beta:b'\longrightarrow\varphi(a)$ en $\underline B$ puede
+completarse en un diagrama conmutativo
+\begin{equation}\tag{*}
+\begin{tikzcd}[row sep=large,column sep=huge]
+ \varphi(a') \arrow[r] \arrow[dr,"{\varphi(\alpha)}"']
+ & b' \arrow[d,"\beta"]\\
+ & \varphi(a)
+\end{tikzcd}
+\end{equation}
+para algún $\alpha:a'\longrightarrow a$ en $\underline A$. Decimos
+que $\varphi$ es \underline{mínimamente liso} si es liso y
+\[
+ \varphi(k[\varepsilon]):
+ [\underline A(k[\varepsilon])]
+ \longrightarrow
+ [\underline B(k[\varepsilon])]
+\]
+es biyectivo.
+
+\underline{Observación 2.2(a).} Sea
+$\varphi:\underline A\longrightarrow\underline B$ un funtor de
+grupoides cofibrados sobre $\underline C_\Lambda$. Las condiciones
+siguientes son equivalentes:
+
+(i) $\varphi$ es liso;
+
+(ii) todo morfismo sobreyectivo
+$\beta:b'\longrightarrow\varphi(a)$ en $\underline B$ puede
+completarse en un diagrama $(*)$ en el que
+$\varphi(a')\longrightarrow b'$ es un
+$\underline C_\Lambda$-isomorfismo;
+
+(iii) toda pequeña prolongación
+$\beta:b'\longrightarrow\varphi(a)$ en $\underline B$ puede
+completarse en un diagrama conmutativo $(*)$.
+
+\underline{Observación 2.2(b).} Para todo grupoide cofibrado
+$\underline A$ sobre $\underline C_\Lambda$, el funtor natural
+\[
+ \underline A\longrightarrow[\underline A]
+\]
+es mínimamente liso.
+
+\underline{Observación 2.2(c).} Para cada
+$R\in\widehat{\underline C}_\Lambda$, sea
+\[
+ h_R:\underline C_\Lambda\longrightarrow(\mathrm{Ens})
+\]
+el funtor definido por
+\[
+ h_R(S)=\operatorname{Hom}_{\Lambda\text{-alg}}(R,S)
+ \qquad(S\in\underline C_\Lambda).
+\]
+Este determina un grupoide discreto cofibrado $\underline h_R$ sobre
+$\underline C_\Lambda$. Un morfismo $R\longrightarrow S$ en
+$\widehat{\underline C}_\Lambda$ induce un funtor
+\[
+ \underline h_S\longrightarrow\underline h_R.
+\]
+Este funtor es liso si y solo si $S$ es un anillo de series formales
+sobre $R$.
+
+%%%%%%%%%%  scan idx 62  |  folio 51  %%%%%%%%%%
+
+\underline{Observación 2.2(d).} Dado
+$R\in\widehat{\underline C}_\Lambda$, denotemos por
+$(R,\underline C_\Lambda)$ la categoría de las flechas de
+$\widehat{\underline C}_\Lambda$ con fuente $R$ y blanco en
+$\underline C_\Lambda$. Sea $\underline A$ un grupoide cofibrado
+sobre $\underline C_\Lambda$. Dado
+$\xi\in\operatorname{Ob}\widehat{\underline A}$ con $P(\xi)=R$,
+sea
+\[
+ \underline A'\longrightarrow(R,\underline C_\Lambda)
+\]
+el producto fibrado de
+$\underline A\longrightarrow\underline C_\Lambda$ por el funtor
+canónico
+$(R,\underline C_\Lambda)\longrightarrow\underline C_\Lambda$.
+Elijamos una sección $\xi^\#$ tal que
+$\xi^\#(1_R)=\xi$. Así, para todo morfismo
+$f:R\longrightarrow S$, elegimos un $f$-morfismo
+$\xi\longrightarrow\xi(f)$.
+
+Obtenemos un funtor
+\[
+ \xi^\#:\underline h_R\longrightarrow\underline A
+\]
+sobre $\underline C_\Lambda$ enviando
+$(R\xrightarrow{f}S)$ a $\xi(f)$. Salvo equivalencia natural, este
+funtor no depende de la elección de $\xi^\#$.
+
+La afirmación de que
+$\xi^\#:\underline h_R\longrightarrow\underline A$ es
+(mínimamente) liso significa que todo morfismo sobreyectivo
+$a'\xrightarrow{\alpha}\xi(f)$ en $\underline A$ puede completarse
+en un diagrama conmutativo
+\[
+\begin{tikzcd}[row sep=large,column sep=huge]
+ \xi(f') \arrow[r] \arrow[dr,"{\xi(\,)}"']
+ & a' \arrow[d,"\alpha"]\\
+ & \xi(f)
+\end{tikzcd}
+\]
+(y, en el caso mínimo, que
+$\underline h_R(k[\varepsilon])\longrightarrow
+\underline A(k[\varepsilon])$ es biyectivo). Esto significa
+precisamente que $\xi$ es un objeto formal (mínimamente) versal de
+$\underline A$ sobre $\underline C_\Lambda$.
+
+Así, la existencia de un objeto formal (mínimamente) versal de
+$\underline A$ equivale a la existencia de un funtor (mínimamente)
+liso
+\[
+ \underline h_R\longrightarrow\underline A
+\]
+sobre $\underline C_\Lambda$ para algún
+$R\in\operatorname{Ob}(\widehat{\underline C}_\Lambda)$.
+

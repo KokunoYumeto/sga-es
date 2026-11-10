@@ -1,0 +1,264 @@
+% AUTORIDAD DE FUENTE: Exposé IX §9.3, líneas francesas 2279--2430;
+% índices de escaneo 432--438, folios 421--427. Las ocho operaciones
+% materiales indicadas por las capas D/C se conservan mediante \sisi.
+
+\medskip
+\noindent
+9.3. \underline{Extensiones mixtas.}
+
+Sea $\underline C$ una categoría abeliana, y sean
+\begin{equation}\tag{9.3.1}
+ P,\ R,\ Q
+\end{equation}
+tres objetos de $\underline C$. Nos interesa clasificar los objetos $X$
+de $\underline C$ dotados de una filtración de tres escalones
+\begin{equation}\tag{*}
+ X^0=X\supset X^1\supset X^2\supset X^3=0
+\end{equation}
+y de isomorfismos dados
+\begin{equation*}
+ X^0/X^1\xrightarrow{\ \sim\ }\sisi{P}{Q},
+ \qquad X^1/X^2\xrightarrow{\ \sim\ }R,
+ \qquad X^2/X^3=X^2\xrightarrow{\ \sim\ }\sisi{Q}{P}.
+\end{equation*}
+Poniendo
+\begin{equation*}
+ E=X^0/X^2,
+ \qquad F=X^1/X^3=X^1,
+\end{equation*}
+vemos que $X$ da lugar a dos extensiones ordinarias
+\begin{equation}\tag{9.3.2}
+ 0\longrightarrow P\longrightarrow F\longrightarrow R\longrightarrow0,
+ \qquad
+ 0\longrightarrow R\longrightarrow E\longrightarrow Q\longrightarrow0,
+\end{equation}
+de $R$ por $P$ y de $Q$ por $R$, respectivamente. Nuestro punto de
+vista consistirá en partir, además de los objetos (9.3.1), de las
+estructuras de extensión (9.3.2), que también se suponen dadas, y
+considerar las estructuras filtradas correspondientes sobre $X$.
+
+Más precisamente, una \underline{extensión mixta} de la extensión $E$
+por la extensión $F$ será un objeto $X$ de $\underline C$, dotado de
+una filtración de tres escalones (*) y de isomorfismos dados
+\begin{equation}\tag{9.3.3}
+ E\simeq X^0/X^2,
+ \qquad F\simeq X^1/X^3=X^1,
+\end{equation}
+compatibles con las filtraciones: llevan $X^1/X^2$ a
+$\operatorname{Im}(R\longrightarrow E)$ y $X^2$ a
+$\operatorname{Im}(P\longrightarrow F)$, respectivamente, y se exige
+que el isomorfismo $R\simeq F/P$ —y, por tanto,
+$R\simeq X^1/X^2$— deducido de (9.3.3) sea el deducido de la primera
+sucesión exacta de (9.3.2).
+
+%%%%%%%%%%  scan idx 433  |  folio 422  %%%%%%%%%%
+
+Para $P,Q,R$ fijos y extensiones $E,F$ fijas, las extensiones mixtas de
+$E$ por $F$ forman una categoría de manera evidente; de hecho, es un
+grupoide, pues toda flecha es invertible. El grupo de automorfismos de
+una extensión mixta $X$ de $E$ por $F$ es canónicamente isomorfo a
+$\Hom(Q,P)$ mediante
+\begin{equation}\tag{9.3.4}
+ \Hom(Q,P)
+ \xrightarrow{\ \sim\ }
+ \operatorname{Aut}_{\mathrm{extpan}}(X),
+ \qquad
+ u\longmapsto\id_X+\bar u,
+\end{equation}
+donde $\bar u$ es el endomorfismo del objeto subyacente a $X$ obtenido
+componiendo
+$X\longrightarrow Q\xrightarrow{u}P\longrightarrow X$; las flechas
+exteriores son, respectivamente, el epimorfismo canónico y el
+monomorfismo canónico provenientes de la estructura de extensión mixta
+dada sobre $X$.
+
+Se puede precisar la estructura de la categoría
+$\operatorname{EXTPAN}(E,F)$ de extensiones mixtas de $E$ por $F$
+considerándola como un ``torsor'' bajo la ``categoría-grupo'' (VII 2.5)
+$\operatorname{EXT}(Q,P)$ de extensiones de $Q$ por $P$, mediante un
+funtor natural análogo a la composición de Brauer de extensiones
+ordinarias:
+\begin{equation}\tag{9.3.5}
+\begin{aligned}
+ \omega:
+ \operatorname{EXT}(Q,P)\times\operatorname{EXTPAN}(E,F)
+ &\longrightarrow\operatorname{EXTPAN}(E,F),\\
+ \omega(G,X)&=G\wedge X.
+\end{aligned}
+\end{equation}
+Para todo objeto $X$ de $\operatorname{EXTPAN}(E,F)$, el funtor
+parcial $G\longmapsto G\wedge X$ es una equivalencia de
+$\operatorname{EXT}(Q,P)$ con $\operatorname{EXTPAN}(E,F)$.
+
+%%%%%%%%%%  scan idx 434  |  folio 423  %%%%%%%%%%
+
+Daremos solo una breve descripción de $\omega$. Consideremos una
+extensión mixta $X$ de $E$ por $F$ como una extensión ordinaria, también
+denotada $X$, de $Q$ por $F$. Para toda extensión $G$ de $Q$ por $P$,
+sea $\bar G$ la extensión de $Q$ por $F$ inducida por la inclusión
+$P\longrightarrow F$. Pongamos
+\begin{equation}\tag{9.3.6}
+ G\wedge X=\omega(G,X)
+ \overset{\mathrm{def}}{=}\bar G\wedge X,
+\end{equation}
+donde $\wedge$ denota la composición de Brauer en la categoría de
+extensiones de $Q$ por $F$. La filtración de tres escalones del miembro
+derecho $X'$ de (9.3.6) es clara, al igual que el segundo isomorfismo de
+tipo (9.3.3) asociado a $X'$.
+
+Para definir el primer isomorfismo de tipo (9.3.3) para $X'$, obsérvese
+que el funtor
+\begin{equation*}
+ Y\longmapsto\widetilde Y,
+ \qquad
+ \operatorname{EXT}(Q,F)\longrightarrow\operatorname{EXT}(Q,R),
+\end{equation*}
+inducido por el morfismo dado $F\longrightarrow R$ de (9.3.2) es
+compatible con la composición de Brauer. Por tanto, envía $X'$ a una
+extensión $\widetilde X'$ canónicamente isomorfa a
+$\widetilde{\bar G}\wedge\widetilde X$. El primer isomorfismo (9.3.3)
+da un isomorfismo
+$\widetilde X\simeq\sisi{F}{E}$, mientras que
+$\widetilde{\bar G}$ —la extensión inducida por $G$ mediante el
+compuesto $P\longrightarrow F\longrightarrow R$— es canónicamente
+isomorfa a la extensión trivial, pues ese compuesto es nulo. En
+consecuencia, existe un isomorfismo canónico
+$\widetilde X'\simeq\sisi{F}{E}$, que especifica sobre el miembro
+derecho de (9.3.6) su estructura de extensión mixta de $E$ por $F$.
+
+%%%%%%%%%%  scan idx 435  |  folio 424  %%%%%%%%%%
+
+Dejamos al lector la definición de $\omega$ sobre las flechas de
+$\operatorname{EXT}(Q,P)\times\operatorname{EXTPAN}(E,F)$, la
+verificación de que (9.3.5) posee la propiedad enunciada —para toda
+extensión mixta \underline{fija} $X$, el funtor
+$G\longmapsto G\wedge X$ es una equivalencia de
+$\operatorname{EXT}(Q,P)$ con $\operatorname{EXTPAN}(E,F)$—, y la
+demostración de la fórmula de asociatividad
+\begin{equation}\tag{9.3.7}
+ G_1\wedge(G_2\wedge X)
+ \simeq(G_1\wedge G_2)\wedge X,
+\end{equation}
+donde $G_1\wedge G_2$ denota la composición de Brauer en
+$\operatorname{EXT}(Q,P)$.
+
+La discusión precedente da inmediatamente (a) y (b) del resultado
+siguiente.
+
+\medskip
+\noindent
+\underline{Proposición 9.3.8. Dadas dos extensiones} $E$ \underline{y} $F$ \underline{como en
+(9.3.2) en la categoría abeliana} $\mathbf C$, \underline{consideremos la
+categoría} $\operatorname{EXTPAN}(E,F)$ \underline{de extensiones mixtas de} $E$ \underline{por}
+$F$. \underline{Entonces:}
+
+\smallskip
+\noindent
+a) \underline{$\operatorname{EXTPAN}(E,F)$ es un grupoide. Para cada
+uno de sus objetos, el grupo de automorfismos es canónicamente
+isomorfo a}
+$\Ext^0(Q,P)=\Hom(Q,P)$.
+
+\smallskip
+\noindent
+b) \underline{El conjunto $\operatorname{Extpan}(E,F)$ de clases de
+isomorfismo de objetos de $\operatorname{EXTPAN}(E,F)$ es vacío o es,
+de manera natural, un torsor bajo el grupo} $\Ext^1(Q,P)$.
+
+\smallskip
+\noindent
+c) \underline{Se puede definir canónicamente una clase}
+\begin{equation}\tag{9.3.9}
+ c(E,F)\in\Ext^2(Q,P),
+\end{equation}
+\underline{cuya anulación es necesaria y suficiente para que}
+$\operatorname{Extpan}(E,F)\neq\varnothing$, \underline{es decir, para
+que exista una extensión mixta de} $E$ \underline{por} $F$.
+
+%%%%%%%%%%  scan idx 436  |  folio 425  %%%%%%%%%%
+
+Queda por demostrar $\sisi{\mathrm{d})}{\mathrm{c})}$. Una extensión
+mixta de $E$ por $F$ puede describirse también como una extensión $X$
+de $E$ por $P$ junto con un isomorfismo de extensiones de $R$ por $P$
+\begin{equation*}
+ X^1\simeq F,
+\end{equation*}
+donde $X^1$ denota la imagen de la extensión $X$ por el morfismo
+$R\longrightarrow E$ de (9.3.2). Por tanto, tal extensión mixta existe
+si y solo si hay un elemento de $\Ext^1(E,P)$ cuya imagen en
+$\Ext^1(R,P)$ sea la clase $\xi$ de $F$. Consideremos la sucesión
+exacta de los $\Ext^i(-,P)$ asociada a la segunda sucesión exacta de
+(9.3.2):
+\begin{equation*}
+ \cdots\longrightarrow
+ \Ext^1(E,P)\longrightarrow
+ \Ext^1(R,P)
+ \xrightarrow{\partial}
+ \sisi{\Ext^2(R,Q)}{\Ext^2(Q,P)}\longrightarrow\cdots .
+\end{equation*}
+Basta definir $c(E,F)$ por
+\begin{equation}\tag{9.3.10}
+ c(E,F)=\partial\xi,
+ \qquad
+ \xi=\operatorname{cl}(F)\in\Ext^1(R,P).
+\end{equation}
+
+Supongamos ahora dado un funtor exacto
+\begin{equation}\tag{9.3.11}
+ r:\underline C\longrightarrow\underline C',
+\end{equation}
+donde $\underline C'$ es otra categoría abeliana. Denotemos por
+$P',Q',R',E',F'$ los objetos de $\underline C'$ obtenidos aplicando
+$r$ a $P,Q,R,E,F$, de modo que $E'$ sea una extensión de $Q'$ por $R'$
+y $F'$ una extensión de $R'$ por $P'$. Salvo isomorfismo canónico, el
+diagrama de funtores siguiente es conmutativo:
+\begin{equation}\tag{9.3.12}
+\begin{tikzcd}[column sep=large,row sep=large]
+ \operatorname{EXT}(Q,P)\times\operatorname{EXTPAN}(E,F)
+   \arrow[r,"\omega"]\arrow[d]
+ &\operatorname{EXTPAN}(E,F)\arrow[d]\\
+ \operatorname{EXT}(Q',P')\times\operatorname{EXTPAN}(E',F')
+   \arrow[r,"\sisi{\omega}{\omega'}"']
+ &\operatorname{EXTPAN}(E',F').
+\end{tikzcd}
+\end{equation}
+Las flechas verticales son los funtores evidentes inducidos por el
+funtor exacto $r$, y $\omega'$ es la flecha análoga a $\omega$ de
+(9.3.5), sustituyendo $\underline C$ por $\underline C'$. Se obtienen
+compatibilidades análogas con $r$ para las estructuras consideradas en
+9.3.8; dejamos su formulación explícita al lector.
+
+%%%%%%%%%%  scan idx 437  |  folio 426  %%%%%%%%%%
+
+\begingroup
+\sloppy
+Utilizaremos la consecuencia siguiente de esta conmutatividad.
+Supongamos que $\operatorname{EXTPAN}(E,F)$ no es vacía y elijamos un
+objeto $X$ en ella. Mediante $G'\longmapsto G'\wedge X'$, donde
+$X'=r(X)$, la categoría $\operatorname{EXTPAN}(E',F')$ es equivalente
+a $\operatorname{EXT}(Q',P')$. Así, un objeto $Y'$ de
+$\operatorname{EXTPAN}(E',F')$ queda determinado salvo isomorfismo
+cuando se conoce la clase de isomorfismo del objeto correspondiente de
+$\operatorname{EXT}(Q',P')$, es decir, cuando se conoce el elemento
+correspondiente
+\par
+\endgroup
+\begin{equation*}
+ c_X(Y')\in\Ext^1(Q',P').
+\end{equation*}
+
+Si $X$ se sustituye por otro objeto $X_1=H\wedge X$, donde $H$ es una
+extensión de $Q$ por $P$, se obtiene inmediatamente de (9.3.7)
+\begin{equation*}
+ c_{X_1}(Y')=c_X(\sisi{Y}{Y'})-\operatorname{cl}(H').
+\end{equation*}
+Por tanto, para $Y'$ fijo y $X$ variable, los elementos $c_X(Y')$
+recorren exactamente una clase lateral
+\begin{equation}\tag{9.3.13}
+ c(Y')\in
+ \Ext^1(Q',P')/\operatorname{Im}\Ext^1(Q,P),
+\end{equation}
+asociada canónicamente a la extensión mixta $Y'$ de $E'$ por $F'$. Por
+construcción, su anulación es necesaria y suficiente para que $Y'$ sea
+isomorfa a la transformada por $r$ de una extensión mixta $X$ de $E$
+por $F$.

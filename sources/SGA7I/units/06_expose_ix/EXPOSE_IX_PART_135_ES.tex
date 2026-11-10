@@ -1,0 +1,90 @@
+\par\medskip
+\noindent
+2.5. El teorema de ortogonalidad posee una formulación equivalente
+mediante una polarización $\xi$ de $A_K$ y la forma bilineal alternante
+(1.0.8), compatible con las operaciones de $\pi$,
+\begin{equation}\tag{2.5.1}
+ \varphi_\xi:T_\ell(A(\overline K))\times T_\ell(A(\overline K))
+ \longrightarrow T_\ell(\overline K^*),
+\end{equation}
+obtenida de la forma $\varphi$ de (1.0.3) transportando la estructura
+en el segundo argumento a lo largo de la isogenia de
+$\mathbb Z_\ell$-módulos
+\[
+ T_\ell(A(\overline K))\longrightarrow T_\ell(A'(\overline K))
+\]
+inducida por la isogenia $\psi_\xi:A_K\longrightarrow A'_K$ definida
+por $\xi$. La igualdad de (2.4.6) adopta entonces la forma sencilla
+\begin{equation}\tag{2.5.2}
+ W=V\cap V^\perp,
+\end{equation}
+donde hemos puesto
+\begin{equation}\tag{2.5.3}
+ \left\{
+ \begin{array}{l}
+ U=T_\ell(A(\overline K)),\qquad
+ V=U^I=\text{la «parte fija» de }T_\ell(A(\overline K)),\\[2mm]
+ \hspace{4em}W=\text{la parte tórica de }T_\ell(A(\overline K)),
+ \end{array}
+ \right.
+\end{equation}
+y $\perp$ denota el ortogonal respecto de la forma de polarización
+(2.5.1). Estos módulos dan el siguiente diagrama de inclusiones:
+\begin{equation}\tag{2.5.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+ && V\arrow[dl,hook',"2\lambda"'] && \\
+ U & W^\perp=V+V^\perp\arrow[l,hook',"\mu"']
+ && W=V\cap V^\perp
+    \arrow[ul,hook',"2\alpha"']
+    \arrow[dl,hook,"2\lambda"]
+ & 0\arrow[l,hook',"\mu"'] \\
+ && V^\perp\arrow[ul,hook,"2\alpha"] &&
+\end{tikzcd}
+\qquad ,
+\end{equation}
+donde los enteros $2\alpha$, $2\lambda$ y $\mu$ son los rangos de los
+cocientes de módulos consecutivos en el diagrama, con la notación de
+(2.1.9). (Que $W$ tenga rango $\mu$ es la definición de $\mu$; que
+$V/W$ tenga rango $2\alpha$ se deduce de la segunda relación de
+(2.1.11), junto con la sucesión exacta (2.1.6). Por tanto, por
+ortogonalidad, $\operatorname{rank}(U/W^\perp)=\mu$ y
+$\operatorname{rank}(W^\perp/V^\perp)=2\alpha$. Finalmente, las
+fórmulas
+\begin{equation}\tag{2.5.5}
+ \operatorname{rank}\bigl(\sisi{V}{V^\perp}/(V\cap V^\perp)\bigr)
+ =\operatorname{rank}(\sisi{V}{V^\perp}/W)=2\lambda
+\end{equation}
+y la fórmula dual se deducen de las precedentes, en vista de (2.1.10)
+y de $\operatorname{rank}U=n$.)
+
+\medskip
+\noindent
+\underline{Observaciones} 2.6.\quad a) Hemos obtenido aquí el teorema
+de ortogonalidad 2.4 como consecuencia fácil de la teoría de
+biextensiones desarrollada en las secciones precedentes. La
+\underline{inclusión} (2.4.6) puede demostrarse sin utilizar la teoría
+de biextensiones, mediante un argumento aritmético al estilo de la
+demostración del «teorema de monodromía» dada en el Exposé I. Se reduce
+a una situación en la que $S$ posee cuerpo residual finito, donde el
+resultado de ortogonalidad se deduce de una consideración sencilla de
+los \underline{pesos} de la operación de Frobenius (utilizando el
+resultado de A.~Weil sobre los valores propios de este Frobenius). No
+es necesario invocar aquí la resolución de singularidades: puede
+enunciarse el resultado deseado para esquemas en grupos $A$ sobre
+esquemas $S$ bajo condiciones suficientemente generales. Por desgracia,
+no parece posible obtener por este método la igualdad en la inclusión
+precedente. Al parecer, esta igualdad se utilizará de manera esencial
+en la demostración del «teorema de reducción semiestable» de la sección
+siguiente.
+
+\smallskip
+\noindent
+b) El teorema de ortogonalidad 2.4 permite expresar las propiedades más
+importantes del modelo de Néron de una variedad abeliana $A_K$ en
+términos de la representación del grupo de inercia $I$ sobre el módulo
+de Tate $T_\ell(A(\overline K))$, donde $\ell$ es un primo fijo distinto
+de la característica residual. (El caso $\ell=p$ se considerará por
+separado más adelante, en la sección 5.) Como primer enunciado de este
+tipo, aunque no utiliza el teorema de ortogonalidad, recordemos el
+criterio de buena reducción 2.2.9. Daremos a continuación muchos otros
+ejemplos, comenzando en la sección siguiente (3.5).

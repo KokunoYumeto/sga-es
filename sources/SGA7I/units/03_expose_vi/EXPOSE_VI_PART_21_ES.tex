@@ -1,0 +1,50 @@
+\par\medskip\noindent
+\underline{Corolario 2.10.} (a) Sea
+$\varphi:\underline A\longrightarrow\underline B$ un funtor liso de
+grupoides cofibrados sobre $\underline C_\Lambda$. Sea $\xi$ un objeto
+formal versal de $\underline A$, y sea $\eta$ un objeto formal
+mínimamente versal de $\underline B$. Si $\underline B$ es homogéneo,
+entonces, para todo morfismo
+$\beta:\eta\longrightarrow\varphi(\xi)$ en
+$\widehat{\underline B}$, el anillo $P(\xi)$ es un anillo de series
+formales sobre $P(\eta)$ mediante
+\[
+ P(\beta):P(\eta)\longrightarrow P(\varphi(\xi))=P(\xi).
+\]
+
+(b) Sea $\underline A$ un grupoide cofibrado homogéneo sobre
+$\underline C_\Lambda$, y sean $\xi$ y $\eta$ objetos formales versales
+de $\underline A$. Si $\eta$ es minimal, entonces, para todo morfismo
+$\alpha:\eta\longrightarrow\xi$ en $\widehat{\underline A}$, el
+anillo $P(\xi)$ es un anillo de series formales sobre $P(\eta)$ mediante
+\[
+ P(\alpha):P(\eta)\longrightarrow P(\xi).
+\]
+
+\underline{Demostración.} (a) Un morfismo
+$\beta:\eta\longrightarrow\varphi(\xi)$ induce un diagrama conmutativo
+\[
+\begin{tikzcd}[row sep=huge,column sep=huge]
+ \underline h_{P(\xi)} \arrow[r,"{\widetilde\beta}"]
+                           \arrow[d,"{\widetilde\xi}"']
+ & \underline h_{P(\eta)} \arrow[d,"{\widetilde\eta}"]\\
+ \underline A \arrow[r,"{\varphi}"'] & \underline B.
+\end{tikzcd}
+\]
+Como $\widetilde\xi$ y $\varphi$ son lisos, el compuesto
+$\widetilde\eta\circ\widetilde\beta
+=\varphi\circ\widetilde\xi$ es liso. Por otra parte,
+
+%%%%%%%%%%  scan idx 71  |  folio 60  %%%%%%%%%%
+
+\[
+ \widetilde\eta(k[\varepsilon]):
+ \underline h_{P(\eta)}(k[\varepsilon])
+ \longrightarrow[\underline B(k[\varepsilon])]
+\]
+es un isomorfismo. La Proposición 2.9(a) muestra entonces que
+$\widetilde\beta$ es liso, lo que significa precisamente que $P(\xi)$
+es un anillo de series formales sobre $P(\eta)$.
+
+(b) Apliquemos (a) con $\underline A=\underline B$.
+\hfill$\square$

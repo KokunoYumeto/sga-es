@@ -1,0 +1,82 @@
+\par\medskip
+\noindent\textbf{Teorema 5.4.}
+Sea $X\xrightarrow{f}Y$ un morfismo esencialmente de presentación
+finita. Supongamos que existe un entero fijo $n\geq0$ para el cual se
+cumple una de las condiciones siguientes:
+
+\smallskip
+\noindent\textbf{(1)} $f$ es plano y
+$\dim_xX_{f(x)}=n$ para todo $x\in X$;
+
+\smallskip
+\noindent\textbf{(2)} $f$ es una intersección completa relativa de
+dimensión virtual $n$ (SGA 6, VIII, 1.9).
+
+\smallskip
+Entonces $x\notin J_X^n(X|Y)$ si y solo si $f$ es liso en $x$.
+
+\smallskip
+\noindent\textit{Demostración.}
+Por 5.3(4), $x\notin J_X^n(X|Y)$ si y solo si existe un diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+U \arrow[r,hook,"i"] \arrow[d,"f"']
+  & U' \arrow[dl,"f'"] \\
+Y & {}
+\end{tikzcd}
+\]
+tal que $f'$ es liso en $x'$, con
+$\dim_{x'}U'_{f(x)}=n$, mientras que $i$ es una inmersión cerrada y
+$x'=i(x)$. Basta, pues, demostrar que, bajo (1) o (2), $i$ es un
+isomorfismo en $x$.
+
+Pongamos
+\[
+A=\mathcal O_{Y,f(x)},\qquad
+B'=\mathcal O_{U',x'},\qquad B=\mathcal O_{U,x},
+\]
+y sea exacta la sucesión
+\[
+0\longrightarrow I\longrightarrow B'\longrightarrow B
+\longrightarrow0
+\]
+Debemos demostrar que $I=0$.
+
+Supongamos (1). Como $B$ es plano sobre $A$, la sucesión
+\[
+0\longrightarrow I/\mathfrak mI
+\longrightarrow B'/\mathfrak mB'
+\longrightarrow B/\mathfrak mB\longrightarrow0
+\]
+es exacta, donde $\mathfrak m$ es el ideal maximal de $A$. Por
+hipótesis,
+\[
+\dim_xU_{f(x)}=\dim_{x'}U'_{f(x)},
+\]
+y, por tanto,
+$\dim(B'/\mathfrak mB')=\dim(B/\mathfrak mB)$. Como
+$B'/\mathfrak mB'$ es un anillo local regular, se deduce que
+$I/\mathfrak mI=0$ y, por tanto, $I=0$.
+
+%%%%%%%%%%  scan idx 129  |  folio 118  %%%%%%%%%%
+
+Supongamos ahora (2), y consideremos la sucesión exacta
+\[
+I/I^2\xrightarrow{d}B\otimes_{B'}\Omega_{B'|A}
+\longrightarrow\Omega_{B|A}\longrightarrow0.
+\]
+Como $X$ es una intersección completa relativa sobre $Y$ y
+$U'\longrightarrow Y$ es liso en $x'$, la aplicación
+\[
+d:I/I^2\longrightarrow B\otimes_{B'}\Omega_{B'|A}
+\]
+es inyectiva en $x$, y tanto $I/I^2$ como
+$B\otimes_{B'}\Omega_{B'|A}$ son libres en $x$. Por la definición de
+la dimensión virtual de una intersección completa relativa, debemos
+tener, por tanto,
+\[
+n=\dim_{\kappa(x)}\Omega_{B'|A}(x')
+  -\dim_{\kappa(x)}(I/I^2)(x)
+ =n-\dim_{\kappa(x)}(I/I^2)(x).
+\]
+Así, $I/I^2=0$ y, por tanto, $I=0$. \hfill$\square$

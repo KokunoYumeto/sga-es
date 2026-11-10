@@ -1,0 +1,98 @@
+% AUTORIDAD DE FUENTE:
+% expose_VII_body.tex, líneas 1355--1434; índices de escaneo 203--205;
+% folios de fuente 192--194. La letra o mecanografiada en los subíndices
+% se restituye como cero; la flecha omitida en (3.4.5) se restituye según
+% el escaneo. La única variante diplomática/corregida material de este
+% fragmento se conserva mediante \sisi en la demostración de 3.4.7.
+
+\subsection*{3.4. Varianza de $\underline\Psi_{L_\bullet}$ respecto de
+$L_\bullet$}
+
+Consideremos un morfismo de complejos
+\begin{equation}\tag{3.4.1}
+ f:L'_\bullet\longrightarrow L_\bullet
+\end{equation}
+dado por un diagrama conmutativo
+\begin{equation}\tag{3.4.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+ {}\arrow[r]&L'_2\arrow[r]\arrow[d,"f_2"']
+ &L'_1\arrow[r]\arrow[d,"f_1"']
+ &L'_0\arrow[r]\arrow[d,"f_0"']&0\\
+ {}\arrow[r]&L_2\arrow[r]&L_1\arrow[r]&L_0\arrow[r]&0.
+\end{tikzcd}
+\end{equation}
+Le asociamos un funtor canónico
+\begin{equation}\tag{3.4.3}
+ f^*:\underline\Psi_{L_\bullet}\longrightarrow
+ \underline\Psi_{L'_\bullet}.
+\end{equation}
+Se trata, de hecho, de un funtor cocartesiano de categorías cofibradas
+sobre $\underline C$: es compatible con los funtores estructurales con
+valores en $\underline C$ y transforma morfismos cocartesianos en
+morfismos cocartesianos; véase SGA 1, Exposé VI.
+
+Si $(X,\alpha)$ es un objeto de $\underline\Psi_{L_\bullet}$,
+definimos $f^*(X,\alpha)=(X',\alpha')$ como sigue.
+
+%%%%%%%%%%  scan idx 204  |  folio 193  %%%%%%%%%%
+
+La extensión $X'$ de
+$L'_0$ por $A$ es la imagen inversa, mediante $f_0$, de la extensión
+dada $X$ de $L_0$ por $A$, y $\alpha'$ es la trivialización parcial
+deducida de $\alpha$ por transitividad en el segundo cuadrado de
+(3.4.2). La compatibilidad de $\alpha'$ con la relación
+$d'_0d'_1=0$ resulta inmediatamente de la condición análoga para
+$\alpha$. Por construcción, (3.4.3) conmuta con los funtores
+estructurales con valores en $\underline C$. Su carácter cocartesiano
+se deduce enseguida de que, en la categoría de extensiones de objetos
+de $\underline C$, las imágenes directas de extensiones conmutan con
+las imágenes inversas de extensiones.
+
+El funtor (3.4.3) induce morfismos de funtores
+\begin{equation}\tag{3.4.4}
+ f^i:\Psi^i_{L_\bullet}\longrightarrow\Psi^i_{L'_\bullet},
+ \qquad i=0,1
+\end{equation}
+(compárese 2.6). Por otra parte, el morfismo (3.4.1) induce morfismos
+\begin{equation}\tag{3.4.5}
+ f^i:\Ext^i(L_\bullet,-)\sisi{\qquad}{\longrightarrow}
+ \Ext^i(L'_\bullet,-),\qquad i\in\mathbb Z.
+\end{equation}
+Para $i=0,1$, los morfismos (3.4.4) y (3.4.5) son compatibles con los
+isomorfismos (3.1.8) y (3.2.4). En otras palabras, para
+$A\in\operatorname{Ob}\underline C$ e $i=0,1$, el diagrama siguiente
+es conmutativo:
+\begin{equation}\tag{3.4.6}
+\begin{tikzcd}[column sep=large,row sep=large]
+ \Psi^i_{L_\bullet}(A)\arrow[r,"\sim"]\arrow[d]
+ &\Ext^i(L_\bullet,A)\arrow[d]\\
+ \Psi^i_{L'_\bullet}(A)\arrow[r,"\sim"]
+ &\Ext^i(L'_\bullet,A).
+\end{tikzcd}
+\end{equation}
+
+%%%%%%%%%%  scan idx 205  |  folio 194  %%%%%%%%%%
+
+La verificación de esta compatibilidad es esencialmente inmediata y se
+deja al lector.
+
+\underline{Proposición} 3.4.7. \underline{El funtor} (3.4.3)
+\underline{es fiel} (\underline{respectivamente, plenamente fiel;
+respectivamente, una equivalencia de categorías}) \underline{si y
+solo si}
+\[
+ H_0(f):H_0(L'_\bullet)\longrightarrow H_0(L_\bullet)
+\]
+\underline{es un epimorfismo} (\underline{respectivamente, si}
+$H_0(f)$ \underline{es un isomorfismo y} $H_1(f)$
+\underline{es un epimorfismo; respectivamente, si} $H_0(f)$
+\underline{y} $H_1(f)$ \underline{son isomorfismos}).
+
+En efecto, si $f^i$ denota el morfismo funtorial (3.4.4), la condición
+requerida es que $f^0$ sea un monomorfismo (respectivamente, que $f^0$
+sea un isomorfismo y que $f\sisi{}{^1}$ sea un monomorfismo;
+respectivamente, que $f^0$ y $f^1$ sean isomorfismos). Por la
+conmutatividad de (3.4.6), estas condiciones se expresan mediante las
+condiciones análogas sobre los funtores $\Ext^i$, $i=0,1$. La
+proposición se reduce entonces a una afirmación elemental de álgebra
+homológica, que dejamos al lector como ejercicio.

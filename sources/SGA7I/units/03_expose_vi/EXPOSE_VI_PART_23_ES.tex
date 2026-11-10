@@ -1,0 +1,156 @@
+\par\medskip\noindent
+\underline{Definición y Proposición 2.11.} Un cogrupoide
+$(R_0,R_1,\ldots)$ en $\widehat{\underline C}_\Lambda$ se llama
+\underline{liso} si se cumple una, y por tanto ambas, de las siguientes
+condiciones equivalentes:
+
+(i) $R_1$ es un anillo de series de potencias formales sobre $R_0$ por
+medio de $s_1$ (y por medio de $s_2$);
+
+(ii) el funtor
+\[
+ \epsilon:\underline h_{R_0}
+ \longrightarrow\underline h_{(R_0,R_1,\ldots)}
+\]
+es liso sobre $\underline C_\Lambda$.
+
+Un \underline{cogrupoide mínimamente liso}, llamado también
+\underline{cogrupoide liso normalizado}, en
+$\widehat{\underline C}_\Lambda$ es un cogrupoide liso
+$(R_0,R_1,\ldots)$ para el cual
+$\underline h_{(R_0,R_1,\ldots)}(k[\varepsilon])$ es totalmente
+disconexo; equivalentemente,
+\[
+ s_1(k[\varepsilon])=s_2(k[\varepsilon]).
+\]
+
+\underline{Demostración.} La lisura de
+$\epsilon:\underline h_{R_0}\to
+\underline h_{(R_0,R_1,\ldots)}$ significa que, para toda aplicación
+suprayectiva
+\[
+ (S',f')\xrightarrow{(h,u)}(S,f)
+\]
+en $\underline h_{(R_0,R_1,\ldots)}$, existen un levantamiento $f''$ de
+$f$ a $S'$ y un isomorfismo
+\[
+ (S',f'')\xrightarrow{(1,u')}(S',f').
+\]
+Equivalentemente, dados $u\in h_{R_1}(S)$ y un levantamiento $f'$ de
+$s_1(u)$ a $S'$, existe un levantamiento $u'$ de $u$ a $S'$ tal que
+$s_1(u')=f'$, para toda suprayección $S'\to S$ en
+$\underline C_\Lambda$. Esto es precisamente la lisura de
+\[
+ s_1:\underline h_{R_1}\longrightarrow\underline h_{R_0}
+\]
+sobre $\underline C_\Lambda$, y esta, a su vez, afirma que $R_1$ es un
+anillo de series de potencias formales sobre $R_0$ por medio de $s_1$.
+\hfill$\square$
+
+\underline{Proposición 2.12.} Sea $(R_0,R_1,\ldots)$ un cogrupoide en
+$\widehat{\underline C}_\Lambda$.
+
+(a) Si $(R_0,R_1,\ldots)$ es liso, entonces
+$\underline h_{(R_0,R_1,\ldots)}$ es homogéneo.
+
+(b) Si $s_1(k[\varepsilon])=s_2(k[\varepsilon])$, entonces las condiciones
+siguientes son equivalentes:
+
+(i) $(R_0,R_1,\ldots)$ es liso;
+
+(ii) $\underline h_{(R_0,R_1,\ldots)}$ es homogéneo;
+
+(iii) $\underline h_{(R_0,R_1,\ldots)}$ es semihomogéneo.
+
+%%%%%%%%%%  scan idx 75  |  folio 64  %%%%%%%%%%
+
+(c) Si $\underline h_{(R_0,R_1,\ldots)}$ es semihomogéneo, entonces
+es equivalente a $\underline h_{(S_0,S_1,\ldots)}$ para algún cogrupoide
+mínimamente liso $S_*$.
+
+\underline{Demostración.} (a) Considérese un diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+ (S_1,f_1) \arrow[dr,"{(h_1,u_1)}"']
+ && (S_2,f_2) \arrow[dl,"{(h_2,u_2)}"]\\
+ & (S,f) &
+\end{tikzcd}
+\]
+en $\underline h_{(R_0,R_1,\ldots)}$, donde
+$h_2:S_2\longrightarrow S$ es suprayectiva en
+$\underline C_\Lambda$. Puesto que
+$s_1:\underline h_{R_1}\longrightarrow\underline h_{R_0}$ es
+liso, $u_1^{-1}u_2$ se levanta a un elemento $v\in h_{R_1}(S_2)$ con
+$s_1(v)=f_2$. Se tiene
+\[
+ h_2\circ s_2(v)=h_1\circ f_1,
+\]
+por lo que $f_1\times s_2(v)$ es un elemento de
+$h_{R_0}(S_1\times_SS_2)$ y proporciona un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+ & (S_1\times_SS_2,f_1\times s_2(v))
+   \arrow[dl,"{\pi_1}"']
+   \arrow[dr,"{(\pi_2,v^{-1})}"] &\\
+ (S_1,f_1) \arrow[dr,"{(h_1,u_1)}"']
+ && (S_2,f_2) \arrow[dl,"{(h_2,u_2)}"]\\
+ & (S,f) &
+\end{tikzcd}
+\]
+Afirmamos que su objeto superior es el producto fibrado
+\[
+ (S_1,f_1)\times_{(S,f)}(S_2,f_2)
+\]
+en $\underline h_{(R_0,R_1,\ldots)}$. En efecto, para todo objeto
+$(T,g)$, una aplicación al objeto superior equivale a una tupla
+$(h'_1\times h'_2,w_1,w_2)$ que satisface
+\begin{align*}
+ h_1w_1&=h_2w_2,&
+ s_1(w_1)&=h'_1g,&s_2(w_1)&=f_1,\\
+ s_1(w_2)&=h'_2g,&
+ s_2(w_2)&=s_2(v).
+\end{align*}
+Al poner $w'_2=v^{-1}w_2$ se obtiene una biyección con las tuplas
+$(h'_1\times h'_2,w_1,w'_2)$ que satisfacen
+\begin{align*}
+ u_2h_2w'_2&=u_1h_1w_1,&
+ s_1(w_1)&=h'_1g,&s_2(w_1)&=f_1,\\
+ s_1(w'_2)&=h'_2g,&
+ s_2(w'_2)&=f_2.
+\end{align*}
+Estas son exactamente las parejas de flechas de $(T,g)$ a $(S_1,f_1)$
+y $(S_2,f_2)$ cuyos compuestos hacia $(S,f)$ coinciden. Por tanto,
+\begin{multline*}
+ \operatorname{Hom}((T,g),(S_1\times_SS_2,
+                 f_1\times s_2(v)))\\
+ \simeq
+ \operatorname{Hom}((T,g),(S_1,f_1))
+ \times_{\operatorname{Hom}((T,g),(S,f))}
+ \operatorname{Hom}((T,g),(S_2,f_2)),
+\end{multline*}
+lo que demuestra (a).
+
+%%%%%%%%%%  scan idx 76  |  folio 65  %%%%%%%%%%
+
+(b) Solo queda demostrar (iii)$\Rightarrow$(i). Si
+$\underline h_{(R_0,R_1,\ldots)}$ es semihomogéneo, entonces
+\[
+ \dim[\underline h_{(R_0,R_1,\ldots)}(k[\varepsilon])]
+ =\dim h_{R_0}(k[\varepsilon])<\infty,
+\]
+por lo que admite un objeto formal mínimamente versal. Por otra parte,
+$(R_0,1_{R_0})$ es un objeto mínimo cuasi-inicial de
+$\widehat{\underline h}_{(R_0,R_1,\ldots)}$, porque
+\[
+ h_{R_0}(k[\varepsilon])
+ \longrightarrow
+ [\underline h_{(R_0,R_1,\ldots)}(k[\varepsilon])]
+\]
+es biyectiva. Por tanto, la Proposición 1.10(ii) hace de
+$(R_0,1_{R_0})$ un objeto formal mínimamente versal de
+$\underline h_{(R_0,R_1,\ldots)}$. Equivalentemente,
+\[
+ \epsilon:\underline h_{R_0}
+ \longrightarrow\underline h_{(R_0,R_1,\ldots)}
+\]
+es mínimamente liso. Esto demuestra (i).

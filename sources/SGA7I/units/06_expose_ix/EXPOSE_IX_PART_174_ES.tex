@@ -1,0 +1,109 @@
+% AUTORIDAD DE FUENTE: Exposé IX §12.4 y Teorema 12.5, líneas francesas
+% 3621--3672; índices de escaneo 484--485, folios 473--474.
+
+%%%%%%%%%%  scan idx 484  |  folio 473  %%%%%%%%%%
+
+\medskip
+\noindent
+12.4. Situémonos ahora en el caso considerado al final de 12.2. Por
+(12.1.12) y (12.3.6), aplicados con $C=X_o$, el grupo de caracteres $M$
+del toro maximal $T_o$ de la fibra especial $A_o$ del modelo de Néron
+$A$ de $\sisi{A}{A_\eta}=\underline{\operatorname{Pic}}^o_{X_\eta/\eta}$ viene dado por
+
+\begin{equation}\tag{12.4.1}
+ M=\ker\left(\mathbb Z^I\xrightarrow{\ d\ }\mathbb Z^J\right),
+\end{equation}
+
+\noindent
+donde $I$ es el conjunto de los puntos singulares de $X_o$ y $J$ el
+conjunto de sus componentes irreducibles; el homomorfismo
+$\mathbb Z^I\to\mathbb Z^J$ está dado por
+
+\begin{equation}\tag{12.4.2}
+ d(x_i)=C'_i-C''_i.
+\end{equation}
+
+Aquí $C'_i$ y $C''_i$ son las dos componentes irreducibles de
+$\widetilde C$ correspondientes a las ramas que pasan por el punto doble
+$x_i$. El operador $d$ depende de la elección de un orden
+$(C'_i,C''_i)$ en estas dos ramas, y el isomorfismo (12.4.1) depende
+claramente de este sistema de elecciones. Sin embargo, si para $i\in I$
+denotamos por
+
+\begin{equation}\tag{12.4.3}
+ \varphi_{x_i}:M\longrightarrow\mathbb Z
+\end{equation}
+
+\noindent
+el compuesto
+
+\begin{equation*}
+ M\longrightarrow\mathbb Z^I
+   \xrightarrow{\ \operatorname{pr}_i\ }\mathbb Z,
+\end{equation*}
+
+\noindent
+donde el primer homomorfismo procede de (12.4.1), se ve inmediatamente,
+al volver a la expresión (12.3.4), que $\varphi_{x_i}$ está bien definido
+salvo signo. Más precisamente, depende únicamente del orden elegido
+entre las dos ramas $C'_i,C''_i$ que pasan por $x_i$, y cambia de signo
+cuando se invierte dicho orden. Se sigue, en particular, que la forma
+bilineal
+
+\begin{equation}\tag{12.4.4}
+ \varphi_{x_i}\otimes\varphi_{x_i}
+ \in \check M\otimes_{\mathbb Z}\check M
+ \simeq\operatorname{Hom}(M\otimes M,\mathbb Z)
+\end{equation}
+
+\noindent
+está determinada canónicamente por el punto singular $x_i$, sin
+ambigüedad de signo alguna. Podemos, por tanto, poner
+
+\begin{equation}\tag{12.4.5}
+ u=\sum_i\varphi_{x_i}\otimes\varphi_{x_i}:
+ M\otimes_{\mathbb Z}M\longrightarrow\mathbb Z.
+\end{equation}
+
+Se obtiene así un emparejamiento bien definido, independiente de toda
+elección de signos. Es manifiestamente \underline{definido positivo},
+puesto que es la restricción a $M\hookrightarrow\mathbb Z^I$ de la forma
+cuadrática estándar $\sum_i X_i^2$ sobre $\mathbb Z^I$.
+
+%%%%%%%%%%  scan idx 485  |  folio 474  %%%%%%%%%%
+
+La notación $M$ para el grupo de caracteres de $T_o$ no es, a priori,
+compatible con la de las secciones precedentes, donde este grupo se
+denotaba por $M'$, mientras que $M$ designaba el grupo análogo asociado
+al esquema abeliano dual $A'_K$ de $A_K$. Pero, como $A_K$ es una
+jacobiana, posee una polarización canónica $\xi$ [5]\sisi{\hspace{2em}}{},
+que induce un isomorfismo canónico
+
+\begin{equation}\tag{12.4.6}
+ \psi_\xi:A_K\xrightarrow{\ \sim\ }A'_K.
+\end{equation}
+
+\noindent
+Mediante este isomorfismo identificaremos $A_K$ con $A'_K$, de modo que
+ya no será necesario distinguir $M$ de $M'$. En particular, para todo
+número primo $\ell$, el emparejamiento de monodromía (9.1.2) puede
+considerarse como un emparejamiento
+
+\begin{equation}\tag{12.4.7}
+ u_\ell:M_\ell\otimes_{\mathbb Z_\ell}M_\ell
+ \longrightarrow\mathbb Z_\ell.
+\end{equation}
+
+Entendido esto, podemos enunciar el resultado principal de esta sección:
+
+\medskip
+\noindent
+\underline{Teorema} 12.5 (\underline{fórmula de Picard--Lefschetz}).
+\underline{Sea $S$ un trait estrictamente local y sea $X$ un esquema
+regular, proyectivo y plano sobre $S$, de fibras de dimensión uno, cuya
+fibra geométrica genérica sea lisa y conexa y cuya fibra geométrica
+especial no tenga más singularidades que singularidades cuadráticas
+ordinarias. Con la notación introducida en 12.4, para todo número primo
+$\ell$, el emparejamiento de monodromía (12.4.7) es igual al
+emparejamiento obtenido a partir de (12.4.5) por extensión de escalares
+de $\mathbb Z$ a $\mathbb Z_\ell$.}

@@ -1,0 +1,209 @@
+\subsection*{3.5. Una resolución parcial plana canónica de un
+$\mathbb Z$-módulo arbitrario}
+
+Aplicaremos los resultados precedentes cuando $\underline C$ sea la
+categoría de los grupos conmutativos del topos $\underline T$, es decir,
+la categoría de los $\mathbb Z$-módulos de $\underline T$. Sea $P$ un
+objeto de $\underline C$. Definiremos, funtorialmente en $P$, un complejo
+de cadenas $L_\bullet(P)$ aumentado hacia $P$:
+
+%%%%%%%%%%  scan idx 210  |  folio 199  %%%%%%%%%%
+
+\begin{equation}\tag{3.5.1}
+\begin{tikzcd}[column sep=small,row sep=large]
+ 0\arrow[r]&\overbrace{\mathbb Z[P\times P]\times
+   \mathbb Z[P\times P\times P]}^{L_2}
+   \arrow[r,"d_1"]
+ &\overbrace{\mathbb Z[P\times P]}^{L_1}
+   \arrow[r,"d_0"]
+ &\overbrace{\mathbb Z[P]}^{L_0}
+   \arrow[r]\arrow[d,"\varepsilon"']&0\\
+ &&&P&{}
+\end{tikzcd}\quad ,
+\end{equation}
+con $L_i(P)=0$ para $i\geq3$. Las componentes se muestran en (3.5.1),
+con la notación de 1.4. Para describir los diferenciales $d_0,d_1$ y el
+aumento $\varepsilon$, escribamos $[p]$ para la sección de
+$\mathbb Z[P](S)$ definida por $p\in P(S)$, y análogamente $[p,q]$ y
+$[p,q,r]$ para las secciones correspondientes de
+$\mathbb Z[P\times P](S)$ y
+$\mathbb Z[P\times P\times P](S)$. Pongamos entonces
+\begin{equation}\tag{3.5.2}
+\left\{
+\begin{aligned}
+ \varepsilon[p]&=p,\\
+ d_0[p,q]&=[p+q]-[p]-[q],\\
+ d_1[p,q]&=[p,q]-[q,p],\\
+ d_1[p,q,r]&=[p+q,r]-[p,q+r]+[p,q]-[q,r].
+\end{aligned}
+\right.
+\end{equation}
+Estos homomorfismos de grupos conmutativos definen efectivamente un
+complejo $L_\bullet(P)$ aumentado hacia $P$:
+\[
+ \varepsilon d_0=0,\qquad \sisi{d_1d_0}{d_0d_1}=0.
+\]
+La primera relación es inmediata. La segunda se descompone en dos
+relaciones según los dos factores de $L_2(P)$; estas expresan,
+respectivamente, la conmutatividad y la asociatividad de la ley de
+
+%%%%%%%%%%  scan idx 211  |  folio 200  %%%%%%%%%%
+
+composición sobre $P$.
+
+El complejo aumentado depende funtorialmente de $P$. Un morfismo
+$u:P\longrightarrow P'$ da un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+ L_\bullet(P)\arrow[r,"L_\bullet(u)"]\arrow[d]
+ &L_\bullet(P')\arrow[d]\\
+ P\arrow[r,"u"]&P'.
+\end{tikzcd}
+\]
+Sus componentes son planas, como todo $\mathbb Z$-módulo libre.
+
+\underline{Proposición} 3.5.3. \underline{Se tiene}
+$H_1(L_\bullet(P))=0$, \underline{y el aumento} $\varepsilon$
+\underline{induce un isomorfismo}
+\[
+ H_0(L_\bullet(P))\xrightarrow{\sim}P.
+\]
+
+Para la demostración puede hacerse la reducción usual al caso en que
+$\underline T$ es la categoría de los conjuntos y $P$ es un
+$\mathbb Z$-módulo ordinario, caso en el cual (3.5.1) será probablemente
+conocido. Daremos, en cambio, una demostración directa que no usa esta
+reducción, aplicando 3.4.7 al aumento
+\[
+ \varepsilon:L_\bullet(P)\longrightarrow P,
+\]
+donde $P$ se considera, como de costumbre, un complejo de cadenas
+concentrado en grado cero. Queda por demostrar que, para todo objeto $G$
+de $\underline C$, el funtor
+\begin{equation}\tag{*}
+ \varepsilon^*:\underline\Psi_P(G)\longrightarrow
+ \underline\Psi_{L_\bullet(P)}(G)
+\end{equation}
+es una equivalencia de categorías.
+
+%%%%%%%%%%  scan idx 212  |  folio 201  %%%%%%%%%%
+
+La fuente de (*) es claramente isomorfa a la categoría de las extensiones
+del $\mathbb Z$-módulo $P$ por $G$. Para describir su destino, se usa 1.4
+para identificar las categorías de extensiones de $L_0,L_1,L_2$ por $G$,
+respectivamente, con la categoría de los torsores bajo $G_P$, la categoría
+de los torsores bajo $G_{P\times P}$ y la categoría de las parejas formadas
+por un torsor bajo $G_{P\times P}$ y un torsor bajo
+$G_{P\times P\times P}$.
+
+Así, un objeto del destino de (*) es una pareja $(E,\varphi)$, donde $E$
+es un torsor bajo $G_P$ y $\varphi$ es una trivialización del torsor $E'$
+sobre $P\times P$ correspondiente a la imagen inversa por $d_0$ de la
+extensión de $\mathbb Z[P]$ por $G$ definida por $E$. La trivialización
+está sujeta a la compatibilidad con $\sisi{d_1d_0}{d_0d_1}=0$ descrita
+más adelante. La fórmula (3.5.2) da inmediatamente
+\[
+ E'=\pi^*E\,\pr_1^*(E)^{-1}\,\pr_2^*(E)^{-1},
+\]
+y una trivialización de este torsor equivale a un isomorfismo, denotado
+también por $\varphi$,
+\[
+ \varphi:\pr_1^*E\,\pr_2^*E\xrightarrow{\sim}\pi^*E.
+\]
+Al explicitar la compatibilidad de $\varphi$ con $d_0d_1=0$ se obtienen
+la condición de conmutatividad (1.2.1) y la condición de asociatividad
+(1.1.4.1), correspondientes a los dos factores de $L_2$. La afirmación
+de que (*) es una equivalencia es, por tanto, precisamente el diccionario
+de 1.1.6. Esto demuestra 3.5.3.
+
+\underline{Observación} 3.5.4. a) Sería interesante reforzar 3.5.3
+construyendo una resolución $L_\bullet(P)$ de $P$, funtorial en $P$, cuyas
+componentes fueran funtorialmente isomorfas a sumas de
+$\mathbb Z$-módulos libres engendrados por potencias cartesianas
+
+%%%%%%%%%%  scan idx 213  |  folio 202  %%%%%%%%%%
+
+de $P$. En vista de los isomorfismos de la forma (1.4.5), esto daría un
+método para calcular parcialmente $\Ext^i(P,A)$ como término final de una
+sucesión espectral cuyo término inicial se expresa mediante los grupos
+\[
+ H^j(P\times P\times\cdots\times P,A).
+\]
+Aquí solo obtenemos información muy parcial sobre $\Ext^1$, y ninguna
+información sobre los $\Ext^i$ superiores. En todo caso, hay una manera
+natural de continuar en un grado la resolución parcial
+$L_\bullet(P)$.\footnote{L. Breen construyó una resolución de este tipo
+(nota del redactor).}
+
+b) Hay una variante de (3.5.1) y 3.5.3 en la categoría de los
+$A$-módulos, donde $A$ es un anillo fijo de $\underline T$. La forma de
+$L_\bullet(P)$ es más complicada porque debe ampliarse la descripción
+1.1.6 (compárese con 2.10.3). Se obtiene
+\begin{equation}\tag{3.5.5}
+\left\{
+\begin{aligned}
+ L_0={}&A[P],\\
+ L_1={}&A[P\times P]+A[A\times P],\\
+ L_2={}&A[P\times P\times P]+A[P\times P]
+       +A[A\times A\times P]+A[A\times P\times P].
+\end{aligned}
+\right.
+\end{equation}
+La estructura de complejo aumentado viene dada por (3.5.2), completada
+con
+\begin{equation}\tag{3.5.6}
+\left\{
+\begin{aligned}
+ d_0[\lambda,p]={}&[\lambda p]-\lambda[p],\\
+ d_1[\lambda,\mu,p]={}&[\lambda,\mu p]-[\lambda\mu,p]
+                         +\lambda[\mu,p],\\
+ d_1[\lambda,p,q]={}&[\lambda,p+q]-[\lambda,p]-[\lambda,q]
+                       +\lambda[p,q]-[\lambda p,\lambda q].
+\end{aligned}
+\right.
+\end{equation}
+La relación $d_0d_1=0$ se sigue de la relación análoga sobre las
+componentes que aparecen en (3.5.2), la cual, como vimos, equivale a la
+asociatividad y la conmutatividad de la adición sobre $P$, junto con las
+relaciones
+\[
+ d_0d_1[\lambda,\mu,p]=0,
+ \qquad d_0d_1[\lambda,p,q]=0.
+\]
+
+%%%%%%%%%%  scan idx 214  |  folio 203  %%%%%%%%%%
+
+Estas últimas expresan, respectivamente, la asociatividad de la acción
+dada de $A$ sobre $P$,
+\[
+ \lambda(\mu p)=(\lambda\mu)p,
+\]
+y su distributividad respecto de la adición,
+\[
+ \lambda(p+q)=\lambda p+\lambda q.
+\]
+
+Para un torsor $E$ bajo $G_P$, una trivialización de $d_0^*E$ equivale a
+una ley de composición interna sobre $E$ (que satisface las condiciones
+de compatibilidad ya descritas entre la ley interna de $E$ y su estructura
+de torsor), junto con una ley de composición externa de $A$ sobre $E$,
+compatible con la acción de $A$ sobre $P$ y sobre $G$. La compatibilidad
+de esta trivialización con la trivialización evidente de $d_1^*d_0^*E$
+equivale a las condiciones ya descritas, que dicen que la ley interna de
+$E$ es una ley de grupo conmutativo que extiende $P$ por $G$, junto con la
+asociatividad de la ley externa y la distributividad de esta última
+respecto de la ley interna. Estas condiciones dicen exactamente que $E$,
+con sus dos leyes de composición y su estructura de torsor, es una
+extensión de $A$-módulos de $P$ por $G$.
+
+Se sigue, por esencialmente el mismo método que en 3.5.3, que
+$L_\bullet$ es una resolución parcial del módulo $P$, es decir,
+$H_1(L_\bullet)=0$. Sería de nuevo interesante prolongar esta resolución
+parcial a una resolución infinita del mismo tipo, con componentes de la
+forma
+\[
+ A[A\times A\times\cdots\times P\times P\times\cdots].
+\]
+Compárese con la cuestión análoga de a) para grupos conmutativos.
+
+%%%%%%%%%%  scan idx 215  |  folio 204  %%%%%%%%%%

@@ -1,0 +1,216 @@
+\par\medskip\noindent
+\underline{3.1(c).} Si $B$ es un objeto de
+$\underline C_{A|R}$, el diagrama $(*)$ de \sisi{2.1(a)}{3.1(a)}, junto con la
+exactitud de $\widetilde j$ y $j^{\vee}$, proporciona un isomorfismo
+canónico
+\[
+ H^{\bullet}(B|R,\widetilde jF)=
+ [\underline H^{\bullet}_{A|R}(F)](B).
+\]
+Por otra parte, un homomorfismo de anillos $S\longrightarrow R$ induce el
+diagrama $(**)$ de \sisi{2.1(a)}{3.1(a)}. El funtor $\widetilde\beta$ no tiene por qué
+ser exacto; sin embargo, $\beta$ conserva los productos fibrados, y se
+obtiene una sucesión espectral
+\[
+ \underline H^p_{A|R}(R^q\widetilde\beta F)
+ \Longrightarrow
+ \beta^{\vee}\underline H^{p+q}_{A|S}(F),
+\]
+o, al evaluar en $A$,
+\[
+ H^p(A|R,R^q\widetilde\beta F)
+ \Longrightarrow H^{p+q}(A|S,F).
+\]
+Como hay un isomorfismo canónico
+\[
+ \widetilde\beta=
+ G_{A|R}\circ\beta^{\vee}\circ i_{A|S}
+\]
+y el funtor
+$\beta^{\#}=G_{A|R}\circ\beta^{\vee}$ es exacto, se tiene
+
+%%%%%%%%%%  scan idx 85  |  folio 74  %%%%%%%%%%
+
+\[
+ R^{\bullet}\widetilde\beta F=
+ \beta^{\#}\underline H^{\bullet}_{A|S}(F).
+\]
+Así, la sucesión espectral precedente puede escribirse
+\[
+ H^p\bigl(A|R,\beta^{\#}\underline H^q_{A|S}(F)\bigr)
+ \Longrightarrow H^{p+q}(A|S,F).
+\]
+
+\underline{Lema 3.2.} Sea
+$B\in\operatorname{Ob}(\underline C_{A|R})$, y elíjase una flecha
+suprayectiva $P\longrightarrow B$ en $\underline C_{B|R}$, donde $P$ es
+un álgebra polinómica sobre $R$. Entonces, para todo
+$F\in\operatorname{Ob}(\overset{\vee}{\underline C}_{A|R})$, la
+aplicación natural
+\[
+ H^{\bullet}(\{P\longrightarrow B\},F)
+ \longrightarrow[\check{\underline H}^{\,\bullet}(F)](B)
+\]
+es un isomorfismo.
+
+\underline{Demostración.} Basta demostrar que la aplicación natural
+\[
+ H^0(\{P\longrightarrow B\},F)
+ \longrightarrow[\check{\underline H}^{\,0}(F)](B)
+ =\varinjlim_{\{B'\to B\}\in\operatorname{Cov}(B)}
+   H^0(\{B'\longrightarrow B\},F)
+\]
+es un isomorfismo. Esto es claro porque, para todo
+$\{B'\longrightarrow B\}\in\operatorname{Cov}(B)$, hay una aplicación
+de recubrimientos
+\[
+ \{P\longrightarrow B\}\longrightarrow
+ \{B'\longrightarrow B\}.
+\]
+\hfill$\square$
+
+\underline{Corolario 3.3.}
+
+\begin{enumerate}[label=(\alph*)]
+\item Supongamos que $A$ es noetheriano. Si
+$F\in\operatorname{Ob}(\widetilde{\underline C}_{A|R})$ es de tipo
+finito, entonces $\underline H^n(F)$ es de tipo finito para todo $n$.
+
+\item Si $P$ es un álgebra polinómica sobre $R$, entonces
+\[
+ H^n(P|R,F)=0
+\]
+para todo $n>0$ y todo
+$F\in\operatorname{Ob}(\widetilde{\underline C}_{P|R})$.
+
+\item Una sucesión
+\[
+ 0\longrightarrow F'\longrightarrow F\longrightarrow F''
+ \longrightarrow0
+\]
+en $\widetilde{\underline C}_{A|R}$ es exacta si y solo si
+\[
+ 0\longrightarrow F'(P)\longrightarrow F(P)
+ \longrightarrow F''(P)\longrightarrow0
+\]
+es exacta para toda $R$-álgebra polinómica
+$P\in\operatorname{Ob}(\underline C_{A|R})$.
+\end{enumerate}
+
+\underline{Demostración.}
+
+(a) En vista de la sucesión espectral
+\[
+ \check H^p\bigl(B|R,\underline H^q(F)\bigr)
+ \Longrightarrow H^{p+q}(B|R,F)
+\]
+y de la igualdad
+$\check H^0(\underline H^q(F))=0$ para $q>0$, basta demostrar que
+$\check{\underline H}^{\,n}(G)$ es de tipo finito para todo $n$ y todo
+prehaz $G$ de tipo finito. Por el Lema 3.2,
+\[
+ \check H^{\bullet}(B|R,G)=
+ H^{\bullet}(\{P\longrightarrow B\},G),
+\]
+donde $P$ es un álgebra polinómica sobre $R$ y
+$\{P\longrightarrow B\}\in\operatorname{Cov}(B)$. Este último es la
+cohomología del complejo
+
+%%%%%%%%%%  scan idx 86  |  folio 75  %%%%%%%%%%
+
+\[
+ \cdots
+ G(P\times_BP\times_BP)
+ \mathrel{\substack{\longleftarrow\\[-.6ex]\longleftarrow\\[-.6ex]\longleftarrow}}
+ G(P\times_BP)
+ \mathrel{\substack{\longleftarrow\\[-.6ex]\longleftarrow}}
+ G(P).
+\]
+Si $B$ es una $R$-álgebra de tipo finito, puede elegirse $P$ de tipo
+finito sobre $R$. Todos los productos fibrados iterados
+$P\times_B\cdots\times_BP$ son entonces $R$-álgebras de tipo finito. Si
+$G$ es de tipo finito, sus imágenes por $G$ son $A$-módulos de tipo
+finito. Por consiguiente,
+$H^{\bullet}(\{P\longrightarrow B\},G)$ es un $A$-módulo de tipo finito
+porque $A$ es noetheriano.
+
+(b) Sea $P$ un álgebra polinómica sobre $R$. Toda aplicación suprayectiva
+de $R$-álgebras $B\longrightarrow P$ admite una sección, por lo que
+\[
+ H^i(\{B\longrightarrow P\},G)=0\qquad(i>0).
+\]
+Se sigue que $\check H^i(P|R,G)=0$ para todo $i>0$ y todo prehaz $G$
+sobre $\underline C_{P|R}$. Por consiguiente, la sucesión espectral
+\[
+ \check H^p\bigl(P|R,\underline H^q_{P|R}(F)\bigr)
+ \Longrightarrow H^{p+q}(P|R,F)
+\]
+degenera, y
+\[
+ \check H^0\bigl(P|R,\underline H^n(F)\bigr)
+ \simeq H^n(P|R,F)
+\]
+para todo $n$. Sin embargo, para un haz $F$,
+$\check H^0(P|R,\underline H^n(F))=0$ siempre que $n>0$. Así,
+$H^n(P|R,F)=0$ para todo $n>0$.
+
+(c) Si
+$0\longrightarrow F'\longrightarrow F\longrightarrow F''
+\longrightarrow0$ es exacta en
+$\widetilde{\underline C}_{A|R}$, entonces la sucesión
+\[
+ 0\longrightarrow F'(B)\longrightarrow F(B)
+ \longrightarrow F''(B)
+ \longrightarrow H^1(B|R,F')\longrightarrow H^1(B|R,F)
+ \longrightarrow\cdots
+\]
+es exacta. Si $P\in\operatorname{Ob}(\underline C_{A|R})$ es un
+álgebra polinómica sobre $R$, entonces $H^1(P|R,F')=0$ por (b), y por
+tanto
+\[
+ 0\longrightarrow F'(P)\longrightarrow F(P)
+ \longrightarrow F''(P)\longrightarrow0
+\]
+es exacta.
+
+Recíprocamente, sea $\underline P_{A|R}$ la subcategoría plena de
+$\underline C_{A|R}$ con
+\[
+ \operatorname{Ob}(\underline P_{A|R})=
+ \{P\in\operatorname{Ob}(\underline C_{A|R})\mid
+   P\text{ es un álgebra polinómica sobre }R\},
+\]
+dotada de la topología inducida, y sea
+$p:\underline P_{A|R}\longrightarrow\underline C_{A|R}$ la inclusión.
+Todo objeto de $\underline C_{A|R}$ está recubierto por un objeto de
+$\underline P_{A|R}$; el lema de comparación muestra, por tanto, que
+\[
+ \widetilde p:\widetilde{\underline C}_{A|R}
+ \longrightarrow\widetilde{\underline P}_{A|R}
+\]
+es una equivalencia de categorías. Si la sucesión que se obtiene al
+evaluar $F'\longrightarrow F\longrightarrow F''$ en cada
+$P\in\operatorname{Ob}(\underline P_{A|R})$ es exacta, entonces
+\[
+ 0\longrightarrow\widetilde pF'\longrightarrow\widetilde pF
+ \longrightarrow\widetilde pF''\longrightarrow0
+\]
+es exacta en $\widetilde{\underline P}_{A|R}$ y, por consiguiente, la
+sucesión original es exacta en
+$\widetilde{\underline C}_{A|R}$. \hfill$\square$
+
+%%%%%%%%%%  scan idx 87  |  folio 76  %%%%%%%%%%
+
+\underline{Observación 3.4.} Toda flecha suprayectiva en
+$\underline P_{A|R}$ admite una sección. Se sigue inmediatamente que
+todo prehaz sobre $\underline P_{A|R}$ es un haz; es decir,
+\[
+ \widetilde{\underline P}_{A|R}=
+ \overset{\vee}{\underline P}_{A|R}.
+\]
+Por consiguiente, el funtor de restricción
+\[
+ \widetilde{\underline C}_{A|R}
+ \longrightarrow\overset{\vee}{\underline P}_{A|R}
+\]
+es una equivalencia de categorías.

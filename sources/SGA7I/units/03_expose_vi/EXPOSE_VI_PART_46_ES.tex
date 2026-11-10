@@ -1,0 +1,80 @@
+%%%%%%%%%%  scan idx 118  |  folio 107  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Teorema 4.11.}
+Sea $X_0$ un esquema separado de tipo finito sobre $k$, liso fuera
+de un subconjunto cerrado finito
+\[
+X_0^{\mathrm{Sing}}=\{x_1,\ldots,x_r\}.
+\]
+Sean $U_0^1,\ldots,U_0^r$ entornos abiertos afines de
+$x_1,\ldots,x_r$ tales que
+$U_0^i\cap X_0^{\mathrm{Sing}}=\{x_i\}$. Si
+$H^2(X_0,\underline D^0_{X_0})=0$, entonces el funtor natural
+\[
+\underline M_{X_0}\longrightarrow
+\underline M_{U_0^1}\times\cdots\times\underline M_{U_0^r}
+\]
+es liso.
+
+\smallskip
+\noindent\textit{Demostración.}
+Completemos $U_0^1,\ldots,U_0^r$ hasta obtener un recubrimiento
+abierto afín de $X_0$, eligiendo $U_0^{r+1},\ldots,U_0^N$ tales que
+$U_0^j\cap X_0^{\mathrm{Sing}}=\varnothing$ para todo $j>r$.
+Sea $R'\longrightarrow R$ una pequeña extensión en
+$\underline C_\Lambda$, y sean
+$(R',U'^1),\ldots,(R',U'^r)$ deformaciones de
+$U_0^1,\ldots,U_0^r$ sobre $R'$ tales que
+\[
+U'^i\otimes_{R'}R=X|_{U_0^i},\qquad 1\leq i\leq r,
+\]
+para alguna deformación $(R,X)$ de $X_0$ sobre $R$. Debemos hallar
+una deformación $(R',X')$ de $X_0$ sobre $R'$ tal que
+\[
+X'\otimes_{R'}R=X,
+\qquad
+X'|_{U_0^i}=U'^i\quad(1\leq i\leq r).
+\]
+
+%%%%%%%%%%  scan idx 119  |  folio 108  %%%%%%%%%%
+
+Para $j>r$, el esquema $U_0^j$ es liso sobre $k$; por tanto, por
+4.9(a), $X|_{U_0^j}$ se levanta a una deformación $(R',U'^j)$ de
+$U_0^j$ sobre $R'$. Así,
+\[
+U'^j\otimes_{R'}R=X|_{U_0^j}\qquad(j>r).
+\]
+Para cada par $i\neq j$, la intersección $U_0^i\cap U_0^j$ es afín
+y lisa sobre $k$. Obtenemos, pues, un isomorfismo
+\[
+\tau_{ij}:U'^i|_{U_0^i\cap U_0^j}
+\xrightarrow{\ \sim\ }
+U'^j|_{U_0^i\cap U_0^j}
+\]
+tal que
+$\tau_{ij}\otimes_{R'}R=\operatorname{id}_{X|_{U_0^i\cap U_0^j}}$.
+En las intersecciones triples, los automorfismos
+\[
+\tau_{ij}\tau_{jk}\tau_{ik}^{-1}
+\]
+definen una clase de cohomología en
+$H^2(X_0,\underline D^0_{X_0})$. Esta clase es la obstrucción para
+pegar los $U'^i$ en una deformación global. Se anula por hipótesis,
+de modo que los $U'^i$ se pegan en una deformación $(R',X')$ con
+$X'\otimes_{R'}R=X$ y $X'|_{U_0^i}\simeq U'^i$. \hfill$\square$
+
+\medskip
+\noindent\textbf{Observación 4.12.}
+La demostración precedente supone que $X_0$ es separado, pero esta
+hipótesis es innecesaria. En efecto, fijemos una deformación $(R,X)$
+de $X_0$ y deformaciones $(R',U'^i)$ de los miembros $U_0^i$ de un
+recubrimiento abierto. Las deformaciones $(R',V')$ de los
+subconjuntos abiertos $V$ de $X$ sobre $R'$ que son compatibles con
+las deformaciones ya dadas $(R',U'^i)$ forman una «gerbe» (en la
+terminología de Giraud) cuyo haz estructural es
+$\underline D^0_{X_0}$. La obstrucción a la existencia de una sección
+de esta gerbe---es decir, de una deformación global $(R',X')$ de $X$
+compatible con los datos dados $(R',U'^i)$---pertenece a
+$H^2(X_0,\underline D^0_{X_0})$ y, por tanto, se anula bajo la
+hipótesis del teorema.

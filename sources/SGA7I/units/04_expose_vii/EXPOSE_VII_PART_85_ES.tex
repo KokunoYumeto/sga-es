@@ -1,0 +1,136 @@
+\subsection*{3.2. Determinación de $\Psi^1_{L_\bullet}(A)$}
+
+Consideremos un objeto $(X,\alpha)$ (3.1.3) de
+$\underline\Psi_{L_\bullet}(A)$. Consideremos el complejo de
+cocadenas de longitud uno
+\begin{equation}\tag{3.2.1}
+ [X\longrightarrow L_0]:\quad
+ 0\longrightarrow X\longrightarrow L_0\longrightarrow0\longrightarrow
+ \cdots
+\end{equation}
+definido por el morfismo $j:X\longrightarrow L_0$, con $X$ como su
+componente de grado cero. Es una resolución de $A$ y, por tanto, puede
+identificarse con $A$ como objeto de la categoría derivada
+$D(\underline C)$ [5]. El diagrama (3.1.3) da entonces un morfismo de
+complejos de grado uno
+\begin{equation}\tag{3.2.2}
+ L_\bullet\longrightarrow[X\longrightarrow L_0],
+\end{equation}
+explicitado por el siguiente diagrama de cuadrados anticonmutativos:
+\begin{equation}\tag{3.2.3}
+\begin{tikzcd}[column sep=large,row sep=huge]
+ \cdots & L_2\arrow[r,"d_1"]
+ & L_1\arrow[r,"d_0"]\arrow[d,"u^{-1}=-\alpha"']
+ & L_0\arrow[r]\arrow[d,"u^0=\mathrm{id}"'] & 0 & \cdots\\
+ \cdots & 0\arrow[r] & X\arrow[r,"j"] & L_0\arrow[r] & 0 & \cdots
+\end{tikzcd}\quad .
+\end{equation}
+(Utilizamos la convención usual que asocia al complejo de cadenas
+$L_\bullet$ un complejo cuyo diferencial tiene grado $1$ y cuya
+componente de grado $i$ es $L_{-i}$.) Obtenemos así un morfismo de
+grado uno en la categoría derivada
+\begin{equation}\tag{3.2.3}
+ c(X,\alpha):L_\bullet\longrightarrow A
+ \qquad
+ \bigl(\text{un morfismo de grado uno en }D(\underline C)\bigr),
+\end{equation}
+que manifiestamente depende solo de la clase de isomorfismo de
+$(X,\alpha)$. Hemos definido con ello una aplicación canónica
+\begin{equation}\tag{3.2.4}
+ \Psi^1_{L_\bullet}(A)\longrightarrow\Ext^1(L_\bullet,A)
+ \overset{\mathrm{def}}{=}
+ \Hom_{D(\underline C)}(L_\bullet,A[1]).
+\end{equation}
+
+\underline{Teorema} 3.2.5. \underline{La aplicación} (3.2.4)
+\underline{es un isomorfismo de grupos, funtorial en el objeto}
+$A$ \underline{de} $\underline C$.
+
+Dejamos al lector la verificación de que (3.2.4) es aditiva y
+funtorial en $A$, y nos limitaremos a demostrar que es biyectiva. Para
+la inyectividad, mostremos primero que si el morfismo de complejos $u$
+de (3.2.3) es cero en $D(\underline C)$, entonces ya es cero en la
+categoría de homotopía $K(\underline C)$; es decir, existe un morfismo
+\[
+ s:L_0\longrightarrow X
+\]
+tal que
+\begin{equation}\tag{3.2.5.1}
+ js=u^0=\mathrm{id}_{L_0},
+ \qquad sd_0=-u^{-1}=\alpha.
+\end{equation}
+En efecto, la hipótesis dice que la conclusión se vuelve cierta
+después de componer el morfismo de complejos considerado con un
+cuasi-isomorfismo adecuado $v$
+\begin{equation}\tag{*}
+\begin{tikzcd}[column sep=large,row sep=huge]
+ 0\arrow[r] & X\arrow[r,"j"]\arrow[d]
+ & L_0\arrow[r]\arrow[d] & 0\\
+ 0\arrow[r] & C^0\arrow[r,"j'"] & C^1\arrow[r] & C^2\arrow[r] & \cdots
+\end{tikzcd}\quad ,
+\end{equation}
+(y, sustituyendo si es necesario $C^i$ por $0$ para $i\geq2$ y
+$C^1$ por
+$\operatorname{Im}(C^0\longrightarrow C^1)
+=\operatorname{Ker}(C^1\longrightarrow C^2)$, podemos suponer que
+$C^i=0$ para $i\geq2$). Pero el morfismo (*) induce la identidad sobre
+$A$ y, por tanto, identifica $X$ con el producto fibrado de $L_0$ y
+$C^0$ sobre $C^1$. En consecuencia, un morfismo
+$s':L_0\longrightarrow C^0$ que define una homotopía $vu\sim0$, y que
+por tanto satisface $j's'=v^1u^0$, se factoriza a través de un morfismo
+$s:L_0\longrightarrow X$ que satisface
+$js=u^0=\mathrm{id}_{L_0}$. Así, $s$ escinde la extensión $X$ de
+$L_0$ por $A$, de modo que el complejo $X\longrightarrow L_0$ es
+isomorfo \underline{en} $K(\underline C)$ al complejo $K^\bullet$
+concentrado en $A$. Para este último complejo es claro que
+\[
+ \Hom_{K(\underline C)}(L_\bullet,K^\bullet)
+ \longrightarrow
+ \Hom_{D(\underline C)}(L_\bullet,K^\bullet)
+\]
+es un isomorfismo, lo cual demuestra la afirmación.
+
+Ahora, la elección de un morfismo
+$\sisi{j}{s}:L_0\longrightarrow X$ que satisface (3.2.5.1) equivale
+precisamente a una trivialización de la extensión $X$ de $L_0$ por
+$A$ compatible con la trivialización parcial $\alpha$. Esto demuestra
+la inyectividad de (3.2.4).
+
+Para la sobreyectividad, partamos de un elemento del miembro derecho.
+Por definición, puede describirse mediante un morfismo de complejos de
+grado uno
+\begin{equation}\tag{3.2.5.2}
+\begin{tikzcd}[column sep=large,row sep=huge]
+ \ldots & L_2\arrow[r,"d_1"]
+ & L_1\arrow[r,"d_0"]\arrow[d,"u^{-1}"']
+ & L_0\arrow[r]\arrow[d,"u^0"'] & 0\\
+ & 0\arrow[r] & C^0\arrow[r] & C^1\arrow[r] & \ldots
+\end{tikzcd}
+\end{equation}
+con cuadrados anticonmutativos, donde $C^\bullet$ es una resolución de
+$A$ y, como antes, podemos suponer que $C^i=0$ para $i\geq2$. Así,
+$C^0$ es una extensión de $C^1$ por $A$, y podemos formar la extensión
+$X$ obtenida por imagen inversa a lo largo de
+$L_0\longrightarrow C^1$. La anticonmutatividad en (3.2.5.2) muestra
+que $-u^{-1}$ se factoriza a través de un morfismo
+$\alpha:L_1\longrightarrow X$ que es una escisión parcial, es decir,
+$j\alpha=d_0$ (con $j$ como en (3.1.2)). Además, la relación
+$u^{-1}d_1=0$ de (3.2.5.2) implica $\alpha d_1=0$. Por tanto,
+$(X,\alpha)$ es efectivamente un objeto de
+$\underline\Psi_{L_\bullet}(A)$. Por construcción, el morfismo
+(3.2.5.2) es la composición del morfismo (3.2.3) asociado a
+$(X,\alpha)$ y del morfismo
+\[
+ [X\longrightarrow L_0]\longrightarrow C^\bullet
+ =[C^0\longrightarrow C^1]
+\]
+cuyas componentes son $(f,u^0)$, donde $f:X\longrightarrow C^0$ es el
+morfismo canónico obtenido de la definición de $X$ como imagen inversa
+de la extensión $C^0$.
+
+El morfismo precedente es un morfismo de resoluciones de $A$ e induce
+la identidad sobre $A$. Se sigue, por la definición
+$\Ext^1=\Hom^1_{D(\underline C)}$, que el elemento dado de
+$\Ext^1(L_\bullet,A)$ descrito por (3.2.5.2) es precisamente
+$c(X,\alpha)$. Esto demuestra la sobreyectividad de (3.2.4) y concluye
+la demostración de 3.2.5.

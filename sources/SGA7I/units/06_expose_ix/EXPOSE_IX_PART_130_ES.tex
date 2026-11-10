@@ -1,0 +1,165 @@
+\par\medskip
+\noindent
+\underline{1. Modelos de Néron de los esquemas abelianos: notación; el
+emparejamiento canónico}
+\[
+ \Phi_o\times\Phi'_o\longrightarrow(\mathbb Q/\mathbb Z)_k,
+\]
+\underline{y la biextensión canónica $W^o$ de $(A^o,{A'}^o)$.}
+
+\medskip
+\noindent
+1.0. A lo largo de esta exposición fijamos un rasgo $S$, para el cual
+utilizamos las notaciones habituales $s$, $\eta$, $k$, $K$, etcétera,
+de I~1. Sea $A_K$ un esquema abeliano sobre $K$, y denotemos por $A'_K$
+su esquema abeliano dual [5]. La dualidad entre $A_K$ y $A'_K$ viene
+dada por una correspondencia divisorial $W_K$ sobre $(A_K,A'_K)$, es
+decir, por un haz invertible sobre $A_K\times A'_K$, birigidificado con
+respecto a las secciones identidad de $A_K$ y $A'_K$. Queda determinado,
+salvo isomorfismo único, por su clase (cf. VIII~3.1)
+\begin{equation}\tag{1.0.1}
+ w_K\in\mathrm{Biext}^1(A_K,A'_K;\mathbb G_{mK}).
+\end{equation}
+Desempeñará un papel importante el emparejamiento correspondiente
+(VIII~2.2)
+\begin{equation}\tag{1.0.2}
+ \varphi:T_\ell(A_K)\times T_\ell(A'_K)
+ \longrightarrow\mathbb Z_\ell(1)_K
+ \overset{\mathrm{def}}{=}T_\ell(\mathbb G_{mK}),
+\end{equation}
+donde $\ell$ es un número primo arbitrario. Cuando
+$\ell\ne p=\operatorname{char}k$, dar $\varphi$ equivale a dar un
+emparejamiento de $\mathbb Z_\ell$-módulos libres de tipo finito
+\begin{equation}\tag{1.0.3}
+ \varphi:T_\ell(A_K(\overline K))\times
+ T_\ell(A'_K(\overline K))\longrightarrow T_\ell(\overline K^*),
+\end{equation}
+compatible con la acción de
+\[
+ \pi=\operatorname{Gal}(\overline K/K)
+\]
+sobre los tres módulos en cuestión, donde $\overline K$ es una clausura
+separable de $K$. Se sabe (VIII~3.2) que este emparejamiento es una
+dualidad perfecta: identifica cada uno de los módulos
+$T_\ell(A_K(\overline K))$ y $T_\ell(A'_K(\overline K))$ con el dual
+del otro, con valores en el módulo invertible
+$\mathbb Z_\ell(1)=T_\ell(\overline K^*)$.
+
+En ocasiones supondremos elegida una polarización de $A_K$; así, se
+nos da un elemento
+\begin{equation}\tag{1.0.4}
+ \xi\in\operatorname{NS}(A_K/K)
+ =\underline{\operatorname{NS}}_{A_K/K}(K),
+\end{equation}
+donde
+\[
+ \underline{\operatorname{NS}}_{A_K/K}
+ \overset{\mathrm{def}}{=}
+ \underline{\operatorname{Pic}}_{A_K/K}/
+ \bigl(\underline{\operatorname{Pic}}{}^o_{A_K/K}=A'_K\bigr).
+\]
+De la manera habitual, este define un homomorfismo
+\begin{equation}\tag{1.0.5}
+ \psi_\xi:A_K\longrightarrow A'_K,
+\end{equation}
+por tanto un homomorfismo
+\begin{equation}\tag{1.0.6}
+ T_\ell(\psi_\xi),\quad\text{o simplemente}\quad
+ \psi_\xi:T_\ell(A_K)\longrightarrow T_\ell(A'_K),
+\end{equation}
+y una forma bilineal $\varphi_\xi$
+\begin{equation}\tag{1.0.7}
+ \begin{split}
+ \varphi_\xi(x,y)&=\varphi(x,\psi_\xi(y)),\\
+ \varphi_\xi:T_\ell(A_K)\times T_\ell(A_K)
+ &\longrightarrow\mathbb Z_\ell(1)_K,
+ \end{split}
+\end{equation}
+que, para $\ell\ne p$, puede interpretarse también como un
+emparejamiento de $\mathbb Z_\ell$-módulos libres de tipo finito con
+operadores:
+\begin{equation}\tag{1.0.8}
+ \varphi_\xi:T_\ell(A_K(\overline K))\times
+ T_\ell(A_K(\overline K))\longrightarrow T_\ell(\overline K^*).
+\end{equation}
+Estas construcciones tienen sentido para todo elemento del grupo de
+Néron--Severi de $A_K$, y producen una forma \underline{alternante}
+$\varphi_\xi$, en cualquiera de las interpretaciones (1.0.7) o (1.0.8)
+(VIII~2.2.11). El hecho de que $\xi$ sea una \underline{polarización}
+implica que $\psi_\xi$ en (1.0.5) es una isogenia; equivalentemente,
+puesto que $\dim A_K=\dim A'_K$, es un epimorfismo de grupos. Esto
+equivale también a la inyectividad de $T_\ell(\psi_\xi)$ en (1.0.6)
+(o a que tenga conúcleo finito) y, finalmente, a que la forma
+$\varphi_\xi$ de (1.0.7) sea \underline{separante}.
+
+\medskip
+\noindent
+1.1. Recordemos que existe un \underline{esquema liso} $A$ sobre $S$,
+llamado \underline{modelo de Néron de $A_K$}, que representa el funtor
+\begin{equation}\tag{1.1.1}
+ S'\longmapsto\operatorname{Hom}(S'_\eta,A_K)
+\end{equation}
+sobre la categoría de los $S$-esquemas lisos. Así, por definición,
+existe un isomorfismo, funtorial en el $S$-esquema relativo liso $S'$,
+\begin{equation}\tag{1.1.2}
+ \operatorname{Hom}_S(S',A)\simeq
+ \operatorname{Hom}_K(S'_\eta,A_K).
+\end{equation}
+Néron [19] construyó $A$ cuando el cuerpo residual $k$ de $S$ es
+perfecto. Raynaud extendió la construcción al caso general en un
+seminario no publicado celebrado en el IHES en 1966--67 (véase [21]
+para el enunciado de los principales resultados de Raynaud, que
+completan los de Néron en loc. cit.). Admitiremos aquí este resultado
+de existencia, junto con el hecho de que $A$ es un \underline{esquema}
+cuasiproyectivo sobre $S$. Aplicando (1.1.2) cuando $S'$ es liso
+\underline{sobre} $\eta$, se obtiene también que el siguiente
+morfismo canónico es un isomorfismo:
+\begin{equation}\tag{1.1.3}
+ A\times_S\operatorname{Spec}(K)\xrightarrow{\ \sim\ }A_K.
+\end{equation}
+Esto justifica la notación emparejada $A,A_K$; cuando convenga,
+escribiremos también $A_\eta$ en lugar de $A_K$. Utilizando (1.1.3)
+como isomorfismo de identificación, la biyección canónica (1.1.2) es
+simplemente la aplicación dada por la \underline{restricción a las
+fibras genéricas}.
+
+Puesto que el funtor (1.1.1) posee manifiestamente una estructura de
+grupo conmutativo, el modelo de Néron $A$ que lo representa posee a su
+vez una estructura de \underline{esquema en grupos conmutativo liso
+sobre $S$}. El resto de esta exposición está dedicado al estudio de
+este esquema en grupos.
+
+Un invariante importante procedente del modelo de Néron es, por
+supuesto, el esquema en grupos conmutativo liso de tipo finito sobre
+$k$
+\begin{equation}\tag{1.1.4}
+ A_o=A\times_Ss=A_k.
+\end{equation}
+Conforme a la notación general, denotamos por $A_o^o$ su componente
+neutra y consideramos también el esquema en grupos
+\begin{equation}\tag{1.1.5}
+ \Phi_o=A_o/A_o^o
+\end{equation}
+de componentes conexas de $A_o$, que es finito y étale sobre $k$. En
+términos de una clausura separable $\overline k$ de $k$, queda por tanto
+determinado por el grupo finito ordinario
+\begin{equation}\tag{1.1.6}
+ \Phi_o(\overline k),
+\end{equation}
+junto con la acción natural de
+\[
+ \pi_o=\operatorname{Gal}(\overline k/k)
+\]
+sobre este grupo.
+
+Junto con el modelo de Néron $A$ de $A_K$, estudiaremos
+\begin{equation}\tag{1.1.7}
+ A'=\text{el modelo de Néron de }A'_K,
+\end{equation}
+que es asimismo un esquema en grupos conmutativo liso de tipo finito
+sobre $S$. Denotaremos por
+\begin{equation}\tag{1.1.8}
+ \Phi'_o=A'_o/{A'}_o^o
+\end{equation}
+el grupo de componentes conexas de su fibra especial
+\sisi{$A_o$}{$A'_o$}.

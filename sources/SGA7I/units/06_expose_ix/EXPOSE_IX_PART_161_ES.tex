@@ -1,0 +1,161 @@
+% AUTORIDAD DE FUENTE: Exposé IX §9.5, líneas francesas 2578--2653;
+% índices de escaneo 443--447, folios 432--436. Las cuatro correcciones
+% D/C de referencias, nombre del objeto y base se conservan con \sisi.
+
+\medskip
+\noindent
+9.5. Fijemos un número primo $\ell$, progrupos de Barsotti--Tate
+pro-$\ell$ sobre $S$
+\begin{equation}\tag{9.5.1}
+ P=(P(n))_{n\geq0},
+ \qquad R=(R(n))_{n\geq0},
+ \qquad Q=(Q(n))_{n\geq0},
+\end{equation}
+y extensiones de progrupos de Barsotti--Tate pro-$\ell$
+\begin{equation}\tag{9.5.2}
+ 0\longrightarrow P\longrightarrow F\longrightarrow R\longrightarrow0,
+ \qquad
+ 0\longrightarrow R\longrightarrow E\longrightarrow Q\longrightarrow0.
+\end{equation}
+Así, para todo entero $n\geq0$, estas definen extensiones de
+$\Lambda_n$-módulos, donde
+$\Lambda_n=\mathbb Z/\ell^{\,n+1}\mathbb Z$:
+\begin{equation}\tag{9.5.3}
+\begin{gathered}
+ 0\longrightarrow P(n)\longrightarrow F(n)\longrightarrow R(n)
+ \longrightarrow0,\\
+ 0\longrightarrow R(n)\longrightarrow E(n)\longrightarrow Q(n)
+ \longrightarrow0.
+\end{gathered}
+\end{equation}
+Suponemos que $Q$ es de tipo étale y $P$ de tipo multiplicativo.
+Supongamos, por último, dado sobre $\eta$ un progrupo de
+Barsotti--Tate pro-$\ell$ $X_\eta$ que sea una \underline{extensión
+mixta} de $E_\eta$ por $F_\eta$. Esto significa que está dotado, como
+progrupo de Barsotti--Tate pro-$\ell$, de una filtración de tres
+escalones cuyas extensiones parciales están provistas de isomorfismos con
+$E_\eta$ y $F_\eta$, respectivamente. Se sigue que, para todo $n$,
+$X_\eta(n)$ está dotado de una estructura de extensión mixta de
+$E(n)_\eta$ por $F(n)_\eta$. Podemos asociarle, pues, un emparejamiento
+de tipo (9.4.1):
+\begin{equation}\tag{9.5.4}
+ c(X(n)_\eta):Q(n)\otimes Q^*(n)
+ \longrightarrow\Lambda_n=\mathbb Z/\ell^{\,n+1}\mathbb Z,
+\end{equation}
+donde los $Q^*(n)$ son los grupos finitos étale sobre $S$ definidos por
+\begin{equation*}
+ P(n)\simeq D(Q^*(n)),
+ \qquad\text{es decir,}\qquad Q^*(n)=D(P(n)),
+\end{equation*}
+y $D$ vuelve a denotar la dualidad de Cartier. Los $Q^*(n)$ forman de
+manera evidente un progrupo pro-$\ell$, denotado $Q^*$. Dejamos al
+lector verificar que, al variar $n$, los homomorfismos (9.5.4) definen
+un homomorfismo de sistemas proyectivos, es decir, un homomorfismo de
+haces $\ell$-ádicos constantes torcidos sobre $S$:
+\begin{equation}\tag{9.5.5}
+ c(X_\eta):Q\otimes Q^*\longrightarrow\mathbb Z_{\ell S}.
+\end{equation}
+
+%%%%%%%%%%  scan idx 444  |  folio 433  %%%%%%%%%%
+
+Mencionamos de paso el resultado siguiente, que no se utilizará después.
+
+\medskip
+\noindent
+\underline{Proposición 9.5.6. Sean $P,Q,R,E,F$ como antes, salvo que el
+trait $S$ no tiene por qué ser henseliano. Consideremos el funtor}
+\begin{equation}\tag{9.5.6.1}
+ X\longmapsto X_\eta
+\end{equation}
+\underline{de la categoría de extensiones mixtas de Barsotti--Tate de
+$E$ por $F$ a la categoría de extensiones mixtas de $E_\eta$ por
+$F_\eta$. Para todo grupo de Barsotti--Tate $X_\eta$ que sea una
+extensión mixta de $E_\eta$ por $F_\eta$, consideremos el
+emparejamiento correspondiente}
+\begin{equation}\tag{9.5.6.2}
+ Q_0\otimes Q_0^*\longrightarrow\mathbb Z_{\ell s}
+\end{equation}
+\underline{inducido por el emparejamiento de tipo (9.5.5) definido
+sobre el henselizado de $S$. Entonces el funtor (9.5.6.1) es plenamente
+fiel, y su imagen esencial está formada por los grupos de
+Barsotti--Tate $X_\eta$ que son extensiones mixtas de $E_\eta$ por
+$F_\eta$ y para los cuales el emparejamiento correspondiente (9.5.6.2)
+es nulo}. \underline{Además, si $\operatorname{car}K=0$} (\underline{de modo que se aplica el
+teorema de Tate} [33, Teorema 4]), \underline{$X_\eta$ pertenece a la imagen esencial
+si y solo si se prolonga a un grupo de Barsotti--Tate sobre $S$.}
+
+\medskip
+\noindent
+9.5.6.3. Dejamos al lector extender este enunciado al caso en que se
+supone solamente que $S$ es un esquema conexo, regular, noetheriano y de
+dimensión $1$.
+
+La primera afirmación de 9.5.6 se deduce inmediatamente de
+$\sisi{9.4.6}{9.4.7}$, aplicada a los componentes de los grupos de
+Barsotti--Tate considerados. Queda por demostrar que, si un grupo de
+Barsotti--Tate $X_\eta$, que es una extensión mixta de $E_\eta$ por
+$F_\eta$, se prolonga a un grupo de Barsotti--Tate
+$\sisi{X_\eta}{X}$ sobre $S$, entonces se prolonga también como extensión
+mixta. Por el teorema de Tate [33], el homomorfismo
+$X_\eta\longrightarrow Q_\eta$ se prolonga de manera única a un
+homomorfismo
+\begin{equation*}
+ X\longrightarrow Q.
+\end{equation*}
+
+%%%%%%%%%%  scan idx 445  |  folio 434  %%%%%%%%%%
+
+Para todo entero $n$, el homomorfismo correspondiente
+$X(n)\longrightarrow Q(n)$ es sobreyectivo sobre las fibras genéricas y,
+por tanto, es sobreyectivo. Como $Q(n)$ es étale sobre
+$\sisi{n}{S}$, el morfismo $X(n)\longrightarrow Q(n)$ es plano y, en
+consecuencia, un epimorfismo. Así, $X\longrightarrow Q$ es un
+\underline{epimorfismo componente por componente}. Sea $\overline F$ el
+núcleo de $X\longrightarrow Q$. Entonces $\overline F$ es un grupo de
+Barsotti--Tate y $X$ es una extensión de $Q$ por $\overline F$. El
+isomorfismo $F_\eta\xrightarrow{\sim}\overline F_\eta$ se prolonga, por
+el teorema de Tate, a un isomorfismo $F\simeq\overline F$. Por tanto,
+$X$ es una extensión de $Q$ por $F$. Consideremos ahora el cociente
+$\overline E=X/P$. Otra aplicación del teorema de Tate da un isomorfismo
+$E\simeq\overline E$. Se sigue que $X$ es una extensión mixta de $E$
+por $F$ que prolonga la extensión mixta $X_\eta$, como se quería.
+
+\medskip
+\noindent
+\underline{Observaciones 9.5.6.4.}
+
+\smallskip
+\noindent
+a) Naturalmente, la última afirmación de 9.5.6 debería ser válida sin
+restricción sobre $K$, pues lo mismo debería valer para el teorema de
+Tate invocado.
+
+%%%%%%%%%%  scan idx 446  |  folio 435  %%%%%%%%%%
+
+\smallskip
+\noindent
+b) Se puede dar otra demostración del criterio de buena reducción 5.10.
+Como en 5.10, nos reducimos al caso en que $A_K$ tiene reducción
+semiestable, y aplicamos 9.5.6 a $T_\ell(A_K)$ considerado como extensión
+mixta (véase 9.6). Esto implica $u_\ell=0$; usando \sisi{11.6.2(a)}{11.5.2(a)} más abajo se
+obtiene entonces $T_\ell(A_K)^t=0$.
+
+\medskip
+\noindent
+9.5.8. Si $\ell\neq p$, los grupos de Barsotti--Tate considerados sobre
+$S$ y sobre $K$, respectivamente, pueden interpretarse sencillamente en
+términos de haces $\ell$-ádicos constantes torcidos sobre $S$, o
+equivalentemente en términos de representaciones de
+$\pi_0=\operatorname{Gal}(\overline k/k)$ y
+$\pi=\operatorname{Gal}(\overline K/K)$, respectivamente, sobre
+$\mathbb Z_\ell$-módulos libres de tipo finito. Se ve entonces que el
+homomorfismo $(\sisi{9.5.6}{9.5.5})$ es el homomorfismo canónico que
+expresa la acción del subgrupo de inercia $I\subset\pi$ sobre
+$X_\eta(\overline K)$, definido por el método de 9.2. Para comprobarlo,
+nos reducimos inmediatamente a la situación de 9.4, tomando allí $n$
+igual a una potencia de $\ell$ y $R$ un $\Lambda$-módulo localmente
+constante, como lo son $Q$ y $P$; lo mismo vale entonces para $E,F$ y
+$X_\eta$. La verificación de que ambas definiciones coinciden se deja al
+lector.
+
+%%%%%%%%%%  scan idx 447  |  folio 436  %%%%%%%%%%

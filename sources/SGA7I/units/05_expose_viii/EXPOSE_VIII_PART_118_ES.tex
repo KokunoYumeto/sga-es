@@ -1,0 +1,102 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2031--2063; índices de escaneo 302--304;
+% folios de fuente 291--293. La corrección material de la capa francesa
+% se conserva reversiblemente mediante \sisi.
+
+\medskip
+\noindent 6.3. En lo que sigue suponemos que
+$G=\underline G_{mS}$. Toda extensión $\overline G$ de
+$\mathbb Z_{S,T}$ por $G=\underline G_{mS}$ es entonces representable
+(6.2.4) y es, naturalmente, lisa sobre $S$, por ser una extensión del
+esquema en grupos étale $\mathbb Z_{S,T}$ por el esquema en grupos liso
+$\underline G_{mS}$. Además, dar un torsor $F$ bajo $\underline G_m$
+equivale a dar un haz invertible $\mathbb L$ sobre $S$ (asociando a
+este último el torsor de las secciones invertibles de $\mathbb L$).
+Así, $\overline G$ queda descrito por un par $(\mathbb L,s)$, donde
+$\mathbb L$ es un haz invertible sobre $S$ y $s$ es una trivialización
+de $\mathbb L$ sobre $U=S\setminus T$, es decir, una sección invertible
+de $\mathbb L|U$.
+
+Cuando $U$ es esquemáticamente denso en $S$ y $S$ es localmente
+noetheriano, o bien es reducido y su conjunto de componentes
+irreducibles es localmente finito, dar tal par equivale a dar un
+\underline{divisor $D$ sobre $S$ tal que}
+\begin{equation}\tag{6.3.1}
+ \operatorname{supp}D\subset T,
+\end{equation}
+asociando a dicho divisor el par
+\begin{equation}\tag{6.3.2}
+ \bigl(\underline O_S(-D),\sisi{s_D}{s_{-D}}|U\bigr)
+\end{equation}
+formado por el haz invertible $\underline O_S(-D)$ asociado a $-D$
+(EGA IV 21.2.8.1) y la restricción a $U$ de su sección racional
+canónica $s_{-D}$ (EGA IV 21.2.11 y 20.2.11(ii)). En cualquier caso,
+sin hipótesis alguna sobre $S$, un divisor $D$ sobre $S$ que satisface
+(6.3.1) define mediante (6.3.2) un par $(\mathbb L,s)$ y, por tanto,
+una extensión $\overline G$ de $\mathbb Z_{S,T}$ por
+$\underline G_m$. La llamaremos el \underline{modelo de
+Néron--Raynaud de $\underline G_m$} asociado al divisor $D$ y al
+subesquema cerrado $T$ de $S$ que satisface (6.3.1). Si
+$T=\operatorname{supp}D$, omitiremos $T$ de la terminología.
+
+%%%%%%%%%%  scan idx 303  |  folio 292  %%%%%%%%%%
+
+Es inmediato que la formación de esta extensión $\overline G$ conmuta
+con todo cambio de base $f:S'\to S$ para el cual esté definido el
+divisor imagen inversa $f^*(D)$ (EGA IV 21.4.2), y en particular con
+todo cambio de base \underline{plano}.
+
+\medskip
+\noindent 6.3.3. La descripción general de 6.2.1 de las secciones de
+$\overline G$ muestra inmediatamente que pueden identificarse con las
+secciones $f$ del haz $\mathcal M_S^*$ de secciones meromorfas regulares
+sobre $S$ (EGA IV 20.1.8) cuyo divisor $\operatorname{div}(f)$ es,
+localmente para la topología de Zariski, un múltiplo entero de $D$. Si
+$V$ es un abierto de $S$ en el que la restricción de
+$\operatorname{div}(f)$ coincide con la de $nD$, donde
+$n\in\mathbb Z$, entonces la sección de $\mathbb Z_{S,T}$ definida por
+$f$ es simplemente la imagen en (6.1.2) de la sección constante de
+$\mathbb Z_S$ de valor $n$. La descripción precedente del grupo de
+secciones de $\overline G$ sobre $S$ sigue siendo válida sobre todo
+abierto de $S$ y, más generalmente, para el grupo de puntos de
+$\overline G$ con valores en cualquier $S$-esquema plano $S'$. Como
+$\overline G$ mismo es plano (e incluso liso) sobre $S$, esta
+descripción vuelve a dar una caracterización completa del modelo de
+Néron--Raynaud de $\underline G_m$ definido por $D$ y
+$T\supset\operatorname{supp}D$.
+
+\medskip
+\noindent 6.4. Supongamos ahora que $S$ es \underline{normal}, que su
+conjunto de componentes irreducibles es localmente finito (de modo que
+$S$ es una suma de esquemas normales integrales), que $D$ es un divisor
+positivo cuyas multiplicidades son todas iguales a $1$ (EGA IV 21.6),
+que $T=\operatorname{supp}D$ y que $T$ es localmente irreducible, es
+decir, que sus componentes irreducibles son disjuntas. Entonces, para
+toda función racional $f$ sobre $S$ que sea regular sobre
+$U=S\setminus T$, el divisor $\operatorname{div}(f)$ es localmente un
+múltiplo de $D$. Por tanto, en este caso existe un isomorfismo canónico
+de grupos
+
+%%%%%%%%%%  scan idx 304  |  folio 293  %%%%%%%%%%
+
+\begin{equation}\tag{6.4.1}
+ \Gamma(S,\overline G)\xrightarrow{\ \sim\ }
+ \Gamma(U,\underline G_{mU}).
+\end{equation}
+Supongamos además que $T$ es geométricamente unirrama y localmente
+integral, hipótesis estable por cambio de base liso (EGA IV 17.5.7).
+Como todas las hipótesis son entonces estables por cambio de base, de
+(6.4.1) se deduce que \underline{para todo $S'$ liso sobre $S$ existe
+un isomorfismo canónico de grupos, funtorial en $S'$,}
+\begin{equation}\tag{6.4.2}
+ \mathrm{Hom}_S(S',\overline G)\xrightarrow{\ \sim\ }
+ \mathrm{Hom}_U(S'_U,\underline G_{mU})
+ \simeq\Gamma(S'_U,\underline O_{S'_U}^*).
+\end{equation}
+Como $\overline G$ es él mismo liso sobre $S$, este isomorfismo
+caracteriza el esquema en grupos $\overline G$ sobre $S$ salvo
+isomorfismo único. También muestra que $\overline G$ desempeña el papel
+de un ``modelo de Néron'' para el esquema en grupos
+$\underline G_{mU}$ sobre el abierto $U$ de $S$. Junto con el hecho de
+que fue introducido y utilizado por primera vez por M.~Raynaud, esto
+justifica la terminología adoptada en 6.3 para $\overline G$.

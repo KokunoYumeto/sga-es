@@ -1,0 +1,203 @@
+\par\medskip
+\noindent
+\underline{4. Aplicación a una conjetura de Serre--Tate y al conductor}
+
+\medskip
+\noindent
+4.1. Suponemos que $S$ es henseliano y conservamos la notación de
+(2.5.3), con $\ell\ne p$.\footnote{El caso
+$\ell\sisi{\ne}{=}p$ se estudiará en los \S\S5 y 6 más adelante.}
+Para estudiar la acción de $\pi=\operatorname{Gal}(\overline K/K)$ y
+de su subgrupo de inercia $I$ sobre $U=T_\ell(A(\overline K))$,
+utilizaremos el hecho de que existe un subgrupo abierto $I'$ de $I$,
+que podemos tomar además normal en $\pi$, tal que la acción de $I'$
+sobre $U$ es unipotente de escalón dos; es decir,
+\[
+ U^{I'}\supset (U^{I'})^\perp.
+\]
+Resulta entonces claro que $U^{I'}$ no depende de la elección particular
+de $I'$. Podríamos llamarlo el \underline{submódulo esencialmente fijo}
+de $U$, y lo denotaremos por $U^{\mathrm{ef}}$. Su ortogonal se llamará
+el \underline{submódulo esencialmente tórico} de $U$, y se denotará por
+$U^{\mathrm{et}}$. Tenemos así una filtración de tres escalones
+\begin{equation}\tag{4.1.1}
+ U\supset U^{\mathrm{ef}}\supset U^{\mathrm{et}}\supset0,
+\end{equation}
+que es manifiestamente invariante bajo la acción de $\pi$.
+
+Observemos asimismo que existe un mayor subgrupo de $I$ que actúa
+unipotentemente (o, equivalentemente aquí, unipotentemente de escalón
+dos) sobre $U$: es el subgrupo $I'$ formado por los elementos que actúan
+unipotentemente. Es también el núcleo de la representación de $I$ sobre
+el módulo graduado asociado a la filtración (4.1.1), o,
+equivalentemente en el caso presente, el núcleo de la representación
+inducida de $I$ sobre $U^{\mathrm{ef}}$. Por el criterio galoisiano de
+reducción semiestable (3.5), este subgrupo $I'$ corresponde a
+\underline{la menor extensión de Galois} $\widetilde K'$ de
+$\widetilde K$ (la extensión no ramificada máxima de $K$)
+\underline{tal que} $A_{\widetilde K'}$ \underline{posee reducción semiestable}.
+Esta descripción muestra también que el subgrupo $I'$ de $I$ es
+independiente de la elección del primo $\ell\ne p$.
+
+Obsérvese que, una vez conocida la representación de $\pi$ sobre
+$U^{\mathrm{ef}}$, y por tanto sobre $U^{\mathrm{et}}$, la
+representación sobre $U/U^{\mathrm{ef}}$ queda conocida salvo isogenia,
+mediante la isogenia inducida por el emparejamiento de polarización
+(2.5.1):
+\begin{equation}\tag{4.1.2}
+ U/U^{\mathrm{ef}}\longrightarrow (U^{\mathrm{et}})^\vee(1)
+ \qquad\text{una isogenia},
+\end{equation}
+donde $(1)$ denota el giro de Tate por
+$\mathbb Z_\ell(1)=T_\ell(\overline K^*)$; este homomorfismo es
+manifiestamente compatible con las operaciones de $\pi$. Más
+precisamente, existe un \underline{isomorfismo} canónico
+\[
+ U/U^{\mathrm{ef}}\simeq ((U')^{\mathrm{et}})^\vee(1),
+ \qquad U'=T_\ell(A'(\overline K)).
+\]
+Queda, por tanto, estudiar más de cerca la acción de $\pi$ sobre
+$U^{\mathrm{ef}}$.
+
+Por construcción, esta acción es trivial sobre el subgrupo normal $I'$
+de $I$, y se factoriza por tanto mediante una representación del grupo
+cociente
+\begin{equation}\tag{4.1.3}
+ \pi'=\pi/I',
+\end{equation}
+acción de la que daremos ahora una descripción «independiente de
+$\ell$».
+
+\medskip
+\noindent
+4.2. Sea $K'$ una extensión de Galois de $K$ correspondiente a un
+subgrupo abierto normal $V$ de $\pi$ tal que $V\cap I=I'$. El grupo de
+Galois $G$ de $K'/K$ aparece entonces en una sucesión exacta
+\begin{equation}\tag{4.2.1}
+ 1\longrightarrow\Gamma\longrightarrow G\longrightarrow G_o
+ \longrightarrow1,
+\end{equation}
+donde
+\begin{equation}\tag{4.2.2}
+ \Gamma=I/I'
+\end{equation}
+es el subgrupo de inercia, y $G_o$ es el grupo de Galois de la mayor
+subextensión no ramificada $K''$ de $K'/K$. Así, (4.2.1) es la imagen
+de la sucesión exacta análoga
+\begin{equation}\tag{4.2.3}
+ 1\longrightarrow\Gamma\longrightarrow\pi'\longrightarrow\pi_o
+ \longrightarrow1,
+\end{equation}
+donde $\pi'$ es el grupo (4.1.3) que actúa sobre $U^{\mathrm{ef}}$.
+Tenemos, pues, el siguiente diagrama de inclusiones de cuerpos:
+\begin{equation}\tag{4.2.4}
+\begin{tikzpicture}[baseline=(current bounding box.center),
+  every node/.style={inner sep=2pt}]
+  \node (K) at (0,0) {$K$};
+  \node (Ktwo) at (4.25,0) {$K''=\widetilde K\cap K'$};
+  \node (Kt) at (8.5,0) {$\widetilde K$};
+  \node (Kp) at (4.25,-1.8) {$K'$};
+  \node (Ktp) at (8.5,-1.8) {$\widetilde K'$};
+  \node (Kb) at (8.5,-3.6) {$\overline K$};
+  \draw[->] (K) -- node[above] {$G_o$} (Ktwo);
+  \draw[->] (Ktwo) -- (Kt);
+  \draw[->] (Ktwo) -- node[right] {$\Gamma$} (Kp);
+  \draw[->] (Kp) -- (Ktp);
+  \draw[->] (Kt) -- node[right] {$\Gamma$} (Ktp);
+  \draw[->] (Ktp) -- node[right] {$I'$} (Kb);
+  \draw[-] (K) -- node[below left,pos=.58] {$G$} (Kp);
+  \draw[-] (K) to[out=65,in=115,looseness=.85]
+    node[above,pos=.78] {$\pi_o$} (Kt);
+  \draw[-] (Kt) to[out=12,in=12,looseness=1.25]
+    node[right,pos=.52] {$I$} (Kb);
+\end{tikzpicture}
+\end{equation}
+
+Sea $S'$ la normalización de $S$ en $K'$, y sea $A^*$ el modelo de
+Néron de $A_{K'}$. Entonces, por el criterio galoisiano de reducción
+semiestable (\sisi{4.5}{3.5}), $A_{K'}$ \underline{posee reducción
+semiestable sobre $S'$}; es decir, $A^{*o}_o$ \underline{es una
+extensión de un esquema abeliano por un toro}. Por otra parte, por
+transporte de estructura, $G$ \underline{actúa sobre $A^*$, y por tanto
+sobre $A^{*o}$, mediante automorfismos de manera compatible con la
+acción dada de $G$ sobre el esquema de base $S'$ de $A^*$}. Resulta
+entonces claro que \underline{la acción de $\pi'$ sobre}
+\[
+ U^{\mathrm{ef}}=T_\ell(A^{*o})^f(\overline K)
+\]
+\underline{se obtiene por transporte de estructura a partir de la
+acción de $\pi'$ sobre $(A^{*o}/K',\widetilde K')$}, donde $\pi'$ actúa
+sobre $A^*$ por medio de $G$. Teniendo en cuenta el isomorfismo canónico
+\begin{equation}\tag{4.2.6}
+ U^{\mathrm{ef}}\simeq T_\ell(A^{*o})^f(\overline K)
+ \simeq T_\ell(A^{*o}_o)(\overline k)
+\end{equation}
+(válido para todo haz $\ell$-ádico constante torcido sobre $S'$; cf.
+% Canon: SGA-SRC-001270.
+Exposé I\sisi{$\,(I\qquad)$}{ \textit{[referencia interna omitida en la
+fuente]}}), obtenemos la siguiente descripción de
+la acción de $\pi'$ sobre $U^{\mathrm{ef}}$.
+
+Considérese el esquema en grupos liso conexo $A^{*o}_o$ sobre el cuerpo
+residual $k'\hookrightarrow\overline k$ de $S'$, que es una extensión
+cuasi-Galois de $k$ con grupo de Galois $G_o$. El grupo cociente $G$ de
+$\pi'$ actúa sobre $A^{*o}_o$ de manera compatible con su acción sobre
+$k'$ por medio de $G_o$. Además, $\pi'$ actúa sobre $\overline k$ por
+medio de su cociente $\pi_o$, y actúa por tanto sobre la situación
+$(A^{*o}_o/k',\overline k)$. Así, por transporte de estructura, $\pi'$
+actúa sobre
+\[
+ U^{\mathrm{ef}}=T_\ell(A^{*o}_o)(\overline k),
+\]
+y esta es la acción deseada de $\pi'$. En particular, el subgrupo
+$\Gamma$ de $G$, que actúa trivialmente sobre $k'$, actúa sobre
+$A^{*o}_o$ mediante $k'$-automorfismos, y la representación
+correspondiente de $\Gamma=I/I'$ sobre
+$T_\ell(A^{*o}_o)(\overline k)$ es la representación deducida de la
+representación natural del grupo de inercia $I$ sobre
+$U^{\mathrm{ef}}$.
+
+Por otra parte, la parte esencialmente tórica $U^{\mathrm{et}}$ de $U$
+corresponde simplemente al submódulo
+\begin{equation}\tag{4.2.7}
+ U^{\mathrm{et}}\simeq T_\ell(T^*_o)(\overline k)
+ \subset U^{\mathrm{ef}}\simeq T_\ell(A^{*o}_o)(\overline k),
+\end{equation}
+donde $T^*_o$ es el mayor subtoro de $A^{*o}_o$. Análogamente, pongamos
+\begin{equation}\tag{4.2.8}
+ B^*_o=A^{*o}_o/T^*_o
+\end{equation}
+para la parte abeliana de $A^{*o}_o$. La acción de $G$ sobre
+$A^{*o}_o$ induce por separado acciones de $G$ sobre $T^*_o$ y sobre
+$B^*_o$, y la acción de $\pi'$ sobre $U^{\mathrm{et}}$ y sobre
+$U^{\mathrm{ef}}/U^{\mathrm{et}}$ se obtiene de estas acciones mediante
+el isomorfismo (4.2.7) y el isomorfismo correspondiente
+\begin{equation}\tag{4.2.9}
+ U^{\mathrm{ef}}/U^{\mathrm{et}}
+ \simeq T_\ell(B^*_o)(\overline k).
+\end{equation}
+Se deduce de esto y de la isogenia (4.1.2) que el carácter
+$g\longmapsto\operatorname{Tr}g_U$ de la acción de $\pi'$ (o de $\pi$)
+sobre $U$ viene dado por
+\begin{equation}\tag{4.2.10}
+ \operatorname{Tr}g_{U_\ell}
+ =\operatorname{Tr}g_{B^*_o,\ell}
+ +\operatorname{Tr}g_{T^*_o,\ell}
+ +\chi_\ell(g)\operatorname{Tr}g^{-1}_{T^*_o,\ell}.
+\end{equation}
+Aquí se ha escrito $U_\ell$ por $U$ en el miembro izquierdo para
+recordar el primo elegido $\ell\ne p$; $g_{B^*_o,\ell}$ y
+$g_{T^*_o,\ell}$ denotan, respectivamente, las acciones de $g$ sobre
+los módulos de Tate $T_\ell(B^*_o)(\overline k)$ y
+$T_\ell(T^*_o)(\overline k)$ inducidas por sus acciones sobre $B^*_o$
+y $T^*_o$ recién descritas; y
+\begin{equation}\tag{4.2.11}
+ \chi_\ell:\pi'\longrightarrow\pi_o\longrightarrow\mathbb Z_\ell^*
+\end{equation}
+es el carácter de $\pi'$ (o de $\pi_o$) inducido por la acción sobre
+$\mathbb Z_\ell(1)=T_\ell(\overline k^*)$, carácter que es trivial
+sobre $\sisi{\Gamma^o}{\Gamma}$.
+
+Estamos ya en condiciones de demostrar un caso particular de una
+conjetura de Serre--Tate [29, Apéndice].\footnote{Se trata esencialmente
+del caso $i=1$ de aquellas conjeturas para los $H^i$.}

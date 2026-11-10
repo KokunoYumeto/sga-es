@@ -1,0 +1,150 @@
+\par\medskip
+\noindent\textbf{Definición 5.9.}
+Sea $S$ un esquema formal noetheriano y
+$f:\mathfrak X\longrightarrow S$ un esquema formal $S$-ádico
+esencialmente de tipo finito. Supongamos que
+$J_{\mathfrak X}^p(\mathfrak X|S)$ es propio sobre $S$, de modo que
+\[
+f_*\mathcal O_{J_{\mathfrak X}^p(\mathfrak X|S)}
+\]
+es un $\mathcal O_S$-módulo coherente. Definamos
+\[
+\underline I_S^p(\mathfrak X|S)
+=\underline I_S^0\!\left(
+ f_*\mathcal O_{J_{\mathfrak X}^p(\mathfrak X|S)}
+\right),
+\]
+y sea $J_S^p(\mathfrak X|S)$ el subesquema formal cerrado de $S$
+definido por $\underline I_S^p(\mathfrak X|S)$.
+
+Si existe un entero fijo $n$ que satisface la condición 5.4(1) o
+5.4(2) para todo $X_\nu\longrightarrow S_\nu$, pongamos
+\[
+\begin{aligned}
+\underline I_{\mathfrak X}(\mathfrak X|S)
+ &=\underline I_{\mathfrak X}^n(\mathfrak X|S),
+&\qquad
+J_{\mathfrak X}(\mathfrak X|S)
+ &=J_{\mathfrak X}^n(\mathfrak X|S),\\
+\underline I_S(\mathfrak X|S)
+ &=\underline I_S^n(\mathfrak X|S),
+&
+J_S(\mathfrak X|S)
+ &=J_S^n(\mathfrak X|S).
+\end{aligned}
+\]
+
+\medskip
+\noindent\textbf{Corolario 5.10.}
+Sea $S$ un esquema formal noetheriano y
+$f:\mathfrak X\longrightarrow S$ un esquema formal $S$-ádico
+esencialmente de tipo finito tal que
+$J_{\mathfrak X}^p(\mathfrak X|S)$ es propio sobre $S$. Entonces:
+
+\smallskip
+\noindent\textbf{(1)}
+\[
+\bigl|J_S^p(\mathfrak X|S)\bigr|
+=f\bigl(\,|J_{\mathfrak X}^p(\mathfrak X|S)|\,\bigr).
+\]
+
+%%%%%%%%%%  scan idx 134  |  folio 123  %%%%%%%%%%
+
+\smallskip
+\noindent\textbf{(2)} La formación de $J_S^p(\mathfrak X|S)$
+conmuta con el cambio de base: si
+$\mathfrak X'=\mathfrak X\times_SS'$, entonces
+\[
+J_{S'}^p(\mathfrak X'|S')
+=J_S^p(\mathfrak X|S)\times_SS'.
+\]
+
+\smallskip
+\noindent\textbf{(3)} Si
+\[
+J_{\mathfrak X}^p(\mathfrak X|S)
+=\coprod_{1\leq i\leq m}\mathfrak Y^{(i)}
+\]
+es una unión disjunta, entonces
+\[
+\underline I_S^p(\mathfrak X|S)
+=\prod_{1\leq i\leq m}
+ \underline I_S^0\bigl(f_*\mathcal O_{\mathfrak Y(i)}\bigr).
+\]
+En particular, si
+\[
+\bigl|J_{X_0}^p(X_0|S_0)\bigr|=\{x_1,\ldots,x_m\}
+\]
+es discreto, entonces
+\[
+\underline I_S^p(\mathfrak X|S)
+=\prod_{1\leq i\leq m}
+ \underline I_S^p(\mathfrak X_{(x_i)}|S)
+=\prod_{1\leq i\leq m}
+ \underline I_S^p(\mathfrak X_{(\widehat{x_i})}|S).
+\]
+
+\smallskip
+\noindent\textbf{(4)} Sea $S$ un esquema noetheriano ordinario,
+$X$ un $S$-esquema esencialmente de tipo finito y
+$S_0\hookrightarrow S$ un subesquema cerrado. Sea $\widehat S$ la
+completación formal de $S$ a lo largo de $S_0$. Si
+\[
+\widehat X=X\times_S\widehat S
+\]
+es la completación formal de $X$ a lo largo de
+$X_0=X\times_SS_0$, entonces
+\[
+J_{\widehat S}^p(\widehat X|\widehat S)
+=J_S^p(X|S)\times_S\widehat S.
+\]
+Así, es la completación formal de $J_S^p(X|S)$ a lo largo de
+$J_{S_0}^p(X_0|S_0)$.
+
+\smallskip
+\noindent\textit{Demostración.}
+Por 5.1(c),
+\[
+\operatorname{Supp}
+ f_*\mathcal O_{J_{\mathfrak X}^p(\mathfrak X|S)}
+=\bigl|J_S^p(\mathfrak X|S)\bigr|,
+\]
+lo cual demuestra (1). Las afirmaciones (2) y (4) se deducen de
+5.1(a), mientras que (3) se deduce de 5.1(d) y, para un punto aislado
+$x\in J_{\mathfrak X}^p(\mathfrak X|S)$, del isomorfismo
+\[
+J_{\mathfrak X_{(\widehat{x})}}^p
+ (\mathfrak X_{(\widehat{x})}|S)
+\xrightarrow{\ \sim\ }
+J_{\mathfrak X_{(x)}}^p(\mathfrak X_{(x)}|S).
+\]
+\hfill$\square$
+
+\medskip
+\noindent\textbf{Observación 5.11.}
+Nuestra definición del ideal jacobiano, adoptada de la definición
+clásica sobre un cuerpo base, conmuta con el cambio de base y, bajo la
+hipótesis leve de 5.4, proporciona un criterio de lisura. Sin embargo,
+en un marco general probablemente se pueda definir de muchas maneras
+un subesquema canónico cuyo soporte sea el lugar no liso. Esbozamos una
+de esas definiciones.
+
+Para un $A$-álgebra $B$, pongamos
+\[
+I_{B|A}=\bigcap_E\operatorname{Ann}D^1(B|A,E),
+\]
+donde $E$ recorre todos los $B$-módulos de tipo finito. Por 3.13(c),
+el ideal $I_{B|A}$ conmuta con la localización. Así, un morfismo
+$f:X\longrightarrow Y$ determina un haz de ideales
+$\underline I_{X|Y}$. Si $f$ es esencialmente de tipo finito, entonces
+por 3.13(a), $f$ es liso en $x$ si y solo si
+\[
+x\notin\operatorname{Supp}
+ \bigl(\mathcal O_X/\underline I_{X|Y}\bigr).
+\]
+
+%%%%%%%%%%  scan idx 135  |  folio 124  %%%%%%%%%%
+
+Esta construcción se extiende naturalmente a los esquemas formales
+ádicos esencialmente de tipo finito y, por tanto, es igualmente
+adecuada para la teoría de deformaciones.

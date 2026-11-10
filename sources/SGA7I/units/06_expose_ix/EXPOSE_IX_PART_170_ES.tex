@@ -1,0 +1,153 @@
+%%%%%%%%%%  scan idx 471  |  folio 460  %%%%%%%%%%
+
+Para probar el lema, observemos que
+\begin{equation*}
+K_n=\ker\widetilde u_n
+\end{equation*}
+es también el anulador izquierdo del acoplamiento canónico
+\begin{equation*}
+u_n:\underline M_n\times\underline M'_n
+ \longrightarrow(\mathbb Z/n\mathbb Z)_S,
+\end{equation*}
+cuya definición explícita se da en 9.4 y 9.6 en términos de las
+extensiones
+\begin{equation}\tag{11.6.14}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=small, row sep=large]
+0 \arrow[r]
+ \& {\ensuremath{\check{\underline M}'_n(1)}} \arrow[r]
+ \& F_n \arrow[r] \arrow[d, equal]
+ \& R_n \arrow[r]
+ \& 0
+ \& {,}
+ \& 0 \arrow[r]
+ \& {\ensuremath{\check{\underline M}_n(1)}} \arrow[r]
+ \& F'_n \arrow[r] \arrow[d, equal]
+ \& R'_n \arrow[r]
+ \& 0 \\
+{}
+ \& {}
+ \& ({}_nA^o)^f
+ \& {}
+ \& {}
+ \& {}
+ \& {}
+ \& {}
+ \& ({}_nA'^o)^f
+ \& {}
+ \& {}
+\end{tikzcd}}
+\end{equation}
+(donde $R_n$ y $R'_n$ son duales de Cartier entre sí), y en términos
+de la extensión mixta $X_{n\eta}$ de $E_{n\eta}$ por $F_{n\eta}$,
+fibra genérica de \sisi{(11.7.5)}{(11.6.5)}, donde ponemos
+\begin{equation}\tag{11.6.15}
+\begin{tikzcd}[column sep=large, row sep=large]
+E_n=D(\sisi{F_n}{F'_n}),
+ & 0 \arrow[r]
+ & R_n \arrow[r] \arrow[d, no head, "\wr"']
+ & E_n \arrow[r]
+ & \underline M_n \arrow[r]
+ & 0
+ & {.} \\
+{}
+ & {}
+ & D(R'_n)
+ & {}
+ & {}
+ & {}
+ & {}
+\end{tikzcd}
+\end{equation}
+Se deduce inmediatamente de la proposición
+\sisi{9.4.6}{9.4.7} que $K_n$ es el mayor de los subgrupos finitos
+étale $K'_n$ de $\underline M_n$ tales que la imagen inversa
+$\overline X_{n\eta}$ de $K'_n$ en la extensión mixta $X_{n\eta}$,
+considerada como extensión mixta de $\overline E_{n\eta}$ por
+$F_{n\eta}$, se prolonga a una extensión mixta de $\overline E_n$ por
+$F_n$. Aquí $\overline E_n$ es la extensión evidente del subgrupo
+\sisi{$K_n$}{$K'_n$} por $R_n$.
+
+Esta condición se cumple evidentemente para el subgrupo ${}_n\Phi$ de
+$\underline M_n$ en (11.6.11), pues se dispone de la correspondiente
+extensión mixta $({}_nA)^f$ sobre $S$. Por tanto,
+${}_n\Phi\subset K_n$. Para probar la inclusión opuesta, consideremos
+la
+
+%%%%%%%%%%  scan idx 472  |  folio 461  %%%%%%%%%%
+
+extensión mixta $\overline X_n$ de $\overline E_n$ por $F_n$ que
+prolonga $\overline X_{n\eta}$, definida como antes tomando
+$K'_n=K_n$. Es, pues, una extensión
+
+\begin{equation*}
+0\longrightarrow F_n\longrightarrow\overline X_n
+ \longrightarrow K_n\longrightarrow0,
+\end{equation*}
+y existe un homomorfismo canónico
+\begin{equation}\tag{*}
+F_n=({}_nA^o)^f\lhook\joinrel\longrightarrow A,
+\end{equation}
+que sobre la fibra genérica está inducido por el homomorfismo canónico
+\begin{equation}\tag{**}
+\overline X_{n\eta}\lhook\joinrel\longrightarrow X_{n\eta}
+ ={}_nA_K\lhook\joinrel\longrightarrow A_K.
+\end{equation}
+Se deduce inmediatamente de (5.9.2) que el homomorfismo $(**)$ se
+prolonga de manera única a un homomorfismo
+\begin{equation}\tag{***}
+\overline X_n\longrightarrow A
+\end{equation}
+que induce $(*)$. Como este último homomorfismo aplica la fibra genérica
+en ${}_nA$, que es un subesquema cerrado de $A$, se factoriza a través
+de $\overline X_n\longrightarrow{}_nA$; y, puesto que $\overline X_n$
+es finito, se factoriza a través de $({}_nA)^f$. Examinando el
+homomorfismo inducido sobre las fibras genéricas, concluimos que
+\begin{equation*}
+\overline X_{n\eta}\subset({}_nA)^f_\eta,
+\quad\text{es decir,}\quad
+K_{n\eta}\subset{}_n\Phi_\eta,
+\quad\text{es decir,}\quad
+K_n\subset{}_n\Phi.
+\end{equation*}
+Esto prueba el lema.
+
+\medskip
+\noindent
+\underline{Observaciones 11.7.} La construcción realizada en
+\sisi{11.7}{11.6} muestra que, a partir de las extensiones (11.6.14)
+sobre $S$ y de la extensión mixta $X_{n\eta}={}_nA_K$ de $E_n$ por
+$F_n$, se puede reconstruir, salvo isomorfismo único, la extensión
+mixta (11.6.5) y, por tanto, también el subgrupo
+\begin{equation*}
+({}_nA)^f\supset({}_nA^o)^f
+\end{equation*}
+de ${}_nA$. En efecto, en virtud de 9.4, estos datos determinan el
+acoplamiento
+\begin{equation*}
+u_n:\underline M_n\times\underline M'_n
+ \longrightarrow(\mathbb Z/n\mathbb Z)_S,
+\end{equation*}
+y la construcción
+
+%%%%%%%%%%  scan idx 473  |  folio 462  %%%%%%%%%%
+
+precedente proporciona $({}_nA)^f$ como la extensión
+mixta $\overline X_n$ de $\overline E_n$ por $F_n$ que prolonga la
+extensión mixta $\overline X_{n\eta}$ inducida por $X_{n\eta}$. Aquí
+$\overline E_n$ es la imagen inversa de $\ker\widetilde u_n$ por
+$E_n\longrightarrow\underline M_n$. Por \sisi{(9.4.8)}{(9.4.7)}, esta extensión mixta
+$\overline X_n$ queda así determinada \underline{salvo isomorfismo
+único}. Se recupera entonces ${}_nA$ pegando $\overline X_n$ y
+$X_{n\eta}$ a lo largo de su subesquema abierto común
+$\overline X_{n\eta}$.
+
+Por tanto, si se conocen los datos estructurales (9.6.1) y la extensión
+mixta
+\begin{equation*}
+X_\eta=T_\ell(A_K)
+\end{equation*}
+de $E_\eta$ por $F_\eta$ ---equivalentemente, si se conocen las
+extensiones (11.6.14) y $X_{n\eta}$ para todo
+$n=\ell^{r+1}$, $r\geq0$---, se puede reconstruir el sistema inductivo
+(o, si se prefiere, proyectivo) de extensiones mixtas (11.6.5).

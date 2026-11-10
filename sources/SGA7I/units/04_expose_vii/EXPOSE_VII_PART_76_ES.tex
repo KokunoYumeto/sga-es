@@ -1,0 +1,74 @@
+%%%%%%%%%%  scan idx 173  |  folio 162  %%%%%%%%%%
+
+2.3. \underline{Morfismos de biextensiones}. Sea $E$ una biextensión
+de $(P,Q)$ por $G$, y sea asimismo $E'$ una biextensión de $(P',Q')$
+por $G'$, donde $P',Q',G'$ son también grupos conmutativos de
+$\underline T$. Se llama \underline{morfismo de biextensiones} de $E$
+a $E'$ a un sistema $(u,v,w,f)$, donde
+\begin{equation}\tag{2.3.1}
+ u:P\longrightarrow P',\qquad
+ v:Q\longrightarrow Q',\qquad
+ w:G\longrightarrow G'
+\end{equation}
+son morfismos de grupos, y
+\begin{equation}\tag{2.3.2}
+ f:E\longrightarrow E'
+\end{equation}
+es un morfismo de los haces de conjuntos subyacentes a $E$ y $E'$, tal
+que $f$ es simultáneamente un homomorfismo de extensiones de grupos
+sobre $P$ y $P'$, respectivamente, asociado a los homomorfismos de
+grupos relativos
+\[
+ u\times v:Q_P\longrightarrow Q'_{P'},
+ \qquad
+ u\times w:G_P\longrightarrow G'_{P'},
+\]
+y un homomorfismo de extensiones de grupos sobre $Q$ y $Q'$, asociado
+a los homomorfismos de grupos relativos
+\[
+ u\times v:P_Q\longrightarrow P'_{Q'},
+ \qquad
+ v\times w:G_Q\longrightarrow G'_{Q'}.
+\]
+Obsérvese además que $u,v,w$ quedan determinados por $f$ solamente. En
+efecto, pasando al cociente se recupera $u\times v$ a partir de $f$, y
+después se recuperan $u$ y $v$ por restricción a $P\times1_Q$ y
+$1_P\times Q$, respectivamente; restringiendo $f$ a $G.e_E$ se
+recupera $w$. No hay, pues, inconveniente en identificar el morfismo
+$(u,v,w,f)$ con $f$.
+
+Con la precaución habitual de adjuntar a los morfismos sus fuentes y
+sus metas (la genuflexión canónica), se ve que \underline{las
+biextensiones del topos $\underline T$ son los objetos de una
+categoría}, cuyos objetos y morfismos son los definidos en 2.1 y 2.3 y
+cuya composición
+
+%%%%%%%%%%  scan idx 174  |  folio 163  %%%%%%%%%%
+
+de morfismos se define de manera evidente. Además,
+$(P,Q,G,E)\mapsto(P,Q,G)$ da un funtor canónico
+\begin{equation}\tag{2.3.3}
+ \operatorname{BIEXT}(\underline T)
+ \longrightarrow
+ \operatorname{GRAB}(\underline T)\times
+ \operatorname{GRAB}(\underline T)\times
+ \operatorname{GRAB}(\underline T),
+\end{equation}
+donde $\operatorname{BIEXT}(\underline T)$ designa la categoría de
+biextensiones sobre $\underline T$ y
+$\operatorname{GRAB}(\underline T)$ la categoría de grupos abelianos
+sobre $\underline T$. Conviene descomponer este funtor canónico en los
+dos funtores $E\mapsto(P,Q)$,
+\begin{equation}\tag{2.3.4}
+ \operatorname{BIEXT}(\underline T)
+ \longrightarrow
+ \operatorname{GRAB}(\underline T)\times
+ \operatorname{GRAB}(\underline T),
+\end{equation}
+y $E\mapsto G$,
+\begin{equation}\tag{2.3.5}
+ \operatorname{BIEXT}(\underline T)
+ \longrightarrow
+ \operatorname{GRAB}(\underline T).
+\end{equation}
+

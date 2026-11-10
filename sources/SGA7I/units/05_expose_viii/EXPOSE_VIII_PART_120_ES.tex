@@ -1,0 +1,131 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2103--2170; índices de escaneo 307--310;
+% folios de fuente 296--299. Las correcciones materiales de la capa
+% francesa se conservan reversiblemente mediante \sisi. El diagrama
+% reproduce la dirección de flecha corregida a mano en la fuente.
+
+\medskip
+\noindent\underline{Observaciones 6.8.}\quad a) Aplicaremos 6.6 y 6.7
+cuando $S$ sea un rasgo y $D$ el divisor definido por la inclusión del
+punto cerrado $s$ de $S$ en $S$. En este caso, $U$ es el espectro del
+cuerpo de fracciones $K$ de $S$, y $\overline G$ es el modelo de Néron
+usual del grupo multiplicativo sobre $K$, introducido por Raynaud.
+Obsérvese que, incluso en este caso particular, la demostración de 6.6
+y 6.7 utiliza 6.5 sobre bases más generales que los rasgos (como $P$ y
+sus potencias cartesianas). Sin embargo, en este caso basta conocer la
+\underline{existencia} del modelo de Néron $\overline G$ en la
+situación especial considerada: 6.5 para esquemas base lisos sobre
+$S$, y por tanto 6.6 y 6.7, se deducen entonces formalmente. Para
+nosotros, la introducción de $\overline G$ servirá sobre todo de etapa
+intermedia cómoda para estudiar, en la sección siguiente, el problema
+de prolongar extensiones y biextensiones por el grupo multiplicativo.
+
+\smallskip
+\noindent b) Puede definirse un modelo de Néron--Raynaud $\overline G$
+de $\underline G_{mU}$, que satisfaga la condición fundamental (6.4.2)
+para todo $S'$ liso sobre $S$, bajo condiciones mucho más generales
+que las consideradas anteriormente, siendo $U$ meramente un abierto
+esquemáticamente denso de un esquema normal localmente noetheriano
+$S$. En este caso $\overline G$ es un \underline{haz} fppf, no
+necesariamente representable. Denotemos por $\underline D$ el haz, en
+el sitio étale pequeño de $S$, de los divisores sobre $S$ cuyo soporte
+está contenido
+
+%%%%%%%%%%  scan idx 308  |  folio 297  %%%%%%%%%%
+
+en $T=S\setminus U$, y, por abuso de lenguaje, denotemos también con
+la misma letra su extensión canónica a un haz sobre
+$(\mathrm{Sch})_{/S}$. Sus secciones sobre un esquema relativo
+$f:S'\to S$ son las secciones de
+$f_{\mathrm{\acute{e}t}}^*(\underline D)$ sobre $S'$. El modelo buscado
+es una extensión de grupos
+\begin{equation}\tag{6.8.1}
+ 0\longrightarrow\underline G_{mS}\longrightarrow\overline G
+ \longrightarrow\underline D\longrightarrow0.
+\end{equation}
+La construcción de una extensión canónica (6.8.1), sin hipótesis de
+normalidad sobre $S$, no presenta dificultad si se usa la descripción
+general VII 1.1.6; al mismo tiempo se obtiene (6.4.2) para $S'$ étale
+sobre $S$. Para que la misma relación valga para todo $S'$ liso sobre
+$S$, equivale a comprobar que la formación del haz $\underline D$
+conmuta con todo cambio de base liso $f:S'\to S$. Cuando $S$ es normal,
+esto se deduce de EGA $\mathrm{Err}_{\mathrm{IV}}$ 53, 21.4.9.
+
+\medskip
+\noindent 6.9.\quad ``\underline{Autocrítica}'' (observaciones de
+P.~Deligne).\footnote{El redactor de la presente exposición, habiéndose
+dado por vencido, invita al lector, si fuera necesario, a reescribir
+las secciones 5 y 6 siguiendo las indicaciones adjuntas.}
+
+Las secciones 5 y 6 son realmente poco inspiradas. Periódicamente se
+tiene la impresión de que se rehace ``a mano'' el formalismo de
+$i_*,i^*$, sin distinguir lo que es geométrico de lo que es
+``general nonsense''.
+
+Propongo extraer los enunciados ``geométricos'' a), b), c):
+
+\smallskip
+\noindent a) (cf. 6.8 b)) Sea
+$j:\sisi{V}{U}\hookrightarrow S$ un abierto esquemáticamente denso de
+un esquema normal noetheriano $S$. El haz étale $\underline G_{mS}$ se
+identifica entonces con un subhaz del haz étale
+$j_*\underline G_{mU}$. Sea $\underline D$ el haz étale cociente en la
+sucesión exacta
+\[
+ 0\longrightarrow\underline G_{mS}\longrightarrow
+ j_*\sisi{\underline G_{mS}}{\underline G_{mU}}
+ \longrightarrow\underline D\longrightarrow0.
+\]
+
+%%%%%%%%%%  scan idx 309  |  folio 298  %%%%%%%%%%
+
+\underline{Entonces} la formación de $\underline D$ conmuta con todo
+cambio de base liso (EGA $\mathrm{Err}_{\mathrm{IV}}$ 53, 21.4.9);
+\underline{además}, $R^1j_*\underline G_m=0$ (Teorema 90) si los
+anillos estrictamente locales de $S$ son factoriales.
+
+\smallskip
+\noindent b) Si $U=S\setminus Y$, donde $Y$ es un divisor
+geométricamente unirrama, y si $i$ es la inclusión de $Y$ en $S$,
+entonces
+\[
+ \underline D=i_*\mathbb Z_Y.
+\]
+
+\smallskip
+% Canon: SGA-SRC-001273.
+\noindent c) \sisi{Si $Y$ es un subesquema cerrado de un esquema $X$ y
+$E$ es un conjunto}{Si $Y$ es un subesquema cerrado de un esquema $X$,
+si $i:Y\hookrightarrow X$ designa la inmersión cerrada, y si $E$ es un
+conjunto}, entonces el haz étale $i_*\underline E_Y$ está
+representado por un esquema étale sobre $X$, cuya formación conmuta con
+todo cambio de base.
+
+\medskip
+\noindent\underline{Corolario.} \underline{Sea $S$ un esquema normal
+noetheriano, sea $Y$ un divisor geométricamente unirrama y sea
+$U=S\setminus Y$:}
+\begin{center}
+\begin{tikzcd}[column sep=huge]
+ U \arrow[r, hook, "j"'] & S & Y \arrow[l, "i"']
+\end{tikzcd}
+\qquad .
+\end{center}
+\underline{Existe un único esquema en grupos liso $\mathcal G_m$ sobre
+$S$ tal que, después de todo cambio de base liso, se tiene
+$\mathcal G_m|S_{\mathrm{\acute{e}t}}=j_*(\underline G_m)_U$.}
+
+En efecto, las condiciones precedentes determinan $\mathcal G_m$ como
+haz, para la topología étale, sobre la categoría de esquemas lisos
+sobre $S$. Por a) y b), la sucesión
+\[
+ 0\longrightarrow\underline G_m\longrightarrow\mathcal G_m
+ \xrightarrow{\ q\ }i_*\mathbb Z_Y\longrightarrow0
+\]
+es exacta. Por c), $i_*\mathbb Z_Y$ es representable. Finalmente, el
+morfismo $q$ es representable.
+
+El uso del ``sitio liso pequeño'' precedente debería permitir deducir
+formalmente de a) los enunciados de la sección 6.
+
+%%%%%%%%%%  scan idx 310  |  folio 299  %%%%%%%%%%

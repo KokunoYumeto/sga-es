@@ -1,0 +1,168 @@
+\par\medskip
+\noindent\textbf{Teorema 6.4.}
+Sea $X_0$ un $k$-esquema de tipo finito cuyos puntos no lisos sean
+aislados, y sea $(R,\mathfrak X)$ una deformación versal formal de
+$X_0$. Denotemos por $\{z_1,\ldots,z_m\}$ el conjunto de puntos no
+lisos de $X_0$. Supongamos que
+\[
+H^2(X_0,\underline D^0_{X_0})=0
+\]
+y que todo $z_i$ es una singularidad cuadrática no degenerada
+racional sobre $k$. Entonces:
+
+\smallskip
+\noindent\textbf{(1)} $R$ es formalmente liso sobre $\Lambda$; es
+decir, $R$ es un anillo de series formales sobre $\Lambda$.
+
+\smallskip
+\noindent\textbf{(2)} Hay una descomposición en unión disjunta
+\[
+J_{\mathfrak X}(\mathfrak X|R)
+=\coprod_{1\leq i\leq m}
+ J_{\mathfrak X_{(z_i)}}(\mathfrak X_{(z_i)}|R),
+\]
+y el morfismo canónico
+\[
+J_{\mathfrak X_{(z_i)}}(\mathfrak X_{(z_i)}|R)
+ \xrightarrow{\ \sim\ }
+J_R(\mathfrak X_{(z_i)}|R)
+\]
+es un isomorfismo.
+
+\smallskip
+\noindent\textbf{(3)} Cada ideal
+$I_R(\mathfrak X_{(z_i)}|R)$ es principal, al igual que
+\[
+I_R(\mathfrak X|R)
+=\prod_{1\leq i\leq m}I_R(\mathfrak X_{(z_i)}|R).
+\]
+Si $I_R(\mathfrak X_{(z_i)}|R)=(t_i)$, entonces
+$t_1,\ldots,t_m$ pueden completarse hasta un sistema de generadores
+formales libres de $R$ sobre $\Lambda$.
+
+\smallskip
+\noindent\textbf{(4)} El morfismo
+$\mathfrak X\longrightarrow\operatorname{Spec}(\Lambda)$ es
+formalmente liso; equivalentemente,
+\[
+J_{\mathfrak X}(\mathfrak X|\Lambda)=\varnothing.
+\]
+
+%%%%%%%%%%  scan idx 139  |  folio 128  %%%%%%%%%%
+
+\smallskip
+\noindent\textbf{(5)} Si $X_0$ es una curva completa irreducible,
+entonces
+\[
+\dim\underline M_{X_0}=3g-3+a,
+\]
+donde
+\[
+g=\dim_kH^1(X_0,\mathcal O_{X_0}),
+\qquad
+a=\dim_kH^0(X_0,\underline D^0_{X_0}).
+\]
+
+\smallskip
+\noindent\textit{Demostración.}
+La afirmación (1) se deduce de (2) y (3). La primera afirmación de (2)
+se deduce de 5.7(2). Para cada $i$, sea $(R_i,\mathfrak Y_i)$ una
+deformación versal formal de
+$\operatorname{Spec}(\widehat{\mathcal O}_{X_0,z_i})$. Como
+$(R,\mathfrak X_{(\widehat z_i)})$ es una deformación de este tipo,
+existe un homomorfismo local continuo de $\Lambda$-álgebras
+\[
+\varphi_i:R_i\longrightarrow R
+\]
+y un diagrama cartesiano
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathfrak X_{(\widehat z_i)}
+  \arrow[r] \arrow[d]
+& \mathfrak Y_i \arrow[d]\\
+\operatorname{Spf}(R)
+  \arrow[r,"{\operatorname{Spf}(\varphi_i)}"']
+& \operatorname{Spf}(R_i).
+\end{tikzcd}
+\]
+Por consiguiente,
+\[
+\begin{aligned}
+J_{\mathfrak X_{(z_i)}}(\mathfrak X_{(z_i)}|R)
+&=J_{\mathfrak X_{(\widehat z_i)}}
+   (\mathfrak X_{(\widehat z_i)}|R)\\
+&\simeq
+J_{\mathfrak Y_i}(\mathfrak Y_i|R_i)
+ \times_{\operatorname{Spf}(R_i)}\operatorname{Spf}(R),
+\end{aligned}
+\]
+y
+\[
+\begin{aligned}
+J_R(\mathfrak X_{(z_i)}|R)
+&=J_R(\mathfrak X_{(\widehat z_i)}|R)\\
+&\simeq
+J_{R_i}(\mathfrak Y_i|R_i)
+ \times_{\operatorname{Spf}(R_i)}\operatorname{Spf}(R).
+\end{aligned}
+\]
+Por el Lema 6.2(1),
+\[
+J_{\mathfrak Y_i}(\mathfrak Y_i|R_i)
+ \longrightarrow J_{R_i}(\mathfrak Y_i|R_i)
+\]
+es un isomorfismo, lo cual demuestra la afirmación restante de (2).
+
+Por el Lema 6.2(2),
+\[
+I_{R_i}(\mathfrak Y_i|R_i)=(u_i),
+\qquad R_i=\Lambda[[u_i]].
+\]
+Se sigue que
+\[
+I_R(\mathfrak X_{(z_i)}|R)
+=I_R(\mathfrak X_{(\widehat z_i)}|R)
+=(t_i),
+\qquad t_i=\varphi_i(u_i),
+\]
+y por tanto
+\[
+I_R(\mathfrak X|R)
+=\prod_{1\leq i\leq m}I_R(\mathfrak X_{(z_i)}|R)
+=\left(\prod_{i=1}^m t_i\right).
+\]
+Por 4.13, el morfismo natural
+\[
+\underline M_{X_0}\longrightarrow
+\underline M_{X_0,(\widehat z_1)}\times\cdots\times
+\underline M_{X_0,(\widehat z_m)}
+\]
+es liso. Por tanto,
+\[
+R_1\widehat\otimes_\Lambda\cdots
+ \widehat\otimes_\Lambda R_m\longrightarrow R
+\]
+es formalmente liso. Así, $t_1,\ldots,t_m$ se completan hasta un
+sistema de generadores formales libres de $R$ sobre $\Lambda$, lo que
+demuestra (1) y (3).
+
+%%%%%%%%%%  scan idx 140  |  folio 129  %%%%%%%%%%
+
+Para (4), la proyección
+\[
+\mathfrak X_{(\widehat z_i)}
+ \xrightarrow{\ \sim\ }
+\mathfrak Y_i\times_{\operatorname{Spf}(R_i)}
+ \operatorname{Spf}(R)
+ \longrightarrow\mathfrak Y_i
+\]
+es formalmente lisa porque
+$\operatorname{Spf}(R)\sisi{\overset{\ \operatorname{Spf}(\varphi_i)\ }{\relbar\joinrel\relbar\joinrel\relbar\joinrel\relbar}}{\longrightarrow}\operatorname{Spf}(R_i)$ es
+formalmente liso. El Lema 6.2(3) muestra que
+$\mathfrak Y_i\longrightarrow\operatorname{Spec}(\Lambda)$ es
+formalmente liso. Por consiguiente, todo
+$\mathfrak X_{(\widehat z_i)}\longrightarrow
+\operatorname{Spec}(\Lambda)$ es formalmente liso. Como los $z_i$
+son precisamente los puntos no lisos de $X_0$, se sigue que
+$\mathfrak X\longrightarrow\operatorname{Spec}(\Lambda)$ es
+formalmente liso.

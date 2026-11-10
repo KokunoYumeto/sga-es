@@ -1,0 +1,129 @@
+%%%%%%%%%%  scan idx 80  |  folio 69  %%%%%%%%%%
+
+\underline{Corolario 2.18.} Un funtor
+$F:\underline C_\Lambda\longrightarrow(\mathrm{Sets})$ es
+prorepresentable si y solo si es homogéneo y
+$\dim F(k[\varepsilon])<\infty$.
+
+\underline{Corolario 2.19.} Todo cogrupoide liso en
+$\widehat{\underline C}_\Lambda$ puede normalizarse salvo isomorfismo.
+
+Dado un cogrupoide $(R_0,R_1,\ldots)$ en
+$\widehat{\underline C}_\Lambda$, pongamos $\bar R_1=R_1/J$, donde $J$ es
+el ideal de $R_1$ generado por
+\[
+ \{s_1(r)-s_2(r)\mid r\in R_0\}.
+\]
+Entonces $(R_0,\bar R_1,\ldots)$ define un esquema formal en grupos sobre
+$R_0$ con la ley de composición inducida.
+
+Sea ahora $\underline A$ un grupoide cofibrado sobre
+$\underline C_\Lambda$, prorepresentado por un cogrupoide liso
+normalizado $(R_0,R_1,\ldots)$ mediante $(\xi,\varphi)$. Sean
+\[
+ \underline C_k\lhook\joinrel\longrightarrow
+ \underline C_{R_0}\lhook\joinrel\longrightarrow
+ \underline C_{R_0\widehat\otimes_\Lambda R_0}
+\]
+las inclusiones correspondientes a las suprayecciones
+\[
+ R_0\widehat\otimes_\Lambda R_0\longrightarrow R_0\longrightarrow k,
+\]
+y sean $\operatorname{Aut}_\xi$ y $\operatorname{Aut}^{o}$ las
+restricciones de $\operatorname{Isom}_\xi$ a
+$\underline C_{R_0}$ y $\underline C_k$, respectivamente. Así,
+$\operatorname{Aut}_\xi(S)$ es el grupo de automorfismos de $\xi(S)$ para
+$S\in\operatorname{ob}(\underline C_{R_0})$, mientras que
+$\operatorname{Aut}^{o}(S)$ es el grupo de automorfismos de $1_S$ para
+$S\in\operatorname{ob}(\underline C_k)$, donde $1_S$ es la imagen
+directa de $1\in\underline A(k)$ por $k\longrightarrow S$.
+
+Como $R_1$ prorepresenta $\operatorname{Isom}_\xi$ sobre
+$\underline C_{R_0\widehat\otimes_\Lambda R_0}$, se sigue que
+$\bar R_1$ prorepresenta $\operatorname{Aut}_\xi$ sobre
+$\underline C_{R_0}$, y que
+$k\otimes_{R_0}\bar R_1$ prorepresenta $\operatorname{Aut}^{o}$ sobre
+$\underline C_k$. Aunque $\underline A$ está prorepresentado por el
+cogrupoide liso $(R_0,R_1,\ldots)$, ni
+$(R_0,\bar R_1,\ldots)$ ni
+$(k,k\otimes_{R_0}\bar R_1,\ldots)$ son lisos en general. Más
+precisamente:
+
+\underline{Corolario 2.20.} Sea $\underline A$ un
+\sisi{cogrupoide homogéneo}{grupoide cofibrado homogéneo} sobre
+$\underline C_\Lambda$, prorepresentado por un cogrupoide
+liso normalizado $(R_0,R_1,\ldots)$ mediante $(\xi,\varphi)$.
+
+\begin{enumerate}[label=(\alph*)]
+\item $(R_0,\bar R_1,\ldots)$ y
+$(k,k\otimes_{R_0}\bar R_1,\ldots)$ prorepresentan
+$\operatorname{Aut}_\xi$ y $\operatorname{Aut}^{o}$, respectivamente.
+
+\item Las afirmaciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item el esquema formal en grupos
+$\underline h_{(R_0,\bar R_1,\ldots)}$ es formalmente liso sobre $R_0$;
+\item para toda flecha suprayectiva $a'\longrightarrow a$ en
+$\underline A$, la aplicación
+\[
+ \operatorname{Aut}_{P(a')}(a')\longrightarrow
+ \operatorname{Aut}_{P(a)}(a)
+\]
+es suprayectiva;
+\item $R_0$ prorepresenta el funtor $[\underline A]$ sobre
+$\underline C_\Lambda$.
+\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%  scan idx 81  |  folio 70  %%%%%%%%%%
+
+\underline{Demostración.} Ya hemos señalado (a). Para (b), la
+equivalencia (i)$\Leftrightarrow$(ii) es clara, mientras que
+(ii)$\Leftrightarrow$(iii) se sigue de 2.7 y 2.15, puesto que
+\[
+ \widetilde\xi:\underline h_{R_0}\longrightarrow[\underline A]
+\]
+es mínimamente liso. \hfill$\square$
+
+\underline{Observación 2.21.} Sea $\underline A$ un grupoide cofibrado
+sobre $\underline C_\Lambda$, y sea
+$\underline A|\underline C_k$ el cambio de base de
+$p:\underline A\longrightarrow\underline C_\Lambda$ por medio de
+$\underline C_k\lhook\joinrel\longrightarrow\underline C_\Lambda$.
+Si $\underline A$ está prorepresentado por $(R_0,R_1,\ldots)$ mediante
+$(\xi,\varphi)$, entonces $\underline A|\underline C_k$ está
+prorepresentado por
+\[
+ (k\otimes_\Lambda R_0,k\otimes_\Lambda R_1,\ldots)
+\]
+mediante $(k\otimes_\Lambda\xi,k\otimes_\Lambda\varphi)$. Aquí
+$k\otimes_\Lambda\xi$ es la imagen directa de $\xi$ por
+$R_0\longrightarrow k\otimes_\Lambda R_0$, y
+$k\otimes_\Lambda\varphi$ es la imagen de $\varphi$ por
+\[
+ \operatorname{Isom}_{\underline A(\sisi{R_0}{R_1})}
+   \bigl(\xi(s_1),\xi(s_2)\bigr)
+ \longrightarrow
+ \operatorname{Isom}_{\underline A(k\otimes_\Lambda R_1)}
+   \bigl(k\otimes_\Lambda\xi(s_1),
+         k\otimes_\Lambda\xi(s_2)\bigr).
+\]
+Si $(R_0,R_1,\ldots)$ está normalizado, también lo está
+$(k\otimes_\Lambda R_0,k\otimes_\Lambda R_1,\ldots)$; además, la
+dimensión relativa de $R_1$ sobre $R_0$ es igual a la de
+$k\otimes_\Lambda R_1$ sobre $k\otimes_\Lambda R_0$, puesto que $R_1$ es
+liso sobre $R_0$.
+
+\underline{Observación 2.22.} Supongamos que $\underline A$ está
+prorepresentado por cogrupoides lisos $(R_0,R_1,\ldots)$ y
+$(R'_0,R'_1,\ldots)$, con $(R_0,R_1,\ldots)$ normalizado. Obtenemos un
+homomorfismo
+\[
+ (i_0,i_1):(R_0,R_1,\ldots)\longrightarrow(R'_0,R'_1,\ldots).
+\]
+Por 2.10(b), $R'_0$ es un anillo de series de potencias formales sobre
+$R_0$, y $(i_0,i_1)$ induce un isomorfismo
+\[
+ R'_0\otimes_{R_0}(R_0,R_1,\ldots)
+ \xrightarrow{\ \sim\ }(R'_0,R'_1,\ldots).
+\]

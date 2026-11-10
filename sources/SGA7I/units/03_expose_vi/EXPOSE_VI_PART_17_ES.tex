@@ -1,0 +1,98 @@
+%%%%%%%%%%  scan idx 59  |  folio 48 (continued)  %%%%%%%%%%
+
+\underline{Definición 1.19.} (1) Un objeto
+$\xi\in\widehat{\underline A}$ se llama \underline{objeto formal
+versal} si todo morfismo sobreyectivo $\alpha:a'\longrightarrow a$ en
+$\underline A$ induce un morfismo sobreyectivo
+\[
+ \operatorname{Hom}_{\widehat{\underline A}}(\xi,a')
+ \longrightarrow
+ \operatorname{Hom}_{\widehat{\underline A}}(\xi,a).
+\]
+
+(2) Un objeto formal versal $\xi\in\widehat{\underline A}$, con
+imagen $(R,s)$ en $\widehat C_{\Lambda,K}$, se llama
+\underline{mínimo} si se cumple la condición siguiente. Para dos
+morfismos cualesquiera
+\[
+ \varphi_1,\varphi_2:R\rightrightarrows D_{K'}(K),
+\]
+si $\varphi_1(\xi)$ es isomorfo a $\varphi_2(\xi)$, existe una
+derivación $D:K\longrightarrow K'$ tal que
+\[
+ (1,D)(\varphi_1)=\varphi_2,
+ \qquad\text{es decir,}\qquad
+ \varphi_2-\varphi_1=Ds.
+\]
+
+\underline{Teorema 1.20. Si $\underline A$ es semihomogéneo y}
+\[
+ \dim_{K'}[\underline A(D_{K'}(K))]<\infty,
+\]
+\underline{entonces $\underline A$ admite un objeto formal mínimamente
+versal, y dos objetos cualesquiera de esta clase son isomorfos.}
+
+%%%%%%%%%%  scan idx 60  |  folio 49  %%%%%%%%%%
+
+Con la notación de 1.18, sea $H^*$ un subespacio de
+$[\underline A(D_{K'}(K))]$ complementario de la imagen de $\gamma$,
+y sea $H$ el dual de $H^*$. Pongamos
+\[
+ R_0=D_H(K).
+\]
+Elijamos $\xi_0\in\underline A(R_0)$ cuya clase, bajo las
+identificaciones
+\[
+ [\underline A(R_0)]
+ \simeq H\otimes[\underline A(D_{K'}(K))]
+ \simeq
+ \operatorname{Hom}\bigl(H^*,[\underline A(D_{K'}(K))]\bigr),
+\]
+es la inclusión
+$H^*\hookrightarrow[\underline A(D_{K'}(K))]$. Entonces:
+
+(1) para todo $V$, los morfismos
+\[
+ \operatorname{Hom}_{C_{\Lambda,K}}
+   \bigl(D_H(K),D_V(K)\bigr)
+ \longrightarrow[\underline A(D_V(K))]
+\]
+son sobreyectivos;
+
+(2) se cumple la condición de minimalidad de 1.19(2) para
+$(R_0,\xi_0)$.
+
+Elijamos $S\in\widehat C_{\Lambda,K}$ formalmente liso sobre
+$\Lambda$, junto con un epimorfismo $t:S\longrightarrow R_0$, de
+modo que
+\[
+ \Omega_{R_0/\Lambda}\otimes K'
+ \xrightarrow{\ \sim\ }
+ \Omega_{S/\Lambda}\otimes K'.
+\]
+Si $M$ es el ideal maximal de $S$, definamos por inducción, para
+$n\geq1$,
+\[
+ R_n=S/I_n,
+ \qquad
+ \xi_n\in\operatorname{Ob}(\underline A(R_n)),
+\]
+mediante las condiciones siguientes:
+
+(a) $I_{n+1}$ es la intersección de los ideales $I$ tales que
+\[
+ I_nM\subset I\subset I_n
+\]
+y $\xi_n$ se extiende a un objeto $\xi\in\underline A(S/I)$;
+
+(b) $\xi_{n+1}$ es una extensión de $\xi_n$.
+
+Si
+\[
+ R=\varprojlim_nR_n,
+ \qquad
+ \xi=\varprojlim_n\xi_n,
+\]
+entonces $(R,\xi)$ es un objeto formal mínimamente versal y es único
+salvo isomorfismo.
+

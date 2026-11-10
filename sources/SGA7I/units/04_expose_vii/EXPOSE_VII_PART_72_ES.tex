@@ -1,0 +1,57 @@
+\par\medskip\noindent
+1.4. \underline{Extensiones de un grupo conmutativo libre}
+
+Sea $I$ un objeto de $\underline T$, y pongamos
+\begin{equation}\tag{1.4.1}
+ P=\mathbb Z[I],
+\end{equation}
+el $\mathbb Z$-módulo libre generado por $I$ (SGA 4, IV, 11). A toda
+extensión $E$ de $P$ por un $\mathbb Z$-módulo dado $G$ (en lo sucesivo
+solo se considerarán extensiones conmutativas de grupos), asociemos el
+torsor correspondiente bajo $G_P$, y después su restricción a $I$ por
+el morfismo canónico
+\[
+ I\longrightarrow P=\mathbb Z[I].
+\]
+
+%%%%%%%%%%  scan idx 166  |  folio 155  %%%%%%%%%%
+
+Se obtiene así un funtor canónico
+\begin{equation}\tag{1.4.2}
+ \operatorname{EXT}(P,G)\longrightarrow
+ \operatorname{TORS}(I,G_I).
+\end{equation}
+Afirmo que este funtor es una \underline{equivalencia de categorías}.
+Equivalentemente, para todo $G$, las aplicaciones
+\begin{equation}\tag{1.4.3}
+ \operatorname{Hom}_{\mathbb Z}(P,G)\longrightarrow
+ H^0(I,G_I)=G(I)
+\end{equation}
+y
+\begin{equation}\tag{1.4.4}
+ \operatorname{Ext}^1_{\mathbb Z}(P,G)\longrightarrow H^1(I,G_I)
+\end{equation}
+son isomorfismos. Más generalmente, si $A$ es un anillo (no
+necesariamente conmutativo) de $\underline T$ y $P=A[I]$ es el
+$A$-módulo libre generado por $I$, existen isomorfismos canónicos,
+funtoriales en el $A$-módulo variable $G$,
+\begin{equation}\tag{1.4.5}
+ \operatorname{Ext}^i_A(A[I],G)\xrightarrow{\ \sim\ }H^i(I,G_I).
+\end{equation}
+Para $A=\mathbb Z$ e $i=0,1$, coinciden con (1.4.3) y (1.4.4). Para
+definir (1.4.5), recordemos que su primer miembro es el funtor derivado
+del funtor
+\[
+ G\longmapsto\operatorname{Hom}_A(A[I],G),
+\]
+que, por la definición de $A[I]$, es isomorfo al funtor
+$G\longmapsto G(I)=H^0(I,G_I)$. Como $G\longmapsto G_I$ transforma
+módulos inyectivos en módulos inyectivos de $\underline T_{/I}$
+(SGA 4, V), se sigue la conclusión. Dejamos al lector la comprobación
+de la compatibilidad anunciada con (1.4.3) y (1.4.4).
+
+Finalmente, el funtor (1.4.2) es compatible con las imágenes inversas
+por un morfismo de topoi
+\[
+ f:\underline T'\longrightarrow\underline T.
+\]

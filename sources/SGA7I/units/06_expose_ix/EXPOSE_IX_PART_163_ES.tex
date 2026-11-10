@@ -1,0 +1,133 @@
+%%%%%%%%%%  scan idx 450  |  folio 439  %%%%%%%%%%
+
+\medskip
+\noindent
+10. \underline{Propiedades del acoplamiento de monodromía}.
+\underline{Teorema de integralidad y positividad}
+
+En esta sección daremos primero ciertas propiedades formales,
+esencialmente triviales, de los acoplamientos de monodromía, dejando al
+lector los detalles, algo tediosos, de las verificaciones. Enunciaremos
+también un teorema más profundo (10.4) sobre estos acoplamientos e
+indicaremos cómo reducir su demostración a un caso particular de
+jacobianas, que será tratado mediante métodos trascendentes en la
+sección 12, lógicamente independiente de la sección 11.
+
+\medskip
+\noindent
+10.1. \underline{Transporte de estructura}. De la definición del
+acoplamiento de monodromía (9.1.2) se desprende claramente que este
+acoplamiento es compatible con el transporte de estructura en la
+situación $(S,A_K,A'_K)$.
+
+\medskip
+\noindent
+10.2. \underline{Simetría}. Partiendo del esquema dual $A'_K$ de
+$A_K$ y aplicándole la construcción de la sección 9, hay que introducir
+el esquema dual $(A'_K)'$ de $A'_K$, canónicamente isomorfo a $A_K$
+por el teorema de bidualidad ([5] o VIII 3.2). Denotemos por
+$u_\ell^{A_K}$ el acoplamiento de monodromía (9.1.2) relativo a $A_K$.
+Del mismo modo obtenemos un acoplamiento
+\begin{equation}\tag{10.2.1}
+u_\ell^{A'_K}:\underline M'_\ell\otimes\underline M_\ell
+ \longrightarrow\mathbb Z_\ell.
+\end{equation}
+Afirmo que este último se obtiene de $u_\ell^{A_K}$ mediante la
+simetría
+\begin{equation*}
+s:\underline M'_\ell\otimes\underline M_\ell
+ \xrightarrow{\ \sim\ }
+ \underline M_\ell\otimes\underline M'_\ell;
+\end{equation*}
+es decir,
+
+%%%%%%%%%%  scan idx 451  |  folio 440  %%%%%%%%%%
+
+\begin{equation}\tag{10.2.2}
+u_\ell^{A'_K}=u_\ell^{A_K}\circ s.
+\end{equation}
+
+Teniendo en cuenta la propiedad conocida de anticonmutatividad de los
+acoplamientos $\varphi_\xi$ ([5] o VIII 2.2.11), la fórmula de simetría
+(10.2.2) puede reformularse como sigue en términos de una polarización
+fija $\xi$ de $A_K$. Esta define un homomorfismo
+\begin{equation*}
+\widetilde\xi:A_K\longrightarrow A'_K
+\end{equation*}
+y, por tanto, un homomorfismo correspondiente ($t$ significa
+``tórico'')
+\begin{equation}\tag{10.2.3}
+\xi_t:\underline M\longrightarrow\underline M'.
+\end{equation}
+Podemos formar entonces el acoplamiento
+\begin{equation}\tag{10.2.4}
+\begin{aligned}
+\varphi^t_{\xi,\ell}:\underline M_\ell\otimes\underline M_\ell
+ &\longrightarrow\mathbb Z_\ell,\\
+\varphi^t_{\xi,\ell}(x,y)&=u_\ell^{A_K}\bigl(x,\xi_t(y)\bigr).
+\end{aligned}
+\end{equation}
+La forma precedente $\varphi^t_{\xi,\ell}$ es \underline{simétrica}:
+\begin{equation}\tag{10.2.5}
+\varphi^t_{\xi,\ell}(x,y)=\varphi^t_{\xi,\ell}(y,x).
+\end{equation}
+En realidad, esta afirmación es válida para todo elemento $\xi$ del
+grupo de Néron--Severi de $A_K$, no necesariamente una polarización.
+Pero solo cuando $\xi$ es no degenerada, es decir, define una
+\underline{isogenia} $A_K\longrightarrow A'_K$, y por tanto también
+una isogenia (10.2.3), la relación de simetría (10.2.5) equivale a
+(10.2.2). Cuando $\xi$ es una polarización, reforzaremos
+considerablemente (10.2.5) en 10.4(b) más abajo.
+
+Señalemos finalmente una tercera interpretación de la relación de
+simetría. Consideremos una biextensión (es decir, una correspondencia
+divisorial) $\xi$ sobre un par $(A_K,\overline A_K)$ de esquemas
+abelianos con reducción semiestable sobre $K$. Define un homomorfismo
+\begin{equation*}
+A_K\longrightarrow\overline A'_K.
+\end{equation*}
+
+%%%%%%%%%%  scan idx 452  |  folio 441  %%%%%%%%%%
+
+Al pasar a los modelos de Néron, este define un homomorfismo sobre los
+toros maximales de las fibras especiales y, por tanto, en sentido
+inverso, un homomorfismo sobre sus grupos de caracteres:
+\begin{equation}\tag{10.2.6}
+\xi_t:\overline{\underline M}\longrightarrow\underline M',
+\end{equation}
+donde $\overline{\underline M}$ se define a partir de
+$\overline A_K$ como $\underline M$ se define a partir de $A_K$.
+Podemos, por tanto, formar el acoplamiento
+\begin{equation}\tag{10.2.7}
+\begin{aligned}
+\varphi^t_\xi:\underline M_\ell\otimes
+ \overline{\underline M}_\ell&\longrightarrow\mathbb Z_\ell,\\
+\varphi^t_\xi(x,y)&=u_\ell^{A_K}\bigl(x,\xi_t(y)\bigr).
+\end{aligned}
+\end{equation}
+Observemos de paso que, para un esquema abeliano variable $A_K$ con
+reducción semiestable, el grupo constante retorcido $\underline M$ es
+un funtor covariante de $A_K$. La formación de los acoplamientos
+(10.2.7) asociados a biextensiones de esquemas abelianos con reducción
+semiestable sobre $(K,S)$ es entonces compatible, en el sentido
+evidente, con la formación de imágenes inversas de biextensiones.
+
+Cuando $\xi$ es la biextensión canónica (``de Weil'') de
+$(A_K,A'_K)$, el acoplamiento (10.2.7) es, naturalmente, precisamente
+el acoplamiento de monodromía \sisi{(9.2.1)}{(9.1.2)}. Consideremos
+ahora la transpuesta ${}^s\xi$ de $\xi$, una biextensión de
+$(\overline A_K,A_K)$, y por tanto el acoplamiento
+\begin{equation*}
+\varphi^t_{{}^s\xi}:\overline{\underline M}_\ell\otimes
+ \underline M_\ell\longrightarrow\mathbb Z_\ell.
+\end{equation*}
+La relación de simetría es
+\begin{equation}\tag{10.2.8}
+\varphi^t_{{}^s\xi}=\varphi^t_\xi\circ s,
+\qquad
+s:\overline{\underline M}_\ell\otimes\underline M_\ell
+ \xrightarrow{\ \sim\ }
+ \underline M_\ell\otimes\overline{\underline M}_\ell,
+\end{equation}
+donde $s$ es de nuevo el isomorfismo de simetría. Compárese esta
+relación con la relación de antisimetría de VIII 2.2.11.

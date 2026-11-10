@@ -1,0 +1,145 @@
+\par
+Para (5), $R$ es formalmente liso sobre $\Lambda$, y por 4.4 y 4.11
+la sucesión
+\[
+0\longrightarrow H^1(X_0,\underline D^0_{X_0})
+ \longrightarrow[\underline M_{X_0}(k[\varepsilon])]
+ \longrightarrow H^0(X_0,\underline D^1_{X_0})
+ \longrightarrow0
+\]
+es exacta. Así,
+\[
+\begin{aligned}
+\dim\underline M_{X_0}
+&=\dim_kH^1(X_0,\underline D^0_{X_0})
+ +\dim_kH^0(X_0,\underline D^1_{X_0})\\
+&=\dim_kH^1(X_0,\underline D^0_{X_0})+m.
+\end{aligned}
+\]
+Basta, pues, mostrar que
+\[
+\dim_kH^1(X_0,\underline D^0_{X_0})+m
+=3g-3+\dim_kH^0(X_0,\underline D^0_{X_0}),
+\]
+o equivalentemente
+\[
+\chi(\underline D^0_{X_0})=3-3g+m,
+\]
+donde, para un $\mathcal O_{X_0}$-módulo coherente $\mathcal E$,
+ponemos
+\[
+\chi(\mathcal E)
+=\dim_kH^0(X_0,\mathcal E)-\dim_kH^1(X_0,\mathcal E).
+\]
+
+La característica de Euler de $\underline D^0_{X_0}$ no cambia al
+extender el cuerpo base a su clausura algebraica, de modo que podemos
+suponer que $k$ es algebraicamente cerrado. Sea $z$ un punto no liso
+de $X_0$, pongamos
+\[
+A=\widehat{\mathcal O}_{X_0,z},
+\]
+y sea $A'$ la normalización de $A$. Por hipótesis,
+\[
+A\simeq k[[x,y]]/(f),
+\]
+donde $f$ es una forma cuadrática no degenerada. Sobre el cuerpo
+algebraicamente cerrado $k$ podemos tomar $f=xy$, de modo que
+\[
+A\simeq k[[x,y]]/(xy).
+\]
+Se sigue inmediatamente que
+\[
+\ell(A'/A)=1,
+\qquad
+\operatorname{Der}_k(A,\mathfrak m_A)
+=\operatorname{Der}_k(A,A).
+\]
+Sea $C$ el conductor de $A$ en $A'$. Como $A$ es una intersección
+completa,
+\[
+\ell(A/C)=\ell(A'/A)=1,
+\]
+y por tanto $C=\mathfrak m_A$. En consecuencia,
+\[
+A'=\{a'\in K\mid a'\mathfrak m_A\subset\mathfrak m_A\},
+\]
+donde $K$ es el anillo total de fracciones de $A$.
+
+Afirmamos que
+\[
+\operatorname{Der}_k(A,A)
+ \subset\operatorname{Der}_k(A',A')
+\]
+dentro de $\operatorname{Der}_k(K,K)$. En efecto, sea
+$D\in\operatorname{Der}_k(A,A)$. Para $a'\in A'$ y
+$x\in\mathfrak m_A$, se tiene $xa'\in\mathfrak m_A$, de modo que
+$D(xa')\in\mathfrak m_A$ y $a'D(x)\in\mathfrak m_A$. La identidad
+\[
+D(xa')=a'D(x)+xD(a')
+\]
+da, por tanto, $xD(a')\in\mathfrak m_A$ para todo
+$x\in\mathfrak m_A$, de donde $D(a')\in A'$.
+
+%%%%%%%%%%  scan idx 141  |  folio 130  %%%%%%%%%%
+
+Además, la sucesión exacta
+\[
+0\longrightarrow\operatorname{Der}_k(A,A)
+ \longrightarrow\operatorname{Der}_k(A',A')
+ \longrightarrow A'/\mathfrak m_AA'\longrightarrow0
+\]
+puede escribirse
+\[
+0\longrightarrow\operatorname{Der}_k(A,A)
+ \longrightarrow\operatorname{Der}_k(A',A')
+ \longrightarrow A'/C\longrightarrow0.
+\]
+Si $X_0'$ es la normalización de $X_0$, estas sucesiones locales dan
+una sucesión exacta
+\[
+0\longrightarrow\underline D^0_{X_0}
+ \longrightarrow\underline D^0_{X_0'}
+ \longrightarrow\mathcal O_{X_0'}/C\longrightarrow0.
+\]
+Como $X_0$ es localmente una intersección completa,
+\[
+\ell(\mathcal O_{X_0'}/C)
+=2\ell(\mathcal O_{X_0'}/\mathcal O_{X_0})=2m,
+\]
+mientras que el teorema de Riemann--Roch da
+\[
+\chi(\underline D^0_{X_0'})=3-3(g-m).
+\]
+Por consiguiente,
+\[
+\begin{aligned}
+\chi(\underline D^0_{\sisi{X^0_0}{X_0}})
+&=\chi(\underline D^0_{X_0'})
+ -\ell(\mathcal O_{X_0'}/C)\\
+&=3-3(g-m)-2m=3-3g+m.
+\end{aligned}
+\]
+Esto concluye la demostración.
+\hfill$\square$
+
+\par\medskip
+\noindent\textbf{Observación 6.5.}
+En la fórmula del Teorema 6.4(5), el número
+$a=\dim_kH^0(X_0,\underline D^0_{X_0})$ se calcula fácilmente por el
+teorema de Riemann--Roch:
+\[
+a=
+\begin{cases}
+0,&g\geq2,\\
+1,&g=1,\\
+3,&g=0.
+\end{cases}
+\]
+
+Terminamos con una observación sobre la característica $2$. Si
+$\operatorname{char}k=2$, no hay ninguna forma cuadrática no
+degenerada en un número impar de variables. Equivalentemente, no hay
+ninguna singularidad cuadrática no degenerada de dimensión par en
+característica $2$. En este caso se puede considerar, en su lugar, una
+forma cuadrática de no degeneración maximal.

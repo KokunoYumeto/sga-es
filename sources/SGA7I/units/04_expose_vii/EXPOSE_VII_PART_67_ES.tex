@@ -1,0 +1,88 @@
+\par\medskip\noindent
+1.3.  \underline{Relaciones con los torsors rigidificados o
+birrigidificados}
+
+1.3.1.0.  Sean $P$ un objeto de $T$ provisto de una sección $e_P$,
+$G$ un grupo de \underline{$T$} y $E$ un torsor bajo $G_P$. Se llama
+\underline{rigidificación de} $E$ (relativamente a la sección dada
+$e_P$ de $P$) a una trivialización del torsor
+$E_1 = e_P^*(E)$ bajo $G$,
+%%%%%%%%%%  scan idx 156  |  folio 145  %%%%%%%%%%
+es decir, a una sección de este torsor. La terminología adoptada se
+inspira en el caso en que $G$ es conmutativo y se tiene
+
+\begin{equation}\tag{1.3.1.1}
+\mathrm{Hom}_{pt}(P,G) \;\simeq\; (e) \qquad ,
+\end{equation}
+donde el primer miembro denota el conjunto de los morfismos que
+transforman $e_P$ en la sección unidad $e_G$ de $G$; esta relación
+equivale al hecho de que el homomorfismo natural
+$\Gamma(G) \longrightarrow \mathrm{Hom}(P,G)$, que asocia a una
+sección $g$ de $G$ el morfismo constante $P \longrightarrow G$ de
+valor $g$, es un isomorfismo:
+
+\begin{equation}\tag{1.3.1.2}
+\Gamma(G) \;\xrightarrow{\;\sim\;}\; \mathrm{Hom}(P,G) \qquad .
+\end{equation}
+Se ve de inmediato, en efecto, que las relaciones equivalentes
+precedentes equivalen también a decir que todo automorfismo del torsor
+$E$ que respete la rigidificación dada es el automorfismo identidad
+(pues los automorfismos en cuestión corresponden precisamente a los
+elementos del primer miembro de (1.3.1.1)); en particular, bajo la
+condición (1.3.1.1), la categoría de los torsors bajo $G_P$
+rigidificados relativamente a $e_P$ es «rígida».
+
+1.3.2.  Sea además $Q$ un objeto de \underline{$T$} provisto de una
+sección $e_Q$, y designemos ahora por $E$ un torsor bajo
+$G_{P\times Q}$. Como $e_Q$ define una sección $e_{P\times Q/P}$ de
+$P\times Q$ sobre $P$, se pueden considerar sobre $E$ las
+rigidificaciones $\alpha$ relativas a esta sección (situándose en el
+topos inducido $\underline{T}_{/P}$), que se explicitan como las
+secciones del torsor inducido por $E$ sobre $P\times e_Q$.
+Intercambiando los papeles de $P$ y $Q$, pueden considerarse las
+rigidificaciones $\beta$ sobre $E$ relativas a la sección
+$e_{P\times Q/Q}$ de $P\times Q$ sobre $Q$ definida por $e_P$. Dos
+rigidificaciones parciales de esta índole se dicen \underline{compatibles}
+si las secciones $\alpha$ y $\beta$ coinciden sobre
+$e_P\times e_Q$, es decir, definen una misma sección del torsor
+$E_{1,1}$ bajo $G$, imagen
+%%%%%%%%%%  scan idx 157  |  folio 146  %%%%%%%%%%
+inversa de $E$ por la sección $(e_P,e_Q)$ de $P\times Q$. Se llama
+también \underline{birrigidificación} del torsor $E$ relativamente al
+par de secciones $(e_P,e_Q)$ a un par de rigidificaciones parciales
+compatibles. Si $G$ es conmutativo, se ve de inmediato que, para que el
+torsor $E$ admita una birrigidificación $(\alpha,\beta)$, es necesario
+y suficiente que admita rigidificaciones parciales $\alpha$ y $\beta$,
+y puede hallarse entonces una birrigidificación en la cual $\alpha$ (o
+$\beta$) esté elegida de antemano; basta, en efecto, corregir $\beta$
+mediante el morfismo $Q \longrightarrow G$ compuesto
+$Q \longrightarrow e \xrightarrow{\lambda} G$, donde la segunda
+flecha $\lambda$ está definida por la propiedad
+$\beta e_Q = (\alpha e_P)\lambda$.
+
+Siempre en el caso conmutativo, observemos que, si $E,E'$ son dos
+torsors birrigidificados bajo $G_{P\times Q}$, equivale decir que son
+isomorfos simplemente como $G_{P\times Q}$-torsors o como
+$G_{P\times Q}$-torsors birrigidificados; en otras palabras, si existe
+un isomorfismo $u : E \longrightarrow E'$ de $G_{P\times Q}$-torsors,
+puede hallarse un isomorfismo $v : E \longrightarrow E'$ de
+$G_{P\times Q}$-torsors que respete las birrigidificaciones. En efecto,
+al considerar la desviación de $u$ respecto de las birrigidificaciones
+dadas, se obtienen morfismos $f:P \longrightarrow G$ y
+$g : Q \longrightarrow G$ tales que $fe_P=ge_Q$, sea
+$a \in G(e)$; existe entonces un morfismo
+$P\times Q \longrightarrow G$ cuyos compuestos con
+$e_{P\times Q/P}$ y $e_{P\times Q/Q}$ sean, respectivamente, $f$ y
+$g$ (a saber, $h(p,q) = f(p)g(q)a^{-1}$), y puede tomarse $v = uh$.
+
+% Canon: SGA-SRC-001257.
+1.3.3.  La terminología de 1.3.1 se extiende de inmediato al caso en
+que se tiene un \underline{bitorsor} $E$ bajo $(G_P,G_P)$,
+entendiéndose que una rigidificación del bitorsor $E$ debe ser un
+isomorfismo de $\sisi{e_P(E)}{e_P^*(E)}$ con el bitorsor trivial
+$_sG_d$, es decir, está definida por una sección $e_E$ de
+$\sisi{e_P(E)}{e_P^*(E)}$ que es \underline{central},
+es decir, que satisface la condición $g.e_E = e_E.g$ ($g \in G(S)$).
+La terminología de las
+%%%%%%%%%%  scan idx 158  |  folio 147  %%%%%%%%%%
+birrigidificaciones se extiende del mismo modo al caso de los bitorsors.

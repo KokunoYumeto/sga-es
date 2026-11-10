@@ -1,0 +1,151 @@
+\par\medskip\noindent
+% Continuación Canon: SGA-SRC-001252.
+1.1.3.  La estructura de bitorsor de 1.1.2 bajo
+$(\sisi{G_P}{G_P},\sisi{G_P}{G_P})$ sobre
+$E$, en términos de la estructura de extensión (1.1.1), solo utilizaba
+una parte de la estructura multiplicativa de $E$, a saber, la
+multiplicación de pares de «puntos» uno de los cuales, al menos,
+provenía de un punto de $G$ (por medio de $i$). Vamos a interpretar
+ahora la estructura multiplicativa de $E$ como una estructura suplemen
+%%%%%%%%%%  scan idx 148  |  folio 137  %%%%%%%%%%
+taria sobre el bitorsor considerado. Para ello, consideremos primero
+dos secciones $p$, $p'$ de $P$, de donde, con las notaciones de
+1.1.2.1, se obtienen dos bitorsors $E_p$, $E_{p'}$ bajo $(G,G)$, a
+saber, las imágenes inversas en $E$ de dichas secciones
+$p,p' : e \longrightarrow P$ (NB: $e$ denota el objeto final de
+$\underline{T}$). Es entonces trivial que la multiplicación de $E$
+induce un morfismo de objetos de $\underline{T}$
+
+\begin{equation*}
+\varphi : \quad \sisi{P_p}{E_p} \times \sisi{P_{p'}}{E_{p'}}
+\ \longrightarrow\ \sisi{P_{pp'}}{E_{pp'}}
+\end{equation*}
+que satisface, en términos de las estructuras izquierdas y derechas de
+los tres bitorsors en juego (y tomando, como de costumbre, puntos con
+valores en un objeto arbitrario
+$S \in \mathrm{ob}\ \underline{T}$),
+
+\begin{equation}\tag{1.1.3.0}
+\left\{\ \begin{array}{l} \varphi(gx,x') = g\ \varphi(x,x')\ ,\ \ \varphi(x,x'g') = \varphi(x,x')g' \\[3ex] \qquad\qquad\qquad \varphi(xg,x') = \varphi(x,gx') \end{array}\right.
+\end{equation}
+$(g,g' \in G(S)$, $x \in \sisi{P_p}{E_p}(S)$,
+$x' \in \sisi{P_{p'}}{E_{p'}}(S))$. La tercera de estas relaciones se
+interpreta, en términos del producto fibrado contraído [2],
+
+\begin{equation*}
+\sisi{P_p}{E_p} \overset{G}{\times} \sisi{P_{p'}}{E_{p'}} \qquad ,
+\end{equation*}
+diciendo que el morfismo $\varphi$ se factoriza como
+
+\begin{equation*}
+\sisi{P_p}{E_p} \times \sisi{P_{p'}}{E_{p'}} \ \longrightarrow\
+\ \sisi{P_p}{E_p} \overset{G}{\times} \sisi{P_{p'}}{E_{p'}}
+\ \xrightarrow{\ \varphi_{p,p'}\ }\ \sisi{P_{pp'}}{E_{pp'}}
+\qquad ,
+\end{equation*}
+donde la primera flecha es el morfismo canónico de paso al cociente.
+Por otra parte, las dos primeras relaciones significan que el morfismo
+
+\begin{equation}\tag{1.1.3.1}
+\varphi_{p,p'} \ :\ \sisi{P_p}{E_p} \overset{G}{\times}
+\sisi{P_{p'}}{E_{p'}} \ \longrightarrow\ \sisi{P_{pp'}}{E_{pp'}}
+\end{equation}
+que acabamos de obtener es un homomorfismo de \underline{bitorsors},
+teniendo en cuenta la estructura de bitorsor sobre el primer miembro
+para la cual las operaciones
+%%%%%%%%%%  scan idx 149  |  folio 138  %%%%%%%%%%
+izquierdas (resp. derechas) de $G$ provienen de las operaciones
+izquierdas (resp. derechas) de $G$ sobre el primer factor
+$\sisi{P_p}{E_p}$ (resp. sobre el segundo factor
+$\sisi{P_{p'}}{E_{p'}}$). Observemos que (como todo homomorfismo de
+bitorsors bajo un par de grupos dado) el homomorfismo
+$\varphi_{p,p'}$ es necesariamente un \underline{isomorfismo}.
+
+La definición del isomorfismo precedente (1.1.3.1) se extiende de
+inmediato al caso en que $p,p'$, en lugar de ser secciones de $P$, son
+puntos de $P$ con valores en un objeto cualquiera $S$ de
+$\underline{T}$: basta aplicar lo anterior al topos inducido
+$\underline{T}_{/S}$ y a la extensión de grupos sobre $S$ deducida de
+(1.1.1) por cambio de base. Se comprueba entonces que la formación de
+los isomorfismos $\varphi_{p,p'}$ precedentes es «compatible con todo
+cambio de base» $S' \longrightarrow S$ (es decir, corresponde a un
+homomorfismo de secciones cartesianas de la categoría fibrada que se
+considera sobre la categoría $\underline{T}_{/P\times P}$ de los pares
+de flechas $p,p' : S \rightrightarrows P$ con destino $P$). El dato del
+sistema de los $\varphi_{p,p'}$ que satisfacen esta condición equivale
+también, por supuesto, al dato de $\varphi_{p,p'}$ en el caso
+«universal», correspondiente al caso en que $S = P\times P$ y $p,p'$
+son, respectivamente, las dos proyecciones $\mathrm{pr}_i$ ($i=1,2$)
+de $P\times P$ en $P$. Se interpreta entonces como un isomorfismo de
+bitorsors bajo $(G_{P\times P},G_{P\times P})$:
+
+\begin{equation}\tag{1.1.3.2}
+\varphi \ :\ \mathrm{pr}_1^*(E)\ \ \mathrm{pr}_2^*(E)\ \overset{\sim}{\longrightarrow}\ \pi^*(E) \qquad ,
+\end{equation}
+donde
+
+\begin{equation*}
+\pi \ :\ P\times P \ \longrightarrow\ P
+\end{equation*}
+es el morfismo de objetos de $\underline{T}$ que define la estructura
+multiplicativa del grupo $P$. Sin embargo, las propiedades de
+compatibilidad que siguen se enuncian más cómodamente en la forma de los
+datos (1.1.3.1), evitando recurrir a diagramas menos próximos a la
+intuición.
+
+
+%%%%%%%%%%  scan idx 150  |  folio 139  %%%%%%%%%%
+
+1.1.4.  Al escribir las relaciones (1.1.3.0), que nos permitieron
+expresar la ley de composición dada sobre $E$ en términos de
+isomorfismos de bitorsors (1.1.3.1), solo utilizamos la asociatividad de
+esta ley de composición en el caso del producto de tres «puntos» de $E$
+uno de los cuales, al menos, proviene de un punto de $G$. Si se quiere
+expresar la asociatividad completa en términos de los
+$\varphi_{p,p'}$, se llega a escribir, para tres puntos $p,p',p''$ de
+$P$ (con valores en un objeto $S$ de $\underline{T}$), que el diagrama
+siguiente es conmutativo:
+
+\begin{equation}\tag{1.1.4.1}
+\begin{tikzcd}[column sep=huge, row sep=large]
+ & E_{pp'}E_{p''} \arrow[dr, "{\varphi_{pp',p''}}"] & \\
+E_{p}E_{p'}E_{p''} \arrow[ur, "{\varphi_{p,p'}\wedge id}"] \arrow[dr, "{id\wedge\varphi_{p',p''}}"'] & & E_{pp'p''} \\
+ & E_{p}E_{p'p''} \arrow[ur, "{\varphi_{p,p'p''}}"'] &
+\end{tikzcd}
+\end{equation}
+% ESTRUCTURA: Rombo, 4 nodos, 4 flechas, todas flechas simples continuas con una sola punta rellena;
+%   sin ganchos, sin cabezas dobles, sin tildes de isomorfismo ni trazos discontinuos. NODOS (4
+%   exactamente): N1 (izquierda/vértice oeste, en la misma línea de base que la etiqueta impresa
+%   «(1.1.4.1)» situada en el margen izquierdo): E_p E_p' E_p'' [E con subíndice p, E con subíndice p',
+%   E con subíndice p'', yuxtapuestos]. N2 (arriba/vértice norte, por encima y a la derecha de N1):
+%   E_pp' E_p''. N3 (abajo/vértice sur, por debajo y a la derecha de N1): E_p E_p'p''. N4
+%   (derecha/vértice este): E_pp'p''. FLECHAS (4 exactamente): A1: N1 -> N2, flecha recta continua
+%   ascendente hacia la derecha, etiqueta encima/a la izquierda del cuerpo: \varphi_{p,p'}\wedge id.
+%   A2: N2 -> N4, flecha recta continua descendente hacia la derecha, etiqueta encima/a la derecha:
+%   \varphi_{pp',p''}. A3: N1 -> N3, flecha recta continua descendente hacia la derecha, etiqueta
+%   debajo/a la izquierda, ligeramente superpuesta a la punta en la fuente: id\wedge\varphi_{p',p''}.
+%   A4: N3 -> N4, flecha recta continua ascendente hacia la derecha, etiqueta encima/a la derecha:
+%   \varphi_{p,p'p''}. Las flechas entrantes A2 y A4 terminan en N4 desde la izquierda. Un punto final
+%   suelto «.» aparece en el extremo derecho del área del diagrama, muy a la derecha y algo por debajo
+%   de N4, al nivel de la fila N3.
+En este diagrama hemos escrito el producto contraído de bitorsors sin
+los signos $\overset{G_S}{\times}$, entendiéndose que la multiplicación
+contraída de dos bitorsors $Q.R$ se efectúa utilizando (para pasar al
+cociente en $Q\times R$) la operación del grupo estructural $G$
+\underline{a derecha sobre} $Q$ \underline{y a izquierda sobre} $R$.
+Se sabe, por otra parte, que esta operación de producto contraído es
+asociativa salvo un isomorfismo canónico [2], y efectuamos la
+identificación $(E_{p}E_{p'})E_{p''} \simeq
+E_{p}(E_{p'}E_{p''})$, escribiendo simplemente ambos miembros como
+$E_{p}E_{p'}E_{p''}$. En lo que sigue de esta exposición utilizaremos
+convenciones evidentes de esta naturaleza sin señalarlas expresamente
+cada vez.
+
+1.1.4.2.  Del mismo modo que el dato de los isomorfismos
+$\varphi_{p,p'}$ (1.1.3.1) se reduce al caso «universal»
+$S=P\times P$, $p=\mathrm{pr}_1,p' = \mathrm{pr}_2$ considerado en (1.1.3.2), también
+%%%%%%%%%%  scan idx 151  |  folio 140  %%%%%%%%%%
+para verificar las condiciones de asociatividad (1.1.4.1) podemos
+limitarnos al caso «universal» en que \sisi{$S=P\times P\times P$}{S=P$\times$P$\times$P},
+\sisi{$p=\mathrm{pr}_1$}{$p=pr_1$},\sisi{$p'=\mathrm{pr}_2$}{$p'=pr_2$},\sisi{$p''=\mathrm{pr}_3$}{$p''=pr_3$}. Dejamos al lector el cuidado de escribir
+el diagrama en cuestión con las notaciones que prefiera.

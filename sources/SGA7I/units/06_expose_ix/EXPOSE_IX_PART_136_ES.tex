@@ -1,0 +1,190 @@
+\par\medskip
+\noindent
+3. \underline{El caso de reducción semiestable. El teorema de reducción
+semiestable.}
+
+Damos primero un resultado auxiliar al estilo de SGA 3.
+
+\medskip
+\noindent
+\underline{Proposición} 3.1. \underline{Sea $S$ un esquema, sea $G$ un
+$S$-esquema en grupos conmutativo, plano, separado y de presentación
+finita sobre $S$, sea $H$ un esquema en grupos cuasiseparado localmente
+de tipo finito sobre $S$, sea $u:G\longrightarrow H$ un homomorfismo de
+$S$-esquemas en grupos, y pongamos $K=\ker u$. Para todo $s\in S$, sea
+$\bar s$ el espectro de una clausura algebraica de $k(s)$, y denotemos
+por $\mu(s)$ (respectivamente, $\alpha(s)$) el rango reductivo
+(respectivamente, el rango abeliano) de $K_s$, es decir, la dimensión
+del mayor subtoro (respectivamente, del mayor cociente variedad
+abeliana) de $(K_{\bar s})^o_{\mathrm{red}}$. Sean $s\in S$, $t\in S$
+una generalización de $s$, y $p$ el exponente característico de $k(s)$.}
+
+\smallskip
+\noindent
+a) \underline{Para todo entero $n>0$ primo con $p$, ${}_nK$ es étale,
+de tipo finito y separado sobre $S$ en un entorno de $s$, y se tiene la
+relación de divisibilidad}
+\begin{equation}\tag{3.1.1}
+ \operatorname{rank}({}_nK_s)\mid \operatorname{rank}({}_nK_t).
+\end{equation}
+
+\noindent
+b) \underline{Se tiene}
+\begin{equation}\tag{3.1.2}
+ \mu(s)+2\alpha(s)\leq \mu(t)+2\alpha(t).
+\end{equation}
+
+\noindent
+c) \underline{Si $(K_{\bar t})^o_{\mathrm{red}}$ es unipotente,
+entonces $(K_{\bar s})^o_{\mathrm{red}}$ también lo es.}
+
+\smallskip
+\noindent
+d) \underline{Supongamos que $G_s$ posee rango unipotente cero, que
+$H$ es liso sobre $S$ y que $u_t$ es una isogenia. Entonces $u$ es
+plano y cuasifinito sobre un entorno abierto $U$ de $s$; con mayor
+razón, $K|_U$ es plano y cuasifinito.}
+
+\smallskip
+\noindent
+e) \underline{Bajo las hipótesis de d), supongamos además que $u_t$ es
+un monomorfismo (y, por tanto, un isomorfismo de $G_t$ sobre un subgrupo
+abierto de $H_t$). Entonces $u_s$ es un isomorfismo de $G_s$ sobre un
+subgrupo abierto de $H_s$. Si, además, $S$ es irreducible con punto
+genérico $t$, existe un entorno abierto $U$ de $s$ tal que $u$ induce
+un isomorfismo de $G|_U$ sobre un subgrupo abierto de $H|_U$.}
+
+\medskip
+\noindent
+\underline{Demostración.}
+
+\smallskip
+\noindent
+a) Podemos suponer que $n$ es invertible sobre $S$. Entonces
+$n\,\mathrm{id}_G$ es étale sobre toda fibra (SGA 3, XV, 1.3); puesto
+que $G$ es plano y de presentación finita sobre $S$, el criterio
+fibrado de etalicidad (EGA IV, 17.8.2) muestra que
+$n\,\mathrm{id}_G$ es étale. Por tanto, su núcleo ${}_nG$ es étale;
+es también separado y de presentación finita sobre $S$, porque $G$ lo
+es. Análogamente, ${}_nH$ es localmente de tipo finito, cuasiseparado y
+formalmente no ramificado sobre $S$,\footnote{Al menos cuando $H$ es
+conmutativo. En el caso general, ${}_nH$ sigue siendo no ramificado
+sobre $S$ a lo largo de su sección unidad, que es todo lo que aquí se
+necesita.} de modo que su sección unidad es una inmersión abierta
+(EGA IV, 17.4.2 b')). En consecuencia, el núcleo de
+\[
+ {}_nu:{}_nG\longrightarrow {}_nH
+\]
+es un subesquema abierto de ${}_nG$, luego es étale sobre $S$; es
+cuasicompacto en ${}_nG$ y, por tanto, de presentación finita sobre
+$S$, y es separado sobre $S$ porque $G$ lo es. Este núcleo es
+manifiestamente ${}_nK$.
+
+La fórmula (3.1.1) se deduce de estas propiedades de ${}_nK$. En efecto,
+tras un cambio de base podemos reducirnos al caso en que $S$ es local
+henseliano con punto cerrado $s$, y utilizar entonces la descomposición
+de ${}_nK$ en ${}_nK^f$ y un esquema de fibra especial vacía
+(cf. 2.2.3). Más precisamente, el mismo argumento da un monomorfismo
+sobre las fibras geométricas
+\[
+ {}_nK(\bar s)\lhook\joinrel\longrightarrow {}_nK(\bar t).
+\]
+
+\smallskip
+\noindent
+b) Elijamos un entero $n>0$ primo con el exponente característico de
+$k(s)$ y con los rangos de los cocientes de las fibras geométricas de
+$K$ en $s$ y $t$ por sus componentes neutras reducidas. Los dos miembros
+de (3.1.1) se obtienen entonces elevando $n$, respectivamente, a
+potencias cuyos exponentes son los dos miembros de (3.1.2), como se
+deduce de la estructura conocida de los grupos algebraicos conmutativos.
+Así, b) se deduce de a).
+
+\smallskip
+\noindent
+c) La hipótesis de que $(K_{\bar t})^o_{\mathrm{red}}$ sea unipotente
+equivale a las igualdades $\mu(t)=\alpha(t)=0$, y análogamente para
+$K_{\bar s}$. La afirmación c) se deduce, pues, formalmente de b).
+
+\smallskip
+\noindent
+d) Puesto que $u_t$ es una isogenia, $K_t$ es finito. Estamos, por
+tanto, bajo las hipótesis de c), y $(K_{\bar s})^o_{\mathrm{red}}$ es
+unipotente. Como $G_s$ posee rango unipotente cero, se sigue que $K_s$
+es finito. Además, el hecho de que $u_t$ sea una isogenia da
+$\dim G_t=\dim H_t$. Puesto que $G$ y $H$ son planos y localmente de
+presentación finita, se tiene
+\[
+ \dim G_s=\dim G_t,\qquad \dim H_s=\dim H_t
+ \quad\text{(SGA 3, VI$_B$, 4.3)},
+\]
+y, por tanto, $\dim G_s=\dim H_s$. Como $\dim\ker u_s=0$, se sigue que
+$\dim H_s=\dim u_s(G_s)$ (SGA 3, VI$_B$, 1.2), lo cual, dado que $H_s$
+es liso, equivale a que $u_s$ sea plano (SGA 3, VI$_A$, 5.6). Existe,
+por tanto, un entorno abierto $U$ de $s$ tal que $u$ es plano y
+cuasifinito en los puntos de la sección unidad sobre $U$ (SGA 3,
+VI$_B$, 2.2(i) y 2.5(ii)). Como para $u_s$, se sigue que $u_{s'}$ es
+plano para todo $s'\in U$; por consiguiente, $u|_{G_U}$ es plano y
+cuasifinito, puesto que posee estas propiedades sobre toda fibra.
+
+\smallskip
+\noindent
+e) Para la primera afirmación, un cambio de base nos reduce de inmediato
+al caso en que $S$ es entero con punto genérico $t$, y por tanto a
+demostrar la segunda afirmación de e). Esta se deduce inmediatamente
+de d) y del lema siguiente.
+
+\medskip
+\noindent
+\underline{Lema} 3.1.3. \underline{Sea $S$ un esquema, sea $K$ un
+$S$-esquema cuasifinito de presentación finita, separado y plano sobre
+$S$, sean $s\in S$ y $t\in\sisi{T}{S}$ una generalización de $s$. Entonces}
+\[
+ \operatorname{rank}K_s\leq \operatorname{rank}K_t.
+\]
+\underline{Si $\operatorname{rank}$} $K_\eta\leq1$ \underline{para todo punto máximo
+$\eta$ de} $S$, \underline{entonces $K\longrightarrow S$ es una inmersión abierta
+(y, por tanto, un isomorfismo si admite una sección).}
+
+Para la primera afirmación, la localización estricta nos reduce al caso
+en que $S$ es estrictamente local. Descomponiendo $K$ como unión
+disjunta de un esquema finito $K^f$ y un esquema de fibra especial
+vacía, obtenemos
+\[
+ \operatorname{rank}K_s
+ =\operatorname{rank}K^f_s
+ =\operatorname{rank}K^f_t
+ \leq\operatorname{rank}K_t.
+\]
+La segunda igualdad se deduce de que $K^f$ es plano, finito y de
+presentación finita sobre $S$ y, por tanto, localmente libre sobre $S$.
+
+Para la segunda afirmación, el argumento precedente muestra ya que
+$\operatorname{rank}K_s\leq1$ para todo $s\in S$. Así, $K_s$ es vacío
+o isomorfo a $\operatorname{Spec}k(s)$. En consecuencia,
+$K\longrightarrow S$ es un monomorfismo (SGA 3, VI$_B$, 2.11) y, al
+ser plano y de presentación finita, es una inmersión abierta
+(EGA IV, 17.9.1). Esto demuestra el lema.
+
+\medskip
+\noindent
+\underline{Observación} 3.1.4. La parte 3.1 a), y el resto de la
+Proposición 3.1, no proporcionan información alguna sobre ${}_nK_s$
+cuando $n$ es una potencia de $p$ (para $p>1$). Al menos cuando $G$ es
+liso (y $S$ es localmente noetheriano o $H$ es de presentación finita
+sobre $S$), esencialmente el mismo método que en la demostración de a)
+proporciona tal información. En efecto, reduciéndonos al caso en que
+$S$ es local noetheriano completo y utilizando SGA 3, XV, 1.6 c), X,
+3.2, IX, 3.6, y IX, 5.2, se obtiene
+\begin{equation}\tag{3.1.4.1}
+ \operatorname{rank}_{\mathrm{mult}}({}_nK_s)
+ \mid
+ \operatorname{rank}_{\mathrm{mult}}({}_nK_t),
+\end{equation}
+donde $\operatorname{rank}_{\mathrm{mult}}$ denota el rango del mayor
+subgrupo de tipo multiplicativo del grupo algebraico conmutativo
+considerado (SGA 3, XVII, 7.2.1). Obsérvese que un grupo algebraico de
+torsión de tipo multiplicativo es finito. La fórmula (3.1.4.1) es
+válida para todo entero $n\geq1$. Se deduce de SGA 3, XVII, 4.6.1(vi)
+que, en c), si $K_t$ es unipotente (SGA 3, VII, 1.1), entonces $K_s$
+también lo es.

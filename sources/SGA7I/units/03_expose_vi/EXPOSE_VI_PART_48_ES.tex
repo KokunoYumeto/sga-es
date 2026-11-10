@@ -1,0 +1,97 @@
+\par\medskip
+\noindent\textbf{4.14.}
+Cerramos esta sección construyendo explícitamente una deformación
+formal versal en un caso sencillo. Cuando $X_0$ es afín y una
+intersección completa, tal deformación se escribe de inmediato. Sea
+\[
+A_0=k[x_1,\ldots,x_n]/(f_1,\ldots,f_r)=S/J,
+\]
+donde $S=k[x_1,\ldots,x_n]$, $J=(f_1,\ldots,f_r)$ y
+$f_1,\ldots,f_r$ es una sucesión $S$-regular. Tenemos una sucesión
+exacta
+\[
+\cdots\longrightarrow\operatorname{Der}_k(S,A_0)
+\longrightarrow\operatorname{Hom}_{A_0}(J/J^2,A_0)
+\longrightarrow D^1(A_0|k,A_0)\longrightarrow0.
+\]
+El $A_0$-módulo $J/J^2$ es libre de rango $r$, generado por las
+clases de $f_1,\ldots,f_r$, porque estos elementos forman una
+sucesión $S$-regular.
+
+Supongamos ahora que $D^1(A_0|k,A_0)$ es de dimensión finita sobre
+$k$; por ejemplo, supongamos que $A_0$ solo tiene puntos no lisos
+aislados. Pongamos
+\[
+d=\dim_kD^1(A_0|k,A_0),
+\]
+y elijamos aplicaciones
+\[
+p_i:J/J^2\longrightarrow A_0\qquad(1\leq i\leq d)
+\]
+cuyas clases formen una $k$-base de $D^1(A_0|k,A_0)$. Para
+$1\leq i\leq d$ y $1\leq j\leq r$, elijamos
+$P_{ij}\in\Lambda[x_1,\ldots,x_n]$ tal que
+\[
+P_{ij}\equiv p_i(f_j)\pmod{\mathfrak m_\Lambda+J},
+\]
+donde $\mathfrak m_\Lambda$ es el ideal maximal de $\Lambda$. Pongamos
+\[
+R=\Lambda[[t_1,\ldots,t_d]],
+\qquad
+B=R[x_1,\ldots,x_n]/(G_1,\ldots,G_r),
+\]
+donde
+\[
+G_j=F_j-\sum_{i=1}^d t_iP_{ij},
+\]
+y $F_j\in\Lambda[x_1,\ldots,x_n]$ se obtiene de $f_j$ levantando sus
+coeficientes de $k$ a $\Lambda$.
+
+El álgebra $R[x_1,\ldots,x_n]$ es plana sobre $R$, y las imágenes de
+$G_1,\ldots,G_r$ módulo $\mathfrak m_R$ forman la sucesión regular
+$f_1,\ldots,f_r$ en
+$k\otimes_RR[x_1,\ldots,x_n]$. Por tanto, $B$ es $R$-plana y
+$k\otimes_RB=A_0$. Por construcción, la aplicación
+\[
+\operatorname{Hom}_{\Lambda\text{-alg}}(R,k[\varepsilon])
+\longrightarrow D^1(A_0|k,A_0)
+=[\underline M_{\operatorname{Spec}(A_0)}(k[\varepsilon])]
+\]
+es biyectiva. Así, si
+
+%%%%%%%%%%  scan idx 122  |  folio 111  %%%%%%%%%%
+
+\[
+\operatorname{Spf}(B)
+=\varinjlim_\nu
+\operatorname{Spec}\bigl((R/\mathfrak m_R^{\nu+1})\otimes_RB\bigr),
+\]
+entonces $(R,\operatorname{Spf}(B))$ es un objeto de
+$\widehat{\underline M}_{\operatorname{Spec}(A_0)}$. El funtor
+\[
+\underline h_R\longrightarrow\underline M_{\operatorname{Spec}(A_0)}
+\]
+que induce es liso por 1.6, puesto que $R$ es un anillo de series
+formales sobre $\Lambda$. En otras palabras,
+$(R,\operatorname{Spf}(B))$ es un objeto formal versal de
+$\underline M_{\operatorname{Spec}(A_0)}$.
+
+Por 4.10(b), si ponemos en cambio
+\[
+B=R[[x_1,\ldots,x_n]]/(G_1,\ldots,G_r),
+\]
+entonces $(R,\operatorname{Spf}(B))$ es una deformación formal versal
+de $\operatorname{Spec}(A_0)$ para
+\[
+A_0=k[[x_1,\ldots,x_n]]/(f_1,\ldots,f_r).
+\]
+
+\medskip
+\noindent\textbf{Observación 4.15.}
+Sea $X_0$ un esquema de tipo finito sobre $k$ que solo tiene puntos
+no lisos aislados, y sea $(R,\mathfrak X)$ una deformación formal
+versal de $X_0$. La construcción precedente muestra que, cuando
+$X_0$ es afín y localmente una intersección completa, $\mathfrak X$
+es la formalización de un $R$-esquema de tipo finito. El mismo hecho
+se extiende fácilmente al caso no afín siempre que
+$H^2(X_0,\underline D^0_{X_0})=0$.

@@ -1,0 +1,140 @@
+%%%%%%%%%%  scan idx 58  |  folio 47  %%%%%%%%%%
+
+\underline{Lema 1.18. Supongamos que la condición (II$'$) se cumple
+para $\underline A$. Entonces:}
+
+(1) $[\underline A(D_{K'}(K))]$ está provisto de una única estructura
+de espacio vectorial tal que, funtorialmente en $V$,
+\[
+ [\underline A(D_V(K))]
+ \simeq
+ V\otimes_{K'}[\underline A(D_{K'}(K))].
+\]
+
+(2) Existe una aplicación lineal
+\[
+ \gamma:\operatorname{Hom}(\Omega,K')
+ \longrightarrow [\underline A(D_{K'}(K))]
+\]
+tal que, para todo $D\in\operatorname{Hom}(\Omega,K')$, el morfismo
+\[
+ [\underline A((1,D))]:
+ [\underline A(D_{K'}(K))]
+ \longrightarrow [\underline A(D_{K'}(K))]
+\]
+es $x\longmapsto x+\gamma(D)$.
+
+(3) Para todo
+$(u,D):D_V(K)\longrightarrow D_W(K)$, el morfismo inducido
+\[
+ (u,D):[\underline A(D_V(K))]
+ \longrightarrow[\underline A(D_W(K))],
+\]
+es decir,
+\[
+ (u,D):
+ V\otimes[\underline A(D_{K'}(K))]
+ \longrightarrow
+ W\otimes[\underline A(D_{K'}(K))],
+\]
+viene dado por
+\[
+ x\longmapsto u(x)+\gamma(D).
+\]
+
+Introduzcamos la notación
+\[
+\begin{aligned}
+ F(V)&=[\underline A(D_V(K))],\\
+ A&=F(K'),\\
+ F(u,D):F(V)&\longrightarrow F(W),\\[-.25ex]
+ &\quad\text{para el morfismo inducido por}\\[-.25ex]
+ &\quad (u,D):D_V(K)\longrightarrow D_W(K),\\
+ F(D):F(V)&\longrightarrow F(V),
+   &F(D)&=F(1,D).
+\end{aligned}
+\]
+Por (II$'$), y puesto que $K'$ es un objeto espacio vectorial sobre
+$K'$ en la categoría de los espacios vectoriales sobre $K'$,
+$F(K')$ es un objeto espacio vectorial sobre $K'$ en la categoría de
+los conjuntos y, por tanto, un espacio vectorial sobre $K'$. Esto
+demuestra (1). En adelante identificaremos $F(V)$ con $V\otimes A$.
+
+La identidad
+\[
+ (u,D)=(1,D)\circ(u,0)
+\]
+da
+\[
+ F(u,D)=F(D)\circ(u\otimes1_A).
+\]
+La funtorialidad de $F$ equivale a las identidades
+\[
+\begin{aligned}
+ F(0)&=\operatorname{Id},\\
+ F(D)\circ F(D')&=F(D+D'),\\
+ (u\otimes1)\circ F(D)
+   &=F(uD)\circ(u\otimes1_A).
+\end{aligned}
+\]
+
+Para todo $D:\Omega\longrightarrow V$ y todo $n\in\mathbb N$, sean
+\[
+ i:V\lhook\joinrel\longrightarrow V\oplus K'^{\,n},
+ \qquad
+ p:V\oplus K'^{\,n}\longrightarrow \sisi{K^{n}}{K'^{n}}
+\]
+la inclusión y la proyección canónicas. Entonces $piD=0$, y el
+diagrama siguiente es conmutativo:
+
+%%%%%%%%%%  scan idx 59  |  folio 48  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+ V\otimes A
+   \arrow[r]
+   \arrow[d,"{F(D)}"]
+ & (V\oplus K'^{\,n})\otimes A
+   \arrow[r]
+   \arrow[d,"{\sisi{F(i,D)}{F(i\,D)}}"]
+ & K'^{\,n}\otimes A
+   \arrow[d,equal]\\
+ V\otimes A
+   \arrow[r]
+ & (V\oplus K'^{\,n})\otimes A
+   \arrow[r]
+ & K'^{\,n}\otimes A.
+\end{tikzcd}
+\]
+
+Sea $x:K'^{\,n}\longrightarrow V$ un morfismo, pongamos
+$x_i=x(e_i)$ y sea $(a_i)$ una familia de elementos de $A$. Se tiene
+\[
+ (1_V+x)\circ i\circ D=D.
+\]
+Por consiguiente, si
+\[
+ F(i,D)\Bigl(\sum_i e_i a_i\Bigr)
+ =\sum_i e_i a_i+a,
+ \qquad a\in V\otimes A,
+\]
+entonces
+\[
+ F(D)\Bigl(\sum_i x_i a_i\Bigr)
+ =\sum_i x_i a_i+a,
+\]
+y $a$ es independiente de los $x_i$. Por tanto,
+\[
+\begin{aligned}
+ F(D)(y)&=y+G(D),\\
+ G(D+D')&=G(D)+G(D'),\\
+ uG(D)&=G(uD)
+   \qquad\text{para todo }u:V\longrightarrow W.
+\end{aligned}
+\]
+Todo $G$ de esta forma viene dado, para algún
+$\gamma\in\Omega\otimes A$, por
+\[
+ G(D)=(D\otimes1_A)(\gamma).
+\]
+Esto demuestra (2) y (3).

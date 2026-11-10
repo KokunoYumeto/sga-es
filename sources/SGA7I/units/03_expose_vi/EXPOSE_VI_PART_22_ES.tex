@@ -1,0 +1,249 @@
+\par
+Concluimos considerando la «representabilidad» de un grupoide
+cofibrado. Sea $\underline C$ una categoría fija. Todo objeto $R$ de
+$\underline C$ define un funtor
+\[
+ h_R:\underline C\longrightarrow(\mathrm{Sets}),
+ \qquad h_R(S)=\operatorname{Hom}_{\underline C}(R,S),
+\]
+y, por tanto, un funtor plenamente fiel
+\[
+ h:\underline C^{\mathrm{op}}
+ \longrightarrow
+ \underline{\operatorname{Hom}}(\underline C,(\mathrm{Sets})).
+\]
+Una \emph{cocategoría en $\underline C$} es un diagrama
+\[
+\begin{tikzcd}[column sep=huge]
+ h_{R_1}\times_{h_{R_0}}h_{R_1} \arrow[r]
+ & h_{R_1}
+   \arrow[r,shift left=3,"{s_1}"]
+   \arrow[r,shift right=3,"{s_2}"']
+ & h_{R_0} \arrow[l,"{\epsilon}" description]
+\end{tikzcd}
+\qquad
+\text{con }s_i\circ\epsilon=\operatorname{id}\quad(i=1,2),
+\]
+donde la primera flecha se denota por $c$ y
+\[
+ h_{R_1}\times_{h_{R_0}}h_{R_1}
+ = (h_{R_1})_{s_1}\times_{h_{R_0}}{}_{s_2}(h_{R_1}),
+\]
+tal que
+
+(i) $c$ es asociativo y compatible con $s_i$ para $i=1,2$;
+
+(ii) ambos compuestos
+\begin{align*}
+ h_{R_1}&\xrightarrow{\ \sim\ }
+ h_{R_0}\times_{h_{R_0}}h_{R_1}
+ \xrightarrow{\ \epsilon\times1\ }
+ h_{R_1}\times_{h_{R_0}}h_{R_1}
+ \xrightarrow{\ c\ }h_{R_1},\\[1ex]
+ h_{R_1}&\xrightarrow{\ \sim\ }
+ h_{R_1}\times_{h_{R_0}}h_{R_0}
+ \xrightarrow{\ 1\times\epsilon\ }
+ h_{R_1}\times_{h_{R_0}}h_{R_1}
+ \xrightarrow{\ c\ }h_{R_1}
+\end{align*}
+son identidades.
+
+Si $(R_0,R_1,s_1,s_2,\epsilon,c)$ es una cocategoría en
+$\underline C$, para todo $S\in\underline C$ definimos una categoría
+$h_{(R_0,R_1,\ldots)}(S)$ mediante
+\[
+ \operatorname{ob}h_{(R_0,R_1,\ldots)}(S)
+   =\operatorname{Hom}_{\underline C}(R_0,S),
+ \qquad
+ \operatorname{Fl}h_{(R_0,R_1,\ldots)}(S)
+   =\operatorname{Hom}_{\underline C}(R_1,S),
+\]
+con la composición dada por
+\[
+ c:h_{R_1}\times_{h_{R_0}}h_{R_1}\longrightarrow h_{R_1}.
+\]
+Las categorías así obtenidas dependen funtorialmente de $S$ y definen
+una categoría cofibrada $\underline h_{(R_0,R_1,\ldots)}$ sobre
+$\underline C$. Por ejemplo, todo objeto $R$ de $\underline C$ define
+una cocategoría discreta
+\[
+ \underline h_R
+ =\underline h_{(R,R,s_1,s_2,\epsilon,c)}
+\]
+tomando $s_1,s_2,\epsilon$ y $c$ todos iguales a los morfismos
+identidad. Un homomorfismo
+\[
+ (R_0,R_1,\ldots)\longrightarrow(R'_0,R'_1,\ldots)
+\]
+
+%%%%%%%%%%  scan idx 72  |  folio 61  %%%%%%%%%%
+
+de cocategorías es un par de morfismos de funtores representados
+$h_{R_0}\longrightarrow h_{R'_0}$ y
+$h_{R_1}\longrightarrow h_{R'_1}$ cuyo morfismo inducido
+\[
+ h_{(R_0,R_1,\ldots)}(S)
+ \longrightarrow h_{(R'_0,R'_1,\ldots)}(S)
+\]
+es un funtor para todo $S\in\underline C$. Toda cocategoría
+$(R_0,R_1,\ldots)$ posee, en particular, un homomorfismo
+\[
+ \epsilon:\underline h_{R_0}
+ \longrightarrow\underline h_{(R_0,R_1,\ldots)}.
+\]
+Un \emph{cogrupoide en $\underline C$} es una cocategoría
+$(R_0,R_1,\ldots)$ para la cual $h_{(R_0,R_1,\ldots)}(S)$ es un
+grupoide para todo $S\in\underline C$; equivalentemente,
+$\underline h_{(R_0,R_1,\ldots)}$ es una categoría cofibrada en
+grupoides sobre $\underline C$.
+
+En la práctica, las cocategorías y los cogrupoides aparecen del modo
+siguiente. Sea $P:\underline F\longrightarrow\underline C$ una
+categoría cofibrada, y fijemos un objeto $\xi$ de $\underline F$.
+Pongamos $R_0=P(\xi)$, y denotemos por $(R_0,\underline C)$ la categoría
+de flechas de $\underline C$ con fuente $R_0$. Sea
+$P:\underline F'\longrightarrow(R_0,\underline C)$ la imagen inversa de
+$\underline F$ por el funtor canónico
+$(R_0,\underline C)\longrightarrow\underline C$. Elijamos una sección
+cocartesiana $\xi^{\#}$ de $\underline F'$ sobre
+$(R_0,\underline C)$ tal que
+$\xi^{\#}(\operatorname{id}_{R_0})=\xi$. Así, para toda flecha
+$R_0\xrightarrow fS$ en $\underline C$, elegimos un $f$-morfismo
+cocartesiano $\xi\longrightarrow\xi^{\#}(f)$.
+
+Definamos
+\[
+ \operatorname{Hom}_{\xi^{\#}}:
+ (R_0\amalg R_0,\underline C)\longrightarrow(\mathrm{Sets})
+\]
+mediante
+\[
+ X=(f_1,f_2)\longmapsto
+ \operatorname{Hom}_{\underline F(S)}
+   (\xi^{\#}(f_1),\xi^{\#}(f_2)),
+\]
+donde $S$ es el blanco común de $f_1$ y $f_2$. Salvo equivalencia
+natural canónica, este funtor no depende de la elección de $\xi^{\#}$;
+en lo sucesivo escribiremos simplemente $\xi$ en lugar de $\xi^{\#}$.
+
+Supongamos que el funtor está representado por un objeto
+\[
+ X_0=
+ \left(R_0\sisi{\overset{s_1}{\underset{s_2}{=\!=}}}{\mathrel{\substack{\xrightarrow{\ s_1\ }\\[-.6ex]
+                              \xrightarrow[\ s_2\ ]{}}}}R_1\right)
+\]
+de $(R_0\amalg R_0,\underline C)$. Existe entonces un $R_0$-morfismo
+$\varphi:\xi(s_1)\longrightarrow\xi(s_2)$ en $\underline F$ tal que
+\[
+ \widetilde\varphi:
+ \operatorname{Hom}_{(R_0\amalg R_0,\underline C)}(X_0,X)
+ \longrightarrow\operatorname{Hom}_\xi(X)
+\]
+es biyectivo para todo $X$ en $(R_0\amalg R_0,\underline C)$. Entonces
+$X_0$ define naturalmente una cocategoría $(R_0,R_1,\ldots)$ en
+$\underline C$. En efecto, una terna de flechas
+
+%%%%%%%%%%  scan idx 73  |  folio 62  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=huge]
+ R_0 \arrow[r,shift left=3,"u"]
+     \arrow[r,"v"]
+     \arrow[r,shift right=3,"w"']
+ & S
+\end{tikzcd}
+\]
+en $\underline C$ define una composición
+\[
+ \operatorname{Hom}_{\underline F(S)}(\xi(v),\xi(w))
+ \times
+ \operatorname{Hom}_{\underline F(S)}(\xi(u),\xi(v))
+ \longrightarrow
+ \operatorname{Hom}_{\underline F(S)}(\xi(u),\xi(w)),
+\]
+y, por tanto, una ley de composición
+\[
+ h_{R_1}(S)\times_{h_{R_0}(S)}h_{R_1}(S)
+ \longrightarrow h_{R_1}(S),
+\]
+funtorial en $S$. Por consiguiente, $\operatorname{Hom}_\xi$ define la
+cocategoría $(R_0,R_1,\ldots)$ en $\underline C$ y la categoría
+cofibrada $\underline h_{(R_0,R_1,\ldots)}$ sobre $\underline C$.
+Explícitamente,
+\[
+ \operatorname{ob}\underline h_{(R_0,R_1,\ldots)}
+ =\coprod_{S\in\operatorname{ob}(\underline C)}
+   \operatorname{Hom}_{\underline C}(R_0,S).
+\]
+Una flecha
+\[
+ (R_0\xrightarrow fS)\longrightarrow(R_0\xrightarrow{f'}S')
+\]
+es un par de flechas $S\xrightarrow hS'$ y $R_1\xrightarrow uS'$ en
+$\underline C$ tales que
+\[
+ u\circ s_1=h\circ f,
+ \qquad u\circ s_2=f'.
+\]
+El funtor estructural
+$P:\underline h_{(R_0,R_1,\ldots)}\longrightarrow\underline C$ envía
+$(R_0\xrightarrow fS)$ a $S$.
+
+El par $(\xi,\varphi)$ define ahora un funtor
+\[
+ (\xi,\varphi):\underline h_{(R_0,R_1,\ldots)}
+ \longrightarrow\underline F
+ \quad\text{sobre }\underline C
+\]
+mediante
+\[
+ (R_0\xrightarrow fS)\longmapsto\xi(f)
+\]
+en los objetos y mediante
+\[
+ \left[(R_0\xrightarrow fS)
+ \xrightarrow{(h,u)}(R_0\xrightarrow{f'}S')\right]
+ \longmapsto
+ \left[\xi(f)\xrightarrow{h_*}\xi(hf)
+ \xrightarrow{u(\varphi)}\xi(f')\right]
+\]
+en las flechas. Para todo $S\in\underline C$, el funtor
+\[
+ (\xi,\varphi)(S):
+ \underline h_{(R_0,R_1,\ldots)}(S)\longrightarrow\underline F(S)
+\]
+es plenamente fiel por la representabilidad de
+$\operatorname{Hom}_\xi$. Se sigue que
+\[
+ (\xi,\varphi):\underline h_{(R_0,R_1,\ldots)}
+ \longrightarrow\underline F
+\]
+es una $\underline C$-equivalencia si y solo si $\xi$ es cuasi-inicial
+en $\underline F$ sobre $\underline C$, es decir, si todo objeto $a$ de
+$\underline F$ admite una flecha cocartesiana
+$\xi\longrightarrow a$.
+
+También se puede considerar el funtor
+\[
+ \operatorname{Isom}_\xi:
+ (R_0\amalg R_0,\underline C)\longrightarrow(\mathrm{Sets}),
+\]
+
+%%%%%%%%%%  scan idx 74  |  folio 63  %%%%%%%%%%
+
+dado por
+\[
+ X=(f_1,f_2)\longmapsto
+ \operatorname{Isom}_{\underline F(S)}(\xi(f_1),\xi(f_2)),
+\]
+donde $S$ es el blanco común de $f_1$ y $f_2$. Si este funtor está
+representado por un objeto $(R_0\rightrightarrows R_1)$ de
+$(R_0\amalg R_0,\underline C)$, entonces define un cogrupoide
+$(R_0,R_1,\ldots)$ en $\underline C$, junto con un funtor
+\[
+ (\xi,\varphi):\underline h_{(R_0,R_1,\ldots)}
+ \longrightarrow\underline F.
+\]
+Cuando $\underline F$ es un grupoide cofibrado, este funtor es una
+$\underline C$-equivalencia si y solo si $\xi$ es cuasi-inicial en
+$\underline F$ sobre $\underline C$.

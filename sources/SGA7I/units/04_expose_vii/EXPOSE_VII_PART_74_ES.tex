@@ -1,0 +1,95 @@
+Simétricamente, una estructura de extensión en la dirección de $Q$,
+es decir, \sisi{de $P_Q$ por $G_Q$}{de $Q_P$ por $G_P$}, se describe
+mediante isomorfismos de torsores bajo $G_S$
+\begin{equation}\tag{2.0.7}
+ \psi_{p;q,q'}:E_{p,q}E_{p,q'}
+ \xrightarrow{\ \sim\ }\sisi{E_{pp',q}}{E_{p,qq'}},
+\end{equation}
+para $p\in P(S)$ y $q,q'\in Q(S)$. Estos son funtoriales en $S$ y
+satisfacen las condiciones simétricas de asociatividad y
+conmutatividad
+\begin{equation}\tag{2.0.8}
+\begin{tikzcd}[column sep=5.1em,row sep=3.4em]
+ & E_{p,qq'}E_{p,q''}
+   \arrow[rd,"{\psi_{p;qq',q''}}"] & \\
+ E_{p,q}E_{p,q'}E_{p,q''}
+   \arrow[ru,"{\psi_{p;q,q'}\wedge\mathrm{id}}"]
+   \arrow[rd,"{\mathrm{id}\wedge\psi_{p;q',q''}}"']
+ && E_{p,qq'q''} \\
+ & E_{p,q}E_{p,q'q''}
+   \arrow[ru,"{\sisi{\psi_{p;q;q'q''}}{\psi_{p;q,q'q''}}}"'] &
+\end{tikzcd}
+\end{equation}
+para $p\in P(S)$ y $q,q',q''\in Q(S)$, y
+\begin{equation}\tag{2.0.9}
+\begin{tikzcd}[column sep=5em,row sep=3.1em]
+ E_{p,q}E_{p,q'} \arrow[r,"{\psi_{p;q,q'}}"]
+   \arrow[d,"\mathrm{sym}"']
+ & E_{p,qq'} \arrow[d,"\mathrm{id}"] \\
+ E_{p,q'}E_{p,q} \arrow[r,"{\psi_{p;q',q}}"']
+ & E_{p,q'q}.
+\end{tikzcd}
+\end{equation}
+Aquí $p\in P(S)$ y $q,q'\in Q(S)$.
+
+%%%%%%%%%%  scan idx 170  |  folio 159  %%%%%%%%%%
+
+\underline{Definición 2.1. Sean $P,Q,G$ grupos abelianos de
+$\underline T$, y sea $E$ un torsor bajo $G_{P\times Q}$ provisto de
+una estructura de extensión en la dirección de $P$, es decir,
+\sisi{de $Q_P$ por $G_P$}{de $P_Q$ por $G_Q$}, definida por los
+isomorfismos (2.0.4), y de una estructura de extensión en la dirección
+de $Q$, es decir, \sisi{de $P_Q$ por $G_Q$}{de $Q_P$ por $G_P$},
+definida por los isomorfismos (2.0.7), ambas funtoriales en $S$ y
+sujetas a las condiciones de asociatividad y conmutatividad anteriores.
+Se dice que las dos estructuras son compatibles si, para todo objeto
+$S$ de $\underline T$ y $p,p'\in P(S)$, $q,q'\in Q(S)$, conmuta el
+diagrama siguiente:}
+\begin{equation}\tag{2.1.1}
+\begin{tikzcd}[column sep=2.7em,row sep=3.2em,font=\scriptsize]
+ && E_{p,qq'}E_{p',qq'}
+    \arrow[rrdd,"{\varphi_{p,p';qq'}}"] && \\
+ E_{p,q}E_{p,q'}E_{p',q}E_{p',q'}
+    \arrow[rru,"{\psi_{p;q,q'}\wedge\psi_{p';q,q'}}"]
+    \arrow[d,"{}"'] &&&& \\
+ E_{p,q}E_{p',q}E_{p,q'}E_{p',q'}
+    \arrow[rrd,"{\varphi_{p,p';q}\wedge\varphi_{p,p';q'}}"']
+ &&&& E_{pp',qq'} \\
+ && E_{pp',q}E_{pp',q'}
+    \arrow[rru,"{\psi_{pp';q,q'}}"'] &&
+\end{tikzcd}
+\end{equation}
+\underline{donde la flecha vertical se deduce del isomorfismo de
+simetría}
+\[
+ E_{p,q'}E_{p',q}\xrightarrow{\ \sim\ }E_{p',q}E_{p,q'}.
+\]
+\underline{Se llama \emph{biextensión} de $(P,Q)$ por $G$ a un torsor
+$E$ bajo $G_{P\times Q}$ provisto de una estructura de extensión
+\sisi{de $Q_P$ por $G_P$}{de $P_Q$ por $G_Q$} y de una estructura de
+extensión \sisi{de $G_Q$ por $P_Q$}{de $Q_P$ por $G_P$}, compatibles
+en el sentido precedente.}
+
+%%%%%%%%%%  scan idx 171  |  folio 160  %%%%%%%%%%
+
+2.1.1. Equivalentemente, una estructura de biextensión sobre el torsor
+$E$ bajo $G_{P\times Q}$ viene dada por dos leyes de composición
+parcialmente definidas $\varphi(x,y)$ y $\psi(x,y)$ sobre $E$. La
+primera está definida cuando $\pr_2j(x)=\pr_2j(y)$, y la segunda cuando
+$\pr_1j(x)=\pr_1j(y)$, donde $j:E\longrightarrow P\times Q$ es el
+morfismo estructural del torsor. Además de relaciones de asociatividad
+del tipo
+\begin{equation}\tag{2.1.1.1}
+ \varphi(gx,y)=\varphi(x,gy)=g\varphi(x,y)
+ \qquad(x,y\in E(S),\ g\in G(S))
+\end{equation}
+y de las relaciones análogas para $\psi$, los axiomas dicen que estas
+leyes de composición parcial son asociativas y conmutativas y que
+satisfacen
+\begin{equation}\tag{2.1.1.2}
+ \varphi(\psi(x,y),\psi(z,t))
+ =\psi(\varphi(x,z),\varphi(y,t)),
+\end{equation}
+donde $x,y,z,t$ pertenecen respectivamente a
+$E_{p,q}(S),E_{p,q'}(S),E_{p',q}(S),E_{p',q'}(S)$.
+

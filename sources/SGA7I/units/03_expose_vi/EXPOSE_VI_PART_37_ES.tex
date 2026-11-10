@@ -1,0 +1,181 @@
+%%%%%%%%%%  scan idx 103  |  folio 92  %%%%%%%%%%
+
+\underline{Corolario 3.14.}
+Sea $R$ noetheriano, y sea $A$ un $R$-álgebra de tipo finito
+que es lisa en todo punto salvo en un punto cerrado
+$x\in\operatorname{Spec}(A)$. Entonces existen isomorfismos
+\[
+ D^1(A|R,A)\simeq D^1(A_x|R,A_x)
+ \simeq D^1(\widehat A_x|R,\widehat A_x).
+\]
+
+\underline{Demostración.}
+Como $A$ es lisa sobre $R$ fuera de $x$,
+$D^1(A|R,A)$ es un $A$-módulo de tipo finito con soporte en
+$\{x\}$. Por tanto,
+\[
+ D^1(A|R,A)=D^1(A|R,A)_x
+ =\widehat{D^1(A|R,A)_x}.
+\]
+La afirmación se deduce ahora de 3.13.
+\hfill$\square$
+
+\underline{Observación 3.15.}
+Sea $R$ un anillo topológico y $A$ un $R$-álgebra topológica.
+Para todo $A$-módulo $E$, definamos
+\[
+ D^i_{\mathrm{top}}(A|R,E)
+ =\varinjlim_\alpha
+ D^i(A_\alpha|R_\alpha,A_\alpha\otimes_AE),
+\]
+donde $A_\alpha=A/J_\alpha$, $R_\alpha=R/I_\alpha$, y
+$J_\alpha$ e $I_\alpha$ son abiertos en $A$ y $R$, respectivamente.
+Así, $A$ es formalmente lisa como $R$-álgebra topológica precisamente
+cuando $D^1_{\mathrm{top}}(A|R,E)=0$ para todo $A$-módulo $E$.
+
+Sea ahora $X$ un esquema sobre un anillo $R$, y sea $\underline E$ un
+$\mathcal O_X$-módulo cuasicoherente. Definimos haces
+\[
+ \underline D^i_{X|R}(\underline E)
+ =\underline D^i(X|R,\underline E)
+\]
+sobre $X$ a partir de los prehaces sobre los abiertos afines
+$U\subset X$ dados por
+\[
+ \bigl[\underline D^i_{X|R}(\underline E)\bigr](U)
+ =D^i\bigl(\Gamma(U,\mathcal O_X)|R,
+            \Gamma(U,\underline E)\bigr).
+\]
+Si $R$ es noetheriano y $X$ es de tipo finito sobre $R$, la
+propiedad de localización 3.13 muestra que estos prehaces forman
+canónicamente $\mathcal O_X$-módulos cuasicoherentes.
+
+Cuando no haya posibilidad de confusión, abreviamos
+\[
+ \underline D^i_{X|R}
+ =\underline D^i_{X|R}(\mathcal O_X).
+\]
+Todas las afirmaciones de 3.13 tienen formulaciones correspondientes
+para los haces cuasicoherentes
+$\underline D^i_{X|R}(\underline E)$. Dejamos esas formulaciones al
+lector y registramos a continuación las propiedades más pertinentes
+para nuestro propósito.
+
+\underline{Corolario 3.15.}
+Sea $R$ noetheriano y sea $X$ un $R$-esquema de tipo finito.
+
+%%%%%%%%%%  scan idx 104  |  folio 93  %%%%%%%%%%
+
+\begin{enumerate}[label=(\alph*)]
+\item Para todo $\mathcal O_X$-módulo coherente $\underline E$,
+$\underline D^i_{X|R}(\underline E)$ es también coherente para todo
+$i$. Además,
+\[
+ \operatorname{Supp}\underline D^i_{X|R}(\underline E)
+ \subset X^{\mathrm{Sing}}
+ \qquad(i>0),
+\]
+donde
+\[
+ X^{\mathrm{Sing}}
+ =\{x\in X\mid X\text{ no es liso sobre }R\text{ en }x\}.
+\]
+
+\item Si $X$ es plano sobre $R$, entonces para toda $R$-álgebra $S$
+existe un isomorfismo canónico
+\[
+ \underline D^i_{X\otimes_RS\,|\,S}(\underline E)
+ \xrightarrow{\ \sim\ }
+ \underline D^i_{X|R}(\underline E)
+\]
+para todo $i$.
+
+\item Supongamos que $X$ es una intersección completa relativa sobre
+$R$. Para todo homomorfismo sobreyectivo de anillos
+$S\longrightarrow R$, existe una sucesión exacta
+\[
+0\longrightarrow\underline D^1_{X|R}(\underline E)
+\longrightarrow\underline D^1_{X|S}(\underline E)
+\longrightarrow
+\underline{\operatorname{Hom}}_{\mathcal O_X}
+ \bigl((I/I^2)\otimes_R\mathcal O_X,\underline E\bigr)
+\longrightarrow0,
+\]
+donde $I=\ker(S\longrightarrow R)$. Si, además, $R$ es local
+con cuerpo residual $k$ y $X$ es plano sobre $R$, entonces
+\[
+0\longrightarrow
+ \underline D^1_{X_0|k}(\mathcal O_{X_0})
+\longrightarrow
+ \underline D^1_{X|S}(\mathcal O_{X_0})
+\longrightarrow
+ D^1(R|S,k)\otimes_k\mathcal O_{X_0}
+\longrightarrow0,
+\]
+donde $X_0=X\otimes_Rk$.
+\end{enumerate}
+
+\underline{Demostración.}
+La parte (a) se deduce de la finitud y de las descripciones en grados
+bajos de 3.12, mientras que (b) se deduce de 3.12(3).
+
+Para (c), como $X$ es una intersección completa relativa sobre $R$,
+tenemos $\underline D^i_{X|R}(\underline E)=0$ para todo $i\geq2$.
+La sucesión de transitividad 3.12(2) proporciona, por tanto, una
+sucesión exacta
+\begin{multline*}
+0\longrightarrow\underline D^0_{X|R}(\underline E)
+\longrightarrow\underline D^0_{X|S}(\underline E)
+\longrightarrow\underline D^0_{R|S}(\underline E)
+\longrightarrow\underline D^1_{X|R}(\underline E)\\
+\longrightarrow\underline D^1_{X|S}(\underline E)
+\longrightarrow\underline D^1_{R|S}(\underline E)
+\longrightarrow0,
+\end{multline*}
+donde los haces cuasicoherentes
+$\underline D^i_{R|S}(\underline E)$ sobre $X$ se definen en todo
+abierto afín $U\subset X$ mediante
+\[
+ \bigl[\underline D^i_{R|S}(\underline E)\bigr](U)
+ =D^i(R|S,\underline E(U)).
+\]
+Como $S\longrightarrow R$ es sobreyectivo,
+$\underline D^0_{R|S}(\underline E)=0$; y la descripción en grados
+bajos de 3.12(8) da
+\[
+ \underline D^1_{R|S}(\underline E)
+ =\underline{\operatorname{Hom}}_{\mathcal O_X}
+  \bigl((I/I^2)\otimes_R\mathcal O_X,\underline E\bigr).
+\]
+Esto demuestra la primera sucesión exacta.
+
+%%%%%%%%%%  scan idx 105  |  folio 94  %%%%%%%%%%
+
+Si $X$ es plano sobre $R$, entonces, para todo
+$\mathcal O_{X_0}$-módulo cuasicoherente $\underline E$, existen
+isomorfismos canónicos
+\[
+ \underline D^i_{X_0|k}(\underline E)
+ \xrightarrow{\ \sim\ }
+ \underline D^i_{X|R}(\underline E)
+\]
+para todo $i$. En particular,
+\[
+ \underline D^1_{X_0|k}(\mathcal O_{X_0})
+ \xrightarrow{\ \sim\ }
+ \underline D^1_{X|R}(\mathcal O_{X_0}),
+\]
+de donde se deduce la segunda sucesión exacta.
+\hfill$\square$
+
+\underline{Observación 3.16.}
+Los haces cuasicoherentes $\underline D^i_{X|R}(\underline E)$
+definidos anteriormente deberían aparecer como los términos
+$E_2^{0,i}$ de una sucesión espectral que relacione la teoría local
+con la teoría global. L.~Illusie ha obtenido una teoría de este tipo
+en \emph{Lecture Notes in Mathematics} 239. Su método utiliza
+«álgebra homotópica», que generaliza los métodos de M.~André y
+D.~Quillen, en lugar de «álgebra cohomológica». Parece que el
+enfoque adoptado aquí puede globalizarse mediante la cohomología de
+Grothendieck en la categoría de esquemas, dotada de una topología
+apropiada que generalice la de la categoría afín.

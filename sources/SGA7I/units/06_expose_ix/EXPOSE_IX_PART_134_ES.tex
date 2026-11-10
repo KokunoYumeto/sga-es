@@ -1,0 +1,151 @@
+\par\medskip
+\noindent
+2.3. Supongamos de nuevo que $S$ es henseliano y que
+$\ell\ne p=\operatorname{char}k$. Utilizamos ahora la inclusión
+\begin{equation}\tag{2.3.1}
+ T_\ell(T_o)\hookrightarrow T_\ell(A_o^o)
+\end{equation}
+de (2.1.6), junto con la equivalencia de categorías recordada en 2.2.4.
+Obtenemos un subhaz $\ell$-ádico constante torcido canónico de
+$T_\ell(A^o)^f$, llamado la \underline{parte tórica de}
+$T_\ell(A^o)$,
+\begin{equation}\tag{2.3.2}
+ T_\ell(A^o)^t\hookrightarrow T_\ell(A^o)^f
+ \hookrightarrow T_\ell(A^o),
+\end{equation}
+caracterizado por la condición de que su fibra especial sea la
+inclusión (2.3.1):
+\begin{equation}\tag{2.3.3}
+ T_\ell(A^o)^t\times_Ss=T_\ell(T_o)
+ \hookrightarrow T_\ell(A_o^o).
+\end{equation}
+Más adelante daremos una interpretación de la parte tórica de
+$T_\ell(A^o)$ como el módulo de Tate $T_\ell(T)$ de un toro $T$ sobre
+$S$ que levanta el toro $T_o$ sobre $k$. Esta interpretación permitirá
+extender la definición de la parte tórica al caso $\ell=p$. Por el
+momento, y para fijar ideas, nos limitamos al caso $\ell\ne p$. En este
+caso, la parte tórica de $T_\ell(A^o)$ puede describirse mediante el
+$\mathbb Z_\ell$-submódulo correspondiente de
+$T_\ell(A(\overline K))$:
+\begin{equation}\tag{2.3.4}
+ T_\ell(A(\overline K))^t\hookrightarrow
+ T_\ell(A(\overline K))^f\hookrightarrow
+ T_\ell(A(\overline K)).
+\end{equation}
+Es estable bajo la acción de $\pi$; su primer término se define como
+$T_\ell(A^o)^t(\overline K)$ y, como cabría esperar, se denomina de
+nuevo el \underline{submódulo tórico} del módulo de Tate
+$T_\ell(A(\overline K))$. Así, este módulo de Tate lleva la filtración
+canónica de tres escalones (2.3.4). Aplicando las mismas consideraciones
+al esquema abeliano dual $A'_K$, obtenemos la filtración análoga de tres
+escalones
+\begin{equation}\tag{2.3.5}
+ T_\ell(A'(\overline K))^t\hookrightarrow
+ T_\ell(A'(\overline K))^f\hookrightarrow
+ T_\ell(A'(\overline K)).
+\end{equation}
+Los términos intermedios de (2.3.4) y (2.3.5), las «partes fijas», se
+describen en términos de las estructuras de $\pi$-módulos de los
+módulos de Tate de $A(\overline K)$ y $A'(\overline K)$ como sus
+submódulos de invariantes bajo el grupo de inercia $I$
+(\sisi{1.6.5}{2.2.5}). Las partes tóricas quedan entonces completamente
+descritas en términos de las partes fijas y del emparejamiento
+$\varphi$ de (1.0.2), mediante el teorema siguiente (del que ya aparece
+un caso particular en [11]).
+
+\medskip
+\noindent
+\underline{Teorema} 2.4. (\underline{Teorema de ortogonalidad}.)
+\underline{Sea $S$ un rasgo henseliano, sea $A_K$ un esquema abeliano
+sobre su cuerpo de fracciones $K$, sea $A'_K$ el esquema abeliano dual,
+y sea $\ell$ un primo distinto de la característica residual de $S$.
+Los módulos de Tate $T_\ell(A(\overline K))$ y
+$T_\ell(A'(\overline K))$ llevan entonces, respectivamente, las
+filtraciones canónicas (2.3.4) y (2.3.5) por la «parte fija» y la «parte
+tórica». La parte tórica $T_\ell(A(\overline K))^t$ es la intersección
+de la parte fija $T_\ell(A(\overline K))^f$ con el ortogonal de la parte
+fija $T_\ell(A'(\overline K))^f=T_\ell(A'(\overline K))^I$ respecto del
+emparejamiento canónico $\varphi$ de (1.0.3). Simétricamente, la parte
+tórica $T_\ell(A'(\overline K))^t$ es la intersección de
+$T_\ell(A'(\overline K))^f$ con el ortogonal de la parte fija
+$T_\ell(A(\overline K))^f=T_\ell(A(\overline K))^I$. (Aquí el
+superíndice $I$ denota el submódulo de invariantes bajo la acción del
+grupo de inercia $I$.)}
+
+\smallskip
+\noindent
+\underline{Demostración.}\quad a) Demostremos que
+$T_\ell(A(\overline K))^t$ es ortogonal a
+$T_\ell(A'(\overline K))^f$. Para ello, interpretamos la restricción
+de $\varphi$ a las partes fijas de los módulos de Tate mediante la
+biextensión canónica $W^o=W$ de (1.4.4). Esta es el prolongamiento
+canónico de la biextensión $W_K$ de $(A_K\sisi{;}{,}A'_K)$ por $\mathbb G_{mK}$
+a una biextensión de $(A^o,A'{}^o)$ por $\mathbb G_{mS}$. Según
+VIII~2.2, $W$ da lugar a un emparejamiento
+\begin{equation}\tag{2.4.1}
+ \varphi_{\sisi{w}{W}}:T_\ell(A^o)\times T_\ell(A'{}^o)
+ \longrightarrow T_\ell(\mathbb G_{mS}),
+\end{equation}
+del que se obtiene el emparejamiento $\varphi$ de (1.0.3) pasando a los
+puntos con valores en $\overline K$. Se sigue que la restricción de
+$\varphi$ a las partes fijas consideradas en 2.4 se obtiene, pasando a
+los puntos con valores en $\overline K$, del emparejamiento
+\begin{equation}\tag{2.4.2}
+ T_\ell(A^o)^f\times T_\ell(A'{}^o)^f
+ \longrightarrow T_\ell(\mathbb G_{mS}),
+\end{equation}
+restricción de (2.4.1). Puesto que los dos factores del miembro
+izquierdo de (2.4.2) son ahora haces $\ell$-ádicos constantes torcidos,
+este emparejamiento puede estudiarse sobre las fibras especiales. Las
+fibras de ambos factores son precisamente los módulos de Tate
+$T_\ell(A_o^o)$ y $T_\ell(A'{}_o^o)$ (2.2.3.3), y el emparejamiento
+inducido sobre las fibras especiales por (2.4.2) es
+\begin{equation}\tag{2.4.3}
+ T_\ell(A_o^o)\times T_\ell(A'{}_o^o)
+ \longrightarrow T_\ell(\mathbb G_{mk}),
+\end{equation}
+obtenido de la biextensión $W_o$ de $(A_o^o,A'{}_o^o)$ por
+$\mathbb G_{mk}$, restricción de $W$ a las fibras especiales.
+
+Recordemos de 2.3 que la parte tórica de $T_\ell(A(\overline K))$ se
+obtiene pasando a los puntos con valores en $\overline K$ en el subhaz
+$\ell$-ádico constante torcido $T_\ell(A^o)^t$ de $T_\ell(A^o)^f$.
+Así, la relación de ortogonalidad que se quiere demostrar expresa que
+el emparejamiento inducido por (2.4.2),
+\begin{equation}\tag{2.4.4}
+ T_\ell(A^o)^t\times T_\ell(A'{}^o)^f
+ \longrightarrow T_\ell(\mathbb G_{mS}),
+\end{equation}
+es idénticamente nulo. Basta comprobarlo para el emparejamiento
+correspondiente sobre las fibras especiales, que por la definición de
+la parte tórica es
+\begin{equation}\tag{2.4.5}
+ T_\ell(T_o)\times T_\ell(\sisi{A_o^{\,o}}{A_o^{\prime\,o}})
+ \longrightarrow T_\ell(\mathbb G_{mk}),
+\end{equation}
+inducido por (2.4.3). Según VIII~4.10, este emparejamiento es
+necesariamente nulo, lo que demuestra la ortogonalidad afirmada.
+
+\smallskip
+\noindent
+b) Demostremos que la inclusión
+\begin{equation}\tag{2.4.6}
+ T_\ell(A(\overline K))^t\subset
+ T_\ell(A(\overline K))^f\cap
+ \bigl(T_\ell(A'(\overline K))^f\bigr)^\perp
+\end{equation}
+es una igualdad, donde $\perp$ denota el ortogonal. Equivalentemente,
+en el emparejamiento (2.4.2), el anulador del segundo factor ---que,
+como acabamos de ver, contiene la parte tórica $T_\ell(A^o)^t$--- es
+igual a esta parte tórica. Puesto que se trata de nuevo de relaciones
+entre haces $\ell$-ádicos constantes torcidos, basta comprobar la
+afirmación sobre las fibras especiales: a saber, que la inclusión ya
+obtenida \sisi{(1.10)}{(2.4.7)},
+\begin{equation}\tag{2.4.7}
+ T_\ell(T_o)\subset T_\ell(A'{}_o^o)^\perp
+\end{equation}
+es una igualdad. En otras
+palabras, debemos comprobar que la biextensión $W_o$ de
+$(A_o^o,A'{}_o^o)$ es \underline{no degenerada por la izquierda}
+(VIII~4.11). Pero esto es precisamente lo que ya observamos en 1.5,
+como consecuencia de un resultado de la tesis de Raynaud.

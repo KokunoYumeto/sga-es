@@ -1,0 +1,356 @@
+\subsection*{1. Diversos casos particulares sobre un topos cualquiera}
+
+1.1. En esta sección y en la siguiente, como en el Exposé VII, $T$
+denota un topos, y $P,Q,G$ denotan tres grupos abelianos de $T$. Se
+tiene, pues, un isomorfismo canónico (VII 3.6.5)
+\begin{equation}\tag{1.1.1}
+ \Biext^1(P,Q;G)
+ \simeq
+ \Ext^1\!\left(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G\right).
+\end{equation}
+Recordemos los isomorfismos canónicos (llamados isomorfismos de Cartan)
+\begin{equation}\tag{1.1.2}
+\begin{split}
+ \Ext^1\!\left(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G\right)
+ &\simeq \Ext^1\!\left(P,R\uHom(Q,G)\right)\\
+ &\simeq \Ext^1\!\left(Q,R\uHom(P,G)\right).
+\end{split}
+\end{equation}
+Todos estos isomorfismos son funtoriales en los tres argumentos
+$P,Q,G$.
+
+\sisi{Teniendo en cuenta que los objetos de homología de
+$P\mathbin{\overset{\mathbb L}{\otimes}}Q$ son los
+$\Tor_i(P,Q)$, que se anulan para $i\geq1$, se deduce de (1.1.1) la
+siguiente sucesión exacta infinita:}{Tomando el truncamiento estándar
+del producto tensorial derivado, cuyos objetos de homología son los
+$\Tor_i(P,Q)$, se obtiene de (1.1.1) la siguiente sucesión exacta
+infinita:}
+\begin{equation}\tag{1.1.3}
+\begin{aligned}
+0\longrightarrow{}&
+ \Ext^1(P\otimes Q,G)
+ \longrightarrow \Biext^1(P,Q;G)
+ \longrightarrow \Hom(\Tor_1(P,Q),G)\\
+ \longrightarrow{}&
+ \Ext^2(P\otimes Q,G)
+ \longrightarrow
+ \Ext^2\!\left(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G\right)
+ \longrightarrow\cdots .
+\end{aligned}
+\end{equation}
+Por otra parte, como los objetos de cohomología de $R\uHom(Q,G)$ son
+los $\uExt^i(Q,G)$, la primera igualdad de (1.1.2) da lugar a la
+sucesión exacta de cinco términos
+\begin{equation}\tag{1.1.4}
+\begin{aligned}
+0\longrightarrow{}&
+ \Ext^1(P,\uHom(Q,G))
+ \longrightarrow \Biext^1(P,Q;G)
+ \longrightarrow \Hom(P,\uExt^1(Q,G))\\
+ \longrightarrow{}&
+ \Ext^2(P,\uHom(Q,\sisi{P}{G}))
+ \longrightarrow \Ext^2(P,R\uHom(Q,G)),
+\end{aligned}
+\end{equation}
+
+%%%%%%%%%%  scan idx 232  |  folio 221  %%%%%%%%%%
+
+asociada a la sucesión espectral usual
+\[
+ \Ext^*(P,R\uHom(Q,G))
+ \Longleftarrow
+ \Ext^p(P,\uExt^q(Q,G)).
+\]
+Dejamos al lector, si siente la necesidad, la tarea de explicitar la
+primera flecha de (1.1.3), respectivamente de (1.1.4), por medio del
+\underline{funtor natural plenamente fiel}
+\begin{equation}\tag{1.1.5}
+ \operatorname{EXT}(P\otimes Q,G)
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;G),
+\end{equation}
+respectivamente
+\begin{equation}\tag{1.1.6}
+ \operatorname{EXT}(P,\uHom(Q,G))
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;G),
+\end{equation}
+donde $\operatorname{EXT}$ y $\operatorname{BIEXT}$ denotan las
+categorías evidentes de extensiones y biextensiones.
+
+Naturalmente, el isomorfismo
+\[
+ \Biext^1(P,Q;G)\simeq\Ext^1(Q,R\uHom(P,G))
+\]
+da lugar a una sucesión exacta análoga a (1.1.3), con los papeles de
+$P$ y $Q$ intercambiados. Su primera flecha puede explicitarse por
+medio del funtor plenamente fiel
+\begin{equation}\tag{1.1.7}
+ \operatorname{EXT}(Q,\uHom(P,G))
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;G)
+\end{equation}
+análogo a (1.1.6).
+
+1.2. Supongamos que
+\begin{equation}\tag{1.2.1}
+ \Tor_1(P,Q)=0.
+\end{equation}
+Entonces (1.1.3) proporciona un isomorfismo canónico
+\begin{equation}\tag{1.2.2}
+ \Biext^1(P,Q;G)\simeq\Ext^1(P\otimes Q,G).
+\end{equation}
+Así ocurre, por ejemplo, si $P$ o $Q$ es un $\mathbb Z$-módulo
+\underline{plano}. Más precisamente, bajo la condición (1.2.1), el
+funtor (1.1.5) es una equivalencia de categorías.
+
+%%%%%%%%%%  scan idx 233  |  folio 222  %%%%%%%%%%
+
+1.3. Supongamos que
+\begin{equation}\tag{1.3.1}
+ P\otimes Q=0.
+\end{equation}
+Entonces (1.1.3) proporciona un isomorfismo canónico
+\begin{equation}\tag{1.3.2}
+ \Biext^1(P,Q;G)\simeq\Hom(\Tor_1(P,Q),G).
+\end{equation}
+El caso de mayor interés para nosotros en el que se cumple (1.3.1) es
+aquel en que existe un entero $n>0$ tal que
+\begin{equation}\tag{1.3.3}
+ nP=P,\qquad
+ Q=\varinjlim_i {}_{n^i}Q;
+\end{equation}
+es decir, $P$ es divisible por $n$ y $Q$ es límite de subgrupos
+anulados por potencias de $n$. Pongamos, como de costumbre,
+\[
+ T_n(P)=({}_{n^i}P)_{i\geq0}\quad\text{(un sistema proyectivo)},\qquad
+ {}_{n^\infty}P=\varinjlim_i{}_{n^i}P.
+\]
+De (1.3.3) se obtienen las fórmulas siguientes, más precisas que
+(1.3.1):
+\begin{equation}\tag{1.3.4}
+\begin{split}
+ P\otimes Q&=0,\\
+ \Tor_1(P,Q)
+ &\simeq\varinjlim_i
+   \bigl({}_{n^i}P\otimes{}_{n^i}Q\bigr)
+ \simeq T_n(P)\otimes Q\\
+ &\simeq{}_{n^\infty}P\otimes T_n(Q).
+\end{split}
+\end{equation}
+Por tanto, el isomorfismo (1.3.2) adopta aquí la forma más concreta
+\begin{equation}\tag{1.3.5}
+\begin{split}
+ \Biext^1(P,Q;G)
+ &\simeq\Hom(T_n(P),D(Q))\\
+ &\simeq\Hom(Q,D(T_n(P))\sisi{}{)}\\
+ &\simeq\Hom(T_n(P)\otimes T_n(Q),T_n(G)).
+\end{split}
+\end{equation}
+Precisemos el significado de estas fórmulas.
+
+\begin{enumerate}[label=\alph*)]
+\item En el sistema inductivo que aparece en (1.3.4), el homomorfismo
+de transición
+\[
+ {}_{n^i}P\otimes{}_{n^i}Q
+ \longrightarrow
+ {}_{n^j}P\otimes{}_{n^j}Q
+ \qquad(i\leq j)
+\]
+se describe identificando el primer miembro con
+$\,{}_{n^j}P\otimes{}_{n^i}Q$ mediante
+$n^{j-i}\otimes\id$, y utilizando después el homomorfismo
+\[
+ \id\otimes\operatorname{inj}:
+ {}_{n^j}P\otimes{}_{n^i}Q
+ \longrightarrow
+ {}_{n^j}P\otimes{}_{n^j}Q,
+\]
+donde
+$\operatorname{inj}:{}_{n^i}Q\longrightarrow{}_{n^j}Q$
+denota la inclusión.
+
+%%%%%%%%%%  scan idx 234  |  folio 223  %%%%%%%%%%
+
+\item Por definición, pongamos
+\[
+ T_n(P)\otimes Q
+ \overset{\mathrm{def}}{=}
+ \varinjlim_i\bigl(T_n(P)\otimes{}_{n^i}Q\bigr),
+\]
+donde
+\[
+ T_n(P)\otimes M
+ \overset{\mathrm{def}}{=}
+ {}_{n^i}P\otimes M
+ \qquad\text{si }n^iM=0.
+\]
+El tercer término escrito en (1.3.4) se precisa del mismo modo cuando
+se supone también $nQ=Q$, de manera que $T_n(Q)$, como $T_n(P)$, es
+un sistema proyectivo estricto. El último término de
+\sisi{(1.3.4)}{(1.3.5)} es un $\Hom$ entre sistemas proyectivos de
+grupos.
+
+\item La letra $D$ denota $\uHom(-,G)$. El objeto $D(Q)$ se define
+como el sistema proyectivo de grupos
+\[
+ D(Q)=\bigl(D({}_{n^i}Q)\bigr)_{i\geq0}
+ =\bigl(\uHom({}_{n^i}Q,G)\bigr)_{i\geq0},
+\]
+siendo el segundo miembro de (1.3.5) el grupo de homomorfismos de
+sistemas proyectivos de grupos. \sisi{El último miembro}{El miembro
+siguiente} se interpreta más sencillamente poniendo
+\[
+ D(T_n(P))=\varinjlim_iD({}_{n^i}P),
+\]
+donde los morfismos de transición de este sistema inductivo se
+obtienen por transposición de los morfismos de transición
+\[
+ \sisi{n^{j-1}}{n^{j-i}}:{}_{n^j}P\longrightarrow{}_{n^i}P
+\]
+de $T_n(P)$.
+\end{enumerate}
+
+%%%%%%%%%%  scan idx 235  |  folio 224  %%%%%%%%%%
+
+Dejamos al lector la tarea de explicitar el cálculo de $\Tor_1(P,Q)$
+indicado en (1.3.4) y de deducir de él (1.3.5). Señalemos únicamente
+que se utilizan las relaciones, deducidas de la segunda hipótesis de
+(1.3.3),
+\[
+ \Tor_p(P,Q)\simeq
+ \varinjlim_i\Tor_p(P,{}_{n^i}Q).
+\]
+Para $p=0$ esto da inmediatamente $P\otimes Q=0$ y reduce el cálculo
+de $\Tor_1(P,Q)$ al de los $\Tor_1(P,{}_{n^i}Q)$ y sus morfismos de
+transición. Así, cuando $Q$ está anulado por un entero $m=n^i$ tal que
+$mP=P$, queda por explicitar un isomorfismo
+\begin{equation}\tag{1.3.6}
+ \Tor_1(P,Q)
+ \xleftarrow{\ \sim\ }
+ {}_mP\otimes{}_mQ
+ \qquad(mP=P,\ mQ=0).
+\end{equation}
+Hay varias maneras de hacerlo. Una consiste en utilizar la sucesión
+exacta de Tor asociada a
+\[
+ 0\longrightarrow{}_mP\longrightarrow P
+ \xrightarrow{\ m\ }P\longrightarrow0.
+\]
+También puede utilizarse el homomorfismo (2.1.1) de más abajo; el hecho
+de que los morfismos de transición sean los precisados en (a) no es
+sino 2.1.11. En cualquier caso, la elección de (1.3.6) equivale a la
+elección de un signo; véase 2.1.10.
+
+1.4. Supongamos que
+\begin{equation}\tag{1.4.1}
+ \uHom(Q,G)=0.
+\end{equation}
+Entonces (1.1.4) proporciona un isomorfismo canónico
+\begin{equation}\tag{1.4.2}
+ \Biext^1(P,Q;G)
+ \xrightarrow{\ \sim\ }
+ \Hom(P,\uExt^1(Q,G)).
+\end{equation}
+
+%%%%%%%%%%  scan idx 236  |  folio 225  %%%%%%%%%%
+
+Este caso se presenta en particular cuando $Q$ es un esquema abeliano
+y $G=\underline G_m$; véase VII 1.3.8. Por consiguiente, el funtor en
+$P$,
+\[
+ P\longmapsto\Biext^1(P,Q;G),
+\]
+es \underline{representable} por $Q^*=\uExt^1(Q,G)$. En particular,
+existe una biextensión canónica $E^Q$ de $(Q^*,Q)$ por $G$,
+determinada salvo isomorfismo único, pues su grupo de automorfismos es
+\[
+ \Hom(\sisi{P}{Q^*},\uHom(Q,G))=0.
+\]
+Esta biextensión, o su biextensión simétrica $\,{}^sE^Q$ de
+$(Q,Q^*)$ por $G$, puede llamarse la \underline{biextensión de Weil}
+de $(Q^*,Q)$, respectivamente de $(Q,Q^*)$, por $G$.
+
+1.5. Supongamos que
+\begin{equation}\tag{1.5.1}
+ \Hom(P,\uExt^1(Q,G))=0.
+\end{equation}
+Esto se cumple en particular si $\uExt^1(Q,G)=0$; por ejemplo, si $Q$
+es un esquema en grupos finito localmente libre o un grupo de tipo
+multiplicativo (SGA 3 IX), y $G=\underline G_m$; véase 3.4 más abajo.
+Entonces (1.1.4) proporciona un isomorfismo canónico
+\begin{equation}\tag{1.5.2}
+ \Biext^1(P,Q;G)
+ \xleftarrow{\ \sim\ }
+ \Ext^1(P,\uHom(Q,G)),
+\end{equation}
+donde $\uHom(Q,G)$ desempeña el papel de un ``grupo dual'' de $Q$
+(relativamente a $G$). Más precisamente, de (1.5.2) se sigue que el
+funtor plenamente fiel (1.1.6) es una \underline{equivalencia de
+categorías}.
+
+1.6. Supongamos que se cumplen simultáneamente las dos relaciones
+\begin{equation}\tag{1.6.1}
+ \uHom(P,G)=0,\qquad
+ \Hom(P,\uExt^1(Q,G))=0.
+\end{equation}
+Por 1.4 y 1.5, respectivamente, estas dos relaciones dan los
+isomorfismos
+\[
+ \Biext^1(P,Q;G)
+ \xrightarrow{\ \sim\ }
+ \Hom(Q,\uExt^1(P,G)),
+\]
+\[
+ \Biext^1(P,Q;G)
+ \xleftarrow{\ \sim\ }
+ \Ext^1(P,\uHom(Q,G)).
+\]
+Su compuesto es el isomorfismo canónico
+\begin{equation}\tag{1.6.2}
+ \Ext^1(P,\uHom(Q,G))
+ \xrightarrow{\ \sim\ }
+ \Hom(Q,\uExt^1(P,G))
+ \quad\bigl(\simeq\Biext^1(P,\sisi{G}{Q};G)\bigr),
+\end{equation}
+
+%%%%%%%%%%  scan idx 237  |  folio 226  %%%%%%%%%%
+
+que desempeña el papel de una fórmula de dualidad.
+
+Obsérvese además que la primera relación de (1.6.1) implica
+evidentemente $\Hom(P\otimes Q,G)=0$. Por tanto, la categoría
+$\operatorname{EXT}(P,\uHom(Q,G))$ de extensiones conmutativas de $P$
+por $\uHom(Q,G)$ es rígida (todo automorfismo de un objeto es la
+identidad), y lo mismo ocurre con $\operatorname{BIEXT}(P,Q;G)$. La
+estructura de estas categorías queda, pues, determinada cuando se
+conoce el grupo de clases de isomorfismo de sus objetos; por (1.6.2),
+este grupo es canónicamente isomorfo a
+\[
+ \Hom(Q,\uExt^1(P,\sisi{Q}{G})).
+\]
+
+La aplicación (1.6.2) está de hecho definida en todos los casos, sin
+suponer (1.6.1), y también puede describirse directamente, sin pasar
+por $\Biext^1(P,Q;G)$, en términos del acoplamiento natural
+\[
+ Q\times Q'\longrightarrow G,
+ \qquad Q'=\uHom(Q,G).
+\]
+Interpretándolo como un homomorfismo
+$Q\longrightarrow\uHom(Q',G)$ se obtiene un compuesto
+\begin{equation}\tag{1.6.3}
+\begin{split}
+ \Ext^1(P,Q')\times Q
+ &\longrightarrow
+ \Ext^1(P,Q')\times\Hom(Q',G)\\
+ &\longrightarrow
+ \Ext^1(P,G),
+\end{split}
+\end{equation}
+que vuelve a dar (1.6.2).
+
+Para un caso útil en el que se aplican las consideraciones de 1.6,
+véase 3.7 más abajo.

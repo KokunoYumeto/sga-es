@@ -1,0 +1,210 @@
+%%%%%%%%%%  scan idx 105  |  folio 94  %%%%%%%%%%
+
+\section*{4. Módulos formales de deformaciones}
+
+Entre las categorías cofibradas naturales cuyas clases de isomorfía
+de objetos no son, en general, prorepresentables, pero que admiten no
+obstante un objeto formal versal, se encuentra la categoría cofibrada
+de las deformaciones. Retomamos la situación y la notación de la
+sección 1. Así, en toda esta sección, $\Lambda$ es un anillo local
+noetheriano completo fijo, de cuerpo residual $k$, y
+$\underline C_\Lambda$ es la categoría de las $\Lambda$-álgebras
+locales artinianas de cuerpo residual $k$.
+
+Sea $X_0$ un esquema fijo sobre $k$. Por deformación (infinitesimal)
+de $X_0$ entendemos un par $(R,X)$, donde
+$R\in\operatorname{Ob}(\underline C_\Lambda)$ y $X$ es un
+$R$-esquema plano, junto con un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+X_0 \arrow[r,"i_X"] \arrow[d] & X \arrow[d,"\mathrm{flat}"] \\
+\operatorname{Spec}(k) \arrow[r] & \operatorname{Spec}(R)
+\end{tikzcd}
+\]
+tal que el morfismo inducido
+\[
+ X_0\longrightarrow
+ X\times_{\sisi{\operatorname{spec}(R)}{\operatorname{Spec}(R)}}\operatorname{Spec}(k)
+\]
+sea un isomorfismo. Como $R$ es local artiniano,
+$i_X:X_0\longrightarrow X$ es necesariamente una inmersión cerrada y
+un homeomorfismo entre los espacios topológicos subyacentes.
+
+%%%%%%%%%%  scan idx 106  |  folio 95  %%%%%%%%%%
+
+Si $(R,X)$ y $(R',X')$ son deformaciones de $X_0$ sobre $R$ y
+$R'$, respectivamente, una flecha
+\[
+ (R',X')\longrightarrow(R,X)
+\]
+consiste en una aplicación $\varphi:R'\longrightarrow R$ en
+$\underline C_\Lambda$ y un morfismo de esquemas
+$\Phi:X\longrightarrow X'$ que encajan en un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+X \arrow[rr,"\Phi"] \arrow[ddd] && X' \arrow[ddd] \\
+& X_0 \arrow[ul,"i_X"'] \arrow[ur,"i_{X'}"] \arrow[d] & \\
+& \operatorname{Spec}(k) \arrow[dl] \arrow[dr] & \\
+\operatorname{Spec}(R)
+ \arrow[rr,"\operatorname{Spec}(\varphi)"']
+&& \operatorname{Spec}(R').
+\end{tikzcd}
+\]
+Esto define la categoría $\underline M_{X_0}$ de deformaciones
+infinitesimales de $X_0$. Está provista del funtor
+\[
+ p:\underline M_{X_0}\longrightarrow\underline C_\Lambda,
+ \qquad (R,X)\longmapsto R.
+\]
+
+Sea $(R,X)\in\operatorname{Ob}(\underline M_{X_0})$ y sea
+$\varphi:R\longrightarrow S$ una aplicación en
+$\underline C_\Lambda$. Existe un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+X\times_{\operatorname{Spec}(R)}\operatorname{Spec}(S)
+ \arrow[r,"p_1"] \arrow[d,"\mathrm{flat}"']
+& X \arrow[d,"\mathrm{flat}"] \\
+\operatorname{Spec}(S)
+ \arrow[r,"\operatorname{Spec}(\varphi)"']
+& \operatorname{Spec}(R),
+\end{tikzcd}
+\]
+y la $\varphi$-flecha
+\[
+ (\varphi,p_1):(R,X)\longrightarrow
+ \bigl(S,X\times_{\operatorname{Spec}(R)}\operatorname{Spec}(S)\bigr)
+\]
+es cocartesiana en $\underline M_{X_0}$. Por consiguiente,
+$\underline M_{X_0}$ es una categoría cofibrada sobre
+$\underline C_\Lambda$. Registramos los hechos siguientes.
+
+%%%%%%%%%%  scan idx 107  |  folio 96  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{4.1(a).}
+Sea
+\[
+ (1_R,\Phi):(R,X_1)\longrightarrow(R,X_2)
+\]
+una flecha en $\underline M_{X_0}$. Así,
+$\Phi:X_2\longrightarrow X_1$ es un $R$-morfismo cuya reducción
+\[
+ X_2\otimes_Rk\longrightarrow X_1\otimes_Rk
+\]
+es un isomorfismo. Como $R$ es artiniano y los $X_i$ son planos sobre
+$R$, $\Phi$ es un isomorfismo. En consecuencia,
+$\underline M_{X_0}$ es una categoría cofibrada en grupoides sobre
+$\underline C_\Lambda$.
+
+\medskip
+\noindent\textbf{4.1(b).}
+Supongamos que $X_0$ es afín, digamos
+$X_0=\operatorname{Spec}(A_0)$. Entonces todo
+$(R,X)\in\operatorname{Ob}(\underline M_{X_0})$ tiene también $X$
+afín. En consecuencia, para todo
+$R\in\operatorname{Ob}(\underline C_\Lambda)$, tomar secciones
+globales identifica $\underline M_{X_0}(R)$ con la categoría
+siguiente. Un objeto es una $R$-álgebra plana $A$ junto con una
+aplicación de $R$-álgebras $j_A:A\longrightarrow A_0$ que induce un
+isomorfismo
+\[
+ A\otimes_Rk\xrightarrow{\ \sim\ }A_0.
+\]
+Un morfismo $\Phi:A_1\longrightarrow A_2$ es una aplicación de
+$R$-álgebras para la cual conmuta el diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+A_1 \arrow[r,"\Phi"] \arrow[d,"j_{A_1}"']
+& A_2 \arrow[d,"j_{A_2}"] \\
+A_0 \arrow[r,equal] & A_0
+\end{tikzcd}
+\]
+
+\medskip
+\noindent\textbf{4.1(c).}
+Consideremos la categoría cofibrada
+$\widehat{\underline M}_{X_0}$ en grupoides sobre
+$\widehat{\underline C}_\Lambda$. Por definición, para todo
+$R\in\operatorname{Ob}(\widehat{\underline C}_\Lambda)$, la categoría
+$\widehat{\underline M}_{X_0}(R)$ es canónicamente equivalente a la
+categoría de esquemas formales $\mathfrak X$, ádicos sobre
+$\operatorname{Spf}(R)$, tales que
+\[
+ \mathfrak X_n
+ =\mathfrak X\otimes_R R/\mathfrak m^{n+1}
+\]
+es plano sobre $R/\mathfrak m^{n+1}$ para todo $n\geq0$. Si $X_0$ es
+noetheriano, esto equivale a exigir que $\mathfrak X$ sea plano sobre
+$\operatorname{Spf}(R)$. Así, en ese caso,
+$\widehat{\underline M}_{X_0}$ es canónicamente equivalente sobre
+$\widehat{\underline C}_\Lambda$ a la categoría de deformaciones de
+$X_0$ sobre los objetos de $\widehat{\underline C}_\Lambda$, en el
+sentido de los esquemas formales.
+
+\medskip
+\noindent\textbf{4.1(d).}
+Sea $(R,X)\in\operatorname{Ob}(\underline M_{X_0})$, de modo que
+existe un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+X_0 \arrow[r,"i_X"] \arrow[d] & X \arrow[d,"\mathrm{flat}"] \\
+\operatorname{Spec}(k) \arrow[r] & \operatorname{Spec}(R)
+\end{tikzcd}
+\]
+cuyo morfismo inducido
+$X_0\longrightarrow X\times_{\operatorname{Spec}(R)}
+\operatorname{Spec}(k)$ es un isomorfismo.
+
+%%%%%%%%%%  scan idx 108  |  folio 97  %%%%%%%%%%
+
+Sea $U_0\subset X_0$ un subesquema abierto. Como
+$i_X:X_0\longrightarrow X$ es una inmersión cerrada y un
+homeomorfismo entre los espacios subyacentes, la restricción da un
+diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+U_0 \arrow[r,"i_X|_{U_0}"] \arrow[d]
+& X|_{U_0} \arrow[d,"\mathrm{flat}"] \\
+\operatorname{Spec}(k) \arrow[r] & \operatorname{Spec}(R).
+\end{tikzcd}
+\]
+El morfismo inducido
+\[
+ U_0\longrightarrow
+ (X|_{U_0})\times_{\operatorname{Spec}(R)}\operatorname{Spec}(k)
+ =(X\otimes_Rk)|_{U_0}
+\]
+es un isomorfismo, por lo que $(R,X|_{U_0})$ es una deformación de
+$U_0$ sobre $R$. Además, toda flecha
+$(\varphi,\Phi):(R,X)\longrightarrow(R',X')$ en
+$\underline M_{X_0}$ se restringe a una flecha
+\[
+ (\varphi,\Phi|_{U_0}):(R,X|_{U_0})
+ \longrightarrow(R',X'|_{U_0})
+\]
+en $\underline M_{U_0}$. Tenemos, por tanto, un funtor de restricción
+\[
+ \underline M_{X_0}\longrightarrow\underline M_{U_0}
+\]
+sobre $\underline C_\Lambda$.
+
+También se puede localizar y completar en un punto. Sea
+$x_0\in X_0$. Si $(R,X)\in\operatorname{Ob}(\underline M_{X_0})$,
+entonces $\operatorname{Spec}(\mathcal O_{X,x_0})$ es una deformación
+de $\operatorname{Spec}(\mathcal O_{X_0,x_0})$ sobre $R$, mientras
+que $\operatorname{Spec}(\widehat{\mathcal O}_{X,x_0})$ es una
+deformación de
+$\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_0})$ sobre $R$; los
+sombreros denotan la completación para la topología definida por las
+potencias del ideal maximal. Existen, pues, funtores
+\[
+ \underline M_{X_0}
+ \longrightarrow
+ \underline M_{\operatorname{Spec}(\mathcal O_{X_0,x_0})}
+ \longrightarrow
+ \underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_0})}.
+\]
+
+Demostraremos primero que $\underline M_{X_0}$ es una categoría
+cofibrada homogénea sobre $\underline C_\Lambda$.

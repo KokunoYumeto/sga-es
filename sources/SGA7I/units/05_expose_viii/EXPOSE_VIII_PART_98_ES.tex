@@ -1,0 +1,244 @@
+\par\medskip\noindent
+2.2. Consideremos ahora, además de $P$ y $Q$, un grupo conmutativo
+$G$. En (1.1.3) definimos un homomorfismo canónico, funtorial en
+$P,Q,G$,
+\begin{equation}\tag{2.2.1}
+ \Biext^1(P,Q;G)
+ \longrightarrow
+ \Hom\bigl(\Tor_1(P,Q),G\bigr).
+\end{equation}
+Por otra parte, si $n$ es un entero positivo (respectivamente, si
+$\ell$ es un número primo), el homomorfismo $\alpha^n_{P,Q}$ de
+(2.1.1) (respectivamente, el homomorfismo $\alpha^{(\ell)}_{P,Q}$ de
+(2.1.13.2)) da un homomorfismo
+\[
+ \Hom\bigl(\Tor_1(P,Q),G\bigr)
+ \longrightarrow
+ \Hom({}_nP\otimes{}_nQ,G)
+\]
+(respectivamente, un homomorfismo
+\[
+ \Hom\bigl(\Tor_1(P,Q),G\bigr)
+ \longrightarrow
+ \Hom\bigl(T_\ell(P)\otimes T_\ell(Q),T_\ell(G)\bigr)).
+\]
+Estos últimos homomorfismos son también funtoriales en $P,Q,G$.
+Componiéndolos con (2.2.1), obtenemos homomorfismos canónicos,
+funtoriales en $P,Q,G$,
+\begin{equation}\tag{2.2.2}
+ \varphi^n=\varphi^n_{P,Q}:
+ \Biext^1(P,Q;G)
+ \longrightarrow
+ \Hom({}_nP\otimes{}_nQ,G),
+\end{equation}
+\begin{equation}\tag{2.2.3}
+ \varphi^{(\ell)}=\varphi^{(\ell)}_{P,Q}:
+ \Biext^1(P,Q;G)
+ \longrightarrow
+ \Hom\bigl(T_\ell(P)\otimes T_\ell(Q),T_\ell(G)\bigr).
+\end{equation}
+Para
+\begin{equation}\tag{2.2.4}
+ \xi\in\Biext^1(P,Q;G),
+\end{equation}
+
+%%%%%%%%%%  scan idx 249  |  folio 238  %%%%%%%%%%
+
+denotemos su imagen por (2.2.2) (respectivamente, por (2.2.3)) con
+$\varphi^n_\xi$ (respectivamente, con $\varphi^{(\ell)}_\xi$):
+\begin{equation}\tag{2.2.5}
+ \varphi^n_\xi:{}_nP\otimes{}_nQ
+ \longrightarrow G
+ \qquad\text{(o, equivalentemente, }{}_nG\text{)},
+\end{equation}
+\begin{equation}\tag{2.2.6}
+ \varphi^{(\ell)}_\xi:
+ T_\ell(P)\otimes T_\ell(Q)
+ \longrightarrow T_\ell(G).
+\end{equation}
+
+2.2.7. Evidentemente, conocer $\varphi^{(\ell)}_\xi$ equivale a
+conocer los $\varphi^n_\xi$ para todos los $n=\ell^\nu$, con
+$\nu\geq0$. Para $n$ fijo, conocer $\varphi^n_\xi$ equivale a conocer,
+sobre la imagen de
+\[
+ \sisi{\varphi^n_{P,Q}:{}_nP\otimes{}_nQ
+ \longrightarrow\uTor_1(P,Q;G)}%
+ {\alpha^n_{P,Q}:{}_nP\otimes{}_nQ
+ \longrightarrow\uTor_1(P,Q)},
+\]
+el homomorfismo
+\begin{equation}\tag{2.2.8}
+ \uTor_1(P,Q)\longrightarrow G
+\end{equation}
+que es la imagen de $\xi$ por (2.2.1).
+
+Obsérvese que si $P=nP$ y $Q=nQ$, entonces la imagen precedente es
+$\,{}_n\uTor_1(P,Q)$. Esto se deduce fácilmente considerando la
+sucesión exacta (1.3.5) y la sucesión exacta análoga para $Q$.
+Además, si $P$ y $Q$ son divisibles, es decir, si $nP=P$ y $nQ=Q$
+para todo entero positivo $n$, se comprueba fácilmente que
+$\uTor_1(P,Q)$ es de torsión, es decir,
+\[
+ \uTor_1(P,Q)=\varinjlim_n{}_{n}\uTor_1(P,Q).
+\]
+Así, en este caso, conocer los $\varphi^n_\xi$ para todo $n$ equivale
+a conocer (2.2.8), mientras que conocer $\varphi^{(\ell)}_\xi$ para
+un primo dado $\ell$ equivale a conocer la restricción de (2.2.8) a
+la componente $\ell$-primaria de $\uTor_1(P,Q)$.
+
+Explicitemos ahora las propiedades de simetría de los acoplamientos
+\sisi{(2.2.4)}{(2.2.5)} y (2.2.6) asociados a las biextensiones.
+Observemos primero que se tiene un diagrama conmutativo
+\begin{equation}\tag{2.2.9}
+\begin{tikzcd}[column sep=large,row sep=huge]
+ \Biext^1(P,Q;G)
+   \arrow[r,"\sim"]
+   \arrow[d]&
+ \Biext^1(Q,P;G)
+   \arrow[d]\\
+ \Hom\bigl(\uTor_1(P,Q),G\bigr)
+   \arrow[r,"\sim"]&
+ \Hom\bigl(\uTor_1(Q,P),G\bigr),
+\end{tikzcd}
+\end{equation}
+
+%%%%%%%%%%  scan idx 250  |  folio 239  %%%%%%%%%%
+
+donde las flechas horizontales son las flechas de simetría (la primera
+de ellas se definió en VII 2.7) y las flechas verticales son (2.2.1).
+La conmutatividad resulta de la de los dos cuadrados que componen el
+diagrama más completo
+\begin{equation}\tag{2.2.10}
+\begin{tikzcd}[column sep=large,row sep=large]
+ \Biext^1(P,Q;G)
+   \arrow[r,"\sim"]
+   \arrow[d]&
+ \Biext^1(Q,P;G)
+   \arrow[d]\\
+ \Ext^1\!\left(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G\right)
+   \arrow[r,"\sim"]
+   \arrow[d]&
+ \Ext^1\!\left(Q\mathbin{\overset{\mathbb L}{\otimes}}P,G\right)
+   \arrow[d]\\
+ \Hom\bigl(\uTor_1(P,Q),G\bigr)
+   \arrow[r,"\sim"]&
+ \Hom\bigl(\uTor_1(Q,P),G\bigr).
+\end{tikzcd}
+\end{equation}
+La primera flecha vertical de cada columna es el isomorfismo canónico
+de VII 3.6.5, y la segunda es el homomorfismo evidente. El segundo
+cuadrado de (2.2.10) es trivialmente conmutativo: por definición, el
+isomorfismo de simetría
+\[
+ P\mathbin{\overset{\mathbb L}{\otimes}}Q
+ \xrightarrow{\ \sim\ }
+ Q\mathbin{\overset{\mathbb L}{\otimes}}P
+\]
+induce el isomorfismo de simetría
+$\uTor_1(P,Q)\simeq\uTor_1(Q,P)$ y, para un complejo variable
+$L_\bullet$, el isomorfismo canónico
+\[
+ \Ext^1(L_\bullet,G)
+ \simeq
+ \Hom\bigl(H_1(L_\bullet),G\bigr)
+\]
+es funtorial en $L_\bullet$.
+
+En cuanto a la conmutatividad del primer cuadrado de (2.2.10), se
+deduce explicitando simultáneamente los isomorfismos de simetría y los
+isomorfismos verticales definidos en VII 3.6.5. Dejamos al lector los
+detalles de la verificación. Se utiliza el hecho de que el
+isomorfismo de simetría
+\[
+ L_\bullet(P)\otimes L_\bullet(Q)
+ \simeq
+ L_\bullet(Q)\otimes L_\bullet(P)
+\]
+induce en grado $1$ el isomorfismo
+\[
+ L_0(P)\otimes L_1(Q)+L_1(P)\otimes L_0(Q)
+ \simeq
+ L_0(Q)\otimes L_1(P)+L_1(Q)\otimes L_0(P),
+\]
+
+%%%%%%%%%%  scan idx 251  |  folio 240  %%%%%%%%%%
+
+que, sobre los sumandos correspondientes, viene dado por el
+isomorfismo de simetría ordinario de los módulos subyacentes no
+graduados (y por tanto no introduce ningún signo).
+
+En vista de la conmutatividad de (2.2.9), la anticonmutatividad de
+(2.1.10.1), expresada en términos de los $\varphi^n$ o de los
+$\varphi^{(\ell)}$, se convierte en la relación siguiente.
+
+\medskip
+\noindent\underline{Proposición 2.2.11.}
+\underline{Los diagramas siguientes son anticonmutativos:}
+\begin{equation}\tag{2.2.11.1}
+\begin{tikzcd}[row sep=large,column sep=huge]
+ \Biext^1(P,Q;G)
+   \arrow[rr,"\sim"]
+   \arrow[dd,"{\varphi^n_{P,Q}}"']&&
+ \Biext^1(Q,P;G)
+   \arrow[dd,"{\varphi^n_{Q,P}}"]\\
+ &- &\\
+ \Hom({}_nP\otimes{}_nQ,G)
+   \arrow[rr,"\sim"]&&
+ \Hom({}_nQ\otimes{}_nP,G),
+\end{tikzcd}
+\end{equation}
+\begin{equation}\tag{2.2.11.2}
+\begin{tikzcd}[row sep=large,column sep=huge]
+ \Biext^1(P,Q;G)
+   \arrow[rr,"\sim"]
+   \arrow[dd,"{\varphi^{(\ell)}_{P,Q}}"']&&
+ \Biext^1(Q,P;G)
+   \arrow[dd,"{\varphi^{(\ell)}_{Q,P}}"]\\
+ &- &\\
+ \Hom\bigl(T_\ell(P)\otimes T_\ell(Q),T_\ell(G)\sisi{}{)}
+   \arrow[rr,"\sim"]&&
+ \Hom\bigl(T_\ell(Q)\otimes T_\ell(P),T_\ell(G)\bigr),
+\end{tikzcd}
+\end{equation}
+\underline{donde las flechas horizontales son las flechas de simetría.}
+
+Consignemos el corolario importante.
+
+\medskip
+\begingroup
+\sloppy
+\noindent\underline{Corolario 2.2.12.}
+\uline{Supongamos que $P=Q$, y que $\xi$ es la clase de una
+biextensión simétrica (respectivamente, antisimétrica) de $(P,P)$ por
+$G$; es decir, supongamos que ${}^s\xi=\xi$ (respectivamente,
+${}^s\xi=-\xi$), donde ${}^s\xi$ denota la imagen de $\xi$ por
+simetría. Entonces las aplicaciones bilineales $\varphi^n_\xi$, sobre
+${}_nP\times{}_nP$, y $\varphi^{(\ell)}_\xi$, sobre
+$T_\ell(P)\times T_\ell(P)$, son antisimétricas (respectivamente,
+simétricas).}
+\par
+\endgroup
+
+%%%%%%%%%%  scan idx 252  |  folio 241  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Observación 2.2.13.}
+Supongamos que $\xi$ es simétrica. Si $n$ (respectivamente, $\ell$) es
+impar, 2.2.12 muestra que $\varphi^n_\xi$ (respectivamente,
+$\varphi^{(\ell)}_\xi$) es en realidad una forma alternada. Esta
+conclusión no es válida en general sin la restricción de que $n$
+(respectivamente, $\ell$) sea impar, como se ve ya cuando $P$ es el
+grupo ordinario $\mathbb Z/2\mathbb Z$ y $G=\mathbb Z/2\mathbb Z$.
+
+Supongamos, sin embargo, que $2P=P$. Este es el caso, en particular,
+cuando $P$ es un esquema abeliano, trabajando como de costumbre con la
+topología fppf o fpqc. Las formas anteriores siguen siendo entonces
+alternadas. Basta probar que $\varphi^{2^\nu}_\xi(x,x)=0$. Como
+$2P=P$, un elemento dado $x\in{}_{2^\nu}P(S)$ puede escribirse
+$x=2y$, con $y\in{}_{2^{\nu+1}}P(S)$. Por consiguiente,
+\[
+ \varphi^{2^\nu}_\xi(x,x)
+ =2\varphi^{2^{\nu+1}}_\xi(y,y)=0,
+\]
+porque $\varphi^{2^{\nu+1}}_\xi$ es antisimétrica.

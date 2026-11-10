@@ -1,0 +1,294 @@
+Las propiedades generales de la lisura que siguen son inmediatas.
+
+\underline{Proposición 2.3.} Sean
+\[
+ \underline A\xrightarrow{\ \varphi\ }\underline B
+ \xrightarrow{\ \psi\ }\underline C
+\]
+funtores de grupoides cofibrados sobre $\underline C_\Lambda$.
+
+(a) Si $\varphi$ y $\psi$ son lisos, entonces también lo es
+$\psi\circ\varphi$.
+
+(b) Si $\psi\circ\varphi$ es liso y $\varphi$ es sobreyectivo sobre
+las clases de isomorfía de objetos, entonces $\psi$ es liso.
+
+%%%%%%%%%%  scan idx 63  |  folio 52  %%%%%%%%%%
+
+\underline{Observación 2.4.} Sea $\underline A$ un grupoide cofibrado
+sobre $\underline C_\Lambda$ que admite un objeto formal versal $\xi$.
+Por 2.2(d), esto significa que
+\[
+ \tilde\xi:\underline h_R\longrightarrow\underline A
+\]
+es liso, donde $R=P(\xi)$. Por consiguiente, las afirmaciones
+siguientes son equivalentes:
+
+\begin{itemize}
+\item $\underline A$ es formalmente liso sobre $\underline C_\Lambda$
+      (cf. \sisi{1.13}{1.14}), es decir, $R$ es un álgebra de series formales sobre
+      $\Lambda$;
+\item el funtor compuesto
+      \[
+       \underline h_R\xrightarrow{\ \tilde\xi\ }\underline A
+       \xrightarrow{\ P\ }\underline C_\Lambda
+       \;(=\underline h_\Lambda)
+      \]
+      es liso;
+\item $P:\underline A\longrightarrow\underline C_\Lambda$ es
+      liso.
+\end{itemize}
+La última equivalencia se deduce de la Proposición 2.3(b).
+
+Consideremos ahora una propiedad más fuerte que la semihomogeneidad.
+
+\underline{Definición 2.5.} Un grupoide cofibrado $\underline A$ sobre
+$\underline C_\Lambda$ se llama \underline{homogéneo} si todo diagrama
+\[
+\begin{tikzcd}[row sep=large,column sep=huge]
+ & a' \arrow[d]\\
+ b' \arrow[r] & a
+\end{tikzcd}
+\]
+en el que $a'\longrightarrow a$ es sobreyectivo admite un producto
+fibrado $a'\times_a b'$ en $\underline A$ tal que
+\[
+ P(a'\times_a b')=
+ P(a')\times_{P(a)}P(b').
+\]
+
+\underline{Observación 2.6(a).} Sea $\underline A$ un grupoide
+cofibrado sobre $\underline C_\Lambda$, y consideremos un diagrama
+\[
+(*)\qquad
+\begin{tikzcd}[row sep=small,column sep=small]
+ & a' \arrow[dl] \arrow[dr] & \\
+ a_1 \arrow[dr] & & a_2 \arrow[dl]\\
+ & a &
+\end{tikzcd}
+\qquad\text{en $\underline A$ situado sobre el diagrama}\qquad
+\begin{tikzcd}[row sep=small,column sep=small]
+ & R_1\times_R R_2 \arrow[dl,"{\pi_1}"'] \arrow[dr,"{\pi_2}"] & \\
+ R_1 \arrow[dr] & & R_2 \arrow[dl]\\
+ & R &
+\end{tikzcd}
+\]
+en $\underline C_\Lambda$, donde los $\pi_i$ son las proyecciones.
+Si existe un producto fibrado $a_1\times_a a_2$ en $\underline A$,
+hay un único morfismo
+\[
+ \varphi:a'\longrightarrow a_1\times_a a_2
+\]
+compatible con las proyecciones. Si
+\[
+ P(a_1\times_a a_2)=R_1\times_R R_2,
+\]
+entonces $P(\varphi)$ es el morfismo identidad de $R_1\times_R R_2$;
+por tanto, $\varphi$ es un $\underline C_\Lambda$-isomorfismo, es
+decir, $a'=a_1\times_a a_2$. Así, si $\underline A$ es homogéneo,
+todo diagrama $(*)$ define un producto fibrado $a_1\times_a a_2$
+siempre que $R_1\longrightarrow R$ sea sobreyectivo. De ello se deduce
+inmediatamente
+
+%%%%%%%%%%  scan idx 64  |  folio 53  %%%%%%%%%%
+
+que todo grupoide cofibrado homogéneo es, con mayor razón,
+semihomogéneo.
+
+\underline{Observación 2.6(b).} Consideremos un diagrama de categorías
+y funtores
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+ X \arrow[dr,"{\varphi}"'] & & Y \arrow[dl,"{\psi}"]\\
+ & Z &
+\end{tikzcd}
+\]
+El producto fibrado ordinario $X\times_ZY$ es la categoría cuyos
+objetos son los pares $(x,y)$ que satisfacen
+$\varphi(x)=\psi(y)$ y cuyos morfismos
+$(x,y)\longrightarrow(x',y')$ son los pares
+\[
+ \alpha:x\longrightarrow x',\qquad
+ \beta:y\longrightarrow y'
+\]
+tales que $\varphi(\alpha)=\psi(\beta)$. El producto fibrado
+$X\times_Z^2Y$ en el sentido de las $2$-categorías es la categoría
+cuyos objetos son las ternas $(x,y;\gamma)$, donde
+\[
+ \varphi(x)\xrightarrow{\ \gamma\ }\psi(y)
+\]
+es un isomorfismo. Un morfismo
+$(x,y;\gamma)\longrightarrow(x',y';\gamma')$ es un par formado por
+$\alpha:x\longrightarrow x'$ y $\beta:y\longrightarrow y'$ para el
+cual el diagrama
+\[
+\begin{tikzcd}[row sep=huge,column sep=huge]
+ \varphi(x) \arrow[r,"{\varphi(\alpha)}"] \arrow[d,"{\gamma}"']
+ & \varphi(x') \arrow[d,"{\gamma'}"]\\
+ \psi(y) \arrow[r,"{\psi(\beta)}"'] & \psi(y')
+\end{tikzcd}
+\]
+es conmutativo.
+
+Las nociones de grupoide cofibrado (semi)homogéneo y de funtor liso
+pueden reformularse en términos de productos fibrados de categorías en
+este sentido $2$-categórico. Sea
+$P:\underline A\longrightarrow\underline C_\Lambda$ una categoría
+cofibrada, y consideremos $R_1\times_RR_2$ en
+$\underline C_\Lambda$. Elijamos funtores de imagen directa
+\[
+ (\pi_i)_*:\underline A(R_1\times_RR_2)
+ \longrightarrow\underline A(R_i),\qquad i=1,2.
+\]
+Estos inducen un funtor
+\[
+ \underline A(R_1\times_RR_2)\longrightarrow
+ \underline A(R_1)\times^2_{\underline A(R)}\underline A(R_2).
+\]
+Salvo equivalencia natural canónica, este no depende de los funtores
+de imagen directa elegidos. El grupoide $\underline A$ es homogéneo si
+y solo si este funtor es una equivalencia siempre que
+$R_1\longrightarrow R$ sea sobreyectivo; es semihomogéneo si y solo si
+\[
+ [\underline A(R_1\times_RR_2)]\longrightarrow
+ [\underline A(R_1)]
+ \times_{[\underline A(R)]}[\underline A(R_2)]
+\]
+
+%%%%%%%%%%  scan idx 65  |  folio 54  %%%%%%%%%%
+
+es sobreyectivo siempre que $R_1\longrightarrow R$ sea sobreyectivo,
+y es biyectivo siempre que $R=k$ y $R_1=k[\varepsilon]$.
+
+Sea ahora $\varphi:\underline A\longrightarrow\underline B$ un
+funtor de grupoides cofibrados sobre $\underline C_\Lambda$. Para todo
+morfismo $R'\longrightarrow R$ en $\underline C_\Lambda$,
+$\varphi$ induce, salvo equivalencia natural canónica, un funtor
+\[
+ \underline A(R')\longrightarrow
+ \underline A(R)\times^2_{\underline B(R)}\underline B(R').
+\]
+El funtor $\varphi$ es liso si y solo si este funtor es sobreyectivo
+sobre las clases de isomorfía de objetos siempre que
+$R'\longrightarrow R$ sea sobreyectivo.
+
+\underline{Observación 2.6(c).} Si $\underline A$ es homogéneo,
+entonces, para cualesquiera $k$-espacios vectoriales de dimensión
+finita $V$ y $W$, el funtor
+\[
+ \underline A(k[V\times W])\longrightarrow
+ \underline A(k[V])\times\underline A(k[W])
+\]
+es una equivalencia de categorías. Recordemos nuestro convenio
+$\underline A(k)=\{e\}$. En particular,
+\[
+ \operatorname{Aut}_{\underline A(k[V\times W])}(1_{V\times W})
+ \xrightarrow{\ \sim\ }
+ \operatorname{Aut}_{\underline A(k[V])}(1_V)
+ \times
+ \operatorname{Aut}_{\underline A(k[W])}(1_W),
+\]
+donde $1_V$ es la imagen directa de $e$ por el único morfismo
+$k\longrightarrow k[V]$ en $\underline C_\Lambda$. En consecuencia,
+si $\underline A$ es homogéneo, tanto
+$\operatorname{Aut}(1_\varepsilon)$ como
+$[\underline A(k[\varepsilon])]$ están provistos de estructuras
+canónicas de espacio vectorial sobre $k$.
+
+\underline{Observación 2.6(d).} Para todo
+$R\in\widehat{\underline C}_\Lambda$, el grupoide discreto cofibrado
+$\underline h_R$ sobre $\underline C_\Lambda$ es homogéneo.
+
+Si $\underline A$ es semihomogéneo, también lo es $[\underline A]$.
+Sin embargo, la homogeneidad de $\underline A$ no implica en general
+la homogeneidad de $[\underline A]$.
+
+\underline{Proposición 2.7.} Sea $\underline A$ un grupoide cofibrado
+homogéneo sobre $\underline C_\Lambda$. Las condiciones siguientes son
+equivalentes.
+
+(i) $[\underline A]$ es homogéneo; es decir,
+\[
+ [\underline A(R'\times_RS)]\longrightarrow
+ [\underline A(R')]
+ \times_{[\underline A(R)]}[\underline A(S)]
+\]
+es biyectivo para toda pequeña extensión $R'\longrightarrow R$.
+
+(ii) Para toda pequeña prolongación $a'\longrightarrow a$ en
+$\underline A$, el morfismo
+\[
+ \operatorname{Aut}_{\underline A(R')}(a')
+ \longrightarrow
+ \operatorname{Aut}_{\underline A(R)}(a)
+\]
+
+%%%%%%%%%%  scan idx 66  |  folio 55  %%%%%%%%%%
+
+es sobreyectivo, donde $R'=P(a')$ y $R=P(a)$.
+
+\underline{Demostración.} (i)$\Rightarrow$(ii). Sea
+$f:R'\longrightarrow R$ una pequeña extensión en
+$\underline C_\Lambda$, y sea $a'\longrightarrow a$ un $f$-morfismo
+en $\underline A$. Dado
+$\tau\in\operatorname{Aut}_{\underline A(R)}(a)$, consideremos
+$a'\times_a a'$ y $a'\times_a a'_\tau$, donde
+$a'_\tau\longrightarrow a$ es el compuesto
+\[
+ a'\longrightarrow a\xrightarrow{\ \tau\ }a.
+\]
+Como
+\[
+ [\underline A(R'\times_RR')]
+ \longrightarrow
+ [\underline A(R')]
+ \times_{[\underline A(R)]}[\underline A(R')]
+\]
+es biyectivo, existe un isomorfismo
+\[
+ a'\times_a a'\xrightarrow{\ u\ }a'\times_a a'_\tau.
+\]
+La proyección sobre el segundo factor da entonces un isomorfismo
+$\tau':a'\longrightarrow a'$ que levanta $\tau$.
+
+(ii)$\Rightarrow$(i). Sean $a''_i$ $(i=1,2)$ objetos de
+$\underline A(R'\times_RS)$ con la misma imagen por
+\[
+ [\underline A(R'\times_RS)]\longrightarrow
+ [\underline A(R')]
+ \times_{[\underline A(R)]}[\underline A(S)].
+\]
+Obtenemos un diagrama de flechas continuas
+\[
+\begin{tikzcd}[column sep=small,row sep=small]
+ && a''_2 \arrow[ddll] \arrow[ddrr] &&\\
+ && a''_1 \arrow[u,dashed] \arrow[dl] \arrow[dr] &&\\
+ a'_2 \arrow[ddrr] & a'_1 \arrow[l,"{\sim}"] \arrow[dr]
+ && b_1 \arrow[r,"{\tau}"] \arrow[dl] & b_2 \arrow[ddll]\\
+ && a_1 \arrow[d,"{\bar\tau}"] &&\\
+ && a_2 &&
+\end{tikzcd}
+\qquad\text{situado sobre}\qquad
+\begin{tikzcd}[column sep=small,row sep=small]
+ & R'\times_RS \arrow[dl] \arrow[dr] &\\
+ R' \arrow[dr] && S \arrow[dl]\\
+ & R &
+\end{tikzcd}
+\]
+donde $\bar\tau:a_1\longrightarrow a_2$ es el isomorfismo inducido
+por $\tau$, de modo que el cuadrado inferior derecho es conmutativo.
+Bajo la condición (ii), el isomorfismo dado
+$a'_1\xrightarrow{\sim}a'_2$ puede sustituirse de modo que también el
+cuadrado izquierdo sea conmutativo. Como
+\[
+ a''_i=a'_i\times_{a_i}b_i\qquad(i=1,2)
+\]
+por la Observación 2.6(a), obtenemos un isomorfismo
+$a''_1\xrightarrow{\sim}a''_2$. Por tanto,
+\[
+ [\underline A(R'\times_RS)]\longrightarrow
+ [\underline A(R')]
+ \times_{[\underline A(R)]}[\underline A(S)]
+\]
+es inyectivo y, por consiguiente, biyectivo, pues $\underline A$ es
+homogéneo por hipótesis. \hfill$\square$

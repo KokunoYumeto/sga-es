@@ -1,0 +1,171 @@
+\par\medskip
+\noindent
+\underline{Teorema} 5.2. \underline{Supongamos que $S$ es un rasgo
+completo, y sean $A_K$ un esquema abeliano sobre $K$, $A'_K$ el esquema
+abeliano dual y $\ell$ un primo tal que el modelo de Néron conexo $A^o$
+es $\ell$-divisible (cf. 2.2.1), de modo que se tienen entonces las
+filtraciones (5.1.10) y (5.1.11) de los progrupos $T_\ell(A_K)$ y
+$T_\ell(\sisi{A_{K'}}{A'_K})$. Entonces las partes tóricas se recuperan de las partes
+fijas mediante la fórmula}
+\begin{equation}\tag{5.2.1}
+ T_\ell(A_K)^t
+ =
+ T_\ell(A_K)^f\cap\bigl(T_\ell(A'_K)^f\bigr)^\perp,
+\end{equation}
+\underline{y mediante la fórmula análoga obtenida intercambiando los
+papeles de $A_K$ y $A'_K$, donde $\perp$ denota el complemento ortogonal
+respecto del emparejamiento canónico (1.0.2).}
+
+\underline{Por último, cuando $A_K$ posee reducción semiestable sobre
+$S$ (lo que se deduce de las demás hipótesis en el caso $\ell=p$), se
+tiene incluso la fórmula}
+\begin{equation}\tag{5.2.2}
+ T_\ell(A_K)^t=\bigl(T_\ell(A'_K)^f\bigr)^\perp.
+\end{equation}
+
+\smallskip
+\noindent
+5.2.3. El significado de la fórmula (5.2.1) es muy claro cuando $\ell$
+es primo con la característica de $K$: como en 2.4, puede interpretarse
+entonces pasando a los $\mathbb Z_\ell$-módulos ordinarios, dotados de
+una acción de $\pi=\operatorname{Gal}(\overline K/K)$, formados por los
+puntos con valores en $\overline K$ de los progrupos que intervienen.
+Expliquémoslo en el caso general, utilizando la noción de dual
+\begin{equation}\tag{5.2.3.1}
+ D(G)=\operatorname{Hom}\bigl(G,T_\ell(\mathbb G_m)\bigr)
+\end{equation}
+de un pro-$\ell$-grupo de Barsotti--Tate $G=(G(\nu))$. Por definición,
+es el sistema proyectivo de los duales de Cartier $D(G(\nu))$
+(SGA 3 VII 3.3.1 y VIII 1), cuyos morfismos de transición se definen
+de la manera evidente (por ejemplo, por transposición a partir de los
+morfismos de inclusión entre los $G(\nu)$). La teoría de dualidad de
+las variedades abelianas nos dice que el emparejamiento mencionado en
+5.2 define, de hecho, un \underline{isomorfismo}
+\begin{equation}\tag{5.2.3.2}
+ T_\ell(A'_K)\simeq D\bigl(T_\ell(A_K)\bigr),
+\end{equation}
+y por tanto, por composición, un morfismo
+\begin{equation}\tag{5.2.3.3}
+ T_\ell(A_K)^f\longrightarrow D\bigl(T_\ell(A'_K)^f\bigr).
+\end{equation}
+La fórmula (5.2.1) expresa que el núcleo del homomorfismo precedente
+(que a priori es un prosubgrupo de su primer término) es precisamente
+la parte tórica $T_\ell(A_K)^t$. Obsérvese que se trata de un
+\underline{isomorfismo de proobjetos, y no de sistemas proyectivos}:
+no afirmamos (y en general sería falso) que, para todo entero $\nu$,
+$T_\ell(A_K)^t(\nu)$ sea igual al núcleo de
+\[
+ T_\ell(A_K)^f(\nu)
+ \longrightarrow
+ D\bigl(T_\ell(A'_K)^f\bigr)(\nu);
+\]
+este último puede ser a priori mayor. Veremos más adelante, sin embargo,
+que no es mayor si $A_K$ posee reducción semiestable; por las hipótesis
+formuladas en 5.2, este es, en particular, el caso cuando $\ell=p$.
+
+\smallskip
+\noindent
+5.2.4. La demostración de (5.2.1) no hace sino repetir, casi sin cambios,
+la demostración de 2.4. Obsérvese que el emparejamiento inducido
+\begin{equation}\tag{5.2.4.1}
+ T_\ell(A_K)^f\times T_\ell(A'_K)^f
+ \longrightarrow T_\ell(\mathbb G_{mK})
+\end{equation}
+que da lugar a (5.2.3.3) está inducido por un emparejamiento
+\begin{equation}\tag{5.2.4.2}
+ T_\ell(A^o)^f\times T_\ell({A'}^o)^f
+ \longrightarrow T_\ell(\mathbb G_{mS})
+\end{equation}
+de progrupos de Barsotti--Tate sobre $S$, inducido a su vez por
+el emparejamiento de progrupos
+\begin{equation}\tag{5.2.4.3}
+ T_\ell(A^o)\times T_\ell({A'}^o)
+ \longrightarrow T_\ell(\mathbb G_{mS})
+\end{equation}
+deducido de la biextensión $W$ de $(A^o,{A'}^o)$ por
+$\mathbb G_{mS}$. En consecuencia, el emparejamiento
+\begin{equation}\tag{5.2.4.4}
+ T_\ell(A_o^o)\times T_\ell({A'}_o^o)
+ \longrightarrow T_\ell(\mathbb G_{mk}),
+\end{equation}
+obtenido de (5.2.4.2) al pasar a las fibras especiales, es precisamente
+el emparejamiento deducido de la biextensión $W_o$ de
+$(A_o^o,{A'}_o^o)$ por $\mathbb G_{mk}$. Por VIII 4.11 y 1.5, el
+anulador izquierdo del emparejamiento (5.2.4.4) es, por tanto,
+$T_\ell(T_o)$, que es precisamente la fibra especial de la parte tórica
+$T_\ell(A^o)^t$. Volviendo a la definición de anuladores izquierdos
+dada en 5.2.3, concluimos mediante el lema siguiente.
+
+\medskip
+\noindent
+\underline{Lema} 5.2.5. \underline{Sea $u:G\longrightarrow H$ un
+homomorfismo de pro}-$\ell$-\underline{grupos de Barsotti--Tate sobre $S$. Si
+$u_o:G_o\longrightarrow H_o$ es cero, entonces $u$ es cero. Si
+$u_o:G_o\longrightarrow H_o$ es una isogenia (respectivamente, un
+isomorfismo), entonces $u$ es una isogenia (respectivamente, un
+isomorfismo).}
+
+En efecto, apliquemos la primera afirmación de 5.2.5 al morfismo
+compuesto
+\[
+ T_\ell(A^o)^t
+ \longrightarrow T_\ell(A^o)^f
+ \longrightarrow D\bigl(T_\ell({A'}^o)^f\bigr),
+\]
+donde el segundo morfismo se deduce del emparejamiento (5.2.4.2). El
+compuesto es cero, de modo que el emparejamiento considerado se anula
+sobre la parte tórica de la izquierda. Por simetría, se anula también
+sobre la parte tórica de la derecha y desciende, por tanto, a un
+emparejamiento sobre los cocientes, o \emph{trozos abelianos},
+\[
+ T_\ell(A^o)^{ab}\times T_\ell({A'}^o)^{ab}
+ \longrightarrow T_\ell(\mathbb G_m).
+\]
+Estos cocientes son de nuevo progrupos de Barsotti--Tate, como
+se comprueba fácilmente. Queda demostrar que el morfismo correspondiente
+a este emparejamiento,
+\[
+ T_\ell(A^o)^{ab}
+ \longrightarrow D\bigl(T_\ell({A'}^o)^{ab}\bigr),
+\]
+es una isogenia, lo cual se deduce nuevamente de 5.2.5.
+
+Dejamos al lector la fácil demostración de 5.2.5, resultado válido sobre
+toda base noetheriana conexa. Además, más adelante, en 7.4.7, mediante
+un análisis algo más preciso de las biextensiones $W_n$ de
+$(A_n^o,{A'}_n^o)$, encontraremos una demostración directa bastante
+evidente de los dos casos particulares en los que tuvimos que utilizar
+5.2.5.
+
+\smallskip
+\noindent
+5.2.6. Supongamos ahora que $A_K$ posee reducción semiestable sobre $S$,
+de modo que $\ell$ puede ser un primo cualquiera (igual o distinto de
+$p$). Además, por el criterio galoisiano de reducción semiestable 3.5,
+para $\ell\neq p$ se tiene
+\begin{equation}\tag{5.2.7}
+ \bigl(T_\ell(A'_K)^f\bigr)^\perp
+ \ \bigl(=T_\ell(A_K)^t\bigr)
+ \subset T_\ell(A_K)^f.
+\end{equation}
+Para concluir la demostración de 5.2, queda mostrar que esta inclusión
+es válida sin restricción sobre $\ell$.
+
+En efecto, el término izquierdo es canónicamente isomorfo a
+\[
+ D\bigl(T_\ell(A'_K)/T_\ell(A'_K)^f\bigr)
+\]
+y posee, por tanto, \emph{rango} (o \emph{altura})
+$2n-2\alpha-\mu=\mu$, con la notación de (2.1.9), pues por hipótesis
+$\lambda=0$. Este es también el rango de $T_\ell(A_K)^t$. Como la
+inclusión
+\begin{equation}\tag{*}
+ T_\ell(A_K)^t\subset T_\ell(A_K)
+\end{equation}
+es \underline{estricta}, en el sentido de que ya induce un monomorfismo
+sobre cada término de los sistemas proyectivos considerados, se deduce
+fácilmente que el término izquierdo de (*) es maximal entre los
+prosubgrupos de Barsotti--Tate de $T_\ell(A_K)$ que poseen el
+mismo rango. Hay, pues, igualdad en (5.2.7); por el teorema de
+ortogonalidad, esto equivale a la inclusión entre los dos términos
+extremos de (5.2.7).

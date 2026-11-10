@@ -1,0 +1,115 @@
+%%%%%%%%%%  scan idx 447  |  folio 436  %%%%%%%%%%
+
+\medskip
+\noindent
+9.6. Estamos ya en condiciones de definir el acoplamiento canónico
+anunciado (9.1.2), sin restricción alguna sobre $\ell$, de manera que,
+para $\ell\neq p$, esta definición coincida con la dada en 9.2. Para
+ello aplicamos las consideraciones de 9.5 a la situación siguiente:
+
+\begin{equation}\tag{9.6.1}
+\left\{
+\begin{aligned}
+P&=T_\ell(A^o)^t=\check{\underline M}{}'_\ell(1),
+& Q&=\underline M_\ell,
+& R&=T_\ell(A^o)^f/T_\ell(A^o)^t,\\[1.25ex]
+F&=T_\ell(A^o)^f,
+& E&=D(F')=D\bigl(T_\ell({A'}^o)^f\bigr).
+\end{aligned}
+\right.
+\end{equation}
+En la última fórmula, $D$ denota la dualidad de Cartier en el sentido
+de los pro-$\ell$-grupos de Barsotti--Tate; es decir, $D(Y)$ es el
+sistema \underline{proyectivo} de los $D(Y(n))$, con los morfismos de
+transición usuales. La estructura de $F$ como extensión de $R$ por
+$P$ es clara. Análogamente,
+\begin{equation*}
+F'=T_\ell({A'}^o)^f
+\end{equation*}
+posee la estructura de una extensión de $R'$ por
+$P'=T_\ell({A'}^o)^t=\check{\underline M}_\ell(1)$. Aplicando la
+dualidad de Cartier, se concluye que $E=D(F')$ está dotado de la
+estructura de una extensión de $D(P')=\underline M_\ell$ por $D(R')$.
+Ahora bien, $D(R')$ es canónicamente isomorfo a $R$ por 5.5
+(demostrado en 7.4.6); esto precisa la estructura de $E$ como extensión
+de $Q$ por $R$.
+
+%%%%%%%%%%  scan idx 448  |  folio 437  %%%%%%%%%%
+
+Como extensión mixta $X_\eta$ de $E_\eta$ por $F_\eta$, tomamos
+\begin{equation}\tag{9.6.2}
+X_\eta=T_\ell(A_K)=X^0_\eta
+ \supset X^1_\eta=T_\ell(A_K)^f
+ \supset X^2_\eta=T_\ell(A_K)^t
+ \supset0.
+\end{equation}
+El isomorfismo de extensiones de $R_\eta$ por $P_\eta$
+\begin{equation*}
+X^1_\eta\simeq F_\eta
+\end{equation*}
+es claro. El isomorfismo de extensiones de $Q_\eta$ por $R_\eta$
+\begin{equation*}
+X_\eta/X^2_\eta\simeq\sisi{F_\eta}{E_\eta}=D(F'_\eta)
+\end{equation*}
+se deduce inmediatamente del teorema de ortogonalidad 5.2.
+
+Disponemos, pues, de los datos necesarios para definir un acoplamiento
+\sisi{(9.5.6)}{(9.5.5)}, que aquí, puesto que
+$Q^*=\underline M'_\ell$, adopta la forma (9.1.2). Su compatibilidad
+con la definición de 9.2 se deduce de 9.5.8. Las consideraciones de
+5.8 muestran además, bajo reserva de la validez del teorema de Tate
+[33] (y por tanto al menos cuando $\operatorname{char}K=0$), que el
+acoplamiento considerado puede describirse en términos del único
+pro-$\ell$-grupo de Barsotti--Tate $X_\eta=T_\ell(A_K)$ sobre
+$\sisi{S}{\eta}$: su filtración de tres escalones y las extensiones
+$F$ y $E$ que prolongan $X^1_\eta$ y $X_\eta/X^2_\eta$ pueden
+definirse canónicamente en términos de $X_\eta$ solamente.
+
+\medskip
+\noindent
+\underline{Observación 9.7.} Ya no suponemos necesariamente que $A_K$
+tenga reducción semiestable sobre el rasgo henseliano $S$. Sea $K'$
+una extensión de Galois finita de $K$ tal que $A_{K'}$ tenga reducción
+semiestable sobre la normalización $S'$ de $S$ en $K'$ (3.6). Con las
+notaciones de (8.1.8), el descenso de Galois a partir del acoplamiento
+de monodromía de $A_{K'}$ define entonces un acoplamiento
+
+%%%%%%%%%%  scan idx 449  |  folio 438  %%%%%%%%%%
+
+\begin{equation}\tag{*}
+v_\ell^{K'}:\underline M_K\otimes\underline M'_K
+ \longrightarrow\mathbb Z_{\ell K}.
+\end{equation}
+A priori, este acoplamiento depende de la elección de $K'$, pero se
+deduce de (10.4.3) más abajo que el acoplamiento
+\begin{equation}\tag{9.7.1}
+u_\ell:\underline M_K\otimes\underline M'_K
+ \longrightarrow\mathbb Q_{\ell K}
+\end{equation}
+dado por
+\begin{equation*}
+u_\ell=\frac{1}{e(S'/S)}\,v_\ell^{K'}
+\end{equation*}
+es independiente de ella, donde
+\begin{equation*}
+e(S'/S)=\operatorname{length}(V'/\mathfrak mV').
+\end{equation*}
+Podemos volver a llamar a (9.7.1) el \underline{acoplamiento de
+monodromía} del esquema abeliano $A_K$ sobre $K$ y del número primo
+$\ell$ considerado: cuando el propio $A_K$ tiene reducción
+semiestable, coincide manifiestamente con la restricción a $\eta$ del
+acoplamiento de monodromía (9.1.2). Se deduce de 10.4 más abajo que este
+acoplamiento toma siempre, de hecho, valores en $\mathbb Q_K$ y es
+independiente de $\ell$.
+
+Cabe preguntarse si toma valores en $\mathbb Z_K$, lo que equivale a
+decir que (9.7.1) toma valores en $\mathbb Z_{\ell K}$ para todo
+número primo $\ell$. Así ocurre al menos cuando $A_K$ es una curva
+elíptica. El único caso que requiere verificación es entonces aquel en
+que $\underline M_K\simeq\underline M'_K$ tiene rango $1$, de modo que
+$\underline M_K\otimes\underline M'_K$ es canónicamente isomorfo a
+$\mathbb Z_K$ y el acoplamiento de monodromía (9.7.1) puede
+interpretarse simplemente como un número racional ordinario. Se
+deduce de los resultados de Néron [19] que este número es $v(j)$,
+donde $j$ es el invariante absoluto de $A_K$ y $v$ es la valoración
+normalizada de $K$.

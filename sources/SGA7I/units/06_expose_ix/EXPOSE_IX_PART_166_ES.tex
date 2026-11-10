@@ -1,0 +1,126 @@
+\par\medskip
+\noindent
+11. \underline{Componentes conexas del modelo de Néron: relación de
+dualidad y comportamiento asintótico}
+
+\smallskip
+\noindent
+11.0. El objeto de la presente sección es estudiar el $k$-grupo finito
+étale
+\begin{equation}\tag{11.0.1}
+\Phi_o=A_o/A_o^{\,o}
+\end{equation}
+ya considerado en la sección 1. Para todo número primo $\ell$,
+denotemos por
+\begin{equation*}
+\Phi_o(\ell)
+\end{equation*}
+su componente $\ell$-primaria. Así, conocer $\Phi_o$ equivale a conocer
+los $\Phi_o(\ell)$, en virtud de la fórmula
+\begin{equation}\tag{11.0.2}
+\Phi_o=\coprod_\ell\Phi_o(\ell).
+\end{equation}
+
+%%%%%%%%%%  scan idx 460  |  folio 449  %%%%%%%%%%
+
+Obsérvese que los grupos $\Phi_o$ y $\Phi_o(\ell)$ están determinados,
+respectivamente, por los grupos finitos ordinarios $\Phi_o(\bar k)$ y
+$\Phi_o(\ell)(\bar k)$, junto con la acción natural de
+\begin{equation*}
+\pi_o=\operatorname{Gal}(\bar k/k)
+\end{equation*}
+sobre ellos. Por otra parte, está claro que $\Phi_o(\bar k)$ es también
+el grupo de componentes conexas del modelo de Néron de
+$A_{\widetilde K}$, donde $\widetilde K$ es el cuerpo de fracciones de
+la henselización estricta de $S$ relativa a la clausura separable
+elegida $\bar k$ de $k$. Por tanto, para estudiar $\Phi_o$, podemos
+reducirnos al caso en que $S$ es estrictamente local; las acciones de
+\begin{equation*}
+\pi_o\simeq\operatorname{Gal}(\widetilde K/K)
+\end{equation*}
+sobre $\Phi_o(\bar k)$ se recuperan entonces automáticamente por
+transporte de estructura. Del mismo modo, podríamos reducirnos además
+al caso en que $S$ es completo, mediante el cambio de base
+$\widehat S\longrightarrow S$ y el hecho de que la formación del modelo
+de Néron conmuta con él [21, teorema 3.4 b)].
+
+\smallskip
+\noindent
+11.1. Supongamos, pues, que $S$ es estrictamente local, de modo que
+$\Phi_o$ puede identificarse con el grupo finito ordinario
+$\Phi_o(k)$. Se obtiene
+\begin{equation}\tag{11.1.1}
+\Phi_o(k)\simeq A_o(k)/A_o^o(k)
+ \simeq A(S)/A^o(S)
+ \simeq A(K)/A(K)^o,
+\end{equation}
+donde la primera igualdad se deduce de que $A_o$ es liso sobre $k$; la
+segunda, del lema de Hensel, pues $A$ es liso sobre $S$ y $S$ es
+henseliano; y la tercera, de la relación
+$A(S)\xrightarrow{\sim}A(K)$ y de la convención
+\begin{equation}\tag{11.1.2}
+A(K)^o\mathrel{\mathop:}=A^o(S).
+\end{equation}
+Así, $A(K)^o$ aparece como un subgrupo natural de índice finito en
+$A(K)$ (y no debe confundirse con $A^o(K)=A(K)$). Los isomorfismos
+
+%%%%%%%%%%  scan idx 461  |  folio 450  %%%%%%%%%%
+
+(11.1.1) son evidentemente funtoriales en $A$ y compatibles con el
+transporte de estructura en $(S,A_K)$ y, en particular, con la acción
+de cualesquiera grupos de Galois.
+
+Sea ahora $\ell$ un número primo distinto de $p$. Entonces $A^o$ es
+$\ell$-divisible; más precisamente, $\ell\operatorname{id}_{A^o}$ es
+un morfismo étale y sobreyectivo. En consecuencia, induce un
+endomorfismo sobreyectivo de $A^o(S)=A(K)^o$, que es por tanto un
+\underline{grupo $\ell$-divisible}. Se sigue inmediatamente que, para
+todo entero $n\geq0$ primo con $p=\operatorname{char}(k)$,
+\begin{equation}\tag{11.1.3}
+{}_n\Phi_o(k)\simeq{}_nA(K)/{}_nA(K)^o,
+ \qquad (n,p)=1.
+\end{equation}
+Por la definición (2.2.3) de la parte fija de ${}_nA_K$, se tiene
+\begin{equation}\tag{11.1.4}
+{}_nA(K)^o=({}_nA_K)^f(\bar K)
+ \simeq T_n(A_K)^f(\bar K)
+ \otimes_{\mathbb Z_n}\mathbb Z/n\mathbb Z.
+\end{equation}
+Tomando para $n$ una potencia de $\ell$ y poniendo, como en (2.5.3),
+\begin{equation}\tag{11.1.5}
+U=T_\ell\bigl(A(\bar K)\bigr),
+ \qquad
+T_\ell\bigl(A(\bar K)\bigr)^f=U^I,
+\end{equation}
+donde $U^I$ denota el submódulo de $U$ formado por los invariantes bajo
+el grupo de inercia $I$, podemos escribir (11.1.3) en la forma
+\begin{equation}\tag{11.1.6}
+{}_n\Phi_o(k)\simeq (U_n)^I/(U^I)_n,
+ \qquad n=\ell^{r+1},
+\end{equation}
+donde el subíndice $n$ denota la reducción módulo $n$, es decir, el
+producto tensorial sobre $\mathbb Z_\ell$ con
+$\mathbb Z_\ell/n\mathbb Z_\ell$. Como los morfismos de transición
+entre los grupos que aparecen en ambos miembros de (11.1.6) son
+evidentes, al pasar al límite inductivo sobre las potencias de $\ell$
+se obtiene el
+
+%%%%%%%%%%  scan idx 462  |  folio 451  %%%%%%%%%%
+
+resultado siguiente.
+
+\medskip
+\noindent
+\underline{Proposición 11.2.} \underline{Supongamos que $S$ es
+estrictamente local y sea $\ell$ un número primo distinto de $p$.
+Entonces existe un isomorfismo canónico}
+\begin{equation}\tag{11.2.1}
+\Phi_o(\ell)\simeq
+ \frac{(U\otimes D_\ell)^I}{U^I\otimes D_\ell},
+\end{equation}
+\underline{donde $U$ se define en (11.1.5) y
+$D_\ell=\mathbb Q_\ell/\mathbb Z_\ell$.}
+
+Así, el grupo $\Phi_o(\ell)$ puede describirse únicamente en términos
+del módulo de Tate $U=T_\ell(A(\bar K))$, considerado como módulo de
+Galois bajo la acción del grupo de inercia $I$.

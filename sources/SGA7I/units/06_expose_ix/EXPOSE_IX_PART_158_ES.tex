@@ -1,0 +1,115 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §9.2, líneas 2216--2276;
+% índices de escaneo 430--432, folios 419--421. Las capas francesas D/C
+% no presentan diferencias materiales. Dos errores matemático-tipológicos
+% inequívocos detectados durante la traducción se conservan reversiblemente
+% mediante \sisi y se han comunicado al custodio raíz. Las reparaciones
+% transcriptivas x, V^\perp, T'_o y el equilibrado de paréntesis están
+% confirmadas por la impresión y no requieren aparato.
+
+\medskip
+\noindent
+9.2. \underline{El caso $\ell\neq p$}. Comencemos por el caso más
+sencillo $\ell\neq p$, utilizando la notación introducida en (2.5.3).
+Obsérvese que, salvo torsión, la relación $V=U^I$ significa también que
+$V^{\perp}$ es el módulo engendrado por los elementos $gx-x$, donde
+$\sisi{u\in U}{x\in U}$ y $g\in I$, y en cualquier caso se tiene
+
+\begin{equation}\tag{9.2.1}
+gx-x\in V^{\perp}\quad\text{para }x\in U,\ g\in I \qquad .
+\end{equation}
+Así, para $g\in I$,
+
+\begin{equation}\tag{9.2.2}
+gx=x+u(g)\mathbin{.}x \qquad ,
+\end{equation}
+donde $\sisi{g\longmapsto u(g)}{u(g)}$ es un homomorfismo de $U$ en
+$V^{\perp}$ que se anula sobre $V=U^I$, o, equivalentemente,
+
+\begin{equation}\tag{9.2.3}
+u\in\operatorname{Hom}(U/V,V^{\perp})
+ \simeq (U/V)^{\vee}\otimes V^{\perp} \qquad .
+\end{equation}
+En el caso de reducción semiestable considerado, es decir, cuando
+$V^{\perp}\subset V$, la fórmula (9.2.2) dice que la acción de $g$ sobre
+$U$ es una \underline{transvección} paralela a $V^{\perp}=W$, y la
+composición de estas transvecciones es simplemente la suma de los
+homomorfismos correspondientes $u$ de (9.2.3). Por consiguiente, la
+acción del grupo de inercia $I$ sobre $U$ queda completamente descrita
+por un homomorfismo de grupos
+
+\begin{equation}\tag{9.2.4}
+I\longrightarrow (U/V)^{\vee}\otimes V^{\perp} \qquad .
+\end{equation}
+
+%%%%%%%%%%  scan idx 431  |  folio 420  %%%%%%%%%%
+
+El teorema de ortogonalidad, aplicado tanto a $A_K$ como a $A'_K$, da
+
+\begin{equation*}
+V^{\perp}=W \quad , \qquad
+(U/V)^{\vee}\simeq W'(-1) \qquad ,
+\end{equation*}
+donde $W'$ es la parte tórica de
+$U'=T_{\ell}(A'(\overline K))$, y $(-1)$ denota el giro de Tate. Además,
+el homomorfismo (9.2.4) se factoriza a través de
+$I(\ell)\simeq\mathbb{Z}_{\ell}(1)$, de modo que (9.2.4) puede
+interpretarse como un homomorfismo canónico
+
+\begin{equation}\tag{9.2.5}
+u:\mathbb{Z}_{\ell}(1)\longrightarrow W'\otimes W(-1)
+ \qquad ,
+\end{equation}
+o, equivalentemente, como un elemento
+
+\begin{equation}\tag{9.2.6}
+u\in W'\otimes W(-2) \qquad .
+\end{equation}
+Recordemos que $W$ y $W'$ son los grupos de puntos con valores en
+$\overline K$ de los dos haces $\ell$-ádicos constantes torcidos
+$T_{\ell}(A^o)^t$ y $T_{\ell}({A'}^o)^t$, cuyas fibras especiales son
+$T_{\ell}(T_o)$ y $T_{\ell}(T'_o)$, respectivamente. Obtenemos los
+isomorfismos canónicos
+
+\begin{equation}\tag{9.2.7}
+\left\{
+\begin{array}{l}
+W\simeq\sisi{T_{\ell}(T_o)(\overline k))}{T_{\ell}(T_o)(\overline k)}
+ \simeq\check M\otimes\mathbb{Z}_{\ell}(1),\\[3ex]
+W'\simeq T_{\ell}(\sisi{T_o}{T'_o}(\overline k))
+ \simeq\check M'\otimes\mathbb{Z}_{\ell}(1),
+\end{array}
+\right.
+\end{equation}
+donde $M$ y $M'$ denotan los grupos de caracteres sobre $\overline k$
+de $T_o$ y $T'_o$, respectivamente:
+
+\begin{equation}\tag{9.2.8}
+T_o=D(M) \quad , \qquad T'_o=D(M') \qquad .
+\end{equation}
+Se deduce que el elemento $u$ de (9.2.6), que describe la acción del
+grupo de inercia $I$ sobre el módulo de Tate $U$ de $A_K$, se interpreta
+como un elemento canónico de
+$(\check M'\otimes_{\mathbb{Z}}\check M)
+ \otimes_{\mathbb{Z}}\mathbb{Z}_{\ell}$. Además, es invariante bajo
+$\pi_o=\pi/I=\operatorname{Gal}(\overline k/k)$, pues por definición es
+invariante por transporte de estructura:
+
+%%%%%%%%%%  scan idx 432  |  folio 421  %%%%%%%%%%
+
+\begin{equation}\tag{9.2.9}
+u\in
+\bigl((\check M'\otimes_{\mathbb{Z}}\check M)
+ \otimes_{\mathbb{Z}}\mathbb{Z}_{\ell}\bigr)^{\sisi{I}{\pi_o}}
+\simeq
+\operatorname{Hom}_{\mathbb{Z}}
+ (\underline M\otimes\underline M',\mathbb{Z}_{\ell})
+\simeq
+\operatorname{Hom}_{\mathbb{Z}_{\ell}}
+ (\underline M_{\ell}\otimes\underline M'_{\ell},
+  \mathbb{Z}_{\ell}) \quad .
+\end{equation}
+Salvo escribir $u$ en lugar de $u_{\ell}$, este es el elemento (9.1.2)
+que queríamos definir.
+
+Para definir (9.1.2) en el caso general, necesitaremos algunos
+preliminares, que se desarrollarán en las dos secciones siguientes.

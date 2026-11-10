@@ -1,0 +1,85 @@
+\par
+(c) Sea $(S_0,\xi_0)$ un objeto formal mínimamente versal de
+$\underline h_{(R_0,R_1,\ldots)}$ (Teorema 1.11). Para todo objeto
+\[
+ \xi:R_0\longrightarrow T
+ \qquad\text{de }\underline h_{(R_0,R_1,\ldots)}(T),
+\]
+considérese el funtor
+\[
+ \operatorname{Isom}(\xi,\xi):
+ \underline C_\Lambda/(T\widehat\otimes_\Lambda T)
+ \longrightarrow(\mathrm{Sets}).
+\]
+Este asigna a $R$ el conjunto de isomorfismos entre las dos imágenes de
+$\xi$ sobre $R$ obtenidas a partir de
+\[
+ R_0\xrightarrow{\ \xi\ }T
+ \mathrel{\substack{\xrightarrow{}\\[-.6ex]\xrightarrow[]{}}}
+ T\widehat\otimes_\Lambda T\longrightarrow R.
+\]
+Este funtor está representado por
+\[
+ R_1\otimes_{R_0\widehat\otimes_\Lambda R_0}
+       (T\otimes_\Lambda T).
+\]
+El paso al límite inverso muestra que
+$\operatorname{Isom}(\xi_0,\xi_0)$ está prorepresentado por un objeto
+$S_1$, y que
+\[
+ \underline h_{(R_0,R_1,\ldots)}
+ \simeq\underline h_{(S_0,S_1,\ldots)}.
+\]
+Por (b), el cogrupoide $S_*$ es mínimamente liso. \hfill$\square$
+
+\underline{Definición 2.13.} Un grupoide cofibrado $\underline A$
+sobre $\underline C_\Lambda$ se llama \underline{(mínimamente)
+prorepresentable} si es $\underline C_\Lambda$-equivalente a
+$\underline h_{(R_0,R_1,\ldots)}$ para algún cogrupoide (normalizado)
+$(R_0,R_1,\ldots)$ en $\widehat{\underline C}_\Lambda$.
+
+\underline{Proposición 2.14.} Si $(R_0,R_1,\ldots)$ es un cogrupoide
+normalizado en $\widehat{\underline C}_\Lambda$, entonces todo
+homomorfismo
+\[
+ (\alpha_0,\alpha_1):(R_0,R_1,\ldots)
+ \longrightarrow(R_0,R_1,\ldots)
+\]
+que induce una $\underline C_\Lambda$-equivalencia
+\[
+ \underline h_{(\alpha_0,\alpha_1)}:
+ \underline h_{(R_0,R_1,\ldots)}
+ \longrightarrow\underline h_{(R_0,R_1,\ldots)}
+\]
+es un isomorfismo. En
+
+%%%%%%%%%%  scan idx 77  |  folio 66  %%%%%%%%%%
+
+particular, una prorepresentación normalizada de un grupoide cofibrado
+sobre $\underline C_\Lambda$, si existe, es única salvo isomorfismo.
+
+\underline{Demostración.} Considérese el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ \underline h_{(R_0,R_1,\ldots)}
+   \arrow[r,"{\underline h_{(\alpha_0,\alpha_1)}}"]
+ & \underline h_{(R_0,R_1,\ldots)}\\
+ \underline h_{R_0} \arrow[u,"\epsilon"]
+   \arrow[r,"{\underline h_{\alpha_0}}"']
+ & \underline h_{R_0} \arrow[u,"\epsilon"']
+\end{tikzcd}
+\]
+en el que $\underline h_{(\alpha_0,\alpha_1)}$ es una
+$\underline C_\Lambda$-equivalencia. Puesto que
+$\underline h_{(R_0,R_1,\ldots)}(k[\varepsilon])$ es totalmente
+disconexo, tanto
+\[
+ [\underline h_{(\alpha_0,\alpha_1)}(k[\varepsilon])]
+ \quad\text{como}\quad
+ [\epsilon(k[\varepsilon])]
+\]
+son biyecciones, y por tanto también lo es
+$\underline h_{\alpha_0}(k[\varepsilon])$. Así,
+$\alpha_0:R_0\longrightarrow R_0$ es un endomorfismo suprayectivo y,
+por consiguiente, un automorfismo. Se sigue que $\alpha_1$ es también un
+automorfismo de $R_1$. \hfill$\square$

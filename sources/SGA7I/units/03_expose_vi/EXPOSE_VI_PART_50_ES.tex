@@ -1,0 +1,122 @@
+\par\bigskip
+\noindent\textbf{5. Subesquemas jacobianos formales}
+
+\medskip
+Sea $X_0$ un esquema de tipo finito sobre un cuerpo $k$, y sea
+$(R,\mathfrak X)$ una deformación formal versal de $X_0$. El espacio
+$\mathfrak X$ no es un $R$-esquema ordinario, sino un esquema formal
+$R$-ádico. El objeto de esta sección es precisar el significado del
+«lugar no liso de $\mathfrak X$ sobre $R$».
+
+Recordemos primero los ideales de Fitting de un módulo de tipo finito.
+Sea $A$ un anillo conmutativo y sea $E$ un $A$-módulo de tipo finito.
+Elijamos una presentación
+\[
+K\longrightarrow F\longrightarrow E\longrightarrow0,
+\]
+donde $F$ es localmente libre de rango constante $n$. Para
+$p=0,1,2,\ldots$, definamos
+\[
+I_A^p(E)=\operatorname{Im}\left(
+ \bigwedge^{n-p}K\otimes_A\bigwedge^{n-p}F^*
+ \longrightarrow A\right).
+\]
+Estos ideales son independientes de la presentación elegida. Son
+invariantes del $A$-módulo $E$, llamados sus \emph{ideales de
+Fitting}. Las propiedades siguientes se deducen directamente de la
+definición.
+
+\medskip
+\noindent\textbf{5.1.}
+\textbf{(a)} Para todo homomorfismo de anillos
+$A\longrightarrow B$, la aplicación canónica
+\[
+B\otimes_A A/I_A^p(E)
+\xrightarrow{\ \sim\ }
+B/I_B^p(B\otimes_AE)
+\]
+es un isomorfismo para todo $p$. En particular,
+\[
+I_{S^{-1}A}^p(S^{-1}E)=S^{-1}I_A^p(E)
+\]
+para todo subconjunto multiplicativo $S\subset A$.
+
+%%%%%%%%%%  scan idx 126  |  folio 115  %%%%%%%%%%
+
+\smallskip
+\noindent\textbf{(b)} Hay inclusiones
+\[
+I_A^0(E)\subset I_A^1(E)\subset I_A^2(E)\subset\cdots.
+\]
+Para todo $x\in\operatorname{Spec}(A)$,
+\[
+I_A^p(E)_x=A_x
+\qquad\text{para todo }p\geq\dim_{\kappa(x)}E(x),
+\]
+donde $E(x)=\kappa(x)\otimes_AE$.
+
+\smallskip
+\noindent\textbf{(c)} Un punto
+$x\in\operatorname{Spec}(A)-\operatorname{Supp}(A/I_A^p(E))$ si y
+solo si, para cualquier presentación (equivalentemente, para alguna)
+\[
+K\longrightarrow F\longrightarrow E\longrightarrow0,
+\qquad F\simeq A^n,
+\]
+el módulo $K_x$ contiene una copia de $A_x^{n-p}$ que es un sumando
+directo de $F_x$. En particular,
+\[
+\operatorname{Supp}(A/I_A^0(E))=\operatorname{Supp}(E).
+\]
+
+\smallskip
+\noindent\textbf{(d)} Para cualesquiera dos $A$-módulos de tipo
+finito,
+\[
+I_A^r(E_1\oplus E_2)
+=\sum_{p+q=r}I_A^p(E_1)I_A^q(E_2).
+\]
+
+\smallskip
+\noindent\textbf{(e)} Si $A$ es un anillo ádico noetheriano,
+entonces
+\[
+A/I_A^p(E)=\varprojlim_\nu A_\nu/I_{A_\nu}^p(E_\nu),
+\]
+donde $A=\varprojlim_\nu A_\nu$ y $E_\nu=E\otimes_AA_\nu$.
+
+La propiedad 5.1(a) globaliza la definición. Si $X$ es un esquema y
+$\underline E$ es un $\mathcal O_X$-módulo cuasicoherente de
+presentación finita, existen haces cuasicoherentes de ideales
+$\underline I_X^p(\underline E)$, $p\geq0$, caracterizados en todo
+abierto afín $U\subset X$ por
+\[
+\Gamma(U,\underline I_X^p(\underline E))
+\xrightarrow{\ \sim\ }
+I_{\Gamma(U,\mathcal O_X)}^p(\Gamma(U,\underline E)).
+\]
+
+Para un morfismo de esquemas $X\longrightarrow Y$, el módulo relativo
+de diferenciales de K\"ahler
+$\Omega_{X|Y}=\Omega^1_{X|Y}$ es cuasicoherente. Si el morfismo es
+esencialmente de presentación finita, entonces $\Omega_{X|Y}$ es de
+presentación finita, de modo que están definidos los haces de ideales
+$\underline I_X^p(\Omega_{X|Y})$.
+
+\medskip
+\noindent\textbf{Definición 5.2.}
+Sea $X\longrightarrow Y$ un morfismo esencialmente de presentación
+finita. Para todo entero $p\geq0$, definamos $J_X^p(X|Y)$ como el
+subesquema cerrado de $X$
+
+%%%%%%%%%%  scan idx 127  |  folio 116  %%%%%%%%%%
+
+\noindent definido por el haz de ideales
+\[
+\underline I_X^p(X|Y)=\underline I_X^p(\Omega_{X|Y}).
+\]
+Se llama el $p$-ésimo \emph{subesquema jacobiano} de $X$ sobre $Y$.
+Para todo $x\in X$, pongamos
+\[
+X_x=\operatorname{Spec}(\mathcal O_{X,x}).
+\]

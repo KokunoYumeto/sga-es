@@ -1,0 +1,184 @@
+%%%%%%%%%%  scan idx 116  |  folio 105  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Teorema 4.10.}
+Sea $X_0$ un esquema afín de tipo finito sobre $k$.
+
+\smallskip
+\noindent\textbf{(a)}
+Si $X_0$ es localmente una intersección completa, entonces
+$\underline M_{X_0}$ es liso sobre $\underline C_\Lambda$.
+
+\smallskip
+\noindent\textbf{(b)}
+Supongamos que, para un punto cerrado fijo $x\in X_0$, el abierto
+$X_0-\{x\}$ es liso sobre $k$. Entonces ambos funtores
+\[
+\underline M_{X_0}
+\longrightarrow
+\underline M_{\operatorname{Spec}(\mathcal O_{X_0,x})}
+\longrightarrow
+\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x})}
+\]
+son mínimamente lisos. En particular, si $(R,\mathfrak X)$ es una
+deformación versal formal de $X_0$, entonces $(R,\mathfrak X_{(x)})$
+y $(R,\mathfrak X_{(\widehat x)})$ son deformaciones versales
+formales de $\operatorname{Spec}(\mathcal O_{X_0,x})$ y
+$\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x})$,
+respectivamente.
+
+\medskip
+\noindent\textit{Demostración.}
+Utilizamos la notación de la sección 3 para la cohomología de álgebras
+conmutativas y escribimos $X_0=\operatorname{Spec}(A_0)$.
+
+%%%%%%%%%%  scan idx 117  |  folio 106  %%%%%%%%%%
+
+\smallskip
+\noindent\textbf{(a)}
+Basta mostrar que
+$P:[\underline M_{X_0}]\longrightarrow\underline C_\Lambda$ es
+liso. Sea $(R,\operatorname{Spec}(A))$ una deformación de
+$\operatorname{Spec}(A_0)$ sobre
+$R\in\operatorname{Ob}(\underline C_\Lambda)$. Dada una extensión
+pequeña $R'\longrightarrow R$ en $\underline C_\Lambda$, de modo que
+\[
+0\longrightarrow k\longrightarrow R'\longrightarrow R
+\longrightarrow0
+\]
+es exacta, debemos levantar $(R,\operatorname{Spec}(A))$ a $R'$. La
+sucesión de transitividad para los $D^i$ con coeficientes en $A_0$,
+aplicada a $R'\longrightarrow R\longrightarrow A$, da
+\[
+\cdots\longrightarrow D^1(A|R,A_0)
+\longrightarrow D^1(A|R',A_0)
+\longrightarrow D^1(R|R',k)\otimes_kA_0
+\longrightarrow D^2(A|R,A_0)\longrightarrow\cdots .
+\]
+Como $R'\longrightarrow R$ es una extensión pequeña,
+$D^1(R|R',k)$ es de dimensión uno sobre $k$, generado por la clase
+$[R']$ representada por
+$0\longrightarrow k\longrightarrow R'\longrightarrow R
+\longrightarrow0$. Puesto que $A$ es plano sobre $R$,
+\[
+D^i(A|R,A_0)=D^i(A_0|k,A_0)
+\qquad(i>0).
+\]
+En particular, $D^2(A|R,A_0)=0$ porque $A_0$ es localmente una
+intersección completa, por la descripción en grados bajos de
+3.12(8). Obtenemos, pues, una sucesión exacta
+\[
+\longrightarrow D^1(A_0|k,A_0)
+\longrightarrow D^1(A|R',A_0)
+\longrightarrow D^1(R|R',k)\otimes_kA_0
+\longrightarrow0.
+\]
+Por tanto, existe una extensión $A'$ de $R'$-álgebras de $A$ por
+$A_0$ cuya clase se aplica en $[R']\otimes1$. Equivalentemente,
+$(R,\operatorname{Spec}(A))$ se levanta a la deformación
+$(R',\operatorname{Spec}(A'))$.
+
+\smallskip
+\noindent\textbf{(b)}
+Por 3.14 hay isomorfismos
+\[
+D^1(A_0|k,A_0)
+\xrightarrow{\ \sim\ }
+D^1((A_0)_x|k,(A_0)_x)
+\xrightarrow{\ \sim\ }
+D^1(\widehat{(A_0)_x}|k,\widehat{(A_0)_x}),
+\]
+y por tanto
+\[
+[\underline M_{X_0}(k[\varepsilon])]
+\xrightarrow{\ \sim\ }
+[\underline M_{\operatorname{Spec}(\mathcal O_{X_0,x})}
+ (k[\varepsilon])]
+\xrightarrow{\ \sim\ }
+[\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x})}
+ (k[\varepsilon])].
+\]
+Por 2.7(a), resta mostrar que
+\[
+[\underline M_{X_0}]
+\longrightarrow
+[\underline M_{\operatorname{Spec}(\mathcal O_{X_0,x})}]
+\longrightarrow
+[\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x})}]
+\]
+son funtores lisos.
+
+Sea $(R,\operatorname{Spec}(A))$ una deformación de
+$X_0=\operatorname{Spec}(A_0)$, y sea
+$0\longrightarrow k\longrightarrow R'\longrightarrow R
+\longrightarrow0$ una extensión pequeña. Como antes, los
+homomorfismos $R'\longrightarrow R\longrightarrow A$ dan un diagrama
+conmutativo exacto
+
+%%%%%%%%%%  scan idx 118  |  folio 107  %%%%%%%%%%
+
+\begin{center}
+\scriptsize
+\begin{tikzcd}[column sep=tiny,row sep=large]
+{} \arrow[r]
+& D^1(A_0|k,A_0) \arrow[r] \arrow[d,"\sim"']
+& D^1(A|R',A_0) \arrow[r,"p"] \arrow[d]
+& D^1(R|R',k)\otimes_kA_0 \arrow[r] \arrow[d]
+& D^2(A_0|k,A_0) \arrow[r] \arrow[d,"\sim"]
+& \cdots \\
+{} \arrow[r]
+& D^1(A_0|k,(A_0)_x) \arrow[r]
+& D^1(A|R',(A_0)_x) \arrow[r]
+& D^1(R|R',k)\otimes_k(A_0)_x \arrow[r]
+& D^2(A_0|k,(A_0)_x) \arrow[r]
+& \cdots \\
+{} \arrow[r]
+& D^1((A_0)_x|k,(A_0)_x) \arrow[r] \arrow[u]
+& D^1(A_x|R',(A_0)_x) \arrow[r,"p_x"] \arrow[u]
+& D^1(R|R',k)\otimes_k(A_0)_x \arrow[r] \arrow[u]
+& D^2((A_0)_x|k,(A_0)_x) \arrow[r] \arrow[u]
+& \cdots
+\end{tikzcd}
+\end{center}
+Los isomorfismos indicados se deducen de que $A_0$ es liso sobre $k$
+fuera del único punto cerrado $x$, de modo que
+\[
+D^i(A_0|k,(A_0)_x)
+=D^i(A_0|k,A_0)_x
+=D^i(A_0|k,A_0)
+\qquad(i>0).
+\]
+
+Supongamos dada una flecha
+\[
+(R',\operatorname{Spec}(B))
+\longrightarrow(R,\operatorname{Spec}(A_x))
+\]
+en $[\underline M_{\operatorname{Spec}((A_0)_x)}]$. Esto equivale a
+una clase $[B]\in D^1(A_x|R',(A_0)_x)$ que satisface
+$p_x([B])=[R']$. Una persecución en el diagrama da una clase
+$[A']\in D^1(A|R',A_0)$ tal que $p([A'])=[R']$ y $A'_x=B$.
+Así, $(R',\operatorname{Spec}(A'))$ es una deformación de
+$\operatorname{Spec}(A_0)$ sobre $R'$ cuya localización en $x$ es
+$\operatorname{Spec}(B)$. Esto demuestra que
+\[
+\underline M_{X_0}\longrightarrow
+\underline M_{\operatorname{Spec}(\mathcal O_{X_0,x})}
+\]
+es liso.
+
+La lisura de
+\[
+\underline M_{\operatorname{Spec}((A_0)_x)}
+\longrightarrow
+\underline M_{\operatorname{Spec}(\widehat{(A_0)_x})}
+\]
+se deduce del diagrama análogo y de las identidades
+\[
+D^i((A_0)_x|k,\widehat{(A_0)_x})
+=\widehat{D^i((A_0)_x|k,(A_0)_x)}
+=D^i((A_0)_x|k,(A_0)_x)
+\qquad(i>0),
+\]
+puesto que $x$ es el único punto posiblemente no liso.
+\hfill$\square$

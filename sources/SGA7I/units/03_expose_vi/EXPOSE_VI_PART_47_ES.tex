@@ -1,0 +1,124 @@
+\par\medskip
+\noindent\textbf{Corolario 4.13.}
+Sea $X_0$ un esquema de tipo finito sobre $k$, liso fuera de un
+subconjunto finito
+\[
+X_0^{\mathrm{Sing}}=\{x_1,\ldots,x_r\},
+\]
+y supongamos que $H^2(X_0,\underline D^0_{X_0})=0$. Entonces:
+
+\smallskip
+\noindent\textbf{(a)} El funtor
+\[
+\underline M_{X_0}\longrightarrow
+\prod_{i=1}^r
+\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_i})}
+\]
+es liso. En particular,
+\[
+\dim\underline M_{X_0}
+=\dim_k H^1(X_0,\underline D^0_{X_0})
++\sisi{\sum_{i=1}^r
+\dim\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_i})}}{\sum_{c=1}^r
+\dim\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_c})}}.
+\]
+
+\smallskip
+\noindent\textbf{(b)} Si, además, $X_0$ es localmente una
+intersección completa, entonces $\underline M_{X_0}$ es liso.
+
+%%%%%%%%%%  scan idx 120  |  folio 109  %%%%%%%%%%
+
+\smallskip
+\noindent\textit{Demostración.}
+\textbf{(a)} La primera afirmación se deduce de 4.10 y 4.9(b).
+Sean $(R,\mathfrak X)$ y
+$(R_1,\mathfrak X_1),\ldots,(R_r,\mathfrak X_r)$ deformaciones
+formales versales de $X_0$ y de
+\[
+\operatorname{Spec}(\mathcal O_{X_0,x_1}),\ldots,
+\operatorname{Spec}(\mathcal O_{X_0,x_r}),
+\]
+respectivamente. Obtenemos un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\underline h_R
+  \arrow[r]
+  \arrow[d]
+& \underline h_{R_1\widehat\otimes_\Lambda\cdots
+  \widehat\otimes_\Lambda R_r}
+  \arrow[d] \\
+\underline M_{X_0}
+  \arrow[r]
+& \displaystyle\prod_{i=1}^r
+  \underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_i})}.
+\end{tikzcd}
+\]
+El funtor compuesto
+\[
+\underline h_R\longrightarrow\underline M_{X_0}
+\longrightarrow
+\prod_{i=1}^r
+\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_i})}
+\]
+es liso, mientras que
+\[
+\underline h_{R_1\widehat\otimes_\Lambda\cdots
+\widehat\otimes_\Lambda R_r}
+\longrightarrow
+\prod_{i=1}^r
+\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_i})}
+\]
+es mínimamente liso. Se deduce de 2.7(a) que
+\[
+\underline h_R\longrightarrow
+\underline h_{R_1\widehat\otimes_\Lambda\cdots
+\widehat\otimes_\Lambda R_r}
+\]
+es liso; equivalentemente, $R$ es un anillo de series formales sobre
+$R_1\widehat\otimes_\Lambda\cdots\widehat\otimes_\Lambda R_r$.
+
+Por 4.4, la sucesión
+\[
+0\longrightarrow H^1(X_0,\underline D^0_{X_0})
+\longrightarrow[\underline M_{X_0}(k[\varepsilon])]
+\longrightarrow
+\prod_{i=1}^r
+[\underline M_{\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x_i})}
+  (k[\varepsilon])]
+\]
+es exacta. Equivalentemente,
+\[
+0\longrightarrow H^1(X_0,\underline D^0_{X_0})
+\longrightarrow\operatorname{Hom}_{\Lambda\text{-alg}}(R,k[\varepsilon])
+\longrightarrow
+\operatorname{Hom}_{\Lambda\text{-alg}}
+ (R_1\widehat\otimes_\Lambda\cdots\widehat\otimes_\Lambda R_r,
+  k[\varepsilon])
+\]
+es exacta. En consecuencia, $R$ es un anillo de series formales sobre
+$R_1\widehat\otimes_\Lambda\cdots\widehat\otimes_\Lambda R_r$ en
+$d$ variables, donde
+\[
+d=\dim_k H^1(X_0,\underline D^0_{X_0}).
+\]
+Por tanto,
+\begin{align*}
+\dim\underline M_{X_0}
+ &=\dim(k\otimes_\Lambda R) \\
+ &=d+\dim\bigl(k\otimes_\Lambda
+   (R_1\widehat\otimes_\Lambda\cdots\widehat\otimes_\Lambda R_r)
+   \bigr) \\
+ &=d+\dim\bigl((k\otimes_\Lambda R_1)
+   \widehat\otimes_k\cdots\widehat\otimes_k
+   (k\otimes_\Lambda R_r)\bigr) \\
+ &=d+\sum_{i=1}^r\dim(k\otimes_\Lambda R_i) \\
+ &=d+\sum_{i=1}^r
+   \dim\underline M_{\operatorname{Spec}
+   (\widehat{\mathcal O}_{X_0,x_i})}.
+\end{align*}
+
+%%%%%%%%%%  scan idx 121  |  folio 110  %%%%%%%%%%
+
+\noindent\textbf{(b)} Esto se deduce de 4.10 y 4.9(a).
+\hfill$\square$

@@ -1,0 +1,146 @@
+\par\medskip\noindent
+\underline{Proposición} 1.3.5. \underline{Sean} $P$ \underline{y}
+$\sisi{Q}{G}$ \underline{dos grupos de} $\underline{T}$.
+
+a)  \underline{Supongamos que todo morfismo de haces de conjuntos de}
+$P\times P$ \underline{en} $G$ \underline{que sea trivial sobre}
+$P\times e_P$ \underline{y sobre} $e_P\times P$ \underline{es
+trivial}. \underline{Entonces el funtor} $i$ \underline{de} (1.3.4.1)
+\underline{es plenamente fiel}. \underline{En particular},
+\underline{sobre un bitorsor} $E$ \underline{bajo} $(G_P,G_P)$,
+\underline{\sisi{birrigidificado}{rigidificado} relativamente a} $e_P$, \underline{es
+decir}, \underline{provisto de una sección central} $e_E$
+\underline{de} $E_1 = e_P^*(E)$, \underline{existe a lo sumo una
+estructura de extensión de} $P$ \underline{por} $G$,
+\underline{compatible con su estructura de bitorsor y que admite}
+$e_E$ \underline{como sección unidad}.
+
+b)  \underline{Supongamos además que todo morfismo de haces de
+conjuntos de} $P\times P\times P$ \underline{en} $G$ \underline{que
+sea trivial sobre los productos parciales} $P\times P\times e_P$,
+$P\times e_P\times P$ \underline{y} $e_P\times P\times P$
+\underline{es trivial}. \underline{Sea} $E$
+\underline{\sisi{un torsor bajo $G_P$}{un bitorsor bajo
+$(G_P,G_P)$}}. \underline{Para que exista sobre} $E$ \underline{una
+estructura de extensión de} $P$ \underline{por} $G$
+\underline{compatible con su estructura de bitorsor}, \underline{es
+necesario y suficiente que el bitorsor bajo}
+$(G_{P\times P},G_{P\times P})$ \underline{subyacente a}
+$\delta(E) = \pi^*(E)\mathrm{pr}_1^*(E)^{-1}\mathrm{pr}_2^*(E)^{-1}$
+\underline{sea trivial}. \underline{Cuando así sea}, \underline{para
+toda sección central} $e_E$ de $E_1 = e_P^*(E)$, \underline{es decir},
+\underline{toda rigidificación de} $E$ \underline{relativamente a}
+$e_P$, \underline{existe una estructura de extensión única sobre}
+$E$, \underline{compatible con su estructura de bitorsor y que admite}
+$e_E$ \underline{como sección unidad}; \underline{es decir}, $E$,
+\underline{considerado como bitorsor rigidificado relativamente a}
+$e_P$, \underline{pertenece a la imagen esencial de} $i$. \underline{Por
+otra parte}, \underline{existe una y solo una trivialización del
+bitorsor birrigidificado} $\delta(E)$.
+
+
+%%%%%%%%%%  scan idx 160  |  folio 149  %%%%%%%%%%
+
+En términos del diagrama (1.3.4.1), puede decirse, pues, que la imagen
+esencial del funtor plenamente fiel $i$ es «el núcleo» del funtor
+$\delta$, o también, de manera figurada, que el diagrama (1.3.4.1) es
+una «sucesión exacta de categorías apuntadas», e incluso de categorías
+con estructuras de pseudogrupos (en la terminología introducida en
+2.5.1 más adelante).
+
+Demostremos 1.3.5.  a)  Sean $E,E'$ dos extensiones de $P$ por $G$, y
+sea $f : E \longrightarrow E'$ un morfismo de los bitorsors
+rigidificados subyacentes; demostremos que $f$ es un morfismo de
+extensiones o, lo que manifiestamente equivale a lo mismo, un morfismo
+de grupos. Hay que demostrar que $f(xy) = f(x)f(y)$. Ahora bien
+(designando por $j' : E' \longrightarrow P$ el morfismo estructural del
+torsor $E'$ sobre $P$), se tendrá
+$j'f(xy) = j'(f(x)f(y))$, pues los dos miembros son respectivamente
+iguales a $\sisi{j(f(xy))}{j(xy)}$ y a $\sisi{j(f(x)f(y))}{j(x)j(y)}$, que son iguales porque $j$ es
+multiplicativo. Por tanto,
+
+\begin{equation*}
+f(xy) = u(j(x),j(y))f(x)f(y) \qquad ,
+\end{equation*}
+donde
+
+\begin{equation*}
+u : P \times P \longrightarrow G
+\end{equation*}
+es un morfismo bien determinado. Haciendo $x=1$ y después $y=1$ en la
+relación precedente, se obtiene (teniendo en cuenta que $f(1)=1$)
+
+\begin{equation*}
+u(p,1) = u(1,p) = 1 \qquad ,
+\end{equation*}
+es decir, $u$ es trivial sobre $P \times e_P$ y sobre
+$e_P \times P$, de donde resulta por hipótesis que $u$ es trivial, y
+por tanto $f(xy) = f(x)f(y)$, como se quería demostrar.
+
+b)  La necesidad de la condición considerada sobre $E$ para que
+admita una estructura de extensión compatible con su estructura de
+bitorsor es trivial (1.3.4.3); queda demostrar su suficiencia para
+probar la primera afirmación de b). Ahora bien, utilizando una
+trivialización $\varphi$
+%%%%%%%%%%  scan idx 161  |  folio 150  %%%%%%%%%%
+% Canon: SGA-SRC-001257.
+de $\delta(E)$, se deduce de ella, por imagen inversa mediante la
+sección unidad de $P \times P$, una trivialización de
+$E_1 = \sisi{e_P(E)}{e_P^*(E)}$ (compárese 1.5.1), es decir, una
+rigidificación de $E$
+relativamente a $e_P$. Supongámosla fijada. Una trivialización dada
+$\varphi$ de $\delta(E)$ no es necesariamente compatible con esta
+birrigidificación; sus restricciones a $P \times e_P$ y a
+$e_P \times P$ se expresan, en términos de las rigidificaciones
+parciales naturales de $\delta(E)$, mediante morfismos
+\underline{centrales}
+
+\begin{equation*}
+f : P \longrightarrow G \ , \ g : P \longrightarrow G \ ,
+\end{equation*}
+que tienen las mismas restricciones a la sección unidad de $P$:
+$f(1) = g(1) = a \in \Gamma G$. Entonces el morfismo
+\underline{central}
+
+\begin{equation*}
+h : P \times P \longrightarrow G \quad , \quad h(p,q) = f(p)g(q)a^{-1}
+\end{equation*}
+tiene como restricciones a $P \times e_P$ y $e_P \times P$ los
+morfismos $f$ y $g$. Por consiguiente, corrigiendo $\varphi$ mediante
+$h$ (es decir, reemplazándolo por $\varphi(p,q)h(p,q)^{-1}$), se
+obtiene una trivialización de $\delta(E)$ compatible con su
+birrigidificación. Observemos, por lo demás, que una trivialización de
+esta índole está determinada módulo un morfismo central
+$P \times P \longrightarrow G$ que es trivial sobre $P \times e_P$
+y sobre $e_P \times P$, y que por tanto es trivial; así, este
+$\varphi$ es único, lo que constituye la última afirmación de 1.3.5 b).
+La demostración quedará terminada si probamos que este $\varphi$,
+considerado como un isomorfismo de la forma (1.1.3.2), satisface la
+condición de asociatividad (1.1.4.1), teniendo en cuenta que ya sabemos,
+por la elección de $\varphi$, que $e_E$ es una unidad bilateral para la
+ley de composición definida por $\varphi$. Ahora bien, los dos
+compuestos de (1.1.4.1) son isomorfismos de bitorsors bajo
+$(G_{P \times P \times P} , G_{P \times P \times P})$, por lo que
+difieren en un morfismo central
+
+\begin{equation*}
+u : P \times P \times P \longrightarrow G \qquad ,
+\end{equation*}
+según la fórmula
+
+\begin{equation*}
+(xy)z = u(jx,jy,jz) \ x(yz) \qquad .
+\end{equation*}
+
+%%%%%%%%%%  scan idx 162  |  folio 151  %%%%%%%%%%
+
+Haciendo en esta fórmula sucesivamente
+\sisi{$y=z=1$, después $z=x=1$, y después $x=y=1$}{$z=1$, después
+$x=1$, y después $y=1$}, y utilizando el hecho de que $1$ es una
+unidad bilateral para la ley de composición considerada, se obtiene que
+$u$ es trivial sobre los tres trozos
+\sisi{$P\times e_P\times e_P$, $e_P\times P\times e_P$,
+$e_P\times e_P\times P$}{$P\times P\times e_P$,
+$e_P\times P\times P$, $P\times e_P\times P$}, lo cual implica por
+hipótesis que es trivial, y por tanto que $(xy)z = x(yz)$, con lo que
+termina la demostración.

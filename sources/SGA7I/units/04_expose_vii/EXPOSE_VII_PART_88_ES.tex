@@ -1,0 +1,238 @@
+\par\medskip\noindent
+3.4.8. Consideremos ahora una sucesión exacta de complejos de cadenas
+\begin{equation}\tag{3.4.8.1}
+ 0\longrightarrow L_\bullet\xrightarrow{f}L'_\bullet
+ \xrightarrow{g}L''_\bullet\longrightarrow0.
+\end{equation}
+Esta da funtores de la forma (3.4.3),
+\[
+ \underline\Psi_{L''_\bullet}\xrightarrow{g^*}
+ \underline\Psi_{L'_\bullet}\xrightarrow{f^*}
+ \underline\Psi_{L_\bullet}.
+\]
+La propiedad de transitividad implícita en los funtores de la forma
+(3.4.3) da un isomorfismo de funtores
+\[
+ f^*g^*\simeq(gf)^*=(0_{L_\bullet\to L''_\bullet})^*.
+\]
+
+%%%%%%%%%%  scan idx 206  |  folio 195  %%%%%%%%%%
+
+El último miembro es evidentemente isomorfo de manera canónica al funtor
+cero cocartesiano de $\underline\Psi_{L''_\bullet}$ a
+$\underline\Psi_{L_\bullet}$. Por tanto, el isomorfismo precedente
+define un funtor canónico
+\begin{equation}\tag{3.4.8.2}
+ \underline\Psi_{L''_\bullet}\longrightarrow
+ \underline\Psi_{[L_\bullet\longrightarrow L'_\bullet]}.
+\end{equation}
+Aquí $\underline\Psi_{[L_\bullet\longrightarrow L'_\bullet]}$ denota
+la categoría de las parejas $(X',t)$ en las que $X'$ es un objeto de
+$\underline\Psi_{L'_\bullet}$ y $t$ es una trivialización de su imagen
+inversa $f^*(X')$, es decir, un isomorfismo
+\[
+ f^*(X')\simeq\sisi{0_{L_\bullet,A'}}{0_{L_\bullet,A}},
+\]
+donde $0_{L_\bullet,A}$ denota el objeto cero de
+$\underline\Psi_{L_\bullet}(A)$ y $A$ es el objeto de
+$\underline C$ subyacente a $X'$. Afirmamos que \underline{el
+funtor} (3.4.8.2) \underline{es una equivalencia de categorías}.
+Junto con la exactitud por la izquierda en $A$ establecida en 3.3.1,
+esto completa la propiedad de exactitud en $L_\bullet$ de la expresión
+$\underline\Psi_{L_\bullet}(A)$.
+
+Esbocemos la demostración. Dar un objeto del destino de (3.4.8.2)
+equivale a dar una extensión
+\[
+ 0\longrightarrow A\xrightarrow{i'}X'\xrightarrow{j'}L'_0
+ \longrightarrow0
+\]
+de $L'_0$ por un objeto $A$ de $\underline C$, junto con un morfismo
+$\alpha':L'_1\longrightarrow X'$ que satisface
+$\sisi{j}{j'}\alpha'=d'_0$ y $\alpha'd'_1=0$, y un morfismo
+$t:L_0\longrightarrow X'$ que satisface $\sisi{j}{j'}t=f_0$ y
+$td_0=\alpha'f_1$. Estos datos se representan en el diagrama siguiente:
+\begin{center}
+\begin{tikzpicture}[
+  x=1cm,y=1cm,>=Latex,
+  every node/.style={font=\small,inner sep=1.2pt}
+]
+  \node (z00) at (0,0) {$0$};
+  \node (l0)  at (1.3,0) {$L_0$};
+  \node (lp0) at (2.8,0) {$L'_0$};
+  \node (lpp0) at (4.3,0) {$L''_0$};
+  \node (z05) at (5.5,0) {$0$};
+
+  \node (z10) at (0,-1.35) {$0$};
+  \node (l1)  at (1.3,-1.35) {$L_1$};
+  \node (lp1) at (2.8,-1.35) {$L'_1$};
+  \node (lpp1) at (4.3,-1.35) {$L''_1$};
+  \node (z15) at (5.5,-1.35) {$0$};
+
+  \node (z20) at (0,-2.70) {$0$};
+  \node (l2)  at (1.3,-2.70) {$L_2$};
+  \node (lp2) at (2.8,-2.70) {$L'_2$};
+  \node (lpp2) at (4.3,-2.70) {$L''_2$};
+  \node (z25) at (5.5,-2.70) {$0$};
+
+  \node (xp) at (3.25,1.25) {$X'$};
+  \node (ap) at (4.0,2.25) {$A$};
+  \node (zap) at (4.75,3.25) {$0$};
+  \node (xpp) at (5.85,1.25) {$X''$};
+  \node (app) at (6.60,2.25) {$A$};
+  \node (zapp) at (7.35,3.25) {$0$};
+
+  \draw[->] (z00)--(l0);
+  \draw[->] (l0)--node[above]{$f_0$}(lp0);
+  \draw[->] (lp0)--node[above]{$g_0$}(lpp0);
+  \draw[->] (lpp0)--(z05);
+  \draw[->] (z10)--(l1);
+  \draw[->] (l1)--node[above]{$f_1$}(lp1);
+  \draw[->] (lp1)--node[above]{$g_1$}(lpp1);
+  \draw[->] (lpp1)--(z15);
+  \draw[->] (z20)--(l2);
+  \draw[->] (l2)--(lp2);
+  \draw[->] (lp2)--(lpp2);
+  \draw[->] (lpp2)--(z25);
+
+  \draw[->] (l1)--node[right]{$d_0$}(l0);
+  \draw[->] (lp1)--node[right]{$d'_0$}(lp0);
+  \draw[->] (lpp1)--node[right]{$d''_0$}(lpp0);
+  \draw[->] (l2)--(l1);
+  \draw[->] (lp2)--node[right]{$d'_1$}(lp1);
+  \draw[->] (lpp2)--node[right]{$d''_1$}(lpp1);
+
+  \draw[->] (zap)--(ap);
+  \draw[->] (ap)--node[left]{$i'$}(xp);
+  \draw[->,dashed] (zapp)--(app);
+  \draw[->,dashed] (app)--node[left]{$i''$}(xpp);
+  \draw[->] (l0) to[bend left=22] node[above]{$t$} (xp);
+  \sisi{\draw[<->] (xp)--node[left]{$j'$}(lp0);}{\draw[->] (xp)--node[left]{$j'$}(lp0);}
+  \draw[->] (lp1)--node[pos=.82,right]{$\alpha'$}(xp);
+  \draw[->,dashed] (xpp)--node[above]{$j''$}(lpp0);
+  \draw[->,dashed] (lpp1) to[bend right=25]
+    node[pos=.82,right]{$\alpha''$} (xpp);
+
+  \node[anchor=west] at (7.55,-0.70) {$
+    \left\{
+    \begin{aligned}
+      j'\alpha'&=d'_0,\\
+      \alpha'd'_1&=0,\\
+      j't&=f_0,\\
+      td_0&=\alpha'f_1.
+    \end{aligned}
+    \right.$};
+\end{tikzpicture}
+\end{center}
+
+%%%%%%%%%%  scan idx 207  |  folio 196  %%%%%%%%%%
+
+La conocida exactitud por la izquierda, en el primer argumento, de las
+extensiones de un objeto $L$ por un objeto $A$, aplicada a la primera fila
+del diagrama, muestra que un morfismo $t$ que satisface
+$\sisi{j}{j'}t=f_0$ permite interpretar $X'$ como la imagen inversa de
+una extensión $X''$ de $L''_0$ por $A$. Bajo esta interpretación, $t$
+corresponde a la trivialización natural de la imagen inversa de esa
+extensión por $g_0f_0=0$.
+
+El morfismo $\alpha'$ que satisface $\sisi{j}{j'}\alpha'=d'_0$ y
+$\alpha'f_1=td_0$ se interpreta mediante esencialmente el mismo
+diccionario, aplicado ahora a la segunda fila del diagrama, como proveniente
+de un morfismo $\alpha'':L''_1\longrightarrow X''$ que satisface
+$j''\alpha''=d''_0$. Aquí $\alpha'$ y $\alpha''$ se consideran como
+trivializaciones de las imágenes inversas de $X'$ y $X''$ por $d'_0$ y
+$d''_0$, respectivamente. Finalmente, la relación $\alpha'd'_1=0$ es
+entonces equivalente a $\alpha''d''_1=0$. Así, los datos
+$(X',\alpha',t)$, que forman un objeto de
+$\underline\Psi_{[L_\bullet\longrightarrow L'_\bullet]}$, equivalen a
+los datos $(X'',\alpha'')$, que forman un objeto de
+$\sisi{\underline\Psi_{L_\bullet}}{\underline\Psi_{L''_\bullet}}$.
+Esto demuestra, en esencia, que (3.4.8.2) es efectivamente una equivalencia
+de categorías.
+
+3.4.9. Sigamos considerando la sucesión exacta (3.4.8.1), así como la
+sucesión exacta de grupos $\Ext^i$ que define:
+\begin{multline}\tag{3.4.9.1}
+ 0\longrightarrow\Ext^0(L''_\bullet,A)
+ \xrightarrow{g^0}\sisi{\Ext^0(L'_\bullet A)}{\Ext^0(L'_\bullet,A)}
+ \xrightarrow{f^0}\Ext^0(L_\bullet,A)
+ \xrightarrow{\partial^0}\Ext^1(L''_\bullet,A)\\
+ \xrightarrow{g^1}\Ext^1(L'_\bullet,A)
+ \xrightarrow{f^1}\Ext^1(L_\bullet,A)\longrightarrow\cdots.
+\end{multline}
+Los isomorfismos canónicos de las formas (3.1.8) y (3.2.4) dan una
+interpretación geométrica de los seis primeros términos de esta sucesión
+exacta en función de las categorías $\underline\Psi_{L_\bullet}$,
+$\underline\Psi_{L'_\bullet}$ y $\underline\Psi_{L''_\bullet}$. La
+compatibilidad (3.4.6) proporciona asimismo una interpretación geométrica
+de las flechas
+
+%%%%%%%%%%  scan idx 208  |  folio 197  %%%%%%%%%%
+
+$f^0,g^0,f^1,g^1$. Daremos ahora una interpretación análoga de
+$\partial^0$, usando el resultado recién demostrado de que (3.4.8.2) es
+una equivalencia de categorías.
+
+Sea
+\[
+ u\in\Ext^0(L_\bullet,A),
+ \qquad\text{es decir,}\qquad
+ u:L_0\longrightarrow A,\quad ud_0=0.
+\]
+Consideremos el objeto $(0,\overline u)$ de
+$\underline\Psi_{[L_\bullet\to L'_\bullet]}$. Aquí $0$ es el objeto
+cero de $\underline\Psi_{L'_\bullet}$, cuya imagen inversa por $f_0$ se
+identifica, por tanto, con el objeto cero de
+$\underline\Psi_{L_\bullet}$, y $\overline u$ es el automorfismo de este
+último definido por $u$ mediante el isomorfismo canónico (3.1.8). Puesto
+que (3.4.8.2) es una equivalencia, $(0,\overline u)$ proviene de un objeto
+de $\underline\Psi_{L''_\bullet}(A)$, determinado salvo isomorfismo único.
+Su clase de isomorfismo es un elemento de
+\[
+ \Psi^1_{L''_\bullet}(A)\simeq\Ext^1(L''_\bullet,A).
+\]
+\underline{Afirmamos que este elemento es precisamente} $\partial^0(u)$.
+
+Demostraremos esta compatibilidad reduciéndola a la análoga de
+[4, Cor.~5.5], donde debe corregirse el signo como se indicó en 3.3.6.3.
+El argumento proporciona también otra demostración de la equivalencia
+(3.4.8.2), reduciéndola a [4, Prop.~2.7]. Considérese la categoría opuesta
+$\underline C^{\mathrm o}$ e interprétense la construcción de
+$\underline\Psi_{L_\bullet}(A)$, para $A$ fijo, y las construcciones de
+3.4.8 y de la presente sección en términos de
+$\underline C^{\mathrm o}$ y de la categoría $\underline E$ cofibrada
+sobre $\underline C^{\mathrm o}$ cuyos objetos son las extensiones del
+objeto fijo $A$ de $\underline C^{\mathrm o}$ por un objeto variable $L$
+de $\underline C^{\mathrm o}$. Esta es una categoría cofibrada aditiva
+sobre $\underline C^{\mathrm o}$, e incluso exacta por la izquierda en
+ella (en el sentido de [4, 2.2]).
+
+Un complejo de cadenas $L_\bullet$ de $\underline C$ puede interpretarse
+como
+
+%%%%%%%%%%  scan idx 209  |  folio 198  %%%%%%%%%%
+
+un complejo de cocadenas de $\underline C^{\mathrm o}$. Bajo esta
+interpretación, la construcción de $\underline\Psi_{L_\bullet}(A)$
+coincide con la opuesta de la categoría
+$\underline{\widehat E}(L_\bullet)$ en el sentido de [4, 1.8]. El funtor
+(3.4.8.2) se identifica entonces con el opuesto del funtor de la forma
+[4, (2.1.2)], reemplazando $E$ por su extensión
+$\underline{\widehat E}$ a la categoría de los complejos de cocadenas.
+Por consiguiente, la afirmación de que este funtor es una equivalencia es
+el caso particular [4, 2.7, a)$\Rightarrow$d)].
+
+Por otra parte, la sucesión exacta (3.4.9.1) se identifica con la sucesión
+exacta de los grupos $\Ext^i(A,L''_\bullet)$,
+$\Ext^i(A,L'_\bullet)$ y $\Ext^i(A,L_\bullet)$, salvo un factor
+$(-1)^i$ en $\partial^i$ (Verdier dixit). Análogamente, los isomorfismos
+(3.1.8) y (3.2.4) se identifican con los isomorfismos análogos (3.11.5) y
+(3.11.4). La compatibilidad afirmada es, por tanto, el caso particular de
+[4, Cor.~5.5] corregido como se indicó antes.
+
+\underline{Observación} 3.4.9.2. El redactor, que teme mucho a los signos,
+confiesa no tener plena confianza en la demostración precedente: teme que
+se hayan omitido signos al pasar de $C$ a $C^{\mathrm o}$. Recomienda al
+lector valiente que compruebe directamente la compatibilidad afirmada (o,
+respectivamente, su opuesta). Afortunadamente, estas cuestiones de signos
+no desempeñarán ningún papel en las exposiciones siguientes.

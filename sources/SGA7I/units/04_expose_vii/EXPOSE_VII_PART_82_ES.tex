@@ -1,0 +1,97 @@
+\noindent\uline{Corolario 2.9.4. Sean $P,Q,G$ grupos conmutativos que
+satisfacen}
+\begin{equation}\tag{2.9.4.1}
+ \underline{\operatorname{Hom}}_{\mathrm{pt}}(P,G)=e,
+ \qquad
+ \underline{\operatorname{Hom}}_{\mathrm{pt}}(Q,G)=e
+\end{equation}
+\uline{(cf.\ 1.3.7). Entonces}
+\sisi{\uline{se satisfacen las condiciones preliminares de 2.9.2}}%
+{\uline{se satisfacen las hipótesis de la Proposición 2.9.3}},
+\uline{y son válidas las conclusiones (a) y (b) de dicha proposición.
+Además, si $E$ es un torsor bajo $G_{P\times Q}$ birrigidificado
+respecto de $(e_P,e_Q)$, admite una estructura de biextensión de
+$(P,Q)$ por $G$ compatible con sus estructuras dadas si y solo si los
+dos morfismos de haces apuntados que define,}
+\begin{equation}\tag{2.9.4.2}
+ Q\longrightarrow R^1p_*(G_P),
+ \qquad
+ P\longrightarrow R^1q_*(G_Q),
+\end{equation}
+\uline{donde $p:P\longrightarrow e$ y $q:Q\longrightarrow e$ son
+los morfismos estructurales, son morfismos de grupos.}
+
+La primera afirmación se demostró en 1.3.7. Para la segunda, la
+necesidad es clara. Para demostrar la suficiencia, se aplican
+\sisi{2.9.2(b)}{la Proposición 2.9.3(b)} y 1.3.5(b). La
+multiplicatividad del primer morfismo de (2.9.4.2) significa que el
+torsor rigidificado $E$ bajo $G_P$ satisface la condición de 1.3.5(b)
+\underline{localmente sobre $P$}. Como se observó en 1.3.7, esa
+condición se cumple entonces globalmente sobre $P$, por lo que $E$
+admite una estructura de extensión de $Q_P$ por $G_P$ compatible con
+su estructura de torsor rigidificado. Simétricamente, $E$ admite una
+estructura de extensión de $P_Q$ por $G_Q$ compatible con su
+estructura de torsor rigidificado bajo $G_Q$. La conclusión se deduce
+de \sisi{2.9.2(b)}{la Proposición 2.9.3(b)}.
+
+\underline{Ejemplo 2.9.5.} Sea $S$ un esquema, sean $P$ y $Q$
+esquemas abelianos sobre $S$, y sea
+$G=\sisi{\underline G_{mS}}{\underline G_{m,S}}$ el esquema en grupos
+multiplicativo sobre $S$. Observamos en 1.3.8 que entonces se satisface
+(2.9.4.1). Un torsor birrigidificado $E$ sobre $P\times Q$ equivale a
+un haz invertible birrigidificado sobre $P\times Q$. Recordemos que una
+\underline{correspondencia divisorial sobre $P,Q$} es la clase de
+isomorfismo de tal haz invertible birrigidificado (véase, por ejemplo,
+[1]). En la topología fppf, los morfismos (2.9.4.2) son
+\begin{equation}\tag{2.9.5.1}
+ Q\longrightarrow\underline{\operatorname{Pic}}_{P/S},
+ \qquad
+ P\longrightarrow\underline{\operatorname{Pic}}_{Q/S},
+\end{equation}
+definidos por la correspondencia divisorial. El teorema del cuadrado
+(\emph{loc.\ cit.}) dice que estos morfismos respetan necesariamente
+las estructuras de grupo. Así, 2.9.4 muestra que
+\underline{la categoría de biextensiones de $(P,Q)$ por
+$G=\underline G_{m,S}$ es equivalente a la categoría de haces
+invertibles birrigidificados sobre $P\times Q$}; es, por tanto, una
+categoría rígida, y su conjunto de clases de isomorfismo se identifica
+con el conjunto de correspondencias divisoriales sobre $(P,Q)$. Esta
+identificación respeta manifiestamente las leyes de grupo naturales
+sobre ambos conjuntos, siendo la primera la de (2.5.2.2).
+
+\underline{Observación 2.9.6.} La aditividad del primer morfismo de
+(2.9.4.2) equivale a la factorización del segundo a través del subhaz
+$\underline{\operatorname{Ext}}^1(Q,G)$; obsérvese que, por 1.3.5, el
+morfismo canónico
+\[
+ \underline{\operatorname{Ext}}^1(Q,G)
+ \longrightarrow R^1q_*(G_Q)
+\]
+es inyectivo. Del mismo modo, la aditividad del segundo morfismo de
+(2.9.4.2) significa que el primero se factoriza a través de
+$\underline{\operatorname{Ext}}^1(P,G)$. Esto da isomorfismos de grupos
+\begin{equation}\tag{2.9.6.1}
+ \operatorname{Biext}\sisi{}{^{1}}(P,Q;G)
+ \simeq
+ \operatorname{Hom}\bigl(Q,\underline{\operatorname{Ext}}^1(P,G)\bigr)
+ \simeq
+ \operatorname{Hom}\bigl(P,\underline{\operatorname{Ext}}^1(Q,G)\bigr).
+\end{equation}
+En la situación de 2.9.5, estos se reducen a los isomorfismos
+familiares
+\begin{equation}\tag{2.9.6.2}
+ \operatorname{Corr}(P,Q)
+ \simeq \operatorname{Hom}(P,Q')
+ \simeq \operatorname{Hom}(Q,P'),
+\end{equation}
+donde
+\[
+ P'=\underline{\operatorname{Ext}}^1(P,\underline G_m),
+ \qquad
+ Q'=\underline{\operatorname{Ext}}^1(Q,\underline G_m)
+\]
+son los esquemas abelianos duales de $P$ y $Q$, identificados,
+respectivamente, con $\underline{\operatorname{Pic}}^0_{P/S}$ y
+$\underline{\operatorname{Pic}}^0_{Q/S}$. En ambas fórmulas,
+$\operatorname{Hom}$ denota el grupo de \underline{homomorfismos de
+grupos}.

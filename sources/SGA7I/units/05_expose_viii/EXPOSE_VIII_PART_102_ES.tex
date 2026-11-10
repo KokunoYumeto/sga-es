@@ -1,0 +1,79 @@
+\par\medskip
+\noindent 2.3.17. Aprovechemos la descripción explícita mediante
+cociclos del acoplamiento
+\[
+ \varphi_\xi^n:{}_nP\otimes{}_nQ\longrightarrow G
+\]
+dada en (2.3.12), para obtener otra expresión del mismo. Supongamos
+primero que la biextensión $E$ de clase $\xi$ admite una sección $s$
+sobre $P\times Q$.
+
+%%%%%%%%%%  scan idx 261  |  folio 250  %%%%%%%%%%
+
+Como en VII 3.8.13, tomemos para resolución plana de $P$ la que tiene
+$L_0=\mathbb Z[P]$ y $L_1$ igual al núcleo del homomorfismo canónico
+$\mathbb Z[P]\longrightarrow P$, y definamos $M_\bullet$ de manera
+análoga. Existe entonces una única trivialización de biextensión de la
+imagen inversa de $E$ sobre $(L_0,M_0)$ cuya restricción a $P\times Q$
+está dada por $s$; denotemos esta trivialización también por $s$
+(cf. VII 3.8.2). Por VII 3.8.12, la clase de $\xi$ en
+\[
+ \Ext^1\!\left(
+ P\mathbin{\overset{\mathbb L}{\otimes}}Q,G\right)
+\]
+está representada por el cociclo de componentes $(f,g)$ caracterizadas
+por
+\[
+ s(x_1,y_0)=f(x_1\otimes y_0)e_{E/Q}(y_0),
+ \qquad
+ s(x_0,y_1)=g(x_0\otimes y_1)e_{E/P}(x_0).
+\]
+Si $x$ e $y$ son secciones de $\,{}_nP$ y $\,{}_nQ$, levantémoslas a
+las secciones correspondientes $x_0=[x]$ e $y_0=[y]$ de $L_0$ y
+$M_0$. Aplicando la fórmula (2.3.13), y poniendo $z=s(x,y)$, se
+obtiene
+\begin{equation}\tag{2.3.18}
+ \varphi_\xi^n(x,y)
+ ={}^n z/e_{E/Q}(y)-z^n/e_{E/P}(x).
+\end{equation}
+Aquí el exponente $n$ escrito a la izquierda, respectivamente a la
+derecha, de $z$ denota la potencia $n$-ésima para la estructura
+multiplicativa izquierda, respectivamente derecha, de $E$. Da, pues,
+una sección de $E$ sobre $(0,y)$, respectivamente $(x,0)$; el sentido
+del ``cociente'' de un elemento tal por $e_{E/Q}(y)$, respectivamente
+$e_{E/P}(x)$, es claro.
+
+La fórmula precedente (2.3.18) conserva sentido siempre que $z$ sea
+una sección global de $E$ que levante las secciones $x,y$ de
+$\,{}_nP,\,{}_nQ$. Afirmo que (2.3.18) es válida para toda sección de
+este tipo, sin suponer que exista una sección de $E$ sobre $P\times Q$.
+La sección $(x,y)$ de $P\times Q$ siempre se levanta localmente a una
+sección de $E$, puesto que $E\longrightarrow P\times Q$ es un
+epimorfismo; por consiguiente, la fórmula calcula
+$\varphi_\xi^n(x,y)$ en todos los casos.
+
+%%%%%%%%%%  scan idx 262  |  folio 251  %%%%%%%%%%
+
+Además, si $z$ se reemplaza por otra sección $z'$ de $E$ que levante
+$(x,y)$, entonces $z'=z+g$ para una sección $g$ de $G$. Los dos
+términos del miembro derecho de (2.3.18) correspondientes a $z'$ son
+los correspondientes a $z$, cada uno aumentado en $ng$. Su diferencia
+es, por tanto, independiente de $z$, lo que muestra que (2.3.18)
+define un homomorfismo bien determinado
+\[
+ {}_nP\otimes{}_nQ\longrightarrow G.
+\]
+
+Queda por demostrar que este homomorfismo es en efecto
+$\sisi{\varphi^n}{\varphi_\xi^n}$. Para ello nos reducimos de inmediato
+al caso
+\[
+ P=Q=(\mathbb Z/n\mathbb Z)_T.
+\]
+Entonces $P\times Q$ es de la forma $I_T$, donde
+$I=\mathbb Z/n\mathbb Z\times\mathbb Z/n\mathbb Z$ es un conjunto
+finito. En este caso, el torsor $E$ bajo $G_{P\times Q}$, que se
+identifica con una familia de torsores $E_i$ bajo $G$, para $i\in I$,
+se hace manifiestamente trivial localmente sobre $T$. Quedamos así
+reducidos al caso ya tratado en que $E$ posee una sección global sobre
+$P\times Q$.

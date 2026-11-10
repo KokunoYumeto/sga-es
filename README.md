@@ -71,7 +71,4 @@ este repositorio contiene las de [SGA 1](sources/SGA1/README.md) y [SGA 7, tomo 
 
 ## Derechos
 
-En la medida en que el editor tenga derechos sobre la traducción, las correcciones y la composición producidas por
-IA, quedan dedicados al dominio público bajo
-[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Esto no afecta a los derechos sobre las obras
-originales ni concede permiso para usarlas. Aviso completo: [RIGHTS_NOTICE.md](RIGHTS_NOTICE.md).
+Los derechos sobre las obras originales pertenecen a sus autores o a los representantes o herederos de estos. En la medida en que tengamos derechos sobre las transcripciones, las traducciones, las correcciones y la composición tipográfica producidas por IA, estos se dedican al dominio público bajo [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Estas ediciones se publican con fines educativos y sin ánimo de lucro, y no reclamamos ningún derecho que no poseamos. Si usted es titular de derechos sobre alguna de estas obras y se opone a su publicación aquí, [abra una incidencia en GitHub](https://github.com/KokunoYumeto/sga-es/issues) y la retiraremos.

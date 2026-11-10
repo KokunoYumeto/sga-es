@@ -1,0 +1,109 @@
+\par\medskip
+\noindent
+\underline{Proposición} 3.2. \underline{Sea $S$ un esquema entero
+regular, localmente noetheriano, de dimensión} $1$; \underline{sea $K$ su cuerpo de
+funciones racionales; sea $A_K$ un esquema abeliano sobre $K$; y sea
+$A$ su modelo de Néron sobre $S$, que es un esquema en grupos liso y
+separado sobre $S$} (\underline{y cuasiproyectivo sobre $S$ si $S$ es noetheriano
+[23, VIII, 2, 3\textdegree]). Son equivalentes las condiciones
+siguientes:}
+
+\smallskip
+\noindent
+(i) \underline{Para todo $s\in S$, $A_s^o$ posee rango unipotente cero;
+es decir, es una extensión de un esquema abeliano por un toro (2.1.5).}
+
+\smallskip
+\noindent
+(ii) \underline{Existe un esquema en grupos $G$, liso, separado y de
+tipo finito sobre $S$, que prolonga $A_K$ y cuyas fibras poseen rango
+unipotente cero.}
+
+\smallskip
+\noindent
+\underline{Además, si $G$ es como en (ii), el único morfismo
+$G\longrightarrow A$ que induce el isomorfismo dado sobre las fibras
+genéricas es un isomorfismo de $G$ sobre un subgrupo abierto de $A$;
+induce, por tanto, un isomorfismo de las componentes neutras}
+\[
+ G^o\xrightarrow{\ \sim\ }A^o.
+\]
+
+\medskip
+\noindent
+3.2.1. Observemos de inmediato que la definición del modelo de Néron
+$A$ de $A_K$ es la misma que en el caso local recordado en 1.1. La
+existencia de este modelo de Néron, y el hecho de que sea separado y de
+tipo finito sobre $S$, son bien conocidos y, de hecho, se reducen de
+inmediato al caso local. Naturalmente, para todo punto cerrado $s\in S$,
+\[
+ S'=\operatorname{Spec}(\mathcal O_{S,s})
+\]
+es un rasgo, y $A\times_S S'$ es precisamente el modelo de Néron de
+$A_K$ sobre $S'$ en el sentido considerado en 1.1.
+
+Demostremos 3.2. Es trivial que (i) implica (ii), pues basta tomar
+$G=A$. Queda por demostrar que, si $G$ es como en (ii), entonces
+$G\longrightarrow A$ es una inmersión abierta. Este es, en efecto, un
+caso particular de 3.1 e).
+
+\medskip
+\noindent
+\underline{Corolario} 3.3. \underline{Con la notación de 3.2,
+supongamos que las componentes neutras de las fibras del modelo de
+Néron poseen rango unipotente cero. Sea $S'$ un esquema que satisface
+las mismas hipótesis que $S$; sea $K'$ su cuerpo de funciones
+racionales; sea $f:S'\longrightarrow S$ un morfismo dominante; sea}
+\[
+ A_{K'}\simeq A_K\otimes_KK'
+ \simeq \text{la fibra genérica de }A\times_SS',
+\]
+\underline{sea $A'$ el modelo de Néron de $A_{K'}$, y considérese el
+único morfismo}
+\[
+ u:A\times_SS'\longrightarrow A'
+\]
+\underline{que induce la identidad sobre las fibras genéricas. Entonces
+$u$ es una inmersión abierta y, por tanto, induce un isomorfismo sobre
+las componentes neutras}
+\begin{equation}\tag{3.3.1}
+ A^o\times_SS'\xrightarrow{\ \sim\ }{A'}^o.
+\end{equation}
+En efecto, basta aplicar 3.2 sobre $S'$, tomando
+$G\simeq A\times_SS'$.
+
+\medskip
+\noindent
+3.3.2. Así, las propiedades equivalentes de 3.2 implican una propiedad
+parcial de «estabilidad» de los modelos de Néron. Conviene tener presente
+que, cuando $A_K$ no posee buena reducción, es decir, cuando $A$ no es
+un esquema abeliano, no es cierto que, para todo $S'$ como en 3.3
+(incluso para $S'$ finito sobre $S$ y $K'/K$ separable), el propio
+morfismo
+\[
+ A\times_SS'\longrightarrow A'
+\]
+sea un isomorfismo, ni que induzca isomorfismos sobre los grupos de
+componentes conexas de las fibras (véase 11.10 más adelante para el
+comportamiento de estos grupos de componentes conexas bajo extensión
+de la base). Estas observaciones, reforzadas por 3.9 más adelante,
+justifican la terminología siguiente, introducida por Mumford (y que
+también parece concordar con las nociones del mismo nombre estudiadas
+en su libro [17]).
+
+\medskip
+\noindent
+\underline{Definición} 3.4. \underline{Con la notación de 3.2, se dice
+que el esquema abeliano $A_K$ sobre $K$ posee reducción semiestable
+sobre $S$ si se satisfacen las condiciones equivalentes (i) y (ii) de
+3.2.}
+
+\medskip
+\noindent
+3.4.0. Obsérvese que, en la forma (ii), esta condición no invoca la
+noción de modelo de Néron. Además, por localización, se reduce de
+inmediato al caso en que $S$ es un rasgo, como se deduce, por ejemplo,
+de 3.2.1. Por otra parte, puesto que la formación del modelo de Néron
+conmuta con el cambio de base de $S$ a su henselización o a su
+henselización estricta, la noción se reduce incluso al caso en que $S$
+es un rasgo estrictamente local.

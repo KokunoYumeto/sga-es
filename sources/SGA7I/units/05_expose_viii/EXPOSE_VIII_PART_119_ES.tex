@@ -1,0 +1,104 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2064--2102; índices de escaneo 304--307;
+% folios de fuente 293--296. La corrección material de la capa francesa
+% se conserva reversiblemente mediante \sisi.
+
+\medskip
+\noindent\underline{Teorema 6.5.} \underline{Sea $S$ un esquema
+normal localmente integral y sea $D$ un divisor positivo sobre $S$,
+sin componentes múltiples, cuyo soporte sea geométricamente unirrama y
+localmente integral. Sea $\overline G$ el modelo de Néron--Raynaud de
+$\underline G_m$ sobre $S$ relativo a $D$} (6.3), \underline{y
+consideremos la categoría de torsors $E$ sobre $S$ bajo el esquema en
+grupos $\overline G$. El funtor de restricción}
+\[
+ E\longmapsto E_U=E|U
+\]
+\underline{de esta categoría a la categoría de torsors sobre $U$ bajo
+el esquema en grupos $\underline G_{mU}$ es plenamente fiel. Si $S$ es
+regular} (más generalmente, si sus anillos locales son factoriales),
+\underline{este funtor es una equivalencia de categorías.}
+
+%%%%%%%%%%  scan idx 305  |  folio 294  %%%%%%%%%%
+
+Demostremos que el funtor en cuestión es plenamente fiel; es decir,
+que, para dos torsors $E,F$ bajo $\overline G$, la aplicación de
+restricción
+\begin{equation}\tag{*}
+ \mathrm{Hom}(E,F)\longrightarrow\mathrm{Hom}(E_U,F_U)
+\end{equation}
+es biyectiva, donde $\mathrm{Hom}$ denota el conjunto de homomorfismos
+de \underline{torsors}. Observemos primero que esta cuestión es
+manifiestamente \underline{local sobre $S$ para la topología de
+Zariski}. En efecto, supongamos que $S$ es la unión de abiertos $S_i$
+tales que, para todo abierto $S'$ de $S$ contenido en algún $S_i$ (y,
+por tanto, en particular para $S'=S_i$ o $S_i\cap S_j$), la aplicación
+\[
+ \mathrm{Hom}(E_{S'},F_{S'})
+ \longrightarrow
+ \mathrm{Hom}(E_{S'\cap U},F_{S'\cap U})
+\]
+es biyectiva. Entonces (*) es biyectiva. Por otra parte, de 5.8
+aplicado a $S,T,\mathbb Z$ y de 5.1 aplicado a $T,\mathbb Z$ se deduce
+inmediatamente que todo torsor bajo $\overline G$ es localmente trivial
+para la topología de Zariski. Estas dos observaciones nos reducen a
+demostrar la biyectividad de (*) cuando $E=F=\overline G$. En ese caso,
+la aplicación es precisamente (6.4.1), cuya biyectividad ya se ha
+establecido.
+
+Demostremos ahora que el funtor $E\mapsto E_U$ es esencialmente
+sobreyectivo cuando los anillos locales de $\sisi{X}{S}$ son
+factoriales. Como $\underline G_{mS}$ se identifica con un subesquema
+en grupos abierto de $\overline G$, basta mostrar que todo torsor bajo
+$\underline G_{mU}$ es isomorfo a la restricción a $U$ de un torsor
+bajo $\underline G_{mS}$. Equivalentemente, todo haz invertible sobre
+$U$ debe ser isomorfo a la restricción de un haz invertible sobre $S$.
+Esto se sigue de la hipótesis sobre $S$ (EGA IV 21.6.11, donde solo se
+trata el caso localmente noetheriano, que es el único que necesitaremos
+más adelante). Esto demuestra 6.5.
+
+%%%%%%%%%%  scan idx 306  |  folio 295  %%%%%%%%%%
+
+\medskip
+\noindent 6.5.1. Supongamos ahora, además, que $S$ es localmente
+noetheriano y \underline{regular}. Como $S$ es entonces localmente
+factorial, dar $D$ equivale a dar un subesquema cerrado reducido,
+puramente de codimensión $1$, que volveremos a denotar por $D$ y que es
+geométricamente unirrama. Obsérvese también que las hipótesis sobre $S$
+y $D$ son estables por todo cambio de base liso $S'\to S$, de modo que
+la conclusión de 6.5 se aplica a $S'$ con el subesquema
+$D'=D\times_S S'$. La descripción de VII 1.1.6 de los grupos de
+extensiones da inmediatamente la consecuencia siguiente.
+
+\medskip
+\noindent\underline{Corolario 6.6.} \underline{Sea $S$ un esquema
+regular localmente noetheriano, sea $D$ un subesquema cerrado reducido,
+geométricamente unirrama y puramente de codimensión $1$} (que define,
+por tanto, un divisor sobre $S$), \underline{sea $\overline G$ el
+modelo de Néron--Raynaud de $\underline G_m$ relativo a $D$, y sea $P$
+un esquema en grupos conmutativo liso sobre $S$. Consideremos la
+categoría de extensiones conmutativas, como haces de grupos, de $P$ por
+$\overline G$. La restricción a $U$, $E\mapsto E|U$, induce una
+equivalencia entre esta categoría y la categoría de extensiones de
+$P_U$ por $\underline G_{mU}$.}
+
+\medskip
+\noindent 6.6.1. El mismo método da el enunciado análogo para
+extensiones no necesariamente conmutativas, sin suponer ya que $P$ sea
+conmutativo. Dejamos al lector los detalles de la demostración; son
+algo más complicados porque deben considerarse bitorsors en lugar de
+torsors.
+
+Por una demostración esencialmente idéntica a la de 6.6 se obtiene
+asimismo:
+
+%%%%%%%%%%  scan idx 307  |  folio 296  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Corolario 6.7.} \underline{Sean
+$S,D,\overline G$ como en 6.6, y sean $P,Q$ dos esquemas en grupos
+conmutativos lisos sobre $S$. Consideremos la categoría de
+biextensiones de $(P,Q)$ por $\overline G$. Entonces el funtor de
+restricción a $U$, $E\mapsto E|U$, de esta categoría a la categoría de
+biextensiones de $(P_U,Q_U)$ por $\underline G_{mU}$ es una
+equivalencia de categorías.}

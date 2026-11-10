@@ -1,0 +1,157 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 1607--1696; índices de escaneo 280--284;
+% folios de fuente 269--273. No hay diferencias materiales entre las
+% capas diplomática y corregida en este fragmento.
+
+\medskip
+\noindent\underline{Proposición 4.7.} \underline{Sean $P$ y $Q$ dos
+grupos algebraicos lisos y conexos sobre el cuerpo $k$. Supongamos que
+$P$ es una extensión de un esquema abeliano $A$ por un grupo algebraico
+afín liso y conexo $L$ que admite una serie de composición cuyos
+factores son isomorfos a un toro o a $\underline G_a$ (condición que se
+cumple siempre si $k$ es perfecto}). \underline{Entonces el funtor considerado en
+\sisi{1.3}{4.3} es una equivalencia de categorías; es decir, todo haz invertible
+birrigidificado $\mathbb L$ sobre $P\times Q$ procede de una
+biextensión de $(P,Q)$. Además, el funtor entre categorías rígidas}
+\[
+ \operatorname{BIEXT}(A,Q;\underline G_m)
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;\underline G_m)
+\]
+\underline{es una equivalencia de categorías; en otras palabras,
+induce un isomorfismo de grupos}
+\begin{equation}\tag{4.7.1}
+ \Biext^1(A,Q;\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \Biext^1(P,Q;\underline G_m).
+\end{equation}
+
+%%%%%%%%%%  scan idx 281  |  folio 270  %%%%%%%%%%
+
+Para la primera afirmación, el descenso y 4.3 nos reducen de nuevo al
+caso en que $k$ es separablemente cerrado. Procediendo como en la
+demostración de 4.6, se deduce de 4.5 y de la hipótesis sobre $L$ que
+$\mathbb L$ es isomorfo a la imagen inversa de un haz invertible
+birrigidificado $\mathbb M$ sobre $A\times Q$. Para la primera
+afirmación de 4.7 quedamos, pues, reducidos al caso $A=P$. El haz
+invertible $\mathbb L$ define entonces un morfismo de esquemas
+apuntados
+\[
+ f:Q\longrightarrow\underline{\Pic}_{P/k},
+\]
+que necesariamente se factoriza por el esquema abeliano dual $P'$ de
+$P$. Sea $\mathbb L'$ la imagen inversa del haz de Weil sobre
+$P\times P'$ mediante
+\[
+ \id_P\times f:P\times Q\longrightarrow P\times P'.
+\]
+Se trata de un haz invertible birrigidificado que, por definición de
+$f$, solo difiere de $\mathbb L$ por la imagen inversa de un haz
+invertible $\mathbb M$ sobre $P$. Como las restricciones de
+$\mathbb L'$ y $\mathbb L$ a $P\times e_Q$ son triviales, se sigue que
+$\mathbb M$ es trivial y, por tanto, que $\mathbb L\simeq\mathbb L'$.
+Se señaló en VII 2.9.4 que las correspondencias divisoriales sobre el
+producto de dos esquemas abelianos proceden de biextensiones. En
+consecuencia, $\mathbb L'$, y por tanto $\mathbb L$, procede de una
+biextensión.
+
+Volvamos al caso general, en el que $P$ es una extensión de $A$ por
+$L$. Queda por demostrar que (4.7.1) es un isomorfismo. Esto se deduce
+de la sucesión exacta de los $\Biext^i$, para $i=0,1$, asociada a
+\[
+ 0\longrightarrow L\longrightarrow P\longrightarrow A
+ \longrightarrow0,
+\]
+y de las relaciones
+\[
+ \Biext^0(L,Q;\underline G_m)=0,
+ \qquad
+ \Biext^1(L,Q;\underline G_m)=0.
+\]
+
+%%%%%%%%%%  scan idx 282  |  folio 271  %%%%%%%%%%
+
+La primera es un caso particular de la afirmación de rigidez de 4.3,
+y la segunda es precisamente el primer caso de 4.6.
+
+\medskip
+\noindent\underline{Corolario 4.8.} \underline{Bajo las hipótesis de
+4.7, supongamos que $Q$ es una extensión de un grupo algebraico $B$}
+(\underline{necesariamente liso y conexo}) \underline{por un grupo algebraico afín liso y
+conexo $M$. Entonces el funtor entre categorías rígidas}
+\[
+ \operatorname{BIEXT}(A,B;\underline G_m)
+ \longrightarrow
+ \operatorname{BIEXT}(P,Q;\underline G_m)
+\]
+\underline{es una equivalencia de categorías; en otras palabras,
+induce un isomorfismo de grupos}
+\begin{equation}\tag{4.8.1}
+ \Biext^1(A,B;\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \Biext^1(P,Q;\underline G_m).
+\end{equation}
+
+En virtud de (4.7.1), basta demostrar que
+\[
+ \Biext^1(A,B;\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \Biext^1(A,Q;\underline G_m)
+\]
+es un isomorfismo. Como en la demostración de (4.7.1), esto se deduce
+de la sucesión exacta de los $\Biext^i$ asociada a
+\[
+ 0\longrightarrow M\longrightarrow Q\longrightarrow B
+ \longrightarrow0,
+\]
+junto con las relaciones
+\[
+ \Biext^0(P,M;\underline G_m)=0,
+ \qquad
+ \Biext^1(P,M;\underline G_m)=0.
+\]
+En efecto, (4.7.1), aplicado con $M$ en lugar de $Q$, identifica estos
+grupos con los grupos correspondientes que tienen $A$ en la primera
+variable, tal como exige la sucesión exacta precedente. La segunda
+anulación mostrada arriba es un caso particular del segundo caso de
+4.6, tras intercambiar los dos factores.
+
+%%%%%%%%%%  scan idx 283  |  folio 272  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Observación 4.9.} Sean $P$ y $Q$ dos grupos
+algebraicos lisos y conexos sobre un cuerpo \underline{perfecto} $k$.
+Se sabe entonces [3] que cada uno es una extensión de un esquema
+abeliano por un grupo liso, conexo y afín, y que este último es el
+producto de un toro por una extensión iterada de copias de
+$\underline G_a$ (véase la referencia dada en 4.6):
+\[
+ 0\longrightarrow L\longrightarrow P\longrightarrow A
+ \longrightarrow0,
+ \qquad
+ 0\longrightarrow M\longrightarrow Q\longrightarrow B
+ \longrightarrow0.
+\]
+Por tanto, 4.8 se aplica y muestra que la teoría de las biextensiones
+de $(P,Q)$ por $\underline G_m$ se reduce a la teoría análoga (¡y mucho
+más clásica!) para la pareja $(A,B)$ de variedades abelianas.
+
+\medskip
+\noindent\underline{Corolario 4.10.} \underline{Sean $P$ y $Q$ dos
+grupos algebraicos lisos y conexos sobre $k$, sea $L$ un subgrupo
+algebraico afín liso y conexo de $P$, y sea $E$ una biextensión de
+$(P,Q)$ por $\underline G_m$. Por 2.2, $E$ induce un emparejamiento}
+\[
+ T_\ell(P)\times T_\ell(Q)\longrightarrow T_\ell(\underline G_m).
+\]
+\underline{Entonces el emparejamiento inducido}
+\[
+ T_\ell(L)\times T_\ell(Q)\longrightarrow T_\ell(\underline G_m)
+\]
+\underline{es nulo.}
+
+En efecto, podemos suponer evidentemente que $k$ es algebraicamente
+cerrado. Estamos entonces bajo las hipótesis de 4.6, que implican que
+la restricción de $E$ a $(L,Q)$ es la biextensión trivial. La conclusión
+afirmada se sigue porque el emparejamiento inducido en cuestión es el
+definido por esta restricción.

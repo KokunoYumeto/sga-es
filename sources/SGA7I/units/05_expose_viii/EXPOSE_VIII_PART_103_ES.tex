@@ -1,0 +1,88 @@
+\par\medskip
+\noindent 2.3.19. \underline{Otra demostración de 2.3.11}
+(por Deligne).
+
+\medskip
+\noindent a) Reducción a $P=\mathbb Z/n\mathbb Z$ y a
+$T=(\mathrm{Sets})$.
+
+\medskip
+\noindent b) Sea $\partial$ la flecha siguiente de $nQ$ a
+$\,{}_nQ[1]$:
+\[
+ nQ\xleftarrow[\text{``$n$''}]{\ \sim\ }
+ [\,{}_nQ\longrightarrow Q\,]
+ \longrightarrow{}_nQ[1].
+\]
+El diagrama siguiente es anticonmutativo:
+\[
+\begin{tikzcd}[row sep=huge,column sep=huge]
+ nQ[\sisi{o}{0}]\arrow[r,"1"]\arrow[d,"\partial"']
+   &{[Q\xrightarrow{n}Q]}\\
+ {}_nQ[1]\arrow[ru,"1"']&{.}
+\end{tikzcd}
+\]
+En efecto, las flechas
+\[
+\begin{tikzcd}[column sep=small,row sep=large]
+ {[{}_nQ}\arrow[r]\arrow[dd,"0"']&{Q]}\arrow[dd,"n"]
+   &&{[{}_nQ}\arrow[r]\arrow[dd,"1"']&{Q]}\arrow[dd,"0"']
+   &\text{son opuestas}
+   &{[{}_nQ}\arrow[r]&{Q]}\arrow[ddl,"1"]\\
+ &&\text{y}&&&\text{por medio de}\quad H\,:&&\\
+ {[Q}\arrow[r,"n"]&{Q]}&&{[Q}\arrow[r,"n"]&{Q]}
+   &&{[Q}\arrow[r,"n"]&{Q]}
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 263  |  folio 252  %%%%%%%%%%
+
+\medskip
+\noindent c) El diagrama 2.3.10 es
+\[
+\begin{tikzcd}[column sep=small,row sep=small]
+ &&&H^1\mathrm{RHom}
+   (\mathbb Z\mathbin{\overset{\mathbb L}{\otimes}}Q,G)
+   \arrow[ddd]\\
+ &&&+\\
+ H^1\mathrm{RHom}
+   (\mathbb Z/n\mathbb Z\mathbin{\overset{\mathbb L}{\otimes}}Q,G)
+   \arrow[rr]\arrow[dd]\arrow[uurrr]
+ &&H^1\mathrm{RHom}
+   (\mathbb Z/n\mathbb Z,\mathrm{RHom}(Q,G))
+   \arrow[dd]&\\
+ &&&\mathrm{Ext}^1(Q,G)\arrow[ddl]\\
+ \mathrm{Hom}(\mathrm{Tor}_1(\mathbb Z/n\mathbb Z,Q),G)\arrow[d]
+ &|[draw,circle,inner sep=1pt]|{-\,?}
+ &\mathrm{Hom}(\mathbb Z/n\mathbb Z,\mathrm{Ext}^1(Q,G))
+   \arrow[d]&\\
+ \mathrm{Hom}({}_nQ,G)\arrow[rr]
+ &&\mathrm{Ext}^1(nQ,G)&
+\end{tikzcd}
+\]
+y:
+
+\smallskip
+\noindent c1) Se tiene un isomorfismo
+\[
+ \mathbb Z/n\mathbb Z
+ \mathbin{\overset{\mathbb L}{\otimes}}Q
+ \simeq[Q\xrightarrow{n}Q],
+\]
+y, mediante este isomorfismo, la primera flecha vertical compuesta
+está inducida por
+\[
+ {}_nQ[1]\longrightarrow[Q\xrightarrow{n}Q].
+\]
+
+\smallskip
+\noindent c2) La segunda flecha horizontal es la transpuesta de la
+flecha $\partial$ mostrada arriba en b).
+
+\smallskip
+\noindent c3) Recorriendo el diagrama en sentido horario, es claro que
+se obtiene la flecha inducida por
+\[
+ nQ[0]\longrightarrow[Q\xrightarrow{n}Q].
+\]
+Esto prueba 2.3.11.

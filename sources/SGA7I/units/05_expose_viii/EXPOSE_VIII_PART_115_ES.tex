@@ -1,0 +1,122 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 1917--1974; índices de escaneo 295--298;
+% folios de fuente 284--287. Las correcciones materiales de la capa
+% francesa se conservan reversiblemente mediante \sisi.
+
+\medskip
+\noindent 5.7. Sean $S$ un esquema, $T$ un subesquema cerrado y $Z$
+un conjunto. Se llama \underline{esquema constante sobre $S$, truncado
+en $T$, de valor $Z$}, y se denota por $Z_{S,T}$, al esquema que se
+obtiene tomando la suma de copias $S_z$ de $S$, una por cada $z\in Z$,
+y pegando todas estas copias a lo largo del subesquema abierto
+$U=S\setminus T$. Así,
+\begin{equation}\tag{5.7.1}
+ Z_{S,T}\times_S U\simeq U,
+ \qquad
+ Z_{S,T}\times_S T\simeq Z_T,
+\end{equation}
+y $Z_{S,T}$ es étale sobre $S$. Para un $S$-esquema variable $S'$
+existe un isomorfismo, funtorial en $S'$,
+\begin{equation}\tag{5.7.2}
+ \Hom_S(S',Z_{S,T})\simeq\Hom_T(S'_T,Z_T).
+\end{equation}
+La aplicación es la restricción a $S'_T$, usando el segundo
+isomorfismo de (5.7.1); dejamos al lector comprobar que es biyectiva.
+Si
+
+%%%%%%%%%%  scan idx 296  |  folio 285  %%%%%%%%%%
+
+\[
+ i:T\longrightarrow S
+\]
+denota la inclusión, el isomorfismo funtorial (5.7.2) también puede
+escribirse como un isomorfismo de haces
+\begin{equation}\tag{5.7.3}
+ Z_{S,T}\simeq i_*(Z_T).
+\end{equation}
+Esta fórmula, o directamente la definición, muestra que, al variar
+$Z$, $Z_{S,T}$ depende funtorialmente de $Z$ y que este funtor conmuta
+con los límites proyectivos finitos. En particular, transforma grupos
+en esquemas en grupos y grupos conmutativos en esquemas en grupos
+conmutativos, como también resulta claro de la forma
+\sisi{(2.7.2)}{(5.7.2)} del funtor representado por $Z_{S,T}$.
+
+También es inmediato a partir de la definición, o de (5.7.3), que la
+formación de $Z_{S,T}$ conmuta con todo cambio de base $f:S'\to S$.
+Esto da un isomorfismo, funtorial en $Z$,
+\begin{equation}\tag{5.7.4}
+ Z_{S,T}\times_S S'\simeq Z_{S',T'},
+ \qquad T'=T\times_S S'=T_{S'}.
+\end{equation}
+
+\medskip
+\noindent 5.8. Estudiaremos los torsors $E$ bajo un esquema en grupos
+de la forma $Z_{S,T}$, donde $Z$ es un grupo, que supondremos
+conmutativo para simplificar. Existe un funtor natural
+\begin{equation}\tag{5.8.0}
+ E\longmapsto E_T
+\end{equation}
+de la categoría de torsors bajo $Z_{S,T}$ a la categoría de torsors
+bajo $Z_T$. Afirmamos que este funtor es una
+\underline{equivalencia de categorías}. Su plena fidelidad significa
+que, para dos torsors $E,F$ bajo $\sisi{G_{S,T}}{Z_{S,T}}$, la
+aplicación
+\[
+ \Hom(E,F)\longrightarrow\Hom(E_T,F_T)
+\]
+es biyectiva. Por descenso fpqc, esto se reduce inmediatamente al caso
+en que $E$ y $F$ son triviales,
+
+%%%%%%%%%%  scan idx 297  |  folio 286  %%%%%%%%%%
+
+y, por tanto, a $E=F=\sisi{G_{S,T}}{Z_{S,T}}$, donde la afirmación es
+precisamente la biyectividad de (5.7.2) para $S'=S$.
+
+Queda demostrar que (5.8.0) es esencialmente sobreyectivo. Sea $E_T$
+un torsor bajo $Z_T$. Ya observamos en la demostración de 5.1 que
+$E_T$ es representable y localmente trivial para la topología étale.
+Basta, pues, demostrar que
+\[
+ H^1(S_{\mathrm{\acute{e}t}},Z_{S,T})
+ \longrightarrow H^1(T_{\mathrm{\acute{e}t}},Z_T)
+\]
+es biyectiva. Esto resulta de (5.7.3) y de la relación
+\[
+ R^1i_{\mathrm{\acute{e}t},*}(Z_T)=0,
+\]
+que es el caso particular SGA 4 VIII 5.6.
+
+\medskip
+\noindent 5.8.1. Sea ahora $P$ un esquema en grupos conmutativo sobre
+$S$. Queremos determinar la categoría de extensiones, como haces de
+grupos conmutativos, de $P$ por $Z_{S,T}$. Para ello utilizamos la
+descripción de VII 1.1.6 y 1.3 en términos de torsors sobre $P$,
+$P\times P$ y $P\times P\times P$, bajo las imágenes inversas de
+$Z_{S,T}$. Por (5.7.4), estas imágenes inversas vuelven a ser de la
+misma forma que $Z_{S,T}$. Aplicando a esos torsors el resultado
+precedente, se ve que corresponden a torsors sobre $P_T$,
+$P_T\times_TP_T$ y $P_T\times_TP_T\times_TP_T$, bajo las imágenes
+inversas de $Z_T$. Obtenemos, por tanto, lo siguiente.
+
+\medskip
+\noindent\underline{Proposición 5.9.} \underline{Sean $S$ un esquema,
+$T$ un subesquema cerrado, $\sisi{G}{Z}$ un grupo conmutativo,
+$\sisi{G_{S,T}}{Z_{S,T}}$ el correspondiente esquema en grupos
+constante truncado sobre $S$, definido en 5.7, y $P$ un esquema en
+grupos conmutativo sobre $S$. Entonces la restricción a $T$ induce una
+equivalencia entre la categoría}
+
+%%%%%%%%%%  scan idx 298  |  folio 287  %%%%%%%%%%
+
+\underline{de haces de grupos conmutativos que son extensiones de $P$
+por $Z_{S,T}$ y la categoría de haces de grupos conmutativos que son
+extensiones de $P_T$ por $Z_T$.}
+
+Una demostración esencialmente idéntica da el resultado siguiente.
+
+\medskip
+\noindent\underline{Corolario 5.10.} \underline{Con la notación de
+5.9, sea $Q$ otro esquema en grupos conmutativo sobre $S$. Entonces la
+restricción a $T$ induce una equivalencia entre la categoría de
+biextensiones de $(P,Q)$ por $Z_{S,T}$ y la categoría de
+biextensiones de $(P_T,Q_T)$ por $Z_T$.}

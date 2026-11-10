@@ -1,0 +1,226 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §14.3, líneas 4627--4723;
+% índices de escaneo 525--529, folios 514--518. Las capas francesas D/C
+% no presentan diferencias materiales. Seis errores tipológicos o de
+% referencia inequívocos se conservan reversiblemente mediante \sisi y
+% se han comunicado al custodio raíz. La coma espuria del testigo inglés
+% en \underline m^{,n+1} se rechazó contra ambas capas francesas, que
+% coinciden en la lectura correcta \underline m^{n+1}.
+
+\par\medskip
+\noindent
+14.3. \underline{Aplicación a una caracterización aritmética de}
+$i:\underline M_K\longrightarrow G_K$.
+
+La caracterización que tenemos en mente se basa en la observación de
+que, para todo número primo $\ell$, la extensión (14.2.2) de
+$\underline M_K\otimes\mathbb Z_\ell$ por $T_\ell(G_K)$ deducida de
+$i$ se conoce por medios puramente algebraicos. En particular, se
+conoce la imagen de $i$ por el homomorfismo canónico
+
+\begin{equation}\tag{14.3.1}
+ \operatorname{Hom}(\underline M_K,G_K)\longrightarrow
+ \prod_\ell\operatorname{Ext}^1
+ \bigl(\underline M_K\otimes\mathbb Z_\ell,T_\ell(G_K)\bigr)
+ \qquad .
+\end{equation}
+
+\noindent
+En el caso (al que siempre puede reducirse uno por descenso) en que
+$\underline M_K$ es constante, de valor $M$, el homomorfismo precedente
+puede interpretarse como
+
+\begin{equation}\tag{14.3.2}
+ \operatorname{Hom}\bigl(M,G_K(K)\bigr)\longrightarrow
+ \prod_\ell
+ \sisi{\operatorname{Hom}\bigl(M,H^1(K,T_\ell(G_K))}%
+ {\operatorname{Hom}\bigl(M,H^1(K,T_\ell(G_K))\bigr)},
+\end{equation}
+
+\noindent
+deducido del homomorfismo canónico
+
+\begin{equation}\tag{14.3.3}
+ G_K(K)\longrightarrow\prod_\ell H^1(K,T_\ell(G_K))
+ \qquad ,
+\end{equation}
+
+\noindent
+que proviene de los homomorfismos de conexión de las sucesiones exactas
+de Kummer
+
+\begin{equation*}
+ 0\longrightarrow{}_nG_K\longrightarrow G_K
+ \xrightarrow{\ n\ }G_K\longrightarrow0\qquad .
+\end{equation*}
+
+%%%%%%%%%%  scan idx 526  |  folio 515  %%%%%%%%%%
+
+(El homomorfismo (14.3.1) podría, de hecho, interpretarse siempre como
+el homomorfismo de conexión análogo a (14.3.3) para el grupo torcido
+$\check{\underline M}_K\otimes G_K=
+\underline{\operatorname{Hom}}(\underline M_K,G_K)$.) El núcleo de
+(14.3.3) está formado manifiestamente por los elementos de $G_K(K)$ que
+son \underline{divisibles por} $n$ \underline{para todo entero}
+$n\geq1$, o, como diremos, que son \underline{infinitamente
+divisibles}. Esto determina ya $i$ módulo un elemento de
+$\operatorname{Hom}(M,g)$, donde $g$ es el subgrupo de $G_K(K)$ formado
+por sus elementos infinitamente divisibles:
+
+\begin{equation*}
+ g=\bigcap_{n\geq1}nG_K(K)\qquad .
+\end{equation*}
+
+Tenemos ahora el siguiente resultado.
+
+\medskip
+\noindent
+\underline{Lema 14.3.4.} \underline{Sea} $V$ \underline{un anillo de
+valoración discreta cuyo cuerpo residual} $k$ \underline{tenga
+característica} $p>0$ \underline{y sea de tipo finito sobre su cuerpo
+primo, y sea} $G_K$ \underline{un esquema en grupos de tipo finito
+sobre} $K$, \underline{de rango unipotente cero si}
+$\operatorname{car}K=0$. \underline{Entonces el grupo} $g$
+\underline{de los elementos infinitamente divisibles de} $G_K(K)$
+\underline{es cero; es decir,} (\underline{si} $G_K$ \underline{es
+divisible}) \underline{el homomorfismo} (14.3.3) \underline{es
+inyectivo}.
+
+Después de efectuar una extensión finita $K'/K$ y reemplazar $V$ por
+su normalización en $K'$, podemos suponer que $G_K$ admite una serie de
+composición cuyos cocientes sucesivos son de uno de los tipos
+siguientes: un grupo finito constante, una variedad abeliana,
+$\mathbb G_{mK}$ o $\mathbb G_{aK}$. Nos reducimos, pues,
+inmediatamente al caso en que el propio $\sisi{\mathbb G_K}{G_K}$ es
+de uno de estos tipos. El caso de un grupo finito constante, o de
+$\mathbb G_{aK}$, es trivial. En el caso abeliano, $G_K$ puede
+considerarse como la fibra genérica de su modelo de Néron $G$, de modo
+que nos reducimos a demostrar que, si $G$ es un esquema de tipo finito
+sobre $S$, el subgrupo de $G(S)$ formado por los puntos infinitamente
+divisibles es cero.
+
+%%%%%%%%%%  scan idx 527  |  folio 516  %%%%%%%%%%
+
+Esto es cierto para el grupo $G(k)$, como se deduce inmediatamente del
+dévissage habitual de $G_o$ y del \underline{teorema de Mordell--Weil}
+[16] (que dice que $G_o(k)$ es un $\mathbb Z$-módulo de tipo finito si
+$G_o$ es un esquema abeliano sobre el cuerpo de tipo finito $k$). Por
+consiguiente, $g$ está contenido en el núcleo $G(S)^{(1)}$ de
+$G(S)\longrightarrow G(k)$. El núcleo de
+$G(S)^{(1)}\longrightarrow G(V/\underline m^{n+1})$ posee una
+filtración cuyos cocientes son isomorfos a grupos vectoriales sobre $k$
+(después de suponer, como podemos, que $S$ es completo), y estos son
+aniquilados por $p$. Se deduce que $g$ está contenido en el núcleo del
+homomorfismo precedente para todo $n$, y por tanto que es cero. El caso
+$G_K=\mathbb G_{mK}$ se reduce al precedente, pues
+$G_K(K)\sisi{\longrightarrow}{=}K^*$ es una extensión de $\mathbb Z$
+(que no tiene elementos infinitamente divisibles no nulos) por
+$V^*=\mathbb G_m(S)$, y este último satisface la misma condición por lo
+que acabamos de demostrar.
+
+\medskip
+\noindent
+\underline{Observaciones 14.3.4.1.} Obsérvese que en 14.3.4 es esencial
+exigir la divisibilidad por \underline{todos} los enteros $\geq1$, y no
+solo por las potencias de un primo fijo $\ell$; equivalentemente, hay
+que considerar el núcleo de (14.3.3), en vez de restringir el miembro
+de la derecha a un único factor $H^1(K,T_\ell(G_K))$. En efecto, si
+$G_K$ proviene de un esquema en grupos liso $G$ sobre $S$ y $S$ es
+henseliano, ¡todo elemento del núcleo de
+$G(S)\longrightarrow G(k)$ es infinitamente $\ell$-divisible para todo
+$\ell\neq p$! El argumento que demuestra 14.3.4 muestra que el subgrupo
+de $G_K(K)$ formado por los elementos infinitamente $p$-divisibles (es
+decir, el núcleo de
+$G_K(K)\longrightarrow H^1(K,T_p(G_K))$ cuando $G_K$ es $p$-divisible)
+es un grupo \underline{finito}.
+
+%%%%%%%%%%  scan idx 528  |  folio 517  %%%%%%%%%%
+
+\medskip
+\noindent
+14.3.5. Las consideraciones precedentes muestran que, cuando el cuerpo
+residual $k$ tiene característica $p>0$ y es de tipo finito en sentido
+absoluto, el homomorfismo $i$ (14.1.5) está completamente determinado
+por su imagen mediante (14.3.1), es decir, por las extensiones
+(14.2.2). Para deducir de ello un principio que caracterice $i$ en el
+caso general, sin restricción sobre $k$, obsérvese que en el párrafo 7
+pudimos construir el esquema $G$ sobre $S$ bajo condiciones
+considerablemente más generales que aquellas en las que $S$ es un
+rasgo completo y se dispone de una variedad abeliana con reducción
+semiestable sobre su cuerpo de fracciones.
+
+Más generalmente, sea $S$ el espectro de un anillo noetheriano normal
+$V$, separado y completo para una topología $\underline m$-ádica, y
+consideremos un esquema en grupos liso y cuasiproyectivo $A$ sobre $S$,
+de fibras conexas. Supongamos que
+$A_o=A\times_S S_o$, donde
+$S_o=\operatorname{Spec}(V/\underline m)$, es una extensión de un
+esquema abeliano $B_o$ por un toro isotrivial $T_o$, y que $A_U$ es un
+esquema abeliano, donde $U\subset S-S_o$ es un abierto no vacío. En
+$\sisi{7.22}{7.2.2}$ construimos entonces un esquema $G$ sobre $S$, una
+extensión de un esquema abeliano $B$ por un toro $T$, caracterizado
+salvo isomorfismo único por el isomorfismo (14.1.8)
+
+\begin{equation}\tag{14.3.5.1}
+ \widehat G\xrightarrow{\ \sim\ }\widehat A
+\end{equation}
+
+\noindent
+sobre los completados formales a lo largo de $G_o$ y $A_o$.
+
+%%%%%%%%%%  scan idx 529  |  folio 518  %%%%%%%%%%
+
+Para todo número primo $\ell$ se deduce un isomorfismo (7.3.5)
+
+\begin{equation}\tag{14.3.5.2}
+ T_\ell(G)\xrightarrow{\ \sim\ }T_\ell(A)^f\qquad ,
+\end{equation}
+
+\noindent
+y por tanto, restringiendo a $U$, la estructura de una extensión de
+grupos de Barsotti--Tate pro-$\ell$
+
+\begin{equation}\tag{14.3.5.3}
+\begin{tikzcd}[row sep=large,column sep=large]
+0 \arrow[r] & T_\ell(G_U) \arrow[r] \arrow[d,no head,"\wr"']
+ & T_\ell(A_U) \arrow[r]
+ & T_\ell(A_U)/T_\ell(A_U)^f \arrow[r] & 0\quad .\\
+& T_\ell(A_U)^f
+\end{tikzcd}
+\end{equation}
+
+Supongamos ahora dado un segundo esquema en grupos $A'$ sobre $S$ que
+satisface las mismas hipótesis que $A$, junto con una biextensión $W$
+de $(A,A')$ por $\mathbb G_m$ que sobre $U$ induce una dualidad entre
+los esquemas abelianos $A_U$ y $A'_U$. (De hecho, por VIII 7.1, dar $W$
+equivale a dar tal dualidad entre $A_U$ y $A'_U$.) Entonces $W$ define
+emparejamientos
+
+\begin{equation}\tag{14.3.5.4}
+ T_\ell(A_U)\times T_\ell(A'_U)\longrightarrow\mathbb Z_\ell(1)
+ \qquad ,
+\end{equation}
+
+\noindent
+que dan lugar al teorema de ortogonalidad (7.4.8):
+$T_\ell(A_U)^f$ es el ortogonal de
+$T_\ell(A'_U)^t=T_\ell(T'_U)$, donde $T'$ es la parte tórica de la
+extensión de Raynaud $G'={A'}^{\natural}$ asociada a $A'$. Se obtiene
+así de nuevo un isomorfismo
+
+\begin{equation}\tag{14.3.5.5}
+ T_\ell(A_U)/T_\ell(A_U)^f
+ \simeq\underline M_U\otimes\mathbb Z_\ell\qquad ,
+\end{equation}
+
+\noindent
+donde $\underline M=D(T')$ es el retículo sobre $S$ dual del toro
+$T'$. Por consiguiente, $\sisi{(14.3.8)}{(14.3.5.3)}$ y
+$\sisi{(14.3.10)}{(14.3.5.5)}$ dan una extensión
+
+\begin{equation}\tag{14.3.5.6}
+ 0\longrightarrow T_\ell(G_U)\longrightarrow T_\ell(A_U)
+ \longrightarrow\underline M_U\otimes\mathbb Z_\ell
+ \longrightarrow0\qquad .
+\end{equation}
+
+Entendido esto, podemos enunciar la siguiente conjetura.

@@ -1,0 +1,249 @@
+\par\medskip
+\noindent
+4.5. Daremos una aplicación de 4.3 a) a la teoría del conductor local
+de los esquemas abelianos. Supongamos que $k$ es algebraicamente
+cerrado.\footnote{Bastaría, en realidad, con que $k$ fuese perfecto,
+pero, tras pasar a la henselización estricta de $S$, se reduce de
+inmediato al caso aquí considerado.} Recordemos (SGA 5 X 6.2, o [20])
+que, para todo $\ell$-esquema en grupos conmutativo étale $F_K$ sobre
+$K$ ($\ell\neq p$), se define un entero
+\begin{equation}\tag{4.5.1}
+ \alpha_s(F_K)=\alpha_s(i_*F_K),
+\end{equation}
+donde $i:\eta\longrightarrow S$ denota la inclusión, como sigue. Se
+elige una extensión de Galois finita $K'$ de $K$, con grupo $\Gamma$,
+que escinda $F_K$, de modo que $F_K$ esté representado por un
+$\ell$-grupo finito $M$ sobre el cual actúa $\Gamma$. Por otra parte,
+se asocia a la extensión $K'/K$ cierto $\mathbb Z_\ell[\Gamma]$-módulo
+proyectivo, definido salvo isomorfismo,
+\begin{equation}\tag{4.5.2}
+ \operatorname{Sw}=\operatorname{Sw}(K'/K,\mathbb Z_\ell),
+\end{equation}
+y se pone
+\begin{equation}\tag{4.5.3}
+ \alpha_s(F_K)
+ =\operatorname{length}
+   \operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}(\operatorname{Sw},M).
+\end{equation}
+Se comprueba (loc. cit.) que esta expresión es independiente de la
+elección de la extensión $K'/K$. Además, la proyectividad de
+$\operatorname{Sw}$ como $\mathbb Z_\ell[\Gamma]$-módulo implica que
+$\alpha_s(F_K)$ es aditivo en las sucesiones exactas.
+
+Aplicamos esta definición al haz ${}_\ell A_K$, donde $A_K$ es nuestro
+esquema abeliano sobre $K$. En este caso se obtiene, por tanto, un entero
+\begin{equation}\tag{4.5.4}
+ \alpha_s(A_K;\ell)
+ =\operatorname{length}
+   \operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}
+   \bigl(\operatorname{Sw},
+         U_\ell\otimes_{\mathbb Z_\ell}\mathbb F_\ell\bigr),
+ \qquad
+ U_\ell=T_\ell(A(\overline K)),
+\end{equation}
+donde $\Gamma$ se elige como antes (elección que a priori depende de
+$\ell$). El entero (4.5.4) se denomina el \emph{exponente del conductor
+salvaje} del esquema abeliano $A_K$ relativo al anillo de valoración
+discreta $V\subset K$.\footnote{Debe definirse asimismo el
+\emph{exponente del conductor moderado} de $A_K$ relativo a $V$ como la
+diferencia entre las longitudes sobre $\mathbb Z/\ell\mathbb Z$ de las
+fibras geométricas genérica y especial de ${}_\ell A^o$. Es
+independiente de $\ell$ e igual a $2\lambda+\mu$ con la notación de
+\sisi{(1.1.11)}{(2.1.11)}. \underline{El exponente} (total) \underline{del conductor} de $A_K$ es la suma de los
+exponentes moderado y salvaje; es el término local que aparece en la
+fórmula de Euler--Poincaré para ${}_\ell A^o$ en SGA 5 X 6.2 y [20].}
+Tras pasar a la henselización, queda naturalmente definido sin suponer
+que $V$ sea henseliano, y se reduce inmediatamente al caso en que $S$
+es estrictamente local. Nos proponemos demostrar el resultado siguiente.
+
+\medskip
+\noindent
+\underline{Corolario} 4.6. \underline{El exponente del conductor
+salvaje (4.5.4) es independiente de la elección del primo
+$\ell\neq p$.}
+
+Podemos suponer que $S$ es estrictamente local. Calculamos (4.5.4),
+sustituyendo $\operatorname{Sw}$ por cualquier otro
+$\mathbb Z_\ell(\Gamma)$-módulo proyectivo $L$. Obsérvese que la
+filtración (4.1.1) de $U_\ell$ está formada por
+$\mathbb Z_\ell$-submódulos que son manifiestamente sumandos directos.
+Induce, por tanto, una filtración correspondiente de
+\[
+ U(\ell)=U_\ell\otimes_{\mathbb Z_\ell}\mathbb F_\ell,
+\]
+cuyos factores sucesivos se obtienen, por producto tensorial con
+$\mathbb F_\ell$, a partir de los factores $V_i$ $(i=1,2,3)$
+\[
+ U^{\mathrm{et}},\qquad
+ U^{\mathrm{ef}}/U^{\mathrm{et}},\qquad
+ U/U^{\mathrm{ef}}
+\]
+que aparecen en (4.1.1). Esta filtración es, naturalmente, estable bajo
+$\Gamma$. La aditividad descompone así
+\[
+ \operatorname{length}
+ \operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}(L,U(\ell))
+\]
+como suma de tres términos, las longitudes de los grupos
+\begin{equation}\tag{*}
+ \operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}
+   (L,V_i\otimes_{\mathbb Z_\ell}\mathbb F_\ell)
+ \simeq
+ \operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}(L,V_i)
+   \otimes_{\mathbb Z_\ell}\mathbb F_\ell.
+\end{equation}
+El isomorfismo de (*) se deduce de nuevo de la proyectividad supuesta de
+$L$; solo es necesario elegir $K'$ suficientemente grande para que
+$\Gamma$ actúe sobre los $V_i$. Ahora bien,
+$\operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}(L,V_i)$ es
+manifiestamente un $\mathbb Z_\ell$-módulo sin torsión, por lo que su
+rango es la longitud del miembro derecho de (*). Si $\varphi_i$ es el
+carácter de la representación de $\Gamma$ sobre $V_i$, y $\psi$ el
+carácter de la representación de $I$ sobre $\check L$, obtenemos
+\begin{equation}\tag{4.6.1}
+ \operatorname{length}
+ \operatorname{Hom}_{\mathbb Z_\ell(\Gamma)}(L,U(\ell))
+ =
+ \sum_{1\leq i\leq3}N^{-1}
+ \sum_{g\in\Gamma}\psi(g)\varphi_i(g)
+\end{equation}
+\[
+ =N^{-1}\sum_{g\in\Gamma}\psi(g)\varphi(g),
+ \qquad N=\operatorname{card}\Gamma,
+\]
+donde $\varphi(g)=\sum_i\varphi_i(g)$ es también la función sobre
+$\Gamma$ obtenida, pasando al cociente, a partir del carácter de la
+representación de monodromía del grupo de inercia $I$ sobre $U$. Por
+4.3 a), este carácter es una función racional con valores enteros,
+independiente de $\ell$. Tomando $L=\operatorname{Sw}$, lo mismo ocurre
+con el carácter $\psi(g)$ de $L$, que es
+\[
+ a(g)-N\delta(g)+1,
+\]
+donde $\delta$ es la función de Dirac sobre $\Gamma$ y $a$ es el
+conductor de Artin de $K'/K$ [26]. Esto demuestra 4.6 y da al mismo
+tiempo la siguiente expresión, independiente de $\ell$, para el
+exponente del conductor salvaje:
+\begin{equation}\tag{4.6.2}
+ \alpha_s(A_K)
+ =N^{-1}\sum_{g\in\Gamma}
+   \bigl(a(g)-N\delta(g)+1\bigr)\varphi(g).
+\end{equation}
+Aquí $\Gamma$ es el grupo de Galois de una extensión de Galois finita
+$K'$ de $K$ que escinde $U^{\mathrm{ef}}$ (por ejemplo, la menor de
+tales extensiones; cf. 4.1), $a(g)$ es el conductor de Artin sobre
+$\Gamma$, y $\varphi(g)$ es la función traza sobre $\Gamma$ descrita
+en (4.3.0). En el caso de reducción semiestable puede tomarse $K'=K$,
+por tanto $\Gamma=\{e\}$, y se obtiene
+\begin{equation}\tag{4.6.3}
+ \alpha_s(A_K)=0
+ \qquad\text{(caso de reducción semiestable).}
+\end{equation}
+
+Para concluir, enunciemos explícitamente un criterio de reducción
+semiestable que se deduce de las consideraciones generales de 4.2.
+
+\medskip
+\noindent
+\underline{Proposición} 4.7. \underline{(Criterio de M. Raynaud para la
+reducción semiestable.) Sea $S$ un rasgo, sea $A_K$ un esquema abeliano
+sobre su cuerpo de funciones $K$, y sea $n>1$ un entero primo con la
+característica residual $p$. Supongamos que ${}_nA_K$ es no ramificado
+respecto de $S$, es decir, que el grupo de inercia actúa trivialmente
+sobre ${}_nA(\overline K)$. Entonces, o bien $A_K$ posee reducción
+semiestable sobre $S$, o bien $n=2$; en este último caso, si $S$ es
+estrictamente local, $A_K$ adquiere reducción semiestable sobre una
+extensión de Galois finita $K'$ de $K$ cuyo grupo de Galois es isomorfo
+a $(\mathbb Z/2\mathbb Z)^r$.}\footnote{Como se deduce de un ejemplo
+que me comunicó J. Tate, 4.7 deja de ser válido cuando $n$ es igual a
+la característica residual $p$, incluso si $K$ posee característica
+cero y $A_K$ es una curva elíptica con multiplicación compleja.}
+
+Podemos suponer manifiestamente que $S$ es estrictamente local. Con la
+notación de 4.1 y 4.2, tomemos $K'$ lo más pequeño posible; en otras
+palabras, supongamos que $\Gamma$ actúa fielmente sobre $A^{*o}_o$. Por
+hipótesis, $\Gamma$ actúa trivialmente sobre ${}_nA(\overline K)$ y,
+con mayor razón, sobre
+\[
+ {}_nA(\overline K)^{\mathrm{ef}}
+ \simeq{}_nA^*_o(k)\supset{}_nA^{*o}_o(k).
+\]
+La conclusión se deduce de los dos lemas siguientes.
+
+\medskip
+\noindent
+\underline{Lema} 4.7.1. \underline{(J.-P. Serre.) Sea $G$ un esquema
+en grupos conmutativo sobre un cuerpo $k$, extensión de un esquema
+abeliano por un toro, y sea $n\geq2$ un entero. Todo automorfismo de
+orden finito de $G$ que induce la identidad sobre ${}_nG$ es la
+identidad si $n\neq2$, y es la identidad o tiene orden dos si $n=2$.}
+
+\medskip
+\noindent
+\underline{Lema} 4.7.2. \underline{Un grupo finito en el que todo
+elemento distinto de $1$ posee orden $2$ es isomorfo a
+$(\mathbb Z/2\mathbb Z)^r$ para algún $r\geq0$.}
+
+\smallskip
+\noindent
+4.7.3. Recordemos la conocida demostración de 4.7.1. Puesto que
+$n\,\operatorname{id}_G$ es un epimorfismo, la hipótesis de que $u$
+induce la identidad sobre ${}_nG$, o equivalentemente de que $1-u$
+induce cero sobre ${}_nG$, se expresa por la condición
+\[
+ 1-u=nv
+\]
+en el anillo de endomorfismos de $G$. Para demostrar la conclusión
+afirmada, nos reducimos, descomponiendo el grupo cíclico finito generado
+por $u$ en sus componentes $p$-primarias para los distintos primos $p$
+que dividen el orden de $u$, al caso en que $u$ posee orden $p^N$.
+
+Sea $E$ el subanillo de $\operatorname{End}(G)$ generado por $v$.
+Puesto que $u=1-nv$ y $u^{p^N}=1$, es un cociente de
+\[
+ \mathbb Z[T]\big/\bigl(\sisi{T^{p^N}-1}{(1-nT)^{p^N}-1}\bigr);
+\]
+es, por tanto, de tipo finito sobre $\mathbb Z$. Además, no posee
+torsión (consecuencia formal de la divisibilidad de $G$) y se sumerge,
+por consiguiente, en
+\[
+ E_{\mathbb Q}=E\otimes_{\mathbb Z}\mathbb Q.
+\]
+Este último es un cociente, tras el cambio de variable $u=1-nT$, de
+$\mathbb Q[u]/(u^{p^N}-1)$, que es un producto directo de extensiones
+finitas de cuerpos de $\mathbb Q$; lo mismo ocurre, por tanto, con
+$E_{\mathbb Q}$. Considerando las imágenes de $E$, $u$ y $v$ en los
+cuerpos componentes $K_i$ de $E_{\mathbb Q}$, queda demostrar la
+afirmación siguiente. Sea $K=\mathbb Q(u)$ engendrado por una raíz
+primitiva $p^{\sisi{n}{m}}$-ésima de la unidad $u$, y sea $n\geq2$ un
+entero tal que
+\[
+ u-1\equiv0\pmod n
+\]
+en el anillo de enteros de $K$. Entonces $u=1$, o bien $u=-1$ y $n=2$.
+
+Esto se deduce de inmediato del hecho conocido de que, si $u\neq1$, es
+decir, $m\geq1$, el ideal $(u-1)$ es primo y $(p)$ es una potencia de
+él, con exponente mayor que $1$ salvo cuando $p=2$ y $m=1$, es decir,
+cuando $u=-1$. Puesto que $(u-1)$ es primo y divide a $p$, un entero
+$n\geq2$ solo puede dividir a $u-1$ si $n=p$; y $p$ solo puede dividir
+a $u-1$ si $(u-1)=(p)$, es decir, si $u=-1$. Por tanto, $n=2$.
+
+\smallskip
+\noindent
+4.7.4. Demostremos 4.7.2. Basta demostrar que $\Gamma$ es conmutativo.
+Si $x,y\in\Gamma$, entonces $(xy)(xy)=1$; puesto que $x^2=1$ e $y^2=1$,
+esto puede escribirse también
+\[
+ xy=(xy)^{-1}=y^{-1}x^{-1}=yx,
+\]
+como se quería.
+
+\medskip
+\noindent
+\underline{Observación} 4.7.5. La demostración dada en 4.7.3, junto
+con 4.7.2, muestra que, si $G$ es un grupo conmutativo divisible en un
+topos, $n\geq2$ es un entero, y $\Gamma$ es un grupo finito que actúa
+fielmente sobre $G$ e induce la identidad sobre ${}_nG$, entonces
+$\Gamma$ es el grupo trivial si $n\geq3$, y es isomorfo a un grupo
+$(\mathbb Z/2\mathbb Z)^r$ si $n=2$.

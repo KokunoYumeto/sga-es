@@ -1,0 +1,127 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 1745--1799; índices de escaneo 286--289;
+% folios de fuente 275--278. Las cuatro correcciones materiales de la
+% capa francesa se conservan reversiblemente mediante \sisi.
+
+\medskip
+\noindent 4.12. Sea $P$ un esquema en grupos liso y conexo, sea
+$\mathbb L$ un haz invertible sobre $P$, y pongamos
+\begin{equation}\tag{4.12.1}
+ \delta(\mathbb L)=
+ \pi^*\mathbb L\otimes
+ \pr_1^*(\mathbb L)^{-1}\otimes
+ \pr_2^*(\mathbb L)^{-1},
+\end{equation}
+con la notación de 4.2. Como ya se observó en VII 1.3.4, este es un haz
+invertible birrigidificado sobre $P\times P$. Por 4.3, si
+$\delta(\mathbb L)$ procede de una biextensión, esta queda determinada
+salvo isomorfismo único. En particular, por 4.7, está definida cuando
+$P$ es una extensión de un esquema abeliano $A$ por una extensión
+iterada de toros y copias de $\underline G_a$. Siempre que está
+definida, esta biextensión es manifiestamente simétrica.
+
+%%%%%%%%%%  scan idx 287  |  folio 276  %%%%%%%%%%
+
+En el caso favorable precedente, y suponiendo que el toro maximal de
+$P$ es escindido, la construcción de $\delta(\mathbb L)$ puede
+reducirse al caso en que $P$ es un esquema abeliano. En efecto, la
+construcción es funtorial en $P$, mientras que el homomorfismo
+\begin{equation}\tag{4.12.2}
+ \Pic(A)\longrightarrow\Pic(P)
+\end{equation}
+inducido por el homomorfismo cociente canónico
+\[
+ f:\sisi{A\longrightarrow P}{P\longrightarrow A}
+\]
+es sobreyectivo por 4.5 (véase el comienzo de la demostración de 4.6).
+Por tanto, podemos encontrar un isomorfismo
+\[
+ \mathbb L\sisi{^*}{}\simeq f^*\mathbb M,
+\]
+donde $\mathbb M$ es un haz invertible sobre
+$\sisi{\mathbb M}{A}$. Entonces $\delta(\mathbb L)$ es la imagen
+inversa de la biextensión $\delta(\mathbb M)$ de $(A,A)$ por
+$\underline G_{m,k}$.
+
+\medskip
+\noindent\underline{Proposición 4.13.} \underline{Bajo las hipótesis
+de 4.12, supongamos que $\mathbb L$ es un haz invertible amplio sobre
+$P$. Si la biextensión $\delta(\mathbb L)$ de $(P,P)$ por
+$\underline G_{m,k}$ está definida, entonces es no degenerada en el
+sentido de 4.11. Si $P$ es una extensión de un esquema abeliano $A$ por
+un grupo afín liso y conexo $L$ que satisface la condición de 4.7,
+entonces la biextensión de $(A,A)$ de la cual procede
+$\delta(\mathbb L)$ por 4.8 es de la forma $\delta(\mathbb M)$, donde
+$\mathbb M$ es un haz invertible amplio sobre $A$.}
+
+Nos reducimos al caso en que $k$ es algebraicamente cerrado. Por la
+definición, basta entonces, con la notación de 4.12, demostrar que la
+biextensión $\delta(\mathbb M)$ de $(A,A)$ es no degenerada. M. Raynaud
+demuestra en su tesis [2, XI 1.11] que, si
+$\mathbb L=f^*\mathbb M$ es amplio, entonces $\mathbb M$ también lo es.
+La teoría de A. Weil da entonces la conclusión conocida de que
+$\delta(\mathbb M)$ es no degenerada [1, 2], es decir, que el
+homomorfismo de $A$ a su esquema abeliano dual es una isogenia.
+
+%%%%%%%%%%  scan idx 288  |  folio 277  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Observación 4.14.} Supongamos que estamos en el
+caso favorable en que $P$ es una extensión de un esquema abeliano $A$
+por un grupo $L$ que es una extensión iterada de toros y copias de
+$\underline G_a$, y consideremos el compuesto canónico
+\begin{equation}\tag{4.14.1}
+ \operatorname{NS}(A)
+ \xrightarrow{\ \delta\ }
+ \Biext^1(A,A;\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \Biext^1(P,P;\underline G_m).
+\end{equation}
+Por 4.8, la segunda flecha es biyectiva. Por otra parte, la teoría de
+las variedades abelianas muestra que la primera flecha identifica el
+grupo de Néron--Severi $\operatorname{NS}(A)$ de $A$ con el subgrupo de
+\[
+ \Biext^1(A,A;\underline G_m)=\operatorname{Corr}(A,A)
+\]
+formado por las clases de biextensiones simétricas o,
+equivalentemente, de correspondencias divisoriales simétricas. Así,
+(4.14.1) identifica $\operatorname{NS}(A)$ con el grupo de las
+biextensiones simétricas de $(P,P)$ por $\underline G_m$. Por 4.7,
+este grupo también puede describirse como el grupo de clases de
+correspondencias divisoriales simétricas sobre $(P,P)$.
+
+Es natural llamar \underline{amplia} a una correspondencia divisorial
+sobre $(P,P)$, y llamar asimismo \underline{amplia} a la biextensión
+correspondiente de $(P,P)$ por $\underline G_m$, cuando procede de un
+elemento amplio de $\operatorname{NS}(A)$. Esta condición es
+manifiestamente invariante por extensión del cuerpo base; por tanto, la
+noción sigue teniendo sentido sin la hipótesis restrictiva precedente
+sobre $P$, suponiendo solo que $P$ es liso y conexo.
+
+%%%%%%%%%%  scan idx 289  |  folio 278  %%%%%%%%%%
+
+Supongamos además que $L$ es ``resoluble escindido sobre $k$'', en el
+sentido de que admite una dévissage por copias de $\underline G_a$ y
+$\underline G_m$. La observación precedente y la sobreyectividad de
+(4.12.2) muestran que la imagen de
+\begin{equation}\tag{4.14.2}
+ \Pic(P)\xrightarrow{\ \delta\ }
+ \Biext^1(P,P;\underline G_m)
+\end{equation}
+está formada por las biextensiones simétricas, y que su núcleo es el
+subgrupo $\Pic^0(P)$ de $\Pic(P)$ que es imagen de $\Pic^0(A)$. En
+consecuencia, si ponemos
+\[
+ \operatorname{NS}(P)=\Pic(P)/\Pic^0(P)
+ \simeq\operatorname{NS}(A),
+\]
+también podemos interpretar (4.14.1) como un isomorfismo canónico
+\begin{equation}\tag{4.14.3}
+ \operatorname{NS}(P)
+ \xrightarrow{\ \sim\ }
+ \Biext^1(P,P;\underline G_m)^{\mathrm{sym}}.
+\end{equation}
+
+Finalmente, el teorema de Raynaud citado en 4.13 afirma que un elemento
+$\xi$ de $\Pic(P)$ es amplio si y solo si su imagen $\delta(\xi)$ por
+$(\sisi{4.14.1}{4.14.2})$ es la clase de una biextensión amplia.

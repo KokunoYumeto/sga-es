@@ -1,0 +1,75 @@
+\par\medskip\noindent
+2.10. \underline{Diversas generalizaciones de la noción de
+biextensión}. Las mencionamos para completar la exposición, aunque no
+las utilizaremos.
+
+2.10.1. Se puede definir una biextensión de $(P,Q)$ por $G$ sin
+suponer conmutativos $P$ ni $Q$, siendo conmutativo solamente $G$. Es
+un torsor bajo $G_{P\times Q}$ provisto de estructuras de extensión
+central de $Q_P$ por $G_P$ y de $P_Q$ por $G_Q$, cada una compatible
+con la estructura de torsor y compatibles entre sí, en el sentido de
+que hacen conmutativo (2.1.1). La mayoría de los desarrollos
+precedentes siguen siendo válidos, \emph{mutatis mutandis}, para esta
+noción más general. Incluso cuando $P,Q$ son conmutativos, es más
+general que la noción de 2.1, que es el caso en que las dos estructuras
+de grupo relativo subyacentes sobre $E$ son \underline{conmutativas}.
+En el caso no conmutativo, la categoría de biextensiones de $(P,Q)$
+por $G$ sigue dependiendo aditivamente de $G$, pero no de $P$ y $Q$.
+
+2.10.2. Parafraseando 2.1, para un entero fijo $n\geq1$ se define una
+\underline{$n$-extensión de una sucesión de $n$ grupos conmutativos}
+$(P_1,P_2,\ldots,P_n)$ por un grupo conmutativo $G$. Consiste en un
+torsor $E$ bajo $G_{P_1\times\cdots\times P_n}$, provisto de $n$
+estructuras de extensión parciales sobre los productos parciales de
+$n-1$ factores, con una relación de compatibilidad del tipo (2.1.1)
+para cada par de índices distintos entre $1$ y $n$.
+
+Si $n\geq3$, los $P_i$ son esquemas abelianos sobre un esquema $S$, y
+\sisi{$G$ es el grupo multiplicativo sobre $\underline G_m$
+(compárese 2.9.2)}{$G=\underline G_{m,S}$ es el grupo multiplicativo
+sobre $S$ (compárese 2.9.3)}, toda $n$-extensión de
+$(P_1,\ldots,P_n)$ por $G$ es \underline{trivial}.
+
+2.10.3. La noción de biextensión de 2.1 puede verse como una variante
+de la noción de extensión conmutativa de grupos conmutativos, es decir,
+de una extensión de $\mathbb Z$-módulos. Sea $A$ un anillo de
+$\underline T$, que supondremos conmutativo para simplificar, y sean
+$P,Q,G$ tres $A$-módulos. Más generalmente, se puede definir una
+\underline{biextensión de $A$-módulos} de $(P,Q)$ por $G$, variante de
+una extensión de $A$-módulos.
+
+Tal biextensión es una biextensión en el sentido de 2.1 cuyas
+estructuras de extensión parciales subyacentes se enriquecen en
+estructuras de extensión de $A_P$-módulos y $A_Q$-módulos,
+respectivamente, compatibles con las estructuras de módulos relativos
+ya presentes sobre $Q_P,G_P$ y $P_Q,G_Q$. Las dos estructuras de
+módulo relativo sobre $E$ pueden interpretarse como dos acciones del
+monoide multiplicativo subyacente de $A$ sobre el haz de conjuntos
+subyacente a $E$, y se exige que estas dos acciones conmuten. Esta
+condición se añade a la compatibilidad expresada por (2.1.1), y ella
+misma se expresa mediante un diagrama análogo, que dejamos al lector.
+Finalmente, se exige que la primera acción de $A$ sobre $E$ sea
+distributiva no solo respecto de la primera ley de composición sobre
+$E$, sino también respecto de la segunda; se exige lo mismo para la
+segunda acción.
+
+El diccionario de 1.1.6 también tiene una variante $A$-lineal. Una
+extensión del $A$-módulo $P$ por el $A$-módulo $G$ equivale a una
+familia de torsores $E_p$ bajo $G_p$, parametrizada por los puntos
+$p\in P(S)$ para $S\in\operatorname{ob}\underline T$ variable, con
+$E_p$ variando \underline{$A$-linealmente}, y no solo aditivamente, en
+$p$. Además de los isomorfismos $\varphi_{p,p'}$ de (1.1.3.1), esto se
+expresa mediante isomorfismos
+\[
+ \mu_{a,p}:\,{}^{a}\sisi{P_p}{E_p}\xrightarrow{\ \sim\ }
+ \sisi{P_{ap}}{E_{ap}}
+ \qquad(p\in P(S),\ a\in A(S)),
+\]
+donde $\,{}^{a}E_p$ denota la imagen del $G_S$-torsor
+\sisi{$P_p$}{$E_p$} por extensión del grupo estructural a lo largo de
+\[
+ g\longmapsto ag:G_S\longrightarrow G_S.
+\]
+Dejamos al lector las condiciones sobre $\varphi$ y $\mu$ que hacen
+que estos datos correspondan a una extensión de $A$-módulos $E$ de
+$P$ por $G$ (cf.\ 3.5.4(b)).

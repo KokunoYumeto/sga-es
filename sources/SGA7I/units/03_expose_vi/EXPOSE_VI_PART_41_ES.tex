@@ -1,0 +1,101 @@
+%%%%%%%%%%  scan idx 111  |  folio 100  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Teorema 4.5.}
+Sea $X_0$ un esquema de tipo finito sobre $k$ para el cual se cumple
+una de las condiciones siguientes:
+
+\smallskip
+\noindent(i) $X_0$ es propio sobre $k$, o bien
+
+\noindent(ii) $X_0$ es afín y
+\[
+X_0^{\mathrm{sing}}
+=\{x\in X_0\mid X_0\text{ no es liso sobre }k\text{ en }x\}
+\]
+es finito.
+
+\smallskip
+\noindent\textbf{(a)}
+La categoría $\underline M_{X_0}$ admite un objeto formal versal
+sobre $\underline C_\Lambda$, llamado deformación formal versal de
+$X_0$. Si $(R,\mathfrak X)$ es una deformación formal versal de
+$X_0$, entonces para todo
+$(S,\mathfrak Y)\in\operatorname{Ob}(\widehat{\underline M}_{X_0})$
+existe una aplicación
+\[
+(\varphi,\Phi):(R,\mathfrak X)\longrightarrow(S,\mathfrak Y)
+\]
+en $\widehat{\underline M}_{X_0}$ tal que el diagrama siguiente es
+cartesiano:
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathfrak Y \arrow[r,"\Phi"] \arrow[d]
+& \mathfrak X \arrow[d] \\
+\operatorname{Spf}(S)
+ \arrow[r,"\operatorname{Spf}(\varphi)"']
+& \operatorname{Spf}(R).
+\end{tikzcd}
+\]
+Además, una deformación formal versal $(R,\mathfrak X)$ de $X_0$
+prorepresenta el funtor $[\underline M_{X_0}]$ si y solo si, para toda
+aplicación sobreyectiva $R'\longrightarrow R$ en
+$\underline C_\Lambda$ y toda deformación $(R',X')$ de $X_0$ sobre
+$R'$, el homomorfismo
+\[
+\operatorname{Aut}_{R'}(X'\mid X_0)
+\longrightarrow
+\operatorname{Aut}_R(X'\otimes_{R'}R\mid X_0)
+\]
+es sobreyectivo.
+
+\smallskip
+\noindent\textbf{(b)}
+Si $X_0$ es propio sobre $k$, entonces $\underline M_{X_0}$ es
+pseudorrepresentable de manera lisa sobre $\underline C_\Lambda$.
+
+%%%%%%%%%%  scan idx 112  |  folio 101  %%%%%%%%%%
+
+\medskip
+\noindent\textit{Demostración.}
+\textbf{(a)} Por el Corolario 4.3, $\underline M_{X_0}$ es una
+categoría cofibrada homogénea en grupoides sobre
+$\underline C_\Lambda$. Por 1.11 y 2.9(b), basta, por tanto, demostrar
+que $[\underline M_{X_0}(k[\varepsilon])]$ tiene dimensión finita
+sobre $k$.
+
+Consideremos la sucesión exacta
+\begin{equation}\tag{*}
+0\longrightarrow H^1(X_0,\underline D^0_{X_0})
+\longrightarrow[\underline M_{X_0}(k[\varepsilon])]
+\longrightarrow H^0(X_0,\underline D^1_{X_0}).
+\end{equation}
+% Canon: SGA-SRC-001245.
+Si $X_0$ es propio sobre $k$, tanto
+$H^1(X_0,\underline D^0_{X_0})$ como
+$H^0(X_0,\underline D^1_{X_0})$ tienen dimensión finita, pues los
+$\underline D^i_{X_0}$ son coherentes para todo $i\geq0$ por
+\sisi{2.13(a)}{3.15(a)}.
+
+Supongamos ahora que $X_0$ es afín y que
+$X_0^{\mathrm{sing}}$ es finito. El haz
+$\underline D^1_{X_0}$ es coherente y
+\[
+\operatorname{Supp}\underline D^1_{X_0}
+\subset X_0^{\mathrm{sing}}
+\]
+por \sisi{2.13(a)}{3.15(a)}. Por consiguiente,
+$H^0(X_0,\underline D^1_{X_0})$ tiene dimensión finita sobre $k$,
+mientras que $H^1(X_0,\underline D^0_{X_0})=0$ porque $X_0$ es afín.
+En ambos casos, la sucesión exacta $(*)$ muestra que
+$[\underline M_{X_0}(k[\varepsilon])]$ tiene dimensión finita sobre
+$k$. La segunda afirmación de la parte (a) se deduce de 2.7.
+
+\smallskip
+\noindent\textbf{(b)} Si $X_0$ es propio, entonces
+\[
+\operatorname{Aut}(X_0\otimes_k k[\varepsilon]\mid X_0)
+=H^0(X_0,\underline D^0_{X_0})
+\]
+tiene dimensión finita, y la afirmación se deduce de 2.13.
+\hfill$\square$

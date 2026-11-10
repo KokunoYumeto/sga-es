@@ -1,0 +1,96 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 1701--1743; índices de escaneo 284--286;
+% folios de fuente 273--275. La referencia impresa (1.11.1) y su
+% corrección local (4.11.1) se conservan reversiblemente mediante \sisi.
+
+%%%%%%%%%%  scan idx 284  |  folio 273  %%%%%%%%%%
+
+\medskip
+\noindent 4.11. Sean $P$ y $Q$ grupos algebraicos lisos sobre $k$,
+sea $E$ una biextensión de $(P,Q)$ por $\underline G_m$, y sea $T$ el
+mayor subtoro de $P$. Determinaremos el anulador izquierdo del
+emparejamiento
+\begin{equation}\tag{4.11.1}
+ T_\ell(P)\times T_\ell(Q)
+ \longrightarrow T_\ell(\underline G_{m,k}),
+\end{equation}
+donde $\ell$ vuelve a ser un número primo fijo. Por 4.10, este anulador
+contiene siempre el subgrupo $T_\ell(T)$ de $T_\ell(P)$.
+
+Elijamos una extensión $k'$ de $k$ sobre la cual $P$ y $Q$ puedan
+escribirse cada uno como una extensión de un esquema abeliano por un
+grupo afín que sea una extensión iterada de toros y copias de
+$\underline G_a$. Si $P$ y $Q$ tienen rango unipotente cero, podemos
+tomar $k'=k$; en general, podemos tomar como $k'$ la clausura perfecta
+de $k$ (o una extensión radicial finita). Sean $A'$ y $B'$ las partes
+abelianas de $P_{k'}$ y $Q_{k'}$, respectivamente. Por 4.7, la
+biextensión $E_{k'}$ de $(P_{k'},Q_{k'})$ procede de una biextensión
+$F'$ de $(A',B')$, determinada de manera única salvo isomorfismo único.
+En consecuencia, el emparejamiento
+\begin{equation}\tag{4.11.2}
+ T_\ell(P_{k'})\times T_\ell(Q_{k'})
+ \longrightarrow T_\ell(\underline G_{m,k'}),
+\end{equation}
+obtenido de (4.11.1) mediante la extensión del cuerpo base $k\to k'$,
+y definido asimismo por la biextensión $E_{k'}$, se obtiene del
+emparejamiento
+\begin{equation}\tag{4.11.3}
+ T_\ell(A')\times T_\ell(B')
+ \longrightarrow T_\ell(\underline G_{m,k'})
+\end{equation}
+definido por $F'$, componiéndolo con los homomorfismos canónicos (que
+son epimorfismos si $P$ y $Q$ son $\ell$-divisibles)
+\begin{equation}\tag{4.11.4}
+ T_\ell(P_{k'})\longrightarrow T_\ell(A'),
+ \qquad
+ T_\ell(Q_{k'})\longrightarrow T_\ell(B').
+\end{equation}
+
+%%%%%%%%%%  scan idx 285  |  folio 274  %%%%%%%%%%
+
+Se sigue que el anulador izquierdo de (4.11.2), obtenido del anulador
+izquierdo de (4.11.1) por cambio de base, es la imagen inversa, por el
+primer homomorfismo de (4.11.4), del anulador izquierdo de (4.11.3).
+Sea $C'$ el mayor subesquema abeliano de $A'$ tal que la restricción de
+$F'$ a $(C',B')$ sea la biextensión trivial. Equivalentemente, $C'$ es
+la componente neutra reducida del núcleo del homomorfismo
+\begin{equation}\tag{4.11.5}
+ A'\longrightarrow(B')^*
+\end{equation}
+definido por $F'$, donde $(B')^*$ es el esquema abeliano dual de $B'$.
+El anulador izquierdo de (4.11.3) se identifica con $T_\ell(C')$; por
+tanto, el anulador izquierdo de
+$(\sisi{1.11.1}{4.11.1})$ es precisamente la imagen inversa de
+\[
+ T_\ell(C')\lhook\joinrel\longrightarrow T_\ell(A')
+\]
+por el primer morfismo de (4.11.4).
+
+En particular, decir que el anulador izquierdo de (4.11.1) es
+exactamente $T_\ell(T)$ —equivalentemente, que el anulador izquierdo de
+(4.11.2) es el núcleo $T_\ell(T')$ del primer morfismo de (4.11.4)—
+equivale a decir que (4.11.3) es no degenerado por la izquierda, es
+decir, que $C'=0$, o, equivalentemente, que (4.11.5) tiene núcleo
+finito. En esta última forma, la condición es manifiestamente
+independiente de $\ell$, y en cualquiera de sus formas es claramente
+independiente de la elección de $k'$. Cuando se cumple, diremos
+sencillamente que la biextensión dada $E$ de $(P,Q)$ por
+$\underline G_m$ es \underline{no degenerada por la izquierda}. Por
+dualidad, esto significa también que el homomorfismo
+\begin{equation}\tag{4.11.6}
+ B'\longrightarrow(A')^*
+\end{equation}
+definido por $F'$ es un epimorfismo, es decir, es sobreyectivo.
+
+%%%%%%%%%%  scan idx 286  |  folio 275  %%%%%%%%%%
+
+La noción de biextensión \underline{no degenerada por la derecha} se
+define simétricamente: (4.11.6) debe tener núcleo finito o,
+equivalentemente, (4.11.5) debe ser un epimorfismo. Se dice que la
+biextensión $E$ de $(P,Q)$ por $\underline G_{m,k}$ es
+\underline{no degenerada} si lo es por la izquierda y por la derecha.
+Esto equivale a decir que (4.11.5), o equivalentemente (4.11.6), es una
+isogenia.
+
+De la definición se sigue inmediatamente que estas nociones son
+invariantes por toda extensión del cuerpo base $k$.

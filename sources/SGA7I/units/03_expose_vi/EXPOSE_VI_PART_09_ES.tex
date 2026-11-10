@@ -1,0 +1,150 @@
+%%%%%%%%%%  scan idx 43  |  folio 32  %%%%%%%%%%
+
+\begin{center}
+\underline{Expos\'e VI}
+
+\vspace{1em}
+\underline{\underline{TEORÍA FORMAL DE LAS DEFORMACIONES}}
+
+\vspace{1em}
+\underline{por D. S. Rim}
+\end{center}
+
+1. \underline{Teorema de existencia formal}
+
+Recordemos la noción de categoría cofibrada (S.G.A. 1 IV). Sea
+$\underline C$ una categoría fija. Una categoría cofibrada $\underline A$
+sobre $\underline C$ es, por definición, una categoría $\underline A$
+junto con un funtor $P:\underline A\longrightarrow\underline C$ tal que:
+
+\underline{Ax. 1.} Para todo morfismo $f$ de $\underline C$ y todo objeto
+$a$ de $\underline A$ tal que $P(a)$ sea la fuente de $f$, existe un
+$f$-morfismo cocartesiano $\alpha:a\longrightarrow b$. Así, para todo
+$f$-morfismo $\alpha':a\longrightarrow b'$, existe un único
+$T$-morfismo $\tau:b\longrightarrow b'$ en $\underline A$ tal que
+$\alpha'=\tau\alpha$, donde $T$ es el blanco de $f$.
+
+\underline{Ax. 2.} Un compuesto de morfismos cocartesianos en
+$\underline A$ es de nuevo cocartesiano.
+
+Las propiedades siguientes de una categoría cofibrada
+$P:\underline A\longrightarrow\underline C$ se deducen inmediatamente de
+las definiciones.
+
+(Cancelación) Sean
+$a\overset{\alpha}{\underset{\beta}{\rightrightarrows}}a'$ dos morfismos
+cocartesianos tales que $P(\alpha)=P(\beta)$. Si existe un morfismo
+cocartesiano $b\xrightarrow{\gamma}a$ tal que
+$\alpha\gamma=\beta\gamma$, entonces $\alpha=\beta$.
+
+(Factorización) Dados morfismos cocartesianos
+$a\xrightarrow{\alpha}a'$ y $a\xrightarrow{\beta}a''$, existe un
+morfismo cocartesiano $a'\xrightarrow{\gamma}a''$ tal que
+$\gamma\alpha=\beta$ si y solo si existe un morfismo
+$f:P(a')\longrightarrow P(a'')$ en $\underline C$ tal que
+$fP(\alpha)=P(\beta)$. Además, $\gamma$ es único.
+
+Sea $\underline A$ una categoría cofibrada sobre $\underline C$. Para cada
+objeto $S$ de $\underline C$, denotemos por $\underline A(S)$ la
+subcategoría de $\underline A$ cuyos objetos son los objetos $a$ para los
+cuales $P(a)=S$, y en la que
+\[
+ \Hom_{\underline A(S)}(a,a')=
+ \{\alpha\in\Hom_{\underline A}(a,a')\mid P(\alpha)=\id_S\}.
+\]
+Un grupoide cofibrado sobre $\underline C$ es una categoría cofibrada
+$\underline A$ sobre $\underline C$ tal que $\underline A(S)$
+
+%%%%%%%%%%  scan idx 44  |  folio 33  %%%%%%%%%%
+
+es un grupoide para todo objeto $S$ de $\underline C$. Recordemos que un
+grupoide es una categoría en la que todo morfismo es un isomorfismo. Así,
+un grupoide cofibrado sobre $\underline C$ es una categoría cofibrada
+$P:\underline A\longrightarrow\underline C$ en la que todo morfismo de
+$\underline A$ es cocartesiano. Además, para todo
+$\alpha\in\operatorname{Fl}(\underline A)$, $\alpha$ es un isomorfismo
+en $\underline A$ si y solo si $P(\alpha)$ es un isomorfismo.
+
+En lo que resta de esta sección, fijemos un anillo local noetheriano
+completo $\Lambda$ con cuerpo residual $k$, y sea $\underline C_\Lambda$
+la categoría de las $\Lambda$-álgebras locales artinianas con cuerpo
+residual $k$, cuyos morfismos son homomorfismos locales sobre $\Lambda$.
+A partir de 1.2, se supondrá siempre que un grupoide cofibrado
+$\underline A$ sobre $\underline C_\Lambda$ satisface
+$\underline A(k)=\{e\}$, donde $\{e\}$ denota la categoría en la que
+$\Hom_{\{e\}}(a,b)$ consta de un único elemento para cada par de objetos
+$a,b$ de $\{e\}$. Un morfismo $a'\xrightarrow{\alpha}a$ en
+$\underline A$ se llamará simplemente $\underline C_\Lambda$-morfismo si
+$P(a')=P(a)$ y $P(\alpha)=1_{P(a)}$. Por abuso de lenguaje, un morfismo
+$a'\xrightarrow{\alpha}a$ en $\underline A$ se llamará sobreyectivo si
+$P(\alpha):P(a')\longrightarrow P(a)$ es sobreyectivo en
+$\underline C_\Lambda$.
+
+\underline{Ej. 1.1(a).} Sea
+$F:\underline C\longrightarrow(\text{categorías})$ un funtor.
+Definamos la categoría $\underline F$ como sigue. Un objeto de
+$\underline F$ es un par $(S,a)$ con
+$S\in\mathrm{ob}(\underline C)$ y $a\in\mathrm{ob}F(S)$; un morfismo
+$(S,a)\longrightarrow(S',a')$ es un par $(f,u')$, donde
+$f:S\longrightarrow S'$ es un morfismo en $\underline C$ y
+$u':F(f)a\longrightarrow a'$ es un morfismo en $F(S')$. El compuesto de
+\[
+ (S,a)\xrightarrow{(f,u')}(S',a')
+ \xrightarrow{(g,u'')}(S'',a'')
+\]
+es
+\[
+ (gf,\,u''\mathbin{\cdot}F(g)u'):(S,a)\longrightarrow(S'',a'').
+\]
+Respecto del funtor
+$P:\underline F\longrightarrow\underline C$ dado por
+$(S,a)\longmapsto S$, $\underline F$ se convierte en una categoría
+cofibrada sobre $\underline C$. Si $F(S)$ es un grupoide para todo
+$S\in\mathrm{ob}(\underline C)$, entonces $\underline F$ es un grupoide
+cofibrado sobre $\underline C$. En particular, un funtor
+$F:\underline C\longrightarrow(\text{grupos})$ da lugar a un grupo
+cofibrado, y un funtor $F:\underline C\longrightarrow(\mathrm{Ens})$
+da lugar a un grupoide discreto cofibrado. Una transformación natural
+$\varphi:F\longrightarrow G$, donde $F,G:\underline C\longrightarrow
+(\text{categorías})$, induce un funtor cocartesiano
+$\varphi:\underline F\longrightarrow\underline G$ sobre $\underline C$.
+
+\underline{Ej. 1.1(b).} Sean $X$ e $Y$ esquemas sobre $\Lambda$
+provistos de un
+
+%%%%%%%%%%  scan idx 45  |  folio 34  %%%%%%%%%%
+
+isomorfismo fijo
+\[
+ X\otimes_\Lambda k\xleftrightarrow{\ \tau\ }Y\otimes_\Lambda k.
+\]
+Entonces el funtor
+$\Isom_{X,Y}:\underline C_\Lambda\longrightarrow(\text{grupoides})$
+dado por
+\[
+ \Isom_{X,Y}(S)=
+ \left\{X\otimes_\Lambda S\xleftrightarrow{\ \sigma\ }
+ Y\otimes_\Lambda S\;\middle|\;
+ \sigma\otimes_\Lambda k=\tau\right\}
+\]
+da lugar a un grupoide cofibrado
+$P:\underline{\Isom}_{X,Y}\longrightarrow\underline C_\Lambda$.
+
+\underline{Ej. 1.1(c).} Sea $X_0$ un esquema fijo sobre $k$, y sea
+$\underline M_{X_0}$ la categoría de las deformaciones de $X_0$ sobre
+$\underline C_\Lambda$ (véase \S4). Así, un objeto de
+$\underline M_{X_0}$ es un par $(R,X)$, donde
+$R\in\underline C_\Lambda$ y $X$ es una deformación de $X_0$ a $R$.
+Entonces el funtor
+$P:\underline M_{X_0}\longrightarrow\underline C_\Lambda$ dado por
+$(R,X)\mathrel{\mapstochar\rightsquigarrow} R$ define un grupoide cofibrado sobre
+$\underline C_\Lambda$.
+
+\underline{Ej. 1.1(d).} Para todo grupoide $X$, denotemos por $[X]$ el
+grupoide discreto constituido por las clases de isomorfía de objetos de
+$X$. Si $P:\underline F\longrightarrow\underline C_\Lambda$ es un
+grupoide cofibrado, obtenemos un funtor
+$[\underline F]:\underline C_\Lambda\longrightarrow(\mathrm{Ens})$
+dado por $[\underline F](S)=[\underline F(S)]$, y por tanto un grupoide
+discreto cofibrado que, por abuso de notación, se denota de nuevo por
+$[\underline F]$.

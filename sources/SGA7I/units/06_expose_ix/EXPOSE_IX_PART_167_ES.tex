@@ -1,0 +1,146 @@
+\par\medskip
+\noindent
+11.3. Utilizaremos la expresión explícita (11.2.1) para esbozar la
+definición de un acoplamiento canónico
+\begin{equation}\tag{11.3.1}
+\Phi_o(\ell)\otimes\Phi'_o(\ell)\longrightarrow\mathbb Q/\mathbb Z
+\end{equation}
+que es una dualidad perfecta; aquí $\Phi'_o$ denota, como en la sección
+1, el grupo de componentes conexas asociado al modelo de Néron del
+\underline{dual} $A'_K$ de $A_K$. Apenas cabe duda (aunque el redactor
+ha prescindido de la verificación) de que este acoplamiento no es otro,
+quizá salvo el signo, que el definido en (1.2.1), y se invita al lector,
+como ejercicio, a establecer la compatibilidad requerida (¡con el
+signo correcto!).
+
+Pongamos
+\begin{equation*}
+U'=T_\ell\bigl(A'(\bar K)\bigr),
+ \qquad
+T=T_\ell(1)(\bar K)=T_\ell(\bar K^*).
+\end{equation*}
+Existe un \underline{acoplamiento perfecto} de
+$\mathbb Z_\ell$-módulos libres de tipo finito, compatible con las
+acciones de $I$,
+\begin{equation}\tag{11.3.2}
+\varphi:U\otimes U'\longrightarrow T,
+ \qquad (T\simeq\mathbb Z_\ell\text{ no canónicamente}),
+\end{equation}
+
+%%%%%%%%%%  scan idx 463  |  folio 452  %%%%%%%%%%
+
+y, por la estructura conocida de $I$, una sucesión exacta
+\begin{equation}\tag{11.3.3}
+1\longrightarrow R\longrightarrow I\longrightarrow T\longrightarrow1,
+\end{equation}
+donde $R$ es un grupo profinito \underline{primo con} $\ell$. Partiendo
+ahora de los datos (11.3.2) y (11.3.3), introduzcamos los grupos
+\begin{equation}\tag{11.3.4}
+\begin{aligned}
+\Phi&=\frac{(U\otimes D_\ell)^I}{U^I\otimes D_\ell},\qquad
+\Phi'=\frac{(U'\otimes D_\ell)^I}{{U'}^I\otimes D_\ell},\qquad
+D_\ell=\mathbb Q_\ell/\mathbb Z_\ell.
+\end{aligned}
+\end{equation}
+Definiremos una dualidad perfecta
+\begin{equation}\tag{11.3.5}
+\Phi\otimes\Phi'\longrightarrow\mathbb Q/\mathbb Z,
+\end{equation}
+que dará, en particular, el acoplamiento anunciado (11.3.1).
+Consideremos la sucesión exacta de $I$-módulos
+\begin{equation}\tag{11.3.6}
+0\longrightarrow U\xrightarrow{\ i\ }
+ U\otimes_{\mathbb Z_\ell}\mathbb Q_\ell
+ \xrightarrow{\ j\ }U\otimes D_\ell\longrightarrow0
+\end{equation}
+y la sucesión exacta de cohomología asociada, donde la cohomología de
+$I$ se define mediante \underline{cocadenas continuas} con coeficientes
+en los grupos topológicos considerados:
+\begin{equation}\tag{11.3.7}
+\resizebox{\textwidth}{!}{%
+\begin{tikzcd}[ampersand replacement=\&, column sep=small, row sep=large]
+0 \arrow[r]
+ \& H^o(I,U) \arrow[r, "i^o"] \arrow[d, no head, "\wr"]
+ \& H^o(I,U\otimes\mathbb Q_\ell) \arrow[r, "j^o"]
+      \arrow[d, no head, "\wr"]
+ \& H^o(I,U\otimes D_\ell) \arrow[r, "\partial"]
+      \arrow[d, no head, "\wr"]
+ \& H^1(I,U) \arrow[r, "i^1"]
+ \& H^1(I,U\otimes\mathbb Q_\ell) \arrow[d, no head, "\wr"] \\
+{}
+ \& U^I
+ \& (U\otimes\sisi{Q_\ell}{\mathbb Q_\ell})^I\simeq U^I\otimes_{\mathbb Z}\mathbb Q
+ \& (U\otimes D_\ell)^I
+ \& {}
+ \& H^1(I,U)\otimes_{\mathbb Z}\mathbb Q .
+\end{tikzcd}}
+\end{equation}
+Es inmediato que el grupo $\Phi$ definido por (11.3.4) es precisamente
+$\operatorname{coker}j^o$ y, por tanto, es canónicamente isomorfo a
+$\ker i^1$. Obtenemos así una sucesión exacta canónica
+\begin{equation}\tag{11.3.8}
+0\longrightarrow\Phi\longrightarrow H^1(I,U)
+ \longrightarrow H^1(I,U)\otimes_{\mathbb Z}\mathbb Q,
+\end{equation}
+
+%%%%%%%%%%  scan idx 464  |  folio 453  %%%%%%%%%%
+
+que muestra que $\Phi$ \underline{es canónicamente isomorfo al
+subgrupo de torsión de $H^1(I,U)$}.
+
+Por otra parte, de la sucesión exacta (11.3.3) se deduce, para todo
+$n=\ell^r$, un isomorfismo
+\begin{equation}\tag{11.3.9}
+H^1(I,T_n)\simeq\operatorname{Hom}(I,T_n)
+ \xleftarrow{\sim}\operatorname{Hom}(T,T_n)
+ \xleftarrow{\sim}\mathbb Z/n\mathbb Z.
+\end{equation}
+(Obsérvese que $I$ actúa trivialmente sobre $T$ y, por tanto, sobre
+$T_n=T/nT$.) Se sigue que, para todo $I$-$\mathbb Z_\ell$-módulo finito
+$M$, si
+\begin{equation}\tag{11.3.10}
+M'=\operatorname{Hom}(M,T\otimes D_\ell)
+\end{equation}
+denota su ``dual de Cartier'', existe un acoplamiento canónico
+\begin{equation}\tag{11.3.11}
+H^i(I,M)\otimes H^{1-i}(I,M')
+ \longrightarrow H^1(I,T\otimes D_\ell)\simeq D_\ell,
+\end{equation}
+donde el último isomorfismo se deduce de los isomorfismos (11.3.9)
+pasando al límite inductivo sobre las potencias $n$ de $\ell$. Es bien
+sabido que estos acoplamientos son \underline{dualidades perfectas}
+(véase, por ejemplo, SGA 5 I 5). Tomando en estos acoplamientos $M$ de
+la forma $U_n$, de modo que $M'=U'_n$, y pasando al límite, obtenemos un
+acoplamiento perfecto
+\begin{equation}\tag{11.3.12}
+H^o(I,U\otimes D_\ell)\times H^1(I,U')\longrightarrow D_\ell,
+\end{equation}
+donde el segundo factor del miembro izquierdo es un
+$\mathbb Z_\ell$-módulo de tipo finito. Un nuevo paso al límite en los
+acoplamientos (11.3.12), para morfismos de transición de la forma
+$\ell^r\operatorname{id}$, da un segundo acoplamiento perfecto
+\begin{equation}\tag{11.3.13}
+H^o(I,U\otimes\mathbb Q_\ell)
+ \times H^1(I,U'\otimes\mathbb Q_\ell)
+ \longrightarrow D_\ell
+\end{equation}
+de espacios vectoriales de dimensión finita sobre $\mathbb Q_\ell$.
+Denotemos por $i'$ y $j'$ los
+
+%%%%%%%%%%  scan idx 465  |  folio 454  %%%%%%%%%%
+
+morfismos definidos como en (11.3.6), con $U$ sustituido por $U'$. Es
+entonces fácil ver que los homomorfismos siguientes
+\begin{center}
+\begin{tikzcd}[column sep=6em, row sep=5em]
+H^o(I,U\otimes\mathbb Q_\ell) \arrow[r, "j^o"]
+  & H^o(I,U\otimes D_\ell) \\
+H^1(I,U'\otimes\mathbb Q_\ell)
+  & H^1(I,U') \arrow[l, "{i'}^1"']
+\end{tikzcd}
+\end{center}
+son \underline{traspuestos} uno de otro respecto de los acoplamientos
+(11.3.12) y (11.3.13). Se deduce inmediatamente que
+$\operatorname{coker}j^o$ y $\ker {i'}^1$ son duales entre sí mediante
+un acoplamiento canónico con valores en $D_\ell$; este es el
+acoplamiento anunciado (11.3.5).

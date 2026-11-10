@@ -1,0 +1,265 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §§5.11--5.15, líneas 1693--1782;
+% índices de escaneo 397--403, folios 386--392. No hay diferencias
+% materiales entre las capas francesas D/C. Cuatro errores nominales o
+% matemáticos inequívocos detectados durante la traducción se conservan
+% reversiblemente mediante \sisi y se han comunicado al custodio raíz.
+
+\medskip
+\noindent
+\underline{Observación} 5.11. Una vez demostrado el teorema de Tate
+sin ninguna hipótesis restrictiva sobre $\operatorname{car}K$, los
+resultados precedentes 5.8, 5.9 y 5.10, así como 5.13 más adelante,
+serán manifiestamente válidos sin tal restricción.
+
+Introduzcamos una definición que también será útil en otros lugares.
+
+\medskip
+\noindent
+\underline{Definición} 5.12. Sea $S$ un rasgo henseliano, sea $\ell$
+un número primo y sea $X_\eta$ un progrupo de Barsotti--Tate
+pro-$\ell$ sobre el punto genérico $\eta$ de $S$. Se dice que
+$X_\eta$ tiene \emph{buena reducción sobre $S$} si se prolonga a un
+grupo de Barsotti--Tate sobre $S$ (cf. 5.10). Se dice que tiene
+\emph{buena reducción virtual sobre $S$} si existe una filtración
+\[
+ \bigl(\operatorname{Fil}^i(X_\eta)\bigr)_{i\geq0}
+\]
+por subgrupos estrictos de Barsotti--Tate\footnote{Es decir,
+subobjetos como sistemas proyectivos, o equivalentemente subobjetos
+término a término.} tal que los grupos de Barsotti--Tate
+\[
+ \operatorname{Gr}^i(X_\eta)=
+ \operatorname{Fil}^i(X_\eta)/\operatorname{Fil}^{i+1}(X_\eta)
+\]
+tengan buena reducción sobre $S$. Si la filtración puede elegirse de
+longitud a lo sumo $n$ (es decir, si a lo sumo $n$ de los
+$\operatorname{Gr}^i$ son no nulos), se dice que $X_\eta$ tiene
+\emph{buena reducción virtual de escalón $n$ sobre $S$}.
+
+%%%%%%%%%%  scan idx 398  |  folio 387  %%%%%%%%%%
+
+Finalmente, se dice que $X_\eta$ tiene \emph{buena reducción esencial
+sobre $S$} (respectivamente, \emph{buena reducción virtual esencial},
+respectivamente, \emph{buena reducción virtual esencial de escalón
+$n$}) si existe una extensión finita $K'/K$ tal que $X_{K'}$ tenga
+buena reducción (respectivamente, buena reducción virtual,
+respectivamente, buena reducción virtual de escalón $n$) sobre la
+normalización $S'$ de $S$ en $K'$.
+
+\medskip
+\noindent
+5.12.1. Cuando $\ell\neq p$, las categorías de progrupos de
+Barsotti--Tate pro-$\ell$ sobre $\eta$ y sobre $S$ pueden interpretarse
+en términos de representaciones $\ell$-ádicas de
+\[
+ \pi=\pi_1(\eta), \qquad \pi_o=\pi_1(S),
+\]
+respectivamente. Las seis nociones recién introducidas pueden
+expresarse entonces mediante la representación natural del grupo de
+inercia $I$ sobre $X_\eta(\overline K)$: esta representación es,
+respectivamente, trivial, unipotente, unipotente de escalón $n$,
+esencialmente trivial, esencialmente unipotente o esencialmente
+unipotente de escalón $n$.
+
+\medskip
+\noindent
+5.12.2. Tomemos $X_\eta=T_\ell(A_K)$, donde $A_K$ es un esquema
+abeliano sobre $K$. Vimos en 5.6 que, si $A_K$ tiene reducción
+semiestable sobre $S$, entonces $X_\eta$ tiene buena reducción virtual
+de escalón 2 (y veremos enseguida la recíproca). Por consiguiente, en
+virtud del teorema de reducción semiestable 3.6, $X_\eta$ tiene buena
+reducción virtual esencial de escalón 2. Este enunciado debe
+considerarse como la formulación ``correcta'' del teorema de monodromía
+geométrica del Exposé III\footnote{La fuente deja en blanco la
+referencia interna precisa.} para $H^1$ de un esquema propio y liso
+sobre $K$, sin excluir el caso $\ell=p$ (que no se consideró allí).
+
+%%%%%%%%%%  scan idx 399  |  folio 388  %%%%%%%%%%
+
+El teorema geométrico de monodromía---o, por ahora, la conjetura---para
+los $H^i$ superiores formulado en el Exposé III debería reformularse
+análogamente de modo que incluyera coeficientes ``$p$-ádicos'', como se
+observó en 0.4.
+
+Resumamos ahora las relaciones entre las propiedades de reducción de
+los esquemas abelianos sobre $K$ y las de los grupos de
+Barsotti--Tate asociados.
+
+\medskip
+\noindent
+\underline{Proposición} 5.13. Sea $S$ un rasgo henseliano, sea $A_K$
+un esquema abeliano sobre su cuerpo de fracciones y sea $\ell$ un
+número primo. Cuando $\ell=p$, supongamos que $K$ tiene característica
+cero (cf. 5.11).
+
+\smallskip
+\noindent
+a) El esquema abeliano $\sisi{A}{A_K}$ tiene buena reducción sobre $S$
+(2.2.9) si y solo si $T_\ell(A_K)$ tiene buena reducción sobre $S$
+(5.12).
+
+\smallskip
+\noindent
+b) El esquema abeliano $A_K$ tiene buena reducción esencial sobre
+$S$---es decir, existe una extensión finita $K'/K$ tal que $A_{K'}$
+tiene buena reducción sobre la normalización $S'$ de $S$ en $K'$---si
+y solo si $T_\ell(A_K)$ tiene buena reducción esencial sobre $S$
+(5.12). En tal caso puede elegirse $K'$ como una extensión finita
+separable de $K$.
+
+\smallskip
+\noindent
+c) Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[1)] $\sisi{A}{A_K}$ tiene reducción semiestable sobre $S$ (3.4);
+\item[2)] $T_\ell(A_K)$ tiene buena reducción virtual de escalón 2
+  sobre $S$ (5.12);
+\item[3)] $T_\ell(A_K)$ tiene buena reducción virtual sobre $S$.
+\end{enumerate}
+
+\noindent
+\underline{Demostración}. La parte a) no es sino 5.10 y se ha incluido
+como referencia.
+
+Para b), la primera afirmación se deduce inmediatamente de a) y de las
+definiciones. Para demostrar la última afirmación, podemos suponer que
+$\ell\neq p$.
+
+%%%%%%%%%%  scan idx 400  |  folio 389  %%%%%%%%%%
+
+En vista de a), basta entonces tomar como $K'$ la extensión finita
+separable de $K$ correspondiente a un subgrupo abierto $\pi'$ de
+\[
+ \pi=\sisi{\operatorname{Gal}(\overline K/\overline K)}%
+ {\operatorname{Gal}(\overline K/K)}
+\]
+cuya intersección con el grupo de inercia $I$ esté contenida en el
+núcleo de la representación de $I$ sobre
+$T_\ell(A_K(\overline K))$; dicho núcleo es abierto por hipótesis
+(cf. 5.12.1).
+
+Para c), ya hemos observado que 1) implica 2) (5.12.2), y es inmediato
+que 2) implica 3). Queda demostrar que 3) implica 1). Para
+$\ell\neq p$, esto es precisamente el criterio galoisiano de reducción
+semiestable 3.5. Para $\ell=p$, procedamos como sigue. Elijamos un primo
+$\ell'\neq p$ y apliquemos las consideraciones de 4.1. Podemos suponer
+que $S$ es estrictamente local (3.4.0), y elegir una extensión de
+Galois finita $K'/K$, de grupo $G$, tal que $A_{K'}$ tenga reducción
+semiestable. Debemos demostrar que la representación de $G$ sobre cada
+uno de los tres cocientes que aparecen en (4.1.1) es trivial. Esto
+equivale a que su representación suma directa sea trivial, o también a
+que su traza sea la traza ``trivial'', es decir, constante. Vimos en
+4.3(a) que esta función traza es independiente de la elección de
+$\ell'\neq p$, y en 6.4 más adelante indicamos un método para calcularla
+también en términos de $T_p(A_K)$. Ese cálculo da manifiestamente una
+función constante cuando $T_p(A_K)$ tiene buena reducción virtual, lo
+que concluye la demostración.
+
+\medskip
+\noindent
+\underline{Observación} 5.13.1. Parece plausible que, si $X_\eta$ es
+un progrupo de Barsotti--Tate pro-$\ell$ sobre $\eta$ que tiene buena
+reducción virtual sobre $S$ y buena reducción virtual esencial de
+escalón $n$, entonces tenga buena reducción virtual de escalón $n$.
+(Esto es cierto cuando $\ell\neq p$.)
+
+%%%%%%%%%%  scan idx 401  |  folio 390  %%%%%%%%%%
+
+El resultado siguiente, consecuencia fácil de 5.7 y del teorema de
+reducción semiestable 3.6, me fue señalado por J.-P. Serre.
+
+\medskip
+\noindent
+\underline{Proposición} 5.14 (Criterio de buena reducción esencial).
+Sea $S$ un rasgo de cuerpo de funciones $K$, sea $A_K$ un esquema
+abeliano sobre $K$ y sea $\ell$ un número primo distinto de
+$\operatorname{car}K$.
+
+\smallskip
+\noindent
+a) Supongamos que $\ell\neq p=\operatorname{car}k$. Entonces las
+condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] $A_K$ tiene buena reducción esencial sobre $S$; es decir,
+  existe una extensión finita separable $K'/K$ tal que $A_{K'}$ tiene
+  buena reducción sobre la normalización $S'$ de $S$ en $K'$;
+\item[(ii)] la acción del grupo de inercia $I$ sobre
+  $U_\ell=T_\ell(A(\overline K))$ es esencialmente trivial; es decir,
+  es trivial sobre un subgrupo abierto de $I$, o equivalentemente se
+  factoriza por un cociente finito $\Gamma$ de $I$;
+\item[(iii)] la acción de $I$ sobre
+  $U_\ell\otimes_{\mathbb Z_\ell}\mathbb Q_\ell$ es semisimple.
+\end{enumerate}
+
+\noindent
+b) Supongamos que $\ell=p$. Si $n=\dim A_K\neq0$, la imagen de $I$ en
+el grupo de automorfismos de $U_\ell$ no es finita; más precisamente,
+su imagen en el grupo $\sisi{\mathbb Z_\ell}{\mathbb Z_\ell^\times}$
+de automorfismos de $\bigwedge^{2n}U_\ell$ tiene índice finito. Una
+condición suficiente (pero en modo alguno necesaria) para que $A_K$
+tenga buena reducción esencial es que la acción de $I$ sobre
+$U_\ell\otimes_{\mathbb Z_\ell}\mathbb Q_\ell$ sea semisimple.
+
+\noindent
+\underline{Demostración}. Cuando $\ell\neq p$, la equivalencia de (i)
+y (ii) se deduce inmediatamente del criterio de buena reducción 2.2.9,
+y (ii) implica (iii) porque $\mathbb Q_\ell$ tiene característica cero.
+El homomorfismo
+\[
+ \pi=\operatorname{Gal}(\overline K/K)
+ \longrightarrow \mathbb Z_\ell^\times
+ \simeq\operatorname{Aut}\!\left(\bigwedge^{2n}U_\ell\right)
+\]
+es $\chi^n$, donde $\chi$ está inducido por el carácter
+
+%%%%%%%%%%  scan idx 402  |  folio 391  %%%%%%%%%%
+
+\[
+ \mathbb Z_\ell^\times=\operatorname{Aut}(\mathbb Z_\ell(1))
+\]
+procedente de la acción sobre las raíces $\ell^\nu$-ésimas de la
+unidad. Se sabe que, cuando $\ell=p$, la imagen de $I$ por este carácter
+tiene índice finito [33]. El hecho de que la acción de $I$ sobre
+$U_p\otimes\mathbb Q_p$ pueda no ser semisimple incluso cuando $A_K$
+es una curva elíptica con buena reducción se muestra en [28, IV A 2.4].
+
+Queda demostrar que (iii) implica (i), para todo $\ell$. Utilizamos el
+teorema de reducción semiestable 3.6, que nos reduce inmediatamente al
+caso en que $A_K$ tiene reducción semiestable sobre $S$: la hipótesis
+(iii) se conserva al sustituir $K$ por una extensión finita separable
+$K'$, o equivalentemente $I$ por un subgrupo abierto $I'$. Cuando
+$\ell\neq p$, la acción de $I$ sobre
+$U_\ell\otimes\mathbb Q_\ell$ es unipotente (3.5(v)) y semisimple, por
+tanto trivial, y el criterio de buena reducción 2.2.9 da el resultado.
+Demos ahora una demostración válida sin restricción sobre $\ell$, que
+proporciona una afirmación ligeramente más precisa.
+
+\medskip
+\noindent
+\underline{Corolario} 5.15. Con la notación de 5.14, supongamos que
+$A_K$ tiene reducción semiestable sobre $S$ y que la parte fija
+\[
+ (U_{\ell\mathbb Q_\ell})^f
+ \stackrel{\mathrm{def}}{=}(U_\ell^f)_{\mathbb Q_\ell}
+\]
+admite un complemento estable bajo $I$ en
+$U_{\ell\mathbb Q_\ell}$. Entonces $A_K$ tiene buena reducción.
+
+Basta demostrar bajo estas hipótesis que $U_\ell=U_\ell^f$. Por 5.6,
+esto significa precisamente que la parte tórica $T_o$ de $A_o^o$ es
+nula, de modo que $A_o^o$ es un esquema abeliano; por 2.2.9, $A$ es
+entonces un esquema abeliano. Podemos suponer manifiestamente que $k$
+es separablemente cerrado.
+
+%%%%%%%%%%  scan idx 403  |  folio 392  %%%%%%%%%%
+
+La intersección del complemento postulado en 5.15 con $U_\ell$ define
+entonces un subprogrupo pro-$\ell$ $F_K$ de $T_\ell(A_K)$ que es isógeno
+a la parte cotórica
+\[
+ T_\ell(A_K)/T_\ell(A_K)^f.
+\]
+Esta última es pro-étale y no ramificada por 5.6, y lo mismo vale, por
+tanto, para $F_K$. Se sigue de 5.7 que $F_K$ está contenido en
+$T_\ell(A_K)^f$; así, $F_K=0$, lo que demuestra que $U_\ell$ es igual
+a su parte fija.

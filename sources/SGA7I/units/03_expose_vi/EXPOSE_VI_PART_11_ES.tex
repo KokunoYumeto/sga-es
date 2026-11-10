@@ -1,0 +1,149 @@
+%%%%%%%%%%  scan idx 47  |  folio 36 (continuación)  %%%%%%%%%%
+
+\underline{Definición 1.4.} (1) \underline{Sea $R$ un objeto de
+$\underline C_\Lambda$. Una pequeña extensión de $R$ en
+$\underline C_\Lambda$ es un morfismo sobreyectivo
+$R'\xrightarrow{f}R$ en $\underline C_\Lambda$ tal que
+$(\ker f)^2=0$ y $\ker f\simeq k$. En otras palabras,
+$R'\xrightarrow{f}R$ es una pequeña extensión de $R$ si}
+\[
+0\longrightarrow k\xrightarrow{t}R'\xrightarrow{f}R
+ \longrightarrow0
+\]
+\underline{es exacta para algún $t\in R'$ con $t^2=0$.}
+
+(2) \underline{Sea $\underline A$ un grupoide cofibrado sobre
+$\underline C_\Lambda$, y sea $a$ un objeto de $\underline A$.
+Una pequeña prolongación de $a$ es una flecha
+$a'\xrightarrow{\alpha}a$ en $\underline A$ tal que $P(\alpha)$ es
+una pequeña extensión en $\underline C_\Lambda$. Una flecha
+$a'\xrightarrow{\alpha}a$ se llamará versal para las pequeñas
+prolongaciones de $a$ si, para toda pequeña prolongación
+$a'_1\longrightarrow a$, existe un diagrama conmutativo}
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+a' \arrow[rr] \arrow[dr,"\alpha"'] & & a'_1 \arrow[dl] \\
+& a &
+\end{tikzcd}
+\]
+
+\underline{Proposición 1.5. Sea $\underline A$ un grupoide cofibrado
+semihomogéneo sobre $\underline C_\Lambda$.}
+
+(1) \underline{Sean}
+\[
+\begin{tikzcd}[column sep=large]
+& R \\
+R\times_k k[\varepsilon]
+ \arrow[ur,"\pi_1"] \arrow[dr,"\pi_2"'] & \\
+& k[\varepsilon]
+\end{tikzcd}
+\]
+\underline{los morfismos de proyección en $\underline C_\Lambda$, y
+sea $a'\xrightarrow{\alpha}a$ un} $\pi_1$-\underline{morfismo. Entonces existe un
+morfismo $a\xrightarrow{\beta}a'$ tal que $\alpha\beta=1_a$ si y solo
+si existe un morfismo $a\longrightarrow(\pi_2)_*a'$.}
+
+%%%%%%%%%%  scan idx 48  |  folio 37  %%%%%%%%%%
+
+(2) \underline{Sea $R'\xrightarrow{f}R$ una pequeña extensión en
+$\underline C_\Lambda$, y consideremos un diagrama conmutativo}
+\[
+\begin{tikzcd}[row sep=large,column sep=small]
+& a'' \arrow[dl,"\alpha'"'] \arrow[dr,"\alpha'_1"]
+  & & & & & R'\times_RR' \arrow[dl] \arrow[dr] & \\
+a' \arrow[dr,"\alpha"'] & & \sisi{a'}{a'_1} \arrow[dl,"\alpha_1"]
+  & & \underline{\text{situado sobre}} & R' \arrow[dr] & & R' \arrow[dl] \\
+& a & & & & & R &
+\end{tikzcd}
+\]
+\underline{Definamos el morfismo canónico
+$\widetilde f:R'\times_RR'\longrightarrow k[\ker f]$ mediante}
+\[
+ \widetilde f(r'_1,r'_2)=r'_1(0)+(r'_1-r'_2).
+\]
+\underline{Si existe un morfismo
+$a'\longrightarrow(\widetilde f)_*(a'')$, entonces existe un morfismo
+$\gamma:a'\longrightarrow \sisi{a'}{a'_1}$ tal que
+$\alpha=\alpha_1\gamma$.}
+
+\underline{Demostración.} (1) La parte «solo si» es clara. Supongamos,
+recíprocamente, que existe un morfismo
+$\varphi:a\longrightarrow(\pi_2)_*a'$. Pongamos
+\[
+ h:R\longrightarrow R\times_k k[\varepsilon],
+ \qquad h=1\times P(\varphi).
+\]
+El compuesto $\pi_1h$ es la identidad. Obtenemos, por tanto, morfismos
+\[
+ a\mathrel{\mathop{\rightleftarrows}^{\gamma}_{\alpha_1}}h_*a,
+ \qquad \alpha_1\gamma=1_a,
+ \qquad P(\gamma)=h,
+ \qquad P(\alpha_1)=\pi_1.
+\]
+Por otra parte, $\pi_2h=P(\varphi)$, de modo que existe un
+$\pi_2$-morfismo
+\[
+ h_*a\longrightarrow(\pi_2)_*a'.
+\]
+Así, $(\pi_2)_*(h_*a)=(\pi_2)_*a'$, y 1.2(2) proporciona un
+$\underline C_\Lambda$-morfismo $u:h_*a\longrightarrow a'$ tal que
+$\alpha u=\alpha_1$. Definamos $\beta=u\gamma$. Entonces
+\[
+ \alpha\beta=\alpha u\gamma=\alpha_1\gamma=1_a.
+\]
+
+(2) El morfismo
+\[
+ 1\times\widetilde f:R'\times_RR'
+ \longrightarrow R'\times_k k[\ker f]
+\]
+es un isomorfismo compatible con las proyecciones sobre el primer
+factor, y $\pi_2(1\times\widetilde f)=\widetilde f$, donde
+$\pi_2:R'\times_k k[\ker f]\longrightarrow k[\ker f]$ es la segunda
+proyección. Puesto que $R'\xrightarrow fR$ es una pequeña extensión,
+$k[\ker f]\simeq k[\varepsilon]$. Por consiguiente, si existe un
+morfismo
+\[
+ a'\longrightarrow(\widetilde f)_*a''
+   =(\pi_2)_*\bigl((1\times\widetilde f)_*a''\bigr),
+\]
+la parte (1) proporciona un morfismo $\gamma':a'\longrightarrow a''$
+tal que $\alpha'\gamma'=1_{a'}$. Definamos
+$\gamma=\alpha'_1\gamma':a'\longrightarrow \sisi{a'}{a'_1}$. Entonces
+$\alpha_1\gamma=\alpha$.
+
+%%%%%%%%%%  scan idx 49  |  folio 38  %%%%%%%%%%
+
+\underline{Corolario 1.6. Sea $\underline A$ un grupoide cofibrado
+semihomogéneo sobre $\underline C_\Lambda$, y consideremos un diagrama}
+\[
+\begin{tikzcd}[column sep=large]
+a' \arrow[dr,"\alpha"'] & & a_1 \arrow[dl,"\alpha_1"] \\
+& a &
+\end{tikzcd}
+\]
+\underline{en $\underline A$, donde $\alpha_1$ es una pequeña
+prolongación. Supongamos que $a$ es versal para las pequeñas
+prolongaciones de $e$. Entonces existe un morfismo
+$\rho:a'\sisi{\relbar\joinrel\relbar\joinrel\relbar}{\longrightarrow} a_1$ tal que $\alpha=\alpha_1\rho$ si y solo
+si existe un morfismo $f:P(a')\longrightarrow P(a_1)$ tal que
+$P(\alpha)=P(\alpha_1)f$ en $\underline C_\Lambda$.}
+
+\underline{Demostración.} Supongamos que
+$P(\alpha)=P(\alpha_1)f$, donde
+$f:P(a')\longrightarrow P(a_1)$. Sustituyendo $a'$ por su imagen
+directa mediante $f$, podemos y vamos a suponer que
+$P(\alpha)=P(\alpha_1)$. Pongamos $R'=P(a_1)$ y $R=P(a)$. Como
+$\underline A$ es semihomogéneo, obtenemos un diagrama conmutativo
+\[
+\begin{tikzcd}[row sep=large,column sep=small]
+& a'' \arrow[dl,"\beta"'] \arrow[dr,"\beta_1"]
+  & & & & & R'\times_RR' \arrow[dl] \arrow[dr] & \\
+a' \arrow[dr,"\alpha"'] & & a_1 \arrow[dl,"\alpha_1"]
+  & & \text{situado sobre} & R' \arrow[dr] & & R' \arrow[dl] \\
+& a & & & & & R &
+\end{tikzcd}
+\]
+Como $a$ es versal para las pequeñas prolongaciones de $e$, también lo
+es $a'$; la afirmación se deduce entonces de 1.5(2).

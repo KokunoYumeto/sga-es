@@ -1,0 +1,116 @@
+\par\medskip
+\noindent\textbf{Lema 6.2.}
+Sea $A_0$ un $k$-álgebra local esencialmente de tipo finito tal que
+\[
+\widehat A_0\simeq k[[x_1,\ldots,x_n]]/(f),
+\]
+donde $f$ es una forma cuadrática no degenerada, y sea
+$(R,\mathfrak X)$ una deformación versal formal de
+$X_0=\operatorname{Spec}(A_0)$. Entonces:
+
+\smallskip
+\noindent\textbf{(1)} Los morfismos canónicos
+\[
+J_{\mathfrak X}(\mathfrak X|R)
+ \longrightarrow J_R(\mathfrak X|R)
+ \longrightarrow \operatorname{Spec}(\Lambda)
+\]
+son ambos isomorfismos.
+
+\smallskip
+\noindent\textbf{(2)} El ideal
+$I_R(\mathfrak X|R)$ es principal y está generado por un generador
+formal libre de $R$ sobre $\Lambda$; en otras palabras,
+\[
+I_R(\mathfrak X|R)=(t),
+\qquad R=\Lambda[[t]].
+\]
+
+\smallskip
+\noindent\textbf{(3)} El morfismo
+$\mathfrak X\longrightarrow\operatorname{Spec}(\Lambda)$ es
+formalmente liso.
+
+\smallskip
+\noindent\textit{Demostración.}
+Escribamos $\mathfrak X=\operatorname{Spf}(A)$. Por 4.10(b),
+$(R,\operatorname{Spf}(\widehat A))$ es una deformación versal formal
+de $\widehat X_0=\operatorname{Spec}(\widehat A_0)$, donde
+\[
+\widehat A=\varprojlim_\nu A\otimes_RR_\nu.
+\]
+Ahora bien,
+\[
+\widehat A_0\simeq k[[x_1,\ldots,x_n]]/(f),
+\qquad
+\left(\frac{\partial f}{\partial x_1},\ldots,
+      \frac{\partial f}{\partial x_n}\right)
+=(x_1,\ldots,x_n).
+\]
+Se sigue inmediatamente que
+\[
+\bigl[\underline M_{\widehat X_0}(k[\varepsilon])\bigr]
+\simeq k.
+\]
+Por consiguiente, por 4.14,
+\[
+R\simeq\Lambda[[t]],
+\qquad
+\widehat A\simeq R[[x_1,\ldots,x_n]]/(F-t),
+\]
+donde $F$ es el polinomio cuadrático de
+$\Lambda[x_1,\ldots,x_n]\subset R[[x_1,\ldots,x_n]]$ obtenido de
+$f$ levantando sus coeficientes a $\Lambda$.
+
+La sucesión
+\[
+0\longrightarrow\widehat A
+ \sisi{\overset{dF}{\relbar\joinrel\relbar\joinrel\relbar}}{\xrightarrow{\ dF\ }}
+ \widehat A\,dx_1\oplus\cdots\oplus\widehat A\,dx_n
+ \sisi{\relbar\joinrel\relbar\joinrel\relbar\joinrel\relbar\joinrel\relbar}{\longrightarrow}\widehat\Omega_{\widehat A|R}\longrightarrow0
+\]
+es exacta, donde
+\[
+1\longmapsto
+ \frac{\partial F}{\partial x_1}dx_1+\cdots+
+ \frac{\partial F}{\partial x_n}dx_n.
+\]
+
+%%%%%%%%%%  scan idx 137  |  folio 126  %%%%%%%%%%
+
+Por tanto,
+\[
+I_{\widehat A}(\widehat A|R)
+=\left(\frac{\partial F}{\partial x_1},\ldots,
+       \frac{\partial F}{\partial x_n}\right)
+=(x_1,\ldots,x_n),
+\]
+y por consiguiente
+\[
+\begin{aligned}
+\widehat A/I_{\widehat A}(\widehat A|R)
+&=\widehat A/(x_1,\ldots,x_n)\\
+&=R[[x_1,\ldots,x_n]]/(x_1,\ldots,x_n,F-t)
+ \simeq\Lambda.
+\end{aligned}
+\]
+Así, el morfismo canónico
+$\Lambda\longrightarrow
+\widehat A/I_{\widehat A}(\widehat A|R)$ es un isomorfismo. La
+comparación de las completaciones identifica este cociente con
+$A/I_A(A|R)$ y, por consiguiente,
+\[
+\Lambda\xrightarrow{\ \sim\ }R/I_R(A|R).
+\]
+Esto demuestra (1) y (2). Finalmente, (3) se deduce de los
+isomorfismos
+\[
+\begin{aligned}
+\widehat A
+&\simeq R[[x_1,\ldots,x_n]]/(F-t)\\
+&\simeq\Lambda[[t,x_1,\ldots,x_n]]/(F-t)
+ \simeq\Lambda[[x_1,\ldots,x_n]]
+\end{aligned}
+\]
+de $\Lambda$-álgebras.
+\hfill$\square$

@@ -1,0 +1,128 @@
+%%%%%%%%%%  scan idx 108  |  folio 97  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Lema 4.2.}
+Consideremos un diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+& R' \arrow[d] \\
+R \arrow[r,"\mathrm{surjective}"'] & \bar R
+\end{tikzcd}
+\]
+en $\underline C_\Lambda$, y sean $E$ y $E'$ módulos planos sobre
+$R$ y $R'$, respectivamente. Entonces, para todo
+$R'$-homomorfismo
+\[
+ E'\longrightarrow \bar E=E\otimes_R\bar R,
+\]
+el producto fibrado $E\times_{\bar E}E'$ es plano como módulo sobre
+$R\times_{\bar R}R'$.
+
+%%%%%%%%%%  scan idx 109  |  folio 98  %%%%%%%%%%
+
+\medskip
+\noindent\textit{Demostración.}
+Sea exacta
+\[
+ 0\longrightarrow I\longrightarrow R\longrightarrow\bar R
+ \longrightarrow0
+\]
+de modo que
+\[
+ 0\longrightarrow I\longrightarrow R\times_{\bar R}R'
+ \longrightarrow R'\longrightarrow0
+\]
+es exacta. Como $E$ es plano sobre $R$,
+\[
+ 0\longrightarrow I\otimes_RE\longrightarrow E
+ \longrightarrow\bar E\longrightarrow0
+\]
+es exacta, y por tanto obtenemos la sucesión exacta
+\begin{equation}\tag{*}
+0\longrightarrow I\otimes_RE\longrightarrow
+E\times_{\bar E}E'\longrightarrow E'\longrightarrow0.
+\end{equation}
+Pongamos $S=R\times_{\bar R}R'$. Como $I$ es nilpotente,
+$E\times_{\bar E}E'$ es plano como $S$-módulo si y solo si
+$(E\times_{\bar E}E')\otimes_SR'$ es plano como $R'$-módulo y
+\[
+ \operatorname{Tor}_1^S(E\times_{\bar E}E',R')=0.
+\]
+Pero
+\[
+ I\otimes_RE=I\otimes_S(E\times_{\bar E}E'),
+ \qquad
+ E'=R'\otimes_S(E\times_{\bar E}E'),
+\]
+y, por consiguiente, la sucesión exacta $(*)$ puede reescribirse como
+\[
+0\longrightarrow I\otimes_S(E\times_{\bar E}E')
+\longrightarrow E\times_{\bar E}E'
+\longrightarrow R'\otimes_S(E\times_{\bar E}E')
+\longrightarrow0.
+\]
+Así,
+\[
+ \operatorname{Tor}_1^S(R',E\times_{\bar E}E')=0,
+ \qquad
+ R'\otimes_S(E\times_{\bar E}E')=E',
+\]
+y $E'$ es plano sobre $R'$. Se sigue que
+$E\times_{\bar E}E'$ es plano sobre $S$. \hfill$\square$
+
+\medskip
+\noindent\textbf{Corolario 4.3.}
+Dado un diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+(R,X) \arrow[dr,"{(\varphi,\Phi)}"']
+&& (R',X') \arrow[dl,"{(\varphi',\Phi')}"] \\
+& (\bar R,\bar X) &
+\end{tikzcd}
+\]
+en $\underline M_{X_0}$, la suma amalgamada
+$X\amalg_{\bar X}X'$ (en la categoría de esquemas) es un esquema
+plano sobre $R\times_{\bar R}R'$, siempre que
+$\varphi:R\longrightarrow\bar R$ sea sobreyectivo. En consecuencia,
+$\underline M_{X_0}$ es una categoría cofibrada homogénea en
+grupoides sobre $\underline C_\Lambda$.
+
+\medskip
+\noindent\textit{Demostración.}
+Para todo abierto afín $U_0\subset X_0$, por definición tenemos
+\[
+ (X\amalg_{\bar X}X')|_{U_0}
+ \simeq
+ \operatorname{Spec}\!\left(
+   \Gamma(U_0,X)
+   \times_{\Gamma(U_0,\bar X)}
+   \Gamma(U_0,X')
+ \right).
+\]
+Por consiguiente, si $\varphi:R\longrightarrow\bar R$ es
+sobreyectivo, $X\amalg_{\bar X}X'$ es plano sobre
+$R\times_{\bar R}R'$ por el Lema 4.2. Además, el morfismo
+\[
+ i_X\amalg_{i_{\bar X}}i_{X'}:
+ X_0\longrightarrow X\amalg_{\bar X}X'
+\]
+induce un isomorfismo
+\[
+ X_0\longrightarrow (X\amalg_{\bar X}X')\otimes_Sk,
+ \qquad S=R\times_{\bar R}R'.
+\]
+Por tanto,
+\[
+ \bigl(R\times_{\bar R}R',X\amalg_{\bar X}X'\bigr)
+ \in\operatorname{Ob}(\underline M_{X_0}),
+\]
+y, en $\underline M_{X_0}$, tenemos
+\[
+ \bigl(R\times_{\bar R}R',X\amalg_{\bar X}X'\bigr)
+ =
+ (R,X)\times_{(\bar R,\bar X)}(R',X').
+\]
+Así, $\underline M_{X_0}$ es homogénea sobre
+$\underline C_\Lambda$. \hfill$\square$
+
+%%%%%%%%%%  scan idx 110  |  folio 99  %%%%%%%%%%

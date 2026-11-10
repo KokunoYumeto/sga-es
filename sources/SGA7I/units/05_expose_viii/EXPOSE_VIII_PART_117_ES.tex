@@ -1,0 +1,100 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2004--2029; índices de escaneo 300--302;
+% folios de fuente 289--291. La corrección material de la capa francesa
+% se conserva reversiblemente mediante \sisi.
+
+\medskip
+\noindent 6.2.1. Si $\overline G$ corresponde al par $(F,s)$, la
+imagen inversa $f_n^*(\overline G)$ en $\overline G$ de la sección
+$f_n$ de $\mathbb Z_{S,T}$ definida por la sección constante de
+$\mathbb Z_S$ de valor $n\in\mathbb Z$ se identifica canónicamente,
+como torsor bajo $G$, con la potencia $n$-ésima $F^{(n)}$ del
+$G$-torsor $F$. El isomorfismo canónico de $G_U$-torsors
+\[
+ f_n^*(\overline G)|U\simeq G_U,
+\]
+definido por la primera relación de (5.7.1), viene determinado por la
+sección $s^{(n)}$ de $F_U^{(n)}$, potencia $n$-ésima de la sección
+dada $s$ de $F_U$. Esto explicita la descripción siguiente de las
+secciones de $\overline G$ sobre $S$. Una sección $\overline g$ de
+$\overline G$ sobre $S$ queda determinada por:
+
+\smallskip
+\noindent a) una sección $\underline n$ de $\mathbb Z_{S,T}$ sobre
+$S$, que puede interpretarse como una sección de $\mathbb Z_T$, es
+decir, como una función localmente constante sobre $T$ con valores en
+$\mathbb Z$, o equivalentemente como una partición
+\[
+ T=\coprod_{i\in\mathbb Z}T_i
+\]
+de $T$ en una suma disjunta de abiertos indexados por
+$i\in\mathbb Z$;
+
+\smallskip
+\noindent b) una familia de secciones
+\[
+ \begin{gathered}
+  \overline g_i\in\Gamma(F^{(i)}/S_i'),\qquad i\in\mathbb Z,\\
+  S_i'=S\setminus T_i',\qquad
+  T_i'=\displaystyle\bigcup_{\substack{j\in\mathbb Z\\j\ne i}}T_j,
+ \end{gathered}
+\]
+sujeta a la condición de compatibilidad siguiente. Para
+$i,j\in\mathbb Z$, $\overline g_i$ y $\overline g_j$ coinciden sobre
+$S_i'\cap S_j'=U$ después de identificar $F^{(i)}|U$ y $F^{(j)}|U$
+con $G_U$ mediante las secciones $s^{(i)}$ y $s^{(j)}$,
+respectivamente. Dicho de otro modo, debe existir una sección,
+necesariamente única, $h_{ij}\in\Gamma(G/U)$ tal que
+\[
+ \overline g_i=h_{ij}s^{(i)},\qquad
+ \overline g_j=h_{ij}s^{(j)}.
+\]
+Puesto que la descripción de \sisi{3.2}{6.2} de una extensión
+$\overline G$ de $\mathbb Z_{S,T}$ por $G$ es manifiestamente
+compatible con todo cambio de base $S'\to S$, lo anterior da una
+descripción completa del haz $\overline G$ como funtor
+
+%%%%%%%%%%  scan idx 301  |  folio 290  %%%%%%%%%%
+
+del argumento $S'\in\operatorname{Ob}(\mathrm{Sch}_{/S})$.
+
+\medskip
+\noindent 6.2.2. Si $T$ es un esquema que es suma de esquemas conexos
+no vacíos $T_i$, $i\in I$, la descripción de 6.2.1 de las secciones de
+$\overline G$ sobre $S$ puede simplificarse. Tal sección queda
+determinada por una familia de enteros $(n_i)_{i\in I}$ indexada por
+$I$ y una familia de secciones
+\[
+ \overline g_i\in\Gamma(F^{(n_i)}/S_i'),\qquad i\in I,
+\]
+donde
+\[
+ S_i'=S\setminus T_i',
+ \qquad
+ T_i'=\coprod_{\substack{j\in I\\j\ne i}}T_j.
+\]
+Las $\overline g_i$ satisfacen la condición de compatibilidad
+siguiente: para todo par $i,j\in I$, las restricciones de
+$\overline g_i$ y $\overline g_j$ a $S_i'\cap S_j'=U$ coinciden bajo
+las identificaciones de $F^{(n_i)}|U$ y $F^{(n_j)}|U$ deducidas de las
+respectivas secciones $s^{(n_i)}$ y $s^{(n_j)}$ de estos torsors.
+
+\medskip
+\noindent 6.2.3. Finalmente, si se supone que $T$ es no vacío y
+conexo, dar una sección $\overline g$ de $\overline G$ sobre $S$
+equivale a dar un entero $n$ y una sección $\overline g$ de $F^{(n)}$
+sobre $S$. Ya no hay ninguna condición de compatibilidad que imponer,
+de modo que la sección $s$ de $F|U$ no interviene en la descripción del
+grupo de secciones de $\overline G$ sobre $S$. (Naturalmente, $s$
+vuelve a aparecer en cuanto se intenta describir los puntos de
+$\overline G$ con valores en un $S$-esquema general $S'$.)
+
+\medskip
+\noindent 6.2.4. Como $\overline G$ es la unión de los
+``subesquemas abiertos'' $f_n^*(\overline G)$, $n\in\mathbb Z$,
+descritos en 6.2.1, se sigue que $\overline G$ es representable si y
+solo si lo son los torsors $F^{(n)}$. Por ejemplo, basta con que $G$
+sea representable y afín sobre $S$, por la teoría del descenso de
+SGA 1 VIII 2.1.
+
+%%%%%%%%%%  scan idx 302  |  folio 291  %%%%%%%%%%

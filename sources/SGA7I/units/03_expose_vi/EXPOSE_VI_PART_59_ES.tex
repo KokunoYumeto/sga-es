@@ -1,0 +1,114 @@
+\par\medskip
+\noindent\textbf{Corolario 6.3.}
+Sea $X_0$ un $k$-esquema de tipo finito y sea $x\in X_0$ una
+singularidad cuadrática no degenerada racional sobre $k$.
+
+\smallskip
+\noindent\textbf{(1)} Sean $(R,\mathfrak X)$ y
+$(R,\mathfrak Y)$ dos deformaciones de $X_0$, con
+$R\in\operatorname{ob}(\widehat{\underline C}_\Lambda)$. Supongamos
+que $k=k^2$. Entonces
+\[
+\mathfrak X_{(\widehat x)}\simeq
+\mathfrak Y_{(\widehat x)}
+\]
+como esquemas formales $R$-ádicos si y solo si
+\[
+I_R(\mathfrak X_{(x)}|R)=I_R(\mathfrak Y_{(x)}|R).
+\]
+
+\smallskip
+\noindent\textbf{(2)} Sea
+$R\in\operatorname{ob}(\widehat{\underline C}_\Lambda)$ un anillo
+local regular y sea $(R,\mathfrak X)$ una deformación de $X_0$.
+Entonces $\mathcal O_{\mathfrak X,x}$ es regular si y solo si
+\[
+I_R(\mathfrak X_{(x)}|R)\not\subset\mathfrak m_R^2;
+\]
+equivalentemente, $I_R(\mathfrak X_{(x)}|R)$ es un divisor regular en
+$\operatorname{Spf}(R)$.
+
+\smallskip
+\noindent\textit{Demostración.}
+Sea $(R_0,Z)$ una deformación versal formal de
+$\operatorname{Spec}(\widehat{\mathcal O}_{X_0,x})$. Como $x$ es una
+singularidad cuadrática no degenerada racional sobre $k$, el Lema 6.2
+nos permite tomar
+\[
+R_0\simeq\Lambda[[t]],
+\qquad
+Z\simeq\operatorname{Spf}
+ \bigl(R_0[[X_1,\ldots,X_n]]/(F-t)\bigr).
+\]
+
+Para (1), las deformaciones
+$(R,\mathfrak X_{(\widehat x)})$ y
+$(R,\mathfrak Y_{(\widehat x)})$ son inducidas por $(R_0,Z)$ mediante
+homomorfismos locales continuos de $\Lambda$-álgebras
+\[
+\varphi,\psi:R_0\longrightarrow R.
+\]
+Pongamos $a=\varphi(t)$ y $b=\psi(t)$. Entonces
+\[
+\begin{aligned}
+\mathfrak X_{(\widehat x)}
+&\simeq\operatorname{Spf}
+ \bigl(R[[X_1,\ldots,X_n]]/(F-a)\bigr),\\
+\mathfrak Y_{(\widehat x)}
+&\simeq\operatorname{Spf}
+ \bigl(R[[X_1,\ldots,X_n]]/(F-b)\bigr).
+\end{aligned}
+\]
+
+%%%%%%%%%%  scan idx 138  |  folio 127  %%%%%%%%%%
+
+Supongamos que
+$I_R(\mathfrak X_{(x)}|R)=I_R(\mathfrak Y_{(x)}|R)$;
+equivalentemente, $(a)=(b)$ en $R$. Entonces $a=ub$ para alguna
+unidad $u\in R$. Como $k=k^2$ y $R$ es completo, $u=v^2$ para alguna
+unidad $v\in R$, y por tanto $a=v^2b$. Así,
+\[
+(F-a)\longmapsto v^2(F-b)
+\]
+bajo $X_i\mapsto vX_i$, y esta sustitución induce un isomorfismo de
+$R$-álgebras
+\[
+R[[X_1,\ldots,X_n]]/(F-a)
+ \xrightarrow{\ \sim\ }
+R[[X_1,\ldots,X_n]]/(F-b),
+\]
+porque $F$ es cuadrática. El recíproco es inmediato.
+
+Para (2), existe un homomorfismo local continuo de $\Lambda$-álgebras
+\[
+\varphi:R_0=\Lambda[[t]]\longrightarrow R
+\]
+tal que
+\[
+\mathfrak X_{(\widehat x)}
+\simeq\operatorname{Spf}
+ \bigl(R[[X_1,\ldots,X_n]]/(F-\varphi(t))\bigr).
+\]
+Además,
+\[
+I_R(\mathfrak X_{(x)}|R)
+=I_R(\mathfrak X_{(\widehat x)}|R)
+=(\varphi(t)),
+\]
+y
+\[
+R[[X_1,\ldots,X_n]]/(F-\varphi(t))
+=\widehat{\mathcal O}_{\mathfrak X,x}
+\]
+es regular si y solo si $\mathcal O_{\mathfrak X,x}$ es regular. Como
+$R$ es regular, $R[[X_1,\ldots,X_n]]$ es un anillo local regular. Si
+$M$ denota su ideal maximal, entonces su cociente por
+$F-\varphi(t)$ es regular si y solo si
+\[
+F-\varphi(t)\notin M^2,
+\]
+lo cual equivale a $\varphi(t)\notin\mathfrak m_R^2$, y por tanto a
+\[
+I_R(\mathfrak X_{(x)}|R)\not\subset\mathfrak m_R^2.
+\]
+\hfill$\square$

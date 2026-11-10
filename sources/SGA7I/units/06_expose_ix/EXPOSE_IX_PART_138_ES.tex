@@ -1,0 +1,180 @@
+\par\medskip
+\noindent
+\underline{Proposición} 3.5. (\underline{Criterio galoisiano de
+reducción semiestable}). \underline{Supongamos que $S$ es un rasgo. Son equivalentes
+las condiciones siguientes sobre el esquema abeliano $A_K$} (siendo la
+notación la de (2.5.3), aplicada a la situación deducida de $(A_K,S)$
+al pasar a la henselización de $S$):
+
+\smallskip
+\noindent
+(i) \underline{$A_K$ posee reducción semiestable sobre $S$} (3.4).
+
+\smallskip
+\noindent
+(ii) \underline{Con la notación de (2.5.3) y (2.5.4), se tiene}
+\[
+ \sisi{V\subset V^\perp}{V^\perp\subset V}.
+\]
+
+\noindent
+(iii) \underline{Para la parte tórica $W$ del módulo de Tate se tiene}
+\[
+ W=V^\perp.
+\]
+
+\noindent
+(iv) \underline{La acción del grupo de inercia $I$ sobre
+$U=T_\ell(A(\overline K))$ es unipotente de escalón $2$} (es decir,
+existe un submódulo estable bajo $I$, $U'$, de $U$, tal que $I$ actúa
+trivialmente sobre $U'$ y sobre $U/U'$).
+
+Podemos suponer que $S$ es henseliano (3.4.0). Con la notación de
+2.1.9, (i) significa que
+\[
+ \lambda=0.
+\]
+Por las fórmulas de rango que siguen a (2.5.4), esto equivale a
+$V^\perp=V\cap V^\perp$, es decir, a (ii). Puesto que
+$W=V\cap V^\perp$ por el teorema de ortogonalidad 2.4, las condiciones
+(ii) y (iii) son equivalentes. Además, (iv) expresa también que $I$
+actúa trivialmente sobre
+\sisi{$U^I=V$}{$U/U^I=U/V$}. Por dualidad, esto significa que actúa
+trivialmente sobre $V^\perp$, es decir, que
+$V^\perp\subset U^I=V$, que es (ii). Esto concluye la demostración.
+
+\medskip
+\noindent
+\underline{Observaciones} 3.5.1. Las condiciones (ii) y (iv) dependen
+manifiestamente solo de la acción de $I$ sobre el espacio vectorial
+sobre $\mathbb Q_\ell$
+$U\otimes_{\mathbb Z_\ell}\mathbb Q_\ell$, y podrían haberse formulado
+en términos de esta acción. Observemos asimismo que estas condiciones
+son manifiestamente estables bajo todo cambio de base por un morfismo
+de rasgos $S'\longrightarrow S$. Por último, si (iv) se cumple para
+$A_K$, se cumple manifiestamente para todo subesquema abeliano y todo
+esquema abeliano cociente de $A_K$, y en particular para todo esquema
+abeliano isógeno a $A_K$ (por ejemplo, para $A'_K$).
+
+\medskip
+\noindent
+\underline{Corolario} 3.5.2. \underline{Sea $g$ un generador topológico
+de $\mathbb Z_\ell(1)=T_\ell(\overline k^{\,*})$. Las condiciones
+equivalentes de 3.5 son también equivalentes a la condición siguiente:}
+
+\smallskip
+\noindent
+(v) \underline{La acción del grupo de inercia $I$ sobre
+$U=T_\ell(A(\overline K))$ se factoriza por el mayor cociente
+pro-$\ell$ $I(\ell)$ de $I$, canónicamente isomorfo a
+% Canon: SGA-SRC-001269 — referencia interna omitida en la fuente;
+% destino no recuperable.
+$\mathbb Z_\ell(1)$\sisi{$\,(I\qquad)$}{}, y la acción $g_U$ del
+generador $g$ sobre $U$ satisface}
+\begin{equation}\tag{3.5.3}
+ (1-g_U)^2=0.
+\end{equation}
+En efecto, para toda acción unipotente continua de un grupo profinito
+$I$ sobre un espacio vectorial $\ell$-ádico, se ve de inmediato que la
+imagen de $I$ es un grupo pro-$\ell$. Se sigue que (v) equivale a (iv).
+
+Podemos demostrar ahora el resultado central de la presente exposición:
+
+\medskip
+\noindent
+\underline{Teorema} 3.6. \underline{(Teorema de reducción semiestable).
+Sea $S$ un esquema noetheriano regular conexo de dimensión $1$; sea $K$
+el cuerpo de funciones racionales de $S$; y sea $A_K$ un esquema
+abeliano sobre $K$. Existe entonces una extensión de Galois finita $K'$
+de $K$ tal que el esquema abeliano
+$A_{K'}=A_K\otimes_KK'$ posee reducción semiestable} (3.4)
+\underline{sobre la normalización $S'$ de $S$ en $K'$.}
+
+Obsérvese que $S'$ es conexo, regular, noetheriano y de dimensión $1$,
+por lo que la conclusión enunciada tiene sentido. Para demostrar 3.6,
+elijamos una clausura separable $\overline K$ de $K$ y escribamos
+$\overline K$ como unión filtrante de sus subextensiones de Galois
+finitas $K_i$. Sea $S_i$ la normalización de $S$ en $K_i$, y sea $U$
+el mayor abierto de $S$ sobre el cual $A_K$ posee buena reducción.
+Puesto que $S$ es conexo, noetheriano y unidimensional, y
+$U\ne\varnothing$, el complemento $T=S-U$ es un conjunto finito de
+puntos cerrados de $S$, y $\mathcal O_{S,t}$ es un anillo de valoración
+discreta para todo $t\in T$. Basta encontrar, para cada $t\in T$, un
+índice $i=i(t)$ tal que $A_{K_i}$ posea reducción semiestable en los
+puntos de $S_i$ situados sobre $t$: se toma entonces como $K'$ el
+compuesto de las extensiones $K_{i(t)}$, para $t\in T$. Quedamos así
+reducidos al caso en que $S$ es un rasgo.
+
+Además, como el grupo de Galois permuta los puntos de la normalización
+situados sobre el punto cerrado $s$ de $S$, basta encontrar $K'$ tal
+que $A_{K'}$ posea reducción semiestable en \emph{un} punto de la
+normalización $S'$. Aquí no es necesario exigir inicialmente que $K'/K$
+sea de Galois: basta encontrar una extensión finita étale $K'/K$ que
+satisfaga la condición precedente, pues su clausura de Galois satisface
+la misma condición. Utilizando el criterio 3.5(iv), vemos que el Teorema
+3.6 se reduce a la afirmación siguiente.
+
+\medskip
+\noindent
+\underline{Corolario} 3.7. \underline{Supongamos de nuevo que $S$ es un
+rasgo. Existe entonces un subgrupo abierto $\pi'$ de $\pi$ tal que la
+acción de $I'=I\cap\pi'$ sobre $U=T_\ell(A(\overline K))$ es unipotente
+de escalón $2$; equivalentemente, existe un subgrupo abierto $I'$ de
+$I$ cuya acción sobre $U$ es unipotente de escalón $2$.}
+
+Existe un isomorfismo canónico, compatible con las acciones de $\pi$,
+\begin{equation}\tag{*}
+ H^1(A_{\overline K},\mathbb Z_\ell)
+ \simeq
+ \operatorname{Hom}\bigl(T_\ell(A(\overline K)),\mathbb Z_\ell\bigr),
+\end{equation}
+que muestra que la afirmación 3.7 equivale a la misma afirmación para
+las acciones de $I$ sobre el miembro izquierdo de (*). Pero esta
+afirmación fue demostrada en el Exposé III (utilizando la resolución de
+singularidades para esquemas excelentes de dimensión $2$).
+
+\medskip
+\noindent
+\underline{Corolario} 3.8. \underline{Las condiciones equivalentes
+(i)--(iv) de 3.5 son también equivalentes a la condición siguiente:}
+
+\smallskip
+\noindent
+(vi) \quad \underline{La acción de $I$ sobre
+$U=T_\ell(A(\overline K))$ es unipotente.}
+
+En efecto, para demostrar que \sisi{(v) implica (vi)}{(vi) implica
+(iv)}, observemos que, si un grupo $I$ que actúa unipotentemente sobre
+un espacio vectorial $E$ de dimensión finita sobre un cuerpo de
+característica cero (aquí $\mathbb Q_\ell$) posee un subgrupo $I'$ de
+índice finito que actúa con escalón $m$ (aquí $m=2$), entonces el propio
+$I$ actúa con escalón $m$. En efecto, como $I'$ tiene índice finito en
+$I$, el grupo algebraico $G'\subset\operatorname{GL}(E)$ que define
+tiene índice finito en el grupo $G$ definido por $I$; pero $G$ es
+unipotente y, por tanto, conexo (en característica cero), de modo que
+$G=G'$. Así, $I$ e $I'$ tienen el mismo «escalón de unipotencia».
+
+Obtenemos también un recíproco de 3.3:
+
+\medskip
+\noindent
+\underline{Corolario} 3.9. \underline{La notación es la de 3.2. Las
+condiciones (i) y (ii) de 3.2 son también equivalentes a la condición
+siguiente:}
+
+\smallskip
+\noindent
+(iii) \quad \underline{Para toda extensión finita étale $K'$ de $K$,
+sea $S'$ la normalización de $S$ en $K'$, y sea $A'$ el modelo de Néron
+de $A_{K'}=A\otimes_SK'=A_K\otimes_KK'$. Entonces el morfismo canónico}
+\[
+ A\times_SS'\longrightarrow A'
+\]
+\underline{induce un isomorfismo sobre las componentes neutras.}
+
+La necesidad de la condición se demostró, en una forma más fuerte, en
+3.3. Para la suficiencia, elijamos $K'$ como en 3.6. Puesto que las
+fibras de ${A'}^o$ poseen rango unipotente cero, lo mismo ocurre con las
+fibras de $(A\times_SS')^o=A^o\times_SS'$ y, por tanto, también con las
+fibras de $A^o$, de las cuales se obtienen las anteriores por extensión
+del cuerpo de base.

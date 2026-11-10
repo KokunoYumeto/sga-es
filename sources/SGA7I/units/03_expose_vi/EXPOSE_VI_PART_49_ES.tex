@@ -1,0 +1,165 @@
+\par\medskip
+\noindent\textbf{Observación 4.16.}
+La teoría global del complejo cotangente relativo---reducida aquí al
+complejo truncado de longitud uno, que sin embargo basta para muchos
+fines de la teoría de deformaciones---generaliza y simplifica
+resultados como 4.10. Sea $S$ un esquema, y sean
+$S_0\subset S'\subset S$ subesquemas definidos por ideales
+$J\supset I$ con $JI=0$. Sea $X'$ plano sobre $S'$, y escribamos
+\[
+L_\bullet=L^{X_0/S_0}
+\]
+para el complejo cotangente relativo de $X_0$ sobre $S_0$,
+considerado como un objeto de $D(X_0,\mathcal O_{X_0})$. Sea
+$\underline F$ la categoría de los $S$-esquemas planos $X$ que
+extienden $X'/S'$; así, un objeto está provisto de un
+$S'$-isomorfismo
+\[
+X\times_SS'\xrightarrow{\ \sim\ }X'.
+\]
+Entonces:
+
+\smallskip
+\noindent\textbf{(a)} Para un objeto $X$ de $\underline F$, su grupo
+de automorfismos que inducen la identidad sobre $X'$ es canónicamente
+isomorfo a
+\[
+\operatorname{Ext}^0(X_0;L_\bullet,I_{X_0}),
+\]
+donde $I_{X_0}$ es la imagen inversa sobre $X_0$ del
+$\mathcal O_{S_0}$-módulo $I$.
+
+%%%%%%%%%%  scan idx 123  |  folio 112  %%%%%%%%%%
+
+\smallskip
+\noindent\textbf{(b)} El conjunto de clases de isomorfía de objetos
+de $\underline F$ es vacío o bien un torsor (un espacio homogéneo
+principal) bajo $\operatorname{Ext}^1(X_0;L_\bullet,I_{X_0})$.
+
+\smallskip
+\noindent\textbf{(c)} Existe un elemento canónico
+\[
+c\in\operatorname{Ext}^2(X_0;L_\bullet,I_{X_0})
+\]
+cuya anulación es necesaria y suficiente para que $\underline F$ no
+sea vacía.
+
+Para estudiar estos grupos, a menudo conviene escribir
+\[
+\operatorname{Ext}^i(X_0;L_\bullet,I_{X_0})
+=H^i\bigl(X_0,R\underline{\operatorname{Hom}}
+  (L_\bullet,I_{X_0})\bigr).
+\]
+Los haces de cohomología de
+$R\underline{\operatorname{Hom}}(L_\bullet,I_{X_0})$ son
+precisamente los haces $\underline D^i_{X_0}(I_{X_0})$ introducidos
+en la sección 3. Para $i=0,1,2$, pueden considerarse,
+respectivamente, como el haz de automorfismos de un objeto $X$ de
+$\underline F$ (automorfismos que inducen la identidad sobre $X'$),
+el haz que mide la indeterminación de las clases de isomorfía de las
+soluciones locales del problema de deformación plana y el haz de
+obstrucciones a la existencia de soluciones locales.
+
+La sucesión espectral estándar es
+\[
+E_2^{p,q}
+=H^p\bigl(X_0,\underline D^q_{X_0}(I_{X_0})\bigr)
+\Longrightarrow
+\operatorname{Ext}^{p+q}(X_0;L_\bullet,I_{X_0}).
+\]
+Proporciona los isomorfismos conocidos
+\begin{align*}
+\operatorname{Aut}(X/X')
+&\simeq H^0\bigl(X_0,\underline D^0_{X_0}(I_{X_0})\bigr)\\
+&\simeq H^0\bigl(X_0,
+  \underline{\operatorname{Hom}}
+  (\Omega^1_{X_0/S_0},I_{X_0})\bigr)\\
+&=\operatorname{Hom}(\Omega^1_{X_0/S_0},I_{X_0}),
+\end{align*}
+y la sucesión exacta de grados bajos
+\[
+0\longrightarrow H^1(X_0,\underline D^0_{X_0}(I_{X_0}))
+\longrightarrow\operatorname{Ext}^1
+\longrightarrow H^0(X_0,\underline D^1_{X_0}(I_{X_0}))
+\longrightarrow H^2(X_0,\underline D^0_{X_0}(I_{X_0}))
+\longrightarrow\operatorname{Ext}^2.
+\]
+En particular, si
+$H^2(X_0,\underline D^0_{X_0}(I_{X_0}))=0$ y existen deformaciones
+planas locales de $X'/S'$, entonces las deformaciones locales
+compatibles se pegan en una deformación plana global. Más
+generalmente, para una sección prescrita del haz de clases de
+isomorfía de deformaciones planas locales, el argumento de 4.10 sitúa
+la obstrucción a una deformación global compatible en
+$H^2(X_0,\underline D^0_{X_0}(I_{X_0}))$.
+
+%%%%%%%%%%  scan idx 124  |  folio 113  %%%%%%%%%%
+
+La misma sucesión espectral muestra que $\operatorname{Ext}^2$ se
+anula siempre que
+\begin{equation}\tag{*}
+H^0(X_0,\underline D^2_{X_0})=0,
+\qquad
+H^1(X_0,\underline D^1_{X_0})=0,
+\qquad
+H^2(X_0,\underline D^0_{X_0})=0.
+\end{equation}
+La primera igualdad se cumple siempre cuando $X_0$ es una
+intersección completa relativa sobre $S_0$, pues entonces
+$\underline D^2_{X_0}(M)=0$ para todo $\mathcal O_{X_0}$-módulo $M$.
+La segunda se cumple cuando el soporte de $\underline D^1_{X_0}$ es
+discreto, como ocurre cuando $X_0$ es liso sobre $S_0$ fuera de un
+subconjunto discreto. Si se cumplen las tres igualdades de $(*)$,
+entonces $\underline F$ no es vacía por (c), lo que generaliza
+4.13(b).
+
+Existe también una interpretación geométrica que solo requiere los
+funtores globalizados $\underline D^i_{X_0}$, en lugar de la teoría
+global del complejo cotangente relativo. Las tres obstrucciones
+sucesivas a extender planamente $X'/S'$ sobre $S$ pertenecen a los
+tres grupos mostrados en $(*)$. La teoría local define la primera
+obstrucción
+\[
+c_1\in H^0(X_0,\underline D^2_{X_0})
+\]
+como la obstrucción a la existencia de soluciones locales. Si
+$c_1=0$, el haz $\underline F$ de clases de isomorfía de soluciones
+locales es canónicamente un torsor bajo $\underline D^1_{X_0}$. Su
+obstrucción a tener una sección es
+\[
+c_2\in H^1(X_0,\underline D^1_{X_0});
+\]
+tal sección es un sistema coherente de clases de isomorfía de
+soluciones locales. Si $c_2=0$, elijamos una sección de
+$\underline F$. La obstrucción a una solución global que realice las
+clases locales elegidas es entonces
+\[
+c_3\in H^2(X_0,\underline D^0_{X_0}).
+\]
+Cambiar la sección de $\underline F$ por una sección de
+$\underline D^1_{X_0}$ da una aplicación
+\[
+d:H^0(X_0,\underline D^1_{X_0})
+\longrightarrow H^2(X_0,\underline D^0_{X_0}).
+\]
+Existe una solución si y solo si $c_1=0$, $c_2=0$ y la clase de
+$c_3$ en $\operatorname{Coker}d$ es cero (estando definido cada
+$c_i$ únicamente después de que se anulen las obstrucciones
+precedentes).
+
+%%%%%%%%%%  scan idx 125  |  folio 114  %%%%%%%%%%
+
+Los tres grupos de obstrucciones
+\[
+H^0(X_0,\underline D^2_{X_0}),
+\qquad
+H^1(X_0,\underline D^1_{X_0}),
+\qquad
+H^2(X_0,\underline D^0_{X_0})/\operatorname{Im}d
+\]
+son los términos iniciales $E_2^{0,2}$, $E_2^{1,1}$ y $E_3^{2,0}$
+de la sucesión espectral precedente; salvo el signo, $d$ es su
+diferencial
+\[
+d_2:E_2^{0,1}\longrightarrow E_2^{2,0}.
+\]

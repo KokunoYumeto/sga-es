@@ -1,0 +1,219 @@
+%%%%%%%%%%  scan idx 245  |  folio 234  %%%%%%%%%%
+
+2.1.13. Sea $\ell$ un número primo. Para todo grupo conmutativo $E$,
+denotemos por $T_\ell(E)$ el sistema proyectivo
+\begin{equation}\tag{2.1.13.1}
+ T_\ell(E)=({}_{\ell^\nu}E)_{\nu\geq0},
+\end{equation}
+que depende manifiestamente de manera funtorial de $E$. Las
+compatibilidades de 2.1.12, para $n,n'$ de la forma
+$\ell^\nu,\ell^{\nu'}$ con $\nu'\geq\nu$, muestran que los
+homomorfismos $\alpha^{\ell^\nu}_{P,Q}$, al variar $\nu$, definen un
+homomorfismo de sistemas proyectivos, funtorial en $P,Q$:
+\begin{equation}\tag{2.1.13.2}
+ \alpha^{(\ell)}_{P,Q}:
+ T_\ell(P)\otimes T_\ell(Q)
+ \longrightarrow T_\ell\bigl(\uTor_1(P,Q)\bigr).
+\end{equation}
+Conocer estos homomorfismos para todo primo $\ell$ equivale
+manifiestamente a conocer los $\alpha^n_{P,Q}$ para todo entero $n$.
+Las relaciones de antisimetría de 2.1.10 se convierten entonces en las
+relaciones de antisimetría $\ell$-ádicas análogas, para todo $\ell$,
+expresadas por la anticonmutatividad de los diagramas
+\begin{equation}\tag{2.1.13.3}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ T_\ell(P)\otimes T_\ell(Q)
+   \arrow[r]
+   \arrow[d,"{\alpha^{(\ell)}_{P,Q}}"']
+   \arrow[rd,phantom,"-" description]&
+ T_\ell(Q)\otimes T_\ell(P)
+   \arrow[d,"{\alpha^{(\ell)}_{Q,P}}"]\\
+ T_\ell\bigl(\uTor_1(P,Q)\bigr)
+   \arrow[r]&
+ T_\ell\bigl(\uTor_1(Q,P)\bigr).
+\end{tikzcd}
+\end{equation}
+Aquí las flechas horizontales son las flechas de simetría.
+
+\medskip
+\noindent\underline{Observación 2.1.14.}
+La construcción del homomorfismo (2.1.1) y los resultados 2.1.10 y
+2.1.11 que le conciernen pueden generalizarse a la situación en que
+se dan un anillo conmutativo $\underline A$ sobre $T$ y dos ideales
+$\underline a$ y $\underline b$ de $\underline A$.
+
+%%%%%%%%%%  scan idx 246  |  folio 235  %%%%%%%%%%
+
+En el caso tratado anteriormente, ambos ideales son el ideal
+$n\mathbb Z_T$ del anillo constante $\mathbb Z_T$ sobre $T$. Se
+define entonces un homomorfismo, funtorial en los $\underline A$-módulos
+$P,Q$,
+\begin{equation}\tag{2.1.14.1}
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+ \xrightarrow{\ \alpha\ }
+ \uHom_{\underline A}
+ \left(
+   \frac{\underline a\cap\underline b}
+        {\underline a\mathbin{\cdot}\underline b},
+   \uTor^{\underline A}_1(P,Q)
+ \right),
+\end{equation}
+como compuesto de los homomorfismos
+\[
+\begin{split}
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+ &\longrightarrow
+ \uHom(\underline A/\underline a,P)
+ \otimes
+ \uHom(\underline A/\underline b,Q)\\
+ &\longrightarrow
+ \uHom\!\left(
+   \uTor_1(\underline A/\underline a,\underline A/\underline b),
+   \uTor_1(P,Q)
+ \right),
+\end{split}
+\]
+utilizando el conocido isomorfismo canónico
+\begin{equation}\tag{2.1.14.2}
+ \uTor_1(\underline A/\underline a,\underline A/\underline b)
+ \simeq
+ \frac{\underline a\cap\underline b}
+      {\underline a\mathbin{\cdot}\underline b}.
+\end{equation}
+En realidad, el signo de 2.1.10 está ``oculto'' en la elección de este
+isomorfismo, según se trabaje con la resolución
+$0\longrightarrow\underline a\longrightarrow\underline A
+\longrightarrow0$ de $\underline A/\underline a$, o con la
+resolución $0\longrightarrow\underline b\longrightarrow\underline A
+\longrightarrow0$ de $\underline A/\underline b$. Aquí se convierte
+en la anticonmutatividad del diagrama
+\begin{equation}\tag{2.1.14.3}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+   \arrow[r]
+   \arrow[d]
+   \arrow[rd,phantom,"-1" description]&
+ {}_{\underline b}Q\otimes{}_{\underline a}P
+   \arrow[d]\\
+ \uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(P,Q)
+ \right)
+   \arrow[r]&
+ \uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(Q,P)
+ \right).
+\end{tikzcd}
+\end{equation}
+Las flechas horizontales son las flechas de simetría. Cuando
+$\underline a=\underline b$, esta anticonmutatividad también puede
+expresarse diciendo que el automorfismo de simetría en
+$\uTor_1(\underline A/\underline a,\underline A/\underline a)$ es
+$-\id$.
+
+En el caso particular en que
+$\underline a=\underline b=n\underline A$, con $n$ una sección de
+$\underline A$, la multiplicación por $n$ induce un epimorfismo
+\[
+ \underline A/\underline a
+ \longrightarrow
+ \frac{\underline a\cap\underline a}
+      {\underline a\mathbin{\cdot}\underline a}
+ =\underline a/\underline a^2,
+\]
+y, por tanto, un \sisi{isomorfismo inyectivo}{homomorfismo inyectivo},
+funtorial en el $\underline A$-módulo $T$,
+
+%%%%%%%%%%  scan idx 247  |  folio 236  %%%%%%%%%%
+
+\[
+ \uHom(\underline a/\underline a^2,T)
+ \longrightarrow{}_{\underline a}T.
+\]
+Así, en este caso, el homomorfismo (2.1.14.1) puede interpretarse como
+un homomorfismo
+\begin{equation}\tag{2.1.14.4}
+ {}_nP\otimes{}_nQ
+ \longrightarrow{}_n\uTor_1(P,Q),
+\end{equation}
+de forma más próxima a (2.1.1).
+
+Sigamos suponiendo que $\underline a=\underline b=n\underline A$ y
+que $n$ es una sección regular de $\underline A$. La sucesión
+espectral (2.1.4) conserva su sentido en la situación presente y da la
+siguiente sucesión exacta de términos de grado bajo, que generaliza
+(2.1.5), donde $Q$ es ahora un $\underline A$-módulo \underline{anulado por}
+$\underline a$:
+\begin{equation}\tag{2.1.14.5}
+\begin{split}
+ \uTor^{\underline A}_2(P,Q)
+ &\longrightarrow
+ \uTor^{\underline A/n\underline A}_2(P_n,Q)
+ \longrightarrow{}_nP\otimes Q
+ \xrightarrow{\ \alpha\ }
+ \uTor^{\underline A}_1(P,Q)\\
+ &\longrightarrow
+ \uTor^{\underline A/n\underline A}_1(P_n,Q)
+ \longrightarrow0.
+\end{split}
+\end{equation}
+
+Volvamos ahora a $\underline a$ y $\underline b$ arbitrarios, y sean
+$p$ y $q$ dos secciones de $\underline A$. Obtenemos entonces el
+diagrama conmutativo siguiente; (2.1.11.1) es esencialmente el caso
+particular que se obtiene tomando $q=1$:
+{\footnotesize
+\begin{equation}\tag{2.1.14.6}
+\begin{tikzcd}[row sep=large,column sep=tiny]
+ &{}_{p\underline a}P\otimes{}_{q\underline b}Q
+   \arrow[dl,"p\otimes q"']
+   \arrow[dr,"i\otimes j"]&\\
+ {}_{\underline a}P\otimes{}_{\underline b}Q
+   \arrow[d,"\alpha"']&&
+ {}_{pq\underline a}P\otimes{}_{pq\underline b}Q
+   \arrow[d,"\alpha"]\\
+ \uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(P,Q)
+ \right)
+   \arrow[dr,hook,"\mathrm{incl.}"']&&
+ \uHom\!\left(
+   \dfrac{pq\underline a\cap pq\underline b}
+         {pq\underline a\mathbin{\cdot}pq\underline b},
+   \uTor_1(P,Q)
+ \right)
+   \arrow[dl,hook,"(pq)^*"]\\
+ &\uHom\!\left(
+   \dfrac{\underline a\cap\underline b}
+         {pq\underline a\mathbin{\cdot}\underline b},
+   \uTor_1(P,Q)
+ \right)&
+\end{tikzcd}
+\end{equation}}
+
+%%%%%%%%%%  scan idx 248  |  folio 237  %%%%%%%%%%
+
+Aquí
+\[
+ i:{}_{p\underline a}P\longrightarrow{}_{pq\underline a}P,
+ \qquad
+ j:{}_{q\underline b}Q\longrightarrow{}_{pq\underline b}Q
+\]
+son las inclusiones canónicas, y $(pq)^*$ denota el homomorfismo
+inyectivo obtenido, pasando a $\uHom$, a partir del homomorfismo
+suprayectivo
+\[
+ \frac{\underline a\cap\underline b}
+      {pq\underline a\mathbin{\cdot}\underline b}
+ \longrightarrow
+ \frac{pq\underline a\cap\sisi{\underline b}{pq\underline b}}
+      {pq\underline a\mathbin{\cdot}pq\underline b}
+\]
+inducido por la multiplicación por $pq$. Cuando
+$\underline a=\underline b=n\underline A$, este diagrama puede
+reescribirse en una forma más sencilla, dada en (2.1.11.1) para
+$q=1$.

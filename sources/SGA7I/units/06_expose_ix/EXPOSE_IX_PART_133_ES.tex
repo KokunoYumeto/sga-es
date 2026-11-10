@@ -1,0 +1,319 @@
+\par\medskip
+\noindent
+2.2. Nos proponemos precisar las relaciones entre $T_\ell(A_K)$ y
+$T_\ell(A_o)=T_\ell(A_o^o)$ haciendo intervenir $T_\ell(A^o)$.
+Recordemos primero lo siguiente.
+
+\medskip
+\noindent
+\underline{Lema} 2.2.1. \underline{Sea $m>0$ un entero. Entonces son
+equivalentes las condiciones siguientes:}
+
+\smallskip
+\noindent
+(i) $m\,\mathrm{id}_{A^o}$ \underline{es plano}.
+
+\noindent
+(ii) $m\,\mathrm{id}_{A^o}$ \underline{es sobreyectivo}.
+
+\noindent
+(iii) $m\,\mathrm{id}_{A^o}$ \underline{es cuasifinito}.
+
+\noindent
+(iv) $m$ \underline{es primo con la característica de $k$}, o $A_o^o$
+\underline{posee rango unipotente cero} (cf.
+\sisi{1.5.5}{2.1.5}).
+
+\smallskip
+\noindent
+\underline{Además, si estas condiciones se cumplen para $m$, se
+cumplen para $m^\nu$ para todo $\nu>0$; los grupos}
+\[
+ {}_{m^\nu}A^o\underset{\mathrm{dfn}}{=}
+ \ker(m^\nu\,\mathrm{id}_{A^o})
+\]
+\underline{son cuasifinitos, separados y planos sobre $S$, y, al variar
+$\nu$, forman un sistema inverso de esquemas en grupos cuyos morfismos
+de transición}
+\[
+ x\longmapsto m^{\nu'-\nu}x:
+ {}_{m^{\nu'}}A^o\longrightarrow{}_{m^\nu}A^o
+ \qquad(\nu'\geq\nu)
+\]
+\underline{son fielmente planos}.
+
+En efecto, el criterio fibrado de planitud (EGA~IV~11.3.5) muestra que
+(i), al igual que (ii) y (iii), es una condición sobre las fibras;
+estas tres condiciones son equivalentes por SGA~3
+$\mathrm{VI}_A$~5.6, puesto que las fibras en cuestión son lisas y
+conexas. En la forma (ii), un teorema clásico de Weil [5, 15] muestra
+que las condiciones se cumplen sobre la fibra genérica, que es un
+esquema abeliano; basta, pues, enunciarlas sobre la fibra especial. Su
+equivalencia con (iv) es entonces también bien conocida por la teoría
+de estructura. En cualquiera de estas formas, la estabilidad de la
+condición bajo $m\mapsto m^\nu$ es inmediata. Se sigue que los
+${}_{m^\nu}A^o$ son esquemas en grupos cuasifinitos planos sobre $S$,
+y son manifiestamente separados sobre $S$ porque $A^o$ lo es. Por
+último, la planitud fiel de los morfismos de transición ---o,
+equivalentemente, el hecho de que sean epimorfismos para la topología
+fppf--- se deduce formalmente de que $m\,\mathrm{id}_{A^o}$ es
+fielmente plano y, por tanto, un epimorfismo para dicha topología.
+
+\medskip
+\noindent
+2.2.2. En consecuencia, tomaremos como $m$ un primo $\ell$ que
+satisfaga las condiciones de 2.2.1. Denotamos entonces por
+\begin{equation}\tag{2.2.2.1}
+ T_\ell(A^o)=({}_{\ell^\nu}A^o)_{\nu>0}
+\end{equation}
+el sistema inverso descrito en 2.2.1. Mediante los dos cambios de base
+$\eta\longrightarrow S$ y $s\longrightarrow S$, se recuperan los
+sistemas inversos $T_\ell(A_K)$ y
+$T_\ell(A_o^o)=T_\ell(A_o)$ considerados respectivamente en 1.0 y 2.1.
+
+\medskip
+\noindent
+2.2.3. Supongamos ahora que $S$ es henseliano. Todo esquema cuasifinito
+separado $X$ sobre $S$ posee entonces una descomposición canónica como
+unión disjunta
+\begin{equation}\tag{2.2.3.1}
+ X=X^f\coprod X',
+\end{equation}
+donde $X^f$ es \underline{finito sobre $S$} y $X'_o=\varnothing$, es
+decir, $X'$ está confinado a su fibra genérica $X'_\eta$; así, $X^f$
+posee la misma fibra especial que $X$. Esta descomposición es
+manifiestamente funtorial en $X$. En particular, si $X$ es un esquema
+en grupos sobre $S$, entonces $X^f$ es un subesquema en grupos. Si $X$
+es plano, respectivamente étale, sobre $S$, lo mismo ocurre con $X^f$.
+
+Aplicamos esto a las componentes ${}_{\ell^\nu}A^o$ de $T_\ell(A^o)$.
+Se obtiene un subsistema proyectivo de grupos
+\begin{equation}\tag{2.2.3.2}
+ \bigl(({}_{\ell^\nu}A^o)^f\bigr)_{\nu>0}
+ \underset{\mathrm{dfn}}{=}T_\ell(A^o)^f
+ \subset T_\ell(A^o),
+\end{equation}
+llamado la \underline{parte fija} del módulo de Tate $T_\ell(A^o)$.
+Por construcción existen isomorfismos canónicos, funtoriales en $A$,
+\begin{equation}\tag{2.2.3.3}
+ T_\ell(A^o)^f\times_S s\xrightarrow{\ \sim\ }
+ T_\ell(A^o)\times_Ss\xrightarrow{\ \sim\ }T_\ell(A_o^o).
+\end{equation}
+Por otra parte, la fibra genérica de $T_\ell(A^o)^f$ define un
+subprogrupo canónico de $T_\ell(A_K)$, llamado también la
+«\underline{parte fija}» de este módulo de Tate:
+\begin{equation}\tag{2.2.3.4}
+ T_\ell(A_K)^f\subset T_\ell(A_K).
+\end{equation}
+
+\medskip
+\noindent
+2.2.4. Cuando $\ell\ne p=\operatorname{char}k$, la parte fija
+$T_\ell(A^o)^f$ puede interpretarse como un haz $\ell$-ádico constante
+torcido sobre $S$ (pues los $({}_{\ell^\nu}A^o)^f$ son finitos étale
+sobre $S$). Puesto que el funtor
+\[
+ X\longmapsto X_o=X\times_Ss
+\]
+de los esquemas finitos étale sobre $S$ a los esquemas finitos étale
+sobre $k$ es una equivalencia de categorías cuando $S$ es henseliano,
+existe una equivalencia análoga para las categorías de haces
+$\ell$-ádicos constantes torcidos sobre $S$ y sobre $k$. Por tanto,
+(2.2.3.3), que da la fibra especial de $T_\ell(A^o)^f$, caracteriza
+esta parte fija salvo isomorfismo único. Por otra parte, como subhaz
+$\ell$-ádico de $T_\ell(A^o)$, queda manifiestamente caracterizada por
+su fibra genérica (2.2.3.4), o equivalentemente por el
+$\mathbb Z_\ell$-submódulo correspondiente, estable bajo
+$\pi=\operatorname{Gal}(\overline K/K)$:
+\begin{equation}\tag{2.2.4.1}
+ T_\ell(A_K)^f(\overline K)
+ \underset{\mathrm{dfn}}{=}T_\ell(A(\overline K))^f
+ \subset T_\ell(A(\overline K)).
+\end{equation}
+De hecho, se tiene el resultado siguiente.
+
+\medskip
+\noindent
+\underline{Proposición} 2.2.5. \underline{Supongamos, como antes, que
+$\ell\ne p$ y que $S$ es henseliano. Entonces el submódulo (2.2.4.1)
+de $T_\ell(A(\overline K))=T_\ell(A_K)(\overline K)$ correspondiente a
+la parte fija $T_\ell(A_K)^f$ de (2.2.3.4) es el submódulo
+$T_\ell(A(\overline K))^I$ de invariantes bajo el grupo de inercia
+$I\subset\pi$.}
+
+Esto se deduce, pasando al límite inverso, de la relación análoga
+válida para todo entero $m>0$ primo con
+$p=\operatorname{char}k$:
+\begin{equation}\tag{2.2.5.1}
+ ({}_mA)^f(\overline K)=({}_mA(\overline K))^I.
+\end{equation}
+Para demostrar esta relación, introduzcamos el localizado estricto
+$\widetilde S$ de $S$, cuyo cuerpo de fracciones $\widetilde K$ es la
+subextensión no ramificada máxima de $\overline K/K$. Puesto que
+$({}_mA)^f$ es finito étale sobre $S$, sus puntos con valores en
+$\overline K$ ya tienen valores en $\widetilde K$. Así, el miembro
+izquierdo de (2.2.5.1) es
+$\operatorname{Hom}_S(\widetilde S,({}_mA)^f)$, mientras que el miembro
+derecho es, por definición de $\widetilde K$, igual a
+${}_mA(\widetilde K)$. Por la definición de $({}_mA)^f$, y dado que
+$\widetilde S$ es un límite inverso de $S$-esquemas finitos étale
+$S_i$, el primero es también igual a
+\[
+ \operatorname{Hom}_S(\widetilde S,{}_mA)
+ ={}_m\operatorname{Hom}_S(\widetilde S,A).
+\]
+Por la propiedad definitoria del modelo de Néron,
+$\operatorname{Hom}_S(\widetilde S,A)=A(\widetilde K)$, lo que
+demuestra \sisi{(6.2.5.1)}{(2.2.5.1)}.
+
+Para deducir 2.2.5, observemos que (2.2.5.1) da
+\begin{equation}\tag{*}
+ T_\ell(A(\overline K))^I
+ =\varprojlim_\nu({}_{\ell^\nu}A)^f(\overline K)
+ \supset\varprojlim_\nu({}_{\ell^\nu}A^o)^f(\overline K).
+\end{equation}
+Si $(x_\nu)$ pertenece al término situado más a la derecha, entonces,
+para todo $\nu\geq0$, $x_\nu$ es una sección de $A$ infinitamente
+divisible por $\ell$. Su valor en $s$ es, por tanto, un elemento de
+$A_o(k)$ infinitamente divisible por $\ell$ y, en consecuencia,
+pertenece a $A_o^o(k)$. Esto demuestra la igualdad de los dos últimos
+términos de (*) y concluye la demostración de 2.2.5.
+
+\medskip
+\noindent
+\underline{Proposición} 2.2.6. \underline{Sea $C_K$ un segundo esquema
+abeliano sobre $K$, con modelo de Néron $C$, y considérese un
+homomorfismo $u_K:C_K\longrightarrow A_K$, que se prolonga por tanto a
+un homomorfismo $u:C\longrightarrow A$. Supongamos que $u_K$ es una
+isogenia. Entonces, para todo primo $\ell$,
+$T_\ell(u_K):T_\ell(C_K)\longrightarrow T_\ell(A_K)$ induce una
+isogenia de las partes fijas}
+\begin{equation}\tag{2.2.6.1}
+ T_\ell(C_K)^f\longrightarrow T_\ell(A_K)^f,
+\end{equation}
+\underline{y, análogamente, la aplicación inducida por
+$u_o:C_o\longrightarrow A_o$}
+\begin{equation}\tag{2.2.6.2}
+ T_\ell(u_o^o):T_\ell(C_o^o)\longrightarrow T_\ell(A_o^o)
+\end{equation}
+\underline{es una isogenia. Por último, $u_o:C_o\longrightarrow A_o$
+induce una isogenia del mayor subtoro de $C_o$ al mayor subtoro $T_o$
+de $A_o$; y sobre una extensión $k'/k$ en la que estén definidas las
+«partes abelianas» de $C_o$ y $A_o$ (por ejemplo, sobre la clausura
+perfecta de $k$), $u_o$ induce una isogenia entre las partes abelianas
+de $C_{ok'}$ y $A_{ok'}$.}
+
+Este enunciado se deduce formalmente de que $T_\ell(A_K)^f$,
+$T_\ell(A_o^o)$, el mayor subtoro de $A_o$ y la «parte abeliana» de
+$A_{ok'}$ son funtores aditivos del $A_K$ variable, y de que $u_K$ es
+una isogenia precisamente en el sentido de que existe un morfismo
+$v_K:A_K\longrightarrow C_K$ tal que
+\[
+ u_Kv_K=n\,\mathrm{id},\qquad v_Ku_K=n\,\mathrm{id}
+\]
+para algún entero $n>0$.
+
+\medskip
+\noindent
+\underline{Corolario} 2.2.7. \underline{Si $A_K$ y $C_K$ son esquemas
+abelianos isógenos sobre $K$, entonces los invariantes correspondientes
+$\mu,\lambda,\alpha$ de (2.1.11) son los mismos para $A_K$ y $C_K$. En
+particular, son los mismos para $A_K$ y su dual $A'_K$.}
+
+\medskip
+\noindent
+\underline{Observaciones} 2.2.8. En los dos enunciados precedentes,
+2.2.6 y 2.2.7, hemos supuesto que $S$ es henseliano. Sin embargo, es
+inmediato que 2.2.7, así como las afirmaciones de 2.2.6 relativas a las
+propiedades del homomorfismo inducido
+$u_o:C_o\longrightarrow A_o$, son válidas sin esta hipótesis. En
+efecto, se reduce al caso ya tratado mediante el cambio de base
+$S^h\longrightarrow S$, donde $S^h$ es la henselización de $S$,
+utilizando el hecho ---inmediato a partir de las definiciones--- de que
+la formación de los modelos de Néron conmuta con este cambio de base.
+
+\medskip
+\noindent
+\underline{Corolario} 2.2.9. (\underline{Buena reducción.})
+\underline{Sea $S$ un rasgo, sea $A_K$ un esquema abeliano sobre su
+cuerpo de fracciones $K$, sea $A$ el modelo de Néron de $A_K$, y sea
+$\ell$ un primo distinto de $\operatorname{char}k$. Son equivalentes
+las condiciones siguientes.}
+
+\smallskip
+\noindent
+(i) \underline{Existe un esquema abeliano sobre $S$ cuya fibra genérica
+es isomorfa a $A_K$.}
+
+\noindent
+(ii) $A$ \underline{es un esquema abeliano}.
+
+\noindent
+(ii$^o$) $A^o$ \underline{es un esquema abeliano}.
+
+\noindent
+(iii) $A_o$ \underline{es un esquema abeliano}.
+
+\noindent
+(iii$^o$) $A_o^o$ \underline{es un esquema abeliano}, \underline{es
+decir, con la notación de (2.1.11), $\lambda=\mu=0$}.
+
+\noindent
+(iv) $A$ \underline{es propio sobre $S$}.
+
+\noindent
+(iv$^o$) $A^o$ \underline{es propio sobre $S$}.
+
+\noindent
+(v) $T_\ell(A_K)$ \underline{es «no ramificado sobre $S$»}, es decir,
+\underline{se prolonga a un haz $\ell$-ádico constante torcido sobre
+$S$}, o equivalentemente \underline{el grupo de inercia $I$ actúa
+trivialmente sobre $T_\ell(A_K(\overline K))$}.
+
+\noindent
+(v bis) \underline{Para todo entero $\nu\geq0$,
+${}_{\ell^\nu}A_K$ es «no ramificado sobre $S$»}, es decir,
+\underline{se prolonga a un recubrimiento étale de $S$}, o
+equivalentemente \underline{el grupo de inercia $I$ actúa trivialmente
+sobre ${}_{\ell^\nu}A_K(\overline K)$}.
+
+\smallskip
+\noindent
+\underline{Por último, un esquema abeliano sobre $S$ como en (i) es un
+modelo de Néron de $A_K$ y, en particular, queda determinado salvo
+isomorfismo único.}
+
+\medskip
+\noindent
+2.2.9.1. Se dice que $A_K$ posee \underline{buena reducción} sobre $S$
+si satisface la condición (i) anterior. El criterio (v), o (v bis), se
+conoce como el \underline{criterio de Néron--Ogg--Shafarevich} de buena
+reducción.
+
+Demostremos 2.2.9. Es bien sabido (cf., por ejemplo, [5]) que un esquema
+abeliano sobre $S$ satisface la propiedad universal de un modelo de
+Néron; esto se reduce al hecho de que una sección racional de un esquema
+abeliano sobre una base regular está definida en todas partes. Esto
+demuestra la equivalencia
+$(i)\Longleftrightarrow(ii)\Longleftrightarrow(ii^o)$, así como la última
+afirmación de 2.2.9. Estas condiciones implican manifiestamente (iii),
+(iv) y (iv$^o$), cada una de las cuales implica (iii$^o$). Demostremos
+que (iii$^o$)$\Longrightarrow$(ii$^o$), lo que establecerá la
+equivalencia de (i) a (iv$^o$). Esto se deduce del hecho de que un
+esquema en grupos liso sobre $S$ cuyas fibras son esquemas abelianos es
+propio sobre $S$ (y, por tanto, es un esquema abeliano), por
+EGA~IV~15.7.10.
+
+Por otra parte, en vista de 2.2.5 y del hecho de que
+\[
+ T_\ell(A_K(\overline K))/T_\ell(A_K(\overline K))^I
+\]
+es manifiestamente un $\mathbb Z_\ell$-módulo sin torsión, la condición
+(v) expresa que $T_\ell(A_K(\overline K))$ y su parte fija tienen el
+mismo rango. Por (2.1.11) y (2.2.3.3), esta es la condición
+\[
+ \mu+2\alpha=2(\lambda+\mu+\alpha),
+\]
+es decir, $2\lambda+\mu=0$, o $\lambda=\mu=0$, que es precisamente
+(iii$^o$). Finalmente, la equivalencia entre (v) y (v bis) resulta
+clara por las definiciones. Esto concluye la demostración de 2.2.9.

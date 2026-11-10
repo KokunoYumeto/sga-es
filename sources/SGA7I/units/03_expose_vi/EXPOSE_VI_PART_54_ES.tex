@@ -1,0 +1,113 @@
+\par\medskip
+\noindent\textbf{Corolario 5.7.}
+Sea $S$ un esquema formal noetheriano y $\mathfrak X$ un esquema
+formal $S$-ádico esencialmente de tipo finito. Entonces:
+
+\smallskip
+\noindent\textbf{(1)} La formación de
+$J_{\mathfrak X}^p(\mathfrak X|S)$ conmuta con el cambio de base. Más
+precisamente, si
+\[
+\mathfrak X'=\mathfrak X\times_SS',
+\]
+entonces
+\[
+J_{\mathfrak X'}^p(\mathfrak X'|S')
+=J_{\mathfrak X}^p(\mathfrak X|S)\times_SS'.
+\]
+
+\smallskip
+\noindent\textbf{(2)} Las componentes conexas de
+$J_{\mathfrak X}^p(\mathfrak X|S)$ están en correspondencia biyectiva
+con las de $J_{X_0}^p(X_0|S_0)$. Para todo
+\[
+x\in\bigl|J_{X_0}^p(X_0|S_0)\bigr|
+\]
+hay un isomorfismo canónico
+\[
+J_{\mathfrak X}^p(\mathfrak X|S)_{(x)}
+\simeq
+J_{\mathfrak X_{(x)}}^p(\mathfrak X_{(x)}|S).
+\]
+En particular, si
+\[
+\bigl|J_{X_0}^p(X_0|S_0)\bigr|=\{x_1,\ldots,x_m\}
+\]
+es discreto, entonces
+\[
+J_{\mathfrak X}^p(\mathfrak X|S)
+=\coprod_{1\leq i\leq m}
+ J_{\mathfrak X_{(x_i)}}^p(\mathfrak X_{(x_i)}|S)
+\qquad\text{(unión disjunta)}.
+\]
+
+%%%%%%%%%%  scan idx 132  |  folio 121  %%%%%%%%%%
+
+\smallskip
+\noindent\textbf{(3)} Sea $S$ un esquema noetheriano ordinario y
+$X$ un $S$-esquema esencialmente de tipo finito. Dado un subesquema
+cerrado $S_0\subset S$, sea $\widehat S$ la completación formal de
+$S$ a lo largo de $S_0$. Si
+\[
+\widehat X=X\times_S\widehat S
+\]
+es la completación formal de $X$ a lo largo de
+$X_0=X\times_SS_0$, entonces
+\[
+J_{\widehat X}^p(\widehat X|\widehat S)
+=J_X^p(X|S)\times_S\widehat S.
+\]
+Equivalentemente, es la completación formal de $J_X^p(X|S)$ a lo
+largo de $J_{X_0}^p(X_0|S_0)$.
+
+\smallskip
+\noindent\textbf{(4)} Supongamos que un entero fijo $n\geq0$
+satisface la condición 5.4(1) o 5.4(2) para todo
+$X_\nu\longrightarrow S_\nu$. Entonces
+\[
+x\notin J_{\mathfrak X}^n(\mathfrak X|S)
+\]
+si y solo si $\mathfrak X$ es formalmente liso sobre $S$ en $x$.
+
+\smallskip
+\noindent\textit{Demostración.}
+La afirmación (1) se deduce de
+\[
+\Omega_{\mathfrak X'|S'}
+\simeq
+\mathcal O_{S'}\widehat\otimes_{\mathcal O_S}
+\Omega_{\mathfrak X|S},
+\]
+mientras que (2) se deduce de
+\[
+\mathcal O_{\mathfrak X_{(x)}}
+\widehat\otimes_{\mathcal O_{\mathfrak X}}
+\Omega_{\mathfrak X|S}
+\simeq\Omega_{\mathfrak X_{(x)}|S}.
+\]
+Para (3),
+\[
+\begin{aligned}
+J_{\widehat X}^p(\widehat X|\widehat S)
+&=\varinjlim_\nu
+ J_{X\times_SS_\nu}^p(X\times_SS_\nu|S_\nu) \\
+&=\varinjlim_\nu\bigl(J_X^p(X|S)\times_SS_\nu\bigr)
+ =J_X^p(X|S)\times_S\widehat S.
+\end{aligned}
+\]
+Finalmente, como $\mathfrak X$ es $S$-ádico,
+\[
+\begin{aligned}
+\mathfrak X\to S\text{ es formalmente liso en }x
+&\Longleftrightarrow
+ X_\nu\to S_\nu\text{ es formalmente liso en }x
+ \text{ para todo }\nu \\
+&\Longleftrightarrow
+ x\notin J_{X_\nu}^n(X_\nu|S_\nu)
+ \text{ para todo }\nu \\
+&\Longleftrightarrow
+ x\notin\varinjlim_\nu J_{X_\nu}^n(X_\nu|S_\nu)
+ =J_{\mathfrak X}^n(\mathfrak X|S).
+\end{aligned}
+\]
+\hfill$\square$

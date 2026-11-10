@@ -1,0 +1,184 @@
+\underline{Demostración.}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Si
+\[
+ 0\longrightarrow M'\longrightarrow M\longrightarrow M''
+ \longrightarrow0
+\]
+es una sucesión exacta de $A$-módulos, entonces, para toda álgebra de
+polinomios $P$ sobre $R$, la sucesión
+\[
+ 0\longrightarrow\operatorname{Der}_R(P,M')
+ \longrightarrow\operatorname{Der}_R(P,M)
+ \longrightarrow\operatorname{Der}_R(P,M'')
+ \longrightarrow0
+\]
+es exacta. Por tanto, según 3.3(c),
+\[
+ 0\longrightarrow\operatorname{Der}_R(-,M')
+ \longrightarrow\operatorname{Der}_R(-,M)
+ \longrightarrow\operatorname{Der}_R(-,M'')
+ \longrightarrow0
+\]
+es una sucesión exacta de haces.
+
+\item El funtor $\operatorname{Der}_S(-,M)$ es un haz aditivo sobre
+$\underline C_{A|S}$, y
+\[
+ \operatorname{Der}_R(B,M)
+ =\ker\bigl(\operatorname{Der}_S(B,M)
+ \longrightarrow\operatorname{Der}_S(R,M)\bigr)
+\]
+para todo $B\in\operatorname{Ob}(\underline C_{A|R})$.
+La afirmación se deduce entonces de 3.7(c).
+
+\item Sea
+\[
+ S:\underline C_{A|R}\longrightarrow
+ \underline C_{A\otimes_RS|S},
+ \qquad X\longmapsto X\otimes_RS.
+\]
+Entonces
+$\widetilde S\operatorname{Der}_S(-,M)
+=\operatorname{Der}_R(-,M)$, de modo que la afirmación se deduce de
+3.7(a).
+
+%%%%%%%%%%  scan idx 99  |  folio 88  %%%%%%%%%%
+
+\item Esto se deduce de 3.9. En efecto,
+$F=\operatorname{Der}_R(-,N)$ es un haz aditivo sobre
+$\underline C_{S^{-1}A|R}$, y
+$F_A\in\operatorname{Ob}
+(\widetilde{\underline C}_{S^{-1}A|A})$ también es aditivo, pues
+\begin{align*}
+ F_A(X)
+ &=\ker\bigl(F(X)\longrightarrow F(A)\bigr)\\
+ &=\ker\bigl(\operatorname{Der}_R(X,N)
+   \longrightarrow\operatorname{Der}_R(A,N)\bigr)\\
+ &=\operatorname{Der}_A(X,N).
+\end{align*}
+Así, $F_A=\operatorname{Der}_A(-,N)$.
+
+\item La primera afirmación se deduce de 3.8(a). Supongamos ahora que
+$\operatorname{Tor}_i^R(A,A)=0$ para todo $i>0$ y que
+\[
+ \Delta:\operatorname{Spec}(A)\longrightarrow
+ \operatorname{Spec}(A)\times_{\operatorname{Spec}(R)}
+ \operatorname{Spec}(A)
+\]
+es una inmersión abierta. Sea
+$\varphi:A\otimes_RA\longrightarrow A$ el morfismo de multiplicación.
+Para todo ideal maximal $\mathfrak m$ de $A$, el morfismo inducido
+\[
+ (A\otimes_RA)_{\varphi^{-1}(\mathfrak m)}
+ \longrightarrow A_{\mathfrak m}
+\]
+es un isomorfismo. La primera afirmación, junto con 3.12(4), implica
+entonces que el morfismo diagonal
+\[
+ \Delta_{\mathfrak m}:D^i(A|R,M)_{\mathfrak m}
+ \longrightarrow D^i(A|R,M)_{\mathfrak m}
+ \oplus D^i(A|R,M)_{\mathfrak m}
+\]
+es un isomorfismo para todo ideal maximal $\mathfrak m$ de $A$.
+Por consiguiente,
+\[
+ \Delta:D^i(A|R,M)\longrightarrow
+ D^i(A|R,M)\oplus D^i(A|R,M)
+\]
+es un isomorfismo, y por tanto $D^i(A|R,M)=0$ para todo $i>0$.
+
+\item En vista de 3.12(4), podemos suponer que $A$ es una
+$R$-álgebra de tipo finito. Consideremos el morfismo de haces
+\[
+ E\otimes_A\operatorname{Der}_R(-,M)
+ \longrightarrow
+ \operatorname{Der}_R(-,E\otimes_AM)
+\]
+sobre $\widetilde{\underline C}_{A|R}$. Como $E$ es plano sobre $A$,
+el morfismo
+\[
+ E\otimes_A\operatorname{Der}_R(B,M)
+ \xrightarrow{\ \sim\ }
+ \operatorname{Der}_R(B,E\otimes_AM)
+\]
+es un isomorfismo siempre que
+$B\in\operatorname{Ob}(\underline C_{A|R})$ sea de tipo finito sobre
+$R$. Según 3.3(b), se sigue que
+\[
+ D^i\bigl(A|R,E\otimes_A\operatorname{Der}_R(-,M)\bigr)
+ \longrightarrow
+ D^i\bigl(A|R,\operatorname{Der}_R(-,E\otimes_AM)\bigr)
+\]
+es un isomorfismo. Por otra parte, $E\otimes_A-$ es exacto y, por tanto,
+\[
+ E\otimes_AD^i(A|R,M)
+ =D^i\bigl(A|R,E\otimes_A\operatorname{Der}_R(-,M)\bigr).
+\]
+Esto demuestra la afirmación.
+
+\item Esto se deduce de 3.3(a).
+
+%%%%%%%%%%  scan idx 100  |  folio 89  %%%%%%%%%%
+
+\item En vista de 3.10 y 3.11, basta mostrar que
+\[
+ \operatorname{Coker}\bigl(
+ \operatorname{Der}_R(P,M)\longrightarrow
+ \operatorname{Hom}_A(I/I^2,M)\bigr)
+ =\operatorname{Exalcomm}(A|R,M),
+\]
+donde $\operatorname{Exalcomm}(A|R,M)$ denota el conjunto de clases de
+isomorfismo de extensiones de $R$-álgebras de $A$ por $M$. Sea
+\[
+ 0\longrightarrow M\longrightarrow A'\longrightarrow A
+ \longrightarrow0
+\]
+una extensión de este tipo. Como $P$ es un álgebra de polinomios sobre
+$R$, obtenemos un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large]
+0 \arrow[r] & I \arrow[r] \arrow[d]
+& P \arrow[r] \arrow[d]
+& A \arrow[r] \arrow[d,equal] & 0 \\
+0 \arrow[r] & M \arrow[r]
+& A' \arrow[r]
+& A \arrow[r] & 0.
+\end{tikzcd}
+\]
+El morfismo $I\longrightarrow M$ está determinado por la extensión
+$A'$, salvo la acción de $\operatorname{Der}_R(P,M)$. Obtenemos así un
+morfismo
+\[
+ \Phi:\operatorname{Exalcomm}(A|R,M)
+ \longrightarrow
+ \operatorname{Coker}\bigl(
+ \operatorname{Der}_R(P,M)\longrightarrow
+ \operatorname{Hom}_A(I/I^2,M)\bigr).
+\]
+Recíprocamente, un morfismo $P$-lineal $I\longrightarrow M$ produce,
+mediante un pushout, una extensión que forma parte de un diagrama
+\[
+\begin{tikzcd}[column sep=large]
+0 \arrow[r] & I \arrow[r] \arrow[d]
+& P \arrow[r] \arrow[d]
+& A \arrow[r] \arrow[d,equal] & 0 \\
+0 \arrow[r] & M \arrow[r]
+& A' \arrow[r]
+& A \arrow[r] & 0.
+\end{tikzcd}
+\]
+Dos morfismos $P$-lineales $I\rightrightarrows M$ que difieren en un
+elemento de $\operatorname{Der}_R(P,M)$ producen extensiones isomorfas.
+Por tanto, hay un morfismo
+\[
+ \Psi:\operatorname{Coker}\bigl(
+ \operatorname{Der}_R(P,M)\longrightarrow
+ \operatorname{Hom}_A(I/I^2,M)\bigr)
+ \longrightarrow\operatorname{Exalcomm}(A|R,M).
+\]
+Se comprueba inmediatamente que $\Phi$ y $\Psi$ son inversos uno de
+otro.
+\end{enumerate}
+\hfill$\square$

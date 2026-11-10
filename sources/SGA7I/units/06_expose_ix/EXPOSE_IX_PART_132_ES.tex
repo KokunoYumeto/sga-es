@@ -1,0 +1,136 @@
+\par\medskip
+\noindent
+\underline{2. Partes fija y tórica de $T_\ell(A_K)$. Criterios de buena
+reducción. Teorema de ortogonalidad para $\ell\ne p$.}
+
+\medskip
+\noindent
+2.1. Como todo grupo algebraico conmutativo sobre $k$, $A_o$ posee un
+mayor subtoro, cuya formación conmuta con toda extensión del cuerpo de
+base [SGA~3 XVII~7.2.1, XII~1.12]:
+\begin{equation}\tag{2.1.1}
+ T_o\subset A_o.
+\end{equation}
+Cuando $k$ es perfecto, $T_o$ se caracteriza por la condición de que
+$A_o^o/T_o$ sea una extensión de un esquema abeliano $B_o$ sobre $k$
+por un grupo unipotente liso conexo [25]. Este último posee
+necesariamente una serie de composición cuyos cocientes son todos
+isomorfos a $\mathbb G_{ak}$ (SGA~3 XVII~4.1.3), y se tiene una
+sucesión exacta
+\begin{equation}\tag{2.1.2}
+ 0\longrightarrow U_o\longrightarrow A_o^o/T_o
+ \longrightarrow B_o\longrightarrow0.
+\end{equation}
+En cualquier caso, sea o no $k$ perfecto, \underline{si} $A_o^o$ es
+una extensión de un esquema abeliano $B_o$ por un esquema afín liso
+conexo $L_o$,
+\begin{equation}\tag{2.1.3}
+ 0\longrightarrow L_o\longrightarrow A_o^o
+ \longrightarrow B_o\longrightarrow0,
+\end{equation}
+se sabe que esta estructura de extensión es única [25]. Además,
+$T_o\subset L_o$, y $T_o$ es el mayor subtoro de $L_o$. Se tiene así
+la sucesión exacta (2.1.2), con
+\begin{equation}\tag{2.1.4}
+ U_o=L_o/T_o.
+\end{equation}
+
+\medskip
+\noindent
+2.1.5. Observemos que $A_o^o$ posee \underline{rango unipotente cero}
+(es decir, tras pasar a una clausura algebraica de $k$, no posee ningún
+subgrupo isomorfo a $\mathbb G_a$) si y solo si $A_o^o/T_o$ es un
+esquema abeliano $B_o$. En tal caso, las hipótesis precedentes se
+aplican con $U_o=0$.
+
+Sea $\ell$ un primo distinto de la característica de $k$, de modo que
+$A_o^o$ es $\ell$-divisible. La inclusión (2.1.1) da entonces una
+sucesión exacta de proesquemas en grupos:
+\begin{equation}\tag{2.1.6}
+\begin{tikzcd}[row sep=large,column sep=large]
+0 \arrow[r] & T_\ell(T_o) \arrow[r]
+ & T_\ell(A_o^o) \arrow[r] \arrow[d,"\wr"]
+ & T_\ell(A_o^o/T_o) \arrow[r] \arrow[d,"\wr"] & 0\\
+ & & T_\ell(A_o) & T_\ell(A_o/T_o) & {,}
+\end{tikzcd}
+\end{equation}
+cuyos términos pueden interpretarse también como haces $\ell$-ádicos
+libres constantes torcidos. Cuando se dispone de una sucesión exacta
+(2.1.2) ---por ejemplo, cuando $k$ es perfecto o cuando $A_o^o$ posee
+rango unipotente cero---, se tiene
+\begin{equation}\tag{2.1.7}
+ T_\ell(A_o^o/T_o)\xrightarrow{\ \sim\ }T_\ell(B_o),
+\end{equation}
+de modo que la sucesión exacta (2.1.6) se convierte en
+\begin{equation}\tag{2.1.8}
+ 0\longrightarrow T_\ell(T_o)\longrightarrow T_\ell(A_o^o)
+ \longrightarrow T_\ell(B_o)\longrightarrow0.
+\end{equation}
+Pongamos
+\begin{equation}\tag{2.1.9}
+ n=\dim A_K=\dim A_o,\qquad
+ \mu=\dim T_o,\qquad
+ \lambda=\dim U_o,\qquad
+ \alpha=\dim B_o.
+\end{equation}
+Entonces
+\begin{equation}\tag{2.1.10}
+ n=\mu+\lambda+\alpha,
+\end{equation}
+y
+\begin{equation}\tag{2.1.11}
+ \left\{
+ \begin{aligned}
+ \operatorname{rank}T_\ell(T_o)&=\mu,&
+ \operatorname{rank}T_\ell(A_o^o/T_o)
+ &=\operatorname{rank}T_\ell(B_o)=2\alpha,\\
+ \operatorname{rank}T_\ell(A_o^o)&=\mu+2\alpha.
+ \end{aligned}
+ \right.
+\end{equation}
+La segunda relación es un conocido teorema de Weil [5, 15].
+
+\medskip
+\noindent
+2.1.12. Los enteros $n,\mu,\lambda,\alpha$ están manifiestamente
+definidos, tras pasar a una clausura algebraica de $k$, incluso sin
+suponer la existencia de una sucesión exacta (2.1.2). Se denominan,
+respectivamente, dimensión de $A_o$, \underline{rango reductivo de
+$A_o$} (igual a la dimensión de $T_o$), \underline{rango unipotente de
+$A_o$} y \underline{rango abeliano de $A_o$}. Siguen ligados por
+(2.1.10) y (2.1.11), omitiendo de esta última el término
+$\operatorname{rank}T_\ell(B_o)$.
+
+\medskip
+\noindent
+2.1.13. Supongamos que $k$ posee característica $p>0$ y que $A_o^o$ es
+$p$-divisible, o equivalentemente que posee rango unipotente cero
+(cf. 2.1.5). Debe considerarse entonces también el progrupo
+$T_p(A_o^o)$, que es un \underline{grupo de Barsotti--Tate} (o un
+\underline{grupo $p$-divisible}, en la terminología de [33]). La
+sucesión exacta (2.1.8) sigue siendo válida para $\ell=p$ y es entonces
+una sucesión exacta de grupos de Barsotti--Tate. Aquí $\lambda=0$ y,
+por tanto,
+\begin{equation}\tag{2.1.13.1}
+ n=\mu+\alpha.
+\end{equation}
+Las fórmulas (2.1.11) siguen siendo válidas asimismo, siempre que el
+rango se interprete como el rango (o «altura») de los grupos de
+Barsotti--Tate en cuestión.
+
+\medskip
+\noindent
+2.1.14. Para ${A'}_o^o$ introducimos análogamente los invariantes
+\[
+ T'_o\subset {A'}_o^o,\qquad U'_o,\qquad B'_o,
+\]
+donde $T'_o$ es la parte tórica de ${A'}_o^o$, $B'_o$ su parte abeliana
+(definida, en particular, cuando $k$ es perfecto o cuando ${A'}_o^o$
+posee rango unipotente cero), y $U'_o$ su parte unipotente (definida,
+por ejemplo, cuando $k$ es perfecto, o trivialmente cuando
+${A'}_o^o$ posee rango unipotente cero). Existe una sucesión exacta
+correspondiente de la forma (2.1.6), o (2.1.8), que no volveremos a
+escribir. Podrían introducirse enteros $\mu',\lambda',\alpha'$ para
+${A'}_o^o$ como en (2.1.9), pero veremos más adelante (2.2.7) que
+coinciden con los de $A_o^o$; esto nos evita introducir para ellos una
+notación nueva.

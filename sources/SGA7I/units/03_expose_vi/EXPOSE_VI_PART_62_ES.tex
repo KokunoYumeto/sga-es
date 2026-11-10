@@ -1,0 +1,168 @@
+%%%%%%%%%%  scan idx 142  |  folio 131  %%%%%%%%%%
+
+\par\medskip
+\noindent\textbf{Definición 6.6.}
+Sea $X$ un $k$-esquema de tipo finito. Un punto cerrado $z\in X$ se
+denomina una \emph{singularidad cuadrática ordinaria racional sobre
+$k$} si se satisfacen las condiciones siguientes.
+
+\smallskip
+\noindent\textbf{(i)} Si $\operatorname{char}k\neq2$, o bien
+$\operatorname{char}k=2$ y $\dim\mathcal O_{X,z}$ es impar, entonces
+$z$ es una singularidad cuadrática no degenerada racional sobre $k$.
+
+\smallskip
+\noindent\textbf{(ii)} Si $\operatorname{char}k=2$ y
+$\dim\mathcal O_{X,z}$ es par, entonces
+\[
+\overline k\otimes_k\widehat{\mathcal O}_{X,z}
+ \simeq
+\overline k[[X_0,X_1,\ldots,X_{2n}]]/(f),
+\]
+donde $\overline k$ es una clausura algebraica de $k$ y
+\[
+f=X_0^2+X_1X_2+X_3X_4+\cdots+X_{2n-1}X_{2n}.
+\]
+
+\par\medskip
+\noindent\textbf{Lema 6.7.}
+Sea $k$ un cuerpo de característica $2$, y pongamos
+\[
+A_0=k[[X_0,X_1,\ldots,X_{2n}]]/(f),
+\qquad
+f=X_0^2+X_1X_2+X_3X_4+\cdots+X_{2n-1}X_{2n}.
+\]
+Sea $(R,\mathfrak X)$ una deformación versal formal de
+$X_0=\operatorname{Spec}(A_0)$. Entonces
+\[
+R=\Lambda[[t,t_1]],
+\]
+donde $t,t_1$ son generadores formales libres de $R$ sobre
+$\Lambda$, y
+\[
+I_R(\mathfrak X|R)=(t^2).
+\]
+Además, $\mathfrak X\longrightarrow\operatorname{Spec}(\Lambda)$ es
+formalmente liso.
+
+\smallskip
+\noindent\textit{Demostración.}
+Escribamos $\mathfrak X=\operatorname{Spf}(A)$. Como
+\[
+\left(f,\frac{\partial f}{\partial X_0},\ldots,
+         \frac{\partial f}{\partial X_{2n}}\right)
+=(X_0^2,X_1,\ldots,X_{2n}),
+\]
+tenemos
+\[
+D^1(A_0|k,A_0)\simeq k[X_0]/(X_0^2).
+\]
+Así, $[\underline M_{X_0}(k[\varepsilon])]$ es un espacio vectorial
+sobre $k$ de dimensión dos. Por 4.14,
+\[
+R\simeq\Lambda[[t,t_1]],
+\qquad
+A\simeq R[[X_0,X_1,\ldots,X_{2n}]]/(F),
+\]
+donde
+\[
+F=f+t_1+tX_0.
+\]
+La sucesión exacta
+\[
+0\longrightarrow A\xrightarrow{\ dF\ }
+A\,dX_0\oplus\cdots\oplus A\,dX_{2n}
+\longrightarrow\widehat\Omega_{A|R}\longrightarrow0,
+\]
+en la que
+\[
+dF:\ 1\longmapsto
+\sum_{0\leq i\leq2n}\frac{\partial f}{\partial X_i}\,dX_i
+\sisi{}{+t\,dX_0},
+\]
+da
+\[
+I_A(A|R)
+=(t,X_1,\ldots,X_{2n})
+=(X_0^2+t_1,t,X_1,\ldots,X_{2n}).
+\]
+% La fórmula impresa omite el sumando t\,dX_0, aunque
+% F=f+t_1+tX_0 y el ideal siguiente fuerzan este término diferencial.
+
+%%%%%%%%%%  scan idx 143  |  folio 132  %%%%%%%%%%
+
+Por tanto,
+\[
+\begin{aligned}
+A/I_A(A|R)
+&\simeq A/(X_0^2+t_1,t,X_1,\ldots,X_{2n})\\
+&\simeq\Lambda[[t_1,X_0]]/(X_0^2+t_1).
+\end{aligned}
+\]
+Como $R$-módulo, este último módulo es isomorfo a
+$R/(t)\oplus R/(t)$. Se sigue que
+\[
+I_R(A|R)=(t^2),
+\]
+lo cual demuestra la primera afirmación. Por otra parte,
+\[
+\begin{aligned}
+A
+&\simeq
+\Lambda[[t,t_1,X_0,X_1,\ldots,X_{2n}]]/
+ (X_0^2+X_1X_2+\cdots+X_{2n-1}X_{2n}+tX_0+t_1)\\
+&\simeq\Lambda[[t,X_0,X_1,\ldots,X_{2n}]],
+\end{aligned}
+\]
+de modo que $A$ es formalmente liso sobre $\Lambda$.
+\hfill$\square$
+
+El Lema 6.7 da el siguiente análogo del Teorema 6.4; dejamos su
+demostración al lector.
+
+\par\medskip
+\noindent\textbf{Corolario 6.8.}
+Sea $X_0$ un $k$-esquema de tipo finito cuyos puntos no lisos sean
+aislados, supongamos que
+\[
+H^2(X_0,\underline D^0_{X_0})=0,
+\]
+y sea $(R,\mathfrak X)$ una deformación versal formal de $X_0$.
+Denotemos por $\{z_1,\ldots,z_m\}$ el conjunto de puntos no lisos.
+Supongamos que $\operatorname{char}k=2$, que $\dim X_0$ es par y que
+todos los $z_i$ son singularidades cuadráticas ordinarias. Entonces:
+
+\smallskip
+\noindent\textbf{(1)} $R$ es formalmente liso sobre $\Lambda$.
+
+\smallskip
+\noindent\textbf{(2)} Cada ideal
+$I_R(\mathfrak X_{(z_i)}|R)$ es principal, al igual que
+\[
+I_R(\mathfrak X|R)
+=\prod_{1\leq i\leq m}I_R(\mathfrak X_{(z_i)}|R).
+\]
+Más precisamente,
+\[
+I_R(\mathfrak X_{(z_i)}|R)=(t_i^2),
+\]
+y $t_1,\ldots,t_m$ pueden completarse hasta un sistema de generadores
+formales libres de $R$ sobre $\Lambda$.
+
+\smallskip
+\noindent\textbf{(3)} El morfismo
+$\mathfrak X\longrightarrow\operatorname{Spec}(\Lambda)$ es
+formalmente liso.
+
+\smallskip
+\noindent\textbf{(4)} Si $k$ es algebraicamente cerrado y $X_0$ es
+una curva completa irreducible, entonces
+\[
+\dim\underline M_{X_0}=3g-3+a,
+\]
+donde
+\[
+g=\dim_kH^1(X_0,\mathcal O_{X_0}),
+\qquad
+a=\dim_kH^0(X_0,\underline D^0_{X_0}).
+\]

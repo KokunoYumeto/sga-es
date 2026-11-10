@@ -1,0 +1,46 @@
+\par\medskip\noindent
+1.3.4.  Volvamos al caso en que se dan dos grupos $P$ y $G$, y
+elijamos la sección unidad $e_P$ para definir rigidificaciones de
+bitorsors sobre $P$ y birrigidificaciones de bitorsors sobre
+$P\times P$. Se tienen funtores naturales
+
+\begin{equation}\tag{1.3.4.1}
+\mathbf{EXT}(P;\ G) \xrightarrow{\ i\ } \mathrm{BITORSRIG}(P,G) \xrightarrow{\ \delta\ } \mathbf{BITORSBIRIG}(P,P;G) \quad ,
+\end{equation}
+donde las tres expresiones escritas designan, respectivamente, la
+categoría de las extensiones de grupos de $P$ por $G$, la categoría de
+los bitorsors bajo $(G_P,G_P)$ rigidificados para $e_P$, y la categoría
+de los bitorsors bajo $(G_{P\times P},G_{P\times P})$ birrigidificados
+para $(e_P,e_P)$. El funtor $i$ se define asociando a la extensión $E$
+de $P$ por $G$ el bitorsor correspondiente sobre $P$ (1.1.6),
+rigidificado por la sección unidad de $E$. El funtor $\delta$ se define
+mediante la fórmula
+
+\begin{equation}\tag{1.3.4.2}
+\delta(E) = \pi^*(E)\mathrm{pr}_1^*(E)^{-1}\mathrm{pr}_2^*(E)^{-1} \quad ,
+\end{equation}
+donde $\pi$ : $P\times P \longrightarrow P$ es la ley de composición
+de $P$, y $\mathrm{pr}_1$ y $\mathrm{pr}_2$ son las dos proyecciones.
+Se tiene una \underline{birrigidificación canónica sobre} $\delta(E)$.
+En efecto, la restricción de $\delta(E)$ a $P\times e_P$ es
+canónicamente isomorfa a
+$\mathrm{id}_P^*(E)\mathrm{id}_P^*(E)^{-1}e^*(E)^{-1}$, donde
+$e = \mathrm{pr}_2\mathrm{inj}_1$ es el morfismo constante
+$P \longrightarrow P$ de valor $e_P$, de modo que, gracias a la
+rigidificación dada de $E$, se tiene un isomorfismo
+$e^*(E) \xrightarrow{\ \sim\ }$ bitorsor trivial, y de ahí un
+isomorfismo de la restricción de $\delta(E)$ a $P\times e_P$ con el
+bitorsor trivial. Se define simétricamente una rigidificación parcial
+relativamente a $e_P\times P$, y se comprueba de inmediato que estas
+dos rigidificaciones parciales son compatibles.
+
+
+%%%%%%%%%%  scan idx 159  |  folio 148  %%%%%%%%%%
+
+1.3.4.3.  Observemos que el compuesto $\delta i$ de los funtores
+$\delta$ e $i$ de (1.3.4.1) es canónicamente isomorfo al funtor
+trivial, es decir, al funtor constante cuyo valor es el bitorsor
+birrigidificado trivial sobre $P\times P$. En efecto, para toda
+extensión $E$ de $P$ por $G$, el isomorfismo $\varphi$ de (1.1.3.2)
+define evidentemente una trivialización de $\delta i(E)$ compatible
+con su birrigidificación canónica.

@@ -1,0 +1,156 @@
+% AUTORIDAD DE FUENTE: Exposé IX §12.8 hasta antes de (12.8.9), líneas
+% francesas 3709--3795; índices de escaneo 488--491, folios 477--480.
+
+\medskip
+\noindent
+12.8. \underline{Demostración de 12.5: reducción al caso en que $S$ es
+de característica cero.} Utilizaremos un razonamiento basado en el mismo
+principio que la demostración del «teorema sobre la acción esencialmente
+moderada de la monodromía sobre $\pi_1$» en el Exposé
+V\sisi{\hspace{4em}}{}. Obsérvese que, por 10.3, podemos suponer que $S$
+es completo. Sea $W$ un $p$-anillo de Cohen con cuerpo residual $k$, y
+elijamos un homomorfismo $W\longrightarrow V$ que induzca la identidad
+en los cuerpos residuales (EGA $0_{\mathrm{IV}}$, 19.8.6). Sea
+$(x_\lambda)_{\lambda\in L}$ el conjunto de los puntos singulares de
+$X_o$, y consideremos el esquema formal de módulos $\underline S$ de
+$X_o$ sobre $W$, junto con la «curva universal»
+\[
+ \underline f:\underline X\longrightarrow\underline S
+\]
+cuya fibra especial es $X_o$ (Exposé VI\sisi{\hspace{3em}}{}). Se vio en
+el lugar citado que $\underline S$ es isomorfo al espectro formal de un
+anillo de series formales $W[[T_1,\ldots,T_N]]$, y que en $\underline S$
+puede hallarse un divisor con cruces normales
+
+%%%%%%%%%%  scan idx 489  |  folio 478  %%%%%%%%%%
+
+\begin{equation}\tag{12.8.1}
+ D=\sum_{\lambda\in L}D_\lambda,
+\end{equation}
+
+\noindent
+cuyas componentes irreducibles $D_\lambda$ están indexadas por $L$, y
+cada $D_\lambda$ está descrita por una ecuación de la forma
+$T_{i_\lambda}=0$. (Si se desea, puede suponerse que
+$i_\lambda=\lambda$ tras indexar $L$ por un conjunto de enteros
+$[1,r]$.) La componente $D_\lambda$ es la imagen por
+$\underline f:\underline X\longrightarrow\underline S$ de la componente
+$D'_\lambda$ que pasa por el punto singular $x_\lambda$ de $X_o$ en el
+lugar de no lisura
+\[
+ D'=\bigcup_{\lambda\in L}D'_\lambda
+\]
+de $\underline f$. Por la propia construcción,
+$f:X\longrightarrow S$ es isomorfo a la imagen inversa de
+$\underline f:\underline X\longrightarrow\underline S$ por un
+$W$-morfismo adecuado $g:S\longrightarrow\underline S$:
+
+\begin{equation}\tag{12.8.2}
+\begin{tikzcd}
+ \underline X \arrow[d,"\underline f"'] &
+ X \arrow[l] \arrow[d,"f"] \\
+ \underline S & S \arrow[l,"g"']
+\end{tikzcd}
+\qquad .
+\end{equation}
+
+\noindent
+Pongamos
+
+\begin{equation}\tag{12.8.3}
+ P=\underline{\operatorname{Pic}}^{o}_{\underline X/\underline S}.
+\end{equation}
+
+\noindent
+Como la fibra especial de $\underline f$ es geométricamente reducida de
+dimensión $1$, se sigue que $\sisi{\underline F}{\underline f}$ es cohomológicamente plano en
+dimensión cero, por EGA III, 7.8.1, y que $P$ es formalmente liso sobre
+$\underline S$ (esto último resulta de
+$H^2(X_o,\underline{\mathcal O}_{X_o})=0$, puesto que $X_o$ tiene
+dimensión $1$). Para simplificar, supondremos que $P$
+\underline{es representable por un esquema en grupos sobre
+$\underline S$}; será necesariamente un esquema en grupos liso de
+fibras conexas. Este es un caso particular de un resultado no publicado
+de Mumford citado en [22] (y considerablemente generalizado por Raynaud
+en la nota allí citada, cuando la base es un trait). Como no se ha
+publicado ninguna demostración de los resultados de Mumford o de Raynaud,
+el lector puede preferir utilizar los resultados generales de M. Artin
+[1]. Estos proporcionan la representabilidad de $P$---bajo la única
+hipótesis de que $\underline f$ sea propio, plano y cohomológicamente
+plano en dimensión cero---por un «espacio algebraico» en el sentido de
+Artin, lo cual bastaría para nuestro propósito. Pongamos
+
+%%%%%%%%%%  scan idx 490  |  folio 479  %%%%%%%%%%
+
+\begin{equation}\tag{12.8.4}
+ U=\underline S-\operatorname{supp}D.
+\end{equation}
+
+\noindent
+Así, $U$ es el mayor abierto de $\underline S$ sobre el cual
+$\underline X$ es liso, y, por consiguiente,
+\[
+ P|_U=\underline{\operatorname{Pic}}^{o}_{\underline X_U/U}
+\]
+es un esquema abeliano sobre $U$. Su imagen inversa sobre $\eta$ por
+$g:\eta\longrightarrow U$ es el esquema abeliano $A_\eta$ sobre $\eta$
+que queremos estudiar. Más precisamente, existe un isomorfismo canónico
+sobre $S$ (12.1.10):
+
+\begin{equation}\tag{12.8.5}
+ P\times_{\underline S}S\simeq A^{o}.
+\end{equation}
+
+\noindent
+Como la fibra especial $P_o=A_o^{o}$ es $\ell$-divisible para todo
+$\ell$, lo mismo ocurre con $P$; todas sus fibras son, por tanto,
+extensiones de una variedad abeliana por un toro. Consideremos el grupo
+pro-$\ell$ $T_\ell(P)$ sobre $\underline S$, cuya imagen inversa por $g$
+es precisamente $T_\ell(A^{o})$. Aplicando las construcciones de 7.3, se
+define una filtración de este progrupo mediante una «parte fija» y una
+«parte tórica»:
+
+\begin{equation}\tag{12.8.6}
+ T_\ell(P)\supset T_\ell(P)^f=T_\ell(\widehat P)
+ \supset T_\ell(P)^t=T_\ell(T)\supset0.
+\end{equation}
+
+\noindent
+Su imagen inversa por $g$ es la filtración análoga de $T_\ell(A^{o})$
+estudiada en las secciones 2 y 5.
+
+%%%%%%%%%%  scan idx 491  |  folio 480  %%%%%%%%%%
+
+Consideremos la restricción de esta filtración al abierto $U$ de
+$\underline S$. Allí tenemos la autodualidad canónica de $P_U$, por ser
+la jacobiana de un esquema de curvas liso sobre $U$, y, por tanto, el
+emparejamiento correspondiente
+
+\begin{equation}\tag{12.8.7}
+ \varphi:T_\ell(P_U)\otimes T_\ell(P_U)
+ \longrightarrow T_\ell(\mathbb G_{mU}).
+\end{equation}
+
+\noindent
+Esta es una \underline{autodualidad}, en el sentido de los grupos de
+Barsotti--Tate, de $T_\ell(\sisi{B_U}{P_U})$. Se vio en 7.4.8 que, para
+este emparejamiento, $T_\ell(P_U)^f$ \underline{y} $T_\ell(P_U)^t$
+\underline{son ortogonales uno del otro}. Se sigue que
+\[
+ E_U=T_\ell(P_U)/T_\ell(P_U)^t
+\]
+es canónicamente isomorfo al progrupo de Barsotti--Tate dual de
+$T_\ell(P_U)^f=F_U$. Se prolonga, pues, canónicamente a un grupo de
+Barsotti--Tate $E$ sobre $\underline S$, a saber,
+
+\begin{equation}\tag{12.8.8}
+ E=D(F),\qquad\text{donde}\qquad F=T_\ell(P)^f.
+\end{equation}
+
+\noindent
+Nos encontramos ahora en una situación típica de extensiones mixtas
+(9.3), y podemos repetir las construcciones de 9.4--9.6 (¡por haberlas
+escrito en el marco estrecho y de mierda de un esquema base reducido a
+un trait, pedimos disculpas!): $T_\ell(P_U)$ es una extensión mixta de
+$E_U$ por $F_U$, donde $E$ y $F$ son grupos de Barsotti--Tate sobre
+$\underline S$ que son extensiones duales entre sí:

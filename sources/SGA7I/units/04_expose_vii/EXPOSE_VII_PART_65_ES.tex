@@ -1,0 +1,161 @@
+% Canon: SGA-SRC-001254.
+\par\medskip\noindent
+1.1.5.  Recíprocamente, supuestos dados los grupos $P$ y $G$ de
+$\underline{T}$, supongamos dado además un bitorsor
+
+\begin{equation}\tag{1.1.5.1}
+j \; : \; E \longrightarrow P
+\end{equation}
+bajo $(G_{P},G_{P})$ (NB: las dos acciones de $G_{P}$ sobre $E$, o,
+lo que es lo mismo, de $G$ sobre $\sisi{P}{E}$, se sobreentienden en las
+notaciones), y, por otra parte, un sistema de isomorfismos de bitorsors
+sobre una base variable $S$,
+
+\begin{equation}\tag{1.1.5.2}
+\varphi_{p,p'} \; : \; E_{p}E_{p'} \;\overset{\sim}{\longrightarrow}\; E_{pp'} \qquad (p,p' \in P(S)),
+\end{equation}
+compatibles con el cambio de base $S' \longrightarrow S$; en otras
+palabras, un isomorfismo de bitorsors (1.1.3.2). Supongamos que los
+diagramas correspondientes (1.1.4.1) son conmutativos. Afirmo que
+\underline{existe sobre} $E$ \underline{una única estructura de
+extensión de} $P$ \underline{por} $G$, \underline{tal que los datos
+precedentes se deducen de esta estructura mediante las construcciones
+de} 1.1.2 \underline{y} 1.1.3.
+
+Observemos primero que, al tomar en (1.1.5.2) como $p,p'$ la sección
+unidad $1$ de $P$, se obtiene un isomorfismo
+
+\begin{equation}\tag{1.1.5.3}
+\varphi_{1,1} \; : \; E_{1} \;\overset{\sim}{\longleftarrow}\; E_{1} \overset{G}{\times} E_{1} \qquad ,
+\end{equation}
+de donde, tomando el producto contraído (a izquierda, digamos) de ambos
+miembros con el bitorsor inverso $E_{1}^{-1}$ de $E_{1}$ [2], se obtiene
+un isomorfismo canónico
+
+\begin{equation}\tag{1.1.5.4}
+E_{1} \;\simeq\; \text{bitorsor unidad } {}_{s}G_{d}
+\end{equation}
+($=G$ actuando sobre sí mismo mediante traslaciones a izquierda y a
+derecha), teniendo en cuenta
+%%%%%%%%%%  scan idx 152  |  folio 141  %%%%%%%%%%
+el isomorfismo canónico
+
+\begin{equation*}
+E_1^{-1}.E_1 \;\; \simeq \;\; \text{bitorsor unidad } {}_sG_d
+\end{equation*}
+de loc.cit. (válido para todo bitorsor). Esto equivale a decir que se
+tiene una sección $1_E$ de $E_1$, y por tanto de $E$:
+
+\begin{equation}\tag{1.1.5.5}
+1_E \in \Gamma(E_1) = \mathrm{Hom}(e,E_1) \subset \Gamma(E)
+\end{equation}
+(a saber, la imagen por (1.1.5.4) de la sección marcada de
+${}_sG_d$), que satisface la relación
+
+\begin{equation*}
+g.1_E = 1_E.g \qquad (g \in G(S)) \quad ,
+\end{equation*}
+y, por construcción, esta sección está caracterizada por la condición
+
+\begin{equation}\tag{1.1.5.6}
+\varphi_{1,1}(1_E,1_E) = 1_E \qquad .
+\end{equation}
+Por otra parte, el dato de un morfismo de torsors $\varphi$ (1.1.3.2)
+equivale manifiestamente al dato de un morfismo
+
+\begin{equation}\tag{1.1.5.7}
+\pi_E : E\times E \longrightarrow E \quad , \qquad \text{denotado también } (x,y) \longmapsto xy
+\end{equation}
+que satisface las condiciones
+
+\begin{equation}\tag{1.1.5.8}
+j(xy) = j(x)j(y) \qquad (x,y \in E(S))
+\end{equation}
+(es decir, $j$ es compatible con las estructuras multiplicativas
+$\pi_E$, resp. $\pi$, sobre $E$, resp. $P$), y las tres relaciones
+(1.1.3.0) (comenzando preferentemente por la última de ellas). Por
+último, se define un morfismo de objetos de \underline{$T$}
+
+\begin{equation*}
+i : G \longrightarrow E
+\end{equation*}
+por la fórmula
+
+\begin{equation}\tag{1.1.5.9}
+i(g) = g.1_E = 1_E.g 
+\end{equation}
+
+%%%%%%%%%%  scan idx 153  |  folio 142  %%%%%%%%%%
+
+(la identidad de los dos últimos miembros de esta fórmula ya se había
+observado en la construcción de $1_E$). Sentado esto, afirmo que
+\underline{la ley de multiplicación} $\pi_E$ \underline{sobre} $E$
+\underline{hace de} $E$ \underline{un grupo que admite} $1_E$
+\underline{como sección unidad, y que}
+$j : E \rightarrow P$ \underline{e} $i : G \rightarrow E$
+\underline{son homomorfismos de grupos que hacen del grupo} $E$
+\underline{una extensión de} $P$ \underline{por} $G$.
+
+En efecto, la asociatividad de la ley de composición de $E$ no es sino
+la conmutatividad de los diagramas (1.1.4.1). La construcción de
+$\pi_E$ mediante los isomorfismos $\varphi_{p,p'}$ (1.1.3.1) muestra,
+por otra parte, que para todo $x \in E(S)$ las traslaciones a izquierda
+y a derecha por $x$ en $E(S)$ son inyectivas. Como
+$1_E1_E = 1_E$ por (1.1.5.6), se concluye de inmediato que $1_E$ es una
+unidad bilateral de $E$. Dejamos al lector la comprobación de la
+existencia de un inverso de un $x \in E(S)$ sobre $p \in P(S)$,
+utilizando un isomorfismo canónico deducido de
+$\varphi_{p,p^{-1}}$:
+
+\begin{equation}\tag{1.1.5.10}
+\sisi{P_{p^{-1}}}{E_{p^{-1}}} \;\simeq\;
+(\sisi{P_p}{E_p})^{o} \qquad .
+\end{equation}
+Por tanto, $E$ es en efecto un \underline{grupo}. Ya se ha señalado que
+$j$ es compatible con las leyes de composición (1.1.5.8), y lo mismo
+ocurre con $i$, pues, para $g,g' \in G(S)$, se tendrá:
+
+\begin{multline*}
+i(g)i(g') = (g.1_E)(g'.1_E) = (g.1_E.g')\ 1_E \quad (\text{última relación} \\ \text{de } (1.1.3.0)) = \ g.1_E.g' \quad (\text{pues } 1_E \text{ es unidad}) = g.(1_E.g') = g.(g'.1_E) \\ (1.1.5.9) = (gg').1_E = i(gg'). \qquad .
+\end{multline*}
+Como $j$ es la proyección estructural de un torsor, es un epimorfismo
+de objetos de \underline{$T$}; queda por ver que $i$ induce un
+isomorfismo de $G$ con $Ker j = E_1$, lo cual está claro por la
+definición (1.1.5.9) y la construcción de $1_E$.
+
+
+%%%%%%%%%%  scan idx 154  |  folio 143  %%%%%%%%%%
+
+1.1.6.  Admitiremos que los razonamientos precedentes demuestran que,
+para un topos fijo \underline{$T$}, las construcciones anteriores
+proporcionan una \underline{equivalencia entre la categoría de las
+extensiones de grupos de} \underline{$T$} (1.1.1) (donde $P$ y $G$,
+así como $E$, se suponen variables), \underline{y la categoría de los
+sistemas} $(P,G,E,\varphi)$, \underline{donde} $P$ \underline{y} $G$
+\underline{son grupos de} \underline{$T$}, $E$ \underline{un bitorsor
+bajo} $(G_P,G_P)$ \underline{sobre} $P$, \underline{y, finalmente,}
+$\varphi$ \underline{un isomorfismo de bitorsors} (1.1.3.2) (o, si se
+prefiere, un sistema de isomorfismos de bitorsors (1.1.3.1) compatibles
+con los cambios de base), \underline{que satisface la condición de
+asociatividad expresada por la conmutatividad del diagrama} (1.1.4.2)
+(o, si se prefiere, de los diagramas (1.1.4.1)).
+
+Dejamos al lector el cuidado de explicitar de manera evidente, en
+términos del diccionario precedente, la noción de imagen inversa (resp.
+directa) de una extensión (1.1.1) por un morfismo de grupos
+
+\begin{equation*}
+P' \longrightarrow P \qquad (\text{resp. } G \longrightarrow G'\ ) \qquad ,
+\end{equation*}
+o por estas dos operaciones simultáneamente. Le dejamos también el
+cuidado de explicitar una compatibilidad de la equivalencia de
+categorías precedente con el funtor imagen inversa $f^*$ por un morfismo de
+topos
+
+\begin{equation*}
+f : \underline{T}' \longrightarrow \underline{T} \qquad ;
+\end{equation*}
+para ello, conviene utilizar el dato $\varphi$ en la forma (1.1.3.2)
+(con preferencia a los $\varphi_{p,p'}$ de (1.1.3.1)), que define
+entonces un dato correspondiente $f^*(\varphi)$ sobre el topos
+$\underline{T}'$.

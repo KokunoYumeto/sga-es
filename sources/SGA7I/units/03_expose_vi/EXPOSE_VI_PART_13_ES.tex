@@ -1,0 +1,140 @@
+%%%%%%%%%%  scan idx 51  |  folio 40 (continued)  %%%%%%%%%%
+
+Sea $P:\underline A\longrightarrow\underline C_\Lambda$ una
+categoría cofibrada en grupoides. Esta da entonces una categoría
+cofibrada en grupoides
+\[
+ \operatorname{pro}(P):\operatorname{pro}(\underline A)
+ \longrightarrow\operatorname{pro}(\underline C_\Lambda)
+\]
+(para la definición de la categoría de proobjetos
+$\operatorname{pro}(\underline A)$, véase A. Grothendieck,
+S\'eminaire Bourbaki 195), que encaja en el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\underline A \arrow[r] \arrow[d,"P"']
+ & \operatorname{pro}(\underline A)
+   \arrow[d,"\operatorname{pro}(P)"] \\
+\underline C_\Lambda \arrow[r]
+ & \operatorname{pro}(\underline C_\Lambda).
+\end{tikzcd}
+\]
+
+Sea $\widehat{\underline C}_\Lambda$ la subcategoría plena de
+$\operatorname{pro}(\underline C_\Lambda)$ cuyos objetos son sistemas
+$(R_i)_{i\in\mathbb N}$ con $R_i\in\underline C_\Lambda$ tales que
+cada morfismo $\varphi_i:R_i\longrightarrow R_{i-1}$ es sobreyectivo
+y, para todo $i$ suficientemente grande, induce un isomorfismo
+\[
+ \frac{m_i}{m_\Lambda R_i+m_i^2}
+ \xrightarrow{\ \sim\ }
+ \frac{m_{i-1}}{m_\Lambda R_{i-1}+m_{i-1}^2},
+\]
+donde $\mathbb N$ denota la categoría ordenada de los números naturales
+y $m_i$ es el ideal maximal de $R_i$.
+
+Sea $\widehat{\underline A}$ la subcategoría plena de
+$\operatorname{pro}(\underline A)$ definida por
+\[
+ \operatorname{ob}(\widehat{\underline A})=
+ \left\{a\in\operatorname{ob}(\operatorname{pro}(\underline A))
+ \mathrel{\Big|}
+ \operatorname{pro}(P)(a)\in
+ \operatorname{ob}(\widehat{\underline C}_\Lambda)\right\}.
+\]
+Obtenemos una categoría cofibrada en grupoides
+$\widehat P:\widehat{\underline A}\longrightarrow
+\widehat{\underline C}_\Lambda$ y un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\underline A \arrow[r,hook] \arrow[d,"P"']
+ & \widehat{\underline A} \arrow[d,"\widehat P"] \\
+\underline C_\Lambda \arrow[r,hook]
+ & \widehat{\underline C}_\Lambda.
+\end{tikzcd}
+\]
+La categoría $\widehat{\underline C}_\Lambda$ es canónicamente
+equivalente a la categoría de las $\Lambda$-álgebras locales completas
+de tipo formalmente finito sobre $\Lambda$ con cuerpo residual fijo
+$k$; en adelante efectuaremos esta identificación.
+
+\underline{Definición 1.9. Sea $\underline A$ un grupoide cofibrado
+sobre $\underline C_\Lambda$. Un objeto $\xi$ de
+$\widehat{\underline A}$ se llama cuasiinicial si, para todo objeto
+$a$ de $\widehat{\underline A}$, existe un morfismo $\xi\to a$ en
+$\widehat{\underline A}$. Un objeto cuasiinicial $\xi$ se llama
+mínimo si el morfismo
+$\xi:h_R\longrightarrow[\widehat{\underline A}]$ induce una biyección}
+
+%%%%%%%%%%  scan idx 52  |  folio 41  %%%%%%%%%%
+
+\[
+ \xi(k[\varepsilon]):
+ \operatorname{Hom}_{\Lambda\text{-alg}}(R,k[\varepsilon])
+ \xrightarrow{\ \sim\ }
+ [\underline A(k[\varepsilon])],
+ \qquad R=P(\xi).
+\]
+\underline{Un objeto $\xi$ de $\widehat{\underline A}$ se llama
+objeto formal versal de $\underline A$ si todo morfismo sobreyectivo
+$\alpha:a'\to a$ en $\underline A$ induce un morfismo sobreyectivo}
+\[
+ \operatorname{Hom}_{\widehat{\underline A}}(\xi,a')
+ \longrightarrow
+ \operatorname{Hom}_{\widehat{\underline A}}(\xi,a).
+\]
+\underline{Un objeto formal versal $\xi$ se llama mínimo si
+$\xi:h_R\longrightarrow[\widehat{\underline A}]$ induce la biyección
+anterior sobre $k[\varepsilon]$, donde $R=P(\xi)$.}
+
+\underline{Proposición 1.10. Sea $\underline A$ un grupoide cofibrado
+sobre $\underline C_\Lambda$.}
+
+(i) \underline{Todo objeto formal (mínimamente) versal de
+$\underline A$ es un objeto cuasiinicial (mínimo) de
+$\widehat{\underline A}$.}
+
+(ii) \underline{Supongamos que $\xi$ es un objeto de
+$\sisi{\widehat A}{\widehat{\underline A}}$ para el cual}
+\[
+ \widetilde\xi(k[\varepsilon]):
+ \operatorname{Hom}_{\Lambda\text{-alg}}(R,k[\varepsilon])
+ \longrightarrow[\underline A(k[\varepsilon])]
+\]
+\underline{es inyectivo, donde $P(\xi)=R$. Entonces todo endomorfismo
+de $\xi$ en $\sisi{\widehat A}{\widehat{\underline A}}$ es un automorfismo. En
+particular, un objeto cuasiinicial mínimo de $\widehat{\underline A}$,
+si existe, es único salvo isomorfismo no canónico.}
+
+\underline{Demostración.} (i) Sea $\xi$ un objeto formal versal de
+$\underline A$. Para un objeto $a$ de $\widehat{\underline A}$,
+elijamos una presentación mediante morfismos sobreyectivos en
+$\underline A$,
+\[
+ \cdots\longrightarrow a_n\xrightarrow{\alpha_n}a_{n-1}
+ \longrightarrow\cdots\longrightarrow
+ a_1\xrightarrow{\alpha_1}a_0,
+ \qquad a=\varprojlim_n a_n.
+\]
+Supongamos elegidos morfismos $\varphi_i:\xi\longrightarrow a_i$ con
+$\alpha_i\varphi_i=\varphi_{i-1}$ para todo $i<n$. Como $\xi$ es
+versal y $\alpha_n$ es sobreyectivo, existe un morfismo
+$\varphi_n:\xi\longrightarrow a_n$ con
+$\alpha_n\varphi_n=\varphi_{n-1}$. Así,
+$\varphi=\varprojlim_n\varphi_n$ define un morfismo
+$\xi\longrightarrow a$.
+
+(ii) Sea $\alpha:\xi\longrightarrow\xi$ un endomorfismo en
+$\widehat{\underline A}$. Para todo
+$\lambda\in\operatorname{Hom}_{\Lambda\text{-alg}}
+(R,k[\varepsilon])$, se tiene
+\[
+ \lambda_*\xi\simeq
+ (\lambda\circ P(\alpha))_*\xi.
+\]
+La inyectividad da, por tanto,
+$\lambda=\lambda\circ P(\alpha)$ para todo $\lambda$. De ello se
+deduce que $P(\alpha):R\longrightarrow R$ es sobreyectivo. Todo
+endomorfismo sobreyectivo de un anillo noetheriano es un automorfismo;
+por consiguiente, $P(\alpha)$ y, por ende, $\alpha$ son automorfismos.
+

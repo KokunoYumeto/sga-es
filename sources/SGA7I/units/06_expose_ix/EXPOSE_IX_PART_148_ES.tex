@@ -1,0 +1,326 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §6, líneas 1783--1842;
+% índices de escaneo 403--410, folios 392--399. Las tres diferencias
+% materiales D/C se conservan reversiblemente mediante \sisi. Se han
+% normalizado sin aparato varios errores puramente transcriptivos que la
+% impresión resuelve: p^\infty, p^N A_o^o, A'_{K'} en (6.3.2), la
+% normalización en K' y la función de traza sobre \pi'.
+
+\medskip
+\noindent
+\underline{6. Observaciones sobre la construcción de la parte tórica y de
+la parte fija de} $T_p(A)$ \underline{en el caso de reducción no
+semiestable}.
+
+\medskip
+\noindent
+6.1. La construcción de la parte tórica de $T_\ell(A_K)$ dada en 5.1
+sigue teniendo sentido en cuanto $S$ es completo, sin suponer que
+$A^o$ sea $\ell$-divisible; es decir (cuando $p=\ell$), sin suponer la
+reducción semiestable. Esta hipótesis solo se había utilizado para
+formular el teorema de ortogonalidad 5.2. Además, se puede construir
+$T_p(A_K)^t$ suponiendo únicamente que $S$ es henseliano: se demuestra
+que la parte tórica $T_p(A_{\widehat K})^t$ sobre el completado,
+construida por el método de 5.1, proviene de un subprogrupo de
+Barsotti--Tate de $T_p(A_K)$, necesariamente determinado de manera
+única.
+
+Más precisamente, se puede construir un grupo de Barsotti--Tate
+pro-$p$, $T_p(A)^t$, \underline{sobre} $S$, y un homomorfismo
+\[
+ T_p(A)^t\longrightarrow T_p(A)
+\]
+de sistemas proyectivos que es un monomorfismo término a término y cuya
+imagen inversa sobre $\widehat S$ da los objetos análogos construidos
+por el método de 5.1. Esto se deduce parafraseando la construcción de
+5.1, salvo que, en vez de levantar todo el toro maximal $T_o$ de $A_o$,
+para cada entero $\nu\geq0$ basta levantar el subgrupo
+${}_{p^\nu}T_o$ a un subgrupo de tipo multiplicativo
+$({}_{p^\nu}A^o)^t$ de ${}_{p^\nu}A^o$.
+
+%%%%%%%%%%  scan idx 404  |  folio 393  %%%%%%%%%%
+
+Para la existencia y unicidad de tal levantamiento, obsérvese que el
+funtor
+\[
+ (\mathrm{Sch})^o_{/S}\longrightarrow\mathrm{Ens},
+ \qquad
+ S'\longmapsto
+ \{\text{subgrupos finitos de tipo multiplicativo de }A^o_{S'}\}
+\]
+está representado por un $S$-esquema $X$ de tipo finito (cf. la
+demostración de SGA 3 XI 3.12 a)), que es étale sobre $S$ por SGA 3 IX
+3.6 bis. En consecuencia, existe exactamente una sección de $X$ sobre
+$S$ que prolonga una sección dada de $X_s$ sobre $s$, lo cual demuestra
+la afirmación.
+
+El mismo argumento demuestra, más generalmente, que, para todo
+\underline{subgrupo finito de tipo multiplicativo} $H_o$ de $A_o$,
+existe un único subgrupo finito de tipo multiplicativo $H$ de $A$ que
+lo prolonga. Por consiguiente, para todo subgrupo $p$ de Barsotti--Tate
+\underline{tórico} $H_o$ de $A_o$ (es decir, uno cuyas componentes son
+de tipo multiplicativo), existe un único subgrupo $p$ de Barsotti--Tate
+$H$ de $A$ que lo prolonga. Esto da a su vez un subgrupo $p$ de
+Barsotti--Tate de ${}_{p^\infty}A_K$, o, equivalentemente, un subgrupo
+pro-$p$ de Barsotti--Tate de $T_p(A_K)$.
+
+En particular, este procedimiento se aplica cuando $H_o$ es el mayor
+subgrupo $p$ de Barsotti--Tate tórico de $A_o$. Se obtiene tomando el
+mayor subgrupo $p$-divisible $\overline A_o$ de $A_o^o$
+($\overline A_o=p^N A_o^o$ para $N$ suficientemente grande) y la
+``parte tórica'' de ${}_{p^\infty}\overline A_o$ (definida, por ejemplo,
+por SGA 3 XVII 7.2.1). Obtenemos así un subgrupo de Barsotti--Tate de
+${}_{p^\infty}A_K$ que podría llamarse la \underline{parte tórica} de
+este último.
+
+\medskip
+\noindent
+6.2. Sea de nuevo $\overline A_o$ el mayor subesquema en grupos
+$p$-divisible de $A_o^o$, y consideremos el grupo $p$ de
+Barsotti--Tate
+\[
+ F_o={}_{p^\infty}(\overline A_o).
+\]
+Es inmediato que $F_o$ puede caracterizarse como el mayor subgrupo $p$
+de Barsotti--Tate de $A_o$ (o de $A_o^o$). Es natural preguntarse si
+este grupo de Barsotti--Tate puede prolongarse a un subgrupo de
+Barsotti--Tate $F$ de $A$, que desempeñaría entonces el papel de la
+\underline{parte fija} $T_\ell(A)^f$ de (2.2.3.2) en el caso en que
+$A^o$ es $\ell$-divisible.
+
+%%%%%%%%%%  scan idx 405  |  folio 394  %%%%%%%%%%
+
+En el caso semiestable, donde $\overline A_o=A_o^o$, el método de 2.2
+responde afirmativamente a la pregunta. En el caso general, siempre que
+el problema tenga solución, se ve fácilmente que esta es única. Los
+subprogrupos correspondientes de $T_p(A_K)$ y $T_p(A'_K)$ (que también
+merecen llamarse las \underline{partes fijas} de los progrupos en
+cuestión) siguen satisfaciendo el teorema de ortogonalidad 5.2, y la
+parte fija $T_p(A_K)^f$ todavía puede caracterizarse como en 5.8.
+
+\medskip
+\noindent
+6.2.1. Demostraremos, sin embargo, que en general la pregunta no admite
+una respuesta afirmativa; es decir, \underline{la parte fija
+$T_p(A)^f$ no puede definirse en general} en el caso de reducción no
+semiestable. En efecto, por un teorema de levantamiento de Serre--Tate
+[30], cuando $S$ es completo, la existencia de la parte fija equivale a
+la existencia de levantamientos infinitesimales $\overline A_n$ de
+$\overline A_o$ en los $A_n$, o también a la existencia de un esquema
+en grupos liso $\overline A$ sobre $S$, extensión de un esquema
+abeliano por un toro $T$, con fibra especial $\overline A_o$, junto con
+un homomorfismo formal
+\[
+ \widehat{\overline A}\longrightarrow\widehat A
+\]
+que prolonga la inclusión en las fibras especiales.
+
+Así, cuando $\overline A_o$ es un esquema abeliano, es decir, cuando
+$T_o=0$, esto equivale a la existencia de un esquema abeliano
+$\overline A$ que prolongue $\overline A_o$ y de un homomorfismo
+$\overline A\longrightarrow A$ que prolongue la inclusión de las fibras
+especiales. Bastará, pues, dar un ejemplo en el que $T_o=0$, $A_o^o$ no
+sea ni unipotente ni propio y $A_K$ sea simple sobre $K$.
+
+%%%%%%%%%%  scan idx 406  |  folio 395  %%%%%%%%%%
+
+\medskip
+\noindent
+6.2.2. He aquí un ejemplo debido a M. Raynaud. Se basa en la observación
+de que, si $S$ es un rasgo, $S'$ es la normalización de $S$ en una
+extensión separable finita $K'$ de $K$, y $A'$ es un esquema abeliano
+sobre $S'$, entonces el esquema en grupos
+\[
+ A=\prod_{S'/S} A'/S'
+\]
+sobre $S$ es un modelo de Néron: se identifica con el modelo de Néron de
+su fibra genérica, que es, en efecto, un esquema abeliano. Esto se
+deduce inmediatamente de las definiciones y del hecho de que $A'$ es él
+mismo un modelo de Néron sobre $S'$. Entonces
+\[
+ A_o=\prod_{S'_s/s}(A'\times_{S'}S'_s)/S'_s
+\]
+es una extensión de un esquema abeliano, no nulo si $A'\neq0$, por un
+esquema unipotente conexo, no nulo si $A'\neq0$ y $S'$ está ramificado
+sobre $S$.
+
+Basta, por tanto, dar un ejemplo en el que $A'\neq0$, $S'$ esté
+ramificado sobre $S$ (un rasgo local completo), y
+\[
+ A_K=\prod_{K'/K}A'_{K'}/K'
+\]
+sea \sisi{simple sobre $K'$}{simple sobre $K$}. Tomemos $K'$ como una
+extensión cuadrática ramificada de \sisi{$S$}{$K$} (tal extensión existe
+siempre), y
+tomemos $A'$ como una curva elíptica sobre $S'$. Entonces $A$ tiene
+dimensión relativa dos, y decir que $A_K$ es simple sobre $K$ significa
+que no existe ningún homomorfismo no nulo
+\[
+ B_K\longrightarrow A_K,
+\]
+donde $B_K$ es un esquema abeliano de dimensión uno sobre $K$. Dar tal
+homomorfismo equivale a dar un homomorfismo no nulo
+\[
+ B_{K'}\longrightarrow A'_{K'},
+\]
+que sería necesariamente una isogenia. Por tanto, $A_K$ es simple
+sobre $K$ precisamente cuando $A'_{K'}$ no es isógena a una curva
+elíptica proveniente de $K$.
+
+Si ocurriera lo contrario, el invariante $j$ de $A'$ dependería
+algebraicamente (sobre el cuerpo primo) de su conjugado $\overline j$
+bajo el automorfismo no trivial de $K'$ sobre $K$. Si se elige $j$ de
+modo que
+\[
+ a=j+\overline j=\operatorname{Tr}_{K'/K}j
+\]
+sea trascendente sobre el cuerpo primo, esto equivale a decir que $j$
+depende algebraicamente de $a$. Sin embargo, por consideraciones de
+cardinalidad, existe un elemento $a\in V$ trascendente sobre el
+subcuerpo primo $P$ de $K$, y luego un elemento $b\in V'$ (la
+normalización de $V$ en $K'$) trascendente sobre $P(a)$ y tal que
+\[
+ \operatorname{Tr}_{V'/V}b=0.
+\]
+
+%%%%%%%%%%  scan idx 407  |  folio 396  %%%%%%%%%%
+
+Basta tomar $j=a+b\in V'$. Podemos suponer además que
+$b\in\mathfrak r(V')$, y que la imagen de $a$ en $k=V/\mathfrak m$ es
+un elemento prescrito de $k$, elegido distinto de los valores
+excepcionales $j_o=0$ y $j_o=12^3$. Esto es posible incluso cuando $k$
+solo tiene dos elementos, pues entonces estos dos valores considerados
+de $j_o$ coinciden. Así, la imagen $j_o$ de $j$ en $k(s')$ es distinta
+de $0$ y de $12^3$, y se sabe que existe entonces una curva elíptica
+sobre $S'$ con invariante $j$ igual a $j$.
+
+\medskip
+\noindent
+6.3. Volvamos al caso en que $S$ solo se supone henseliano. Por analogía
+con las definiciones de 4.1 para $\ell\neq p$, se puede definir entonces
+una filtración
+\begin{equation}\tag{6.3.1}
+ T_p(A_K)\supset T_p(A_K)^{\mathrm{ef}}
+ \supset T_p(A_K)^{\mathrm{et}}\supset0
+\end{equation}
+por subprogrupos estrictos de Barsotti--Tate, llamados respectivamente
+la \underline{parte esencialmente fija} y la
+\underline{parte esencialmente tórica} de $T_p(A_K)$.
+
+Para ello, elijamos una extensión de Galois finita $K'$ de $K$ tal que
+$A_{K'}$ tenga reducción semiestable sobre la normalización $S'$ de $S$
+en $K'$. Queda entonces definida la parte fija $T_p(A_{K'})^f$ de
+$T_p(A_{K'})=(T_p(A_K))_{K'}$ (2.2.3), así como la parte tórica (6.1).
+Esta última es además el complemento ortogonal de la parte fija
+$T_p(A'_{K'})^f$ en $T_p(A'_{K'})$ (5.2). Evidentemente,
+\[
+ T_p(A_{K'})^t\subset T_p(A_{K'})^f
+\]
+(esto se deduce de 5.3, o directamente de la construcción de la parte
+tórica en 6.1), y el grupo de Galois de $K'/K$ preserva estos dos
+subprogrupos estrictos de $(T_p(A_K))_{K'}$.
+
+%%%%%%%%%%  scan idx 408  |  folio 397  %%%%%%%%%%
+
+El descenso da, pues, la filtración buscada (6.3.1). Esta es
+independiente de la elección de $K'$, por la propiedad de reducción
+semiestable 3.3. El descenso da asimismo de manera evidente la propiedad
+de ortogonalidad
+\begin{equation}\tag{6.3.2}
+ \begin{split}
+ T_p(A_K)^{\mathrm{et}}
+   &=\bigl(T_p(\sisi{A'_k}{A'_K})^{\mathrm{ef}}\bigr)^\perp,\\
+ T_p(A_K)^{\mathrm{ef}}
+   &=\bigl(T_p(\sisi{A'_k}{A'_K})^{\mathrm{et}}\bigr)^\perp.
+ \end{split}
+\end{equation}
+
+Se podría dar una caracterización intrínseca de la filtración (6.3.1)
+en términos del progrupo de Barsotti--Tate $X=T_p(A_K)$ sobre el cuerpo
+de fracciones $K$ de $S$, en el espíritu de 5.8---al menos, por ahora,
+en características desiguales. La parte esencialmente fija es el mayor
+subprogrupo de Barsotti--Tate con ``buena reducción virtual sobre $S$'':
+tras una extensión separable finita $K'$ de $K$, da un progrupo de
+Barsotti--Tate $X_{K'}$ con buena reducción sobre la normalización $S'$
+de $S$ en $\sisi{K}{K'}$, es decir, que se prolonga a un progrupo de
+Barsotti--Tate sobre $S'$. Tal prolongación es necesariamente única
+salvo isomorfismo único, por el teorema de Tate ya citado [33, Th. 4].
+La parte esencialmente tórica se define entonces a partir de la parte
+esencialmente fija por ortogonalidad (6.3.2).
+
+Consignemos también la siguiente consecuencia inmediata de 5.8 y de
+las definiciones; para $\ell=p$ se reduce a
+\sisi{6.5 a)}{5.13 b)}.
+
+\medskip
+\noindent
+\underline{Proposición} 6.3.3. \underline{Sea $\ell$ un número primo.
+Si $\ell=p$, supongamos que $\operatorname{car}K=0$.}
+\footnote{Esta hipótesis probablemente sea innecesaria; cf. 5.11.}
+\underline{Entonces $A_K$ tiene buena reducción virtual sobre $S$
+\sisi{(5.12 a))}{(5.13 b))} si y solo si su parte esencialmente fija}
+$T_\ell(A_K)^{\mathrm{ef}}$
+\underline{(4.1.1 y 6.3.1) es todo $T_\ell(A_K)$.}
+
+%%%%%%%%%%  scan idx 409  |  folio 398  %%%%%%%%%%
+
+\medskip
+\noindent
+6.4. Recordemos que, cuando $\ell\neq p$, en 4.3 a) se puso de
+manifiesto una notable función de valores enteros sobre el grupo de
+inercia $I$ de $S$, independiente de la elección de $\ell$. Cuando el
+cuerpo residual es perfecto, el conocimiento de esta función basta
+para reconstruir el exponente del conductor de $A$ (4.5): se toma,
+sobre un cociente suficientemente grande $\Gamma=I/I'$ de $I$, el
+producto interno de esta función con el conductor de Artin sobre
+$\Gamma$ (cf. (4.6.2)). Conviene observar que esta función de valores
+enteros sobre $I$ también puede recuperarse a partir del conocimiento
+de $T_\ell(A_K)$ para $\ell=p$---al menos, por ahora, en características
+desiguales.
+
+Cuando el cuerpo residual $k$ es finito, una observación análoga se
+aplica a la función de valores en $\mathbb Q$ considerada en 4.3 b),
+definida sobre el subgrupo $\pi'$ de $\pi$ formado por los elementos
+cuya imagen en $\pi_o$ tiene la forma $f_q^{\,n}$,
+$n\in\mathbb Z$. Indicamos el principio de la verificación. Usando la
+filtración (6.3.1), nos reducimos a asociar una función adecuada (sobre
+$I$, respectivamente sobre $\pi'$) a un grupo pro-$p$ de
+Barsotti--Tate $Y$ sobre $K$ que tenga ``buena reducción virtual sobre
+$S$'' en el sentido de 5.12. Aquí $Y$ será uno de los tres cocientes
+provenientes de la filtración (6.3.1).
+
+En el caso de 4.3 a), una extensión conveniente del cuerpo residual en
+$S$ (EGA $0_{\mathrm{III}}$ 10.3.1) nos reduce al caso de un cuerpo
+residual perfecto, o incluso algebraicamente cerrado si se desea.
+Elijamos una extensión de Galois finita $K'$ de $K$ tal que $Y_{K'}$
+tenga buena reducción sobre $S'$. Tenemos entonces un grupo de
+Barsotti--Tate $Y_{S'}$ sobre $S'$ y una acción de $G$ sobre $Y_{S'}$
+compatible con su acción sobre $S'$. Si $k'$ es el cuerpo residual de
+$S'$, entonces $G$ actúa, no necesariamente fielmente, sobre $k'$ (cuyo
+cuerpo de invariantes es $k$), y sobre $Y_{k'}$ de manera compatible
+con su acción sobre $k'$.
+
+%%%%%%%%%%  scan idx 410  |  folio 399  %%%%%%%%%%
+
+Por la teoría de Dieudonné [16 bis], el grupo pro-$p$ de
+Barsotti--Tate $Y_{k'}$ tiene asociado canónicamente un módulo libre
+finito $M$ (de rango igual al rango de $Y_{k'}$) sobre el anillo
+$W(k')$ de vectores de Witt de $k'$. El grupo $G$ actúa evidentemente
+sobre $M$ de manera compatible con sus acciones sobre $W(k')$, por
+medio de sus acciones sobre $k'$. Por consiguiente, el subgrupo de
+inercia $\Gamma$ de $G$ actúa $W(k')$-linealmente sobre $M$; como
+$\Gamma$ es un cociente del grupo de inercia $I$, esto da una función
+de traza sobre $\Gamma$, y por tanto sobre $I$, que es la función
+buscada.
+
+A priori, esta función toma valores en $W(k')$,
+\footnote{De hecho, es inmediato que esta función toma siempre valores
+en $W(k)$, pues es invariante bajo $\operatorname{Gal}(k'/k)$.}
+pero coincide con la función análoga definida en términos de los
+$T_\ell$ para $\ell\neq p$ siempre que la acción de $G$ sobre $Y_{S'}$
+se obtenga de una acción de $G$ sobre un esquema en grupos
+$p$-divisible liso $C'$ sobre $S'$, tomando $Y=T_p(C')$ (cf. [25 bis,
+Th. 7, p. 737]). En este caso, por tanto, es de valores enteros. El caso
+de 4.3 b) se trata de modo análogo: para definir una función de traza
+sobre $\pi'$, se utiliza el método de la demostración de 4.3.2 para
+``linealizar'' sobre $M$ la acción definida por un elemento $g\in\pi$
+que está por encima de un $f_q^n$, con $n\geq0$.

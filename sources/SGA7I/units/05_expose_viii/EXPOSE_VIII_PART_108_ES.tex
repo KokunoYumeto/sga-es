@@ -1,0 +1,133 @@
+\par\medskip
+\noindent\underline{Corolario 3.5.} \underline{Sea $P$ un esquema en
+grupos liso de presentación finita sobre $S$, con fibras conexas, y
+sea}
+\[
+ 0\longrightarrow Q'\longrightarrow Q\longrightarrow Q''
+ \longrightarrow0
+\]
+\underline{una sucesión exacta de grupos conmutativos sobre $S$, con
+$Q'$ un toro. Entonces el funtor de imagen inversa sobre las
+biextensiones}
+\begin{equation}\tag{3.5.1}
+ \operatorname{BIEXT}(P,Q'';\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \operatorname{BIEXT}(P,Q;\underline G_m)
+\end{equation}
+\underline{es una equivalencia de categorías. En particular, los
+homomorfismos naturales siguientes son isomorfismos:}
+\begin{equation}\tag{3.5.2}
+ \Biext^i(P,Q'';\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \Biext^i(P,Q;\underline G_m),
+ \qquad i=0,1.
+\end{equation}
+
+En efecto, salvo equivalencia,
+$\operatorname{BIEXT}(P,Q'';\underline G_m)$ se identifica con la
+categoría de las biextensiones $E$ de $(P,Q)$ por $\underline G_m$
+\underline{provistas} de una trivialización de la biextensión inducida
+$E'$ de $(P,Q')$ por $\underline G_m$ (VII 3.7.6). Por 3.4 existe
+exactamente una trivialización de $E'$ para cada biextensión $E$ dada.
+
+%%%%%%%%%%  scan idx 274  |  folio 263  %%%%%%%%%%
+
+Naturalmente, también puede demostrarse directamente que (3.5.2) es
+un isomorfismo para $i=0,1$ —lo que equivale a la conclusión de 3.5—
+utilizando la sucesión exacta de los $\Biext^i$ de VII 3.7.5 asociada
+a
+\[
+ 0\longrightarrow Q'\longrightarrow Q\longrightarrow Q''
+ \longrightarrow0.
+\]
+
+\medskip
+\noindent\underline{Observación 3.6.} El enunciado simétrico que se
+obtiene de 3.5 intercambiando izquierda y derecha es también válido;
+se deduce formalmente de 3.5 pasando a las biextensiones simétricas
+(VII 2.7). Supongamos, además de los datos e hipótesis de 3.5, que se
+tienen los datos e hipótesis simétricos: a saber, que $Q$ tiene fibras
+conexas (equivalentemente, que $Q''$ tiene fibras conexas, pues $Q'$
+las tiene), y que existe una sucesión exacta
+\[
+ 0\longrightarrow P'\longrightarrow P\longrightarrow P''
+ \longrightarrow0
+\]
+con $P'$ un toro. Aplicando sucesivamente 3.5 y su forma simétrica a
+esta última sucesión y a $Q''$, se ve que el funtor
+\begin{equation}\tag{3.6.1}
+ \operatorname{BIEXT}(P'',Q'';\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \operatorname{BIEXT}(P,Q;\underline G_m)
+\end{equation}
+es una equivalencia de categorías. En particular, el homomorfismo
+siguiente es un isomorfismo:
+\begin{equation}\tag{3.6.2}
+ \Biext^i(P'',Q'';\underline G_m)
+ \xrightarrow{\ \sim\ }
+ \Biext^{\sisi{1}{i}}(P,Q;\underline G_m),
+ \qquad i=0,1.
+\end{equation}
+
+\medskip
+\noindent\underline{Proposición 3.7.} \underline{Sea $A$ un esquema
+abeliano sobre $S$, sea $T$ un esquema en grupos de tipo multiplicativo
+(SGA 3 IX) y de tipo finito sobre $S$, y sea}
+\[
+ \underline M=\uHom(T,\underline G_m)
+\]
+\underline{el dual de Cartier de $T$ (un grupo constante retorcido
+finitamente generado sobre $S$, por 3.3.3). Entonces las categorías
+$\operatorname{EXT}(A,T)$ y
+$\operatorname{BIEXT}(A,\underline M;\underline G_m)$, formadas
+respectivamente por las extensiones conmutativas de $A$ por $T$ y por
+las biextensiones de $(A,\underline M)$ por $\underline G_m$, son
+rígidas y canónicamente equivalentes. Sus grupos de clases de
+isomorfismo son canónicamente isomorfos a $\Hom(\underline M,A^*)$,
+donde}
+
+%%%%%%%%%%  scan idx 275  |  folio 264  %%%%%%%%%%
+
+\[
+ A^*=\uExt^1(A,\underline G_m)
+\]
+\underline{es el esquema abeliano dual de $A$ (3.2). En particular,
+se tiene un isomorfismo canónico}
+\begin{equation}\tag{3.7.1}
+ \Ext^1(A,T)\xrightarrow{\ \sim\ }
+ \Hom(\underline M,A^*).
+\end{equation}
+
+Este es el caso particular de 1.6 que se obtiene tomando $P=A$ y
+$Q=\underline M$. Por el teorema de bidualidad (SGA 3 X 5.7), se
+tiene en efecto
+\[
+ T\simeq\uHom(\underline M,\underline G_m),
+\]
+y solo queda verificar las condiciones (1.6.1), que aquí se escriben
+\[
+ \uHom(A,\underline G_m)=0,
+ \qquad
+ \Hom\bigl(A,\uExt^1(\underline M,\underline G_m)\bigr)=0.
+\]
+La primera igualdad se recordó en (3.2.1); la segunda puede reforzarse
+como
+\[
+ \uExt^1(\underline M,\underline G_m)=0.
+\]
+Esta afirmación es local sobre $S$, por lo que podemos suponer que
+$\underline M$ es constante, $\underline M=M_S$. Descomponiendo $M$
+como suma directa de $\mathbb Z$-módulos cíclicos, quedamos reducidos a
+$M=\mathbb Z$, que es trivial, y a
+$\sisi{\mathbb Z}{M}=\mathbb Z/n\mathbb Z$, que se deduce de la
+$n$-divisibilidad de $\underline G_m$ (o, más eruditamente, de 3.3.1).
+
+Cuando $T=\underline G_m$, y por tanto
+$\underline M=\mathbb Z_S$, (3.7.1) se reduce al isomorfismo identidad
+(3.2.3). Naturalmente, una demostración directa de (3.7.1) sería
+esencialmente trivial, sin introducir el grupo
+\[
+ \Ext^1\bigl(A\mathbin{\mathop{\otimes}^{\mathbb L}}\underline M,
+              \underline G_m\bigr)
+ =\Biext^1(A,\underline M;\underline G_m).
+\]

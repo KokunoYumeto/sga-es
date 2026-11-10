@@ -1,0 +1,75 @@
+\par\medskip\noindent
+2.6. En 2.5 solo se hizo variar $G$, manteniendo fijos $P$ y $Q$.
+Conviene ahora decir algunas palabras acerca de la variación en $P,Q$.
+El hecho esencial, del cual los demás se deducen formalmente, es que la
+dependencia contravariante de $\operatorname{BIEXT}(P,Q;G)$ respecto
+de $P,Q$ \underline{conmuta} con su dependencia covariante respecto de
+$G$. Por tanto, las categorías consideradas pueden verse
+
+%%%%%%%%%%  scan idx 180  |  folio 169  %%%%%%%%%%
+
+como las categorías fibra de una \underline{categoría cofibrada}
+\begin{equation}\tag{2.6.1}
+ \operatorname{BIEXT}'(\underline T)
+ \longrightarrow
+ \operatorname{GRAB}(\underline T)^{\mathrm{op}}\times
+ \operatorname{GRAB}(\underline T)^{\mathrm{op}}\times
+ \operatorname{GRAB}(\underline T),
+\end{equation}
+donde los superíndices $\mathrm{op}$ designan las categorías opuestas y
+el funtor estructural es $E\mapsto(P,Q,G)$. Esta categoría cofibrada es
+aditiva en cada uno de sus tres argumentos o, como diremos,
+\underline{triaditiva}.
+
+Parafraseando argumentos estándar, que no reproduciremos, se deduce
+que la composición $E.E'$ en la categoría fibra
+\sisi{$\operatorname{BIEXT}(P,P';G)$}%
+      {$\operatorname{BIEXT}(P,Q;G)$}
+puede describirse usando la estructura aditiva de cualquiera de los
+tres argumentos: las tres estructuras de pseudogrupo resultantes son
+canónicamente isomorfas. En consecuencia, los grupos abelianos
+\begin{equation}\tag{2.6.2}
+ \operatorname{Biext}^{i}(P,Q;G),\qquad i=0,1,
+\end{equation}
+pueden considerarse como dos funtores trilineales en $P,Q,G$,
+respectivamente en $\operatorname{GRAB}(\underline T)^{\mathrm{op}}$,
+$\operatorname{GRAB}(\underline T)^{\mathrm{op}}$ y
+$\operatorname{GRAB}(\underline T)$. Equivalentemente, son
+\underline{funtores trilineales} de los argumentos variables $P,Q,G$
+en $\operatorname{GRAB}(\underline T)$, contravariantes en $P,Q$ y
+covariantes en $G$, con valores en la categoría de grupos abelianos.
+Con esta varianza, el isomorfismo (2.5.4.1) es funtorial en todos los
+argumentos $P,Q,G$, y no solo en $G$. La afirmación análoga será válida
+más adelante para la descripción de $\operatorname{Biext}^{1}$
+mediante un $\operatorname{Ext}^{1}$.
+
+2.7. \underline{Biextensión simétrica de una biextensión dada}.
+
+Si $E$ es una biextensión de $(P,Q)$ por $G$, definamos su
+\underline{biextensión simétrica} $\,{}^{s}E$, que es una biextensión
+de $(Q,P)$ por $G$. El haz de conjuntos subyacente a $\,{}^{s}E$ es el
+de $E$, y las acciones de $G$ sobre $E$ y $\,{}^{s}E$ son las mismas.
+El morfismo estructural
+% Canon: SGA-SRC-001256.
+\[
+ {}^{s}E\longrightarrow \sisi{P\times Q}{Q\times P}
+\]
+es el compuesto de $E\longrightarrow P\times Q$ con la simetría
+$P\times Q\longrightarrow Q\times P$; finalmente, las estructuras de
+
+%%%%%%%%%%  scan idx 181  |  folio 170  %%%%%%%%%%
+
+extensión izquierda y derecha de $\,{}^{s}E$ son, respectivamente,
+las estructuras de extensión derecha e izquierda de $E$. Es evidente
+que $E\mapsto{}^{s}E$ es un automorfismo de la categoría
+$\operatorname{BIEXT}(\underline T)$ de biextensiones y, de hecho, un
+\underline{automorfismo involutivo}:
+\[
+ {}^{s}({}^{s}E)=E.
+\]
+Todo enunciado acerca de bitorsores $E,\ldots$ permite, por tanto,
+deducir un enunciado simétrico aplicándolo a $\,{}^{s}E,\ldots$.
+Podemos llamarlo el enunciado obtenido \emph{intercambiando izquierda y
+derecha}. En general solo explicitaremos uno de los dos enunciados
+simétricos, eligiendo entre izquierda y derecha, por ejemplo, según
+nuestras preferencias políticas.

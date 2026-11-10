@@ -1,0 +1,118 @@
+%%%%%%%%%%  scan idx 278  |  folio 267  %%%%%%%%%%
+
+Recordemos, en forma de lema, el resultado siguiente de EGA
+$\mathrm{Err}_{\mathrm{IV}}$ 53, 21.4.13.
+
+\medskip
+\noindent\underline{Lema 4.5.} \underline{Sea
+$f:X\longrightarrow Y$ un morfismo liso y suprayectivo con fibras
+íntegras, donde $Y$ es normal e íntegro y tiene punto genérico $y$.
+Sea $\mathbb L$ un módulo invertible sobre $X$ cuya restricción a
+$X_y$ es trivial. Entonces existe un módulo invertible $\mathbb M$
+sobre $Y$ tal que}
+\[
+ \mathbb L\simeq f^*\mathbb M.
+\]
+
+\medskip
+\noindent\underline{Proposición 4.6.} \underline{Sean $P,Q$ dos
+grupos algebraicos lisos y conexos sobre el cuerpo $k$, con $P$ afín.
+Supongamos además, bien que $P$ admite una serie de composición cuyos
+factores son toros o son isomorfos al grupo aditivo $\underline G_a$
+(condición que se cumple en particular cuando $k$ es perfecto [SGA 3,
+XVII 7.2.1, 4.1.1 (i)$\Longleftrightarrow$(ii), y 4.1.5]), bien que
+$Q$ es una extensión de una variedad abeliana $B$ por un grupo
+algebraico afín liso y conexo que satisface la condición precedente.
+Bajo cualquiera de estas hipótesis, todo módulo invertible
+birigidificado $\mathbb L$ sobre $P\times Q$ es trivial; con mayor
+razón, por 4.3, toda biextensión de $(P,Q)$ por $\underline G_m$ es
+trivial.}
+
+\noindent\underline{Demostración.} Observemos primero que todo
+automorfismo de un módulo invertible birigidificado es la identidad
+(4.3). La teoría del descenso muestra, por tanto, que basta demostrar
+que $\mathbb L$ se hace trivial tras una extensión finita separable de
+$k$. El paso al límite nos reduce inmediatamente al caso en que $k$
+es separablemente cerrado.
+
+Todo toro sobre un cuerpo tal es escindido. Por ello, si $P$ admite
+una serie de composición como en 4.6, admite también una cuyos
+cocientes son isomorfos a $\underline G_a$ o $\underline G_m$. La
+aplicación repetida de 4.5, junto con
+\[
+ \Pic(\underline G_{a_K})=\Pic(\underline G_{m_K})=0
+\]
+para todo cuerpo $K$, da
+\[
+ \Pic(P)=0.
+\]
+
+%%%%%%%%%%  scan idx 279  |  folio 268  %%%%%%%%%%
+
+Esta igualdad sigue siendo válida después de toda extensión del cuerpo
+de base $k$. Aplicando 4.5 a
+\[
+ \pr_2:P\times Q\longrightarrow Q
+\]
+y a $\mathbb L$, encontramos un módulo invertible $\mathbb M$ sobre
+$Q$ tal que $\mathbb L\simeq\pr_2^*\mathbb M$. Como la restricción de
+$\mathbb L$ a $e_P\times Q$ es trivial, $\mathbb M$ es trivial, y por
+tanto también $\mathbb L$. Esto prueba el primer caso.
+
+En el segundo caso, sea $Q$ una extensión de un esquema abeliano $B$
+por un grupo $M$ que admite una serie de composición con cocientes
+isomorfos a $\underline G_m$ o $\underline G_a$. Apliquemos 4.5 a
+\[
+ f:X=P\times Q\longrightarrow Y=P\times B.
+\]
+La fibra sobre el punto genérico $y$ de $P\times B$ es un
+$M_y$-torsor. Es necesariamente trivial por la estructura particular
+de $M$ y por las igualdades clásicas
+\[
+ H^1(K,\underline G_a)=0,
+ \qquad
+ H^1(K,\underline G_m)=0,
+\]
+válidas para todo cuerpo $K$, aquí $K=k(y)$. Como $\Pic(M)=0$, se
+tiene $\Pic(X_y)=0$; por tanto, 4.5 se aplica y muestra que $\mathbb L$
+es la imagen inversa de un módulo invertible $\mathbb N$ sobre
+$Y=P\times B$.
+
+Sean $\mathbb N_1$ y $\mathbb N_2$ las restricciones de $\mathbb N$
+a $P\times e_B$ y $e_P\times B$, respectivamente. Reemplazando
+$\mathbb N$ por
+\[
+ \mathbb N\otimes\pr_1^*(\mathbb N_1)^{-1}
+ \otimes\pr_2^*(\mathbb N_2)^{-1},
+\]
+donde $\pr_1$ y $\pr_2$ son las dos proyecciones de
+$Y=P\times\sisi{A}{B}$, podemos suponer que $\mathbb N$ está
+birigidificado y que $\mathbb L$ es su imagen inversa
+birigidificada. Quedamos así reducidos al caso en que el propio $Q$ es
+un esquema abeliano.
+
+Entonces $\mathbb L$ define un morfismo canónico
+\begin{equation}\tag{*}
+ P\longrightarrow\underline{\Pic}_{Q/k}
+\end{equation}
+que lleva la identidad en la identidad. Como $P$ es conexo, este
+morfismo se factoriza por el esquema abeliano dual
+
+%%%%%%%%%%  scan idx 280  |  folio 269  %%%%%%%%%%
+
+\[
+ Q'=\underline{\Pic}^{0}_{Q/k}.
+\]
+Es bien sabido que todo morfismo de esquemas de un grupo algebraico
+afín, liso y conexo a un esquema abeliano es constante. Es una
+afirmación geométrica, de modo que podemos suponer que $k$ es
+algebraicamente cerrado; un dévissage la reduce entonces
+inmediatamente a $P=\underline G_a$ o $P=\underline G_m$, y toda
+aplicación racional de $\mathbb P^1_k$ a un esquema abeliano sobre $k$
+es constante.
+
+La constancia, y por tanto la nulidad, de (*) significa que
+$\mathbb L$ es la imagen inversa de un módulo invertible $\mathbb M$
+sobre $P$. Como $\mathbb L$ es trivial sobre
+$P\times e_{\sisi{A}{Q}}$, $\mathbb M$ es trivial, y por consiguiente
+$\mathbb L$ también lo es. Esto termina la demostración.

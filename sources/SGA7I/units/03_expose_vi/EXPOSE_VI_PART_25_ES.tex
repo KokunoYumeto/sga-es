@@ -1,0 +1,188 @@
+\par\medskip\noindent
+\underline{Lema 2.15.} Sean $A$ y $B$ grupoides discretos sobre
+$\underline C_\Lambda$, y sea $\varphi:A\longrightarrow B$ un funtor
+mínimamente liso. Si $A$ y $B$ son homogéneos, entonces $\varphi$ es una
+$\underline C_\Lambda$-equivalencia.
+
+\underline{Demostración.} Debemos demostrar que
+$\varphi(S):A(S)\longrightarrow B(S)$ es biyectiva para todo
+$S\in\operatorname{ob}(\underline C_\Lambda)$. Es suprayectiva para todo
+$S$ y biyectiva para $S=k[\varepsilon]$. Razonamos por inducción sobre la
+longitud de $S$. Sea $S'\xrightarrow fS$ una extensión pequeña en
+$\underline C_\Lambda$. Puesto que $A$ y $B$ son grupoides discretos
+homogéneos, el isomorfismo canónico
+\[
+ 1\times\widetilde f:S'\times_SS'
+ \xrightarrow{\ \sim\ }S'\times_k k[\operatorname{Ker}f]
+\]
+induce un diagrama conmutativo
+
+%%%%%%%%%%  scan idx 78  |  folio 67  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ A(S')\times_{A(S)}A(S') \arrow[r,"\sim"] \arrow[d]
+ & A(S')\times A(k[\operatorname{Ker}f]) \arrow[d]\\
+ B(S')\times_{B(S)}B(S') \arrow[r,"\sim"']
+ & B(S')\times B(k[\operatorname{Ker}f]).
+\end{tikzcd}
+\]
+Así, $A(S')$ y $B(S')$ son conjuntos homogéneos principales sobre
+$A(S)$ y $B(S)$, con grupos estructurales identificados por
+\[
+ A(k[\operatorname{Ker}f])\xrightarrow{\ \sim\ }
+ B(k[\operatorname{Ker}f]).
+\]
+Si $\varphi(S)$ es biyectiva, se sigue que $\varphi(S')$ es inyectiva y,
+por tanto, biyectiva. Esto concluye la inducción.
+\hfill$\square$
+
+\underline{Corolario 2.16.} Sea $\underline A$ un grupoide homogéneo
+sobre $\underline C_\Lambda$ tal que
+\[
+ \operatorname{Aut}_{\underline A(k[\varepsilon])}(1_\varepsilon)
+\]
+sea de dimensión finita. Para todo
+$\xi\in\operatorname{ob}(\widehat{\underline A})$, el funtor
+\[
+ \operatorname{Isom}_\xi:
+ \underline C_{R\widehat\otimes_\Lambda R}
+ \longrightarrow(\mathrm{Sets})
+\]
+es prorepresentable, donde $R=P(\xi)$.
+
+\underline{Demostración.} Si $\operatorname{Isom}_\xi$ es homogéneo,
+el Teorema 1.11 proporciona un funtor mínimamente liso
+\[
+ \Phi:\underline h_{R_1}\longrightarrow
+ \underline{\operatorname{Isom}}_\xi.
+\]
+El Lema 2.15 hace de $\Phi$ una
+$\underline C_{R\widehat\otimes_\Lambda R}$-equivalencia,
+y por tanto $\operatorname{Isom}_\xi$ es prorepresentable. Queda por
+demostrar la homogeneidad. Considérese un diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ T_1 \arrow[dr] && T_2 \arrow[dl]\\
+ & T &
+\end{tikzcd}
+\]
+en $\underline C_{R\widehat\otimes_\Lambda R}$, con
+$T_2\longrightarrow T$ suprayectiva. Puesto que $\underline A$ es
+homogéneo, los productos fibrados
+\[
+ \xi_i(T_1)\times_{\xi_i(T)}\xi_i(T_2)
+\]
+existen en $\underline A$, y hay isomorfismos canónicos
+\[
+ \xi_i(T_1\times_TT_2)\xrightarrow{\ \sim\ }
+ \xi_i(T_1)\times_{\xi_i(T)}\xi_i(T_2)
+ \qquad(i=1,2)
+\]
+(cf. 2.6(a)). Por consiguiente,
+\[
+ \operatorname{Isom}_\xi(T_1\times_TT_2)
+ \longrightarrow
+ \operatorname{Isom}_\xi(T_1)
+ \times_{\operatorname{Isom}_\xi(T)}
+ \operatorname{Isom}_\xi(T_2)
+\]
+es un isomorfismo. \hfill$\square$
+
+\underline{Teorema 2.17.} Sea $\underline A$ un grupoide cofibrado
+sobre $\underline C_\Lambda$. Entonces es prorepresentable por un
+cogrupoide liso (normalizado) si y solo si
+
+%%%%%%%%%%  scan idx 79  |  folio 68  %%%%%%%%%%
+
+(1) $\underline A$ es homogéneo;
+
+(2) $[\underline A(k[\varepsilon])]$ y
+$\operatorname{Aut}_{\underline A(k[\varepsilon])}(1_\varepsilon)$
+son espacios vectoriales de dimensión finita sobre $k$.
+
+\underline{Demostración.} Supongamos primero que $\underline A$ está
+prorepresentado por un cogrupoide liso. Así, $\underline A$ es
+$\underline C_\Lambda$-equivalente a
+\[
+ \underline h=\underline h_{(R_0,R_1,\ldots)}
+\]
+para un cogrupoide liso $(R_0,R_1,\ldots)$ en
+$\widehat{\underline C}_\Lambda$. La Proposición 2.12(a) muestra que
+$\underline h$ es homogéneo. Además,
+\begin{align*}
+ [\underline h(k[\varepsilon])]
+ &=\operatorname{Coker}\!\left(
+   \operatorname{Hom}_{\Lambda\text{-alg}}(R_1,k[\varepsilon])
+   \mathrel{\substack{\xrightarrow{\ s_1\ }\\[-.6ex]
+                       \xrightarrow[\ s_2\ ]{}}}
+   \operatorname{Hom}_{\Lambda\text{-alg}}(R_0,k[\varepsilon])
+   \right),\\[1ex]
+ \operatorname{Aut}_{\underline h}(1_\varepsilon)
+ &=\operatorname{Ker}\!\left(
+   \operatorname{Hom}_{\Lambda\text{-alg}}(R_1,k[\varepsilon])
+   \xrightarrow{\ s_1\ }
+   \operatorname{Hom}_{\Lambda\text{-alg}}(R_0,k[\varepsilon])
+   \right)\\
+ &=\operatorname{Ker}\!\left(
+   \operatorname{Hom}_{\Lambda\text{-alg}}(R_1,k[\varepsilon])
+   \xrightarrow{\ s_2\ }
+   \operatorname{Hom}_{\Lambda\text{-alg}}(R_0,k[\varepsilon])
+   \right).
+\end{align*}
+Ambos son espacios vectoriales de dimensión finita sobre $k$, por lo que
+lo mismo vale para $\underline A$.
+
+Recíprocamente, supongamos (1) y (2). Como $\underline A$ es homogéneo y
+$[\underline A(k[\varepsilon])]$ es de dimensión finita, posee un objeto
+formal mínimamente versal $\xi$. Pongamos $P(\xi)=R_0$ y consideremos
+\[
+ \operatorname{Isom}_\xi:
+ \widehat{\underline C}_{R_0\widehat\otimes_\Lambda R_0}
+ \longrightarrow(\mathrm{Sets}),
+\]
+dado por
+\[
+ T\longmapsto
+ \operatorname{Isom}_{\underline A(T)}(\xi_1(T),\xi_2(T)),
+\]
+donde $\xi_i(T)=\xi(f_i)$ y $f_i:R_0\longrightarrow T$ son las
+aplicaciones compuestas en
+\[
+\begin{tikzcd}[column sep=large]
+ R_0 \arrow[r,shift left=2,"s_1"]
+     \arrow[r,shift right=2,"s_2"']
+ & R_0\widehat\otimes_\Lambda R_0 \arrow[r] & T.
+\end{tikzcd}
+\]
+El Corolario 2.16 prorepresenta este funtor mediante un objeto
+\[
+ R_1\in
+ \operatorname{ob}(\widehat{\underline C}_{R_0\widehat\otimes_\Lambda R_0})
+\]
+y un isomorfismo
+$\xi_1(R_1)\xrightarrow{\varphi}\xi_2(R_1)$ para el cual
+\[
+ \Phi:\underline h_{R_1}\longrightarrow
+ \underline{\operatorname{Isom}}_\xi
+\]
+es un isomorfismo sobre
+$\widehat{\underline C}_{R_0\widehat\otimes_\Lambda R_0}$. La pareja
+$(R_0,R_1)$ define, por tanto, un cogrupoide, y
+\[
+ (\xi,\varphi):\underline h_{(R_0,R_1,\ldots)}
+ \longrightarrow\underline A
+\]
+es una $\underline C_\Lambda$-equivalencia. Como $\xi$ es mínimamente
+versal, el compuesto
+\[
+ \underline h_{(R_0,R_0,\ldots)}
+ \xrightarrow{\ \epsilon\ }
+ \underline h_{(R_0,R_1,\ldots)}
+ \xrightarrow{\ (\xi,\varphi)\ }
+ \underline A
+\]
+es mínimamente liso. Puesto que $(\xi,\varphi)$ es una equivalencia,
+$\epsilon$ es asimismo mínimamente liso. Así,
+$(R_0,R_1,\ldots)$ es un cogrupoide liso normalizado en
+$\widehat{\underline C}_\Lambda$. \hfill$\square$

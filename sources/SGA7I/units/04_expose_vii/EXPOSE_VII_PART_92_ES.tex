@@ -1,0 +1,241 @@
+% NORMALIZACIONES DE TRANSCRIPCIÓN: los subíndices mecanografiados con letra o
+% se representan como cero. La diagonal sin punta de (3.8.2) se conserva en la
+% rama impresa; la rama actual restituye la flecha dirigida determinada por el
+% texto.
+% Canon: SGA-SRC-001262.
+% El producto mecanografiado con X en (3.8.6) se representa mediante \times.
+% La flecha de (3.8.10) sigue la autoridad francesa. No hay diferencias
+% adicionales entre los testigos francés diplomático y corregido en este componente.
+
+\subsection*{3.8. Biextensiones de $(P,Q)$ trivializadas sobre
+extensiones de $P$ y $Q$}
+
+Consideremos primero dos sucesiones exactas de grupos abelianos
+\begin{equation}\tag{3.8.1}
+ 0\longrightarrow L_1\xrightarrow{\ i\ }L_0\xrightarrow{\ u\ }P
+ \longrightarrow0,\qquad
+ 0\longrightarrow M_1\xrightarrow{\ j\ }M_0\xrightarrow{\ v\ }Q
+ \longrightarrow0.
+\end{equation}
+Describiremos la categoría de las biextensiones $E$ de $(P,Q)$ por un
+grupo abeliano $G$ cuya imagen inversa $(u,v)^*(E)$ es trivial; es
+decir, aquellas para las que existe un homomorfismo $s$ que hace
+conmutativo el triángulo siguiente:
+\begin{equation}\tag{3.8.2}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ E\arrow[d]\sisi{\arrow[dr,dash,"s"]}{}&\\
+ P\times Q&L_0\times M_0\arrow[l,"u\times v"']%
+ \sisi{}{\arrow[ul,"s"]}
+\end{tikzcd}\quad ,
+\end{equation}
+y que satisface la condición de aditividad requerida en cada uno de
+sus dos argumentos. La elección de tal $s$ identifica, por tanto,
+$(u,v)^*(E)$ con la biextensión trivial
+$E_0=L_0\times M_0\times G$ de $(L_0,M_0)$ por $G$. La exactitud a
+izquierda en $P,Q$ de la categoría cofibrada de las biextensiones de
+$(P,Q)$ por $G$ fijo (3.7.6) muestra entonces que dar la biextensión
+$E$ de $(P,Q)$, junto con la trivialización $s$ de su imagen inversa,
+equivale esencialmente a dar dos trivializaciones parciales de la
+biextensión trivial $E_0$ de $(L_0,M_0)$ por $G$, sobre $(L_1,M_0)$ y
+$(L_0,M_1)$ respectivamente, que coincidan sobre $(L_1,M_1)$. Puesto
+que las biextensiones inducidas por $E_0$ sobre $(L_1,M_0)$,
+$(L_0,M_1)$ y $(L_1,M_1)$ se identifican con las biextensiones
+triviales, una trivialización parcial sobre $(L_1,M_0)$
+(respectivamente sobre $(L_0,M_1)$) equivale a dar un homomorfismo (o
+emparejamiento)
+\begin{equation}\tag{3.8.3}
+ f:L_1\otimes M_0\longrightarrow G
+ \qquad
+ \bigl(\text{respectivamente }g:L_0\otimes M_1\longrightarrow G\bigr).
+\end{equation}
+La compatibilidad de que se trata significa simplemente que los dos
+homomorfismos coinciden sobre $L_1\otimes M_1$, es decir,
+\begin{equation}\tag{3.8.4}
+ f(x_1\otimes y_1)=g(x_1\otimes y_1),
+\end{equation}
+para secciones $x_1,y_1$ de $L_1,M_1$ sobre un objeto de
+$\underline T$. En términos del homomorfismo $s$ de (3.8.2), las
+formas $f$ y $g$ quedan caracterizadas por
+\begin{equation}\tag{3.8.5}
+ s(x_1,y_0)=f(x_1\otimes y_0)e_{E/Q}(y_0),\qquad
+ s(x_0,y_1)=g(x_0\otimes y_1)e_{E/P}(x_0),
+\end{equation}
+lo que pone de nuevo de manifiesto la necesidad de la condición
+(3.8.4).
+
+Elegida la trivialización $s$, las demás trivializaciones son los
+morfismos $s':L_0\times M_0\longrightarrow E$ de la forma
+\begin{equation}\tag{3.8.6}
+ s'(x_0,y_0)=s(x_0,y_0)+h(x_0\otimes y_0),
+\end{equation}
+donde
+\[
+ h:L_0\otimes M_0\longrightarrow G
+\]
+es una forma arbitraria. De (3.8.5) se desprende entonces claramente
+que las formas $f,g$ definidas por $s$ se transforman en
+\begin{equation}\tag{3.8.7}
+\begin{aligned}
+ f'(x_1\otimes y_0)&=f(x_1\otimes y_0)+h(x_1\otimes y_0),\\
+ g'(x_0\otimes y_1)&=g(x_0\otimes y_1)+h(x_0\otimes y_1).
+\end{aligned}
+\end{equation}
+Así se obtiene:
+
+\underline{Proposición} 3.8.8.
+\underline{El subgrupo de} $\Biext^1(P,Q;G)$ \underline{formado por las clases
+de biextensiones cuya imagen inversa por $(u,v)$ es una biextensión
+trivial de $(L_0,M_0)$} (es decir, el núcleo de
+$\Biext^1(P,Q;G)\longrightarrow\Biext^1(L_0,M_0;G)$)
+\underline{es canónicamente isomorfo, mediante la descripción
+precedente, al cociente del grupo de pares de formas $(f,g)$ de
+(3.8.3) que satisfacen la condición de compatibilidad (3.8.4), por
+los pares de formas que proceden por restricción de una forma}
+$h:L_0\otimes M_0\longrightarrow G$.
+
+Interpretemos ahora este isomorfismo en términos de álgebra homológica,
+teniendo en cuenta el isomorfismo canónico
+\[
+ \Biext^1(P,Q;G)\simeq
+ \Ext^1(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G)
+\]
+de 3.6.5. Para ello, interpretemos los datos (3.8.1) como dos complejos
+que resuelven $P$ y $Q$, respectivamente:
+\begin{equation}\tag{3.8.9}
+ L_\bullet:\ 0\longrightarrow L_1\longrightarrow L_0
+ \longrightarrow0,\qquad
+ M_\bullet:\ 0\longrightarrow M_1\longrightarrow M_0
+ \longrightarrow0,
+\end{equation}
+y consideremos el complejo producto tensorial
+$L_\bullet\otimes M_\bullet$
+\[
+ 0\longrightarrow L_1\otimes M_1
+ \xrightarrow{d_2}
+ L_1\otimes M_0+L_0\otimes M_1
+ \xrightarrow{d_1}
+ L_0\otimes M_0\longrightarrow0.
+\]
+Se tiene, además, un homomorfismo canónico en la categoría derivada
+\[
+ P\mathbin{\overset{\mathbb L}{\otimes}}Q
+ \longrightarrow L_\bullet\otimes M_\bullet,
+\]
+y, por tanto, un homomorfismo igualmente canónico
+\begin{equation}\tag{3.8.10}
+ H^1\!\left(\Hom^{\cdot}(L_\bullet\otimes M_\bullet,G)\right)
+ \longrightarrow
+ \Ext^1(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G).
+\end{equation}
+El grupo de los $1$-cociclos de
+$\Hom^{\cdot}(L_\bullet\otimes M_\bullet,G)$ se identifica con el
+grupo de pares $(f,g)$ como en (3.8.3) que satisfacen la condición de
+compatibilidad (3.8.4): a tal par se asocia el homomorfismo
+$F:L_1\otimes M_0+L_0\otimes M_1\longrightarrow G$ de componentes
+$(f,g)$,
+\begin{equation}\tag{3.8.11}
+ F(x_1\otimes y_0+x_0\otimes y_1)
+ =f(x_1\otimes y_0)+g(x_0\otimes y_1).
+\end{equation}
+Además, el coborde de la $0$-cocadena
+$h:L_0\otimes M_0\longrightarrow G$ es precisamente el par de sus
+restricciones a $L_1\otimes M_0$ y $L_0\otimes M_1$. Por consiguiente,
+el grupo de pares $(f,g)$ módulo los pares $(h,h)$ descritos en 3.8.8
+es canónicamente isomorfo al primer miembro de (3.8.10). Sentado esto,
+se tiene la compatibilidad siguiente.
+
+\underline{Proposición} 3.8.12.
+\underline{Si}
+\[
+ \xi\in\Ker\!\left(
+ \Biext^1(P,Q;G)\longrightarrow\Biext^1(L_0,M_0;G)\right)
+\]
+\underline{está descrito por el par $(f,g)$ como en 3.8.8, entonces
+la imagen de $\xi$ en}
+$\Ext^1(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G)$
+\underline{mediante el isomorfismo (3.6.5.1) es la imagen por
+(3.8.10) del elemento de su primer miembro definido por el cociclo
+(3.8.11)}.
+
+La comprobación de esta compatibilidad se deja al lector.
+
+3.8.13. Aplicaremos esto, en particular, al caso
+\[
+ L_0=\mathbb Z[P],\qquad M_0=\mathbb Z[Q],
+\]
+en el que $L_1$ y $M_1$ son, respectivamente, los núcleos de los
+homomorfismos canónicos $\mathbb Z[P]\longrightarrow P$ y
+$\mathbb Z[Q]\longrightarrow Q$. Obsérvense los isomorfismos
+canónicos
+\[
+ L_0\mathbin{\overset{\mathbb L}{\otimes}}M_0
+ \simeq L_0\otimes M_0
+ \simeq\mathbb Z[P\times Q].
+\]
+Como $L_0$ y $M_0$ son planos, (1.4.5) da isomorfismos canónicos
+\[
+ \Ext^i(L_0\mathbin{\overset{\mathbb L}{\otimes}}M_0,G)
+ \simeq H^i(P\times Q,G_{P\times Q}).
+\]
+De aquí y de 3.6.5, o directamente de las definiciones y de 1.4, se
+deduce que el funtor que asigna a cada biextensión de $(L_0,M_0)$ por
+$G$ el $G_{P\times Q}$-torsor sobre $P\times Q$ que induce es una
+equivalencia de categorías. (Esto sigue siendo válido sin utilizar
+una estructura aditiva sobre $P,Q$.) Por consiguiente, si $E$ es una
+biextensión de $(P,Q)$ por $G$, dar una trivialización de su imagen
+inversa sobre $(L_0,M_0)$ equivale a dar una sección de $E$
+considerado únicamente como objeto sobre $P\times Q$; es decir, una
+trivialización de $E$ considerado como torsor bajo $G_{P\times Q}$.
+
+Las biextensiones provistas de esta estructura adicional quedan, por
+tanto, descritas por los pares $(f,g)$ de (3.8.3) que satisfacen la
+compatibilidad (3.8.4), y su clasificación salvo isomorfismo es la
+dada en 3.8.8.
+
+Con la notación de 3.5, también puede considerarse $L_1$ como el
+conúcleo de $L_2(P)\longrightarrow L_1(P)$, y análogamente $M_1$.
+Esto permite expresar los datos $(f,g)$ mediante un sistema de
+homomorfismos
+\[
+\left\{
+\begin{aligned}
+ f'&:L_1(P)\otimes L_0(Q)
+     =\mathbb Z(P\times P\times Q)\longrightarrow G,\\
+ g'&:L_0(P)\otimes L_1(Q)
+     =\mathbb Z(P\times Q\times Q)\longrightarrow G,
+\end{aligned}
+\right.
+\]
+es decir, homomorfismos de haces de \underline{conjuntos}
+\[
+ P\times P\times Q\longrightarrow G,\qquad
+ P\times Q\times Q\longrightarrow G,
+\]
+que satisfacen cinco condiciones de compatibilidad. Estas expresan
+que $f'$ y $g'$ se factorizan a través de $f$ y $g$---lo que da
+$2\times2$ ecuaciones, teniendo en cuenta la expresión de $L_2(P)$ y
+$L_2(Q)$ como sumas de dos términos---junto con la condición (3.8.4).
+Se ve entonces que $f'$ y $g'$ son precisamente los datos de
+multiplicación parcial que definen una biextensión, y que las cinco
+condiciones de que se trata son exactamente los cinco axiomas de las
+biextensiones considerados en 2.1 (cf. la demostración de 3.6.4).
+
+\subsection*{Bibliografía del Exposé VII}
+
+\begin{enumerate}[label={[\arabic*]}]
+\item M. Demazure, J. Giraud y M. Raynaud,
+\emph{Schémas abéliens}, Séminaire Fac. Sc. Orsay 1967/68 (en prensa).
+\item J. Giraud, \emph{Cohomologie non abélienne}, tesis, París,
+1967 (en prensa).
+\item A. Grothendieck, \emph{Sur quelques points d'Algèbre
+homologique}, Tohoku Mathematical Journal 9 (\sisi{1956}{1957}), 119--221.
+% Canon: SGA-SRC-001265.
+\item A. Grothendieck, \emph{Catégories cofibrées additives et
+Complexe cotangent relatif},
+\sisi{Lectures Notes in Math.}{Lecture Notes in Mathematics} n.º 79, 1968
+(Springer).
+\item J.-L. Verdier, \emph{Catégories dérivées des catégories
+abéliennes} (en prensa).
+\item D. Mumford, \emph{Biextensions of formal groups}, Tata
+Institute of Fundamental Research, 1968 (en prensa).
+\end{enumerate}

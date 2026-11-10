@@ -1,0 +1,167 @@
+
+%%%%%%%%%%  scan idx 144  |  folio 133  %%%%%%%%%%
+
+
+S G A 7
+
+
+\underline{E X P O S I C I Ó N \ VII}
+
+
+\underline{\underline{BIEXTENSIONES DE HACES DE GRUPOS}}
+
+
+\underline{por A. Grothendieck}
+
+
+0. \underline{Introducción}
+
+La noción de \underline{biextensión} fue introducida por D. MUMFORD
+[6], en el contexto de los grupos formales, para expresar cómodamente
+las relaciones entre los grupos formales asociados a un esquema
+abeliano y el esquema abeliano dual. En la presente exposición hacemos
+un estudio sistemático de esta noción en el contexto general de los
+haces de grupos sobre un sitio dado, y mostramos en particular que esta
+noción se integra de manera notablemente sencilla en el formalismo
+cohomológico clásico de $\overset{L}{\otimes}$ y
+$\mathrm{R}\underline{\mathrm{Hom}}$ (3.6.4 y 3.6.5). En la exposición siguiente
+explicitaremos los casos particulares más interesantes, y en especial
+el de las biextensiones de esquemas en grupos por el grupo multiplicativo
+$\underline{G}_{m}$ (trabajando con sitios tales como el sitio de
+Zariski, el sitio fpqc o algún sitio intermedio); veremos en particular
+que, si $A$ y $B$ son dos esquemas abelianos sobre un esquema $S$, las
+biextensiones de $(A,B)$ por $\underline{G}_{m}$ poseen una
+interpretación notable como, esencialmente, las correspondencias
+divisoriales clásicas sobre $A,B$. Queda así explicitado de manera muy
+cómoda el significado cohomológico de la noción de correspondencia
+divisorial (ya implícito en el teorema de dualidad de Tate para
+variedades abelianas sobre cuerpos $p$-ádicos). Esta interpretación de
+las correspondencias divisoriales también resulta cómoda para «seguir»
+el destino de una correspondencia de esta índole cuando se hacen
+«degenerar»
+%%%%%%%%%%  scan idx 145  |  folio 134  %%%%%%%%%%
+$A$ y $B$ (supuestos definidos sobre el cuerpo de fracciones de un
+anillo de valoración discreta) mediante la teoría de Néron: los
+resultados de VIII nos mostrarán que se obtiene, por ejemplo, una
+biextensión del par de componentes neutras de los modelos de Néron, y
+por tanto una biextensión de las fibras especiales conexas de los
+modelos de Néron, que desempeña el papel de una especialización de la
+correspondencia divisorial inicial. Estos resultados se utilizarán en
+IX, junto con el teorema de monodromía (I 3), para demostrar ciertos
+resultados sobre los modelos de Néron de las variedades abelianas (el
+más importante de ellos es el «teorema de reducción semiestable» para
+el modelo de Néron).
+
+En todo lo que sigue trabajaremos (salvo indicación expresa en
+contrario) en un $\underline{U}$-topos fijo, denotado por
+$\underline{T}$; es decir (SGA 4 IV), $\underline{T}$ es una categoría
+equivalente a la categoría de los haces sobre un $\underline{U}$-sitio
+adecuado (que puede tomarse, si se desea, igual a $\underline{T}$,
+dotado de su topología canónica). A menudo identificaremos, en la
+terminología, los objetos de $\underline{T}$ con los haces (de
+conjuntos) sobre $\underline{T}$. Los grupos, extensiones de grupos,
+etc., que consideraremos serán todos relativos a este topos
+$\underline{T}$.
+
+
+1. \underline{Complementos sobre las extensiones de grupos}
+
+1.1.   Sean $P$ y $G$ dos grupos de $\underline{T}$, y
+
+\begin{equation}\tag{1.1.1}
+\begin{tikzcd}[column sep=large]
+1 \arrow[r] & G \arrow[r, "i"] & E \arrow[r, "j"] & P \arrow[r] & 1
+\end{tikzcd}
+\end{equation}
+% ESTRUCTURA: Una sola fila horizontal, 5 nodos, 4 flechas, todas flechas simples continuas hacia la
+%   derecha (sin ganchos, sin cabezas dobles, sin trazos discontinuos, sin etiquetas de isomorfismo,
+%   sin flechas verticales ni diagonales). NODOS (de izquierda a derecha): (1) «1»; (2) «G»; (3) «E»;
+%   (4) «P»; (5) «1». FLECHAS: A1: nodo1 «1» --> nodo2 «G», hacia la derecha, flecha continua simple
+%   de una cabeza, SIN etiqueta. A2: nodo2 «G» --> nodo3 «E», hacia la derecha, flecha continua simple
+%   de una cabeza, etiqueta «i» ENCIMA del cuerpo de la flecha. A3: nodo3 «E» --> nodo4 «P», hacia la
+%   derecha, flecha continua simple de una cabeza, etiqueta «j» ENCIMA del cuerpo de la flecha. A4:
+%   nodo4 «P» --> nodo5 «1», hacia la derecha, flecha continua simple de una cabeza, SIN etiqueta. La
+%   etiqueta «(1.1.1)» aparece en el margen IZQUIERDO de la línea, bien separada del diagrama, situado
+%   hacia el centro del bloque de texto.
+una extensión de $P$ por $G$; por tanto, $E$ es un grupo,
+$j : E \longrightarrow P$ es un epimorfismo de grupos, e $i$ induce
+un isomorfismo de $G$ con Ker $j$. Vamos a reinterpretar el dato de una
+extensión de esta índole en términos diferentes, que nos resultarán
+cómodos para definir y estudiar las biextensiones.
+
+
+%%%%%%%%%%  scan idx 146  |  folio 135  %%%%%%%%%%
+
+% Canon: SGA-SRC-001252.
+1.1.2.  En primer lugar, el homomorfismo $i$ permite hacer actuar $G$
+de dos maneras sobre $E$, a izquierda y a derecha, poniendo
+
+\begin{equation*}
+gxg' = i(g)xi(g')
+\end{equation*}
+para $g,g' \in G(S)$, $x \in E(S)$ ($S$ un objeto cualquiera de
+$\underline{T}$). Si, gracias a $j$, se considera $E$ como un objeto
+«sobre $P$», es decir, como un objeto del topos inducido
+$\sisi{E_{/P}}{\underline T_{/P}}$, esto equivale a decir que el grupo
+inducido $\sisi{G_P = G\times P}{G_P=G\times P}$ por $G$ en
+$\sisi{\underline{T}_{/P}}{\underline T_{/P}}$ actúa sobre $E$ a
+izquierda y a derecha. Además,
+es bien sabido que una y otra acción hacen de $E$ un \underline{torsor}
+(a izquierda y a derecha, respectivamente) sobre $P$, de grupo
+$\sisi{G_P}{G_P}$,
+y que se obtiene incluso, más precisamente, un \underline{bitorsor}
+bajo $(\sisi{G_P}{G_P},\sisi{G_P}{G_P})$. Recordemos [2] que esto
+significa que $E$ es un torsor a derecha $E_d$ para la acción derecha de
+$\sisi{G_P}{G_P}$, y que la acción izquierda induce un isomorfismo de
+$\sisi{G_P}{G_P}$ con el grupo de automorfismos
+de $E_d$ (= haz de grupos de los automorfismos de $E$ que conmutan con
+la acción derecha de $\sisi{G_P}{G_P}$ sobre $E$). Esta condición
+equivale a la condición simétrica, a saber: la acción izquierda de
+$\sisi{G_P}{G_P}$ sobre $E$ hace de $E$ un torsor a izquierda $E_s$, y
+la acción derecha induce un isomorfismo del grupo opuesto
+$\sisi{G_P^{\;o}}{G_P^{\;o}}$ de $\sisi{G_P}{G_P}$ con el grupo de
+automorfismos de $E_s$.
+
+1.1.2.1.  Cuando $\underline{T}$ es el «topos puntual», es decir, la
+categoría de los conjuntos (equivalente a la categoría de los haces
+sobre el espacio topológico puntual), de modo que $P$ y $G$ son grupos
+ordinarios, el dato de un bitorsor $E$ bajo
+$(\sisi{G_P}{G_P},\sisi{G_P}{G_P})$ equivale
+manifiestamente al dato, para todo $p \in P$, de un bitorsor $E_p$ bajo
+$(G,G)$ (a saber, la fibra de $E$ en $p$). Puede darse una
+interpretación análoga en el caso general, observando que el dato de un
+bitorsor $E$ bajo $(\sisi{G_P}{G_P},\sisi{G_P}{G_P})$ equivale al dato,
+para todo «punto»
+$p \in P(S)$ ($S$ un objeto cualquiera de $\underline{T}$), de un
+bitorsor $E_p$ bajo
+%%%%%%%%%%  scan idx 147  |  folio 136  %%%%%%%%%%
+el par de grupos $(G_S,G_S)$ sobre $S$, de modo que la formación de
+$E_p$ sea «compatible con los cambios de base para todo morfismo
+$S' \longrightarrow S$»; es decir, si $p' : S' \longrightarrow P$ es
+el morfismo compuesto, se supone dado además un isomorfismo de
+% Canon: SGA-SRC-001253.
+bitorsors de $\sisi{P_p}{E_{p'}}$ con la imagen inversa de
+$\sisi{P_p}{E_p}$ por $S' \longrightarrow S$, estando estos
+isomorfismos sometidos a la condición usual de transitividad para el
+caso de un compuesto de dos morfismos
+$S'' \longrightarrow S' \longrightarrow S$. Al explicitar este
+enunciado en lenguaje canónico (SGA 1 VI), se reduce a la tautología
+siguiente: el dato de un bitorsor bajo el par de grupos
+$(\sisi{G_P}{G_P},\sisi{G_P}{G_P})$
+sobre $P$ equivale a una sección cartesiana, sobre la categoría
+$\underline{T}_{/P}$, de la categoría fibrada de los bitorsors de grupo
+$(G_S,G_S)$ sobre una base variable
+$S \in \mathrm{ob}\ \underline{T}_{/P}$; más precisamente aún, el
+funtor «valor en $P$» induce una equivalencia de la categoría de las
+secciones cartesianas en cuestión con la categoría de los bitorsors bajo
+$(\sisi{G_P}{G_P},\sisi{G_P}{G_P})$. Este enunciado resulta, por
+supuesto, trivialmente del hecho
+de que $P$ es objeto final de la categoría base $\underline{T}_{/P}$ de
+nuestra categoría fibrada; por tanto, para \underline{toda} categoría
+fibrada sobre $\underline{T}_{/P}$, el funtor «valor en $S$» es una
+equivalencia entre la categoría de las secciones cartesianas de dicha
+categoría fibrada y la categoría fibra en $P$. No obstante, pese a su
+naturaleza tautológica, esta interpretación nos será útil para expresar
+ciertas compatibilidades en un lenguaje próximo al caso «conjuntista»,
+utilizando puntos con valores en un objeto $S$ en lugar de puntos
+ordinarios.

@@ -1,0 +1,116 @@
+% AUTORIDAD DE FUENTE: Exposé IX §§11.8--11.11, líneas francesas
+% 3393--3446; índices de escaneo 473--475, folios 462--464. El cociente
+% de (11.8.1) y Phi en (11.8.3) siguen directamente el escaneo.
+
+11.8. Como en 8.3, consideremos la clausura separable $\overline K$ de
+$K$ como límite inductivo de sus subextensiones finitas $K'$. Para cada
+una, denote $A[K']$ el modelo de Néron de
+\begin{equation*}
+ A_{K'}=A_K\otimes_K K'.
+\end{equation*}
+Este da un esquema en grupos finito étale
+\begin{equation}\tag{11.8.1}
+ \Phi_0[K']=\sisi{A[K']_0, A[K']_0^0}{A[K']_0/A[K']_0^0}
+\end{equation}
+de componentes conexas, definido sobre el cuerpo residual de la
+normalización $S[K']$ de $S$ en $K'$. Para simplificar, supongamos que
+el cuerpo residual de $S$ es separablemente cerrado; lo mismo vale
+entonces para los cuerpos residuales de los $S[K']$. Los grupos (11.8.1)
+pueden identificarse con grupos finitos ordinarios $\Phi[K']$, y es
+inmediato que, al variar $K'$, forman un sistema inductivo que queremos
+estudiar. Nos interesará, en particular, el grupo
+\begin{equation}\tag{11.8.2}
+ \Psi=\varinjlim_{K'}\Phi[K'].
+\end{equation}
+Sabemos por 3.6 que, para $K'$ suficientemente grande, digamos
+$K'\supset K'_0$, $A[K']$ tiene reducción semiestable. Así, para
+$K'\supset K'_0$, los morfismos de transición son inyectivos (3.3).
+Además, con la notación de 5.5, conservada en esta sección, existe para
+$K'\supset K'_0$ un isomorfismo canónico
+\begin{equation}\tag{11.8.3}
+ \sisi{\Psi[K'](\ell)}{\Phi[K'](\ell)}\simeq
+ \ker\bigl(\widetilde u[K']_\ell\otimes D_\ell:
+ M_\ell\otimes D_\ell\longrightarrow
+ \check M'_\ell\otimes D_\ell\bigr),
+\end{equation}
+procedente de (11.6.2) aplicado a $A[K']$. También se comprueba
+inmediatamente que las inmersiones correspondientes
+\begin{equation*}
+ \Phi[K'](\ell)\lhook\joinrel\longrightarrow M_\ell\otimes D_\ell
+\end{equation*}
+son compatibles con los morfismos de transición al variar $K'$.
+Pasando al límite se obtiene, por tanto, un monomorfismo canónico
+\begin{equation}\tag{11.8.4}
+ \Psi(\ell)\mathrel{\mathop{=}^{\mathrm{def}}}
+ \varinjlim_{K'}\Phi[K'](\ell)
+ \lhook\joinrel\longrightarrow M_\ell\otimes D_\ell
+\end{equation}
+desde el componente $\ell$-primario de $\Psi$; sumando sobre todos los
+$\ell$ se obtiene
+\begin{equation}\tag{11.8.5}
+ \Psi\mathrel{\mathop{=}^{\mathrm{def}}}
+ \varinjlim_{K'}\Phi[K']
+ \longrightarrow M\otimes\mathbb Q/\mathbb Z.
+\end{equation}
+
+%%%%%%%%%%  scan idx 474  |  folio 463  %%%%%%%%%%
+
+\medskip
+\noindent
+\underline{Teorema} 11.9. \underline{El homomorfismo canónico (11.8.5)
+es un isomorfismo}.
+
+Ya sabemos que es un monomorfismo. Para demostrar que es un
+isomorfismo, debemos utilizar la caracterización (11.8.3) de la imagen
+de $\Phi[K'](\ell)$ y el comportamiento de $\widetilde u[K']$ al variar
+$K'$. Este comportamiento viene dado por (10.3.4).
+
+Podemos reducirnos al caso en que $S$ es estrictamente local. La
+demostración de 11.9 se reduce entonces a la afirmación conocida
+siguiente, aplicada a $S[K'_0]$: si $S$ es un trait estrictamente local
+de cuerpo de fracciones $K$, para todo entero $n\geq1$ existe una
+% Canon: SGA-SRC-001281.
+extensión separable $K'$ de $K$ cuyo grado es divisible por
+$n$\sisi{}{\footnote{Referencia interna omitida en la fuente; destino no
+recuperable.}}.
+\sisi{$(\text{véase I}\hspace{2em})$}{}
+
+\medskip
+\noindent
+\underline{Corolario} 11.10. \underline{Bajo las hipótesis ($S$
+completo) y con la notación de 8.3, el ind-esquema en grupos finito
+sobre $K$ de componentes conexas del esquema en grupos $A_K^{\flat}$,
+esto es, $A_K^{\flat}/{A_K^{\flat}}^0$, es canónicamente isomorfo a}
+$\underline M_K\otimes\mathbb Q/\mathbb Z$, \underline{donde
+$\underline M_K$ es el grupo constante torcido sobre $K$ definido en
+(8.1.8)}.
+
+Esto se deduce inmediatamente de \sisi{(8.2.4)}{(8.3.4)} y 11.9, a la vista de la
+definición de $\underline M_K$.
+
+%%%%%%%%%%  scan idx 475  |  folio 464  %%%%%%%%%%
+
+\medskip
+\noindent
+\underline{Observaciones} 11.11. a) Si se consideran únicamente los
+componentes $\ell$-primarios para $\ell\neq p$, el Teorema 11.9 es
+inmediato a partir de 11.2 y no requiere las consideraciones más
+delicadas de 11.6 mediante 9.4. Del mismo modo, si se supone que $K$ es
+\underline{de característica cero}, 11.9 puede demostrarse sin usar
+(11.8.3): es inmediato que la imagen de ${}_n\Phi[K'](\ell)$ en
+\begin{equation*}
+ M_n={}_n(M_\ell\otimes D_\ell)
+\end{equation*}
+contiene la imagen del grupo ${}_nA(K')$ de puntos de ${}_nA$ con
+valores en $K'$. Para $K'$ suficientemente grande, este grupo es igual
+a ${}_nA(\overline K)$ y, por tanto, se aplica sobreyectivamente a
+$M_n$. Si $\operatorname{car}K=p$, en cambio, parece no haber una
+demostración ``trivial'' —es decir, una demostración que evite 9.4— de
+11.10 para el componente $p$-primario.
+
+b) La existencia de un isomorfismo
+\begin{equation*}
+ \Psi\simeq(\mathbb Q/\mathbb Z)^r,
+\end{equation*}
+junto con el valor correcto de $r$, fue conjeturada en 1964 por
+J.-P. Serre.

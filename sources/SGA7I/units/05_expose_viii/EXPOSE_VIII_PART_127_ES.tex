@@ -1,0 +1,114 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2449--2495; índices de escaneo 321--323;
+% folios de fuente 310--312. No hay diferencias materiales entre capas;
+% los acentos bibliográficos siguen la autoridad impresa.
+
+\medskip
+\noindent\underline{Proposición 7.4. Sea $S$ un esquema reducido.}
+
+\smallskip
+\noindent a) \underline{Sea $P$ un esquema en grupos liso sobre $S$
+cuyas fibras en los puntos maximales de $S$ son conexas. Entonces el
+funtor natural}
+\begin{equation}\tag{7.4.1}
+ \mathrm{EXT}(P,\underline G_{mS})
+ \longrightarrow
+ \mathrm{TORSRIG}(P,e_P;\underline G_{mS})
+\end{equation}
+\underline{de la categoría de extensiones de $P$ por
+$\underline G_{mS}$ a la categoría de torsors bajo
+$\underline G_{mP}$ rigidificados a lo largo de la sección identidad
+de $P$ es plenamente fiel. Si $S$ es normal y $P$ tiene fibras conexas,
+un objeto $E$ del destino de (7.4.1) pertenece a la imagen esencial de
+este funtor si y solo si, para todo punto maximal $\eta$ de $S$, el
+torsor rigidificado $E_\eta$ sobre $P_\eta$ procede de una extensión de
+$P_\eta$ por $\underline G_{m\eta}$.}
+
+\smallskip
+\noindent b) \underline{Sean $P,Q$ dos esquemas en grupos lisos sobre
+$S$ cuyas fibras en los puntos maximales de $S$ son conexas. Entonces
+el funtor natural}
+\begin{equation}\tag{7.4.2}
+ \mathrm{BIEXT}(P,Q;\underline G_{mS})
+ \longrightarrow
+ \mathrm{TORSBIRIG}(P,Q;\underline G_{mS})
+\end{equation}
+\underline{de la categoría de biextensiones de $(P,Q)$ por
+$\underline G_{mS}$ a la categoría de torsors bajo
+$\underline G_{m,P\times_S Q}$ birrigidificados a lo largo de la
+pareja de secciones identidad de $P$ y $Q$ es plenamente fiel. Si $S$
+es normal y $P$ o $Q$ tiene fibras conexas, un objeto $E$ del destino
+de (7.4.2) pertenece a la imagen esencial del funtor si y solo si, para
+todo punto maximal $\eta$ de $S$, $E_\eta$ procede de una biextensión de
+$(P_\eta,Q_\eta)$ por $\underline G_{m\eta}$.}
+
+Demostremos (a); la demostración esencialmente idéntica de (b) se deja
+al lector. Para la plena fidelidad, obsérvese que 4.1 sigue siendo
+válido si $X$ e $Y$ son esquemas planos sobre un esquema reducido $S$
+cuyas fibras en los puntos maximales satisfacen las condiciones de 4.1.
+En efecto, la familia de fibras maximales de $X\times_S Y$ —que es
+plano sobre el esquema reducido $S$— es esquemáticamente densa en
+$X\times_S Y$. Por tanto, un morfismo de $X\times_S Y$ al esquema
+separado $\underline G_{mS}$ sobre $S$ es trivial en cuanto lo sea
+sobre las fibras maximales. La plena fidelidad de (7.4.1) se demuestra
+entonces como en 4.2, y la caracterización de su imagen esencial dada
+allí sigue siendo válida.
+
+Queda por demostrar que, si el torsor rigidificado $E$ sobre $P$ es tal
+que los $E_\eta$ proceden de extensiones, entonces también $E$ procede
+de una extensión, suponiendo que $S$ es normal y $P$ tiene fibras
+conexas. Esta última condición implica que $P$ es de presentación
+finita sobre $S$ (SGA 3 $\mathrm{VI}_B$ 5.5). La plena fidelidad muestra
+también que la cuestión es local sobre $S$, de modo que podemos suponer
+$S$ afín y local. El argumento usual de paso al límite, utilizando el
+teorema de Nagata sobre la finitud de la clausura integral de una
+$\mathbb Z$-álgebra reducida y finitamente generada (EGA IV 7.8), nos
+reduce además al caso en que $S$ es noetheriano.
+
+%%%%%%%%%%  scan idx 322  |  folio 311  %%%%%%%%%%
+
+Entonces 7.1(a) muestra que existe un abierto $U\subset S$ cuyo
+complemento tiene codimensión al menos $2$ y tal que $E_U$ procede de
+una extensión de $P_U$ por $\underline G_{mU}$. En otras palabras, el
+isomorfismo buscado
+\[
+ \pi^*(E)\simeq
+ \operatorname{pr}_1^*(E)\operatorname{pr}_2^*(E)
+\]
+puede construirse sobre $(P\times_S P)_U$. Este es un abierto del
+esquema normal $P\times_S P$ cuyo complemento tiene codimensión al menos
+$2$. Por tanto, el isomorfismo sobre $(P\times_S P)_U$ se prolonga a
+todo $P\times_S P$, lo que concluye la demostración.
+
+%%%%%%%%%%  scan idx 323  |  folio 312  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Corolario 7.5. Sea $S$ un esquema normal y sean $P$
+y $Q$ dos esquemas en grupos lisos sobre $S$, con fibras conexas en los
+puntos maximales, y supongamos que $P$ o $Q$ tiene fibras conexas.
+Supongamos además que, para todo punto maximal $\eta$ de $S$, $P_\eta$
+o $Q_\eta$ es una extensión de un esquema abeliano por un toro (o, más
+generalmente, admite una serie de composición cuyos factores son
+esquemas abelianos, toros o grupos $\underline G_a$). Entonces el funtor
+(7.4.2) es una equivalencia de categorías.}
+
+Es una consecuencia inmediata de 7.4(b) y 4.7.
+
+\bigskip
+\noindent\underline{BIBLIOGRAFÍA}
+
+\begin{enumerate}
+\item[{[1]}] M. Demazure, J. Giraud, M. Raynaud,
+  \emph{Schémas abéliens}, Séminaire Orsay 1967/68, de próxima
+  aparición.
+\item[{[2]}] M. Raynaud, \emph{Faisceaux amples sur les schémas en
+  groupes et les espaces homogènes}, tesis, París, 1968 (de próxima
+  aparición en Lecture Notes, Springer).
+\item[{[3]}] M. Rosenlicht, \emph{Some basic theorems on algebraic
+  groups}, Amer. Jour. Math. \textbf{78}, n.º~2 (1956), pp.~401--443.
+\item[{[3bis]}] M. Rosenlicht, \emph{Some rationality questions on
+  algebraic groups}, Annali di Matematica, serie 4, n.º~43 (1957),
+  pp.~25--50.
+\item[{[4]}] J.-P. Serre, \emph{Corps locaux}, Act. Sci. Ind. 1296
+  (1962), Hermann, París.
+\end{enumerate}

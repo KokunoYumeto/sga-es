@@ -1,0 +1,90 @@
+\par\medskip\noindent
+2.9. \underline{Relaciones con los torsores birrigidificados}.
+
+En la terminología de 1.3.2, vimos en 2.2 que, para toda biextensión
+$E$ de $(P,Q)$ por $G$, la estructura de torsor subyacente bajo
+$G_{P\times Q}$ está canónicamente birrigidificada respecto del par de
+secciones identidad de $P$ y $Q$. Esto da un funtor canónico
+\begin{equation}\tag{2.9.1}
+ \operatorname{BIEXT}(P,Q;G)
+ \xrightarrow{\ i\ }
+ \operatorname{TORSBIRIG}(P,Q;G),
+\end{equation}
+donde la categoría de la derecha consta de los torsores sobre
+$P\times Q$ bajo $G_{P\times Q}$ birrigidificados.
+
+Utilizando las secciones identidad de $P$ y $Q$, para todo producto de
+$n$ objetos, cada uno isomorfo a $P$ o a $Q$, se obtiene un morfismo
+canónico $\operatorname{inj}_i$ del $i$-ésimo factor a ese producto.
+Así, para un morfismo de tal producto a $G$, se puede hablar de su
+restricción al $i$-ésimo factor. Consideremos los productos
+\begin{equation}\tag{2.9.2}
+ \left\{
+ \begin{array}{l}
+ P\times Q,\\[1mm]
+ P\times Q\times Q,\quad P\times Q\times Q\times Q,\\[1mm]
+ P\times P\times Q,\quad P\times P\times P\times Q,\\[1mm]
+ P\times P\times Q\times Q.
+ \end{array}
+ \right.
+\end{equation}
+
+\underline{Proposición 2.9.3. Supongamos que todo morfismo de uno de
+los productos (2.9.2) a $G$ que sea trivial sobre cada factor de ese
+producto (inmerso mediante las secciones identidad como acaba de
+explicarse}) \underline{es trivial. Entonces:}
+
+\medskip
+\noindent
+a) \underline{El funtor canónico (2.9.1) es plenamente fiel, y ambos
+miembros de (2.9.1) son categorías rígidas. En particular, si $E$ es
+un torsor bajo $G_{P\times Q}$ birrigidificado respecto de
+$(\sisi{e_P}{e_P},e_Q)$, existe a lo sumo una estructura de
+biextensión sobre $E$ compatible con su estructura de torsor
+birrigidificado.}
+
+\medskip
+\noindent
+b) \underline{Tal estructura de biextensión existe sobre $E$ si y
+solo si $E$ admite una estructura de extensión de $Q_P$ por $G_P$
+compatible con su estructura de torsor bajo $G_P$, y una estructura
+de extensión de $P_Q$ por $G_Q$ compatible con su estructura de torsor
+bajo $G_Q$ (cf.\ 1.3.5(b)). En ese caso existe una única estructura de
+extensión de $Q_P$ por $G_P$ compatible con la estructura de torsor
+bajo $G_P$ y con la rigidificación dada sobre $P\times e_Q$, y una
+única estructura de extensión de $P_Q$ por $G_Q$ compatible con la
+estructura de torsor bajo $G_Q$ y con la rigidificación dada sobre
+$e_P\times Q$; estas dos estructuras de extensión son compatibles en
+el sentido de 2.1.}
+
+\underline{Demostración.} a) Si $E$ es un torsor birrigidificado sobre
+$P\times Q$, su grupo de automorfismos se identifica con el grupo de
+morfismos $P\times Q\longrightarrow G$ triviales sobre los dos
+factores parciales. Por la hipótesis aplicada a $P\times Q$, este grupo
+solo contiene el automorfismo identidad, lo cual demuestra la rigidez.
+Sean ahora $E,E'$ biextensiones de $(P,Q)$ por $G$. Para ver que todo
+morfismo $f:E\longrightarrow E'$ de torsores birrigidificados es un
+morfismo de biextensiones, se aplica 1.3.5(a) a las dos estructuras de
+extensión definidas por $E,E'$ sobre $P$ y sobre $Q$,
+respectivamente. Para ello se utiliza la hipótesis para
+$P\times Q\times Q$ y $P\times P\times Q$ en (2.9.2).
+
+\noindent
+b) La necesidad es clara. Para la suficiencia, 1.3.5(b) muestra
+primero que la condición enunciada da estructuras de extensión únicas
+de $Q_P$ por $G_P$ y de $P_Q$ por $\sisi{G_P}{G_Q}$, compatibles con
+la estructura de torsor y con las rigidificaciones. Aquí se utiliza la
+hipótesis para $P\times Q\times Q\times Q$ y
+$P\times P\times P\times Q$. Resta demostrar que las dos estructuras
+de extensión son compatibles, es decir, que el diagrama (2.1.1) es
+conmutativo. Sus dos composiciones son isomorfismos de torsores sobre
+$P\times P\times Q\times Q$ y, por tanto, difieren en un morfismo
+\[
+ u:P\times P\times Q\times Q\longrightarrow G.
+\]
+Como las trivializaciones parciales de $E$ son secciones identidad
+para las leyes $\varphi$ y $\psi$, respectivamente, $u$ es trivial
+sobre cada uno de los cuatro factores. La hipótesis para
+$P\times P\times Q\times Q$ hace, pues, trivial a $u$. Esto demuestra
+la proposición.
+\par\medskip

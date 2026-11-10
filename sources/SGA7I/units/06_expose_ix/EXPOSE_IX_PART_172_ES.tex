@@ -1,0 +1,245 @@
+% AUTORIDAD DE FUENTE: Exposé IX §§12--12.2, líneas francesas
+% 3452--3547; índices de escaneo 476--480, folios 465--469.
+
+%%%%%%%%%%  scan idx 476  |  folio 465  %%%%%%%%%%
+
+\medskip
+\noindent
+12. \underline{Modelo de Néron de una jacobiana y fórmula de
+Picard--Lefschetz}
+
+Recordemos primero los siguientes resultados generales de M. Raynaud
+[22, teoremas 5 y 7; 22 bis].
+
+\medskip
+\noindent
+\underline{Teorema} 12.1 (M. Raynaud). \underline{Sean $S$ un trait
+estrictamente local y $f:X\to S$ un esquema propio y plano sobre $S$, de
+fibras de dimensión uno, tales que}
+
+\begin{equation}\tag{12.1.1}
+ f_*\underline{\mathcal O}_X\simeq\underline{\mathcal O}_S,
+\end{equation}
+
+\noindent
+\underline{y tales que los anillos locales de $X$ sean factoriales. Para
+cada punto maximal $x_i$ de $X_o$, pongamos}
+
+\begin{equation}\tag{12.1.2}
+ d_i=\operatorname{long}\underline{\mathcal O}_{X_o,x_i},
+ \qquad d_i^t=\mu_i d_i,
+\end{equation}
+
+\noindent
+\underline{donde $\mu_i$ es la multiplicidad radicial de $k(x_i)$ sobre
+$k$} (EGA IV, 4.7.4) (\underline{por tanto, una potencia del exponente
+característico de} $k$). \underline{Sea $d$ (respectivamente, $d^t$) el máximo común
+divisor de los enteros $d_i$ (respectivamente, $d_i^t$); se tiene, pues,
+$d=d^t$ si $k$ es perfecto. Pongamos}
+
+\begin{equation}\tag{12.1.3}
+ P=\underline{\operatorname{Pic}}_{X/S}:
+   (\operatorname{Sch})_{/S}^{\,o}\longrightarrow(\operatorname{Ab}).
+\end{equation}
+
+\noindent
+a) \underline{Consideremos las condiciones siguientes}:
+
+\smallskip
+\noindent
+1) $d^t=1$.
+
+\smallskip
+\noindent
+2) $X$ \underline{posee un $0$-ciclo de grado $1$}.
+
+\smallskip
+\noindent
+3) \underline{Existe un haz invertible $L$ sobre $X\times P^o$ tal que
+el homomorfismo correspondiente}
+$P^o_\eta\to\underline{\operatorname{Pic}}_{X_\eta/\eta}=P_\eta$
+\underline{sea la inclusión canónica}. (Se sabe, por J.-P. Murre, que
+$P_\eta$ es representable por un esquema en grupos localmente de tipo
+finito sobre $\eta$; véase, por ejemplo, SGA 6, XII, 1.5.)
+
+%%%%%%%%%%  scan idx 477  |  folio 466  %%%%%%%%%%
+
+\smallskip
+\noindent
+4) $X$ \underline{es cohomológicamente plano sobre $S$} (EGA III,
+7.8.1) (equivalentemente, cohomológicamente plano en dimensión cero, o,
+equivalentemente,
+$k\xrightarrow{\sim}H^o(X_o,\underline{\mathcal O}_{X_o})$),
+\underline{y $d=1$}.
+
+\smallskip
+\noindent
+5) $P$ \underline{es representable} (equivalentemente, representable
+por un esquema en grupos liso sobre $S$).
+
+\smallskip
+\noindent
+6) $P^o$ \underline{es representable} (equivalentemente, representable
+por un esquema en grupos liso sobre $S$). (Para la definición de $P^o$,
+véase SGA 3, $\mathrm{VI}_B$, 3.1.)
+
+\smallskip
+\noindent
+7) $P^o$ \underline{es separado sobre $S$}, es decir, satisface el
+criterio valuativo de separación de EGA II, 7.2.3 (equivalentemente,
+toda sección $s$ de $P^o$ sobre $S$ tal que $s(\eta)=0$ es nula).
+
+\smallskip
+\noindent
+8) $d=1$.
+
+\smallskip
+\noindent
+\underline{Se tienen entonces las implicaciones}
+
+\begin{equation}\tag{12.1.4}
+ 1)\Longleftrightarrow2)\Longrightarrow3)\Longrightarrow4)
+ \Longleftrightarrow5)\Longleftrightarrow6)\Longleftrightarrow7)
+ \Longrightarrow8).
+\end{equation}
+
+\noindent
+\underline{En particular, si $d=d^t$, por ejemplo si $k$ es perfecto,
+las condiciones 1) a 8) son equivalentes}.
+
+\medskip
+\noindent
+b) \underline{Supongamos que $d^t=1$, de modo que $P$ es representable
+por un esquema en grupos liso sobre $S$. Entonces la adherencia
+esquemática de la sección unidad de $P$ es un subesquema en grupos $E$
+étale sobre $S$. Si $I$ es el conjunto de las componentes irreducibles
+reducidas $X_o^i$ de $X_o$, se obtiene un isomorfismo}
+
+\begin{equation}\tag{12.1.5}
+ \mathbb Z^I\simeq\Gamma(S,E)
+\end{equation}
+
+%%%%%%%%%%  scan idx 478  |  folio 467  %%%%%%%%%%
+
+\noindent
+\underline{asociando a cada $i\in I$ la sección $S_i$ de $P$ sobre $S$
+(nula sobre $\eta$) definida por el haz invertible
+$\underline{\mathcal O}_X(X_o^i)$ \sisi{sobre $S$}{sobre $X$}}.
+\footnote{La fuente impresa dice aquí «sobre $S$» y escribe después
+$X_i^o$ para el mismo divisor. El haz invertible asociado a la componente
+$X_o^i$ vive sobre $X$.}
+(Como, por hipótesis, los anillos locales de $X$ son factoriales, los
+ciclos $X_o^i$ son efectivamente divisores; por tanto,
+$\underline{\mathcal O}_X(X_o^i)$ tiene el sentido indicado como haz
+invertible asociado a dicho divisor; véase EGA IV, 21.2.8.1.)
+\underline{Se tiene}
+
+\begin{equation}\tag{12.1.6}
+ P^o\cap E=\underline{\text{la sección nula de}}\ P.
+\end{equation}
+
+\noindent
+c) \underline{Bajo las condiciones de b), el cociente}
+
+\begin{equation}\tag{12.1.7}
+ Q=P/E
+\end{equation}
+
+\noindent
+\underline{es representable por un esquema en grupos liso y separado
+sobre $S$, y este esquema es néroniano, es decir, satisface la propiedad
+universal (1.1.2) en términos de su fibra \sisi{especial}{genérica}}.
+
+\medskip
+\noindent
+d) \underline{Bajo las condiciones de c), supongamos además que la fibra
+geométrica genérica de $X$ es íntegra. Entonces existe una sucesión exacta
+canónica}
+
+\begin{equation}\tag{12.1.8}
+ 0\longrightarrow A\longrightarrow Q
+   \xrightarrow{\ \deg\ }\mathbb Z_S\longrightarrow0,
+\end{equation}
+
+\noindent
+\underline{donde $\deg$ está inducido por el homomorfismo «grado»
+$P\to\mathbb Z_S$, y donde $A$ es un esquema en grupos liso, separado y
+de tipo finito sobre $S$, que también es néroniano, es decir, un modelo
+de Néron de}
+
+\begin{equation}\tag{12.1.9}
+ A_\eta=P_\eta^o=
+ \underline{\operatorname{Pic}}^o_{X_\eta/\eta}.
+\end{equation}
+
+\noindent
+\underline{Además, el homomorfismo compuesto $P^o\to P\to Q$ induce un
+isomorfismo}
+
+\begin{equation}\tag{12.1.10}
+ P^o\xrightarrow{\ \sim\ }A^o.
+\end{equation}
+
+%%%%%%%%%%  scan idx 479  |  folio 468  %%%%%%%%%%
+
+\medskip
+\noindent
+12.1.11. El caso que nos interesará es aquel en el que $X_\eta$ es liso
+sobre $\eta$, de modo que, teniendo en cuenta (12.1.1), la fibra
+geométrica genérica de $X$ es lisa y conexa (por tanto, íntegra), y en el
+que $X_\eta$ posee un $0$-ciclo de grado uno. Se cumplen entonces todas
+las condiciones consideradas en 12.1 (y, en particular, las condiciones
+1) a 8) de a)). Además, $A_\eta=P_\eta^o$ es entonces un esquema
+abeliano, y d) nos proporciona una construcción muy explícita de su
+modelo de Néron $A$. En particular, (12.1.10) proporciona un isomorfismo
+
+\begin{equation}\tag{12.1.12}
+ A_o^{\,o}\simeq\underline{\operatorname{Pic}}^o_{X_o/k},
+\end{equation}
+
+\noindent
+que muestra, en particular, que $A$ \underline{tiene reducción
+semiestable sobre $S$ si y solo si}
+$\underline{\operatorname{Pic}}^o_{X_o/k}$ \underline{tiene rango
+unipotente cero}. Cuando $X$ es regular y $X_o$ es separable sobre $k$,
+se sabe que esto ocurre si y solo si la fibra geométrica especial
+$\overline X_o$ no tiene otros puntos singulares que puntos dobles
+ordinarios (es decir, puntos cuyo anillo local completado coincide con el
+de la unión de los dos ejes coordenados del espacio afín de dimensión
+$2$ en el origen). La verificación de este hecho, junto con la
+descripción «bien conocida» del esquema de Picard de una curva propia
+separable sobre un cuerpo $k$, utilizando EGA IV, 21.8.5, se deja al
+lector como ejercicio. Obsérvese también que la implicación
+«$\overline X_o$ tiene puntos dobles ordinarios» $\Longrightarrow$
+«$A_\eta=\underline{\operatorname{Pic}}^o_{X_\eta/\eta}$ tiene reducción
+semiestable» es una consecuencia inmediata del «teorema de monodromía
+geométrica» III\sisi{\hspace{3.5em}}{}, teniendo en cuenta el criterio
+galoisiano de reducción semiestable de 3.5. Sin embargo, este argumento
+no proporciona el importante isomorfismo (12.1.10) ni su consecuencia
+(12.1.12).
+
+%%%%%%%%%%  scan idx 480  |  folio 469  %%%%%%%%%%
+
+\medskip
+\noindent
+12.2. Para la demostración de 12.1 remitimos a [22 bis]; en realidad,
+solo necesitaremos el caso en que $X_\eta$ es liso sobre $\eta$. Notemos
+también que en [22 bis] se demuestran relaciones entre esquemas de Picard
+y modelos de Néron bajo condiciones bastante más generales que las de
+12.1 c) y d). Como sus enunciados son más técnicos, hemos preferido no
+incluirlos en este recordatorio. Señalemos únicamente que b), c) y d) son
+consecuencias fáciles de a), y que en a) los únicos puntos delicados son
+las implicaciones $3)\Longrightarrow4)\Longrightarrow5)$ y
+$7)\Longrightarrow4)$, siendo la primera la más difícil. Este punto es,
+en cambio, trivial si se supone que $X_o$ es separable sobre $k$ (lo que
+implica que $X$ admite una sección sobre $S$, pues $S$ es estrictamente
+local, y, por tanto, que se cumple la condición 1), $d^t=1$). Aconsejamos
+al lector que haga la demostración en este caso particularmente sencillo,
+suponiendo además, si es necesario, que $X_\eta$ es liso, de modo que
+$P_\eta^o$ sea un esquema abeliano. Se puede utilizar entonces su modelo
+de Néron $A$, y $A^o$ representa
+$\underline{\operatorname{Pic}}^o_{X/S}$. Solo utilizaremos 12.1 en este
+caso particular y bajo la hipótesis adicional de que $\overline X_o$ no
+tiene otros puntos singulares que puntos dobles ordinarios, es decir, por
+(12.1.11), de que $A_\eta$ tiene reducción semiestable. Este es el caso
+considerado en \sisi{12.5.4}{10.5.4}, al cual nos limitaremos de ahora en adelante.

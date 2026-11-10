@@ -1,0 +1,176 @@
+\par\medskip
+\noindent
+11.6. Para definir el isomorfismo (11.5.1), podemos limitarnos al caso
+en que $S$ es estrictamente local (11.0), de modo que $\underline M$ y
+$\underline M'$ son constantes, con valores
+\begin{equation}\tag{11.6.1}
+M=D(T'_o),\qquad M'=D(T_o),
+\end{equation}
+donde $T_o$ y $T'_o$ son, respectivamente, los toros maximales de
+$A_o$ y $A'_o$. Identificando asimismo $\Phi_o$ con un grupo finito
+ordinario, debemos definir un isomorfismo canónico entre su componente
+$\Phi_o(\ell)$ y
+\begin{equation*}
+\Phi(\ell)=\operatorname{coker}\bigl(
+ \widetilde u_\ell:M_\ell\longrightarrow\check M'_\ell\bigr).
+\end{equation*}
+En realidad, definiremos directamente un isomorfismo canónico
+\begin{equation}\tag{11.6.2}
+\Phi_o(\ell)\simeq
+ \ker\bigl(\widetilde u_\ell\otimes D_\ell:
+ M_\ell\otimes D_\ell\longrightarrow
+ \check M'_\ell\otimes D_\ell\bigr).
+\end{equation}
+Como $\Phi_o(\ell)$ es finito y $M_\ell$ y $\check M'_\ell$ tienen el
+mismo rango, se deducirá primero que
+$\widetilde u_\ell:M_\ell\to\check M'_\ell$ es una isogenia. Se sigue
+entonces que el miembro derecho de (11.6.2) es canónicamente isomorfo a
+$\Phi(\ell)$:
+\begin{equation}\tag{11.6.3}
+\Phi(\ell)=\operatorname{coker}\widetilde u_\ell
+ \simeq
+ \ker(\widetilde u_\ell\otimes D_\ell).
+\end{equation}
+En efecto, identificando $M_\ell$ mediante $\widetilde u_\ell$ con un
+submódulo de índice finito de $\check M'_\ell$, podemos escribir el
+origen y el destino de $\widetilde u_\ell\otimes D_\ell$ como
+\begin{equation*}
+\sisi{\Phi(\ell)=V/M_\ell,\qquad
+\Phi'(\ell)=V/\check M'_\ell}%
+{M_\ell\otimes D_\ell=V/M_\ell,\qquad
+\check M'_\ell\otimes D_\ell=V/\check M'_\ell},
+\end{equation*}
+donde
+\begin{equation*}
+V=M_\ell\otimes\mathbb Q_\ell
+ \simeq\check M'_\ell\otimes\mathbb Q_\ell.
+\end{equation*}
+Componiendo (11.6.2) con (11.6.3) se obtiene inmediatamente el
+isomorfismo (11.5.1) que había que definir; todo se reduce, pues, a
+
+%%%%%%%%%%  scan idx 468  |  folio 457  %%%%%%%%%%
+
+definir el isomorfismo canónico (11.6.2).
+
+Escribiendo $M_\ell\otimes D_\ell$ (respectivamente,
+$\check M'_\ell\otimes D_\ell$) como el límite inductivo de los $M_n$
+(respectivamente, de los $\check M'_n$), donde $n$ recorre las
+potencias de $\ell$, equivale a definir isomorfismos canónicos
+\begin{equation}\tag{11.6.4}
+{}_n\Phi_o\xrightarrow{\ \sim\ }
+ \ker\bigl(\widetilde u_n:M_n\longrightarrow\check M'_n\bigr),
+ \qquad n=\ell^{r+1},
+\end{equation}
+compatibles con los morfismos de transición evidentes al variar $n$.
+Aquí, por abuso de notación, $\widetilde u_n$ denota ahora el
+homomorfismo obtenido reduciendo módulo $n$ el homomorfismo
+$\widetilde u_\ell:M_\ell\longrightarrow\check M'_\ell$.
+
+Para ello, consideremos el esquema en grupos ${}_nA$ sobre $S$. Por la
+hipótesis de reducción semiestable, es plano y cuasifinito sobre $S$
+(2.2.1). Existe una filtración canónica
+\begin{equation}\tag{11.6.5}
+{}_nA\supset({}_nA^o)^f\supset({}_nA^o)^t\supset0,
+\end{equation}
+donde el exponente $f$ (respectivamente, $t$) denota la ``parte fija''
+(2.2.3) (respectivamente, la ``parte tórica'' (5.1)) del esquema en
+grupos al que se aplica. En la definición de la parte tórica en 5.1
+habíamos supuesto que $S$ era completo, lo cual está permitido aquí
+(11.0). (Además, vimos en 6.1 que la construcción se generaliza al caso
+henseliano, si se desea.) Pongamos
+\begin{equation}\tag{11.6.6}
+{}_n\Psi={}_nA/({}_nA^o)^f.
+\end{equation}
+Este es un esquema en grupos plano, separado y cuasifinito sobre $S$
+(SGA 3 $\mathrm{VI}_A$ 3.2 y $\mathrm{VI}_B$ 9.2), con fibra genérica
+\begin{equation*}
+{}_n\Psi_K=({}_nA_K)/({}_nA_K)^f,
+\end{equation*}
+
+%%%%%%%%%%  scan idx 469  |  folio 458  %%%%%%%%%%
+
+donde, por definición,
+$({}_nA_K)^f=({}_nA^o)^f_K$ denota el $r$-ésimo componente
+$(n=\ell^{r+1})$ del progrupo de Barsotti--Tate $T_\ell(A_K)^f$. La
+primera de las relaciones (5.5.8) proporciona entonces un isomorfismo
+canónico
+\begin{equation}\tag{11.6.7}
+{}_n\Psi_K\xrightarrow{\ \sim\ }\underline M_{nK},
+\qquad
+\underline M_n\mathrel{\mathop:}=\underline M
+ \otimes_{\mathbb Z}(\mathbb Z/n\mathbb Z).
+\end{equation}
+De hecho, se tiene lo siguiente.
+
+\medskip
+\noindent
+\underline{Lema 11.6.8.} \underline{El esquema en grupos ${}_n\Psi$
+sobre $S$ definido en (11.6.6) es étale sobre $S$, y el isomorfismo
+(11.6.7) se prolonga de manera única a un morfismo}
+\begin{equation}\tag{11.6.8.1}
+{}_n\Psi\lhook\joinrel\longrightarrow\underline M_n
+\end{equation}
+\underline{que es una inmersión abierta.}
+
+Para ver que ${}_n\Psi$ es étale, en virtud de (11.6.7) solo queda
+verificarlo en los puntos de su fibra especial, o, equivalentemente,
+verificar que esta fibra es étale. Esto es inmediato, pues la fibra en
+cuestión es
+\begin{equation*}
+{}_nA_o/{}_nA_o^o\subset A_o/A_o^o=\Phi_o.
+\end{equation*}
+Se sigue que ${}_n\Psi$ es normal y, puesto que $\underline M_n$ es
+finito sobre $S$, la existencia de la prolongación (11.6.8.1) se deduce
+enseguida. Es un morfismo de esquemas en grupos étale sobre $S$, de modo
+que su núcleo es étale sobre $S$. Como ${}_n\Psi$, y por tanto este
+núcleo, es separado, mientras que su fibra genérica es el grupo unidad
+por (11.6.7), el núcleo es el grupo unidad (3.1.3). Así, (11.6.8.1) es
+un monomorfismo étale y, por tanto, una inmersión abierta (EGA IV
+17.9.1), lo que prueba el lema.
+
+Pongamos ahora
+\begin{equation}\tag{11.6.9}
+{}_n\Phi=({}_nA)^f/({}_nA^o)^f\subset{}_n\Psi.
+\end{equation}
+Así, ${}_n\Phi$ es un subesquema finito abierto de ${}_n\Psi$, pues
+$({}_nA)^f$
+
+%%%%%%%%%%  scan idx 470  |  folio 459  %%%%%%%%%%
+
+es un subesquema en grupos finito abierto de ${}_nA$. Más precisamente,
+se ve inmediatamente que
+
+\begin{equation}\tag{11.6.10}
+{}_n\Phi\xrightarrow{\ \sim\ }({}_n\Psi)^f.
+\end{equation}
+Componiendo (11.6.9) con (11.6.8.1), obtenemos una inmersión abierta
+\begin{equation}\tag{11.6.11}
+{}_n\Phi\lhook\joinrel\longrightarrow\underline M_n.
+\end{equation}
+Por otra parte,
+\begin{equation*}
+{}_n\Phi\times_Ss={}_n\Psi\times_Ss={}_nA_o/{}_nA_o^o,
+\end{equation*}
+y, puesto que $A_o^o$ es $n$-divisible (2.2.1), el último miembro se
+identifica inmediatamente con ${}_n\Phi_o$. Obtenemos, por tanto, un
+isomorfismo
+\begin{equation}\tag{11.6.12}
+{}_n\Phi\times_Ss\xrightarrow{\ \sim\ }{}_n\Phi_o,
+\end{equation}
+que muestra que ${}_n\Phi$ queda caracterizado, salvo isomorfismo único,
+como el esquema finito étale sobre $S$ cuya fibra especial es
+${}_n\Phi_o$. Así pues, para definir el isomorfismo buscado (11.6.4)
+mediante la inmersión abierta (11.6.11), basta probar lo siguiente.
+
+\medskip
+\noindent
+\underline{Lema 11.6.13.} \underline{La imagen del homomorfismo
+canónico} (11.6.11) \underline{es igual al núcleo de}
+\begin{equation*}
+\widetilde u_n:\underline M_n\longrightarrow\underline{\check M}'_n.
+\end{equation*}
+
+La compatibilidad requerida de los homomorfismos (11.6.11) con los
+morfismos de transición al variar $n$ es inmediata a partir de las
+definiciones. Por consiguiente, el lema 11.6.13 completará la prueba del
+teorema 11.5.

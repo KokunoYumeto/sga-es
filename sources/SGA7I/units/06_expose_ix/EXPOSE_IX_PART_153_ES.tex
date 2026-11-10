@@ -1,0 +1,137 @@
+% AUTORIDAD DE FUENTE: Exposé IX, §7.4, líneas 2017--2080;
+% índices de escaneo 420--423, folios 409--412. Las capas francesas D/C
+% no presentan diferencias materiales.
+
+\medskip
+\noindent
+7.4. Supongamos ahora dado un segundo esquema en grupos $A'$ sobre $S$
+que satisface las mismas hipótesis que $A$, y supongamos que $A$ y $A'$
+tienen fibras conexas. Sea $W$ una biextensión de $(A,A')$ por
+$\mathbb G_{mS}$. Obtenemos así un emparejamiento (VIII 2.2)
+
+\begin{equation}\tag{7.4.1}
+T_{\ell}(A) \times T_{\ell}(A') \longrightarrow
+T_{\ell}(\mathbb G_{mS}) = \mathbb Z_{\ell}(1)
+\end{equation}
+y, por restricción a las partes fijas, un emparejamiento
+
+\begin{equation}\tag{7.4.2}
+T_{\ell}(A)^{f} \times T_{\ell}(A')^{f}
+ = T_{\ell}(\widehat A) \times T_{\ell}(\widehat {A'})
+ \longrightarrow \mathbb Z_{\ell}(1) \qquad .
+\end{equation}
+Este también puede interpretarse como el emparejamiento definido por
+la biextensión $\widehat W$ de $(\widehat A,\widehat {A'})$ por
+$\widehat{\mathbb G}_{mS}$ obtenida de $W$ por completado (aquí, por
+simplicidad, se define una biextensión de esquemas formales en grupos
+como una familia coherente de biextensiones $W_n$ de $(A_n,A'_n)$ por
+$\mathbb G_{mS_n}$). Ahora bien, sabemos (VIII 3.5) que $W_n$ proviene
+de una biextensión $W_n^{ab}$ de $(B_n,B'_n)$, donde $B'_n$ es la parte
+abeliana de $A'_n$, de modo que (7.4.2) se factoriza a través de
+
+\begin{equation}\tag{7.4.3}
+T_{\ell}(A)^{ab} \times T_{\ell}(A')^{ab}
+ = T_{\ell}(\widehat B) \times T_{\ell}(\widehat {B'})
+ \longrightarrow \mathbb Z_{\ell}(1) \qquad .
+\end{equation}
+Este es también el emparejamiento definido por la biextensión
+
+\begin{equation*}
+\widehat W^{ab}=(W_n^{ab})
+\end{equation*}
+de $(\widehat B,\widehat {B'})$ por $\widehat{\mathbb G}_{mS}$. Cuando
+$\widehat B$ y $\widehat {B'}$ son algebraizables, de modo que se
+dispone de los esquemas abelianos $B,B'$ sobre $S$, EGA \sisi{IV}{III} 5.1.4
+demuestra que $\widehat W^{ab}$ proviene de una biextensión, definida
+salvo isomorfismo único,
+
+%%%%%%%%%%  scan idx 421  |  folio 410  %%%%%%%%%%
+
+\begin{equation*}
+W^{ab}\quad\text{de}\quad(B,B')\quad\text{por}\quad\mathbb G_{mS},
+\end{equation*}
+y el emparejamiento correspondiente
+
+\begin{equation}\tag{7.4.4}
+T_{\ell}(B) \times T_{\ell}(B')
+ \longrightarrow T_{\ell}(\mathbb G_{mS})
+\end{equation}
+es canónicamente isomorfo a (7.4.3).
+
+Denotando por $D(B')$ el esquema abeliano dual de $B'$, $W^{ab}$ define
+un homomorfismo
+
+\begin{equation}\tag{7.4.5}
+u:B\longrightarrow D(B') \qquad ,
+\end{equation}
+cuyas propiedades reflejan las de los emparejamientos (7.4.4), es
+decir, (7.4.3). Por ejemplo, el emparejamiento (7.4.3) es una dualidad
+perfecta en un punto $t\in S$ si y solo si
+$u_t:B_t\longrightarrow D(B')_t$ es una isogenia cuyo núcleo tiene
+rango primo con $\ell$. Esto implica que el propio $u$ es una isogenia
+(pues $S$ es local, y por tanto conexo), y $\ker u$ es plano y finito
+sobre $S$, de modo que $\ker u$ tiene el mismo rango en todo punto. Así,
+la condición que acabamos de considerar es independiente del punto
+elegido $t$.
+
+\medskip
+\noindent
+7.4.6. Esto termina, en particular, la demostración de 5.4. En efecto,
+bajo las condiciones de ese teorema (donde se puede suponer que $S$ es
+completo), la aplicación de la discusión precedente a $A^o$ y
+${A'}^o$ demuestra que, para todo $\ell$, el emparejamiento (7.4.3) es
+una dualidad perfecta en el punto genérico $\eta$, y por tanto también
+en el punto $s$.
+
+%%%%%%%%%%  scan idx 422  |  folio 411  %%%%%%%%%%
+
+\medskip
+\noindent
+7.4.7. Las consideraciones precedentes aclaran asimismo el teorema de
+ortogonalidad 5.2, sin recurrir al Lema \sisi{5.2.4}{5.2.5}. En efecto, en el curso de
+7.4 hemos establecido que el emparejamiento $\sisi{(5.2.3.1)}{(5.2.4.2)}=(7.4.2)$ se
+anula sobre las partes tóricas de ambos lados y, por tanto, se factoriza
+a través del emparejamiento (7.4.3). Solo queda establecer que este
+emparejamiento es no degenerado sobre las fibras genéricas de los
+progrupos considerados, sabiendo que lo es sobre las fibras especiales.
+Esto se deduce del hecho de que, si (7.4.5) induce una isogenia sobre
+las fibras especiales, entonces es una isogenia.
+
+\medskip
+\noindent
+7.4.8. Volvamos a las condiciones generales de 7.4, y supongamos dado
+un abierto $U\subset S-S_o$ tal que $A_U$ y $A'_U$ sean
+\underline{esquemas abelianos}, duales entre sí mediante la biextensión
+$W_U$. Restringiendo (7.3.6), y la sucesión exacta análoga para $A'$, a
+$U$, obtenemos filtraciones canónicas sobre los grupos de Barsotti--Tate
+pro-$\ell$ $T_\ell(A_U)$ y $T_\ell(A'_U)$:
+
+\begin{equation}\tag{7.4.9}
+\left\{
+\begin{aligned}
+T_\ell(A_U)&\supset T_\ell(A_U)^f\supset T_\ell(A_U)^t\supset0,\\[4ex]
+T_\ell(A'_U)&\supset T_\ell(A'_U)^f\supset T_\ell(A'_U)^t\supset0
+\qquad .
+\end{aligned}
+\right.
+\end{equation}
+
+%%%%%%%%%%  scan idx 423  |  folio 412  %%%%%%%%%%
+
+Afirmo que \underline{estas dos filtraciones son duales entre sí} con
+respecto al emparejamiento (7.4.1), que aquí es una dualidad perfecta
+(VIII 3.2); es decir, la relación (5.2.2) y su contraparte simétrica
+siguen siendo válidas al reemplazar $A_K,A'_K$ por $A_U,A'_U$. Hemos
+visto arriba que esta afirmación de ortogonalidad equivale asimismo a
+decir que la biextensión $W^{ab}$ de $(B,B')$ por $\mathbb G_{mS}$ es
+una dualidad perfecta sobre $U$ (o, equivalentemente, cuando $U$ es
+denso en $S$, sobre $S$). Basta comprobar esta propiedad en todo punto
+$\eta$ de $U$; el argumento habitual nos reduce entonces al caso ya
+conocido en que $S$ es un rasgo de punto genérico $\eta$.
+
+La relación de ortogonalidad también permite extender las fórmulas
+(5.5.7), (5.5.8) y (5.5.9) al caso presente, reemplazando la restricción
+al punto genérico $\eta$ por la restricción al abierto $U$. Por
+consiguiente, 5.6 se extiende asimismo al caso presente. Nos abstenemos
+de reescribir aquí, en este contexto, las fórmulas y el enunciado
+precedentes.

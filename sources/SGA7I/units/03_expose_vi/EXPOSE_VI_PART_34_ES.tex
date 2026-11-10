@@ -1,0 +1,121 @@
+%%%%%%%%%%  scan idx 97  |  folio 86  %%%%%%%%%%
+
+\underline{Teorema 3.12.}
+
+\begin{enumerate}[label=(\arabic*)]
+\item Si
+\[
+ 0\longrightarrow M'\longrightarrow M\longrightarrow M''
+ \longrightarrow0
+\]
+es una sucesión exacta de $A$-módulos, entonces la sucesión
+\begin{multline*}
+0\longrightarrow D^0(A|R,M')\longrightarrow D^0(A|R,M)
+\longrightarrow D^0(A|R,M'')\longrightarrow D^1(A|R,M')\\
+\longrightarrow D^1(A|R,M)\longrightarrow D^1(A|R,M'')
+\longrightarrow\cdots\longrightarrow D^n(A|R,M')\\
+\longrightarrow D^n(A|R,M)\longrightarrow D^n(A|R,M'')
+\longrightarrow\cdots
+\end{multline*}
+es exacta.
+
+\item Sean $S\longrightarrow R\longrightarrow A$ homomorfismos de
+anillos. Entonces, para todo $A$-módulo $M$, la sucesión
+\begin{multline*}
+0\longrightarrow D^0(A|R,M)\longrightarrow D^0(A|S,M)
+\longrightarrow D^0(R|S,M)\longrightarrow D^1(A|R,M)\\
+\longrightarrow D^1(A|S,M)\longrightarrow D^1(R|S,M)
+\longrightarrow\cdots\longrightarrow D^n(A|R,M)\\
+\longrightarrow D^n(A|S,M)\longrightarrow D^n(R|S,M)
+\longrightarrow\cdots
+\end{multline*}
+es exacta.
+
+\item Sean $A$ y $S$ $R$-álgebras tales que
+$\operatorname{Tor}_i^R(A,S)=0$ para todo $i>0$. Entonces, para todo
+$A\otimes_RS$-módulo $M$, el morfismo canónico
+\[
+ D^i(A\otimes_RS|S,M)\longrightarrow D^i(A|R,M)
+\]
+es un isomorfismo para todo $i$. En particular, si $A$ es plano sobre
+$R$, entonces
+\[
+ D^i(A\otimes_RS|S,M)\xrightarrow{\ \sim\ }D^i(A|R,M)
+\]
+para todo $i$, toda $R$-álgebra $S$ y todo $A\otimes_RS$-módulo $M$.
+
+\item Sea $S$ un subconjunto multiplicativo de $A$. Para todo
+$S^{-1}A$-módulo $N$, el morfismo canónico
+\[
+ D^i(S^{-1}A|R,N)\longrightarrow D^i(A|R,N)
+\]
+es un isomorfismo para todo $i$. Por consiguiente, para todo $A$-módulo
+$M$, hay un isomorfismo canónico
+\[
+ D^i(S^{-1}A|R,S^{-1}M)
+ \xrightarrow{\ \sim\ }S^{-1}D^i(A|R,M)
+\]
+para todo $i$.
+
+\item Sean $A$ y $B$ $R$-álgebras tales que
+$\operatorname{Tor}_i^R(A,B)=0$ para $0<i\leq n$. Entonces, para todo
+$A\otimes_RB$-módulo $M$, el morfismo canónico
+\[
+ D^i(A\otimes_RB|R,M)
+ \longrightarrow D^i(A|R,M)\oplus D^i(B|R,M)
+\]
+es un isomorfismo para $i\leq n$. En particular, supongamos que
+$\operatorname{Tor}_i^R(A,A)=0$ para todo $i>0$ y que la diagonal
+\[
+ \Delta:\operatorname{Spec}(A)\longrightarrow
+ \operatorname{Spec}(A)\times_{\operatorname{Spec}(R)}
+ \operatorname{Spec}(A)
+\]
+es una inmersión abierta; por ejemplo, supongamos que $A$ es
+\emph{étale} sobre $R$. Entonces
+\[
+ D^i(A|R,M)=0
+\]
+para todo $i>0$ y todo $A$-módulo $M$.
+
+%%%%%%%%%%  scan idx 98  |  folio 87  %%%%%%%%%%
+
+\item Sea $R$ noetheriano, sea $A$ una $R$-álgebra esencialmente de
+tipo finito y sea $E$ un $A$-módulo plano. Entonces el morfismo canónico
+\[
+ E\otimes_AD^i(A|R,M)
+ \xrightarrow{\ \sim\ }
+ D^i(A|R,E\otimes_AM)
+\]
+es un isomorfismo para todo $i\geq0$ y todo $A$-módulo $M$.
+
+\item Si $R$ es noetheriano, $A$ es una $R$-álgebra esencialmente de
+tipo finito y $M$ es un $A$-módulo de tipo finito, entonces
+$D^i(A|R,M)$ es un $A$-módulo de tipo finito para todo $i$.
+
+\item Sea $P$ un álgebra de polinomios sobre $R$, y sea exacta
+\[
+ 0\longrightarrow I\longrightarrow P\longrightarrow A
+ \longrightarrow0.
+\]
+Entonces
+\[
+ D^0(A|R,M)=\operatorname{Der}_R(A,M),
+\]
+\begin{align*}
+D^1(A|R,M)
+ &=\operatorname{Coker}\bigl(
+   \operatorname{Der}_R(P,M)\\[-.25ex]
+ &\hspace{5em}\longrightarrow
+   \operatorname{Hom}_A(I/I^2,M)\sisi{}{\bigr)}\\
+ &=\left\{
+   \begin{array}{c}
+   \text{clases de isomorfismo de extensiones}\\
+   \text{conmutativas de }R\text{-álgebras de }A\text{ por }M
+   \end{array}\right\},\\
+D^2(A|R,M)
+ &=\operatorname{Coker}\bigl(
+   H^1(K_I,M)\longrightarrow
+   \operatorname{Hom}_A(H_1(K_I),M)\bigr).
+\end{align*}
+\end{enumerate}

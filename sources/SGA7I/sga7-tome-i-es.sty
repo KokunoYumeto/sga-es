@@ -1,0 +1,116 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sga7-tome-i-es}[2026/08/20 SGA 7 Tome I Spanish edition]
+
+\RequirePackage{cmap}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{textcomp}
+\RequirePackage[english,french,spanish,es-noquoting]{babel}
+\RequirePackage{amsmath,amssymb,amsfonts,mathrsfs}
+\RequirePackage{mathtools}
+\RequirePackage{tikz}
+\usetikzlibrary{cd,arrows.meta,calc,positioning,babel}
+\RequirePackage{geometry}
+\geometry{a4paper,margin=2.35cm,includeheadfoot}
+\RequirePackage{enumitem}
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage[normalem]{ulem}
+\RequirePackage[unicode,hidelinks,hypertexnames=false]{hyperref}
+
+\emergencystretch=3em
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt}
+\allowdisplaybreaks[2]
+
+\let\mathunderline\underline
+\renewcommand{\underline}[1]{%
+  \ifmmode\mathunderline{#1}\else\uline{#1}\fi}
+
+% Selector reversible: la primera rama conserva la lectura impresa;
+% la segunda es la lectura española corriente/corregida.
+\ifdefined\SGAOriginalMode
+  \newcommand{\sisi}[2]{#1}
+  \def\SGASevenBranchName{original diplomática}
+  \def\SGASevenPdfSuffix{original}
+\else
+  \newcommand{\sisi}[2]{#2}
+  \def\SGASevenBranchName{corriente corregida}
+  \def\SGASevenPdfSuffix{current}
+\fi
+
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}
+\DeclareUnicodeCharacter{2297}{\ensuremath{\otimes}}
+\DeclareUnicodeCharacter{2295}{\ensuremath{\oplus}}
+\DeclareUnicodeCharacter{2228}{\ensuremath{\vee}}
+\DeclareUnicodeCharacter{223C}{\ensuremath{\sim}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+\DeclareUnicodeCharacter{2113}{\ensuremath{\ell}}
+\DeclareUnicodeCharacter{00A7}{\S}
+\DeclareUnicodeCharacter{010C}{\v{C}}
+\DeclareUnicodeCharacter{00C3}{\~{A}}
+\DeclareUnicodeCharacter{02D9}{\.{} }
+
+\providecommand{\Zl}{\mathbb Z_{\ell}}
+\providecommand{\Ql}{\mathbb Q_{\ell}}
+\providecommand{\Gal}{\operatorname{Gal}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Isom}{\operatorname{Isom}}
+\providecommand{\Aut}{\operatorname{Aut}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\End}{\operatorname{End}}
+\providecommand{\Biext}{\operatorname{Biext}}
+\providecommand{\Pic}{\operatorname{Pic}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Im}{\operatorname{Im}}
+\providecommand{\Tor}{\operatorname{Tor}}
+\providecommand{\prof}{\operatorname{prof}}
+\providecommand{\codim}{\operatorname{codim}}
+\providecommand{\pr}{\operatorname{pr}}
+\providecommand{\id}{\mathrm{id}}
+\providecommand{\sym}{\mathrm{sym}}
+\providecommand{\Corr}{\operatorname{Corr}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\Comp}{\operatorname{Comp}}
+\providecommand{\cC}{\mathcal C}
+\providecommand{\cY}{\mathcal Y}
+\providecommand{\cT}{\mathcal T}
+\providecommand{\cPsi}{\Psi}
+\providecommand{\Dcat}{D}
+\providecommand{\La}{\Lambda}
+\providecommand{\Ghat}{\widehat G}
+\providecommand{\uHom}{\underline{\operatorname{Hom}}}
+\providecommand{\uExt}{\underline{\operatorname{Ext}}}
+\providecommand{\uTor}{\underline{\operatorname{Tor}}}
+\providecommand{\cl}{\operatorname{c\ell}}
+\providecommand{\e}{\mathrm e}
+
+\hypersetup{
+  pdftitle={SGA 7, tomo I — edición española (\SGASevenBranchName)},
+  pdfauthor={Proyecto de Traducción Matemática Interlanguage},
+  pdfsubject={Grupos de monodromía en geometría algebraica},
+  pdfkeywords={SGA 7; monodromía; geometría algebraica; español},
+  pdfcreator={pdfLaTeX; edición Interlanguage},
+  pdfproducer={pdfTeX}
+}
+\pdfstringdefDisableCommands{\def\sisi#1#2{#2}\def\underline#1{#1}}
+
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=-1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi

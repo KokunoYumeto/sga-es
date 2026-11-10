@@ -1,0 +1,108 @@
+%%%%%%%%%%  scan idx 56  |  folio 45  %%%%%%%%%%
+
+\textbf{1.15.} En lo que resta de este párrafo explicaremos brevemente
+cómo modificar la teoría anterior para permitir extensiones del cuerpo
+residual.
+
+Sean $\Lambda$ y $K$ anillos locales noetherianos completos, siendo
+$K$ una $\Lambda$-álgebra. Supongamos que:
+
+(a) el morfismo natural $\Lambda\longrightarrow K$ es un
+homomorfismo local;
+
+(b) el cuerpo residual $K'$ de $K$ es una extensión de tipo finito del
+cuerpo residual $k$ de $\Lambda$.
+
+El caso más interesante es $K=K'$, siendo $K$ una extensión finita
+inseparable de $k$.
+
+Denotemos por $\widehat C_{\Lambda,K}$ la categoría cuyos objetos son
+anillos locales noetherianos completos $R$ provistos de una estructura
+de $\Lambda$-álgebra y de un epimorfismo de $\Lambda$-álgebras
+$s:R\longrightarrow K$. Sea $C_{\Lambda,K}$ su subcategoría plena
+constituida por los pares $(R,s)$ para los cuales $\ker(s)$ tiene
+longitud finita como $R$-módulo. La categoría
+$\widehat C_{\Lambda,K}$ se identifica con una subcategoría plena de
+$\operatorname{Pro}(C_{\Lambda,K})$. Si $K$ es artiniano, todo objeto
+de $C_{\Lambda,K}$ es artiniano.
+
+Para un espacio vectorial $V$ de dimensión finita sobre $K'$, denotemos
+por $D_V(K)$ el álgebra de números duales sobre $K$ definida por $V$.
+Sus elementos son de la forma $x+v\varepsilon$, donde $x\in K$,
+$v\in V$ y $\varepsilon^2=0$, con multiplicación
+\[
+ (x+v\varepsilon)(x'+v'\varepsilon)
+ =xx'+(xv'+x'v)\varepsilon.
+\]
+El morfismo
+\[
+ s:D_V(K)\longrightarrow K,
+ \qquad s(x+v\varepsilon)=x,
+\]
+hace de $D_V(K)$ un objeto de $C_{\Lambda,K}$. El papel que antes
+desempeñaba $k[\varepsilon]$ lo desempeña ahora $D_{K'}(K)$.
+
+Como en 1.8, todo grupoide cofibrado $\underline A$ sobre
+$C_{\Lambda,K}$ se extiende naturalmente a una categoría cofibrada
+$\widehat{\underline A}$ sobre $\widehat C_{\Lambda,K}$. Un morfismo
+de $\underline A$ o $\widehat{\underline A}$ se llama
+\underline{sobreyectivo} cuando el homomorfismo de álgebras
+correspondiente en $C_{\Lambda,K}$ o $\widehat C_{\Lambda,K}$ es
+sobreyectivo.
+
+%%%%%%%%%%  scan idx 57  |  folio 46  %%%%%%%%%%
+
+\underline{Suponemos que $\underline A(K)=\{e\}$.}
+
+\underline{Definición 1.16. Un grupoide cofibrado $\underline A$ sobre
+$C_{\Lambda,K}$ se llama semihomogéneo si se cumplen las propiedades
+siguientes:}
+
+(I) \underline{Todo diagrama de flechas continuas}
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+a'' \arrow[r,dashed] \arrow[d,dashed]
+ & a' \arrow[d] \\
+a_1 \arrow[r] & a
+\end{tikzcd}
+\]
+\underline{en $\underline A$, donde $a'\longrightarrow a$ es
+sobreyectivo, puede completarse en un diagrama conmutativo añadiendo
+las flechas punteadas.}
+
+(II) \underline{Para todo $R$, el morfismo natural}
+\[
+ [\underline A(R\times_KD_{K'}(K))]
+ \longrightarrow
+ [\underline A(R)]\times[\underline A(D_{K'}(K))]
+\]
+\underline{es biyectivo.}
+
+Si $\underline A$ es semihomogéneo, también lo es $[\underline A]$.
+
+\textbf{1.17.} Restrinjamos primero $\underline A$ a la subcategoría
+plena de $C_{\Lambda,K}$ cuyos objetos son los $D_V(K)$. Pongamos
+\[
+ \Omega=\Omega^1_{K/\Lambda}\otimes_KK',
+ \qquad d:K\longrightarrow\Omega.
+\]
+Un morfismo $f:D_V(K)\longrightarrow D_W(K)$ puede escribirse
+\[
+ f(x+v\varepsilon)
+ =x+\bigl(u(v)+D(dx)\bigr)\varepsilon,
+\]
+con $u\in\operatorname{Hom}_{K'}(V,W)$ y
+$D\in\operatorname{Hom}_{K'}(\Omega,W)$. Identificando $f$ con
+$(u,D)$, la composición viene dada por
+\[
+ (u,D)\circ(u',D')=(uu',D+uD').
+\]
+La condición (II) implica:
+
+(II$'$) el funtor de los espacios vectoriales sobre $K'$ a los
+conjuntos
+\[
+ V\longmapsto[\underline A(D_V(K))]
+\]
+conmuta con los productos.
+

@@ -1,0 +1,169 @@
+\par\medskip\noindent
+\underline{Lema 3.5.} Considérese un diagrama de $R$-álgebras
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ & C \arrow[d]\\
+ B' \arrow[r,"\text{suprayectiva}"'] & B
+\end{tikzcd}
+\]
+y sea $S$ una $R$-álgebra.
+
+\begin{enumerate}[label=(\roman*)]
+\item Si $\operatorname{Tor}_1^R(B,S)=0$, entonces la aplicación canónica
+\[
+ (B'\times_BC)\otimes_RS
+ \longrightarrow
+ (B'\otimes_RS)\times_{B\otimes_RS}(C\otimes_RS)
+\]
+es un isomorfismo.
+
+\item Supongamos que $B'$ es plano sobre $R$. Si
+\[
+ \operatorname{Tor}_i^R(C,S)=0\quad(0<i<n)
+ \qquad\text{y}\qquad
+ \operatorname{Tor}_i^R(B,S)=0\quad(0<i\sisi{<}{\leq}n),
+\]
+entonces
+\[
+ \operatorname{Tor}_i^R(B'\times_BC,S)=0\qquad(0<i<n).
+\]
+\end{enumerate}
+
+\underline{Demostración.} Considérese la sucesión exacta
+$0\longrightarrow J\longrightarrow B'\longrightarrow B
+\longrightarrow0$.
+
+(i) Si $\operatorname{Tor}_{\sisi{i}{1}}^R(B,S)=0$, entonces
+\[
+ 0\longrightarrow J\otimes_RS\longrightarrow B'\otimes_RS
+ \longrightarrow B\otimes_RS\longrightarrow0
+\]
+es exacta, y por tanto también lo es
+\[
+ 0\longrightarrow J\otimes_RS
+ \longrightarrow
+ (B'\otimes_RS)\times_{B\otimes_RS}(C\otimes_RS)
+ \longrightarrow C\otimes_RS\longrightarrow0.
+\]
+Se obtiene así un diagrama conmutativo de filas exactas:
+\begin{center}
+\scriptsize
+\begin{tikzcd}[column sep=small,row sep=large]
+ & J\otimes_RS \arrow[r] \arrow[d,equal]
+ & (B'\times_BC)\otimes_RS \arrow[r] \arrow[d]
+ & C\otimes_RS \arrow[r] \arrow[d,equal]
+ & 0\\
+ 0 \arrow[r] & J\otimes_RS \arrow[r]
+ & (B'\otimes_RS)\times_{B\otimes_RS}(C\otimes_RS) \arrow[r]
+ & C\otimes_RS \arrow[r] & 0.
+\end{tikzcd}
+\end{center}
+
+%%%%%%%%%%  scan idx 88  |  folio 77  %%%%%%%%%%
+
+Se sigue que
+\[
+ (B'\sisi{\otimes}{\times}_BC)\otimes_RS
+ \longrightarrow
+ (B'\otimes_RS)\times_{B\otimes_RS}(C\otimes_RS)
+\]
+es un isomorfismo.
+
+(ii) Puesto que $B'$ es plano sobre $R$ y
+$\operatorname{Tor}_i^R(B,S)=0$ para $0<i\leq n$, la sucesión exacta
+larga de Tor da
+\[
+ \operatorname{Tor}_i^R(J,S)=0\qquad(0<i<n).
+\]
+Aplicando la misma sucesión a
+\[
+ 0\longrightarrow J\longrightarrow B'\times_BC
+ \longrightarrow C\longrightarrow0
+\]
+y usando la hipótesis sobre $C$, se obtiene
+\[
+ \operatorname{Tor}_i^R(B'\times_BC,S)=0\qquad(0<i<n).
+\]
+\hfill$\square$
+
+\underline{Corolario 3.6.}
+
+\begin{enumerate}[label=(\alph*)]
+\item Sean $A$ y $S$ $R$-álgebras. Si
+$\operatorname{Tor}_1^R(A,S)=0$, entonces, para todo
+$G\in\operatorname{Ob}
+(\overset{\vee}{\underline C}_{A\otimes_RS|S})$, la aplicación canónica
+\[
+ \check H^{\bullet}(A\otimes_RS|S,G)
+ \longrightarrow\check H^{\bullet}(A|R,\check SG)
+\]
+es un isomorfismo. Aquí
+\[
+ S:\underline C_{A|R}\longrightarrow
+ \underline C_{A\otimes_RS|S},
+ \qquad X\longmapsto X\otimes_RS.
+\]
+En particular, si $S$ es plano sobre $R$, entonces
+\[
+ \check S\,\check{\underline H}^{\,\bullet}(G)
+ \longrightarrow
+ \check{\underline H}^{\,\bullet}(\check SG)
+\]
+es un isomorfismo para todo $G$ de esta clase.
+
+\item Sea $P\longrightarrow B$ una aplicación suprayectiva de
+$R$-álgebras, donde $P$ es un álgebra polinómica sobre $R$. Si
+\[
+ \operatorname{Tor}_i^R(B,S)=0\qquad(0<i\leq n),
+\]
+entonces, para todo producto fibrado iterado de copias de $P$ sobre $B$,
+\[
+ \operatorname{Tor}_i^R
+ (P\times_B P\times_B\cdots\times_B P,S)=0
+ \qquad(0<i<n).
+\]
+\end{enumerate}
+
+\underline{Demostración.}
+
+(a) Dado $B\in\operatorname{Ob}(\underline C_{A|R})$, elíjase un
+recubrimiento $\{P\longrightarrow B\}\in\operatorname{Cov}(B)$ con $P$
+un álgebra polinómica sobre $R$. Si
+$\operatorname{Tor}_1^R(B,S)=0$, el Lema 3.5(i) muestra que la aplicación
+natural
+\[
+ \left(\overbrace{P\times_B\cdots\times_BP}^{n}\right)\otimes_RS
+ \longrightarrow
+ \overbrace{(P\otimes_RS)\times_{B\otimes_RS}\cdots
+ \times_{B\otimes_RS}(P\otimes_RS)}^{n}
+\]
+es un isomorfismo para todo $n$. Por consiguiente,
+\begin{align*}
+ \check H^{\bullet}(B|R,\check SG)
+ &=H^{\bullet}(\{P\longrightarrow B\},\check SG)\\
+ &=H^{\bullet}(\{P\otimes_RS\longrightarrow B\otimes_RS\},G)\\
+ &=\check H^{\bullet}(B\otimes_RS|S,G).
+\end{align*}
+Si $S$ es plano sobre $R$, entonces
+$\operatorname{Tor}_1^R(X,S)=0$ para todo
+$X\in\operatorname{Ob}(\underline C_{A|R})$. Por tanto, el isomorfismo
+precedente es natural en $X$, y da
+\[
+ \check S\,\check{\underline H}^{\,\bullet}(G)
+ \xrightarrow{\ \sim\ }
+ \check{\underline H}^{\,\bullet}(\check SG).
+\]
+
+(b) Pongamos
+\[
+ P^{(m)}=\overbrace{P\times_B\cdots\times_BP}^{m+1}.
+\]
+Para $m=0$ no hay nada que demostrar, pues $P$ es plano sobre $R$.
+Supongamos inductivamente que
+$\operatorname{Tor}_i^R(P^{(m-1)},S)=0$ para $0<i<n$. Puesto que
+$P\longrightarrow B$ es suprayectiva y
+$P^{(m)}=P\times_BP^{(m-1)}$, el Lema 3.5(ii) da
+\[
+ \operatorname{Tor}_i^R(P^{(m)},S)=0\qquad(0<i<n).
+\]
+\hfill$\square$

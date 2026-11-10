@@ -1,0 +1,219 @@
+% AUTORIDAD DE FUENTE: Exposé IX §12.3, líneas francesas 3549--3619;
+% índices de escaneo 480--483, folios 469--472. Se conserva mediante
+% \sisi la capa diplomática/corregida de los loci materiales.
+
+\medskip
+\noindent
+12.3. Sea $C$ una curva separable y propia sobre un cuerpo $k$, que
+supondremos separablemente cerrado para simplificar (o incluso
+algebraicamente cerrado, si el lector lo prefiere). Si $\widetilde C$ es
+la normalización de $C$, se sabe que
+$\underline{\operatorname{Pic}}^o_{\widetilde C/k}$ tiene «rango
+reductivo» cero (es decir, su toro maximal es nulo). Por consiguiente, el
+toro maximal de $\underline{\operatorname{Pic}}^o_{C/k}$ está contenido
+en
+
+\begin{equation*}
+ N=\ker\bigl(\underline{\operatorname{Pic}}_{C/k}
+       \longrightarrow\underline{\operatorname{Pic}}_{\widetilde C/k}\bigr),
+\end{equation*}
+
+\noindent
+y es, por tanto, canónicamente isomorfo al toro maximal de este último
+grupo. La estructura de $N$ se hace explícita fácilmente mediante EGA
+IV, 21.8.5: $N$ es canónicamente una extensión de un toro $T$, que
+describiremos, por un grupo unipotente conexo $U$ (el cual posee, sobre
+$k$, una serie de composición cuyos cocientes son isomorfos al grupo
+aditivo $\mathbb G_a$). Además, si $T'$ es el toro maximal de $N$,
+entonces $T'\cap U$ es a la vez unipotente y de tipo multiplicativo, y es
+por tanto nulo (SGA 3, XVII, 2.4), mientras que la imagen de $T'$ en $T$
+es todo $T$ (SGA 3, XII, 7.1 e)). Así, $T'\to T$ es un isomorfismo. En
+consecuencia, $T$ es canónicamente isomorfo al toro maximal de $N$ y,
+por tanto, al de
+$\underline{\operatorname{Pic}}^o_{\sisi{X}{C}/k}$.
+\footnote{La fuente impresa escribe
+$\underline{\operatorname{Pic}}^o_{X/k}$ al final de este argumento. La
+curva de toda la sección 12.3 es $C$, y las apariciones precedente y
+siguiente llevan ambas $C$.}
+
+%%%%%%%%%%  scan idx 481  |  folio 470  %%%%%%%%%%
+
+Para explicitar la estructura de $N$, conviene suponer que $k$ es
+separablemente cerrado. Las componentes irreducibles $C_i$ de $C$ son
+entonces geométricamente irreducibles, y los puntos no normales de $C$
+son radiciales sobre $k$. Sea $J$ el conjunto de las componentes
+irreducibles de $\widetilde C$ y, para cada $x\in C$, sea $J(x)$ el
+conjunto de las «ramas» de $C$ que pasan por $x$ (es decir, los puntos de
+$\widetilde C$ situados sobre $x$). Pongamos finalmente
+
+\begin{equation}\tag{12.3.1}
+ R(x)=\mathbb Z^{J(x)}/\operatorname{Im}\mathbb Z,
+\end{equation}
+
+\noindent
+donde $\mathbb Z\to\mathbb Z^{J(x)}$ es el morfismo diagonal, y
+
+\begin{equation}\tag{12.3.2}
+ R=\left(\bigoplus_x R(x)\right)/\operatorname{Im}\mathbb Z^J.
+\end{equation}
+
+\noindent
+Es claro que basta tomar la suma sobre el conjunto finito de puntos de
+$C$ que pertenecen al menos a dos ramas de $C$. Por tanto, $R$ es un
+$\mathbb Z$-módulo de tipo finito. Se tiene entonces un isomorfismo
+canónico
+
+\begin{equation}\tag{\sisi{12.2.3}{12.3.3}}
+ T\ \bigl(\simeq\text{ el toro maximal de }
+       \underline{\operatorname{Pic}}^o_{C/k}\bigr)
+ \simeq R\otimes\mathbb G_{m,k}.
+\end{equation}
+
+\noindent
+En otras palabras, el grupo de caracteres $M$ de $T$ es
+
+\begin{equation}\tag{\sisi{12.2.4}{12.3.4}}
+ M\mathrel{\mathop{=}^{\mathrm{def}}}D(T)=\check R
+ \simeq\ker\left(\bigoplus_x\check R(x)\longrightarrow\mathbb Z^J\right),
+\end{equation}
+
+\noindent
+donde $\check R(x)$ puede interpretarse también como el conjunto de las
+funciones sobre $J(x)$ con valores enteros cuya suma de valores es cero.
+
+%%%%%%%%%%  scan idx 482  |  folio 471  %%%%%%%%%%
+
+\medskip
+\noindent
+12.3.5. Solo necesitaremos el caso en el que por cada punto $x$ de $C$
+pasan a lo sumo dos ramas de $C$ (como ocurre, en particular, con los
+puntos dobles ordinarios). Si $\operatorname{card}J(x)=2$, entonces
+$R(x)$ es isomorfo a $\mathbb Z$, pero el isomorfismo depende de una
+ordenación de las dos ramas $(C',C'')$ que pasan por $x$, o,
+equivalentemente, de la elección de una de ellas, $C'$: a $C'$ se asocia
+el elemento de $R(x)$ que es la imagen canónica de
+$0_{C'}+1_{C''}$. Se obtiene así un isomorfismo
+
+\begin{equation}\tag{12.3.6}
+ R=\mathbb Z^I/\operatorname{Im}\mathbb Z^J,
+ \qquad
+ T\simeq\mathbb G_m^I/\operatorname{Im}\mathbb G_m^J,
+ \qquad
+ M=\ker\bigl(\mathbb Z^I\longrightarrow\mathbb Z^J\bigr),
+\end{equation}
+
+\noindent
+donde $I$ es el conjunto de los puntos $x\in C$ que pertenecen a dos
+ramas de $C$, tras una elección de signos como la que acabamos de
+explicar.
+
+\medskip
+\noindent
+\underline{Observaciones} 12.3.7. Una manera a veces conveniente de
+describir el grupo de caracteres $M$ del toro maximal $T$ de
+$\underline{\operatorname{Pic}}^o_{C/k}$ es la siguiente. Consideremos
+el «grafo unidimensional no orientado» $\Gamma(C)$ (N. Bourbaki,
+\emph{Groupes et algèbres de Lie}, capítulo IV, apéndice), cuyos vértices
+son las componentes irreducibles de $\widetilde C$. Dos vértices
+$\widetilde C_i$ y $\widetilde C_j$ están unidos por un conjunto de
+aristas en correspondencia biyectiva con los pares de ramas
+\underline{distintas} de $C$, contenidas respectivamente en
+$\widetilde C_i$ y $\widetilde C_j$, que pasan por un mismo punto de $C$.
+Este conjunto es $\widetilde C_i\times_C\widetilde C_j$ si $i\ne j$;
+si $i=j$, es
+
+\begin{equation*}
+ \bigl(\widetilde C_i\times_C\widetilde C_i-
+       \Delta(\widetilde C_i)\bigr)/(\text{simetría}),
+\end{equation*}
+
+\noindent
+donde $\Delta:\widetilde C\to\widetilde C\times_C\widetilde C$ es la
+diagonal. (Por tanto, es vacío si $C_i$ es geométricamente unirrama.) Se
+tienen entonces isomorfismos canónicos
+
+\begin{equation}\tag{12.3.7}
+ M=D(T)\xleftarrow{\ \sim\ }H_1(\Gamma(C),\mathbb Z),
+ \qquad
+ \check M=R\simeq H^1(\Gamma(C),\mathbb Z).
+\end{equation}
+
+No necesitaremos esta interpretación combinatoria de $M$ y nos
+limitaremos a definir el homomorfismo canónico
+
+\begin{equation}\tag{12.3.8}
+ H_1(\Gamma(C),\mathbb Z)\longrightarrow M,
+\end{equation}
+
+\noindent
+dejando al lector la demostración de que es un isomorfismo. Sea $I$ el
+conjunto de los puntos de $C$ que pertenecen al menos a dos ramas de
+$C$; sea $J$, como antes, el conjunto de las componentes irreducibles de
+$\widetilde C$ (o de $C$, lo que es lo mismo), y sea $K$ el conjunto de
+las «ramas» de $C$ en los puntos de $I$, es decir, la imagen inversa de
+$I$ en $\widetilde C$. Existe un morfismo canónico
+
+%%%%%%%%%%  scan idx 483  |  folio 472  %%%%%%%%%%
+
+\begin{equation}\tag{12.3.9}
+ h:K\longrightarrow I\times J,
+ \qquad h=(f,g),
+\end{equation}
+
+\noindent
+y la descripción (12.3.4) de $M$ se expresa en términos de $h$ como
+
+\begin{equation}\tag{12.3.10}
+ M\simeq\ker\left(
+  \mathbb Z^{(h)}:\mathbb Z^{(K)}\longrightarrow
+  \mathbb Z^{(I\times J)}\right).
+\end{equation}
+
+En efecto, la expresión \sisi{(12.3.3)}{(12.3.2)} de $R=\check M$ puede interpretarse
+claramente como el conúcleo del homomorfismo
+$\mathbb Z^{I\times J}\to\mathbb Z^K$ inducido por $h$, que es el
+transpuesto de $\mathbb Z^{(h)}$. El grafo $\Gamma(C)$ se describe
+asimismo en términos de $h$ mediante
+
+\begin{equation*}
+ \Gamma_0=J,
+ \qquad
+ \Gamma_1=(K\times_I K-\Delta(K))/(\text{simetría}).
+\end{equation*}
+
+Elijamos una orientación en cada arista de $\Gamma(C)$ y denotemos por
+$\Gamma_1$ el conjunto de estas aristas orientadas $(x,C',C'')$. Entonces
+
+\begin{equation}\tag{12.3.11}
+ H_1(\Gamma(C),\mathbb Z)=
+ \ker\left(d:\mathbb Z^{(\Gamma_1)}\longrightarrow\mathbb Z^{(J)}\right),
+\end{equation}
+
+\noindent
+donde el diferencial es
+
+\begin{equation}\tag{12.3.12}
+ d(x,C',C'')=g(C'')-g(C').
+\end{equation}
+
+El homomorfismo (12.3.8) está inducido por el siguiente homomorfismo $v$
+de complejos de cadenas:
+
+\begin{equation}\tag{12.3.13}
+ \begin{split}
+ v=(v_0,v_1):C_\bullet(\Gamma(C))
+   &=\left[\mathbb Z^{(\sisi{\Gamma}{\Gamma_1})}
+      \longrightarrow\mathbb Z^{(J)}\right]\\
+   &\longrightarrow
+     \left[\mathbb Z^{(K)}\longrightarrow\mathbb Z^{(I\times J)}\right],
+ \end{split}
+\end{equation}
+
+\noindent
+dado por
+
+\begin{equation}\tag{12.3.14}
+ v_1(x,C',C'')=(x,C'')-(x,C'),
+ \qquad
+ v_0(\widetilde C_j)=(0,\widetilde C_j).
+\end{equation}

@@ -1,0 +1,163 @@
+%%%%%%%%%%  scan idx 267  |  folio 256  %%%%%%%%%%
+
+\medskip
+\noindent 3.3. Pasemos ahora al caso en que $Q$ es finito localmente
+libre sobre $S$, o es un esquema en grupos de tipo multiplicativo
+sobre $S$. El lema clave en este caso es el resultado bien conocido
+siguiente.
+
+\medskip
+\noindent\underline{Proposición 3.3.1.} \underline{Sea $Q$ un
+esquema en grupos conmutativos sobre $S$, y supongamos que $Q$ es
+finito localmente libre sobre $S$, o que $Q$ es de tipo finito y de
+tipo multiplicativo sobre $S$ (SGA 3 IX). Entonces}
+\[
+ \uExt^1(Q,\underline G_m)=0.
+\]
+
+\noindent\underline{Demostración.} Distinguimos los dos casos.
+
+\medskip
+\noindent a) Supongamos que $Q$ es finito localmente libre sobre $S$.
+Hay que demostrar que toda extensión $E$ de $Q$ por $\underline G_m$
+se escinde localmente para la topología fppf. Podemos suponer
+manifiestamente que $S$ es afín; existe entonces un entero $n>0$ tal
+que $nQ=0$ (SGA 3 IX 6.1). Además, $n\cdot\id$ es un epimorfismo de
+$\underline G_m$ para la topología fppf, y por tanto la sucesión
+exacta de Kummer
+\[
+ 0\longrightarrow\mu_n\longrightarrow\underline G_m
+ \xrightarrow{\ n\ }\underline G_m\longrightarrow0
+\]
+da una sucesión exacta de los $\Ext^i(Q,-)$ y, en particular, un
+\underline{epimorfismo}
+\[
+ \Ext^1(Q,\mu_n)\longrightarrow
+ {}_n\Ext^1(Q,\underline G_m)=\Ext^1(Q,\underline G_m).
+\]
+La última igualdad se debe a que la multiplicación por $n$, al ser
+nula sobre $Q$, es también nula sobre $\Ext^1(Q,\underline G_m)$.
+Así, la extensión $E$ procede de una extensión $F$ de $Q$ por
+$\mu_n$.
+
+%%%%%%%%%%  scan idx 268  |  folio 257  %%%%%%%%%%
+
+El grupo $F$ está representado por un esquema finito localmente libre
+sobre $S$ (teoría del descenso fpqc, SGA 1 VII). Por las propiedades
+conocidas de la dualidad de Cartier para grupos finitos localmente
+libres (SGA 3 VII 3),
+\[
+ D(F)=\uHom(F,\underline G_m)
+\]
+es una extensión de $D(\mu_n)$ por $D(Q)$. Aquí se utiliza el hecho
+siguiente: si $A\longrightarrow B$ es un monomorfismo de grupos
+conmutativos finitos localmente libres sobre $S$, entonces
+$D(B)\longrightarrow D(A)$ es fielmente plano. Como $D(B)$ y $D(A)$
+son a su vez finitos localmente libres sobre $S$, el criterio fibral
+de planitud fiel nos reduce al caso en que $S$ es el espectro de un
+cuerpo $k$. En este caso, la afirmación dice que el homomorfismo de
+anillos afines
+\[
+ k(D(A))\longrightarrow k(D(B))
+\]
+es inyectivo (SGA 3 $\mathrm{VI}_B$ 11.14). Este homomorfismo es el
+transpuesto de $k(B)\longrightarrow k(A)$, que es suprayectivo porque
+$A\longrightarrow B$ es una inmersión cerrada (SGA 3 $\mathrm{VI}_B$
+1.4.2). Por tanto, $k(D(A))\longrightarrow k(D(B))$ es en efecto
+inyectivo.
+
+La inclusión $\mu_n\longrightarrow\underline G_m$ se identifica con
+una sección de
+\[
+ D(\mu_n)=\uHom(\mu_n,\underline G_m),
+\]
+y solo queda demostrar que, localmente para la topología fppf sobre
+$S$, esta inclusión se prolonga a un homomorfismo
+$F\longrightarrow\underline G_m$; equivalentemente, que la sección de
+$D(\mu_n)$ que acabamos de considerar se levanta localmente fppf a una
+sección de $D(F)$. Esto es claro, puesto que
+$D(F)\longrightarrow D(\mu_n)$ es fielmente plano y de presentación
+finita.
+
+\medskip
+\noindent b) Por SGA 3 X 4.5, después de reemplazar $S$ por un
+recubrimiento étale, podemos suponer que $Q$ es diagonalizable,
+digamos $Q=D(M)$, donde $M$ es un $\mathbb Z$-módulo finitamente
+generado. Sea $T$ el submódulo de torsión de $M$, y pongamos $L=M/T$,
+de modo que $L\simeq\mathbb Z^r$.
+
+%%%%%%%%%%  scan idx 269  |  folio 258  %%%%%%%%%%
+
+La sucesión exacta
+\[
+ 0\longrightarrow T\longrightarrow M\longrightarrow L
+ \longrightarrow0
+\]
+da entonces una sucesión exacta (SGA 3 IX 3.1)
+\[
+ 0\longrightarrow D(L)\longrightarrow D(M)
+ \longrightarrow D(\sisi{L}{T})\longrightarrow0.
+\]
+Basta, pues, demostrar separadamente que se anulan los $\uExt^1$ de
+$D(L)$ y de $D(T)$ por $\underline G_m$. El caso de $D(T)$ se deduce
+de a), y el de $D(L)$ se reduce a $L=\mathbb Z$. Queda por comprobar
+que
+\[
+ \uExt^1(\underline G_m,\underline G_m)=0,
+\]
+es decir, que toda extensión $E$ de $\underline G_m$ por
+$\underline G_m$ es localmente trivial para la topología fppf.
+
+Tal extensión está representada por un esquema en grupos afín y plano
+sobre $S$ (teoría del descenso fpqc, SGA 1 VII), cuyas fibras son
+toros; es, por tanto, un toro (SGA 3 X 4.9). Por SGA 3 X 4.5 podemos
+suponer que $E$ es un toro escindido
+\[
+ E=D(R)\simeq\underline G_m^2.
+\]
+Tras una localización de Zariski, también podemos suponer que el
+monomorfismo $\underline G_m\hookrightarrow E=D(R)$ procede de un
+morfismo constante $R\longrightarrow\mathbb Z_S$ (SGA 3 VIII 1.4),
+que es necesariamente un epimorfismo (SGA 3 VIII 3.2 b)). Eligiendo
+$r\in R$ sobre $1\in\mathbb Z$ se obtiene un homomorfismo
+$E\longrightarrow\underline G_m$ que escinde la extensión y prueba la
+afirmación.
+
+\medskip
+\noindent\underline{Corolario 3.3.2.} \underline{Sea $Q$ como en
+3.3.1. Entonces, para todo $P$, se tiene un isomorfismo canónico}
+\begin{equation}\tag{3.3.2.1}
+ \Biext^1(P,Q;\underline G_m)
+ \xleftarrow{\ \sim\ }\Ext^1(P,D(Q)),
+\end{equation}
+\underline{donde $D(Q)$ denota el dual de Cartier
+$\uHom(Q,\underline G_m)$ de $Q$. Más precisamente, el funtor
+canónico (1.1.6) es una equivalencia de la categoría de extensiones de
+$P$ por $D(Q)$ con la categoría de biextensiones de $(P,Q)$ por
+$\underline G_m$.}
+
+%%%%%%%%%%  scan idx 270  |  folio 259  %%%%%%%%%%
+
+Este es el caso particular de 1.5 que se obtiene aplicando 3.3.1.
+
+\medskip
+\noindent\underline{Observaciones 3.3.3.} Bajo las hipótesis de
+3.3.1, $D(Q)$ está representado por un esquema en grupos separado,
+localmente de presentación finita y localmente cuasifinito sobre $S$.
+Más precisamente, si $Q$ es finito localmente libre sobre $S$, también
+lo es $D(Q)$, como es bien sabido (SGA 3 VII 3). Si $Q$ es de tipo
+multiplicativo, entonces $D(Q)$ es un \underline{grupo constante
+retorcido finitamente generado} (SGA 3 X 5.1), como se vio en SGA 3 IX
+4.5 y X 5.7. Si $P$ es un esquema en grupos, toda extensión de $P$ por
+$D(Q)$ es, por tanto, representable, por un lema conocido de la teoría
+del descenso fpqc (SGA 3 X 5.4).
+
+\medskip
+\noindent 3.3.4. Es falso que $\uExt^1(Q,\underline G_m)=0$ para todo
+esquema en grupos afín y plano $Q$ de presentación finita sobre $S$.
+Esto falla ya para
+\[
+ Q=\underline G_{a_S},\qquad
+ S=\Spec k[t]/(t^2),
+\]
+donde $k$ es un cuerpo de característica $p>0$.

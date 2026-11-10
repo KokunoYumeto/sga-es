@@ -1,0 +1,95 @@
+%%%%%%%%%%  scan idx 167  |  folio 156  %%%%%%%%%%
+
+2. \underline{La noción de biextensión de haces abelianos}
+
+2.0. En todo este número, $P,Q,G$ designan grupos conmutativos del
+topos $\underline T$. Utilizaremos con frecuencia el diagrama
+cartesiano
+\begin{equation}\tag{2.0.1}
+\begin{tikzcd}[column sep=4em,row sep=2.6em]
+ P \arrow[d] & P\times Q \arrow[l] \arrow[d] \\
+ e & Q \arrow[l]
+\end{tikzcd}
+\end{equation}
+y los grupos $G_P$ (respectivamente $G_Q$, $G_{P\times Q}$) sobre $P$
+(respectivamente $Q$, $P\times Q$), obtenidos por imagen inversa del
+grupo $G$ sobre $e$. Identificamos $G_{P\times Q}$ indistintamente con
+la imagen inversa $(G_P)_{P\times Q}$ por $\pr_1$, o con la imagen
+inversa $(G_Q)_{P\times Q}$ por $\pr_2$. En estas notaciones, las
+estructuras de grupo de $P,Q,P\times Q$ no intervienen; de hecho, casi
+nunca utilizaremos la estructura de grupo producto sobre $P\times Q$.
+En cambio, utilizaremos sobre $P\times Q$ la estructura de grupo sobre
+$P$ obtenida por imagen inversa de $Q$ sobre $e$,
+\begin{equation}\tag{2.0.2}
+ P\times Q=Q_P,
+\end{equation}
+y, análogamente, la estructura de grupo sobre $Q$ obtenida por imagen
+inversa de $P$ sobre $e$,
+\begin{equation}\tag{2.0.3}
+ P\times Q=P_Q.
+\end{equation}
+Así, sobre $P$ se consideran los dos grupos $G_P,Q_P$, y sobre $Q$ los
+dos grupos $G_Q,P_Q$.
+
+Si $E$ es un torsor sobre $P\times Q$ bajo $G_{P\times Q}$, puede
+considerarse tanto un torsor sobre $Q_P$ bajo
+$G_{P\times Q}=(G_P)_{Q_P}$ como un torsor sobre $P_Q$ bajo
+$G_{P\times Q}=(G_Q)_{P_Q}$. Por tanto, tiene sentido dotar a $E$ de
+una estructura de extensión conmutativa de $Q_P$ por $G_P$ compatible
+con su estructura de torsor o, simétricamente,
+
+%%%%%%%%%%  scan idx 168  |  folio 157  %%%%%%%%%%
+
+de una estructura de extensión de $P_Q$ por $G_Q$ compatible con su
+estructura de torsor. Además, 1.1.6, aplicado a los topoi inducidos
+$\underline T_{/P}$ y $\underline T_{/Q}$, proporciona una manera
+cómoda de explicitar tales estructuras mediante los isomorfismos
+canónicos
+\[
+ \underline T_{/P\times Q}\simeq
+ (\underline T_{/P})_{/P\times Q},\qquad
+ \underline T_{/P\times Q}\simeq
+ (\underline T_{/Q})_{/P\times Q}.
+\]
+Una estructura de extensión en la dirección de $P$, es decir,
+\sisi{de $Q_P$ por $G_P$}{de $P_Q$ por $G_Q$}, sobre el torsor $E$
+equivale a dar, para todo objeto $S$ de $\underline T$ y elementos
+$p,p'\in P(S)$, $q\in Q(S)$, un isomorfismo de torsores bajo $G_S$
+\begin{equation}\tag{2.0.4}
+ \varphi_{p,p';q}:E_{p,q}E_{p',q}
+ \xrightarrow{\ \sim\ }E_{pp',q}.
+\end{equation}
+Como de costumbre (cf. 1.1.2.1), para
+$(p,q)\in(P\times Q)(S)$, $E_{p,q}$ designa el torsor bajo $G_S$
+obtenido de $E$ por imagen inversa mediante
+$(p,q):S\longrightarrow P\times Q$. Los datos (2.0.4) deben ser
+\underline{funtoriales en} $S$, asociativos y conmutativos. La
+asociatividad se expresa por la conmutatividad de
+\begin{equation}\tag{2.0.5}
+\begin{tikzcd}[column sep=5.1em,row sep=3.4em]
+ & E_{pp',q}E_{p'',q}
+   \arrow[rd,"{\varphi_{pp',p'';q}}"] & \\
+ E_{p,q}E_{p',q}E_{p'',q}
+   \arrow[ru,"{\sisi{\varphi_{p,p;q}}{\varphi_{p,p';q}}\wedge\mathrm{id}}"]
+   \arrow[rd,"{\mathrm{id}\wedge\varphi_{p',p'';q}}"']
+ && E_{pp'p'',q} \\
+ & E_{p,q}E_{p'p'',q}
+   \arrow[ru,"{\varphi_{p,p'p'';q}}"'] &
+\end{tikzcd}
+\end{equation}
+para $p,p',p''\in P(S)$ y $q\in Q(S)$. La conmutatividad se expresa
+por la conmutatividad de diagramas de la forma (1.2.1).
+
+%%%%%%%%%%  scan idx 169  |  folio 158  %%%%%%%%%%
+
+\begin{equation}\tag{2.0.6}
+\begin{tikzcd}[column sep=5em,row sep=3.1em]
+ E_{p,q}E_{p',q} \arrow[r,"{\varphi_{p,p';q}}"]
+   \arrow[d,"\mathrm{sym}"']
+ & E_{pp',q} \arrow[d,"\mathrm{id}"] \\
+ E_{p',q}E_{p,q} \arrow[r,"{\varphi_{p',p;q}}"']
+ & E_{p'p,q}.
+\end{tikzcd}
+\end{equation}
+Aquí $p,p'\in P(S)$ y $q\in Q(S)$.
+

@@ -1,0 +1,197 @@
+\par\medskip
+\noindent
+\underline{Teorema} 4.3. \underline{Sea $S$ un rasgo henseliano de
+cuerpo residual $k$ y cuerpo de funciones $K$, y sea $A_K$ un esquema
+abeliano sobre $K$. Considérese la representación de}
+$\pi=\operatorname{Gal}(\overline K/K)$ \underline{sobre el módulo de
+Tate} $U_\ell=T_\ell(A(\overline K))$, \underline{donde $\ell$ es un
+primo distinto de la característica residual.}
+
+\smallskip
+\noindent
+a) \underline{Existe un subgrupo abierto $I'$ del grupo de inercia que
+actúa unipotentemente sobre $U_\ell$, de modo que el carácter de la
+representación de $\pi$ sobre $U_\ell$ es, de hecho, una función sobre
+$\pi/I'$.}
+\underline{Además, sobre $\Gamma=I/I'$ esta función toma valores enteros
+y es independiente de $\ell$. Más generalmente, para todo $g\in I$,
+los coeficientes del polinomio característico de $g_{U_\ell}$ son
+enteros racionales independientes de $\ell$.}
+
+\smallskip
+\noindent
+b) \underline{Supongamos que $k$ es un cuerpo finito de $q$ elementos,
+de modo que}
+\[
+ \pi_o=\pi/I\simeq\operatorname{Gal}(\overline k/k)
+\]
+\underline{se identifica con el completado profinito
+$\widehat{\mathbb Z}$ de $\mathbb Z$, correspondiendo al generador $1$
+de $\mathbb Z$ el automorfismo de Frobenius}
+\[
+ f_q:x\longmapsto x^q
+\]
+\underline{de $\overline k/k$. Entonces, para todo $g\in\pi$ cuya imagen
+en $\pi_o$ pertenece a $\mathbb Z$, la traza} (\underline{y, más generalmente, todo
+coeficiente del polinomio característico}) \underline{de $g_{U_\ell}$ es un número
+racional independiente de $\ell$. Es incluso un entero si la imagen de
+$g$ en $\pi_o$ es de la forma $f_q^{\,n}$, con $n\geq0$.}
+
+Demostremos, por ejemplo, las afirmaciones relativas a las trazas. Las
+afirmaciones relativas a los coeficientes del polinomio característico
+podrían demostrarse del mismo modo. Puede observarse también que se
+deducen formalmente de las afirmaciones sobre las trazas, expresando
+estos coeficientes en términos de las trazas de los iterados (aunque
+estas fórmulas introducen denominadores y, por tanto, no dan la
+integralidad afirmada), junto con un lema de Dwork--Fatou, del que
+Kleiman da una elegante demostración en [14, 2.8].
+
+\smallskip
+\noindent
+a) Utilizamos la fórmula (4.2.10), que aquí se convierte en
+\begin{equation}\tag{4.3.0}
+ \operatorname{Tr}g_{U_\ell}
+ =\operatorname{Tr}g_{B^*_o,\ell}
+ +\operatorname{Tr}g_{T^*_o,\ell}
+ +\operatorname{Tr}g^{-1}_{T^*_o,\ell}.
+\end{equation}
+Aquí $g_{B^*_o}$ y $g_{T^*_o}$ son ahora $k'$-automorfismos de $B^*_o$
+y $T^*_o$, respectivamente. Basta, por tanto, demostrar que las dos
+trazas correspondientes son enteros racionales independientes de
+$\ell$, lo cual es una afirmación «geométrica» general sobre grupos
+algebraicos. Para $g_{B^*_o}$ es un resultado bien conocido de Weil en
+la teoría de las variedades abelianas [5] [15]. Para $g_{T^*_o}$ es
+prácticamente inmediato: se describe la representación de $\Gamma$
+sobre $T=T^*_o$ mediante la representación correspondiente sobre el
+grupo dual $M'\simeq\mathbb Z^\mu$. La traza buscada es la de la
+contragrediente de esta última representación, por el isomorfismo
+canónico
+\[
+ T_\ell(T)\simeq\check M_\ell(1)
+ \mathrel{\mathop{=}^{\mathrm{def}}}
+ \check M'\otimes_{\mathbb Z}\mathbb Z_\ell(1).
+\]
+
+\smallskip
+\noindent
+b) Si la imagen de $g$ en $\pi_o$ es $f_q^{\,n}$, la fórmula (4.2.10)
+se convierte ahora en
+\begin{equation}\tag{4.3.1}
+ \operatorname{Tr}g_{U,\ell}
+ =\operatorname{Tr}g_{B^*_o,\ell}
+ +\operatorname{Tr}g_{T^*_o,\ell}
+ +q^n\operatorname{Tr}g^{-1}_{T^*_o,\ell}.
+\end{equation}
+Quedamos reducidos a demostrar el lema siguiente, en el que $k$ debe
+sustituirse por una clausura algebraica de $k'$, y $A$ por
+$A^{*o}_o\otimes_{k'}\overline k$.
+
+\medskip
+\noindent
+\underline{Lema} 4.3.2. \underline{Sea $k$ la clausura algebraica de
+un cuerpo finito, sea $A$ un esquema en grupos conmutativo de tipo
+finito sobre $k$, y sea $g$ un automorfismo de este esquema en grupos
+compatible con el automorfismo $f$ de $\operatorname{Spec}(k)$ obtenido
+por transporte de estructura a partir de un automorfismo de Frobenius
+iterado}
+\[
+ x\longmapsto x^q,
+ \qquad q=p^r,\quad r\geq0,
+\]
+\underline{donde $q$ es una potencia de la característica. Así, la
+acción de $g$ sobre las funciones $\varphi$ satisface}
+\[
+ g^*(\lambda\varphi)=f^*(\lambda)g^*(\varphi)
+ =\lambda^{q^{-1}}g^*(\varphi)
+ =\lambda^{p^{-r}}g^*(\varphi)
+ \qquad(\lambda\in k).
+\]
+\underline{Sea $g_\ell$ el automorfismo inducido por $g$ sobre
+$T_\ell(A(k))$ por «transporte de estructura», donde $\ell$ es un primo
+distinto de $p$. Entonces la traza de $g_\ell$ (y, más generalmente,
+todo coeficiente de su polinomio característico) es un entero racional
+independiente de $\ell$, y sus valores propios son enteros algebraicos
+de valor absoluto $q^{1/2}$ o $q$. Si $A$ es un esquema abeliano, sus
+valores absolutos son $q^{1/2}$; si $A$ es afín, los valores propios son
+de la forma $q\varepsilon_i$, donde los $\varepsilon_i$ son raíces de
+la unidad.}
+
+En efecto, considérese el endomorfismo «potencia $q$» $f_q^A$ del
+esquema absoluto subyacente de $A$, definido como la identidad sobre
+los puntos y como la aplicación potencia $q$ sobre el haz estructural.
+Es un endomorfismo del esquema en grupos $A$ compatible con el
+endomorfismo $f_q^{\operatorname{Spec}(k)}=f^{-1}$ de la base
+$\operatorname{Spec}(k)$. En consecuencia, el compuesto
+\begin{equation}\tag{4.3.3}
+ F=f_q^A g
+\end{equation}
+es un endomorfismo del esquema en grupos $A$ compatible con la identidad
+sobre $\operatorname{Spec}(k)$; en otras palabras, es un endomorfismo
+sobre $k$ del esquema en grupos $A$. Afirmo que el automorfismo
+$\Gamma_g$ de $A(k)$ definido por $g$ mediante transporte de estructura,
+a saber,
+\begin{equation}\tag{4.3.4}
+ \Gamma_g(u)=g\circ u\circ f^{-1}
+ \qquad\text{para }u\in A(k),
+\end{equation}
+puede describirse también por
+\begin{equation}\tag{4.3.5}
+ \Gamma_g(u)=F(u)
+ \qquad\text{para }u\in A(k).
+\end{equation}
+Para comprobarlo, basta observar que las aplicaciones subyacentes de
+conjuntos de los morfismos $\operatorname{Spec}(k)\longrightarrow A$
+representados por ambos miembros son iguales. Esto nos reduce a la
+igualdad obtenida de (4.3.5) componiendo su miembro izquierdo por la
+izquierda con $f_q^A$ y su miembro derecho por la derecha con $f^{-1}$,
+puesto que $f_q^A$ y $f^{-1}$ inducen la identidad sobre los conjuntos
+subyacentes de los esquemas fuente. La fórmula resultante se deduce
+inmediatamente de (4.3.3) y (4.3.4).
+
+Aplicando (4.3.5) a $u\in{}_{\ell^\nu}A(k)$ y pasando al límite inverso
+en $\nu$, se obtiene que $g_\ell$ puede interpretarse también como el
+endomorfismo $T_\ell(F)$ de $T_\ell(A(k))$ asociado al endomorfismo $F$
+de $A$. Por otra parte, se sabe que $T_\ell(F)$ posee un polinomio
+característico con coeficientes enteros independientes de $\ell$. Por
+dévissage, esto se reduce al caso en que $A$ es un esquema abeliano o
+un toro, donde el resultado requerido ya fue utilizado en la parte a)
+de la demostración. El mismo argumento demuestra también las
+afirmaciones sobre los valores propios, en vista, en el caso de los
+esquemas abelianos, de los resultados clásicos de Weil [15].
+
+Esto demuestra 4.3.2 y concluye la demostración de 4.3. Al mismo tiempo,
+demuestra el resultado siguiente.
+
+\medskip
+\noindent
+\underline{Corolario} 4.4. \underline{Supongamos que se cumplen las
+hipótesis de 4.3 b). Entonces, para todo $g\in\pi'$ cuya imagen en
+$\pi_o$ es de la forma $f_q^n$ con $n\geq0$, los valores propios de los
+automorfismos inducidos de}
+\[
+ U^{\mathrm{et}},\qquad
+ U^{\mathrm{ef}}/U^{\mathrm{et}},\qquad
+ U/U^{\mathrm{ef}}
+\]
+\underline{son enteros algebraicos cuyos valores absolutos son,
+respectivamente, $q^n$, $q^{n/2}$ y} $1$. \underline{Para los dos trozos extremos
+puede decirse más precisamente que los valores propios correspondientes
+son, respectivamente,}
+\[
+ (q^n\varepsilon_i)_{1\leq i\leq\mu}
+ \qquad\text{y}\qquad
+ (\varepsilon_i)_{1\leq i\leq\mu},
+\]
+\underline{donde los $\varepsilon_i$ $(1\leq i\leq\mu)$ son raíces de
+la unidad.}
+
+En efecto, la fórmula (4.1.2) da para el último trozo los valores propios
+\[
+ \frac{q^n}{q^n\varepsilon_i}=\varepsilon_i^{-1}.
+\]
+Pero, puesto que $\varepsilon_i$ es una raíz de la unidad, se tiene
+$\varepsilon_i^{-1}=\overline{\varepsilon_i}$ (conjugado complejo), y
+como la familia de los $\varepsilon_i$ es estable bajo conjugación
+compleja (por ser la familia de raíces de una ecuación con coeficientes
+enteros), la familia de los $\varepsilon_i^{-1}$ es también la familia
+de los $\varepsilon_i$. Esto demuestra la última afirmación de 4.4.

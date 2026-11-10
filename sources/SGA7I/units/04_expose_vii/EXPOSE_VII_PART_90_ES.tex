@@ -1,0 +1,221 @@
+\subsection*{3.6. Aplicación a la descripción de la categoría cofibrada
+de las biextensiones de una pareja dada $(P,Q)$ de grupos conmutativos}
+
+Sean $P$ y $Q$ dos $\mathbb Z$-módulos del topos $\underline T$.
+Elijamos una resolución plana $L'_\bullet(P)$ de $P$ que coincida en
+grados a lo sumo $2$ con el complejo aumentado $L_\bullet(P)$ de 3.5.
+Esto es posible por 3.5.3 y porque todo $\mathbb Z$-módulo sobre
+$\underline T$ es cociente de un $\mathbb Z$-módulo libre y, por tanto,
+plano. Elijamos análogamente una resolución plana $L'_\bullet(Q)$ de $Q$
+que coincida con $L_\bullet(Q)$ en grados a lo sumo $2$. Se tienen
+homomorfismos canónicos
+\begin{equation}\tag{3.6.1}
+ L_\bullet(P)\longrightarrow L'_\bullet(P),
+ \qquad
+ L_\bullet(Q)\longrightarrow L'_\bullet(Q),
+\end{equation}
+y, por consiguiente, un homomorfismo canónico
+\begin{equation}\tag{3.6.2}
+\begin{split}
+ L_\bullet(P,Q)
+ &\overset{\mathrm{def}}{=}L_\bullet(P)\otimes L_\bullet(Q)
+ \longrightarrow L'_\bullet(P,Q)\\
+ &\overset{\mathrm{def}}{=}L'_\bullet(P)\otimes L'_\bullet(Q)
+ \simeq P\mathbin{\overset{\mathbb L}{\otimes}}Q.
+\end{split}
+\end{equation}
+Es un isomorfismo sobre las componentes en grados a lo sumo $2$. Por
+consiguiente, por definición,
+\begin{equation}\tag{3.6.3}
+ \underline\Psi_{L_\bullet(P,Q)}
+ =
+ \sisi{\underline\Psi_{L_\bullet(P',Q')}}%
+       {\underline\Psi_{L'_\bullet(P,Q)}}.
+\end{equation}
+
+\underline{Teorema} 3.6.4. \underline{La categoría cofibrada aditiva
+sobre la categoría}
+\[
+ \underline C=\operatorname{GRAB}(\underline T)
+\]
+\underline{de los grupos conmutativos de $\underline T$, formada por las
+biextensiones de $(P,Q)$ por un grupo abeliano variable $G$} (2.4),
+\underline{es canónicamente equivalente a la categoría cofibrada aditiva}
+\[
+ \underline\Psi_{L_\bullet(P,Q)}
+ =
+ \underline\Psi_{L'_\bullet(P,Q)}
+\]
+\underline{definida a partir de}
+$L_\bullet(P,Q)=L_\bullet(P)\otimes L_\bullet(Q)$
+\underline{como en 3.1}.
+
+Esto y 3.2.5 proporcionan el resultado principal de la presente sección,
+anunciado anteriormente:
+
+%%%%%%%%%%  scan idx 216  |  folio 205  %%%%%%%%%%
+
+\underline{Corolario} 3.6.5. \underline{Para $P$ y $Q$ fijos hay un
+isomorfismo canónico, funtorial en $G$,}
+\begin{equation}\tag{3.6.5.1}
+ \Biext^1(P,Q;G)
+ \xrightarrow{\sim}
+ \Ext^1(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G).
+\end{equation}
+
+Para demostrar 3.6.5, explicitemos primero las componentes de grados
+$0,1,2$ de $L_\bullet(P,Q)$:
+\begin{equation}\tag{3.6.6}
+\left\{
+\begin{aligned}
+ L_0(P,Q)
+  ={}&L_0(P)\otimes L_0(Q)
+     =\mathbb Z[P\times Q],\\
+ L_1(P,Q)
+  ={}&L_0(P)\otimes L_1(Q)+L_1(P)\otimes L_0(Q)\\
+  ={}&\mathbb Z[P\times Q\times Q]
+     +\mathbb Z[P\times P\times Q],\\
+ L_2(P,Q)
+  ={}&L_0(P)\otimes L_2(Q)+L_1(P)\otimes L_1(Q)
+     +L_2(P)\otimes L_0(Q)\\
+  ={}&\mathbb Z[P\times Q\times Q]
+     +\mathbb Z[P\times Q\times Q\times Q]\\
+   &+\mathbb Z[P\times P\times Q\times Q]\\
+   &+\mathbb Z[P\times P\times Q]
+     +\mathbb Z[P\times P\times P\times Q].
+\end{aligned}
+\right.
+\end{equation}
+
+Para describir la categoría cofibrada
+$\underline\Psi_{L_\bullet(P,Q)}$ mediante sus fibras
+$\underline\Psi_{L_\bullet(P,Q)}(G)$, usamos 1.4 para expresar en términos
+de torsores las extensiones de $L_i(P,Q)$, para $i=0,1,2$, por $G$. Una
+extensión de $\sisi{L_0(P\times Q)}{L_0(P,Q)}$ por $G$ es un torsor bajo
+$G_{P\times Q}$. Una extensión de $L_1(P,Q)$ por $G$ es una pareja formada
+por un torsor bajo $G_{P\times Q\times Q}$ y otro bajo
+$G_{P\times P\times Q}$. De manera análoga, una extensión de $L_2(P,Q)$
+por $G$ es un sistema de cinco torsores bajo los grupos obtenidos de $G$
+por cambio de base a
+\[
+\begin{gathered}
+ P\times Q\times Q,\quad
+ P\times Q\times Q\times Q,\quad
+ P\times P\times Q\times Q,\\
+ P\times P\times Q,\quad
+ P\times P\times P\times Q.
+\end{gathered}
+\]
+
+Bajo este diccionario, una pareja $(X,\alpha)$ formada por una extensión
+de $L_0(P,Q)$ por $G$ y una trivialización de $d_0^*X$ sobre $L_1(P,Q)$
+se convierte en un torsor $E$ sobre $P\times Q$, dotado de dos
+trivializaciones $(\varphi,\psi)$ de los torsores $(E_1,E_2)$ sobre
+$P\times Q\times Q$ y $P\times P\times Q$, respectivamente, obtenidos
+de $E$ por imagen inversa mediante
+
+%%%%%%%%%%  scan idx 217  |  folio 206  %%%%%%%%%%
+
+\[
+ d_0:L_1(P,Q)\longrightarrow L_0(P,Q).
+\]
+Al explicitar $d_0$, como en la demostración de 3.5.3, se identifican
+$\varphi$ y $\psi$ con los isomorfismos
+\[
+ \varphi:q_1^*E\,q_2^*E\xrightarrow{\sim}\pi_Q^*E,
+ \qquad
+ \psi:p_1^*E\,p_2^*E\xrightarrow{\sim}\pi_P^*E.
+\]
+Aquí $\pi_Q,\sisi{q_1q_2}{q_1,q_2}:P\times Q\times Q
+\longrightarrow\sisi{Q}{P\times Q}$ están inducidos por la ley de
+composición y por las proyecciones primera y segunda
+$Q\times Q\longrightarrow Q$; las aplicaciones
+\[
+ \pi_P,p_1,p_2:P\times P\times Q\longrightarrow P\times Q
+\]
+se definen simétricamente. Así, $\varphi$ y $\psi$ son datos de las formas
+(2.0.4) y (2.0.7) que aparecen en 2.1.
+
+Finalmente, la condición de que $(X,\alpha)$ sea un objeto de
+$\underline\Psi_{L_\bullet(P,Q)}(G)$, a saber, la compatibilidad de la
+trivialización parcial $\alpha$ con $d_0d_1=0$, se convierte en cinco
+relaciones de compatibilidad para la estructura $(E,\varphi,\psi)$ sobre
+los torsores definidos, respectivamente, sobre
+\[
+\begin{gathered}
+ P\times Q\times Q,\quad
+ P\times Q\times Q\times Q,\quad
+ P\times P\times Q\times Q,\\
+ P\times P\times Q,\quad
+ P\times P\times P\times Q.
+\end{gathered}
+\]
+Estas corresponden a los cinco términos de la expresión (3.6.6) para
+$L_2(P,Q)$. Como en la demostración de 3.5.3, las dos primeras son
+precisamente la relación de conmutatividad (2.0.6) y la relación de
+asociatividad (2.0.5); juntas dicen que $\varphi$ dota a $E$ de la
+estructura de una extensión conmutativa de $Q_P$ por $G_P$.
+Simétricamente, las dos últimas dicen que $\psi$ dota a $E$ de la
+estructura de una extensión conmutativa de $P_Q$ por
+$\sisi{G_P}{G_Q}$. La relación intermedia, sobre los torsores definidos
+sobre $P\times P\times Q\times Q$, es exactamente la conmutatividad del
+diagrama (2.1.1). Dice que $\varphi$ y $\psi$ son compatibles y, en vista
+de las otras condiciones, definen sobre $E$ una estructura de biextensión
+de $(P,Q)$ por $G$. La comprobación de estas interpretaciones es inmediata
+y se deja al lector.
+
+%%%%%%%%%%  scan idx 218  |  folio 207  %%%%%%%%%%
+
+La discusión precedente define efectivamente una equivalencia de
+categorías cofibradas sobre
+$\underline C=\operatorname{GRAB}(\underline T)$, tal como se afirmó en
+3.6.4.
+
+\underline{Observación} 3.6.7. Cada una de las tres generalizaciones de
+las biextensiones mencionadas en 2.10 tiene una variante correspondiente
+de 3.6.4 y, por tanto, de 3.6.5. La generalización a un número cualquiera
+de factores (2.10.2) es inmediata, al igual que la generalización a las
+biextensiones de $A$-módulos (2.10.3), una vez construida la variante de
+$L_\bullet(P)$ descrita en 3.5.4 b). Desde el punto de vista del álgebra
+homológica es más interesante el caso en que no se supone que $P$ y $Q$
+sean conmutativos (2.10.1).
+
+Asociemos a un grupo no necesariamente conmutativo $P$ de $\underline T$
+un complejo $K_\bullet(P)$ truncado en grado $2$. Se describe como se
+describió $L_\bullet(P)$ en 3.5, salvo que
+\[
+ K_2(P)=\mathbb Z[P\times P\times P],
+\]
+omitiéndose el primer factor que aparecía en $L_2(P)$; $d_0$ y $d_1$ se
+definen como en (3.5.2). Entonces
+\[
+ H_0(K_\bullet(P))=P/[P,P]
+ \simeq\underline H_1(P,\mathbb Z),
+\]
+y, análogamente,
+\[
+ H_1(K_\bullet(P))\simeq\underline H_2(P,\mathbb Z).
+\]
+En efecto, $K_\bullet(P)$ es precisamente el truncamiento en grado $2$ del
+complejo de cadenas $C_\bullet(P,\mathbb Z)$ de $P$ con coeficientes en
+$\mathbb Z$.
+
+El argumento que demuestra 3.5.3 muestra asimismo que la categoría
+cofibrada $\underline\Psi_{K_\bullet(P)}$ sobre
+$\underline C=\operatorname{GRAB}(\underline T)$ es canónicamente
+
+%%%%%%%%%%  scan idx 219  |  folio 208  %%%%%%%%%%
+
+equivalente a la categoría de las extensiones centrales de $P$ por grupos
+conmutativos variables $G$. Análogamente, para dos grupos $P,Q$, la
+categoría cofibrada de las biextensiones de $(P,Q)$ en el sentido de
+2.10.1 es equivalente a $\underline\Psi_{K_\bullet(P,Q)}$, donde
+\[
+ K_\bullet(P,Q)
+ =
+ K_\bullet(P)\mathbin{\overset{\mathbb L}{\otimes}}K_\bullet(Q).
+\]
+
+Estas consideraciones sugieren que, cuando $P$ es conmutativo, la
+resolución canónica buscada en 3.5.4 a) podría obtenerse mediante una
+modificación adecuada de $C_\bullet(P,\mathbb Z)$.

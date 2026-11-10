@@ -1,0 +1,62 @@
+\par\medskip\noindent
+2.8. \underline{Cambio de topos. Localización.}
+
+Sea
+\[
+ f:\underline T'\longrightarrow\underline T
+\]
+un morfismo de topoi. El funtor de imagen inversa $f^*$ transforma una
+biextensión de $(P,Q)$ por $G$ en una biextensión $f^*(E)$ de
+$(f^*P,f^*Q)$ por $f^*G$, como sucede siempre para una estructura
+expresable mediante límites proyectivos finitos y límites inductivos
+arbitrarios. Para demostrar la compatibilidad de las dos estructuras
+de extensión sobre $f^*(E)$ inducidas por las de $E$, se expresa la
+compatibilidad mediante la conmutatividad de (2.1.1) en el caso
+universal
+\[
+ S=P\times P\times Q\times Q,
+\]
+donde $p,p',q,q'$ son las cuatro proyecciones. Como era de esperar,
+$E\mapsto f^*(E)$ da un funtor canónico
+\[
+ f^*:\operatorname{BIEXT}(\underline T)
+ \longrightarrow
+ \operatorname{BIEXT}(\underline T').
+\]
+
+En lo que sigue utilizaremos sin más mención el hecho de que toda
+construcción hecha con biextensiones es compatible con las imágenes
+inversas por morfismos de topoi. Esto se aplica, en particular, al
+producto $EE'$ y al inverso $E^{-1}$ considerados en 2.5.
+
+Se puede tomar como $\underline T'$ un \underline{topos inducido}
+$\underline T_{/S'}$, y como $f$ el morfismo canónico, llamado
+morfismo de localización (SGA 4 IV 5),
+\[
+ f=i_{S'}:\underline T_{/S'}\longrightarrow\underline T.
+\]
+Entonces $f^*(E)$ se denomina la \underline{biextensión inducida} por
+$E$ sobre $S'$, y se denota también, como de costumbre, por $E|_{S'}$
+o $E_{S'}$.
+
+Como la restricción tiene las propiedades usuales de transitividad,
+las categorías $\operatorname{BIEXT}(\underline T_{/S})$, para
+$S\in\underline T$ variable, forman las fibras de una
+\underline{categoría fibrada} sobre $\underline T$ (SGA 1 VI 8). De
+hecho, esta categoría es incluso un \underline{stack} sobre
+$\underline T$ en el sentido de Giraud [2]: los morfismos y los
+objetos de sus fibras pueden pegarse. Por ejemplo, para dar una
+biextensión sobre $S$ salvo isomorfismo canónico, basta dar una familia
+de recubrimiento (es decir, una familia epimórfica)
+$S_i\longrightarrow S$, una biextensión $E_i$ sobre cada $S_i$ (un
+objeto de $\underline T_{/S_i}$) y, para cada par $(i,j)$, un
+isomorfismo entre $E_i|_{S_j}$ y $E_j|_{S_i}$, sujeto a la condición de
+cociclo usual.
+
+Llamamos a este el \underline{stack de biextensiones sobre
+$\underline T$}. Sustituyendo $\underline T$ en (2.3.3), y por tanto
+también en (2.3.4) y (2.3.5), por $\underline T_{/S}$ para $S$
+variable, se obtienen morfismos de stacks sobre $\underline T$. Lo
+mismo vale para las operaciones $E.E'$ y $E^{-1}$ de (2.5.1) en las
+categorías $\operatorname{BIEXT}(P_S,Q_S;G_S)$ para $S$ variable,
+donde $P,Q,G$ son grupos conmutativos fijos sobre $\underline T$.

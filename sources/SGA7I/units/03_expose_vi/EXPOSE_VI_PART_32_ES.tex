@@ -1,0 +1,127 @@
+%%%%%%%%%%  scan idx 94  |  folio 83  %%%%%%%%%%
+
+Sea $A$ una $R$-álgebra. Un $A$-módulo $M$ define un haz aditivo
+\[
+ \operatorname{Der}_R(-,M)
+ \in\operatorname{Ob}(\widetilde{\underline C}_{A|R}),
+ \qquad X\longmapsto\operatorname{Der}_R(X,M).
+\]
+Hacemos la definición siguiente.
+
+\underline{Definición 3.10.} Sea $A$ una $R$-álgebra. Para todo
+$A$-módulo $M$, pongamos
+\[
+ D^i(A|R,M)=H^i(A|R,\operatorname{Der}_R(-,M)).
+\]
+
+Calculemos ahora los grupos de grado bajo, a saber, $D^i(A|R,M)$ para
+$i=1,2$. Elijamos una flecha sobreyectiva
+$P\longrightarrow A$ en $\underline C_{A|R}$, con $P$ un álgebra de
+polinomios sobre $R$, y escribamos
+\[
+ 0\longrightarrow I\longrightarrow P\longrightarrow A
+ \longrightarrow0.
+\]
+
+\underline{Lema 3.10.}
+\begin{align*}
+ D^1(A|R,M)
+ &=\operatorname{Coker}\bigl(
+   \operatorname{Der}_R(P,M)\longrightarrow
+   \operatorname{Hom}_P(I,M)\bigr),\\
+ D^2(A|R,M)
+ &=H^1\bigl(A|R,
+   \underline H^1_{A|R}(\operatorname{Der}_R(-,M))\bigr).
+\end{align*}
+
+\underline{Demostración.} Consideremos el álgebra simplicial
+\[
+ (*)\qquad
+ \cdots\ P_A^{(2)}
+ \mathrel{\substack{\longrightarrow\\[-.6ex]\longrightarrow\\[-.6ex]\longrightarrow}}
+ P_A^{(1)}
+ \mathrel{\substack{\longrightarrow\\[-.6ex]\longrightarrow}}
+ P_A^{(0)},
+\]
+donde
+\[
+ P_A^{(n)}=
+ \overbrace{P\times_A\cdots\times_AP}^{n+1}.
+\]
+Para todo $n$ hay una sucesión exacta
+\[
+ 0\longrightarrow I^{(n)}\longrightarrow P_A^{(n)}
+ \longrightarrow A\longrightarrow0,
+ \qquad
+ I^{(n)}=\overbrace{I\times\cdots\times I}^{n+1}.
+\]
+Pongamos $\overline I=I/I^2$, y denotemos por $\Delta$ el morfismo
+diagonal. Se comprueba inmediatamente que, para todo $n$, la sucesión
+\[
+ 0\longrightarrow
+ \operatorname{Hom}_A
+ \bigl(\overline I^{(n)}/\Delta(\overline I),M\bigr)
+ \longrightarrow\operatorname{Der}_R(P_A^{(n)},M)
+ \xrightarrow{\operatorname{Der}(\Delta,M)}
+ \operatorname{Der}_R(P,M)\longrightarrow0
+ \tag{a}
+\]
+es exacta. También tenemos la sucesión exacta
+\[
+ 0\longrightarrow
+ \operatorname{Hom}_A
+ \bigl(\overline I^{(n)}/\Delta(\overline I),M\bigr)
+ \longrightarrow\operatorname{Hom}_A(\overline I^{(n)},M)
+ \xrightarrow{\operatorname{Hom}(\Delta,M)}
+ \operatorname{Hom}_A(\overline I,M)\longrightarrow0.
+ \tag{b}
+\]
+Las sucesiones (a) y (b) dan lugar a las correspondientes sucesiones
+exactas de $A$-módulos simpliciales. Puesto que
+$\{I\longrightarrow0\}$ y $\{I\longrightarrow I\}$ admiten secciones,
+\[
+ H^i(\{I\longrightarrow0\},\operatorname{Hom}_A(-,M))
+ =H^i(\{I\longrightarrow I\},\operatorname{Hom}_A(-,M))=0
+ \qquad(i>0).
+\]
+
+%%%%%%%%%%  scan idx 95  |  folio 84  %%%%%%%%%%
+
+Se sigue que
+\[
+\left\{
+\begin{aligned}
+0\longrightarrow\operatorname{Der}_R(A,M)
+&\longrightarrow\operatorname{Der}_R(P,M)
+\longrightarrow\operatorname{Hom}_A(\overline I,M)\\
+&\longrightarrow
+H^1(\{P\longrightarrow A\},\operatorname{Der}_R(-,M))
+\longrightarrow0
+&&\text{es exacta},\\
+H^i(\{P\longrightarrow A\},\operatorname{Der}_R(-,M))
+&=0 &&(i>1).
+\end{aligned}
+\right.
+\]
+Por tanto, según 3.1(b),
+\begin{align*}
+D^1(A|R,M)
+ &=\check H^1(A|R,\operatorname{Der}_R(-,M))\\
+ &=H^1(\{P\longrightarrow A\},\operatorname{Der}_R(-,M))\\
+ &=\operatorname{Coker}\bigl(
+   \operatorname{Der}_R(P,M)\longrightarrow
+   \operatorname{Hom}_A(\overline I,M)\bigr)\\
+ &=\operatorname{Coker}\bigl(
+   \operatorname{Der}_R(P,M)\longrightarrow
+   \operatorname{Hom}_P(I,M)\bigr),\\
+D^2(A|R,M)
+ &=H^1\bigl(A|R,
+   \underline H^1_{A|R}(\operatorname{Der}_R(-,M))\bigr).
+\end{align*}
+\hfill$\square$
+
+Elijamos un $P$-módulo libre $F$ y un morfismo $P$-lineal
+$\gamma:F\longrightarrow P$ tal que $\gamma(F)=I$. A $\gamma$ se
+asocia un complejo de Koszul que, por abuso de notación, denotaremos
+por $K_I$.
+\par

@@ -1,0 +1,151 @@
+%%%%%%%%%%  scan idx 92  |  folio 81  %%%%%%%%%%
+
+\underline{Corolario 3.8.}
+
+\begin{enumerate}[label=(\alph*)]
+\item Sean $A$ y $B$ $R$-álgebras tales que
+\[
+ \operatorname{Tor}_i^R(A,B)=0\qquad(0<i\leq n).
+\]
+Entonces, para todo haz aditivo
+$F\in\operatorname{Ob}(\widetilde{\underline C}_{A\otimes_RB|R})$,
+la aplicación canónica
+\[
+ H^i(A\otimes_RB|R,F)
+ \longrightarrow H^i(A|R,F)\oplus H^i(B|R,F)
+\]
+es un isomorfismo para todo $i\leq n$.
+
+\item Sea $A$ una $R$-álgebra tal que
+$\operatorname{Tor}_i^R(A,A)=0$ para todo $i>0$. Si la aplicación
+$A\otimes_RA\longrightarrow A$ es un isomorfismo, entonces, para todo
+haz aditivo
+$F\in\operatorname{Ob}(\widetilde{\underline C}_{A|R})$, se tiene
+\[
+ H^i(A|R,F)=0
+\]
+para todo $i$.
+\end{enumerate}
+
+\underline{Demostración.}
+
+(a) Sea
+$F\in\operatorname{Ob}(\widetilde{\underline C}_{A\otimes_RB|R})$
+aditivo. Aplicada a
+$R\longrightarrow A\longrightarrow A\otimes_RB$, la Proposición
+3.7(c) da la sucesión exacta
+\[
+ (*)\quad\cdots\longrightarrow
+ H^i(A\otimes_RB|A,F_A)
+ \longrightarrow H^i(A\otimes_RB|R,F)
+ \longrightarrow H^i(A|R,F)\longrightarrow\cdots.
+\]
+Considérese el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+H^i(A\otimes_RB|A,F_A) \arrow[r] \arrow[d]
+& H^i(A\otimes_RB|R,F) \arrow[d]\\
+H^i(B|R,\widetilde A F_A) \arrow[r,"\approx"]
+& H^i(B|R,F).
+\end{tikzcd}
+\]
+Aquí
+\[
+ A:\underline C_{B|R}\longrightarrow
+ \underline C_{A\otimes_RB|A},
+ \qquad X\longmapsto A\otimes_RX,
+\]
+y la flecha inferior está inducida por
+$\widetilde A F_A\longrightarrow F$, que es un isomorfismo porque $F$ es
+aditivo. Por funtorialidad, la conmutatividad del diagrama se reduce al
+caso $i=0$.
+
+Si $\operatorname{Tor}_i^R(A,B)=0$ para $0<i\leq n$, entonces la
+Proposición 3.7(a) muestra que la flecha vertical izquierda es un
+isomorfismo para $i\leq n$. Por consiguiente, tanto los compuestos
+\[
+ H^i(A\otimes_RB|A,F_A)
+ \longrightarrow H^i(A\otimes_RB|R,F)
+ \longrightarrow H^i(B|R,F)
+\]
+como, por simetría,
+
+%%%%%%%%%%  scan idx 93  |  folio 82  %%%%%%%%%%
+
+\[
+ H^i(A\otimes_RB|B,F_B)
+ \longrightarrow H^i(A\otimes_RB|R,F)
+ \longrightarrow H^i(A|R,F)
+\]
+son isomorfismos para $i\leq n$. Se sigue que $(*)$ se descompone en
+sucesiones exactas cortas escindidas
+\[
+ 0\longrightarrow H^i(A\otimes_RB|A,F_A)
+ \longrightarrow H^i(A\otimes_RB|R,F)
+ \longrightarrow H^i(A|R,F)\longrightarrow0
+\]
+para $i\leq n$, y por tanto que
+\[
+ H^i(A\otimes_RB|R,F)
+ \longrightarrow H^i(A|R,F)\oplus H^i(B|R,F)
+\]
+es un isomorfismo en ese rango.
+
+(b) Por (a), la aplicación
+\[
+ H^i(A\otimes_RA|R,F)
+ \longrightarrow H^i(A|R,F)\oplus H^i(A|R,F)
+\]
+es un isomorfismo para todo $i$. Por otra parte, el isomorfismo supuesto
+$A\otimes_RA\longrightarrow A$ induce un isomorfismo
+\[
+ H^i(A|R,F)\longrightarrow H^i(A\otimes_RA|R,F).
+\]
+Su compuesto es la aplicación diagonal
+\[
+ H^i(A|R,F)\longrightarrow
+ H^i(A|R,F)\oplus H^i(A|R,F).
+\]
+Puesto que es un isomorfismo, $H^i(A|R,F)=0$ para todo $i$.
+\hfill$\square$
+
+\underline{Corolario 3.9.} Sea $S$ un subconjunto multiplicativo de una
+$R$-álgebra $A$. Supongamos que
+\[
+ F\in\operatorname{Ob}
+ (\widetilde{\underline C}_{S^{-1}A|R})
+\]
+es aditivo y que $F_A$ es también aditivo. Entonces la aplicación canónica
+\[
+ H^i(S^{-1}A|R,F)\longrightarrow H^i(A|R,F)
+\]
+es un isomorfismo para todo $i$. Aquí
+$F_A\in\operatorname{Ob}
+(\widetilde{\underline C}_{S^{-1}A|A})$ está definido por
+\[
+ F_A(X)=\ker\bigl(F(X)\longrightarrow F(A)\bigr)
+\]
+para todo
+$X\in\operatorname{Ob}(\underline C_{S^{-1}A|A})$.
+
+\underline{Demostración.} Aplicada a
+$R\longrightarrow A\longrightarrow S^{-1}A$, la Proposición 3.7(c)
+da la sucesión exacta
+\[
+ \cdots\longrightarrow H^n(S^{-1}A|A,F_A)
+ \longrightarrow H^n(S^{-1}A|R,F)
+ \longrightarrow H^n(A|R,F)\longrightarrow\cdots.
+\]
+La aplicación
+\[
+ S^{-1}A\otimes_AS^{-1}A\longrightarrow S^{-1}A
+\]
+\begingroup
+\sloppy
+es un isomorfismo, y $F_A$ es aditivo por hipótesis. Por tanto, el
+Corolario 3.8(b) da $H^n(S^{-1}A|A,F_A)=0$ para todo $n$. En consecuencia,
+la aplicación central de la sucesión exacta es un isomorfismo para todo
+$n$. \hfill$\square$
+\par
+\endgroup
+\par

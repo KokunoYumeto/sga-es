@@ -1,0 +1,264 @@
+% AUTORIDAD DE FUENTE: Exposé IX §9.4, líneas francesas 2435--2576;
+% índices de escaneo 438--443, folios 427--432. Las correcciones D/C
+% de Hom, Ext y la referencia final se conservan mediante \sisi.
+
+%%%%%%%%%%  scan idx 438  |  folio 427  %%%%%%%%%%
+
+\medskip
+\noindent
+9.4. Sea $S$ un trait henseliano de punto genérico $\eta$, sea $n$ un
+entero $>0$, pongamos $\Lambda=\mathbb Z/n\mathbb Z$, y sean
+$\underline C$ la categoría de $\Lambda$-módulos sobre $S$ (para el
+sitio fppf de $S$; véase VIII 0.2) y $\underline C'$ la categoría de
+$\Lambda$-módulos sobre $\eta$. Sean $P,R,Q$ objetos de $\underline C$,
+y sean $E,F$ extensiones de $Q$ por $R$ y de $R$ por $P$,
+respectivamente (9.3.2). Supongamos que $Q$ es un $\Lambda_S$-módulo
+localmente libre de tipo finito y que $P$ está representado por un grupo
+finito de tipo multiplicativo sobre $S$ (SGA 3 IX), de modo que es de la
+forma
+\begin{equation*}
+ P=D(Q^*),
+\end{equation*}
+donde $D=\underline{\Hom}(-,\mathbb G_{mS})$ denota la dualidad de
+Cartier. Denotemos por $P_\eta,R_\eta,Q_\eta,E_\eta,F_\eta$ las
+restricciones de $P,R,Q,E,F$ a $\eta$, y supongamos dada una extensión
+mixta $X_\eta$ de $E_\eta$ por $F_\eta$. En estas condiciones definiremos
+canónicamente un emparejamiento
+\begin{equation}\tag{9.4.1}
+ c(X_\eta):Q\otimes_\Lambda Q^*\longrightarrow\Lambda_S
+ \qquad(\Lambda=\mathbb Z/n\mathbb Z).
+\end{equation}
+
+Supongamos primero que $S$ es \underline{estrictamente local}. Entonces
+$Q$ y $Q^*$ son constantes, digamos $Q=Q_{0S}$ y $Q^*=Q^*_{0S}$, y dar
+(9.4.1) equivale a dar un elemento
+\begin{equation}\tag{9.4.2}
+ c(X_\eta)\in\check Q_0\otimes\check Q_0^*,
+\end{equation}
+donde el signo $\check{\ }$ denota el dual ordinario
+$\Hom(-,\Lambda)$. Aplicamos las consideraciones de 9.3 al funtor de
+restricción $r:\underline C\longrightarrow\underline C'$. Observemos
+primero que existe una extensión mixta de $E$ por $F$. En efecto, la
+obstrucción a su existencia pertenece a $\Ext^2(Q,P)$ (9.3.8(c)), y
+basta demostrar
+\begin{equation*}
+ \Ext^2(Q,P)=0.
+\end{equation*}
+
+Esto es un caso particular del lema siguiente.
+
+%%%%%%%%%%  scan idx 439  |  folio 428  %%%%%%%%%%
+
+\medskip
+\noindent
+\underline{Lema 9.4.3. Bajo las hipótesis precedentes, con $S$
+estrictamente local, se tienen:}
+
+\smallskip
+\noindent
+a) \underline{isomorfismos canónicos}
+\begin{equation*}\tag{a)}
+ \Ext^i_\Lambda(Q,P)\simeq H^i(S,\check Q\otimes P),
+ \qquad
+ \Ext^i_\Lambda(Q_\eta,P_\eta)
+ \simeq H^i(\eta,\check Q\otimes P);
+\end{equation*}
+
+\noindent
+b) \underline{un isomorfismo canónico}
+\begin{equation}\tag{b)}
+ \check Q\otimes P\simeq D(Q\otimes Q^*);
+\end{equation}
+
+\noindent
+c) \underline{para todo grupo finito constante $H=H_{0S}$ sobre $S$,}
+\begin{equation}\tag{c)}
+ H^i(S,D(H))=H^i(\eta,D(H)_\eta)=0
+ \qquad\underline{\text{para }}i\geq2;
+\end{equation}
+
+\noindent
+d) \underline{isomorfismos canónicos}
+\begin{equation}\tag{d)}
+\begin{aligned}
+ H^1(S,D(H))&\simeq\mathbb G_m(S)\otimes\check H_0
+               =V^*\otimes\check H_0,\\
+ H^1(\eta,D(H)_\eta)&\simeq\mathbb G_m(\eta)\otimes\check H_0
+               =K^*\otimes\check H_0,
+\end{aligned}
+\end{equation}
+\underline{donde en (d) el signo $\check{\ }$ denota
+$\Hom(-,\mathbb Q/\mathbb Z)$.}
+
+Las fórmulas de (a) y (b) se deducen inmediatamente de que $Q$ es un
+$\Lambda_S$-módulo localmente libre de tipo finito. Para demostrar (c),
+nos reducimos al caso $H_0=\mathbb Z/m\mathbb Z$, es decir,
+$D(H)=\mu_m$. La sucesión de cohomología asociada a la sucesión exacta
+de Kummer
+\begin{equation*}
+ 0\longrightarrow\mu_m\longrightarrow\mathbb G_m
+ \xrightarrow{\ m\cdot\id\ }\mathbb G_m
+ \longrightarrow0
+\end{equation*}
+nos reduce a demostrar
+\begin{equation*}
+ H^i(S,\mathbb G_m)=H^i(\eta,\mathbb G_m)=0
+ \qquad\text{para }i\geq1.
+\end{equation*}
+Estos grupos son los $H^i_{\mathrm{\acute et}}$ calculados en el sitio
+étale [6, Teorema 11.7], y por tanto se anulan para $S$, pues $S$ es
+estrictamente local. Su anulación para $\eta$ también es bien conocida
+[6, Teorema 1.1].
+
+%%%%%%%%%%  scan idx 440  |  folio 429  %%%%%%%%%%
+
+Queda por describir los isomorfismos de (d). Sobre una base arbitraria
+$U$ existe un homomorfismo canónico
+\begin{equation}\tag{9.4.3.1}
+ \mathbb G_m(U)\otimes\check H_0
+ \longrightarrow H^1(U,D(H_{0U})).
+\end{equation}
+Si $H_0$ es anulado por un entero $m>0$, este homomorfismo se describe
+mediante el morfismo de borde
+$\mathbb G_m(U)\xrightarrow{\partial}H^1(U,\mu_m)$ asociado a la
+sucesión de Kummer: es el compuesto
+\begin{equation*}
+\begin{aligned}
+ \mathbb G_m(U)\otimes\check H_0
+ &\longrightarrow H^1(U,\mu_m)\otimes\check H_0\\
+ &\longrightarrow H^1(U,\mu_m\otimes\check H_0)
+  \longrightarrow H^1(U,D(H_{0U})).
+\end{aligned}
+\end{equation*}
+La segunda flecha se deduce del homomorfismo evidente
+$\check H_0\longrightarrow
+\Hom(\mu_m,\mu_m\otimes\check H_0)$, y la tercera es un caso particular
+de (b), con $m$ en lugar de $n$. Dejamos al lector comprobar que
+(9.4.3.1) es independiente de la elección del entero $m$ tal que
+$mH_0=0$. Afirmamos también que (9.4.3.1) es siempre inyectivo y que su
+cociente se anula si $\Pic(U)=0$. De hecho, dicho cociente es siempre
+isomorfo a $\Hom(H_0,\Pic(U))$, pero esto no importa aquí. En efecto, nos
+reducimos al caso $H_0=\mathbb Z/n\mathbb Z$, y la afirmación se sigue
+inmediatamente de la sucesión de cohomología de Kummer. Esto demuestra
+(d) y da inmediatamente:
+
+\medskip
+\noindent
+\underline{Corolario 9.4.4. Con la notación de 9.4.3, existe un
+isomorfismo canónico}
+
+\noindent
+e)
+\begin{equation*}\tag{e)}
+ H^1(\eta,D(H)_\eta)/\operatorname{Im}H^1(S,D(H))
+ \simeq\check H_0,
+\end{equation*}
+\underline{y, combinando} (a) \underline{y} (b), \underline{un isomorfismo canónico}
+\begin{equation}\tag{9.4.5}
+ \Ext^1(Q_\eta,P_\eta)/
+ \operatorname{Im}\Ext^1(Q,P)
+ \simeq\check Q_0\otimes\check Q_0^*.
+\end{equation}
+
+%%%%%%%%%%  scan idx 441  |  folio 430  %%%%%%%%%%
+
+Volvamos a la definición de (9.4.2) cuando $S$ es estrictamente local.
+La relación $\Ext^2(Q,P)=0$ permite definir el elemento canónico
+(9.3.13), tomando como $Y'$ la extensión mixta dada $X_\eta$ de
+$E_\eta$ por $F_\eta$. La fórmula (9.4.5) identifica este elemento
+$c(X_\eta)$ con un elemento de $\check Q_0\otimes\check Q_0^*$, lo que
+completa la definición de (9.4.2). Las consideraciones generales de 9.3
+muestran también que este elemento es la obstrucción a prolongar
+$X_\eta$ a una extensión mixta $X$ de $E$ por $F$.
+
+\medskip
+\noindent
+9.4.6. La definición de (9.4.1) cuando $S$ es henseliano se reduce
+inmediatamente al caso estrictamente local por descenso de Galois desde
+el henselizado estricto de $S$.
+
+\medskip
+\noindent
+\underline{Proposición 9.4.7. Sean $P,Q,R,E,F$ como antes, salvo que el
+trait $S$ no tiene por qué ser henseliano. Consideremos el funtor}
+\begin{equation}\tag{9.4.7.1}
+ X\longmapsto X_\eta
+\end{equation}
+\underline{de la categoría de extensiones mixtas de $E$ por $F$ a la
+categoría de extensiones mixtas de $E_\eta$ por $F_\eta$. Para toda
+extensión mixta $X_\eta$ de $E_\eta$ por $F_\eta$, consideremos el
+emparejamiento}
+\begin{equation}\tag{9.4.7.2}
+ c_0(X_\eta):Q_0\otimes Q_0^*\longrightarrow\Lambda_s
+\end{equation}
+\underline{inducido por el emparejamiento de tipo (9.4.1) definido
+sobre el henselizado $S^h$ de} $S$. \underline{Entonces el funtor (9.4.7.1) es
+plenamente fiel, y una extensión mixta $X_\eta$ de $E_\eta$ por
+$F_\eta$ pertenece a su imagen esencial si y solo si el emparejamiento
+(9.4.7.2) es nulo.}
+
+%%%%%%%%%%  scan idx 442  |  folio 431  %%%%%%%%%%
+
+9.4.7.3. Este enunciado sigue teniendo sentido y siendo válido si se
+supone solamente que $S$ es un esquema conexo, regular, noetheriano y de
+dimensión $1$. En vez del único emparejamiento (9.4.7.2), hay que
+considerar un emparejamiento
+$Q_s\otimes Q_s^*\longrightarrow\Lambda_s$ para cada punto cerrado $s$
+de $S$. Será más cómodo demostrar 9.4.7 en esta forma más general.
+
+\smallskip
+\noindent
+a) Para toda extensión mixta $X$, la aplicación
+\begin{equation*}
+ \End(X)\longrightarrow\End(X_\eta)
+\end{equation*}
+es biyectiva. Sus dos miembros son, respectivamente, las secciones sobre
+$S$ y $\eta$ de
+$\underline{\Hom}(\sisi{P,Q}{Q,P})=D(Q\otimes Q^*)$; por tanto, la
+afirmación se sigue de que $S$ es normal y $D(Q\otimes Q^*)$ es finito
+sobre $S$. De aquí se deduce inmediatamente que, si $X$ e $Y$ son dos
+extensiones mixtas que ya se sabe isomorfas, entonces
+\begin{equation*}
+ \Hom(X,Y)\longrightarrow\Hom(X_\eta,Y_\eta)
+\end{equation*}
+es biyectiva.
+
+\smallskip
+\noindent
+b) Si $X$ e $Y$ son dos extensiones mixtas, todo isomorfismo
+$X_\eta\xrightarrow{\sim}Y_\eta$ procede de un isomorfismo
+$X\longrightarrow Y$. Por (a), la cuestión es local para la topología
+étale, por lo que podemos reducirnos al caso en que $S$ es estrictamente
+local. En ese caso, 9.4.3 muestra que la aplicación
+\begin{equation*}
+ \Ext^1_\Lambda(\sisi{P,Q}{Q,P})
+ \longrightarrow
+ \Ext^1_\Lambda(\sisi{P_\eta,Q_\eta}{Q_\eta,P_\eta})
+\end{equation*}
+se identifica con
+\begin{equation*}
+ V^*\otimes\check H_0\longrightarrow K^*\otimes\check H_0,
+ \qquad H_0=Q_0\otimes Q_0^*.
+\end{equation*}
+Esta última es inyectiva, pues la sucesión exacta
+$0\longrightarrow V^*\longrightarrow K^*\longrightarrow\mathbb Z
+\longrightarrow0$ es escindida. Por la discusión de 9.3, esto implica
+que, si $X_\eta$ e $Y_\eta$ son isomorfas, también lo son $X$ e $Y$; la
+conclusión se sigue entonces de (a).
+
+Así, (a) y (b) muestran que $X\longmapsto X_\eta$ es
+\underline{plenamente} fiel.
+
+%%%%%%%%%%  scan idx 443  |  folio 432  %%%%%%%%%%
+
+\smallskip
+\noindent
+c) Sea $X_\eta$ una extensión mixta sobre $\eta$. Demostremos que se
+prolonga a $S$ si y solo si los emparejamientos
+$(\sisi{9.4.6.2}{9.4.7.2})$ son nulos. También aquí, la unicidad ya
+demostrada muestra que la cuestión es local para la topología étale, lo
+que nos reduce de nuevo al caso estrictamente local. La conclusión vale
+entonces por construcción, como se observó inmediatamente antes de
+9.4.6.
+
+Esto concluye la demostración de 9.4.7.

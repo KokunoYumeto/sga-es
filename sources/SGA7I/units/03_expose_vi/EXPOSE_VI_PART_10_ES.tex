@@ -1,0 +1,145 @@
+\par\medskip\noindent
+\underline{Definición 1.2. Un grupoide cofibrado $\underline A$ sobre
+$\underline C_\Lambda$ se llama semihomogéneo si se cumplen las
+propiedades siguientes:}
+
+(1) \underline{Todo diagrama}
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+a'' \arrow[r,dashed] \arrow[d,dotted] & a' \arrow[d] \\
+a_1 \arrow[r] & a
+\end{tikzcd}
+\]
+\underline{de flechas continuas en $\underline A$, donde
+$a'\longrightarrow a$ es sobreyectivo, puede completarse en un diagrama
+conmutativo añadiendo las flechas punteadas.}
+
+(2) \underline{Sean}
+\[
+\begin{tikzcd}[column sep=large]
+& R \\
+R\underset{k}{\times}k[\varepsilon]
+ \arrow[ur,"\pi_1"] \arrow[dr,"\pi_2"'] & \\
+& k[\varepsilon]
+\end{tikzcd}
+\]
+\underline{los morfismos de proyección, donde $k[\varepsilon]$ es el
+anillo de números duales sobre $k$, y sean}
+\[
+\begin{tikzcd}[column sep=huge]
+a' \arrow[dr,"\alpha"] & \\
+& a \\
+b' \arrow[ur,"\beta"'] &
+\end{tikzcd}
+\]
+\underline{$\pi_1$-morfismos en $\underline A$. Entonces existe un
+$\underline C_\Lambda$-morfismo $\gamma:a'\longrightarrow b'$ tal que
+$\alpha=\beta\gamma$ si y solo si
+$(\pi_2)_*(a')\simeq(\pi_2)_*(b')$.}
+
+\underline{Observación 1.3(a).} Más adelante, en 2.6(b), daremos una
+reformulación de esta noción en términos de $2$-categorías. Si
+$\underline A$ es semihomogéneo, entonces $[\underline A]$ también lo
+es. En particular, 1.2(2) implica que el morfismo canónico
+
+%%%%%%%%%%  scan idx 46  |  folio 35  %%%%%%%%%%
+
+\[
+ [\underline A(R\times_k k[\varepsilon])]
+ \longrightarrow
+ [\underline A(R)]\times[\underline A(k[\varepsilon])]
+\]
+es biyectivo.
+
+\underline{Observación 1.3(b).} Consideremos un diagrama conmutativo
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+& a' \arrow[dl,"v_1"'] \arrow[dr,"v_2"] & \\
+a_1 \arrow[dr,"u_1"'] & & a_2 \arrow[dl,"u_2"] \\
+& a &
+\end{tikzcd}
+\]
+en una categoría cofibrada $\underline A$ sobre
+$\underline C_\Lambda$. Pongamos $R=P(a)$, $R'=P(a')$ y
+$R_i=P(a_i)$ para $i=1,2$. Si $a''$ es la imagen directa por el morfismo
+\[
+ (P(v_1),P(v_2)):R'\longrightarrow R_1\times_RR_2,
+\]
+obtenemos un diagrama conmutativo
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+& a' \arrow[d] \arrow[ddl,"v_1"'] \arrow[ddr,"v_2"] & \\
+& a'' \arrow[dl] \arrow[dr] & \\
+a_1 \arrow[dr,"u_1"'] & & a_2 \arrow[dl,"u_2"] \\
+& a &
+\end{tikzcd}
+\]
+Por tanto, 1.2(1) puede sustituirse por:
+
+(1)$'$ Todo diagrama
+\[
+\begin{tikzcd}[cramped,column sep=small,row sep=small]
+a_1 \arrow[dr] & & a_2 \arrow[dl] \\
+& a &
+\end{tikzcd}
+\qquad\text{en }\underline A\text{ situado sobre}\qquad
+\begin{tikzcd}[cramped,column sep=small,row sep=small]
+R_1 \arrow[dr] & & R_2 \arrow[dl] \\
+& R &
+\end{tikzcd}
+\quad\text{en }\underline C_\Lambda,
+\]
+donde $R_2\longrightarrow R$ es sobreyectivo, puede completarse en un
+diagrama conmutativo
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+& a' \arrow[dl] \arrow[dr] & \\
+a_1 \arrow[dr] & & a_2 \arrow[dl] \\
+& a &
+\end{tikzcd}
+\qquad\text{situado sobre}\qquad
+\begin{tikzcd}[row sep=large,column sep=large]
+& R_1\times_RR_2 \arrow[dl,"\pi_1"'] \arrow[dr,"\pi_2"] & \\
+R_1 \arrow[dr] & & R_2 \arrow[dl] \\
+& R &
+\end{tikzcd}
+\]
+donde $\pi_i$ ($i=1,2$) son las proyecciones.
+
+\underline{Observación 1.3(c).} Si $\underline A$ es un grupoide
+cofibrado semihomogéneo sobre $\underline C_\Lambda$, entonces
+$[\underline A(k[\varepsilon])]$ está provisto canónicamente de una
+estructura de espacio vectorial sobre $k$, donde $k[\varepsilon]$ es el
+anillo de números duales sobre $k$. En efecto, sea
+$\underline{\underline V}$ la categoría de los
+
+%%%%%%%%%%  scan idx 47  |  folio 36  %%%%%%%%%%
+
+espacios vectoriales de dimensión finita sobre $k$. Todo funtor que
+conserva los productos
+$H:\underline{\underline V}\longrightarrow(\mathrm{Ens})$ se factoriza
+canónicamente como
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+\underline{\underline V} \arrow[rr,"H"]
+ \arrow[dr,"\overline H"'] & & (\mathrm{Ens}) \\
+& \underline{\underline V} \arrow[ur] &
+\end{tikzcd}
+\]
+donde $\underline{\underline V}\longrightarrow(\mathrm{Ens})$ es el
+funtor de olvido. Por otra parte, el funtor
+\[
+ G:\underline{\underline V}\longrightarrow\underline C_\Lambda,
+ \qquad W\longmapsto k[W]=k\oplus W,\qquad W^2=0,
+\]
+lleva los productos de $\underline{\underline V}$ a productos fibrados
+sobre $k$ en $\underline C_\Lambda$. Si $\underline A$ es un grupoide
+cofibrado semihomogéneo sobre $\underline C_\Lambda$, entonces
+\[
+ [\underline A(k[V]\times_k k[W])]
+ \longrightarrow
+ [\underline A(k[V])]\times[\underline A(k[W])]
+\]
+es biyectivo por 1.3(a). Por consiguiente, el funtor
+$V\longmapsto[\underline A(k[V])]$ conmuta con los productos, lo que
+demuestra la afirmación.

@@ -1,0 +1,208 @@
+%%%%%%%%%%  scan idx 81  |  folio 70  %%%%%%%%%%
+
+\section*{3. Los haces coherentes $\underline D_X^i$}
+
+Un funtor importante que por lo común no es prorepresentable, pero que
+sin embargo admite un objeto formal versal, es el funtor de deformaciones.
+Con este propósito, recordamos algunos hechos básicos sobre las extensiones
+de anillos conmutativos y su teoría de obstrucciones. Esta sección no
+contiene nada nuevo, salvo quizá por su uso sistemático de la cohomología de
+Grothendieck sobre un sitio. Su finalidad es hacer esta exposición tan
+autocontenida como sea posible; de hecho, demostramos algo más de lo que se
+necesitará después. Los resultados básicos se enuncian en el Teorema 3.12.
+En toda la sección, todos los anillos son conmutativos y poseen unidad.
+
+%%%%%%%%%%  scan idx 82  |  folio 71  %%%%%%%%%%
+
+Dado un anillo $R$, sea $\underline C_R$ la categoría de las
+$R$-álgebras. Para todo $A\in\operatorname{Ob}(\underline C_R)$,
+pongamos
+\[
+ \operatorname{Cov}(A)=
+ \{\text{flechas suprayectivas }\varphi:A'\longrightarrow A
+   \text{ en }\underline C_R\}.
+\]
+Esto define una pretopología, y por tanto un sitio, sobre
+$\underline C_R$. Para todo $A\in\operatorname{Ob}(\underline C_R)$,
+sea $\underline C_{A|R}$ la categoría de las flechas de
+$\underline C_R$ con destino $A$. Dotamos a $\underline C_{A|R}$ de la
+topología inducida por el funtor de olvido
+\[
+ j_A:\underline C_{A|R}\longrightarrow\underline C_R.
+\]
+La categoría $\underline C_{A|R}$ tiene un objeto final
+$(1_A:A\longrightarrow A)$ y un objeto inicial
+$(i_A:R\longrightarrow A)$, y admite tanto productos fibrados como
+coproductos. Cuando no haya riesgo de confusión, escribiremos simplemente
+$B$ para un objeto $(B\longrightarrow A)$ de $\underline C_{A|R}$.
+
+Sea $\mathscr C$ una categoría abeliana. Un haz con valores en $\mathscr C$
+sobre $\underline C_{A|R}$ es, por definición, un funtor
+\[
+ F:\underline C_{A|R}^{\mathrm{op}}\longrightarrow\mathscr C
+\]
+tal que, para toda flecha suprayectiva $B'\longrightarrow B$ en
+$\underline C_{A|R}$, la sucesión
+\[
+ 0\longrightarrow F(B)\longrightarrow F(B')
+ \mathrel{\substack{\longrightarrow\\[-.6ex]\longrightarrow}}
+ F(B'\mathbin{\times_B}B')
+\]
+es exacta. Los prehaces \underline{aditivos} son los que conservan los
+coproductos; así,
+\[
+ F(B_1\otimes_R B_2)=F(B_1)\oplus F(B_2).
+\]
+Por ejemplo, un $A$-módulo $M$ define el funtor
+\[
+ \operatorname{Der}_R(-,M):
+ \underline C_{A|R}^{\mathrm{op}}\longrightarrow(A\text{-mod}),
+\]
+que envía $B$ a las derivaciones $R$-lineales
+$\operatorname{Der}_R(B,M)$, considerando $M$ como $B$-módulo por medio
+de la aplicación estructural $B\longrightarrow A$. Este es claramente un
+haz aditivo sobre $\underline C_{A|R}$. Aquí $(A\text{-mod})$ denota la
+categoría de los $A$-módulos.
+
+Se dice que un prehaz $F$ sobre $\underline C_{A|R}$ con valores en
+$(A\text{-mod})$ es de \underline{tipo finito} si $F(B)$ es un
+$A$-módulo de tipo finito siempre que $B$ sea una $R$-álgebra de tipo
+finito. Por ejemplo, si $A$ es noetheriano y $M$ es un $A$-módulo de tipo
+finito, entonces $\operatorname{Der}_R(-,M)$ es un haz aditivo de tipo
+finito sobre $\underline C_{A|R}$.
+
+Introducimos algo más de notación y recordamos algunos hechos básicos de
+álgebra homológica.
+
+\underline{3.1(a).} En todo el resto de esta sección,
+$\widetilde{\underline C}_{A|R}$ y
+$\overset{\vee}{\underline C}_{A|R}$ denotan, respectivamente, las
+categorías de haces y prehaces con valores en $(A\text{-mod})$. Hay un
+funtor de inclusión exacto por la izquierda
+\[
+ i_{A|R}:\widetilde{\underline C}_{A|R}
+ \longrightarrow\overset{\vee}{\underline C}_{A|R}
+\]
+y un funtor exacto de haz asociado
+\[
+ G_{A|R}:\overset{\vee}{\underline C}_{A|R}
+ \longrightarrow\widetilde{\underline C}_{A|R},
+\]
+adjunto por la izquierda de $i_{A|R}$.
+
+%%%%%%%%%%  scan idx 83  |  folio 72  %%%%%%%%%%
+
+Un objeto $B\in\operatorname{Ob}(\underline C_{A|R})$ induce un
+funtor continuo
+$j:\underline C_{B|R}\longrightarrow\underline C_{A|R}$ y, por tanto,
+un diagrama conmutativo
+\begin{equation}\tag{*}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ \widetilde{\underline C}_{A|R}
+   \arrow[r,"\widetilde j"] \arrow[d,"i_{A|R}"']
+ & \widetilde{\underline C}_{B|R} \arrow[d] \\
+ \overset{\vee}{\underline C}_{A|R}
+   \arrow[r,"j^{\vee}"']
+ & \overset{\vee}{\underline C}_{B|R}.
+\end{tikzcd}
+\end{equation}
+El funtor de restricción $\widetilde j$, al igual que $j^{\vee}$, es
+exacto, porque el sitio $\underline C_{B|R}$ es simplemente la categoría
+de las flechas de $\underline C_{A|R}$ con destino $B$, dotada de la
+topología inducida.
+
+Un homomorfismo de anillos $S\longrightarrow R$ induce un funtor continuo
+$\beta:\underline C_{A|R}\longrightarrow\underline C_{A|S}$ y, por
+tanto, un diagrama conmutativo
+\begin{equation}\tag{**}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ \widetilde{\underline C}_{A|S}
+   \arrow[r,"\widetilde\beta"] \arrow[d,"i_{A|S}"']
+ & \widetilde{\underline C}_{A|R} \arrow[d] \\
+ \overset{\vee}{\underline C}_{A|S}
+   \arrow[r,"\beta^{\vee}"']
+ & \overset{\vee}{\underline C}_{A|R}.
+\end{tikzcd}
+\end{equation}
+Obsérvese que $\widetilde\beta$ no tiene por qué ser exacto.
+
+\underline{3.1(b).} El funtor derivado por la derecha de la inclusión
+\[
+ i_{A|R}:\widetilde{\underline C}_{A|R}
+ \longrightarrow\overset{\vee}{\underline C}_{A|R}
+\]
+se denotará por $\underline H^{\bullet}_{A|R}$. Para todo haz $F$ sobre
+$\underline C_{A|R}$, pongamos
+\[
+ H^{\bullet}(A|R,F)=
+ [\underline H^{\bullet}_{A|R}(F)](A).
+\]
+
+Para $B'\longrightarrow B$ en $\operatorname{Cov}(B)$, definamos
+\[
+ H^0(\{B'\longrightarrow B\},F)=
+ \ker\!\left(
+ F(B')\mathrel{\substack{\longrightarrow\\[-.6ex]\longrightarrow}}
+ F(B'\mathbin{\times_B}B')
+ \right).
+\]
+Los funtores derivados por la derecha de
+$H^0(\{B'\longrightarrow B\},-)$ se denotan por
+$H^{\bullet}(\{B'\longrightarrow B\},-)$. Estos son
+los grupos de cohomología del módulo semisimplicial de \v{C}ech
+
+%%%%%%%%%%  scan idx 84  |  folio 73  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=large]
+ F(B')
+   \arrow[r,shift left=2] \arrow[r,shift right=2]
+ & F(B'\times_BB')
+   \arrow[r,shift left=3] \arrow[r] \arrow[r,shift right=3]
+ & F(B'\times_BB'\times_BB')
+   \arrow[r,shift left=4.5] \arrow[r,shift left=1.5]
+   \arrow[r,shift right=1.5] \arrow[r,shift right=4.5]
+ & \cdots .
+\end{tikzcd}
+\]
+
+El funtor derivado por la derecha de
+\[
+ \check{\underline H}^{\,0}_{A|R}:
+ \overset{\vee}{\underline C}_{A|R}
+ \longrightarrow\overset{\vee}{\underline C}_{A|R}
+\]
+se denotará por $\check{\underline H}^{\,\bullet}_{A|R}$, donde
+\[
+ [\check{\underline H}^{\,0}_{A|R}(F)](B)=
+ \varinjlim_{\{B'\to B\}\in\operatorname{Cov}(B)}
+ H^0(\{B'\longrightarrow B\},F).
+\]
+Para todo prehaz $F$ sobre $\underline C_{A|R}$, pongamos
+\[
+ \check H^{\bullet}(A|R,F)=
+ [\check{\underline H}^{\,\bullet}_{A|R}(F)](A)=
+ \varinjlim_{\{A'\to A\}\in\operatorname{Cov}(A)}
+ H^{\bullet}(\{A'\longrightarrow A\},F).
+\]
+Para todo haz $F$ sobre $\underline C_{A|R}$ se tiene la sucesión
+espectral usual
+\[
+ \check H^p\bigl(A|R,\underline H^q_{A|R}(F)\bigr)
+ \Longrightarrow H^{p+q}(A|R,F).
+\]
+Aquí
+$\check H^0(A|R,\underline H^q_{A|R}(F))=0$ para todo $q>0$. En
+consecuencia,
+\[
+ \check H^1(A|R,F)=H^1(A|R,F),
+\]
+y la sucesión
+\[
+ 0\longrightarrow\check H^2(A|R,F)
+ \longrightarrow H^2(A|R,F)
+ \longrightarrow
+ \check H^1\bigl(A|R,\underline H^1_{A|R}(F)\bigr)
+ \longrightarrow\check H^3(A|R,F)
+\]
+es exacta.

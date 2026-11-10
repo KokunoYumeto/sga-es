@@ -1,0 +1,111 @@
+\par\medskip\noindent
+2.3. \underline{Relación con la ``dualidad de Cartier''.}
+La descripción dada en 2.2 de los acoplamientos definidos por una
+biextensión, mediante el teorema de isomorfismo VII 3.6.5 y el
+homomorfismo (2.2.1), no es manifiestamente la definición utilizada
+antiguamente para los esquemas abelianos, cuando todavía no existía la
+noción misma de biextensión. Aquella definición procede por medio de
+la dualidad de Cartier; vamos a relacionarla con la actual.
+
+Consideremos de nuevo el homomorfismo
+\begin{equation}\tag{2.3.1}
+ \Biext^1(P,Q;G)
+ \longrightarrow
+ \Hom\bigl(P,\uExt^1(Q,G)\bigr)
+\end{equation}
+procedente de la sucesión exacta (1.4). Es, de hecho, un isomorfismo
+cuando
+\begin{equation}\tag{2.3.2}
+ \uHom(Q,G)=0.
+\end{equation}
+
+%%%%%%%%%%  scan idx 253  |  folio 242  %%%%%%%%%%
+
+Esta condición se cumple en particular cuando $Q$ es un esquema
+abeliano sobre un esquema $S$ y $G$ es el grupo multiplicativo
+$\underline G_m$ (VII 1.3.8).
+
+Existe también un homomorfismo evidente de ``restricción a $nQ$''
+\[
+ \uExt^1(Q,G)\longrightarrow\uExt^1(nQ,G),
+\]
+y por tanto un homomorfismo compuesto
+\begin{equation}\tag{2.3.4}
+\begin{split}
+ \Hom\bigl(P,\uExt^1(Q,G)\bigr)
+ &\longrightarrow
+ \Hom\bigl(P,\uExt^1(nQ,G)\bigr)\\
+ &\longrightarrow
+ \Hom\bigl({}_nP,{}_n\uExt^1(nQ,G)\bigr),
+\end{split}
+\end{equation}
+donde la segunda flecha es la restricción a $\,{}_nP$. Componiendo con
+(2.3.1), obtenemos un homomorfismo
+\begin{equation}\tag{2.3.5}
+ \Biext^1(P,Q;G)
+ \longrightarrow
+ \Hom\bigl({}_nP,{}_n\uExt^1(nQ,G)\bigr).
+\end{equation}
+
+Por otra parte, la sucesión exacta
+\begin{equation}\tag{2.3.6}
+ 0\longrightarrow{}_nQ\longrightarrow Q
+ \xrightarrow{\ n\ }nQ\longrightarrow0
+\end{equation}
+da lugar a una sucesión exacta larga de los $\uExt^i(-,G)$, y por
+tanto a la sucesión exacta corta
+\begin{equation}\tag{2.3.7}
+ 0\longrightarrow\uHom(Q,G)_n
+ \longrightarrow\uHom({}_nQ,G)
+ \xrightarrow{\ \partial\ }
+ {}_n\uExt^1(nQ,G)
+ \longrightarrow0,
+\end{equation}
+donde, como de costumbre, $E_n$ denota $E/nE$. Retenemos de esta
+sucesión el homomorfismo canónico suprayectivo
+\begin{equation}\tag{2.3.8}
+ \uHom({}_nQ,G)
+ \xrightarrow{\hspace{3em}\partial\hspace{3em}}
+ {}_n\uExt^1(nQ,G),
+\end{equation}
+que es un isomorfismo si $\uHom(Q,G)_n=0$, y con mayor razón si se
+cumple (2.3.2). De (2.3.8) deducimos un homomorfismo
+\begin{equation}\tag{2.3.9}
+\begin{split}
+ \Hom\bigl({}_nP,\uHom({}_nQ,G)\bigr)
+ &\simeq
+ \Hom({}_nP\otimes{}_nQ,G)\\
+ &\longrightarrow
+ \Hom\bigl({}_nP,{}_n\uExt^1(nQ,G)\bigr),
+\end{split}
+\end{equation}
+que es un isomorfismo cuando se cumple (2.3.2).
+
+Todos los homomorfismos considerados son funtoriales en $P,Q,G$. Los
+homomorfismos (2.3.5), (2.3.9) y (2.2.2) forman el diagrama
+
+%%%%%%%%%%  scan idx 254  |  folio 243  %%%%%%%%%%
+
+\begin{equation}\tag{2.3.10}
+\begin{tikzcd}[column sep=large,row sep=large]
+ &\Biext^1(P,Q;G)
+   \arrow[ddl,"\varphi^n"']
+   \arrow[ddr,"(2.3.5)"]&\\
+ &-&\\
+ \Hom({}_nP\otimes{}_nQ,G)
+   \arrow[rr,"(2.3.9)"]&&
+ \Hom\bigl({}_nP,{}_n\uExt^1(\sisi{nQnG}{nQ,G})\bigr),
+\end{tikzcd}
+\end{equation}
+donde la flecha horizontal (2.3.9) es un isomorfismo si se cumple
+(2.3.2).
+
+\medskip
+\noindent\underline{Proposición 2.3.11.}
+\underline{El diagrama (2.3.10) es anticonmutativo.}
+
+Cuando $\uHom(Q,G)=0$, este enunciado recupera, por tanto, una
+caracterización del homomorfismo $\varphi^n$ de (2.2.2) en términos
+de los homomorfismos (2.3.5) y (2.3.9). Es la caracterización
+utilizada antiguamente en la teoría de los esquemas abelianos, donde
+además $nQ=Q$.

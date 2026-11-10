@@ -1,0 +1,126 @@
+%%%%%%%%%%  scan idx 453  |  folio 442  %%%%%%%%%%
+
+\medskip
+\noindent
+10.3. \underline{Cambio de rasgo}. Sea
+\begin{equation}\tag{10.3.1}
+g:S'\longrightarrow S
+\end{equation}
+un morfismo dominante de rasgos henselianos, asociado a un
+homomorfismo local inyectivo de anillos de valoración discreta
+\begin{equation*}
+V\longrightarrow V'.
+\end{equation*}
+Como de costumbre, pongamos
+\begin{equation}\tag{10.3.2}
+e(S'/S)=\operatorname{length}_V\bigl(V'/\underline mV'\bigr),
+\end{equation}
+donde $\underline m$ es el ideal maximal de $V$. Se sabe entonces que
+el homomorfismo inducido por (10.3.1) sobre las partes ``moderadas'' de
+los grupos de inercia,
+\begin{equation}\tag{10.3.3}
+g_*:I'_t\simeq\prod_{\ell\ne p}\mathbb Z_\ell(1)(k')
+ \longrightarrow
+ I_t=\prod_{\ell\ne p}\mathbb Z_\ell(1)(k),
+\end{equation}
+está dado por
+\begin{equation}\tag{10.3.4}
+g_*(x)=e(S'/S)x,
+\end{equation}
+después de identificar los dos miembros de
+% Canon: SGA-SRC-001287.
+\sisi{(10.3.3)}{(10.3.3)} mediante los isomorfismos evidentes
+$\mathbb Z_\ell(1)(k)\xrightarrow{\ \sim\ }
+\mathbb Z_\ell(1)(k')$.
+
+Por otra parte, si $A_K$ es un esquema abeliano sobre $K$ con
+reducción semiestable sobre $S$, la formación de los retículos
+retorcidos $\underline M$ y $\underline M'$ conmuta con todo cambio de
+base $S'\longrightarrow S$ como el anterior, según se deduce
+inmediatamente de las definiciones (en especial, de 3.4). Podemos,
+pues, considerar el acoplamiento $u_\ell^{A_{K'}}$ definido por
+$A_{K'}$, donde $K'$ es el cuerpo de fracciones de $V'$, como un
+acoplamiento
+\begin{equation*}
+u_\ell^{A_{K'}}:
+ \underline M_{\ell S'}\otimes\underline M'_{\ell S'}
+ \longrightarrow\mathbb Z_{\ell S'},
+\end{equation*}
+y compararlo con el acoplamiento $u_{\ell S'}^{A_K}$ obtenido de
+$u_\ell^{A_K}$ por cambio de base. Cuando $\ell\ne p$, la construcción
+de los acoplamientos $u_\ell$ dada en 9.2, junto con la fórmula
+(10.3.4), muestra inmediatamente que
+\begin{equation}\tag{10.3.5}
+u_\ell^{A_{K'}}=e(S'/S)u_\ell^{A_K}.
+\end{equation}
+
+%%%%%%%%%%  scan idx 454  |  folio 443  %%%%%%%%%%
+
+En realidad, esta fórmula sigue siendo válida para $\ell=p$. Para
+verlo, volvamos a la construcción general de 9.3--9.6 y reduzcamos a
+la afirmación de compatibilidad análoga para el isomorfismo 9.4.4(e),
+bajo un cambio de rasgos estrictamente locales
+$S'\longrightarrow S$. Obsérvese que el isomorfismo en cuestión está
+inducido por la valoración normalizada $K^*/V^*\simeq\mathbb Z$ y da,
+por tanto, el diagrama conmutativo
+\begin{center}
+\begin{tikzcd}
+K^*/V^* \arrow[r,"\sim"] \arrow[d]
+  & \mathbb Z \arrow[d,"e(S'/S)"] \\
+K^{\prime *}/V^{\prime *} \arrow[r,"\sim"]
+  & \mathbb Z .
+\end{tikzcd}
+\end{center}
+
+He aquí un resultado más profundo sobre los acoplamientos de
+monodromía. Lo demostraremos mediante métodos trascendentes en la
+sección 12, apoyándonos en resultados que se probarán más adelante en
+el Seminario. (En realidad, no utilizaremos 10.4 en el resto del
+Seminario, como tampoco utilizaremos los demás resultados del presente
+exposé.)
+
+\medskip
+\noindent
+\underline{Teorema} 10.4. \underline{Sea $S$ un rasgo henseliano, y
+sea $A_K$ un esquema abeliano sobre $K$ con reducción semiestable sobre
+$S$. Consideremos los retículos $\underline M$ y $\underline M'$
+asociados como en 9.1 (cf. 5.5.2). Entonces se cumplen las afirmaciones
+siguientes:}
+
+%%%%%%%%%%  scan idx 455  |  folio 444  %%%%%%%%%%
+
+\smallskip
+\noindent
+a) \underline{Existe un único acoplamiento}
+\begin{equation}\tag{10.4.1}
+u:\underline M\otimes\underline M'\longrightarrow\mathbb Z_S
+\end{equation}
+\underline{tal que, para todo número primo $\ell$,
+$u\otimes_{\mathbb Z}\mathbb Z_\ell$ sea el acoplamiento de monodromía
+$u_\ell$ de (9.1.2). Este acoplamiento es separante.}
+
+\smallskip
+\noindent
+b) \underline{Sea $\xi$ una polarización de $A_K$, que define por
+tanto un homomorfismo (10.2.3)}
+\begin{equation*}
+\xi_t:\underline M\longrightarrow\underline M',
+\end{equation*}
+\underline{y consideremos la forma}
+\begin{equation}\tag{10.4.2}
+\begin{aligned}
+\varphi_\xi^t:\underline M\otimes\underline M
+  &\longrightarrow\mathbb Z_S,\\
+\varphi_\xi^t(x,y)&=u\bigl(x,\xi_t(y)\bigr).
+\end{aligned}
+\end{equation}
+\underline{Esta forma es simétrica, positiva y no degenerada.}
+
+Naturalmente, en términos de la fibra geométrica $M_o$ de
+$\underline M$ en un punto geométrico dado de $S$, la afirmación
+precedente dice que la forma correspondiente
+\begin{equation*}
+M_o\otimes M_o\longrightarrow\mathbb Z
+\end{equation*}
+es simétrica, positiva y no degenerada. El acoplamiento (10.4.1) se
+llamará de nuevo \underline{acoplamiento de monodromía}.

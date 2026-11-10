@@ -1,0 +1,152 @@
+\section*{3. Complementos de álgebra homológica}
+
+El objeto principal de esta sección es definir el isomorfismo
+\[
+ \Biext^1(P,Q;G)\simeq
+ \Ext^1(P\overset{\mathbb L}{\otimes}Q,G)
+\]
+anunciado anteriormente. Para ello necesitaremos ciertos desarrollos
+de álgebra homológica que tienen interés independiente y ocuparán las
+secciones 3.1 a 3.4. Los desarrollos de 3.1 y 3.3 pueden considerarse
+complementos de [4], especialmente de su sección 6.9.
+
+\subsection*{3.1. Construcción de una categoría cofibrada aditiva
+$\underline\Psi_{L_\bullet}$ a partir de un complejo de cadenas
+$L_\bullet$ en una categoría abeliana $\underline C$}
+
+Sea $\underline C$ una categoría abeliana y sea $L_\bullet$ un
+complejo de cadenas en $\underline C$,
+\begin{equation}\tag{3.1.1}
+ L_2\longrightarrow L_1\longrightarrow L_0\longrightarrow0,
+\end{equation}
+escrito con la convención de grados inferiores, de modo que el
+diferencial tiene grado $-1$. Así, $L_i=0$ para $i<0$. Definiremos una
+categoría cofibrada
+\[
+ \underline\Psi=\underline\Psi_{L_\bullet}
+\]
+sobre $\underline C$; salvo equivalencia canónica de categorías
+cofibradas, es la categoría del mismo nombre de [4, 6.9]. Los objetos
+de $\underline\Psi_{L_\bullet}$ son los pares
+\[
+ (X,\alpha),
+\]
+donde $X$ es una extensión de $L_0$ por un objeto $A$ de
+$\underline C$, que depende de $X$,
+\begin{equation}\tag{3.1.2}
+ 0\longrightarrow A\xrightarrow{i}X\xrightarrow{j}L_0
+ \longrightarrow0,
+\end{equation}
+y $\alpha$ es una trivialización de la imagen inversa $d_0^*(X)$ de
+esta extensión por $d_0:L_1\longrightarrow L_0$. Se exige que la
+trivialización correspondiente de la imagen inversa
+$d_1^*d_0^*(X)$ por $d_1:L_2\longrightarrow L_1$ sea la evidente,
+obtenida del isomorfismo de transitividad
+\[
+ d_1^*d_0^*(X)\simeq(d_0d_1)^*(X)
+\]
+y de la relación $d_0d_1=0$.
+
+Equivalentemente, $\alpha$ es un levantamiento de
+$d_0:L_1\longrightarrow L_0$ a un morfismo
+$\alpha:L_1\longrightarrow X$, sujeto a $\alpha d_1=0$:
+\begin{equation}\tag{3.1.3}
+\begin{tikzcd}[row sep=large,column sep=large]
+ &&0\arrow[d]\\
+ &&A\arrow[d,"i"]\\
+ &&X\arrow[d,"j"]\\
+ L_2\arrow[r,"d_1"']&L_1\arrow[r,"d_0"']\arrow[ru,"\alpha"]
+   &L_0\arrow[d]\\
+ &&0
+\end{tikzcd}
+\qquad,\qquad \alpha d_1=0.\quad(*)
+\end{equation}
+He aquí una descripción más sencilla, señalada por Deligne:
+$\underline\Psi_{L_\bullet}(A)$ es la categoría de las extensiones del
+complejo $L_\bullet$ por $A$, considerado como un complejo concentrado
+en grado cero.
+
+En esta forma se ve que la descripción de los objetos $(X,\alpha)$
+depende solo del complejo de cadenas $[L_\bullet]$
+\underline{truncado en grado 1}, obtenido de $L_\bullet$ ``matando
+$H_i(L_\bullet)$ para $i\geq2$'': sus términos son cero en grados al
+menos $2$, coinciden con los de $L_\bullet$ en grados a lo sumo $0$, y
+su término de grado $1$ es el conúcleo de
+$d_1:L_2\longrightarrow L_1$.
+
+Un homomorfismo de $(X,\alpha)$ a $(X',\alpha')$ es un homomorfismo de
+extensiones $u:X\longrightarrow X'$, compatible con la identidad
+sobre $L_0$, tal que $u\alpha=\alpha'$. Los homomorfismos se componen
+componiendo los homomorfismos de extensiones correspondientes. Esto da
+la categoría anunciada $\underline\Psi_{L_\bullet}$. Salvo
+isomorfismo canónico, depende únicamente del truncamiento en grado
+$1$, $[L_\bullet]$, de $L_\bullet$.
+
+Hay un funtor evidente $(X,\alpha)\longmapsto A$,
+\begin{equation}\tag{3.1.4}
+ \pi:\underline\Psi_{L_\bullet}\longrightarrow\underline C.
+\end{equation}
+\underline{Este funtor es cofibrado}. En efecto, sea
+$u:A\longrightarrow B$ un morfismo de $\underline C$, y sea
+$(X,\alpha)$ un objeto de la fibra
+$\underline\Psi_{L_\bullet}(A)$. Así, $X$ es una extensión de $L_0$
+por $A$. Formemos la extensión $u_*(X)$ de $L_0$ por $B$, imagen
+directa de $X$ por $u$, y dotémosla de la trivialización parcial
+$\beta=f\alpha$, donde $f:X\longrightarrow u_*(X)$ es el morfismo
+canónico. Se sigue inmediatamente que
+\[
+ f:(X,\alpha)\longrightarrow(u_*(X),\beta)
+\]
+es cocartesiano para (3.1.4): posee la propiedad universal usual para
+los $u$-morfismos de $\underline\Psi_{L_\bullet}$ con fuente
+$(X,\alpha)$. Esta no es sino la propiedad universal correspondiente,
+bien conocida y elemental, de $f:X\longrightarrow u_*(X)$.
+
+Finalmente, la categoría cofibrada $\underline\Psi_{L_\bullet}$ es
+\underline{aditiva}; es decir, satisface
+\begin{equation}\tag{3.1.5}
+ \underline\Psi_{L_\bullet}(0)
+ \quad\text{es equivalente a la categoría con un solo objeto},
+\end{equation}
+y, para $A,B$ arbitrarios en $\underline C$,
+\begin{equation}\tag{3.1.6}
+ \underline\Psi_{L_\bullet}(A\times B)
+ \longrightarrow
+ \underline\Psi_{L_\bullet}(A)\times
+ \underline\Psi_{L_\bullet}(B)
+ \quad\text{es una equivalencia}.
+\end{equation}
+Esto se deduce inmediatamente de las propiedades correspondientes de
+la categoría cofibrada de las extensiones de $L_0$ por objetos
+variables de $\underline C$. Utilizaremos libremente las consecuencias
+de la aditividad de $\underline\Psi_{L_\bullet}$ establecidas en
+[4, 1] y recordadas anteriormente en 2.5.
+
+3.1.7. Entre estas consecuencias, para todo objeto $A$ de
+$\underline C$, la categoría $\underline\Psi_{L_\bullet}(A)$ tiene un
+objeto \underline{cero}, o \underline{trivial} (2.5.1). Es la
+extensión trivial $X=L_0+A$ de $L_0$ por $A$, provista de la
+trivialización parcial $\alpha:L_1\longrightarrow X$ cuyas componentes
+son $d_0$ y $0$.
+
+Además, por 2.5.2, para todo $(X,\alpha)$ de
+$\underline\Psi_{L_\bullet}(A)$, el grupo de automorfismos de este
+objeto es canónicamente isomorfo al grupo de automorfismos del objeto
+trivial. Denotemos este último grupo conmutativo por
+$\Psi^0_{L_\bullet}(A)$. La descripción explícita anterior da los
+isomorfismos canónicos
+\begin{multline}\tag{3.1.8}
+ \Psi^0_{L_\bullet}(A)
+ =\Ker\bigl(\Hom(L_0,A)\longrightarrow\Hom(L_1,A)\bigr)
+ \simeq\Hom(H_0(L_\bullet),A)\\
+ \simeq\Ext^0(L_\bullet,A),
+\end{multline}
+inducidos por la identificación usual del grupo de automorfismos de
+la extensión $X$ con $\Hom(L_0,A)$. El isomorfismo
+\sisi{(3.1.7.1)}{(3.1.8)} es manifiestamente funtorial en $A$.
+
+3.1.9. Finalmente, recordemos de 2.5.2 que la estructura
+multiplicativa natural sobre la categoría fibra
+$\underline\Psi_{L_\bullet}(A)$ dota a su conjunto de clases de
+isomorfismo de una estructura de grupo natural. Denotamos este grupo
+por $\Psi^1_{L_\bullet}(A)$; es un funtor aditivo de $A$.

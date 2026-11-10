@@ -1,0 +1,81 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 2204--2242; índices de escaneo 311--313;
+% folios de fuente 300--302. Las dos correcciones materiales se
+% conservan reversiblemente mediante \sisi.
+
+\medskip
+\noindent\underline{Demostración.}\quad a) Sea $\overline G$ el modelo
+de Néron--Raynaud de $\underline G_m$. El funtor considerado es el
+compuesto del funtor ``extensión del núcleo
+$\underline G_{mS}\to\overline G$'' con el funtor ``restricción a
+$\eta$'', definido sobre la categoría de
+$\sisi{\text{biextensiones}}{\text{extensiones}}$ por $\overline G$.
+Este último funtor es una equivalencia de categorías por 6.6, de modo
+que queda por estudiar el primero. Para ello utilizamos la sucesión
+exacta de esquemas en grupos
+\begin{equation}\tag{7.1.3}
+ 0\longrightarrow\underline G_{mS}\longrightarrow\overline G
+ \longrightarrow\mathbb Z_{S,s}\longrightarrow0,
+\end{equation}
+donde la notación $\mathbb Z_{S,s}$ es la de 5.7. La sucesión exacta de
+los $\Ext^i$, $i=0,1$, asociada a (7.1.3) muestra que el funtor en
+cuestión es plenamente fiel si y solo si
+\begin{equation}\tag{7.1.4}
+ \Hom(P,\mathbb Z_{S,s})=0,
+\end{equation}
+y que la obstrucción para que una extensión $\overline E$ de $P$ por
+$\overline G$ proceda de una extensión $E$ de $P$ por
+$\underline G_{mS}$ pertenece a
+\begin{equation}\tag{7.1.5}
+ \Ext^1(P,\mathbb Z_{S,s}).
+\end{equation}
+
+%%%%%%%%%%  scan idx 312  |  folio 301  %%%%%%%%%%
+
+Por (5.7.2), el primer grupo de (7.1.4) es isomorfo a
+$\Hom(P_0,\mathbb Z_k)$, que a su vez es isomorfo a
+$\Hom(\Phi,\mathbb Z_k)$. Por tanto, (7.1.4) equivale a
+\begin{equation}\tag{7.1.4 bis}
+ \Hom(\Phi,\mathbb Z_k)=0.
+\end{equation}
+Esta relación se cumple ciertamente si $\Phi$ es un grupo de torsión.
+Además, si $n\Phi=0$, entonces 5.9 y 5.5 dan isomorfismos canónicos
+\begin{equation}\tag{7.1.6}
+ \Ext^1(P,\mathbb Z_{S,s})
+ \simeq\Ext^1(P_0,\mathbb Z_k)
+ \simeq\Hom\bigl(\Phi,(\mathbb Q/\mathbb Z)_k\bigr),
+\end{equation}
+lo cual concluye la demostración de 7.1(a).
+
+\smallskip
+\noindent b) La demostración es esencialmente la misma. Por 6.7,
+quedamos reducidos a estudiar el funtor ``extensión del núcleo
+$\underline G_{mS}\to\overline G$'' de la categoría de biextensiones
+de $(P,Q)$ por $\underline G_{mS}$ a la categoría de biextensiones de
+$(P,Q)$ por $\overline G$. Utilizamos la sucesión exacta (7.1.3) y la
+sucesión exacta asociada de los $\Biext^i$, $i=0,1$ (VII 3.7.5). La
+plena fidelidad del funtor equivale a
+\begin{equation}\tag{7.1.7}
+ \Hom(P\otimes Q,\mathbb Z_{S,s})=0.
+\end{equation}
+Por (5.7.2), el miembro izquierdo es isomorfo a
+$\Hom(P_0\otimes Q_0,\mathbb Z_k)$ y, por tanto, a
+$\Hom(\Phi\otimes\Psi,\mathbb Z_k)$; este grupo es nulo si $\Phi$ o
+$\Psi$ es un grupo de torsión. Por otra parte, para una biextensión
+dada $\overline E$ de $(P,Q)$ por $\overline G$, la obstrucción para
+que proceda de una biextensión $E$ de $(P,Q)$ por $\underline G_{mS}$
+pertenece a
+\[
+ \Biext^1(P,Q;\mathbb Z_{S,s}).
+\]
+Por 5.10, este grupo es isomorfo a
+$\Biext^1(P_0,Q_0;\mathbb Z_k)$, que, si $n\Phi=0$ o $n\Psi=0$, es a
+su vez isomorfo por 5.6 a
+\[
+ \Hom\bigl(\Phi\otimes\Psi,
+ \sisi{\mathbb Q/\mathbb Z}{(\mathbb Q/\mathbb Z)_k}\bigr).
+\]
+
+%%%%%%%%%%  scan idx 313  |  folio 302  %%%%%%%%%%
+
+Esto concluye la demostración de 7.1.

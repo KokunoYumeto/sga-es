@@ -1,0 +1,259 @@
+%%%%%%%%%%  scan idx 89  |  folio 78  %%%%%%%%%%
+
+\underline{Proposición 3.7.}
+
+\begin{enumerate}[label=(\alph*)]
+\item Sean $A$ y $S$ $R$-álgebras. Si
+\[
+ \operatorname{Tor}_i^R(A,S)=0\qquad(0<i\leq n),
+\]
+entonces, para todo haz $F$ sobre
+$\underline C_{A\otimes_RS|S}$, la aplicación canónica
+\[
+ H^i(A\otimes_RS|S,F)
+ \longrightarrow H^i(A|R,\widetilde SF)
+\]
+es un isomorfismo para todo $i\leq n$. Aquí
+\[
+ S:\underline C_{A|R}\longrightarrow
+ \underline C_{A\otimes_RS|S},
+ \qquad X\longmapsto X\otimes_RS.
+\]
+
+\item Sea $P$ un álgebra polinómica sobre $R$. Entonces, para todo haz
+aditivo $F$ sobre $\underline C_{A\otimes_RP|R}$, la aplicación
+canónica
+\[
+ H^n(A\otimes_RP|R,F)\longrightarrow H^n(A|R,F)
+\]
+es un isomorfismo para todo $n>0$.
+
+\item Sean $S\longrightarrow R\longrightarrow A$ homomorfismos de
+anillos. Entonces, para todo haz aditivo $F$ sobre
+$\underline C_{A|S}$, hay una sucesión exacta
+\begin{multline*}
+0\longrightarrow H^0(A|R,F_R)\longrightarrow H^0(A|S,F)
+\longrightarrow H^0(R|S,F)\longrightarrow H^1(A|R,F_R)\\
+\longrightarrow H^1(A|S,F)\longrightarrow H^1(R|S,F)
+\longrightarrow\cdots\longrightarrow H^n(A|R,F_R)\\
+\longrightarrow H^n(A|S,F)\longrightarrow H^n(R|S,F)
+\longrightarrow H^{n+1}(A|R,F_R)\longrightarrow\cdots,
+\end{multline*}
+donde $F_R$ es el haz sobre $\underline C_{A|R}$ definido por
+\[
+ F_R(X)=\ker\bigl(F(X)\longrightarrow F(R)\bigr)
+\]
+para todo $X\in\operatorname{Ob}(\underline C_{A|R})$, mediante el
+funtor de olvido
+$\underline C_{A|R}\longrightarrow\underline C_{A|S}$.
+\end{enumerate}
+
+\underline{Demostración.}
+
+(a) Considérese el funtor continuo
+\[
+ S:\underline C_{A|R}\longrightarrow
+ \underline C_{A\otimes_RS|S},
+ \qquad S(X)=X\otimes_RS.
+\]
+Como $S$ envía las álgebras polinómicas sobre $R$ a álgebras
+polinómicas sobre $S$, el funtor
+\[
+ \widetilde S:\widetilde{\underline C}_{A\otimes_RS|S}
+ \longrightarrow\widetilde{\underline C}_{A|R}
+\]
+es exacto por 3.3(c). Se obtiene, por tanto, la aplicación canónica
+\[
+ \check S\,\underline H^{\bullet}_{A\otimes_RS|S}(F)
+ \longrightarrow
+ \underline H^{\bullet}_{A|R}(\widetilde SF)
+\]
+y el siguiente diagrama conmutativo de sucesiones espectrales:
+\begin{center}
+\small
+\begin{tikzcd}[column sep=huge,row sep=large]
+E_S^{p,q}(S(X))=
+ \check H^p\bigl(X\otimes_RS|S,
+ \underline H^q_{A\otimes_RS|S}(F)\bigr)
+ \arrow[r,Rightarrow] \arrow[d]
+& H^{p+q}(X\otimes_RS|S,F) \arrow[dd]\\
+\check H^p\bigl(X|R,
+ \check S\,\underline H^q_{A\otimes_RS|S}(F)\bigr)
+ \arrow[d] & \\
+E_R^{p,q}(X)=
+ \check H^p\bigl(X|R,
+ \underline H^q_{A|R}(\widetilde SF)\bigr)
+ \arrow[r,Rightarrow]
+& H^{p+q}(X|R,\widetilde SF).
+\end{tikzcd}
+\end{center}
+
+%%%%%%%%%%  scan idx 90  |  folio 79  %%%%%%%%%%
+
+Por 3.6(a), la aplicación
+\[
+ E_S^{p,q}(S(X))\longrightarrow
+ \check H^p\bigl(X|R,
+ \check S\,\underline H^q_{A\otimes_RS|S}(F)\bigr)
+\]
+es un isomorfismo siempre que
+$\operatorname{Tor}_1^R(X,S)=0$. Supongamos inductivamente que
+\[
+ [\check S\,\underline H^q_{A\otimes_RS|S}(F)](X)
+ \longrightarrow
+ [\underline H^q_{A|R}(\widetilde SF)](X)
+\]
+es un isomorfismo para todo $q<n$ y todo
+$X\in\operatorname{Ob}(\underline C_{A|R})$ que satisface
+\[
+ \operatorname{Tor}_i^R(X,S)=0\qquad(0<i\sisi{\leq}{<} n).
+\]
+Se sigue de 3.6(b) que
+$E_S^{p,q}(S(X))\longrightarrow E_R^{p,q}(X)$ es un isomorfismo
+para todo $q<n$ y todo $p$, bajo la misma hipótesis de Tor. Además,
+$E_S^{0,n}(S(X))\longrightarrow E_R^{0,n}(X)$ es un isomorfismo,
+puesto que ambos miembros son cero. Por tanto,
+\[
+ H^n(X\otimes_RS|S,F)
+ \longrightarrow H^n(X|R,\widetilde SF)
+\]
+es un isomorfismo siempre que
+$\operatorname{Tor}_i^R(X,S)=0$ para $0<i\leq n$. Equivalentemente,
+\[
+ [\check S\,\underline H^i_{A\otimes_RS|S}(F)](X)
+ \longrightarrow
+ [\underline H^i_{A|R}(\widetilde SF)](X)
+\]
+es un isomorfismo para todo $i\leq n$ bajo esa hipótesis.
+
+(b) Sea
+\[
+ f:\underline C_{A|R}\longrightarrow
+ \underline C_{A\otimes_RP|R},
+ \qquad f(X)=X\otimes_RP.
+\]
+Elíjase una flecha suprayectiva $P'\longrightarrow X$ en
+$\underline C_{A|R}$, siendo $P'$ un álgebra polinómica sobre $R$.
+Entonces
+\[
+ P'\otimes_RP\longrightarrow X\otimes_RP
+\]
+es una flecha suprayectiva en $\underline C_{A\otimes_RP|R}$, y
+$P'\otimes_RP$ es de nuevo un álgebra polinómica sobre $R$. Puesto que
+$P$ es plano
+sobre $R$, 3.5(i) da
+\begin{align*}
+ \check H^{\bullet}(X|R,\check fG)
+ &=H^{\bullet}(\{P'\longrightarrow X\},\check fG)\\
+ &=H^{\bullet}(\{P'\otimes_RP\longrightarrow X\otimes_RP\},G)\\
+ &=\check H^{\bullet}(X\otimes_RP|R,G)
+\end{align*}
+para todo
+$G\in\operatorname{Ob}(\overset{\vee}{\underline C}_{A\otimes_RP|R})$.
+Así, $\widetilde f$ envía los haces acíclicos a haces acíclicos. Por otra
+parte, $f$ envía las álgebras polinómicas sobre $R$ a álgebras
+polinómicas sobre $R$, de modo que
+\[
+ \widetilde f:\widetilde{\underline C}_{A\otimes_RP|R}
+ \longrightarrow\widetilde{\underline C}_{A|R}
+\]
+es exacto por 3.3(c). Se sigue que
+\[
+ H^{\bullet}(A\otimes_RP|R,F)
+ \longrightarrow H^{\bullet}(A|R,\widetilde fF)
+\]
+es un isomorfismo para todo
+$F\in\operatorname{Ob}(\widetilde{\underline C}_{A\otimes_RP|R})$.
+
+Para cada $X\in\operatorname{Ob}(\underline C_{A|R})$ hay una aplicación
+canónica
+\[
+ (\widetilde fF)(X)=F(X\otimes_RP)
+ \longrightarrow F(X)\oplus F(P),
+\]
+y por tanto una aplicación canónica
+$\widetilde fF\longrightarrow F\oplus F(P)$, donde $F(P)$ denota el haz
+constante y el $F$ del miembro derecho denota la restricción de $F$ a
+$\underline C_{A|R}$. Si $F$ es aditivo, esta aplicación es un
+isomorfismo. Por consiguiente, para todo $n>0$,
+\[
+ H^n(A|R,\widetilde fF)
+ \xrightarrow{\ \sim\ }
+ H^n(A|R,F\oplus F(P))=H^n(A|R,F),
+\]
+porque el haz constante $F(P)$ es flácido. Esto demuestra (b).
+
+%%%%%%%%%%  scan idx 91  |  folio 80  %%%%%%%%%%
+
+(c) Este argumento fue comunicado por Rinehart. Considérese el funtor de
+olvido
+$\beta:\underline C_{A|R}\longrightarrow\underline C_{A|S}$.
+Hay una sucesión espectral
+\[
+ E^{p,q}=H^p\bigl(A|R,
+ \beta^{\#}\underline H^q_{A|S}(F)\bigr)
+ \Longrightarrow H^{p+q}(A|S,F),
+\]
+donde
+\[
+ \beta^{\#}=G_{A|R}\circ\beta^{\vee},
+ \qquad
+ G_{A|R}:\overset{\vee}{\underline C}_{A|R}
+ \longrightarrow\widetilde{\underline C}_{A|R}
+\]
+es el funtor de haz asociado.
+
+Supongamos ahora que $F$ es aditivo. Afirmamos que
+$\beta^{\#}\underline H^q_{A|S}(F)$ es un haz constante para todo
+$q>0$. En efecto, si $P$ es un álgebra polinómica sobre $R$, entonces
+$P=R\otimes_SP'$ para un álgebra polinómica $P'$ sobre $S$, y
+\[
+ [\beta^{\#}\underline H^q_{A|S}(F)](P)
+ =H^q(P|S,F)
+ =H^q(R\otimes_SP'|S,F)
+ \longrightarrow H^q(R|S,F)
+\]
+es un isomorfismo para $q>0$ por (b), y es suprayectiva para $q=0$.
+Por 3.3(c), la aplicación canónica
+\[
+ \beta^{\#}\underline H^q_{A|S}(F)
+ \longrightarrow H^q(R|S,F)
+\]
+al haz constante correspondiente es, por tanto, un isomorfismo para
+$q>0$ y una suprayección para $q=0$. De aquí que $E^{p,q}=0$ siempre que
+$p,q>0$, y la sucesión espectral proporciona la sucesión exacta
+\[
+ (*)\quad
+ 0\longrightarrow E^{1,0}\longrightarrow H^1
+ \longrightarrow E^{0,1}\longrightarrow E^{2,0}
+ \longrightarrow H^2\longrightarrow E^{0,2}
+ \longrightarrow E^{3,0}\longrightarrow H^3\longrightarrow\cdots.
+\]
+Aquí
+\[
+ E^{0,q}=[\beta^{\#}\underline H^q_{A|S}(F)](A)
+ \xrightarrow{\ \sim\ }H^q(R|S,F)\quad(q>0),
+ \qquad
+ E^{p,0}=H^p(A|R,\widetilde\beta F).
+\]
+Por otra parte, la sucesión exacta
+\[
+ 0\longrightarrow F_R\longrightarrow\widetilde\beta F
+ \longrightarrow F(R)\longrightarrow0
+\]
+da el diagrama exacto
+\begin{center}
+\scriptsize
+\begin{tikzcd}[column sep=small,row sep=large]
+0 \arrow[r]
+& H^0(A|R,F_R) \arrow[r]
+& H^0(A|R,\widetilde\beta F) \arrow[r] \arrow[d,equal]
+& H^0(A|R,F(R)) \arrow[r] \arrow[d,equal]
+& H^1(A|R,F_R) \arrow[r]
+& H^1(A|R,\widetilde\beta F) \arrow[r]
+& 0\\
+&& H^0(A|S,F) & H^0(R|S,F) &&&
+\end{tikzcd}
+\end{center}
+etiquetado $(**)$ en la fuente. La combinación de $(*)$ y $(**)$ da la
+sucesión exacta buscada. \hfill$\square$

@@ -1,0 +1,151 @@
+\par\medskip
+\noindent\underline{Demostración de \sisi{2.5.11}{2.3.11}.}
+\footnote{Para una demostración más elegante, véase 2.3.19 más abajo.}
+Sea $\xi$ un elemento de $\Biext^1(P,Q;G)$, sea
+\[
+ \varphi_\xi:{}_nP\otimes{}_nQ\longrightarrow G
+\]
+el acoplamiento asociado, y sea
+\[
+ u_\xi:{}_nP\longrightarrow{}_n\uExt^1(nQ,G)
+\]
+la imagen de $\xi$ por (2.3.5). Hay que demostrar que $-u_\xi$ se
+obtiene de $\varphi_\xi$ mediante la flecha (2.3.9), es decir, que es
+el compuesto
+\begin{equation}\tag{*}
+ {}_nP
+ \xrightarrow{\ \varphi_\xi\ }
+ \uHom({}_nQ,G)
+ \xrightarrow{\ (2.3.8)\ }
+ {}_n\uExt^1(nQ,G).
+\end{equation}
+Para probarlo, podemos tomar una sección $x$ de $\,{}_nP$ y demostrar
+que su imagen por $-u_\xi$ es igual a su imagen por el compuesto (*).
+Si se desea, esto permitiría reducirnos al caso
+$P=(\mathbb Z/n\mathbb Z)_T$, pero no necesitaremos esta reducción.
+
+\medskip
+\noindent a) Elijamos resoluciones planas $L_\bullet$ y $M_\bullet$,
+\[
+ 0\longrightarrow L_1\longrightarrow L_0\longrightarrow0,
+ \qquad
+ 0\longrightarrow M_1\longrightarrow M_0\longrightarrow0,
+\]
+de $P$ y $Q$, respectivamente.
+
+%%%%%%%%%%  scan idx 255  |  folio 244  %%%%%%%%%%
+
+Por ejemplo, se obtiene una resolución plana de $P$ escribiendo $P$
+como cociente de un $\mathbb Z_T$-módulo plano $L_0$ y tomando como
+$L_1$ el núcleo de $L_0\longrightarrow P$; este núcleo es plano
+porque carece de torsión. Obtenemos el complejo
+$L_\bullet\otimes M_\bullet$
+\[
+ 0\longrightarrow L_1\otimes M_1
+ \xrightarrow{d_2}
+ L_1\otimes M_0+L_0\otimes M_1
+ \xrightarrow{d_1}
+ L_0\otimes M_0
+ \longrightarrow0,
+\]
+cuyo haz $\underline H_1$ servirá como $\uTor_1(P,Q)$.
+
+Sea $L'_0$ (respectivamente, $M'_0$) el subhaz de $L_0$
+(respectivamente, de $M_0$) que es la imagen inversa de $\,{}_nP$
+(respectivamente, de $\,{}_nQ$). Así,
+\[
+ 0\longrightarrow L_1\longrightarrow L'_0\longrightarrow0
+ \qquad
+ \left(\text{respectivamente, }
+ 0\longrightarrow M_1\longrightarrow M'_0\longrightarrow0\right)
+\]
+es una resolución plana de $\,{}_nP$ (respectivamente, de
+$\,{}_nQ$). El homomorfismo
+\[
+ {}_nP\otimes{}_nQ
+ \longrightarrow
+ \uTor_1(P,Q)=\underline H_1(L_\bullet\otimes M_\bullet)
+\]
+puede describirse entonces, pasando al cociente, a partir del
+homomorfismo
+\[
+ L'_0\otimes M'_0
+ \longrightarrow
+ \underline H_1(L_\bullet\otimes M_\bullet)
+\]
+dado por
+\[
+ x_0\otimes y_0
+ \longmapsto
+ \text{la clase del $1$-ciclo }
+ [nx_0]\otimes y_0-x_0\otimes[ny_0].
+\]
+Los corchetes indican que el elemento considerado se ve como una
+sección del subhaz $L_1$ de $L_0$ (respectivamente, de $M_1$ en
+$M_0$). Esta descripción se deduce del cálculo efectuado en la
+demostración de 2.1.10.
+
+\medskip
+\noindent b) Tomemos una resolución inyectiva
+\[
+ C^\bullet=\bigl(0\longrightarrow C^0
+ \xrightarrow{d^0}C^1\longrightarrow\cdots\bigr)
+\]
+de $G$, e identifiquemos
+\[
+ \Biext^1(P,Q;G)
+ \simeq
+ \Ext^1\!\left(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G\right)
+ =H^1\!\left(
+   \Hom^{\boldsymbol\cdot}
+   (L_\bullet\otimes M_\bullet,C^{\boldsymbol\cdot})
+ \right).
+\]
+El elemento $\xi$ puede representarse, por tanto, mediante un par de
+homomorfismos $f_1,f_0$ que dan el diagrama anticonmutativo
+
+%%%%%%%%%%  scan idx 256  |  folio 245  %%%%%%%%%%
+
+\begin{equation}\tag{2.3.12}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ L_1\otimes M_0+L_0\otimes M_1
+   \arrow[r,"d_1"]
+   \arrow[d,"f_1"']
+   \arrow[rd,phantom,"-" description]&
+ L_0\otimes M_0
+   \arrow[d,"f_0"']\\
+ C^0\arrow[r,"d^0"]&C^1.
+\end{tikzcd}
+\end{equation}
+Por definición, el acoplamiento
+\[
+ \varphi_\xi:{}_nP\otimes{}_nQ\longrightarrow G
+\]
+se obtiene, pasando al cociente, a partir del homomorfismo
+\[
+ \varphi:L'_0\otimes M'_0\longrightarrow G
+\]
+dado por
+\begin{equation}\tag{2.3.13}
+ \varphi(x_0\otimes y_0)
+ =f_1\bigl([nx_0]\otimes y_0-x_0\otimes[ny_0]\bigr)
+ \in G=\ker(C^0\longrightarrow C^1).
+\end{equation}
+Como la afirmación 2.3.11 es local sobre $T$, podemos suponer que la
+sección dada $x$ de $\,{}_nP$ se levanta a una sección $x_0$ de
+$L'_0$. Considerando $y_0$ variable, la fórmula precedente define
+entonces un homomorfismo
+\begin{equation}\tag{2.3.14}
+ \varphi':M'_0\longrightarrow G,
+ \qquad
+ y_0\longmapsto
+ f_1\bigl([nx_0]\otimes y_0
+ \sisi{\longrightarrow}{-}x_0\otimes[ny_0]\bigr),
+\end{equation}
+que pasa al cociente para dar
+\[
+ {}_nQ\longrightarrow G,
+ \qquad
+ y\longmapsto\varphi_\xi(x,y),
+\]
+el homomorfismo asociado a $\varphi_\xi$ y $x$.

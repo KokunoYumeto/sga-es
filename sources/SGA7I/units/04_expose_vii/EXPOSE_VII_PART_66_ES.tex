@@ -1,0 +1,44 @@
+\par\medskip\noindent
+1.2. \underline{Caso conmutativo}. En todo lo que sigue a partir de
+1.4 solo nos interesarán las extensiones \underline{conmutativas} de
+grupos. Supondremos, pues, que $P$ y $G$ son conmutativos, y nos
+proponemos explicitar aquí, en términos
+%%%%%%%%%%  scan idx 155  |  folio 144  %%%%%%%%%%
+de la descripción ($P,G,E,\varphi$) de una extensión mediante
+bitorsors, el hecho de que $E$ es un grupo conmutativo. Una primera
+condición evidentemente necesaria (y que expresa, de hecho, que $i(G)$
+sea un subgrupo \underline{central} de $E$) es que los bitorsors $E_p$
+($p \in P(S)$) sean torsors ordinarios, es decir, que las operaciones
+izquierda y derecha de $G$ sobre $\sisi{P_p}{E_p}$ coincidan. Es
+evidentemente equivalente decir que $E$ sobre $P$ es un torsor ordinario
+bajo $G_P$. (Por tanto, en adelante será inútil hablar de bitorsors, y
+solo consideraremos torsors ordinarios.) Supuesta satisfecha esta
+condición preliminar, la condición de conmutatividad de $E$ se expresa
+entonces por la conmutatividad de los diagramas siguientes (donde
+$p,p' \in P(S)$):
+
+\begin{equation}\tag{1.2.1}
+\begin{tikzcd}[column sep=large, row sep=large]
+E_p\ E_{p'} \arrow[r, "{\varphi_{p,p'}}"] \arrow[d, "\mathrm{sym}"'] & E_{pp'} \arrow[d, "\mathrm{id}"] \\
+E_{p'}E_p \arrow[r, "{\varphi_{p',p}}"] & E_{p'p}
+\end{tikzcd}
+\end{equation}
+% ESTRUCTURA: Cuadrado, 4 nodos, 4 flechas. NODOS: (arriba-izquierda) $E_p\ E_{p'}$ — dos símbolos
+%   yuxtapuestos con un espacio en blanco, sin glifo de operador entre ellos; (arriba-derecha)
+%   $E_{pp'}$; (abajo-izquierda) $E_{p'}E_p$ — yuxtapuestos sin espacio (la prima queda entre las dos
+%   E); (abajo-derecha) $E_{p'p}$. FLECHAS: (1) horizontal superior, izquierda→derecha, flecha simple
+%   de un solo cuerpo y una punta abierta, etiqueta $\varphi_{p,p'}$ ENCIMA; (2) vertical izquierda,
+%   de arriba abajo, flecha simple de un solo cuerpo y una punta abierta, etiqueta «sym» a la IZQUIERDA;
+%   (3) vertical derecha, de arriba abajo, flecha simple de un solo cuerpo y una punta abierta, etiqueta
+%   «id» a la DERECHA; (4) horizontal inferior, izquierda→derecha, flecha simple de un solo cuerpo y
+%   una punta abierta, etiqueta $\varphi_{p',p}$ ENCIMA. SIN flechas con gancho/monomorfismos, SIN
+%   signos de isomorfismo (~), SIN flechas de cabeza doble y SIN flechas discontinuas en el diagrama.
+%   La etiqueta (1.2.1) está en el extremo izquierdo, al nivel de las dos flechas verticales. Una coma
+%   aparece en la línea de base, bien a la derecha del nodo inferior derecho $E_{p'p}$, cerrando la
+%   frase; es puntuación, no un nodo.
+donde la primera flecha vertical es el isomorfismo canónico de
+conmutatividad (definido gracias al hecho de que $G$ es ahora
+conmutativo; además se tiene $pp' = p'p$, pues $P$ es conmutativo).
+Esta condición equivale evidentemente a la condición correspondiente
+en la situación universal S=P$\times$P, $p=pr_1$,$p' = pr_2$, que nos
+abstenemos de volver a escribir aquí.

@@ -1,0 +1,153 @@
+% NORMALIZACIÓN DE TRANSCRIPCIÓN: los superíndices mecanografiados con letra o
+% se representan como cero; no hay diferencias materiales entre los testigos
+% francés diplomático y corregido en este componente.
+
+\subsection*{3.7. Compatibilidades diversas}
+
+En esta sección examinamos el comportamiento, al variar $P$ y $Q$,
+de la equivalencia de categorías cofibradas de 3.6.4. La varianza de
+la categoría cofibrada de las biextensiones de $(P,Q)$ por un $G$
+variable, con respecto a $P,Q$ variables, se definió en principio en
+2.4; también puede expresarse diciendo que se tiene un funtor
+cofibrado (2.6.1). Obsérvese que la varianza en $P,Q$ es
+\underline{contravariante}. La varianza de la categoría cofibrada
+$\underline\Psi_{L_\bullet(P,Q)}$ con respecto a $P,Q$ variables
+también está clara, puesto que
+$L_\bullet(P,Q)=L_\bullet(P)\otimes L_\bullet(Q)$ depende
+funtorialmente del par $(P,Q)$, mientras que
+$\underline\Psi_{L_\bullet}$ depende contravariantemente de
+$L_\bullet$ (3.4). Sentado esto, una primera compatibilidad se expresa,
+para toda terna de morfismos
+\begin{equation}\tag{3.7.1}
+ P'\longrightarrow P,\qquad
+ Q'\longrightarrow Q,\qquad
+ G\longrightarrow G',
+\end{equation}
+por el hecho de que el diagrama de funtores
+\begin{equation}\tag{3.7.2}
+\begin{tikzcd}[column sep=huge,row sep=large]
+ \underline\Psi_{L_\bullet(P,Q)}(G)
+   \arrow[r]\arrow[d]
+ &\underline\Psi_{L_\bullet(P',Q')}(G')
+   \arrow[d]\\
+ \operatorname{BIEXT}(P,Q;G)
+   \arrow[r]
+ &\operatorname{BIEXT}(P',Q';G')
+\end{tikzcd}
+\end{equation}
+es conmutativo salvo un isomorfismo canónico. Admitiremos esta
+compatibilidad: explicitar el isomorfismo de conmutatividad solo podría
+ser tan evidente como fastidioso (al igual, por lo demás, que la
+explicitación completa que presupone de la equivalencia de categorías
+cofibradas de 3.6.4).
+
+3.7.3. De la compatibilidad precedente resulta, en particular, que el
+isomorfismo (3.6.5.1) es funtorial no solo en $G$, sino también en $P$
+y $Q$. Análogamente, y de manera más trivial, puede enunciarse la
+funtorialidad análoga del isomorfismo definido mediante (3.1.8), del
+mismo modo que (3.6.5.1) se definió mediante (3.2.4):
+\begin{equation}\tag{3.7.4}
+ \Biext^0(P,Q;G)
+ \xrightarrow{\sim}
+ \Ext^0(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G)
+ \simeq\Hom(P\otimes Q,G).
+\end{equation}
+Pero ya se había obtenido un isomorfismo de este tipo en (2.5.4.1), y
+en 2.6 se observó que era funtorial en sus tres argumentos. Es
+inmediato comprobar que los dos isomorfismos (3.7.4) y (2.5.4.1) son
+iguales.
+
+3.7.5. El interés del isomorfismo de 3.6.5 radica en que expresa el
+notable grupo de origen geométrico $\Biext^1(P,Q;G)$ en términos del
+invariante muy sencillo de álgebra homológica
+$\Ext^1(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G)$. Este último
+forma parte de la sucesión de invariantes
+$\Ext^i(P\mathbin{\overset{\mathbb L}{\otimes}}Q,G)$, a la que se
+aplica el formalismo habitual del álgebra homológica. En particular,
+la sucesión de estos $\Ext^i$ es un \underline{funtor cohomológico} en
+el sentido de [3] (o una \underline{sucesión conexa de funtores},
+en la terminología de [5]) en cada uno de los tres argumentos
+$P,Q,G$. Así, una sucesión exacta
+\begin{equation}\tag{3.7.5.1}
+ 0\longrightarrow G'\longrightarrow G\longrightarrow G''
+ \longrightarrow0
+\end{equation}
+(respectivamente,
+\begin{equation}\tag{3.7.5.2}
+ 0\longrightarrow P'\longrightarrow P\longrightarrow P''
+ \longrightarrow0,\qquad\text{o bien}\qquad
+ 0\longrightarrow Q'\longrightarrow Q\longrightarrow Q''
+ \longrightarrow0)
+\end{equation}
+da lugar a una sucesión exacta infinita de los $\Ext^i$. Sus seis
+primeros términos, en los que solo intervienen $\Ext^0$ y $\Ext^1$,
+pueden interpretarse en términos de biextensiones mediante 3.6.5 y
+3.7.4. Ya señalamos en 3.3.6 una interpretación geométrica de la
+sucesión exacta deducida de (3.7.5.1), y en especial del homomorfismo
+de borde
+\begin{equation}\tag{3.7.5.3}
+ \partial:\Biext^0(P,Q;G'')\longrightarrow
+ \Biext^1(P,Q;G'),
+\end{equation}
+en el marco de una \underline{categoría cofibrada exacta a izquierda}.
+Puede buscarse una interpretación análoga de la sucesión exacta de
+seis términos asociada a cualquiera de las sucesiones exactas cortas
+de (3.7.5.2), digamos la primera; o, lo que equivale a lo mismo en
+vista de 3.7.3, una interpretación geométrica del homomorfismo de borde
+\begin{equation}\tag{3.7.5.4}
+ \partial:\Biext^0(P',Q;G)\longrightarrow
+ \Biext^1(P'',Q;G).
+\end{equation}
+En efecto, se tiene el resultado siguiente.
+
+\underline{Proposición} 3.7.6. \underline{La categoría cofibrada sobre}
+\[
+ \operatorname{GRAB}(\underline T)^{\mathrm{op}}
+ \times\operatorname{GRAB}(\underline T)^{\mathrm{op}}
+ \times\operatorname{GRAB}(\underline T)
+\]
+\underline{de las biextensiones de $(P,Q)$ por $G$, con $P,Q,G$
+variables} (cf. (2.6.1)), \underline{es exacta a izquierda no solo en
+el argumento $G$, sino también en cada uno de los argumentos $P$ y
+$Q$. Además, el homomorfismo de borde (3.7.5.4) deducido de la
+sucesión exacta de los $\Ext^i$ asociada a (3.7.5.2), mediante los
+isomorfismos 3.6.5 y 3.7.4, es el homomorfismo de borde de la teoría de
+las categorías cofibradas exactas a izquierda sobre}
+$\underline C=\operatorname{GRAB}(\underline T)^{\mathrm{op}}$
+\underline{recordado en 3.3.6, aplicado a la categoría cofibrada de
+las biextensiones de $(P,Q)$ por $G$, donde $Q$ y $G$ están fijos y
+$P$ varía} (salvo un posible error de signo en 3.4.9; cf. 3.4.9.2).
+
+Esbocemos la demostración de 3.7.6. Mediante 3.6.4 y la compatibilidad
+(3.7.2), interpretamos las biextensiones de $(P,Q)$ por $G$ como
+objetos de $\underline\Psi_{L_\bullet(P,Q)}(G)$. Consideremos el
+homomorfismo
+\[
+ L_\bullet(P,Q)
+ =L_\bullet(P)\otimes L_\bullet(Q)
+ \longrightarrow P\otimes L_\bullet(Q)
+\]
+definido por el aumento $L_\bullet(P)\longrightarrow P$. De 3.5.3 y
+de la planitud de $L_\bullet(Q)$ se sigue que este homomorfismo induce
+isomorfismos sobre $H_0$ y $H_1$ y, por tanto, mediante 3.4.7, una
+equivalencia
+\[
+ \underline\Psi_{P\otimes L_\bullet(Q)}
+ \longrightarrow
+ \underline\Psi_{L_\bullet(P,Q)}.
+\]
+Podemos, pues, interpretar las biextensiones de $(P,Q)$ por $G$ como
+objetos de $\underline\Psi_{P\otimes L_\bullet(Q)}(G)$. La sucesión
+exacta (3.7.5.2) da ahora una sucesión exacta de complejos de cadenas
+\begin{equation}\tag{3.7.6.1}
+ 0\longrightarrow P'\otimes L_\bullet(Q)
+ \longrightarrow P\otimes L_\bullet(Q)
+ \longrightarrow P''\otimes L_\bullet(Q)
+ \longrightarrow0.
+\end{equation}
+La exactitud a izquierda enunciada resulta de aplicar 3.4.8 a esta
+sucesión exacta de complejos. (La comprobación directa sería, en todo
+caso, inmediata.) Además, el homomorfismo (3.7.5.4) es precisamente el
+homomorfismo de borde $\Ext^0\longrightarrow\Ext^1$ deducido de esta
+sucesión exacta al tomar los $\Ext^i$ con valores en $G$. La última
+afirmación de 3.7.6 es, por consiguiente, un caso particular de 3.4.9.

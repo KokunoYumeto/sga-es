@@ -1,0 +1,270 @@
+\par
+Sea $\underline A$ un grupoide cofibrado homogéneo sobre
+$\underline C_\Lambda$, y sea $f:R'\longrightarrow R$ una pequeña
+extensión en $\underline C_\Lambda$. Existe una aplicación canónica
+
+%%%%%%%%%%  scan idx 67  |  folio 56  %%%%%%%%%%
+
+\[
+ \widetilde f:R'\times_RR'\longrightarrow k[\operatorname{Ker}f],
+ \qquad
+ (r'_1,r'_2)\longmapsto r'_1(0)+(r'_1-r'_2),
+\]
+y
+\[
+ 1\times\widetilde f:R'\times_RR'
+ \longrightarrow R'\times_k k[\operatorname{Ker}f]
+\]
+es un isomorfismo. Dados dos $f$-morfismos
+$a_i\longrightarrow a$ $(i=1,2)$ en $\underline A$, el producto
+fibrado $a_1\times_a a_2$ es un objeto sobre $R'\times_RR'$. Por
+tanto, podemos formar
+\[
+ \tau(a_1,a_2)=
+ (\widetilde f)_*(a_1\times_a a_2)
+ \in\underline A(k[\operatorname{Ker}f]).
+\]
+Como $1\times\widetilde f$ es un isomorfismo, existe un
+isomorfismo
+\[
+ a_1\times_a a_2\simeq a_1\times\tau(a_1,a_2)
+\]
+compatible con la proyección sobre el primer factor. El enunciado
+1.5(2) adopta ahora la forma más precisa siguiente.
+
+\underline{Lema 2.8.} Sea $\underline A$ un grupoide cofibrado
+homogéneo sobre $\underline C_\Lambda$, y sean
+\[
+ a_i\xrightarrow{\ \alpha_i\ }a\qquad(i=1,2)
+\]
+$f$-morfismos en $\underline A$.
+
+(1) Existe $\rho:a_1\longrightarrow a_2$ en $\underline A$
+con $\alpha_2\circ\rho=\alpha_1$ si y solo si existe una flecha
+$a_1\longrightarrow\tau(a_1,a_2)$ en $\underline A$.
+
+(2) Existe tal $\rho$ con $P(\rho)=\operatorname{id}_{R'}$
+si y solo si
+\[
+ \tau(a_1,a_2)=0
+ \quad\text{en}\quad
+ [\underline A(k[\operatorname{Ker}f])].
+\]
+
+\underline{Demostración.} Demostramos simultáneamente ambas
+afirmaciones. La existencia de $\rho:a_1\longrightarrow a_2$ que
+satisface $\alpha_2\circ\rho=\alpha_1$ (y
+$P(\rho)=\operatorname{id}_{R'}$) equivale sucesivamente a la
+existencia de
+\[
+ h:a_1\longrightarrow a_1\times_a a_2,
+ \qquad \operatorname{pr}_1\circ h=\operatorname{id}_{a_1},
+\]
+con $P(h)$ igual a la aplicación diagonal; a la existencia de
+\[
+ g:a_1\longrightarrow a_1\times\tau(a_1,a_2),
+ \qquad \operatorname{pr}_1\circ g=\operatorname{id}_{a_1},
+\]
+con
+\[
+ P(g):R'\longrightarrow R'\times_k k[\operatorname{Ker}f],
+ \qquad r'\longmapsto(r',r'(0));
+\]
+y a la existencia de una flecha
+$\gamma:a_1\longrightarrow\tau(a_1,a_2)$ en $\underline A$, con
+\[
+ P(\gamma):R'\longrightarrow k[\operatorname{Ker}f],
+ \qquad r'\longmapsto r'(0).
+\]
+Tal flecha se factoriza a través de
+$R'\longrightarrow k\longrightarrow k[\operatorname{Ker}f]$ si y
+solo si $\tau(a_1,a_2)=0$. \hfill$\square$
+
+\underline{Proposición 2.9.} (a) Sean
+\[
+ \underline A\xrightarrow{\ \varphi\ }\underline B
+ \xrightarrow{\ \psi\ }\underline C
+\]
+funtores de grupoides cofibrados sobre $\underline C_\Lambda$.
+Supongamos que
+
+(i) $\underline B$ es semihomogéneo y $\underline C$ es
+homogéneo;
+
+(ii) la aplicación
+\[
+ \psi(k[\varepsilon]):[\underline B(k[\varepsilon])]
+ \longrightarrow[\underline C(k[\varepsilon])]
+\]
+es inyectiva.
+
+Entonces $\psi\circ\varphi$ es liso si y solo si $\varphi$ y
+$\psi$ son ambos
+
+%%%%%%%%%%  scan idx 68  |  folio 57  %%%%%%%%%%
+
+lisos.
+
+(b) Sea $\varphi:\underline A\longrightarrow\underline B$ un
+funtor liso de grupoides cofibrados sobre $\underline C_\Lambda$.
+Si $\underline A$ es semihomogéneo y $\underline B$ es
+homogéneo, entonces
+\[
+ \widehat\varphi:\widehat{\underline A}
+ \longrightarrow\widehat{\underline B}
+\]
+es liso. Explícitamente, para toda aplicación sobreyectiva
+$b'\xrightarrow{\beta}\widehat\varphi(a)$ en
+$\widehat{\underline B}$, existen una aplicación
+$\alpha:a'\longrightarrow a$ en $\widehat{\underline A}$ y un
+$\widehat{\underline C}_\Lambda$-isomorfismo
+\[
+ \rho:\widehat\varphi(a')\xrightarrow{\ \sim\ }b'
+\]
+tales que $\beta\circ\rho=\varphi(\alpha)$.
+
+\underline{Demostración.} (a) Supongamos que
+$\psi\circ\varphi$ es liso. Si $\varphi$ es liso, entonces
+$\psi$ es liso por la Proposición 2.3(b), de modo que basta
+demostrar que $\varphi$ es liso. Sea
+$b'\xrightarrow{\beta}\varphi(a)$ una pequeña prolongación en
+$\underline B$. Como $\psi\circ\varphi$ es liso, existen una
+flecha $a'\xrightarrow{\alpha}a$ en $\underline A$ y un
+$\underline C_\Lambda$-isomorfismo
+\[
+ \rho:\psi(b')\longrightarrow\psi\varphi(a')
+\]
+para los cuales el diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ \psi(b') \arrow[rr,"{\rho}"] \arrow[dr,"{\psi(\beta)}"']
+ && \psi\varphi(a') \arrow[dl,"{\psi\varphi(\alpha)}"]\\
+ & \psi\varphi(a) &
+\end{tikzcd}
+\]
+es conmutativo. Como $\underline B$ es semihomogéneo, podemos
+elegir un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=small,row sep=small]
+ & b'' \arrow[dl] \arrow[dr] &
+ &&& R'\times_RR' \arrow[dl] \arrow[dr] &\\
+ b' \arrow[dr,"{\beta}"'] &&
+ \varphi(a') \arrow[dl,"{\varphi(\alpha)}"]
+ & \text{situado sobre} &
+ R' \arrow[dr] && R' \arrow[dl]\\
+ & \varphi(a) &&&& R &
+\end{tikzcd}
+\]
+donde $R=P(a)$ y $R'=P(b')=P(a')$. La homogeneidad de
+$\underline C$ da
+\[
+ \psi(b'')=
+ \psi(b')\times_{\psi\varphi(a)}\psi\varphi(a')
+\]
+por la Observación 2.6(a). El Lema 2.8(2) da entonces
+\[
+ 0=\tau(\psi\varphi(a'),\psi(b'))
+   =(\widetilde f)_*\psi(b'').
+\]
+Por la hipótesis (ii), se sigue que $(\widetilde f)_*(b'')=0$.
+El enunciado 1.5(2) proporciona ahora una aplicación
+$\gamma:b'\longrightarrow\varphi(a')$ que satisface
+$\beta=\varphi(\alpha)\circ\gamma$. Por tanto, $\varphi$ es liso,
+y entonces también lo es $\psi$. El recíproco se deduce de la
+Proposición 2.3(a).
+
+(b) Sea dada una aplicación sobreyectiva
+$\beta:b'\longrightarrow\widehat\varphi(a)$ en
+$\widehat{\underline B}$. Está representada por una sucesión de
+diagramas conmutativos
+
+%%%%%%%%%%  scan idx 69  |  folio 58  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=large]
+ {} \arrow[r,dashed] & b'_3 \arrow[r,"{\beta'_2}"] \arrow[d,"{\beta_3}"]
+ & b'_2 \arrow[r,"{\beta'_1}"] \arrow[d,"{\beta_2}"]
+ & b'_1 \arrow[d,"{\beta_1}"]\\
+ {} \arrow[r,dashed] & \varphi(a_3) \arrow[r,"{\varphi(\alpha_2)}"']
+ & \varphi(a_2) \arrow[r,"{\varphi(\alpha_1)}"']
+ & \varphi(a_1)
+\end{tikzcd}
+\]
+en $\underline B$, donde cada $\alpha_v$, $\beta_v$ y
+$\beta'_v$ es sobreyectiva y
+$\beta=\varprojlim_v\beta_v$. Basta demostrar por inducción que
+todo diagrama de flechas de trazo continuo que aparece a
+continuación, con
+$\alpha_n$, $\beta_n$, $\beta_{n+1}$ y $\beta'_n$
+sobreyectivas, puede completarse mediante las flechas punteadas:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ \varphi(a'_{n+1})
+   \arrow[rrrr,dashed,"{\varphi(\,)}"]
+   \arrow[dr,dashed,leftrightarrow]
+   \arrow[ddr,dashed,"{\varphi(\,)}"']
+ &&&& \varphi(a'_n)
+   \arrow[dl,leftrightarrow]
+   \arrow[ddl,"{\varphi(\alpha'_n)}"]\\
+ & b'_{n+1} \arrow[rr,"{\beta'_n}"] \arrow[d,"{\beta_{n+1}}"]
+ && b'_n \arrow[d,"{\beta_n}"'] &\\
+ & \varphi(a_{n+1}) \arrow[rr,"{\varphi(\alpha_n)}"']
+ && \varphi(a_n) &
+\end{tikzcd}
+\]
+Por hipótesis, $\underline A$ es semihomogéneo y
+$\sisi{\alpha_n}{\alpha'_n}:a'_{n}\longrightarrow a_n$ es sobreyectiva. Por tanto,
+existe un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=small,row sep=small]
+ & a' \arrow[dl,"{\gamma}"'] \arrow[dr,"{\gamma'}"] &
+ &&& R_{n+1}\times_{R_n}R'_n \arrow[dl] \arrow[dr] &\\
+ a_{n+1} \arrow[dr,"{\alpha_n}"'] &&
+ a'_n \arrow[dl,"{\alpha'_n}"]
+ & \text{en $\underline A$ sobre} &
+ R_{n+1} \arrow[dr] && R'_n \arrow[dl]
+ & \text{en $\underline C_\Lambda$}\\
+ & a_n &&&& R_n &&
+\end{tikzcd}
+\]
+La homogeneidad de $\underline B$ implica que
+\[
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ & \varphi(a') \arrow[dl,"{\varphi(\gamma)}"']
+                  \arrow[dr,"{\varphi(\gamma')}"] &\\
+ \varphi(a_{n+1}) \arrow[dr,"{\varphi(\alpha_n)}"']
+ && \varphi(a'_n) \arrow[dl,"{\varphi(\alpha'_n)}"]\\
+ & \varphi(a_n) &
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 70  |  folio 59  %%%%%%%%%%
+
+es un diagrama de producto fibrado en $\underline B$. Existe, por
+tanto, una única aplicación
+$\delta:b'_{n+1}\longrightarrow\varphi(a')$ con la conmutatividad
+requerida. Como $\beta_{n+1}$ y $\beta'_n$ son sobreyectivas,
+también lo es $\delta$. La lisura de $\varphi$ proporciona entonces
+una aplicación $a'_{n+1}\xrightarrow{\alpha'}a'$ en $\underline A$
+y un $\underline C_\Lambda$-isomorfismo
+\[
+ \rho:\varphi(a'_{n+1})\xrightarrow{\ \sim\ }b'_{n+1}
+\]
+tal que $\delta\circ\rho=\varphi(\alpha')$. Obtenemos el diagrama
+conmutativo
+\[
+\begin{tikzcd}[row sep=huge,column sep=huge]
+ \varphi(a'_{n+1})
+   \arrow[rrrr,"{\varphi(\gamma'\circ\alpha')}"]
+   \arrow[dr,"{\rho}"]
+   \arrow[ddr,"{\varphi(\gamma\circ\alpha')}"']
+ &&&& \varphi(a'_n)
+   \arrow[dl,"{\sim}"]
+   \arrow[ddl,"{\varphi(\alpha'_n)}"]\\
+ & b'_{n+1} \arrow[rr] \arrow[d]
+ && b'_n \arrow[d] &\\
+ & \varphi(a_{n+1}) \arrow[rr]
+ && \varphi(a_n) &
+\end{tikzcd}
+\]
+lo que completa la inducción y demuestra (b). \hfill$\square$

@@ -1,0 +1,262 @@
+% AUTORIDAD DE FUENTE:
+% expose_VIII_body.tex, líneas 1800--1916; índices de escaneo 289--295;
+% folios de fuente 278--284. Las correcciones materiales de la capa
+% francesa se conservan reversiblemente mediante \sisi.
+
+\medskip
+\noindent\underline{5. Extensiones y biextensiones por esquemas en
+grupos constantes truncados sin torsión.}
+
+En esta sección y en la siguiente damos algunos resultados auxiliares
+que se utilizarán en la sección 7 en el caso $Z=\mathbb Z$.
+
+\medskip
+\noindent\underline{Proposición 5.1.} \underline{Sea $S$ un esquema
+irreducible geométricamente unirrama con punto genérico $\eta$, y sea
+$Z$ un grupo sin torsión, que define por tanto un esquema en grupos
+constante $Z_S$ sobre $S$. Entonces todo torsor $E$ bajo $Z_S$ es
+trivial, y el funtor}
+\[
+ E\longmapsto E(\eta)
+\]
+\underline{de la categoría de torsors bajo $Z_S$ a la categoría de
+torsors bajo $Z=Z_S(\eta)$ es una equivalencia de categorías.}
+
+Un lema conocido de teoría del descenso (SGA 3 X 5.4) muestra que todo
+torsor $E$ bajo $\sisi{G_S}{Z_S}$ es representable. De hecho, ese
+resultado se aplica a todo esquema en grupos sobre $S$ que sea
+separado, localmente de presentación finita y localmente cuasifinito
+sobre $S$. Como $Z_S$ es étale sobre $S$, el descenso fpqc muestra que
+lo mismo vale para todo torsor $E$ bajo $Z_S$; tal torsor es, por
+tanto, localmente trivial para la \underline{topología étale} (y no
+solo para la topología fppf).
+
+%%%%%%%%%%  scan idx 290  |  folio 279  %%%%%%%%%%
+
+Para probar que $E$ es trivial basta, en consecuencia, demostrar
+\[
+ H^1(S_{\mathrm{\acute{e}t}},Z_S)=e.
+\]
+Del mismo modo, la plena fidelidad de 5.1 se reduce a la relación
+\[
+ Z\xrightarrow{\ \sim\ }H^0(S_{\mathrm{\acute{e}t}},Z_S).
+\]
+Esta última es inmediata. Para demostrar la primera, consideremos la
+inclusión
+\[
+ i:\eta\longrightarrow S.
+\]
+Como $S$ es geométricamente unirrama, tenemos
+\[
+ Z_S\xrightarrow{\ \sim\ }i_*(Z_\eta)
+\]
+(SGA 4 IX 2.14.1). La sucesión exacta no conmutativa en grados bajos
+que sustituye a la sucesión espectral de Leray para $i:\eta\to S$
+(SGA 4 XII 3.2) comienza, por tanto, por
+\[
+ e\longrightarrow H^1(S,i_*(Z_\eta))
+   \longrightarrow H^1(\eta,Z_\eta)\longrightarrow\cdots,
+\]
+y muestra que
+\[
+ H^1(S,Z_S)\longrightarrow H^1(\eta,Z_\eta)
+\]
+es inyectiva. Quedamos así reducidos al caso en que $S$ es el espectro
+de un cuerpo $k$. Si $\pi$ es el grupo de Galois de una clausura
+separable de $k$, entonces
+\[
+ H^1(k,Z)=\Hom_{\mathrm{cont}}(\pi,Z)/Z=e,
+\]
+porque $\sisi{E}{Z}$ no tiene torsión. Esto concluye la demostración.
+
+\medskip
+\noindent\underline{Corolario 5.2.} \underline{Con la notación de
+5.1, sea $P$ un esquema liso sobre $S$. Entonces todo torsor $E$ bajo
+$Z_P$ es trivial, y el funtor de restricción}
+\[
+ E\longmapsto E_\eta
+\]
+\underline{de la categoría de torsors sobre
+$\sisi{P_\eta}{P}$ bajo $\sisi{Z_{P_\eta}}{Z_P}$ a la categoría de
+torsors sobre $P_\eta$ bajo $Z_{P_\eta}$ es una equivalencia de
+categorías.}
+
+%%%%%%%%%%  scan idx 291  |  folio 280  %%%%%%%%%%
+
+En efecto, $P$ es geométricamente unirrama (EGA IV 17.5.7). Además,
+cada componente irreducible de $P$ domina $S$, porque $P$ es plano
+sobre $S$, y el conjunto de componentes irreducibles de $P$ es
+localmente finito. Así, $P$ es la suma disjunta de esquemas irreducibles
+geométricamente unirrama $P_i$. La afirmación se deduce inmediatamente
+de 5.1 aplicado a los distintos $P_i$ y a sus fibras genéricas
+$P_{i\eta}$, observando que el punto genérico $p_i$ de $P_i$ es también
+el punto genérico de $P_{\sisi{i}{i\eta}}$.
+
+\medskip
+\noindent 5.2.1. El corolario precedente da inmediatamente la
+afirmación análoga para bitorsors sobre $P$ bajo $(Z_P,Z_P)$: la
+restricción a la fibra genérica induce una equivalencia de su categoría
+con la categoría de bitorsors sobre $P_\eta$ bajo
+$(Z_{P_\eta},Z_{P_\eta})$. En efecto, basta expresar la estructura de
+bitorsor sobre $E$ mediante su estructura de torsor derecho bajo $Z_P$
+y un isomorfismo de $Z_P$ con el conmutante de $Z_P$ para su acción
+sobre $E$. Puesto que $E$ es necesariamente trivial, dicho conmutante
+es isomorfo a $Z_P$. Quedamos reducidos, en cada componente irreducible
+$X$ de $P$, a la observación inmediata siguiente: si $X$ es un esquema
+conexo no vacío, el funtor $Z\mapsto Z_X$ de conjuntos a esquemas sobre
+$X$ es plenamente fiel.
+
+%%%%%%%%%%  scan idx 292  |  folio 281  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Proposición 5.3.} \underline{Sean $S$ y $Z$ como
+en 5.1, y sea $P$ un esquema en grupos liso sobre $S$. Consideremos
+extensiones $E$ de esquemas en grupos de $P$ por $Z_S$. Entonces la
+restricción a la fibra genérica}
+\[
+ E\longmapsto E_\eta
+\]
+\underline{es una equivalencia de la categoría de estas extensiones
+con la categoría de extensiones de $P_\eta$ por $Z_\eta$. Si $P$ y $Z$
+son conmutativos, induce también una equivalencia entre las categorías
+correspondientes de extensiones conmutativas.}
+
+Observemos primero que toda extensión de haces de grupos de $P$ por
+$Z_S$ (y, análogamente, de $P_\eta$ por $Z_\eta$) da, por 5.2, un torsor
+trivial y, en particular, representable. Las categorías de 5.3 pueden,
+por tanto, interpretarse igualmente como categorías de extensiones de
+haces de grupos. La descripción de VII 1.1.6 y 1.2 las expresa mediante
+bitorsors sobre $P$, $P\times P$ y $P\times P\times P$
+(respectivamente sobre $P_\eta$, $P_\eta\times P_\eta$ y
+$P_\eta\times P_\eta\times P_\eta$), bajo las parejas de grupos
+obtenidas de $(Z,Z)$ por cambio de base. Aplicando 5.2 en el caso
+conmutativo y 5.2.1 en el caso general a los esquemas lisos sobre $S$
+$P$, $P\times P$ y $P\times P\times P$, se obtiene la conclusión
+afirmada. El mismo argumento da el resultado siguiente.
+
+\medskip
+\noindent\underline{Corolario 5.4.} \underline{Sean $S,Z$ como en
+5.1, y sean $P,Q$ dos esquemas en grupos lisos sobre $S$. Supongamos
+que $P,Q$ y $Z$ son conmutativos, y consideremos biextensiones $E$ de
+$(P,Q)$ por $Z_S$. Entonces la restricción a la fibra genérica}
+\[
+ E\longmapsto E_\eta
+\]
+\underline{es una equivalencia de la categoría de estas biextensiones
+con la categoría de biextensiones de $(P_\eta,Q_\eta)$ por $Z_\eta$.}
+
+%%%%%%%%%%  scan idx 293  |  folio 282  %%%%%%%%%%
+
+Los resultados precedentes reducen la determinación de las categorías
+de extensiones o biextensiones por un grupo constante sin torsión al
+caso en que el esquema base es el espectro de un cuerpo. En ese caso
+obtenemos lo siguiente.
+
+\medskip
+\noindent\underline{Proposición 5.5.} \underline{Sea $k$ un cuerpo,
+$Z$ un grupo sin torsión, $P$ un esquema en grupos sobre $k$ localmente
+de tipo finito, $P^\circ$ su componente neutra y
+$\Phi=P/P^\circ$ su grupo de componentes conexas (SGA 3
+$\mathrm{VI}_A$ 4). Entonces:}
+
+\smallskip
+\noindent (i) \underline{El funtor natural de la categoría de esquemas
+en grupos que son extensiones (respectivamente, extensiones
+conmutativas) de $\Phi$ por $Z_k$ a la categoría de esquemas en grupos
+que son extensiones (respectivamente, extensiones conmutativas) de $P$
+por $Z_k$ es una equivalencia. En particular, si $P$ es conexo, toda
+extensión de $P$ por $Z_k$ es trivial y la categoría de tales
+extensiones es rígida.}
+
+\smallskip
+\noindent (ii) \underline{Supongamos que $\Phi$ es un grupo de torsión
+y que $P$ y $Z$ son conmutativos. Entonces la categoría de extensiones
+de $P$ por $Z_k$ es rígida: todo automorfismo de un objeto de esta
+categoría es trivial. Si además existe un entero $n>0$ tal que
+$n\id_\Phi=0$ —por ejemplo, si $\Phi$ es finito, como ocurre cuando
+$\sisi{Z}{P}$ es de tipo finito—, entonces el grupo de clases de
+extensiones conmutativas de $P$ por $\sisi{G_k}{Z_k}$ viene dado por el
+isomorfismo canónico}
+\begin{equation}\tag{5.5.1}
+ \Ext^1(P,Z_k)
+ \xleftarrow{\ \sim\ }
+ \Hom\bigl(\Phi,(Z\otimes_{\mathbb Z}\mathbb Q)/Z\bigr),
+\end{equation}
+\underline{definido por el operador de borde de la sucesión exacta de
+grupos $\Ext$ asociada a la sucesión exacta}
+\begin{equation}\tag{5.5.2}
+ 0\longrightarrow Z\longrightarrow Z\otimes_{\mathbb Z}\mathbb Q
+ \longrightarrow (Z\otimes_{\mathbb Z}\mathbb Q)/Z
+ \longrightarrow0.
+\end{equation}
+
+%%%%%%%%%%  scan idx 294  |  folio 283  %%%%%%%%%%
+
+El morfismo canónico
+\[
+ P\longrightarrow\Phi
+\]
+induce manifiestamente un isomorfismo entre los conjuntos de
+componentes irreducibles, pues es plano con fibras irreducibles. Por
+5.1, el funtor inducido de torsors bajo $Z_\Phi$ a torsors bajo $Z_P$
+es, por tanto, una equivalencia. Recordemos que un esquema en grupos
+localmente de tipo finito sobre $k$ es geométricamente unirrama. La
+misma conclusión vale para los bitorsors y para los morfismos
+\[
+ P\times P\longrightarrow\Phi\times\Phi,
+ \qquad
+ P\times P\times P\longrightarrow\Phi\times\Phi\times\Phi.
+\]
+La descripción de VII 1.1.6 de las extensiones de $P$ por $Z_k$ y de
+$\Phi$ por $Z_k$ (y VII 1.3 en el caso conmutativo) da las afirmaciones
+de (i).
+
+Restrinjámonos a las extensiones conmutativas. El grupo de
+automorfismos de una extensión de $P$ por $\sisi{G_k}{Z_k}$ es
+\[
+ \Hom(P,\sisi{G_k}{Z_k})\simeq
+ \Hom(\Phi,\sisi{G_k}{Z_k}),
+\]
+que es manifiestamente nulo si $\Phi$ es un grupo de torsión. Del mismo
+modo, si $V=\sisi{G}{Z}\otimes_{\mathbb Z}\mathbb Q$ y $\Phi$ es
+anulado por el entero $n>0$, entonces
+\[
+ \Ext^i(\Phi,V_k)=0\qquad\text{para todo }i\in\mathbb Z,
+\]
+porque los grupos en cuestión son espacios vectoriales sobre
+$\mathbb Q$ anulados por $n$. El isomorfismo (5.5.1) se sigue
+inmediatamente.
+
+El mismo método demuestra, esencialmente, lo siguiente.
+
+\medskip
+\noindent\underline{Corolario 5.6.} \underline{Sea $k$ un cuerpo, sea
+$Z$ un grupo conmutativo sin torsión, sean $P$ y $Q$ dos esquemas en
+grupos conmutativos localmente de tipo finito sobre $k$, y sean
+$\Phi=P/P^\circ$ y $\Psi=Q/Q^\circ$ sus grupos de componentes
+$\sisi{neutras}{conexas}$. Entonces:}
+
+%%%%%%%%%%  scan idx 295  |  folio 284  %%%%%%%%%%
+
+\smallskip
+\noindent (i) \underline{El funtor natural de la categoría de
+biextensiones de $(\Phi,\Psi)$ por $Z_k$ a la categoría de
+biextensiones de $(P,Q)$ por $Z_k$ es una equivalencia. En particular,
+si $P$ o $Q$ es conexo, la categoría de biextensiones de $(P,Q)$ por
+$Z_k$ es equivalente a la categoría terminal.}
+
+\smallskip
+\noindent (ii) \underline{Supongamos que $\Phi$ o $\Psi$ es un grupo
+de torsión. Entonces la categoría de biextensiones de $(P,Q)$ por
+$Z_k$ es rígida. Si además existe un entero $n>0$ tal que
+$n\id_\Phi=0$ o $n\id_\Psi=0$, entonces el grupo de clases de
+biextensiones de $(P,Q)$ por $Z_k$ viene dado por el isomorfismo
+canónico}
+\begin{equation}\tag{5.6.1}
+ \Biext^1(P,Q;\sisi{G_k}{Z_k})
+ \xleftarrow{\ \sim\ }
+ \Hom\bigl(\Phi\otimes\Psi,
+ (Z\otimes_{\mathbb Z}\mathbb Q)/Z\bigr),
+\end{equation}
+\underline{definido por el operador de borde de la sucesión exacta de
+grupos $\Biext^i$ $(i=0,1)$ asociada a (5.5.2).}

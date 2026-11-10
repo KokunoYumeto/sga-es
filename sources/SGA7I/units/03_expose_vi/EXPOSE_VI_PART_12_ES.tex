@@ -1,0 +1,99 @@
+%%%%%%%%%%  scan idx 49  |  folio 38 (continued)  %%%%%%%%%%
+
+\underline{Definición 1.7. Para cada objeto $R$ de
+$\underline C_\Lambda$, pongamos}
+\[
+ \overline\Omega_R=M/(m_\Lambda R+M^2),
+\]
+\underline{donde} $\underline{m}_\Lambda$ \underline{y $M$ son los ideales maximales de
+$\Lambda$ y $R$, respectivamente. Este es un espacio vectorial de
+dimensión finita sobre $k$, y $R\longmapsto\overline\Omega_R$ define
+un funtor}
+\[
+ \overline\Omega:\underline C_\Lambda
+   \longrightarrow\underline{\underline V},
+\]
+\underline{donde $\underline{\underline V}$ es la categoría de los
+espacios vectoriales de dimensión finita sobre $k$. Si $\underline A$
+es una categoría cofibrada sobre $\underline C_\Lambda$, el funtor
+compuesto $\underline A\xrightarrow P\underline C_\Lambda
+\longrightarrow\underline{\underline V}$ se denota también por
+$\overline\Omega$, por abuso de notación.}
+
+\underline{Proposición 1.8. Sea $\underline A$ un grupoide cofibrado
+semihomogéneo sobre $\underline C_\Lambda$. Dado un objeto $a$ de
+$\underline A$ que es versal para las pequeñas prolongaciones de $e$,
+existe una flecha $a'\longrightarrow a$ tal que:}
+
+%%%%%%%%%%  scan idx 50  |  folio 39  %%%%%%%%%%
+
+(i) \underline{$a'$ es versal para las pequeñas prolongaciones de $a$;}
+
+(ii) \underline{$P(a')\longrightarrow P(a)$ es sobreyectivo, y su
+núcleo está anulado por el ideal maximal de $P(a)$;}
+
+(iii) \underline{$\overline\Omega_{a'}\longrightarrow
+\overline\Omega_a$ es un isomorfismo.}
+
+\underline{Demostración.} Pongamos $R=P(a)$ y consideremos una sucesión
+exacta
+\[
+ 0\longrightarrow J\longrightarrow S\longrightarrow R
+ \longrightarrow0,
+\]
+donde $S$ es un anillo de series formales sobre $\Lambda$ en un número
+finito de variables y $J\subset M^2$, siendo $M$ el ideal maximal de
+$S$. Sea $\Sigma$ el conjunto de los ideales $J_1$ de $S$ tales que
+
+(i) $J\supset J_1\supset MJ$, y
+
+(ii) existe un $\pi_1$-morfismo $a_1\longrightarrow a$ en
+$\underline A$, donde $\pi_1:S/J_1\longrightarrow R$ es el morfismo
+canónico.
+
+La propiedad 1.2(1) de $\underline A$, junto con el hecho de que $J/MJ$
+es un espacio vectorial de dimensión finita sobre $k$, implica que
+$\Sigma$ tiene un ideal mínimo. Denotémoslo por $J'$ y elijamos un
+$\pi'$-morfismo $a'\xrightarrow g a$, donde
+$\pi':S/J'\longrightarrow R$ es el morfismo canónico. Como
+$J'\subset J\subset M^2$, el morfismo
+$\overline\Omega_{a'}\longrightarrow\overline\Omega_a$ es un
+isomorfismo.
+
+Afirmamos que $a'\xrightarrow g a$ es versal para las pequeñas
+prolongaciones de $a$. En efecto, sea $a_1\longrightarrow a$ una
+pequeña prolongación y pongamos $R_1=P(a_1)$. Obtenemos un diagrama
+conmutativo exacto
+\[
+\begin{tikzcd}[column sep=small]
+0 \arrow[r] & J/MJ \arrow[r] \arrow[d,"h"]
+ & S/MJ \arrow[r] \arrow[d,"h_1"]
+ & R \arrow[r] \arrow[d,equal] & 0 \\
+0 \arrow[r] & k \arrow[r] & R_1 \arrow[r] & R \arrow[r] & 0.
+\end{tikzcd}
+\]
+Si $h=0$, entonces $\pi_1:R_1\longrightarrow R$ admite una sección,
+por lo que $h_1$ induce un morfismo $f:S/J'\longrightarrow R_1$. Si
+$h\ne0$, entonces $h_1:S/MJ\longrightarrow R_1$ es sobreyectivo y,
+por tanto, por la definición de $J'$, induce de nuevo un morfismo
+$f:S/J'\longrightarrow R_1$. En ambos casos obtenemos un diagrama
+conmutativo
+\[
+\begin{tikzcd}[column sep=large]
+S/J' \sisi{\arrow[rr,"f",no head]}{\arrow[rr,"f"]} \arrow[dr,"\pi'"']
+ & & R_1 \arrow[dl,"\pi_1"] \\
+& R &
+\end{tikzcd}
+\]
+Como $a$ es versal para las pequeñas prolongaciones de $e$, el
+Corolario 1.6 proporciona un diagrama conmutativo
+
+%%%%%%%%%%  scan idx 51  |  folio 40  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=large]
+a' \arrow[rr,"\rho"] \arrow[dr] & & a_1 \arrow[dl] \\
+& a &
+\end{tikzcd}
+\]
+como se quería.

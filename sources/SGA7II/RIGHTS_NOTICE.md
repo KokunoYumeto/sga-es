@@ -1,7 +1,3 @@
-# Derechos y disponibilidad
+# Derechos
 
-Los derechos sobre las obras originales y sobre las contribuciones protegidas a estas traducciones y transcripciones derivadas corresponden a sus respectivos titulares. Todo aquello sobre lo que el editor tenga derechos en estas ediciones queda dedicado al dominio público bajo CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/deed.es). Las menciones de derechos de terceros y las autorizaciones ya concedidas siguen siendo aplicables.
-
-Estas ediciones se ofrecen gratuitamente, con fines no comerciales y exclusivamente educativos, bajo la presunción de que los respectivos titulares de derechos no se opondrían a que estas traducciones y transcripciones estuvieran disponibles gratuitamente junto a los originales franceses en [NUMDAM](https://www.numdam.org/). Esta presunción no significa que se haya obtenido autorización; el acceso gratuito a los originales no autoriza por sí solo su traducción, adaptación o republicación.
-
-Si usted es titular de derechos sobre algún material presentado aquí y se opone a su disponibilidad, puede [abrir una incidencia en GitHub](https://github.com/KokunoYumeto/sga-es/issues). El responsable de la publicación retirará el material afectado a petición del titular de los derechos.
+Los derechos sobre las obras originales pertenecen a sus autores o a los representantes o herederos de estos. En la medida en que tengamos derechos sobre las transcripciones, las traducciones, las correcciones y la composición tipográfica producidas por IA, estos se dedican al dominio público bajo [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Estas ediciones se publican con fines educativos y sin ánimo de lucro, y no reclamamos ningún derecho que no poseamos. Si usted es titular de derechos sobre alguna de estas obras y se opone a su publicación aquí, [abra una incidencia en GitHub](https://github.com/KokunoYumeto/sga-es/issues) y la retiraremos.

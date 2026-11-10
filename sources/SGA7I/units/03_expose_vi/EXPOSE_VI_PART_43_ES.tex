@@ -1,0 +1,179 @@
+%%%%%%%%%%  scan idx 113  |  folio 102  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Lema 4.7.}
+La sucesión
+\[
+0\longrightarrow
+H^0\!\left(
+Y_0,
+\underline{\operatorname{Hom}}_{\mathcal O_{Y_0}}
+(\underline I/\underline I^2,\mathcal O_{Y_0})
+\right)
+\longrightarrow[\underline M_{X_0,Y_0}(k[\varepsilon])]
+\longrightarrow[\underline M_{X_0}(k[\varepsilon])]
+\]
+es exacta, donde $\underline I$ es el haz de ideales que define
+$Y_0$ en $X_0$; así,
+\[
+0\longrightarrow\underline I\longrightarrow\mathcal O_{X_0}
+\longrightarrow\mathcal O_{Y_0}\longrightarrow0
+\]
+es exacta.
+
+%%%%%%%%%%  scan idx 114  |  folio 103  %%%%%%%%%%
+
+\medskip
+\noindent\textit{Demostración.}
+Sea $\underline B$ la subcategoría plena de
+$\underline M_{X_0,Y_0}(k[\varepsilon])$ cuyos objetos tienen la
+forma
+\[
+\bigl(k[\varepsilon];
+X_0\times_{\operatorname{Spec}(k)}\operatorname{Spec}(k[\varepsilon]),
+Y\bigr).
+\]
+Entonces
+\[
+[\underline B]
+=\ker\!\left(
+[\underline M_{X_0,Y_0}(k[\varepsilon])]
+\longrightarrow[\underline M_{X_0}(k[\varepsilon])]
+\right).
+\]
+La categoría $\underline B$ es el grupoide de las deformaciones de
+$Y_0$ sobre $k[\varepsilon]$ dentro de
+$X_0\times_{\operatorname{Spec}(k)}\operatorname{Spec}(k[\varepsilon])$.
+Así, un objeto es un diagrama
+conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+Y \arrow[rr,"i_Y"] \arrow[dr,"\mathrm{flat}"']
+&& X_0\times_{\operatorname{Spec}(k)}
+   \operatorname{Spec}(k[\varepsilon]) \arrow[dl] \\
+& \operatorname{Spec}(k[\varepsilon]) &
+\end{tikzcd}
+\]
+cuya fibra especial es la inmersión cerrada fija $i_{Y_0}$. Una
+flecha $(Y_1,i_{Y_1})\longrightarrow(Y_2,i_{Y_2})$ es un
+$k[\varepsilon]$-morfismo $\Phi:Y_1\longrightarrow Y_2$
+(necesariamente un isomorfismo) cuya fibra especial es
+$\operatorname{id}_{Y_0}$ y para el cual
+$i_{Y_2}\circ\Phi=i_{Y_1}$.
+
+Equivalentemente, un objeto de $\underline B$ es un par $(Y,j_Y)$,
+donde $Y$ es una deformación de $Y_0$ sobre $k[\varepsilon]$ y
+$j_Y:Y\longrightarrow X_0$ es un $k$-morfismo cuyo compuesto
+$Y_0\longrightarrow Y\xrightarrow{j_Y}X_0$ es $i_{Y_0}$. Una flecha
+$(Y_1,j_{Y_1})\longrightarrow(Y_2,j_{Y_2})$ es un morfismo
+$\Phi:Y_1\longrightarrow Y_2$ cuya fibra especial es
+$\operatorname{id}_{Y_0}$ y para el cual
+$j_{Y_2}\circ\Phi=j_{Y_1}$.
+
+La asignación que envía $(Y,j_Y)$ al diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r]
+& \underline I \arrow[r] \arrow[d]
+& \mathcal O_{X_0} \arrow[r] \arrow[d,"\sisi{\mathfrak{J}_Y}{j_Y}"]
+& \mathcal O_{Y_0} \arrow[r] \arrow[d,equal]
+& 0 \\
+0 \arrow[r]
+& \mathcal O_{Y_0} \arrow[r,"\varepsilon"]
+& \mathcal O_Y \arrow[r]
+& \mathcal O_{Y_0} \arrow[r]
+& 0
+\end{tikzcd}
+\]
+da un isomorfismo
+\[
+\begin{aligned}
+[\underline B]
+&\xrightarrow{\ j_Y|_{\underline I}\ }
+\operatorname{Hom}_{\mathcal O_{X_0}}
+ (\underline I,\mathcal O_{Y_0}) \\
+&=
+\operatorname{Hom}_{\mathcal O_{Y_0}}
+ (\underline I/\underline I^2,\mathcal O_{Y_0}) \\
+&=
+H^0\!\left(
+Y_0,
+\underline{\operatorname{Hom}}_{\mathcal O_{Y_0}}
+(\underline I/\underline I^2,\mathcal O_{Y_0})
+\right).
+\end{aligned}
+\]
+Esto demuestra la exactitud. \hfill$\square$
+
+%%%%%%%%%%  scan idx 115  |  folio 104  %%%%%%%%%%
+
+\medskip
+\noindent\textbf{Observación 4.8.}
+Para una fórmula más general que implica el Lema 4.7, véase SGA 3,
+III, 4.4. También puede observarse lo siguiente. Para todo
+$S$-esquema $X$ y todo $\mathcal O_X$-módulo cuasicoherente $E$, se
+pueden definir $\mathcal O_X$-módulos cuasicoherentes
+$\underline D^i_{X|S}(E)$ para todo $i\geq0$, generalizando el caso
+en que $S$ es afín. Como de costumbre, escribimos
+\[
+\underline D^i_{X|S}(\mathcal O_X)=\underline D^i_{X|S}.
+\]
+Para la inmersión cerrada $Y_0\hookrightarrow X_0$, tenemos entonces
+\[
+H^0\!\left(
+Y_0,
+\underline{\operatorname{Hom}}_{\mathcal O_{Y_0}}
+(\underline I/\underline I^2,\mathcal O_{Y_0})
+\right)
+=H^0(Y_0,\underline D^1_{Y_0|X_0}),
+\]
+donde
+$0\longrightarrow\underline I\longrightarrow\mathcal O_{X_0}
+\longrightarrow\mathcal O_{Y_0}\longrightarrow0$ es exacta.
+
+\medskip
+\noindent\textbf{Teorema 4.9.}
+Sea $X_0$ un $k$-esquema de tipo finito y $Y_0$ un subesquema
+cerrado de $X_0$. Supongamos que se cumple una de las condiciones
+siguientes:
+
+\smallskip
+\noindent(i) $X_0$ es propio sobre $k$, o bien
+
+\noindent(ii) $X_0$ es afín y liso sobre $k$ fuera de un número
+finito de puntos, y $Y_0$ es propio sobre $k$.
+
+\smallskip
+\noindent\textbf{(a)}
+La categoría $\underline M_{X_0,Y_0}$ admite una deformación formal
+versal sobre $\underline C_\Lambda$. Prorepresenta el funtor
+$[\underline M_{X_0,Y_0}]$ si y solo si, para toda aplicación
+sobreyectiva $R'\longrightarrow R$ en $\underline C_\Lambda$ y toda
+deformación $(R';X',Y')$, la aplicación
+\[
+\operatorname{Aut}_{R'}((X',Y')\mid X_0)
+\longrightarrow
+\operatorname{Aut}_{R}\!\left(
+(X'\otimes_{R'}R,Y'\otimes_{R'}R)\mid X_0
+\right)
+\]
+es sobreyectiva.
+
+\smallskip
+\noindent\textbf{(b)}
+Si, además,
+\[
+H^0\!\left(
+X_0,
+\underline D^0_{Y_0|k}
+\times_{\underline D^0_{X_0|k}(\mathcal O_{Y_0})}
+\underline D^0_{X_0|k}
+\right)
+\]
+tiene dimensión finita, entonces $\underline M_{X_0,Y_0}$ es
+pseudorrepresentable de manera lisa.
+
+\medskip
+\noindent\textit{Demostración.}
+Esto se deduce inmediatamente de los Lemas 4.4 y 4.7, junto con 1.11,
+2.7 y 2.13. \hfill$\square$

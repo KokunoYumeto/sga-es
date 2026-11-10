@@ -1,0 +1,203 @@
+\par\medskip
+\noindent c) Hay que tomar la imagen de este homomorfismo por el
+operador de conexión $\partial$ de (2.3.7), asociado a la sucesión
+exacta (2.3.6). Ahora bien,
+$nQ\simeq Q/{}_nQ$ es también manifiestamente isomorfo a $M_0/M'_0$,
+de modo que tenemos un homomorfismo de sucesiones exactas
+
+%%%%%%%%%%  scan idx 257  |  folio 246  %%%%%%%%%%
+
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ 0\arrow[r]&M'_0\arrow[r]\arrow[d]&M_0\arrow[r]\arrow[d]
+   &M_0/M'_0\arrow[r]\arrow[d,"\wr"']&0\\
+ 0\arrow[r]&{}_nQ\arrow[r]&Q\arrow[r]&nQ\arrow[r]&0&{,}
+\end{tikzcd}
+\]
+donde la última flecha vertical es un isomorfismo. Esto muestra que la
+sección buscada de $\uExt^1(nQ,G)$ también puede calcularse como la
+imagen de $\varphi'$ de (2.3.14) por el operador de conexión
+\[
+ \uHom(M'_0,G)\xrightarrow{\ \partial\ }
+ \uExt^1(M_0/M'_0,G),
+\]
+o, equivalentemente, como la sección del segundo término definida por
+el elemento de $\Ext^1$ global que es la imagen de $\varphi'$ por el
+operador de conexión
+\[
+ \Hom(M'_0,G)\longrightarrow
+ \Ext^1(M_0/M'_0,G).
+\]
+La construcción usual del operador de conexión da la receta siguiente.
+Prolónguese el compuesto (2.3.13)
+\[
+ M'_0\xrightarrow{\ \varphi'\ }G\longrightarrow C^0
+\]
+a un homomorfismo
+\[
+ \psi:M_0\longrightarrow C^0,
+\]
+lo cual es posible porque $C^0$ es inyectivo, y considérese el único
+homomorfismo
+\begin{equation}\tag{2.3.15}
+ \lambda:M_0/M'_0\longrightarrow C^1
+\end{equation}
+que hace conmutativo el diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ 0\arrow[r]&M'_0\arrow[r]\arrow[d,"\varphi'"']
+   &M_0\arrow[r]\arrow[d,"\psi"']
+   &M_0/M'_0\arrow[r]\arrow[d,"\lambda"']&0\\
+ 0\arrow[r]&G\arrow[r]&C^0\arrow[r]&C^1&&{.}
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 258  |  folio 247  %%%%%%%%%%
+
+Es claro que (2.3.15) toma valores en los $1$-cociclos, es decir, que
+es un $1$-cociclo, y que este cociclo representa el elemento buscado de
+\[
+ \Ext^1(nQ,G)=\Ext^1(M_0/M'_0,G).
+\]
+
+\medskip
+\noindent d) Queda por describir explícitamente la sección de
+$\uExt^1(nQ,G)$ obtenida de $\xi$ y $x$ mediante la flecha (2.3.5)
+del diagrama (2.3.10). Para ello podemos olvidar que la sección $x$ de
+$P$ está anulada por $n$. En términos del levantamiento elegido $x_0$
+de $x$ a una sección de $L_0$, la descripción es la siguiente. Este
+levantamiento define un homomorfismo de aumentación
+\[
+ u:M_\bullet\longrightarrow L_\bullet\otimes M_\bullet,
+ \qquad
+ y_0\longmapsto x_0\otimes y_0,
+ \quad
+ y_1\longmapsto x_0\otimes y_1.
+\]
+La sección de $\uExt^1(Q,G)$ obtenida de (2.3.1) es, por tanto, la que
+se obtiene del elemento $\xi$ de
+$\Ext^1(L_\bullet\otimes M_\bullet,G)$ componiendo con el
+homomorfismo precedente. Está representada, pues, por el homomorfismo
+de grado uno
+\[
+\begin{tikzcd}[column sep=large,row sep=huge]
+ 0\arrow[r]&M_1\arrow[r,"d_1"]
+   \arrow[d,"{y_1\mapsto f_1(x_0\otimes y_1)}"']
+   \arrow[rd,phantom,"-" description]
+   &M_0\arrow[r]
+   \arrow[d,"{y_0\mapsto f_{\sisi{1}{0}}(x_0\otimes y_0)}"]&0\\
+ 0\arrow[r]&C^0\arrow[r,"d^0"]&C^1&\ldots&{.}
+\end{tikzcd}
+\]
+Para restringir esta clase a $nQ\hookrightarrow Q$, utilicemos el
+isomorfismo $nQ\simeq M_0/M'_0$, que da una resolución plana
+\[
+ 0\longrightarrow M'_0\longrightarrow M_0\longrightarrow0
+\]
+de $nQ$. La inclusión $nQ\hookrightarrow Q$ se levanta al
+homomorfismo de resoluciones siguiente:
+\[
+\begin{tikzcd}[column sep=large,row sep=huge]
+ 0\arrow[r]&M'_0\arrow[r]
+   \arrow[d,"{y'_0\mapsto[ny'_0]}"']
+   \arrow[rd,phantom,"+" description]
+   &M_0\arrow[r]\arrow[d,"{y_0\mapsto ny_0}"]&0\\
+ 0\arrow[r]&M_1\arrow[r]&M_0\arrow[r]&0&{.}
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 259  |  folio 248  %%%%%%%%%%
+
+Por composición, la sección buscada de $\uExt^1(nQ,G)$ está, pues,
+asociada al elemento de $\Ext^1(nQ,G)$ representado por el
+homomorfismo de complejos de grado uno
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ 0\arrow[r,dash]&M'_0\arrow[r,dash,"d_1"]\arrow[d,"g_1"']
+   &M_0\arrow[r,dash]\arrow[d,"g_0"]&0&{}\\
+ 0\arrow[r,dash]&C^0\arrow[r,dash]&C^1\arrow[r,dash]&\dots&{,}
+\end{tikzcd}
+\]
+donde
+\[
+ g_1(y'_0)=f_1\bigl(x_0\otimes[ny'_0]\bigr),
+ \qquad
+ g_0(y_0)=n f_0(x_0\otimes y_0).
+\]
+
+\medskip
+\noindent e) Utilizando ahora que $x$ es una sección de $\,{}_nP$,
+mostremos que el elemento precedente de $\Ext^1(nQ,G)$ es el opuesto
+del elemento definido por (2.3.15). Para todo homomorfismo
+\[
+ h:M_0\longrightarrow C^0,
+\]
+el elemento de $\Ext^1$ considerado en d) no cambia si $g_1,g_0$ se
+reemplazan, respectivamente, por
+\[
+ g'_1=g_1+h d_1,
+ \qquad
+ g'_0=g_0-d^0h.
+\]
+Disponemos del homomorfismo $\psi:M_0\longrightarrow C^0$ construido
+en c), que por definición satisface
+\[
+ \psi(y'_0)=
+ f_1\bigl([nx_0]\otimes y'_0-x_0\otimes[ny'_0]\bigr)
+\]
+para toda sección $y'_0$ de $M'_0$. Equivalentemente,
+\[
+ f_1\bigl(x_0\otimes[ny'_0]\bigr)
+ \bigl(=g_1(y'_0)\bigr)
+ =f_1\bigl([nx_0]\otimes y'_0\bigr)-\psi(y'_0).
+\]
+Definamos $h:M_0\longrightarrow C^0$ por
+
+%%%%%%%%%%  scan idx 260  |  folio 249  %%%%%%%%%%
+
+\[
+ h(y_0)=-f_1\bigl([nx_0]\otimes y_0\bigr)+\psi(y_0).
+\]
+Por construcción se tiene entonces
+\[
+ g'_1=0,
+ \qquad
+ g'_0(y_0)=n f_0(x_0\otimes y_0)
+ +d^0f_1\bigl([nx_0]\otimes y_0\bigr)-d^0\psi(y_0).
+\]
+Como $d^0f_1=-f_0d_1$, tenemos
+\[
+ d^0f_1\bigl([nx_0]\otimes y_0\bigr)
+ =-f_0(nx_0\otimes y_0),
+\]
+y por tanto
+\[
+ g'_1=0,
+ \qquad
+ g'_0=-d^0\psi.
+\]
+Así, el elemento considerado es el definido por el homomorfismo
+\[
+ M_0/M'_0\simeq nQ\longrightarrow C^1
+\]
+inducido por $-d^0\psi$ al pasar al cociente. Obtenemos, por tanto, el
+opuesto del elemento definido por (2.3.15).
+
+\medskip
+\noindent\underline{Observaciones 2.3.16.}
+La demostración precedente da en realidad una compatibilidad algo más
+precisa que la indicada en 2.3.11, obtenida eligiendo una sección $x$
+de $\,{}_nP$. Esta sección define entonces un homomorfismo
+\[
+ {}_nQ\longrightarrow G,
+ \qquad
+ y\longmapsto\varphi_\xi(x,y),
+\]
+y, por el homomorfismo de conexión asociado a (2.3.6), un elemento de
+$\Ext^1(nQ,G)$. Por otra parte, olvidando que $x$ está anulado por
+$n$, consideramos el homomorfismo $\mathbb Z_T\longrightarrow P$
+definido por $\sisi{X}{x}$. Su imagen inversa es una biextensión de
+$(\mathbb Z_T,Q)$ por $G$, cuya clase puede interpretarse como un
+elemento de $\Ext^1(Q,G)$ y, por tanto, induce un elemento de
+$\Ext^1(nQ,G)$. Con estas convenciones, los dos elementos obtenidos
+en $\Ext^1(nQ,G)$ son \underline{opuestos}.

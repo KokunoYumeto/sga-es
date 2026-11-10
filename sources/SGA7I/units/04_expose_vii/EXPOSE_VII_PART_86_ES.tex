@@ -1,0 +1,250 @@
+\subsection*{3.3. Propiedades de la categoría cofibrada
+$\underline\Psi_{L_\bullet}$}
+
+En esta sección, que no es esencial para comprender lo que sigue,
+utilizamos libremente las nociones de [4], con el objeto de comparar
+los resultados precedentes con los de ese trabajo.
+
+\underline{Teorema} 3.3.1. \underline{La categoría cofibrada aditiva}
+$\underline\Psi_{L_\bullet}$ \underline{sobre} $\underline C$
+\underline{es exacta a izquierda} ([4, 2.2]), \underline{admite un
+objeto cuasimaximal} ([4, 4.4]) \underline{y, para todo objeto}
+$E=(X,\alpha)$ \underline{de esta categoría, existe un complejo
+típico} $L^E_\bullet$ \underline{para} $E$ ([4, 3.1]).
+\underline{Además, el procomplejo típico de}
+$\underline\Psi_{L_\bullet}$ ([4, 3.7 y 4.4])
+\underline{es canónicamente isomorfo en} $D(\underline C)$
+\underline{al complejo truncado} $[L_\bullet]$
+\underline{considerado en} 3.1.
+
+Explicitamos ahora el significado de las distintas afirmaciones de
+3.3.1.
+
+3.3.2. Decir que la categoría cofibrada
+$\underline\Psi_{L_\bullet}$ es \underline{exacta a izquierda}
+significa que es aditiva y que además satisface la condición siguiente:
+
+3.3.2.1. Para toda sucesión exacta
+\[
+ 0\longrightarrow A'\xrightarrow{u}A\xrightarrow{v}A''
+ \longrightarrow0
+\]
+en $\underline C$, el funtor natural (con la notación de [4, 1.8])
+\[
+ \underline\Psi_{L_\bullet}(\sisi{A}{A'})
+ \longrightarrow
+ \underline\Psi_{L_\bullet}([A\longrightarrow A''])
+\]
+es una equivalencia de categorías.
+
+Recordemos que, si $\underline\Psi$ es una categoría cofibrada sobre
+$\underline C$ y $v:A\longrightarrow A''$ es un morfismo de
+$\underline C$, entonces $\underline\Psi([A\longrightarrow A''])$ es
+la categoría de los pares $(E,\rho)$ en los que $E$ es un objeto de
+$\underline\Psi(A)$ y $\rho$ es una ``trivialización'' del objeto
+correspondiente $v_*(E)$ de $\underline\Psi(A'')$; es decir, un
+isomorfismo de este con el objeto cero (2.5.1) de
+$\underline\Psi(A'')$. La definición del funtor
+\[
+ \underline\Psi(A')\longrightarrow
+ \underline\Psi([A\longrightarrow A''])
+\]
+de 3.3.2.1 es evidente. Cuando
+$\underline\Psi=\underline\Psi_{L_\bullet}$, los objetos de
+$\underline\Psi_{L_\bullet}([A\longrightarrow A''])$ son
+explícitamente los triples $(X,\alpha,\rho)$, donde $(X,\alpha)$ es
+como en (3.1.3) y $\rho:X\longrightarrow A''$ es un morfismo de
+$\underline C$ que satisface
+\begin{equation}\tag{*}
+ \rho i=v,\qquad \rho\alpha=0.
+\end{equation}
+Si $v:A\longrightarrow A''$ pertenece a una sucesión exacta corta como
+en \sisi{3.2.3}{3.3.2.1}, entonces, como es bien sabido, dar un
+morfismo que satisfaga la primera relación (*) equivale, por la
+exactitud a izquierda de la categoría cofibrada de extensiones de
+$L_0$ por objetos variables de $\underline C$, a dar una extensión
+$X'$ de $L_0$ por $A'\simeq\Ker v$ que sea una subextensión de $X$:
+se toma $X'=\Ker\rho$. La segunda relación (*) dice que $\alpha$ se
+factoriza a través de un morfismo
+$\alpha':L_1\longrightarrow X'$. Salvo las compatibilidades cuya
+verificación es inmediata, esto demuestra la exactitud a izquierda
+enunciada en \sisi{3.2.3}{3.3.2.1}.
+
+3.3.3. Recordemos que un objeto $E_0$ de una categoría cofibrada
+$\underline\Psi$ sobre $\underline C$ se denomina
+\underline{cuasimaximal} si, para todo objeto $E$ de
+$\underline\Psi$ situado sobre un objeto $A$ de $\underline C$,
+existe un morfismo $E\longrightarrow E'$ en $\underline\Psi$ que
+induce un \underline{monomorfismo} $A\longrightarrow A'$ en
+$\underline C$, tal que $\sisi{E}{E'}$ esté \underline{dominado por} $E_0$, es
+decir, que exista un morfismo $E_0\longrightarrow E'$. Si
+$\underline C$ tiene suficientes objetos inyectivos, esto equivale a
+decir que todo objeto de $\underline\Psi$ sobre un objeto inyectivo de
+$\underline C$ está dominado por $E_0$.
+
+Para $\underline\Psi=\underline\Psi_{L_\bullet}$ existe el siguiente
+objeto cuasimaximal canónico. Pongamos
+\[
+ L'_1=\Coker(d_1:L_2\longrightarrow L_1)
+\]
+y sea $\bar d_0:L'_1\longrightarrow L_0$ el morfismo inducido por
+$d_0:L_1\longrightarrow L_0$. Sea $E_0=(X_0,\alpha_0)$ el objeto de
+$\underline\Psi_{L_\bullet}(L'_1)$ para el cual
+$X_0=L_0\oplus L'_1$ es la extensión trivial de $L_0$ por $L'_1$ y
+$\alpha_0$ es la composición
+\[
+ L_1\twoheadrightarrow L'_1
+ \xrightarrow{(\bar d_0,\,\mathrm{id}_{L'_1})}
+ L_0\oplus L'_1.
+\]
+
+Para ver que $E_0$ es cuasimaximal, obsérvese que para todo objeto
+$(X,\alpha)$ de $\underline\Psi_{L_\bullet}$ se puede encontrar un
+morfismo de él a un objeto $(X',\alpha')$, que induce un
+\underline{monomorfismo} $A\longrightarrow A'$ en $\underline C$,
+tal que la extensión $X'$ de $L_0$ por $A'$ sea
+\underline{escindida}. En efecto, basta tomar $A'=X$ y
+$(X',\alpha')=i_*(X,\alpha)$, con la notación de (3.1.2). Por otra
+parte, es inmediato que todo objeto $(X',\alpha')$ de
+$\underline\Psi$ para el cual la extensión $X'$ sea escindida está
+dominado por $E_0$.
+
+3.3.4. Sea $E$ un objeto de una categoría cofibrada aditiva
+$\underline\Psi$ sobre $\underline C$, situado sobre un objeto $A$ de
+$\underline C$, y consideremos el siguiente funtor del objeto variable
+$B$ de $\underline C$:
+\begin{equation}\tag{3.3.4.1}
+ B\longmapsto\Hom(E,\theta_B),
+\end{equation}
+donde $\theta_B$ denota el objeto trivial de $\underline\Psi(B)$.
+Decimos que $E$ \underline{admite un complejo típico} si este funtor
+es representable por un objeto $\Omega_E$ de $\underline C$. Como el
+funtor en cuestión se aplica canónicamente en el funtor
+$B\longmapsto\Hom(A,B)$ representado por $A$, se obtiene un morfismo
+canónico
+\begin{equation}\tag{3.3.4.2}
+ A\longrightarrow\Omega_E,
+\end{equation}
+y el \underline{complejo de cadenas} correspondiente de longitud uno
+$A\longrightarrow\Omega_E$ en $\underline C$ se denomina
+\underline{complejo típico de} $E$.
+
+Cuando $\underline\Psi=\underline\Psi_{L_\bullet}$ y
+$E=(X,\alpha)$, se comprueba inmediatamente que el funtor (3.3.4.1)
+está representado por $\Coker\alpha$, y que el morfismo canónico
+(3.3.4.2) es simplemente la composición
+\[
+ A\xrightarrow{\ \sisi{j}{i}\ }X
+ \xrightarrow{\ \mathrm{can}\ }\Coker\alpha.
+\]
+
+3.3.5. Si una categoría cofibrada aditiva $\underline\Psi$ sobre
+$\underline C$ admite un objeto cuasimaximal (3.3.3), y existen los
+complejos típicos de sus objetos, entonces el complejo típico
+$T_\bullet$ de un objeto cuasimaximal $E_0$, considerado como objeto de
+la \underline{categoría derivada} $D(\underline C)$, es independiente,
+salvo isomorfismo canónico, de la elección de $E_0$ ([4, 4.4]). Se
+denomina el \underline{complejo típico de la categoría cofibrada
+aditiva} $\underline\Psi$. Si, además, $\underline\Psi$ es exacta a
+izquierda (3.3.2), entonces $\underline\Psi$ puede reconstruirse a
+partir del complejo típico $T_\bullet$, salvo una equivalencia de
+categorías fibradas sobre $\underline C$ única salvo isomorfismo único
+([4, 6.10]). También hay isomorfismos canónicos, funtoriales en
+$A\in\underline C$ ([4, 5.4]),
+\begin{equation}\tag{3.3.5.1}
+ \Psi^0(A)\xrightarrow{\sim}\Ext^0(T_\bullet,A),
+ \qquad
+ \Psi^1(A)\xrightarrow{\sim}\Ext^1(T_\bullet,A).
+\end{equation}
+
+Para completar la comparación con [4], demostraremos que cuando
+$\underline\Psi=\underline\Psi_{L_\bullet}$ su complejo típico es el
+truncamiento $[L_\bullet]$. Esto da otra definición de los
+isomorfismos (3.1.8) y (3.2.4) en términos de (3.3.5.1), y se comprueba
+que es compatible con las definiciones de 3.1 y 3.2.
+
+Para esta afirmación podemos restringirnos claramente al caso en que
+$L_\bullet$ ya esté truncado en grado $1$, pues en 3.1 se observó que
+el truncamiento no cambia $\underline\Psi_{L_\bullet}$ salvo
+isomorfismo de categorías cofibradas. La construcción explícita de
+3.3.4 muestra entonces inmediatamente que el complejo típico del
+objeto cuasimaximal descrito en 3.3.3 es canónicamente isomorfo a
+$L_\bullet$.
+
+\underline{Observación} 3.3.6. Sea
+\[
+ 0\longrightarrow A'\longrightarrow A\longrightarrow A''
+ \longrightarrow0
+\]
+una sucesión exacta en $\underline C$. Da una sucesión exacta de
+grupos $\Ext^i$
+\[
+ 0\longrightarrow\Ext^0(L_\bullet,A')
+ \longrightarrow\Ext^0(L_\bullet,A)
+ \longrightarrow\cdots\longrightarrow\Ext^1(L_\bullet,A)
+ \longrightarrow\Ext^1(L_\bullet,A''),
+\]
+que, por supuesto, podría continuarse a la derecha introduciendo
+$\Ext^i$ para $i\geq2$. Utilizando los isomorfismos (3.1.8) y (3.2.4),
+obtenemos la sucesión exacta
+\begin{multline}\tag{3.3.6.1}
+ 0\longrightarrow\Psi^0_{L_\bullet}(A')
+ \longrightarrow\Psi^0_{L_\bullet}(A)
+ \longrightarrow\Psi^0_{L_\bullet}(A'')
+ \xrightarrow{\ \sisi{o}{\partial}\ }\Psi^1_{L_\bullet}(A')\\
+ \longrightarrow\Psi^1_{L_\bullet}(A)
+ \longrightarrow\Psi^1_{L_\bullet}(A'').
+\end{multline}
+Todas las flechas salvo $\partial$ están definidas simplemente por la
+funtorialidad de $\Psi^0_{L_\bullet}$ y $\Psi^1_{L_\bullet}$. Por otra
+parte, [4, 2.5.2] define una sucesión exacta (3.3.6.1), para toda
+categoría cofibrada exacta a izquierda $\underline\Psi$ sobre
+$\underline C$, mediante un morfismo
+\begin{equation}\tag{3.3.6.2}
+ \partial:\Psi^0(A'')\longrightarrow\Psi^1(A').
+\end{equation}
+Este asocia a un elemento $u$ del miembro izquierdo la clase, en el
+miembro derecho, del objeto de $\underline\Psi(A')$, determinado salvo
+isomorfismo canónico, cuya imagen en
+$\underline\Psi([A\longrightarrow A''])$ (notación de 3.3.2) es el
+par $(X_0,u)$, donde $X_0$ es el objeto trivial de
+$\underline\Psi(A)$.
+
+Para $\underline\Psi=\underline\Psi_{L_\bullet}$, el morfismo
+(3.3.6.2) definido por esta \underline{construcción ``geométrica'' es
+el opuesto del morfismo de borde} $\partial$ \underline{de} (3.3.6.1).
+Así, después de las identificaciones anteriores y de un cambio de
+signo en $\partial$, esta última sucesión exacta es precisamente la de
+[4, 2.5.2]. Esto se deduce de la última afirmación de [4, 5.4], a la
+vista de las compatibilidades señaladas en 3.3.5.
+
+\underline{Observación} 3.3.6.3. Aprovechamos la ocasión para aclarar
+un punto de [4, n.º 3.11] relativo a los isomorfismos fundamentales
+(3.11.3) y (3.11.4), que desempeñan un papel esencial en la
+demostración de [4, 5.4]. El diagrama de la página 35 de [4] es
+conmutativo, no anticonmutativo, y por tanto no define tal como está un
+morfismo
+\[
+ u:[L^X_1\longrightarrow L^X_0]\longrightarrow K^\bullet[1].
+\]
+Debe hacerse anticonmutativo sustituyendo $u^1$ por $-u^1$. También se
+podría adoptar la convención opuesta y sustituir $u^0$ por $-u^0$;
+sin embargo, la convención indicada, en la que $u^1$ se convierte en
+$-u^1$, es aquella para la cual (3.11.3) generaliza el isomorfismo
+(3.5.3) de [4], como allí se afirma. Con esta aclaración, también debe
+corregirse la afirmación de [4, 5.4]: los dos morfismos de borde allí
+considerados \underline{difieren en un signo}.
+
+3.3.7. En [4, 6.13] también se explicitó la varianza de la categoría
+cofibrada $\underline\Psi_{L_\bullet}$ sobre $\underline C$ al variar
+$L_\bullet$, reconstruyendo, en particular, la categoría de funtores
+cocartesianos de $\underline\Psi_{L_\bullet}$ a
+$\underline\Psi_{L'_\bullet}$ a partir de los complejos de cadenas
+$L_\bullet$ y $L'_\bullet$. El conjunto de clases de isomorfismo de
+tales funtores cocartesianos está canónicamente en biyección con
+\[
+ \Hom_{D(\underline C)}(L'_\bullet,L_\bullet).
+\]
+Solo utilizaremos una pequeña parte de estos resultados, que
+desarrollamos en la sección siguiente mediante la descripción sencilla
+de $\underline\Psi_{L_\bullet}$ dada en 3.1.

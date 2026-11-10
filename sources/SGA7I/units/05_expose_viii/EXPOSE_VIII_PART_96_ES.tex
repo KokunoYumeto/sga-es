@@ -1,0 +1,206 @@
+\par\medskip\noindent
+2.1.9. La definición dada en (2.1.1) no es simétrica. Intercambiando
+los papeles de $P$ y $Q$ en la construcción precedente, puede
+definirse un homomorfismo análogo
+\begin{equation}\tag{2.1.9.1}
+ \beta^n_{P,Q}:{}_nP\otimes{}_nQ\longrightarrow\uTor_1(P,Q),
+\end{equation}
+reduciéndose primero al caso $nP=0$ y utilizando después una
+resolución plana \underline{de} $Q$. Equivalentemente, puede definirse
+$\beta$ en términos de $\alpha$ exigiendo la conmutatividad del
+diagrama siguiente:
+\begin{equation}\tag{2.1.9.2}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ {}_nP\otimes{}_nQ
+   \arrow[r,"\sim"]
+   \arrow[d,"{\beta^n_{P,Q}}"']&
+ {}_nQ\otimes{}_nP
+   \arrow[d,"{\alpha^n_{Q,P}}"]\\
+ \uTor_1(P,Q)\arrow[r,"\sim"]&
+ \uTor_1(Q,P).
+\end{tikzcd}
+\end{equation}
+Las flechas horizontales son los isomorfismos de simetría. Con esta
+convención, la relación entre $\alpha$ y $\beta$ es
+\begin{equation}\tag{2.1.9.3}
+ \beta^n_{P,Q}=-\alpha^n_{P,Q}.
+\end{equation}
+En otros términos:
+
+\medskip
+\noindent\underline{Lema 2.1.10.}
+\underline{Sean $P$ y $Q$ dos grupos conmutativos y sea $n>0$ un
+entero. Entonces el diagrama siguiente es anticonmutativo, donde
+$\alpha$ está definido en (2.1.1):}
+\begin{equation}\tag{2.1.10.1}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ {}_nP\otimes{}_nQ
+   \arrow[r,"\sim"]
+   \arrow[d,"{\alpha^n_{P,Q}}"']&
+ {}_nQ\otimes{}_nP
+   \arrow[d,"{\alpha^n_{Q,P}}"]\\
+ \uTor_1(P,Q)
+   \arrow[r,"\sim"]
+   \arrow[ur,phantom,"-" description]&
+ \uTor_1(Q,P).
+\end{tikzcd}
+\end{equation}
+\underline{Las flechas horizontales son los isomorfismos de simetría.}
+
+%%%%%%%%%%  scan idx 242  |  folio 231  %%%%%%%%%%
+
+\medskip
+\noindent\underline{Demostración.}
+El procedimiento de 2.1.8 nos reduce inmediatamente al caso
+$P=Q=(\mathbb Z/n\mathbb Z)_T$. Hay que demostrar entonces que los
+dos isomorfismos (2.1.8.1), obtenidos resolviendo mediante (2.1.8.2)
+el primer y el segundo argumento de $\uTor_1$, respectivamente,
+difieren en un signo (equivalentemente, que el isomorfismo de simetría
+en $\uTor^{\mathbb Z}_1(\mathbb Z/n\mathbb Z,\mathbb Z/n\mathbb Z)$
+es $-\id$). Podemos suponer evidentemente que $T$ es el topos puntual,
+de modo que trabajamos con grupos conmutativos ordinarios. Sea
+$L_\bullet$ el complejo
+\[
+ L_\bullet=\bigl(0\longrightarrow\mathbb Z
+ \xrightarrow{n}\mathbb Z\longrightarrow0\bigr),
+\]
+considerado como una resolución plana de
+$P=Q=\mathbb Z/n\mathbb Z$. Utilicemos
+$L_\bullet\otimes L_\bullet$ para calcular
+\[
+ \Tor_1(P,Q)=\Tor_1(\mathbb Z/n\mathbb Z,\mathbb Z/n\mathbb Z).
+\]
+Los isomorfismos con
+$H_1(L_\bullet\otimes\mathbb Z/n\mathbb Z)$, que define $\alpha$,
+y con $H_1(\mathbb Z/n\mathbb Z\otimes L_\bullet)$, que define
+$\beta$, están inducidos, respectivamente, por las aumentaciones
+$L_\bullet\longrightarrow\mathbb Z/n\mathbb Z$ de los factores
+segundo y primero de $L_\bullet\otimes L_\bullet$. Se sigue
+inmediatamente que $\alpha(1,1)$ está representado por el ciclo
+\[
+ -1_0\otimes1_1+1_1\otimes1_0
+ \in(L_\bullet\otimes L_\bullet)_1
+ =L_0\otimes L_1+L_1\otimes L_0,
+\]
+donde $1_0$ y $1_1$ denotan el elemento $1$ de $L_0$ y $L_1$,
+respectivamente, mientras que $\beta(1,1)$ está representado por
+$1_0\otimes1_1-1_1\otimes1_0$. Esto prueba 2.1.10.
+
+Para terminar estas generalidades sobre los acoplamientos $\alpha$,
+queda por precisar las relaciones entre los homomorfismos
+$\alpha^n_{P,Q}$ cuando varía $n$. El resultado principal es el
+siguiente.
+
+\medskip
+\noindent\underline{Lema 2.1.11.}
+\underline{Sean $P,Q$ dos grupos conmutativos de $T$, y sean $n,n'$
+enteros positivos tales que $n'$ sea múltiplo de $n$, digamos
+$n'=mn$. Entonces el diagrama siguiente es conmutativo:}
+
+%%%%%%%%%%  scan idx 243  |  folio 232  %%%%%%%%%%
+
+\begin{equation}\tag{2.1.11.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+ &{}_{n'}P\otimes{}_nQ
+   \arrow[ld,"P_m\otimes\id_{{}_nQ}"']
+   \arrow[rd,"\id_{{}_{n'}P}\otimes i_m"]&\\
+ {}_nP\otimes{}_nQ
+   \arrow[rd,"{\alpha^n_{P,Q}}"']&&
+ {}_{n'}P\otimes{}_{n'}Q
+   \arrow[ld,"{\alpha^{n'}_{P,Q}}"]\\
+ &\uTor_1(P,Q)&
+\end{tikzcd}
+\end{equation}
+\underline{Aquí $P_m:{}_{n'}P\longrightarrow{}_nP$ es el
+homomorfismo inducido por $m\cdot\id_P$, e
+$i_m:{}_nQ\longrightarrow{}_{n'}Q$ es la inclusión. Asimismo, es
+conmutativo el diagrama \sisi{(2.11.2)}{(2.1.11.2)}, simétrico de
+\sisi{(2.11.1)}{(2.1.11.1)}, cuyos vértices son los mismos que los de
+\sisi{(2.11.1)}{(2.1.11.1)}, salvo el vértice superior
+$\,{}_{n'}P\otimes{}_nQ$, que se reemplaza por
+$\,{}_nP\otimes{}_{n'}Q$.}
+
+\medskip
+Basta demostrar la primera afirmación; la segunda se deduce por
+simetría en virtud de 2.1.10. Mediante el procedimiento de 2.1.8,
+quedamos reducidos al topos puntual, donde $P$ y $Q$ son grupos
+conmutativos ordinarios y
+\[
+ P=\mathbb Z/n'\mathbb Z,\qquad Q=\mathbb Z/n'\mathbb Z.
+\]
+De hecho, para $P$ solo utilizamos la hipótesis $n'P=0$. Utilizando la
+resolución
+\[
+ 0\longrightarrow\mathbb Z\xrightarrow{n'}\mathbb Z
+ \longrightarrow0
+\]
+de $Q$, identifiquemos $\Tor_1(P,Q)$ con $\,{}_{n'}P=P$. Asimismo,
+utilizando
+\[
+ 0\longrightarrow\mathbb Z\xrightarrow n\mathbb Z
+ \longrightarrow0
+\]
+para resolver $\,{}_nQ\simeq\mathbb Z/n\mathbb Z$, identifiquemos
+$\Tor_1({}_nP,{}_nQ)$ con $\,{}_nP$. La aumentación de esta última
+resolución envía $1_0$ en $m\cdot1_Q$, donde $1_Q$ denota el elemento
+$1$ de $Q=\mathbb Z/n'\mathbb Z$. Bajo estas identificaciones, el
+homomorfismo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ \Tor_1({}_nP,{}_nQ)\arrow[r]\arrow[d,no head,"\wr"']&
+ \Tor_1(P,Q)\arrow[d,no head,"\wr"']\\
+ {}_nP&{}_{n'}P=P
+\end{tikzcd}
+\]
+
+%%%%%%%%%%  scan idx 244  |  folio 233  %%%%%%%%%%
+
+inducido por las inclusiones $\,{}_nP\hookrightarrow P$ y
+$\,{}_nQ\hookrightarrow Q$ no es sino la inclusión natural
+$\,{}_nP\hookrightarrow{}_{n'}P$.
+
+Por consiguiente, identifiquemos el vértice superior de (2.1.11.1)
+con $P/nP$ mediante el generador $m\cdot1_Q$ de $\,{}_nQ$, que
+identifica $\,{}_nQ$ con $\mathbb Z/n\mathbb Z$. El diagrama se
+convierte en
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ &P/nP
+   \arrow[ld,"x\longmapsto mx"']
+   \arrow[rd,"x\longmapsto mx"]&\\
+ {}_nP\arrow[rd,"x\longmapsto x"']&&
+ P\arrow[ld,"x\longmapsto x"]\\
+ &{}_{n'}P&
+\end{tikzcd}
+\]
+que es manifiestamente conmutativo.
+
+\medskip
+\noindent\underline{Corolario 2.1.12.}
+\underline{Con la notación de 2.1.11, el diagrama siguiente es
+conmutativo:}
+\begin{equation}\tag{2.1.12.1}
+\begin{tikzcd}[column sep=huge,row sep=huge]
+ {}_{n'}P\otimes{}_{n'}Q
+   \arrow[r,"m\otimes m"]
+   \arrow[d,"{\alpha^{n'}_{P,Q}}"']&
+ {}_nP\otimes{}_nQ
+   \arrow[d,"{\alpha^n_{P,Q}}"]\\
+ {}_{n'}\uTor_1(P,Q)
+   \arrow[r,"m"]&
+ {}_n\uTor_1(P,Q).
+\end{tikzcd}
+\end{equation}
+\underline{En la descripción de las flechas horizontales, $m$ denota
+los homomorfismos $\,{}_{n'}E\longrightarrow{}_nE$ inducidos por
+$m\cdot\id_E$, para $E=P,Q$ y $\uTor_1(P,Q)$, respectivamente.}
+
+\medskip
+En efecto, por 2.1.11, para $x\in{}_{n'}P(S)$ e
+$y\in{}_{n'}Q(S)$ se tiene
+\[
+ \alpha^n(mx\otimes my)=\alpha^{n'}(x\otimes my).
+\]
+El miembro derecho es igual a $m\alpha^{n'}(x\otimes y)$, puesto que
+$x\otimes my=m(x\otimes y)$. Esto prueba la conmutatividad de
+(2.1.12.1).

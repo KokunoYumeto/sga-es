@@ -1,0 +1,98 @@
+\par\medskip
+\noindent\textbf{Observación 5.8.}
+Sea $\mathfrak X$ un esquema formal $S$-ádico esencialmente de tipo
+finito. Para un punto $x\in\mathfrak X$, consideremos también el
+esquema formal $S$-ádico
+\[
+\mathfrak X_{(\widehat{\sisi{X}{x}})}
+=\varinjlim_\nu
+ \operatorname{Spec}\bigl(\widehat{\mathcal O_{X_\nu,x}}\bigr).
+\]
+Hay morfismos naturales
+\[
+\mathfrak X_{(\widehat{\sisi{X}{x}})}
+\longrightarrow\mathfrak X_{(x)}
+\longrightarrow\mathfrak X.
+\]
+En general, $\widehat{\mathcal O_{X_0,x}}$ no es esencialmente de
+tipo finito sobre $S_{(y)}$, donde $y$ es la imagen de $x$ por
+$\mathfrak X\longrightarrow S$.
+
+Para simplificar, pongamos
+\[
+A_\nu=\mathcal O_{X_\nu,x},
+\qquad R_\nu=\mathcal O_{S_\nu,y}.
+\]
+El morfismo natural
+\[
+\Omega_{A_\nu|R_\nu}
+\longrightarrow\Omega_{\widehat A_\nu|R_\nu}
+\]
+induce un isomorfismo
+\[
+\widehat{\Omega_{A_\nu|R_\nu}}
+\xrightarrow{\ \sim\ }
+\sisi{\widehat{\widehat\Omega_{A_\nu|R_\nu}}}{\widehat{\Omega_{\widehat A_\nu|R_\nu}}},
+\]
+y por tanto
+\[
+\varprojlim_\nu\widehat{\Omega_{A_\nu|R_\nu}}
+\xrightarrow{\ \sim\ }
+\varprojlim_\nu
+ \sisi{\widehat{\Omega_{\widehat A_\nu|R_\nu}}}{\widehat{\widehat\Omega_{A_\nu|R_\nu}}}.
+\]
+Aquí el sombrero exterior denota la completación separada de un
+módulo para la topología inducida por el anillo. Por consiguiente, si
+definimos
+\[
+\widehat\Omega_{\mathfrak X_{(\widehat{x})}|S}
+=\varprojlim_\nu
+ \sisi{\widehat{\Omega_{
+   \widehat{\mathcal O}_{X_\nu,x}|\mathcal O_{S_\nu,y}}}}{\widehat{\widehat\Omega_{
+   \mathcal O_{X_\nu,x}|\mathcal O_{S_\nu,y}}}},
+\]
+entonces $\widehat\Omega_{\mathfrak X_{(\widehat{x})}|S}$ es un
+$\mathfrak X_{(\widehat{x})}$-módulo coherente.
+
+%%%%%%%%%%  scan idx 133  |  folio 122  %%%%%%%%%%
+
+Definamos
+$J_{\mathfrak X_{(\widehat{x})}}^p
+ (\mathfrak X_{(\widehat{x})}|S)$
+como el subesquema formal cerrado de
+$\mathfrak X_{(\widehat{x})}$ definido por
+\[
+\underline I_{\mathfrak X_{(\widehat{x})}}^p
+ (\mathfrak X_{(\widehat{x})}|S)
+=\underline I_{\mathfrak X_{(\widehat{x})}}^p
+ (\widehat\Omega_{\mathfrak X_{(\widehat{x})}|S}).
+\]
+Entonces
+\[
+J_{\mathfrak X_{(x)}}^p(\mathfrak X_{(x)}|S)_{(\widehat{x})}
+\simeq
+J_{\mathfrak X_{(\widehat{x})}}^p
+ (\mathfrak X_{(\widehat{x})}|S).
+\]
+Si $x$ es un punto aislado de
+$J_{\mathfrak X}^p(\mathfrak X|S)$, el morfismo natural
+\[
+J_{\mathfrak X_{(\widehat{x})}}^p
+ (\mathfrak X_{(\widehat{x})}|S)
+\longrightarrow
+J_{\mathfrak X_{(x)}}^p(\mathfrak X_{(x)}|S)
+\]
+es un isomorfismo.
+
+Para formar la ``imagen'' de $J_{\mathfrak X}^p(\mathfrak X|S)$ por
+$f:\mathfrak X\longrightarrow S$, podríamos tomar simplemente el
+subesquema formal de $S$ definido por el haz de ideales
+\[
+\ker\left(
+ \mathcal O_S\longrightarrow
+ \mathcal O_{\mathfrak X}/
+ \underline I_{\mathfrak X}^p(\mathfrak X|S)
+\right).
+\]
+Para nuestros fines, sin embargo, es más conveniente volver a utilizar
+el ideal de Fitting.

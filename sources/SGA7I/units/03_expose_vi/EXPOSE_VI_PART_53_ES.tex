@@ -1,0 +1,125 @@
+\par\medskip
+\noindent\textbf{Definición 5.5.}
+Sea $X\xrightarrow{f}Y$ un morfismo esencialmente de presentación
+finita. Si existe un entero fijo $n$ que satisface (1) o (2) de 5.4,
+pongamos
+\[
+\underline I_X(X|Y)=\underline I_X^n(X|Y),
+\qquad
+J_X(X|Y)=J_X^n(X|Y).
+\]
+
+%%%%%%%%%%  scan idx 130  |  folio 119  %%%%%%%%%%
+
+Esta noción se extiende naturalmente a los esquemas formales. Sea
+$\mathfrak X$ un esquema formal noetheriano y $\mathcal E$ un
+$\mathfrak X$-módulo coherente. Para todo abierto afín
+$U\subset\mathfrak X$, definamos
+\[
+\underline I_{\mathfrak X}^{\sisi{P}{p}}(\mathcal E)(U)
+=I_{\mathfrak X(U)}^{\sisi{P}{p}}\bigl(\mathcal E(U)\bigr).
+\]
+Si $\mathfrak X=\varinjlim_\nu X_\nu$, entonces
+$\mathcal E=\varprojlim_\nu\mathcal E_\nu$, donde
+\[
+\mathcal E_\nu
+=\mathcal E\otimes_{\mathcal O_{\mathfrak X}}\mathcal O_{X_\nu},
+\]
+y el carácter noetheriano da
+\[
+\underline I_{\mathfrak X}^{\sisi{P}{p}}(\mathcal E)
+=\varprojlim_\nu\underline I_{X_\nu}^{\sisi{P}{p}}(\mathcal E_\nu).
+\]
+
+Sea ahora $S$ un esquema formal noetheriano y $\mathfrak X$ un
+esquema formal $S$-ádico esencialmente de tipo finito. Sea
+$\underline I_{\mathfrak X}$ el haz de ideales que define la
+inmersión diagonal cerrada
+\[
+\Delta:\mathfrak X\longrightarrow
+\mathfrak X\times_S\mathfrak X
+\]
+(donde el producto fibrado se toma en la categoría de los esquemas
+formales), de modo que
+\[
+0\longrightarrow\underline I_{\mathfrak X}
+\longrightarrow\mathcal O_{\mathfrak X\times_S\mathfrak X}
+\longrightarrow\mathcal O_{\mathfrak X}\longrightarrow0
+\]
+es exacta. Definamos
+\[
+\Omega_{\mathfrak X|S}
+=\underline I_{\mathfrak X}/\underline I_{\mathfrak X}^{2}.
+\]
+Escribiendo
+\[
+\mathfrak X=\varinjlim_\nu X_\nu,
+\qquad X_\nu=\mathfrak X\times_SS_\nu,
+\]
+tenemos
+\[
+\Omega_{\mathfrak X|S}
+\simeq\varprojlim_\nu\Omega_{X_\nu|S_\nu},
+\]
+por lo que $\Omega_{\mathfrak X|S}$ es un $\mathfrak X$-módulo
+coherente. Para todo $S$-esquema formal $S'$ de tipo finito existe un
+isomorfismo canónico
+\[
+\Omega_{\mathfrak X\times_SS'|S'}
+\simeq
+\mathcal O_{S'}\otimes_{\mathcal O_S}\Omega_{\mathfrak X|S}.
+\]
+
+\medskip
+\noindent\textbf{Definición 5.6.}
+Sea $S$ un esquema formal noetheriano y $\mathfrak X$ un esquema
+formal $S$-ádico esencialmente de tipo finito. Definamos
+\[
+\underline I_{\mathfrak X}^p(\mathfrak X|S)
+=\underline I_{\mathfrak X}^p(\Omega_{\mathfrak X|S}),
+\]
+y sea $J_{\mathfrak X}^p(\mathfrak X|S)$ el subesquema formal cerrado
+de $\mathfrak X$ definido por este haz de ideales.
+
+Como
+$\Omega_{\mathfrak X|S}=\varprojlim_\nu\Omega_{X_\nu|S_\nu}$,
+tenemos
+\[
+\underline I_{\mathfrak X}^p(\mathfrak X|S)
+=\varprojlim_\nu\underline I_{X_\nu}^p(X_\nu|S_\nu)
+\]
+y
+\[
+J_{\mathfrak X}^p(\mathfrak X|S)
+=\varinjlim_\nu J_{X_\nu}^p(X_\nu|S_\nu).
+\]
+
+%%%%%%%%%%  scan idx 131  |  folio 120  %%%%%%%%%%
+
+El esquema formal $\mathfrak X_{(x)}$ es de nuevo $S$-ádico y
+esencialmente de tipo finito, y existe un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+\mathfrak X_{(\widehat{x})}
+  \arrow[rr,"i_{(\widehat{x})}"] \arrow[dr]
+  && \mathfrak X \\
+& \mathfrak X_{(x)} \arrow[ur,"i_{(x)}"'] & {}
+\end{tikzcd}
+\]
+% Comprobación directa de la fuente a 1800 ppp: el subíndice superior
+% izquierdo y la etiqueta de su flecha son ambos \widehat{x}; el subíndice
+% inferior y su etiqueta son x sin sombrero.
+Si $x$ es un punto aislado de $\mathfrak X$, entonces
+$i_{(x)}$ e $i_{(\widehat{x})}$ son ambos isomorfismos sobre la
+componente conexa de $\mathfrak X$ que contiene a $x$.
+
+En particular, si
+\[
+|\mathfrak X|=\{x_1,\ldots,x_m\}
+\]
+es un espacio discreto finito, entonces existe una identificación
+canónica
+\[
+\mathfrak X=\coprod_{1\leq i\leq m}\mathfrak X_{(x_i)}
+\qquad\text{(unión disjunta)}.
+\]
