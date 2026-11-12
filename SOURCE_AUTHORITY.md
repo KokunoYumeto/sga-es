@@ -1,8 +1,9 @@
 # Fuentes y alcance de la traducción
 
 La versión `2026-08-27-r19` es la edición española acumulada y completa de SGA en el repositorio
-`KokunoYumeto/sga-es`; la versión `2026-09-23-r20` añade la nueva edición de SGA 4½, y la versión `2026-11-10-r21` publica SGA 1 y SGA 7
-a partir de las fuentes de este repositorio. El lector de 4.439 páginas
+`KokunoYumeto/sga-es`; la versión `2026-09-23-r20` añade la nueva edición de SGA 4½, la versión `2026-11-10-r21` publica SGA 1 y SGA 7
+a partir de las fuentes de este repositorio, y la versión `2026-11-12-r22` añade a SGA 7 las correcciones de la quinta ronda
+de la revisión del texto francés. El lector de 4.439 páginas
 reúne los trece libros matemáticos en orden canónico. Las fuentes editables, las ramas de corrección reversibles y
 las pruebas de revisión y procedencia están en los archivos 05 y 06 de la publicación; el manifiesto SHA-256 global
 es el archivo 07.

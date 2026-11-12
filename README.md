@@ -34,28 +34,28 @@ Todas las ediciones de EGA, FGA y SGA de este proyecto figuran en
 ## Contenido
 
 Los PDF están en la publicación del
-[10 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-10-r21):
+[12 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-12-r22):
 
-- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf)
+- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf)
   con los trece libros; [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno.
 - Lectores por volumen:
 
 | Volumen | Edición actual | Edición diplomática |
 |---|---|---|
-| SGA 1 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/01_SGA1_ES_COMPLETE_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/01B_SGA1_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
-| SGA 2 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/02_SGA2_ES_COMPLETE_READER.pdf) | |
-| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4½ | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/01_SGA4half_ES_Actual.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/04_SGA4half_ES_Diplomatica.pdf) |
-| SGA 5 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
-| SGA 6 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/04_SGA6_ES_COMPLETE_READER.pdf) | |
-| SGA 7, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 7, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 1 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/01_SGA1_ES_COMPLETE_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/01B_SGA1_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
+| SGA 2 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/02_SGA2_ES_COMPLETE_READER.pdf) | |
+| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 4½ | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/01_SGA4half_ES_Actual.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/04_SGA4half_ES_Diplomatica.pdf) |
+| SGA 5 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
+| SGA 6 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/04_SGA6_ES_COMPLETE_READER.pdf) | |
+| SGA 7, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| SGA 7, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
 
 SGA 3, tomos I y III, solo está en el lector acumulado. Las fuentes LaTeX de todos los volúmenes están en
-[05_SGA_ES_EDITABLE_SOURCES.zip](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-10-r21/05_SGA_ES_EDITABLE_SOURCES.zip);
+[05_SGA_ES_EDITABLE_SOURCES.zip](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/05_SGA_ES_EDITABLE_SOURCES.zip);
 este repositorio contiene las de [SGA 1](sources/SGA1/README.md), [SGA 7, tomo I](sources/SGA7I) y [SGA 7, tomo II](sources/SGA7II/README.md).
 [SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) describe el alcance de SGA 3.
 
