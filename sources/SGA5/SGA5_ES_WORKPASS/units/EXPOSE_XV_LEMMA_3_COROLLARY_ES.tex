@@ -1,0 +1,19 @@
+% SOURCE_AUTHORITY: sga5_fr_workpass.tex, lines 15248--15264 (LF-normalized unit).
+% SOURCE_SHA256: 791F4EFFC5E02832D5D77ED03518C8156D6F07E4C8238B03545DB93D883FBB28
+\begin{statement}{Corolario}
+Supongamos que el ideal $I$ es nilpotente. Para todo complejo acíclico y acotado por la derecha $N_0$ de $A_0$-módulos proyectivos, existe un complejo acíclico acotado por la derecha $N$ de $A$-módulos proyectivos tal que $T(N)\simeq N_0$.
+\end{statement}
+
+Como el complejo $N_0$ es acíclico, se descompone en sucesiones exactas cortas
+\[
+0\longrightarrow Z_0^i\longrightarrow N_0^i\longrightarrow Z_0^{i+1}\longrightarrow0,
+\]
+donde $Z_0^i$ designa, para cada $i$, el submódulo de los ciclos de $N_0^i$; además, $N_0^i=0$ para $i$ suficientemente grande. Por inducción descendente sobre $i$, se ve que las sucesiones exactas anteriores son escindidas y que $Z_0^i$ es proyectivo para todo $i$. Se levanta $N_0$ levantando sucesivamente todas estas sucesiones exactas, por inducción descendente sobre $i$. Se trata, pues, de demostrar que si
+\[
+S_0:0\longrightarrow P_0\longrightarrow Q_0\longrightarrow R_0\longrightarrow0
+\]
+es una sucesión exacta de $A_0$-módulos, con $Q_0$ proyectivo, y si $R$ es un $A$-módulo tal que $T(R)\simeq R_0$, existe una sucesión exacta
+\[
+S:0\longrightarrow P\longrightarrow Q\longrightarrow R\longrightarrow0
+\]
+de $A$-módulos, con $Q$ proyectivo, tal que $T(S)\simeq S_0$. Ahora bien, se puede levantar $Q_0$ a un $A$-módulo proyectivo $Q$ por el lema 3(ii), y después $Q_0\to R_0$ a una aplicación $A$-lineal $Q\to R$ por el lema 3(i). Esta aplicación es sobreyectiva por el lema de Nakayama; se pone $P=\ker(Q\to R)$ para completar la sucesión exacta $S$.

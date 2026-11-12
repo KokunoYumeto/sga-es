@@ -1,0 +1,31 @@
+% SOURCE_AUTHORITY: sga5_fr_workpass.tex, lines 15193--15221 (LF-normalized unit).
+% SOURCE_SHA256: 791F4EFFC5E02832D5D77ED03518C8156D6F07E4C8238B03545DB93D883FBB28
+La existencia de los sistemas $(K'_\nu)$ y $(h'_\nu)$ se basa en dos lemas, en los que se consideran un anillo conmutativo $A$, un ideal $I$ de $A$ y el funtor
+\[
+T:L\rightsquigarrow L\otimes_A A_0
+\]
+($L$ complejo de $A$-módulos acotado por la derecha), con $A_0=A/I$.
+
+\begin{statement}{Lema 1}
+Supongamos que el ideal $I$ es nilpotente. Consideremos un complejo $L\in D^-(A)$ plano en cada grado, un complejo $M\in D^-(A_0)$ proyectivo en cada grado y un isomorfismo
+\[
+u:T(L)\xrightarrow{\sim}M
+\]
+en $D^-(A_0)$. Existen un complejo de $A$-módulos $L'$, acotado por la derecha y proyectivo en cada grado, un isomorfismo
+\[
+v:L\xrightarrow{\sim}L'
+\]
+en $D^-(A)$ y un isomorfismo de complejos
+\[
+w:T(L')\xrightarrow{\sim}M,
+\]
+tales que $u=w\circ T(v)$ en $D^-(A_0)$.
+\end{statement}
+
+\begin{statement}{Observación}
+Si se supone que $M$ es libre, respectivamente de tipo finito, en cada grado, el complejo $L'$ es también libre, respectivamente de tipo finito, en cada grado. En efecto, si un $A$-módulo plano $N$ es tal que $T(N)$ sea libre, respectivamente de tipo finito, se demuestra fácilmente que $N$ es libre, respectivamente de tipo finito (Bourbaki, Alg. comm., cap.~II, §3, prop.~5). Señalemos el corolario: sea $L\in\Ob D^-(A)$ tal que $L\lten_A A_0$ sea un complejo de $A_0$-módulos pseudocoherente, respectivamente perfecto, es decir, isomorfo en $D^-(A)$ a un complejo acotado superiormente, respectivamente acotado, y proyectivo de tipo finito en cada grado. Entonces $L$ es un complejo de $A$-módulos pseudocoherente, respectivamente perfecto.
+\end{statement}
+
+\begin{statement}{Lema 2}
+Consideremos un complejo de $A$-módulos acotado por la derecha $L$, proyectivo en cada grado, provisto de un endomorfismo $\varphi$, y un endomorfismo $\varphi_0$ de $M=T(L)$ que coincide con $T(\varphi)$ en el sentido de la categoría derivada $D^-(A_0)$. Existe un endomorfismo $\varphi'$ de $L$ que coincide con $\varphi$ en el sentido de $D^-(A)$ y satisface $T(\varphi')=\varphi_0$.
+\end{statement}

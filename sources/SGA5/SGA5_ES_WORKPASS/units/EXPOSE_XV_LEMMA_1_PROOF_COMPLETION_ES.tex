@@ -1,0 +1,15 @@
+% SOURCE_AUTHORITY: sga5_fr_workpass.tex, lines 15288--15300 (LF-normalized unit).
+% SOURCE_SHA256: 791F4EFFC5E02832D5D77ED03518C8156D6F07E4C8238B03545DB93D883FBB28
+Supongamos, pues, que $u:T(L)\to M$ es un cuasi-isomorfismo sobreyectivo, y sea $R_0$ su núcleo. El complejo $R_0$ es acíclico porque $u$ es un cuasi-isomorfismo, y es proyectivo en cada grado, pues la sucesión exacta
+\[
+0\longrightarrow R_0\longrightarrow T(L)\longrightarrow M\longrightarrow0
+\]
+es escindida porque $M$ es proyectivo en cada grado. Por tanto, gracias al corolario del lema 3, se puede levantar $R_0$ a un complejo de $A$-módulos $R$ acotado por la derecha, acíclico y proyectivo en cada grado. Demostremos ahora que el morfismo $f_0:R_0\to T(L)$ se levanta a un morfismo de complejos $f:R\to L$. Para ello, se observa que $R_0$ es homotópicamente trivial, de modo que $f_0$ es homotópico a $0$ y puede escribirse
+\[
+f_0=h_0d_{R_0}+d_{T(L)}h_0,
+\]
+donde $h_0=(h_0^i)_i$, con $h_0^i:R_0^i\to T(L)^{i-1}$. El lema 3(i) permite levantar $h_0$ a $h=(h^i)_i$, con $h^i:R^i\to L^{i-1}$, y se ve que
+\[
+f=hd_R+d_Lh
+\]
+es un morfismo de complejos que levanta $f_0$. Un lema estándar (compárese SGA 60/61, IV 5.7) implica entonces que $f$ es inyectivo y que $\coker f=L'$ es plano en cada grado. Como $T(L')\simeq\coker T(f)=\coker f_0\simeq M$ es proyectivo en cada grado, resulta (lema 3(ii)) que lo mismo vale para $L'$. Por otra parte, el homomorfismo canónico $L\to L'$ es un cuasi-isomorfismo (por ser sobreyectivo y tener núcleo acíclico $R$), y se ve así que $L'$ satisface la conclusión pretendida en el lema 1, como se quería demostrar.

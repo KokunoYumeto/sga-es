@@ -21,3 +21,12 @@ lector acumulado.
 La versión r19 aplicó 1.606 correcciones aceptadas y unificó la terminología de geometría algebraica según textos
 matemáticos escritos en español. Los avisos históricos de copyright se conservan como procedencia; los derechos se
 indican en [RIGHTS_NOTICE.md](RIGHTS_NOTICE.md).
+
+## SGA 5
+
+Desde el 12 de noviembre de 2026, las fuentes de SGA 5 están en [sources/SGA5](sources/SGA5/README.md): las unidades
+comunes (`SGA5_ES_WORKPASS/units`) y las dos ramas, corregida (`materialized/current`) y diplomática
+(`materialized/original`), con sus documentos principales. Son la fuente de referencia de SGA 5: más recientes que el
+archivo 05 de las versiones r20-r22, que solo contenía las unidades propias de cada rama. Llevan las correcciones del
+cotejo página por página del texto francés con el impreso que afectan al sentido o a las matemáticas, en la rama que
+corresponde a cada capa del francés.

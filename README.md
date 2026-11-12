@@ -56,7 +56,10 @@ Los PDF están en la publicación del
 
 SGA 3, tomos I y III, solo está en el lector acumulado. Las fuentes LaTeX de todos los volúmenes están en
 [05_SGA_ES_EDITABLE_SOURCES.zip](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/05_SGA_ES_EDITABLE_SOURCES.zip);
-este repositorio contiene las de [SGA 1](sources/SGA1/README.md), [SGA 7, tomo I](sources/SGA7I) y [SGA 7, tomo II](sources/SGA7II/README.md).
+este repositorio contiene las de [SGA 1](sources/SGA1/README.md), [SGA 5](sources/SGA5/README.md) (sus dos ramas),
+[SGA 7, tomo I](sources/SGA7I) y [SGA 7, tomo II](sources/SGA7II/README.md). Las fuentes de SGA 5 en el repositorio
+son más recientes que los lectores de SGA 5 de la versión r22: llevan las correcciones del cotejo del texto francés
+con el impreso (noviembre de 2026).
 [SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) describe el alcance de SGA 3.
 
 ## Fuentes y créditos
