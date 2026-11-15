@@ -36,7 +36,7 @@ Todas las ediciones de EGA, FGA y SGA de este proyecto figuran en
 Los PDF están en la publicación del
 [12 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-12-r22):
 
-- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf)
+- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf)
   con los trece libros; [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno.
 - Lectores por volumen:
 
