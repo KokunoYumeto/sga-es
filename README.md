@@ -7,18 +7,27 @@ también en un único lector PDF con enlaces entre los volúmenes.
 
 ## Cómo se hizo
 
-La traducción al español está producida por IA, y también las correcciones, la edición y la composición. Los
-registros conservados no indican con seguridad el modelo que hizo la traducción. La reconstrucción de los lectores,
-las correcciones y la validación de la versión del 23 de septiembre de 2026 (que añade la nueva edición de SGA 4½)
-las hizo OpenAI Codex (GPT-5.6 Sol, esfuerzo Ultra). La versión del 27 de agosto de 2026 aplicó 1.606 correcciones
-aceptadas y unificó la terminología de geometría algebraica según textos matemáticos escritos en español.
+La traducción al español es una traducción por IA; también lo son las correcciones, la edición y la composición. Las
+traducciones y los lectores de agosto a octubre de 2026 los hizo OpenAI Codex (GPT-5.6 Sol y GPT-6.1 Sol, esfuerzo
+de razonamiento ultra); los registros no siempre indican cuál de los dos modelos tradujo cada volumen. La versión del
+27 de agosto de 2026 aplicó 1.606 correcciones aceptadas y unificó la terminología de geometría algebraica según
+textos matemáticos escritos en español.
 
-Varios volúmenes tienen dos ramas: la actual, con las correcciones aceptadas, y la diplomática, que conserva las
-lecturas del texto impreso. El lector acumulado usa la rama actual.
+- **SGA 3, los tres tomos (texto de 1970):** el 9 y el 10 de noviembre de 2026 la traducción se llevó al texto de 1970
+  del impreso: GPT-6.1 Sol (API de OpenAI, esfuerzo de razonamiento alto, nivel Flex) retradujo del francés los
+  pasajes que la reedición de 2011 había cambiado, con los scripts y las comprobaciones de Claude Opus 5.5 con
+  esfuerzo max.
+- **SGA 5 y SGA 7:** las correcciones del cotejo del texto francés con el impreso (noviembre de 2026).
+- **Composición (15 de noviembre de 2026):** cada lector se reconstruyó desde su fuente más reciente; nada sobresale
+  del margen más de 2 pt. La corrección toca solo la composición (preámbulo, fórmulas y diagramas anchos reducidos al
+  ancho de la línea, encabezados largos), nunca el texto: Claude Opus 5.5 con esfuerzo high.
+
+Cada volumen tiene dos ediciones: la corregida, con las correcciones aceptadas, y la diplomática, que conserva las
+lecturas del texto impreso. El lector acumulado usa la edición corregida.
 
 ## Estado
 
-La traducción está completa. Puede contener errores.
+La traducción está completa: los trece libros, cada uno en dos ediciones. Puede contener errores.
 
 ## Otras ediciones de SGA
 
@@ -34,33 +43,31 @@ Todas las ediciones de EGA, FGA y SGA de este proyecto figuran en
 ## Contenido
 
 Los PDF están en la publicación del
-[12 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-12-r22):
+[15 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-15-r24):
 
-- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf)
-  con los trece libros; [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno.
-- Lectores por volumen:
+- [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf) con los trece libros (4.226 páginas, versión
+  2026-11-15-r24); [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno según la versión r22.
+- Lectores y fuentes por volumen:
 
-| Volumen | Edición actual | Edición diplomática |
-|---|---|---|
-| SGA 1 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/01_SGA1_ES_COMPLETE_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/01B_SGA1_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
-| SGA 2 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/02_SGA2_ES_COMPLETE_READER.pdf) | |
-| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/29_SGA3_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/30_SGA3_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/24_SGA4_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/25_SGA4_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/20_SGA4_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/21_SGA4_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/16_SGA4_TOME_III_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/17_SGA4_TOME_III_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 4½ | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/01_SGA4half_ES_Actual.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/04_SGA4half_ES_Diplomatica.pdf) |
-| SGA 5 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/03_SGA5_ES_COMPLETE_PUBLISHED_CONTENT_READER.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/03B_SGA5_ES_DIPLOMATIC_ORIGINAL_READER.pdf) |
-| SGA 6 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/04_SGA6_ES_COMPLETE_READER.pdf) | |
-| SGA 7, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/08_SGA7_TOME_I_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/09_SGA7_TOME_I_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
-| SGA 7, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/12_SGA7_TOME_II_EDICION_ESPANOLA_CORREGIDA_20260821.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-pdf-check/13_SGA7_TOME_II_EDICION_ESPANOLA_DIPLOMATICA_20260821.pdf) |
+| Volumen | Edición corregida | Edición diplomática | Fuentes LaTeX |
+|---|---|---|---|
+| SGA 1 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA1_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA1_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA1_ES_fuentes.zip) |
+| SGA 2 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA2_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA2_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA2_ES_fuentes.zip) |
+| SGA 3, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_I_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_I_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_I_ES_fuentes.zip) |
+| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_II_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_II_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_II_ES_fuentes.zip) |
+| SGA 3, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_III_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_III_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_III_ES_fuentes.zip) |
+| SGA 4, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_I_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_I_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_I_ES_fuentes.zip) |
+| SGA 4, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_II_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_II_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_II_ES_fuentes.zip) |
+| SGA 4, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_III_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_III_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_III_ES_fuentes.zip) |
+| SGA 4½ | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_MEDIO_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_MEDIO_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_MEDIO_ES_fuentes.zip) |
+| SGA 5 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA5_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA5_ES_diplomatica.pdf) | [repositorio](sources/SGA5/README.md) |
+| SGA 6 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA6_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA6_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA6_ES_fuentes.zip) |
+| SGA 7, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA7_TOMO_I_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA7_TOMO_I_ES_diplomatica.pdf) | [repositorio](sources/SGA7I) |
+| SGA 7, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA7_TOMO_II_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA7_TOMO_II_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA7_TOMO_II_ES_fuentes.zip) |
 
-SGA 3, tomos I y III, solo está en el lector acumulado. Las fuentes LaTeX de todos los volúmenes están en
-[05_SGA_ES_EDITABLE_SOURCES.zip](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-12-r22/05_SGA_ES_EDITABLE_SOURCES.zip);
-este repositorio contiene las de [SGA 1](sources/SGA1/README.md), [SGA 5](sources/SGA5/README.md) (sus dos ramas),
-[SGA 7, tomo I](sources/SGA7I) y [SGA 7, tomo II](sources/SGA7II/README.md). Las fuentes de SGA 5 en el repositorio
-son más recientes que los lectores de SGA 5 de la versión r22: llevan las correcciones del cotejo del texto francés
-con el impreso (noviembre de 2026).
-[SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) describe el alcance de SGA 3.
+Las fuentes de SGA 1, SGA 5 y SGA 7 están también en este repositorio ([SGA 1](sources/SGA1/README.md),
+[SGA 5](sources/SGA5/README.md), [SGA 7, tomo I](sources/SGA7I), [SGA 7, tomo II](sources/SGA7II/README.md)).
+[SOURCE_AUTHORITY.md](SOURCE_AUTHORITY.md) dice de qué copia procede cada volumen.
 
 ## Fuentes y créditos
 
@@ -68,10 +75,8 @@ con el impreso (noviembre de 2026).
 - SGA 1: la edición [arXiv math/0206203v2](https://arxiv.org/abs/math/0206203v2), recomposición LaTeX de los
   voluntarios del proyecto dirigido por Bas Edixhoven, con las notas de Michel Raynaud y la contribución de la Société
   mathématique de France.
-- SGA 3, tomo I: el texto matemático original (exposiciones I–VII_B e índice); la presentación editorial de la
-  reedición de 2011 de la Société mathématique de France (pp. v–xviii), obra de sus editores, no forma parte de esta
-  edición.
+- SGA 3: el texto de 1970 del impreso. Las adiciones de la reedición de P. Gille y P. Polo (Société mathématique de France, 2011) figuran solo como notas que la nombran, redactadas por nosotros; la presentación editorial de esa reedición (pp. v–xviii), obra de sus editores, no forma parte de esta edición.
 
 ## Derechos
 
-Los derechos sobre las obras originales pertenecen a sus autores o a los representantes o herederos de estos. En la medida en que tengamos derechos sobre las transcripciones, las traducciones, las correcciones y la composición tipográfica producidas por IA, estos se dedican al dominio público bajo [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Estas ediciones se publican con fines educativos y sin ánimo de lucro, y no reclamamos ningún derecho que no poseamos. Si usted es titular de derechos sobre alguna de estas obras y se opone a su publicación aquí, [abra una incidencia en GitHub](https://github.com/KokunoYumeto/sga-es/issues) y la retiraremos.
+Los derechos sobre las obras originales pertenecen a sus autores o a los representantes o herederos de estos. Nuestras transcripciones, traducciones, correcciones y composición tipográfica fueron producidas por IA. No tienen autor humano y, según nuestro entender, no están protegidas por derechos de autor; si aun así existiera algún derecho nuestro, se dedica al dominio público bajo [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es). Todo este trabajo reproduce o traduce las obras originales, por lo que nada de lo que aquí se publica concede licencia ni autoriza reproducción, traducción u otro uso de ellas. Estas ediciones se publican con fines educativos y sin ánimo de lucro, y no reclamamos ningún derecho que no poseamos. Si usted es titular de derechos sobre alguna de estas obras y se opone a su publicación aquí, [abra una incidencia en GitHub](https://github.com/KokunoYumeto/sga-es/issues) y la retiraremos.
