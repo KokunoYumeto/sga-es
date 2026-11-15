@@ -1,14 +1,14 @@
 component	status	pages_in_cumulative	standalone_files	note
-SGA 1	complete/integrated	6-294	01,01B	Current branch in cumulative; diplomatic branch separate
-SGA 2	complete/integrated	295-503	02	Complete Spanish reader including final indexes
-SGA 3, Tome I	complete/integrated	504-1195	in cumulative 00/05/06/07	Original mathematical corpus C005-C616; Exposés I-VII_B; index
-SGA 3, Tome II	complete/integrated	1196-1605	29,30,31,32,33	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 3, Tome III	complete/integrated	1606-2079	in cumulative 00/05/06/07	Front matter; Exposés XIX-XXVI; terminal indices
-SGA 4, Tome I	complete/integrated	2080-2381	24,25,26,27,28	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 4, Tome II	complete/integrated	2382-2563	20,21,22,23	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 4, Tome III	complete/integrated	2564-2938	16,17,18,19	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 4½	complete/integrated	2939-3136	01-08 (SGA4half_ES); SGA4HALF_* (2026-08-21 edition)	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 5	complete/integrated	3137-3462	03,03B	Current branch in cumulative; diplomatic branch separate
-SGA 6	complete/integrated	3463-3840	04	Complete Spanish reader
-SGA 7, Tome I	complete/integrated	3841-4162	08,09,10,11	Current branch in cumulative; diplomatic branch and source/evidence separate
-SGA 7, Tome II	complete/integrated	4163-4439	12,13,14,15	Current branch in cumulative; diplomatic branch and source/evidence separate
+SGA 1	complete/integrated	6-291	SGA1_ES_corregida.pdf,SGA1_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 2	complete/integrated	292-501	SGA2_ES_corregida.pdf,SGA2_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 3, Tomo I	complete/integrated	502-983	SGA3_TOMO_I_ES_corregida.pdf,SGA3_TOMO_I_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 3, Tomo II	complete/integrated	984-1393	SGA3_TOMO_II_ES_corregida.pdf,SGA3_TOMO_II_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 3, Tomo III	complete/integrated	1394-1870	SGA3_TOMO_III_ES_corregida.pdf,SGA3_TOMO_III_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 4, Tomo I	complete/integrated	1871-2172	SGA4_TOMO_I_ES_corregida.pdf,SGA4_TOMO_I_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 4, Tomo II	complete/integrated	2173-2354	SGA4_TOMO_II_ES_corregida.pdf,SGA4_TOMO_II_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 4, Tomo III	complete/integrated	2355-2727	SGA4_TOMO_III_ES_corregida.pdf,SGA4_TOMO_III_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 4½	complete/integrated	2728-2925	SGA4_MEDIO_ES_corregida.pdf,SGA4_MEDIO_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 5	complete/integrated	2926-3250	SGA5_ES_corregida.pdf,SGA5_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 6	complete/integrated	3251-3628	SGA6_ES_corregida.pdf,SGA6_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 7, Tomo I	complete/integrated	3629-3950	SGA7_TOMO_I_ES_corregida.pdf,SGA7_TOMO_I_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate
+SGA 7, Tomo II	complete/integrated	3951-4226	SGA7_TOMO_II_ES_corregida.pdf,SGA7_TOMO_II_ES_diplomatica.pdf	Corrected edition in the cumulative reader (2026-11-15-r24); diplomatic edition separate

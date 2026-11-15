@@ -46,7 +46,7 @@ Los PDF están en la publicación del
 [15 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-15-r24):
 
 - [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf) con los trece libros (4.226 páginas, versión
-  2026-11-15-r24); [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno según la versión r22.
+  2026-11-15-r24); [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno.
 - Lectores y fuentes por volumen:
 
 | Volumen | Edición corregida | Edición diplomática | Fuentes LaTeX |
