@@ -1,0 +1,69 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 3, proposición 3.5 y observación 3.6, líneas 4173--4233 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 3.5.} Si $S$ es noetheriano, o cuasicompacto y separado, el funtor
+\begin{equation}\tag{3.0}
+ \varphi:\mathrm D^+(\Qcoh(S))\longrightarrow \mathrm D^+(S)
+\end{equation}
+es plenamente fiel y tiene por imagen esencial la subcategoría plena $\mathrm D^+(S)_{\qcoh}$ de $\mathrm D^+(S)$ formada por los complejos de cohomología cuasicoherente.
+
+\emph{Demostración.} Basta probar la afirmación relativa al caso en que $S$ es separado, siendo bien conocido el caso en que $S$ es noetheriano ([H] II 7.19). Evidentemente, equivale a probar las afirmaciones siguientes:
+
+\begin{enumerate}[label={(3.5.\arabic*)~:}]
+\item para $E\in\Ob\mathrm D^+(\Qcoh(S))$, la flecha de adjunción
+\[
+ E\longrightarrow \mathbb RQ(E)
+\]
+(deducida de (3.3 b) (ii))) es un isomorfismo;
+\item para $E\in\Ob\mathrm D^+(S)_{\qcoh}$, la flecha de adjunción
+\[
+ RQ(E)\longrightarrow E
+\]
+(deducida de (3.3 b)(ii))) es un isomorfismo.
+\end{enumerate}
+
+\emph{Demostración de (3.5.1).} Mediante un dévissage inmediato\footnote{Utilizando, por ejemplo, la sucesión espectral $R^pQ(H^q(E))\Longrightarrow R^{*}Q(E)$.}, se reduce a probar que los haces cuasicoherentes son acíclicos para el coherizador (es decir, que, para $E\in\Ob\Qcoh(S)$, se tiene $R^iQ(E)=0$ para $i>0$), y que, por otra parte, para $E\in\Ob\Qcoh(S)$, la flecha de adjunción $E\longrightarrow QE$ es un isomorfismo. Si $S$ es afín, esto resulta de la fórmula $Q=\widetilde{\Gamma_S}$ (cf. demostración de (3.2)). En el caso general, recubramos $S$ por un número finito de abiertos afines $U_i$. Como $S$ es separado, las inclusiones $f_i:U_i\longrightarrow S$ son morfismos afines, al igual que las inclusiones $f_{i_0\ldots i_p}:U_{i_0\ldots i_p}=U_{i_0}\cap\cdots\cap U_{i_p}\longrightarrow S$. Sea $E\in\Ob\Qcoh(S)$, y consideremos la resolución de $E$ definida por el recubrimiento $(U_i)$ (T.F. II 5.2):
+\begin{equation}\tag{*}
+ 0\longrightarrow E\longrightarrow \coprod_i f_{i*}f_i^*(E)\longrightarrow\cdots\longrightarrow
+ \coprod f_{i_0\ldots i_p*}f_{i_0\ldots i_p}^*(E)\longrightarrow .
+\end{equation}
+Proporciona una sucesión espectral
+\begin{equation}\tag{**}
+ E_1^{pq}=\coprod_{i_0\ldots i_p}R^qQ\bigl(f_{i_0\ldots i_p*}f_{i_0\ldots i_p}^*(E)\bigr)
+ \Longrightarrow R^{*}Q(E).
+\end{equation}
+Como $f_{i_0\ldots i_p}$ es afín, se tiene, según (3.4):
+\begin{equation}\tag{***}
+ R^qQ\bigl(f_{i_0\ldots i_p*}f_{i_0\ldots i_p}^*(E)\bigr)
+ \xrightarrow{\sim} f_{i_0\ldots i_p*}R^qQ\bigl(f_{i_0\ldots i_p}^*(E)\bigr).
+\end{equation}
+para todo $q$, de donde, en particular,
+\[
+ E_1^{pq}=0\quad\text{para }q>0,
+\]
+según el caso afín, ya tratado. Se deducen de (**) isomorfismos
+\[
+ R^nQ(E)\simeq H^n(QE^\bullet)\quad\text{para }n\geq0,
+\]
+donde $E'$ es la resolución de $E$ definida por la sucesión exacta (*). Pero, según (***), se tiene $Q\sisi{E^n}{E'{}^n}\xrightarrow{\sim} \sisi{E^n}{E'{}^n}$ para $n\geq0$, de donde, finalmente,
+\[
+ R^nQ(E)=0\quad\text{para }n>0,
+\]
+y $Q(E)\simeq E$, q.e.d.
+
+\emph{Demostración de (3.5.2).} Mediante la sucesión espectral
+\[
+ R^pQ(H^q(E))\Longrightarrow R^{*}Q(E),
+\]
+se reduce inmediatamente al caso en que $E\in\Ob\Qcoh(S)$. Como el compuesto
+\[
+ E\longrightarrow \mathbb RQE\longrightarrow E
+\]
+de las flechas de adjunción es la identidad, la afirmación resulta, pues, de (3.5.1). Esto termina la demostración de (3.5).
+
+\textbf{Observación 3.6.} La conclusión de (3.5) sería falsa si se omitiera la hipótesis «separado o noetheriano», como muestra un bonito contraejemplo de J.L. Verdier (véase el Apéndice I de la presente exposición).
+

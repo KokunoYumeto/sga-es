@@ -1,0 +1,379 @@
+% SGA 6, Exposición V: fragmento español alineado con la fuente.
+% Alcance: sección 5, número 5.7, y sección 6 hasta el enunciado de 6.10, líneas 7771--8145 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 5.7.} Sean \(K\) un anillo binomial, \(A\) una \(K\)-\(\lambda\)-álgebra aumentada, \(N\) un elemento de \(A\) tal que \(\lambda^k(N)=0\) para \(k>d\). Entonces, para todo \(x\in A\) y todo \(p\ge1\), se tiene:
+\begin{equation}\tag{5.7.1}
+  \gamma^p(N,x)\in\Fil^{p-d}A.
+\end{equation}
+Sea \(A_0\) la \(K\)-\(\lambda\)-álgebra engendrada por generadores \(N'_0,X'_0\), sometidos a las relaciones \(\gamma^k(N'_0)=0\) para \(k>d\). Se define el homomorfismo de aumentación \(A_0\xrightarrow{\epsilon}K\) por \(\epsilon(N'_0)=\epsilon(X'_0)=0\). Se sabe que \(A_0\) es el anillo de polinomios con coeficientes en \(K\) respecto de las indeterminadas \(\gamma^i(N'_0)\), con \(1\le i\le d\), y \(\gamma^j(X'_0)\), con \(j\ge1\), y que la \(\lambda\)-filtración sobre \(A_0\) es idéntica a la filtración por el peso, atribuyendo el peso \(i\) a \(\gamma^i(N'_0)\), \(\gamma^i(X'_0)\) (4.12 y 4.15).
+
+Pongamos \(N_0=N'_0+d\), \(X_0=X'_0+\epsilon(x)\). Vamos a demostrar primero 5.7 para \(N_0\) y \(X_0\). Según lo precedente, (5.7.1) equivale a:
+\[
+  \gamma^p(N_0,X_0)\cdot\gamma^d(N'_0)\in\Fil^pA_0.
+\]
+Ahora bien, \(\gamma^d(N'_0)=(-1)^d\lambda_{-1}(N_0)\); esta relación se escribe, pues:
+\[
+  (-1)^d\gamma^p(X_0\gamma^d(N'_0))\in\Fil^pA_0
+\]
+según (5.5.4). Esta relación se verifica efectivamente, puesto que \(\gamma^d(N'_0)\) tiene aumentación nula.
+
+Según 4.7, existe un \(K\)-\(\lambda\)-homomorfismo \(A_0\longrightarrow A\) compatible con las aumentaciones, que envía \(N'_0\) a \(N-d\), y \(X'_0\) a \(x-\epsilon(x)\), y por tanto \(N_0\) a \(N\) y \(X_0\) a \(x\), de donde resulta el resultado, pues el homomorfismo es compatible con las filtraciones.
+
+\section*{6. Anillo de Chern}
+
+En este parágrafo, el anillo base será un anillo binomial (2.7) \(K\), fijado de una vez por todas. Utilizaremos la categoría \(\mathcal C\) (1.1), y por consiguiente volveremos a las notaciones del parágrafo 1, reservando la notación \(\widehat G\) para el funtor definido sobre \(\mathcal C\) (1.1), y denotando por \(\widehat G\circ i\) su restricción a \(\mathcal C_0\) (1.8).
+
+\textbf{6.1.} Hemos definido en 3.5 y 3.6 morfismos de funtores:
+\[
+  (\widehat G\circ i)\times(\widehat G\circ i)\xrightarrow{\nabla}\widehat G\circ i,
+  \qquad
+  \widehat G^t\circ i\xrightarrow{\gamma'}(\widehat G^u\circ i)\circ(\widehat G^t\circ i)_\nabla,
+  \qquad
+  \widehat G\circ i\xrightarrow{a}\widehat G\circ i,
+\]
+siendo el último la multiplicación para la ley \(\nabla\) por \(\gamma_t(a)\), con \(a\in K\).
+
+Por 1.9, se deducen morfismos:
+\[
+  \widehat G\times\widehat G\xrightarrow{\nabla}\widehat G_g,
+  \qquad
+  \widehat G^t\xrightarrow{\gamma'}\widehat G^u\circ i\circ\widehat G^t_{g\nabla},
+  \qquad
+  \widehat G\xrightarrow{a}\widehat G_g;
+\]
+y de las propiedades de isobaricidad de los polinomios \(P'_n\), \(Q'_{i,j}\), \(R_{n,a}\) (3.5, 3.6, 2.9) resulta que la imagen del primer y del tercer funtor está en \(\widehat G\), y la del segundo, en el subgrupo de las series formales en \(u\) cuyos coeficientes de grado no nulo están en \(\widehat G^t\).
+
+Componiendo el primero y el tercero con el morfismo canónico: \(\widehat G\longrightarrow 1+\widehat{\operatorname{Gr}}^{+}\) (1.11), se obtienen, según 1.12, dos morfismos de funtores sobre \(\mathcal C_g\):
+\[
+  (1+\widehat{\cdot}{}^{+})\times(1+\widehat{\cdot}{}^{+})\xrightarrow{\ \ast\ }1+\widehat{\cdot}{}^{+},
+\]
+\[
+  1+\widehat{\cdot}{}^{+}\xrightarrow{\ a\ }1+\widehat{\cdot}{}^{+},
+\]
+que definen sobre el funtor \(1+\widehat{\cdot}{}^{+}\) una multiplicación y operaciones de \(K\). Según 1.13, la multiplicación está definida por su valor sobre el elemento \((1+X,1+Y)\) de \((1+\widehat{K[X,Y]}{}^{+})^{2}\); se denotará por \(\ast\); se tiene, pues:
+\begin{equation}\tag{6.1.1}
+  (1+X)\ast(1+Y)=\frac{1+X+Y}{(1+X)(1+Y)}.
+\end{equation}
+El \(n\)-ésimo polinomio universal de esta ley es la componente isobárica de peso \(n\) de \(P'_n\) (1.15) y se denotará por \(P''_n\).
+
+Las operaciones de \(K\) se seguirán denotando mediante el exponente (3.8). Los polinomios universales que definen estas operaciones son las componentes isobáricas de menor grado de los \(R_{n,a}\) (1.15); como estos son isobáricos, son los propios \(R_{n,a}\).
+
+Sea \(A\in\operatorname{Ob}(\mathcal C_g)\); el anillo \(1+\widehat A^{+}\) definido por las leyes precedentes carece, en general, de elemento unidad; se extiende, pues, este anillo adjuntando los escalares de \(K\), introduciendo el nuevo anillo \(K\times(1+\widehat A^{+})\), provisto de las leyes de composición definidas por: \(\forall\,a,a'\in A\), \(\varphi,\varphi'\in1+\widehat A^{+}\),
+\[
+  (a,\varphi)+(a',\varphi')=(a+a',\varphi\varphi')~;
+\]
+\begin{equation}\tag{6.1.2}
+  (a,\varphi).(a',\varphi')=(aa',\varphi^{a'}\cdot{\varphi'}^{\,a}\cdot(\varphi\ast\varphi')).
+\end{equation}
+El anillo así construido admite \sisi{(1.1)}{\((1,1)\)} como elemento unidad, y \(1+\widehat A^{+}\) se identifica con el ideal \((0)\times(1+\widehat A^{+})\). Está provisto de manera natural de una estructura de \(K\)-álgebra, tal que:
+\begin{equation}\tag{6.1.3}
+  a.(a',\varphi)=(a,1).(a',\varphi)=(aa',\varphi^{a}).
+\end{equation}
+
+Se lo dota de una estructura de \(K\)-\(\lambda\)-álgebra de la manera siguiente: hemos observado más arriba que la imagen del funtor \(\gamma'\colon\widehat G^t\longrightarrow\widehat G^u\circ i\circ\widehat G^t_g\) está en el subgrupo de las series formales en \(u\) cuyos coeficientes de grado no nulo están en \(\widehat G^t\). Utilizando el morfismo canónico: \(\widehat G\longrightarrow 1+\widehat{\operatorname{Gr}}^{+}\), que da: \(\widehat G\longrightarrow K\times(1+\widehat{\operatorname{Gr}}^{+})\), se deduce finalmente un morfismo:
+\[
+  \widehat G^t\xrightarrow{\gamma'}\widehat G^u\circ i\circ(K\times(1+\widehat{\operatorname{Gr}}^{+})),
+\]
+que, según 1.12, define un morfismo de funtores sobre\qquad:
+\[
+  1+\widehat{\cdot}{}^{+}\xrightarrow{\gamma'}\widehat G^u\circ i\circ(K\times(1+\widehat{\cdot}{}^{+})).
+\]
+Los polinomios universales que definen este morfismo son los coeficientes de los \({\gamma'}^{i}(1+X_1+\dots+X_n+\dots)\); el \(j\)-ésimo coeficiente es la componente isobárica de peso \(j\) de \(Q'_{i,j}\) (demostración análoga a la de 1.15), y se denotará por \(Q''_{i,j}\).
+
+Se extiende finalmente el morfismo así construido a \(K\times(1+\widehat{\cdot}{}^{+})\) de manera natural, utilizando la \(\lambda\)-estructura de \(K\). Se obtiene, pues, una estructura de pre-\(\lambda\)-anillo sobre \(K\times(1+\widehat{\cdot}{}^{+})\), definida por las operaciones \(\gamma\) correspondientes, que son tales que:
+\begin{equation}\tag{6.1.4}
+  \gamma_t(a,\varphi)=\gamma_t(a).\Bigl(1+\sum_{p\ge1}{\gamma'}^{p}(\varphi)t^{p}\Bigr),
+\end{equation}
+y que se denotarán por \(\gamma\) en lugar de \(\gamma'\), sin que sea posible confusión alguna.
+
+Para verificar que es una estructura de \(\lambda\)-anillo, se verifica la conmutatividad de (3.7.2); es conocida para los elementos de \(K\); para los elementos de \(1+\widehat{\cdot}{}^{+}\), resulta de la de (3.7.2) para \(\widehat G\) por paso al cociente. De ello se obtiene inmediatamente el resultado.
+
+
+
+% Macros locales para la Exposición V, §§6--7
+\providecommand{\Ghat}{\widehat G}
+\providecommand{\Aqhat}{\widehat A_{\mathbb Q}}
+\providecommand{\Ch}{\operatorname{Ch}}
+\providecommand{\Log}{\operatorname{Log}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\gr}{\operatorname{gr}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\epsi}{\varepsilon}
+\providecommand{\clgr}{\operatorname{cl}}
+\providecommand{\Fil}{\operatorname{Fil}}
+\providecommand{\Gr}{\operatorname{Gr}}
+\providecommand{\Sym}{\operatorname{Sym}}
+
+
+\textbf{Definición 6.2.} El funtor definido en 6.1 sobre la categoría de las \(K\)-álgebras graduadas, con valores en la categoría de las \(K\)-\(\lambda\)-álgebras, se llama \emph{anillo de Chern}; su valor para \(A\in\operatorname{Ob}(\mathcal C_g)\) se denota por \(\Ch(A)\) (o, si hay riesgo de confusión, \(\Ch_K(A)\)).
+
+De las fórmulas (6.1.1), (6.1.2), (6.1.4), y (3.6.2), se deducen las relaciones
+\begin{equation}\tag{6.2.1}
+\begin{gathered}
+ (1,1+X).(1,1+Y)=(1,1+X+Y)\\
+ \lambda^i(1,1+X)=0\quad\text{para }i\ge2,
+\end{gathered}
+\end{equation}
+relaciones que servían para definir el anillo de Chern en [1]. A partir de estas fórmulas, pueden recuperarse inversamente las relaciones (6.1.1) y (6.1.4).
+
+Indiquemos la razón por la cual se introduce el anillo de Chern. Nos situamos en la situación del ejemplo 3.9, y denotamos por \(A\) el graduado asociado (por la filtración definida en 3.10) al \(K^\bullet\) de un topos localmente anillado por anillos conmutativos (que suponemos que es un \(\lambda\)-anillo para simplificar); \(K\) es el anillo de aumentación. Se verá más adelante que se pueden definir para todo elemento de un \(\lambda\)-anillo aumentado clases de Chern con valores en el graduado asociado (6.7). A todo haz localmente libre de tipo finito se puede asociar, pues, un elemento de \(\Ch(A)\), cuya componente sobre el factor \(K\) es el rango del haz, y la componente sobre el factor \(1+\widehat A^+\) la suma de las clases de Chern. Las fórmulas (6.2.1) son entonces las fórmulas usuales que dan las clases de Chern y el rango del producto tensorial de dos haces invertibles y de las potencias exteriores de un haz invertible (es decir, que la aplicación que acaba de definirse de \(K^\bullet\) en \(\Ch(A)\) es un \(\lambda\)-homomorfismo).
+
+\textbf{6.3.} Para toda \(K\)-álgebra graduada \(A\), se denota por \(A_{\mathbb Q}\) la \(K\)-álgebra \(A\otimes_{\mathbb Z}\mathbb Q\), graduada de manera evidente. Según 1.13, se define un homomorfismo funtorial: \(1+\widehat A^+\xrightarrow{\ \ch\ }\widehat A_{\mathbb Q}^{+}\) dando su valor para \(1+X\), a saber
+\begin{equation}\tag{6.3.1}
+  \ch(1+X)=\exp(X)-1.
+\end{equation}
+Este homomorfismo es compatible con la multiplicación definida en 6.1 sobre \(1+\widehat A^+\): según 1.13, basta mostrarlo para los elementos \(1+X,1+Y\) de \(1+\widehat{K[X,Y]}{}^{+}\); ahora bien, se tiene:
+\[
+\begin{aligned}
+ \ch\bigl((1+X)*(1+Y)\bigr)
+ &= \ch\!\left(\frac{1+X+Y}{(1+X)(1+Y)}\right)\\
+ &= \ch(1+X+Y)-\ch(1+X)-\ch(1+Y)\\
+ &= \exp(X+Y)-\exp(X)-\exp(Y)+1\\
+ &= \ch(1+X).\ch(1+Y).
+\end{aligned}
+\]
+
+Denotemos por \(\eta\) el endomorfismo (funtorial respecto de \(A\)) de \(\widehat A_{\mathbb Q}^{+}\), definido por:
+\[
+ \eta\!\left(\sum_{k\ge1} a_k t^k\right)
+ =
+ \sum_{k\ge1}\frac{(-1)^{k-1}}{(k-1)!}.a_k t^k.
+\]
+Entonces, \(\forall\varphi\in1+\widehat A^+\),
+\begin{equation}\tag{6.3.2}
+  \ch(\varphi)=\eta(\Log\varphi).
+\end{equation}
+En efecto, \(\ch\) y \(\eta\circ\Log\) son dos homomorfismos funtoriales de grupos abelianos, y para que sean iguales basta que coincidan sobre \(1+X\), lo cual es evidente.
+
+Se deduce que \(\ch\) conmuta con las operaciones de \(K\): en efecto, también aquí basta mostrarlo para \(1+X\), y se tiene:
+\[
+\begin{aligned}
+ \forall a\in K,\quad\ch((1+X)^a)
+ &=\ch(\exp(a\Log(1+X)))\\
+ &=\eta(a\Log(1+X))\\
+ &=a.\eta(\Log(1+X))\\
+ &=a.\ch(1+X).
+\end{aligned}
+\]
+Se puede, pues, extender de manera evidente \(\ch\) a un homomorfismo de \(K\)-álgebras: \(K\times(1+\widehat A^+)\longrightarrow K\oplus\widehat A_{\mathbb Q}^{+}\). Se tiene, pues:
+\begin{equation}\tag{6.3.3}
+  \ch(a,\varphi)=a+\eta(\Log\varphi).
+\end{equation}
+
+\textbf{Definición 6.4.} El homomorfismo \(\ch:\Ch A\longrightarrow K\oplus\widehat A_{\mathbb Q}^{+}\) que acaba de definirse se llama \emph{carácter de Chern}.
+
+Si \(A\) es de característica \(0\) (es decir, es una \(\mathbb Q\)-álgebra), el carácter de Chern es un isomorfismo: en efecto, sea \(\psi\in K\oplus\widehat A^+\); se puede escribir \(\psi=a+\psi_1\), donde \(\psi_1\) no tiene término de grado nulo; se define entonces un morfismo inverso de \(\ch\) por \(\psi\rightsquigarrow(a,\exp(\eta^{-1}(\psi_1)))\).
+
+\textbf{Proposición 6.5.} Sea \(A\) una \(K\)-álgebra graduada; consideremos sobre \(\Ch(A)\) la filtración definida como sigue (filtración por el grado):
+\begin{equation}\tag{6.5.1}
+  (\Ch(A))_0=\Ch(A)~;\qquad
+  \forall n\ge1,\ (\Ch(A))_n=0\times 1+\widehat A^{\ge n},
+\end{equation}
+donde \(\widehat A^{\ge n}=\prod_{i\ge n}A^i\). Se tienen las congruencias siguientes:
+
+\begin{enumerate}[label=\roman*)]
+\item Sean \(n\ge1\), y \(\varphi\in(\Ch A)_n\); pongamos \(\varphi=1+a_n+\cdots\); entonces:
+\begin{equation}\tag{6.5.2}
+  \ch(\varphi)=\frac{(-1)^{n-1}}{(n-1)!}.a_n+\cdots~;
+\end{equation}
+
+\item Sean \(\varphi\in(\Ch A)_m\), \(\psi\in(\Ch A)_n\); pongamos
+\(\varphi=1+a_m+\cdots\), \(\psi=1+b_n+\cdots\); entonces:
+\begin{equation}\tag{6.5.3}
+  \varphi*\psi
+  =
+  1-\frac{(m+n-1)!}{(m-1)!(n-1)!}.a_m b_n+\cdots,
+\end{equation}
+y por consiguiente, la filtración por el grado es una filtración de anillo.
+\end{enumerate}
+
+i) El carácter de Chern es, por construcción, un morfismo de funtores filtrados; de la congruencia \(\varphi\equiv1+a_n\ \mathrm{mod.}\ (\Ch A)_{n+1}\), se deduce, pues, \(\ch(\varphi)\equiv\ch(1+a_n)\ \mathrm{mod.}\ \widehat A^{\ge n+1}\); ahora bien, \(\ch(1+a_n)=\eta(\Log(1+a_n))\)
+\[
+  =\frac{(-1)^{n-1}}{(n-1)!}\,a_n+\cdots .
+\]
+
+ii) Por sustitución, basta demostrar la fórmula (6.5.3) para \(A=K[X_i;Y_j]_{i,j\in\mathbb N}\) y para \(\varphi=1+\sum_{k\ge m}X_k\), \(\psi=1+\sum_{k\ge n}Y_k\). Como \(K\) es sin torsión, se puede sumergir este anillo en su tensorizado por \(\mathbb Q\), y se ve así que \(\ch\) es inyectivo. Pongamos \(\varphi*\psi=1+Z_p+\cdots\), siendo \(Z_p\) el primer término no nulo y \(\neq1\) de \(\varphi*\psi\). La multiplicatividad de \(\ch\) nos da, según (6.5.2):
+\[
+  1+\frac{(-1)^{p-1}}{(p-1)!}.Z_p+\cdots
+  =
+  \left(1+\frac{(-1)^{m-1}}{(m-1)!}.X_m+\cdots\right)
+  \left(1+\frac{(-1)^{n-1}}{(n-1)!}.Y_n+\cdots\right),
+\]
+de donde se obtiene el valor de \(Z_p\) identificando los términos de menor grado.
+
+\textbf{6.6.} El \(\lambda\)-anillo \(\Ch A\) está aumentado hacia \(K\): se define, en efecto, un \(\lambda\)-homomorfismo de \(\Ch A\) en \(K\) por \((a,\varphi)\rightsquigarrow a\). Está provisto, pues, de una filtración canónica de \(\lambda\)-anillo aumentado. Vamos a compararla con la que acaba de definirse.
+
+\textbf{Proposición 6.6.1.} Sea \(x\in\Ch A\) un elemento de la forma \(x=(n,1+\cdots+a_n)\). Entonces:
+\[
+\begin{array}{ll}
+\text{i)}& \lambda^i(x)=0\quad\text{para }i>n~;\\[0.3em]
+\text{ii)}& \lambda^n(x)=(1,1+a_1),\\[0.3em]
+\text{iii)}& \displaystyle\sum_{i=0}^n(-1)^i\lambda^i(x)
+       =(0,1-(n-1)!a_n+\cdots),
+\end{array}
+\]
+siendo los términos no escritos de grado \(>n\).
+
+Por funtorialidad, basta hacer la demostración en el caso en que \(A\) es el anillo \(K[X_1,\ldots,X_n]\), filtrado por el peso respecto de los \(X_i\), teniendo \(X_i\) peso \(i\), y para el elemento \((n,1+X_1+\cdots+X_n)\). Se sumerge \(A\) en \(A'=K[T_1,\ldots,T_n]\) por las funciones simétricas, y se obtiene así un homomorfismo inyectivo: \(\Ch A\longrightarrow\Ch A'\); resulta entonces:
+\[
+ (n,1+X_1+\cdots+X_n)
+ =
+ \left(n,\prod_{i=1}^n(1+T_i)\right)
+ =
+ \sum_{i=1}^n(1,1+T_i).
+\]
+Se deduce, según (6.2.1):
+\[
+  \lambda_t(x)=\prod_{i=1}^n\bigl(1+(1,1+T_i)t\bigr),
+\]
+y se obtiene:
+\[
+  \lambda^k(x)=0\ \text{para }k>n,\quad\text{y}\quad
+  \lambda^n(x)=\prod_{i=1}^n(1,1+T_i)
+   =\left(1,1+\sum_{i=1}^nT_i\right)=(1,1+X_1).
+\]
+Finalmente,
+\[
+  \sisi{\sum_{i=1}^n}{\sum_{i=0}^n}(-1)^i\lambda^i(x)=\lambda_{-1}(x)
+  =
+  \prod_{i=1}^n\bigl(1-(1,1+T_i)\bigr)
+  =
+  (-1)^n.\prod_{i=1}^n(0,1+T_i).
+\]
+Ahora bien, según (6.5.3),
+\[
+  \prod_{i=1}^n(0,1+T_i)
+  =
+  \left(0,1+(-1)^{n-1}(n-1)!\prod_{i=1}^nT_i+\cdots\right),
+\]
+es decir:
+\[
+  \lambda_{-1}(x)=(0,1-(n-1)!X_n+\cdots).
+\]
+
+\textbf{Corolario 6.6.2.} La relación 6.6.1.iii) es verdadera para todo elemento \(X\) de aumentación \(n\).
+
+Para mostrarlo utilizaremos el lema:
+
+\textbf{Lema 6.6.3.} Para todo \(n\), \((\Ch A)_n\) es un \(\lambda\)-ideal de \(\Ch A\).
+
+Se puede suponer \(n\ge1\). Sea \(x=(0,\varphi)\in(\Ch A)_n\); se puede escribir \(\gamma^i(0,\varphi)=(0,1+Q''_{i,1}+\cdots+Q''_{i,j}+\cdots)\), siendo los \(Q''_{i,j}\) las componentes isobáricas de peso \(j\) de los \(Q'_{i,j}\) (3.6). Para todo \(j\), los polinomios \(Q''_{i,j}\) son, pues, polinomios respecto de los \(j\) primeros coeficientes de \(\varphi\). Si \(j<n\), son, pues, nulos, y por consiguiente los \(\gamma^i(x)\) pertenecen a \((\Ch A)_n\), y \((\Ch A)_n\) es un \(\lambda\)-ideal.
+
+Sea entonces \(x=(n,1+a_1+\cdots+a_n+\cdots)\) un elemento de aumentación \(n\) de \(\Ch A\); \(x\) es congruente \(\mathrm{mod.}\ (\Ch A)_{n+1}\) con \((n,1+\cdots+a_n)\), y por consiguiente, \(\lambda_{-1}(x)\) es congruente con \(\lambda_{-1}(n,1+\cdots+a_n)=(0,1-(n-1)!a_n+\cdots)\), de donde:
+\[
+  \lambda_{-1}(x)=(0,1-(n-1)!a_n+\cdots).
+\]
+
+\textbf{Corolario 6.6.4.} Sea \(\epsilon\) el homomorfismo de aumentación de \(\Ch A\); entonces, para todo \(x\in\Ch A\), se tiene:
+\[
+  \gamma^n(x-\epsilon(x))
+  =
+  (0,1+(-1)^{n-1}(n-1)!a_n+\cdots).
+\]
+Por definición, \(\gamma^n(x-\epsilon(x))=(-1)^n\sum_{i=0}^n(-1)^i\lambda^i(x+n-\epsilon(x))\). Como \(x+n-\epsilon(x)\) tiene aumentación \(n\), se le puede aplicar el corolario 6.6.2, de donde resulta el resultado.
+
+\textbf{Corolario 6.6.5.} Con las notaciones de 3.10, \(\Fil_n\Ch A\subset(\Ch A)_n\). Según el corolario precedente, \(\gamma^n(x-\epsilon(x))\in(\Ch A)_n\). El corolario resulta entonces de que las dos filtraciones son filtraciones de anillo, y de que los \(\gamma^n(x-\epsilon(x))\), para \(n\) y \(x\) variables, generan la filtración de \(\lambda\)-anillo.
+
+\textbf{Corolario 6.6.7.} Sea \(A\) una \(K\)-álgebra graduada de característica nula, con grados acotados; entonces las dos filtraciones definidas sobre \(\Ch A\) son idénticas.
+
+Supongamos que \(\Fil^pA=0\), y sea \(x=(0,1+a_n+\cdots+a_p)\) un elemento de \((\Ch A)_n\). Pongamos \(x'=\left(0,1+\dfrac{(-1)^{n-1}}{(n-1)!}a_n+a_{n+1}+\cdots+a_p\right)\); se tiene entonces:
+\[
+  \gamma^n(x')=(0,1+a_n+\cdots+a'_p),
+\]
+pues \(x'\) tiene aumentación nula. Por consiguiente, \(x-\gamma^n(x')\in(\Ch A)_{n+1}\). Iterando la operación \(p-n\) veces, se llega a \((\Ch A)_{p+1}\), que es nulo, y se ha escrito, pues, \(x\) como un elemento de \(\Fil^n\Ch A\). Teniendo en cuenta (6.6.5), las dos filtraciones son, pues, idénticas.
+
+\textbf{6.7.} Se supone ahora que \(A\) es un \(\lambda\)-anillo aumentado hacia \(K\), denotándose por \(\epsilon\) el homomorfismo de aumentación. Se dispone, pues, sobre \(A\) de la filtración canónica de \(\lambda\)-anillo aumentado, y puede asociarse, por tanto, a \(\Gr A\) su anillo de Chern.
+
+Si \(x\in A\), entonces \(\gamma_t(x-\epsilon(x))\in\Ghat(A)\) por definición de la filtración de \(\lambda\)-anillo aumentado. Se denota por \(c(x)\), y se llama \emph{clase de Chern total} de \(x\), la imagen de \(\gamma_t(x-\epsilon(x))\) en \(\Ghat(A)/\Ghat'(A)=1+\widehat{\Gr A}^{+}\); se denota por \(c^i(x)\), y se llama \(i\)-ésima clase de Chern de \(x\), el \(i\)-ésimo coeficiente de \(c(x)\); se tiene, pues:
+\begin{equation}\tag{6.7.1}
+  c^i(x)=\cl_{\Gr^iA}\!\left(\gamma^i(x-\epsilon(x))\right)~;\qquad
+  c(x)=1+c^1(x)+\cdots .
+\end{equation}
+Se pone entonces:
+\begin{equation}\tag{6.7.2}
+  \widetilde c(x)=(\epsilon(x),c(x)),
+\end{equation}
+y se llama a \(\widetilde c(x)\) la clase de Chern completada de \(x\).
+
+\textbf{Proposición 6.8.} La clase de Chern completada \(\sisi{c}{\widetilde c}:A\longrightarrow\Ch(\Gr A)\), es un \(K\)-\(\lambda\)-homomorfismo de \(K\)-\(\lambda\)-álgebras aumentadas.
+
+Está claro que el homomorfismo así definido es aditivo; para verificar que es multiplicativo, se escribe:
+\[
+\begin{aligned}
+\gamma_t(xy-\epsilon(xy))
+&=\gamma_t\bigl(\epsilon(y)(x-\epsilon(x))\bigr).
+  \gamma_t\bigl(\epsilon(x)(y-\epsilon(y))\bigr).
+  \gamma_t\bigl((x-\epsilon(x))(y-\epsilon(y))\bigr)\\
+&=\bigl(\gamma_t(x-\epsilon(x))\bigr)^{\epsilon(y)}.
+  \bigl(\gamma_t(y-\epsilon(y))\bigr)^{\epsilon(x)}.
+  \bigl(\gamma_t(x-\epsilon(x))\nabla\gamma_t(y-\epsilon(y))\bigr),
+\end{aligned}
+\]
+de donde se obtiene el resultado según (6.1.2), pasando al cociente. Si \(a\in K\), \(\widetilde c(a)=(a,1)\), luego \(\widetilde c\) es un homomorfismo de \(K\)-álgebras; además, es compatible con las aumentaciones.
+
+Falta finalmente ver que es un \(\lambda\)-homomorfismo. Hay que mostrar, pues, la conmutatividad del diagrama:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+A \arrow[r,"\gamma_t"] \arrow[d,"\widetilde c"'] &
+\widehat G_g(A) \arrow[d,"\widehat G_g(\widetilde c)"]\\
+\Ch A \arrow[r,"\gamma_t"] &
+\widehat G_g(\Ch A).
+\end{tikzcd}
+\]
+Por aditividad, basta mostrarla para los elementos de \(K\), para los cuales es evidente, y para los elementos de aumentación nula de \(A\), para los cuales resulta, según la definición de \(c\) y (6.1.4), de la del diagrama (3.7.2).
+
+\textbf{Proposición 6.9.} Sea \(A\) una \(K\)-\(\lambda\)-álgebra aumentada, \(z\in\Fil^mA\); entonces:
+\[
+  \gamma^m(z)\equiv(-1)^{m-1}(m-1)!z\ \mathrm{mod.}\ \Fil^{m+1}A,
+\]
+es decir,
+\[
+  c^m(z)=\cl_{\Gr^mA}\!\left((-1)^{m-1}(m-1)!z\right).
+\]
+
+Hay que ver que estos dos elementos dan la misma imagen en \(\Gr^mA\), es decir, que la \(m\)-ésima clase de Chern de \(z\) es la imagen de \((-1)^{m-1}(m-1)!z\).
+
+Se puede escribir \(z\) como una suma \(\sum a.\gamma^{i_1}(x_1)\cdots\gamma^{i_k}(x_k)\), con \(a\in A\), \(\epsilon(x_i)=0\) para todo \(i\), e \(i_1+\cdots+i_k\ge m\). Se tiene entonces:
+\[
+  \widetilde c(z)=
+  \sum \widetilde c(a).
+        \widetilde c(\gamma^{i_1}(x_1))\cdots
+        \widetilde c(\gamma^{i_k}(x_k)).
+\]
+Como \(\widetilde c\) es un \(\lambda\)-homomorfismo, se puede escribir:
+\[
+  \widetilde c(\gamma^{i_j}(x_j))=\gamma^{i_j}(\widetilde c(x_j)).
+\]
+Teniendo en cuenta la definición de \(c\), y (6.6.4), se obtiene:
+\[
+  \widetilde c(\gamma^{i_j}(x_j))
+  =
+  \left(0,1+(-1)^{i_j-1}(i_j-1)!\,\gamma^{i_j}(x_j)+\cdots\right).
+\]
+Según (6.5.3), y el hecho de que \(\widetilde c(a)=(a,1)\), se obtiene finalmente:
+\[
+\begin{aligned}
+\widetilde c(z)
+&=\sum
+\left(0,\left(1+
+(-1)^{i_1+\cdots+i_k-1}
+(i_1+\cdots+i_k-1)!
+\,\gamma^{i_1}(x_1)\cdots\gamma^{i_k}(x_k)
++\cdots\right)^a\right)\\
+&=
+\left(0,1+
+\sum_{\substack{(x_1,\ldots,x_k)\\ i_1+\cdots+i_k=m}}
+(-1)^{m-1}(m-1)!a\,\gamma^{i_1}(x_1)\cdots\gamma^{i_k}(x_k)
++\cdots\right)\\
+&=
+(0,1+(-1)^{m-1}(m-1)!z+\cdots),
+\end{aligned}
+\]
+de donde resulta el resultado.
+
+\textbf{Proposición 6.10.} Sean \(K\) un anillo binomial, \(R\) una \(K\)-\(\lambda\)-álgebra aumentada, \(N\) un elemento de \(R\) tal que \(\lambda^k(N)=0\) para \(k>d\), y \(x\in\Fil^iR\). Entonces:
+\[
+  \gamma^{d+i}(N,x)-(-1)^{d+i-1}(d+i-1)!x\in\Fil^{i+1}R.
+\]

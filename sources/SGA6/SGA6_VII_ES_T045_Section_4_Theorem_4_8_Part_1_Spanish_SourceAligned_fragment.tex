@@ -1,0 +1,141 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: teorema 4.8 y primera parte de su demostración, líneas 10875--11008 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Teorema 4.8.} Sean \(i:Y\to X\) una inmersión cerrada regular de codimensión constante \(d\), \(X'\) el esquema obtenido haciendo estallar \(Y\), e \(Y'=X'\times_XY\), de modo que se tiene el diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"'] & X.
+\end{tikzcd}
+\]
+Se supone que \(X\) es cuasicompacto y posee un haz amplio. Entonces, para todo \(k\), se tiene la sucesión exacta:
+\[
+0\longrightarrow
+\operatorname{Gr}^{k-d}K^\circ(Y)_{\mathbb Q}
+\xrightarrow{u^{\gr}}
+\operatorname{Gr}^{k-1}K^\circ(Y')_{\mathbb Q}
+\times
+\operatorname{Gr}^{k}K^\circ(X)_{\mathbb Q}
+\xrightarrow{v^{\gr}}
+\operatorname{Gr}^{k}K^\circ(X')_{\mathbb Q},
+\]
+donde, para \(y\in \operatorname{Gr}^{k-d}K^\circ(Y)_{\mathbb Q}\), se pone:
+\[
+  u^{\gr}(y)=
+  \bigl(g^{\gr}(y).(-1)^{d-1}c^{d-1}(F),-i_{\gr}(y)\bigr),
+\]
+y, para \(y'\in \operatorname{Gr}^{k-1}K^\circ(Y')_{\mathbb Q}\) y \(x\in \operatorname{Gr}^{k}K^\circ(X)_{\mathbb Q}\):
+\[
+  v^{\gr}(y',x)=j_{\gr}(y')+f^{\gr}(x),
+\]
+siendo las notaciones las de 3.1 y 3.3, y denotando \(c^{d-1}(F)\) la \((d-1)\)-ésima clase de Chern de \(F\) (V 6.7). Además, \(u^{\gr}\) admite un inverso por la izquierda \(u'^{\gr}\), definido por
+\[
+  u'^{\gr}(y',x)=g_{\gr}(y').
+\]
+Si, además, \(X\) es noetheriano e \(Y\) regular, se tiene la sucesión exacta:
+\[
+0\longrightarrow
+\operatorname{Gr}^{k-d}K^\circ(Y)_{\mathbb Q}
+\xrightarrow{u^{\gr}}
+\operatorname{Gr}^{k-1}K^\circ(Y')_{\mathbb Q}
+\times
+\operatorname{Gr}^{k}K^\circ(X)_{\mathbb Q}
+\xrightarrow{v^{\gr}}
+\operatorname{Gr}^{k}K^\circ(X')_{\mathbb Q}
+\longrightarrow0.
+\]
+
+\emph{Demostración.} Observemos que se podría dar una demostración puramente algebraica del caso en que \(Y\) es regular, en términos de la teoría de los \(\lambda\)-anillos, utilizando la descripción 4.7 de la situación. En su lugar, imitaremos la demostración de 3.7.
+
+Se sabe que los homomorfismos de «imagen inversa» \(f^*,g^*\), al ser \(\lambda\)-homomorfismos, son compatibles con las filtraciones de \(\lambda\)-anillos, y por consiguiente definen homomorfismos sobre los graduados asociados, de donde se obtienen los homomorfismos:
+\[
+  f^{\gr}:\operatorname{Gr}^kK^\circ(X)\to\operatorname{Gr}^kK^\circ(X'),
+  \qquad
+  g^{\gr}:\operatorname{Gr}^{k-d}K^\circ(Y)\to\operatorname{Gr}^{k-d}K^\circ(Y'),
+\]
+y los homomorfismos análogos obtenidos después de tensorizar por \(\mathbb Q\). Por otra parte, 4.6 muestra que, después de tensorizar por \(\mathbb Q\), los homomorfismos \(i_*,j_*\) pasan a los graduados asociados, y definen, por tanto:
+\[
+  i_{\gr}:\operatorname{Gr}^{k-d}K^\circ(Y)_{\mathbb Q}
+  \to \operatorname{Gr}^{k}K^\circ(X)_{\mathbb Q},
+  \qquad
+  j_{\gr}:\operatorname{Gr}^{k-1}K^\circ(Y')_{\mathbb Q}
+  \to \operatorname{Gr}^{k}K^\circ(X')_{\mathbb Q}.
+\]
+Finalmente, se observa que \(\lambda_{-1}(F)=(-1)^{d-1}\gamma^{d-1}(F)\), de modo que los morfismos \(u^{\gr}\) y \(v^{\gr}\) se obtienen por paso al cociente a partir de los morfismos \(u\) y \(v\) de 3.7. Se tiene, pues, \(v^{\gr}\circ u^{\gr}=0\).
+
+Según VI 5.8,
+\[
+  g_*(\Fil^{k-1}K^\circ(Y'))\subset \Fil^{k-d}K^\circ(Y)
+\]
+para todo \(k\), puesto que \(Y'=\mathbf P(N)\), siendo \(N\) de rango \(d\). Se deduce, pues, un homomorfismo:
+\[
+  g_{\gr}:\operatorname{Gr}^{k-1}K^\circ(Y')
+  \to\operatorname{Gr}^{k-d}K^\circ(Y),
+\]
+y un homomorfismo análogo después de tensorizar por \(\mathbb Q\). El homomorfismo \(u'^{\gr}\) se obtiene, por tanto, a partir de \(u'\) (3.7) pasando al graduado asociado. Como \(u'\) es inverso por la izquierda de \(u\), \(u'^{\gr}\) es inverso por la izquierda de \(u^{\gr}\), lo que demuestra al mismo tiempo la inyectividad de \(u^{\gr}\).
+
+Para demostrar que \(\Ker(v^{\gr})=\Im(u^{\gr})\), hay que mostrar que, si se tienen \(y'\in\Fil^{k-1}K^\circ(Y')_{\mathbb Q}\) y \(x\in\Fil^kK^\circ(X)_{\mathbb Q}\), tales que:
+\begin{equation}\tag{\sisi{4.6.1}{4.8.1}}
+  j_*(y')+f^*(x)\in\Fil^{k+1}K^\circ(X')_{\mathbb Q},
+\end{equation}
+entonces existe \(y\in\Fil^{k-d}K^\circ(Y)_{\mathbb Q}\) tal que:
+\[
+\begin{aligned}
+\text{i)}\quad &x+i_*(y)\in\Fil^{k+1}K^\circ(X)_{\mathbb Q},\\
+\text{ii)}\quad &y'-g^*(y)\lambda_{-1}(F)\in\Fil^{k}K^\circ(Y')_{\mathbb Q}.
+\end{aligned}
+\]
+Pongamos:
+\[
+  y=g_*(y').
+\]
+Entonces, según VI 5.8, \(y\in\sisi{\Fil^{k}K^\circ(Y)}{\Fil^{k-d}K^\circ(Y)}\). Se observa después que \(f_*\) conserva la filtración (utilizando resultados de la exposición VIII, lo cual no presenta inconveniente, pues 4.8 no se utiliza para demostrar este hecho). En efecto, de 1.8 ii) resulta que \(f\) es un morfismo de intersección completa de dimensión virtual relativa nula (VIII 4.2). Como \(f\) es proyectivo, el resultado es consecuencia de VIII 3.2. Aplicando \(f_*\) a la relación (\sisi{4.6.1}{4.8.1}), se obtiene:
+\[
+  f_*(j_*(y'))+f_*(f^*(x))\in\Fil^{k+1}K^\circ(X)_{\mathbb Q},
+\]
+es decir, según 3.6:
+\[
+  i_*(y)+x\in\Fil^{k+1}K^\circ(X)_{\mathbb Q}.
+\]
+
+Para demostrar la relación ii), hay que mostrar que:
+\[
+  y'-g^*(g_*(y'))\lambda_{-1}(F)\in\Fil^kK^\circ(Y')_{\mathbb Q}.
+\]
+Pongamos \(z=y'-g^*(g_*(y'))\lambda_{-1}(F)\). Se tiene:
+\[
+\begin{aligned}
+j_*(z)
+  &=j_*(y')-j_*\bigl(g^*(g_*(y'))\lambda_{-1}(F)\bigr)\\
+  &=j_*(y')-f^*(i_*(y))\qquad\text{según 3.4.}
+\end{aligned}
+\]
+Ahora bien, la relación i) da:
+\[
+  f^*(i_*(y))+f^*(x)\in\Fil^{k+1}K^\circ(X')_{\mathbb Q}.
+\]
+Teniendo en cuenta (\sisi{4.6.1}{4.8.1}), se obtiene, pues:
+\[
+  j_*(z)\in\Fil^{k+1}K^\circ(X')_{\mathbb Q}.
+\]
+De donde:
+\[
+  j^*(j_*(z))=z(1-L)\in\Fil^{k+1}K^\circ(Y')_{\mathbb Q}.
+\]
+Sea \(\bar z\) la imagen de \(z\) en \(\operatorname{Gr}^{k-1}K^\circ(Y')_{\mathbb Q}\), y \(\overline{(1-L)}\) la de \((1-L)\) en \(\operatorname{Gr}^{1}K^\circ(Y')_{\mathbb Q}\). Se tiene, pues, \(\overline{z(1-L)}=0\). Se puede aplicar entonces (VI 5.11) (que sigue siendo válido después de tensorizar por \(\mathbb Q\), pues su demostración se basa únicamente en la estructura de \(K^\circ(Y')\) como \(K^\circ(Y)\)-álgebra libre), y se puede, por tanto, encontrar \(z'\in K^\circ(Y)_{\mathbb Q}\) tal que:
+\[
+  z-g^*(z')\lambda_{-1}(F)\in\Fil^kK^\circ(Y')_{\mathbb Q}.
+\]
+Aplicando \(g_*\), se obtiene, teniendo en cuenta que \(g_*(z)=0\):
+\[
+  z'\in\Fil^{k+1-d}K^\circ(Y)_{\mathbb Q},
+\]
+de donde, puesto que \(\lambda_{-1}(F)\in\Fil^{d-1}K^\circ(Y')_{\mathbb Q}\):
+\[
+  z\in\Fil^kK^\circ(Y')_{\mathbb Q},
+\]
+lo que concluye la demostración.

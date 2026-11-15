@@ -1,0 +1,38 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, observación 2.2.7.2 y lema 2.2.8, líneas 3836--3865 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Observación 2.2.7.2.} Como en (2.2.6), la hipótesis de separación sobre $S$ es esencial. En efecto, tomemos una vez más por $S$ el plano afín en el que se ha desdoblado el origen. Recordemos que $S$ se obtiene pegando dos ejemplares del plano afín $\mathbb E^2_k$ ($k$, un cuerpo) mediante la identidad sobre el complementario $U$ del origen $O$; se tiene, pues, una proyección canónica
+\[
+p:S\longrightarrow\mathbb E^2_k,
+\]
+que induce un isomorfismo sobre $U$, constando $p^{-1}(O)$ de dos puntos $O_1$ y $O_2$. Un haz invertible sobre $S$ se obtiene pegando dos haces invertibles sobre $\mathbb E^2_k$ mediante un isomorfismo sobre $U$; como todo haz invertible sobre $\mathbb E^2_k$ es trivial, un haz invertible sobre $S$ está definido, pues, por un elemento $g\in\Gamma(U,\mathcal O_U^*)$; pero $g$ es necesariamente una constante, puesto que la restricción $\Gamma(\mathbb E^2_k,\mathcal O_{\mathbb E^2_k})\to\Gamma(U,\mathcal O_U)$ es un isomorfismo, siendo $O$ de profundidad $2$ en el plano; por tanto, todo haz invertible sobre $S$ es trivial. Por otra parte, es inmediato que $p$ induce un isomorfismo
+\[
+p^*:\Gamma(\mathbb E^2_k,\mathcal O_{\mathbb E^2_k})\longrightarrow\Gamma(S,\mathcal O_S).
+\]
+Por consiguiente, toda sección global de $\mathcal O_S$ que se anula en $O_1$ se anula también en $O_2$, luego los $S_f$, para $f\in\Gamma(S,\mathcal O_S)$, no forman una base de la topología de $S$.
+
+\textbf{Lema 2.2.8.} Sean $S$ un esquema divisorial (2.2.5), $(L_i)_{i\in I}$ una familia amplia de $\mathcal O_S$-módulos invertibles. Denotemos por $L(S)$ la subcategoría aditiva estrictamente plena de $\Qcoh(S)$ (2.2.1) engendrada por los $L_i^{\otimes-n}$ para $(i,n)\in I\times\mathbb N^+$. Sea $E\in\Ob\mathrm D(\Qcoh(S))$.
+\begin{enumerate}[label=\alph*)]
+\item Las categorías $L(S)$ y $\Loclib(S)$ (2.0) son cuasilevantables en $\Qcoh(S)$ (I 1.2) y cuasiestables por núcleo de epimorfismo (I 1.2).
+\item Sea $n\in\mathbb Z$. Para que $E$ sea $n$-pseudocoherente (resp. pseudocoherente) (2.2.1), es necesario y suficiente que $E$ sea $n$-pseudocoherente (resp. pseudocoherente) relativamente a $L(S)$ o $\Loclib(S)$ (I 2.3). Los funtores canónicos
+\[
+\mathrm K^{-}(L(S))/\mathrm K^{-,\varnothing}(L(S))\longrightarrow \mathrm D(\Qcoh(S))
+\]
+y
+\[
+\mathrm K^{-}(\Loclib(S))/\mathrm K^{-,\varnothing}(\Loclib(S))\longrightarrow \mathrm D(\Qcoh(S))
+\]
+son plenamente fieles y tienen por imagen esencial $\mathrm D^{-}(\Qcoh(S))_{\coh}$ (2.2.1).
+\item Sea $[m,n]$ un intervalo de $\mathbb Z$. Para que $E$ sea de amplitud perfecta contenida en $[m,n]$ (2.2.1), es necesario y suficiente que $E$ sea isomorfo, en $\mathrm D(\Qcoh(S))$, a un complejo $F$ tal que $F^i=0$ para $i\notin[m,n]$, $F^i\in\Ob L(S)$ para $i>m$, siendo $F^m$ localmente libre de tipo finito. El funtor canónico
+\[
+\mathrm K^b(\Loclib(S))/\mathrm K^{b,\varnothing}(\Loclib(S))\longrightarrow \mathrm D(\Qcoh(S))
+\]
+es plenamente fiel y tiene por imagen esencial $\mathrm D(\Qcoh(S))_{\parf}$ (2.2.1).
+\end{enumerate}
+
+\emph{Demostración.} Sea $F\to G$ un epimorfismo de $\Qcoh(S)$, donde $G$ es de tipo finito. Como $F$ es límite inductivo de sus subhaces cuasicoherentes de tipo finito (EGA I 9.4.9), existe, en virtud de (2.1.1 a)), un subhaz cuasicoherente de tipo finito $F'$ de $F$ tal que el compuesto $F'\to F\to G$ es un epimorfismo. Según (2.2.3 (ii)), existe un epimorfismo $E\to F'$, con $E\in\Ob L(S)$; por tanto, el compuesto $E\to F'\to F$, compuesto con $F\to G$, es un epimorfismo, lo que prueba que la categoría de los $\mathcal O_S$-módulos cuasicoherentes de tipo finito es cuasilevantable en $\Qcoh(S)$, luego, con mayor razón, lo mismo ocurre con la categoría $\Loclib(S)$ o $L(S)$. Esto demuestra la primera afirmación de a). Para la segunda, apliquemos (1.1) tomando por $\sisi{S}{\mathcal S}$ el sitio de Zariski de $S$, por $\mathcal C$ (resp. $\mathcal C_0$) la categoría fibrada $U\mapsto\Qcoh(U)$ (resp. $L(U)$) ($U$ denota un abierto variable de $S$ y $L(U)$ la subcategoría aditiva estrictamente plena de $\Qcoh(U)$ engendrada por los $(L_i^{\otimes-n}\,|\,U)$). Como todo objeto de $L$ es pseudocoherente, las nociones de $n$-pseudocoherencia (resp. pseudocoherencia) (2.2.1) en la categoría fibrada $\mathrm D(\Qcoh)$ coinciden con las mismas nociones relativamente a $L$ (I 2.14). Como la condición (ii), no respectivamente, de \sisi{(1 1)}{(1.1)} se satisface en virtud de (2.2.3 (ii)), se deduce, gracias a (1.1 a)), la segunda parte de a) relativa a $L(S)$; la afirmación relativa a $\Loclib(S)$ se prueba de manera análoga. Las afirmaciones b) se deducen inmediatamente de (1.1 b) y c)), teniendo en cuenta el hecho de que, si $E\in\Ob\mathrm D(\Qcoh(S))$ es $n$-pseudocoherente, entonces $E$ es objeto de $\mathrm D^{-}(\Qcoh(S))$, puesto que $S$ es cuasicompacto. Un objeto de la categoría fibrada $\Qcoh$ está localmente en $L$ si y solo si es localmente libre de tipo finito: la categoría $L$ es, pues, localmente levantable en $\Qcoh$ y localmente estable por núcleo de epimorfismo. Por consiguiente, las afirmaciones c) resultan de (1.2) aplicado para $\mathcal C=\Qcoh$, $\mathcal C_0=L$, $\mathcal C_{1S}=\Loclib(S)$. Esto termina la demostración.
+

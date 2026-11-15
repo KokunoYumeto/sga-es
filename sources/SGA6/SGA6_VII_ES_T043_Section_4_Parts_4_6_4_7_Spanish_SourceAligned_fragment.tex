@@ -1,0 +1,162 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: sección 4, números 4.6--4.7.6, líneas 10719--10874 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Teorema 4.6.} Sean \(X\) un esquema cuasicompacto que posee un haz amplio, \(d\) un entero \(>0\) e \(i:Y\to X\) una inmersión regular de codimensión \(d\). Entonces, para todo \(k\), se tiene:
+\[
+ i_*\bigl((\Fil^kK^\circ(Y))\otimes_{\mathbb Z}\mathbb Q\bigr)
+ \subset
+ (\Fil^{k+d}K^\circ(X))\otimes_{\mathbb Z}\mathbb Q.
+\]
+
+Observemos ante todo que \(i_*(K^\circ(Y))\subset \Fil^1K^\circ(X)\). En efecto, \(X-Y\) es denso en \(X\): si no fuera así, \(Y\) contendría un abierto afín y, sobre este abierto, el ideal \(J\) que define \(Y\) sería un ideal nil, y por tanto un ideal localmente nilpotente, puesto que es de tipo finito. Pero esto es imposible, ya que los \(J^n/J^{n+1}\) son \(\mathcal O_Y\)-módulos localmente libres de rango \(\ne0\). La aumentación en \(K^\circ(X)\) de un elemento de \(i_*(K^\circ(Y))\) es una función localmente constante sobre \(X\); como es nula sobre \(X-Y\), es nula sobre todo \(X\).
+
+Para todo grupo abeliano \(A\), pondremos \(A_{\mathbb Q}=A\otimes_{\mathbb Z}\mathbb Q\). Sea \(x\in\Fil^kK^\circ(Y)_{\mathbb Q}\); se puede escribir \(x\) en la forma:
+\[
+  x=\sum a\,\gamma^{i_1}(x_1)\cdots\gamma^{i_n}(x_n),
+\]
+con \(\epsilon(x_i)=0\) para todo \(i\), \(a\in\mathbb Q\), e \(i_1+\cdots+i_n\ge k\). Los \(x_i\) se pueden expresar como combinación, con coeficientes enteros, de las clases \(E_\alpha\) de un número finito de \(\mathcal O_Y\)-módulos localmente libres de tipo finito \(E_\alpha\). Sea \(R\) la sub-\(\mathbb Q\)-\(\lambda\)-álgebra de \(K^\circ(Y)_{\mathbb Q}\) engendrada por los \(E_\alpha\) y por \(N\). Se tiene entonces:
+\[
+  x\in\Fil^kR.
+\]
+
+Por otra parte, la filtración de \(\lambda\)-anillo de \(R\) es discreta (VI 6.2); sea \(m\) tal que \(\Fil^mR=0\). Finalmente, se puede, descomponiendo si es preciso \(X\) en una suma finita de abiertos disjuntos y haciendo la demostración en cada abierto (pues \(K^\circ\) conmuta con las sumas directas finitas), suponer que los \(E_\alpha\) tienen rango constante \(r_\alpha\). El anillo de aumentación de \(R\) es entonces \(\mathbb Q\).
+
+Vamos a mostrar que para todo \(i\) se tiene:
+\[
+  i_*(\Fil^iR)\subset \Fil^{i+d}(K^\circ(X)_{\mathbb Q}).
+\]
+Esto implicará en particular:
+\[
+  i_*(x)\in\Fil^{k+d}K^\circ(X),
+\]
+y demostrará, por tanto, el teorema.
+
+La demostración se hace por inducción descendente sobre \(i\), siendo trivial el caso \(i=m\). Sea \(y\in\Fil^iR\), y pongamos, para todo \(j\):
+\[
+  a_j=(-1)^{j-1}(j-1)!.
+\]
+Entonces, según V 6.10,
+\[
+  \gamma^{d+i}(N,y)-a_{d+i}y\in\Fil^{i+1}R.
+\]
+Se puede, pues, aplicar la hipótesis de inducción, suponiendo que:
+\[
+  i_*(\Fil^{i+1}R)\subset \Fil^{i+d+1}K^\circ(X)_{\mathbb Q}.
+\]
+Por consiguiente:
+\[
+  i_*\bigl(\gamma^{d+i}(N,y)-a_{d+i}y\bigr)
+  \in\Fil^{i+d+1}K^\circ(X)_{\mathbb Q}.
+\]
+Según 4.4, esto implica:
+\[
+  \gamma^{d+i}\bigl(i_*(y)\bigr)-a_{d+i}i_*(y)
+  \in\Fil^{i+d+1}K^\circ(X)_{\mathbb Q}.
+\]
+Como \(i_*(y)\) tiene aumentación nula,
+\[
+  \gamma^{d+i}\bigl(i_*(y)\bigr)\in\Fil^{d+i}K^\circ(X).
+\]
+Como se hacen cálculos módulo torsión, se obtiene, pues:
+\[
+  i_*(y)\in\Fil^{i+d}K^\circ(X)_{\mathbb Q}.
+\]
+
+\textbf{Observación 4.6.1.} Se ve que, incluso si 4.3 fuera verdadero sin tensorizar por \(\mathbb Q\), la demostración anterior solo funciona módulo torsión. Para un contraejemplo, véase XIV 4.6.
+
+\subsection*{4.7}
+
+Volvamos a la situación de 3.7, donde se tenía el diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"'] & X,
+\end{tikzcd}
+\]
+donde \(i\) es una inmersión regular, \(X'\) el \(X\)-esquema obtenido haciendo estallar \(Y\), e \(Y'=X'\times_XY\). Se supone que \(X\) es noetheriano y posee un haz amplio, y que \(Y\) es regular. Se vio en 3.7 que se tiene entonces la sucesión exacta:
+\[
+0\longrightarrow K^\circ(Y)\xrightarrow{u}
+K^\circ(Y')\times K^\circ(X)\xrightarrow{v}
+K^\circ(X')\longrightarrow0.
+\]
+Vamos a mostrar que esta sucesión exacta permite describir toda la situación formada por los \(K^\circ\) de \(X,Y,X',Y'\), a partir de los \(\lambda\)-anillos \(K^\circ(X)\), \(K^\circ(Y)\), de las aplicaciones \(i^*\) e \(i_*\), y del elemento \(N\) de \(K^\circ(Y)\) (al menos salvo torsión, hasta nuevo aviso).
+
+Sean, pues, \(K,K'\) dos \(\lambda\)-anillos, \(i_*:K\to K'\) un homomorfismo aditivo, \(i^*:K'\to K\) un \(\lambda\)-homomorfismo, \(d\) un entero, y \(N\) un elemento de \(K\) tal que \(\lambda^i(N)=0\) para \(i>d\) y \(\lambda^d(N)\) sea invertible. Se suponen, además, verdaderas las propiedades siguientes:
+\begin{enumerate}[label=\roman*)]
+\item \(i_*\) es \(K'\)-lineal («fórmula de proyección»);
+\item \(i^*\circ i_*\) es el homomorfismo «multiplicación por \(\lambda_{-1}(N)\)»;
+\item para todo \(n\ge1\), y todo \(y\in K\), \(i_*\bigl(\lambda^n(N,y)\bigr)=\lambda^n(i_*(y))\) (relación (4.3.1)).
+\end{enumerate}
+
+Se utiliza primero VI 1.1 para construir una \(K\)-\(\lambda\)-álgebra \(K_1\), que desempeña el papel de \(K^\circ(Y')\). Sea \(L\) una indeterminada, y sea \(K[L]\) la \(K\)-\(\lambda\)-álgebra engendrada por el generador \(L\), sometido a las relaciones \(\lambda^i(L)=0\) para \(i\ge2\) (V 4.9). Sea:
+\[
+  P(L)=\lambda^d(N-L)=\sum_{i=0}^{d}(-1)^i\lambda^{d-i}(N)L^i.
+\]
+El ideal engendrado por \(P\) es un \(\lambda\)-ideal. Para verlo, se observa primero que las relaciones \(\lambda^i(N)=0\) para \(i>d\) implican que los \(\lambda^j(N-L)\), para \(j\ge d\), son múltiplos de \(\lambda^d(N-L)\). Si se trabaja en \(1+\sisi{K/(P)}{K[L]/(P)}[[t]]^+\), la imagen de \(\lambda_t(N-L)\) es un polinomio de grado \(<d\), y un argumento universal muestra entonces que sus \(\lambda^i\), para \(i\ge d\), son iguales a \(\sisi{1}{0}\) (cf. V 4.8). Como en \(1+K[[t]]^+\) se tiene \(\lambda_t(\lambda^d(N-L))=\lambda^d(\lambda_t(N-L))\), se deduce que los \(\lambda^i(\lambda^d(N-L))\), para \(i\ge1\), son múltiplos de \(P\). Según las relaciones V 2.4.2, esto implica que el ideal engendrado por \(P\) es un \(\lambda\)-ideal.
+
+Se pone entonces \(K_1=\sisi{K/(P)}{K[L]/(P)}\). El homomorfismo natural \(K\to K_1\) se denotará por \(g^*\); es un \(\lambda\)-homomorfismo. Por otra parte, \(K_1\) es un \(K\)-módulo libre que tiene por base los elementos \(1,L,\ldots,L^{d-1}\). De la relación \(\lambda^d(N)=\lambda^{d-1}(N-L).L\) y de la hipótesis de invertibilidad impuesta a \(\lambda^d(N)\) resulta que \(L\) es invertible. Por consiguiente, \(K_1\) admite como base sobre \(K\) los elementos \(1,L^{-1},\ldots,L^{-d+1}\); se define entonces una aplicación \(g_*:K_1\to K\) asociando a todo elemento \(y'=y_0+y_1L^{-1}+\cdots+y_{d-1}L^{-d+1}\) de \(K_1\) el elemento \(y_0\) de \(K\). Está claro que la aplicación así definida es un homomorfismo aditivo, \(K\)-lineal, y tal que \(g_*\circ g^*=\Id\).
+
+Se dota después a \(K_1\times K'\) de una estructura de \(\lambda\)-anillo, poniendo:
+\begin{align}
+ (y'_1,x_1)*(y'_2,x_2)
+   &=(y'_1y'_2(1-L)+x_1y'_2+x_2y'_1,\; x_1x_2), \tag{4.7.1}\\
+ \lambda^n_*(y',x)
+   &=\left(\sum_{p=1}^{n}\lambda^{\,n-p}(x)\lambda^p(L,y'),\;
+     \lambda^n(x)\right). \tag{4.7.2}
+\end{align}
+En estas fórmulas, \(K_1\) se considera como \(K'\)-álgebra mediante el homomorfismo \(g^*\circ i^*\).
+Se pone después, para \(y_1,y_2\in K\) y \(n\ge1\):
+\begin{align}
+ y_1*y_2&=-\,y_1y_2\lambda_{-1}(N), \tag{4.7.3}\\
+ \lambda^n_*(y_1)&=-\,\lambda^n(N,-y_1), \tag{4.7.4}
+\end{align}
+y se define un homomorfismo
+\[
+  u:K\longrightarrow K_1\times K'
+\]
+poniendo:
+\[
+  u(y)=\bigl(g^*(y).\lambda_{-1}(F),-i_*(y)\bigr),
+\]
+con \(F=N-L\).
+
+\textbf{Proposición 4.7.5.} Las operaciones definidas por (4.7.1) y (4.7.2) dotan a \(K_1\times K'\) de una estructura de \(\lambda\)-anillo, y \(u\) es un homomorfismo inyectivo que identifica \(K\), dotado de las operaciones definidas por (4.7.3) y (4.7.4), con un \(\lambda\)-ideal de \(K_1\times K'\).
+
+Es inmediato verificar que \(K_1\times K'\) es un \(\lambda\)-anillo: se puede consultar, por ejemplo, V 5.5, donde se hace una construcción completamente análoga. La demostración de la segunda parte de la proposición se hace también sin dificultad utilizando las relaciones anteriores, la relación
+\[
+  i_*(y_1y_2\lambda_{-1}(N))=i_*(y_1).i_*(y_2),
+\]
+que resulta inmediatamente de las hipótesis, la relación \(g_*(\lambda_{-1}(F))=1\) (véase VI 5.9) y las relaciones de V 5.
+
+Se pone entonces:
+\[
+  K'_1=(K_1\times K')/K,
+\]
+y se denota por \(v\) el homomorfismo canónico \(K_1\times K'\to K'_1\). Se considera \(K'_1\) como \(\lambda\)-anillo gracias a la estructura cociente. Se definen después los homomorfismos aditivos:
+\[
+\begin{array}{llll}
+j_*:K_1\to K'_1, & j^*:K'_1\to K_1, &
+f_*:K'_1\to K', & f^*:K'\to K'_1 .
+\end{array}
+\]
+El homomorfismo \(j_*\) es el compuesto \(K_1\to K_1\times K'\to K'_1\). Del mismo modo, el homomorfismo \(f^*\) es el compuesto \(K'\to K_1\times K'\to K'_1\). Se tiene entonces:
+\[
+  v=j_*+f^*.
+\]
+Se define después un homomorfismo \(K_1\times K'\to K_1\) asociando a \((y',x)\) el elemento \(y'(1-L)+g^*\circ i^*(x)\); este homomorfismo se anula sobre \(K\), y define por consiguiente un homomorfismo \(j^*:K'_1\longrightarrow K_1\). Finalmente, se define un homomorfismo \(K_1\times K'\to K'\) asociando a \((y',x)\) el elemento \(i_*\circ g_*(y')+x\); este homomorfismo se anula sobre \(K\) y define, por tanto, un homomorfismo \(f_*:K'_1\longrightarrow K'\).
+
+\textbf{Proposición 4.7.6.}
+\begin{enumerate}[label=\roman*)]
+\item \(j^*\) y \(f^*\) son \(\lambda\)-homomorfismos;
+\item \(j_*\) es \(K'_1\)-lineal y \(f_*\) es \(K'\)-lineal;
+\item \(j^*\circ j_*\) es el homomorfismo «multiplicación por \(1-L\)»;
+\item para todo \(y'\in K_1\), y todo \(p\ge1\), \(j_*\bigl(\lambda^p(L,y')\bigr)=\lambda^p(j_*(y'))\);
+\item \(f_*\circ f^*=\Id\).
+\end{enumerate}
+Basta hacer funcionar la máquina.
+
+Si se vuelve a la situación geométrica recordada anteriormente, se ve que \(K^\circ(X')\) se construye a partir de \(K^\circ(Y)\), \(K^\circ(X)\), de las aplicaciones \(i^*\) e \(i_*\) y del elemento \(N\) de \(K^\circ(Y)\) mediante el método anterior; sin embargo, las operaciones \(\lambda\) sobre \(K^\circ(X')\) solo coinciden con las operaciones \(\lambda\) definidas anteriormente sobre \(K'_1\) salvo torsión, mientras la relación (4.3.1) solo esté demostrada módulo torsión.

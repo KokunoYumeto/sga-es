@@ -1,0 +1,179 @@
+% SGA 6, Exposición I: apertura de la sección 5 (5.0--5.8.4), en español y alineada con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 2778--2950.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{5. Tor-dimensión finita y perfectitud}
+
+\textbf{5.0.} El lector se habrá planteado sin duda la pregunta: ¿qué le falta a un complejo pseudocoherente \(E\) para ser perfecto? ¿Basta, por ejemplo, con que \(E\) tenga cohomología acotada? La respuesta es no. Tomemos, en efecto, como \(\mathcal C\) la categoría de los módulos sobre un anillo conmutativo noetheriano \(A\), y como \(\mathcal C_0\) la subcategoría plena de los \(A\)-módulos proyectivos de tipo finito. Cualquier \(A\)-módulo de tipo finito \(E\) es pseudocoherente y tiene cohomología acotada, pero \(E\) solo es perfecto si \(E\) tiene, además, dimensión proyectiva finita (o, lo que es equivalente, tor-dimensión finita). Este ejemplo sugiere que la diferencia entre un complejo pseudocoherente y un complejo perfecto reside en una cuestión de dimensión cohomológica. Esto es lo que examinaremos ahora en el caso de la categoría de los módulos de un topos anillado (cf. (3.3)). Necesitaremos algunos sorites preliminares sobre la noción de tor-dimensión finita. Seremos breves, puesto que esta cuestión figura ya en la literatura: cf. ([H] II 4) y (SGA 4 XVII 4.1.9.).
+
+\textbf{Proposición 5.1.} Sean \((\sisi{S}{\mathcal S},A)\) un topos anillado, \(X\in\Ob \sisi{S}{\mathcal S}\), \(F\in\Ob\Dpx^-({}_A X)\), y sean \(m,n\in\mathbb Z\) tales que \(\sisi{m<n}{m\leq n}\). Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item \(F\) es isomorfo, en \(\Dpx^-({}_A X)\), a un complejo \(F'\) tal que \(F'^i\) es plano para todo \(i\) y nulo para \(i\notin[m,n]\);
+\item para todo \(A_X\)-módulo derecho \(E\), se tiene \(\Ho^i(E\overset{\mathrm L}{\otimes}_A F)=0\) para \(i\notin[m,n]\).
+\end{enumerate}
+
+\emph{Demostración.} La implicación (i) \(\Rightarrow\) (ii) es trivial; la implicación (ii) \(\Rightarrow\) (i) resulta, por truncamiento, del
+
+\textbf{Lema 5.1.1.} (cf. (4.16)). \emph{Sea \(F\in\Ob\Dpx^-({}_A X)\). Supongamos que \(F\) satisface la hipótesis (ii) de (5.1), que \(F^i=0\) para \(i\notin[m,n]\), y que \(F^i\) es plano para \(i\ne m\). Entonces \(F^m\) es plano.}
+
+\emph{Demostración.} Se tiene un triángulo distinguido
+\[
+\begin{tikzcd}
+& F^m[-m] \arrow[dl,"+1"'] & \\
+F' \arrow[rr] && F \arrow[ul]
+\end{tikzcd}
+\]
+donde \(F'\) tiene componentes planas y nulas fuera del intervalo \([m+1,n]\) (supóngase \(m<n\)). Aplíquese el funtor \(E\overset{\mathrm L}{\otimes}_A\cdot\), con \(E\) un \(A_X\)-módulo derecho arbitrario, y escríbase la sucesión exacta de cohomología.
+
+\textbf{Definición 5.2.} Un objeto \(F\) de \(\Dpx^-({}_A \sisi{S}{\mathcal S})\) que satisfaga las condiciones equivalentes de (5.1) se dirá de amplitud plana contenida en el intervalo \([m,n]\), y escribiremos
+\[
+  \toramp(F)\subset[m,n].
+\]
+Diremos que \(F\) es de amplitud plana finita (o de tor-dimensión finita) si existen enteros \(m\) y \(n\) para los que se verifica la condición precedente.
+
+\textbf{5.3.} Sea \(X\in\Ob \sisi{S}{\mathcal S}\). Denotaremos por \(\Dpx^-({}_A X)_{\torf}\) la subcategoría plena de \(\Dpx^-({}_A X)\) formada por los objetos de tor-dimensión finita. Por el criterio (ii) de (5.1), es una subcategoría triangulada de \(\Dpx^-({}_A X)\). Cuando \(X\) varía, las categorías \(\Dpx^-({}_A X)_{\torf}\) forman una sub-\(\sisi{S}{\mathcal S}\)-categoría triangulada (1.1.4) de \(\Dpx^-({}_A \sisi{S}{\mathcal S})\), que denotaremos por \(\Dpx^-({}_A \sisi{S}{\mathcal S})_{\torf}\). El funtor \(\overset{\mathrm L}{\otimes}_A\) induce un \(\sisi{S}{\mathcal S}\)-funtor exacto
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx^b(\sisi{S}{\mathcal S}_A)\times\sisi{_S}{_{\mathcal S}} \Dpx({}_A \sisi{S}{\mathcal S})_{\torf}
+  \longrightarrow \Dpx^b(\sisi{S}{\mathcal S}_{\mathbb Z}).
+\]
+
+\textbf{5.4.} Para que un \(A\)-módulo izquierdo \(F\) sea de amplitud plana contenida en \([-n,0]\) (\(n\in\mathbb N\)), es necesario y suficiente que \(F\) sea de tor-dimensión \(\leq n\) en el sentido ordinario, es decir, que \(F\) admita una resolución izquierda de longitud \(n\) por \(A\)-módulos planos.
+
+\textbf{5.5.} Sean \(X\in\Ob \sisi{S}{\mathcal S}\), y \(m,n\in\mathbb Z\) (\(m\leq n\)). Para que \(F\in\Ob\Dpx^-({}_A X)\) sea de amplitud plana contenida en \([m,n]\), es necesario y suficiente que exista una familia cubriente \((X_i\to X)\) tal que \(F|X_i\) sea de amplitud plana contenida en \([m,n]\). En particular, si \(\sisi{S}{\mathcal S}/X\) es de tipo finito (SGA 4 VI 1.7) y si \(F\) es localmente de tor-dimensión finita, entonces \(F\) es de tor-dimensión finita.
+
+\textbf{Proposición 5.6.} \emph{Bajo las hipótesis de (2.16), si \(E'\) es de amplitud plana contenida en \([m',n']\) como objeto de \(\sisi{\Dpx^-({}_A, S')}{\Dpx^-({}_{A'}\mathcal S')}\), y si \(E\) es de amplitud plana contenida en \([m,n]\), entonces \(E'\overset{\mathrm L}{\otimes}_A E\) es de amplitud plana contenida en \([m+m',n+n']\).}
+
+\emph{Demostración.} Es inmediato: utilícese la forma (5.1 (i)) de la noción de tor-dimensión finita y el hecho de que, si \(E\) es un \(A\)-módulo izquierdo plano, \(f^{-1}(E)\) es un \(f^{-1}(A)\)-módulo izquierdo plano (SGA 4 IV App. II).
+
+En particular:
+
+\textbf{Corolario 5.6.1.} \textbf{a)} El funtor
+\[
+  \mathbb L f^*:\Dpx^-({}_A \sisi{S}{\mathcal S})\longrightarrow \sisi{\Dpx^-({}_A, S')}{\Dpx^-({}_{A'}\mathcal S')}
+\]
+induce un funtor
+\[
+  \mathbb L f^*:\Dpx({}_A \sisi{S}{\mathcal S})_{\torf}\longrightarrow \sisi{\Dpx({}_A, S')_{\torf}}{\Dpx({}_{A'}\mathcal S')_{\torf}}.
+\]
+
+\textbf{b)} Si \(A\) es conmutativo, el funtor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx^-(\sisi{S}{\mathcal S})\times\sisi{_S}{_{\mathcal S}}\Dpx^-(\sisi{S}{\mathcal S})
+  \longrightarrow \Dpx^-(\sisi{S}{\mathcal S})
+\]
+induce un funtor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx(\sisi{S}{\mathcal S})_{\torf}\times\sisi{_S}{_{\mathcal S}}\Dpx(\sisi{S}{\mathcal S})_{\torf}
+  \longrightarrow \Dpx(\sisi{S}{\mathcal S})_{\torf}.
+\]
+
+\textbf{Observación 5.6.2.} Sean \(E\in\Ob\Dpx^-({}_A \sisi{S}{\mathcal S})\) (\(S\) = objeto final de \(\sisi{S}{\mathcal S}\)), y \(m,n\in\mathbb Z\) (\(m\leq n\)). Si \(E\) es de amplitud plana contenida en \([m,n]\), lo mismo ocurre, por (5.6), con \(E_s\) para todo punto \(s\) de \(\sisi{S}{\mathcal S}\). El recíproco es verdadero si \(\sisi{S}{\mathcal S}\) tiene suficientes puntos (utilícese la forma (5.1.(ii)) de la noción de amplitud plana y el hecho de que \(\overset{\mathrm L}{\otimes}_A\) conmuta con el paso a las fibras).
+
+\textbf{Ejercicios 5.7.} \textbf{a)} Supongamos que \(A\) es conmutativo y que \((\sisi{S'}{\mathcal S'},A')\) es fielmente plano sobre \((\sisi{S}{\mathcal S},A)\) (cf. (2.16.2)). Para que \(E\in\Ob\Dpx^-({}_A \sisi{S}{\mathcal S})\)\footnote{\(S\) = objeto final de \(\sisi{S}{\mathcal S}\)} sea de amplitud plana contenida en \([m,n]\), es necesario y suficiente que \(f^*(E)\) lo sea.
+
+\textbf{b)} Sea \(F\in\Ob\Dpx^+({}_A \sisi{S}{\mathcal S})\)\sgarepeatfootnotemark. Demostrar la equivalencia de las condiciones:
+\begin{enumerate}[label=(\roman*)]
+\item \(F\) es isomorfo, en \(\Dpx^+({}_A \sisi{S}{\mathcal S})\), a un complejo \(F'\) tal que \(F'^i\) es inyectivo para todo \(i\) y nulo para \(i\notin[m,n]\);
+\item para todo \(A_S\)-módulo izquierdo \(E\), se tiene \(\Ext^i(E,F)=0\) para \(i\notin[m,n]\).
+\end{enumerate}
+Si \(F\) satisface las condiciones precedentes, se dice que \(F\) es de amplitud inyectiva contenida en \([m,n]\). La subcategoría plena de \(\Dpx^+({}_A \sisi{S}{\mathcal S})\) formada por los objetos de amplitud inyectiva finita es una subcategoría triangulada, denotada por \(\Dpx^+({}_A \sisi{S}{\mathcal S})_{\injf}\). Demostrar que, si \(A\) es conmutativo, el funtor
+\[
+  \mathrm R\Hom:\Dpx(\sisi{S}{\mathcal S})^\circ\times\Dpx^+(\sisi{S}{\mathcal S})\longrightarrow \Dpx(\sisi{S}{\mathcal S})
+\]
+induce un funtor
+\[
+  \mathrm R\Hom:\Dpx(\sisi{S}{\mathcal S})^\circ_{\torf}\times\Dpx(\sisi{S}{\mathcal S})_{\injf}
+  \longrightarrow \Dpx(\sisi{S}{\mathcal S})_{\injf}.
+\]
+
+Ahora podemos responder a la pregunta de (5.0) y enunciar el resultado principal de este número.
+
+\textbf{Teorema 5.8.} Sean \((\sisi{S}{\mathcal S},A)\) un topos anillado, \(E\in\Ob\Dpx({}_A \sisi{S}{\mathcal S})\), y \(m,n\in\mathbb Z\), con \(m\leq n\). Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item \(\perfamp(E)\subset[m,n]\) (4.8);
+\item \(E\) es \((m-1)\)-pseudocoherente (2.15) y se tiene \(\toramp(E)\subset[m,n]\) (5.2).
+\end{enumerate}
+Como «perfecto» implica evidentemente «pseudocoherente», se deduce:
+
+\textbf{Corolario 5.8.1.} \emph{Para que \(E\) sea perfecto (4.8), es necesario y suficiente que \(E\) sea pseudocoherente (2.15) y localmente de tor-dimensión finita (5.2).}
+
+Para la demostración necesitaremos algunos lemas.
+
+\textbf{Lema 5.8.2.} Sea \(B\) un anillo de \(\sisi{S}{\mathcal S}\). Si \(E\) es un \(A\)-módulo izquierdo, \(G\) un \(B\)-módulo derecho, y \(F\) un \(A\)-\(B\)-bimódulo (izquierdo sobre \(A\), derecho sobre \(B\)), existe un homomorfismo canónico funtorial
+\begin{equation}\tag{5.8.2.1}
+  \Hom_B(F,G)\otimes_A E
+  \longrightarrow
+  \Hom_B(\Hom_A(E,F),G).
+\end{equation}
+Este es un isomorfismo cuando \(G\) es inyectivo y \(E\) es de presentación finita.
+
+\emph{Demostración.} Definamos primero la flecha. Por la fórmula de adjunción tan querida por Cartan, equivale a definir un homomorfismo de \(B\)-módulos:
+\begin{equation}\tag{*}
+  \Hom_B(F,G)\otimes_A E\otimes_{\mathbb Z_S}\Hom_A(E,F)
+  \longrightarrow G.\text{\sganohyperfootnotemark}
+\end{equation}
+\footnotetext{Se denota por \(S\) el objeto final de \(\sisi{S}{\mathcal S}\), y por \(\mathbb Z_S\) el haz constante de valor \(\mathbb Z\).}
+Ahora bien, se tiene un homomorfismo canónico de \(A\)-\(B\)-bimódulos
+\begin{equation}\tag{**}
+  E\otimes_{\mathbb Z_S}\Hom_A(E,F)
+  \longrightarrow F
+\end{equation}
+(obtenido por adjunción a partir de la flecha identidad de \(\underline{\Hom}_A(E,F)\)). Se tiene asimismo un homomorfismo canónico de \(B\)-módulos
+\begin{equation}\tag{***}
+  \Hom_B(F,G)\otimes_A F\longrightarrow G.
+\end{equation}
+Se define entonces (*) como el compuesto de (**) y (***). Para ver que la flecha (5.8.2.1) es un isomorfismo cuando \(G\) es inyectivo y \(E\) es de presentación finita, basta observar que, si \(G\) es inyectivo, la fuente y el destino de la flecha son funtores exactos por la derecha en \(E\), y que la flecha induce la identidad para \(E=A\).
+
+He aquí ahora un caso particular de (5.8).
+
+\textbf{Lema 5.8.3.} Sea \(E\) un \(A\)-módulo izquierdo. Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item \(E\) es localmente sumando directo de un módulo libre de tipo finito;
+\item \(E\) es plano y de presentación finita.
+\end{enumerate}
+
+\emph{Demostración} (según BOURBAKI Alg. Comm. cap. I, § 2 Ej. 15). Está claro que (i) implica (ii). Demostremos (ii) \(\Rightarrow\) (i). En virtud de (1.3.1), se trata de demostrar que el funtor \(\Hom_A(E,.)\) es exacto. Sea \(F\longrightarrow F''\longrightarrow 0\) una sucesión exacta de \(A\)-módulos (izquierdos). Debe demostrarse que la sucesión
+\[
+  \Hom_A(E,F)\longrightarrow \Hom_A(E,F'')\longrightarrow 0
+\]
+es exacta. Para ello basta demostrar que, para todo \(\mathbb Z_S\)-módulo inyectivo \(I\), es exacta la sucesión obtenida aplicando el funtor \(\underline{\Hom}_{\mathbb Z_S}(.,I)\). Ahora bien, se tiene un diagrama conmutativo en el que las flechas verticales son las flechas canónicas de \sisi{(3.17.1)}{(5.8.2.1)}:
+\[
+\begin{array}{ccccccccc}
+0&\to&\Hom_{\mathbb Z_S}(F'',I)\otimes_A E&\to&\Hom_{\mathbb Z_S}(F,I)\otimes_A E\\
+&&\downarrow&&\downarrow\\
+0&\to&\Hom_{\mathbb Z_S}(\Hom_A(E,F''),I)&\to&\Hom_{\mathbb Z_S}(\Hom_A(E,F),I).
+\end{array}
+\]
+Las flechas verticales son isomorfismos en virtud de (5.8.2). La fila superior es exacta porque \(E\) es plano. Por tanto, la fila inferior es exacta, c.q.d.
+
+\emph{Demostración de (5.8).} La implicación (i) \(\Rightarrow\) (ii) resulta trivialmente de las definiciones. Demostremos (ii) \(\Rightarrow\) (i). Como la cuestión es local, se puede suponer que \(E\) es estrictamente \((m-1)\)-pseudocoherente. Como, por otra parte, \(E\) es acíclico en grado \(<m\), la flecha de truncamiento
+\[
+\begin{array}{ccccccc}
+&\to&E^{m-1}&\to&E^m&\to&E^{m+1}\to\ldots\\
+&&\downarrow&&\downarrow&&\downarrow\\
+&\to&0&\to&E^m/B^m&\to&E^{m+1}\to\ldots
+\end{array}
+\]
+es un cuasi-isomorfismo. Denotemos por \(E'\) el complejo truncado. Por construcción, \(E'\) es de amplitud plana \(\subset[m,n]\), y \(E'^i\) es libre de tipo finito para \(i>m\). Por tanto, según (5.1.1), \(E'^m\) es plano. Se tiene, por otra parte, un triángulo distinguido
+\[
+\begin{tikzcd}
+& E'^m[-m] \arrow[dl,"+1"'] & \\
+E'' \arrow[rr] && E' \arrow[ul]
+\end{tikzcd}
+\]
+donde \(E''\) es estrictamente perfecto. Por (2.6), \(E'^m[-m]\) es \((m-1)\)-pseudocoherente, es decir, por (2.9), \(E'^m\) es de presentación finita. Se concluye, gracias a (5.8.3), que \(E'^m\) es localmente sumando directo de un módulo libre de tipo finito y, por tanto, que \(\perfamp(E)\subset[m,n]\).
+
+\textbf{Observaciones 5.8.4.} \textbf{a)} Utilizando (2.5), se recupera el hecho de que los complejos perfectos forman una subcategoría triangulada de \(\Dpx({}_A \sisi{S}{\mathcal S})\).
+
+\textbf{b)} Un complejo perfecto, incluso con cohomología acotada, no es necesariamente de tor-dimensión finita. Sí lo es, sin embargo, si \(\sisi{S}{\mathcal S}\) es de tipo finito (5.5). Denotemos por \(\Dpx({}_A \sisi{S}{\mathcal S})_{\mathrm{parf}}\) la sub-\(\sisi{S}{\mathcal S}\)-categoría plena de \(\Dpx^b({}_A \sisi{S}{\mathcal S})\) formada por los complejos perfectos y de tor-dimensión finita. Se deduce inmediatamente de (2.16.1 b)) y (5.3) que, si \(A\) es conmutativo, el funtor \(\overset{\mathrm L}{\otimes}_A\) induce un funtor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx(\sisi{S}{\mathcal S})_{\mathrm{parf}}\times\sisi{_S}{_{\mathcal S}} \Dpx^b(\sisi{S}{\mathcal S})_{\mathrm{coh}}
+  \longrightarrow \Dpx^b(\sisi{S}{\mathcal S})_{\mathrm{coh}}.
+\]
+Esta fórmula es el punto de partida de la teoría de intersecciones sobre los esquemas. Obsérvese, en cambio, que el producto tensorial (derivado) de dos complejos pseudocoherentes con cohomología acotada no tiene, en general, cohomología acotada.

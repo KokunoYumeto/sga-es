@@ -1,0 +1,437 @@
+% SGA 6, Exposición V: fragmento español alineado con la fuente.
+% Alcance: continuación de 2.9, secciones 3 y 4, y sección 5 hasta 5.6, líneas 7338--7770 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+\providecommand{\sisi}[2]{#2}
+
+Se supone siempre que \(a\in K\). La multiplicación para la ley \(\circ\) por \(\lambda_t(a)\) define un morfismo de funtores: \(\Ghat_K\to\Ghat_K\), caracterizado por su valor para el elemento \(1+Xt\) de \(\Ghat(K[X])\). Se tiene, pues:
+\[
+  \lambda_t(a)\circ(1+Xt)=\lambda_{Xt}(a)\qquad\text{según (2.3.2), por tanto:}
+\]
+\begin{equation}\tag{2.9.3}
+  \lambda_t(a)\circ(1+Xt)
+  =(1+Xt)^a
+  =\exp(a\Log(1+Xt))
+  =\sum_{n=0}^{\infty}\binom{a}{n}X^nt^n .
+\end{equation}
+Se deduce:
+\begin{equation}\tag{2.9.4}
+  \lambda_t(a)\circ\varphi=\varphi^a
+  \quad(=\exp(a\Log\varphi)) ;
+\end{equation}
+En efecto, los dos miembros son funtores aditivos iguales para \(1+Xt\). De (2.9.3) y 1.15 resulta que el \(n\)-ésimo polinomio universal que define la multiplicación por \(\lambda_t(a)\) es isobárico de peso \(n\); se denotará por \(R_{n,a}\).
+
+Observemos finalmente que si \(A\) es una \(K\)-\(\lambda\)-álgebra, es decir, un \(\lambda\)-anillo provisto de un \(\lambda\)-homomorfismo: \(K\to A\), y si \(b\in A\), se tiene:
+\begin{equation}\tag{2.9.5}
+  \lambda_t(ab)=(\lambda_t(b))^a .
+\end{equation}
+Esto resulta, en efecto, de \(\lambda_t(ab)=\lambda_t(a)\circ\lambda_t(b)\), y de (2.9.4).
+
+\section*{3. Las operaciones \(\gamma\)}
+
+Nos situamos aún en la categoría \(\mathcal C_0\).
+
+\textbf{3.1.} Sea \(K\) un \(\lambda\)-anillo. Vamos a definir, a partir de las operaciones \(\lambda^i\) de \(K\), nuevas operaciones, denotadas por \(\gamma^i\). Están destinadas a introducir una noción de clases de Chern bajo condiciones que se indicarán más adelante. Por el momento, demos una «~justificación~» de las definiciones que siguen: si \(E\) es un fibrado vectorial de rango \(d\), la \(d\)-ésima clase de Chern de \(E\) deberá ser (cualquiera que sea la teoría de clases de Chern considerada) la «~suma alternada de las potencias exteriores de \(\underline E\)~»; para definir la \(n\)-ésima clase de Chern, procederemos de manera análoga, reduciendo \(E\) al rango \(n\) al considerar \((\cl(\underline E)-d)+n\), y tomaremos la suma alternada de las potencias exteriores del elemento así obtenido; se «~interpretará~» la proposición siguiente poniendo en ella \(x=\cl(\underline E)-d\):
+
+\textbf{Proposición 3.2.} Sea \(K\) un \(\lambda\)-anillo.
+\begin{enumerate}[label=\roman*)]
+\item \(\forall x\in K,\ \forall n\in\mathbb N,\quad \lambda^n(x+n-1)=(-1)^n\sum_{i=0}^n(-1)^i\lambda^i(x+n).\)
+\item Si se pone \(\gamma^n(x)=\lambda^n(x+n-1)\), y \(\gamma_t(x)=\sum_{n\ge0}\gamma^n(x)t^n\), entonces:
+\[
+  \gamma_t(x)=\lambda_{t/1-t}(x),\qquad\text{por tanto}
+\]
+\[
+  \lambda_t(x)=\gamma_{t/1+t}(x).
+\]
+\end{enumerate}
+Se ve, pues, que el conocimiento de las operaciones \(\gamma\) equivale al de las operaciones \(\lambda\).
+
+\emph{Demostración.} i) Se tiene
+\[
+  \lambda^n(x+n-1)=\sum_{i=0}^{n}\lambda^i(x+n)\lambda^{n-i}(-1).
+\]
+De \(\lambda_t(1)=1+t\), se obtiene: \(\lambda_t(-1)=1/1+t\), de donde: \(\lambda^k(-1)=(-1)^k\), lo que da la relación buscada.
+
+ii) \(\lambda_{t/1-t}(x)=\sum_{n\ge0}\lambda^n(x)\cdot t^n(1-t)^{-n}.\)
+
+Se desarrolla \(t^n(1-t)^{-n}=t^n\sum_{k\ge0}\binom{-n}{k}(-1)^kt^k=\sum_{p\ge n}\binom{p-1}{p-n}t^p\). \(\lambda_{t/1-t}(x)=\sum_{n\ge0}\bigl[\lambda^n(x)\cdot\sum_{p\ge n}\binom{p-1}{p-n}t^p\bigr]\); el coeficiente de \(t^p\) es, pues:
+\[
+  \sum_{n=0}^{p}\lambda^n(x)\cdot\binom{p-1}{p-n}
+  =\sum_{n=0}^{p}\lambda^n(x)\lambda^{p-n}(p-1)
+  =\lambda^p(x+p-1).
+\]
+
+\textbf{3.3.} Sean \(K\), \(K'\) dos \(\lambda\)-anillos, \(f:K\to K'\) un homomorfismo de anillos. Según la definición 3.2.ii), \(f\) es un \(\lambda\)-homomorfismo si, y solo si, para todo \(i\in\mathbb N\), y todo \(x\in K\), \(f(\gamma^i(x))=\gamma^i(f(x))\), o también
+\[
+  \gamma_t(f(x))=\Gg(f)\circ\gamma_t(x).
+\]
+
+\textbf{3.4.} De la relación 3.2.ii), se deducen las relaciones:
+\begin{equation}\tag{3.4.1}
+  \gamma^0(x)=1,
+  \qquad \gamma^1(x)=x,
+  \qquad \gamma^n(x+y)=\sum_{p+q=n}\gamma^p(x)\gamma^q(y).
+\end{equation}
+Muestran que el homomorfismo \(\gamma_t\) define sobre \(K\) una nueva estructura de pre-\(\lambda\)-anillo; veremos que, en general, no es una estructura de \(\lambda\)-anillo. Si se denota por \(\rho_t\) la sustitución sobre el anillo de las series formales en \(t\) con coeficientes en \(K\) definida por \(\rho_t(t)=t/1-t\), se tiene:
+\[
+  \gamma_t=\rho_t\circ\lambda_t.
+\]
+El automorfismo \(\rho_t\) es funtorial respecto de \(K\), y define un automorfismo del funtor \(\Ghat\) considerado como funtor en grupos abelianos; mediante este automorfismo se puede, por transporte de estructura, definir sobre \(\Ghat\) una nueva estructura de funtor en \(\lambda\)-anillos, que será tal que, para todo \(\lambda\)-anillo \(K\), el homomorfismo \(\gamma_t:K\to\Ghat(K)\) sea un \(\lambda\)-homomorfismo; vamos a explicitar la multiplicación y las operaciones \(\lambda^i\) de esta segunda estructura.
+
+\textbf{3.5.} La multiplicación está definida por el homomorfismo de funtores:
+\[
+  \Ghat\times\Ghat\xrightarrow{(\rho^{-1},\rho^{-1})}
+  \Ghat\times\Ghat\xrightarrow{\circ}\Ghat\xrightarrow{\rho}\Ghat ,
+\]
+donde el signo \(\circ\) denota la multiplicación definida en 2.3. Esta nueva multiplicación se denotará por \(\sisi{v}{\nabla}\). Como de costumbre, está definida por su valor sobre \((1+Xt,1+Yt)\); se tiene, pues:
+\begin{align}
+ (1+Xt)\nabla(1+Yt)
+ &=\rho\!\left(\rho^{-1}(1+Xt)\circ\rho^{-1}(1+Yt)\right) \notag\\
+ &=\rho\!\left(\frac{1+(X+1)t}{1+t}\circ
+                 \frac{1+(Y+1)t}{1+t}\right) \notag\\
+ &=\rho\!\left(\frac{(1+(X+1)(Y+1)t)(1+t)}
+                      {(1+(X+1)t)(1+(Y+1)t)}\right) \notag\\
+ &=\frac{1+(1+X+Y+XY)t}{(1+Xt)(1+Yt)} . \tag{3.5.1}
+\end{align}
+Si \(K\) es un \(\lambda\)-anillo, se tiene, pues, para cualesquiera \(x,y\in K\):
+\begin{equation}\tag{3.5.2}
+  \gamma_t(xy)=\gamma_t(x)\nabla\gamma_t(y).
+\end{equation}
+El \(n\)-ésimo polinomio universal de la ley \(\nabla\) se denotará por \(P'_n\); es un polinomio de \(\mathbb Z[X_i,Y_j]_{1\le i,j\le n}\), cuyas componentes isobáricas tienen pesos que varían de \(n\) a \(2n\) respecto del conjunto de las variables \(X_i,Y_j\), (1.15), y simétrico respecto de estos dos grupos de variables. Para \(x,y\in K\), se tiene, pues:
+\begin{equation}\tag{3.5.3}
+  n\in\mathbb N,\quad \gamma^n(xy)
+  =P'_n(\gamma^1(x),\ldots,\gamma^n(x),
+       \gamma^1(y),\ldots,\gamma^n(y)).
+\end{equation}
+Observemos finalmente que la ley \(\nabla\) admite un elemento unidad, que es \(\rho_t(1+t)\), es decir, \(1/1-t\); se denotará a veces por \(1_\nabla\).
+
+\textbf{3.6.} Las «~operaciones \(\lambda\)~» se definen por el diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=tiny]
+1+K[[t]]^+ \arrow[r,"\lambda_u"] \arrow[d,"\rho_t"'] &
+1+\{1+K[[t]]^+\}[[u]]^+ \arrow[d,"\Ghat(\rho_t)"']\\
+1+K[[t]]^+ \arrow[r,"\lambda'_u"] &
+1+\{1+K[[t]]^+\}[[u]]^+ ,
+\end{tikzcd}
+\tag{3.6.1}
+\]
+es decir, por el morfismo compuesto de funtores:
+\[
+  \lambda' : \Ghat\xrightarrow{\rho_t^{-1}}\Ghat\xrightarrow{\lambda_u}\Ghat\circ\Ghat\xrightarrow{\Ghat(\rho_t)}\Ghat\circ\Ghat ,
+\]
+y se denotarán por \(\lambda'\). Están definidas por su valor para \(1+Xt\); se tiene:
+\[
+\begin{aligned}
+\lambda'_u(1+Xt) &=\Ghat(\rho_t)(\lambda_u(\rho_t^{-1}(1+Xt)))\\
+&=\Ghat(\rho_t)\left(\lambda_u\left(\frac{1+(X+1)t}{1+t}\right)\right)\\
+&=\Ghat(\rho_t)\left(\frac{1_o+\{1+(X+1)t\}u}{1_o+\{1+t\}u}\right)\\
+&=1_\nabla+\frac{\{1+Xt\}u}{1_\nabla+1_\nabla.u}\\
+&=\rho_u^{-1}(1_\nabla+\{1+Xt\}u).
+\end{aligned}
+\]
+Si se denota por \(\gamma'\) las operaciones \(\gamma\) correspondientes a las operaciones \(\lambda'\), se tiene, pues:
+\begin{equation}\tag{3.6.2}
+  \gamma'_u(1+Xt)=1_\nabla+\{1+Xt\}u .
+\end{equation}
+Denotaremos por \(Q'_{i,j}\) el coeficiente de \(t^j\) en \(\gamma'^i(1+\ldots+X_nt^n+\ldots)\); el lector podrá verificar que es un polinomio de \(\mathbb Z[X_1,\ldots,X_{ij}]\), cuyas componentes isobáricas tienen pesos que varían entre \(j\) e \(ij\). Sean \(K\) un \(\lambda\)-anillo, \(x\in K\). Del diagrama (3.6.1), se deducen las relaciones:
+\begin{equation}\tag{3.6.3}
+  \forall i\in\mathbb N,\quad\gamma_t(\lambda^i(x))=\lambda'^i(\gamma_t(x))~;
+  \qquad
+  \gamma_t(\gamma^i(x))=\gamma'^i(\gamma_t(x)).
+\end{equation}
+\begin{equation}\tag{3.6.4}
+  \gamma^j(\gamma^i(x))
+  =Q'_{i,j}(\gamma^1(x),\ldots,\gamma^{ij}(x)).
+\end{equation}
+Obsérvese finalmente que la estructura de pre-\(\lambda\)-anillo que acaba de definirse sobre \(\Ghat\) es una estructura de \(\lambda\)-anillo, puesto que se deduce de la definida en 2.3 mediante el isomorfismo \(\rho\).
+
+\textbf{3.7.} Para evitar confusiones, el funtor \(\Ghat\), provisto de la estructura de funtor en \(\lambda\)-anillos definida en el §2 (resp. en el §3), se denotará por \(\Gcirc\) (resp. \(\Gnabla\)). De las consideraciones precedentes resulta que, para darse una estructura de \(\lambda\)-anillo sobre un anillo \(A\), equivale darse un homomorfismo de anillos \(A\to\Ghat(A)_o\), tal que el diagrama 3.7.1 sea conmutativo, o un homomorfismo de anillos \(A\to\Ghat(A)_\nabla\), tal que el diagrama 3.7.2 sea conmutativo; el primero define las operaciones \(\lambda\), el segundo las operaciones \(\gamma\).
+\[
+\begin{tikzcd}[column sep=tiny]
+A \arrow[r,"\lambda_u"] \arrow[d,"\lambda_t"'] & \Ghat^u(A)_o \arrow[d,"\Ghat^u(\lambda_t)"]\\
+\Ghat^t(A)_o \arrow[r,"\lambda_u"'] & \Ghat^u(\Ghat^t(A)_o)_o
+\end{tikzcd}
+\tag{3.7.1}
+\]
+y
+\[
+\begin{tikzcd}[column sep=tiny]
+A \arrow[r,"\gamma_u"] \arrow[d,"\gamma_t"'] & \Ghat^u(A)_\nabla \arrow[d,"\Ghat^u(\gamma_t)"]\\
+\Ghat^t(A)_\nabla \arrow[r,"\gamma'_u"] & \Ghat^u(\Ghat^t(A)_\nabla)_\nabla.
+\end{tikzcd}
+\tag{3.7.2}
+\]
+
+\textbf{3.8.} Sea \(K\) un anillo binomial (2.7); de (2.6.1) se deducen \(\forall x\in K\) las relaciones:
+\begin{equation}\tag{3.8.1}
+  \gamma_t(x)=(1/1-t)^x
+  =\exp(-x\Log(1-t)).
+\end{equation}
+Sea \(a\) un elemento de \(K\); la multiplicación por \(\gamma_t(a)\) para la ley \(\nabla\) está caracterizada por su valor para \(1+Xt\), a saber:
+\[
+  \gamma_t(a)\nabla(1+Xt)=\rho_t\left(\lambda_t(a)\circ\frac{1+(X+1)t}{1+t}\right)=\rho_t\left(\left(\frac{1+(X+1)t}{1+t}\right)^a\right).
+\]
+\begin{equation}\tag{3.8.2}
+  \gamma_t(a)\nabla(1+Xt)
+  =(1+Xt)^a
+  =\exp(a\Log(1+Xt))
+  =\sum_{n=0}^{\infty}\binom{a}{n}X^nt^n .
+\end{equation}
+En particular, se ve que el \(n\)-ésimo polinomio universal que define la multiplicación por \(\gamma_t(a)\) para la ley \(\nabla\) es el polinomio \(R_{n,a}\) (2.9).
+
+\textbf{Definición 3.9.} Sea \(K\) un \(\lambda\)-anillo; se llama \(K\)-\(\lambda\)-álgebra aumentada al dato de una \(K\)-\(\lambda\)-álgebra \(A\) y de un \(\lambda\)-homomorfismo de \(K\)-álgebras \(A\to K\); un homomorfismo de \(K\)-\(\lambda\)-álgebras aumentadas es un \(\lambda\)-homomorfismo compatible con las aumentaciones.
+
+\textbf{Ejemplo 3.9.1.}: Sea \((X,A)\) un topos localmente anillado por anillos conmutativos, y \(K^\bullet(X)\) el grupo de Grothendieck de la categoría de los haces de \(A\)-módulos localmente libres de tipo finito sobre \(X\). Hemos visto que \(K^\bullet(X)\) puede dotarse de una estructura de pre-\(\lambda\)-anillo (2.2.b, pues todo factor directo de un libre de tipo finito es entonces localmente libre de tipo finito) y que \(H^0(X,\mathbb Z)\) está provisto canónicamente de una estructura de anillo binomial. Se define un \(\lambda\)-homomorfismo de \(H^0(X,\mathbb Z)\) en \(K^\bullet(X)\) de la manera siguiente: sea \(a\) una sección del haz constante \(\mathbb Z\) sobre \(X\); define una partición del objeto final de \(X\) en una suma de abiertos disjuntos \(U_n\), teniendo la sección \(a\) valor \(n\) sobre el abierto \(U_n\); sea entonces \(F\) el haz igual a \(A^n\) sobre \(U_n\) para \(n\ge0\), y a \(0\) sobre \(U_n\) para \(n\le0\), y sea \(F'\) el haz igual a \(A^{-n}\) sobre \(U_n\) para \(n\le0\), y a \(0\) sobre \(U_n\) para \(n\ge0\); se asocia a \(a\) el elemento \(F-F'\) de \(K^\bullet(X)\). Es inmediato verificar que así se obtiene efectivamente un \(\lambda\)-homomorfismo de \(H^0(X,\mathbb Z)\) en \(K^\bullet(X)\); se puede definir entonces la aumentación de \(K^\bullet(X)\) en \(H^0(X,\mathbb Z)\), asociando a todo haz localmente libre de tipo finito su rango, que es una sección de \(\mathbb Z\); la aditividad del rango implica que así se define una función sobre \(K^\bullet(X)\), con valores en \(H^0(X,\mathbb Z)\). Hemos dotado, pues, a \(K^\bullet(X)\) de una estructura de pre-\(\lambda\)-álgebra aumentada. Será siempre esta la considerada en lo que sigue.
+
+\textbf{3.10.} Sea \(A\) una \(K\)-\(\lambda\)-álgebra aumentada. Se define sobre \(A\) una filtración de anillo de la manera siguiente: para todo \(n\ge0\), se denota por \(\Fil^n A\) el ideal generado por los productos:
+\begin{equation}\tag{3.10.1}
+  \gamma^{i_1}(x_1)\cdots\gamma^{i_k}(x_k),
+  \qquad \text{con } i_1+\cdots+i_k\ge n,\ \text{y } \forall i,\ \epsilon(x_i)=0
+\end{equation}
+\((\epsilon:A\to K\) es la aumentación).
+
+Supongamos que \(A\) está generado como grupo abeliano por una familia de elementos \((x_\alpha)_{\alpha\in I}\); entonces \(\Fil^n A\) está generado como \(K\)-módulo por los productos:
+\begin{equation}\tag{3.10.2}
+  \gamma^{i_1}(x_{\alpha_1}-\epsilon(x_{\alpha_1}))\cdots
+  \gamma^{i_k}(x_{\alpha_k}-\epsilon(x_{\alpha_k})),
+  \qquad \text{con } i_1+\cdots+i_k\ge n,\ \text{y } \alpha_i\in I
+\end{equation}
+En efecto, si \(x\) es un elemento de \(A\) de aumentación nula y si se escribe \(x=\sum_i x_{\alpha_i}\), se tiene \(\sum_i \epsilon(x_{\alpha_i})=0\), luego \(x=\sum_i x_{\alpha_i}-\epsilon(x_{\alpha_i})\); por otra parte, si \(a\in A\), se puede escribir \(a=(a-\epsilon(a))+\epsilon(a)=\gamma^1(a-\epsilon(a))+\epsilon(a)\); utilizando las relaciones (3.4.1), se ve, pues, que los elementos de \(\Fil^n A\) son combinaciones lineales con coeficientes en \(K\) de los elementos (3.10.2); como estos están en \(\Fil^n A\), se obtiene el resultado buscado.
+
+La filtración así definida es una filtración de anillo; es decreciente, y se tiene:
+\[
+  \Fil^0A=A~;
+  \qquad \Fil^1A=\Ker\epsilon.
+\]
+Además, es funtorial respecto de \(A\): todo \(\lambda\)-homomorfismo de \(K\)-\(\lambda\)-álgebras aumentadas es compatible con las filtraciones. Cuando consideremos un \(\lambda\)-anillo aumentado como provisto de una filtración, se tratará, salvo mención expresa en contrario, de la filtración precedente.
+
+\textbf{Proposición 3.11.} Sean \(A\) un \(\lambda\)-anillo, e \(y_i\), \(i=1,\dots,n\), elementos de \(A\) tales que \(\lambda^j(y_i)=0\) para \(j\ge2\). Se pone \(x=\sum_i y_i\); entonces:
+\begin{enumerate}[label=\roman*)]
+\item para \(k>n\), se tiene \(\gamma^k(x-n)=0\);
+\item para \(1\le k\le n\), \(\gamma^k(x-n)\) es la \(k\)-ésima función simétrica de los \(y_i-1\).
+\end{enumerate}
+Sea \(j\ge2\). Se tiene entonces \(\gamma^j(y_i-1)=\lambda^j(y_i+j-2)=\sum_{p+q=j}\lambda^p(y_i)\lambda^q(j-2)\). Como \(\lambda^p(y_i)=0\) para \(p\ge2\), y \(\lambda^q(j-2)=0\) para \(q>j-2\), \(\gamma^j(y_i-1)=0\). La proposición resulta entonces de que
+\[
+  \gamma_t(x-n)=\prod_{i=1}^{n}\gamma_t(y_i-1).
+\]
+
+\section*{4. \(\lambda\)-anillos engendrados por generadores y relaciones}
+
+Nos situamos siempre en \(\mathcal C_0\).
+
+\textbf{4.1.} Sea \(K\) un \(\lambda\)-anillo. Se considera una familia de indeterminadas \((X_i)_{i\in I}\), y sea \(A=K[X_i,\lambda^n X_i]_{i\in I,\ n\ge2}\); se quiere definir sobre \(A\) una estructura de \(\lambda\)-anillo que prolongue la de \(K\).
+
+Para darse un homomorfismo \(\lambda_t:A\to\Ghat(A)\), basta darse las imágenes de los \(X_i\), \(\lambda^n X_i\), lo que define un homomorfismo de anillos: \(A\to\Ghat(A)_o\), y para que defina una estructura de \(\lambda\)-anillo sobre \(A\), hay que verificar la conmutatividad del diagrama (3.7.1). Se pone, pues:
+\begin{equation}\tag{4.1.1}
+  \lambda_t(X_i)=1+X_it+\sum_{n\ge2}\lambda^n X_i\,t^n~;
+  \qquad
+  \lambda_t(\lambda^n X_i)=\lambda^n(\lambda_t(X_i)).
+\end{equation}
+Como el diagrama (3.7.1) es un diagrama de homomorfismos de anillos, basta verificar su conmutatividad para los \(X_i\), \(\lambda^n X_i\) (es conocida por hipótesis para los elementos de \(K\)), lo que resulta fácilmente de las definiciones (4.1.1) y de que \(\lambda_u\) y \(\Ghat^u(\lambda_t)\) son \(\lambda\)-homomorfismos.
+
+El \(\lambda\)-anillo \(A\) está caracterizado por la propiedad universal siguiente:
+
+\textbf{Proposición 4.2.} Para toda \(K\)-\(\lambda\)-álgebra \(B\), y toda familia \((b_i)_{i\in I}\) de elementos de \(B\), existe un único \(K\)-\(\lambda\)-homomorfismo \(f\) de \(A\) en \(B\) tal que, para todo \(i\in I\), \(f(X_i)=b_i\).
+
+Para que \(f\) sea un \(\lambda\)-homomorfismo, es necesario que \(f(\lambda^j X_i)=\lambda^j(b_i)\) para cualesquiera \(i,j\); esto define \(f\) de manera única. El homomorfismo así obtenido es efectivamente un \(\lambda\)-homomorfismo, pues para verificar que \(\lambda_t\circ f=\Ghat(f)\circ\lambda_t\) basta verificarlo sobre un sistema de generadores de \(A\) sobre \(K\), lo que resulta de la definición de \(f\) y de las relaciones (2.4.2).
+
+\textbf{4.3.} Se puede hacer la misma construcción utilizando los \(\gamma\) en lugar de los \(\lambda\). Sea \(A'=K[X_i,\gamma^n X_i]_{i\in I,\ n\ge2}\); para definir la estructura de \(\lambda\)-anillo de \(A'\), se da un homomorfismo de anillos: \(A'\to\Ghat(A')_\nabla\), por:
+\begin{equation}\tag{4.3.1}
+  \gamma_t(X_i)=1+X_it+\sum_{n\ge2}\gamma^n X_i\cdot t^n~;
+  \qquad
+  \gamma_t(\gamma^n X_i)=\gamma'^n(\gamma_t(X_i)).
+\end{equation}
+Se verifica después la conmutatividad de (3.7.2), lo que muestra que se obtiene efectivamente una estructura de \(\lambda\)-anillo.
+
+El \(\lambda\)-anillo \(A'\) verifica también la propiedad universal 4.2; es, pues, canónicamente isomorfo (como \(\lambda\)-anillo) al \(\lambda\)-anillo \(A\).
+
+\textbf{Definición 4.4.} El \(\lambda\)-anillo \(A\) se llamará el \(\lambda\)-anillo libre engendrado sobre \(K\) por la familia de generadores \((X_i)_{i\in I}\).
+
+\textbf{Definición 4.5.} Sean \(A\) un \(\lambda\)-anillo, \(J\) un ideal de \(A\). Se dice que \(J\) es un \(\lambda\)-ideal de \(A\) si, para todo \(x\in J\), y todo \(n\ge1\), \(\lambda^n(x)\in J\).
+
+Si \(f:A\to B\) es un \(\lambda\)-homomorfismo, el núcleo de \(f\) es un \(\lambda\)-ideal.
+
+Sea \(J\) un \(\lambda\)-ideal; el homomorfismo compuesto: \(A\xrightarrow{\ \lambda_t\ }\Ghat(A)\longrightarrow\Ghat(A/J)\) se anula sobre \(J\) y se factoriza, pues, por \(A/J\), que queda así provisto de una estructura de \(\lambda\)-anillo, pasando al cociente las relaciones (2.4.2).
+
+Toda intersección de \(\lambda\)-ideales es un \(\lambda\)-ideal. En particular, existe un menor \(\lambda\)-ideal que contiene una familia dada de elementos \((x_i)_{i\in I}\); según las relaciones (2.4.2), es el ideal (ordinario) generado por los \(\lambda^n(x_i)\), \((n\ge1)\).
+
+Sean todavía \(K\) un \(\lambda\)-anillo, \((X_i)_{i\in I}\) una familia de indeterminadas, \(A=K[(X_i),(\lambda^n X_i)]\), y sea \((P_{i'})_{i'\in I'}\) una familia de elementos de \(A\): sea \(J\) el \(\lambda\)-ideal generado por los \(P_{i'}\).
+
+\textbf{Definición 4.6.} El \(\lambda\)-anillo \(A/J\) se llamará \(\lambda\)-anillo engendrado sobre \(K\) por la familia de generadores \((X_i)_{i\in I}\) sometidos a las relaciones \((P_{i'})_{i'\in I'}\).
+
+También pueden darse relaciones entre los \(X_i\), \(\gamma^n X_i\) y hacerse la misma construcción, observando que un ideal es un \(\lambda\)-ideal si, y solo si, es estable para las operaciones \(\gamma^n\), \(n\ge1\), como resulta de las soluciones 3.2.
+
+Sea \(B\) una \(K\)-\(\lambda\)-álgebra, \((b_i)_{i\in I}\) una familia de elementos de \(B\). Como los \(P_{i'}\) son polinomios respecto de las indeterminadas \(X_i\), \(\lambda^n X_i\), se pueden sustituir estas indeterminadas por los \(b_i\), \(\lambda^n(b_i)\); si el elemento obtenido es nulo, se dirá que los \(b_i\) satisfacen las relaciones \(P_{i'}\). La \(K\)-\(\lambda\)-álgebra \(A/J\) está entonces caracterizada por la propiedad universal siguiente:
+
+\textbf{Proposición 4.7.} Para toda \(K\)-\(\lambda\)-álgebra \(B\) y toda familia \((b_i)_{i\in I}\) de elementos de \(B\), que satisfaga las relaciones \((P_{i'})_{i'\in I'}\), existe un único \(K\)-\(\lambda\)-homomorfismo \(A/J\to B\) tal que para todo \(i\), se tenga \(f'(X_i)=b_i\).
+
+En efecto, el núcleo del homomorfismo \(f\) definido en 4.2 contiene los \(P_{i'}\), y por tanto \(J\), puesto que es un \(\lambda\)-ideal; \(f\) pasa, pues, al cociente y define \(f'\), evidentemente único.
+
+\textbf{Proposición 4.8.} Sea \(n\) un entero \(\ge0\); en el \(\lambda\)-anillo libre engendrado sobre \(K\) por una indeterminada \(X\), el ideal generado por los \(\lambda^k X\), \(k>n\), es un \(\lambda\)-ideal.
+
+Pongamos \(A=K[X,\lambda^k X]_{k\ge2}\), y sea \(J\) el ideal generado por los \(\lambda^k X\) para \(k>n\); pongamos \(B=A/J\). Hay que mostrar que el homomorfismo compuesto: \(A\xrightarrow{\ \lambda_t\ }\Ghat(A)\longrightarrow\Ghat(B)\) se anula sobre \(J\), es decir, que \(\lambda_t(\lambda^k X)\), \(k>n\), tiene por imagen \(1\) en \(\Ghat(B)\). Ahora bien, \(\lambda_t(\lambda^k X)=\lambda^k(\lambda_t(X))\), y \(\Ghat(A)\to\Ghat(B)\) es un \(\lambda\)-homomorfismo; basta, pues, mostrar que, para todo anillo \(C\) y toda serie \(\varphi\in\Ghat(C)\), cuyos coeficientes sean nulos en grados \(>n\), \(\lambda^k(\varphi)=1\) si \(k>n\). Pero, para demostrar esta última propiedad, basta mostrarla para \(C=K[X_1,\ldots,X_n]\), y \(\varphi=1+X_1t+\ldots+X_nt^n\). Sumergiendo \(K[X_1,\ldots,X_n]\) en \(K[T_1,\ldots,T_n]\) mediante las funciones simétricas, se puede escribir: \(1+X_1t+\ldots+X_nt^n=\prod_{i=1}^{n}(1+T_it)\), de donde
+\[
+  \lambda_u(1+X_1t+\ldots+X_nt^n)=\prod_{i=1}^{n}\lambda_u(1+T_it)=\prod_{i=1}^{n}\bigl(\underline 1+\{1+T_it\}u\bigr),
+\]
+que es de grado \(n\) en \(u\).
+
+\textbf{Corolario 4.9.} El \(\lambda\)-anillo engendrado sobre \(K\) por el generador \(X\) sometido a las relaciones \(\lambda^k(X)=0\) para \(k>n\), es isomorfo a \(K[X,\ldots,\lambda^n X]\).
+
+\textbf{4.9.1.} Se tendrían los mismos enunciados reemplazando los \(\lambda\) por los \(\gamma\). También se puede reemplazar \(X\) por una familia de indeterminadas \((X_i)_{i\in I}\), sometidas a las relaciones \(\lambda^k(X_i)=0\) para \(k>n_i\), siendo los \(n_i\) enteros \(\ge2\); el \(\lambda\)-anillo obtenido es entonces \(K[X_i,\lambda^k X_i]_{i\in I,\ 2\le k\le n_i}\).
+
+\textbf{4.10.} Sean \(K\) un anillo binomial, y \(A\) una \(K\)-\(\lambda\)-álgebra aumentada. Se denota por \(B=A[X,\gamma^k X]_{k\ge2}\) el \(\lambda\)-anillo libre engendrado por \(X\) sobre \(A\); se define un \(\lambda\)-homomorfismo: \(B\to K\) que prolonga la aumentación de \(A\) enviando \(X\) a \(0\), lo que dota a \(B\) de una estructura de \(K\)-\(\lambda\)-álgebra aumentada. Nos proponemos determinar su filtración (3.10) en función de la de \(A\).
+
+Se gradúa \(B\) por el peso respecto de los \(\gamma^k X\), atribuyéndose a \(\gamma^k X\) el peso \(k\); se denota por \(M_k\) el conjunto de los monomios de peso \(k\) respecto de las indeterminadas \(\gamma^i X\).
+
+\textbf{Lema 4.11.} Sea \(a\in A\); el coeficiente de un monomio de peso \(n\) respecto de los \(\gamma^j X\) en \(\gamma^k(aX)=P'_k(\gamma^i(a),\gamma^j X)\) tiene filtración al menos \(k-n\) (en \(A\)).
+
+El polinomio \(P'_k\) no tiene componentes isobáricas de peso \(<k\) respecto de los \(\gamma^i(a)\), \(\gamma^j X\) (3.5), luego el lema es verdadero si \(a\) tiene aumentación nula. Si \(\epsilon\) denota el homomorfismo de aumentación: \(A\to K\), se puede escribir en el caso general:
+\[
+  \gamma_t(aX)=\gamma_t((a-\epsilon(a))X)\cdot\gamma_t(\epsilon(a)X).
+\]
+Ahora bien, \(\gamma_t(\epsilon(a)X)=(\gamma_t(X))^{\epsilon(a)}=\sum_{n=0}^{\infty}R_{n,a}((\gamma^j X))\cdot t^n\), siendo los \(R_{n,a}\) isobáricos de peso \(n\) respecto de los \(\gamma^j X\) (3.8); se deduce el lema efectuando el producto.
+
+\textbf{Proposición 4.12.} \(\Fil^k B=\Fil^k A+\Fil^{k-1}A\cdot M_1+\cdots+\Fil^0 A\cdot M_k+B\cdot M_{k+1}\).
+
+Está claro que el segundo ideal está contenido en el primero; basta, pues, mostrar la recíproca.
+
+Como la filtración definida por la familia de los ideales del segundo miembro para \(k\) variable es una filtración de anillo, basta mostrar la recíproca para un elemento del tipo \(\gamma^k(b)\), con \(\epsilon(b)=0\), pues estos elementos generan la filtración canónica.
+
+Escribiendo \(b=\sum a_i m_i\), con \(a_i\in A\), y siendo los \(m_i\) monomios respecto de los \(\gamma^j X\), utilizando la aditividad de \(\gamma_t\), se ve que basta hacer la demostración para \(\gamma^k(am_i)\), con \(a\in A\) y \(m_i\in M_i\).
+
+Utilizando el lema 4.11. y el \(A\)-\(\lambda\)-homomorfismo de \(B\) en \(B\) que envía \(X\) a \(m_i\), se ve que basta hacer la demostración para un elemento del tipo \(\gamma^k(m_i)\).
+
+Finalmente, como el polinomio \(P'_k\) no tiene componentes isobáricas de peso \(<k\), se reduce al caso \(\gamma^k(\gamma^j X)\), que resulta a su vez de que los polinomios \(Q'_{j,k}\) no tienen componentes isobáricas de peso \(<k\) (3.6).
+
+\textbf{Observaciones 4.13.} i) La descomposición de \(\Fil^k B\) dada en 4.12 es una descomposición en suma directa de \(A\)-módulos. En otros términos, si \(b\in\Fil^k B\), y si se escribe \(b=\sum_{j\le k}a_{i,j}m_{i,j}+b'\), con \(a_{i,j}\in A\), \(m_{i,j}\in M_j\), y \(b'\in B\cdot M_{k+1}\), entonces \(a_{i,j}\in\Fil^{k-j}A\).
+
+ii) El enunciado 4.12. sigue siendo verdadero para todo cociente de \(B\) por un \(\lambda\)-ideal contenido en el ideal de aumentación.
+
+iii) El enunciado análogo a 4.12. obtenido reemplazando la indeterminada \(X\) por una familia de indeterminadas \((X_i)\) sigue siendo verdadero.
+
+\textbf{Corolario 4.14.} \(\Gr^k B\simeq\Gr^k A\oplus\Gr^{k-1}A\cdot M_1\oplus\cdots\oplus\Gr^0 A\cdot M_k\).
+
+Se define una flecha de derecha a izquierda asociando a todo elemento \(\bar a\cdot m\), donde \(\bar a\) es la clase en \(\Gr^{k-i}A\) de un elemento \(a\) de \(\Fil^{k-i}A\) y \(m\in M_i\), la clase en \(\Gr^k B\) de \(am\). Se define una flecha en sentido inverso por descomposición según la proposición 4.12 y la observación 4.13.i). Está claro que estas dos flechas son inversas una de otra.
+
+\textbf{Corolario 4.15.} Sea \(B'\) el \(\lambda\)-anillo engendrado sobre \(K\) por la indeterminada \(X\) sometida a las relaciones \(\gamma^k(X)=0\) para \(k>n\), es decir, \(B'=K[X,\ldots,\gamma^n X]\) (4.9). Entonces la filtración de \(\lambda\)-anillo de \(B'\) es idéntica a la filtración por el peso respecto de los \(\gamma^j X\).
+
+Teniendo en cuenta la proposición 4.12, la observación 4.13.ii) y el hecho de que \(A=K\), \(\Fil^k B'=K\cdot M_k+B'\cdot M_{k+1}\), luego \(\Fil^k B'\) es el ideal generado por los monomios de peso \(\ge k\) respecto de los \(\gamma^j X\).
+
+\section*{5. Los \(\lambda^p(N,x)\)}
+
+Este parágrafo solo se utilizará en la Exp. VII~4, para el estudio de las inmersiones regulares; puede, pues, omitirse en una primera lectura.
+
+\textbf{5.1.} Sea \(d\) un entero \(\ge1\). Se denota por \(A\) la \(\mathbb Z\)-\(\lambda\)-álgebra engendrada por los generadores \(N\), \(x\) sometidos a las relaciones \(\lambda^i(N)=0\) para \(i>d\); se tiene, pues:
+\[
+  A=\mathbb Z[N,\ldots,\lambda^dN;
+       x,\ldots,\lambda^jx,\ldots].
+\]
+Se pone
+\[
+  \lambda_{-1}(N)=\sum_{i=0}^{d}(-1)^i\lambda^i(N).
+\]
+
+\textbf{Lema 5.2.} Para todo \(p\ge1\), \(\lambda^p(x\cdot\lambda_{-1}(N))\) es divisible por \(\lambda_{-1}(N)\).
+
+Se sabe (2.3) que \(\lambda^p(x\cdot\lambda_{-1}(N))=P_p(\lambda^i x,\lambda^j(\lambda_{-1}(N)))\) es un polinomio isobárico de peso \(p\) respecto de los \(\lambda^j(\lambda_{-1}(N))\); basta, pues, demostrar el lema para los \(\lambda^p(\lambda_{-1}(N))\).
+
+Sea \(B\) el \(\lambda\)-anillo engendrado sobre \(\mathbb Z\) por las indeterminadas \(N_1,\ldots,N_d\), sometidas a las relaciones \(\lambda^i(N_j)=0\) si \(i\ge2\). Está claro que \(\lambda^k(\sum_{i=1}^{d}N_i)=0\) para \(k>d\). Se puede definir, pues, un \(\lambda\)-homomorfismo \(f\) de \(A\) en \(B\), enviando \(N\) a \(\sum_{i=1}^{d}N_i\); se tiene entonces
+\[
+  \Ghat(f)(\lambda_t(N))=\prod_{i=1}^{d}\lambda_t(N_i)=\prod_{i=1}^{d}(1+N_it),
+\]
+lo que muestra que, para \(1\le k\le d\), \(\lambda^k N\) se envía a la \(k\)-ésima función simétrica de los \(N_i\), y por consiguiente que \(f\) es inyectivo e identifica \(A\) con el anillo de los polinomios simétricos en los \(N_i\).
+
+Se tiene entonces \(\lambda_{-1}(N)=\prod_{i=1}^{d}(1-N_i)\), y \(\lambda_t(\lambda_{-1}(N))=\lambda_t\bigl(\prod_{i=1}^{d}(1-N_i)\bigr)\). Los \(\lambda^p(\lambda_{-1}(N))\) son polinomios respecto de los \(N_i\); si para cierto índice \(i\) se pone \(N_i=1\), se ve que \(\lambda_t(\lambda_{-1}(N))\) se convierte en \(\lambda_t(0)=1\), luego que los \(\lambda^p(\lambda_{-1}(N))\) se anulan para \(N_i=1\), y por tanto que contienen \(1-N_i\) como factor. Contienen, pues, el producto de los \(1-N_i\) como factor, es decir, son divisibles por \(\lambda_{-1}(N)\) en \(B\), y por tanto también en \(A\), siendo evidentemente simétrico el cociente de dos polinomios simétricos.
+
+\textbf{5.3.} Como \(A\) es íntegro, se define sin ambigüedad un elemento \(\lambda^p(N,x)\) poniendo (\(p\ge1\)):
+\begin{equation}\tag{5.3.1}
+  \lambda^p(N,x)\cdot\lambda_{-1}(N)=\lambda^p(x\cdot\lambda_{-1}(N)).
+\end{equation}
+El elemento \(\lambda^p(N,x)\) es, pues, un polinomio respecto de los \(\lambda^i(x)\), \(\lambda^j(N)\), isobárico de peso \(p\) respecto de los \(\lambda^i(x)\), pues lo mismo ocurre con \(\lambda^p(x\cdot\lambda_{-1}(N))\) según 2.3.
+
+Sean \(d'\) un entero \(\ge d\), y \(A'\) la \(\mathbb Z\)-\(\lambda\)-álgebra engendrada por los generadores \(N'\) y \(x'\) sometidos a las relaciones \(\lambda^i(N')=0\) para \(i>d'\); según la proposición 4.7, existe un único \(\lambda\)-homomorfismo \(f:A'\longrightarrow A\), que envía \(N'\) a \(N\) y \(x'\) a \(x\). De la definición (5.3.1) resulta que \(f(\lambda^p(N',x'))=\lambda^p(N,x)\) para todo \(p\ge1\).
+
+Si \(B\) es un \(\lambda\)-anillo, y \(N''\) un elemento de \(B\) tal que \(\lambda^k(N'')=0\) para \(k>d\), se puede, para todo \(x''\in B\), definir un elemento \(\lambda^p(N'',x'')\) por sustitución, o también utilizando el único \(\lambda\)-homomorfismo de \(A\) en \(B\) que envía \(N\) a \(N''\), y \(x\) a \(x''\); según la observación precedente, el elemento obtenido no depende del entero \(d\) tal que \(\lambda^k(N'')=0\) para \(k>d\). Utilizando el mismo homomorfismo, se ve que la relación (5.3.1) es verificada por \(N''\) y \(x''\).
+
+\textbf{5.4.} Consideremos el \(\lambda\)-anillo engendrado sobre \(\mathbb Z\) por las indeterminadas \(N,x,y\), sometidas a las relaciones \(\lambda^k(N)=0\) para \(k>d\). De (5.3.1) resulta:
+\begin{align*}
+  \lambda^p(N,x+y)\cdot\lambda_{-1}(N)
+  &=\lambda^p\bigl((x+y)\cdot\lambda_{-1}(N)\bigr)\\
+  &=\sum_{i+j=p}\lambda^i(x\cdot\lambda_{-1}(N))\cdot\lambda^j(y\cdot\lambda_{-1}(N))\\
+  &=\sum_{\substack{i+j=p\\ i,j\ne0}}\lambda^i(N,x)\cdot\lambda^j(N,y)\cdot(\lambda_{-1}(N))^2
+    +(\lambda^p(N,x)+\lambda^p(N,y))\lambda_{-1}N.
+\end{align*}
+Como el anillo considerado es íntegro, se deduce la relación siguiente, válida por sustitución en todo \(\lambda\)-anillo, y para todo elemento \(N\) tal que \(\lambda^k(N)=0\) para \(k>d\):
+\begin{equation}\tag{5.4.1}
+  \lambda^p(N,x+y)=\sum_{\substack{i+j=p\\ i,j\ne0}}\lambda^i(N,x)\cdot\lambda^j(N,y)\cdot\lambda_{-1}(N)+\lambda^p(N,x)+\lambda^p(N,y).
+\end{equation}
+Consideremos ahora el \(\lambda\)-anillo engendrado sobre \(\mathbb Z\) por indeterminadas \(N,N',x\) sometidas a las relaciones \(\lambda^k(N)=0\) para \(k>d\), y \(\lambda^k(N')=0\) para \(k>d'\). Se tiene entonces \(\lambda^k(N+N')=0\) para \(k>d+d'\); se pueden definir, pues, los \(\lambda^p(N+N',x)\). Se obtiene:
+\[
+  \lambda^p(N+N',x)\cdot\lambda_{-1}(N+N')=\lambda^p(x\cdot\lambda_{-1}(N+N')).
+\]
+Por aditividad de \(\lambda_t\), se tiene: \(\lambda_{-1}(N+N')=\lambda_{-1}(N)\cdot\lambda_{-1}(N')\). Se deduce:
+\begin{align*}
+  \lambda^p(N+N',x)\cdot\lambda_{-1}(N)\cdot\lambda_{-1}(N')
+  &=\lambda^p(x\cdot\lambda_{-1}(N)\cdot\lambda_{-1}(N'))\\
+  &=\lambda^p(N',x\cdot\lambda_{-1}(N))\cdot\lambda_{-1}(N').
+\end{align*}
+Como el anillo considerado es íntegro, se deduce la relación siguiente, válida por sustitución en todo \(\lambda\)-anillo, y para cualesquiera elementos \(N,N'\) tales que \(\lambda^k(N)=0\) para \(k>d\), \(\lambda^k(N')=0\) para \(k>d'\):
+\begin{equation}\tag{5.4.2}
+  \lambda^p(N+N',x)\cdot\lambda_{-1}(N)=\lambda^p(N',x\cdot\lambda_{-1}(N)).
+\end{equation}
+
+
+\textbf{5.5.} Sea ahora \(A\) un \(\lambda\)-anillo cualquiera, y \(N\) un elemento de \(A\) tal que \(\lambda^k(N)=0\) para \(k>d\). Vamos a asociar a \(A\) un nuevo \(\lambda\)-anillo \(A_N\).
+
+Se define primero una nueva multiplicación sobre \(A\) poniendo, para \(x,y\in A\):
+\begin{equation}\tag{5.5.1}
+  x\cdot_N y=x\cdot y\cdot\lambda_{-1}(N).
+\end{equation}
+El anillo \(A\) provisto de esta multiplicación ya no tiene unidad; se considera, pues, el anillo \(\mathbb Z\times A\), obtenido adjuntando una unidad a \(A\). Sus operaciones están definidas, pues, por:
+\begin{equation}\tag{5.5.2}
+\begin{aligned}
+  (n,x)+(n',x')&=(n+n',x+x'),\\
+  (n,x)\cdot(n',x')&=(nn',nx'+n'x+\sisi{x\cdot_N y}{x\cdot_N x'}).
+\end{aligned}
+\end{equation}
+Se considera \(A\) sumergido en este anillo mediante \(x\rightsquigarrow(0,x)\). Se define entonces una estructura de pre-\(\lambda\)-anillo por:
+\begin{equation}\tag{5.5.3}
+  \lambda_t(n,x)=(1+t)^n\cdot\sum_{p=0}^{\infty}\lambda^p(N,x)\cdot t^p.
+\end{equation}
+Es una estructura de pre-\(\lambda\)-anillo en virtud de (5.4.1). Se denotará por \(A_N\) el pre-\(\lambda\)-anillo así obtenido. Para ver que es un \(\lambda\)-anillo, basta, por sustitución, hacer la demostración en el caso en que \(A\) sea el \(\lambda\)-anillo engendrado sobre \(\mathbb Z\) por los generadores \(N,X,Y\), sometidos a las relaciones \(\lambda^k(N)=0\) para \(k>d\). Se define entonces un homomorfismo \(A_N\to A\), enviando \((1,0)\) a \(1\), y \((0,x)\) a \(x\cdot\lambda_{-1}(N)\). Es inmediato ver sobre (5.5.1) y (5.3.1) que es un \(\lambda\)-homomorfismo, y, siendo \(A\) íntegro en el caso considerado, se verifica enseguida que es inyectivo; como \(A\) es un \(\lambda\)-anillo, se deduce el resultado.
+
+En el \(\lambda\)-anillo \(A_N\), se pueden definir operaciones \(\gamma\) (3.2). Para \(x\in A\), el valor de \(\gamma^p\) calculado sobre el elemento \((0,x)\) de \(A_N\) está dado por:
+\[
+  \gamma^p(0,x)=\sum_{i=0}^{p-1}\binom{p-1}{i}\lambda^i(N,x),
+\]
+es, pues, un elemento de \(A\); está definido por la relación:
+\begin{equation}\tag{5.5.4}
+  \gamma^p(N,x)\cdot\lambda_{-1}(N)=\gamma^p(x\cdot\lambda_{-1}(N)),
+\end{equation}
+y los polinomios universales que de ella resultan.
+
+
+\textbf{5.6.} Sea \(A\) el \(\lambda\)-anillo engendrado sobre \(\mathbb Z\) por los generadores \(N,L,x\), sometidos a las relaciones \(\lambda^k(N)=0\) para \(k>d\), \(\lambda^k(L)=0\) para \(k>1\). Nos proponemos calcular los \(\lambda^p(N+L,x)\) en función de los \(\lambda^q(N,x)\).
+
+Por definición:
+\[
+  \lambda^p(N+L,x)\cdot\lambda_{-1}(N)\cdot\lambda_{-1}(L)
+  =\lambda^p(x\cdot\lambda_{-1}(N)\cdot\lambda_{-1}(L)),
+\]
+es decir:
+\[
+\begin{aligned}
+1&+\lambda_{-1}(N)\cdot\lambda_{-1}(L)\cdot\sum_{k\ge1}\lambda^k(N+L,x)\cdot t^k \\
+ &=\lambda_t(x\cdot\lambda_{-1}(N))\circ \lambda_t(1-L) \\
+ &=\frac{\lambda_t(x\cdot\lambda_{-1}(N))}{\lambda_{Lt}(x\cdot\lambda_{-1}(N))}
+   \qquad\left(\text{pues }\lambda_t(1-L)=\frac{\lambda_t(1)}{\lambda_t(L)}=\frac{1+t}{1+Lt}\text{, y se aplica }(2.3.2)\right) \\
+ &=\frac{1+\cdots+\lambda^k(x\cdot\lambda_{-1}(N))t^k+\cdots}{1+\cdots+\lambda^k(x\cdot\lambda_{-1}(N))L^k t^k+\cdots} \\
+ &=1+\frac{\sum_{k\ge1}\lambda^k(N,x)\cdot\lambda_{-1}(N)\cdot(1-L^k)t^k}{1+\sum_{k\ge1}\lambda^k(N,x)\cdot\lambda_{-1}(N)\cdot L^k t^k}.
+\end{aligned}
+\]
+Por tanto, \(\lambda^p(N+L,x)\) es el coeficiente de \(t^p\) en la serie:
+\[
+  \frac{\displaystyle\sum_{k\ge1}\lambda^k(N,x)
+        (1+\cdots+L^{k-1})t^k}
+       {\displaystyle 1+\sum_{k\ge1}\lambda^k(N,x)
+        \lambda_{-1}(N)L^k t^k}.
+\]

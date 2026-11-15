@@ -1,0 +1,101 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: corolario 3.4 hasta corolario 3.5.2, líneas 5455--5548 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 3.4.} Sea
+\[
+\begin{tikzcd}[column sep=large]
+X \arrow[rr,"f"] \arrow[dr,"h"'] & & Y \arrow[dl,"g"]\\
+& Z &
+\end{tikzcd}
+\]
+un triángulo conmutativo de topoi anillados, donde se supone que \(X\) tiene suficientes puntos, y sean \(E\in\Ob D(X)\), \(F\in\Ob D(Y)\), y \([a,b]\), \([c,d]\) intervalos de \(\mathbb Z\). Se tiene entonces:
+\[
+  \toramp_f(E)\subset[a,b]\quad\text{y}\quad\toramp_g(F)\subset[c,d]
+\]
+\[
+  \Longrightarrow\toramp_h(E\otimes_Y^{\mathbf L}F)\subset[a+c,b+d].
+\]
+
+\emph{Demostración.} Según (3.3), se trata de mostrar que las relaciones de la izquierda implican
+\[
+  H^i\left(\bigl((E\otimes_Y^{\mathbf L}F)|h^{-1}(Z')\bigr)
+  \otimes_{Z'}^{\mathbf L}M\right)=0
+\]
+para todo \(i\notin[a+c,b+d]\) y todo \(\mathcal O_{Z'}\)-módulo \(M\), donde \(Z'\) es un objeto de \(Z\). Ahora bien, si se pone \(Y'=g^{-1}(Z')\), \(X'=f^{-1}(Y')=h^{-1}(Z')\), se tiene
+\[
+  \bigl((E\otimes_Y^{\mathbf L}F)|X'\bigr)
+  \otimes_{Z'}^{\mathbf L}M
+  \simeq
+  (E|X')\otimes_{Y'}^{\mathbf L}
+  \bigl((F|Y')\otimes_{Z'}^{\mathbf L}M\bigr),
+\]
+y la aserción resulta inmediatamente de las hipótesis.
+
+En particular:
+
+\textbf{Corolario 3.4.1.} Bajo las hipótesis de (3.4),
+\begin{enumerate}[label=\alph*)]
+\item si \(g\) tiene Tor-dimensión \(\leq n\), se tiene
+\[
+  \toramp_f(E)\subset[a,b]\Longrightarrow\toramp_h(E)\subset[a-n,b];
+\]
+\item si \(f\) tiene Tor-dimensión \(\leq m\), se tiene
+\[
+  \toramp_g(F)\subset[c,d]\Longrightarrow\toramp_h(\mathbf Lf^*(F))\subset[c-m,d].
+\]
+\end{enumerate}
+
+\textbf{Observación 3.4.2.} Sean \(f:X\to Y\) un morfismo de Tor-dimensión finita y \(E\in\Ob D(X)\). Entonces, según (3.4.1 a)), si \(E\) tiene amplitud plana finita (en sentido absoluto), \(E\) tiene amplitud plana finita rel. a \(f\). Pero el recíproco es falso, incluso si \(f\) es plano, como muestra el ejemplo de una singularidad de un esquema sobre un cuerpo.
+
+\textbf{Proposición 3.5.} Sean \(S\) un esquema y, para \(i=1,2\), \(f_i:X_i\longrightarrow Y_i\) un \(S\)-morfismo, \(E_i\in\Ob D^{-}(X_i)\), y \([a_i,b_i]\) un intervalo de \(\mathbb Z\). Supongamos que \(X_1\) y \(X_2\), así como \(Y_1\) y \(Y_2\), son Tor-independientes sobre \(S\) (1.5). Pongamos \(a=a_1+a_2\), \(b=b_1+b_2\), \(f=f_1\times_Sf_2:X\to Y\). Entonces:
+\begin{enumerate}[label=\alph*)]
+\item Si \(\toramp_{f_1}(E_1)\subset[a_1,b_1]\) y \(E_2\) es acíclico fuera de \([a_2,b_2]\), \(E_1\otimes_S^{\mathbf L}E_2\) (cf. (1.6)) es acíclico fuera de \([a,b]\).
+\item Si \(\toramp_{f_i}(E_i)\subset[a_i,b_i]\) para \(i=1,2\), se tiene
+\[
+  \toramp_f(E_1\otimes_S^{\mathbf L}E_2)\subset[a,b].
+\]
+\end{enumerate}
+
+\emph{Demostración.} Según (3.3), basta hacer la verificación «en las fibras». Sean \(s\) un punto de \(S\), \(x\) un punto de \(X\) sobre \(s\), \(y=f(x)\), y \(x_i\) (resp. \(y_i\)) la proyección canónica de \(x\) (resp. \(y\)) sobre \(X_i\) (resp. \(Y_i\)). Pongamos
+\[
+  (E_i)_{x_i}=M_i,\quad \mathcal O_{X_i,x_i}=A_i,\quad
+  \mathcal O_{Y_i,y_i}=B_i,\quad \mathcal O_{S,s}=C,
+\]
+\[
+  \mathcal O_{X,x}=A=A_1\otimes_C A_2,\qquad
+  \mathcal O_{Y,y}=B=B_1\otimes_C B_2.
+\]
+Se tiene
+\begin{equation}\tag{$*$}
+  (E_1\otimes_S^{\mathbf L}E_2)_x
+  \simeq
+  M_1\otimes_{A_1}^{\mathbf L}A\otimes_{A_2}^{\mathbf L}M_2.
+\end{equation}
+Por otra parte, las hipótesis de Tor-independencia implican:
+\[
+  A\simeq A_1\otimes_{B_1}^{\mathbf L}B\otimes_{B_2}^{\mathbf L}A_2.
+\]
+Por consiguiente, el segundo miembro de (*) es canónicamente isomorfo, en la categoría derivada \(D(B)\) de los \(B\)-módulos, a \(M_1\otimes_{B_1}^{\mathbf L}B\otimes_{B_2}^{\mathbf L}M_2\). Las relaciones \(\toramp_{f_i}(E_i)\subset[a_i,b_i]\) \((i=1,2)\) implican \(\toramp_{B_i}(M_i)\subset[a_i,b_i]\), y por tanto (I 5.6) \(\toramp_B(M_1\otimes_{B_1}^{\mathbf L}B\otimes_{B_2}^{\mathbf L}M_2)\subset[a,b]\), de donde resulta la aserción b). Por otra parte, si \(\toramp_{f_1}(E_1)\subset[a_1,b_1]\), \(M_1\) es isomorfo a un complejo de \(B_1\)-módulos planos, nulos fuera de \([a_1,b_1]\), y por consiguiente, si \(E_2\) (y por tanto \(M_2\)) es acíclico fuera de \([a_2,b_2]\), \(M_1\otimes_{B_1}^{\mathbf L}B\otimes_{B_2}^{\mathbf L}M_2\) es acíclico fuera de \([a,b]\), de donde resulta la aserción a), lo que concluye la demostración.
+
+\textbf{Corolario 3.5.1.} Bajo las hipótesis de (3.5), si \(f_1\) y \(f_2\) tienen Tor-dimensión finita (3.1), lo mismo ocurre con \(f\).
+
+\textbf{Corolario 3.5.2.} Sea
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"'] \arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+un cuadrado cartesiano de esquemas, donde se supone que \(X\) e \(Y'\) son Tor-independientes sobre \(Y\), y sea \(E\in\Ob D(X)\). Entonces se tiene
+\[
+  \toramp_f(E)\subset[a,b]\Longrightarrow
+  \toramp_{f'}(\mathbf Lg^*(E))\subset[a,b],
+\]
+y por consiguiente el funtor \(\mathbf Lg^*:D^{-}(X)\to D^{-}(X')\) induce un funtor
+\[
+  \mathbf Lg^*:D(f)_{\mathrm{torf}}\longrightarrow D(f')_{\mathrm{torf}} .
+\]

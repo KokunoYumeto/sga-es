@@ -1,0 +1,47 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, número 2.3, líneas 3916--3954 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{2.3. Haces fláccidos}
+
+\textbf{2.3.1.} Recordemos algunas definiciones y resultados de [T.F.]. Sea $X$ un espacio paracompacto. Se dice que un haz de conjuntos $F$ sobre $X$ es \emph{fláccido} si, para todo cerrado $Y$ de $X$, toda sección de $F$ sobre $Y$ se prolonga a una sección de $F$ sobre $X$. Los haces abelianos fláccidos son acíclicos, es decir, si $F$ es fláccido, se tiene $H^i(X,F)=0$ para $i>0$ (T.F. II 4.4.3).
+
+Sea $A$ un haz de anillos sobre $X$. Si $F$ es un $A$-módulo fláccido, $F$ está engendrado por sus secciones (cf. 2.1.1): en efecto, está claro que el homomorfismo $A_X^{(I)}\to F$ definido por $I=H^0(X,F)$ es un epimorfismo. Por otra parte, si $A$ es fláccido, todo $A$-módulo es fláccido (T.F II 3.7.1). Como ejemplos de haces de anillos fláccidos, citemos el haz de las funciones continuas (reales o complejas) sobre un espacio paracompacto, y el haz de las funciones $C^r$ sobre una variedad de clase $C^r$.
+
+\textbf{Proposición 2.3.2.} Sea $S$ un espacio compacto, provisto de un haz de anillos fláccido $A$. Se denota por $\Mod(S)$ la categoría de los $A$-módulos a izquierda, $\mathrm D(S)=\mathrm D(\Mod(S))$.
+\begin{enumerate}[label=\alph*)]
+\item La categoría $\Lib(S)$ (resp. $\Loclib(S)$) (2.0) es levantable en $\Mod(S)$ y cuasiestable (resp. estable) por núcleo de epimorfismo (I 1.2)\footnote{Esta afirmación vale más generalmente para $S$ paracompacto.}.
+\item Sean $E\in\Ob\mathrm D(S)$ y $n\in\mathbb Z$. Para que $E$ sea $n$-pseudocoherente (resp. pseudocoherente), es necesario y suficiente que $E$ lo sea relativamente a $\Lib(S)$ o a $\Loclib(S)$. Los funtores canónicos
+\[
+\mathrm K^{-}(\Lib(S))\longrightarrow \mathrm D(S)
+\]
+y
+\[
+\mathrm K^{-}(\Loclib(S))\longrightarrow \mathrm D(S)
+\]
+son plenamente fieles y tienen por imagen esencial $\mathrm D^{-}(S)_{\coh}$ (I 2.15).
+\item Sean $E\in\Ob\mathrm D(S)$ y $[m,n]$ un intervalo de $\mathbb Z$. Para que $E$ sea de amplitud perfecta contenida en $[m,n]$ (4.8), es necesario y suficiente que exista un cuasiisomorfismo $F\to E$, donde $F$ es un complejo tal que $F^i=0$ para $i\notin[m,n]$, $F^i\in\Ob\Lib(S)$ para $i>m$ y $F^m\in\Ob\Loclib(S)$. El funtor canónico
+\[
+\mathrm K^b(\Loclib(S))\longrightarrow\mathrm D(S)
+\]
+es plenamente fiel y tiene por imagen esencial $\mathrm D(S)_{\parf}$ (4.9).
+\item Denotemos por $\Mod(A(S))$ la categoría de los $A(S)$-módulos a izquierda, y por $\mathrm D(A(S))$ la categoría derivada correspondiente. El funtor
+\[
+H^0(S,.):\Mod(S)\longrightarrow\Mod(A(S))
+\]
+es exacto y una equivalencia de categorías. Además, define equivalencias de categorías:
+\[
+\begin{gathered}
+\mathrm D(S)\longrightarrow\mathrm D(A(S))\\
+\mathrm D^{-}(S)_{\coh}\longrightarrow\mathrm D^{-}(A(S))_{\coh}\\
+\mathrm D(S)_{\parf}\longrightarrow\mathrm D(A(S))_{\parf},
+\end{gathered}
+\]
+entendiéndose las nociones de pseudocoherencia (resp. perfección) en $\mathrm D(A(S))$ relativamente a la categoría de los módulos libres (resp. proyectivos) de tipo finito. Define también una equivalencia de la subcategoría plena de $\mathrm D(S)$ formada por los objetos $n$-pseudocoherentes (resp. de amplitud perfecta contenida en $[m,n]$) sobre la subcategoría plena análoga de $\mathrm D(A(S))$.
+\end{enumerate}
+
+\emph{Demostración.} La primera afirmación de a) resulta de (2.1.2 a)) aplicado tomando por $S$ el topos de los haces de conjuntos sobre $S$, y $\mathcal C'_S=\Mod(S)$ (teniendo en cuenta (2.3.1)). La segunda se deduce de (1.1 a)) (resp. (1.2 a))) con $\mathcal C=\Mod$ (categoría fibrada de los $A$-módulos sobre abiertos variables), $\mathcal C_0=\Lib$ (resp. $\Loclib$), verificándose la condición (ii) de (1.1) según (2.3.1) y (2.1.1.b)). Para la afirmación b), se aplica (1.1 b),c)) (con $\mathcal C$ y $\mathcal C_0$ como anteriormente). La afirmación c) resulta de (1.2.1 b),c),d)), donde $\mathcal C=\Mod$ y $\mathcal C_0=\Lib$. La primera afirmación de d) se deduce, gracias a (2.3.1), de (2.1.2 b) (ii)), donde se toma $\mathcal C'_S=\mathcal C_S=\Mod(S)$. Las demás afirmaciones de d) se deducen de la precedente, teniendo en cuenta b) y c), y el hecho de que el funtor $\Gamma_S$ transforma módulos libres (resp. factores directos de libres) de tipo finito en módulos libres (resp. proyectivos de tipo finito).
+

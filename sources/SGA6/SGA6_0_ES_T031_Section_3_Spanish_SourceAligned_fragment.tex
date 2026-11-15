@@ -1,0 +1,192 @@
+% SGA 6, Exposición 0: fragmento español alineado con la fuente.
+% Alcance: sección 3 completa, antes de la sección 4.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 287--362 inclusive.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\subsection*{3.}
+Mostremos ahora cómo se puede seguir dando sentido a la fórmula (\sisi{2.2}{1.2}) cuando % Canon SGA-SRC-001469
+se abandona la hipótesis de regularidad impuesta a $X,Y$, sustituyéndola por
+una hipótesis de carácter local sobre el morfismo $f$, que precisaremos a
+continuación.
+
+\subsubsection*{3.1}
+Una primera dificultad proviene del hecho de que la observación que había
+servido de punto de partida a la teoría [RRR], a saber, que el grupo $K(X)$
+de las clases de haces sobre $X$ es el mismo tanto si se define en términos
+de haces coherentes como en términos de haces localmente libres, está ligada
+de manera esencial a la hipótesis de regularidad sobre $X$. Cuando $X$ es un
+esquema general (digamos noetheriano, para simplificar), conviene distinguir
+entre estos dos grupos, que denotaremos respectivamente por $K_\bullet(X)$ y
+$K^\bullet(X)$; el primero tiene carácter covariante en $X$ para los
+morfismos propios, y el segundo carácter contravariante en $X$ para los
+morfismos cualesquiera. Obsérvese que $K^\bullet(X)$ está provisto
+naturalmente de una estructura de anillo (e incluso de $\lambda$-anillo
+aumentado), mientras que $K_\bullet(X)$ ya no tiene, en general, una
+estructura de anillo, sino únicamente una estructura de módulo sobre
+$K^\bullet(X)$. El homomorfismo
+$x\mapsto x\,\cl_\bullet(\underline O_X)$ (donde
+$\cl_\bullet(\underline F)$ designa la clase de $\underline F$ en
+$K_\bullet(X)$) de $K^\bullet(X)$ en $K_\bullet(X)$ ya no es, en general,
+un isomorfismo. \uline{Para nuestra formulación del teorema de
+Riemann--Roch generalizado, trabajaremos exclusivamente con $K^\bullet(X)$,
+$K^\bullet(Y)$, con exclusión de $K_\bullet(X)$, $K_\bullet(Y)$}. Como hemos
+señalado en 2.3, estos $\lambda$-anillos aumentados, provistos de su
+$\lambda$-filtración natural, dan lugar a anillos graduados
+$\Gr^\bullet(X)$, $\Gr^\bullet(Y)$, y a homomorfismos «~clases de Chern~»
+\[
+c_i:K^\bullet(X)\longrightarrow \Gr^\bullet(X),
+\]
+y análogamente para $Y$. La dificultad aparece, sin embargo, en la
+definición de un homomorfismo de imagen directa
+\begin{equation}\tag{3.1}
+f_*:K^\bullet(X)\longrightarrow K^\bullet(Y),
+\end{equation}
+que ya no puede definirse mediante la fórmula ingenua
+\[
+f_*(\cl^\bullet(\underline{\sisi{E}{F}}))=\sum_i(-1)^i\cl^\bullet\bigl(R^if_*(\underline F)\bigr), % Canon SGA-SRC-001470
+\]
+pues, aun si $\underline F$ es localmente libre, los módulos
+$R^if_*(\underline F)$ ya no son, en general, localmente libres, ni siquiera
+de tor-dimensión finita, y la fórmula anterior pierde su sentido. El punto
+de vista de las \underline{categorías derivadas} ofrece una solución a esta
+dificultad. En efecto, mientras que los $R^if_*(\underline F)$ son, en
+general, «~malos~» haces, digamos de tor-dimensión infinita, a los que no se
+les podría asociar una clase en $K^\bullet(Y)$, el complejo
+$Rf_*(\underline F)$ sobre $Y$, imagen directa de $\underline F$ en el
+sentido de las categorías derivadas y cuyos haces de cohomología son los
+$R^if_*(\underline F)$, tiende, sin embargo, a ser excelente. Más
+precisamente, supongamos que $\underline F$ tiene tor-dimensión finita sobre
+$\underline O_Y$, lo que ocurrirá si $\underline O_X$ tiene tor-dimensión
+finita sobre $\underline O_Y$ y, además, $F$ es localmente libre. Entonces se
+demuestra (Exp. III) que el complejo $Rf_*(F)$ es «~perfecto~», lo que aquí
+significa: con haces de cohomología coherentes (lo que ya se sabía de todos
+modos) y de tor-dimensión global finita; o también: sobre todo abierto afín
+$U$ de $Y$, este complejo es isomorfo, en la categoría derivada $D(U)$, a un
+complejo de grados acotados y localmente libre de tipo finito en cada grado.
+Desde el punto de vista del álgebra homológica, los complejos perfectos son
+«~tan buenos~» como los módulos localmente libres, de los que constituyen la
+generalización natural. Forman, además, una «~subcategoría triangulada~» de
+la categoría derivada $D(Y)$, es decir, una subcategoría estable bajo los
+conos (o «~cilindros de aplicación~») de morfismos. Por otra parte, a toda
+categoría triangulada $C$ se le asocia un grupo $K(C)$ de clases, variante
+natural de la construcción del grupo de clases de una categoría abeliana,
+tomando el grupo libre engendrado por los objetos de $C$, dividido por las
+relaciones
+\[
+\cl(K)-\cl(K')-\cl(K'')
+\]
+para todo triángulo distinguido
+\[
+\begin{tikzcd}[column sep=large]
+ & K'' \arrow[dl] & \\
+K' \arrow[rr] & & K \arrow[ul]
+\end{tikzcd}
+\]
+Lo que sustituye entonces a la observación fundamental de [RRR] en el caso
+actual es el hecho de que, cuando el esquema $Y$ admite un módulo invertible
+amplio, todo complejo perfecto $L_\bullet$ sobre $Y$ es globalmente (y no
+solo localmente) isomorfo en $D(Y)$ a un complejo $L'$ de grados acotados y
+localmente libre de tipo finito en cada grado (Exp. II); de donde resulta
+fácilmente (Exp. IV) que el homomorfismo canónico
+\[
+K^\bullet(\sisi{X}{Y})\longrightarrow K(\Parf(Y)), % Canon SGA-SRC-001471
+\]
+donde $\Parf(Y)$ es la categoría triangulada de los complejos perfectos sobre
+$Y$, es un isomorfismo. Por tanto, a todo complejo perfecto $L_\bullet$
+sobre $Y$ se le puede asociar una clase
+\[
+\cl^\bullet(L_\bullet)\in K^\bullet(Y),
+\]
+que no es otra que
+\[
+\sisi{\cl}{\cl^\bullet}(L_\bullet)=\sum_i(-1)^i\cl^\bullet(L'_i) % Canon SGA-SRC-001472
+\]
+donde $L'$ es como antes, de modo que los $L'_i$ son efectivamente módulos
+localmente libres sobre $Y$ cuyas clases pueden tomarse en $K^\bullet(Y)$.
+
+Sentado esto, se define un homomorfismo (3.1) siempre que $f:X\to Y$ sea un
+morfismo \underline{propio de tor-dimensión finita} de esquemas noetherianos
+tales que $Y$ admita un módulo invertible amplio, poniendo simplemente
+\begin{equation}\tag{3.2}
+f_*(\cl^\bullet(\underline F))=\cl^\bullet(Rf_*(\underline F))
+\end{equation}
+para todo módulo localmente libre $\underline F$ sobre $X$ (de modo que
+$Rf_*(\underline F)$ es efectivamente un complejo perfecto sobre $Y$, y el
+segundo miembro está definido). Cuando $X$ también admite un módulo
+invertible amplio, $K^\bullet(X)$ puede interpretarse igualmente como
+$K(\Parf(X))$, y el homomorfismo (3.1) no es otro que el asociado, por
+funtorialidad, al funtor exacto de categorías trianguladas inducido por
+\[
+Rf_*:\Parf(X)\longrightarrow \Parf(Y).
+\]
+
+\subsubsection*{3.2}
+Para dar sentido a (1.2), aún queda imponer a $f$ una hipótesis que permita
+dar sentido al homomorfismo (2.5)
+\begin{equation}\tag{3.3}
+f_*:\Gr^\bullet(X)_{\mathbb Q}\longrightarrow \Gr^\bullet(Y)_{\mathbb Q},
+\end{equation}
+es decir, que asegure que el homomorfismo (3.1) que acabamos de definir sea
+(salvo un desplazamiento y módulo torsión) compatible con las filtraciones
+de estos anillos; y queda, finalmente, definir un elemento «~fibrado tangente
+relativo virtual~»
+\[
+T_f\in K^\bullet(X).
+\]
+Para este último, retomando la definición propuesta en 2.1, se ve que hay que
+formular una hipótesis que asegure que (con las notaciones de loc. cit.) el
+módulo conormal $\underline N_{X/X'}$ sea localmente libre. La hipótesis más
+natural a este efecto es que $i$ sea una «~inmersión regular~», es decir, que
+identifique $X$ con un subesquema de $X'$ definido por un ideal que
+localmente pueda definirse mediante una sucesión
+$\underline O_{X'}$-regular de secciones de $\underline O_{X'}$. Esta
+hipótesis, de carácter puramente local, no depende en realidad de la
+factorización elegida de $f$ en una inmersión seguida de un morfismo liso
+(Exp. VIII), y, como antes, lo mismo ocurre con la clase $T_f$ definida por
+la fórmula (\sisi{2.1}{2.2}). Cuando se verifica la hipótesis que acabamos de considerar, % Canon SGA-SRC-001468
+se dice que el morfismo $f$ es un morfismo
+«~\underline{localmente de intersección completa}~»\footnote{También nos
+permitiremos suprimir el vocablo «~localmente~» en esta terminología, lo que
+no puede ocasionar confusión alguna.}. Tal morfismo es, además, localmente de
+tor-dimensión finita.
+
+Si $f$ es un morfismo localmente de intersección completa, se introduce una
+noción natural de «~dimensión relativa virtual~» $d(f)$ mediante la fórmula
+\[
+d(f)(x)=\dim_x\bigl(f'^{-1}(f(x))\bigr)-\codim_x(X,X').
+\]
+Es una función con valores enteros localmente constante en el punto $x\in X$
+y, por tanto, constante si $X$ es conexo; tampoco depende de la factorización
+(2.1). Cuando esta dimensión relativa virtual $d$ es constante, $f$ es
+propio, y $X$ e $Y$ admiten módulos invertibles amplios, se puede demostrar
+(Exp. VIII), aunque dista mucho de ser un resultado trivial, que
+\begin{equation}\tag{3.4}
+f_*\bigl(\operatorname{Filt}^iK^\bullet(X)_{\mathbb Q}\bigr)\subset \operatorname{Filt}^{i-d}K^\bullet(Y)_{\mathbb Q},
+\end{equation}
+de donde se obtiene un homomorfismo (3.3) de grado $-d$.
+
+\subsubsection*{3.3}
+Hemos reunido, pues, todos los elementos de estructura necesarios para dar
+sentido a la fórmula (1.2) \uline{en el caso de un morfismo propio y
+localmente de intersección completa de esquemas noetherianos $X,Y$ que
+admiten ambos módulos invertibles amplios}. Con un poco de cuidado adicional,
+esta formulación conserva además su sentido independientemente de toda
+hipótesis noetheriana.
+
+Bajo esta forma general, esta fórmula de Riemann--Roch se demostrará en Exp.
+VIII. El lector comprobará que la demostración dada en este Seminario
+combina elementos de las dos demostraciones que figuran en [RRR] y de las
+que se habló en la Introducción. La necesidad de recurrir a los métodos de la
+primera de estas demostraciones, que implican más formalismo de
+$\lambda$ que la segunda (seguida en Borel--Serre), se debe a la necesidad de
+una demostración de la inclusión (3.4), cuestión que no se planteaba en el
+marco más restringido de [RRR] y Borel--Serre [2], donde se podía trabajar
+con el anillo de Chow o con el anillo $\Gr^\bullet_{\mathrm{top}}$. De la
+segunda demostración conservamos la introducción del esquema estallado de
+$Y$ a lo largo de $X$ en el caso en que $f$ es una inmersión. Este
+artificio técnico desaparecerá sin duda, y la demostración del caso de una
+inmersión se extenderá al caso en que ya no se postule la existencia de un
+módulo invertible amplio sobre $Y$, una vez resuelta la cuestión planteada
+en Exp. XIV n\textsuperscript{o}~1 sobre la introducción de operaciones de
+potencias exteriores en la categoría derivada $D^-(Y)$.

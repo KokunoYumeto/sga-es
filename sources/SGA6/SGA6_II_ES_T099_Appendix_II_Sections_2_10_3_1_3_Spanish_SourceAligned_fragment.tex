@@ -1,0 +1,83 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, corolario 2.10 y §§3.0--3.1.3, líneas 4729--4804 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 2.10.} Sean $s\in S$ y $V$ una variedad paracompacta. Pongamos $X=S\times V$ y denotemos por $i_s$ la inyección de $V$ en $X$ definida por $s$. Supongamos verificada la hipótesis de (2.5). Sea $E$ un $\cO_X$-módulo (resp. $\cO_X\otimes\mathbb C$-módulo) localmente libre de tipo finito. Existe entonces un entorno $S'$ de $s$ en $S$ tal que $E|X|S'$ sea isomorfo a $\pr_2^*i_s^*(E)$ (siendo $\pr_2:S'\times V\to V$ la segunda proyección).
+
+\emph{Demostración.} Pongamos $F=\pr_2^*i_s^*(E)$. En virtud de (2.4), aplicado al módulo $\underline{\Homop}(E,F)$, el homomorfismo de inducción
+\[
+ \Homop\bigl(i_s^{-1}(E),i_s^{-1}(F)\bigr)
+ \longrightarrow
+ \Homop\bigl(i_s^*(E),i_s^*(F)\bigr)
+\]
+es un epimorfismo. Por otra parte, se tiene (T.F. II 3.3.1):
+\[
+\begin{aligned}
+ \Homop\bigl(i_s^{-1}(E),i_s^{-1}(F)\bigr)
+ &\simeq H^0\bigl(X_s,i_s^{-1}\underline{\Homop}(E,F)\bigr)\\
+ &=\varinjlim_{S'\ni s} H^0\bigl(X|S',\underline{\Homop}(E,F)\bigr)\qquad (S'\ \text{abierto})\\
+ &\simeq \varinjlim_{S'\ni s}\Homop(E|X|S',F|X|S').
+\end{aligned}
+\]
+Por tanto, el isomorfismo canónico $i_s^*(E)\simeq i_s^*(F)$ es inducido por un homomorfismo $f:E\to F$ (reduciendo $S$ si es necesario). Como $f_s$ es un isomorfismo, $f$ es un isomorfismo en un entorno de $X_s$ por Nakayama, y por tanto sobre $X|S'$, donde $S'$ es un entorno conveniente de $s$, q.e.d.
+
+\subsection*{3. El teorema de finitud}
+
+\subsubsection*{3.0. Convenciones y notaciones}
+\textbf{3.0.1.} Sean $X$ e $Y$ dos espacios topológicos. Se denota por $C(X,Y)$ el conjunto de las aplicaciones continuas de $X$ en $Y$, y por $\underline C(X,Y)$ el haz sobre $X$ definido por $U\mapsto C(U,Y)$.
+
+\textbf{3.0.2.} Sean $E,F$ dos espacios de Banach (reales o complejos). Se denota por $\Lop(E,F)$ el espacio de Banach de las aplicaciones lineales continuas de $E$ en $F$.
+
+\textbf{3.0.3.} Las variedades mixtas de las que se tratará en esta sección se supondrán de clase $C^\infty$. Sea $X$ una $S$-variedad mixta; identificaremos con frecuencia un $\cO_X$-módulo (resp. $\cO_X\otimes\mathbb C$-módulo) localmente libre de tipo finito con el fibrado vectorial real (resp. complejo) correspondiente.
+
+\textbf{3.0.4.} Sea $X$ una variedad (ordinaria) compacta, y sea $E$ un fibrado vectorial (real o complejo) de rango finito sobre $X$. Se denota por $C^\infty(X,E)$ el espacio de Fréchet de las secciones (de clase $C^\infty$) sobre $X$ de $E$. Para $r\in\Z$, se denota por $C^r_2(X,E)$ el espacio de Hilbert de las secciones de $E$ $r$ veces diferenciables en $L^2$ ([16]~IX). Para $s\ge r$, $C^s_2(X,E)$ se envía en $C^r_2(X,E)$ mediante una aplicación lineal continua inyectiva de imagen densa, y se tiene (loc. cit.)
+\[
+ C^\infty(X,E)=\varprojlim_r C^r_2(X,E).
+\]
+
+\textbf{3.0.5.} Sea $S$ un espacio topológico. Necesitaremos la noción de «fibrado hilbertiano» sobre $S$, para la cual remitimos al lector a [12] o [14]. Se tiene un funtor aditivo de la categoría de los fibrados hilbertianos (reales, resp. complejos) sobre $S$ en la de los $\cO_S$-módulos, resp. $\cO_S\otimes\mathbb C$-módulos, que asocia a cada fibrado hilbertiano $E$ el haz $\underline E$ de las secciones continuas de $E$.
+
+\subsubsection*{3.1. Resultados técnicos auxiliares}
+\textbf{Lema 3.1.1.} Sean $X,Y$ dos espacios topológicos, siendo $X$ localmente compacto. Denotemos por $\underline C'(X,Y)$ el prehaz definido sobre la base de los abiertos relativamente compactos de $X$ por $\underline C'(X,Y)(U)=C(\bar U,Y)$ (3.0.1). El morfismo canónico de restricción
+\[
+ \underline C'(X,Y)\longrightarrow \underline C(X,Y)
+\]
+induce un isomorfismo sobre los haces asociados.
+
+\emph{Demostración.} Es inmediato.
+
+\textbf{Lema 3.1.2.} Sean $E,F$ dos espacios vectoriales topológicos localmente convexos (sobre $\mathbb C$, para fijar las ideas) y $u:E\to F$ una aplicación lineal continua (resp. continua y de imagen densa). Sea $X$ un espacio compacto. Dotemos a $C(X,E)$ y $C(X,F)$ de la topología de la convergencia uniforme. Entonces la aplicación lineal
+\[
+ u_X:C(X,E)\longrightarrow C(X,F)
+\]
+inducida por $u$ es continua (resp. continua y de imagen densa).
+
+\emph{Demostración.} Está claro que $u_X$ es continua. Por otra parte (Bourbaki, Integración, cap. III \S~2, lemas 1 y 2), el subespacio $C(X,\mathbb C)\otimes_{\mathbb C}E$ de $C(X,E)$ (formado por las aplicaciones continuas de $X$ en $E$ cuyos valores están contenidos en un subespacio vectorial de dimensión finita) es denso; del mismo modo, $C(X,\mathbb C)\otimes_{\mathbb C}F$ es denso en $C(X,F)$. Supongamos que $u$ es continua y de imagen densa. Entonces
+\[
+ u_X(C(X,\mathbb C)\otimes_{\mathbb C}E)=C(X,\mathbb C)\otimes_{\mathbb C}u(E)
+\]
+es denso en $C(X,\mathbb C)\otimes_{\mathbb C}F$; se deduce de ello, tomando las clausuras, que $u_X(C(X,E))$ es denso en $C(X,F)$, q.e.d.
+
+\textbf{3.1.3.} Sean $V$ una variedad compacta, $E$ y $F$ dos fibrados vectoriales complejos\footnote{Para fijar las ideas (resultados análogos en el caso real).} de rango finito sobre $V$, y $n\in\N$. El espacio $\Diff^n_\mathbb C(E,F)$, que se identifica por (1.2.3.1) con
+\[
+ \Homop(P^n(E),F)\simeq C^\infty(V,\underline{\Homop}(P^n(E),F)),
+\]
+está provisto naturalmente de una estructura de espacio de Fréchet. Sea $u\in\Diff^n_\mathbb C(E,F)$; se verifica fácilmente que la aplicación lineal de $C^\infty(V,E)$ en $C^\infty(V,F)$ definida por $u$ es continua. Si $\Lop(C^\infty(V,E),C^\infty(V,F))$ designa el espacio de las aplicaciones lineales continuas de $C^\infty(V,E)$ en $C^\infty(V,F)$, se tiene, por tanto, una aplicación lineal
+\[
+ \varphi:\Diff^n_\mathbb C(E,F)
+ \longrightarrow \Lop(C^\infty(V,E),C^\infty(V,F)).
+\]
+Por otra parte, para $r\in\Z$, $u$ actúa por extensión de escalares ([16]~IX Th.~12) sobre las secciones $C^r_2$ de $E$ y define una aplicación lineal
+\[
+ \varphi_r:\Diff^n_\mathbb C(E,F)
+ \longrightarrow \Lop(C^r_2(V,E),C^{r-n}_2(V,F)).
+\]
+Se verifica fácilmente que:
+\begin{enumerate}[label=(\roman*)]
+\item los $\varphi_r$ son continuos (el espacio de llegada es un espacio de Banach (3.0.2));
+\item $\varphi=\varprojlim\varphi_r$ (es decir, para $u\in\Diff^n_\mathbb C(E,F)$, $\varphi(u)$ es el límite del sistema proyectivo de los $\varphi_r(u)$).
+\end{enumerate}
+(Las afirmaciones precedentes son fáciles a partir de los resultados de (loc. cit.): se reduce inmediatamente a $n=0$; (ii) se deduce entonces directamente de las definiciones, mientras que (i) resulta (tras localizar el problema gracias a una partición de la unidad) de la fórmula que da las derivadas sucesivas de un producto).

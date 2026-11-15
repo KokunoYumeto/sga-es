@@ -1,0 +1,84 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: lema 1.5.1 hasta corolario 1.10, líneas 5199--5275 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Lema 1.5.1.} Sean cuadrados cartesianos de esquemas
+\[
+\begin{tikzcd}
+X \arrow[d] & X' \arrow[l] \arrow[d] & X'' \arrow[l] \arrow[d]\\
+Y & Y' \arrow[l] & Y'' \arrow[l].
+\end{tikzcd}
+\]
+Si \(X\) e \(Y'\) son tor-independientes sobre \(Y\), y si \(X'\) e \(Y''\) son tor-independientes sobre \(Y'\), entonces \(X\) e \(Y''\) son tor-independientes sobre \(Y\).
+
+\emph{Demostración.} Ejercicio fácil sobre la asociatividad del producto tensorial.
+
+\textbf{Notación 1.6.} Sean \(X\) e \(Y\) dos \(S\)-esquemas, \(E\in\Ob D^{-}(X)\), \(F\in\Ob D^{-}(Y)\). Pondremos
+\[
+ E\otimes_S^{\mathbf L}F
+ =
+ L\pr_1^*(E)\otimes^{\mathbf L}L\pr_2^*(F),
+\]
+donde \(\pr_1,\pr_2\) son las dos proyecciones de \(X\times_SY\).
+
+\textbf{Lema 1.7.} Sean \(S\) un esquema y, para \(i=1,2\), \(f_i:X_i\longrightarrow Y_i\) una \(S\)-inmersión cerrada. Se supone que \(X_1\) y \(X_2\), así como \(Y_1\) y \(Y_2\), son tor-independientes sobre \(S\). Entonces, para \(E_i\in\Ob D^{-}(X_i)_{\mathrm{qcoh}}\)\footnote{\(D(X_i)_{\mathrm{qcoh}}\) designa la subcategoría plena de \(D(X_i)\) formada por los complejos de cohomología cuasicoherente.}, existe un isomorfismo canónico
+\[
+ f_{1*}(E_1)\otimes_S^{\mathbf L}f_{2*}(E_2)
+ \xrightarrow{\sim}
+ (f_1\times_Sf_2)_*(E_1\otimes_S^{\mathbf L}E_2).
+\]
+
+\emph{Demostración.} Pongamos \(f_1\times_Sf_2=f\). Se define fácilmente, por adjunción, una flecha canónica
+\[
+ f_{1*}(E_1)\otimes_S^{\mathbf L}f_{2*}(E_2)
+ \longrightarrow
+ f_*(E_1\otimes_S^{\mathbf L}E_2).
+\]
+Demostremos que es un isomorfismo. Como la cuestión es local, se puede suponer que \(S,X_i,Y_i\) son afines de anillos respectivos \(C,A_i,B_i\). Por devissage, se reduce a \(E_i=\mathcal O_{X_i}\). Hay que verificar entonces que
+\[
+ A_1\otimes_{B_1}^{\mathbf L}B\otimes_{B_2}^{\mathbf L}A_2
+ \longrightarrow A
+\]
+es un isomorfismo (se ha puesto \(A=A_1\otimes_C A_2\), \(B=B_1\otimes_C B_2\)). Pero, teniendo en cuenta las hipótesis de tor-independencia, esto resulta inmediatamente de la asociatividad del producto tensorial.
+
+\textbf{Proposición 1.8.} Sean \(S\) un esquema y, para \(i=1,2\), \(f_i:X_i\longrightarrow Y_i\) un \(S\)-morfismo localmente de tipo finito. Se supone que \(X_1\) y \(X_2\), así como \(Y_1\) y \(Y_2\), son tor-independientes sobre \(S\). Sean \([a_i,b_i]\) un intervalo de \(\mathbb Z\), y \(E_i\in\Ob D^{-}(X_i)_{\mathrm{qcoh}}\) un complejo \(a_i\)-pseudocoherente rel. a \(f_i\) y acíclico en grado \(>b_i\). Entonces \(E_1\otimes_S^{\mathbf L}E_2\) es \(a\)-pseudocoherente rel. a \(f\) y acíclico en grado \(>b\), con \(f=f_1\times_Sf_2\), \(a=\operatorname{Sup}(a_1+b_2,a_2+b_1)\), \(b=b_1+b_2\).
+
+\emph{Demostración.} Como la cuestión es local sobre \(X_1\times_SX_2\), se puede suponer que \(f_i\) se factoriza como
+\[
+ X_i\xrightarrow{f'_i}Y'_i\xrightarrow{p_i}Y_i,
+\]
+donde \(f'_i\) es una inmersión cerrada y \(p_i\) un morfismo liso. Poniendo \(f'=f'_1\times_Sf'_2\), hay que mostrar que \(f'_*(E_1\otimes_S^{\mathbf L}E_2)\) es \(a\)-pseudocoherente y acíclico en grado \(>b\). Según (1.5.1), \(Y'_1\) e \(Y'_2\) son tor-independientes sobre \(S\); cambiando las notaciones, se puede suponer, pues, que \(f_i=f'_i\), es decir, que \(f_i\) es una inmersión cerrada. Por hipótesis, \(f_{i*}(E_i)\) es \(a_i\)-pseudocoherente y acíclico en grado \(>b_i\); por tanto, según (I 2.16), \(f_{1*}(E_1)\otimes_S^{\mathbf L}f_{2*}(E_2)\) es \(a\)-pseudocoherente y acíclico en grado \(>b\). Se concluye gracias a (1.7).
+
+\textbf{Corolario 1.9.} Bajo las hipótesis de (1.8), el funtor
+\[
+ \otimes_S^{L}:D^{-}(X_1)\times D^{-}(X_2)\longrightarrow D^{-}(X)
+\]
+induce un funtor
+\[
+ \otimes_S^{L}:D^{-}(f_1)_{\mathrm{coh}}\times D^{-}(f_2)_{\mathrm{coh}}
+ \longrightarrow D^{-}(f)_{\mathrm{coh}}\qquad(\text{cf. }(1.2)).
+\]
+En particular, si \(f_1\) y \(f_2\) son pseudocoherentes (1.2), lo mismo ocurre con \(f\).
+
+\textbf{Corolario 1.10.} Sea
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"'] \arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+un cuadrado cartesiano, con \(f\) localmente de tipo finito. Entonces:
+\begin{enumerate}[label=\alph*)]
+\item Supongamos que \(X\) e \(Y'\) son tor-independientes sobre \(Y\) (1.5). Para \(n\in\mathbb Z\cup\{-\infty\}\), el funtor \(Lg^*:D^{-}(X)\to D^{-}(X')\) induce un funtor
+\[
+ Lg^*:D^{-}(f)_{n\text{-}\coh}\longrightarrow D^{-}(f')_{n\text{-}\coh}.
+\]
+En particular, si \(f\) es \(n\)-pseudocoherente (1.2), lo mismo ocurre con \(f'\).
+
+\item Supongamos que \(h\) es fielmente plano, sean \(n\in\mathbb Z\cup\{-\infty\}\) y \(E\in\Ob D^{-}(X)\) un complejo de cohomología cuasicoherente. Para que \(E\) sea \(n\)-pseudocoherente rel. a \(f\), es necesario y suficiente que \(g^*(E)\) sea \(n\)-pseudocoherente rel. a \(f'\). En particular, para que \(f\) sea \(n\)-pseudocoherente, es necesario y suficiente que \(f'\) lo sea.
+\end{enumerate}
+
+\emph{Demostración.} Teniendo en cuenta (1.2.1 b)), todas las afirmaciones de (1.9) y (1.10) resultan trivialmente de (1.8), salvo la parte «es suficiente» de (1.10 b)). Para esta, como la cuestión es local sobre \(X\), se puede suponer que \(f\) se factoriza en una inmersión cerrada seguida de un morfismo liso. Se reduce entonces, por (1.1.3), al caso en que \(f\) (resp. \(f'\)) es la identidad de \(X\) (resp. \(X'\)). La afirmación resulta entonces, mediante un devissage estándar (cf. I 2.16.2), del hecho de que un haz cuasicoherente \(L\) sobre \(X\) es de tipo finito si y solo si \(g^*L\) es de tipo finito.

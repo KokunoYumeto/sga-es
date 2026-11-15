@@ -1,0 +1,358 @@
+% SGA 6, Exposición I, sección 2 en español, alineada con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 1949--2303.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\section*{2. Complejos pseudocoherentes}
+
+\textbf{2.0.} En esta sección, \(\sisi{S}{\mathcal S}\) designa un sitio, \(S\) un objeto de \(\sisi{S}{\mathcal S}\), \(\mathcal C\) una \(\sisi{S}{\mathcal S}\)-categoría abeliana plana (1.1), y \(\mathcal C_0\) una sub-\(\sisi{S}{\mathcal S}\)-categoría aditiva estrictamente plena de \(\mathcal C\). Se supone que \(\mathcal C_0\) es localmente cuasiestable por núcleo de epimorfismo (1.2) y localmente cuasilevantable en \(\mathcal C\) (1.2).
+
+\textbf{Definición 2.1.} \emph{Sean \(X\in\Ob \sisi{S}{\mathcal S}\), \(E\) un complejo de \(\mathcal C_X\), y \(n\in\mathbb Z\). Diremos que \(E\) es estrictamente \(\mathcal C_0\)-\(n\)-pseudocoherente (resp.\ \(\mathcal C_0\)-pseudocoherente, resp.\ \(\mathcal C_0\)-perfecto) si \(E^i=0\) para \(i\) suficientemente grande y \(E^i\in\Ob\sisi{\mathcal C_{0,S}}{\mathcal C_{0,X}}\) para \(i\geq n\) (resp.\ para todo \(i\), resp.\ para todo \(i\) y \(E^i=0\) para casi todo \(i\)).}
+
+Cuando no haya riesgo de confusión, diremos a veces «~estrictamente \(n\)-pseudocoherente (resp\dots)~» en lugar de «~estrictamente \(\mathcal C_0\)-\(n\)-pseudocoherente (resp\dots)~».
+
+\textbf{Lema 2.1.1.} \emph{Sean \(E\in\Ob\Cpx(\mathcal C_S)\) y \(n\in\mathbb Z\). Si \(E\) es estrictamente \(n\)-pseudocoherente y si \(\Ho^i(E)=0\) para \(i>n\), entonces \(\Ho^n(E)\) es de tipo finito.}
+
+\emph{Demostración.} La sucesión
+\[
+  0\longrightarrow Z^n(E)\longrightarrow E^n\longrightarrow E^{n+1}\longrightarrow\ldots\longrightarrow 0
+\]
+es exacta y \(E^i\in\Ob\mathcal C_0\) para \(i\geq n\). Como \(\mathcal C_0\) es localmente cuasiestable por núcleo de epimorfismo, se sigue que \(Z^n(E)\) es de tipo finito, y por tanto también \(\Ho^n(E)\), que es un cociente suyo.
+
+\textbf{Proposición 2.2.} \emph{Sean \(F\in\Ob\Dpx(\mathcal C_S)\) y \(n\in\mathbb Z\). Entonces}:
+
+\textbf{a)} \emph{Si \(F\) es estrictamente \(n\)-pseudocoherente (relativamente a \(\mathcal C_0\)) y si \(u:E\to F\) es un cuasi-isomorfismo, el conjunto de los \(X\) sobre \(S\) tales que existe un cuasi-isomorfismo \(v:F'\longrightarrow E_X\), con \(F'\) estrictamente \(n\)-pseudocoherente, es un refinamiento de \(S\).}
+
+\textbf{b)} \emph{Las condiciones siguientes son equivalentes}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{el conjunto de los \(X\) sobre \(S\) tales que existe un cuasi-isomorfismo \(u:E\longrightarrow F_X\) de \(\Cpx(\mathcal C_X)\), con \(E\) estrictamente \(n\)-pseudocoherente, es un refinamiento de \(S\)}~;
+\item[\((\mathrm{i}')\)] \emph{la misma condición que (i), pero siendo \(u\) un isomorfismo de \(\Dpx(\mathcal C_X)\)}~;
+\item \emph{el conjunto de los \(X\) sobre \(S\) tales que existe un \(n\)-cuasi-isomorfismo (1.4.3) \(u:E\longrightarrow F_X\) de \(\Cpx(\mathcal C_X)\), con \(E\) estrictamente perfecto, es un refinamiento de \(S\)}~;
+\item[\((\mathrm{ii}')\)] \emph{la misma condición que (ii), pero siendo \(u\) un \(n\)-isomorfismo de \(\Dpx(\mathcal C_X)\)}.
+\end{enumerate}
+
+\emph{Demostración.} a) Existe, para un entero \(i\) suficientemente grande, un \(i\)-cuasi-isomorfismo \(v_i:F'_i\longrightarrow E\), con \(F'_i\) estrictamente \(n\)-pseudocoherente (tómese \(F'_i=0\)). Demostremos que, si \(i>n\), existe, tras refinar \(S\) si es preciso, un \((i-1)\)-cuasi-isomorfismo \(v_{i-1}:F'_{i-1}\longrightarrow E\), con \(F'_{i-1}\) estrictamente \(n\)-pseudocoherente. Según (1.4.4), basta demostrar que \(\Ho^{i-1}(M')\), donde \(M'\) es el cono de \(v_i\), es de \(\mathcal C_0\)-tipo finito. Ahora bien, si \(M''\) designa el cono de \(uv_i\), la hipótesis de que \(u\) es un cuasi-isomorfismo y (1.4.2) implican que se tiene
+\[
+  \Ho^j(M')\qis \Ho^j(M'')\qquad\text{para todo }j,
+\]
+y \(\Ho^j(M')=0\) para \(j\geq i\).
+Por otra parte, la fórmula del cono \(M''{}^j=F'_i{}^{\,j+1}\oplus F^j\) muestra que \(M''\) es estrictamente \((i-1)\)-pseudocoherente. Por tanto, en virtud de (2.1.1), \(\Ho^{i-1}(M'')=\Ho^{i-1}(M')\) es de tipo finito, de donde resulta nuestra afirmación. Por iteración se deduce, y tras refinar \(S\) si es preciso, un \(n\)-cuasi-isomorfismo \(v_n:F'_n\longrightarrow E\), donde \(F'_n\) es estrictamente \(n\)-pseudocoherente. Pero, según (1.4.5), se puede prolongar \(v_n\) a un cuasi-isomorfismo \(v:F'\longrightarrow E\) sin cambiar nada en grado \(\geq n\), y por tanto, en particular, con \(F'\) estrictamente \(n\)-pseudocoherente, lo que demuestra a).
+
+b) La equivalencia de las condiciones (i) y \((\mathrm{i}')\) resulta inmediatamente de a) y de la definición de los isomorfismos de \(\Dpx^-(\mathcal C_X)\). Si \(E\in\Ob\Dpx^-(\mathcal C_S)\) es estrictamente \(n\)-pseudocoherente, existe una sucesión exacta
+\[
+  0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow 0,
+\]
+donde \(E'\) es estrictamente perfecto, y \(E''{}^i=0\) para \(i\geq n\); por consiguiente, \(E'\to E\) es un \(n\)-cuasi-isomorfismo, de donde se obtiene la implicación \((\mathrm{i})\Rightarrow(\mathrm{ii})\). Como la implicación \((\mathrm{ii})\Rightarrow(\mathrm{ii}')\) es trivial, queda demostrar \((\mathrm{ii}')\Rightarrow(\mathrm{i})\). Sea, pues, \(u:E\longrightarrow F\) un \(n\)-isomorfismo de \(\Dpx^-(\mathcal C_S)\), con \(E\) estrictamente perfecto; por tanto, \(u\) está definido por un diagrama de \(\Cpx^-(\mathcal C_S)\)
+\[
+\begin{tikzcd}
+& E' \arrow[dl,"s"'] \arrow[dr,"u'"]\\
+E && F ,
+\end{tikzcd}
+\]
+donde \(s\) es un cuasi-isomorfismo y \(u'\) un \(n\)-cuasi-isomorfismo. En virtud de a), existe, tras refinar \(S\) si es preciso, un cuasi-isomorfismo \(t:E''\longrightarrow E'\), con \(E''\) estrictamente \(n\)-pseudocoherente. Se aplica entonces (1.4.5) para prolongar \(u't:E''\to F\) a un cuasi-isomorfismo \(E'''\longrightarrow F\), con \(E'''\) estrictamente \(n\)-pseudocoherente, lo que demuestra \((\mathrm{ii}')\Rightarrow(\mathrm{i})\) y concluye la demostración de (2.2).
+
+\textbf{Definición 2.3.} \emph{Bajo las hipótesis de (2.2), diremos que \(F\in\Ob\Dpx(\mathcal C_S)\) es \(n\)-\(\mathcal C_0\)-pseudocoherente si \(F\) verifica las condiciones equivalentes b) de (2.2). Diremos que \(F\) es \(\mathcal C_0\)-pseudocoherente si \(F\) es \(n\)-\(\mathcal C_0\)-pseudocoherente para todo \(n\).}
+
+Cuando ello no pueda dar lugar a confusión, nos permitiremos decir a veces \(n\)-pseudocoherente, pseudocoherente, en lugar de \(n\)-\(\mathcal C_0\)-pseudocoherente, \(\mathcal C_0\)-pseudocoherente.
+
+\textbf{Observación 2.3.1.} Sea \(F\in\Ob\Dpx(\mathcal C_S)\) un complejo pseudocoherente. El conjunto de los \(X\) sobre \(S\) tales que existe un cuasi-isomorfismo \(E\longrightarrow F_X\), con \(E\) estrictamente pseudocoherente (2.1), no es en general un refinamiento de \(S\). Sin embargo, veremos más adelante (2.7. a) y Exp.II) casos importantes en los que sí lo es.
+
+La demostración de (2.2 a)) da el resultado siguiente:
+
+\textbf{Proposición 2.4.} Sean \(n,i\in\mathbb Z\), y sea \(u:E\to F\) un \(i\)-cuasi-isomorfismo de \(\Cpx(\mathcal C_S)\), con \(F\) \(n\)-pseudocoherente y \(E\) estrictamente \(n\)-pseudocoherente. Entonces, tras refinar \(S\) si es preciso, existe un triángulo conmutativo de \(\Cpx(\mathcal C_S)\)
+\[
+\begin{tikzcd}
+E \arrow[r,"v"] \arrow[d,"u"'] & E' \arrow[dl,"u'"]\\
+F &
+\end{tikzcd}
+\]
+donde \(E'\) es estrictamente \(n\)-pseudocoherente, \(u'\) un cuasi-isomorfismo y \(v\) un monomorfismo que induce la identidad en grado \(\geq i\).
+
+\textbf{Proposición 2.5.} \textbf{a)} Si \(F\in\Ob\Dpx(\mathcal C_S)\) es \(n\)-pseudocoherente (resp. pseudocoherente), \(F[m]\) es \((n-m)\)-pseudocoherente (resp. pseudocoherente).
+
+\textbf{b)} Sea
+\[
+\begin{tikzcd}
+& G \arrow[dl,"+1"'] & \\
+E \arrow[rr] && F \arrow[ul]
+\end{tikzcd}
+\tag{*}
+\]
+un triángulo distinguido de \(\Dpx(\mathcal C_S)\). Si \(E\) y \(G\) son \(n\)-pseudocoherentes (resp. pseudocoherentes), entonces \(F\) es \(n\)-pseudocoherente (resp. pseudocoherente).
+
+\emph{Demostración.} a) Trivial a partir de las definiciones.
+
+b) Basta, por supuesto, demostrar la afirmación sin la cláusula «respectivamente». El triángulo \((*)\) también puede escribirse
+\[
+\begin{tikzcd}
+& F \arrow[dl,"+1"'] & \\
+G[-1] \arrow[rr] && E \arrow[ul]
+\end{tikzcd}
+\]
+Según a), \(G[-1]\) es \((n+1)\)-pseudocoherente. Quedamos, pues, reducidos a demostrar que, si \(E\) es \((n+1)\)-pseudocoherente y \(F\) es \(n\)-pseudocoherente, entonces \(G\) es \(n\)-pseudocoherente. Tras localizar, podemos suponer que \(E\) (resp. \(F\)) es estrictamente \((n+1)\)-pseudocoherente (resp. \(n\)-pseudocoherente). La flecha \(E\xrightarrow{u}F\) de \(\Dpx^-(\mathcal C_S)\) está definida por un par de flechas de \(\Cpx^-(\mathcal C_S)\)
+\[
+\begin{tikzcd}
+& E' \arrow[dl,"s"'] \arrow[dr,"u'"]\\
+E && F ,
+\end{tikzcd}
+\]
+donde \(s\) es un cuasi-isomorfismo. Según (2.2 a)), existe, tras localizar, un cuasi-isomorfismo \(t:E''\to E'\), donde \(E''\) es estrictamente \((n+1)\)-pseudocoherente. Quedamos, pues, reducidos al caso en que \(u\) está definida por una «verdadera» flecha de \(\Cpx^-(\mathcal C_S)\). La afirmación resulta entonces de las definiciones y de la fórmula \(C(u)^i=E^{i+1}\oplus F^i\), donde \(C(u)\) designa el cono de \(u\).
+
+\textbf{Escolio 2.6.} Por «rotación» de los triángulos, se ve que las propiedades de pseudocoherencia sobre dos de los objetos del triángulo \((*)\) implican otra sobre el tercero. Los distintos casos pueden resumirse en la tabla siguiente (las letras minúsculas designan grados de pseudocoherencia y cada línea corresponde a una implicación cuya conclusión está subrayada):
+\[
+\begin{array}{ccc}
+E&F&G\\[0.2em]
+n+1&n&\underline n\\
+n&\underline n&n\\
+\underline n&n&n-1 .
+\end{array}
+\]
+
+Denotaremos por \(\Dpx(\mathcal C)_{\mathcal C_0\text{-}n\text{-coh}}\) (resp. \(\Dpx(\mathcal C)_{\mathcal C_0\text{-}\mathrm{coh}}\)) la subcategoría fibrada estrictamente plena de \(\Dpx(\mathcal C)\) cuya fibra en cada \(X\in\Ob \sisi{S}{\mathcal S}\) está formada por los objetos de \(\Dpx(\mathcal C_X)\) que son \(n\)-pseudocoherentes (resp. pseudocoherentes) relativamente a \(\mathcal C_0\). La categoría \(\Dpx(\mathcal C)_{\mathcal C_0\text{-}\mathrm{coh}}\) es, en virtud de (2.5), una \emph{sub-\(\sisi{S}{\mathcal S}\)-categoría triangulada} de \(\Dpx(\mathcal C)\) (1.1).
+
+\textbf{Proposición 2.7.} Supongamos que \(\sisi{S}{\mathcal S}\) es un sitio puntual, de modo que \(\mathcal C=\mathcal C_S\), \(\mathcal C_0=\mathcal C_{0,S}\). Entonces:
+
+\textbf{a)} Si \(F\in\Ob\Dpx(\mathcal C)\) es pseudocoherente, existe un cuasi-isomorfismo \(E\longrightarrow F\), con \(E\) estrictamente pseudocoherente (2.1).
+
+\textbf{b)} Denotemos por \(\Kpx^{-,\varnothing}(\mathcal C_0)\) la subcategoría triangulada plena de \(\Kpx^-(\mathcal C_0)\) formada por los complejos acíclicos. El funtor canónico
+\[
+  \Kpx^-(\mathcal C_0)/\Kpx^{-,\varnothing}(\mathcal C_0)
+  \longrightarrow \Dpx(\mathcal C)
+\]
+es plenamente fiel y tiene por imagen esencial \(\Dpx(\mathcal C)_{\mathcal C_0\text{-}\mathrm{coh}}\).
+
+\emph{Demostración.} a) Sea \(F\in\Ob\Dpx(\mathcal C)_{\mathcal C_0\text{-}\mathrm{coh}}\), y supongamos construido un \(i\)-cuasi-isomorfismo (de \(\Cpx(\mathcal C)\)) \(u_i:E_i\longrightarrow F\), con \(E_i\) estrictamente pseudocoherente (esto es posible para \(i\) suficientemente grande con \(E_i=0\)). Sea \(G_i\) el cono de \(u_i\). Se deduce de (1.4.2) y (2.1.1) que \(\Ho^{i-1}(G_i)\) es de \(\mathcal C_0\)-tipo finito. Por tanto, en virtud de (1.4.4), existe un triángulo conmutativo de \(\Cpx(\mathcal C)\)
+\[
+\begin{tikzcd}
+E_i \arrow[r,"v_{i-1}"] \arrow[d,"u_i"'] & E_{i-1} \arrow[dl,"u_{i-1}"]\\
+F &
+\end{tikzcd}
+\]
+donde \(E_{i-1}\) es estrictamente pseudocoherente, \(u_{i-1}\) un \((i-1)\)-cuasi-isomorfismo, y \(v_{i-1}\) un monomorfismo que induce la identidad en grado \(\geq i\). Por paso al límite (cf. demostración de (1.4.5)) se deduce un cuasi-isomorfismo \(u:E\to F\), con \(E\) estrictamente pseudocoherente.
+
+b) Aplicar el criterio ([V] cap. I § 2 4.2 b)(i)) y a).
+
+Obsérvese que la demostración de a) da el resultado más preciso siguiente, que generaliza (1.4.5):
+
+\textbf{Proposición 2.7.1.} Bajo las hipótesis de (2.7), sea \(u:E\to F\) un \(n\)-cuasi-isomorfismo de \(\Cpx(\mathcal C)\), con \(F\) pseudocoherente y \(E\) estrictamente pseudocoherente. Existe entonces un triángulo conmutativo de \(\Cpx(\mathcal C)\)
+\[
+\begin{tikzcd}
+E \arrow[r,"v"] \arrow[d,"u"'] & E' \arrow[dl,"u'"]\\
+F &
+\end{tikzcd}
+\]
+donde \(E'\) es estrictamente pseudocoherente, \(u'\) un cuasi-isomorfismo, y \(v\) un monomorfismo que induce la identidad en grado \(\geq n\).
+
+\textbf{Definición 2.8.} Sean \(n\in\mathbb N\) y \(F\in\Ob\mathcal C_S\). Diremos que \(F\) es de \(n\)-\(\mathcal C_0\)-presentación finita si el conjunto de los \(X\) sobre \(S\) tales que existe una sucesión exacta
+\[
+  E^{-n}\longrightarrow\ldots\longrightarrow E^0\longrightarrow F_X\longrightarrow 0,
+\]
+con \(E^i\in\Ob\mathcal C_{0,X}\) para \(-n\leq i\leq 0\), es un refinamiento de \(S\). Diremos que \(F\) es de \(\infty\)-\(\mathcal C_0\)-presentación finita si \(F\) es de \(n\)-\(\mathcal C_0\)-presentación finita para todo \(n\in\mathbb N\).
+
+Naturalmente, diremos a veces simplemente \(n\)-presentación finita cuando no haya ambigüedad posible sobre \(\mathcal C_0\). Diremos «de presentación finita» en lugar de «de 1-presentación finita», y «de tipo finito» en lugar de «de 0-presentación finita»; esta última noción coincide con la ya introducida en (1.2).
+
+\textbf{Proposición 2.9.} Sean \(n\in\mathbb N\) y \(F\in\Ob\mathcal C_S\). Las condiciones siguientes son equivalentes:
+
+(i) \(F\) es de \(n\)-presentación finita (resp. de \(\infty\)-presentación finita);
+
+(ii) \(F\) es \((-n)\)-pseudocoherente (resp. pseudocoherente).
+
+En el caso en que \(\sisi{S}{\mathcal S}\) sea un sitio puntual, \(F\) es pseudocoherente si y solo si existe una sucesión exacta
+\[
+  \ldots\longrightarrow E^i\longrightarrow\ldots\longrightarrow E^0\longrightarrow F\longrightarrow 0,
+\]
+con \(E^i\in\Ob\mathcal C_0\) para todo \(i\).
+
+\emph{Demostración.} Para la equivalencia \((\mathrm{i})\Leftrightarrow(\mathrm{ii})\), basta evidentemente tratar el caso sin la cláusula «respectivamente». La implicación \((\mathrm{i})\Rightarrow(\mathrm{ii})\) es inmediata a partir de las definiciones, y la implicación \((\mathrm{ii})\Rightarrow(\mathrm{i})\) resulta inmediatamente de (2.4): la flecha \(0\to F\) es un 1-cuasi-isomorfismo, de lo que se deduce (tras localizar si es preciso) un cuasi-isomorfismo \(E\longrightarrow F\), con \(E\) estrictamente \(\sisi{n}{-n}\)-pseudocoherente y \(E^i=0\) para \(i\geq 1\), es decir, una \(n\)-presentación finita de \(F\). La segunda afirmación se demuestra de manera análoga (utilícese (2.7.1)).
+
+\textbf{Proposición 2.10.} \textbf{a)} \emph{Sean \(m,n\in\mathbb Z\), con \(n\leq m\). Si \(F\in\Ob\Dpx^-(\mathcal C_S)\) es \(n\)-pseudocoherente y acíclico en grado \(\geq m\), existe localmente un cuasi-isomorfismo \(E\longrightarrow F\), con \(E\) estrictamente \(n\)-pseudocoherente y \(E^i=0\) para \(i\geq m\). Si \(\sisi{S}{\mathcal S}\) es puntual, y \(F\) es pseudocoherente y acíclico en grado \(\geq m\), existe un cuasi-isomorfismo \(E\longrightarrow F\), con \(E\) estrictamente pseudocoherente y \(E^i=0\) para \(i\geq m\).}
+
+\textbf{b)} \emph{Sea \(F\in\Ob\Dpx^-(\mathcal C_S)\) acíclico en grado \(>n\). Para que \(F\) sea \(n\)-pseudocoherente, es necesario y suficiente que \(\Ho^n(F)\) sea de tipo finito.}
+
+\emph{Demostración.} a) Como \(F\) es acíclico en grado \(\geq m\), la flecha \(0\to F\) es un \(m\)-cuasi-isomorfismo. La afirmación resulta de (2.4) y (2.7.1).
+
+b) Existe un triángulo distinguido de \(\Dpx^-(\mathcal C_S)\):
+\[
+\begin{tikzcd}
+& F' \arrow[dl,"+1"'] & \\
+F \arrow[rr] && \Ho^n(F)[-n] \arrow[ul]
+\end{tikzcd}
+\]
+(para verlo, comiéncese por truncar \(F\), reemplazando \(F^n\) por \(Z^n(F)\) y \(F^i\) por \(0\) para \(i>n\)). La sucesión exacta de cohomología implica \(\Ho^i(F')=0\) para \(i\geq n-1\), luego \(F'\) es \((n-1)\)-pseudocoherente. Se concluye gracias a (2.5) y (2.6).
+
+
+
+% Notación adicional para la continuación de la Exposición I
+\providecommand{\RHom}{\mathrm R\!\Hom}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\coh}{\operatorname{coh}}
+\providecommand{\PreCoh}{\operatorname{precoh}}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\Qis}{\operatorname{Qis}}
+\providecommand{\Rad}{\operatorname{rad}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\End}{\operatorname{End}}
+\providecommand{\Id}{\operatorname{Id}}
+\providecommand{\varinjlim}{\mathop{\mathrm{lim}}\limits_{\longrightarrow}}
+\providecommand{\varprojlim}{\mathop{\mathrm{lim}}\limits_{\longleftarrow}}
+\providecommand{\qcoh}{\operatorname{qcoh}}
+\providecommand{\amp}{\operatorname{amp}}
+
+
+\textbf{Proposición 2.11.} \emph{Sea \(n\in\mathbb Z\).}
+
+\textbf{a)} \emph{Sea \(F\in\Ob\Cpx^-(\mathcal C_S)\). Si, para todo \(i\geq n\) (resp. para todo \(i\)), \(F^i\) es de \((i-n)\)-presentación finita (resp. de \(\infty\)-presentación finita), entonces \(F\) es \(n\)-pseudocoherente (resp. pseudocoherente).}
+
+\textbf{b)} \emph{Sea \(F\in\Ob\Dpx^-(\mathcal C_S)\). Si, para todo \(i\geq n\) (resp. para todo \(i\)), \(\Ho^i(F)\) es de \((i-n)\)-presentación finita (resp. de \(\infty\)-presentación finita), entonces \(F\) es \sisi{pseudocoherente}{\(n\)-pseudocoherente (resp. pseudocoherente)}.}
+
+\emph{Demostración.} Basta tratar las afirmaciones sin la cláusula «respectivamente».
+
+\textbf{a)} Se razona por inducción sobre \(N\), tal que \(F^i\sisi{\neq0}{=0}\) para \(i>n+N\). Si \(N=0\), la afirmación resulta inmediatamente de (2.10 b)). Supongamos \(N\geq1\). Se tiene una sucesión exacta
+\[
+  0\longrightarrow F^{n+N}[-n-N]\longrightarrow F\longrightarrow F'\longrightarrow 0,
+\]
+Por hipótesis de inducción, \(F'\) es \(n\)-pseudocoherente; por otra parte, \(F^{n+N}[-n-N]\) es \(n\)-pseudocoherente por hipótesis (2.9 y 2.5.a)); por tanto, en virtud de (2.5.b)), \(F\) es \(n\)-pseudocoherente.
+
+\textbf{b)} Se razona por inducción sobre \(N\), tal que \(\Ho^i(F)=0\) para \(i>n+N\). Si \(N=0\), la afirmación resulta de (2.10 b)). Supongamos \(N\geq1\). Se tiene un triángulo distinguido de \(\Dpx^-(\mathcal C_S)\) (cf. demostración de (2.10.b))):
+\[
+\begin{tikzcd}
+& F' \arrow[dl,"+1"'] & \\
+F \arrow[rr] && \Ho^{n+N}(F)[-n-N] \arrow[ul]
+\end{tikzcd}
+\]
+La sucesión exacta de cohomología implica
+\[
+  \Ho^i(F')=0\quad\text{para }i\geq n+N-1,\quad\text{es decir, }i>(n-1)+(N-1),
+\]
+y
+\[
+  \Ho^i(F')\qis\Ho^{i+1}(F)\quad\text{para }i<n+N-1 .
+\]
+Por la hipótesis de inducción (aplicada con \(n-1\) en lugar de \(n\)), \(F'\) es, pues, \((n-1)\)-pseudocoherente. Por otra parte, \(\Ho^{n+N}(F)[-n-N]\) es \(n\)-pseudocoherente (2.9 y 2.5.a)). Por tanto, en virtud de (2.6), \(F\) es \(n\)-pseudocoherente.
+
+\textbf{Observación 2.11.1.} Si \(F\) es pseudocoherente, los \(F^i\) (resp. \(\Ho^i(F)\)) no son, en general, pseudocoherentes, ni siquiera de tipo finito. Sin embargo, veremos en el párrafo siguiente, en los sorites sobre las nociones de coherencia, ejemplos importantes en los que la pseudocoherencia de \(F\) implica la de los \(\Ho^i(F)\).
+
+\textbf{Proposición 2.12.} \emph{Sean \(F',F''\in\Ob\Dpx(\mathcal C_S)\), y \(F=F'+F''\). Para que \(F\) sea \(n\)-pseudocoherente (resp. pseudocoherente), es necesario y suficiente que \(F'\) y \(F''\) sean \(n\)-pseudocoherentes (resp. pseudocoherentes).}
+
+\emph{Demostración.} Basta demostrar la afirmación sin la cláusula «respectivamente». La suficiencia es evidente; demostremos la necesidad. Podemos suponer, por inducción, que ya se ha demostrado que \(F'\) y \(F''\) son \((n+1)\)-pseudocoherentes. Tras localizar, podemos incluso suponer que \(F'\) y \(F''\) son estrictamente \((n+1)\)-pseudocoherentes y que \(F=F'+F''\) en \(\Cpx^-(\mathcal C_S)\). Denotemos por \(F'_{>n}\) (resp. \(F'_{\leq n}\)) el complejo deducido de \(F'\) reemplazando \(F'^i\) por \(0\) para \(i\leq n\) (resp. \(i>n\)), y de igual modo \(F''_{>n}\) (resp. \(F''_{\leq n}\))\dots{} Se tiene una sucesión exacta
+\[
+  0\longrightarrow F'_{>n}+F''_{>n}\longrightarrow F
+  \longrightarrow F'_{\leq n}+F''_{\leq n}\longrightarrow 0 .
+\]
+\(F'_{>n}+F''_{>n}\) es estrictamente perfecto y \(F\) es \(n\)-pseudocoherente, por lo que (2.6) \(F'_{\leq n}+F''_{\leq n}\) es \(n\)-pseudocoherente. Esto significa, según (2.10 b)), que
+\[
+  \Ho^n(F'_{\leq n}+F''_{\leq n})
+\]
+es de tipo finito. Pero se tiene
+\[
+  \Ho^n(F'_{\leq n}+F''_{\leq n})
+  =\Ho^n(F'_{\leq n})+\Ho^n(F''_{\leq n}),
+\]
+por tanto, \(\Ho^n(F'_{\leq n})\) (resp. \(\Ho^n(F''_{\leq n})\)) es de tipo finito, y de nuevo gracias a (2.10.b)) \(F'_{\leq n}\) (resp. \(F''_{\leq n}\)) es \(n\)-pseudocoherente. Aplicando (2.5) a la sucesión exacta
+\[
+  0\longrightarrow F'_{>n}\longrightarrow F'\longrightarrow F'_{\leq n}\longrightarrow 0,
+\]
+(resp.\dots), se deduce que \(F'\) (resp. \(F''\)) es \(n\)-pseudocoherente, c.q.d.
+
+\textbf{Proposición 2.13.} Sea \((\sisi{S'}{\mathcal S'},\mathcal C',\mathcal C'_0)\) una terna que satisface las mismas hipótesis (2.0) que \((\sisi{S}{\mathcal S},\mathcal C,\mathcal C_0)\). Sea \(f:\sisi{S'}{\mathcal S'}\to \sisi{S}{\mathcal S}\) un morfismo de sitios ([G] I 1.4), correspondiente a un funtor subyacente \(f^{-1}:\sisi{S}{\mathcal S}\to \sisi{S'}{\mathcal S'}\), y sea
+\[
+  u:\Dpx^*(\mathcal C)\longrightarrow \Dpx^*(\mathcal C')\qquad (*=+,-,b)
+\]
+un funtor cartesiano sobre \(f\), es decir, un \(\sisi{S}{\mathcal S}\)-funtor cartesiano \(\Dpx^*(\mathcal C')\times_{\sisi{S'}{\mathcal S'}}\sisi{S}{\mathcal S}\longleftarrow\Dpx^*(\mathcal C)\). Se supone que \(u\) es exacto en cada fibra y que existen \(a,b\in\mathbb Z\) tales que las condiciones siguientes se verifican para todo \(S\in\Ob \sisi{S}{\mathcal S}\):
+
+(i) si \(E\in\Ob\mathcal C_{0,S}\), \(u(E)\) es \(a\)-\(\mathcal C'_0\)-pseudocoherente (resp. \(\mathcal C'_0\)-pseudocoherente);
+
+(ii) si \(F\in\Ob\Dpx^*(\mathcal C_S)\) es acíclico en grado \(>0\), \(u(F)\) es acíclico en grado \(>b\).
+
+Entonces, si \(F\in\Ob\Dpx^*(\mathcal C_S)\) es \(m\)-pseudocoherente rel. a \(\mathcal C_0\) y acíclico en grado \(>n\), \(u(F)\in\Ob\Dpx^*(\mathcal C'_{S'})\) (donde \(S'=f^{-1}(S)\)) es \(\sup(m+b,n+a)\)-pseudocoherente (rel. a \(\mathcal C'_0\)) (resp. \((m+b)\)-pseudocoherente) y acíclico en grado \(>n+b\).
+
+En particular, en el caso con la cláusula «respectivamente», si \(F\in\Ob\Dpx^*(\mathcal C_S)\) es pseudocoherente (rel. a \(\mathcal C_0\)), \(u(F)\) es pseudocoherente (rel. a \(\mathcal C'_0\)).
+
+\emph{Demostración.} Podemos limitarnos al caso sin la cláusula «respectivamente». Demostremos primero que, si \(F\in\Ob\Dpx^*(\mathcal C_S)\) es estrictamente perfecto (2.1) y tal que \(F^i=0\) para \(i>n\), entonces \(u(F)\) es \((n+a)\)-\(\mathcal C'_0\)-pseudocoherente. Razonemos por inducción sobre el número \(N\) de índices \(i\) tales que \(F^i\neq0\). Si \(N=1\), se tiene \(F=F^p[-p]\) para un \(p\leq n\), luego \(u(F)\) es \((p+a)\)-\(\mathcal C'_0\)-pseudocoherente, y por tanto, a fortiori, \((n+a)\)-pseudocoherente. Si \(N>1\), se tiene una sucesión exacta
+\[
+  0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow 0,
+\]
+donde \(F'\) y \(F''\) son estrictamente perfectos de longitud \(\leq N-1\) y tales que \(F'^i=F''^i=0\) para \(i>n\). Aplicando (2.5.b)) al triángulo distinguido
+\[
+\begin{tikzcd}
+& u(F'') \arrow[dl,"+1"'] & \\
+u(F') \arrow[rr] && u(F) \arrow[ul]
+\end{tikzcd}
+\]
+se deduce de la hipótesis de inducción que \(u(F)\) es \((n+a)\)-pseudocoherente.
+
+Pasemos ahora al caso general: \(F\) es \(m\)-\(\mathcal C_0\)-pseudocoherente y acíclico en grado \(>n\). Tras localizar, podemos, gracias a (2.10.a)), suponer que \(F\) es estrictamente \(m\)-pseudocoherente y que \(F^i=0\) para \(i>n\). Se tiene entonces una sucesión exacta
+\[
+  0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow 0,
+\]
+donde \(F''\) es nulo en grado \(\geq m\), y \(F'\) estrictamente perfecto y nulo en grado \(>n\). En el triángulo distinguido
+\[
+\begin{tikzcd}
+& u(F'') \arrow[dl,"+1"'] & \\
+u(F') \arrow[rr] && u(F) \arrow[ul]
+\end{tikzcd}
+\]
+\(u(F'')\) es acíclico en grado \(\geq m+b\), y por tanto \((m+b)\)-pseudocoherente, y \(u(F')\) es \((n+a)\)-pseudocoherente según lo que hemos visto. Se concluye por (2.5.b)).
+
+\textbf{Corolario 2.14.} \emph{Sea \(\mathcal C_1\) una sub-\(\sisi{S}{\mathcal S}\)-categoría aditiva estrictamente plena de \(\mathcal C\), tal que \(\mathcal C_0\subset\mathcal C_1\subset\mathcal C\). Se supone que todo objeto de \(\mathcal C_1\) es \(\mathcal C_0\)-pseudocoherente. Entonces:}
+
+(i) \emph{\(\mathcal C_1\) es localmente cuasilevantable en \(\mathcal C\) (1.2) y localmente cuasiestable por núcleo de epimorfismo (1.2).}
+
+\emph{(ii) Sean \(S\in\Ob \sisi{S}{\mathcal S}\) y \(F\in\Ob\Dpx(\mathcal C_S)\). Para que \(F\) sea \(n\)-pseudocoherente (resp. pseudocoherente) relativamente a \(\mathcal C_1\), es necesario y suficiente que lo sea relativamente a \(\mathcal C_0\).}
+
+\emph{Demostración.} (i) Sea \(E\to F\) un epimorfismo de \(\mathcal C_S\), con \(F\in\Ob\mathcal C_{1,S}\). Como \(F\) es \(\mathcal C_0\)-pseudocoherente (y por tanto, a fortiori, de \(\mathcal C_0\)-tipo finito), existe (tras localizar si es preciso) un epimorfismo \(E'\to F\), con \(E'\in\Ob\mathcal C_{0,S}\). Utilizando la cuasilevantabilidad de \(\mathcal C_0\) en \(\mathcal C\), podemos suponer (tras localizar de nuevo si es preciso) que este se factoriza a través de \(E\), de donde resulta la cuasilevantabilidad de \(\mathcal C_1\). Por otra parte, si \(E\in\Ob\mathcal C_S\) admite una resolución derecha finita por objetos de \(\mathcal C_1\), \(E\) es \(\mathcal C_0\)-pseudocoherente en virtud de (2.11.a)), y por tanto, a fortiori, de \(\mathcal C_1\)-tipo finito.
+
+(ii) Basta demostrar la necesidad. Para ello se puede aplicar, a elección, (2.11.a)) o (2.13) con \(\sisi{S'}{\mathcal S'}=\sisi{S}{\mathcal S}\), \(\mathcal C'=\mathcal C\), \(f=\text{Identidad}\), \(u=\text{Identidad}\), y \(\mathcal C'_0\) y \(\mathcal C_0\) reemplazadas respectivamente por \(\mathcal C_0\) y \(\mathcal C_1\)).
+
+\textbf{Escolio 2.14.1.} Existe, pues, la mayor sub-\(\sisi{S}{\mathcal S}\)-categoría aditiva estrictamente plena de \(\mathcal C\) que da la misma noción de \(n\)-pseudocoherencia (resp. pseudocoherencia) que \(\mathcal C_0\), a saber, la categoría formada por los objetos \(\mathcal C_0\)-pseudocoherentes. Esta última es localmente estable por núcleo de epimorfismo.
+
+\textbf{Ejemplo 2.15.} Sean \((\sisi{S}{\mathcal S},A)\) un topos anillado y \(\mathcal C,\mathcal C_0\) las \(\sisi{S}{\mathcal S}\)-categorías consideradas en (1.3.d)). La categoría fibrada \(\Dpx(\mathcal C)\) se denotará a menudo por \(\Dpx(\sisi{S}{\mathcal S},A)\), o por \(\Dpx({}_A \sisi{S}{\mathcal S})\) (para sugerir que se trata de \(A\)-módulos a izquierda), o incluso por \(\Dpx(\sisi{S}{\mathcal S})\) si no hay ambigüedad sobre \(A\). Denotaremos por \(S\) el objeto final de \(\sisi{S}{\mathcal S}\) y pondremos \(\Dpx(\mathcal C_S)=\Dpx({}_A \sisi{S}{\mathcal S})\) (o \(\Dpx(\sisi{S}{\mathcal S})\)). Un objeto de \(\Dpx(\sisi{S}{\mathcal S})\) se dirá \(n\)-pseudocoherente (resp. pseudocoherente) si es \(n\)-\(\mathcal C_0\)-pseudocoherente (resp. \(\mathcal C_0\)-pseudocoherente) (lo mismo para las nociones estrictas). La categoría fibrada \(\Dpx(\mathcal C)_{\sisi{n-\mathcal C_0-\coh}{\mathcal C_0\text{-}n\text{-coh}}}\) (resp. \(\Dpx(\mathcal C)_{\mathcal C_0-\coh}\)) (2.6) se denotará por \(\Dpx({}_A \sisi{S}{\mathcal S})_{n-\coh}\) (resp. \(\Dpx({}_A \sisi{S}{\mathcal S})_{\coh}\)). Obsérvese que, en virtud de (2.14), se obtiene la misma noción de pseudocoherencia si se reemplaza \(\mathcal C_0\) por la \(\sisi{S}{\mathcal S}\)-categoría \(\mathcal C_1\) definida por \(U\longmapsto\) (categoría de los \(A_U\)-módulos a izquierda localmente sumandos directos de módulos libres de tipo finito). Si un \(A\)-módulo \(M\) es sumando directo de un \(A\)-módulo libre de tipo finito, no se sigue, en general, que \(M\) sea localmente libre de tipo finito. Sin embargo, se tiene:
+
+\textbf{Lema 2.15.1.} \emph{Supongamos que \(\sisi{S}{\mathcal S}\) verifica una de las dos hipótesis siguientes:}
+
+(i) \emph{\(\sisi{S}{\mathcal S}\) «tiene suficientes puntos» (SGA 4 IV 6.4) y, para todo punto \(s\) de \(\sisi{S}{\mathcal S}\), los \(A_s\)-módulos (a izquierda) proyectivos de tipo finito son libres; esta última condición se cumple, por ejemplo (BOURBAKI, Alg. Comm., cap. II \S~3 n\textsuperscript{o}~2, cor.~2 de la prop. 5), si \(A_s/\operatorname{radical}(A_s)\) es un cuerpo o si \(\operatorname{radical}(A_s)\) es nilpotente;}
+
+(ii) \emph{\((\sisi{S}{\mathcal S},A)\) es un topos «localmente anillado» en el sentido de [1], lo que significa que \(A\) es conmutativo y que, para todo \(X\in\Ob \sisi{S}{\mathcal S}\) y todo \(f\in\Gamma(X,A)\), se tiene \(X=X_f\cup X_{1-f}\), donde \(X_f\) (resp. \(X_{1-f}\)) designa el mayor subobjeto de \(X\) en el que \(f\) (resp. \(1-f\)) es invertible.}
+
+\emph{Entonces, todo sumando directo de un \(A\)-módulo (a izquierda) libre de tipo finito es localmente libre de tipo finito.}
+
+\emph{Demostración.} Supongamos (i). Obsérvese primero que, si \(E\) y \(F\) son dos \(A\)-módulos, siendo \(E\) de presentación finita, la flecha canónica
+\[
+  \Hom(E,F)_s\longrightarrow\Hom(E_s,F_s)
+\]
+es un isomorfismo para todo punto \(s\) de \(\sisi{S}{\mathcal S}\). Se sigue que, si \(E\) y \(F\) son ambos de presentación finita, y si \(E_s\qis F_s\) en un punto \(s\) de \(\sisi{S}{\mathcal S}\), entonces existe un objeto \(s\)-apuntado \(U\) de \(\sisi{S}{\mathcal S}\)\footnote{Es decir, tal que \(s\) se factoriza a través de \(\sisi{S_{/U}}{\mathcal S_{/U}}\).} tal que \(E|U\qis F|U\). La conclusión se deduce inmediatamente.
+
+Supongamos (ii). Sea \(n\in\mathbb N\), denotemos por \(\mathbb D^n\) el funtor sobre la categoría de los topos localmente anillados (pertenecientes a un universo fijado\dots) definido por \(T\longmapsto\Gamma(T,\mathcal O_T)^n\). Se sabe [1] que el funtor \(\underline{\End}_{\mathbb D}(\mathbb D^n)\) está representado por \(M_n=\Spec\mathbb Z[T_{ij}]\ (1\leq i\leq n,\ 1\leq j\leq n)\), provisto del endomorfismo \(U_n\) de \((\mathcal O_{M_n})^n\) definido por la matriz \((T_{ij})\). Sea ahora \(p:A^n\longrightarrow A^n\) un proyector; demostremos que \(p(A^n)\) es localmente libre de tipo finito. Según lo que acabamos de decir, existe un morfismo \(s:\sisi{S}{\mathcal S}\longrightarrow M_n\) de topos localmente anillados tal que \(s^*(\sisi{u_n}{U_n})=p\). Se puede interpretar \(s\) como un punto de \(M_n\) con valores en \(\Gamma(\sisi{S}{\mathcal S},A)\), es decir, una matriz de orden \(n\) con coeficientes en \(\Gamma(\sisi{S}{\mathcal S},A)\); como esta última es un proyector, \(s\) se factoriza a través del subesquema cerrado \(i:P_n\to M_n\) correspondiente a los proyectores en \(\sisi{S}{\mathcal S}\), es decir, \(\sisi{S}{\mathcal S}\xrightarrow{s'}P_n\xrightarrow{i}M_n\). Por tanto, \(p=s'^*i^*(\sisi{u_n}{U_n})\), y con ello se concluye, pues, según la afirmación bajo la hipótesis (i), la imagen de \(i^*(\sisi{u_n}{U_n})\) es un haz localmente libre de tipo finito.
+
+\textbf{Corolario 2.16.} Sea \(f:(\sisi{S'}{\mathcal S'},A')\to(\sisi{S}{\mathcal S},A)\) un morfismo de topos anillados (definido por un funtor \(f^{-1}:\sisi{S}{\mathcal S}\to \sisi{S'}{\mathcal S'}\) y un morfismo de haces de anillos \(f^{-1}(A)\to A'\)). Denotemos por \(\Dpx({}_{A'}\sisi{S'}{\mathcal S'}_A)\) la categoría derivada de la de los \(A'\)-\(A\)-bimódulos (a izquierda sobre \(A'\), a derecha sobre \(A\)), y por
+\[
+  \otimes_A^{\mathrm L}:\Dpx^-(_{A'}\sisi{S'}{\mathcal S'}_A)\times_{\sisi{S'}{\mathcal S'}}\Dpx^-(_A \sisi{S}{\mathcal S})
+  \longrightarrow \Dpx^-(_{A'}\sisi{S'}{\mathcal S'})
+\]
+el funtor derivado del producto tensorial \((E',E)\longmapsto E'\otimes_{f^{-1}(A)} f^{-1}(E)\). Sean \(X\in\Ob \sisi{S}{\mathcal S}\), \(X'=\sisi{u(X)}{f^{-1}(X)}\), \(E'\in\Ob\Dpx^-(_{A'}X'_A)\), \(E\in\Ob\Dpx^-(_A X)\). Entonces, si \(E'\) es \(m'\)-pseudocoherente como objeto de \(\Dpx^-(\sisi{_A}{_{A'}} \sisi{S'}{\mathcal S'})\) y acíclico en grado \(>n'\), y si \(E\) es \(m\)-pseudocoherente y acíclico en grado \(>n\), \(E'\otimes_A^{\mathrm L}E\) es \(\sup(m+n',m'+n)\)-pseudocoherente y acíclico en grado \(>n+n'\).
+
+\emph{Demostración.} Tras reemplazar \(\sisi{S}{\mathcal S}\) por \(\sisi{S_{/X}}{\mathcal S_{/X}}\) si es preciso, podemos suponer \(X=S\), y se aplica (2.13) con \(u=E'\otimes_A^{\mathrm L}:\Dpx^-(_A \sisi{S}{\mathcal S})\to\Dpx^-(_{A'}\sisi{S'}{\mathcal S'})\). Sean \(U\in\Ob \sisi{S}{\mathcal S}\), \(U'=f^{-1}(U)\), y \(E\) un complejo de \(A_U\)-módulos a izquierda. Si \(E\) es acíclico en grado \(>n\), \(E'\otimes_A^{\mathrm L}E\) es acíclico en grado \(>n+n'\) (definición de \(\otimes_A^{\mathrm L}\)); por otra parte, si \(E=(A_U)^p\), entonces \(E'\otimes_A^{\mathrm L}E=(E'|U')^p\), que es \(m'\)-pseudocoherente por hipótesis (y (2.12)). Por tanto, las condiciones de (2.13) se verifican, con \(a=m'\), \(b=n'\), de donde resulta la conclusión.
+
+En particular:
+
+\textbf{Corolario 2.16.1.} Bajo las hipótesis de (2.16), se tiene:
+
+\textbf{a)} El funtor \(\mathrm Lf^*: \Dpx^-(_A \sisi{S}{\mathcal S})\to \Dpx^-(_{A'}\sisi{S'}{\mathcal S'})\) (que no es sino el funtor \(A'\otimes_A^{\mathrm L}\)) induce un funtor
+\[
+  \mathrm Lf^*: \Dpx^-(_A \sisi{S}{\mathcal S})_{\coh}\longrightarrow \Dpx^-(_{A'}\sisi{S'}{\mathcal S'})_{\coh}
+\]
+(notación de (2.6)).
+
+\textbf{b)} Si \(A\) es conmutativo, el funtor \(\otimes_A^{\mathrm L}:\Dpx^-(\sisi{S}{\mathcal S})\times\sisi{_S}{_{\mathcal S}}\Dpx^-(\sisi{S}{\mathcal S})\longrightarrow \Dpx^-(\sisi{S}{\mathcal S})\) induce un funtor
+\[
+  \otimes_A^{\mathrm L}:\Dpx^-(\sisi{S}{\mathcal S})_{\coh}\times\sisi{_S}{_{\mathcal S}}\Dpx^-(\sisi{S}{\mathcal S})_{\coh}
+  \longrightarrow \Dpx^-(\sisi{S}{\mathcal S})_{\coh} .
+\]
+
+\textbf{Ejercicio 2.16.2.} Sean \(\sisi{S}{\mathcal S}\) un topos y \(A\to A'\) un morfismo de anillos de \(\sisi{S}{\mathcal S}\). Se supone una de las hipótesis siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item \(A\to A'\) es sobreyectivo, con núcleo un ideal nilpotente;
+\item el funtor \(A'\otimes_A-\) sobre la categoría de los \(A\)-módulos a izquierda es exacto y fiel.
+\end{enumerate}
+Demostrar que \(E\in\Ob\Dpx^-(_A \sisi{S}{\mathcal S})\) es \(n\)-pseudocoherente (resp. pseudocoherente) si y solo si \(A'\otimes_A^{\mathrm L} E\in\Ob\Dpx^-(_{A'}\sisi{S}{\mathcal S})\) es \(n\)-pseudocoherente (resp. pseudocoherente).
+
+Indicaciones: Demostrar primero que un \(A\)-módulo a izquierda \(L\) es de tipo finito si y solo si \(A'\otimes_A L\) lo es (cf. Bourbaki, Alg. conmutativa, cap. I, § 3, prop. 11 y cap. II, § 3, prop. 4), y reducirse después a este caso mediante truncación, utilizando (2.5) y (2.10 b)).

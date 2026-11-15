@@ -1,0 +1,248 @@
+% SGA 6, Exposición XII: fragmento español alineado con la fuente.
+% Alcance: sección 3 completa, «Démonstration de I : le dévissage de Oort».
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 14324--14468.
+% Las lecturas fuente manifiestamente defectuosas se conservan como primer
+% argumento de \sisi; la lectura coherente usada por la edición es la segunda.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{3. Demostración de I: el dévissage de Oort}
+
+\textbf{Proposición 3.1.} (Oort, Bull. soc. math. France, t. 90-1962).
+Sean $S$ un esquema localmente noetheriano, $f:X\to S$ un morfismo propio y
+$X'\subset X$ un subesquema cerrado. Se supone que:
+\begin{enumerate}[label=\roman*)]
+\item $X'$ está definido por un ideal $I$ contenido en el nilradical $N$ de
+$X$ y $N.I=0$.
+\item $X'$ es plano sobre $S$ y cohomológicamente plano sobre $S$ en
+dimensión $0$ (EGA III 7.8.1).
+\item $I$ es plano sobre $S$ y cohomológicamente plano sobre $S$ en
+dimensiones $0$ y $1$, de modo que (según EGA III 7.4.6) existen un
+$\mathcal O_S$-módulo coherente $Q$ y un isomorfismo funtorial en el
+$\mathcal O_S$-módulo coherente $M$,
+\[
+R^2f_*(I\otimes f^*M)\simeq \Hom_{\mathcal O_S}(Q,M).
+\]
+\item El conúcleo $E$ de $f_*(\mathcal O_{X'})\to R^1f_*(I)$ es un
+$\mathcal O_S$-módulo localmente libre.
+\item El homomorfismo
+$(f_*\mathcal O_X)_{\red}\longrightarrow(f_*\mathcal O_{X'})_{\red}$ es
+sobreyectivo.
+\end{enumerate}
+Entonces el morfismo canónico
+$\Pic_{X/S}\longrightarrow\Pic_{X'/S}$ es representable por un morfismo
+afín de presentación finita; más precisamente, se tiene una sucesión exacta
+canónica de haces f.p.p.f.,
+\[
+0\longrightarrow \mathbb V(E^\vee)\longrightarrow \Pic_{X/S}
+\longrightarrow\Pic_{X'/S}\xrightarrow{u}\mathbb V(Q)
+\]
+y, si $P=\Ker(u)$, el monomorfismo $P\hookrightarrow\Pic_{X'/S}$ es
+representable por una inmersión cerrada y $\Pic_{X/S}$ es un torsor sobre
+$P$ bajo el grupo $\mathbb V(\check E)$ (es decir, la sucesión de haces
+f.p.p.f.
+\[
+0\longrightarrow \mathbb V(\check E)\longrightarrow \Pic_{X/S}
+\longrightarrow P\longrightarrow0
+\]
+es exacta).
+
+Consideremos, para un $S$-esquema $T$, los dos diagramas siguientes, de
+filas exactas:
+\[
+\begin{tikzcd}
+0 \arrow[r] & I_T \arrow[r] & \mathcal O_{X_T} \arrow[r,dash] &
+\mathcal O_{X'_T} \arrow[r] & 0\\
+0 \arrow[r] & I_T \arrow[r,"\alpha",dash] \arrow[u,equal] &
+\mathcal O_{X_T}^{*} \arrow[r] \arrow[u] &
+\mathcal O_{X'_T}^{*} \arrow[r] \arrow[u] & 0 ,
+\end{tikzcd}
+\qquad (\alpha(i)=1+i)
+\]
+y
+\[
+\begin{tikzcd}[column sep=tiny]
+(f_T)_*(\mathcal O_{X'_T}) \arrow[r,"\delta_T"] &
+R^1(f_T)_*(I_T) \arrow[d,equal]\\
+(f_T)_*(\mathcal O_{X'_T}^{*}) \arrow[r,"\delta_T^*"] \arrow[u] &
+R^1(f_T)_*(I_T) \arrow[r] &
+R^1(f_T)_*(\mathcal O_{X_T}^{*}) \arrow[r] &
+\sisi{R'(f_T)_*}{R^1(f_T)_*}(\mathcal O_{X'_T}^{*}) \arrow[r] &
+R^2(f_T)_*(I_T) .
+\end{tikzcd}
+\]
+Adviértase que el cuadrado izquierdo de este diagrama \emph{no es
+necesariamente conmutativo}. Sin embargo, se tiene:
+\[
+\textbf{3.2.}\qquad \im\delta_T^*=\im\delta_T.
+\]
+En efecto, se puede suponer evidentemente que $S$ y $T$ son afines. Tomemos
+un recubrimiento afín $\{V_i\}$ de $X_T$. Sean
+$g\in\Gamma(X_T;\mathcal O_{X'_T}^{*})$ y $g_i$ un levantamiento de
+$g|V_i$ en $\Gamma(V_i;\mathcal O_{X_T}^{*})$. Entonces
+$\delta_T^*(g)$ es igual a la clase del $1$-cociclo
+$\delta_{ij}^*=(g_ig_j^{-1}-1)$; $\delta_T(g)$, a la de
+$\delta_{ij}=(g_i-g_j)=g_j\delta_{ij}^*=g\,\delta_{ij}^*$, y por tanto
+\[
+\delta_T(g)=g\,\delta_T^*(g),
+\]
+teniendo en cuenta la acción de
+$\Gamma(X_T,\mathcal O_{X'_T})$ sobre $I_T$ y, por consiguiente, sobre
+$H^1(X_T,I_T)$.
+
+Según ii), se tiene
+$\Gamma(X_T;\mathcal O_{X'_T})=
+\Gamma(X;\mathcal O_{X'})\otimes_S\Gamma(T,\mathcal O_T)$ y, por tanto,
+$g=\sum g_\beta\otimes t_\beta$, con
+$g_\beta\in\Gamma(X,\mathcal O_{X'})$ y
+$t_\beta\in\Gamma(T,\mathcal O_T)$. Ahora bien, por (v),
+$(f_*\mathcal O_X)_{\red}\longrightarrow
+(f_*\mathcal O_{X'})_{\red}$ es sobreyectivo; por consiguiente,
+$g_\beta=v(h_\beta)+n_\beta$, con
+$h_\beta\in\Gamma(X;\mathcal O_X)$,
+$v:\Gamma(X,\mathcal O_X)\to\Gamma(X,\mathcal O_{X'})$ y
+$n_\beta\in\operatorname{nilrad}(\Gamma(X,\mathcal O_{X'}))$. Según i),
+$(n_\beta\otimes t_\beta)I_T=0$. Por tanto,
+$\delta_T(g)=h\,\delta_T^*(g)$, donde
+$h=\sum v(h_\beta)\otimes t_\beta\in
+\Gamma(X_T,\mathcal O_{X_T})$; de aquí
+$\delta_T^*(g)=h^{-1}\delta_T(g)=\delta_T(h^{-1}g)$ y, por tanto,
+$\im\delta_T^*\subset\im\delta_T$.
+
+Finalmente, sea
+$g=\sum g_\beta\otimes\sisi{t_\alpha}{t_\beta}
+\in\Gamma(X_T,\mathcal O_{X'_T})$. Sea
+$g_\beta=v(\sisi{h}{h_\beta})+n_\beta$, donde
+$n_\beta\in\operatorname{nilrad}
+(\Gamma(X,\sisi{\mathcal O_X}{\mathcal O_{X'}}))$; entonces
+$\delta_T(g)=\delta_T(\sum n_\beta\otimes t_\beta)=
+\delta_T(1+\sum n_\beta\otimes t_\beta)=
+\delta_T^*(1+\sum n_\beta\otimes t_\beta)$, de donde
+$\im\delta_T\subset\im\delta_T^*$.
+
+En virtud de 3.2, iii) y iv), se tiene una sucesión exacta funtorial en $T$:
+\[
+0\longrightarrow \mathbb V(E^\vee)(T)\longrightarrow
+R^1(f_\sisi{t}{T})_*(\mathcal O_{X_T}^{*})
+\longrightarrow
+R^1(f_T)_*(\sisi{\mathcal O_{X'_T}}{\mathcal O_{X'_T}^{*}})
+\longrightarrow
+\mathbb V(Q)(T),
+\]
+que, al pasar a los haces f.p.p.f. asociados, da una sucesión exacta
+\[
+0\longrightarrow \mathbb V(E^\vee)\longrightarrow\Pic_{X/S}
+\longrightarrow\Pic_{X'/S}\xrightarrow{u}\mathbb V(Q).
+\]
+Si $P=\Ker(u)$, el monomorfismo $P\hookrightarrow\Pic_{X'/S}$ se obtiene
+por cambio de base a partir de la sección unidad
+$S\hookrightarrow\mathbb V(Q)$; como $\mathbb V(Q)$ es representable y
+separado, resulta que $P\hookrightarrow\Pic_{X'/S}$ es representable por
+una inmersión cerrada.
+
+Finalmente,
+$0\longrightarrow\mathbb V(E^\vee)\longrightarrow\Pic_{X/S}
+\xrightarrow{w}P\longrightarrow0$ es un torsor para la topología f.p.p.f.;
+a fortiori, gracias al descenso f.p.q.c. a partir de una «escisión» del
+torsor, $w$ es representable por un morfismo afín fielmente plano de
+presentación finita (véase Oort, «~Commutative group schemes~»,
+Proposición (17.4)).
+
+\textbf{Corolario 3.3.} Bajo las condiciones de 3.1, se tiene:
+\begin{enumerate}[label=\roman*)]
+\item Si
+$\Pic_{(\zar)(X'/S)}\to\Pic_{(\fppf)(X'/S)}$ es un isomorfismo, entonces
+$\Pic_{(\zar)(X/S)}\to\Pic_{(\fppf)(X/S)}$ es un isomorfismo.
+\item Suponiendo que el $S$-esquema $T$ es afín, si
+$\Pic(X'_T)\to\Pic_{(\zar)(X'/S)}^{(T)}$ es sobreyectivo, entonces
+$\Pic(X_T)\to\Pic_{(\zar)(X/S)}^{(T)}$ es sobreyectivo.
+\end{enumerate}
+En efecto, (i) resulta del diagrama siguiente de haces para la topología de
+Zariski,
+\[
+\begin{tikzcd}[column sep=small]
+0 \arrow[r] \arrow[d,"S"] & \mathbb V(E^\vee) \arrow[r] \arrow[d,"S"] &
+\Pic_{(\zar)(X/S)} \arrow[r] \arrow[d] &
+\Pic_{(\zar)(X'/S)} \arrow[r] \arrow[d,"S"] &
+\mathbb V(Q) \arrow[d,"S"]\\
+0 \arrow[r] & \mathbb V(E^\vee) \arrow[r,dash] &
+\Pic_{(\fppf)(X/S)} \arrow[r] &
+\Pic_{(\fppf)(X'/S)} \arrow[r] &
+\mathbb V(Q),
+\end{tikzcd}
+\]
+aplicándole el lema de los cinco.
+
+(ii) resulta del siguiente diagrama de filas exactas:
+\[
+\begin{tikzcd}[column sep=small]
+H^1(X_T,I_T) \arrow[r] \arrow[d] &
+H^1(X_T,\mathcal O_{X_T}^{*}) \arrow[r,dash] \arrow[d] &
+H^1(X_T,\mathcal O_{X'_T}^{*}) \arrow[r,dash] \arrow[d] &
+H^2(X_T,I_T) \arrow[d]\\
+H^0(T,R^1(f_T)_*(I_T)) \arrow[r] &
+H^0(T,R^1(f_T)_*\mathcal O_{X_T}^{*}) \arrow[r] &
+H^0(T,R^1(f_T)_*\mathcal O_{X'_T}^{*}) \arrow[r] &
+H^0(T,R^2f_*I_T),
+\end{tikzcd}
+\]
+pues las flechas verticales exteriores son isomorfismos, ya que $T$ es
+afín.
+
+\textbf{Corolario 3.4.} Sean $k$ un cuerpo y $X$ un $k$-esquema propio. Se
+supone que $\Pic_{X_{\red}/k}$ posee un haz invertible universal. (Por
+ejemplo, este será el caso, según la teoría de descenso, si toda componente
+conexa $X'_i$ de $X_{\red}$ posee un punto racional; por ejemplo, si $k$ es
+algebraicamente cerrado o, más generalmente, si el m.c.d. de los grados de
+los $0$-ciclos de todo $X'_i$ es $1$). Entonces, sobre todo abierto afín
+$V$ de $\Pic_{X/k}$, existe un haz invertible universal sobre
+$X\times_kV$.
+
+Finalmente, se demuestra I en la forma más precisa siguiente:
+
+\textbf{Proposición 3.5.} Sean $S$ un esquema noetheriano íntegro y
+$f:X\hookrightarrow Y$ una inmersión nilpotente de $S$-esquemas propios.
+Entonces existe un abierto no vacío $V$ de $S$ tal que el morfismo
+\[
+f^*:\Pic_{Y/S}|V\longrightarrow\Pic_{X/S}|V
+\]
+sea representable por un morfismo afín de presentación finita; de hecho,
+$N=\Ker f^*$ es un esquema de grupos afines con fibras unipotentes (en el
+sentido de SGA 3 XVII).
+
+En efecto, $X$ está definido por un ideal nilpotente $I$. Entonces $I$
+posee una filtración por ideales
+$I_0=I\supset I_1\supset\cdots\supset I_n=0$ tales que
+$NI_i\subset I_{i-1}$, donde $N$ es el nilradical de $\mathcal O_Y$ (por
+ejemplo, $I_k=N^kI$). Sea $X_i$ el subesquema de $Y$ definido por $I_i$.
+Por recurrencia, basta estudiar las inmersiones
+$X_i\hookrightarrow X_{i-1}$. Se puede suponer, por tanto, que $N.I=0$;
+esta es la condición i) de 3.1, y se concluye reduciéndose al caso en que se
+verifican también las demás condiciones (ii) a (v). Gracias al teorema de
+planitud genérica (EGA IV 6.9.1), aplicado\sisi{}{, con las notaciones de 3.1,} a $\mathcal O_{X'}$, a los % Canon SGA-SRC-001315
+$R^if_*(I)$ y a $E$, y teniendo en cuenta las relaciones de Künneth EGA III
+6.9.9, se puede suponer, tras restringir $S$, que se verifican las
+condiciones ii), iii) y iv).
+
+Existe una extensión finita $K$ de $k(S)$ tal que
+$(f_K)_*(\mathcal O_{X'_K})$ tenga todas sus extensiones residuales
+triviales. Si $S'$ es un esquema íntegro finito y plano sobre un abierto
+$V$ de $S$, con cuerpo de funciones $k(S')=K$, existe un abierto $V'$ de
+$S'$ tal que
+\[
+\bigl[(f_{S'})_*(\mathcal O_{X'_{S'}})\bigr]_{\red}
+\simeq
+\bigl[(f_{S'})_*(\mathcal O_{X_{S'}})\bigr]_{\red}
+\]
+sobre $V'$; tras restringir $S$ y $S'$, se puede suponer $S=V$ y $S'=V'$.
+Como la afirmación que se ha de demostrar es local para la topología
+f.p.q.c., se puede reemplazar $S$ por $S'$. Finalmente, se aplica 3.1.
+
+\textbf{3.6. Observación.} Se deduce asimismo, teniendo en cuenta las
+sucesiones exactas
+$\Pic_{X_{i-1}/S}\longrightarrow\Pic_{X_i/S}\longrightarrow\mathbb V(Q_i)$,
+que para todo $s\in S$
+\[
+\coker\bigl(\Pic^0_{X_s/s}\longrightarrow\Pic^0_{Y_s/s}\bigr)
+\]
+es un grupo unipotente.

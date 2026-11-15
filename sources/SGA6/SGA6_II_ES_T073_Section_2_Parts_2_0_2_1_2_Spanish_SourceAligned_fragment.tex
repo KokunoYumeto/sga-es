@@ -1,0 +1,88 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.0--2.1.2, líneas 3592--3671 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{2. Aplicación a ciertas categorías de módulos}
+\subsection*{2.0. Notaciones}
+Sea $(\sisi{S}{\mathcal S},A)$ un topos anillado. Para $U\in\Ob \sisi{S}{\mathcal S}$, se denota por $\Mod(U)$ la categoría de los $A_U$-módulos a izquierda, y por $\Lib(U)$ (resp. $\Loclib(U)$) la subcategoría plena de $\Mod(U)$ formada por los $A_U$-módulos libres (resp. localmente factores directos de libres) de tipo finito.
+
+\subsection*{2.1. Lemas de levantamiento}
+
+\textbf{Lema 2.1.1} (cf. EGA $0_{\mathrm I}$, 5.2.3). Sean $(\sisi{S}{\mathcal S},A)$ un topos anillado y $S\in\Ob \sisi{S}{\mathcal S}$. Se supone que $S$ es cuasicompacto, es decir, que toda familia cubriente $(S_i\to S)$ está dominada por una familia cubriente finita.
+\begin{enumerate}[label=\alph*)]
+\item Sea $F$ un $A_S$-módulo a izquierda límite inductivo, según una categoría filtrante $\Lambda$, de $A_S$-módulos $F_\lambda$, y sea
+\[
+u=\varinjlim u_\lambda:F\longrightarrow G
+\]
+un epimorfismo, donde $G$ es un $A_S$-módulo de tipo finito. Existe entonces $\lambda\in\Lambda$ tal que $u_\lambda$ es un epimorfismo.
+\item Sea $F$ un $A_S$-módulo a izquierda engendrado por sus secciones (es decir, tal que existe un epimorfismo $A_S^{(I)}\to F$ para un conjunto de índices $I$ conveniente). Entonces, si $F$ es de tipo finito, existe un epimorfismo $A_S^p\to F$ para $p\in\mathbb N$.
+\end{enumerate}
+La demostración de a) es análoga a la de (loc. cit.) y se deja como ejercicio al lector, y b) resulta inmediatamente de a).
+
+\textbf{Lema 2.1.2.} Sean $(\sisi{S}{\mathcal S},A)$ un topos anillado, $\mathcal C$ la $\sisi{S}{\mathcal S}$-categoría fibrada de los $A$-módulos a izquierda, $\mathcal C_0$ la subcategoría fibrada de los $A$-módulos libres de tipo finito (I 1.3 d)), $S\in\Ob \sisi{S}{\mathcal S}$, y $\mathcal C'_S$ una subcategoría aditiva estrictamente plena de $\mathcal C_S$ que contiene $\mathcal C_{0S}$ y es estable por núcleo, conúcleo y extensión. Se supone que
+\[
+H^1(S,F)=0\quad\text{para todo }F\in\Ob\mathcal C'_S.
+\]
+Entonces:
+\begin{enumerate}[label=\alph*)]
+\item Toda sucesión exacta de $\mathcal C'_S$:
+\[
+0\longrightarrow E\longrightarrow F\longrightarrow G\longrightarrow0,
+\]
+tal que $\underline{\operatorname{Hom}}(G,E)
+\in\Ob\mathcal C'_S$ y que $G$ sea localmente factor directo de un módulo libre de tipo finito, es escindida. La categoría $\mathcal C_{0S}$ es levantable en $\mathcal C'_S$ (I 1.2).
+\item Denotemos por $\Mod(A(S))$ la categoría de los $A(S)$-módulos. El funtor
+\[
+\Gamma_S:\mathcal C'_S\longrightarrow\Mod(A(S))
+\]
+es exacto. Además:
+\begin{enumerate}[label=(\roman*)]
+\item Si todo objeto $F$ de $\mathcal C'_S$ admite una presentación finita global
+\[
+A_S^p\longrightarrow A_S^q\longrightarrow F\longrightarrow0,
+\]
+el funtor $\Gamma_S:\mathcal C'_S\longrightarrow\Mod(A(S))$ es plenamente fiel y tiene por imagen esencial la subcategoría plena de $\Mod(A(S))$ formada por los $A(S)$-módulos de presentación finita;
+\item Si $\mathcal C'_S$ contiene los $A_S$-módulos libres, si todo objeto $F$ de $\mathcal C'_S$ admite una presentación global
+\[
+A_S^{(I)}\longrightarrow A_S^{(J)}\longrightarrow F\longrightarrow0,
+\]
+y si el funtor $\Gamma_S$ conmuta con los límites inductivos filtrantes\footnote{hipótesis verificada si $\sisi{S}{\mathcal S}$ es localmente de tipo finito (SGA 4 VI 1.2) o si $\sisi{S}{\mathcal S}$ es el topos de los haces de conjuntos sobre un espacio compacto y $S$ el objeto final (T.F II 3.10.1).}, el funtor $\Gamma_S:\mathcal C'_S\longrightarrow\Mod(A(S))$ es una equivalencia de categorías.
+\end{enumerate}
+\end{enumerate}
+
+\emph{Demostración.} a) Como $G$ es localmente factor directo de un libre de tipo finito, la sucesión espectral
+\[
+E_2^{pq}=H^p(S,\mathcal{E}xt^q(G,E))\Longrightarrow\Ext^{\sisi{n}{p+q}}(G,E)
+\]
+degenera (I 1.3.1) y da un isomorfismo
+\[
+H^1(S,\underline{\operatorname{Hom}}(G,E))\simeq\Ext^1(G,E),
+\]
+de donde la primera afirmación. La segunda es un caso particular, puesto que, para $G\in\Ob\mathcal C_{0S}$, es decir, $G$ libre y de tipo finito, y $E\in\Ob\mathcal C'_S$, se tiene $\operatorname{Hom}(G,E)\in\Ob\mathcal C'_S$.
+
+b) La primera afirmación es trivial. Probemos ahora, en el caso (i) o (ii), la plena fidelidad de $\Gamma_S:\mathcal C'_S\longrightarrow\Mod(A(S))$. Sean $F,G\in\Ob\mathcal C'_S$ y sea
+\[
+A_S^{(I)}\longrightarrow A_S^{(J)}\longrightarrow F\longrightarrow0
+\tag{$*$}
+\]
+una presentación global de $F$ (con $I$ y $J$ finitos en el caso (i)). Aplicando a $(*)$ el funtor $\Gamma_S$, que es exacto sobre $\mathcal C'_S$ y conmuta, en el caso (ii), con los límites inductivos filtrantes, se obtiene una sucesión exacta
+\[
+A(S)^{(I)}\longrightarrow A(S)^{(J)}\longrightarrow\Gamma_S(F)\longrightarrow0.
+\tag{$**$}
+\]
+Por otra parte, aplicando a $(*)$ (resp. $(**)$) el funtor exacto a izquierda $\underline{\operatorname{Hom}}_{A_S}(.,G)$ (resp. $\operatorname{Hom}_{A(S)}(\cdot,\Gamma_S(\sisi{F}{G}))$), se obtiene un diagrama conmutativo cuyas filas son exactas:
+\[
+\begin{tikzcd}[column sep=small]
+0 \arrow[r] & \operatorname{Hom}_{A_S}(F,G) \arrow[r] \arrow[d] &
+\operatorname{Hom}_{A_S}(A_S^{(J)},G) \arrow[r] \arrow[d] &
+\operatorname{Hom}_{A_S}(A_S^{(I)},G) \arrow[d] \\
+0 \arrow[r] & \sisi{\operatorname{Hom}_{A(S)}(F,G)}{\operatorname{Hom}_{A(S)}(\Gamma_S(F),\Gamma_S(G))} \arrow[r] &
+\operatorname{Hom}_{A(S)}(A(S)^{(J)},\Gamma_S(G)) \arrow[r] &
+\operatorname{Hom}_{A(S)}(A(S)^{(I)},\Gamma_S(G)).
+\end{tikzcd}
+\]
+Las dos flechas verticales de la derecha son visiblemente isomorfismos; lo mismo ocurre, pues, con la flecha vertical de la izquierda, lo que demuestra la plena fidelidad de $\Gamma_S:\mathcal C'_S\longrightarrow\Mod(A(S))$. La caracterización de la imagen esencial, en el caso (i) o (ii), es inmediata y se deja al lector.
+

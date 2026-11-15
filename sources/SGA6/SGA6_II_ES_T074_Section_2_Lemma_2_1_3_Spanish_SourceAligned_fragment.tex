@@ -1,0 +1,69 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, lema 2.1.3 y observación 2.1.3.1, líneas 3673--3733 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Lema 2.1.3.} Sean $\mathcal A$ y $\mathcal B$ categorías abelianas, y $\varphi:\mathcal A\to\mathcal B$ un funtor exacto.
+\begin{enumerate}[label=\alph*)]
+\item Para $M\in\Ob A$, las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item para todo $L\in\Ob\mathcal A$, la flecha canónica (inducida por $\varphi$)
+\[
+\Ext^n_{\mathcal A}(L,M)\longrightarrow\Ext^n_{\mathcal B}(\varphi(L),\varphi(M))
+\]
+es un isomorfismo para todo $n$;
+\item para todo $L\in\Ob\mathcal A$, la flecha canónica
+\[
+\operatorname{Hom}_{\mathcal A}(L,M)\longrightarrow\operatorname{Hom}_{\mathcal B}(\varphi(L),\varphi(M))
+\]
+es un isomorfismo, y para todo $n\ge1$ y todo $x\in\Ext^n_{\mathcal B}(\varphi(L),\varphi(M))$ existe un epimorfismo $L'\to L$ de $\mathcal A$ que anula $x$.
+\end{enumerate}
+\item Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item para todos $L,M\in\Ob\mathcal A$ y todo $n\in\mathbb Z$, la flecha canónica
+\[
+\Ext^n_{\mathcal A}(L,M)\longrightarrow\Ext^n_{\mathcal B}(\varphi(L),\varphi(M))
+\]
+es un isomorfismo;
+\item el funtor canónico (inducido por $\varphi$)
+\[
+\mathrm D^b(\mathcal A)\longrightarrow\mathrm D^b(\mathcal B)
+\]
+es plenamente fiel y tiene por imagen esencial la subcategoría plena de $\mathrm D^b(\mathcal B)$ formada por los complejos $F$ tales que $H^i(F)$ esté en la imagen esencial de $\varphi$ para todo $i$.
+\end{enumerate}
+\end{enumerate}
+
+\emph{Demostración.} a) Para la implicación (i)$\Rightarrow$(ii), basta mostrar lo siguiente: sean $n\ge1$, $L\in\Ob\mathcal A$, y $y\in\Ext^n_{\mathcal A}(L,M)$; existe entonces un epimorfismo $L'\to L$ que anula $y$. Se puede utilizar para ello la interpretación de Yoneda ([18] III 3.2): $y$ es la clase de una sucesión exacta
+\[
+0\longrightarrow M\longrightarrow E_{n-1}\longrightarrow\ldots\longrightarrow E_0\longrightarrow L\longrightarrow0;
+\]
+el epimorfismo $E_0\to L$ anula $y$ ([18] III 3.2.5 y 3.2.8). Probemos (ii)$\Rightarrow$(i). Pongamos, para abreviar,
+\[
+\Ext^n_{\mathcal A}(.,M)=F^n,\qquad
+\Ext^n_{\mathcal B}(\varphi(.),\varphi(M))=G^n.
+\]
+La hipótesis de anulabilidad significa que se tiene, para $n\ge1$ y $L\in\Ob\mathcal A$,
+\[
+G^n(L)=\varinjlim\operatorname{Coker}(G^{n-1}(L_0)\to G^{n-1}(L_1)),
+\]
+tomándose el límite inductivo según el conjunto de las sucesiones exactas $0\to L_1\to L_0\to L\to0$. Según lo visto anteriormente, se tiene asimismo
+\[
+F^n(L)=\varinjlim\operatorname{Coker}(F^{n-1}(L_0)\to F^{n-1}(L_1)).
+\]
+Como $\varphi=\varphi^0:F^0\to G^0$ es un isomorfismo, resulta, por recurrencia sobre $n$, que el morfismo $\varphi^n:F^n\to G^n$ inducido por $\varphi$ es un isomorfismo para todo $n$.
+
+b) La equivalencia (i)$\Leftrightarrow$(ii) resulta de un dévissage inmediato, que se deja al lector.
+
+\textbf{Observación 2.1.3.1.} Se tiene, desde luego, una equivalencia dual de a), cuyo enunciado se deja al lector. Por otra parte, si $\mathcal A$ y $\mathcal B$ tienen suficientes inyectivos, las condiciones (i) y (ii) de b) son equivalentes a
+\begin{enumerate}[label=(\roman*),start=3]
+\item para $L\in\Ob\mathrm D^{-}(\mathcal A)$ y $M\in\Ob\mathrm D^{+}(\mathcal A)$, la flecha canónica
+\[
+\mathbb R\!\operatorname{Hom}(L,M)\longrightarrow
+\mathbb R\!\operatorname{Hom}(\varphi(L),\varphi(M))
+\]
+es un isomorfismo,
+\end{enumerate}
+como se ve inmediatamente mediante un argumento de sucesión espectral.
+

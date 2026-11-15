@@ -1,0 +1,30 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 1, proposición 1.2, líneas 3569--3590 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 1.2.} Supongamos que $\mathcal C_0$ es localmente levantable en $\mathcal C$ (I 1.2) y localmente estable por núcleo de epimorfismo (I 1.2), y hagamos las hipótesis (1.1 (i) y (ii), respectivamente). Denotemos por $\mathcal C_{1S}$ la subcategoría estrictamente plena de $\mathcal C_S$ formada por los objetos que están localmente en $\mathcal C_0$. Entonces:
+\begin{enumerate}[label=\alph*)]
+\item $\mathcal C_{1S}$ es estable por núcleo de epimorfismo (I 1.2) y cuasilevantable en $\mathcal C_S$ (I 1.2) (como categoría fibrada sobre un sitio puntual).
+\item Sean $E\in\Ob\mathrm D(\mathcal C_S)$ y $[m,n]$ un intervalo de $\mathbb Z$. Para que $E$ sea de $\mathcal C_0$-amplitud perfecta contenida en $[m,n]$, es necesario y suficiente que $E$ sea isomorfo, en $\mathrm D(\mathcal C_S)$, a un complejo $F$ tal que $F^i=0$ para $i\notin[m,n]$, $F^i\in\Ob\mathcal C_{0S}$ para $i>m$, y $F^m\in\Ob\mathcal C_{1S}$.
+\item El funtor canónico
+\[
+\mathrm K^b(\mathcal C_{1S})/\mathrm K^{b,\varnothing}(\mathcal C_{1S})
+\longrightarrow \mathrm D(\mathcal C_S)
+\]
+es plenamente fiel y tiene por imagen esencial la subcategoría plena de $\mathrm D(\mathcal C_S)$ formada por los complejos de amplitud $\mathcal C_0$-perfecta finita.
+\item Si $\mathcal C_{1S}$ no solo es cuasilevantable sino levantable en $\mathcal C_S$, se puede reemplazar en b) la expresión «$E$ sea isomorfo a $F$ en $\mathrm D(\mathcal C_S)$» por «existe un cuasiisomorfismo $F\to E$», y en c) la categoría $\mathrm K^{b,\varnothing}(\mathcal C_{1S})$ se reduce a los objetos nulos.
+\end{enumerate}
+
+\emph{Demostración.} a) Está claro que $\mathcal C_{1S}$ es estable por núcleo de epimorfismo. Por otra parte, los objetos de $\mathcal C_{1S}$ son $\mathcal C_0$-pseudocoherentes, luego $\mathcal C_{0S}$-pseudocoherentes según (1.1 c)); la segunda afirmación resulta, pues, de (I 2.14) (donde se toma por $\sisi{S}{\mathcal S}$ el sitio puntual).
+
+b) Basta demostrar la necesidad. Ya se sabe, gracias a (1.1 c)), que $E$ es $\mathcal C_{0S}$-pseudocoherente. Como $E$ es acíclico en grado $>n$, se puede suponer (I 2.10), reemplazando si es necesario $E$ por un complejo isomorfo en $\mathrm D^{-}(\mathcal C_S)$, que $E$ es estrictamente $(m+1)$-$\mathcal C_{0S}$-pseudocoherente y que $E^i=0$ para $i>n$. Como $E$ es acíclico en grado $<m$, se puede suponer además, reemplazando si es necesario $E$ por su truncado
+\[
+0\longrightarrow E^m/B^m\longrightarrow E^{m+1}\longrightarrow\ldots\longrightarrow E^n\longrightarrow0,
+\]
+que $E^i=0$ para $i<m$. Entonces, según (I 4.16), $E^m$ es localmente objeto de $\mathcal C_0$, luego objeto de $\mathcal C_{1S}$, lo que demuestra la afirmación.
+
+c) Teniendo en cuenta (1.2 a)), la afirmación resulta de (1.2 b)) y (I 4.12.2). d) El hecho de que $\mathrm K^{b,\varnothing}(\mathcal C_{1S})$ se reduce a los objetos nulos es evidente. La otra afirmación resulta de (I 4.6) (aplicado sobre el sitio puntual).
+

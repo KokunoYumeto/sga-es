@@ -1,0 +1,103 @@
+% SGA 6, Exposición IV: fragmento español alineado con la fuente.
+% Parte 5 de 7. Alcance: secciones 3.1--3.2, líneas 6496--6591 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{3. Complementos sobre los grupos de Grothendieck de los esquemas\protect\footnote{Los resultados de este número no se utilizarán en las Exp.\ V a VIII.}}
+
+\textbf{Proposición 3.1.0.} Sea
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"']\arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+un cuadrado cartesiano de esquemas, donde \(Y\) es cuasicompacto y \(f\) cuasicompacto y cuasiseparado, y sea \(E\in\Ob D^b(X)\) un complejo de cohomología cuasicoherente. Se supone que \(X\) e \(Y'\) son tor-independientes sobre \(Y\) (III 1.5). Se supone, por otra parte, que o bien \(h\) es de dimensión tor finita, o bien \(E\) es de amplitud plana finita con respecto a \(f\). En estas condiciones, la flecha de cambio de base (cf. SGA 4 XVII 4)
+\[
+ Lh^*\,Rf_*E\longrightarrow Rf'_*\,Lg^*E
+\]
+está definida y es un isomorfismo.
+
+\emph{Demostración}~: Para definir la flecha, se utiliza la fórmula de dualidad trivial (SGA 4 XVII 2.3) para \(h\), que dice que se tiene un isomorfismo funtorial canónico
+\begin{equation}\tag{$*$}
+ \Hom(Lh^*L,M)\xrightarrow{\sim}\Hom(L,Rh_*M)
+\end{equation}
+para \(L\in\Ob D^-(Y)\), \(M\in\Ob D^+(Y')\). Utilizando (III 3.5.2) y (III 3.7.1), se verifica fácilmente que \(Lg^*E\in\Ob D^b(X')\) y \(Rf_*E\in\Ob D^-(Y)\), de modo que, aplicando (*) con \(L=Rf_*E\) y \(M=Rf'_*Lg^*E\), uno se reduce a definir una flecha
+\[
+ Rf_*E\longrightarrow Rf_*Rg_*Lg^*E.
+\]
+Se toma para esta la imagen por \(Rf_*\) de la flecha de adjunción
+\[
+ E\longrightarrow Rg_*Lg^*E,
+\]
+proveniente de la fórmula de dualidad trivial para \(g\). La flecha de cambio de base queda, pues, definida; falta mostrar que es un isomorfismo. Para ello, primero se pueden suponer \(Y\) e \(Y'\) afines. Después, mediante la sucesión espectral de Leray de un recubrimiento abierto de \(X\), uno se reduce al caso en que \(X\) y \(X'\) son afines. Se tiene entonces un cuadrado cocartesiano de anillos
+\[
+\begin{tikzcd}
+B\arrow[r] & B'\\
+A\arrow[u]\arrow[r] & A'\arrow[u],
+\end{tikzcd}
+\]
+y se puede suponer que \(E\) está definido por un complejo acotado superiormente de \(B\)-módulos. La tor-independencia de \(A'\) y \(B\) sobre \(A\), que se escribe
+\[
+ B\otimes_A^{\mathbf L}A'\xrightarrow{\sim}B',
+\]
+implica entonces que se tiene en \(D(A')\)
+\[
+ E\otimes_A^{\mathbf L}A'\xrightarrow{\sim}E\otimes_B^{\mathbf L}B',
+\]
+de donde se deduce la proposición.
+
+Traduciendo (3.1.0) en términos de grupos de Grothendieck, se obtiene:
+
+\textbf{Proposición 3.1.1.} Sea
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"']\arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+un cuadrado cartesiano de esquemas. Se supone que \(Y\) e \(Y'\) son cuasicompactos, que \(X\) e \(Y'\) son tor-independientes sobre \(Y\) (III 1.5), que \(f\) es propio y pseudocoherente, y que la conjetura de finitud (III 2.1) se verifica para \(f\) y \(f'\) (por ejemplo, \(Y\) e \(Y'\) noetherianos, o \(f\) proyectivo). Entonces, si \(f\) es perfecto (resp. \(h\) de dimensión tor finita), se tiene, para \(x\in K'(X)\) (resp. \(K_{\bullet}(X)\)),
+\[
+ h^* f_*(x)=f'_* g^*(x),
+\]
+donde \(h^*,g^*\) están definidos por (2.7.1) (resp. (2.12.1)), y \(f_*,f'_*\) por (2.12.3) (resp. (2.11.1.1)) (obsérvese que, en virtud de (III 4.7.1), \(f'\) es perfecto si \(f\) lo es, y que, en virtud de (III 3.5.1), \(g\) es de dimensión tor finita si \(h\) lo es).
+
+\textbf{3.2. Paso al límite sobre \(K'_{\naif}\) y \(K_{\bullet}\).} Sea \((X_i,f_{ij})_{i\in I}\) un sistema proyectivo filtrante de esquemas cuasicompactos y cuasiseparados, siendo afines los morfismos de transición (cf. EGA IV 8.2.2). Pongamos \(X=\varprojlim_i X_i\), y denotemos por \(f_i:X\to X_i\) el \sisi{homomorfismo}{morfismo} canónico.
+
+\textbf{3.2.1.} Los homomorfismos (2.7.2) \(f_i^*:K'(X_i)_{\naif}\longrightarrow K'(X)_{\naif}\) definen, gracias a la fórmula de transitividad (2.7.3), un homomorfismo
+\begin{equation}\tag{3.2.1.1}
+ \varinjlim_i K'(X_i)_{\naif}\longrightarrow K'(X)_{\naif}.
+\end{equation}
+Afirmo que el homomorfismo (3.2.1.1) es un isomorfismo. En efecto, sea \(E\) un \(\mathcal O_X\)-módulo localmente libre de tipo finito. Según (EGA IV 8.5.2 y 8.5.5), existe un índice \(i\) y un \(\mathcal O_{X_i}\)-módulo localmente libre de tipo finito \(E_i\) tal que se tiene
+\[
+ E\simeq f_i^*(E_i).
+\]
+En virtud de (EGA IV 8.5.2.5), la imagen de \(\cl(E_i)\) en \(\varinjlim_i K'(X_i)_{\naif}\) no depende de la elección de \(E_i\); denotémosla por \(u(E)\). Según (EGA IV 8.5.2 y 8.5.6), la aplicación
+\(u:\Ob\Loclib(X)\longrightarrow \varinjlim_i K'(X_i)_{\naif}\) así definida es aditiva (1.5)~; define, pues, un homomorfismo \(K'(X)_{\naif}\longrightarrow \varinjlim_i K'(X_i)_{\naif}\), del cual se constata de inmediato, gracias a (EGA IV 8.5.2), que es inverso de (3.2.1.1), lo que prueba nuestra afirmación.
+
+\textbf{3.2.2.} Se define de igual modo un homomorfismo canónico
+\begin{equation}\tag{3.2.2.1}
+ \varinjlim_i K'(X_i)\longrightarrow K'(X).
+\end{equation}
+Utilizando la técnica de localización de Deligne (SGA 4 XVII), que implica que la categoría de los complejos perfectos sobre \(X\) es equivalente a la categoría \(\varinjlim\) de las categorías análogas \(\Parf(X_i)\), se encuentra asimismo que (3.2.2.1) es un isomorfismo.
+
+\textbf{3.2.3.} Supongamos que los \(X_i\) y \(X\) son noetherianos, y los morfismos \(f_{ij}\) planos (lo mismo ocurre entonces con los \(f_i\)). Entonces los homomorfismos (2.12.1)
+\(f_i^*:K_{\bullet}(X_i)\longrightarrow K_{\bullet}(X)\) definen un isomorfismo
+\begin{equation}\tag{\sisi{3.2.2.1}{3.2.3.1}}
+ \varinjlim_i K_{\bullet}(X_i)\xrightarrow{\sim}K_{\bullet}(X).
+\end{equation}
+La demostración es análoga a la de (3.2.1), utilizando el hecho (2.4) de que \(K_{\bullet}(X)\simeq K_{\bullet}(X)_{\naif}\) se calcula en términos de haces coherentes sobre \(X\).
+
+Como las estructuras de módulos de los \(K_{\bullet}(X_i)\) sobre los \(K'(X_i)_{\naif}\) son compatibles con las imágenes inversas \(f_{ij}^*\) según (2.7 a)) y (2.12.2), se encuentra, pasando al límite, que \(\varinjlim_i K_{\bullet}(X_i)\) está dotado de una estructura de módulo sobre \(\varinjlim_i K'(X_i)_{\naif}\); esta es compatible, mediante los isomorfismos (3.2.1.1) y \sisi{(3.2.2.1)}{(3.2.3.1)}, con la estructura de módulo de \(K_{\bullet}(X)\) sobre \(K'(X)_{\naif}\); en otros términos, se tiene un diagrama conmutativo, donde las flechas verticales están definidas por (3.2.1.1) y \sisi{(3.2.2.1)}{(3.2.3.1)}~:
+\[
+\begin{tikzcd}[column sep=tiny]
+\varinjlim K'(X_i)_{\naif}\otimes \varinjlim K_{\bullet}(X_i)
+\arrow[r]\arrow[d,"\sim"']
+&\varinjlim K_{\bullet}(X_i)\arrow[d,"\sim"]\\
+K'(X)_{\naif}\otimes K_{\bullet}(X)\arrow[r]
+&K_{\bullet}(X).
+\end{tikzcd}
+\]
+

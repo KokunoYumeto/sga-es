@@ -1,0 +1,73 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: corolario 1.4, lemas 1.5 y proposiciones 1.6--1.7, líneas 8625--8690 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 1.4.} Bajo las hipótesis de 1.3, existe un \(\Sym(E)\)-módulo graduado \(M\), de presentación finita y plano sobre \(\mathcal O_S\), tal que \(F=\Projz(M)\).
+
+Sea \(n_0\) un entero tal que se verifiquen las propiedades de 1.3. Si \(M=\bigoplus_{n\geq n_0} f_*(F(n))\), se vio que \(M\) es de presentación finita, y es plano sobre \(S\), puesto que los \(f_*(F(n))\), para \(n\geq n_0\), son localmente libres sobre \(S\). Por otra parte, \(F=\Projz(M)\) según EGA II 3.4. Pasemos a la parte b) de la demostración.
+
+\textbf{Lema 1.5.1.} Sean \(A\) un anillo, \(B\) una \(A\)-álgebra graduada en grados positivos tal que \(B_0=A\), y \(M\) un \(B\)-módulo graduado. Se supone que \(M\) es proyectivo de tipo finito como \(B\)-módulo no graduado. Sean \(\widetilde B\) el haz de álgebras sobre \(\Spec(A)\) definido por \(B\), y \(\widetilde M\) el \(\widetilde B\)-módulo asociado a \(M\); entonces \(\widetilde M\) es localmente sobre \(\Spec(A)\) libre de tipo finito sobre \(\widetilde B\), como \(\widetilde B\)-módulo graduado (1.2).
+
+Como \(M\) es de tipo finito, está acotado inferiormente en grados. Por otra parte, \(M\otimes_B A\) es proyectivo de tipo finito sobre \(A\), y por consiguiente solo tiene un número finito de componentes homogéneas no nulas, ellas mismas proyectivas de tipo finito sobre \(A\); localizando sobre \(\Spec(A)\), se puede, pues, suponer que \(M\otimes_B A\) es libre de tipo finito sobre \(A\). Finalmente, como \(M\) es proyectivo, \(\Tor_1^B(M,A)=0\). De estas propiedades resulta que \(M\) es libre de tipo finito sobre \(B\) como módulo graduado (véase Bourbaki, Alg. cap. II §11 prop. 7), luego \(\widetilde M\) es libre de tipo finito sobre \(\widetilde B\), c.q.f.d.
+
+\textbf{Lema 1.5.2.} Sean \(A\) un anillo, \(B\) una \(A\)-álgebra de presentación finita, y \(M\) un \(B\)-módulo de presentación finita. Se supone que \(B\) y \(M\) son planos sobre \(A\), y que, para todo cuerpo residual \(k\) de \(A\), \(M\otimes_A k\) tiene dimensión proyectiva \(\leq n\) sobre \(B\otimes_A k\) (lo que ocurre si \(B=A[t_0,\ldots,t_r]\)). En estas condiciones, \(M\) admite una resolución de longitud \(n\) por \(B\)-módulos proyectivos de tipo finito:
+\[
+  0\longrightarrow L_n\longrightarrow\cdots\longrightarrow L_0\longrightarrow M\longrightarrow 0.
+\]
+Este lema resulta inmediatamente de EGA IV 12.3.2.
+
+\textbf{Proposición 1.6.} Sean \(S\) un esquema cuasicompacto, \(E\) un \(\mathcal O_S\)-módulo localmente libre de rango \(r+1\), \(B\) su álgebra simétrica con su graduación habitual, y \(M\) un \(B\)-módulo graduado de presentación finita, plano sobre \(S\). Entonces existe una resolución graduada:
+\[
+  0\longrightarrow L_{r+1}\longrightarrow\cdots\longrightarrow L_0\longrightarrow M\longrightarrow 0,
+\]
+donde los \(L_i\) son \(B\)-módulos graduados localmente libres de tipo finito (como \(B\)-módulos graduados).
+
+Mostremos primero que, para todo \(B\)-módulo graduado \(M\) que satisfaga las condiciones de la proposición, existe un homomorfismo graduado sobreyectivo \(L\to M\), donde \(L\) es un \(B\)-módulo localmente libre de tipo finito.
+
+Como \(M\) es de tipo finito, existe un entero \(N\) tal que \(M\) esté engendrado sobre \(B\) por sus componentes de grado \(\leq N\). Se pone entonces:
+\[
+  L=\bigoplus_{i\leq N} M_i\otimes_{\mathcal O_S}B(-i);
+\]
+el homomorfismo de \(L\) en \(M\) se define gracias a (1.2.1), y está claro que es sobreyectivo.
+
+Según 1.5.2, \(M\) admite una resolución (no graduada) por \(B\)-módulos localmente libres de tipo finito sobre cada abierto afín. Por consiguiente, si \(M\) posee una resolución parcial global:
+\[
+  L_i\longrightarrow L_{i-1}\longrightarrow\cdots\longrightarrow L_0\longrightarrow M\longrightarrow 0,
+\]
+por \(B\)-módulos localmente libres de tipo finito, el núcleo \(Z_i\) de \(L_i\to L_{i-1}\) sigue siendo un \(B\)-módulo de tipo finito (I. 2.11). Incluso es de presentación finita (haciendo el mismo razonamiento con \(i+1\) en lugar de \(i\)). Finalmente, es plano sobre \(S\). Satisface, pues, las mismas hipótesis que \(M\), lo que permite construir paso a paso una resolución global graduada de \(M\) por \(B\)-módulos graduados localmente libres de tipo finito, según la observación inicial. Para \(i\geq r+1\), \(Z_i\) es un \(B\)-módulo proyectivo sobre todo abierto afín (1.5.2), y por consiguiente es localmente libre como \(B\)-módulo graduado, según 1.5.1. Se puede entonces, en la resolución graduada construida, reemplazar \(L_{r+1}\) por \(Z_{r+1}\), y los términos siguientes por \(0\), de donde se obtiene la resolución anunciada.
+
+Mostremos finalmente el punto c) de la demostración.
+
+\textbf{Proposición 1.7.} Sean \(S\) un esquema cuasicompacto, \(E\) un \(\mathcal O_S\)-módulo localmente libre de tipo finito, \(B=\Sym(E)\), y \(L\) un \(B\)-módulo graduado, localmente libre de tipo finito (1.2). Entonces existe una filtración decreciente de \(L\) por sub-\(B\)-módulos graduados \(L^{(m)}\), tal que:
+\[
+\begin{array}{ll}
+\text{i)}& L^{(m)}=L\quad\text{para }m\leq m_0;\\[1mm]
+\text{ii)}& L^{(m)}=0\quad\text{para }m\geq m_1;\\[1mm]
+\text{iii)}& \text{para todo }m,\quad \operatorname{gr}^m(L)=L^{(m)}/L^{(m+1)}\\
+&\quad \text{es isomorfo como }B\text{-módulo graduado a un}\\
+&\quad B\text{-módulo graduado de la forma }N_m\otimes_{\mathcal O_S}B(m),\\
+&\quad \text{donde }N_m\text{ es un }\mathcal O_S\text{-módulo localmente libre de tipo finito.}
+\end{array}
+\]
+
+Como \(S\) es cuasicompacto, se pueden encontrar enteros \(n_0\) y \(n_1\) tales que, en un entorno de cada punto de \(S\), los elementos de una base homogénea de \(L\) tengan grados comprendidos entre \(n_0\) y \(n_1\). Se procede entonces por inducción sobre \(N=n_1-n_0\).
+
+Cuando \(N=0\), es decir, \(n_1=n_0\), sea \(n\) el valor común. El homomorfismo canónico (1.2.1)
+\[
+  \sisi{M_n}{L_n}\otimes_{\mathcal O_S}B(-n)\longrightarrow \sisi{M}{L}
+\]
+es entonces un isomorfismo. En efecto, la verificación es local, y según (1.2.3), se puede entonces suponer que \(\sisi{M}{L}\simeq(B(-n))^k\), y el resultado es trivial.
+
+En el caso \(N>0\), se considera de nuevo el homomorfismo (1.2.1):
+\[
+  \sisi{M_{n_0}}{L_{n_0}}\otimes_{\mathcal O_S}B(-n_0)\longrightarrow \sisi{M}{L}.
+\]
+Se verifica localmente que este homomorfismo es inyectivo, y que su conúcleo \(\sisi{M'}{L'}\) es localmente libre de tipo finito, con generadores locales de grado comprendido entre \(n_0+1\) y \(n_1\): en efecto, en un entorno de todo punto de \(S\), \(\sisi{M_{n_0}}{L_{n_0}}\) es o bien nulo, o bien la componente homogénea no nula de \(\sisi{M}{L}\) cuyo grado es mínimo; utilizando una descomposición de \(\sisi{M}{L}\) en factores directos del tipo (1.2.2), se ve, en este último caso y utilizando (1.2.3), que
+\[
+  \sisi{M_{n_0}}{L_{n_0}}\otimes_{\mathcal O_S}B(-n_0)
+\]
+es isomorfo al factor directo \((B(-n_0))^{k_{n_0}}\) de \(\sisi{M}{L}\), de donde resultan las propiedades anunciadas. Se aplica entonces la hipótesis de inducción a \(\sisi{M'}{L'}\), de donde se obtiene inmediatamente la conclusión deseada.
+

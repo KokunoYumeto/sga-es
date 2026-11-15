@@ -1,0 +1,359 @@
+% SGA 6, Exposición V: fragmento español alineado con la fuente.
+% Alcance: sección 1, números 1.11--1.16, y sección 2 hasta 2.9, líneas 6984--7337 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{1.11.} Denotaremos por \(\mathcal C_g\) la categoría de las \(K\)-álgebras graduadas, y por \(j\) el funtor de \(\mathcal C_g\) en \(\mathcal C\) que asocia a una \(K\)-álgebra graduada \(B\) la \(K\)-álgebra \(B\) provista de la filtración definida canónicamente por su graduación; el funtor «~graduado asociado~»: \(\mathcal C\to\mathcal C_g\), se denotará por \(\operatorname{Gr}\). Existe un isomorfismo de funtores \(\varepsilon:\operatorname{Id}_{\mathcal C_g}\xrightarrow{\sim}\operatorname{Gr}\circ j\).
+Sea \(B\in\operatorname{Ob}(\mathcal C_g)\); denotaremos por \(1+\widehat B^+\) el grupo multiplicativo de los elementos de \(\prod\limits_{i=0}^{\infty}B^i\) de aumentación \(1\). Dotándolo de la filtración análoga a la de \(\Ghat\), se define así un funtor: \(\mathcal C_g\to\Abfil\). Por otra parte, se define para todo \(A\in\operatorname{Ob}(\mathcal C)\) un homomorfismo de grupos filtrados: \(\Ghat(A)\longrightarrow 1+\widehat{\operatorname{Gr}A}^{+}\), asociando a la serie \(1+\ldots+a_nt^n+\ldots\), la serie \(1+\ldots+\bar a_n+\ldots\), donde \(\bar a_n\) es la clase de \(a_n\) en \(\operatorname{Gr}^nA\). Su núcleo es el grupo \(\Ghat'(A)\) de las series formales tales que:
+\[
+  a_0=1;\qquad \forall i\geq1,\quad a_i\in\Fil^{i+1}A;
+\]
+se tiene, pues, un isomorfismo, funtorial en \(A\):
+\[
+  \Ghat(A)/\Ghat'(A)\xrightarrow{\sim}1+\widehat{\operatorname{Gr}A}^{+}.
+\]
+
+\textbf{Lema 1.12.} Sea \(H:\mathcal C_g\to\Abfil\) un funtor sobre \(\mathcal C_g\); entonces el homomorfismo canónico:
+\[
+  \rho:\Hom_{\Abfil}(1+\widehat{\,\cdot\,}^{+},H)
+  \longrightarrow
+  \Hom_{\Abfil}(\Ghat,H\circ\operatorname{Gr}),
+\]
+es un isomorfismo.
+
+El homomorfismo \(\rho\) se define como el compuesto:
+\[
+  \Hom(1+\widehat{\,\cdot\,}^{+},H)
+  \longrightarrow
+  \Hom(1+\widehat{\operatorname{Gr}(\,\cdot\,)}^{+},H\circ\operatorname{Gr})
+  \longrightarrow
+  \Hom(\Ghat,H\circ\operatorname{Gr}),
+\]
+estando definida la última flecha por el homomorfismo \(\Ghat\longrightarrow1+\widehat{\operatorname{Gr}(\,\cdot\,)}^{+}\).
+Vamos a construir un morfismo en sentido inverso:
+\[
+  \rho':\Hom(\Ghat,H\circ\operatorname{Gr})
+  \longrightarrow
+  \Hom(1+\widehat{\,\cdot\,}^{+},H).
+\]
+Para ello, mostraremos que todo morfismo de funtores de \(\Ghat\) en \(H\circ\operatorname{Gr}\) se factoriza por el morfismo canónico \(\Ghat\longrightarrow1+\widehat{\operatorname{Gr}(\,\cdot\,)}^{+}\), lo que equivale a mostrar que se anula sobre \(\Ghat'\), según 1.11. Sean \(A\in\operatorname{Ob}(\mathcal C)\), \(\chi\in\Ghat'(A)\); se define un homomorfismo de \(K\)-álgebras filtradas \(K[X_i]_{i\geq1}\longrightarrow A\) enviando \(X_1\) a \(0\) y \(X_i\) al \((i-1)\)-ésimo coeficiente de \(\chi\) para \(i>1\); utilizando este homomorfismo, se ve que basta verificar que el morfismo de funtores considerado se anula para el elemento \(1+X_2t+\ldots+X_{n+1}t^n+\ldots\). Se utiliza entonces el endomorfismo \(f\) de \(K[X_i]_{i\geq1}\) definido por \(f(X_i)=X_{i+1}\) para todo \(i\), y el diagrama conmutativo:
+\[
+\begin{tikzcd}
+\Ghat(K[(X_i)]) \arrow[r] \arrow[d,"\Ghat(f)"'] &
+H\circ\operatorname{Gr}(K[(X_i)]) \arrow[d,"H(\operatorname{Gr}(f))"]\\
+\Ghat(K[(X_i)]) \arrow[r] &
+H\circ\operatorname{Gr}(K[(X_i)]);
+\end{tikzcd}
+\]
+ahora bien, \(\operatorname{Gr}(f)=\operatorname{Gr}(f_1)\), siendo \(f_1\) el homomorfismo de aumentación de \(K[X_i]_{i\geq1}\); como este último anula \(\varphi\), resulta del diagrama análogo escrito para \(f_1\) que \(H(\operatorname{Gr}(f))\) anula la imagen de \(\varphi\) en \(H\circ\operatorname{Gr}(K[X_i]_{i\geq1})\), de donde se obtiene el resultado.
+
+Pasando al cociente, se asocia, pues, a todo morfismo de funtores: \(\Ghat\longrightarrow H\circ\operatorname{Gr}\), un morfismo de funtores: \(1+\widehat{\operatorname{Gr}(\,\cdot\,)}^{+}\longrightarrow H\circ\operatorname{Gr}\); por composición con \(j\), y utilizando el isomorfismo \(\varepsilon\), se obtiene un morfismo: \(1+\widehat{\,\cdot\,}^{+}\longrightarrow H\), que define el homomorfismo \(\rho'\) buscado. Es inmediato verificar que \(\rho\) y \(\rho'\) son inversos uno de otro.
+
+\textbf{Teorema 1.13.} Sea \(H\) un funtor sobre \(\mathcal C_g\), con valores en la categoría de los grupos abelianos filtrados separados y completos, y que conmuta con los invariantes bajo un grupo finito. Entonces la aplicación de \(\Hom_{\Abfil}(1+\widehat{\,\cdot\,}^{+},H)\) en \(H(K[X])\) que asocia a un morfismo de funtores su valor sobre el elemento \(1+X\) de \(1+\widehat{K[X]}^+\) es inyectiva; su imagen es el subgrupo de \(H(K[X])\) formado por los elementos \(\theta\) tales que (notaciones de 1.4,1.5):
+\[
+\begin{array}{ll}
+\text{i)}& H(f_1)(\theta)=0;\\[0.3em]
+\text{ii)}& \forall n\geq1,\quad
+H(f_n)\bigl(u_H^n(\theta)\bigr)\equiv u_H^n(\theta)
+\ \mathrm{mod.}\ F^nH(K[X_1,\ldots,X_n]).
+\end{array}
+\]
+Inmediato a partir de 1.6 y 1.12.
+
+Se tiene un enunciado análogo reemplazando \(\Ghat\) por \((\Ghat)^k\).
+
+\textbf{Observación 1.14.} Si \(H\) es un funtor sobre \(\mathcal C_g\), con valores en la categoría de los grupos abelianos, que conmuta con los invariantes bajo un grupo finito y satisface la condición:
+\[
+  \forall B\in\operatorname{Ob}(\mathcal C_g),\qquad
+  H(B)\xrightarrow{\sim}\varprojlim_n H(B/B^{\geq n})\quad(\text{donde }B^{\geq n}=\prod_{i\geq n}B^i),
+\]
+entonces la condición ii) de 1.13 se verifica siempre si se toma como filtración sobre \(H\) la filtración por los núcleos de los \(H(B)\longrightarrow H(B/B^{\geq n})\) (que es separada y completa). Sea, en efecto, \(p_n\) el homomorfismo canónico
+\[
+  K[X_1,\ldots,X_n]\longrightarrow K[X_1,\ldots,X_n]/K[X_1,\ldots,X_n]^{\geq n};
+\]
+se tiene: \(p_n\circ f_n=p_n\), de donde: \(H(p_n)\bigl[H(f_n)\circ u_H^n(\theta)-u_H^n(\theta)\bigr]=0\), es decir:
+\[
+  H(f_n)\circ u_H^n(\theta)-u_H^n(\theta)
+  \in F^nH(K[X_1,\ldots,X_n]).
+\]
+Para darse un morfismo de funtores de \(1+\widehat{\,\cdot\,}^{+}\) en \(H\), basta, pues, darse un elemento de \(H(K[X])\) que satisfaga la única condición i) de 1.13.
+
+\textbf{1.15.} Sea \(H:\mathcal C\to\Abfil\) (resp. \(\mathcal C_0\to\Abfil\), \(\mathcal C_g\to\Abfil\)) un funtor que satisface las condiciones de 1.3 (resp. 1.10, 1.13), y sea \(\Phi:(\Ghat)^k\to H\) (resp. \((\Ghat\circ i)^k\to H\), \((1+\widehat{\,\cdot\,}^{+})^k\to H\)) un morfismo de funtores. Hemos visto (1.7) que \(\Phi\) está determinado por su valor sobre el elemento \((\varphi^{(j)})_{j=1..k}\) de \((\Ghat(K[X_i^{(j)}]_{i\geq1,\ j=1,\ldots,k}))^k\) (resp.\ \ldots)..\ Supongamos que \(H\) sea un funtor tal como \(\Ghat,\Gg,\Ga,1+\widehat{\operatorname{Gr}}^{+}\), etc..; el elemento \(\Phi((\varphi^{(j)})_{j})\) es una serie formal con coeficientes en \(K[X_i^{(j)}]_{i\geq1,\ j=1..k}\); el \(n\)-ésimo coeficiente de esta serie se llamará \(n\)-ésimo polinomio universal de \(\Phi\); el conocimiento de estos polinomios equivale, pues, al conocimiento de \(\Phi\). Según la demostración de 1.6, estos polinomios están a su vez determinados por el elemento \(\Phi(1+X^{(1)}t,\ldots,1+X^{(k)}t)\), efectuándose el cálculo según el método de la demostración: se calculan los elementos \(\Phi(1+X_1^{(1)}t+\ldots+X_n^{(1)}t^n,\ldots,1+X_1^{(k)}t+\ldots+X_n^{(k)}t^n)\), descomponiendo \(1+X_1^{(i)}t+\ldots+X_n^{(i)}t^n\) en \(\prod_{j=1}^{n}(1+T_j^{(i)}t)\) y utilizando la aditividad de \(\Phi\); los polinomios así obtenidos son simétricos respecto de los \(T_j^{(i)}\) (\(i\) fijo y \(j\) variable) y se expresan en función de los \(X_j^{(i)}\); pegando mediante la filtración de \(H\), se determinan así los polinomios universales de \(\Phi\). Si \((\psi^{(1)},\ldots,\psi^{(k)})\in(\Ghat(A))^k\), el cálculo de \(\Phi(\psi^{(1)},\ldots,\psi^{(k)})\) se efectúa sustituyendo los coeficientes \(a_j^{(i)}\) de los \(\psi^{(i)}\) por los \(X_j^{(i)}\) en los polinomios universales.
+
+Supongamos que existe un entero \(m\) tal que el coeficiente de \(t^n\) en \(\theta=\Phi(1+X^{(1)}t,\ldots,1+X^{(k)}t)\) sea un polinomio cuyas componentes isobáricas tienen un peso que varía entre \(n\) y \(mn\); entonces el \(k\)-ésimo polinomio universal de \(\Phi\) tiene componentes isobáricas cuyo peso varía entre \(k\) y \(km\): esto resulta inmediatamente del modo de cálculo expuesto más arriba y del teorema de las funciones simétricas.
+
+Supongamos en particular que \(H=\Ghat\); entonces el \(n\)-ésimo polinomio universal de \(\Phi\) no tiene componentes de peso \(<n\). Consideremos ahora el morfismo canónico: \(H\longrightarrow1+\widehat{\operatorname{Gr}\,\cdot\,}^{+}\); por composición con \(\Phi\), se obtiene un morfismo: \((\Ghat)^k\longrightarrow1+\widehat{\operatorname{Gr}}^{+}\), que según la demostración de 1.12 se factoriza por \((1+\widehat{\operatorname{Gr}}^{+})^k\) y define un morfismo \(\Phi:(1+\widehat{\,\cdot\,}^{+})^k\longrightarrow1+\widehat{\,\cdot\,}^{+}\); se ve enseguida que el \(n\)-ésimo polinomio universal de \(\Phi\) es el mismo que el de \((\Ghat)^k\longrightarrow1+\widehat{\operatorname{Gr}}^{+}\), es decir, la componente isobárica de peso \(n\) del \(n\)-ésimo polinomio universal de \(\Phi\).
+
+Las mismas observaciones se aplican al caso \(H=\Ga\): se puede definir un morfismo de funtores \(H\longrightarrow\widehat{\operatorname{Gr}\,\cdot\,}^{+}\) (con \(\widehat{\operatorname{Gr}\,\cdot\,}^{+}=\widehat{\,\cdot\,}^{+}\circ\operatorname{Gr}\), siendo \(\widehat{\,\cdot\,}^{+}\) el funtor definido sobre \(\mathcal C_g\) por \(\widehat B^+=\prod_{i\geq1}B^i\)) de manera análoga a 1.11; se copian entonces el razonamiento y las conclusiones del párrafo precedente.
+
+\textbf{1.16.} Terminemos con un ejemplo. Se supone que \(K=\mathbb Q\). Se define un endomorfismo del funtor \(1+\widehat{\,\cdot\,}^{+}\), denotado por \(\Toddc\), y llamado carácter de Todd, poniendo:
+\[
+  \Toddc(1+X)=\frac{X}{1-e^{-X}}.
+\]
+Las condiciones i) y ii) del teorema 1.13 se verifican inmediatamente, lo que muestra que así hemos definido efectivamente un endomorfismo de \(1+\widehat{\,\cdot\,}^{+}\).
+
+\section*{2. Definición de los \(\lambda\)-anillos; ejemplos}
+
+En este parágrafo, el anillo base del parágrafo 1 será \(\mathbb Z\) (salvo en 2.9); nos situamos en la categoría \(\mathcal C_0\) (1.8) y denotamos por \(\Ghat\) la restricción de \(\Ghat\) a \(\mathcal C_0\) (1.10).
+
+\textbf{Definición 2.1.}: Se llama pre-\(\lambda\)-anillo a un anillo \(K\), conmutativo con unidad, provisto de un homomorfismo de grupos abelianos
+\[
+  \lambda_t:K\longrightarrow1+K[[t]]^+,
+\]
+tal que para todo \(x\in K\), \(\lambda_t(x)=1+xt+\ldots\).
+
+Pondremos \(\lambda_t(x)=\sum_{i\geq0}^{\infty}\lambda^i(x)t^i\); darse una estructura de pre-\(\lambda\)-anillo sobre un anillo \(K\) equivale, pues, a darse una familia de aplicaciones \(\lambda^i\), \(i\in\mathbb N\), de \(K\) en \(K\), tales que:
+\[
+\begin{array}{ll}
+\text{i)}& \forall x\in K,\quad \lambda^0(x)=1,\\[0.3em]
+\text{ii)}& \forall x\in K,\quad \lambda^1(x)=x,\\[0.3em]
+\text{iii)}& \forall x,y\in K,\ \forall n\in\mathbb N,\quad
+\lambda^n(x+y)=\displaystyle\sum_{p+q=n}\lambda^p(x)\cdot\lambda^q(y).
+\end{array}
+\]
+
+Sean \(K,K'\) dos pre-\(\lambda\)-anillos, y \(f:K\to K'\), un homomorfismo de anillos; se dirá que \(f\) es un homomorfismo de pre-\(\lambda\)-anillos, o también un \(\lambda\)-homomorfismo, si el diagrama:
+\[
+\begin{tikzcd}
+K \arrow[r,"\lambda_t"] \arrow[d,"f"'] &
+1+K[[t]]^+ \arrow[d,"\Ghat(f)"]\\
+K' \arrow[r,"\lambda_t"] &
+1+K'[[t]]^+,
+\end{tikzcd}
+\]
+es conmutativo.
+
+Esto equivale también a las relaciones siguientes:
+\[
+  \forall x\in K,\ \forall i\in\mathbb N,\qquad
+  \lambda^i(f(x))=f(\lambda^i(x)).
+\]
+
+\textbf{Ejemplos 2.2.}: a) Se pueden dar todas las estructuras de pre-\(\lambda\)-anillo de \(\mathbb Z\). Para ello basta darse \(\lambda_t(1)\), que será, pues, una serie formal con coeficientes enteros, sometida a la única condición de comenzar por \(1+t\).
+
+b) Sea \((T,A)\) un topos con anillos conmutativos, y sea \(K\) el «~grupo de Grothendieck~» de los \(A\)-Módulos localmente isomorfos a un factor directo de un \(A\)-Módulo libre de tipo finito; se sabe que \(K\) puede dotarse de una estructura de anillo mediante el producto tensorial (Exp. IV), y vamos a dotarlo de una estructura de pre-\(\lambda\)-anillo de la manera siguiente: para todo \(A\)-Módulo \(E\), localmente factor directo de un Módulo libre de tipo finito, se denota por \(\lambda^i(E)\) la clase en \(K\) de la \(i\)-ésima potencia exterior de \(E\) (que también es localmente factor directo de un Módulo libre de tipo finito); esto define una función sobre la categoría de los \(A\)-Módulos localmente factores directos de un libre de tipo finito, con valores en el grupo abeliano \(1+K[[t]]^+\); hay que mostrar entonces que esta función es aditiva, lo que implicará que se factoriza por \(K\), de donde se obtendrá la estructura buscada.
+
+\textbf{Lema 2.2.1.} Sea \(0\longrightarrow E' \xrightarrow{u} E \xrightarrow{v} E''\longrightarrow0\) una sucesión exacta de \(A\)-Módulos que es localmente escindida (por ejemplo, tal que \(E''\) sea localmente factor directo de un Módulo libre de tipo finito). Existe sobre \(\Lambda^n(E)\) una filtración finita, e isomorfismos:
+\[
+  \Lambda^{n-p}(E')\otimes_A\Lambda^p(E'')
+  \xrightarrow{\sim}
+  \operatorname{Gr}^p\Lambda^n(E).
+\]
+Se toma como \(F^p\Lambda^n(E)\) la imagen del morfismo canónico:
+\[
+\begin{gathered}
+  \Lambda^{n-p}(E')\otimes_A\Lambda^p(E)\longrightarrow\Lambda^n(E)
+  \quad\text{para } 0\leq p\leq n\ ;\quad \text{si } p\geq n,\\
+  F^p\Lambda^n(E)=\Lambda^n(E),\quad \text{y si } p<0,\quad F^p\Lambda^n(E)=0.
+\end{gathered}
+\]
+Esto define efectivamente una filtración finita sobre \(\Lambda^n(E)\).
+
+Se define un homomorfismo:
+\[
+  f_p:\Lambda^{n-p}(E')\otimes_A\Lambda^p(E'')
+  \longrightarrow F^p\Lambda^n(E)/F^{p-1}\Lambda^n(E)
+\]
+poniendo \(f_p(x'_1\wedge\cdots\wedge x'_{n-p}\otimes x''_1\wedge\cdots\wedge x''_p)=\operatorname{cl}_{\operatorname{Gr}^p}\bigl(u(x'_1)\wedge\cdots\wedge u(x'_{n-p})\wedge x_1\wedge\cdots\wedge x_p\bigr)\), que no depende evidentemente de la elección de los \(x_i\) que levantan las secciones dadas \(x''_i\) de \(E''\). Si la sucesión exacta está localmente escindida, \(f_p\) es un isomorfismo, pues localmente \(\Lambda^n(E)\simeq\bigoplus_{p+q=n}\Lambda^p(E')\otimes_A\Lambda^q(E'')\).
+
+En el caso en que \(E',E,E''\) son localmente factores directos de Módulos libres de tipo finito, los \(\operatorname{Gr}^p\Lambda^n(E)\) son localmente factores directos de libres de tipo finito, y por tanto también los \(F^p\Lambda^n(E)\); se puede escribir, pues, en \(K\):
+\(\lambda^n(E)=\sum_{p=0}^{n}\operatorname{cl}(\operatorname{Gr}^p\Lambda^n(E))=\sum_{p=0}^{n}\lambda^{n-p}(E')\cdot\lambda^p(E'')\), de donde se obtiene la aditividad.
+
+Sean \((T,A)\), \((T',A')\) dos topos con anillos conmutativos, y \(f:(T,A)\longrightarrow(T',A')\) un morfismo de topos anillados. Se sabe (Exp. IV, 2.7) que \(f\) define un morfismo de anillos sobre los \(K\) correspondientes, sea \(f^*:K^{\bullet}_{\naif}(T',A')\longrightarrow K^{\bullet}_{\naif}(T,A)\). Como la imagen inversa conmuta con las potencias exteriores, el morfismo \(f^*\) correspondiente sobre los \(K\) es un \(\lambda\)-homomorfismo para la estructura que acaba de definirse.
+
+Señalemos dos casos particulares:
+\begin{itemize}
+\item Sea \(X\) un esquema; \(K^{\bullet}_{\naif}(X)\) queda así provisto de una estructura de pre-\(\lambda\)-anillo; este es el caso que se utilizará en lo que sigue del seminario, y puede considerarse como «~modelo~» de la teoría general de los \(\lambda\)-anillos.
+\item Sea \(A\) un anillo, \(X=\operatorname{Spec}A\); sea, por otra parte, \(G\) un grupo que actúa trivialmente sobre \(A\); si se toma como \((T,A)\) el topos de los haces de conjuntos sobre \(X\), sobre los cuales actúa \(G\), el anillo \(K\) así obtenido es el anillo de las representaciones de \(G\) en los \(A\)-módulos proyectivos de tipo finito.
+\end{itemize}
+
+\textbf{2.3.} Sea \(K\) un anillo conmutativo con unidad; nos proponemos dotar al grupo abeliano \(\Ghat(K)=1+K[[t]]^+\) de una estructura de pre-\(\lambda\)-anillo, funtorial respecto de \(K\). A tal efecto, aplicaremos los resultados de (1.10) sobre el funtor \(\Ghat\).
+
+Se define primero la multiplicación dándose un morfismo \(\mathbb Z\)-bilineal de funtores: \(\Ghat\times\Ghat\longrightarrow\Ghat\), mediante el elemento \(1+XYt\) de \(\Ghat(\mathbb Z[X,Y])\); este elemento verifica, en efecto, 1.7.i), y para ver que verifica 1.7.ii), hay que mostrar que en \(\prod_{i=1}^{n}(1+T_iYt)\), expresado mediante las funciones simétricas elementales \(X_j\) de los \(T_i\), \(X_n\) no aparece en los coeficientes de \(t^k\) para \(k<n\), lo cual es evidente por razones de grado.
+
+La ley así definida se denotará por el signo \(\circ\); se tiene, pues, por definición:
+\begin{equation}\tag{2.3.1}
+  (1+Xt)\circ(1+Yt)=1+XYt.
+\end{equation}
+Es distributiva por construcción, asociativa y conmutativa por los diagramas:
+\[
+\begin{tikzcd}[column sep=tiny]
+\Ghat\times\Ghat\times\Ghat \arrow[r] \arrow[d] &
+\Ghat\times\Ghat \arrow[d]\\
+\Ghat\times\Ghat \arrow[r] & \Ghat
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=tiny]
+\Ghat\times\Ghat \arrow[r] \arrow[d] &
+\Ghat\times\Ghat \arrow[d]\\
+\Ghat \arrow[r,"\id"] & \Ghat,
+\end{tikzcd}
+\]
+donde el significado de las flechas es evidente, y para los cuales basta verificar la conmutatividad sobre los elementos \(1+Xt,1+Yt,1+Zt\) de \(\Ghat(\mathbb Z[X,Y,Z])\) (resp. \(1+Xt,1+Xt\) de \(\Ghat(\mathbb Z[X,Y])\)) según 1.10, verificación que es inmediata.
+
+Según 1.8, el producto por esta ley de dos series se calcula por sustitución de sus coeficientes en los polinomios universales de la ley. El \(n\)-ésimo polinomio universal se denotará por \(P_n\); es un polinomio de \(\mathbb Z[X_i,Y_j]_{1\leq i,j\leq n}\), isobárico de peso \(n\) respecto de cada uno de los dos grupos de variables (véase 1.15), y simétrico respecto de estos dos grupos. Demos como ejemplo el valor de \(P_2\):
+\[
+  P_2(X_1,X_2;Y_1,Y_2)=X_2Y_1^2+Y_2X_1^2-2X_2Y_2.
+\]
+Se tiene también la relación siguiente: sean \(K\in\operatorname{Ob}(\mathcal C_0)\), \(\psi\in\Ghat(K)\), \(a\in K\); entonces
+\begin{equation}\tag{2.3.2}
+  \psi(t)\circ(1+at)=\psi(at).
+\end{equation}
+Como de costumbre, por el argumento funtorial estándar se reduce al caso \(K=\mathbb Z[X,Y]\), \(\psi=1+Xt\), \(a=Y\), donde no es sino 2.3.1.
+
+Aplicando 2.3.2 a \(\Ghat(K)=1+K[[t]]^+\), y a \(a=1\), se ve que el elemento \(1+t\) es unidad para esta multiplicación. Para evitar confusiones, lo denotaremos a veces por \(1\), o también por \(1_\circ\).
+
+El funtor \(\Ghat\) puede considerarse ahora como funtor de \(\mathcal C_0\) en la categoría de los anillos conmutativos con unidad y, por consiguiente, componerse consigo mismo; para evitar confusiones, elegiremos indeterminadas diferentes para cada uno de los factores del producto de \(\Ghat\) por sí mismo, e indicaremos la indeterminada en exponente cuando sea necesario: \(\Ghat^t\), \(\Ghat^u\), etc. Para \(A\in\operatorname{Ob}(\mathcal C_0)\), se tiene, pues, \(\Ghat^u\circ\Ghat^t(A)=1+\{1+A[[t]]^+\}[[u]]^+\). Para definir las operaciones \(\lambda^i\) sobre \(1+K[[t]]^+\), vamos, pues, a darnos un morfismo de funtores: \(\Ghat\longrightarrow\Ghat^u\circ\Ghat^t\).
+Para ello, hay que definir primero una filtración del funtor \(\Ghat^u\circ\Ghat^t\) que permita el pegado de 1.6.
+
+Se observa primero que \(F^k\Ghat\) es un ideal para la ley \(\circ\); para ello, por funtorialidad se reduce al caso \(A=\mathbb Z[X_i,Y]_{i\geq1}\), y al producto \(\left(1+\sum_{i\geq k}X_i t^i\right)\circ(1+Yt)\), y esto resulta de 2.3.2. Se toma entonces como \(F^n(\Ghat^u\circ\Ghat^t)\) el conjunto de las series de la forma \(1+\psi_1u+\cdots+\psi_i u^i+\cdots\), \(\psi_i\in F^{[n/i]}\Ghat\), denotando \([n/i]\) la parte entera de \(n/i\).
+
+El elemento que define el morfismo \(\lambda_u\) es \(\underline 1+\{1+Xt\}u\); el lector verificará como ejercicio que las condiciones de 1.6 se cumplen efectivamente (de hecho, la filtración se elige \emph{ad hoc}).
+
+También aquí, las operaciones \(\lambda^i\) se calculan por sustitución a partir de \(\lambda_u(1+\cdots+X_nt^n+\cdots)\), y están, pues, determinadas por polinomios universales. Denotaremos por \(Q_{i,j}(X_1,\ldots,X_{ij})\) el coeficiente de \(t^j\) en \(\lambda^i(1+\cdots+X_nt^n+\cdots)\); es un polinomio isobárico de peso \(ij\) respecto de las variables \(X_1,\ldots,X_{ij}\) (verificación análoga a la de 1.15). Se calcula mediante funciones simétricas a partir del elemento de definición:
+\begin{equation}\tag{2.3.3}
+  \lambda_u(1+Xt)=\underline 1+\{1+Xt\}u.
+\end{equation}
+Demos como ejemplo el valor de \(Q_{2,2}\):
+\[
+  Q_{2,2}(X_1,X_2,X_3,X_4)=X_1X_3-X_4.
+\]
+
+Indiquemos, para terminar, el origen de las fórmulas (2.3.1) y (2.3.3). Se considera el ejemplo 2.2.b), donde las operaciones \(\lambda^i\) están definidas por las potencias exteriores de los \(A\)-Módulos. Se desea que \(\lambda_t:K\longrightarrow\Ghat(K)\) sea un \(\lambda\)-homomorfismo; hay que definir, pues, sobre \(\Ghat\) leyes tales que, para cualesquiera \(A\)-Módulos \(E,F\), se tenga:
+\[
+  \lambda_t(EF)=\lambda_t(E)\circ\lambda_t(F)~;\qquad
+  \lambda_u(\lambda_t(E))=\Ghat^u(\lambda_t)(\lambda_u(E))~;
+\]
+ahora bien, las relaciones (2.3.1) y (2.3.3) son precisamente las relaciones precedentes aplicadas al caso en que \(E\) y \(F\) son módulos invertibles.
+
+Veremos en la Exp. VI en qué medida se verifica la propiedad deseada.
+
+\textbf{Definición 2.4.} Un pre-\(\lambda\)-anillo \(K\) se llamará \(\lambda\)-anillo si el homomorfismo de grupos abelianos \(\lambda_t:K\longrightarrow1+K[[t]]^+\) es un \(\lambda\)-homomorfismo para la estructura de pre-\(\lambda\)-anillo sobre el segundo miembro definida en 2.3. Esto significa, pues, que se tienen las relaciones: \(\forall x,y\in K\),
+\begin{equation}\tag{2.4.1}
+  \lambda_t(1)=1+t~;\quad
+  \lambda_t(xy)=\lambda_t(x)\circ\lambda_t(y)~;\quad
+  \lambda_u(\lambda_t(x))=\Ghat(\lambda_t)\bigl(\lambda_u(x)\bigr).
+\end{equation}
+En términos de las aplicaciones \(\lambda^i\), las dos últimas relaciones equivalen a: \(x,y\in K\), \(i.j\in\mathbb N\),
+\begin{align}
+  \lambda^i(xy)
+  &=P_i(\lambda^1(x),\ldots,\lambda^i(x);
+       \lambda^1(y),\ldots,\lambda^i(y)), \tag{2.4.2}\\
+  \lambda^j(\lambda^i(x))
+  &=Q_{i,j}(\lambda^1(x),\ldots,\lambda^{ij}(x)). \notag
+\end{align}
+
+Obsérvese que nos apartamos aquí de la terminología usual (cf. [1]), en la que se llamaba \(\lambda\)-anillo a lo que llamamos pre-\(\lambda\)-anillo, y \(\lambda\)-anillos «~especiales~» a nuestros \(\lambda\)-anillos; la razón es que solo los \(\lambda\)-anillos «~especiales~» son utilizables en la práctica.
+
+\textbf{Ejemplos 2.5.}
+\begin{enumerate}[label=\alph*)]
+\item Hemos determinado todas las estructuras de pre-\(\lambda\)-anillo de \(\mathbb Z\); de 2.4.1 resulta que solo la definida por \(\lambda_t(1)=1+t\) puede ser una estructura de \(\lambda\)-anillo. Se tiene entonces \(\lambda_t(n)=(1+t)^n\), de donde:
+\[
+  \forall n,n'\in\mathbb Z,\quad
+  \lambda_t(n)\circ\lambda_t(n')=(1+t)^n\circ(1+t)^{n'}
+  =(1+t)^{nn'}=\lambda_t(nn')~;
+\]
+\[
+  \lambda_u((1+t)^n)
+  =
+  (\lambda_u(1+t))^n
+  =
+  (\underline 1+\{1+t\}u)^n
+  =
+  \Ghat(\lambda_t)((1+u)^n)
+  =
+  \Ghat(\lambda_t)(\lambda_u(n)).
+\]
+Por consiguiente, es efectivamente una estructura de \(\lambda\)-anillo. Si se denota por \(\binom{X}{k}\) el polinomio con coeficientes racionales \(\frac{1}{k!}X(X-1)\cdots(X-k+1)\), se tiene, pues:
+\begin{equation}\tag{2.5.1}
+  \lambda^i(n)=\binom{n}{i}.
+\end{equation}
+
+\item Para todo anillo \(K\), el pre-\(\lambda\)-anillo \(1+K[[t]]^+\) es un \(\lambda\)-anillo. En primer lugar, \(\lambda_u(\underline 1)=\lambda_u(1+t)=\underline 1+\{1+t\}u=\underline 1+\underline 1.u\). Las demás relaciones se verifican por la conmutatividad de los diagramas:
+\[
+\begin{tikzcd}[column sep=tiny]
+\Ghat^t\times\Ghat^t \arrow[r,"\lambda_u\times\lambda_u"] \arrow[d,"\circ"'] &
+(\Ghat^u\circ\Ghat^t)\times(\Ghat^u\circ\Ghat^t) \arrow[d,"\circ"]\\
+\Ghat^t \arrow[r,"\lambda_u"'] &
+\Ghat^u\circ\Ghat^t,
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=tiny]
+\Ghat^t \arrow[r,"\lambda_v"] \arrow[d,"\lambda_u"'] &
+\Ghat^v\circ\Ghat^t \arrow[d,"\Ghat^v(\lambda_u)"]\\
+\Ghat^u\circ\Ghat^t \arrow[r,"\lambda_v"] &
+\Ghat^v\circ\Ghat^u\circ\Ghat^t,
+\end{tikzcd}
+\]
+que se verifican, según 1.10, sobre los elementos \(1+Xt,1+Yt\). Para el primero,
+\[
+\begin{aligned}
+\lambda_u(1+Xt)\circ\lambda_u(1+Yt)
+&=(\underline 1+\{Xt\}u)\circ(\underline 1+\{1+Yt\}u)\\
+&=\underline 1+\{(1+Xt)\circ(1+Yt)\}u\\
+&=\underline 1+\{1+XYt\}u\\
+&=\lambda_u((1+Xt)\circ(1+Yt)).
+\end{aligned}
+\]
+Para el segundo:
+\[
+  \lambda_v(\lambda_u(1+Xt))
+  =
+  \underline 1+\{\underline 1+\{1+Xt\}u\}v
+  =
+  \Ghat^v(\lambda_u)(\lambda_v(1+Xt)).
+\]
+
+\item Los ejemplos geométricos de 2.2 se tratarán más adelante.
+\end{enumerate}
+
+\textbf{2.6.} Se puede generalizar el ejemplo 2.5.a) de la manera siguiente: Sea \(K\) un anillo conmutativo con unidad, tal que:
+\[
+\begin{array}{ll}
+\text{i)}& K\text{ es sin torsión},\\
+\text{ii)}& \forall x\in K,\ \forall n\in\mathbb N,\quad \text{se tiene}\ \binom{x}{n}\in K.
+\end{array}
+\]
+Se pone entonces, para todo \(x\in K\), y todo \(n\in\mathbb N\), \(\lambda^n(x)=\binom{x}{n}\), es decir:
+\begin{equation}\tag{2.6.1}
+  \lambda_t(x)=\sum_{n=0}^{\infty}\binom{x}{n}t^n
+  =(1+t)^x=\exp(x\Log(1+t)),
+\end{equation}
+donde la última identidad se considera en \((K\otimes_{\mathbb Z}\mathbb Q)[[t]]\). Por la multiplicatividad de la exponencial, esto define una estructura de pre-\(\lambda\)-anillo sobre \(K\).
+
+Para ver que es una estructura de \(\lambda\)-anillo, hay que demostrar las relaciones 2.4.2, y basta demostrarlas en \(K\otimes_{\mathbb Z}\mathbb Q\), según 2.6.i). Por funtorialidad se reduce entonces al caso \(K=\mathbb Q[X,Y]\), y a los elementos \(X,Y\). Teniendo en cuenta la definición de los \(\lambda^i\), los dos miembros de las igualdades 2.4.2 son polinomios en \(X,Y\), con coeficientes racionales, y para mostrar su igualdad basta, pues, mostrar que toman el mismo valor para todos los valores enteros de \(X,Y\). Pero las relaciones obtenidas por sustitución de valores enteros por \(X,Y\) son las que expresan que el pre-\(\lambda\)-anillo \(\mathbb Z\) (2.5.a)) es un \(\lambda\)-anillo; por tanto, se satisfacen.
+
+\textbf{Definición 2.7.} Se llama anillo binomial a un anillo que verifica las condiciones 2.6.i) y ii), provisto de la estructura de \(\lambda\)-anillo definida por 2.6.1.
+
+\textbf{Ejemplo 2.8.} Sean \(X\) un sitio, \(K\) un anillo binomial, \(\underline K\) el haz asociado al prehaz constante de valor \(K\) sobre \(X\); entonces \(H^0(X,\underline K)\) es un anillo binomial. En efecto, las condiciones 2.6 se conservan al pasar al límite inductivo. En particular, \(H^0(X,\mathbb Z)\) es un anillo binomial.
+
+\textbf{2.9.} Sean \(K\) un anillo binomial, \(A\) una \(K\)-álgebra. Para toda serie \(\varphi\in\Ghat(A)\), y todo \(a\in K\), puede definirse una serie \(\varphi^a\) de la manera usual: se escribe \(\varphi=1+\psi\), y se pone:
+\begin{equation}\tag{2.9.1}
+  \varphi^a=(1+\psi)^a
+  =
+  \sum_{n=0}^{\infty}\binom{a}{n}\psi^n
+  \left(=\exp(a\Log\varphi)\right),
+\end{equation}
+no pudiendo escribirse la última igualdad sino módulo torsión. Estas fórmulas se obtienen por sustitución a partir de las fórmulas análogas para \(\varphi=1+t\); las relaciones siguientes, propiedades clásicas de la exponencial, siguen siendo, pues, verdaderas para \(a,b\in K\), \(\varphi,\psi\in\Ghat(A)\):
+\begin{equation}\tag{2.9.2}
+  \varphi^a\varphi^b=\varphi^{a+b};\qquad
+  \varphi^{ab}=(\varphi^a)^b;\qquad
+  \varphi^a\psi^a=(\varphi\psi)^a .
+\end{equation}
+
+
+
+% Adiciones de macros para la continuación de la Exposición V
+\providecommand{\Ghat}{\widehat G}
+\providecommand{\Gg}{\widehat G_g}
+\providecommand{\Gcirc}{\widehat G_{\circ}}
+\providecommand{\Gnabla}{\widehat G_{\nabla}}
+\providecommand{\Grhat}{\widehat{\operatorname{Gr}}}
+\providecommand{\Log}{\operatorname{Log}}
+\providecommand{\Fil}{\operatorname{Fil}}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Mon}{\operatorname{Mon}}
+
+

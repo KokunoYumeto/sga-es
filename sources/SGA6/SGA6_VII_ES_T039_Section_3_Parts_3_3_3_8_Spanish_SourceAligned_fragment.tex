@@ -1,0 +1,240 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: sección 3, números 3.3--3.8, líneas 10293--10526 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{3.3.} Supongamos ahora que \(X\) es un esquema que posee un haz amplio. Entonces lo mismo vale para \(X'\), que es proyectivo sobre \(X\), y para \(Y\) e \(Y'\). Por otra parte, \(i\) y \(j\) son morfismos perfectos, puesto que son inmersiones regulares; \(g\) es un morfismo liso, y por tanto perfecto, pues \(Y'=\bfP(N)\); finalmente, \(f\) es perfecto por 1.9. Como estos morfismos son proyectivos, se pueden definir los homomorfismos aditivos \sisi{(IV}{(IV 2.12)}
+\[
+i_*:K^\circ(Y)\to K^\circ(X);\quad
+j_*:K^\circ(Y')\to K^\circ(X');\quad
+f_*:K^\circ(X')\to K^\circ(X);\quad
+g_*:K^\circ(Y')\to K^\circ(Y).
+\]
+
+\textbf{Proposición 3.4.} Bajo las hipótesis y con las notaciones de 3.1 y 3.3, para todo \(x\in K^\circ(Y)\) se tiene la relación
+\[
+f^*(i_*(x))=j_*\bigl(g^*(x).\lambda_{-1}(F)\bigr).
+\]
+
+Como los dos miembros de la relación que hay que demostrar son aditivos, podemos suponer que \(x\) es la clase de un \(\cO_Y\)-módulo localmente libre de tipo finito \(M\). El elemento \(f^*(i_*(x))\) es entonces la clase del complejo \(\mathrm Lf^*(Ri_*(M))\), obtenido tomando una resolución proyectiva de \(i_*(M)\) y aplicándole el funtor \(f^*\). Los haces de homología del complejo así obtenido son los \(\Tor_i^{\cO_X}(M,\cO_{X'})\). Ahora bien, por 2.4 y 3.2, se tiene
+\[
+\Tor_i^{\cO_X}(M,\cO_{X'})
+\xrightarrow{\sim}
+M\otimes_{\cO_Y}\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)
+\xrightarrow{\sim}
+M\otimes_{\cO_Y}\bigwedge^iF.
+\]
+Se sigue que estos haces de homología son localmente libres de tipo finito sobre \(\cO_{Y'}\), y por tanto perfectos sobre \(\cO_{X'}\); en consecuencia, la clase en \(K^\circ(X')\) del complejo \(\mathrm Lf^*(Ri_*(M))\) es la suma alternada de las clases de sus haces de homología, es decir,
+\[
+f^*(i_*(x))
+=\sum_{i\ge0}(-1)^i\operatorname{cl}
+\bigl(j_*(M\otimes_{\cO_Y}\bigwedge^iF)\bigr)
+=\sum_{i\ge0}(-1)^i
+j_*\bigl(g^*(x)\lambda^i(F)\bigr).
+\]
+
+\textbf{Lema 3.5.} Bajo las hipótesis y con las notaciones de 3.1, se tienen los isomorfismos siguientes:
+\begin{enumerate}[label=\roman*)]
+\item para todo \(n\ge0\), y para todo \(i\ge1\), \(R^if_*\bigl(\cO_{X'}(n)\bigr)=0\);
+\item para todo \(n\ge0\), \(f_*\bigl(\cO_{X'}(n)\bigr)=J^n\).
+\end{enumerate}
+Podemos suponer evidentemente que \(X\) es afín, y por tanto cuasicompacto.
+
+i) Recordemos primero el lema siguiente, demostrado en la Exp. III.
+
+\textit{Lema.} Sea \(X'\xrightarrow{f}X\) un morfismo proyectivo y perfecto, con \(X\) cuasicompacto, y sea \(L^\bullet\) un complejo perfecto sobre \(\cO_{X'}\), acíclico en grados \(>0\). Entonces existe un entero \(n_0\) tal que, para \(n\ge n_0\), el complejo \(Rf_*\bigl(L^\bullet\otimes_{\cO_{X'}}\cO_{X'}(n)\bigr)\) sea acíclico en grados \(>0\).
+
+Aplicamos este lema al complejo reducido a \(\cO_{X'}\); existe, pues, un entero \(n_0\) tal que, para \(n\ge n_0\), se tenga \(R^if_*(\cO_{X'}(n))=0\) si \(i\ge1\). Descendemos entonces por inducción hasta \(n=0\). Para ello, consideramos la sucesión exacta
+\[
+0\longrightarrow
+\cO_{X'}(n+1)
+\longrightarrow
+\cO_{X'}(n)
+\longrightarrow
+\cO_{Y'}(n)
+\longrightarrow0,
+\]
+y le aplicamos el funtor \(f_*\). Ahora bien, se tiene \(Rf_*(\cO_{Y'}(n))=i_*\circ\mathbb Rg_*(\cO_{Y'}(n))\). Como \(Y'=\bfP(N)\), \(\cO_{Y'}(n)\) es \(g_*\)-acíclico para \(n\ge0\). Por tanto, para todo \(n\ge0\) y todo \(i\ge1\), se tiene
+\[
+R^if_*(\cO_{Y'}(n))=0,
+\]
+y, por consiguiente, las sucesiones exactas
+\[
+R^if_*(\cO_{X'}(n+1))
+\longrightarrow
+R^if_*(\cO_{X'}(n))
+\longrightarrow0,
+\]
+lo que permite concluir la inducción.
+
+ii) Se trata de demostrar que el morfismo canónico
+\[
+\bigoplus_{n\ge0}J^n
+\longrightarrow
+\bigoplus_{n\ge0}f_*\bigl(\cO_{X'}(n)\bigr)
+\]
+es un isomorfismo. Como la propiedad es local, podemos suponer que \(J\) está definido por una sucesión \(f_1,\ldots,f_d\) de secciones de \(\cO_X\), tales que el homomorfismo correspondiente \((\cO_X)^d\longrightarrow\cO_X\) sea regular. Pongamos \(S=\bigoplus_{n\ge0}J^n\); se define un homomorfismo sobreyectivo de álgebras \(\cO_X[T_1,\ldots,T_d]\xrightarrow{v}S\), enviando \(T_i\) a \(f_i^{(1)}\). Este homomorfismo define una inmersión cerrada \(X'\longrightarrow\bfP_X^{d-1}\), regular por 1.8 ii).
+
+Por 1.8 iii), \(S\) es perfecto como \(\cO_X[T_1,\ldots,T_d]\)-módulo graduado. En particular, \(S\) es de presentación finita como módulo graduado. Sea, pues,
+\[
+L''\longrightarrow L'\longrightarrow S\longrightarrow0
+\]
+una presentación finita graduada de \(S\) sobre \(\cO_X[T_1,\ldots,T_d]\). Se obtiene sobre \(\bfP_X^{d-1}\) la sucesión exacta
+\[
+M''\longrightarrow M'\longrightarrow\cO_{X'}\longrightarrow0,
+\]
+donde \(M''=\underline{\Proj}(L'')\), \(M'=\underline{\Proj}(L')\), y son, por tanto, libres de tipo finito sobre \(\bfP_X^{d-1}\). Se puede escribir entonces, para todo \(n\), el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+L''_n \arrow[r] \arrow[d,"\sim"'] &
+L'_n \arrow[r] \arrow[d,"\sim"'] &
+J^n \arrow[r] \arrow[d] &
+0 \arrow[d]\\
+p_*(M''(n)) \arrow[r] &
+p_*(M'(n)) \arrow[r] &
+p_*(\cO_{X'}(n)) \arrow[r] &
+0,
+\end{tikzcd}
+\]
+donde \(p\) es el morfismo estructural \(\bfP_X^{d-1}\to X\), y \(L''_n\), \(L'_n\) las componentes de grado \(n\) de \(L''\), \(L'\). La línea superior es exacta por hipótesis; las dos primeras flechas verticales son isomorfismos a causa de los resultados clásicos para las imágenes directas en \(\cO_P(n)\), siendo \(P\) un fibrado proyectivo (EGA III, 2.1.15); finalmente, la última línea es exacta si \(n\) es suficientemente grande, pues el núcleo de \(M'\to\cO_{X'}\) es un \(\cO_P\)-módulo perfecto, y se puede aplicar el lema recordado más arriba, que muestra que este núcleo, tensorizado por \(\cO_P(n)\) para \(n\) suficientemente grande, es \(p_*\)-acíclico; lo mismo vale para el núcleo de \(M''\to M'\). Se sigue que, para \(n\) suficientemente grande, \(J^n\longrightarrow p_*(\cO_{X'}(n))\) es un isomorfismo. Ahora bien, \(p_*(\cO_{X'}(n))=f_*(\cO_{X'}(n))\); se tiene así el resultado para \(n\ge n_0\).
+
+Queda descender hasta \(n=0\). Procedemos por inducción descendente, gracias al diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] \arrow[d] &
+J^{n+1} \arrow[r] \arrow[d,"\sim"'] &
+J^n \arrow[r] \arrow[d] &
+J^n/J^{n+1} \arrow[r] \arrow[d,"\sim"'] &
+0 \arrow[d]\\
+0 \arrow[r] &
+f_*(\cO_{X'}(n+1)) \arrow[r] &
+f_*(\cO_{X'}(n)) \arrow[r] &
+f_*(\cO_{Y'}(n)) \arrow[r] &
+0.
+\end{tikzcd}
+\]
+La línea inferior es exacta porque \(R^1f_*(\cO_{X'}(n+1))=0\) para todo \(n\ge0\), por i), ya demostrado. Por otra parte, se tiene
+\[
+f_*(\cO_{Y'}(n))
+=i_*\bigl(g_*(\cO_{Y'}(n))\bigr)
+=i_*(\mathbf S(N)_n)
+=J^n/J^{n+1}.
+\]
+La flecha de la derecha es, pues, un isomorfismo; la de la izquierda lo es por la hipótesis de inducción; por tanto, la del medio también es un isomorfismo.
+
+\textbf{Proposición 3.6.} Bajo las hipótesis y con las notaciones de 3.1 y 3.3, se tiene la relación
+\[
+f_*\circ f^*=\Id_{K^\circ(X)}.
+\]
+Sea \(x\in K^\circ(X)\); por la fórmula de proyección, se puede escribir
+\[
+f_*(f^*(x))=f_*(1.f^*(x))=x.f_*(1).
+\]
+Basta, pues, demostrar que \(f_*(1)=1\). Ahora bien, 3.5 muestra que la cohomología de \(\mathbb Rf_*(\cO_{X'})\) es nula en grados \(>0\), e igual a \(\cO_X\) en grado \(0\). La proposición resulta inmediatamente.
+
+\textbf{Teorema 3.7.} Sean \(i:Y\to X\) una inmersión cerrada regular, \(X'\) el esquema obtenido explotando \(Y\), y \(Y'=X'\times_XY\), de modo que se tiene el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"'] & X.
+\end{tikzcd}
+\]
+Se supone que \(X\) es cuasicompacto y posee un haz amplio. Entonces se tiene la sucesión exacta
+\[
+0\longrightarrow K^\circ(Y)\xrightarrow{u}K^\circ(Y')\times K^\circ(X)
+\xrightarrow{v}K^\circ(X'),
+\]
+donde se pone, para \(y\in K^\circ(Y)\),
+\[
+u(y)=\bigl(g^*(y).\lambda_{-1}(F),-i_*(y)\bigr),
+\]
+y, para \(y'\in K^\circ(Y')\), \(x\in K^\circ(X)\),
+\[
+v(y',x)=j_*(y')+f^*(x),
+\]
+siendo las notaciones las de 3.1 y 3.3. Además, \(u\) admite un inverso por la izquierda \(u'\), definido por \(u'(y',x)=g_*(y')\).
+Si, además, \(X\) es noetheriano y \(Y\) regular, entonces \(v\) es sobreyectivo, y se tiene, por tanto, la sucesión exacta
+\[
+0\longrightarrow K^\circ(Y)\xrightarrow{u}K^\circ(Y')\times K^\circ(X)
+\xrightarrow{v}K^\circ(X')\longrightarrow0.
+\]
+
+Ante todo, \(u\) admite el inverso por la izquierda \(u'\), y a fortiori es inyectivo. En efecto, se tiene
+\[
+g_*\bigl(g^*(y).\lambda_{-1}(F)\bigr)
+=y.g_*(\lambda_{-1}(F)),
+\]
+por la fórmula de proyección. Por otra parte, \(g_*(\lambda_{-1}(F))=1\) (VI 5.9), de donde resulta la afirmación.
+
+A continuación, \(v\circ u=0\). En efecto, si \(y\in K^\circ(Y)\), se tiene
+\[
+v\circ u(y)
+=v\bigl(g^*(y)\lambda_{-1}(F),-i_*(y)\bigr)
+=j_*\bigl(g^*(y)\lambda_{-1}(F)\bigr)-f^*(i_*(\sisi{x}{y}))=0,
+\]
+por 3.4.
+
+Queda, pues, demostrar que \(\Ker(v)\subset \Im(u)\). Sean \(x\in K^\circ(X)\), \(y'\in K^\circ(Y')\), tales que
+\[
+j_*(y')+f^*(x)=0.
+\]
+Hay que encontrar \(y\in K^\circ(Y)\) tal que
+\begin{equation}\tag{3.7.1}
+x=-i_*(y);\qquad y'=g^*(y).\lambda_{-1}(F).
+\end{equation}
+Como \(u\) admite un inverso por la izquierda \(u'\), se tiene necesariamente
+\[
+y=u'(y',x)=g_*(y').
+\]
+Hay que demostrar, pues, que \(y\) verifica las relaciones (3.7.1).
+
+Para demostrar que \(x=-i_*(y)\), partimos de la relación \(f^*(x)=-j_*(y')\) y le aplicamos \(f_*\). Se obtiene \(f_*(f^*(x))=-f_*(j_*(y'))=-i_*(g_*(y'))=-i_*(y)\) por definición de \(y\). Ahora bien, por la proposición 3.6, \(f_*(f^*(x))=x\); de donde resulta la relación deseada.
+
+Para terminar la demostración, hay que probar que
+\[
+y'=g^*(g_*(y'))\lambda_{-1}(F).
+\]
+Pongamos \(z=y'-g^*(g_*(y'))\lambda_{-1}(F)\). Se obtiene \(g_*(z)=g_*(y')-g_*(y')\,g_*(\lambda_{-1}(F))=0\). Por otra parte, se tiene por hipótesis \(\sisi{j_*(y')=f^*(x)}{j_*(y')=-f^*(x)}\), de donde, por lo anterior, \(j_*(y')=f^*(i_*(y))\), y, por la proposición 3.4, \(j_*(y')=j_*\bigl(g^*(y)\lambda_{-1}(F)\bigr)\); por tanto, se tiene también \(j_*(z)=0\). Ahora bien, \(\Ker(j_*)\cap\Ker(g_*)=0\). En efecto, si \(j_*(z)=0\), \(j^*(j_*(z))=0\); ahora bien, \(j^*(j_*(z))=z(1-L)\) (prop. 2.7), y para que \(z(1-L)=0\), es necesario que exista \(z'\in K^\circ(Y)\) tal que \(z=z'\lambda_{-1}(F)\) (VI,5.10); aplicando \(g_*\), esto implica \(z'=g_*(z)=0\), y por tanto \(z=0\).
+
+Supongamos ahora que \(X\) es noetheriano y \(Y\) regular. Entonces \(Y'\) también es regular, puesto que es un fibrado proyectivo sobre \(Y\), y, para todo punto \(y'\) de \(Y'\), el anillo local \(\cO_{X',y'}\) de \(X'\) en \(y'\) es un anillo regular, pues \(\cO_{Y',y'}\) es cociente de \(\cO_{X',y'}\) por un elemento regular (véase EGA \(0_{\mathrm{IV}}\), 17.1.8). Se sabe que, para todo esquema regular que posee un haz amplio, los grupos de Grothendieck formados con los haces localmente libres de tipo finito y con los haces coherentes son idénticos. Este es, en particular, el caso de \(Y'\).
+
+Sea \(E\) un \(\cO_{X'}\)-módulo coherente con soporte en \(Y'\); entonces \(E\) es un \(\cO_{X'}\)-módulo perfecto. En efecto, lo es en los puntos de \(Y'\), puesto que \(X'\) es regular en esos puntos, y en los puntos de \(X'-Y'\), puesto que es nulo allí.
+
+Si \(E\) es la clase de \(E\) en \(K^\circ(X')\), \(E\) pertenece a la imagen de \(j_*\). En efecto, se puede filtrar \(E\) por los \(J'^n.E\). Esta filtración es finita, pues, como \(X'\) es noetheriano, existe un entero \(n_0\) tal que \(J'^{\,n_0}.E=0\); los cocientes de esta filtración son entonces \(\cO_{Y'}\)-módulos, y por tanto su clase en \(K^\circ(X')\) pertenece a la imagen de \(j_*\). Como \(E\) es la suma de las clases de estos cocientes, \(E\) también pertenece a ella.
+
+Sea ahora \(x\in K^\circ(X')\). Se puede encontrar un complejo perfecto \(M^\bullet\) cuya clase sea \(x\). Consideremos el triángulo distinguido
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& N^\bullet \arrow[dl] &\\
+M^\bullet \arrow[rr] && \mathbb Lf^*(\mathbb Rf_*(M^\bullet)) \arrow[ul] ,
+\end{tikzcd}
+\]
+siendo la flecha horizontal el homomorfismo canónico. Esta flecha es un isomorfismo sobre el complementario de \(Y'\), y por consiguiente los haces de cohomología de \(\sisi{N'}{N^\bullet}\) son haces coherentes con soporte en \(Y'\). Por lo anterior, son \(\cO_{X'}\)-módulos perfectos, y su clase pertenece a la imagen de \(j_*\). Se tiene, pues,
+\[
+x-f^*(f_*(x))\in\operatorname{Im}(j_*)\,;
+\]
+por tanto, el homomorfismo \(v\) es sobreyectivo.
+
+
+
+% Macros para la continuación de la Exposición VII
+\providecommand{\Q}{\mathbb Q}
+\providecommand{\bfP}{\mathbf P}
+\providecommand{\gr}{\operatorname{gr}}
+\providecommand{\Id}{\operatorname{Id}}
+\providecommand{\Fil}{\operatorname{Fil}}
+\providecommand{\Imf}{\operatorname{Im}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\codim}{\operatorname{codim}}
+\providecommand{\cJ}{\mathcal J}
+\providecommand{\cI}{\mathcal I}
+\providecommand{\cN}{\mathcal N}
+\providecommand{\cE}{\mathcal E}
+\providecommand{\cO}{\mathcal O}
+
+
+\subsection*{Observación 3.8}
+
+En el caso en que \(X\) es noetheriano y \(Y\) regular, 3.7 determina enteramente el grupo abeliano \(K^\circ(X')\) a partir de los \(\lambda\)-anillos \(K^\circ(X)\), \(K^\circ(Y)\), de las aplicaciones \(i_*,i^*\) entre estos anillos, y del elemento \(N\) de \(K^\circ(Y)\). En efecto, \(K^\circ(Y')\) puede calcularse en función de \(K^\circ(Y)\) y de \(N\) por (VI 1.1). Veremos en el parágrafo siguiente que la estructura multiplicativa de \(K^\circ(X')\) está determinada por los mismos datos, así como la \(\lambda\)-estructura si se tensoriza por \(\mathbb Q\) (siendo sin duda innecesaria esta restricción: véase 4.5).

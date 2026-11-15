@@ -1,0 +1,102 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: preámbulo, teorema 1.1 y lemas 1.1.1--1.1.4 (enunciado), líneas 4978--5073 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+% Exposé III additions
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\qcoh}{\mathrm{qcoh}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\torf}{\mathrm{torf}}
+\providecommand{\toramp}{\operatorname{tor.amp}}
+\providecommand{\amp}{\operatorname{amp}}
+\providecommand{\Id}{\operatorname{Id}}
+\providecommand{\pr}{\operatorname{pr}}
+\providecommand{\coker}{\operatorname{coker}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\Spec}{\operatorname{Spec}}
+
+\section*{Exposición III. Condiciones de finitud relativas}
+\begin{center}
+por L. Illusie
+\end{center}
+
+\section*{1. Pseudocoherencia relativa}
+
+\textbf{Teorema 1.1.} Sea \(n\in\mathbb Z\). Para cada morfismo localmente de tipo finito de esquemas \(f:X\longrightarrow Y\), existe una única subcategoría plena \(D(f)_{n\text{-}\coh}\) de \(D(X)\)\footnote{\(D(X)\) = categoría derivada de la de los \(\mathcal O_X\)-módulos.} tal que se satisfacen las condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item Si \(E\in\Ob D(f)_{n\text{-}\coh}\), entonces \(i^*(E)\in\Ob D(fi)_{n\text{-}\coh}\) para todo abierto \(i:U\to X\).
+
+\item Si \(E\in\Ob D(X)\) y existe un recubrimiento abierto \((i_\alpha:U_\alpha\to X)_{\alpha\in A}\) tal que \(i_\alpha^*(E)\in\Ob D(fi_\alpha)_{n\text{-}\coh}\) para todo \(\alpha\in A\), entonces \(E\in\Ob D(f)_{n\text{-}\coh}\).
+
+\item Si
+\[
+\begin{tikzcd}
+X \arrow[rr,"f"] \arrow[dr,"h"'] & & Y \arrow[dl,"g"]\\
+& Z &
+\end{tikzcd}
+\]
+es un triángulo conmutativo de morfismos localmente de tipo finito, donde \(f\) es una inmersión cerrada y \(g\) un morfismo liso, entonces se tiene\footnote{\(D(Y)_{n\text{-}\coh}\) = subcategoría plena de \(D(Y)\) formada por los objetos \(n\)-pseudocoherentes (I~2.15).}
+\[
+ E\in\Ob D(h)_{n\text{-}\coh}
+ \quad\Longleftrightarrow\quad
+ f_*(E)\in D(Y)_{n\text{-}\coh}.
+\]
+\end{enumerate}
+
+\emph{Demostración.} La unicidad es evidente. Sea, en efecto, \(f:X\to Y\) un morfismo localmente de tipo finito. Elijamos un recubrimiento abierto \((i_\alpha:X_\alpha\to X)_{\alpha\in A}\) tal que, para cada \(\alpha\), \(fi_\alpha\) se factorice como
+\[
+ X_\alpha\xrightarrow{i'_\alpha}Y_\alpha\xrightarrow{f'_\alpha}Y,
+\]
+donde \(i'_\alpha\) es una inmersión cerrada y \(f'_\alpha\) un morfismo liso. Se deduce inmediatamente de (i), (ii) y (iii) que los objetos de \(D(f)_{n\text{-}\coh}\) son los objetos \(E\) de \(D(X)\) tales que
+\[
+ i'_{\alpha *}i_\alpha^*(E)\in \Ob D(Y_\alpha)_{n\text{-}\coh};
+\]
+por tanto, \(D(f)_{n\text{-}\coh}\) está bien determinada (puesto que es una subcategoría plena de \(D(X)\)). Para probar la existencia necesitaremos algunos lemas.
+
+\textbf{Lema 1.1.1.} Sea \(i:X\to Y\) una inmersión cerrada de esquemas tal que \(i_*(\mathcal O_X)\) sea pseudocoherente, y sea \(E\in\Ob D(X)\). Para que \(E\) sea \(n\)-pseudocoherente, es necesario y suficiente que \(i_*(E)\) lo sea.
+
+\emph{Demostración.} La necesidad resulta del criterio general de estabilidad de la pseudocoherencia por aplicación de un funtor (I~2.13). Recíprocamente, supongamos que \(i_*(E)\) es \(n\)-pseudocoherente y probemos que lo mismo ocurre con \(E\). Como \(i_*(E)\) tiene cohomología localmente acotada superiormente, lo mismo ocurre con \(E\); por tanto, como la cuestión es local, se puede suponer que \(E\) es \(m\)-pseudocoherente para \(m\) suficientemente grande. Demostremos, por recurrencia descendente sobre \(m\), que \(E\) es \(m\)-pseudocoherente para todo \(m\geq n\). Supongamos ya probado que \(E\) es \((\sisi{n}{m}+1)\)-pseudocoherente. Localizando si es necesario, se tiene entonces un triángulo distinguido
+\[
+E'\longrightarrow E\longrightarrow E''\longrightarrow E'[1]
+\]
+donde \(E'\) es perfecto y \(E''^i=0\) para \(i>\sisi{n}{m}\). Según (I~2.6), se reduce a mostrar que \(E''\) es \(\sisi{n}{m}\)-pseudocoherente. Ahora bien, aplicando \(i_*\) al triángulo precedente, se obtiene un triángulo distinguido
+\[
+i_*(E')\longrightarrow i_*(E)\longrightarrow i_*(E'')\longrightarrow i_*(E')[1]
+\]
+y, según la primera parte de la demostración, \(i_*(E')\) es pseudocoherente; por tanto, en virtud de (I~2.6), \(i_*(E'')\) es \(\sisi{n}{m}\)-pseudocoherente. Como \(i_*(E'')\) es nulo en grado \(>\sisi{n}{m}\), esto significa, según (I~2.10 b)), que \(H^\sisi{n}{m}(i_*(E''))\) es de tipo finito. Como \(H^\sisi{n}{m}(i_*(E''))\xrightarrow{\sim}i_*H^\sisi{n}{m}(E'')\), se reduce a mostrar, según (I~2.10 b)), que si \(M\) es un \(\mathcal O_X\)-módulo tal que \(i_*(M)\) sea de tipo finito, entonces \(M\) es de tipo finito, lo que es inmediato (e independiente de la hipótesis sobre \(i_*(\mathcal O_X)\)).
+
+\textbf{Observación 1.1.2.} El lema precedente se aplica, en particular, al caso en que \(i\) es una inmersión regular (VII~1.4). En efecto, localmente se tiene, gracias al complejo de Koszul, una resolución izquierda finita de \(i_*(\mathcal O_X)\) por \(\mathcal O_Y\)-módulos libres de tipo finito; por tanto, \(i_*(\mathcal O_X)\) es perfecto (I 4.8 y 4.14) (y, por consiguiente, a fortiori pseudocoherente).
+
+\textbf{Lema 1.1.3.} \sisi{}{(i) }Sea un cuadrado cartesiano de esquemas
+\[
+\begin{tikzcd}
+X \arrow[d,"i"'] & X' \arrow[l,"f"'] \arrow[d,"i'"]\\
+Y & Y'{,} \arrow[l,"g"']
+\end{tikzcd}
+\]
+donde \(i\) es una inmersión cerrada, y sea \(E\) un complejo de \(\mathcal O_X\)-módulos. Entonces la flecha canónica de cambio de base (EGA~III 1.4.15.4)
+\[
+ g^*i_*(E)\longrightarrow i'_*f^*(E)
+\]
+es un isomorfismo.
+
+(ii) Pongamos \(E'=f^*(E)\). Si \(g\) es plano e \(i_*(E)\) es \(n\)-pseudocoherente, entonces \(i'_*(E')\) es \(n\)-pseudocoherente. Recíprocamente, si \(g\) es fielmente plano e \(i'_*(E')\) es \(n\)-pseudocoherente, entonces \(i_*(E)\) es \(n\)-pseudocoherente.
+
+\emph{Demostración.} La afirmación se verifica trivialmente sobre las fibras.
+
+\textbf{Lema 1.1.4.} Sea un diagrama conmutativo de esquemas
+\[
+\begin{tikzcd}
+X' \arrow[dr,"f'"'] & X \arrow[l,"i'"'] \arrow[r,"i''"] & X'' \arrow[dl,"f''"]\\
+& Y{,} &
+\end{tikzcd}
+\]
+donde \(i'\) (resp. \(i''\)) es una inmersión cerrada y \(f'\) (resp. \(f''\)) un morfismo liso, y sea \(E\in\Ob D(X)\). Se tiene entonces:
+\[
+ i'_*(E)\ n\text{-pseudocoherente}
+ \quad\Longleftrightarrow\quad
+ i''_*\sisi{}{(E)}\ n\text{-pseudocoherente}.
+\]

@@ -1,0 +1,371 @@
+% SGA 6, Exposición V: fragmento español alineado con la fuente.
+% Alcance: demostración de 6.10, resto de la sección 6, sección 7, bibliografía y macros liminares siguientes, líneas 8146--8512 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+\providecommand{\sisi}[2]{#2}
+
+Se pueden encontrar elementos \(\sisi{z_{\alpha,j}}{x_{\alpha,j}}\in R\), y \(a_\alpha\in K\), tales que: % Canon SGA-SRC-001606
+\[
+  x=\sum_\alpha a_\alpha\,
+       \gamma^{i_1}(x_{\alpha,1})\cdots
+       \gamma^{i_k}(x_{\alpha,k}),
+\]
+con \(i_1+\cdots+i_k\ge i\), y \(\epsilon(x_{\alpha,j})=0\) para todo \(\alpha\) y todo \(j\). Sea \(R_0\) la \(K\)-\(\lambda\)-álgebra engendrada por generadores \(N'_0\) y \(X_{\alpha,j}\), sometidos a las relaciones:
+\[
+  \gamma^k(N'_0)=0\quad\text{para }k>d.
+\]
+Se define un homomorfismo de aumentación \(R_0\to K\) por \(\epsilon(N'_0)=\epsilon(X_{\alpha,j})=0\). Según (4.9.1), \(R_0\) es el anillo de polinomios con coeficientes en \(K\) respecto de las indeterminadas \(\gamma^n(N'_0)\), con \(1\le n\le d\), y \(\gamma^p(X_{\alpha,j})\) con \(p\ge1\), y la \(\lambda\)-filtración de \(R_0\) es idéntica a su filtración por el peso, atribuyendo el peso \(k\) a \(\gamma^k(N'_0)\) y \(\gamma^k(X_{\alpha,j})\) (4.12 y 4.15).
+
+Se pone:
+\[
+  X_0=\sum_\alpha a_\alpha\,
+       \gamma^{i_1}(X_{\alpha,1})\cdots
+       \gamma^{i_k}(X_{\alpha,k}),
+\]
+y se demostrará 6.10 primero para \(X_0\) y \(N'_0=N_0+d\) (que verifican efectivamente las hipótesis de 6.10). Teniendo en cuenta la observación hecha más arriba sobre la filtración de \(R_0\), basta para ello mostrar que:
+\[
+  \gamma^{d+i}(N_0,X_0)\gamma^d(N'_0)
+  -
+  (-1)^{d+i-1}(d+i-1)!X_0\gamma^d(N'_0)
+  \in\Fil^{d+i+1}R_0 .
+\]
+Ahora bien, se tiene \(\lambda_{-1}(N_0)=(-1)^d\gamma^d(N'_0)\); esta relación se escribe, pues:
+\[
+  (-1)^d\gamma^{d+i}(X_0\ (-1)^d\gamma^d(N'_0))
+  -
+  (-1)^{d+i-1}(d+i-1)!X_0\gamma^d(N'_0)
+  \in\Fil^{d+i+1}R_0 .
+\]
+Pongamos \(z=(-1)^dX_0\gamma^d(N'_0)\); entonces \(z\in\Fil^{d+i}R_0\), y se reduce a mostrar:
+\[
+  \gamma^{d+i}(z)-(-1)^{d+i-1}(d+i-1)!z\in\Fil^{d+i+1}R_0 .
+\]
+Ahora bien, esto resulta de 6.9.
+
+Para deducir 6.10 de este caso particular, se considera el \(K\)-\(\lambda\)-homomorfismo \(R_0\to R\) que envía \(N'_0\) a \(N-d\) y \(X_{\alpha,j}\) a \(x_{\alpha,j}\) para todo \(\alpha\) y todo \(j\) (4.7). Este homomorfismo es compatible con las \(\lambda\)-filtraciones, y envía \(N_0\) a \(N\), y \(X_0\) a \(\sisi{X}{x}\), de donde se obtiene el resultado.
+
+\textbf{Proposición 6.11.} Se supone que \(K\) es de característica nula. Sea \(n\ge0\) un entero. Entonces, el funtor \(\Ch\) es una equivalencia de categorías de la categoría de las \(K\)-álgebras graduadas \(A\) tales que \(A_0=K\), \(A_k=0\) para \(k>n\), en la categoría de las \(K\)-\(\lambda\)-álgebras aumentadas \(\Lambda\) tales que \(\Fil^{n+1}\Lambda=0\); un funtor cuasi-inverso está dado por \(\Lambda\rightsquigarrow\Gr\Lambda\).
+
+Sea \(A\) una \(K\)-álgebra graduada tal que \(A_k=0\) para \(k>n\), provista de la filtración asociada a su graduación; entonces \((\Ch A)_{n+1}=0\), luego \(\Fil^{n+1}\Ch A=0\) (6.6.5). Recíprocamente, si \(\Lambda\) es una \(K\)-\(\lambda\)-álgebra aumentada tal que \(\Fil^{n+1}\Lambda=0\), entonces \(\Gr^0\Lambda=K\), \(\Gr^k\Lambda=0\) para \(k>n\).
+
+Se definirán isomorfismos de funtores:
+\[
+  A\longrightarrow \Gr(\Ch A),
+  \qquad
+  \Lambda\longrightarrow \Ch(\Gr\Lambda).
+\]
+Como \(A\) tiene graduación finita, los graduados asociados a las filtraciones sobre \(\Ch A\) de \(\lambda\)-anillo y por el grado son idénticos (6.6.7). Se define entonces \(u:A\longrightarrow \Gr_{\deg}(\Ch A)\) por la identidad sobre \(A_0\) y por:
+\[
+  \forall\, \sisi{i>1}{i\ge1},\quad\forall\, a_i\in A_i,\qquad u(a_i)=\cl_{\Gr^i}\left(0,1+(-1)^{i-1}(i-1)!a_i\right),
+\]
+y se prolonga por aditividad. Según la relación (6.5.3), es un homomorfismo de anillos graduados, y es fácil ver que es compatible con las operaciones de \(K\). El morfismo inverso \(u^{-1}\) puede definirse así: \(\forall\, i\ge1\), \(\forall\,\bar\varphi\in\Gr^i(\Ch A)\), el \(i\)-ésimo coeficiente \(a_i\) de \(\varphi\) no depende de la manera en que se haya levantado \(\bar\varphi\) en \((\Ch A)_i\), y se pone:
+\[
+  u^{-1}(\bar\varphi)=\frac{(-1)^{i-1}}{(i-1)!}a_i.
+\]
+El homomorfismo \(u\) es, pues, un isomorfismo.
+
+El isomorfismo \(\Lambda\to\sisi{\Ch(\Gr\Lambda))}{\Ch(\Gr\Lambda)}\) está definido por la clase de Chern completada \(\widetilde c\). Para verificar que define efectivamente un isomorfismo, basta verificar que el homomorfismo obtenido pasando a los graduados asociados lo es, pues las filtraciones son discretas. Se obtiene, pues:
+\[
+  \Gr\Lambda
+   \xrightarrow{\Gr(\widetilde c)}
+  \Gr_{\lambda}(\Ch(\Gr\Lambda))
+   \simeq
+  \Gr_{\deg}(\Ch(\Gr\Lambda))
+   \xrightarrow{u^{-1}}
+  \Gr\Lambda .
+\]
+Basta mostrar que el compuesto es la identidad. Como los homomorfismos son homomorfismos de \(K\)-álgebras graduadas, basta, según la \hphantom{def}inición de la filtración de \(\lambda\)-anillo de \(\Lambda\), mostrar que es la identidad para los \(\gamma^i(x)\), con \(\epsilon(x)=0\). Se obtiene entonces:
+\[
+  \Gr(\widetilde c)\bigl(\gamma^i(x)\bigr)
+  =
+  \cl_{\Gr^i}\bigl(\gamma^i(\widetilde c(x))\bigr).
+\]
+Ahora bien, \(\gamma^i(\widetilde c(x))=(0,1+(-1)^{i-1}(i-1)!c^i(x)+\cdots)\), según (6.6.4); por tanto:
+\[
+  \cl_{\Gr^i}\bigl(\gamma^i(\widetilde c(x))\bigr)=u(c^i(x)),
+\]
+lo q\hphantom{u}ue muestra que \(u^{-1}\circ\Gr(\widetilde c)=\id\).
+
+\textbf{Corolario 6.12.} Si \(K\) es de característica nula, y \(\Lambda\) una \(K\)-\(\lambda\)-álgebra de filtración discreta, entonces la clase de Chern completada:
+\[
+  \widetilde c:\Lambda\longrightarrow \Ch(\Gr\Lambda)
+\]
+es un isomorfismo.
+
+La demostración está contenida en la de 6.11.
+
+\textbf{Definición 6.13.} Sea \(A\) una \(K\)-álgebra graduada, y \(\Lambda\) una \(K\)-\(\lambda\)-álgebra aumentada; se llama \emph{teoría de Chern de \(\Lambda\) con valores en \(A\)} a todo \(\lambda\)-homomorfismo: \(\Lambda\longrightarrow \Ch(A)\), compatible con las aumentaciones.
+
+Se define un funtor sobre la categoría de las \(K\)-álgebras graduadas, con valores en la categoría de los conjuntos, asociando a toda \(K\)-álgebra graduada \(A\) el conjunto de las teorías de Chern de \(\Lambda\) con valores en \(A\), es decir,
+\[
+  \Hom_\lambda(\Lambda,\Ch(A)).
+\]
+
+\textbf{Proposición 6.14.} El funtor definido en 6.13 es representable. Si \(K\) es de característica nula, y \(\Lambda\) de filtración discreta, está representado por el graduado asociado a \(\Lambda\).
+
+Demostremos primero el primer punto. Se considera la \(K\)-álgebra graduada engendrada por generadores \(c^i(x)\), con \(i\ge1\), \(x\in\Fil^1\Lambda\), siendo \(c^i(x)\) de grado \(i\), y se toma su cociente por las relaciones siguientes:
+\[
+\begin{array}{ll}
+\text{i)}&
+ c^k(x+y)=\displaystyle\sum_{i+j=k}c^i(x)c^j(y),
+ \quad\text{para } k\ge1,\ x,y\in\Fil^1\Lambda\ ;\\[0.8em]
+\text{ii)}&
+ c^k(xy)=P''_k(c^i(x),c^j(y))
+ \quad(\text{cf. }6.1),
+ \quad\text{para } k\ge1,\ x,y\in\Fil^1\Lambda\ ;\\[0.4em]
+\text{iii)}&
+ c^k(ax)=\sisi{R_{k,a}(c^i(x)}{R_{k,a}(c^i(x))}
+ \quad(\text{cf. }6.1),
+ \quad\text{para } k\ge1,\ a\in K,\ x\in\Fil^1\Lambda\ ;\\[0.4em]
+\text{iv)}&
+ c^k(\gamma^j(x))=Q''_{j,k}(c^i(x))
+ \quad(\text{cf. }6.1),
+ \quad\text{para } j,k\ge1,\ x\in\Fil^1\Lambda.
+\end{array}
+\]
+Como estas relaciones son isobáricas, el cociente es una \(K\)-álgebra graduada \(\Omega\). Se define un morfismo \(\Lambda\xrightarrow{\widetilde c_0}\Ch(\Omega)\) por:
+\[
+  x\rightsquigarrow
+  \bigl(\epsilon(x),1+c^1(x-\epsilon(x))+\cdots\bigr).
+\]
+Las relaciones impuestas muestran que es una teoría de Chern de \(\Lambda\) con valores en \(\Omega\). Si además se tiene una teoría de Chern \(f\), con valores en una \(K\)-álgebra graduada \(A\), se tiene de manera única un homomorfismo: \(\Omega\to A\), tal que \(f\) se factoriza por \(\Ch(\Omega)\); está definido enviando, para todo \(i\ge1\), y todo \(x\in\Fil^1\Lambda\), el elemento \(c^i(x)\) al \(i\)-ésimo coeficiente de \(f(x)\) (lo que está bien definido porque \(f\) es un \(\lambda\)-homomorfismo).
+
+Supongamos ahora \(K\) de característica nula, y \(\Lambda\) de filtración discreta; sea \(n\) tal que \(\Fil^n\Lambda=0\). Entonces el álgebra graduada \(\Omega\) es nula en grados \(\ge n\). Para mostrarlo, hay que mostrar que para \(x_1,\ldots,x_p\in\Fil^1\Lambda\), y \(k_1+\cdots+k_p\ge n\), se tiene:
+\[
+  c^{k_1}(x_1)\cdots c^{k_p}(x_p)=0.
+\]
+Ahora bien, por hipótesis, se tiene:
+\[
+  \gamma^{k_1}(x_1)\cdots\gamma^{k_p}(x_p)=0\ ;
+\]
+Aplicando el \(\lambda\)-homomorfismo \(\widetilde c_0\), se obtiene:
+\[
+  \gamma^{k_1}(\widetilde c_0(x_1))\cdots
+  \gamma^{k_p}(\widetilde c_0(x_p))=(0,1).
+\]
+Ahora bien, según (6.6.4) y (6.5.3), esto implica:
+\[
+  (k_1+\cdots+k_p)!\,
+  c^{k_1}(x_1)\cdots c^{k_p}(x_p)=0.
+\]
+Como \(K\) es de característica nula, se obtiene el resultado buscado.
+
+La propiedad universal de \(\Omega\) aplicada al homomorfismo canónico \(\widetilde c\) da un diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\Lambda \arrow[r,"\widetilde c"] \arrow[d,"\widetilde c_0"'] &
+\Ch(\Gr\Lambda)\\
+\Ch(\Omega) \arrow[ur] &
+\end{tikzcd}
+\]
+Según la proposición 6.11, el homomorfismo: \(\Omega\to\Gr\Lambda\) es un isomorfismo si, y solo si, el homomorfismo: \(\Ch(\Omega)\to\Ch(\Gr\Lambda)\) lo es. Como es visiblemente sobreyectivo, también lo es este último, y basta, pues, mostrar que \(\Ch(\Omega)\to\Ch(\Gr\Lambda)\) es inyectivo. Por funtorialidad de \(\Ch\), se obtiene el diagrama:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\Lambda \arrow[r,"\widetilde c_0"] \arrow[d,"\widetilde c"'] &
+\Ch(\Omega) \arrow[d,"\widetilde c"]\\
+\sisi{\Ch(\Gr\Lambda))}{\Ch(\Gr\Lambda)} \arrow[r,"\Ch(\widetilde c_0)"] &
+\Ch\bigl(\Gr_\lambda(\Ch(\Omega))\bigr);
+\end{tikzcd}
+\]
+como \(\Omega\) tiene grados acotados, la flecha vertical de la derecha es un isomorfismo (6.12), y utilizando 6.11, se obtiene, pues, un morfismo: \(\Gr\Lambda\longrightarrow\Omega\), siendo la composición de ambos la identidad según la propiedad universal de \(\Omega\).
+
+\section*{7. Apéndice: las operaciones \(\psi^k\) de Adams}
+
+Seguimos aquí una presentación debida a J.-P. Serre.
+
+\textbf{7.1.} Sea \(K\) un pre-\(\lambda\)-anillo. Para todo \(x\in K\), se denota por \(\frac{d}{dt}(\lambda_t(x))\) la derivada respecto de \(t\) de \(\lambda_t(x)\). Se definen entonces elementos de \(K\), denotados por \(\psi^k(x)\), poniendo:
+\begin{equation}\tag{7.1.1}
+  \frac{d}{dt}(\lambda_t(x))/\lambda_t(x)
+  =
+  \sum_{k=1}^{\infty}(-1)^{k-1}\psi^k(x)t^{k-1}.
+\end{equation}
+Las aplicaciones \(\psi^k:K\to K\) son aditivas; en efecto, se tiene:
+\[
+\begin{aligned}
+ \frac{d}{dt}(\lambda_t(x+y))/\lambda_t(x+y)
+ &=
+ \frac{d}{dt}(\lambda_t(x)\lambda_t(y))/\lambda_t(x)\lambda_t(y)\\
+ &=
+ \frac{d}{dt}(\lambda_t(x))/\lambda_t(x)
+ +\frac{d}{dt}(\lambda_t(y))/\lambda_t(y)\ ;
+\end{aligned}
+\]
+y por consiguiente, para todo \(k\):
+\[
+  \psi^k(x+y)=\psi^k(x)+\psi^k(y).
+\]
+Según (7.1.1), los \(\psi^k\) son polinomios isobáricos de peso \(k\) respecto de los \(\lambda^i\), con \(i=1,\ldots,k\). Demos, por ejemplo, los valores de \(\psi^1\) y \(\psi^2\):
+\[
+  \psi^1(x)=\lambda^1(x)=x,
+  \qquad
+  \psi^2(x)=x^2-2\lambda^2(x).
+\]
+
+\textbf{7.2.} Sea \(K\) un anillo de característica \(0\); supongamos dadas aplicaciones \(\psi^k\) de \(K\) en \(K\), aditivas, y tales que \(\psi^1=\id_K\). Se define entonces una estructura de pre-\(\lambda\)-anillo sobre \(K\) poniendo:
+\begin{equation}\tag{7.2.1}
+  \lambda_t(x)=
+  \exp\left(\sum_{k=1}^{\infty}(-1)^{k-1}\psi^k(x)t^k/k\right).
+\end{equation}
+La multiplicatividad resulta de la aditividad de los \(\psi^k\). Existe, pues, equivalencia entre el dato de una estructura de pre-\(\lambda\)-anillo sobre \(K\), y el dato de las operaciones \(\psi^k\) correspondientes.
+
+\textbf{7.3.} De la fórmula (7.1.1) se desprende que los \(\psi^k\) conmutan con los \(\lambda\)-homomorfismos. Si \(K,K'\) son pre-\(\lambda\)-anillos de característica nula, es necesario y suficiente que un homomorfismo \(f:K\to K'\) conmute con los \(\psi^k\) para que sea un \(\lambda\)-homomorfismo: esto resulta de 7.2, pues los \(\lambda^i\) se expresan como polinomios respecto de los \(\psi^k\).
+
+\textbf{Ejemplos 7.4.} i) Para \(K=\mathbb Z\), provisto de su estructura de \(\lambda\)-anillo, se tiene:
+\[
+  \frac{d}{dt}(\lambda_t(n))/\lambda_t(n)
+  =
+  n(1+t)^{n-1}/(1+t)^n
+  =
+  n.\sum_{k=1}(-1)^{k-1}t^{k-1}.
+\]
+Por consiguiente, los \(\psi^k\) son todos iguales a la aplicación identidad de \(\mathbb Z\).
+
+ii) Situémonos en la categoría \(\mathcal C_0\) de las \(\mathbb Z\)-álgebras (1.8). Las operaciones \(\psi^k\) definen, según 7.3, endomorfismos aditivos del funtor en \(\lambda\)-anillos \(G\); según 1.10, están caracterizados por su valor para \(1+Xt\). Se tiene:
+\[
+  \frac{d}{dt}(\lambda_u(1+Xt))/\lambda_u(1+Xt)
+  =
+  \frac{1+Xt}{\underline 1+\{1+Xt\}u}
+  =
+  \sum_{k=1}^{\infty}(-1)^{k-1}\{1+Xt\}^{\circ k}u^{k-1}.
+\]
+Por consiguiente:
+\begin{equation}\tag{7.4.1}
+  \psi^k(1+Xt)=1+X^k t.
+\end{equation}
+
+\textbf{Proposición 7.5.} i) Si \(K\) es un \(\lambda\)-anillo, las operaciones \(\psi^k\) verifican las identidades:
+\begin{equation}\tag{7.5.1}
+  \psi^k(1)=1~;\qquad
+  \psi^k(xy)=\psi^k(x)\psi^k(y)~;\qquad
+  \psi^k\circ\psi^{k'}=\psi^{kk'}.
+\end{equation}
+ii) Recíprocamente, si los \(\psi^k\) verifican estas identidades, y si \(K\) es de característica nula, \(K\) es un \(\lambda\)-anillo.
+
+i) Si \(K\) es un \(\lambda\)-anillo, se tiene \(\lambda_t(1)=1+t\), de donde:
+\[
+  \frac{d}{dt}(\lambda_t(1))/\lambda_t(1)
+  =
+  1/1+t
+  =
+  \sum_{k=1}^{\infty}(-1)^{k-1}t^{k-1},
+\]
+y por consiguiente:
+\[
+  \psi^k(1)=1.
+\]
+
+Para demostrar la segunda de las relaciones (7.5.1), se considera el diagrama:
+\begin{equation}\tag{7.5.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K\times K \arrow[r,"\lambda_t\times\lambda_t"] \arrow[d] &
+\widehat G(K)\times\widehat G(K) \arrow[r,"\Phi^k\times\Phi^k"] \arrow[d,"\circ"] &
+K\times K \arrow[d]\\
+K \arrow[r,"\lambda_t"] &
+\widehat G(K) \arrow[r,"\Phi^k"] &
+K ,
+\end{tikzcd}
+\end{equation}
+donde las flechas verticales están definidas por la multiplicación, y las aplicaciones \(\Phi^k\) como sigue: la aplicación «~derivada logarítmica~» es un homomorfismo de grupos de \(\widehat G(K)\) en \(K[[t]]\); la aplicación que asocia a una serie su \((k-1)\)-ésimo coeficiente, multiplicado por \((-1)^{k-1}\), es un homomorfismo aditivo de \(K[[t]]\) en \(K\); el morfismo \(\Phi^k\) será el compuesto de ambos. Está claro que \(\Phi^k\circ\lambda_t=\psi^k\) según la definición (7.1.1).
+
+La segunda de las fórmulas (7.5.1) expresa, pues, la conmutatividad del diagrama escrito más arriba. Si se supone que \(K\) es un \(\lambda\)-anillo, el cuadrado de la izquierda es conmutativo, y basta verificar la conmutatividad del de la derecha. Ahora bien, se trata de un diagrama de homomorfismos de funtores sobre \(\mathcal C_0\), cuya fuente es \(\widehat G\times\widehat G\); basta, pues, según 1.10, verificar la conmutatividad para \((1+Xt,1+Yt)\); se tiene entonces:
+\[
+  \Phi^k(1+Xt)=X^k\qquad\bigl(\text{coeficiente \((k-1)\)-ésimo de }X/1+Xt\bigr)~;\qquad
+  \Phi^k(1+Yt)=Y^k~;
+\]
+\[
+  \Phi^k\bigl((1+Xt)\circ(1+Yt)\bigr)
+  =
+  \Phi^k(1+XYt)
+  =
+  (XY)^k
+  =
+  \Phi^k(1+Xt)\Phi^k(1+Yt),
+\]
+lo que da el resultado.
+
+Para demostrar la última, se observa primero que el diagrama:
+\begin{equation}\tag{7.5.3}
+\begin{tikzcd}[column sep=large,row sep=large]
+\widehat G^t(K) \arrow[r,"\lambda_u"] \arrow[d,"\Phi^{kk'}"'] &
+\widehat G^u\circ\widehat G^t(K) \arrow[d,"\Phi^{k'}_u"]\\
+K \arrow[r,"\Phi^k"] &
+\widehat G^t(K),
+\end{tikzcd}
+\end{equation}
+es conmutativo. Como más arriba, basta, en efecto, verlo para \(1+Xt\), y se tiene:
+\[
+  \Phi^{k'}_u(\lambda_u(1+Xt))
+  =
+  \Phi^{k'}_u(1+\{1+Xt\}u)
+  =
+  (1+Xt)^{\circ k'}
+  =
+  1+X^{k'}t~;
+\]
+luego
+\[
+  \Phi^k(1+X^{k'}t)=X^{kk'}=\Phi^{kk'}(1+Xt).
+\]
+Por consiguiente,
+\[
+  \psi^{kk'}
+  =
+  \Phi^k\circ\Phi^{k'}_u\circ\lambda_u\circ\lambda_t
+  =
+  \Phi^k\circ\psi^{k'}\circ\lambda_t.
+\]
+Por otra parte,
+\[
+  \psi^k\circ\psi^{k'}
+  =
+  \Phi^k\circ\lambda_t\circ\Phi^{k'}\circ\lambda_t
+  =
+  \Phi^k\circ\lambda_t\circ\psi^{k'}.
+\]
+Ahora bien, si \(K\) es un \(\lambda\)-anillo, el diagrama:
+\begin{equation}\tag{7.5.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+K \arrow[r,"\lambda_t"] \arrow[d,"\psi^{k'}"'] &
+\widehat G(K) \arrow[d,"\psi^{k'}"]\\
+K \arrow[r,"\lambda_t"] &
+\widehat G(K)
+\end{tikzcd}
+\end{equation}
+es conmutativo según 7.3, puesto que \(\lambda_t\) es un \(\lambda\)-homomorfismo. Se deducen inmediatamente las relaciones buscadas.
+
+ii) Si \(K\) es de característica nula, la aplicación «~derivada logarítmica~» es un isomorfismo de \(\widehat G(K)\) sobre \(K[[t]]\), pues se puede integrar. Por consiguiente, dos elementos de \(\widehat G(K)\) son iguales si, y solo si, para todo \(k\), tienen la misma imagen por \(\Phi^k\).
+
+Para mostrar que \(\lambda_t\) es un homomorfismo de anillos, hay que mostrar la conmutatividad del cuadrado de la izquierda del diagrama (7.5.2), y según la observación precedente, basta mostrar que, para todo \(k\), el diagrama (7.5.2) es conmutativo, puesto que el cuadrado de la derecha lo es siempre. Ahora bien, esto no es otra cosa que las relaciones \(\psi^k(xy)=\psi^k(x)\psi^k(y)\).
+
+Para mostrar que \(\lambda_t\) es un \(\lambda\)-homomorfismo, basta mostrar que el diagrama (7.5.4) es conmutativo para todo \(k'\), según 7.3. Ahora bien, según la observación precedente, esto equivale a mostrar, para cualesquiera \(k,k'\), que \(\Phi^k\circ\psi^{k'}\circ\lambda_t=\Phi^k\circ\lambda_t\circ\psi^{k'}\), es decir, las relaciones \(\psi^{kk'}=\psi^k\circ\psi^{k'}\). Finalmente, la relación \(\lambda_t(1)=1+t\) se obtiene por integración a partir de las relaciones \(\psi^k(1)=1\).
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item A. Grothendieck, \emph{La théorie des classes de Chern}, Bull. Soc. math. France, 86, 1958, p. 137 a 154.
+\item F. Hirzebruch, Neue topologische Methoden in der algebraischen Geometrie.
+\end{enumerate}
+
+
+
+% Adiciones de macros para la Exposición VI sobre fibrados proyectivos
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\Projz}{\operatorname{Proj}_0}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Comp}{\operatorname{Comp}}
+\providecommand{\Dplus}{D_{+}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\cG}{\mathcal G}
+\providecommand{\cA}{\mathcal A}
+\providecommand{\cB}{\mathcal B}
+\providecommand{\cL}{\mathscr L}
+\providecommand{\cM}{\mathscr M}
+\providecommand{\cN}{\mathscr N}
+\providecommand{\cE}{\mathscr E}
+\providecommand{\cK}{\mathscr K}
+\providecommand{\cP}{\mathscr P}
+\providecommand{\cQ}{\mathscr Q}
+\providecommand{\OO}{\mathcal O}
+\providecommand{\rk}{\operatorname{rk}}
+\providecommand{\colim}{\operatorname*{colim}}
+
+

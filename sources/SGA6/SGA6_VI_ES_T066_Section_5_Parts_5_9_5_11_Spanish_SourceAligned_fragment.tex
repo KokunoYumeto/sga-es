@@ -1,0 +1,99 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 5, números 5.9--5.11, líneas 9487--9577 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 5.9.} Con las notaciones y las hipótesis de 5.1, se tiene, para todo $i\ge 1$:
+\[
+  f_*(\lambda^i(F))=0\qquad\bigl(\text{de donde }f_*(\gamma^i(F))=0\bigr).
+\]
+En particular, si se pone $\lambda_{-1}(F)=\sum_{i=0}^{r}(-1)^i\lambda^i(F)$, se obtiene:
+\[
+  f_*(\lambda_{-1}(F))=1.
+\]
+Se define una aplicación
+\[
+  \bar f_*:1+K'(X)[[t]]^+\longrightarrow 1+K'(S)[[t]]^+
+\]
+poniendo:
+\[
+  \bar f_*\left(\sum_{i\ge0}a_it^i\right)=\sum_{i\ge0}f_*(a_i)t^i .
+\]
+No es en general un homomorfismo de grupos; no obstante, se verifica la relación siguiente para $\varphi\in 1+K'(X)[[t]]^+$, $\psi\in 1+K'(S)[[t]]^+$:
+\[
+  \bar f_*\bigl(\varphi.\hat G(f^*)(\psi)\bigr)=\psi.\bar f_*(\varphi).
+\]
+En efecto, se verifica coeficiente por coeficiente y resulta inmediatamente de la fórmula de proyección.
+
+De la relación $E=F+\xi$, se deduce, pues:
+\[
+  \sisi{\bar f}{\bar f_*}(\lambda_t(F))=
+  \bar f_*(\lambda_t(E)\lambda_t(-\xi))=
+  \lambda_t(E)\bar f_*(\lambda_t(-\xi));
+\]
+Ahora bien, $\sisi{\bar f}{\bar f_*}(\lambda_t(-\xi))=\sum_{i\ge0}(-1)^if_*(\xi^i)t^i=\sigma_{-t}(E)$ según \sisi{(4.2.3)}{(5.2.3)}. Utilizando la relación (1.12.1), se obtiene finalmente:
+\[
+  \bar f_*(\lambda_t(F))=1;
+\]
+de donde las relaciones buscadas.
+
+\textbf{Proposición 5.10.} Con las notaciones y las hipótesis de 5.1, sea $z\in K'(X)$. Para que $z(1-\xi)=0$, es necesario y suficiente que exista $y\in K'(S)$ tal que:
+\[
+  \text{i)}\quad z=y.\lambda_{-1}(F);
+  \qquad
+  \text{ii)}\quad y.\lambda_{-1}(E)=0.
+\]
+De $E=F+\xi$, se deduce $\lambda_{-1}(E)=\lambda_{-1}(F).\lambda_{-1}(\xi)=\lambda_{-1}(F).(1-\xi)$. La condición es, pues, suficiente.
+
+Sea $z$ tal que $z(1-\xi)=0$, es decir, $zx'=0$. Según la observación 1.13, se pueden encontrar, de manera única, elementos $a_i\in K'(S)$ tales que:
+\[
+  z=\sum_{i=0}^{r}a_i{x'}^i .
+\]
+Por otra parte, los ${x'}^i$ verifican una ecuación de dependencia:
+\[
+  \sum_{i=0}^{r}c_i{x'}^i+{x'}^{r+1}=0,
+  \qquad c_i=(-1)^{r+i+1}\gamma^{r+1-i}(E-r-1).
+\]
+Como $zx'=0$, se obtiene:
+\[
+  a_r{x'}^{r+1}=-\sum_{i=1}^{r}a_{i-1}{x'}^i
+  =-\sum_{i=0}^{r}a_rc_i{x'}^i .
+\]
+Utilizando la independencia de $1,\ldots,{x'}^r$, se encuentra:
+\[
+  a_rc_0=0;
+  \qquad 0\le i<r,
+  \quad a_i=a_rc_{i+1}.
+\]
+Por tanto:
+\[
+  z=a_r.\left(\sum_{i=0}^{r-1}c_{i+1}{x'}^i+{x'}^r\right).
+\]
+Ahora bien:
+\[
+\begin{aligned}
+\sum_{i=0}^{r-1}c_{i+1}{x'}^i+{x'}^r
+&=(-1)^r.\left(\sum_{i=0}^{r-1}\gamma^{r-i}(E-r-1).(-1)^i{x'}^i+(-1)^r{x'}^r\right)\\
+&=(-1)^r.\left(\sum_{i=0}^{r}\gamma^{r-i}(E-r-1)\gamma^i(-x')\right)\\
+&=(-1)^r\gamma^r(E-r-1-x')\\
+&=(-1)^r\gamma^r(\sisi{F-x'}{F-r})\\
+&=(-1)^r\lambda^r(F-1)\\
+&=\lambda_{-1}(F).
+\end{aligned}
+\]
+Si se pone $a_r=y$, se obtiene, pues:
+\[
+  z=y.\lambda_{-1}(F).
+\]
+Por otra parte, $y.c_0=0$; ahora bien, $c_0=(-1)^{r+1}\gamma^{r+1}(E-r-1)=\lambda_{-1}(E)$; por tanto, $y.\lambda_{-1}(E)=0$.
+
+\textbf{Proposición 5.11.} Con las notaciones y las hipótesis de 5.1, sea $z\in \Gr K'(X)$. Para que $z.\bar x'=0$, es necesario y suficiente que exista $y\in \Gr K'(S)$ tal que:
+\[
+  \text{i)}\quad z=y.c^r(F);
+  \qquad
+  \text{ii)}\quad y.c^{r+1}(E)=0.
+\]
+La demostración es idéntica a la de 5.10, situándose en los graduados y utilizando 5.6.
+

@@ -1,0 +1,261 @@
+% SGA 6, Exposición 0, apéndice: Capítulo II, secciones 4--5.
+% Fuente francesa alineada: fr.tex, líneas 1151--1409 inclusive.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{4. Algunos resultados técnicos}
+
+Sea $X$ un espacio algebraico; se vio en el \S 3 que la proyección $p$ de $X\times k$ sobre $X$ define un homomorfismo
+\begin{equation}\tag{2.29}
+ p^!:\underline K(X)\longrightarrow\underline K(X\times k).
+\end{equation}
+
+\textbf{Proposición 2.9.} \emph{El homomorfismo (2.29) es sobreyectivo.}
+
+Se razona por recurrencia sobre $n=\dim X$; la afirmación es trivial si $n<0$; supongamos que $n\geq0$; en virtud de la proposición 2.6, basta verificar que, para toda parte cerrada irreducible $Y$ de $X\times k$, $\gamma(Y)$ está en la imagen de $p^!$. Basta continuar el razonamiento suponiendo $X$ irreducible; si $p(Y)$ no es denso en $X$, nuestra afirmación resulta de la hipótesis de recurrencia; de lo contrario, se tiene $Y=X\times k$ y la afirmación es trivial, o bien $Y$ es una hipersuperficie en $X\times k$. Sea entonces $U$ un abierto afín de $X$ formado por puntos no singulares; si $D$ es el divisor sobre $U\times k$ inducido por $Y$, se sabe (álgebra conmutativa) que es linealmente equivalente a un divisor de la forma $D'\times k$, donde $D'$ es un divisor sobre $U$. Entonces $\gamma_{U\times k}(D)-\gamma_{U\times k}(D'\times k)$ pertenece a $\underline K(U\times k)^2$ (corolario de la proposición 2.10), y, por lo ya demostrado, este elemento es de la forma $p^!(x')$, con $x'\in\underline K(U)$. Por tanto, $\gamma_{U\times k}(D)=p^!(y')$, con $y'=x'+\gamma_U(D')$; pero $y'$ es restricción de un elemento $y$ de $\underline K(X)$ (prop.\ 2.10) y, por consiguiente, la restricción de $\gamma_{X\times k}(\sisi{D}{Y})-p^!(y)$ a $U\times k$ es nula; por la proposición 2.10, $\gamma_{X\times k}(\sisi{D}{Y})-p^!(y)$ proviene de un elemento de $\underline K(X\times k-U\times k)=\underline K(X'\times k)$, con $X'=X-U$. La demostración concluye aplicando de nuevo la hipótesis de recurrencia.
+\begin{flushright}cqfd.\end{flushright}
+
+\textbf{Corolario.} \emph{Sean $X$ un espacio algebraico y $p$ la proyección de $X\times k^n$ sobre $X$; entonces el homomorfismo $p^!:\underline K(X)\longrightarrow\underline K(X\times k^n)$ es sobreyectivo; es incluso biyectivo si $X$ es no singular.}
+
+Recurrencia sobre $n$ para la primera afirmación. Para la segunda, se pone $f(x)=(x,0)$, de donde $pf=\underline{1}$ y $f^!p^!=1$, lo que demuestra que $p^!$ es inyectivo.
+
+\textbf{Proposición 2.10.} \emph{Sean $X$ un espacio algebraico, $U$ una parte abierta de $X$ e $Y$ su complementario en $X$. Entonces la sucesión de homomorfismos naturales}
+\begin{equation}\tag{2.30}
+ \underline K(Y)\longrightarrow\underline K(X)\longrightarrow\underline K(U)\longrightarrow 0
+\end{equation}
+\emph{es exacta.}
+
+N.B. Compárese con la proposición 2.3.
+
+El hecho de que $\underline K(X)\longrightarrow\underline K(U)$ sea sobreyectivo resulta inmediatamente de la proposición 2.5 (o también de la proposición 2.6). Queda por demostrar que, si $x\in\underline K(X)$ tiene restricción nula en $\underline K(U)$, está en la imagen de $\underline K(Y)$. Para ello, se vuelve a la definición explícita de $\underline K(X)$ y de $\underline K(U)$: se tienen dos haces algebraicos coherentes $F$ y $G$ sobre $X$, con $x=\gamma_X(F)-\gamma_X(G)$ y $\gamma_U(F)-\gamma_U(G)=0$; esta última relación significa que se pueden encontrar haces coherentes $P'$ y $Q'$ sobre $U$, provistos de filtraciones cuyos factores sean isomorfos dos a dos sobre $U$, y tales que se tenga un isomorfismo sobre $U$:
+\[
+ P=F+Q'\longrightarrow Q=G+P'.
+\]
+En virtud de la proposición 2.5, los haces $P'$ y $Q'$ son restricciones a $U$ de haces coherentes sobre $X$ (denotados por las mismas letras); asimismo, sus filtraciones provienen de filtraciones sobre los haces correspondientes en $X$, por el lema 2.11 de más abajo. Se tiene entonces
+\[
+ \gamma_X(F)-\gamma_X(G)=(\gamma_X(P)-\gamma_X(Q))+(\gamma_X(P')-\gamma_X(Q')).
+\]
+Introduciendo los factores $P'_i$ y $Q'_j$ de las filtraciones de $P'$ y $Q'$ sobre $X$, el último término es la suma de términos $\gamma_X(P'_i)-\gamma_X(Q'_i)$, donde $P'_i|_U\simeq Q'_i|_U$. Se reduce así a demostrar el caso particular siguiente: si $R$ y $S$ son haces coherentes sobre $X$ tales que $R|_U\simeq S|_U$, entonces $\gamma_X(R)-\gamma_X(S)$ está en la imagen de $\underline K(Y)$. Sea, en efecto, $T$ el grafo del isomorfismo dado de $R|_U$ sobre $S|_U$; es un subhaz coherente de $(R\times S)|_U$ y, por tanto, en virtud del lema 2.11, es la restricción a $U$ de un subhaz coherente, denotado también por $T$, de $R\times S$. Se tiene entonces $\gamma_X(R)-\gamma_X(S)=(\gamma_X(R)-\gamma_X(T))-(\gamma_X(S)-\gamma_X(T))$, y basta demostrar, por ejemplo, que el primer término del segundo miembro está en la imagen de $\underline K(Y)$. Ahora bien, la proyección $u:T\longrightarrow R$ es un isomorfismo sobre $U$, por lo que $\gamma_X(R)-\gamma_X(T)=\gamma_X(\operatorname{Coker}u)-\gamma_X(\operatorname{Ker}u)$, y $\operatorname{Ker}u$ y $\operatorname{Coker}u$ tienen su soporte en $Y$.
+
+Queda, pues, por demostrar el lema siguiente:
+
+\textbf{Lema 2.11.} \emph{Sean $X$ un espacio algebraico, $F$ un haz algebraico coherente sobre $X$, $U$ una parte abierta de $X$ y $G$ un subhaz coherente de $F|_U$. Entonces $G$ es la restricción a $U$ de un subhaz coherente de $F$.}
+
+Sea $\overline G$ el subhaz de $F$ cuyas secciones sobre el abierto $V$ de $X$ son las secciones de $F$ sobre $V$ cuya restricción a $U\cap V$ es una sección de $\sisi{V}{G\text{ sobre }U\cap V}$. Todo se reduce a demostrar que este haz $\overline G$ es coherente. Para ello, se pueden suponer $X$ y $U$ afines (pues $U$ es unión de abiertos afines $U_i$, y $\overline G$ es entonces intersección de los haces análogos $\overline{G|_{U_i}}$). Entonces el anillo de coordenadas de $U$ es un anillo de fracciones $A_S$ del anillo de coordenadas $A$ de $X$, y se verifica inmediatamente que, si $F$ está definido por el $A$-módulo $M$, entonces $F|_U$ está definido por el $A_S$-módulo $M_S=A_S\otimes_A M$. El subhaz $G$ de $F|_U$ está entonces definido por un submódulo $N'$ de $M_S$, y se ve que $\overline G$ está definido precisamente por el submódulo $N$ de $M$, imagen inversa de $N'$ por el homomorfismo canónico de $M$ en $M_S$.
+\begin{flushright}cqfd.\end{flushright}
+
+\textbf{Corolario 1 de la proposición 2.10.} \emph{Sea $x\in\underline K(X)$. Para que $x$ sea de filtración $\sisi{\leq}{\geq} i$, es necesario y suficiente que exista una parte cerrada $Y$ de $X$, de dimensión $\leq n-i$, tal que la restricción de $x$ a $X-Y$ sea nula.}
+
+\textbf{Corolario 2.} \emph{Supongamos que $X$ es conexo de dimensión $n$, sin singularidades en dimensión $n-1$. Si $D$ y $D'$ son dos divisores linealmente equivalentes sobre $X$, se tiene $\gamma(D)\equiv\gamma(D')\quad\mathrm{mod.}\ \underline K(X)^2$.}
+
+En virtud del corolario 1, se puede suponer que $X$ es no singular; el corolario resulta entonces de la fórmula general
+\begin{equation}\tag{2.31}
+ \gamma(D)=1-\gamma(L(-D))\qquad\mathrm{mod}\ \underline K(X)^2,
+\end{equation}
+donde $L(-D)$ designa el fibrado vectorial de rango $1$ definido por el divisor $-D$. Para verificar (2.31), se la escribe en la forma
+\begin{equation}\tag{2.31 bis}
+ \gamma(L(-D))=1-\gamma(D)\qquad\mathrm{mod}\ \underline K(X)^2,
+\end{equation}
+y se observa que ambos miembros son homomorfismos del grupo de los divisores en el grupo multiplicativo de los elementos invertibles del anillo $\underline K(X)/\underline K(X)^2$ (obsérvese que $\underline K(X)^1/\underline K(X)^2$ es de cuadrado nulo, lo que se verifica con gran facilidad en la fórmula explícita (2.15), utilizando el corolario 1). Se reduce así al caso en que $D$ es una hipersuperficie irreducible. Más generalmente, si $D$ es una hipersuperficie cuyas componentes son disjuntas, se tiene la igualdad
+\begin{equation}\tag{2.32}
+ \gamma(D)=1-\gamma(L(-D))
+\end{equation}
+como resulta de la sucesión exacta de haces
+\[
+0\longrightarrow\cO_X(L(-D))\longrightarrow\cO_X\longrightarrow\cO_D\longrightarrow0.
+\]
+
+\textbf{Teorema 2.12.} \emph{Sean $X$ una variedad cuasiproyectiva no singular, y $Z$ y $Z'$ dos ciclos homogéneos de codimensión $p$ sobre $X$ que son linealmente equivalentes. Se tiene entonces}
+\begin{equation}\tag{2.33}
+ \gamma_X(Z)\equiv\gamma_X(Z')\qquad\mathrm{mod}\ \underline K(X)^{p+1}.
+\end{equation}
+Por hipótesis, se puede encontrar un ciclo $Y$ de dimensión $n-p+1$ sobre $X\times k$ ($n$ es la dimensión de $X$), y dos puntos $a,a'\in k$ tales que se tenga
+\[
+ Z=f_a^{-1}(Y),\qquad Z'=f_{a'}^{-1}(Y),
+\]
+donde se pone $f_u(x)=(x,u)$. En virtud de la fórmula (2.23), se tiene entonces
+\[
+ \gamma_X(Z)\equiv f_a^!(\gamma_{X\times k}(Y))\qquad\mathrm{mod}\ \underline K(X)^{p+1}
+\]
+y una fórmula análoga para $\gamma_X(Z')$. Basta entonces demostrar que $f_a^!=f_{a'}^!$, lo que resulta inmediatamente de la proposición 2.9.
+\begin{flushright}cqfd.\end{flushright}
+
+\textbf{Corolario 1.} \emph{La filtración de $\underline K(X)$ es compatible con su estructura de anillo, es decir, se tiene $\underline K(X)^i\underline K(X)^j\subset\underline K(X)^{i+j}$ cualesquiera que sean los enteros $i,j\geq0$. Se tiene, además, un homomorfismo sobreyectivo natural de anillos graduados}
+\begin{equation}\tag{2.34}
+ \varphi:A(X)\longrightarrow G(\underline K(X))
+\end{equation}
+(donde el segundo miembro designa el anillo graduado asociado a $\underline K(X)$ provisto de la filtración $(\underline K(X)^i)_{i\geq0}$), definido por la condición
+\[
+ \varphi(Z^{n-p})=\gamma(Z^{n-p})\qquad\mathrm{mod}\ \underline K(X)^{p+1}.
+\]
+Este corolario resulta inmediatamente del teorema 2.12, de las proposiciones 2.6 y 2.7 y del teorema de Chow 2.1, por recurrencia sobre el entero $i+j$.
+
+\textbf{Corolario 2.} \emph{Sean $X$ e $Y$ dos variedades cuasiproyectivas no singulares y sea $f$ un morfismo de $X$ en $Y$. Entonces el homomorfismo $f^!$ de $\underline K(Y)$ en $\underline K(X)$ es compatible con las filtraciones, y se tiene un diagrama conmutativo}
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+G(\underline K(Y)) \arrow[r,"G(f^!)"] & G(\underline K(X))\\
+A(Y) \arrow[r,"f^*"] \arrow[u,"\varphi_Y"'] & A(X) \arrow[u,"\varphi_X"']
+\end{tikzcd}
+\]
+Utilizando el grafo de $f$, se descompone $f$ como composición de una \emph{inmersión} de $X$ en $X\times Y$ y una \emph{proyección} de $X\times Y$ sobre $Y$. Para esta última, el corolario es trivial, y para una inmersión se procede como para el corolario 1, utilizando la proposición 2.8 en lugar de la proposición 2.7.
+
+\textbf{Proposición 2.13 (``descomposición celular'').} \emph{Sea $P$ un espacio algebraico (irreducible o no), provisto de una familia creciente $P^0\subset P^1\subset\cdots\subset P^n=P$ de partes cerradas, tales que, para todo $i$ con $0\leq i\leq n$, las componentes conexas de $P^i-P^{i-1}$ sean espacios algebraicos $V_{i,\alpha}$ isomorfos a $k^i$ (se pone $P^{-1}=\varnothing$). Entonces:}
+\begin{enumerate}[label=\alph*)]
+\item \emph{Para todo espacio algebraico $X$, la aplicación natural de $\underline K(X)\otimes\underline K(P)$ en $\underline K(X\times P)$, deducida del producto tensorial de haces sobre $X$ y $P$, es sobreyectiva.}
+\item \emph{Los $\gamma_P(V_{i,\alpha})$ forman un sistema de generadores del grupo $\underline K(P)$.}
+\end{enumerate}
+La demostración se hace por recurrencia sobre $n$, utilizando el corolario de la proposición 2.9 y la proposición 2.10. (N.B. Por desgracia, ignoro si los $\gamma_P(V_{i,\alpha})$ forman una base de $\underline K(P)$ y si el homomorfismo considerado en a) es biyectivo. No necesitaremos saberlo para lo que sigue).
+
+\textbf{Teorema 2.14.} \emph{Sean $x_i$ ($1\leq i\leq q$) y $E_j$ ($1\leq j\leq r$) letras, y sean $n_j$ ($1\leq j\leq r$) enteros $>0$; consideremos los símbolos $\lambda^k(x_i)$ con $k\geq1$ y $\lambda^k(E_j)$ con $1\leq k\leq n_j$ como indeterminadas, y sea $R$ un polinomio con coeficientes enteros en estas indeterminadas. Se supone que, para todo anillo graduado $A$, cuando se sustituyen en $R$ los $x_i$ por elementos $\xi_i$ y los $E_j$ por elementos $\eta_j$ de $\Atil$, sometidos a las restricciones $\varepsilon(\xi_i)=0$ y $\eta_j=[n_j,1+\eta_j^{(1)}+\cdots+\eta_j^{(n_j)}]$ (por tanto, $\eta_j^{(k)}=0$ para $k>n_j$), se tiene}
+\[
+ R((\lambda^k(\xi_i)),(\lambda^k(\eta_j)))\in\Atil^p.
+\]
+\emph{Sea entonces $X$ una variedad cuasiproyectiva irreducible no singular. Cualesquiera que sean los elementos $x'_i$ de $\underline K(X)^1$ y los fibrados vectoriales $E'_j$ de dimensión $n_j$ sobre $X$ ($1\leq i\leq q$, $1\leq j\leq r$), se tiene}\footnote{Se demuestra fácilmente que la hipótesis formulada implica que, si $R$ se expresa en términos de los $\gamma^k(\xi_i)$, $\gamma^k(\sisi{E_i}{E_j}-\varepsilon(\sisi{E_i}{E_j}))$, entonces todos los términos de $R$ son de peso $\geq p$ (donde $\gamma^k$ tiene peso $k$). Entonces 2.14 es un caso particular de X 1.3.2.}
+\begin{equation}\tag{*}
+ R((\lambda^k(x'_i)),(\lambda^k(\gamma(E'_j))))\in\underline K(X)^p.
+\end{equation}
+
+\emph{Demostración}: En virtud del \S 2, los $x'_i$ son a su vez diferencias de elementos de la forma $\gamma(E)$, siendo $E$ un fibrado vectorial. Por otra parte, suponiendo $X$ localmente cerrado en un espacio proyectivo $P$, resulta del \S 2 y de la proposición 2.5 que, para todo $F\in\cF(X)$, el haz $F(n)$ está engendrado por sus secciones para $n$ suficientemente grande. Si $F$ está definido por un fibrado vectorial $E$, esto demuestra que $E(n)$ es la imagen inversa del fibrado vectorial canónico sobre una variedad grassmanniana $G$ por un morfismo de $X$ en $G$. Considerando el morfismo correspondiente de $X$ en $P\times G$, se ve que $E$ es la imagen inversa de un fibrado vectorial sobre $P\times G$. Se ve, pues, aplicando esto a todos los fibrados vectoriales que intervienen, y utilizando el corolario 2 del teorema 2.12, que se reduce al caso en que $X$ es un producto de grassmannianas. En este caso, la conclusión resultará del lema siguiente:
+
+\textbf{Lema 2.15.} \emph{Supongamos que $X$ es un producto de grassmannianas. Entonces se puede encontrar un $\lambda$-homomorfismo de $\underline K(X)$ en un $\lambda$-anillo sin torsión de la forma $\Atil$ (donde $A$ es un anillo graduado), compatible con las filtraciones, y tal que el homomorfismo correspondiente $G(\underline K(X))\longrightarrow G(\sisi{A}{\widetilde A})$ sea inyectivo.}
+
+Para \sisi{demostrarlo el lema}{demostrar el lema}, utilizaremos la teoría de Chow de las clases de Chern; si se pudiera demostrar el lema, o el teorema 2.14, directamente, se deduciría una teoría puramente «mediante haces» de las clases de Chern (cf.\ \S 5). Consideraremos el homomorfismo $\Ctil$ de $\underline K(X)$ en $\Atil(X)$ y pondremos $A=A(X)$; hay que demostrar que el homomorfismo $\psi=G(\Ctil)$ de $G(\underline K(X))$ en $G(\sisi{A(X)}{\Atil(X)})\simeq A(X)$ es inyectivo. El hecho de que $\Ctil$ sea compatible con las filtraciones es cierto para toda variedad cuasiproyectiva no singular y resulta fácilmente del corolario de la proposición 2.3. Por otra parte, como $X$ es un producto de grassmannianas $C_j$, se tienen sobre $X$ fibrados vectoriales $E_j$, imágenes inversas de los fibrados canónicos sobre los factores. Utilizaremos los hechos siguientes (conocidos):
+\begin{enumerate}[label=\alph*)]
+\item Sobre $X$, la equivalencia lineal de los ciclos equivale a la equivalencia numérica, y $A(X)$ es un grupo de rango finito;
+\item Los $C^i(E_j)$ engendran el anillo $A(X)$.
+\end{enumerate}
+De a) resulta que $\varphi:A(X)\longrightarrow G(\underline K(X))$ es inyectiva (y, por tanto, biyectiva) en virtud del lema siguiente:
+
+\textbf{Lema \sisi{2.15}{2.15 bis}.} \emph{Sean $X^n$ una variedad proyectiva no singular, y $Z^{n-p}$ un ciclo sobre $X$ tal que $\varphi(Z)\in G^p(\underline K(X))$ sea nulo; entonces $Z^{n-p}$ es numéricamente equivalente a cero.}
+
+Para demostrar este lema, basta utilizar la función aditiva $\chi(F)=\sum_{i\geq0}(-1)^i\dim H^i(X,F)$ y el hecho de que esta función es igual a $1$ para $F=\cO_{(x)}$, para todo $x\in X$.
+
+Así, $A(X)$ y $G(\underline K(X))$ tienen, en el caso considerado, el mismo rango finito en todo grado, y $G(\underline K(X))$ no tiene torsión, pues lo mismo ocurre con $A(X)$. De la afirmación b) anterior resulta, de manera «formal», que la aplicación $\Ctil$ de $\underline K(X)$ en $\Atil(X)$ es sobreyectiva módulo grupos finitos. Se deduce fácilmente, puesto que $G(\underline K(X))$ y $A(X)$ tienen el mismo rango finito en todo grado, que el homomorfismo $G(\Ctil)$ de $G(\underline K(X))$ en $G(\Atil(X))$ es biyectivo módulo grupos finitos en todo grado (se utilizará una recurrencia sobre el grado). Como $G(\underline K(X))$ no tiene torsión, este homomorfismo $G(\Ctil)$ es, por tanto, inyectivo.
+\begin{flushright}cqfd.\end{flushright}
+
+N.B. El homomorfismo $\Ctil$ no es sobreyectivo en general, ni siquiera si $X$ es un espacio proyectivo de dimensión $2$.
+
+\subsection*{5. Definición mediante haces de las clases de Chern. Aplicación al estudio de los morfismos de inyección}
+
+\textbf{Teorema 2.16.} \emph{Sea $X$ una variedad cuasiproyectiva no singular. Entonces, para todo $x\in\underline K(X)$ y para todo entero $i\geq0$, el elemento $\gamma^i(x-\varepsilon(x))$ es de filtración $\geq i$. Sea $c^i(x)\in G^i(\underline K(X))$ la clase de este elemento módulo $\underline K(X)^{i+1}$; si se pone}
+\[
+ \widetilde c(x)=\left[\varepsilon(x),1+\sum_{i\geq\sisi{0}{1}}c^i(x)\right]\in\widetilde{G(\underline K(X))},
+\]
+\emph{entonces $\widetilde c$ satisface las condiciones análogas a las del teorema 2.2.}
+
+La primera afirmación resulta del teorema 2.14, al igual que el hecho de que $x\longrightarrow\widetilde c(x)$ sea un homomorfismo de $\lambda$-anillos (la fórmula (1.25) implica $\gamma_t(x+y)=\gamma_t(x)\gamma_t(y)$, lo que ya muestra que $\widetilde c$ es un homomorfismo aditivo). La «funtorialidad» de $\widetilde c$ se verifica inmediatamente, y (2.8) resulta de (2.31).
+\begin{flushright}cqfd.\end{flushright}
+
+\textbf{Corolario 1.} \emph{Se tiene $c^i(x)=\varphi(C^i(x))$.}
+
+Esto resulta de un teorema de unicidad para las clases de Chern, que se demuestra como en Hirzebruch pasando a las variedades de banderas. Solo hay que demostrar que, si $Y$ es una variedad de banderas asociada a un fibrado vectorial sobre $X$, entonces $G(\underline K(X))\longrightarrow G(\underline K(Y))$ es inyectivo, lo que se verifica mediante la determinación explícita de $\underline K(Y)$, con todas sus estructuras, a partir de $\underline K(X)$ (no daré aquí los detalles).
+
+\textbf{Corolario 2.} \emph{Supongamos que, para todo elemento $Z\in A(X)$, existe un morfismo $f$ de $X$ en un producto $X'$ de grassmannianas tal que $Z$ esté en la imagen de $f^*$. Entonces los homomorfismos canónicos}
+\[
+ \varphi:A(X)\longrightarrow G(\underline K(X)),\qquad \psi:G(\underline K(X))\longrightarrow A(X),
+\]
+\emph{satisfacen en dimensión $i$ las relaciones siguientes:}
+\begin{equation}\tag{2.35}
+ \psi\varphi=(-1)^{i-1}(i-1)!\,\underline 1,\qquad
+ \varphi\psi=(-1)^{i-1}(i-1)!\,\underline 1.
+\end{equation}
+Como $\varphi$ es sobreyectiva, basta evidentemente demostrar la primera fórmula y, para esta, se puede suponer que $X$ es un producto de grassmannianas. Como entonces $\varphi$ es inyectiva, basta demostrar la segunda fórmula (2.35), que, en virtud del corolario 1, se escribe
+\[
+ \gamma^i(x-\varepsilon(x))\equiv(-1)^{i-1}(i-1)!\,x\qquad\mathrm{mod}\ \underline K(X)^{i+1}
+\]
+para todo $x\in\underline K(X)^i$. Como $\psi$ es inyectiva, basta demostrar la relación análoga para $\Ctil(x)\in A(X)^i$, y esta es entonces una consecuencia de (1.22 bis).
+
+\textbf{Observación.} El corolario 2 hace plausible la validez de (2.35) en todos los casos; debería existir una demostración directa. En cualquier caso, se demuestra fácilmente la segunda fórmula (2.35) módulo el subgrupo de torsión de $G(\underline K(X))$ y, en característica $0$, esta misma fórmula es consecuencia del teorema de Riemann--Roch. El interés de (2.35) (cuando es verdadera) reside en que muestra que $\varphi$ es inyectiva módulo grupos de torsión (¡quizá siempre nulos!\footnote{No; cf.\ la nota de la página 30.}), de modo que «no se pierde mucho» al definir las clases de Chern como elementos de $G(\underline K(X))$; si se toma el producto tensorial por $\Q$, como se hará más adelante para el teorema de Riemann--Roch, las dos definiciones de las clases de Chern serían entonces idénticas.
+
+Sea todavía $X$ cuasiproyectiva no singular; sea además $Y$ una subvariedad no singular de $X$, y sea $i$ la inyección de $Y$ en $X$. Se tienen entonces, para $i^!$ e $i_*$, las fórmulas siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item $i^!$ es un homomorfismo de $\lambda$-anillos
+\item $i_!(x.i^!(y))=i_!(x).y$, de donde, en particular, $i_*i^!(y)=\xi y$, con $\xi=i_*i^!(1)=\gamma_X(Y)$,
+\item $i^!(i_!(x))=x.\lambda_{-1}(N)$, de donde, en particular, $i^!(\xi)=i^!i_!(1)=\lambda_{-1}(N)$,
+\item $i_*(x)i_*(x')=i_*(xx'\lambda_{-1}(N))$,
+\end{enumerate}
+donde, por definición, $N$ es la clase en $\underline K(Y)$ del fibrado conormal a $Y$ en $X$. Las fórmulas (i) y (ii) son verdaderas para morfismos cualesquiera, no necesariamente inyecciones, y (iii) y (iv) se verifican a partir de la definición (2.15) y de la fórmula análoga para las imágenes inversas (tomando como $x$ y $x'$ clases de fibrados vectoriales, y utilizando el hecho de que
+\begin{equation}\tag{2.36}
+ \Tor^{\cO_X}_i(\cO_Y,\cO_Y)=\cO_Y(\wedge^i N).
+\end{equation}
+)
+La fórmula (iv) expresa que $i_*$ es un homomorfismo de anillos si se introduce sobre $\underline K(Y)$ una nueva estructura multiplicativa, mediante la definición $x_N x'=xx'\lambda_{-1}(N)$ (cf.\ Capítulo I, \S 4). Se completa con la fórmula
+\begin{enumerate}[label=(\roman*)]
+\setcounter{enumi}{4}
+\item $i_!(\lambda^p(N,x))=\lambda^p(i_!(x))$ para $p\geq1$,
+\end{enumerate}
+que significa que $i_*$ define un $\lambda$-homomorfismo de $\underline K(Y)_N$ en $\underline K(X)$. Esta fórmula (v), ciertamente verdadera en todos los casos, solo está demostrada por el momento en característica $0$, pues resulta de la conjunción de los teoremas 1.4 y 2.8.
+
+Se tienen fórmulas análogas para $i_*$ e $i^*$:
+\begin{enumerate}[label=(\roman* bis)]
+\item $i^*$ es un homomorfismo de anillos graduados.
+\item $i_*(x.i^*(y))=i_*(x).y$, de donde, en particular, $i_*(i^*(y))=\xi' y$, con $\xi'=i_*(1)$,
+\item $i^*(i_*(x))=x.(-1)^q N^q$, de donde, en particular, $i^*(\xi')=(-1)^q N^q$,
+\item $i_*(x)i_*(x')=i_*(xx'(-1)^q N^q)$,
+\item $i_*$ aumenta los grados en $q$ unidades.
+\end{enumerate}
+En estas fórmulas, $q$ es la codimensión de $Y$ en $X$, y se pone $N^i=C^i(N)$. Solo las fórmulas (iii bis) y (iv bis) requieren demostración; ignoro si son bien conocidas (¡e incluso si son verdaderas!) y me limito a señalar que resultan por reducción de las fórmulas (ii) y (iv), con tal de que se trabaje en $G(\underline K(Y))$ y $G(\underline K(X))$, y no en $A(Y)$ y $A(X)$. Se utiliza entonces el hecho de que $i_*$ e $i^*$ provienen por paso al cociente de $i_*$ e $i^!$, observando que $i_*$ desplaza la filtración en $q$ unidades.
+
+\textbf{N.B.} Todas las fórmulas «universales» que relacionan $i_*$ e $i^!$ (resp.\ $i_*$ e $i^*$) son consecuencias formales de las precedentes, como se puede comprobar sin gran dificultad.
+
+De la fórmula (v) resulta la fórmula
+\[
+ i_!(\gamma^p(N,x))=\gamma^p(i_!(x)).
+\]
+La conjunción del teorema 2.14 y de la proposición 1.5 muestra que $\gamma^p(N,x)$ es, para $p=q+j$, de filtración $\geq j$; si se denota por $G_p(N,x)$ su clase en $G^j(\underline K(Y))$, el teorema 2.16 muestra que se tiene
+\[
+ i_*(G_p(N,x))=c^p(i_!(x)).
+\]
+Por último, la proposición 1.5, unida al teorema 2.14, permite expresar $G_p(N,x)$ como un polinomio con coeficientes enteros en los $c^i(N)$, los $c^i(x)$ y $\varepsilon(x)$; se deduce el teorema siguiente:
+
+\textbf{Teorema 2.17.} \emph{Supongamos que el cuerpo $k$ es de característica $0$, y sea $i:Y\longrightarrow X$ un morfismo de inyección de variedades cuasiproyectivas no singulares. Se tienen entonces las fórmulas (i) a (v) y, además, para todo entero $j\geq0$, la fórmula}
+\begin{equation}\tag{2.37}
+ c^{q+j}(i_!(x))=i_*\left(\frac{\widetilde c(x)*\lambda_{-1}(\widetilde c(N))}{(-1)^qN^q}\right)^{(j)}.
+\end{equation}
+El segundo miembro de la fórmula (2.37) es una manera abreviada de designar el polinomio en las componentes de $\widetilde c(x)$ y $\widetilde c(N)$ descrito en la proposición 1.5.
+
+\textbf{Corolario:} \emph{En las condiciones precedentes, se tiene}
+\begin{equation}\tag{2.38}
+ \ch(\widetilde c(i_!(x)))=i_*\left(\ch(\widetilde c(x))\,\mathcal T(\check N)^{-1}\right)
+\end{equation}
+\emph{donde $\ch$ es el homomorfismo de Chern definido por la fórmula} (1.26).
+
+Basta utilizar (2.37) escrita en la forma
+\begin{equation}\tag{2.37 bis}
+ \widetilde c(i_!(x))=1+i_*\left(\frac{\widetilde c(x)*\lambda_{-1}(\sisi{c(N)}{\widetilde c(N)})-1}{(-1)^qN^q}\right),
+\end{equation}
+la fórmula explícita (1.29), la fórmula (iv bis) y, por último, (1.30).
+
+Se puede escribir (2.38) en la forma
+\begin{equation}\tag{2.38 bis}
+ \ch_X(F)=i_*\left(\ch_Y(F)\,\mathcal T(T_{X/Y})^{-1}\right),
+\end{equation}
+donde $F$ es un haz algebraico coherente sobre $Y$ (considerado en el primer miembro como un haz sobre $X$ nulo fuera de $Y$), $\ch_X$ y $\ch_Y$ son los homomorfismos de Chern tomados sobre $X$ e $Y$, respectivamente, y $T_{X/Y}$ es el fibrado normal a $Y$ en $X$.
+
+\textbf{Observaciones:} A diferencia de (2.38), la fórmula (2.37) es una «fórmula sin denominador». Solo se ha demostrado (incluso en característica $0$) trabajando en $G(\underline K(X))$ y no en $A(X)$, lo que quizá no sea lo mismo. Es ciertamente verdadera en toda característica y en $A(X)$. Señalemos que se verifica de inmediato que las imágenes de ambos miembros por $i^*$ son las mismas, de donde resulta, aplicando $i_*$, que el producto de su diferencia por $N^q$ es \sisi{nula}{nulo}. Esto sugiere un método de demostración completamente diferente, tratando de obtener $Y$ como imagen inversa transversal de una subvariedad $Y'$ en una variedad $X'$, tal que, en dimensión $\leq n=\dim X$, la clase de $Y'$ en $A(X')$ no sea divisor de $0$\dots. Por desgracia, no se puede esperar que $X'$ sea una grassmanniana o algo semejante.
+
+Se observará que, si se desprecian los elementos de torsión, la fórmula (2.38) es equivalente a (2.37).
+
+
+
+
+% Definiciones adicionales de macros
+\providecommand{\cS}{\mathcal S}
+\providecommand{\cD}{\mathcal D}
+\providecommand{\cE}{\mathscr E}
+\providecommand{\cG}{\mathscr G}
+\providecommand{\cL}{\mathscr L}
+\providecommand{\cM}{\mathscr M}
+\providecommand{\cP}{\mathscr P}
+\providecommand{\cK}{\mathcal K}
+\providecommand{\Db}{\mathrm D}
+\providecommand{\Kb}{\mathrm K}
+\providecommand{\Trc}{\operatorname{Tr}}
+\providecommand{\ob}{\operatorname{ob}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Cone}{\operatorname{Cone}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\Id}{\operatorname{Id}}
+\providecommand{\RR}{\mathrm{R.R.}}
+\providecommand{\RRR}{\mathrm{R.R.R.}}
+\providecommand{\GrR}{\mathrm{G}}
+\providecommand{\pr}{\operatorname{pr}}

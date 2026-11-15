@@ -1,0 +1,231 @@
+% SGA 6, Exposición XII: fragmento español alineado con la fuente.
+% Alcance: sección 2 completa, «Primeras reducciones».
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 14219--14323.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\section*{2. Primeras reducciones}
+
+\textbf{2.1.} Apliquemos 1.3 a \(X/S\) y \(Y/S\): se obtienen un abierto no
+vacío \(V\) de \(S\), un esquema íntegro \(S'\) y un morfismo finito y plano
+\(S'\to V\), tales que toda componente irreducible \(X'_i\) de \(X_{S'}\) y
+\(Y'_j\) de \(Y_{S'}\), dotada de la estructura reducida inducida, sea
+íntegra sobre \(S'\). En virtud del descenso f.p.q.c. (EGA IV 2.7.1 (xiv) y
+SGA 1 VIII 7.9), se puede sustituir \(S\) por \(S'\). Del siguiente diagrama
+conmutativo:
+\[
+\begin{tikzcd}
+X_{\red} \arrow[r,"f_{\red}"] \arrow[d,"i"'] & Y_{\red} \arrow[d,"j"]\\
+X \arrow[r,"f"] & Y
+\end{tikzcd}
+\]
+que implica el diagrama conmutativo
+\[
+\begin{tikzcd}
+\Pic_{X_{\red}/S} & \Pic_{Y_{\red}/S} \arrow[l]\\
+\Pic_{X/S} \arrow[u] & \Pic_{Y/S} \arrow[l] \arrow[u]
+\end{tikzcd}
+\]
+y de sorites triviales sobre los morfismos de funtores representables por
+morfismos cuasiafines (resultantes de EGA II 5.1.10 (ii) (v)), se deduce que
+basta con demostrar las dos afirmaciones siguientes:
+\begin{enumerate}[label=\Roman*.]
+\item El teorema 1.1 cuando \(f\) es una inmersión (necesariamente
+nilpotente).
+\item El teorema 1.1 cuando \(X\) e \(Y\) son reducidos y toda componente
+irreducible \(X_i\) de \(X\) y \(Y_i\) de \(Y\), dotada de la estructura
+reducida inducida, es íntegra sobre \(S\).
+\end{enumerate}
+
+\textbf{2.2.} Estudiemos la afirmación II. Para todo \(i\), sea
+\(j=\varphi(i)\) un índice tal que \(f(X_i)\subset Y_j\), y sea
+\(\Sigma_j=\coprod_{\varphi(i)=j} X_i\). Se tienen entonces los dos
+diagramas
+\[
+\begin{tikzcd}
+Y & \coprod_j Y_j \arrow[l]\\
+X \arrow[u] & \coprod_j \Sigma_j \arrow[l] \arrow[u]
+\end{tikzcd}
+\]
+y
+\[
+% Canon SGA-SRC-001361: el diagrama español vigente ya lleva los objetivos Picard correctos.
+\begin{tikzcd}
+\Pic_{Y/S} \arrow[r,"\sgacircled{1}"] \arrow[d,"\sgacircled{2}"'] &
+\Pic_{\coprod_jY_j/S}=\prod_j\Pic_{Y_j/S} \arrow[d,"\sgacircled{4}"]\\
+\Pic_{X/S} \arrow[r,"\sgacircled{3}"] &
+\Pic_{\coprod_j\Sigma_j/S}=\prod_j\Pic_{\Sigma_j/S}.
+\end{tikzcd}
+\]
+Y, para establecer II, basta con ver que, tras restringir \(S\) si es
+necesario, \(\sgacircled{1}\), \(\sgacircled{3}\) y
+\(\sgacircled{4}\) son cuasiafines.
+
+Consideremos primero \(\sgacircled{4}\). Sustituyendo \(Y\) por \(Y_j\) y
+\(X\) por \(\Sigma_j\), nos reducimos al caso en que \(Y\) es íntegro sobre
+\(S\). Como \(f\) es sobreyectivo, existe uno de los \(X_i\), sea \(X_0\),
+que domina a \(Y\), y se tienen las dos sucesiones
+\[
+  X_0\hookrightarrow \coprod X_i\longrightarrow Y,
+\]
+y
+\[
+  \Pic_{X_0/S}\longleftarrow \Pic_{\coprod_i\sisi{X'_i}{X_i}/S}\longleftarrow \Pic_{Y/S}. % Canon SGA-SRC-001357
+\]
+Por tanto, si se sabe que los \(\underline{\Pic}_{X_i/S}\), y por consiguiente también
+\(\Pic_{\coprod_iX_i/S}\), son representables, y que el morfismo compuesto
+es cuasiafín, se concluye que \(\sgacircled{4}\) es cuasiafín. Teniendo en
+cuenta la demostración de 1.2, para \(\sgacircled{4}\) nos reducimos, pues,
+a demostrar II'. El teorema 1.1 cuando \(X\) e \(Y\) son íntegros sobre
+\(S\).
+
+Para \(\sgacircled{1}\) y \(\sgacircled{3}\), hay que tratar el caso de un
+morfismo \(\coprod X_i\to X\), donde \(X\) es reducido, los \(X_i\) son las
+componentes irreducibles de \(X\) y son íntegros sobre \(S\). Ahora bien, se
+puede suponer que \(X\) tiene fibras conexas. En efecto, sea \(\eta\) el
+punto geométrico de \(S\). Entonces \(X_\eta\) tiene como componentes
+irreducibles los \((X_i)_\eta\) y, tras restringir \(S\) si es necesario, se
+puede suponer que \(X_i\cap X_j=\varnothing\) si y solo si
+\((X_i)_\eta\cap(X_j)_\eta=\varnothing\). Sean
+\(Y_k=\bigcup_{i\in I(k)}X_i\) las componentes conexas de \(X\); entonces
+\(f\) se descompone,
+\(f=\coprod_k f_k:\coprod_k(\coprod_{i\in I(k)}X_i)\longrightarrow \sisi{Y_k}{\coprod_kY_k}\), y % Canon SGA-SRC-001358
+de ello resulta la afirmación. Finalmente, una inducción inmediata nos
+reduce al caso de un morfismo \(X_1\amalg X_2\to X\).
+\(\sgacircled{1}\) y \(\sgacircled{3}\) resultan entonces, tras restringir
+\(S\) si es necesario según EGA III 7.8.6, de la proposición siguiente.
+
+\textbf{Proposición 2.3.} Sean \(S\) un esquema, \(g:Y\to S\) un morfismo
+propio y \(Y_1,Y_2\) dos subesquemas cerrados definidos por los ideales
+\(I_1,I_2\). Supongamos que
+\begin{enumerate}[label=\alph*)]
+\item \(Y,Y_1,Y_2,Y_1\cap Y_2\) son fielmente planos y de presentación
+finita sobre \(S\).
+\item \(g_*\mathcal O_Y=\mathcal O_S\) y
+\((g_i)_*\mathcal O_{Y_i}=\mathcal O_S\) universalmente (donde
+\(g_i=g|Y_i\), \(i=1,2\)).
+\item \(I_1\cap I_2=0\).
+\end{enumerate}
+Entonces \(\Pic_{Y/S}\longrightarrow \Pic_{(Y_1\amalg Y_2)/S}\) es
+representable por un morfismo afín de presentación finita.
+
+En efecto, observemos primero que las hipótesis son estables bajo todo cambio
+de base. Para (c), esto resulta de las dos sucesiones exactas:
+\[
+  0\longrightarrow I_1+I_2\longrightarrow\mathcal O_Y
+  \longrightarrow\mathcal O_{Y_1\cap Y_2}\longrightarrow0
+\]
+y
+\[
+  0\longrightarrow I_1\cap I_2\longrightarrow I_1\oplus I_2
+  \longrightarrow I_1+I_2\longrightarrow0~;
+\]
+la primera muestra que \(I_1+I_2\) es plano sobre \(S\); la segunda muestra
+después que \(I_1\cap I_2\) es estable bajo cambio de base.
+
+La afirmación es local para la topología f.p.p.f. Efectuando el cambio de
+base \(Y_1\cap Y_2\to S\), se puede suponer que \(Y_1\cap Y_2/S\) posee una
+sección \(\alpha\), que define secciones \(\alpha_i\) de \(Y_i\) y \(\beta\)
+de \(Y\). Tras un cambio de base conveniente, nos reducimos a ver que todo
+punto \(\mu:S\to\underline{\Pic}_{(Y_1\amalg Y_2)/S}\) tiene como imagen inversa un
+subfuntor de \(\underline{\Pic}_{Y/S}\) que es representable por un esquema afín sobre
+\(S\). Ahora bien, \(\mu\) está definido por un haz invertible \(L_i\) sobre
+\(Y_i\), provisto de una rigidificación
+\(u_i:\alpha_i^*L_i\xrightarrow{\sim}\mathcal O_S\), para \(i=1,2\). Del
+mismo modo, un punto \(\lambda:S\to\underline{\Pic}_{Y/S}\) corresponde a un haz
+invertible \(L\) sobre \(Y\), provisto de una rigidificación
+\(u:\sisi{\alpha}{\beta}^*L\xrightarrow{\sim}\mathcal O_S\). La imagen de \(\lambda\) en % Canon SGA-SRC-001360
+\(\Pic_{Y_1\amalg Y_2/S}\) es \(\mu\) si y solo si existe un isomorfismo de
+haces rigidificados \(f_i^*(L)\simeq L_i\), donde
+\(f_i:Y_i\hookrightarrow Y\) es la inclusión, para \(i=1,2\). Obsérvese que
+estos isomorfismos definen un isomorfismo
+\(\varphi:L_1|Y_1\cap Y_2\xrightarrow{\sim}L_2|Y_1\cap Y_2\) tal que
+\(u_1=u_2\circ\varphi\). Recíprocamente, si \(\varphi\) es un isomorfismo
+\(L_1|Y_1\cap Y_2\to L_2|Y_1\cap Y_2\) tal que
+\(u_1=u_2\circ\varphi\), existe un haz invertible rigidificado \(L\) sobre
+\(Y\), obtenido por pegado según \(\varphi\); explícitamente, \(L\) es el
+núcleo del homomorfismo canónico
+\((f_1)_*L_1\oplus(f_2)_*L_2\longrightarrow(f|Y_1\cap Y_2)_*L_2\) definido
+por \(\varphi\). Este \(L\) corresponde entonces a un punto \(\lambda\) de
+\(\Pic_{Y/S}\) que se envía a \(\mu\).
+
+Finalmente, sea \(I\) el funtor definido, cuando \(T\) recorre los esquemas
+sobre \(S\), por los conjuntos de isomorfismos
+\(\varphi:(L_1)_T|(Y_1\cap Y_2)_T\xrightarrow{\sim}(L_2)_T|(Y_1\cap Y_2)_T\)
+tales que \((u_1)_T=(u_2)_T\circ\varphi\). Acabamos de establecer un
+isomorfismo entre la imagen inversa de \(\mu\) en \(\Pic_{Y/S}\) y el funtor
+\(I\). Basta, pues, con aplicar el lema siguiente (donde se toma
+\(X=Y_1\cap Y_2\));
+
+\textbf{Lema 2.4.} Sea \(X\) un esquema plano, propio y de presentación
+finita sobre \(S\). Sean \(L,M\) dos haces invertibles sobre \(X\), e
+\(\Isom(L,M)\) el funtor de los isomorfismos \(L_T\to M_T\) (para \(T/S\)).
+Entonces
+\begin{enumerate}[label=\roman*)]
+\item \(\underline{\Isom}(L,M)\) es representable por un esquema afín sobre \(S\), de
+presentación finita.
+\item Si, además, \(L\) y \(M\) están provistos de rigidificaciones
+(relativamente a una sección dada de \(X\)), el subfuntor de \(\Isom(L,M)\)
+formado por los isomorfismos compatibles con estas rigidificaciones es
+representable por un cerrado de \(\Isom(L,M)\).
+\end{enumerate}
+En efecto, ii) está claro. En cuanto a i), recordemos que los funtores
+\(T\mapsto\Hom(L_T,M_T)\) y \(T\mapsto\Hom(M_T,L_T)\) son representables por
+fibrados vectoriales \(\mathbb V(E)\) y \(\mathbb V(F)\) (según EGA III
+7.7.8). Entonces, si \(u\in\Hom(L_T,M_T)\) y
+\(v\in\Hom(M_T,L_T)\), las condiciones \(u\circ v=1\) y \(v\circ u=1\)
+definen un cerrado \(F\) de \(\mathbb V(E)\times_S\mathbb V(F)\), y está
+claro que \(F\simeq \sisi{I}{\Isom(L,M)}\). % Canon SGA-SRC-001363
+
+\textbf{2.5.} Finalmente, reduzcamos la afirmación II' a la afirmación
+siguiente:
+
+\(\mathrm{II}^*\). El teorema 1.1 cuando \(X\) e \(Y\) son íntegros sobre
+\(S\) y la sucesión
+\begin{equation}\tag{*}
+  \mathcal O_Y
+  \longrightarrow f_*\sisi{\mathcal O_Y}{\mathcal O_X} % Canon SGA-SRC-001364
+  \rightrightarrows g_*\bigl(\mathcal O_{X\times_{\sisi{y}{Y}}X}\bigr)
+\end{equation}
+(donde \(g:X\times_{\sisi{y}{Y}}X\to Y\) es el morfismo estructural) es exacta.
+
+De hecho, para esto basta con probar que existe una factorización de \(f\)
+\[
+  X\xrightarrow{f_0}Y_0\xrightarrow{f_1}Y_1\longrightarrow\cdots\xrightarrow{f_\eta}Y_\eta=Y
+\]
+tal que todo \(f_i\) satisfaga (*) y, tras restringir \(S\) si es necesario,
+todo \(Y_i\) sea íntegro sobre \(S\).
+
+Para ello, se pone \(Y_0=\Spec(f_*(\mathcal O_X))\), proviniendo \(f_0\) de
+la factorización de Stein de \(f\) (EGA III 4.3.3), de modo que
+\(f_{0*}(\mathcal O_X)\xleftarrow{\sim}\mathcal O_{Y_0}\), y que \(f_0\)
+satisface efectivamente (*). Para factorizar del mismo modo \(Y_0\to Y\), se
+utiliza el
+
+\textbf{Lema 2.6.} Sean \(Y\) un esquema noetheriano,
+\(f:X\to Y\) un epimorfismo finito (es decir, tal que
+\(\mathcal O_Y\to f_*(\mathcal O_X)\) sea inyectivo); entonces \(f\) se
+factoriza en una sucesión finita de morfismos finitos \(f_i\)
+\(X\simeq Y_0\xrightarrow{f_1}Y_1\longrightarrow\cdots\longrightarrow Y_n=Y\)
+que son epimorfismos efectivos (es decir, tales que la sucesión
+\(\mathcal O_{Y_i}\longrightarrow (f_i)_*(\mathcal O_{Y_{i-1}})\rightrightarrows (g_i)_*\bigl(\mathcal O_{Y_{i-1}}\otimes_{\mathcal O_{Y_i}}\mathcal O_{Y_{i-1}}\bigr)\)
+sea exacta).
+
+Pongamos \(A=\mathcal O_Y\), \(B_0=f_*(\mathcal O_X)\), y definamos por
+recurrencia
+\(B_i=\Ker\bigl(B_{i-1}\rightrightarrows B_{i-1}\otimes_A B_{i-1}\bigr)\).
+Se comprueba inmediatamente que
+\(B_{i-1}\otimes_A B_{i-1}\xrightarrow{\sim}B_{i-1}\otimes_{\sisi{A_i}{B_i}}B_{i-1}\). % Canon SGA-SRC-001365
+Queda por demostrar que, para \(i\) suficientemente grande, se tiene
+\(B_i=A\). En efecto, consideremos la sucesión decreciente de
+\(\sisi{B}{A}\)-módulos \(M_i=B_i/A\), y sea \(S_i=\Supp(M_i)\). La sucesión
+decreciente de cerrados \(S_i\) de \(Y\) es estacionaria; sea \(S\) su valor
+estacionario. Mostremos que \(S=\varnothing\). En caso contrario, sea \(s\)
+un punto maximal de \(S\). Sustituyendo \(Y\) por
+\(\Spec\mathcal O_{Y,s}\) si es necesario, se puede suponer que \(Y\) es
+local, de punto cerrado \(s\). Por la elección de \(s\), \(M_i\) es
+artiniano para \(i\) suficientemente grande, por lo que la sucesión
+\((M_i)\) es estacionaria. Existe, pues, \(i\) tal que \(B_i=B_{i+1}\). Por
+consiguiente, \(\Spec(\sisi{A_i}{B_i})\to Y\) es un monomorfismo y, por tanto, una
+inmersión cerrada (Nakayama); como \(\sisi{B\subset A_i}{A\subset B_i}\), se tiene \(\sisi{B=A_i}{A=B_i}\), y
+\(s\notin S\), lo cual es absurdo.

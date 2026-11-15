@@ -1,0 +1,107 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 5, números 5.1--5.8, líneas 9387--9485 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{5. Aplicaciones a los fibrados proyectivos; estudio de \texorpdfstring{$f_*$}{f*}}
+
+\subsection*{5.1}
+En este parágrafo, $S$ es un esquema cuasicompacto, $E$ un $\mathcal O_S$-módulo localmente libre de rango $r+1$, y $X$ el fibrado proyectivo asociado a $E$. Sobre $X$, se tiene la sucesión exacta canónica:
+\[
+  0\longrightarrow F\longrightarrow f^*(E)\longrightarrow \mathcal O_X(1)\longrightarrow 0,
+\]
+siendo $f$ el morfismo estructural $X\longrightarrow S$.
+
+Los $K'$ considerados serán los definidos con ayuda de los haces localmente libres de tipo finito. Denotaremos por $E$, $F$, $\xi$ las clases de $E$, $F$, $\mathcal O_X(1)$. Se pone $x=1-\xi^{-1}$, $x'=\xi-1=\xi x$, y se denotan por $\bar x$, $\bar x'$ las clases de $x$, $x'$ en $\Gr^1K'(X)$. Como $\xi-1$ y $x$ pertenecen a $\Fil^1K'(X)$, se tiene
+\[
+  (\xi-1)x\in\Fil^2K'(X),
+  \quad\text{es decir,}\quad x\equiv \xi x=x' \ \mathrm{mod.}\ \Fil^2K'(X)
+  \quad\text{es decir,}\quad \bar x'= \sisi{-\bar x}{\bar x} .
+\]
+
+\subsection*{5.2}
+Si $G$ es un $\mathcal O_X$-módulo localmente libre de tipo finito, los $R^if_*(G)$ no son en general localmente libres de tipo finito sobre $S$, de modo que no se puede definir un homomorfismo $f_*:K'(X)\to K'(S)$ como se hace para los $K'$ definidos con ayuda de los complejos perfectos. El teorema 1.1 permite sortear esta dificultad de la manera siguiente: si $y\in K'(X)$, se puede escribir, de manera única:
+\begin{equation}\tag{5.2.1}
+  y=a_0+a_1\xi^{-1}+\ldots+a_r\xi^{-r},\qquad \text{con } a_i\in K'(S);
+\end{equation}
+se pone entonces:
+\begin{equation}\tag{5.2.2}
+  f_*(y)=a_0 .
+\end{equation}
+Está claro que el homomorfismo así definido es aditivo y verifica la fórmula de proyección, es decir, es $K'(S)$-lineal. Se verifican las relaciones siguientes:
+\begin{equation}\tag{5.2.3}
+  f_*(1)=1;\qquad
+  f_*(\xi^n)=0\quad\text{para }-r\le n<0;\qquad
+  f_*(\xi^n)=\sigma_n,
+  \quad 1\le n .
+\end{equation}
+Para verificar el último grupo de relaciones, se procede por recurrencia sobre $n$. Supongamos que, para $p\le n-1$, $f_*(\xi^p)=\sigma_p$; la relación (1.9.1), multiplicada por una potencia conveniente de $\xi$, da:
+\[
+  \sum_{i=0}^{r+1}(-1)^i\lambda^i(E)\xi^{\,n-i}=0 .
+\]
+Se le puede aplicar $f_*$:
+\[
+  \sum_{i=0}^{r+1}(-1)^i\lambda^i(E)f_*(\xi^{\,n-i})=0 .
+\]
+El resultado se deduce inmediatamente de la relación (1.11.3) y de la hipótesis de recurrencia.
+
+\textbf{Proposición 5.3.} Con las notaciones y las hipótesis de \sisi{4.1}{5.1}, se tiene, para todo $k\ge 0$, una descomposición en suma directa de $K'(S)$-módulos:
+\begin{equation}\tag{5.3.1}
+  \Fil^kK^{\bullet}(X)=\Fil^kK^{\bullet}(S)+\Fil^{k-1}K'(S).x+\ldots+\Fil^{k-r}K'(S).x^r,
+\end{equation}
+siendo la filtración considerada la filtración de $\lambda$-álgebra aumentada definida en V 3.9.1 y 3.10.
+
+Se observa primero que $x$ es de aumento nulo. Por otra parte, se tiene:
+\[
+  \gamma_t(x)=\lambda_{t/1-t}(1-\xi^{-1})
+  =\left(1+\frac{t}{1-t}\right)\left(1+\frac{\xi^{-1}t}{1-t}\right)^{-1}
+  =1/(1-xt) .
+\]
+Por tanto, $\gamma^i(x)=x^i$ para todo $i$. Por consiguiente, $K'(X)$ es un cociente de la $K'(S)$-$\lambda$-álgebra engendrada por un generador $X$ sometido a las relaciones $\gamma^i(X)=X^i$ para todo $i$, y el ideal por el que se toma el cociente está engendrado por la relación (1.13.1). Se pueden aplicar, pues, V 4.12 y V 4.13.ii), y se reduce a mostrar que, para todo $n\ge 0$:
+\[
+  x^n\in \Fil^nK^{\bullet}(S)+\Fil^{n-1}K'(S).x+\ldots+\Fil^{n-r}K'(S).x^r .
+\]
+Es evidente para $n\le r$; se prosigue por recurrencia. La relación (1.13.1) da:
+\[
+  x^n=-\sum_{i=0}^{r}\gamma^{r+1-i}(\check E-r-1).x^{n-r-1+i},\qquad \text{con } n\ge r+1;
+\]
+aplicando la hipótesis de recurrencia a los $x^{n-r-1+i}$, se deduce el resultado buscado, siendo directa la suma porque $1,\ldots,x^r$ son independientes sobre $K'(S)$.
+
+\textbf{Corolario 5.4.} La filtración inducida por $K'(X)$ sobre $K'(S)$ es idéntica a la filtración de $K'(S)$.
+
+\textbf{Corolario 5.5.} Sean $S$ un esquema cuasicompacto, $E_1,\ldots,E_n$ $\mathcal O_S$-módulos localmente libres de tipo finito, $D(E_1)$ el esquema de banderas de $E_1$, $X=\mathbf D(E_1)\times_S\cdots\times_S D(E_n)$. Entonces el homomorfismo canónico:
+\[
+  \Gr K'(S)\longrightarrow \Gr K'(X)
+\]
+es inyectivo.
+
+El razonamiento de 3.1 permite reducirse a mostrar la misma propiedad cuando $X$ es un fibrado proyectivo sobre $S$. Este caso resulta entonces inmediatamente de 5.4.
+
+\textbf{Corolario 5.6.} Con las notaciones y las hipótesis de 5.1, $\Gr K'(X)$ es un $\Gr K'(S)$-módulo libre que admite como base $1,\bar x,\ldots,\bar x^r$. Para todo $k$, se tiene:
+\[
+  \Gr^kK^{\bullet}(X)=\Gr^kK^{\bullet}(S)\oplus \Gr^{k-1}K'(S).\bar x\oplus\ldots\oplus \Gr^{k-r}K'(S).\bar x^r .
+\]
+Por último, los elementos $1,\bar x,\ldots,\bar x^{r+1}$ están ligados por la relación:
+\[
+  \sum_{i=0}^{r+1}c^{r+1-i}(\check E)\bar x^i=0,
+\]
+donde $c^k(\check E)$ es la $k$-ésima clase de Chern de $\check E$ (V 6.7).
+
+Consecuencia inmediata de 1.1, 5.3 y (1.13.1).
+
+\textbf{Corolario 5.7.} Con las notaciones y las hipótesis de 4.5, la $\Gr K'(S)$-álgebra $\Gr K'(X)$ está engendrada por los $\bar c_i^{(j)}$, donde $\bar c_i^{(j)}$ es la clase en $\Gr^iK^{\bullet}(X)$ de $\gamma^i(F_j-p_j)$. El ideal de las relaciones entre los $\bar c_i^{(j)}$ está engendrado por las relaciones deducidas de:
+\[
+  c(E-n)=\prod_{j=1}^{k}c(F_j-p_j),
+\]
+donde $c$ es la clase de Chern total (V 6.7).
+
+Este resultado se demuestra repitiendo la demostración de 4.6 y utilizando 5.6 (compárese [2], Exp. 4).
+
+\textbf{Corolario 5.8.} Con las notaciones y las hipótesis de 5.1, se tiene, para todo $k$:
+\[
+  f_*(\Fil^kK^{\bullet}(X))\subset \Fil^{k-r}K'(S).
+\]
+Consecuencia inmediata de 5.3 y de la fórmula de proyección.
+

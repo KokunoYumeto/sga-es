@@ -1,0 +1,313 @@
+% SGA 6, Exposición XIII: fragmento español alineado con la fuente.
+% Alcance exacto: fr.tex líneas 14951--15065. El comienzo continúa el
+% entorno tikzcd y la enumeración abiertos en el fragmento precedente.
+\Phi:\underline{\Pic}_{Y/S}\arrow[r]\arrow[u,"\Phi_Y"]&
+\underline{\Pic}_{X/S}\arrow[u,"\Phi_X"]
+\end{tikzcd}
+\]
+\emph{con $\Phi'$ y $\Phi_Y$ de tipo finito, se tiene que $\Phi$ es de tipo
+finito.}
+\end{enumerate}
+
+En efecto, supongamos que $\Phi_T$ es de tipo finito. Sea $\mathscr L$ una
+familia sobre las fibras de $X/S$, acotada por un $L$ sobre un $X_R$. La
+familia $\mathscr L_T=\mathscr L\times_S T$ sobre las fibras de $X_T/T$,
+definida de manera evidente, está acotada por la imagen inversa de $L$ sobre
+$X_{R\times T}$. Si $\Phi_T^{-1}(\mathscr L_T)$ está acotada por un $M$
+sobre un $Y_Q$, entonces $M$ acota también $\Phi^{-1}(\mathscr L)$. El
+recíproco de (i) y la afirmación (ii) se demuestran de manera análoga.
+
+\textbf{Teorema 3.5.} \emph{Sean $S$ un esquema noetheriano, $X$ e $Y$ dos
+$S$-esquemas propios y $f:X\to Y$ un morfismo. Si $f$ es sobreyectivo,
+entonces el morfismo inducido entre los funtores de Picard}
+\[
+f^*:\underline{\Pic}_{Y/S}\longrightarrow\underline{\Pic}_{X/S}
+\]
+\emph{es de tipo finito.}
+
+En efecto, según 3.4 (i), se puede suponer evidentemente que $S$ es reducido
+e irreducible. Existe entonces un abierto no vacío $U$ de $S$ tal que
+$\underline{\Pic}_{Y/S}$ y $\underline{\Pic}_{X/S}$ son representables y la
+restricción de $f^*$ es cuasi-afín (XII 1.1), y por tanto de tipo finito por
+3.2 (i). Dotando a $T=S-U$ de la estructura reducida inducida, por
+recurrencia noetheriana se puede suponer que el morfismo
+\[
+\underline{\Pic}_{Y_T/T}\longrightarrow\underline{\Pic}_{X_T/T}
+\]
+inducido por $f^*$ es de tipo finito; de aquí resulta la afirmación, gracias
+a 3.4 (i) aplicado a $U\amalg T\to S$.
+
+\textbf{Teorema 3.6.} \emph{Sean $S$ un esquema noetheriano, $X$ un
+$S$-esquema propio y $\underline{\Pic}_{X/S}$ el funtor de Picard. Entonces,
+para todo entero $n\ne0$, el homomorfismo de potencia $n$-ésima}
+\[
+\Phi_n:\underline{\Pic}_{X/S}\longrightarrow\underline{\Pic}_{X/S}
+\]
+\emph{es un morfismo de tipo finito.}
+
+En efecto, sea $f:X'\to X$ una presentación de Chow: $X'$ es proyectivo
+sobre $S$ y $f$ es sobreyectivo. Si se admite el teorema para $X'$, el
+teorema para $X$ resulta de 3.5 y 3.4 (ii). Se puede suponer, por tanto, que
+$X/S$ es proyectivo.
+
+Existen un abierto no vacío $U$ de $S$, un esquema íntegro $S'$ y un
+morfismo finito y sobreyectivo $S'\to U$ tales que toda componente
+irreducible $X'_i$ de $X_{S'}$, dotada de la estructura reducida inducida,
+es íntegra sobre $S'$ (XII 1.3). Dotando a $T=S-U$ de la estructura reducida
+inducida, por recurrencia noetheriana se puede admitir el teorema para
+$X_T/T$. Si se admite para todos los $X_i/S'$, resulta para
+$\coprod X_i/S'$ por el lema elemental siguiente, y luego para
+$X_{S'}/S'$ en virtud de 3.5 y 3.4 (ii); finalmente resulta para $X/S$
+gracias a 3.4 (i).
+
+\textbf{Lema 3.7.} \emph{Sean $X=\coprod X_i$ de tipo finito sobre un
+esquema noetheriano $S$ y $\mathcal F$ una familia de clases de haces
+coherentes sobre las fibras de $X/S$. Para que $\mathcal F$ sea acotada, es
+necesario y suficiente que, para todo $i$, la familia $\mathcal F_i$
+inducida sobre las fibras de $X_i/S$ sea acotada.}
+
+En la demostración de 3.6, la cuestión se ha reducido al caso en que $X$ es
+proyectivo e íntegro sobre $S$; dotemos a $X/S$ de un haz muy amplio
+$\mathcal O_X(1)$. Sean $\mathcal L$ una familia acotada de clases de haces
+invertibles sobre las fibras de $X/S$ y $L$ un haz invertible sobre un
+$X_T$, con $T$ de tipo finito sobre $S$, que acota $\mathcal L$. Después de
+descomponer $T$ en estratos, se puede suponer que $L$ es plano sobre $T$ y,
+tras reemplazar $T$ por cada una de sus componentes conexas, que $T$ es
+conexo. Entonces el polinomio en $q$ y $m$,
+$P(q,m)=\chi(L_t^{\otimes q}(m))$, no depende de $t\in T$ (EGA III 7.9.4).
+
+Sea $\mathcal L_n=\Phi_n^{-1}(\mathcal L)$: $\mathcal L_n$ es la familia de
+las clases de haces invertibles $M_K$ tales que la clase de
+$M_K^{\otimes n}$ pertenece a $\mathcal L$. Sea
+$\chi(M_K^{\otimes p}(m))=\sum_{i=0}^{r}a_i(p)\binom{m+i}{i}$, donde
+$a_i(p)$ es un polinomio en $p$ de grado $\leq r-i$. Para $q,m$ variables,
+se tiene $\chi(M_K^{\otimes qn}(m))=P(q,m)$, y cada $a_i(qn)$ no depende,
+por tanto, del $M_K$ elegido; en consecuencia, cada polinomio $a_i(p)$
+tampoco depende de $M_K$. Así pues, la familia $\mathcal L_n$ tiene un único
+polinomio de Hilbert $\chi(M_K(m))$ y es, por tanto, acotada en virtud de
+2.11.
+
+\textbf{Teorema 3.8.} \emph{Sean $S$ un esquema noetheriano, $Y$ un
+$S$-esquema proyectivo provisto de un haz invertible relativamente amplio
+$\mathcal O_Y(1)$, $X$ el esquema de ceros de una sección $\varphi$ de
+$\mathcal O_Y(1)$ y $f:X\to Y$ el morfismo de inclusión. Se supone que, para
+todo punto $s\in S$ y toda componente irreducible $Y_s^i$ de $Y_s$, las
+componentes irreducibles de
+$X_s\cap Y_s^i=V(\varphi|Y_s^i)$ son de dimensión $\geq2$ (lo que ocurre si
+las componentes irreducibles de las fibras de $Y$ son de dimensión
+$\geq3$). Entonces el morfismo inducido entre los funtores de Picard}
+\[
+f^*:\underline{\Pic}_{Y/S}\longrightarrow\underline{\Pic}_{X/S}
+\]
+\emph{es de tipo finito. Además, si $S$ es íntegro, existe un abierto no
+vacío $U$ de $S$ tal que los funtores de Picard restringidos a $U$ son
+representables y el morfismo inducido}
+\[
+\underline{\Pic}_{Y/S}|U\longrightarrow\underline{\Pic}_{X/S}|U
+\]
+\emph{es cuasi-afín (de tipo finito).}
+
+Demostremos primero la primera afirmación. Como en la demostración de 3.6,
+se ve por recurrencia noetheriana que se puede reemplazar $S$ por cualquier
+abierto no vacío, y la cuestión se reduce fácilmente al caso en que $S$ es
+íntegro e $Y$ es íntegro sobre $S$, reemplazando siempre $X$ por
+$X\times_YY'$ cuando se reemplaza $Y$ por $Y'$. Hecho esto, se reduce de la
+misma manera al caso en que $Y$ es normal sobre $S$, utilizando, en lugar de
+XII 1.3, el lema siguiente.
+
+\textbf{Lema 3.9.} \emph{Sean $S$ un esquema noetheriano íntegro y $X$ un
+$S$-esquema íntegro sobre $S$. Entonces existen un abierto no vacío $U$ de
+$S$, un esquema íntegro $S'$ finito y fielmente plano sobre $U$, un
+$S'$-esquema $X'$ normal e íntegro sobre $S'$, y un $S'$-morfismo finito y
+sobreyectivo $X'\to X_{S'}$.}
+
+En efecto, sean $\eta$ el punto genérico de $S$ y $K$ la clausura algebraica
+de $k(\eta)$. Es claro que $\Spec(K)$ es el límite del sistema proyectivo
+filtrante $(S_\alpha)$ de los esquemas afines íntegros provistos de un
+morfismo finito y fielmente plano $S_\alpha\to U_\alpha$, donde $U_\alpha$
+es un abierto no vacío de $S$. El normalizado de $X_K$ proviene, por tanto,
+de un $S_\alpha$-esquema $X'$ para algún $\alpha$, y el morfismo finito y
+sobreyectivo $X'_K\to X_K$ proviene de un $S'_\alpha$-morfismo finito y
+sobreyectivo $X'\to X_{S_\alpha}$ (EGA IV 8.8.2, 8.10.5). Finalmente, como
+$X'_K$ es normal e íntegro, existe un abierto $S'$ de $S_\alpha$ tal que
+$X'_{S'}$ es normal e íntegro sobre $S'$ (EGA IV 9.9.5).
+
+\textbf{Observación 3.10.} Conservando las notaciones y condiciones de 3.9,
+supongamos que existe un morfismo resolvente $X'_K\to X_K$ (EGA IV 7.9.1),
+por ejemplo si $\dim(X_K)\leq2$, según Abhyankhar. Un razonamiento semejante
+muestra entonces que existen un morfismo finito y fielmente plano
+$S'\to U$, un esquema $X'$ liso sobre $S'$ y un morfismo propio,
+sobreyectivo y birracional $X'\to X_{S'}$.
+
+En la demostración de la primera parte de 3.8, la cuestión se ha reducido al
+caso en que $S$ es íntegro e $Y$ es normal e íntegro sobre $S$, y por tanto
+$Y$ es íntegro. Si $\varphi=0$, entonces $X=Y$ y la afirmación es trivial.
+En caso contrario, tras restringir $S$, se puede suponer que para todo
+$s\in S$ se tiene $\varphi_s\ne0$; entonces $\varphi_s$ es
+$\mathcal O_{Y_s}$-regular y la dimensión $r$ de $Y_s$ es $\geq3$.
+
+Sea $\mathcal L$ una familia acotada de clases de haces invertibles sobre
+las fibras de $X/S$. Sea $M_K$ un haz invertible sobre una fibra geométrica
+$Y_K$ de $Y/S$, con polinomio de Hilbert
+$\chi(M_K(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}$. Entonces el polinomio de
+Hilbert de $f^*M_K$ es
+$\sum_{i=0}^{r-1}a_{i+1}\binom{n+i}{i}$. Cuando la clase de $M_K$ recorre
+$(f^*)^{-1}(\mathcal L)$, es decir, cuando la clase de $f^*M_K$ pertenece a
+$\mathcal L$, los tres coeficientes $a_r,a_{r-1},a_{r-2}$ permanecen
+acotados gracias a 1.13.
+
+Sea $H=\mathcal O_Y(m)$ un múltiplo de $\mathcal O_Y(1)$ que sea muy amplio.
+Entonces, en los polinomios de Hilbert
+$\chi(M_K(mn))=\sum_{i=0}^{r}a_i^{(m)}\binom{n+i}{i}$ relativos a $H$ de los
+$M_K$ en $(f^*)^{-1}(\mathcal L)$, los tres coeficientes
+$a_r^{(m)},a_{r-1}^{(m)},a_{r-2}^{(m)}$ permanecen acotados gracias a 2.10.
+Por consiguiente, $\mathcal L$ es acotada en virtud de 2.11; de aquí la
+primera parte de 3.8.
+
+En cuanto a la segunda parte de 3.8, la representabilidad «genérica» de los
+funtores de Picard se estableció en XII 1.2, así como su separación. Por un
+razonamiento semejante al de XII 2, utilizando 3.9 y XII 1.1, se reduce la
+cuestión al caso en que $Y$ es normal sobre $S$. Ahora bien, para que el
+morfismo
+$\underline{\Pic}_{Y/S}\to\underline{\Pic}_{X/S}$ sea cuasi-afín, basta
+que sea separado y cuasifinito (EGA IV 8.12.8), lo cual se verifica sobre
+las fibras geométricas y resulta, por tanto, del lema siguiente.
+
+\textbf{Lema 3.11.} \emph{Sean $k$ un cuerpo algebraicamente cerrado, $Y$ un
+$k$-esquema normal y proyectivo provisto de un haz amplio $\mathcal O_Y(1)$,
+y $X$ el esquema de ceros de una sección $\varphi$ de $\mathcal O_Y(1)$. Se
+supone que $Y$ es de dimensión $\geq3$ (resp. $\geq2$). Entonces el
+morfismo}
+\[
+\Pic_{Y/k}\longrightarrow\Pic_{X/k}
+\]
+\emph{(resp. el morfismo $\Pic^\tau_{Y/k}\to\Pic^\tau_{X/k}$ (véase 4.1)) es de
+tipo finito y tiene un núcleo $N$ que es un grupo finito (no reducido en
+general).}
+
+En efecto, se puede suponer evidentemente que $\varphi\ne0$; entonces
+$\varphi$ es regular, pues $Y$ es íntegro. El morfismo considerado es de
+tipo finito gracias a la primera parte de 3.8 (resp. gracias a 4.7 (iii)).
+Por consiguiente, el núcleo $N$ es un grupo algebraico, contenido en
+$\Pic^T_{Y/k}$, y por ello es el mismo en los dos casos considerados. Como
+$\Pic^T_{Y/k}$ es propio, pues $Y$ es normal (FGA 236-2.13), y como $N$ es
+un subgrupo necesariamente cerrado (SGA 3 VI$_B$ 1.9.2), para que $N$ sea
+finito basta que no contenga un subgrupo de tipo
+$\mu_\ell(=\mathbb Z/\ell\mathbb Z)$, donde
+$(\ell,\operatorname{car}(k))=1$.
+
+Consideremos la teoría de Kummer, es decir, el diagrama conmutativo siguiente,
+procedente de la sucesión exacta
+\[
+0\longrightarrow\mu_\ell\longrightarrow\mathbb G_m
+\xrightarrow{x\mapsto x^\ell}\mathbb G_m\longrightarrow0
+\]
+de haces étales sobre $Y$ (resp. sobre $X$):
+\[
+\begin{tikzcd}[column sep=1.6em,row sep=1.2em]
+& & H^1(Y,\mu_\ell)\arrow[r]\arrow[d]&
+H^1(Y,\mathbb G_m)\arrow[r,"\ell"]\arrow[d]&
+H^1(Y,\mathbb G_m)\arrow[d]\\
+H^0(X,\mathbb G_m)\arrow[r,"\ell"]&H^0(X,\mathbb G_m)\arrow[r]&
+H^1(X,\mu_\ell)\arrow[r]&H^1(X,\mathbb G_m)\arrow[r,"\ell"]&
+H^1(X,\mathbb G_m).
+\end{tikzcd}
+\]
+Por el «teorema 90» de Hilbert, se tiene
+$H^1(Y,\mathbb G_m)=\Pic_{Y/k}(k)$ (resp.
+$H^1(X,\mathbb G_m)=\Pic_{X/k}(k)$). Como $X$ es propio e íntegro,
+$H^0(X,\mathbb G_m)=k^*$; por tanto,
+$H^1(X,\mu_\ell)\to H^1(X,\mathbb G_m)$ es inyectivo.
+
+Basta, pues, ver que
+$H^1(Y,\mathbb Z/\ell\mathbb Z)\longrightarrow
+H^1(X,\mathbb Z/\ell\mathbb Z)$ es inyectivo. Esto resulta de que
+$\pi_1(X,\xi)\to\pi_1(Y,\xi)$ es sobreyectivo o, equivalentemente (SGA 1 V
+6.9), de que todo recubrimiento étale conexo $\widetilde Y$ de $Y$, de grupo
+$\mathbb Z/\ell\mathbb Z$, tiene una restricción
+$\widetilde X=X\times_Y\widetilde Y$ que también es conexa. Esta es una
+consecuencia bien conocida del teorema de Bertini y del teorema de conexión
+de Zariski (SGA 1 X 2.10).
+
+\textbf{Observación 3.12.} Conservemos las condiciones de 3.11. Entonces:
+\begin{enumerate}[label=(\roman*)]
+\item El núcleo $N$ es un grupo finito \emph{unipotente} (SGA 3 XVII 1.1),
+pues no contiene ningún subgrupo de tipo multiplicativo $\mu_n$ para ningún
+$n$ (SGA 3 XVII 4.6.1 vi). Esto se demuestra de la misma manera, utilizando,
+en lugar de la teoría de Kummer, el hecho siguiente, debido a Grothendieck
+(SGA 1 XI, última página): si $X$ es un esquema propio sobre un cuerpo $k$,
+con $H^0(X,\mathcal O_X)=k$, existe un isomorfismo de $k$-esquemas en grupos
+$\Hom_{\mathrm{gr}}(\mu_n,\underline{\Pic}_{X/k})\simeq
+H^1(X,\mathbb Z/n\mathbb Z)$; por consiguiente, si $k$ es algebraicamente
+cerrado, se tiene
+$\Hom_{\mathrm{gr}}(\mu_n,\underline{\Pic}_{X/k})\simeq
+H^1(X,\mathbb Z/n\mathbb Z)$.
+\item Si $k$ es de característica cero, entonces el núcleo $N$ es nulo,
+pues todo grupo finito unipotente es nulo en ese caso (SGA 3 XVII 1.7). Se
+recupera así, aproximadamente, el «Vanishing theorem» de Kodaira en la forma
+dada por Mumford [2].
+\end{enumerate}
+
+\textbf{Teorema 3.13.} \emph{Sean $S$ un esquema noetheriano y $X$ un
+$S$-esquema proyectivo, provisto de un haz invertible relativamente amplio
+$H=\mathcal O_X(1)$. Se supone que las fibras geométricas de $X/S$ son
+íntegras y de dimensión $r$. Entonces, para una familia $\mathcal L$ de
+clases de haces invertibles sobre las fibras de $X/S$, las condiciones
+siguientes son equivalentes:}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{$\mathcal L$ es una familia acotada.}
+\item \emph{En los polinomios de Hilbert
+$\chi(L_K(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}$ de los
+$L_K\in\mathcal L$, el coeficiente $a_{r-1}$ permanece acotado y el
+coeficiente $a_{r-2}$ permanece acotado inferiormente.}
+\item \emph{Cuando $L_K$ recorre $\mathcal L$, el grado
+$d(L_K)=\langle c_1(L_K)\cdot c_1(H_K)^{r-1}\rangle$ permanece acotado y el
+número de intersección
+$\langle c_1(L_K)^2\cdot c_1(H_K)^{r-2}\rangle$ permanece acotado
+inferiormente.}
+\item \emph{Existe un entero $N$ tal que}
+\[
+H^{-N}<\mathcal L<H^N
+\]
+\emph{en el sentido de la relación de orden definida por la relación de
+amplitud; es decir, para todo $L_K\in\mathcal L$,
+$H_K^{\otimes N}\otimes L_K$ y $H_K^{\otimes N}\otimes L_K^{-1}$ son
+amplios.}
+\end{enumerate}
+
+Demostremos que (i) implica (ii), (iii) y (iv). Supongamos que $\mathcal L$
+está acotada por un haz invertible sobre un $X_T$. Entonces $\mathcal L$
+satisface (iv) por EGA II 4.6.12. Supongamos que $L$ es plano sobre $T$. El
+polinomio en $m$ y $n$, $\chi(L_t^{\otimes m}(n))$, solo depende entonces de
+la componente conexa de $T$ (EGA III 7.9.4). Por tanto, $\mathcal L$
+satisface (ii) y, teniendo en cuenta 2.1, también (iii).
+
+Observemos también que la familia de las clases de los $H_K$ (resp. de los
+$\mathcal O_{X_K}$) es acotada y, por tanto, satisface (iii) (resp. (ii)).
+
+Supongamos que $\mathcal L$ satisface (iv). Entonces
+$\langle[Nc_1(H_K)+c_1(L_K)]\cdot c_1(H_K)^{r-1}\rangle>0$, de donde
+$d(L_K)>-Nd(H_K)$ y, del mismo modo, $Nd(H_K)>d(L_K)$. Además,
+$\langle[Nc_1(H_K)+c_1(L_K)]^2\cdot c_1(H_K)^{r-2}\rangle>0$, de donde
+$\langle c_1(L_K)^2\cdot c_1(H_K)^{r-2}\rangle>
+-2Nd(L_K)-N^2d(H_K)$. Por tanto, $\mathcal L$ satisface (iii).
+
+Demostremos finalmente que (ii) (resp. (iii)) implica (i). Gracias a 2.10 y
+2.3, se puede reemplazar $H$ por un múltiplo; supongamos, pues, que $H$ es
+muy amplio. Evidentemente se puede descomponer $S$ en estratos; supongamos
+que existe una sección lineal $Y$ de $X$, íntegra sobre $S$, cuyas fibras
+son de dimensión $2$. En virtud de 3.8, se puede reemplazar
+$X,\mathcal L$ por $Y,\mathcal L|Y$ (teniendo en cuenta 1.7, resp. la fórmula
+de proyección, que implica que la condición (ii), resp. (iii), sobre
+$X,\mathcal L$ equivale a (ii), resp. (iii), sobre $Y,\mathcal L|Y$);
+supongamos, pues, que $r=2$. Si
+$\delta=\sup\{d(L_K)\}$ es $>0$, gracias a 2.3 y 2.10 se puede reemplazar
+$\mathcal L$ por la familia de las clases de los $L_K(-\delta)$;
+supongamos, pues, que $\delta\leq0$.
+
+Si, en los polinomios de Hilbert
+$\sum_{i=0}^{2}a_i\binom{n+i}{i}$, $a_1$ permanece acotado y $a_0$
+permanece acotado inferiormente, los tres coeficientes permanecen acotados
+gracias a 2.3 y 2.7; por tanto, $\mathcal L$ es acotada en virtud de 2.11.
+Así, (ii) implica (i). Por otra parte, (iii) implica (ii) gracias a 2.3 y
+2.8.

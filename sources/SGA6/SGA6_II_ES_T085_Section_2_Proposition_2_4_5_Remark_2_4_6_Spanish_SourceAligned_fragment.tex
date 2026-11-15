@@ -1,0 +1,54 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, proposición 2.4.5 y observación 2.4.6, líneas 4009--4054 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 2.4.5.} Con las hipótesis y notaciones de (2.4.3), se tiene:
+\begin{enumerate}[label=\alph*)]
+\item Los funtores canónicos
+\[
+\mathrm K^{-,b}(\Lib(S))\longrightarrow\mathrm K^{-,b}(\Loclib(S))\longrightarrow\mathrm D^b(S)_{\coh}
+\]
+son equivalencias de categorías. Además, el funtor $R\Gamma_S:\mathrm D^+(S)\to\mathrm D^+(A)$ induce un funtor plenamente fiel
+\[
+R\Gamma_S\sisi{=}{:}\mathrm D^b(S)_{\coh}\longrightarrow\mathrm D^+(A),
+\]
+cuya imagen esencial es $\mathrm D^b(A)_{\coh}$ (subcategoría triangulada de $\mathrm D(A)$ formada por los complejos de cohomología acotada y pseudocoherentes relativamente a la categoría de los módulos libres de tipo finito).
+\item Sea $E\in\Ob\mathrm D(S)$, y sea $[m,n]$ un intervalo de $\mathbb Z$. Si $E$ es de amplitud perfecta contenida en $[m,n]$ (I 4.8), $E$ es isomorfo a un complejo $F$ tal que $F^i=0$ para $i\sisi{\in}{\notin}[m,n]$, $F^i\in\Ob\Lib(S)$ para $i>m$ y $F^m\in\Ob\Loclib(S)$.
+\item El funtor canónico
+\[
+\mathrm K^b(\Loclib(S))\longrightarrow\mathrm D(S)_{\parf}\qquad(\text{I }4.9)
+\]
+es una equivalencia de categorías. Además, el funtor $R\Gamma_S:\mathrm D^+(S)\to\mathrm D^+(A)$ induce un funtor plenamente fiel
+\[
+R\Gamma_S:\mathrm D(S)_{\parf}\longrightarrow\mathrm D^+(A),
+\]
+cuya imagen esencial es $\mathrm D(A)_{\parf}$ (subcategoría triangulada de $\mathrm D(A)$ formada por los complejos perfectos relativamente a la categoría de los módulos proyectivos de tipo finito).
+\end{enumerate}
+
+\emph{Demostración.} a) Los funtores
+\[
+\mathrm K^{-,b}(\Lib(S))\longrightarrow\mathrm K^{-,b}(\Loclib(S))\longrightarrow\mathrm D^b(\Coh(S))\xrightarrow{\Gamma_S}\mathrm D^b(A)_{\coh}
+\]
+son equivalencias de categorías en virtud de (2.4.3 b) y c)). Como el funtor (plenamente fiel) $\Gamma_S:\mathrm D^b(\Coh(S))\to\mathrm D(A)$ se factoriza en
+\[
+\mathrm D^b(\Coh(S))\longrightarrow\mathrm D^b(S)_{\coh}\xrightarrow{\mathbb R\Gamma_S}\mathrm D(A),
+\]
+se concluye gracias a (2.4.4).
+
+b) Supongamos $\operatorname{parf.amp}(E)\subset[m,n]$. En particular, $E$ es pseudocoherente; en virtud de a), se puede suponer, reemplazando si es necesario $E$ por un objeto isomorfo, que $E^i\in\Ob\Lib(S)$ para $i>m$ y $E^i=0$ para $i>n$. Truncando si es necesario, se puede suponer incluso que $E^i=0$ para $i<m$. Según (I 4.16), aplicado para $\mathcal C=\Mod$, $\mathcal C_0=\Lib$, se tiene entonces $E^m\in\sisi{\Ob\Loclib(S))}{\Ob\Loclib(S)}$, de donde la afirmación.
+
+c) Como se verifica la hipótesis (1.1 (i)) (resp. (1.1 (ii), respectivamente)) para $\mathcal C_S=\Coh(S)$, $\mathcal C_0=\Lib$ según (2.4.3 a)) (resp. (2.1.1 b)) y el teorema A), se sabe por (1.2 c) y d)) que el funtor
+\[
+\mathrm K^b(\Loclib(S))\longrightarrow\mathrm D^b(\Coh(S))
+\]
+es plenamente fiel. Por tanto, según (2.4.4), lo mismo ocurre con el funtor
+\[
+\mathrm K^b(\Loclib(S))\longrightarrow\mathrm D(S),
+\]
+cuya imagen esencial es $\mathrm D(S)_{\parf}$ en virtud de b). Mediante un razonamiento análogo al efectuado en la demostración de (2.4.3 c)), se ve que el funtor $\mathrm K^b(\Loclib(S))\to\sisi{\mathrm D(S)}{\mathrm D(A)}$ inducido por $\Gamma_S$ es plenamente fiel y tiene por imagen esencial $\sisi{\mathrm D(S)_{\parf}}{\mathrm D(A)_{\parf}}$, y se termina la demostración como en a).
+
+\textbf{Observación 2.4.6.} El redactor ignora si en (2.4.4) se puede reemplazar $\mathrm D^b$ por $\mathrm D^{-}$, y, por consiguiente, si (2.4.5 a)) sigue siendo verdadero cuando se reemplaza $\mathrm K^{-,b}$ por $\mathrm K^{-}$ y $\mathrm D^b$ por $\mathrm D^{-}$.
+

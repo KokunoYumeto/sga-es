@@ -1,0 +1,280 @@
+% SGA 6, Exposición XIV: traducción española alineada con la fuente.
+% Alcance exacto: fr.tex líneas 15447--15554, secciones 1--3 completas.
+% Las lecturas fuente corregidas se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{Exposición XIV. Problemas abiertos en teoría de intersecciones}
+\begin{center}
+por A. Grothendieck
+\end{center}
+
+En la presente exposición pasamos revista a algunos de los problemas
+relacionados con las cuestiones encontradas en este seminario y que
+merecerían ser estudiados. Dejamos de lado los problemas relacionados con la
+\emph{teoría local} de intersecciones de Serre [14], que no hemos tenido que
+utilizar en el Seminario, y remitimos especialmente a loc. cit. para las dos
+conjeturas fundamentales que permanecen abiertas en esta dirección
+(loc. cit., cap. V, \S~4). Omitimos también los problemas, muy importantes
+para las aplicaciones aritméticas, relacionados con la \emph{estructura de
+los grupos de clases de ciclos}, especialmente sobre un esquema algebraico
+proyectivo y liso; para su discusión remitimos a S. Kleiman,
+\emph{Algebraic cycles and the Weil conjectures}, en \emph{Dix exposés sur
+la cohomologie des schémas} (Masson--North Holland Publishing Cie). En el
+número 4 de esta exposición damos asimismo algunos complementos al
+Seminario, relativos en particular al \emph{anillo de Chow}, que no habían
+encontrado su lugar en las exposiciones precedentes.
+
+\section*{1. Operaciones $\Lambda^i$ en la categoría derivada
+$D(X)$\footnote{Cf. la nota de la página 23.}}
+
+Sea $X$ un topos localmente anillado y sea $K^\bullet(X)$ el anillo de las
+clases de complejos perfectos sobre $X$ (Exp. IV). Se querría definir en
+$K^\bullet(X)$ una estructura de $\lambda$-anillo (Exp. V), funtorial en
+$X$, tal que el homomorfismo natural
+\[
+K^\bullet_{\mathrm{naif}}(X)\longrightarrow K^\bullet(X)
+\]
+(donde el primer miembro es el anillo de las clases de módulos localmente
+libres sobre $X$, provisto de la $\lambda$-estructura definida en la Exp. V)
+sea un $\lambda$-homomorfismo. Con este fin, habría que definir funtores, no
+aditivos en general, de «potencia exterior»
+\[
+\Lambda^i:D^-(X)\longrightarrow D^-(X),
+\]
+que transformen complejos pseudocoherentes (resp. perfectos) en complejos
+pseudocoherentes (resp. perfectos) y posean, respecto de los triángulos
+exactos, las propiedades formales necesarias para definir una
+$\lambda$-estructura sobre $K^\bullet(X)$ mediante la fórmula
+\begin{equation}\tag{1.1}
+\lambda^i(\cl^\bullet(L^\bullet))=\cl^\bullet(\Lambda^i L^\bullet).
+\end{equation}
+
+Cuando $X$ es de característica cero, es decir, cuando su haz estructural es
+un haz de $\Q$-álgebras, el problema se resuelve sencillamente tomando
+\begin{equation}\tag{1.2}
+\Lambda^i L^\bullet=\bigl(\overset{i}{\otimes}{}^{\mathbb L}L^\bullet\bigr)^{\mathrm{alt}},
+\end{equation}
+donde la potencia tensorial $i$-ésima, en el sentido de las categorías
+derivadas, de $L^\bullet$ se considera como un objeto de
+$D^-(\mathcal O_i)$, siendo $\mathcal O_i$ el álgebra del grupo simétrico
+$\mathfrak S_i$ con coeficientes en $\mathcal O_X$, y donde el exponente
+alt denota el paso a la «parte alternada bajo la acción de
+$\mathfrak S_i$» (operación que tiene sentido gracias a la hipótesis de
+característica cero). Una fórmula de este tipo ya se utilizó en [8], citado
+en lo sucesivo como [RRR], para la primera demostración del teorema de
+Riemann--Roch.
+
+Sin hipótesis sobre la característica, cuando $L^\bullet$ es nulo en grados
+$>0$, Dold--Puppe [6] muestra que $L^\bullet$ es canónicamente homotópico al
+complejo asociado a un módulo semisimplicial $L^{\prime\bullet}$ asociado
+canónicamente a $L^\bullet$. Un candidato bastante natural para
+$\Lambda^iL^\bullet$, digamos para $L^\bullet$ plano, sería entonces el
+complejo asociado al módulo semisimplicial $\Lambda^iL^{\prime\bullet}$,
+cuya componente de grado $n$ es $\Lambda^iL'_n$. Pero, para extender la
+definición a complejos de $D^-(X)$ que ya no se suponen nulos en grados
+$>0$, habría que estudiar el comportamiento de la operación anterior
+respecto de la traslación $L^\bullet\mapsto L^\bullet[1]$ (o
+\emph{suspensión}, en la terminología de [6]); desgraciadamente, no parece
+que se disponga de un isomorfismo
+\[
+\Lambda^i(L^\bullet[1])\simeq \Lambda^i(L^\bullet)[i]
+\]
+que permitiese efectuar trivialmente la extensión deseada.
+
+\section*{2. La fórmula de Riemann--Roch sin hipótesis proyectivas}
+
+\textbf{2.1.} Una vez en posesión de una $\lambda$-estructura natural sobre
+los $K^\bullet(X)$, es posible formular el teorema de
+Riemann--Roch, en la forma considerada en la Exp. VIII, para cualquier
+morfismo propio de intersección completa $f:X\to Y$, e incluso, más
+generalmente, para un esquema relativo $X$ sobre un topos localmente
+anillado $Y$, sometiendo todavía $X$ a las condiciones relativas
+correspondientes. La clase de Todd de $f$ se define mediante la clase en
+$K^\bullet(X)$ del complejo cotangente relativo $L^\bullet$ de $f$,
+construido en la Exp. 0, 4.4; este complejo es aquí perfecto gracias a la
+hipótesis local hecha sobre $f$. Parece claro que la demostración de la
+fórmula de Riemann--Roch en este caso general exigirá la introducción de
+ideas esencialmente nuevas, y es posible que estas mismas ideas proporcionen
+la clave de una demostración de la fórmula análoga en el caso analítico
+complejo (¡o analítico rígido!). Recordemos que, en el caso analítico
+complejo, solo se conoce actualmente el caso de un haz localmente libre $F$
+sobre una variedad no singular compacta $X$, sobre un $Y$ puntual, gracias
+a la fórmula del índice de Atiyah--Singer; el caso en que $F$ solo se supone
+coherente parece escapar todavía a las técnicas conocidas.
+
+\textbf{2.2.} Como ingrediente esencial de la fórmula de Riemann--Roch,
+recordemos también el \emph{problema de finitud} planteado en la Exp. III:
+si $f:X\to Y$ es un morfismo propio y $L^\bullet$ un complejo sobre $X$
+pseudocoherente relativamente a $Y$, ¿es $Rf_*(L^\bullet)$
+pseudocoherente? Una demostración general de esta conjetura pondrá
+probablemente en juego ideas algebraicas que permitirán demostrar el
+«teorema» de finitud de Grauert [7] bajo condiciones sensiblemente más
+generales que las de loc. cit., situándose desde el principio sobre espacios
+o topoi de base topológicamente anillados en $\C$-álgebras $Y$, más generales
+que los espacios analíticos. Esto abarcaría el caso en que $Y$ fuese un
+espacio localmente compacto con el haz de funciones continuas complejas, una
+variedad $C^\infty$ con el haz de funciones complejas $C^\infty$, un espacio
+analítico real, etc.
+
+\textbf{2.3.} Señalemos, finalmente, que en estas cuestiones convendría
+reemplazar la hipótesis de que $f$ sea propio por la hipótesis de que los
+haces de cohomología $H^i(L^\bullet)$ de los complejos considerados sobre
+$X$ tengan \sisi{sus grupos propios}{soportes propios} sobre $Y$.
+
+\section*{3. Fórmula de Riemann--Roch «sin denominadores» para una inmersión}
+
+\textbf{3.1.} Sea $f:Y\to X$ una inmersión cerrada regular (Exp. VII), con
+haz conormal $N$. Supongamos, para simplificar, que $X$ admite un haz
+invertible amplio. La fórmula de Riemann--Roch para $y\in K^\bullet(Y)$
+\[
+\ch_X(f_*(y))=f_*\bigl(\ch_Y(y)\operatorname{Todd}(-\check N)\bigr),
+\]
+junto con la fórmula general (Exp. VII)
+\[
+f_*(y')\,f_*(y'')=f_*\bigl(y'y''c_d(\underline N)\bigr),\qquad
+y',y''\in\operatorname{Gr}^\bullet(Y)_\Q,
+\]
+suponiendo que $f$ tiene codimensión $d$, permite expresar las clases de
+Chern de $f_*(y)$ en $\operatorname{Gr}^\bullet(X)_\Q$ en la forma
+\begin{equation}\tag{3.1}
+c_i(f_*(y))=f_*\bigl(P_i((c_\alpha(y))_\alpha,
+(c_\beta(N))_\beta)\bigr),
+\end{equation}
+donde $P_i$ es un polinomio universal en los $c_\alpha(y)$ y $c_\beta(N)$,
+a priori con coeficientes racionales. En realidad, se comprueba en RRR que
+estos polinomios tienen coeficientes \emph{enteros}. Esto plantea la cuestión
+de la validez de una fórmula de Riemann--Roch «sin denominadores».
+
+En general, una fórmula semejante para $c_i(f_*(y))$ no puede buscarse en el
+propio $\operatorname{Gr}^\bullet(X)$, puesto que el homomorfismo
+$f_*:K^\bullet(Y)\to K^\bullet(X)$ no es compatible con las
+$\lambda$-filtraciones, ni siquiera tras desplazarlas en $d$ (4.6), sino
+solo salvo torsión. Por ello no es posible definir un homomorfismo
+\[
+f_*:\operatorname{Gr}^\bullet(Y)\longrightarrow
+\operatorname{Gr}^\bullet(X)
+\]
+que induzca el homomorfismo natural
+$\sisi{f}{f_*}:\operatorname{Gr}^\bullet(Y)_\Q\to
+\operatorname{Gr}^\bullet(X)_\Q$ y permita interpretar (3.1) como una
+fórmula en $\operatorname{Gr}^\bullet(X)$, y no solo en
+$\operatorname{Gr}^\bullet(X)_\Q$.
+
+Pero, si $X$ es regular, de modo que
+$K^\bullet(X)\simeq K_\bullet(X)$ (IV 2.5), se puede dotar
+$K^\bullet(X)$ de la filtración topológica por la codimensión de los
+soportes, heredada de la filtración correspondiente de $K_\bullet(X)$. Es
+plausible que esta filtración sea compatible con la estructura de anillo;
+esto puede demostrarse, al menos en RRR, cuando $X$ es liso sobre un cuerpo
+$k$, utilizando la teoría del anillo de Chow [4]. Cuando esto ocurre, el
+graduado asociado
+\[
+\Gtop^\bullet(X)
+\]
+es un \emph{anillo graduado}; suponiendo además que $Y$ es regular, se dispone
+entonces de un homomorfismo natural de grado $d$ de grupos graduados
+\[
+f_*=f_*^{\mathrm{top}}:\Gtop^\bullet(Y)\longrightarrow
+\Gtop^\bullet(X).
+\]
+Como la $\lambda$-filtración de $K^\bullet(X)$ es más fina que la filtración
+topológica por codimensión que acabamos de considerar (X 1.3.3), se obtiene
+un homomorfismo canónico de grupos graduados, e incluso de anillos graduados,
+\[
+\operatorname{Gr}^\bullet(X)\longrightarrow\Gtop^\bullet(X),
+\]
+que es, por lo demás, un isomorfismo módulo torsión (Exp. VIII). Esto permite,
+como en RRR, considerar sobre $X$ una teoría de clases de Chern con valores
+en $\Gtop^\bullet(X)$, y análogamente sobre $Y$, dando así sentido a (3.1)
+como fórmula en $\Gtop^\bullet(X)$. En esta forma, la fórmula se demuestra
+en RRR cuando $X$ es de \emph{característica cero}, al menos si $X$ es liso
+sobre un cuerpo; esta última hipótesis solo sirve para asegurar que la
+filtración topológica de $K^\bullet(X)$ sea compatible con la estructura de
+anillo. La hipótesis de característica cero se utiliza esencialmente para
+disponer de fórmulas del tipo (1.1), (1.2), y la misma demostración debería
+aplicarse esencialmente sin hipótesis sobre la característica una vez
+resuelta afirmativamente la cuestión planteada en el número 1.
+
+\textbf{3.2.} Cuando $X$ es liso sobre un cuerpo, se dispone también del
+anillo de Chow
+\[
+A(X),
+\]
+y de una teoría de clases de Chern sobre $X$ con valores en $A(X)$ [9], más
+fina que la teoría con valores en $\Gtop^\bullet(X)$ recién introducida; las
+últimas clases de Chern son imágenes de las clases de Chern de estilo Chow
+por el homomorfismo canónico sobreyectivo (cf. 4.1)
+\[
+\varphi:A(X)\longrightarrow\Gtop^\bullet(X).
+\]
+Este homomorfismo es un isomorfismo módulo torsión, pero no un isomorfismo en
+general (4.7). Dicho esto, si $X$ e $Y$ son lisos, la inclusión $f:Y\to X$
+define todavía un homomorfismo de grado $d$ de grupos graduados
+\[
+f_*:A^\bullet(Y)\longrightarrow A^{\bullet+d}(X),
+\]
+lo que permite interpretar (3.1) como una fórmula en $A^\bullet(X)$. Esta
+fórmula se reduce, por lo demás, a $0=0$ para $i<d$, y por tanto solo
+presenta interés para $i\sisi{>}{\ge}d$. Incluso para $i=d=2$, la fórmula no está % Canon SGA-SRC-001404
+demostrada actualmente (cf. 4.3), como tampoco la fórmula menos precisa que
+se deduce de ella reemplazando la equivalencia racional de los ciclos
+algebraicos por la equivalencia algebraica. A diferencia de la fórmula
+análoga en $\Gtop^\bullet(X)$, no parece haber una razón convincente para
+suponer que la fórmula sin denominadores deba ser cierta en $A(X)$. Una
+buena manera de probarla, dada nuestra ignorancia casi total de la naturaleza
+de los grupos $A^i(X)$ para $i>2$, parece consistir en probar las fórmulas
+que pueden deducirse en grupos $A^1(Z)=\Pic(Z)$, por ejemplo transformando
+los dos miembros de (3.1) mediante
+\[
+g_*:A(X)\longrightarrow A(Z),
+\]
+donde $g:X\to Z$ es un morfismo propio sobre un $Z$ cuasiproyectivo liso de
+dimensión $\dim X-i+1$.
+
+\emph{Nota añadida.} La fórmula, así como la variante señalada en 3.3, fue
+demostrada posteriormente por P. JOUANOLOU (noviembre de 1969).
+
+\textbf{3.3.} Finalmente, para dar sentido a (3.1), se puede utilizar también
+la teoría cohomológica de clases de Chern (SGA 5 VII), siempre que se disponga
+de \emph{homomorfismos de Gysin}
+\[
+f_*:H^p(Y,\mu_n^{\otimes i})\longrightarrow
+H^{p+2d}(X,\mu_n^{\otimes(i+d)}).
+\]
+(Cf. n\textsuperscript{o}~6). Este es el caso, al menos, si $Y$ y $X$ son
+ambos lisos sobre un esquema $S$, gracias al teorema de pureza cohomológica
+relativa (SGA 4 XVI 3.7), y, conjeturalmente, si $Y$ y $X$ son ambos
+regulares, según el teorema de pureza cohomológica absoluta, demostrado al
+menos para $X$ excelente de característica cero (SGA 4 XIX 3.2). Cuando $X$
+e $Y$ son lisos sobre el cuerpo de los complejos, se puede utilizar también
+la clase de Chern entera sobre el espacio localmente compacto $X(\C)$ de los
+puntos complejos de $X$. La fórmula (3.1) es establecida en este caso por
+\uline{Atiyah} y \uline{Hirzebruch} [1], quienes tratan más generalmente una
+inmersión de variedades analíticas complejas, trabajando con el $K'$
+«ingenuo». De ello resulta que la fórmula $\ell$-ádica (3.1) es válida
+siempre que $Y$ y $X$ sean lisos sobre un cuerpo \uline{algebraicamente
+cerrado y de característica cero}, utilizando el «principio de Lefschetz» y
+los resultados generales de SGA 4. Esto hace extremadamente plausible la
+validez de la fórmula cohomológica (3.1); obsérvese, sin embargo, que no está
+demostrada actualmente, ni siquiera si $X$ e $Y$ son lisos sobre un cuerpo
+$k$ de característica cero, cuando $k$ no es algebraicamente cerrado.
+
+\textbf{3.4.} También se puede trabajar con la teoría cohomológica de clases
+de Chern de estilo De Rham o Hodge [13]. El problema de la validez de (3.1)
+en este caso solo se plantea si $X$ no es de característica cero, pues se
+sabe de todos modos (n\textsuperscript{o}~6) que la fórmula en cuestión es
+cierta módulo torsión. Para los esquemas lisos cuasiproyectivos sobre un
+cuerpo $k$, la versión De Rham o Hodge de (3.1) sería, por lo demás,
+consecuencia de la versión de (3.1) para clases de ciclos módulo equivalencia
+algebraica. Así, la versión cohomológica De Rham o Hodge proporciona otra
+manera accesible de probar la validez de la versión «clases de ciclos» de
+(3.1).
+
+\textbf{3.5.} La demostración [1] de la versión cohomológica trascendente de
+(3.1) es de naturaleza esencialmente trascendente y utiliza entornos
+tubulares de $Y$ en $X$. Esto sugiere que la demostración de una fórmula del
+tipo (3.1) podría estar ligada a la consideración sistemática de grupos $K'$
+y grupos de cohomología \uline{con soporte en $Y$}; dicha consideración
+podría proporcionar un medio técnico suficiente de «localización alrededor
+de $Y$».

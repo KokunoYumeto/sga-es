@@ -1,0 +1,60 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice I, introducción y sección 1 hasta 1.2, líneas 4336--4388 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Apéndice I. Un contraejemplo de Verdier\protect\footnote{Este apéndice reproduce, salvo algunos detalles de redacción, dos cartas de J.-L. Verdier (30/9/67 y 11/10/67) al redactor, en respuesta a una pregunta de este.}}
+
+\subsection*{0. Introducción}
+Si $S$ es un esquema, se denota por $\Mod(S)$ (resp. $\Qcoh(S)$) la categoría de los $\mathcal O_S$-módulos (resp. $\mathcal O_S$-módulos cuasicoherentes). El objeto de este apéndice es llamar la atención del lector sobre ciertas propiedades patológicas de la categoría $\mathrm D(\Qcoh(S))$ y, en particular, probar los hechos siguientes:
+
+\textbf{0.1.} Sean $X$ un esquema afín de anillo $A$ e $I$ un $A$-módulo inyectivo. Se sabe ([H] II 7.14) que, si $A$ es noetheriano, el haz $\widetilde I$ es un $\mathcal O_X$-módulo inyectivo. Si $A$ no es noetheriano, $\widetilde I$ no es necesariamente inyectivo, ni siquiera flácido, aun cuando el espacio subyacente a $X$ sea noetheriano y de dimensión de Krull finita. Además, la restricción de $\widetilde I$ a un abierto $U$ de $X$ no es, en general, un inyectivo de $\Qcoh(U)$.
+
+\textbf{0.2.} Sea $f:X\longrightarrow Y$ un morfismo de esquemas cuasicompactos y cuasiseparados. El funtor $Rf_*:\mathrm D^+(X)\longrightarrow\mathrm D^+(Y)$ no induce, en general, sobre $\mathrm D^+(\Qcoh(X))$ (subcategoría plena de $\mathrm D^+(X)$ según (II 3.5)) el derivado derecho de $f_*:\Qcoh(X)\longrightarrow\Mod(Y)$. Más precisamente, un inyectivo de $\Qcoh(X)$ no es necesariamente acíclico para $f_*:\Mod(X)\longrightarrow\Mod(Y)$.
+
+\textbf{0.3.} Sea $S$ un esquema cuasicompacto y cuasiseparado. Un objeto de $\Qcoh(S)$, incluso inyectivo, no es necesariamente acíclico para el coherizador (II 3.2). El funtor $\varphi:\mathrm D^b(\Qcoh(S))\longrightarrow\mathrm D^b(S)$ (II 3.0) no es, en general, plenamente fiel.
+
+\subsection*{1. Los contraejemplos}
+Recordemos primero el lema siguiente (SGA 2 II 9):
+
+\textbf{Lema 1.1.} Sean $A$ un anillo, $X=\Spec(A)$, $\mathbf f=(f_\alpha)$ un sistema finito de elementos de $A$ e $Y$ el cerrado definido por $\mathbf f(x)=0$. Para $i>0$, las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item para todo $A$-módulo inyectivo $I$, se tiene $H^i_Y(X,\widetilde I)=0$;
+\item el proobjeto $n\mapsto H_i(\mathbf f^n,A)$ es nulo, es decir, para todo $n$, existe $n'\geq n$ tal que
+\[
+ H_i(\mathbf f^{n'},A)\longrightarrow H_i(\mathbf f^n,A)
+\]
+sea nulo.
+\end{enumerate}
+
+\textbf{1.2.} Vamos a utilizar (1.1) para probar (0.1). Sean $k$ un cuerpo, $B=k[[x,y]]$, $\mathbf f$ el sistema $(x,y)$, $M=\coprod_{n>0}B/(\mathbf f^n)$ y $A$ la $B$-álgebra $D_B(M)$ (EGA $0_{\mathrm{IV}}$ 18.2.3). Se tiene trivialmente\footnote{El exponente A o B indica con respecto a qué anillo se calcula el complejo de Koszul.}
+\[
+ H_2^A(\mathbf f^n,A)\simeq H_2^B(\mathbf f^n,A).
+\]
+Por otra parte, se tiene
+\[
+ H_2^B(\mathbf f^n,A)\simeq H_2^B(\mathbf f^n,B)\oplus H_2^B(\mathbf f^n,M),
+\]
+pero
+\[
+ H_2^B(\mathbf f^n,B)=0,
+\]
+puesto que $\mathbf f$ es una sucesión regular (EGA III 1.1.4 y $0_{\mathrm{IV}}$ 15.1.20); por tanto,
+\[
+ H_2^B(\mathbf f^n,A)\simeq H_2^B(\mathbf f^n,M).
+\]
+Finalmente, se tiene (EGA II 1.1.3.3)
+\[
+ H_2^B(\mathbf f^n,M)\simeq H_B^0(\mathbf f^n,M),
+\]
+donde $H_B^0(\mathbf f^n,M)$ se identifica canónicamente con el submódulo ${}_{(\mathbf f^n)}M$ de $M$ anulado por $(\mathbf f^n)$. De donde, finalmente:
+\begin{equation}\tag{*}
+ H_2^A(\mathbf f^n,A\sisi{}{)}\simeq {}_{(\mathbf f^n)}M.
+\end{equation}
+Como el morfismo de transición $H_2^A(\mathbf f^{n'},A)\longrightarrow H_2^A(\mathbf f^n,A)$ es inducido por la multiplicación por $\mathbf f^{\,n'-n}$ (EGA III 1.1.6), se verifica inmediatamente, con ayuda de (*), que el proobjeto $n\mapsto H_2^A(\mathbf f^n,A)$ no es nulo. Se deduce entonces de (1.1) que existe un $A$-módulo inyectivo $I$ tal que $H^2_Y(X,\widetilde I)\ne0$, y por tanto tal que $\widetilde I$ no sea flácido (SGA 2 I 2.12). Observemos de paso que la proyección $\Spec(A)\longrightarrow\Spec(B)$ es un homeomorfismo, y por consiguiente que el espacio subyacente a $X$ es noetheriano de dimensión $2$. Sea $I$ un $A$-módulo inyectivo tal que $H^2_Y(X,\widetilde I)\ne0$, y denotemos por $U$ el abierto complementario de $Y$ en $X$. Se tiene (SGA 2 II 4)
+\[
+ H^2_Y(X,\sisi{I}{\widetilde I})\simeq H^1(U,\sisi{I}{\widetilde I})\ne0.
+\]
+Ahora bien, como $U$ es separado, el funtor $\mathrm D^+(\Qcoh(U))\to\mathrm D^+(U)$ es plenamente fiel (II 3.5); por tanto, $\widetilde I|U$ no es inyectivo en $\Qcoh(U)$. Se ha probado así la afirmación (0.1).

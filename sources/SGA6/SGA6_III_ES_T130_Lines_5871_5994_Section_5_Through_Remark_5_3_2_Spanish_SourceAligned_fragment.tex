@@ -1,0 +1,131 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: sección 5, desde el encabezado hasta la observación 5.3.2, líneas 5871--5994 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{5. Aplicaciones: teoremas de cambio y de semicontinuidad\footnote{Los resultados de este número no se utilizarán en lo que sigue del Seminario.}}
+
+\textbf{Lema 5.1.} Sea \((X,\mathcal O_X)\) un topos anillado (conmutativo); denotemos por \(\Mod(X)\) la categoría de los \(\mathcal O_X\)-módulos y por \(D(X)=D(\Mod(X))\). Sean \(E\in\Ob D^-(X)\) y \(p\in\mathbb Z\). Consideremos las condiciones siguientes:
+\begin{enumerate}[label=\alph*)]
+\item El funtor \(M\mapsto H^p(E\otimes^{\mathbf L}M)\) de \(\Mod(X)\) en \(\Mod(X)\) es exacto por la derecha.
+\item[a')] La flecha canónica
+\[
+ H^p(E)\otimes M\longrightarrow H^p(E\otimes^{\mathbf L}M)
+\]
+es un isomorfismo para todo \(M\in\Ob\Mod(X)\).
+\item[b)] El funtor \(M\mapsto H^{p+1}(E\otimes^{\mathbf L}M)\) de \(\Mod(X)\) en \(\Mod(X)\) es exacto por la izquierda.
+\item[b')] La flecha canónica definida a continuación
+\begin{equation}
+ H^{p+1}(E\otimes^{\mathbf L}M)\longrightarrow\Hom(H^{-p-1}(E^{\vee}),M)\tag{$*$}
+\end{equation}
+es un isomorfismo para todo \(M\in\Ob\Mod(X)\).
+\end{enumerate}
+Entonces se tiene:
+\[
+ \mathrm a)\Longleftrightarrow\mathrm a')\Longleftrightarrow\mathrm b)\Longleftarrow\mathrm b').
+\]
+Además, si \(E\) es pseudocoherente, las condiciones a), a'), b), b') son equivalentes.
+
+\emph{Definición de \((*)\)}: La flecha canónica (I 7.5) \(E^{\vee}\otimes^{\mathbf L}E\longrightarrow\mathcal O_X\), donde \(E^{\vee}=\RHom(E,\mathcal O_X)\), da, por tensorización con \(M\in\Ob\Mod(X)\), una flecha \(E^{\vee}\otimes^{\mathbf L}E\otimes^{\mathbf L}M\longrightarrow M\), de donde, mediante la fórmula de adjunción tan querida por Cartan (I 7.4), una flecha canónica
+\begin{equation}
+ E\otimes^{\mathbf L}M\longrightarrow\RHom(E^{\vee},M).\tag{$**$}
+\end{equation}
+Componiendo la flecha inducida por \((**)\) sobre \(H^{p+1}\) con la flecha canónica
+\begin{equation}
+ \underline{\Ext}^{p+1}(E^{\vee},M)\longrightarrow\Hom(H^{-p-1}(E^{\vee}),M),\tag{$***$}
+\end{equation}
+se obtiene la flecha \((*)\).
+
+\emph{Demostración.} Las implicaciones
+\[
+ \mathrm a')\Longrightarrow\mathrm a)\Longleftrightarrow\mathrm b)\Longleftarrow\mathrm b')
+\]
+son triviales. Probemos \(\mathrm a)\Longrightarrow\mathrm a')\). Sea \(M\) un \(\mathcal O_X\)-módulo. Existe una sucesión exacta \(M^1\longrightarrow M^0\longrightarrow M\longrightarrow0\), donde \(M^0\) y \(M^1\) son sumas directas de haces del tipo \(\mathcal O_{U,X}\), con \(U\) un objeto de \(X\). Utilizando la exactitud por la derecha y la conmutación con las sumas directas de los funtores \(H^p(E)\otimes\,.\,\) y \(H^p(E\otimes^{\mathbf L}\,\cdot\,)\), se reduce a probar que la flecha de a') es un isomorfismo para \(M=\mathcal O_{U,X}\), \(U\in\Ob X\). Ahora bien, \(H^p(E)\otimes\mathcal O_{U,X}\) (resp. \(H^p(E\otimes^{\mathbf L}\mathcal O_{U,X})\)) se identifica canónicamente (SGA 4 IV 2.13) con \(i_!(H^p(E)|U)\) (resp. \(H^p(i_!(E|U))\)), donde \(i_!\) es la extensión por \(0\) fuera de \(U\), y se concluye porque \(i_!\) es exacto.
+
+Supongamos \(E\) pseudocoherente, y probemos \(\mathrm b)\Longrightarrow\mathrm b')\). Evidentemente, basta mostrar que \((*)\) es un isomorfismo para \(M\) inyectivo. Como la flecha \((***)\) es un isomorfismo para \(M\) inyectivo, la aserción resultará de la siguiente:
+
+\((5.1.1)\): la flecha \((**)\) es un isomorfismo si \(E\) es pseudocoherente y \(M\) inyectivo.
+
+\emph{Demostración de \((5.1.1)\).} Denotemos por \(T\) (resp. \(T'\)) el funtor de \(D^-(X)\) en \(D(X)\) definido por \(F\mapsto F\otimes^{\mathbf L}M\) (resp. \(\RHom(F^{\vee},M)\)). Sea \(n\in\mathbb Z\); si \(H^i(F)=0\) para \(i>n\), entonces \(H^iT(F)=0\) para \(i>n\), \(H^i(F^{\vee})=0\) para \(i<-n\), y \(H^iT'(F)=0\) para \(i>n\) si \(M\) es inyectivo. Como, por otra parte, la flecha \((**)\) conmuta con la restricción a un abierto, y un inyectivo restringido a un abierto sigue siendo inyectivo, se puede, localizando y truncando si es necesario, suponer \(E\) estrictamente perfecto (2.1). Por dévissage, se reduce entonces a \(E=\mathcal O_X\), y se concluye.
+
+\textbf{Observaciones 5.2.} (i) La condición a) (resp. a'), b), \sisi{b'))}{b')} es de naturaleza local: si \((X_\alpha)\) es un recubrimiento abierto del objeto final de \(X\), y si, para cada \(\alpha\), la condición a) (resp\ldots) se verifica para \(X_\alpha\) y \(E\,|\,X_\alpha\), entonces a) (resp\ldots) se verifica.
+
+(ii) Si \(x\) es un punto de \(X\), denotemos por \(\mathrm a_x)\) (resp. \(\mathrm a'_x)\), etc.) la condición a) (resp. a'), etc.) relativa a \(E_x\) y \(\Mod(\mathcal O_{X,x})\). Entonces, si \(X\) tiene suficientes puntos, la condición a) (resp. a'), b)) equivale a la condición «~para todo punto \(x\) de \(X\), \(\mathrm a_x)\) (resp. \(\mathrm a'_x)\), \(\mathrm b_x))\)~», y equivale a la condición «~para todo punto \(x\) de \(X\), \(\mathrm b'_x)\)~» si \(E\) es pseudocoherente; además, la condición a') equivale a la condición análoga en la que se sustituye «~para todo \(M\in\Ob\Mod(X)\)~» por «~para todo \(\mathcal O_X\)-módulo conúcleo de un homomorfismo \(\mathcal O_{U,X}^p\longrightarrow\mathcal O_{U,X}^q\), donde \(U\) es un objeto de \(X\)~».
+
+(iii) El criterio (EGA III 7.4.2) se extiende palabra por palabra a nuestra situación: si \(E\) tiene componentes planas, la condición a) significa simplemente que \(\Coker(E^p\longrightarrow E^{p+1})\) es plano, y por tanto localmente factor directo de un módulo libre de tipo finito si se supone, además, que \(E^p\) y \(E^{p+1}\) son de presentación finita (I 5.8.3). De ello se deduce, en particular, que, si \(E\) es perfecto, entonces \(E\) verifica la condición a) relativa al entero \(p\) si y solo si \(E^{\vee}\) verifica la condición a) relativa al entero \(-p-1\).
+
+(iv) Sean \(X\) un esquema cuasiseparado, \(\mathcal O_X\) el haz estructural, y \(E\in\Ob D^-(X)\) un complejo con cohomología localmente acotada y cuasicoherente. Denotemos por \(\mathrm a_{\qcoh})\) (resp. \(\mathrm a'_{\qcoh})\), etc.) la condición análoga a a) (resp. a'), etc.) en la que se sustituye \(\Mod(X)\) por la categoría \(\Qcoh(X)\) de los \(\mathcal O_X\)-módulos cuasicoherentes. Entonces se tiene
+\[
+ \mathrm a)\Longleftrightarrow\mathrm a_{\qcoh})\Longleftrightarrow\mathrm a'_{\qcoh})\Longleftrightarrow\mathrm b_{\qcoh})\Longleftarrow\mathrm b'_{\qcoh}),
+\]
+y las condiciones precedentes son equivalentes si \(E\) es pseudocoherente.
+
+En efecto, como \(X\) es cuasiseparado, todo haz cuasicoherente sobre un abierto afín de \(X\) está inducido por un haz cuasicoherente sobre \(X\) (EGA I 9.4.2 y IV 1.2.7). De ello resulta que la condición \(\mathrm a_{\qcoh})\) (resp. \(\mathrm a'_{\qcoh})\), \(\mathrm b_{\qcoh})\), \(\mathrm b'_{\qcoh}))\) se verifica si y solo si se verifica sobre todo abierto afín. Para probar las implicaciones anteriores, se puede, pues, suponer \(X\) afín. Entonces (II 3.5) \(E\) es isomorfo en \(D(X)\) a un complejo de módulos cuasicoherentes, y las implicaciones
+\[
+ \mathrm a_{\qcoh})\Longleftrightarrow\mathrm a'_{\qcoh})\Longleftrightarrow\mathrm b_{\qcoh})\Longleftarrow\mathrm b'_{\qcoh})
+\]
+resultan de (5.1) aplicado al topos «~puntual~» anillado por \(\Gamma(X,\mathcal O_X)\); lo mismo ocurre, en virtud de (II 2.2.10 a)), con la implicación \(\mathrm b_{\qcoh})\Longrightarrow\mathrm b'_{\qcoh})\) para \(E\) pseudocoherente. Finalmente, la equivalencia \(\mathrm a)\Longleftrightarrow\mathrm a_{\qcoh})\), o, lo que viene a ser lo mismo, \(\mathrm a')\Longleftrightarrow\mathrm a'_{\qcoh})\), se deduce de la última observación de (ii) (y del hecho de que los haces cuasicoherentes «~se extienden~», por ser \(X\) cuasiseparado).
+
+\textbf{Proposición 5.3.} (propiedad de cambio) (EGA III 7.7.5 II). Sean \(f:X\to Y\) un morfismo de esquemas cuasicompactos y cuasiseparados, \(E\in\Ob D^b(X)\) un complejo con cohomología cuasicoherente y de amplitud plana finita rel. a \(f\), y \(p\in\mathbb Z\). Consideremos las condiciones siguientes:
+\begin{enumerate}[label=\alph*)]
+\item[a)] El funtor \(M\mapsto R^pf_*(E\otimes_Y^{\mathbf L}M)\) de \(\Qcoh(Y)\)\footnote{\(\Qcoh(Y)\) = categoría de los \(\mathcal O_Y\)-módulos cuasicoherentes.} en \(\Qcoh(Y)\)\footnote{En virtud de (3.7).} es exacto por la derecha.
+\item[a')] La flecha canónica
+\[
+ R^pf_*(E)\otimes M\longrightarrow R^pf_*(E\otimes_Y^{\mathbf L}M)
+\]
+(compuesta de la flecha canónica \(R^pf_*(E)\otimes M\longrightarrow H^p(Rf_*(E)\otimes^{\mathbf L}M)\) y del isomorfismo (3.7) \(H^p(Rf_*(E)\otimes^{\mathbf L}M)\xrightarrow{\sim}R^pf_*(E\otimes_Y^{\mathbf L}M)\)) es un isomorfismo para todo \(M\in\Ob\Qcoh(Y)\).
+\item[b)] El funtor \(M\mapsto R^{p+1}f_*(E\otimes_Y^{\mathbf L}M)\) de \(\Qcoh(Y)\) en \(\Qcoh(Y)\) es exacto por la izquierda.
+\item[b')] La flecha canónica
+\[
+ R^{p+1}f_*(E\otimes_Y^{\mathbf L}M)\longrightarrow\underline{\mathrm{Hom}}(H^{-p-1}(Rf_*(E)^{\vee}),M)
+\]
+(compuesta del isomorfismo (3.7) \(R^{p+1}f_*(E\otimes_Y^{\mathbf L}M)\simeq H^{p+1}(Rf_*(E)\otimes^{\mathbf L}M)\) y de la flecha canónica (5.1 (\(*\))) \(H^{p+1}(Rf_*(E)\otimes^{\mathbf L}M)\longrightarrow\underline{\mathrm{Hom}}(H^{-p-1}(Rf_*(E)^{\vee}),M)\)) es un isomorfismo para todo \(M\in\Ob\Qcoh(Y)\).
+\item[c)] Para todo cambio de base \(Y'\to Y\), la flecha canónica
+\[
+ R^pf_*(E)\otimes_Y\mathcal O_{Y'}\longrightarrow H^p(Rf_*(E)\otimes_Y^{\mathbf L}\mathcal O_{Y'})
+\]
+es un isomorfismo.
+\end{enumerate}
+Entonces se tiene:
+\[
+ \mathrm a)\Longleftrightarrow\mathrm a')\Longleftrightarrow\mathrm b)\Longleftrightarrow\mathrm c)\Longleftarrow\mathrm b').
+\]
+Además, si \(f\) es propio, \(E\) pseudocoherente rel. a \(f\) (por tanto perfecto rel. a \(f\)), y a reserva de la validez de (2.1) para \(f\) (por tanto, en particular si \(f\) es proyectivo o si \(Y\) es noetheriano), las condiciones precedentes son equivalentes.
+
+\emph{Demostración.} Las implicaciones \(\mathrm a)\Longleftrightarrow\mathrm a')\Longleftrightarrow\mathrm b)\Longleftarrow\mathrm b')\) resultan inmediatamente de (3.7), (5.1) y (5.2 (iv)), al igual que la implicación \(\mathrm b')\Longleftarrow\mathrm b)\) (para \(f\) propio y \(E\) pseudocoherente rel. a \(f\)) en virtud de (2.1). Queda probar que se tiene \(\mathrm a)\Longleftrightarrow\mathrm c)\). Esto se deducirá de la primera aserción del lema siguiente:
+
+\textbf{Lema 5.3.1.} Sea \(X\) un esquema cuasiseparado, y sea \(E\in\Ob D^{-}(X)\) un complejo con cohomología localmente acotada y cuasicoherente. Entonces la condición (5.1 a)) equivale a la condición
+\begin{enumerate}[label=\alph*)]
+\item[c)] Para todo esquema \(X'\) sobre \(X\), la flecha canónica
+\[
+ H^p(E)\otimes_X\mathcal O_{X'}\longrightarrow H^p(E\otimes_X^{\mathbf L}\mathcal O_{X'})
+\]
+es un isomorfismo.
+\end{enumerate}
+Además, si \(E\) es pseudocoherente, la condición (5.1 a)) implica que, para todo morfismo \(X'\to X\), la flecha canónica
+\begin{equation}
+ H^{-p-1}(E^{\vee})\otimes_X\mathcal O_{X'}\longrightarrow H^{-p-1}((E\otimes_X^{\mathbf L}\mathcal O_{X'})^{\vee})\tag{5.3.1.1}
+\end{equation}
+, compuesta de \(H^{-p-1}(E^{\vee})\otimes_X\mathcal O_{X'}\longrightarrow H^{-p-1}(E^{\vee}\otimes_X^{\mathbf L}\mathcal O_{X'})\) y de la flecha canónica (I 7.1.2) \(H^{-p-1}(E^{\vee}\otimes_X^{\mathbf L}\mathcal O_{X'})\longrightarrow H^{-p-1}((E\otimes_X^{\mathbf L}\mathcal O_{X'})^{\vee})\), es un isomorfismo.
+
+\emph{Demostración.} \(\mathrm a)\Longrightarrow\mathrm c)\). Como la cuestión es local sobre \(X'\), se puede suponer que \(X\) (resp. \(X'\)) es afín de anillo \(A\) (resp. \(A'\)). Según (II 3.5), se puede suponer, por otra parte, que se tiene \(E=\widetilde F\), donde \(F\) es un complejo de \(A\)-módulos. Por hipótesis (condición a')) la flecha
+\[
+ H^p(F)\otimes_A A'\longrightarrow H^p(F\otimes_A^{\mathbf L}A')
+\]
+es un isomorfismo, y se concluye puesto que \(H^p(E)\otimes_X\mathcal O_{X'}\) (resp. \(H^p(E\otimes_X^{\mathbf L}\mathcal O_{X'})\)) se identifica canónicamente con el haz sobre \(X'\) definido por el \(A'\)-módulo \(H^p(F)\otimes_A A'\) (resp. \(H^p(F\otimes_A^{\mathbf L}A')\)).
+
+\(\mathrm c)\Longrightarrow\mathrm a)\). Teniendo en cuenta (5.2 (iv)), basta probar \(\mathrm c)\Longrightarrow\mathrm a'_{\qcoh})\). Como la cuestión es local (puesto que \(X\) es cuasiseparado), se puede suponer que \(X\) es afín de anillo \(A\), y \(E=\widetilde F\), donde \(F\) es un complejo de \(A\)-módulos. Sea \(M=\widetilde N\) un \(\mathcal O_X\)-módulo cuasicoherente. Se trata de mostrar que la flecha
+\[
+ H^p(F)\otimes_A N\longrightarrow H^p(F\otimes_A^{\mathbf L}N)
+\]
+es un isomorfismo. Pero, si se pone \(A'=D_A(N)\) (EGA \(\mathrm O_{\mathrm{IV}}\) 18.2.3), \(X'=\Spec(A')\), esto resulta de c) aplicada al morfismo canónico \(X'\to X\).
+
+Probemos la última aserción. Como la cuestión es local sobre \(X'\), se puede, según (II 2.2.10 b)), suponer \(E\) estrictamente pseudocoherente. Además, como la aserción solo hace intervenir una parte de longitud acotada de \(E\), se puede, truncando si es necesario, suponer \(E\) estrictamente perfecto. Entonces \((E\otimes_X^{\mathbf L}\mathcal O_{X'})^{\vee}\) se identifica canónicamente (I 7.1.2) con \(E^{\vee}\otimes_X^{\mathbf L}\mathcal O_{X'}\), y la flecha (5.3.1.1) puede reescribirse como la flecha canónica
+\begin{equation}
+ H^{-p-1}(E^{\vee})\otimes_X\mathcal O_{X'}\longrightarrow H^{-p-1}(E^{\vee}\otimes_X^{\mathbf L}\mathcal O_{X'}).\tag{$*$}
+\end{equation}
+Si \(E\) verifica la condición (5.1 a)) para el entero \(p\), \(E^{\vee}\) verifica la misma condición para el entero \(-p-1\) en virtud de (5.2 (iii)), y la flecha \((*)\) es un isomorfismo, según la primera aserción de (5.3.1). Esto termina la demostración de (5.3.1), y por tanto la de (5.3).
+
+\textbf{Observación 5.3.2.} La proposición (5.3) se aplica, en particular, cuando \(E\) es un complejo de grados acotados de \(\mathcal O_X\)-módulos cuasicoherentes planos y de presentación finita rel. a \(f\): en efecto, \(E\) es entonces de amplitud perfecta finita rel. a \(f\) en virtud de (4.3.2).

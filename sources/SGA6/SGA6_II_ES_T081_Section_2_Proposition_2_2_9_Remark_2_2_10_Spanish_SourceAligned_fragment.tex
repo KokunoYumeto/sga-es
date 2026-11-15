@@ -1,0 +1,56 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, proposición 2.2.9 y observación 2.2.10, líneas 3867--3914 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 2.2.9.} Las hipótesis y notaciones son las de (2.2.8), pero se supone además que $S$ es separado o noetheriano.
+\begin{enumerate}[label=\alph*)]
+\item Los funtores canónicos
+\[
+\mathrm K^{-,b}(L(S))/\mathrm K^{-,\varnothing}(L(S))\longrightarrow\mathrm D(S)
+\]
+y
+\[
+\mathrm K^{-,b}(\Loclib(S))/\mathrm K^{-,\varnothing}(\Loclib(S))\longrightarrow\mathrm D(S)
+\]
+son plenamente fieles y tienen por imagen esencial $\mathrm D^b(S)_{\coh}$ (I 2.15). Además, si $S$ es de «dimensión cohomológica finita» en el sentido de (3.7)\footnote{El \S~3 es independiente del resto de la exposición.} (por ejemplo, si el espacio subyacente a $S$ es noetheriano y de dimensión de Krull finita), entonces los funtores
+\[
+\mathrm K^{-}(L(S))/\mathrm K^{-,\varnothing}(L(S))\longrightarrow
+\mathrm K^{-}(\Loclib(S))/\mathrm K^{-,\varnothing}(\Loclib(S))\longrightarrow
+\mathrm D^{-}(S)_{\coh}
+\]
+son equivalencias de categorías.
+\item El funtor canónico
+\[
+\mathrm K^b(\Loclib(S))/\mathrm K^{b,\varnothing}(\Loclib(S))\longrightarrow\mathrm D(S)
+\]
+es plenamente fiel y tiene por imagen esencial $\mathrm D(S)_{\parf}$ (I 4.9). Para que $E\in\Ob\mathrm D(S)$ sea de amplitud perfecta contenida en $[m,n]$ (I 4.8), es necesario y suficiente que $E$ sea isomorfo, en $\mathrm D(S)$, a un complejo $F$ tal que $F^i=0$ para $i\notin[m,n]$, $F^i\in\sisi{\Ob L(S))}{\Ob L(S)}$ para $i>m$, siendo $F^m$ localmente libre de tipo finito.
+\end{enumerate}
+
+\emph{Demostración.} Teniendo en cuenta (3.5) y (3.7), es un corolario inmediato de (2.2.8): el único punto que hay que verificar, y que por lo demás resulta trivialmente de (3.5) (resp. (3.7)), es que, para un objeto $E$ de $\mathrm D^b(\Qcoh(S))$ (resp. $\mathrm D(\Qcoh(S))$ en el caso en que $S$ es de dimensión cohomológica finita en el sentido de (3.7)), las nociones de pseudocoherencia y de perfección de (2.2.1) coinciden con las nociones usuales (I 2.15 y 4.9) cuando se considera $E$ como objeto de $\mathrm D(S)$.
+
+\textbf{Observación 2.2.10.} a) Si $S$ es un esquema afín de anillo $A$, la familia reducida al haz $\mathcal O_S$ es amplia. Para esta, se tiene $L(S)=\Lib(S)$. Por otra parte, está claro que las categorías $\mathrm K^{-,\varnothing}(\Lib(S))$ y $\mathrm K^{-,\varnothing}(\Loclib(S))$ se reducen a los objetos nulos. Por consiguiente, se concluye de (2.2.9) que, si se denota por $\Mod(A)$ la categoría de los $A$-módulos y $\mathrm D(A)=\mathrm D(\Mod(A))$, el funtor $R\Gamma_S:\mathrm D^+(S)\longrightarrow\mathrm D^+(A)$ induce un funtor plenamente fiel $\mathrm D^b(S)_{\coh}\longrightarrow\mathrm D(A)$ (resp. $\mathrm D(S)_{\parf}\longrightarrow\mathrm D(A)$) cuya imagen esencial es la subcategoría triangulada $\mathrm D^b(A)_{\coh}$ (resp. $\mathrm D(A)_{\parf}$) formada por los complejos de cohomología acotada y pseudocoherentes (resp. perfectos) relativamente a la subcategoría $\Lib(A)$ (resp. $\Loclib(A)$) de los módulos libres (resp. proyectivos) de tipo finito. Se tienen diagramas conmutativos de equivalencias de categorías
+\[
+\begin{tikzcd}
+\mathrm K^{-,b}(\Lib(S)) \arrow[r] \arrow[d,"\Gamma_S"] &
+\mathrm K^{-,b}(\Loclib(S)) \arrow[r] \arrow[d,"\Gamma_S"] &
+\mathrm D^b(S)_{\coh} \arrow[d,"\mathbb R\Gamma_S"] \\
+\mathrm K^{-,b}(\Lib(A)) \arrow[r] &
+\mathrm K^{-,b}(\Loclib(A)) \arrow[r] &
+\mathrm D^b(A)_{\coh},
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}
+\mathrm K^b(\Loclib(S)) \arrow[r] \arrow[d,"\Gamma_S"] &
+\mathrm D(S)_{\parf} \arrow[d,"\mathbb R\Gamma_S"] \\
+\mathrm K^b(\Loclib(A)) \arrow[r] &
+\mathrm D(A)_{\parf},
+\end{tikzcd}
+\]
+(donde, en el diagrama superior, se puede reemplazar $b$ por $-$ cuando $S$ es de dimensión cohomológica finita en el sentido de (3.7)).
+
+b) Sea $S$ un esquema. De a) resulta que un complejo de $\mathcal O_S$-módulos pseudocoherente y de cohomología acotada es localmente isomorfo (en $\mathrm D(S)$) a un complejo estrictamente pseudocoherente, lo que no era en absoluto evidente a priori (cf. (I 2.3.1)).
+

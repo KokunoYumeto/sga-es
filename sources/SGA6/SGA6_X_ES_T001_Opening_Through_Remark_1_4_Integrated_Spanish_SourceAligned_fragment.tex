@@ -1,0 +1,337 @@
+% SGA 6, Exposición X: fragmento español integrado y alineado con la fuente.
+% Alcance exacto: fr.tex, líneas 12430--12630 inclusive; apertura hasta la observación 1.4.
+% Fuente francesa completa SHA-256:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Derivado sin cambios semánticos del tramo T001 previamente comprobado contra la fuente.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Exposición X. Formalismo de las intersecciones sobre esquemas algebraicos propios}
+\begin{center}
+por O. Jussila\\
+(con un apéndice de A. Grothendieck)
+\end{center}
+
+\section*{1. Compatibilidad de las filtraciones con la ley de composición}
+\[
+K^\circ(X)\times K_\bullet(X)\longrightarrow K_\bullet(X).
+\]
+
+\subsection*{1.1}
+Consideremos primero un esquema noetheriano $X$ y el grupo $K_\bullet(X)$ de
+las clases de $\mathcal O_X$-módulos coherentes. Para todo $\mathcal O_X$-módulo
+coherente $F$, denotaremos por $\cl_\bullet(F)$ su clase en $K_\bullet(X)$.
+
+\textbf{Definición 1.1.1.}
+Para todo entero $n\in\mathbb Z$, se denota por $\Filt_n(X)$ el subgrupo de
+$K_\bullet(X)$ engendrado por las clases $\cl_\bullet(F)$ de los
+$\mathcal O_X$-módulos coherentes $F$ tales que
+\[
+\dim(\Supp(F))\leq n.
+\]
+Se define así una filtración creciente $(\Filt_n(X))_{n\in\mathbb Z}$ de
+$K_\bullet(X)$ tal que $\Filt_n(X)=0$ para $n<0$.
+
+\textbf{Proposición 1.1.2.}
+Sean $X$ un esquema noetheriano, $F$ un $\mathcal O_X$-módulo coherente tal
+que $\dim(\Supp(F))\leq n$, y sea $X(n)$ ($n\in\mathbb Z$) el subconjunto
+$\{x\in X\,;\,\dim(\overline{\{x\}})=n\}$ de $X$. Para todo $x\in X$, se denota por $Z(x)$ el subesquema cerrado
+integral asociado a $\overline{\{x\}}$. Entonces la longitud del
+$\mathcal O_{X,x}$-módulo $F_x$ es finita para todo $x\in X(n)$ y no es nula
+más que para un número finito de puntos $x\in X(n)$; además,
+\begin{equation}\tag{1.1.3}
+\cl_\bullet(F)=
+\sum_{x\in X(n)}\longg(F_x)\cl_\bullet(\mathcal O_{Z(x)})+w,
+\end{equation}
+donde $w\in\Filt_{n-1}(X)$.
+
+Por inducción inmediata sobre $n$ se obtiene:
+
+\textbf{Corolario 1.1.4.}
+Para todo esquema noetheriano $X$ y todo entero $n$, $\Filt_n(X)$ es el
+subgrupo de $K_\bullet(X)$ engendrado por las clases
+$\cl_\bullet(\mathcal O_Z)$, donde $Z$ recorre los subesquemas cerrados
+integrales de dimensión $\leq n$ de $X$.
+
+\emph{Demostración de 1.1.2.}
+Sea $X'=\Supp(F)$. Como $X'$ es un espacio noetheriano de dimensión $\leq n$,
+los elementos de $X'\cap X(n)$ son maximales en $X'$ y, por tanto, son
+finitos; además, $\longg(F_x)$ es finita para todo $x\in X'\cap X(n)$. Esto
+prueba la primera afirmación.
+
+Sea $\mathcal K=\Coh(X)$ la categoría de los $\mathcal O_X$-módulos coherentes
+y sea $\mathcal K'$ el subconjunto de $\operatorname{Ob}(\mathcal K)$ formado
+por los $\mathcal O_X$-módulos coherentes con soporte en $X'$ que satisfacen
+la condición (1.1.3). Evidentemente, $\mathcal K'$ contiene los haces
+$\mathcal O_{Z(x)}$, con $x\in X'$. Basta, pues, demostrar que $\mathcal K'$ es
+un subconjunto exacto de $\operatorname{Ob}(\mathcal K)$, pues entonces el
+lema de dévissage (EGA III 3.1.2) da $F\in\mathcal K'$.
+
+Sea, por tanto,
+\begin{equation}\tag{1.1.5}
+0\longrightarrow G'\longrightarrow G\longrightarrow G''\longrightarrow0
+\end{equation}
+una sucesión exacta de $\mathcal O_X$-módulos que tenga dos de sus términos en
+$\mathcal K'$. Los haces $G'$, $G$ y $G''$ tienen entonces todos soporte en
+$X'$. Por consiguiente, las longitudes $\ell'_x$, $\ell_x$ y $\ell''_x$ de los
+$\mathcal O_{X,x}$-módulos $G'_x$, $G_x$ y $G''_x$ son finitas para todo
+$x\in X(n)$, y
+\begin{equation}\tag{1.1.6}
+\ell_x=\ell'_x+\ell''_x\qquad(x\in X(n)).
+\end{equation}
+La afirmación (1.1.3) para todos los términos de (1.1.5) se deduce entonces
+inmediatamente de la hipótesis y de la igualdad
+\begin{equation}\tag{1.1.7}
+\cl_\bullet(G)=\cl_\bullet(G')+\cl_\bullet(G'').
+\end{equation}
+
+Se sabe que $K_\bullet$ es un funtor covariante en la categoría de los esquemas
+localmente noetherianos con respecto a los morfismos propios. La proposición
+siguiente afirma que nuestra filtración es funtorial.
+
+\textbf{Proposición 1.1.8.}
+Sea $f:X'\to X$ un morfismo propio de esquemas localmente noetherianos, y sea
+\[
+f_*:K_\bullet(X')\longrightarrow K_\bullet(X)
+\]
+el morfismo inducido por $f$. Entonces
+\begin{equation}\tag{1.1.9}
+f_*(\Filt_n(X'))\subset\Filt_n(X)
+\end{equation}
+para todo entero $n$.
+
+\emph{Demostración.}
+Si $F$ es un $\mathcal O_{X'}$-módulo coherente, entonces, por definición
+(IV 2.11),
+\[
+f_*(\cl_\bullet(F))=
+\sum_{i\in\mathbb N}(-1)^i\cl_\bullet(R^if_*(F)).
+\]
+Los $\mathcal O_X$-módulos $R^if_*(F)$ tienen soporte en $f(\Supp(F))$ y, por
+EGA IV 5.4.1(ii),
+\[
+\dim(\Supp(F))\geq\dim(f(\Supp(F))),
+\]
+lo que prueba la afirmación.
+
+\subsection*{1.2}
+Sea ahora $X$ un esquema cualquiera y consideremos el grupo $K^\circ(X)$ de
+las clases de $\mathcal O_X$-módulos localmente libres (en lo sucesivo, se
+sobrentiende: de tipo finito). Es una pre-$\lambda$-álgebra aumentada sobre el
+anillo $H^0(X,\mathbb Z)$ (V 3.9.1). La aplicación
+$f\rightsquigarrow f\cdot1\in K^\circ(X)$ permite identificar en adelante
+$H^0(X,\mathbb Z)$ con un subanillo de $K^\circ(X)$. Si $E$ es un
+$\mathcal O_X$-módulo localmente libre, denotaremos por $\cl^\circ(E)$ su clase
+en $K^\circ(X)$. Los operadores $\lambda^k$ ($k\in\mathbb N$) se definen por
+\begin{equation}\tag{1.2.1}
+\lambda^k(\cl^\circ(E))=\cl^\circ(\Lambda_{\mathcal O}^kE)
+\end{equation}
+y por
+\begin{equation}\tag{1.2.2}
+\lambda^k(x+y)=
+\sum_{\substack{i+j=k\\ i,j\in\mathbb N}}\lambda^i(x)\lambda^j(y).
+\end{equation}
+
+(V 2.2). Recordemos que, en la $\lambda$-filtración
+$(\Filt^i(X))_{i\in\mathbb Z}$ de $K^\circ(X)$, se tiene
+$\Filt^i(X)=K^\circ(X)$ para $i\leq0$, mientras que, para $i\geq1$,
+$\Filt^i(X)$ es el ideal engendrado por los productos
+\begin{equation}\tag{1.2.3}
+P=\gamma^{i_1}(x_1)\cdots\gamma^{i_k}(x_k)
+\end{equation}
+con $1\leq i_1,\ldots,i_k$, $i_1+\cdots+i_k\geq i$ y
+$x_1,\ldots,x_k\in I=\Ker(\varepsilon)$, donde $\varepsilon$ es el
+homomorfismo de aumentación (véase la Exposición V 3.10). Se demostró en
+V 3.10 que $\Filt^i(X)$ es incluso el submódulo sobre $H^0(X,\mathbb Z)$ y,
+por tanto, cuando $X$ es conexo, el subgrupo abeliano engendrado por los
+productos (1.2.3), donde además se puede suponer que los elementos $x_p$
+($p=1,\ldots,k$) son de la forma
+\begin{equation}\tag{1.2.4}
+x_p=\cl^\circ(E_p)-n_p,
+\end{equation}
+siendo $E_p$ un $\mathcal O_X$-módulo localmente libre de rango
+$n_p\in H^0(X,\mathbb Z)$.
+
+\subsection*{1.3}
+Recordemos (IV 2.10) que el bifuntor
+\[
+(E,F)\rightsquigarrow E\otimes_{\mathcal O_X}F,
+\]
+donde $E$ es un $\mathcal O_X$-módulo localmente libre y $F$ un
+$\sisi{\mathcal C_X}{\mathcal O_X}$-módulo coherente, induce una ley de composición
+\begin{equation}\tag{1.3.1}
+K^\circ(X)\times K_\bullet(X)\longrightarrow K_\bullet(X)
+\end{equation}
+que hace de $K_\bullet(X)$ un $K^\circ(X)$-módulo unitario. El resultado clave
+de la presente exposición es el siguiente.
+
+\textbf{Teorema 1.3.2.}
+Sea $X$ un esquema noetheriano. Para todos $i,j\in\mathbb Z$, la ley de
+composición (1.3.1) induce por restricción una ley de composición
+\begin{equation}\tag{1.3.3}
+\Filt^i(X)\times\Filt_j(X)\longrightarrow\Filt_{j-i}(X).
+\end{equation}
+
+\textbf{Corolario 1.3.3.}
+Si $X$ es un esquema noetheriano de dimensión $\leq j$, entonces el
+homomorfismo canónico
+\[
+\Theta_X:K^\circ(X)\longrightarrow K_\bullet(X)
+\]
+definido por $\Theta_X(x)=x\cdot\cl_\bullet(\mathcal O_X)$
+($x\in K^\circ(X)$), induce, para todo $i\in\mathbb Z$, un homomorfismo
+\[
+\Filt^i(X)\longrightarrow\Filt_{j-i}(X).
+\]
+
+\emph{Demostración.}
+Mostremos primero que (1.3.3), para $i+j\leq k\in\mathbb Z$ y para todo
+subesquema cerrado integral de dimensión $\leq j$, implica el Teorema
+1.3.2 para $i+j\leq k$. Por (1.1.4), basta demostrar que, para todo
+$x\in\Filt^i(X)$ y todo subesquema cerrado integral $Z$ de dimensión $\leq j$,
+se tiene
+\[
+x\cl_\bullet(\mathcal O_Z)\in\Filt_{j-i}(X).
+\]
+Para evitar toda confusión, denotemos por $1_Z$ la clase de $\mathcal O_Z$ en
+$K_\bullet(Z)$. Si $\alpha:Z\to X$ es la inmersión canónica, la fórmula de
+proyección (IV \ldots) da
+\[
+x\cl_\bullet(\mathcal O_Z)
+=x\alpha_*(1_Z)
+=\alpha_*(\alpha^*(x)1_Z).
+\]
+Como $\alpha^*(x)\in\Filt^i(Z)$, (1.1.8) y (1.3.3), aplicados a $X=Z$ y
+$i+j\leq k$, dan
+\[
+\alpha_*(\alpha^*(x)1_Z)\in\Filt_{j-i}(X),
+\]
+lo que prueba la afirmación.
+
+El Teorema 1.3.2 es trivial para $i+j\leq0$. Supongamos, por inducción, que se
+ha demostrado para $i+j<k$ y para todo esquema noetheriano $X$. Por la
+observación precedente, queda por probar que, para todo esquema noetheriano
+integral $X$ de dimensión $j$ y todo producto (1.2.3) que satisfaga (1.2.4),
+se tiene
+\begin{equation}\tag{1.3.4}
+P\cl_\bullet(\mathcal O_X)\in\Filt_{j-i}(X).
+\end{equation}
+Si $k>1$ en (1.2.3), la afirmación se deduce de la hipótesis de inducción y de
+la asociatividad de la ley (1.3.1). Podemos, pues, suponer, puesto que $X$ es
+conexo, que
+\begin{equation}\tag{1.3.5}
+x=P=\gamma^m(\cl^\circ(E)-n),
+\end{equation}
+donde $m\geq i$ y $E$ es un $\mathcal O_X$-módulo localmente libre de rango
+$n>0$. Distinguimos dos casos.
+
+I. Supongamos que existen $\mathcal O_X$-módulos invertibles
+$L_1,\ldots,L_n$ tales que
+\[
+\cl^\circ(E)=\cl^\circ(L_1)+\cdots+\cl^\circ(L_n)\in K^\circ(X).
+\]
+
+De ello se sigue (V) que $x$ es la función simétrica elemental $m$-ésima en
+los elementos $\cl^\circ(L_r)-1$ ($r=1,\ldots,n$) y, por tanto, un polinomio
+homogéneo de grado $m$, con coeficientes enteros, en las variables
+$(\cl^\circ(L_r)-1)$ ($r=1,\ldots,n$). Aplicando de nuevo la hipótesis de
+inducción y la asociatividad de la ley (1.3.1), nos reducimos a demostrar que,
+para todo $\mathcal O_X$-módulo invertible $L$, se tiene
+\begin{equation}\tag{1.3.6}
+(\cl^\circ(L)-1)\cl_\bullet(\mathcal O_X)\in\Filt_{j-1}(X).
+\end{equation}
+Como el esquema $X$ es integral, $L$ y $\mathcal O_X$ son isomorfos a
+submódulos del $\mathcal O_X$-módulo constante $R_X$ de las funciones
+racionales sobre $X$. El $\mathcal O_X$-módulo suma
+$F=\mathcal O_X+L$ es coherente, y se obtiene
+\begin{align*}
+(\cl^\circ(L)-1)\cl_\bullet(\mathcal O_X)
+&=\cl_\bullet(L)-\cl_\bullet(\mathcal O_X)\\
+&=(\cl_\bullet(F)-\cl_\bullet(\mathcal O_X))
+  -(\cl_\bullet(F)-\cl_\bullet(L))\\
+&=\cl_\bullet(F/\mathcal O_X)-\cl_\bullet(F/L).
+\end{align*}
+Ahora bien, las fibras en el punto genérico de los haces
+$F/\mathcal O_X$ y $F/L$ son nulas; por consiguiente, sus soportes en $X$
+son raros y, como $X$ es irreducible, tienen dimensión $\leq j-1$.
+La afirmación (1.3.6) se sigue inmediatamente.
+
+II. Queda por demostrar el caso general. Introduzcamos el fibrado de banderas
+\[
+g:D\longrightarrow X
+\]
+de $E$ sobre $X$, en el cual existen $\mathcal O_D$-módulos invertibles
+$L_1,\ldots,L_n$ tales que
+\begin{equation}\tag{1.3.7}
+g^*(\cl^\circ(E))
+=\cl^\circ(L_1)+\cdots+\cl^\circ(L_n)\in K^\circ(D).
+\end{equation}
+Sean $e$ el punto genérico de $X$ y $k(e)$ el cuerpo residual de $e$. Entonces
+se puede encontrar un punto racional $u$ de la fibra genérica $D_e$ de $D$
+sobre $k(e)$,
+pues sus puntos racionales están en correspondencia biunívoca con las
+banderas de tipo $(1,\ldots,1)$ ($n$ términos) del espacio vectorial $E_e$,
+de dimensión $n>0$ sobre $k(e)$. Por otra parte, estos puntos racionales
+corresponden también a los gérmenes de secciones de $g$ en un entorno de
+$e$; podemos, por tanto, hallar una sección $s:U\to D$ sobre un abierto
+$U$ de $X$. Sea $X'=s(U)$ la adherencia de $s(U)$, dotada de la estructura
+reducida inducida, y sea $f:X'\to X$ la restricción de $g$ a $X'$. El
+morfismo $f$ es proyectivo y, puesto que es un isomorfismo sobre $s(U)$,
+es birracional.
+
+Así, $\dim(X')\leq\dim(X)$ (EGA IV 5.6.6.1). Por otra parte,
+$f(X')=g(X')$ es cerrado y contiene a $U$, de modo que $f$ es sobreyectivo y
+$\dim(X')\geq\dim(X)$ (EGA IV 5.4.1(ii)). Las hipótesis del caso I se
+satisfacen, pues, para $X'$ y para
+$x'=f^*(x)\in\Filt^i(X')$, y se obtiene
+\begin{equation}\tag{1.3.7'}
+f^*(x)\cl_\bullet(\mathcal O_{X'})\in\Filt_{j-i}(X').
+\end{equation}
+Teniendo en cuenta la fórmula de proyección y (1.1.8), se concluye que
+\begin{equation}\tag{1.3.8}
+x f_*(\cl_\bullet(\mathcal O_{X'}))\in\Filt_{j-i}(X).
+\end{equation}
+Por otra parte, el homomorfismo canónico
+\[
+\mathcal O_X\longrightarrow f_*(\mathcal O_{X'})
+\]
+es un isomorfismo sobre el abierto denso $U$, y los $\mathcal O_X$-módulos
+$R^if_*(\mathcal O_{X'})$ ($i\geq1$) están soportados en el subconjunto
+cerrado raro $X-U$. Se sigue que
+\begin{equation}\tag{1.3.9}
+f_*(\cl_\bullet(\mathcal O_{X'}))
+=\cl_\bullet(\mathcal O_X)+w,
+\end{equation}
+donde $w\in\Filt_{j-1}(X)$. Por la hipótesis de inducción,
+$x\cdot w\in\Filt_{j-i-1}(X)$; por tanto, las fórmulas (1.3.8) y (1.3.9)
+dan
+\[
+x\cl_\bullet(\mathcal O_X)\in\Filt_{j-i}(X).
+\]
+C.Q.F.D.
+
+\textbf{Observación 1.4.}
+Sea $X$ un esquema localmente noetheriano. Obsérvese que, a lo largo de esta
+sección, solo hemos utilizado las propiedades siguientes de la ``función
+dimensión''
+$D(x)=D_Y(x)=\dim(\overline{\{x\}})$ sobre los $X$-esquemas propios $Y$:
+\begin{enumerate}
+\item[(i)] Para todo $X$-esquema propio $Y$ y todo $x\in Y$, se tiene
+$D_Y(x)\in\mathbb Z$.
+\item[(ii)] Si $y\ne x$ es una especialización de $x$, entonces
+\[
+D(y)<D(x).
+\]
+\item[(iii)] Para todo $X$-morfismo $f:Y_1\to Y_2$ de $X$-esquemas propios
+y todo $y\in Y_1$, se tiene
+\[
+D_{Y_2}(f(y))\leq D_{Y_1}(y).
+\]
+\item[(iv)] Hay igualdad en (iii) si $f$ es una inmersión, o si $Y_1$ es
+irreducible, $f$ es birracional y sobreyectivo, y $y$ es el punto genérico de
+$Y_1$.
+\end{enumerate}
+Esto significa que todos los resultados de esta sección, en particular
+(1.3.2) y (1.3.3), permanecen válidos sin cambio si se sustituye en ellos la
+``dimensión'' por una función $D$ que satisfaga las condiciones (i)--(iv)
+anteriores y se define la filtración de $K_\bullet(X)$ con arreglo a tal
+función $D$.

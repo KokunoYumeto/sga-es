@@ -1,0 +1,28 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: corolario 4.6.1 hasta el enunciado de la proposición 4.7, líneas 5784--5805 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 4.6.1.} Sean \(f:X\to S\) un morfismo localmente de presentación finita y plano, \(x\in X\), \(s=f(x)\), \(E\in\Ob D^-(X)\), y \([a,b]\) un intervalo de \(\mathbb Z\). Denotemos por \(i_s:X_s=X\times_S\Spec(k(s))\to X\) la proyección canónica, y pongamos \(E_{X_s}=\mathbf Li_s^*(E)\). Se tiene entonces
+\[
+\begin{gathered}
+ \parfamp_f(E)\subset[a,b]\text{ en un entorno de }x\text{ y }\tamp(E_{X_s})_x\subset[a,b]\\
+ \Longleftrightarrow \parfamp(E)\subset[a,b]\text{ en un entorno de }x.
+\end{gathered}
+\]
+Por consiguiente, \(E\) es perfecto si y solo si \(E\) es perfecto rel. a \(f\) y \(E_{X_s}\) es perfecto para todo \(s\in S\).
+
+\emph{Demostración.} Aplíquese (4.6) con \(X=Y\), \(f=\Id_X\).
+
+\textbf{Observación 4.6.2.} De (4.6.1) y (I 5.10) resulta que, si \(f\) es localmente de presentación finita, plano y de fibras esquemas regulares, entonces que \(E\) sea perfecto rel. a \(f\) equivale a que \(E\) sea perfecto (esta equivalencia ya se había obtenido en (4.4) para \(f\) liso).
+
+\textbf{Proposición 4.7.} Sean \(S\) un esquema y, para \(i=1,2\), \(f_i:X_i\to Y_i\) un \(S\)-morfismo localmente de tipo finito, \(E_i\in\Ob D(X_i)\), y \([a_i,b_i]\) un intervalo de \(\mathbb Z\). Supongamos que \(X_1\) y \(X_2\), así como \(Y_1\) y \(Y_2\), son Tor-independientes sobre \(S\) (1.5). Pongamos \(a=a_1+a_2\), \(b=b_1+b_2\), \(f=f_1\times_Sf_2\). Entonces se tiene:
+\begin{enumerate}[label=\alph*)]
+\item si \(\parfamp_{f_1}(E_1)\subset[a_1,b_1]\), y si \(E_2\) es pseudocoherente rel. a \(f_2\) y acíclico en grados fuera de \([a_2,b_2]\), \(E_1\otimes_S^{\mathbf L}E_2\) (cf. (1.6)) es pseudocoherente rel. a \(f\) y acíclico en grados fuera de \([a,b]\).
+\item \(\parfamp_{f_i}(E_i)\subset[a_i,b_i]\) para \(i=1,2\)
+\[
+ \Longrightarrow\parfamp_f(E_1\otimes_S^{\mathbf L}E_2)\subset[a,b].
+\]
+\end{enumerate}

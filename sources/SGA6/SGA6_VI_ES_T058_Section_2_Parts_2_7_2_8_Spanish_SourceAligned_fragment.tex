@@ -1,0 +1,86 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.7--2.8, líneas 9089--9167 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{2.7.} Sobre $\mathcal G$, el funtor que asocia a un $B$-módulo graduado su componente $n$-ésima es un funtor exacto con valores en $\mathcal G'$; define, pues, un funtor:
+\begin{equation}\tag{2.7.1}
+  \operatorname{Comp}_n:D^+(\mathcal G)\longrightarrow D^+(\mathcal G').
+\end{equation}
+Para todo $n$, se puede considerar el funtor $\mathcal G'\to\mathcal G$ definido por la tensorización por $B(-n)$. El homomorfismo (1.2.1) define un morfismo de funtores sobre $\mathcal G$, de donde se obtiene un morfismo para los funtores correspondientes entre categorías derivadas:
+\begin{equation}\tag{2.7.2}
+  \operatorname{Comp}_n\otimes_{\mathcal O_S} B(-n)
+  \longrightarrow \operatorname{Id}_{D^+(\mathcal G)}.
+\end{equation}
+Sea $M^{\bullet}$ un complejo $\mathcal G_0$-perfecto. Vamos a mostrar que existe una sucesión de triángulos distinguidos:
+\[
+\begin{array}{ccccccccccc}
+& P_1^{\bullet} &&&& P_2^{\bullet} &&&& P_k^{\bullet} & \\
+\swarrow && \nwarrow && \swarrow && \nwarrow && \swarrow && \nwarrow \\
+N_1^{\bullet} & \longrightarrow & M^{\bullet}, & \qquad &
+N_2^{\bullet} & \longrightarrow & P_1^{\bullet}, & ...., &
+N_k^{\bullet} & \longrightarrow & P_{k-1}^{\bullet},
+\end{array}
+\]
+donde $P_k^{\bullet}$ es acíclico y los $N_i^{\bullet}$ son del tipo \(K_i^{\bullet}\otimes_{\mathcal O_S}B(d)\), siendo los $K_i^{\bullet}$ complejos perfectos en el sentido ordinario sobre $S$.
+
+Puesto que $M^{\bullet}$ es $\mathcal G_0$-perfecto y $S$ es cuasicompacto, existen un recubrimiento finito de $S$ y un entero $d_0$ tales que, sobre todo abierto de este recubrimiento, $M^{\bullet}$ es isomorfo a un complejo acotado de términos localmente libres de tipo finito sobre $B$, a saber, $M_U'{}^{\bullet}$, tal que $\operatorname{Comp}_d(M_U'{}^{\bullet})=0$ para $d<d_0$.
+
+Se considera entonces el morfismo canónico (2.7.2):
+\[
+  N_1^{\bullet}=\operatorname{Comp}_{d_0}(M^{\bullet})\otimes_{\mathcal O_S}B(-d_0)
+  \longrightarrow M^{\bullet};
+\]
+sea $P_1^{\bullet}$ el cono de este morfismo. Sigue siendo un complejo $\mathcal G_0$-perfecto: en efecto, para todo $n$, $\operatorname{Comp}_n(M^{\bullet})$ es un complejo perfecto sobre $S$, pues así ocurre cuando $M^{\bullet}$ está acotado y tiene términos localmente libres de tipo finito sobre $B$; por consiguiente, el complejo $\operatorname{Comp}_n(M^{\bullet})\otimes_{\mathcal O_S}B(-d_0)$ es $\mathcal G_0$-perfecto, y lo mismo vale, por tanto, para el cono (I 4.10).
+
+Por otra parte, se puede escribir sobre todo abierto $U$ del recubrimiento el diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Comp}_{d_0}(M^{\bullet})\otimes_{\mathcal O_S}B(-d_0) \arrow[r] \arrow[d,"\sim"'] & M^{\bullet} \arrow[d,"\sim"]\\
+\operatorname{Comp}_{d_0}(M_U'{}^{\bullet})\otimes_{\mathcal O_S}B(-d_0) \arrow[r] & M_U'{}^{\bullet},
+\end{tikzcd}
+\]
+que induce un isomorfismo entre los conos; ahora bien, el homomorfismo inferior es un isomorfismo en grado $d_0$; por tanto, $P_1^{\bullet}$ es isomorfo sobre $U$ a un complejo acotado de términos localmente libres de tipo finito sobre $B$, cuyas componentes $\operatorname{Comp}_d$ son nulas para $d<d_0+1$. Por consiguiente, $P_1^{\bullet}$ verifica las mismas propiedades que $M^{\bullet}$, reemplazando $d_0$ por $d_0+1$. Se puede, pues, iterar el proceso, y basta ver que, al cabo de un número finito de operaciones, el complejo $P_k^{\bullet}$ obtenido es acíclico. También aquí la cuestión es local, de modo que basta verlo para $M_U'{}^{\bullet}$. Ahora bien, para cada término $M_U'{}^i$, los morfismos considerados anteriormente son los que definen la filtración de la proposición 1.7; esta filtración es finita, luego, en un número finito de operaciones, se llega a partir de $M_U'{}^{\bullet}$ al complejo nulo, es decir, el complejo $P_k^{\bullet}$ correspondiente es acíclico.
+
+\textbf{2.8.} Sea $L^{\bullet}$ un complejo perfecto sobre $X$. Existe un entero $k$ tal que $M^{\bullet}=\mathbf R F_k(L^{\bullet})$ sea un complejo $\mathcal G_0$-perfecto, y que $L^{\bullet}$ sea isomorfo a $\operatorname{Proj}_0\bigl(\mathbf R F_k(L^{\bullet})\bigr)$. Si se aplica 2.7 al complejo $M^{\bullet}$, la sucesión construida de triángulos distinguidos da, aplicando el funtor $\operatorname{Proj}_0$, una sucesión de triángulos distinguidos de $D_{\mathrm{parf}}(\mathcal A)$ (está claro que $\operatorname{Proj}_0$ transforma un complejo $\mathcal G_0$-perfecto en un complejo perfecto). Por otra parte, se tiene:
+\[
+  \operatorname{Proj}_0\bigl(K^{\bullet}\otimes_{\mathcal O_S}B(d)\bigr)
+  = f^*(K^{\bullet})(d)
+\]
+(observemos que $f^*=\mathbf L f^*$ por la planitud de $f$) para $K^{\bullet}$ en $D^+(\mathcal G')$.
+
+Se obtiene, pues, en $K'(X)$ la igualdad:
+\[
+  \cl(L^{\bullet})
+  =\sum_i\cl\bigl(f^*(K_i^{\bullet})\bigr).\xi^{d_i}
+  =\sum_i f^*\bigl(\cl(K_i^{\bullet})\bigr).\xi^{d_i},
+\]
+donde los $K_i^{\bullet}$ son los complejos perfectos sobre $S$ definidos en 2.7. De ello resulta que $K^\bullet(X)$ está engendrado como $K'(S)$-módulo por las potencias de $\xi$.
+
+Para ver que $1,\xi,\ldots,\xi^{r+1}$ son linealmente dependientes, se considera el homomorfismo $K'_{\naif}(X)\to K'_{\mathrm{parf}}(X)$ que asocia a la clase de un haz localmente libre de tipo finito $L$ la clase del complejo igual a $L$ en grado $0$, y nulo en los demás grados. La ecuación (1.9.1) da entonces una relación de dependencia en $K'_{\mathrm{parf}}(X)$.
+
+Para ver que $1,\xi,\ldots,\xi^r$ son linealmente independientes, se puede utilizar el morfismo $K'(S)$-lineal $f_*:K'(X)\to K'(S)$ (IV 2.11.1). Se tiene:
+\[
+  f_*(1)=1,
+  \quad\text{pues } f_*(\mathcal O_X)=\mathcal O_S,\text{ y }R^i(f_*(\mathcal O_X))=0\text{ para }i\geq1;
+\]
+\[
+  f_*(\xi^n)=0\quad\text{para }-r\leq n<0,
+  \quad\text{pues }R^i\bigl(f_*(\mathcal O_X(n))\bigr)=0\text{ para }i\geq0.
+\]
+Si se tiene una relación del tipo:
+\[
+  f^*(x_0)+f^*(x_1)\xi+\cdots+f^*(x_r)\xi^r=0,
+\]
+se multiplica por $\xi^{-r}$ y se aplica $f_*$; se obtiene entonces $x_r=0$; se concluye por inducción, observando que, si $0\leq s\leq r$, y si $x_j=0$ para $s<j\leq r$, se tendrá:
+\[
+  \sum_{i=0}^{s}f^*(x_i)\xi^i=0,
+\]
+de donde:
+\[
+  \sum_{i=0}^{s}f^*(x_i)\xi^{i+r-s}=0,
+\]
+de donde $x_s=0$ por lo que precede.
+

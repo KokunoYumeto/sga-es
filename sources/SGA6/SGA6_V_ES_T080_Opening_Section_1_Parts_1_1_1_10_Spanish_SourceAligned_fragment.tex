@@ -1,0 +1,280 @@
+% SGA 6, Exposición V: fragmento español alineado con la fuente.
+% Alcance: apertura y sección 1, números 1.1--1.10, líneas 6710--6983 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Exposición V. Generalidades sobre los \(\lambda\)-anillos}
+\begin{center}
+por P. Berthelot
+\end{center}
+
+La teoría de los \(\lambda\)-anillos es útil siempre que se utilizan anillos tales como el anillo de las clases de fibrados vectoriales sobre un sitio anillado, el anillo de las representaciones de un grupo, etc., para los cuales las operaciones de potencia exterior definen aplicaciones \(\lambda^i\). La utilizaremos abundantemente en lo que sigue del Seminario; es necesario, por tanto, desarrollar primero su formalismo general. Esta exposición es completamente independiente del resto del seminario y puede servir a quienes utilizan \(\lambda\)-anillos fuera de la geometría algebraica.
+
+El primer parágrafo expone esencialmente la teoría de las «~sucesiones multiplicativas de polinomios~» de Hirzebruch (cf. [2]); el punto de vista funtorial adoptado aquí tiene la ventaja, además de su generalidad, de reducir notablemente los cálculos. Los parágrafos siguientes mostrarán cómo se puede asociar a todo \(\lambda\)-anillo aumentado un «~anillo de Chern~» que permite desarrollar una teoría de las clases de Chern. Esta teoría es la que nos permitirá enunciar el teorema de Riemann--Roch en la forma general de la Exp. VIII.
+
+\section*{1. Polinomios universales}
+
+\textbf{1.1.} Sea \(K\) un anillo conmutativo con unidad, fijado en todo este parágrafo. Denotemos por \(\mathcal C\) la categoría de las \(K\)-álgebras filtradas, conmutativas con unidad, cuya filtración es decreciente y cuyo término de filtración cero es toda el álgebra. Se define un funtor sobre \(\mathcal C\), con valores en la categoría de los grupos abelianos, de la manera siguiente: si \(A\in\operatorname{Ob}(\mathcal C)\), se asocia a \(A\) el conjunto de las series formales \(\psi\in A[[t]]\) que verifican las condiciones siguientes: si \(\psi=a_0+a_1t+\ldots+a_nt^n+\ldots\), entonces
+\begin{equation}\tag{1.1.1}
+  a_0=1;\qquad \forall i\geq 1,\quad a_i\in\Fil^i A .
+\end{equation}
+Este conjunto se denotará por \(\Ghat_K(A)\), o por \(\Ghat(A)\) si no hay posibilidad de confusión; está claro que es un grupo abeliano para la multiplicación de las series formales y que así se define efectivamente un funtor
+\[
+  \Ghat_K:K\text{-Álg.fil.}\longrightarrow \mathrm{Ab}.
+\]
+Si \(A\) está provista de la filtración grosera, \(\Ghat(A)\) es el grupo de las series formales de aumentación \(1\), que se denotará también por \(1+A[[t]]^+\).
+
+\textbf{Lema 1.2.} El funtor \(\Ghat_K\) es representable.
+
+Sea \((X_i)_{i\in\mathbb N,\ i\geq 1}\) una familia de indeterminadas; atribuyamos el peso \(i\) a \(X_i\), y filtremos el anillo \(K[X_i]_{i\geq 1}\) por el peso respecto de los \(X_i\). Se define entonces una biyección:
+\[
+  \Ghat_K(A)\xrightarrow{\sim}
+  \Hom_{K\text{-Álg.fil.}}\bigl(K[X_i]_{i\geq 1},A\bigr)
+\]
+asociando a toda serie \(\psi=1+a_1t+\ldots+a_nt^n+\ldots\in\Ghat_K(A)\) el homomorfismo \(f_\psi\) determinado por \(f_\psi(X_i)=a_i\). Este homomorfismo es compatible con las filtraciones, y se obtiene así un isomorfismo de funtores.
+
+Pongamos \(\varphi=1+X_1t+\cdots+X_nt^n+\cdots\); para toda \(K\)-álgebra filtrada \(A\) y toda serie \(\psi\in\Ghat(A)\), existe un único homomorfismo \(f_\psi\) de \(K[X_i]_{i\geq 1}\) en \(A\) tal que \(\Ghat(f_\psi)(\varphi)=\psi\).
+
+\textbf{1.3.} Para todo \(A\in\operatorname{Ob}(\mathcal C)\) se define una filtración sobre \(\Ghat(A)\) de la manera siguiente: se dirá que una serie \(\psi=1+a_1t+\ldots\) tiene filtración \(\geq k\) si \(a_i=0\) para \(1\leq i<k\). Denotemos por \(F^k\Ghat(A)\) el subgrupo así obtenido; es un funtor sobre \(\mathcal C\), y en adelante consideraremos \(\Ghat\) como funtor con valores en la categoría \(\Abfil\) de los grupos abelianos filtrados gracias a esta filtración (con \(F^0\Ghat=\Ghat\)).
+
+Sea \(H\) un funtor sobre \(\mathcal C\) con valores en \(\Abfil\); supondremos que \(H\) satisface las dos condiciones siguientes:
+\[
+\begin{array}{ll}
+\text{i)} & \forall A\in\operatorname{Ob}(\mathcal C),\ H(A)\text{ está separado y es completo}.\\[0.3em]
+\text{ii)} & \text{si }A\in\operatorname{Ob}(\mathcal C)\text{ es una }K\text{-álgebra graduada, provista de la filtración}\\
+& \text{asociada a su graduación, y si }G\text{ es un grupo finito que actúa sobre }A\\
+& \text{por morfismos graduados, entonces }H(A^G)\xrightarrow{\sim} H(A)^G\\
+& \text{(designando el exponente }G\text{ los invariantes bajo }G\text{).}
+\end{array}
+\]
+
+En realidad, solo necesitaremos estas condiciones cuando \(A\) sea un anillo de polinomios y \(G\) un producto finito de grupos simétricos que actúen por permutación de las indeterminadas.
+
+\textbf{Ejemplos}: 1)~\(H(A)=\Ghat(A)\). 2)~\(H(A)=1+A[[t]]^+\); este funtor se denotará por \(\Gg\) (\(g\), inicial de «~grosera~»). 3)~\(H(A)=\Ga(A)\), donde \(\Ga(A)\) denota el grupo (para la adición) de las series formales tales que \(a_0=0\), \(a_i\in\Fil^i A\) para \(i\geq 1\), provisto de la filtración análoga a la de \(\Ghat\).
+
+\textbf{1.4.} Para todo \(n\), denotaremos por \(f_n\) el endomorfismo de \(K[X_1,\ldots,X_n]\) definido por \(f_n(X_i)=X_i\) si \(i<n\), \(f_n(X_n)=0\). Se factoriza por la inclusión de \(K[X_1,\ldots,X_{n-1}]\) en \(K[X_1,\ldots,X_n]\), lo que muestra que el homomorfismo de \(H(K[X_1,\ldots,X_{n-1}])\) en \(H(K[X_1,\ldots,X_n])\) es inyectivo y nos permitirá identificar el primero con un subgrupo del segundo; del mismo modo, consideraremos \(H(K[X_1,\ldots,X_n])\) como contenido en \(H(K[X_i]_{i\geq 1})\).
+
+Observemos que \(f_1\) no es sino la aumentación de \(K[X]\).
+
+\textbf{1.5.} Se inyecta \(K[X_1,\ldots,X_n]\) en \(K[T_1,\ldots,T_n]\) enviando \(X_i\) a la \(i\)-ésima función simétrica de los \(T_j\); haciendo actuar el grupo simétrico \(\mathfrak S_n\) por permutación de los \(T_j\), y utilizando el teorema de los polinomios simétricos y (1.3.ii)), se ve que el homomorfismo de \(H(K[X_1,\ldots,X_n])\) en \(H(K[T_1,\ldots,T_n])\) que se deduce es inyectivo, lo que nos permitirá también identificar el primero con un subgrupo del segundo:
+\[
+  H(K[X_1,\ldots,X_n])\simeq H(K[T_1,\ldots,T_n]^{\mathfrak S_n})\xrightarrow{\sim} H(K[T_1,\ldots,T_n])^{\mathfrak S_n}\subset H(K[T_1,\ldots,T_n]).
+\]% source-fix p300 §1.5 (2026-07-03): restored Grothendieck's text vs the paraphrase — removed interpolated «élémentaire», «.»→«;», «qui s'en déduit»→«qu'on en déduit», «permet»→«nous permettra», inlined the H(...) terms, restored dropped intermediate iso H(K[T]^{Sym_n})→~H(K[T])^{Sym_n}.
+Denotemos por
+\[
+  u_i^n:K[X]\longrightarrow K[T_1,\ldots,T_n]
+\]
+el homomorfismo definido por \(u_i^n(X)=T_i\), y pongamos
+\[
+  u_H^n=\sum_{i=1}^n H(u_i^n):H(K[X])\longrightarrow H(K[T_1,\ldots,T_n]).
+\]
+El grupo simétrico permuta los morfismos \(H(u_i^n)\) y deja, por tanto, invariante el morfismo \(u_H^n\), que toma en consecuencia sus valores en
+\[
+  H(K[T_1,\ldots,T_n])^{\mathfrak S_n}
+  \simeq H(K[X_1,\ldots,X_n])
+\]
+según (1.3.ii)). Observemos finalmente que, si \(H=\Ghat\), \(u_H^n(1+Xt)=\prod\limits_{i=1}^n(1+T_it)=1+X_1t+\cdots+X_nt^n\).
+
+\textbf{Teorema 1.6.} La aplicación de \(\Hom_{\Abfil}(\Ghat_K,H)\) en \(H(K[X])\) que asocia a un morfismo de funtores su valor sobre el elemento \(1+Xt\) de \(\Ghat_K(K[X])\) es inyectiva; su imagen es el subgrupo de \(H(K[X])\) formado por los elementos \(\theta\) tales que (con las notaciones de 1.4 para los \(f_n\)):
+\[
+\begin{array}{ll}
+\text{i)}& H(f_1)(\theta)=0.\\[0.3em]
+\text{ii)}& \forall n\geq1,\quad
+H(f_n)\bigl(u_H^n(\theta)\bigr)\equiv u_H^n(\theta)
+\ \mathrm{mod.}\ F^nH(K[X_1,\ldots,X_n]).
+\end{array}
+\]
+
+Demostremos primero la inyectividad. Según el lema 1.2, basta ver que un morfismo de funtores \(\Phi\) nulo sobre \(1+Xt\) es nulo sobre
+\[
+  \varphi=1+X_1t+\cdots+X_nt^n+\cdots .
+\]
+El diagrama conmutativo
+\[
+\begin{tikzcd}
+\Ghat(K[X]) \arrow[r,"u^n_{\Ghat}"] \arrow[d,"\Phi"'] &
+\Ghat(K[X_1,\ldots,X_n]) \arrow[d,"\Phi"]\\
+H(K[X]) \arrow[r,"u_H^n"] &
+H(K[X_1,\ldots,X_n])
+\end{tikzcd}
+\tag{1.6.1}
+\]
+muestra que, para todo \(n\), \(\Phi(1+X_1t+\cdots+X_nt^n)=0\). Ahora bien, \(\varphi\equiv 1+X_1t+\cdots+X_nt^n\ \mathrm{mod.}\ F^{n+1}\Ghat\); por tanto, \(\Phi(\varphi)\equiv \Phi(1+\cdots+X_nt^n)\ \mathrm{mod.}\ F^{n+1}H\), y en consecuencia \(\Phi(\varphi)\equiv0\ \mathrm{mod.}\ F^{n+1}H\), para todo \(n\); como \(H(K[X_i]_{i\geq 1})\) es separado y completo, \(\Phi(\varphi)=0\).
+
+Sea ahora \(\Phi\) un elemento cualquiera de \(\Hom(\Ghat,H)\), y sea \(\theta=\Phi(1+Xt)\); demostremos que \(\theta\) verifica las condiciones i) y ii).
+
+i):~\(H(f_1)(\theta)=H(f_1)\circ\Phi(1+Xt)=\Phi\circ\Ghat(f_1)(1+Xt)=\Phi(1)=0\).
+
+ii):~\(u_H^n(\theta)=\Phi(1+\cdots+X_nt^n)\) según (1.6.1); ahora bien, \(1+\cdots+X_nt^n\equiv 1+\cdots+X_{n-1}t^{n-1}\ \mathrm{mod.}\ F^n\Ghat\), y \(1+\cdots+X_{n-1}t^{n-1}=\Ghat(f_n)(1+\cdots+X_nt^n)\). Como \(\Phi\circ\Ghat(f_n)=H(f_n)\circ\Phi\), y \(\Phi\) es un morfismo de funtores filtrados, se obtiene ii).
+
+Falta demostrar que, si \(\theta\in H(K[X])\) verifica i) y ii), existe \(\Phi\in\Hom(\Ghat,H)\) tal que \(\theta=\Phi(1+Xt)\).
+Se determina primero el valor de \(\Phi\) para el elemento \(1+\cdots+X_nt^n\) de \(\Ghat(K[X_1,\ldots,X_n])\) mediante (1.6.1); se tiene, pues, por definición: \(\Phi(1+\cdots+X_nt^n)=\sum\limits_{i=1}^n \Phi(1+T_it)\), siendo conocidos los \(\Phi(1+T_it)\) por funtorialidad mediante los morfismos \(u_i^n\).
+
+A continuación se pegan los \(\Phi(1+\cdots+X_nt^n)\), al variar \(n\), mediante el diagrama conmutativo:
+\[
+\begin{tikzcd}
+K[X_1,\ldots,X_n] \arrow[r,"f_n"] \arrow[d,"\widetilde{\sigma}_n"'] &
+K[X_1,\ldots,X_n] \arrow[d,"\sigma'_n"']\\
+K[T_1,\ldots,T_n] \arrow[r,"f'_n"] &
+K[T_1,\ldots,T_n],
+\end{tikzcd}
+\tag{1.6.2}
+\]
+donde \(f'_n\) está determinado por \(f'_n(T_i)=T_i\) si \(i<n\), \(f'_n(T_n)=0\); \(\widetilde{\sigma}_n\) envía \(X_i\) a la \(i\)-ésima función simétrica de los \(T_j\), y \(\sigma'_n\) envía \(X_i\) a la \(i\)-ésima función simétrica de \(T_1,\ldots,T_{n-1}\) para \(i<n\), y \(X_n\) a \(0\).
+
+En efecto, se deduce:
+\[
+\begin{aligned}
+H(f_n)\bigl(\Phi(1+\cdots+X_nt^n)\bigr)
+&=H(f'_n)\left(\sum_{i=1}^n \Phi(1+T_it)\right)
+=\sum_{i=1}^{n-1}\Phi(1+T_it)\ \text{(por 1.6.i))}\\
+&=\Phi(1+\cdots+X_{n-1}t^{n-1})
+\end{aligned}
+\]
+(situándonos en \(H(K[T_1,\ldots,T_{n-1}])\) mediante las identificaciones de 1.4). Teniendo en cuenta 1.6.ii), \(\Phi(1+\cdots+X_nt^n)\equiv\Phi(1+\cdots+X_{n-1}t^{n-1})\ \mathrm{mod.}\ F^nH(K[X_i]_{i\geq1})\), y los \(\Phi(1+\cdots+X_nt^n)\) definen un elemento \(\psi\) de \(H(K[X_i]_{i\geq1})\), puesto que este es un grupo separado y completo; pondremos, pues,
+\[
+  \Phi(\varphi)=\psi .
+\]
+
+Sean finalmente \(A\in\operatorname{Ob}(\mathcal C)\) y \(\chi\in\Ghat(A)\); pongamos \(\Phi(\chi)=H(f_\chi)(\psi)\), siendo \(f_\chi\) el homomorfismo de \(K[X_i]_{i\geq 1}\) en \(A\) definido en 1.2. Como ya se ha definido \(\Phi\) sobre los elementos \(1+\cdots+X_nt^n=\varphi_n\), hay que verificar que las dos definiciones dan lo mismo, es decir, que:
+\[
+  H(f_{\varphi_n})(\psi)=\Phi(1+\cdots+X_nt^n).
+\]
+Ahora bien, para todo \(p\), se tiene \(\psi\equiv \Phi(1+\cdots+X_pt^p)\ \mathrm{mod.}\ F^{p+1}H(K[X_i]_{i\geq 1})\). De aquí, para todo \(p\geq n\), \(H(f_{\varphi_n})(\psi)\equiv H(f_{\varphi_n})\bigl(\Phi(1+\cdots+X_pt^p)\bigr)\ \mathrm{mod.}\ F^{p+1}H(K[X_i]_{i\geq 1})\). Utilizando las identificaciones de 1.4 y el pegado de los \(\Phi(\varphi_m)\) para \(m\) variable, se obtiene \(H(f_{\varphi_n})(\Phi(\varphi_p))=\Phi(\varphi_n)\).
+Se tiene, pues, finalmente:
+\[
+  \forall p\geq n,\quad
+  H(f_{\varphi_n})(\psi)\equiv \Phi(1+\cdots+X_nt^n)
+  \ \mathrm{mod.}\ F^pH(K[X_i]_{i\geq 1}).
+\]
+Como \(H\) es separado, se deduce la igualdad buscada.
+
+Se ha definido así un sistema de aplicaciones \(\Phi_A:\Ghat(A)\to H(A)\); para verificar que constituyen un morfismo de funtores (con valores en \(\underline{\mathrm{Ens}}\)), hay que demostrar que, para todo morfismo \(h:A\to A'\), el diagrama
+\[
+\begin{tikzcd}
+\Ghat(A) \arrow[r,"\Ghat(h)"] \arrow[d,"\Phi_A"'] &
+\Ghat(A') \arrow[d,"\Phi_{A'}"]\\
+H(A) \arrow[r,"H(h)"] & H(A')
+\end{tikzcd}
+\]
+es conmutativo. Sea \(\chi\in\Ghat(A)\); entonces \(h\circ f_\chi=f_{\Ghat(h)(\chi)}\); de donde:
+\[
+  H(h)(\Phi_A(\chi))=H(h)\circ H(f_\chi)(\psi)
+  =H(f_{\Ghat(h)(\chi)})(\psi)=\Phi_{A'}(\Ghat(h)(\chi)).
+\]
+Queda, pues, demostrar que el morfismo de funtores así construido es compatible con las estructuras de grupos filtrados.
+
+Supongamos que \(\chi\in F^n\Ghat(A)\). Decir que \(\chi\) tiene filtración \(\geq n\) equivale a decir que \(f_\chi:K[X_i]_{i\geq 1}\to A\) se factoriza por el endomorfismo \(g_n\) de \(K[X_i]_{i\geq 1}\) definido por \(g_n(X_i)=0\) si \(1\leq i\leq n-1\), y \(g_n(X_i)=X_i\) si \(i\geq n\).
+Para demostrar que \(\Phi\) es compatible con las filtraciones, basta demostrar que \(H(g_n)(\Phi(\varphi))\in F^nH\). Ahora bien, por construcción:
+\[
+  \Phi(\varphi)\equiv \Phi(1+\cdots+X_{n-1}t^{n-1})\ \mathrm{mod.}\ F^nH,
+\]
+de donde:
+\[
+  H(g_n)(\Phi(\varphi))
+  \equiv H(g_n)\bigl(\Phi(1+\cdots+X_{n-1}t^{n-1})\bigr)
+  =0\ \mathrm{mod.}\ F^nH.
+\]
+
+Para verificar la aditividad de \(\Phi\), basta hacerlo para los elementos de grado finito de \(\Ghat(A)\) y pasar después al límite. Sean, pues, \(\sisi{X_1}{\chi_1},\sisi{X_2}{\chi_2}\) dos elementos de grado \(n\) de \(\Ghat(A)\), y sea \(\sisi{X}{\chi}\) su producto. Considérese el diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=tiny]
+K[X_1,\ldots,X_{2n}] \arrow[rr,"\sisi{f_X}{f_\chi}"] \arrow[d] && A\\
+\bigl(K[T_1,\ldots,T_{2n}]\bigr)^{\mathfrak S_n\times\mathfrak S_n}
+\arrow[urr,"\sisi{f'_X}{f'_\chi}"'] &&
+\end{tikzcd}
+\]
+donde las flechas se definen como sigue: \(\mathfrak S_n\times\mathfrak S_n\) actúa sobre \(K[T_1,\ldots,T_{2n}]\) de modo que el primer factor permuta \(T_1,\ldots,T_n\) y el segundo \(T_{n+1},\ldots,T_{2n}\); \(K[X_1,\ldots,X_{2n}]\) se inyecta en el anillo de invariantes enviando \(X_j\) a la \(j\)-ésima función simétrica de los \(T_i\); \(f'\) envía la \(i\)-ésima función simétrica de \(T_1,\ldots,T_n\) (resp. \(T_{n+1},\ldots,T_{2n}\)) al \(i\)-ésimo coeficiente de \(\sisi{X_1}{\chi_1}\) (resp. \(\sisi{X_2}{\chi_2}\)). Entonces:
+\[
+\begin{aligned}
+\Phi(\chi)
+&=H(f_\chi)\left(\Phi\left(\prod_{i=1}^{2n}(1+T_it)\right)\right)
+=H(f'_\chi)\left(\Phi\left(\prod_{i=1}^{2n}(1+T_it)\right)\right);\\
+\Phi(\sisi{X_1}{\chi_1})
+&=H(f'_\chi)\left(\Phi\left(\prod_{i=1}^{n}(1+T_it)\right)\right)\quad(\text{resp. }\sisi{X_2}{\chi_2},\ i=n+1,\ldots,2n).
+\end{aligned}
+\]
+Como \(H(f'_\chi)\) es un homomorfismo de grupos, quedamos reducidos al caso en que \(\chi=\prod_{i=1}^{2n}(1+T_it)\), y en este caso la aditividad de \(\Phi\) resulta de la definición de los \(\Phi(1+X_1t+\cdots+X_k t^k)\).
+
+\textbf{1.7.} Se pueden generalizar las consideraciones precedentes al caso de un producto de funtores \(\Ghat\); el funtor \((\Ghat)^k\) es representable por el anillo
+\(K[(X_i^{(j)})]\), \(j=1,\ldots,k\), e \(i\geq 1\), donde \(X_i^{(j)}\) tiene peso \(i\). Denotemos por \(\varphi^{(j)}\) la serie \(1+X_1^{(j)}t+\cdots+X_n^{(j)}t^n+\cdots\); el elemento \((\varphi^{(j)})_j\) de \(\bigl(\Ghat(K[(X_i^{(j)})])\bigr)^k\) posee la propiedad universal análoga a la de \(\varphi\) (cf. 1.2).
+
+Se pueden introducir los morfismos \(f_n^{(j)}\), \(u_H^{n,(j)}\) como antes, rehaciendo la construcción por separado para cada familia \((X_i^{(j)})_{i\geq 1}\). Se obtiene un resultado análogo al teorema 1.6 buscando los homomorfismos de funtores de \((\Ghat)^k\) en \(H\), \(\mathbb Z\)-multilineales y compatibles con las filtraciones respecto de cada uno de los \(k\) argumentos por separado: quedan determinados por su valor en el elemento
+\((1+X^{(j)}t)_{j=1,\ldots,k}\) de \(\bigl(\Ghat(K[(X^{(j)})_j])\bigr)^k\); un elemento \(\theta\) de \(H(K[(X^{(j)})_j])\) determina un morfismo de funtores si, y solo si, verifica:
+\[
+\begin{array}{ll}
+\text{i)}& \forall j,\quad H(f_1^{(j)})(\theta)=0\\[0.3em]
+\text{ii)}& \forall n,j,\quad
+H(f_n^{(j)})\bigl(u_H^{n,(j)}(\theta)\bigr)
+\equiv u_H^{n,(j)}(\theta)\ \mathrm{mod.}\ F^nH.
+\end{array}
+\]
+El lector se convencerá fácilmente de que, salvo por las complicaciones de notación, basta copiar la demostración de 1.6.
+
+\textbf{1.8.} Denotemos por \(\mathcal C_0\) la categoría de las \(K\)-álgebras, y por
+\[
+  i:\mathcal C_0\longrightarrow \mathcal C,
+\]
+el funtor que asocia a una \(K\)-álgebra \(A\) la \(K\)-álgebra \(A\) provista de la filtración grosera; denotemos por
+\[
+  g:\mathcal C\longrightarrow\mathcal C_0,
+\]
+el funtor «~olvido de la filtración~». Estos funtores verifican las relaciones siguientes:
+\[
+  g\circ i=\operatorname{Id}_{\mathcal C_0};\qquad
+  \Ghat\circ i\circ g=\Gg;\qquad
+  \Gg\circ i\circ g=\Gg
+\]
+(cf. 1.3, ej. 2).
+
+\textbf{Lema 1.9.} Sea \(H:\mathcal C_0\to\Abfil\) un funtor sobre \(\mathcal C_0\); entonces el homomorfismo canónico
+\[
+  \Hom_{\Abfil}(\Ghat,H\circ g)
+  \longrightarrow
+  \Hom_{\Abfil}(\Ghat\circ i,H)
+\]
+es un isomorfismo.
+
+Para ver que es inyectivo, se utiliza la sucesión de homomorfismos canónicos:
+\[
+  \Hom(\Ghat,H\circ g)\longrightarrow
+  \Hom(\Ghat\circ i,H)\longrightarrow
+  \Hom(\Gg,H\circ g)\longrightarrow
+  \Hom(\Ghat,H\circ g),
+\]
+procediendo la última flecha del hecho de que \(\Ghat\) es un subfuntor de \(\Gg\). Para verificar que el homomorfismo compuesto es la identidad, se observa que un morfismo de funtores \(\Ghat\longrightarrow H\circ g\) está determinado por su valor para los objetos de \(\mathcal C\) cuya filtración es grosera; en efecto, sean \(A\in\operatorname{Ob}(\mathcal C)\) y \(A_g\) el álgebra \(A\) provista de la filtración grosera; el morfismo canónico \(A\to A_g\) define un diagrama conmutativo:
+\[
+\begin{tikzcd}
+\Ghat(A) \arrow[r,"\Phi_A"] \arrow[d] &
+H\circ g(A) \arrow[d]\\
+\Ghat(A_g) \arrow[r,"\Phi_{A_g}"] &
+H\circ g(A_g),
+\end{tikzcd}
+\]
+que muestra que \(\Phi_A\) es la restricción de \(\Phi_{A_g}\) a \(\Ghat(A)\).
+
+Considérese a continuación el homomorfismo compuesto:
+\[
+  \Hom(\Ghat\circ i,H)\longrightarrow
+  \Hom(\Gg,H\circ g)\longrightarrow
+  \Hom(\Ghat,H\circ g)\longrightarrow
+  \Hom(\Ghat\circ i,H),
+\]
+y está claro que es la identidad, de donde resulta lo anunciado.
+
+\textbf{Teorema 1.10.} Sea \(H\) un funtor sobre la categoría \(\mathcal C_0\) de las \(K\)-álgebras, con valores en la categoría de los grupos abelianos filtrados separados y completos, y que conmuta con los invariantes bajo un grupo finito. Entonces la aplicación de \(\Hom_{\Abfil}(\Ghat\circ i,H)\) en \(H(K[X])\) que asocia a un morfismo de funtores su valor sobre el elemento \(1+Xt\) de \(\Ghat\circ i(K[X])\) es inyectiva; su imagen es el subgrupo de \(H(K[X])\) formado por los elementos \(\theta\) tales que (con notaciones análogas a las de 1.4 y 1.5):
+\[
+\begin{array}{ll}
+\text{i)}& H(f_1)(\theta)=0;\\[0.3em]
+\text{ii)}& \forall n\geq1,\quad
+H(f_n)\bigl(u_H^n(\theta)\bigr)\equiv u_H^n(\theta)
+\ \mathrm{mod.}\ F^nH(K[X_1,\ldots,X_n]).
+\end{array}
+\]
+El teorema resulta inmediatamente del teorema 1.6 y del lema 1.9, teniendo en cuenta que \(H\circ g(K[X])\) no depende de la filtración elegida sobre \(K[X]\).
+
+El teorema análogo obtenido reemplazando \(\Ghat\) por \((\Ghat)^k\) también es verdadero (cf. 1.7).
+
+Cuando no haya riesgo de confusión, denotaremos el funtor \(\Ghat\circ i\) por \(\Ghat\), lo cual es legítimo porque \(i\) identifica \(\mathcal C_0\) con una subcategoría de \(\mathcal C\).

@@ -1,0 +1,198 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: sección 4, números 4.1--4.5, líneas 10527--10718 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{4. Inmersiones regulares y filtración de \(K^\circ\)}
+
+Conservamos en este parágrafo las notaciones y las hipótesis de 3.1.
+
+\textbf{Lema 4.1.} Supongamos que existe sobre \(Y\) un haz localmente libre de tipo finito \(N'\), tal que, si \(N,N'\) son las clases en \(K^\circ(Y)\) de \(N,N'\), se tiene \(N=N'+2\). Entonces se verifica la congruencia siguiente:
+\[
+  \lambda_{-1}(F)\equiv 0 \pmod{1-L}.
+\]
+
+Sea \(d\) el rango de \(N\) (que se puede suponer constante); el de \(F\) es entonces \(d-1\). Por definición:
+\[
+\begin{aligned}
+\lambda_{-1}(F)
+ &= \sum_{i\ge0}(-1)^i\lambda^i(F)\\
+ &= (-1)^{d-1}\lambda^{d-1}(F-1)\\
+ &= (-1)^{d-1}\lambda^{d-1}(F+L-1-L)\\
+ &= (-1)^{d-1}\lambda^{d-1}(N-2+1-L).
+\end{aligned}
+\]
+Ahora bien, \(\lambda_t(1-L)=\lambda_t(1)/\lambda_t(L)=(1+t)/(1+Lt)\). Por tanto, para todo \(i\ge1\), \(\lambda^i(1-L)\) es divisible por \(1-L\). Por consiguiente:
+\[
+\begin{aligned}
+\lambda_{-1}(F)
+  &\equiv (-1)^{d-1}\lambda^{d-1}(N-2) \pmod{1-L}\\
+  &\equiv(-1)^{d-1}\lambda^{d-1}(N') \pmod{1-L}.
+\end{aligned}
+\]
+Ahora bien, \(N'\) es de rango \(d-2\), luego \(\lambda^{d-1}(N')=0\), de donde resulta el enunciado.
+
+\subsection*{4.2}
+
+Sea \(i:Y\to X\) una inmersión regular. Sea \(r\) un entero \(\ge1\), y sea \(s:X\longrightarrow \mathbf P_X^r\) la sección definida por el homomorfismo \((\mathcal O_X)^{r+1}\to\mathcal O_X\), obtenido pasando al cociente por el subhaz engendrado por las \(r\) últimas coordenadas. Si \(\mathbf P_X^r\) está definido por la \(\mathcal O_X\)-álgebra graduada \(\mathcal O_X[T_0,\ldots,T_r]\), el ideal \(I\) que define la sección \(s\) es el ideal engendrado por las secciones \(T_1,\ldots,T_r\). Así, \(I/I^2\) es isomorfo a \((\mathcal O_X[T_0])^r\), y por tanto el ideal correspondiente de \(\cO_P\) es isomorfo a \((\mathcal O_X)^r\).
+
+Como la sección \(s\) es evidentemente una inmersión regular, lo mismo vale para \(s\circ i\), y se puede escribir la sucesión exacta de los haces conormales correspondiente (1.7). Se obtiene así la igualdad siguiente en \(K^\circ(Y)\), denotando por \(N\) el haz conormal de \(i\), y por \(N_1\) el haz conormal de \(s\circ i\):
+\[
+  N_1=N+r.
+\]
+Se ve, pues, que para toda inmersión regular \(i\) se puede, componiéndola con una sección \(X\to\mathbf P_X^2\), o bien con \(X\to\mathbf P_{\mathbf P_X^1}^{1}\), obtener una inmersión regular que satisfaga la propiedad del lema 4.1.
+
+\textbf{Teorema 4.3.} Sean \(i:Y\to X\) una inmersión cerrada regular y \(N\) la clase en \(K^\circ(Y)\) del haz conormal de \(Y\) en \(X\). Se supone que \(X\) es cuasicompacto y posee un haz amplio. Entonces, con las notaciones de 3.3, para todo \(y\in K^\circ(Y)\) y todo \(p\ge1\), se tiene:
+\begin{equation}\tag{4.3.1}
+ i_*\bigl(\lambda^p(N,y)\bigr)\equiv \lambda^p(i_*(y))
+ \pmod{\text{torsión}},
+\end{equation}
+donde \(\lambda^p(N,y)\) es el elemento definido en (V 5.3).
+
+i) Supongamos primero que se satisface la hipótesis de 4.1; en este caso mostraremos que \(i_*\bigl(\lambda^p(N,y)\bigr)=\lambda^p(i_*(y))\). Como \(f_*\circ f^*=\Id\), esta relación equivale a
+\[
+  f^*\bigl(i_*(\lambda^p(N,y))\bigr)=
+  f^*\bigl(\lambda^p(i_*(y))\bigr).
+\]
+Ahora bien:
+\[
+\begin{aligned}
+ f^*\bigl(\lambda^p(i_*(y))\bigr)
+ &=\lambda^p\bigl(f^*(i_*(y))\bigr)\\
+ &=\lambda^p\bigl(j_*(g^*(y)\lambda_{-1}(F))\bigr),
+\qquad(3.4)
+\end{aligned}
+\]
+y, por otra parte:
+\[
+  f^*\bigl(i_*(\lambda^p(N,y))\bigr)
+  =
+  j_*\bigl(g^*(\lambda^p(N,y))\lambda_{-1}(F)\bigr)\ (3.4).
+\]
+Como \(g^*(N)=F+L\), se puede aplicar la fórmula (V (5.4.2)):
+\[
+  g^*(\lambda^p(N,y))\lambda_{-1}(F)
+  =
+  \lambda^p(g^*(N),g^*(y))\lambda_{-1}(F)
+  =
+  \lambda^p(L,g^*(y)\lambda_{-1}(F)).
+\]
+Poniendo \(z=g^*(y)\lambda_{-1}(F)\), queda por demostrar la relación
+\[
+  j_*\bigl(\lambda^p(L,z)\bigr)=\lambda^p(j_*(z)),
+\]
+es decir, la relación análoga para la inmersión \(j\) y el elemento \(z\). Ahora bien, por hipótesis \(\lambda_{-1}(F)\) es múltiplo de \((1-L)\); se puede hallar \(z'\) tal que \(z=z'(1-L)\). Entonces
+\[
+  z=j^*(u')\quad\text{con }u'=j_*(z')
+\]
+(2.7); como \(L=j^*(J')\), queda finalmente por verificar:
+\[
+  j_*\bigl(j^*(\lambda^p(J',u'))\bigr)=
+  \lambda^p\bigl(j_*(j^*(u'))\bigr).
+\]
+La sucesión exacta
+\[
+  0\longrightarrow J'\longrightarrow \mathcal O_{X'}
+  \longrightarrow \mathcal O_{Y'}\longrightarrow 0
+\]
+da la relación:
+\begin{equation}\tag{4.3.2}
+  j_*(1)=1-J'.
+\end{equation}
+La relación que hay que verificar se escribe, pues, finalmente, aplicando la fórmula de proyección:
+\[
+  \lambda^p(J',u')(1-J')=\lambda^p(u'(1-J')).
+\]
+Como \(1-J'=\lambda_{-1}(J')\), esta es la fórmula que sirve para definir \(\lambda^p(J',u')\).
+
+ii) Situémonos en el caso general. Se compone entonces \(i\) con una sección \(X\to\mathbf P_X^1\), y después con una sección \(\mathbf P_X^1\to\mathbf P_{\mathbf P_X^1}^1\), de modo que la inmersión compuesta satisfaga la condición de 4.1 (véase 4.2). El teorema 4.3 es entonces verdadero para la inmersión compuesta por lo que precede; queda, pues, «descender» a \(X\). Se desciende primero a \(\mathbf P_X^1\), y luego a \(X\), de modo que la demostración se lleva a cabo aplicando dos veces el lema siguiente (debido a J.-P. Jouanolou):
+
+\textbf{Lema.} En las condiciones de 4.3, sea \(s:X\to\mathbf P_X^1\) la sección definida en 4.2. Si el teorema 4.3 es verdadero para \(s\circ i\), es verdadero para \(i\).
+
+Si se supone 4.3 verdadero para \(s\circ i\), para todo \(p\ge1\) y todo \(y\in K^\circ(Y)\) se tiene:
+\begin{equation}\tag{4.3.3}
+ (s\circ i)_*\bigl(\lambda^p(N+1,y)\bigr)
+ \equiv
+ \lambda^p\bigl((s\circ i)_*(y)\bigr)
+ \pmod{\text{torsión}}.
+\end{equation}
+La sección \(s\) está definida por un ideal isomorfo a \(\mathcal O_{\mathbf P}(-1)\) (4.2); denotemos por \(\xi\) su clase en \(K^\circ(\mathbf P_X^1)\). Se tiene entonces la relación siguiente para todo \(x\in K^\circ(X)\):
+\[
+  s_*(x)=p^*(x)(1-\xi),
+\]
+donde \(p\) es el morfismo estructural \(\mathbf P_X^1\to X\). En efecto, como \(p\circ s=\Id_X\), se tiene \(x=s^*(p^*(x))\), de donde \(s_*(x)=s_*(s^*(p^*(x)))=p^*(x)s_*(1)\); como \(s_*(1)=1-\xi\), se obtiene la relación deseada. La relación (4.3.3) se escribe entonces:
+\[
+\begin{aligned}
+(s\circ i)_*\bigl(\lambda^p(N+1,y)\bigr)
+&\equiv \lambda^p\bigl(p^*(i_*(y))(1-\xi)\bigr)\pmod{\text{torsión}}\\
+&\equiv \lambda^p(\xi,p^*(i_*(y)))(1-\xi)\pmod{\text{torsión}}.
+\end{aligned}
+\]
+Ahora bien, \(\lambda^p(\xi,p^*(i_*(y)))-\lambda^p(1,p^*(i_*(y)))\) es divisible por \(1-\xi\): para verlo, se puede trabajar en el \(\lambda\)-anillo universal que sirve para definir los \(\lambda^p(\xi,X)\) (V 5); entonces \(\lambda^p(\xi,X)-\lambda^p(1,X)\) es un polinomio en \(\xi\), nulo para \(\xi=1\), y por tanto divisible por \(\xi-1\). Por otra parte, la ecuación de dependencia de \(\xi\) sobre \(K^\circ(X)\) es \((1-\xi)^2=0\) (VI (1.13.1)). Se obtiene, pues:
+\[
+\begin{aligned}
+(s\circ i)_*\bigl(\lambda^p(N+1,y)\bigr)
+&\equiv \lambda^p(1,p^*(i_*(y)))(1-\xi) \pmod{\text{torsión}}\\
+&\equiv p^*(\lambda^p(1,i_*(y)))(1-\xi) \pmod{\text{torsión}}.
+\end{aligned}
+\]
+Aplicando \(p_*\), se obtiene:
+\begin{equation}\tag{4.3.4}
+  i_*\bigl(\lambda^p(N+1,y)\bigr)
+  \equiv \lambda^p(1,i_*(y)) \pmod{\text{torsión}},
+\end{equation}
+puesto que \(p_*(\xi)=0\).
+
+Según la fórmula de (V 5.6), aplicada a \(L=1\), \(\lambda^p(N+1,y)\) es el coeficiente de \(t^p\) en la serie:
+\[
+  \frac{\sum_{k\ge1}\lambda^k(N,y)kt^k}
+       {1+\sum_{k\ge1}\lambda^k(N,y)\lambda_{-1}(N)t^k}.
+\]
+Del mismo modo, la misma fórmula aplicada a \(N=0\) y \(L=1\) muestra que \(\lambda^p(1,y)\) es el coeficiente de \(t^p\) en la serie:
+\[
+  \frac{\sum_{k\ge1}\lambda^k(y)kt^k}
+       {\sum_{k\ge0}\lambda^k(y)t^k}.
+\]
+Las congruencias (4.3.4) pueden, pues, escribirse:
+\[
+i_*\left(
+  \frac{\sum_{k\ge1}k\lambda^k(N,y)t^k}
+       {1+\sum_{k\ge1}\lambda^k(N,y)\lambda_{-1}(N)t^k}
+\right)
+\equiv
+  \frac{\sum_{k\ge1}k\lambda^k(i_*(y))t^k}
+       {\sum_{k\ge0}\lambda^k(i_*(y))t^k}
+       \pmod{\text{torsión}}.
+\]
+Aplicando la fórmula 2.8, se obtiene:
+\[
+  \frac{\sum_{k\ge0}k\,i_*(\lambda^k(N,y))t^k}
+       {1+\sum_{k\ge1} i_*(\lambda^k(N,y))t^k}
+  \equiv
+  \frac{\sum_{k\ge0}k\lambda^k(i_*(y))t^k}
+       {\sum_{k\ge0}\lambda^k(i_*(y))t^k}
+       \pmod{\text{torsión}}.
+\]
+Si se pone
+\[
+  u(t)=1+\sum_{k\ge1}i_*(\lambda^k(N,y))t^k,\qquad
+  v(t)=\sum_{k\ge0}\lambda^k(i_*(y))t^k,
+\]
+esta última relación también se puede escribir:
+\[
+  \frac{d}{dt}\!\left(\frac{u(t)}{v(t)}\right)\equiv0
+  \pmod{\text{torsión}}.
+\]
+Como el término constante de \(u(t)/v(t)\) es \(1\), y se escriben congruencias módulo torsión, se puede integrar y escribir la congruencia \(u(t)\equiv v(t)\). Esto da las congruencias anunciadas.
+
+\textbf{Corolario 4.4.} Con las notaciones y las hipótesis de 4.3, para todo \(p\ge1\) y todo \(y\in K^\circ(Y)\) se tiene:
+\[
+  i_*\bigl(\gamma^p(N,y)\bigr)\equiv \gamma^p(\sisi{i'_*}{i_*}(y))
+  \pmod{\text{torsión}}.
+\]
+El corolario resulta inmediatamente de 4.3, utilizando la expresión de los \(\gamma^p\) como combinaciones lineales con coeficientes enteros de los \(\lambda^p\).
+
+\textbf{Observación 4.5.} La propia demostración de 4.3 hace pensar que (4.3.1) debe ser verdadera no solamente módulo torsión, sino también como igualdad. En [RRR], la igualdad se demostraba en característica \(0\) gracias a una caracterización geométrica de los \(\lambda^p(N,x)\). Sería sin duda posible extender este método a todas las características si se supiera definir las operaciones de potencia exterior sobre los complejos perfectos (cf. XIV).
+

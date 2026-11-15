@@ -1,0 +1,58 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 3, líneas 9168--9215 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{3. Consecuencias del teorema de estructura para el \(K'\) de un fibrado proyectivo}
+
+\textbf{Proposición 3.1.} Sean \(S\) un esquema cuasicompacto, \(E_1,\ldots,E_n\) \(\mathcal O_S\)-módulos localmente libres de tipo finito, \(\mathbf D(E_i)\) el esquema de banderas de \(E_i\), \(X=\mathbf D(E_1)\times_S\cdots\times_S D(E_n)\).
+Entonces el homomorfismo canónico:
+\[
+  K'(S)\longrightarrow K'(X)
+\]
+es inyectivo (estando \(K'\) definido, bien a partir de los \(\mathcal O_S\)-módulos localmente libres de tipo finito, bien a partir de los complejos perfectos).
+
+Se verifica inmediatamente, utilizando la propiedad universal de los esquemas de banderas, que \(X\) puede construirse como sigue: se considera la sucesión de \(S\)-esquemas \(X_1,\ldots,X_n\), definidos por recurrencia tomando como \(X_k\) el esquema de banderas de la imagen inversa de \(E_k\) sobre \(X_{k-1}\); entonces \(X=X_n\). Se ve de inmediato que, para demostrar la proposición, basta demostrarla cuando \(n=1\), pues el caso general se deduce por recurrencia. Podemos suponer, por tanto, que \(X\) es el esquema de banderas de un \(\mathcal O_S\)-módulo localmente libre de tipo finito \(E\).
+
+\sisi{}{Tras descomponer \(S\), si es necesario, en un número finito de
+subesquemas abiertos y cerrados, supongamos que \(E\) tiene rango constante
+\(r\).} % Canon SGA-SRC-001528
+
+Se sabe que \(X\) puede construirse entonces como sigue: se pone \(E=F_0\), \(S=X_0\), y se definen por recurrencia unos esquemas \(X_1,\ldots,X_{\sisi{n}{r}}\) y, para todo \(i\), un \(\mathcal O_{X_i}\)-módulo localmente libre de tipo finito \(F_i\), poniendo:
+\[
+  X_k=\mathbf P(F_{k-1});\qquad
+  F_k=\Ker\bigl(f_k^*(F_{k-1})\longrightarrow \mathcal O_{X_k}(1)\bigr),
+\]
+donde \(f_k\) es el morfismo estructural \(X_k\to X_{k-1}\). Se ve entonces que basta demostrar la proposición cuando \(X\) es un fibrado proyectivo sobre \(S\), pues el caso de un fibrado de banderas se deduce por recurrencia. Ahora bien, este caso resulta inmediatamente de 1.1 (resp. 2.1).
+
+\textbf{Teorema 3.2.} Sea \(S\) un esquema cuasicompacto. El pre-\(\lambda\)-anillo \(K'(S)\), definido a partir de los \(\mathcal O_S\)-módulos localmente libres de tipo finito, es un \(\lambda\)-anillo~(V 2.4).
+
+Como el homomorfismo \(\lambda_t:K'(S)\longrightarrow 1+K'(S)[[t]]^+\) es aditivo, para verificar que es un \(\lambda\)-homomorfismo basta efectuar la verificación para elementos del tipo \(\cl(E)\), donde \(E\) es un \(\mathcal O_S\)-módulo localmente libre de tipo finito. Quedamos, pues, reducidos a mostrar que, para todo par de elementos \(E,F\) de \(K'(S)\), clases de \(\mathcal O_S\)-módulos localmente libres de tipo finito \(E,F\), se verifican las relaciones V 2.4.2:
+\[
+  \lambda^i(EF)=P_i\bigl(\lambda^1(E),\ldots,\lambda^i(E);\lambda^1(F),\ldots,\lambda^i(F)\bigr);
+\]
+\[
+  \lambda^j(\lambda^i(E))=Q_{i,j}\bigl(\lambda^1(E),\ldots,\lambda^{ij}(E)\bigr).
+\]
+Como \(S\) es cuasicompacto, se puede encontrar un recubrimiento finito de \(S\) por abiertos disjuntos tal que, sobre cada uno de ellos, \(E\) y \(F\) sean de rango constante. Ahora bien, el \(K'\) de una suma directa finita de abiertos es el producto de los \(K'\) de estos abiertos. Basta, pues, verificar las relaciones V 2.4.2 en cada uno de los \(K'\) de los abiertos del recubrimiento. Podemos suponer, por tanto, que \(E\) y \(F\) son de rango constante sobre \(S\).
+
+Sea entonces \(X=\mathbf D(E)\times_S \mathbf D(F)\). El \(\lambda\)-homomorfismo \(K'(S)\to K'(X)\) es inyectivo por 3.1. Por consiguiente, para demostrar las relaciones V 2.4.2 podemos situarnos en \(K'(X)\). Como en \(K'(X)\) los elementos \(E\) y \(F\) se descomponen como suma de clases de haces invertibles, basta, por aditividad, demostrar estas mismas relaciones para elementos \(\xi,\eta\), clases de haces invertibles; todavía pueden escribirse:
+\[
+  1+\xi\eta t=(1+\xi t)\circ(1+\eta t);
+  \qquad
+  \lambda_u(1+\xi t)=1+\{1+\xi t\}u,
+\]
+poniéndolas en la forma V 2.4.1. No son entonces sino las relaciones V 2.3.1 y 2.3.3 que definen la estructura de \(\lambda\)-anillo de \(1+K'(S)[[t]]^+\).
+
+Indiquemos el siguiente resultado más general:
+
+\textbf{Teorema 3.3.} Sea \((T,A)\) un topos con anillo conmutativo; denotemos por \(K\) el grupo de Grothendieck de los \(A\)-módulos localmente libres de rango acotado sobre \(T\). Entonces \(K\), provisto de su estructura pre-\(\lambda\) canónica~(V 2.2 b)), es un \(\lambda\)-anillo.
+
+Para demostrar que \(K\) es un \(\lambda\)-anillo, hay que demostrar las relaciones V 2.4.1, y, por aditividad, basta demostrarlas para elementos \(E,F\) que sean clases de \(A\)-módulos localmente libres de rango acotado. Como los rangos de \(E\) y \(F\) están acotados, se puede descomponer \(T\) en una «~suma disjunta~» finita de abiertos sobre los cuales \(E\) y \(F\) son de rango constante. Utilizando la compatibilidad de \(K'\) con las sumas directas finitas y poniendo las relaciones V 2.4.1 en la forma V 2.4.2, se ve que basta demostrar las relaciones V 2.4.2 en cada uno de los \(K'\) de los abiertos considerados, es decir, que basta demostrar las relaciones V 2.4.2 para elementos \(E,F\), clases de \(A\)-módulos \(E,F\) localmente libres de rango constante.
+
+Sea \(E\) un \(A\)-módulo localmente libre de rango finito \(n\). Existe un torsor \(P\) bajo \(\GL(n,A)\) tal que \(E=P\times_{\GL(n,A)} (A)^n\), donde \((A)^n\) se considera como \(\GL(n,A)\)-módulo mediante la representación estándar. Se puede definir entonces un \(\lambda\)-homomorfismo de \(R_{\mathbb Z}(\GL(n))\) en \(K\), asociando a toda representación \(\rho\) de \(\GL(n)\) en un \(\mathbb Z\)-módulo libre de rango \(p\) la clase del \(A\)-módulo localmente libre
+\(P\times_{\GL(n,A)} (A)^p\), donde \((A)^p\) se considera como \(\GL(n,A)\)-módulo mediante la representación \(\rho\). En este homomorfismo, la clase de \(E\) es, pues, la imagen de la representación estándar. Para verificar una relación polinómica entre los \(\lambda^i(E)\), basta, pues, que esta relación sea satisfecha por la representación estándar en \(R_{\mathbb Z}(\GL(n))\).
+
+Se puede hacer un razonamiento análogo con dos \(A\)-módulos localmente libres \(E,F\) de rangos \(n,p\); se puede encontrar entonces un torsor \(P\) bajo \(\GL(n,A)\times\GL(p,A)\) tal que \(E=P\times_{\GL(n,A)\times\GL(p,A)} (A)^n\), donde \((A)^n\) se considera como \(\GL(n,A)\times\GL(p,A)\)-módulo haciendo actuar \(\GL(n,A)\) mediante la representación estándar y \(\GL(p,A)\) mediante la representación trivial, y recíprocamente para \(F\). A continuación se define un \(\lambda\)-homomorfismo de \(R_{\mathbb Z}(\GL(n)\times\GL(p))\) en \(K\) de la misma manera que antes, y así nos reducimos a verificar las relaciones entre los \(\lambda^i(E)\), \(\lambda^j(F)\) para los elementos correspondientes de \(R_{\mathbb Z}(\GL(n)\times\GL(p))\). Quedamos, pues, reducidos a mostrar que, para todo esquema en grupos \(G\) sobre \(\Spec\mathbb Z\), producto finito de esquemas en grupos lineales, el pre-\(\lambda\)-anillo \(R_{\mathbb Z}(G)\) es un \(\lambda\)-anillo. Para ello, podemos remitirnos a [5], donde \(R_{\mathbb Z}(G)\) se calcula explícitamente. Si no se quiere utilizar este resultado, se puede razonar de manera análoga a 3.2, utilizando 1.14.

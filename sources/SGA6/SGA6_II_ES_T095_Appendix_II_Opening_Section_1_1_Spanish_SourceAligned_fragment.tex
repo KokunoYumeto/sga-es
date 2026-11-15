@@ -1,0 +1,69 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, preámbulo y §1.1, líneas 4442--4503 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+% Additions for Expose II, Appendix II
+\providecommand{\cO}{\mathcal O}
+\providecommand{\cE}{\mathscr E}
+\providecommand{\cF}{\mathscr F}
+\providecommand{\cG}{\mathscr G}
+\providecommand{\cH}{\mathcal H}
+\providecommand{\cL}{\mathscr L}
+\providecommand{\cP}{\mathscr P}
+\providecommand{\cM}{\mathscr M}
+\providecommand{\cD}{\mathcal D}
+\providecommand{\R}{\mathbb R}
+\providecommand{\C}{\mathbb C}
+\providecommand{\N}{\mathbb N}
+\providecommand{\Zell}{\mathbb Z_\ell}
+\providecommand{\Qell}{\mathbb Q_\ell}
+\providecommand{\C}{\mathbb C}
+\providecommand{\Ch}{\operatorname{Ch}}
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Td}{\operatorname{Td}}
+\providecommand{\Diff}{\operatorname{Diff}}
+\providecommand{\Homop}{\operatorname{Hom}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\pr}{\operatorname{pr}}
+\providecommand{\ind}{\operatorname{ind}}
+\providecommand{\soft}{\operatorname{soft}}
+\providecommand{\Ban}{\operatorname{Ban}}
+\providecommand{\Lop}{\operatorname{L}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\Parf}{\operatorname{Parf}}
+\providecommand{\id}{\operatorname{id}}
+
+\newpage
+\section*{Exposición II, Apéndice II. Definición del índice analítico de un complejo elíptico relativo}
+
+En este apéndice nos proponemos mostrar que la noción de complejo perfecto conduce a una definición sencilla y natural del «índice analítico» de una familia continua de operadores diferenciales elípticos o, más generalmente, de un «complejo elíptico relativo». Para el lector iniciado, digamos que la definición que se da aquí presenta, frente a las definiciones clásicas (véase, por ejemplo, [2][17]), la ventaja de no requerir una deformación del complejo elíptico considerado.
+
+Los §§1 y 2 consisten en recordatorios sobre la noción clásica de «estructura mixta»\footnote{Se aconseja al lector advertido que los omita.}. Naturalmente, solo damos el mínimo de definiciones y resultados necesario para poder enunciar y demostrar, en el §3, el teorema central que tenemos en mente y que afirma, de manera algo más precisa, que la imagen directa, por la proyección (supuesta propia) sobre la base (supuesta localmente compacta), de un complejo elíptico relativo es un complejo perfecto. Cuando la base $S$ es compacta, la definición del índice analítico como elemento de $K(S)$ («grupo de Grothendieck» de los fibrados vectoriales complejos de rango finito sobre $S$) se deduce entonces de los sorites de globalización de (II 2.3.2).
+
+En todo lo que sigue, si $S$ es un espacio topológico, se denotará por $\cO_S$ el haz de las funciones continuas sobre $S$ con valores reales.
+
+\subsection*{1. Los sorites de las estructuras mixtas}
+
+En esta sección se fija un espacio topológico $S$.
+
+\subsubsection*{1.1. Definición de las variedades mixtas}
+Sea $V$ un abierto de $\R^n$. Para $r\in\N$, se denota por $C^r(V)$ el espacio de Fréchet de las funciones de clase $C^r$ sobre $V$ con valores reales. Se pone
+\[
+ C^\infty(V)=\varprojlim_r C^r(V).
+\]
+Sea $U$ un abierto de $S$. Para $r\in\N\cup\{\infty\}$, se denota por ${}^r\cO_{U\times V}$ el haz de anillos sobre $U\times V$ definido por
+\[
+ \Gamma(U'\times V',{}^r\cO_{U'\times V'})=C(U',C^r(V')),
+\]
+donde $U'$ (resp. $V'$) es un abierto de $U$ (resp. $V$), y $C(U',C^r(V'))$ designa el espacio de las aplicaciones continuas de $U'$ en $C^r(V')$. Se tiene una inyección canónica
+\[
+ \pr_1^{-1}(\cO_U)\longrightarrow{}^r\cO_{U\times V},
+\]
+que hace de $(U\times V,{}^r\cO_{U\times V})$ un espacio anillado sobre $U$.
+
+Se dice que un espacio anillado $X$ sobre $S$ es una \emph{variedad mixta de clase $C^r$} ($r\in\N\cup\{\infty\}$) si $X$ es localmente isomorfo (como espacio anillado sobre $S$) a un espacio del tipo $(U\times V,{}^r\cO_{U\times V})$. (Si $S$ se reduce a un punto, una variedad mixta de clase $C^r$ sobre $S$ no es otra cosa que una variedad de clase $C^r$ en el sentido usual).
+
+Sea $f:X\to S$ una variedad mixta de clase $C^r$. Para $s\in S$, la fibra $X_s=f^{-1}(s)$, provista del haz $i_s^{-1}(\cO_X)/I_s$, donde $i_s:X_s\to X$ es la inyección e $I_s$ el ideal de las secciones que «se anulan» sobre $X_s$, es una variedad de clase $C^r$.

@@ -1,0 +1,56 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice I, conclusión de la sección 1, líneas 4390--4438 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+Denotemos por $Z$ el esquema cuasicompacto y cuasiseparado obtenido pegando dos ejemplares de $X$ a lo largo de $U$, y por $j_1,j_2$ las dos inmersiones abiertas canónicas de $X$ en $Z$, de modo que se tiene un cuadrado cartesiano
+\[
+\begin{tikzcd}
+ U \arrow[r,"i"] \arrow[d,"i"'] & X \arrow[d,"j_1"]\\
+ X \arrow[r,"j_2"] & Z .
+\end{tikzcd}
+\]
+Se tiene
+\[
+ j_2^*R^1j_{1*}(\widetilde I)\simeq R^1i_*(i^*\widetilde I),
+\]
+de donde
+\[
+ H^0(X,R^1j_{1*}(\widetilde I))\simeq H^1(U,\widetilde I)\ne0,
+\]
+y por tanto $R^1j_{1*}(\widetilde I)\ne0$, lo que prueba (0.2).
+
+Por otra parte, según (II 3.4 y 3.5), se tiene
+\[
+ \mathbb RQ\,\mathbb Rj_{1*}(\widetilde I)\simeq j_{1*}(\widetilde I).
+\]
+Se deduce de ello una sucesión espectral cuya sucesión exacta de términos de grados bajos proporciona el isomorfismo
+\[
+ R^1j_{1*}(\widetilde I)\simeq R^2Q(j_{1*}\widetilde I).
+\]
+Como el haz $j_{1*}\widetilde I$ es inyectivo en $\Qcoh(Z)$, se ha probado la primera parte de (0.3).
+
+Finalmente, sea $E\in\Ob\Qcoh(Z)$. Se tiene el isomorfismo de dualidad
+\[
+ \mathbb R\Hom_{\Mod}(E,\mathbb Rj_{1*}(\widetilde I))
+ \simeq \mathbb R\Hom_{\Mod}(j_1^*E,\widetilde I),
+\]
+pero, como $X$ es afín, se tiene (II 3.5)
+\[
+ \mathbb R\Hom_{\Mod}(j_1^*E,\widetilde I)
+ \simeq \mathbb R\Hom_{\Qcoh}(j_1^*E,\sisi{I}{\widetilde I})
+ \simeq \Hom(j_1^*E,\widetilde I).
+\]
+Se deduce
+\[
+ \mathbb R\Hom_{\Mod}(E,\mathbb Rj_{1*}(\widetilde I))
+ \simeq \Hom(j_1^*E,\widetilde I),
+\]
+de donde una sucesión espectral cuya sucesión exacta de términos de grados bajos da el isomorfismo
+\[
+ \Ext^2_{\Mod}(E,j_{1*}\widetilde I)
+ \simeq \Hom(E,R^1j_{1*}\widetilde I).
+\]
+Por consiguiente, el morfismo identidad de $E=R^1j_{1*}(\widetilde I)$ proporciona un elemento no nulo de $\Ext^2_{\Mod}(E,j_{1*}\widetilde I)$; por tanto, el funtor $\mathrm D^b(\Qcoh(Z))\longrightarrow \mathrm D^b(Z)$ no es plenamente fiel, lo que termina la demostración de (0.3).

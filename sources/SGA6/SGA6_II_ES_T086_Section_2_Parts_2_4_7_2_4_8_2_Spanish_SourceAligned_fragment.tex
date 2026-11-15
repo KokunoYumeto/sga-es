@@ -1,0 +1,58 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.4.7--2.4.8.2, líneas 4056--4105 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+He aquí, para terminar, un complemento interesante de (2.4.5). Demos primero una definición:
+
+\textbf{Definición 2.4.7.} Se llama \emph{espacio pseudoanalítico complejo} a todo espacio anillado localmente isomorfo a un espacio anillado del tipo $(Y,\mathcal O_X|Y)$, donde $X$ es un espacio analítico complejo y $Y$ una parte cerrada de $X$.
+
+El haz estructural de un espacio pseudoanalítico complejo es, por tanto, coherente. Se dice que un espacio pseudoanalítico complejo es de Stein si lo es el topos correspondiente (2.4.1).
+
+
+
+% Adiciones de continuación de la Exposición II
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\qcoh}{\mathrm{qcoh}}
+\providecommand{\parf}{\mathrm{parf}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\im}{\operatorname{Im}}
+
+\textbf{Proposición 2.4.8.}\footnote{Este resultado, así como su demostración, fue comunicado amablemente al redactor por A. Grothendieck; fue obtenido independientemente por J. Frish [5].}. Sea $S$ un espacio pseudoanalítico complejo, compacto y de Stein (2.4.7). Se supone que, para todo abierto $U$ de $S$ y todo subespacio cerrado reducido $X$ de $U$, la normalización de $X$ es localmente conexa\footnote{Admitiremos que las nociones de geometría analítica local de [10] se extienden a los espacios pseudoanalíticos complejos; en efecto, la reducción al caso usual es cada vez inmediata.} (condición verificada, por ejemplo, si $S$ está definido localmente por ecuaciones o inecuaciones analíticas reales en un espacio $\mathbb R^n$ [15]). Entonces el anillo $A=\Gamma(S,\mathcal O_S)$ es un anillo noetheriano.
+
+\emph{Demostración.} Se trata de mostrar que, si $M$ es un $A$-módulo de presentación finita, el conjunto de los submódulos (o, lo que equivale a lo mismo, el conjunto de los submódulos de tipo finito) de $M$ verifica la condición maximal. Ahora bien, si $N$ es un submódulo de tipo finito de $M$, entonces $M/N$ es de presentación finita según (I 2.6 y 2.9), luego $N$ es de presentación finita según la equivalencia (2.4.3 c)). Utilizando de nuevo la equivalencia (2.4.3 c)) entre la categoría de los $\mathcal O_S$-módulos coherentes y la categoría de los $A$-módulos de presentación finita, y la compacidad de $S$, se reduce a probar el lema siguiente:
+
+\textbf{Lema 2.4.8.1.} Sea $S$ un espacio pseudoanalítico complejo que verifica la condición de conexidad local de (2.4.8). Sean $F$ un $\mathcal O_S$-módulo coherente, $(E_n)$ una sucesión creciente de sub-$\mathcal O_S$-módulos coherentes de $F$, y $s$ un punto de $S$. Existe entonces un entorno abierto $U$ de $s$ tal que la sucesión $(E_n|U)$ sea estacionaria.
+
+\emph{Demostración.} Como el anillo $\mathcal O_{S,s}$ es noetheriano, existe un entero $n_0$ tal que $(E_n)_s=(E_{n_0})_s$ para $n\geq n_0$. Reemplazando, si es necesario, la sucesión $(E_n)$ por la sucesión $(E_n/E_{n_0})$ para $n\geq n_0$, se puede suponer, pues, que $(E_n)_s=0$ para todo $n$. Por otra parte, $F_s=M$ es un $\mathcal O_s$-módulo de tipo finito, luego existe (Bourbaki Alg. com. cap. IV \S1 teorema 1) una filtración finita
+\[
+ M=M_0\supset M_1\supset\ldots\supset M_q=0
+\]
+tal que $M_i/M_{i+1}\simeq \mathcal O_s/\mathfrak p_i$, donde $\mathfrak p_i$ es un ideal primo de $\mathcal O_s$. Como la categoría de los $\mathcal O_s$-módulos de tipo finito es equivalente a la categoría de los gérmenes en $s$ de $\mathcal O_S$-módulos coherentes, se puede suponer, localizando si es necesario en un entorno de $s$, que los $M_i$ (resp. $p_i$) son las fibras en $s$ de sub-$\mathcal O_S$-módulos coherentes $F_i$ (resp. ideales coherentes $\underline p_i$) de $F$ (resp. $\mathcal O_S$) tales que se tenga
+\[
+ F=F_0\supset F_1\supset\ldots\supset F_q=0
+\]
+y $F_i/F_{i+1}\simeq\mathcal O_S/\underline p_i$. Probar que la sucesión $(E_n)$ es estacionaria en un entorno de $s$ equivale evidentemente a probar que lo son las sucesiones inducidas sobre cada escalón de la filtración $(F_i)$ de $F$. De modo que se puede suponer que $F=\mathcal O_S$ y que $\mathcal O_{S,s}$ es un anillo íntegro, formando los $E_n$ una sucesión creciente de ideales de $\mathcal O_S$ tales que $(E_n)_s=0$.
+
+Como $\mathcal O_s$ es íntegro, y en particular reducido, se puede suponer además, gracias al teorema de Oka ([10] IV \S3), localizando si es necesario en $s$, que $S$ es reducido. Mostremos que existe un entorno abierto $U$ de $s$ tal que $E_n|U=0$ para $n$ suficientemente grande. Consideremos para ello la normalización $\widetilde S$ de $S$ ([10] IV \S4). Se sabe (loc. cit.) que $S$ es el espectro analítico ([10] II \S3) de una $\mathcal O_S$-álgebra finita $\widetilde{\mathcal O}_S$ cuya fibra en cada $t\in S$ es la clausura integral de $\mathcal O_{S,t}$ (cf. nota $(^2)$ de (2.4.8)). Se tiene $E_n\subset E_n\cdot\widetilde{\mathcal O}_S$, luego basta probar que $E_n\cdot\widetilde{\mathcal O}_S=0$ para $n$ suficientemente grande. Ahora bien, se tiene (10 II \S3 Prop.8)
+\[
+ E_n\cdot\widetilde{\mathcal O}_S = p_*(\widetilde{E_n\cdot\widetilde{\mathcal O}_S}),
+\]
+donde $p:\widetilde S\longrightarrow S$ es la proyección canónica, y $E_n\cdot\widetilde{\mathcal O}_S$ el ideal de $\mathcal O_{\widetilde S}$ definido canónicamente por $E_n\cdot\widetilde{\mathcal O}_S$. Basta, pues, mostrar que existe un entorno abierto $V$ de $s$ en $\widetilde S$ tal que $\widetilde{E_n\cdot\widetilde{\mathcal O}_S}|\sisi{U}{V}=0$ para $n$ suficientemente grande, lo que reduce al caso en que $S$ es normal, que supondremos en adelante.
+
+Como $(E_n)_s=0$, la inmersión cerrada $i_n:S_n\longrightarrow S$ definida por $E_n$ es \emph{étale} en $s$. Pero, como $S$ es normal, el conjunto de los puntos donde $i_n$ es étale es a la vez abierto y cerrado (véase el lema siguiente), luego su imagen en $S$ es una parte de $S$ a la vez abierta y cerrada. Por tanto, la restricción de $E_n$ a la componente conexa de $s$ en $S$ es nula; como esta componente conexa es un conjunto abierto, puesto que $S$ es localmente conexo, se concluye. Queda, pues, por establecer el lema siguiente:
+
+\textbf{Lema 2.4.8.2.} (cf. EGA IV 18.10.3) Sean $Y$ un espacio pseudoanalítico normal\footnote{Basta que los anillos locales de $Y$ sean íntegros.}, y $f:X\longrightarrow Y$ un morfismo no ramificado. El conjunto de los puntos de $X$ donde $f$ es étale es a la vez abierto y cerrado.
+
+\emph{Demostración.} Es inmediato que el conjunto de los puntos donde $f$ es étale es abierto (pues decir que $f$ es étale en un punto significa que $f$ es un isomorfismo en un entorno de ese punto ([8] VI)). Queda mostrar que el conjunto de los puntos donde $f$ no es étale es abierto. Como un morfismo no ramificado es localmente una inmersión ([8] VI), se puede suponer que $f$ es una inmersión cerrada, definida por un ideal coherente $I$. Sea $x$ un punto de $X$ tal que $I_x\ne0$. Sea $\underline p$ un ideal primo de $\mathcal O_{Y,x}$ que contiene $I_x$. Se tiene $\dim(\mathcal O_{Y,x})_{\underline p}>0$, pues, en caso contrario, se tendría $\underline p=0$ ya que $\mathcal O_{Y,x}$ es íntegro. Por tanto, $\sisi{Y}{X}$ es de codimensión $>0$ en $x$, luego de codimensión $>0$ en un entorno de $x$ ([10] III A Cor. 1 del lema 3), y se concluye.
+

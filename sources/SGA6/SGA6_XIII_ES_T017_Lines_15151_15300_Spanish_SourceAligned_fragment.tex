@@ -1,0 +1,334 @@
+% SGA 6, Exposición XIII: fragmento español alineado con la fuente.
+% Alcance exacto: fr.tex líneas 15151--15300. El final deja abierta la
+% enumeración del Teorema 6.7 para continuarla en el fragmento siguiente.
+% Las correcciones matemáticamente forzadas se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\begin{enumerate}[label=(\alph*)]
+\item Toda generalización de $s$ permanece en $S_0$.
+\item Toda especialización de $s$, próxima a $s$, permanece en $S_0$.
+\item Bajo las condiciones de (ii), toda especialización de $s$ permanece
+en $S_0$.
+\end{enumerate}
+
+Sea $f:X'\to X$ una presentación de Chow: $X'$ es proyectivo sobre $S$ y
+$f$ es sobreyectivo. Si se admiten (a), (b), (c) y (iii) para $X'$, entonces
+resultan para $X$ en virtud de 4.3 y 3.5. Se puede suponer, por tanto, que
+$X$ es proyectivo sobre $S$.
+
+Sea $H$ amplio para $X/S$. Si, para un $s\in S$,
+$(L^{\otimes m}\otimes H)_s$ es amplio, entonces
+$(L^{\otimes m}\otimes H)_t$ es amplio para toda generalización $t$ de $s$
+(EGA III 4.7.1). Gracias a la equivalencia de 4.6 (i) y (iv), queda así
+establecido (a).
+
+Para (b), (c) y 4.7 (iii), se puede suponer que $S$ es íntegro, con $s$
+como punto genérico en (b) y (c). Para (b) y (c) esto es claro, y para (iii)
+resulta de 3.4 (i) aplicado al morfismo $\coprod S_i\to S$, donde los $S_i$
+son las componentes irreducibles de $S$ dotadas de la estructura reducida
+inducida.
+
+Existen un esquema íntegro $S'$ y un morfismo f.p.p.f. $S'\to S$ tales que
+toda componente irreducible $X'_i$ de $X_{S'}$, dotada de la estructura
+reducida inducida, es íntegra sobre $S'$ (XII 1.3). Para demostrar (b) y
+(iii), basta hacerlo para $X_{S'}/S'$: en (b), por descenso; en (iii), por
+recurrencia noetheriana y 3.4 (i).
+
+Consideremos finalmente el morfismo sobreyectivo canónico
+$\coprod X'_i\to X_{S'}$. Entonces (b) y (iii) para $X_{S'}/S'$ resultan de
+(c) y (iii) para los $X'_i/S'$, en virtud de 4.3, 3.5 y 3.7.
+
+La cuestión se ha reducido, pues, a demostrar (c) y (iii), suponiendo que
+$S$ es íntegro de punto genérico $s$, y que $X$ es proyectivo e íntegro
+sobre $S$.
+
+Sea $\mathcal O_X(1)$ un haz muy amplio para $X/S$. Para todos $m,n$,
+$\chi(L_t^{\otimes m}(n))$ y $\chi(\mathcal O_{X_t}(n))$ no dependen de
+$t\in S$ (EGA III 7.9.4). Por tanto, (c) resulta de
+4.6 (i) $\Longleftrightarrow$ (v), que implica también que la familia de las
+clases de haces invertibles $\tau$-equivalentes a $0$ sobre las fibras de
+$X/S$ tiene un único polinomio de Hilbert; (iii) resulta, pues, de 2.11.
+
+\textbf{Observación 4.8.} Sea $X$ propio e íntegro sobre un esquema
+noetheriano $S$. Sin hipótesis de proyectividad sobre $X/S$, se ignora si
+sigue siendo cierto que
+$\underline{\Pic}^\tau_{X/S}\to\underline{\Pic}_{X/S}$ es una inmersión
+\emph{cerrada}, salvo cuando $X$ es normal sobre $S$ y
+$\underline{\Pic}_{X/S}$ es \emph{representable} (FGA 236, 2.3).
+
+% Añadido en las páginas 654--669
+\providecommand{\NS}{\operatorname{NS}}
+\providecommand{\Picard}{\operatorname{Pic}}
+\providecommand{\Et}{\mathrm{et}}
+\providecommand{\rk}{\operatorname{rk}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\HH}{\mathrm H}
+
+\subsection*{5. Teoremas de finitud de tipo «Néron--Severi»}
+
+\textbf{Teorema 5.1.} \emph{Sea $X$ propio sobre un esquema noetheriano
+$S$. Entonces los grupos de Néron--Severi
+$\underline{\Pic}_{X_K/K}(K)/\underline{\Pic}^0_{X_K/K}(K)$ de las fibras
+geométricas $X_K/K$ de $X/S$ son de tipo finito, y su rango y el orden de su
+subgrupo de torsión
+$\underline{\Pic}^\tau_{X_K/K}(K)/\underline{\Pic}^0_{X_K/K}(K)$
+permanecen acotados superiormente.}
+
+En efecto, por recurrencia noetheriana basta demostrar 5.1 después de
+reemplazar $S$ por un abierto no vacío arbitrario de $S_{\red}$; así se
+puede suponer que $\underline{\Pic}^\tau_{X/S}$ está representado por un
+$S$-esquema de tipo finito (XII 1.2 y 4.7 (iii)). Entonces el orden de
+$\underline{\Pic}^\tau_{X_K/K}(K)/\underline{\Pic}^0_{X_K/K}(K)$ es igual
+al número de componentes conexas de
+$(\underline{\Pic}^\tau_{X/S})_K$, número que permanece constante sobre un
+abierto no vacío de $S$ (EGA IV 9.7.9).
+
+Queda acotar superiormente el rango de
+$\underline{\Pic}_{X_K/K}(K)/\underline{\Pic}^\tau_{X_K/K}(K)$. Como en la
+demostración de 4.7 (iii), la cuestión se reduce fácilmente al caso en que
+$S$ es íntegro y $X$ es proyectivo e íntegro sobre $S$. Sea \(r\) la dimensión
+común de las fibras de $X/S$. Si \(r\) es \(0\) (resp. \(1\)), este rango es
+evidentemente $0$ (resp. $1$). Si \(r\) es \(\geq2\), se reducirá la cuestión al caso
+$r=2$ y $X$ liso sobre $S$. Tras restringir $S$, se puede encontrar una
+sección lineal $Y$ de $X$ que sigue siendo íntegra sobre $S$, con fibras de
+dimensión $2$; en virtud de 4.3, se puede reemplazar $X$ por $Y$. Finalmente,
+en virtud de 4.3 y 3.10, utilizando la resolución de singularidades de las
+superficies, y tras reemplazar $S$ por un recubrimiento plano de un abierto
+no vacío de $S$, se puede reemplazar $X$ por un $S$-esquema liso.
+
+Ahora, gracias a 4.6 (i) $\Longleftrightarrow$ (iii) y al teorema de finitud
+y especialización de los grupos de cohomología étale (SGA 4 XVI 2.2), 5.1
+resulta de la proposición siguiente.
+
+\textbf{Proposición 5.2.} \emph{Sean $k$ un cuerpo algebraicamente cerrado y
+$X$ un $k$-esquema propio y liso. Entonces el grupo $C^p_{\rm num}(X)$ de
+los ciclos algebraicos de codimensión $p$ sobre $X$, módulo equivalencia
+numérica, es libre de rango $\leq b^{2p}$, el número de Betti.}
+
+En efecto, si se omite la acción de las raíces de 1, la cohomología étale
+$H^*(X,\Q_\ell)=_{\rm dfn}
+\left[\varprojlim_\nu H^*(X,\Z/\ell^\nu\Z)\right]
+\otimes_{\Z_\ell}\Q_\ell$, donde $(\ell,\operatorname{car}(k))=1$, se
+convierte en una cohomología de Weil: satisface la dualidad de Poincaré y la
+fórmula de Künneth, y recibe un homomorfismo funtorial no nulo del anillo de
+ciclos algebraicos módulo equivalencia racional $C^*_{\rm rat}(X)$ (véase X
+7.13).
+
+Sean $a_1,\ldots,a_m\in C^{r-p}_{\rm rat}(X)$, donde $r=\dim(X)$, elementos
+cuyas imágenes forman una base del $\Q_\ell$-espacio vectorial en
+$H^{2(r-p)}(X,\Q_\ell)$ engendrado por los ciclos algebraicos. Consideremos
+el homomorfismo
+\[
+\alpha:C^p_{\rm rat}(X)\longrightarrow \Z^m
+\]
+definido por
+$\alpha(b)=(\langle b.a_1\rangle,\ldots,
+\langle b\sisi{,}{.}a_m\rangle)$, donde $\langle\ \rangle$ denota el número
+de intersección. Se ve fácilmente que la imagen de $\alpha$ es
+$C^p_{\rm num}(X)$.
+
+\textbf{Observación 5.3.} Sean $k$ un cuerpo algebraicamente cerrado y $X$
+una superficie propia y lisa sobre $k$. El segundo número de Betti $b^2(X)$
+puede interpretarse como $c_2(X)-2+2b^1(X)$, donde
+$b^1(X)=2\dim(\Pic^0_{X/k})$, y $c_2(X)$ es la segunda clase de Chern, la
+característica de Euler--Poincaré y el número de intersección de la diagonal
+de $X\times X$ consigo misma. Así, $b^2(X)$ tiene una interpretación
+independiente de la cohomología. La desigualdad
+$\rang(C^1_{\rm num}(X))\leq b^2(X)$, en esta forma y para
+$\operatorname{car}(k)>0$, se debe, antes de la cohomología étale, a IGUSA,
+quien utilizó resultados profundos sobre la estructura del grupo fundamental
+moderado de una curva algebraica privada de algunos puntos.
+
+\textbf{Teorema 5.4.} \emph{Sean $k$ un cuerpo algebraicamente cerrado y
+$X$ un $k$-esquema propio. Existe entonces un número finito de curvas
+cerradas íntegras $Y_1,\ldots,Y_p$ en $X$ con la propiedad siguiente: para
+que una parte $\Lambda$ del esquema $\Pic_{X/k}$ sea cuasicompacta, es
+necesario y suficiente que los números de intersección
+$\langle\lambda.Y_i\rangle$ de los $\lambda\in\Lambda$ permanezcan
+acotados. Además, se puede tomar como $p$ el rango del grupo de Néron--Severi
+$\Pic_{X/k}(k)/\Pic^0_{X/k}(k)$.}
+
+En efecto, como $\Pic^\tau_{X/k}$ es un subgrupo abierto cuasicompacto de
+$\Pic_{X/k}$ (4.7), para que $\Lambda$ sea cuasicompacta es necesario y
+suficiente que el conjunto correspondiente de puntos del espacio vectorial
+$[\Pic_{X/k}(k)/\Pic^\tau_{X/k}(k)]\otimes_\Z\Q$ sea finito. Pero la
+$\tau$-equivalencia coincide con la equivalencia numérica
+(4.6 (i) $\Longleftrightarrow$ (iii)), por lo que entre las curvas de $X$ se
+pueden elegir curvas cuyas imágenes formen una base del espacio dual; de
+aquí la afirmación.
+
+\subsection*{6. Apéndice: estudio de los $(b)$-haces sobre
+$P=\mathbf P^N_k$}
+
+\textbf{6.1.} Sean $k$ un cuerpo algebraicamente cerrado y
+$P=\mathbf P^N_k$. Sean $F$ un haz coherente sobre $P$, con polinomio de
+Hilbert
+\[
+\chi(F(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i},
+\]
+y
+\[
+(c)=(c_0,\ldots,c_r)
+\]
+una sucesión de enteros $\geq(a)$. Sean
+\[
+a_{m,i}=\sum_{j=0}^{r-i}a_{j+i}\binom{m-1+j}{j}\quad\text{y}\quad
+c_{m,i}=\sum_{j=0}^{r-i}c_{j+i}\binom{m-1+j}{j}.
+\]
+Finalmente, para todo entero $q\geq1$, denotemos el mayor subhaz coherente de
+$F$ con soporte de dimensión $\leq q-1$ por $N_q$, y sea $F_q=F/N_q$.
+
+\textbf{Lema 6.2.} \emph{Bajo las condiciones de 6.1, consideremos una
+sucesión exacta}
+\[
+0\longrightarrow I\longrightarrow\mathcal O_P^{\oplus M}
+\longrightarrow F(m)\longrightarrow0
+\]
+\emph{con $m\geq0$. Entonces $I$ es $p$-regular, con
+$p=P_r(c_{m,0},\ldots,c_{m,r})$, donde $P_r$ es el $r$-ésimo
+$(b)$-polinomio (1.9).}
+
+En efecto, $\mathcal O_P$ es evidentemente un $(0,\ldots,0,1)$-haz
+($N+1$ términos), y por tanto $I$ es un $(0,\ldots,0,M)$-haz según 1.6.
+Gracias a 2.10,
+$\chi(I(n))=M\binom{n+N}{N}-
+\sum_{i=0}^{r}a_{m,i}\binom{n+i}{i}$. La afirmación resulta, pues, de 1.11 y
+1.10.
+
+\textbf{Proposición 6.3.} \emph{Bajo las condiciones de 6.1, supongamos que
+$F$ es un $(b)$-haz. Mediante polinomios universales en los $a_i$, $b_i$ y
+$N$, se pueden calcular enteros $m,M,m_1$ y $M_1$ tales que existe una sucesión
+exacta}
+\[
+\mathcal O_P(-m_1)^{\oplus M_1}\longrightarrow
+\mathcal O_P(-m)^{\oplus M}\longrightarrow F\longrightarrow0.
+\]
+\emph{Además, $N$ solo interviene en el cálculo de $M_1$.}
+
+En efecto, se toma $m=P_{r-1}(c_0,\ldots,c_{r-1})$, con $c_i=b_i-a_i$, y
+$M=\sum a_i\binom{m+i}{i}$, de modo que, en virtud de 1.11 y 1.3, existe
+una sucesión exacta
+\[
+0\longrightarrow I\longrightarrow\mathcal O_P^{\oplus M}
+\longrightarrow F(m)\longrightarrow0.
+\]
+Del mismo modo, teniendo en cuenta 6.2, se toma $m_1=m+p$, con
+$p=P_r(\sisi{a_{m,0},\ldots,a_{m,r}}{c_{m,0},\ldots,c_{m,r}})$, y
+$M_1=M\cdot\binom{p+N}{N}-\sum a_i\binom{m_1+i}{i}
+(=\chi(I(p)))$.
+
+\textbf{Teorema 6.4.} \emph{Bajo las condiciones de 6.1, supongamos que $F$
+es un cociente de $\mathcal O_P(-m)^{\oplus M}$, con $m\geq0$. Sea
+$b_i=P_{r-i}(c_{m,i},\ldots,c_{m,r})$ para $i=0,\ldots,r$, donde $P_s$ es
+el $s$-ésimo $(b)$-polinomio (1.9); sea $b=b_1+m-1$ y sea
+$B=\sum_{i=1}^{r}a_i\binom{b+i}{i}$. Entonces:}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{$F$ es $b$-regular.}
+\item \emph{$-B\leq a_0=h^0(F(b))-B$.}
+\item \emph{$F$ es un $(b_0,\ldots,b_r)$-haz.}
+\end{enumerate}
+
+En efecto, tomemos una sección $\sigma$ de $\mathcal O_P(1)$ tal que se
+obtenga un diagrama conmutativo de filas y columnas exactas:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&0 \arrow[d]&0 \arrow[d]&0 \arrow[d]&\\
+0 \arrow[r]&I(-1) \arrow[r] \arrow[d]&I \arrow[r] \arrow[d]&J \arrow[r]
+\arrow[d]&0\\
+0 \arrow[r]&\mathcal O_P(-1)^{\oplus M} \arrow[r] \arrow[d]&
+\mathcal O_P^{\oplus M} \arrow[r] \arrow[d]&
+\mathcal O_Y^{\oplus M} \arrow[r] \arrow[d]&0\\
+0 \arrow[r]&F(m-1) \arrow[r] \arrow[d]&F(m) \arrow[r] \arrow[d]&
+G(m) \arrow[r] \arrow[d]&0\\
+&0&0&0&
+\end{tikzcd}
+\]
+Como $\chi(G(n))=\sum_{i=0}^{r-1}a_{i+1}\binom{n+i}{i}$ por 1.7, $J$ es
+$b_1$-regular por 6.2; por tanto, $H^q(I(p))=0$ para $q\geq2$ y
+$p\geq b_1-q$ por 1.4 (i). La sucesión exacta
+$H^q(\mathcal O_P^{\oplus M}(p))\longrightarrow H^q(F(m+p))
+\longrightarrow H^{q+1}(I(p))$ muestra entonces que $F(m)$ es
+$(b_1-1)$-regular; de aquí (i). La afirmación (i) implica que
+$0\leq h^0(F(b))=\chi(F(b))=
+\sum_{i=0}^{r}a_i\binom{b+i}{i}$; de aquí (ii). Según 2.10 y 1.9,
+\[
+\chi(F(b))=\sum_{i=0}^{r}a_{m,i}\binom{b_1-1+i}{i}
+\leq b_1+\sum_{i=0}^{r}c_{m,i}\binom{b_1-1+i}{i}=b_0.
+\]
+Por tanto, $h^0(F(-1))\leq h^0(F(b))\leq b_0$. Por recurrencia sobre $r$,
+se puede suponer que $G$ es un $(b_1,\ldots,b_r)$-haz; de aquí (iii),
+gracias a 1.6.2.
+
+\textbf{Lema 6.5.} \emph{Bajo las condiciones de 6.1, supongamos que $F$ no
+tiene ningún ciclo primo asociado de dimensión $0$.}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Si $h^0(F)\geq1$, entonces $h^0(F(-1))\leq h^0(F)-1$.}
+\item \emph{$H^0(F(-n))=0$ para $n\geq h^0(F)$.}
+\item \emph{Sean una sucesión exacta
+$0\to F(-1)\to F\to G\to0$ y un entero $n_0\geq0$ tales que
+$H^0(G(-n_0))=0$. Entonces $H^0(F(-n_0))=0$ y
+$h^0(F)\leq n_0.h^0(G)$.}
+\end{enumerate}
+En efecto, sea $\sigma\in H^0(F)$, $\sigma\ne0$. Entonces $\sigma$ define
+un subhaz no nulo $F'=\sisi{\mathcal O_X}{\mathcal O_P}.\sigma$ de
+$F$, por lo que $s=\dim\operatorname{supp}(F')$ es $\geq1$. Tomemos un diagrama
+conmutativo de filas y columnas exactas:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&0 \arrow[d]&0 \arrow[d]&0 \arrow[d]&\\
+0 \arrow[r]&F'(-1) \arrow[r] \arrow[d]&F' \arrow[r] \arrow[d]&G'
+\arrow[r] \arrow[d]&0\\
+0 \arrow[r]&F(-1) \arrow[r]&F \arrow[r]&G \arrow[r]&0
+\end{tikzcd}
+\]
+De $s\geq1$ resulta $G'\ne0$; por consiguiente, $F'$ no está contenido en
+$F(-1)$, es decir, la sección $\sigma$ no pertenece a la imagen de la
+inyección $H^0(F(-1))\to H^0(F)$; de aquí (i). La afirmación (ii) resulta
+inmediatamente de (i), teniendo en cuenta que $h^0(F)=0$ implica
+evidentemente $h^0(F(-1))=0$, pues $h^0(F(-1))\leq h^0(F)$. En (iii), se
+obtiene
+$0\leq h^0(F(n))-h^0(F(n-1))\leq h^0(G(n))$. Por tanto, para
+$n\geq n_0$, $h^0(F(-n_0))=h^0(F(-n))$, pues $h^0(G(-n_0))=0$; de aquí
+$h^0(F(-n_0))=0$ por (ii). Por consiguiente,
+$h^0(F(p-n_0))\leq h^0(G(1-n_0))+\cdots+h^0(G(p-n_0))
+\leq ph^0(G(p-n_0))$ para $p\geq1$; de aquí (iii).
+
+\textbf{Proposición 6.6.} \emph{Bajo las condiciones de 6.1, supongamos que
+$F$ es un $(b_0,\ldots,b_r)$-haz. Entonces $F_q$ es un
+$((b_{q-1})^q,\ldots,(b_{q-1})^2,b_{q-1},b_q,\ldots,b_r)$-haz.}
+En efecto, sea $\sigma$ una sección «general» de
+$\sisi{\mathcal O_X(1)}{\mathcal O_P(1)}$; entonces
+$\sigma$ define un diagrama conmutativo de filas y columnas exactas:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&0 \arrow[d]&0 \arrow[d]&0 \arrow[d]&\\
+0 \arrow[r]&N_q(-1) \arrow[r] \arrow[d]&N_q \arrow[r] \arrow[d]&G'
+\arrow[r] \arrow[d]&0\\
+0 \arrow[r]&F(-1) \arrow[r] \arrow[d]&F \arrow[r] \arrow[d]&G \arrow[r]
+\arrow[d]&0\\
+0 \arrow[r]&F_q(-1) \arrow[r] \arrow[d]&F_q \arrow[r] \arrow[d]&G''
+\arrow[r] \arrow[d]&0\\
+&0&0&0&
+\end{tikzcd}
+\]
+donde $G$ es un $(b_1,\ldots,b_r)$-haz (1.6 (i)) y
+$G''=G_{q-1}$ (cuestión de profundidad). Supongamos $q=1$. Entonces
+$\operatorname{dim{.}supp}(N_q)=0$; por tanto, $H^1(N_q(-1))=0$ y
+$h^0(\sisi{F_q(-1}{F_q(-1)})\leq h^0(F(-1))\leq b_0$. Además, $G'=0$,
+de modo que $G\simeq G''$. Así, $F_1$ es efectivamente un
+$(b_0,\ldots,b_r)$-haz. Además, 6.5 (ii) muestra que
+$H^0(F_1(-b_0))=0$. Si $q\geq2$, se puede suponer que $G_{q-1}$ es un
+$((b_{q-1})^{q-1},\ldots,b_{q-1},\ldots,b_r)$-haz y que
+$H^0(G_{q-1}(-b_{q-1}))=0$, razonando por recurrencia sobre $q$. Entonces 6.5 muestra que
+$H^0(F_q(-b_{q-1}))=0$ y $h^0(F_q(-1))\leq(b_{q-1})^q$; de aquí la
+afirmación.
+
+\textbf{Teorema 6.7.} \emph{Existen dos sucesiones
+$\{A_i(X_0,\ldots,X_i;Y)\}$ y
+$\{A_i^{(q)}(X_0,\ldots,X_q;Y)\}$ de polinomios con las propiedades
+siguientes. Se suponen satisfechas las condiciones de 6.1 y que $F$ es un
+cociente de $\mathcal O_P(-m)^{\oplus M}$, con $m\geq0$.}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Si $F$ es un $(b_0,\ldots,b_r)$-haz, entonces, para
+$i=0,\ldots,r$,}

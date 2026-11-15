@@ -1,0 +1,302 @@
+% SGA 6, Exposición XIII: fragmento español alineado con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 14578--14750.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Se preservan el comienzo y el final exactos del tramo, sin cierre sintético.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\section*{Exposición XIII. Los teoremas de finitud para el funtor de Picard}
+\begin{center}
+por S. Kleiman
+\end{center}
+
+\subsection*{1. Los (b)-haces}
+Sean $k$ un cuerpo algebraicamente cerrado y $X$ un $k$-esquema proyectivo,
+provisto de un módulo invertible amplio $\mathcal O_X(1)$.
+
+\textbf{Definición 1.1 (Mumford).} \emph{Sea $m\in\mathbb Z$. Un haz
+coherente $F$ sobre $X$ se dice \emph{$m$-regular} si, en cada punto del
+soporte de $F$, $\mathcal O_X(1)$ está generado por sus secciones globales y
+si, para todo $q\ge1$, se tiene}
+\[
+ H^q(F(m-q))=0.
+\]
+
+\textbf{Lema 1.2.} \emph{Sea
+\(0\longrightarrow F(-1)\longrightarrow F\longrightarrow G\longrightarrow 0\)
+una sucesión exacta de haces coherentes sobre $X$}\footnote{Se sobreentiende,
+aquí como en lo sucesivo en situaciones análogas, que \(F(-1)\to F\) está
+definido por tensorización con una sección dada de
+\(\mathcal O_X(1)\).}\emph{. Si $F$ es $m$-regular, entonces $G$ también lo
+es.}
+
+En efecto, se tiene la sucesión exacta correspondiente:
+\[
+H^q(F(m-q))\longrightarrow H^q(G(m-q))\longrightarrow H^{q+1}(F(m-q-1)).
+\]
+
+\textbf{Proposición 1.3.} \emph{Si un haz $F$ sobre $X$ es $m$-regular,
+entonces, para todo $n\ge m$, se tiene}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{$F$ es $n$-regular.}
+\item \emph{\(H^0(F(n))\otimes H^0(\mathcal O_X(1))\longrightarrow H^0(F(n+1))\) es sobreyectivo.}
+\item \emph{$F(n)$ está generado por \(H^0(F(n))\).}
+\end{enumerate}
+
+La demostración se hace por inducción sobre la dimensión \(s\) del soporte
+de \(F\); cuando \(s=-1\), es trivial. Tomemos una sección
+\(\sigma\in H^0(\mathcal O_X(1))\) que no se anule en ningún punto del
+conjunto finito \(\Ass(F)\); entonces \(\sigma\) define una sucesión exacta
+\(0\longrightarrow F(-1)\longrightarrow F\longrightarrow G\longrightarrow 0\),
+y \(G\) es \(m\)-regular por 1.2., con soporte de dimensión \(s-1\).
+
+Consideremos la sucesión exacta correspondiente:
+\[
+H^q(F(n-q-1))\longrightarrow H^q(F(n-q))\longrightarrow H^q(G(n-q)).
+\]
+Por la hipótesis de inducción, se tiene \(H^q(G(n-q))=0\) para
+\(n\ge m\); por tanto, \(H^q(F(n-q-1))=0\) implica
+\(H^q(F(n-q))=0\). Pero \(H^q(F(m-q))=0\), lo que da (i).
+
+Para establecer (ii), se hace una persecución en el diagrama conmutativo
+siguiente:
+\[
+\begin{tikzcd}[column sep=1.8em,row sep=2.5em]
+ & & & H^0(F(n))\otimes H^0(\mathcal O_X(1)) \arrow[rr] \arrow[d]
+ & & H^0(G(n))\otimes H^0(\mathcal O_X(1)) \arrow[r] \arrow[d]
+ & 0 \\
+0 \arrow[rr]
+& & H^0(F(n)) \arrow[ur] \arrow[r]
+& H^0(F(n+1)) \arrow[rr]
+& & H^0(G(n+1)\sisi{}{)} \arrow[d] \\ % Canon SGA-SRC-001405
+& & & & & 0
+\end{tikzcd}
+\]
+donde la flecha oblicua está definida por
+\(\varphi\mapsto\varphi\otimes\sigma\), las líneas horizontales son exactas,
+la primera por la \(n\)-regularidad de \(F\) y por (i), ya demostrado, y la
+segunda columna es exacta por la hipótesis de inducción.
+
+Finalmente, (iii) se deduce del diagrama conmutativo siguiente:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+H^0(F(n))_X\otimes H^0(\mathcal O_X(1))_X
+  \arrow[r,"\alpha_n"]
+  \arrow[d]
+& H^0(F(n)(1))_X
+  \arrow[d,"\beta_{n+1}"] \\
+\bigl[H^0(F(n))_X\bigr](1)
+  \arrow[r,"\beta_n\otimes\mathrm{id}"]
+& F(n)(1)
+\end{tikzcd}
+\]
+donde, si \(M\) es un espacio vectorial sobre \(k\), se escribe \(M_X\) para
+\(M\otimes_k\mathcal O_X\). Para \(n\ge m\), \(\alpha_n\) es sobreyectiva
+por (ii); por tanto, si \(\beta_{n+1}\) es sobreyectiva, entonces
+\(\beta_n\) también lo es. Por el teorema de Serre, \(\beta_{n+1}\) es
+sobreyectiva para \(n\gg0\); de donde resulta (iii).
+
+\textbf{Proposición 1.4.} \emph{Sea \(0\to F(-1)\to F\to G\to0\) una
+sucesión exacta sobre \(X\). Si \(G\) es \(m\)-regular, entonces se tiene}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(H^q(F(n))=0\) para \(q\ge2\) y \(n\ge m-q\).}
+\item \emph{\(h^1(F(n-1))\ge h^1(F(n))\) para \(n\ge m-1\).}
+\item \emph{\(H^1(F(n))=0\) para \(n\ge (m-1)+h^1(F(m-1))\).}
+\end{enumerate}
+\emph{En particular, \(F\) es
+\([m+h^1(F(m-1))]\)-regular.}
+
+En efecto, en la sucesión exacta
+\[
+H^{q-1}(G(n))\longrightarrow H^q(F(n-1))\longrightarrow H^q(F(n))\longrightarrow H^q(G(n)),
+\]
+los dos grupos extremos son \(0\) para \(q\ge2\) y
+\(n\ge m-(q-1)\) por \sisi{2.3}{1.3} (i). Por tanto, % Canon SGA-SRC-001406
+\(H^q(F(m-q))\xrightarrow{\sim}H^q(F(m-q+1))\xrightarrow{\sim}H^q(F(m-q+2))\xrightarrow{\sim}\ldots\),
+pero, por el teorema de Serre, \(H^q(F(n))=0\) para \(n\gg0\); de donde
+resulta (i).
+
+Para \(n\ge m-1\), consideremos la sucesión exacta siguiente:
+\[
+0\to H^0(F(n-1))\to H^0(F(n))
+  \xrightarrow{\alpha_n}H^0(G(n))\to H^1(F(n-1))
+  \to H^1(F(n))\to0
+\]
+Esta implica (ii). Ahora bien, supongamos que \(\alpha_n\) es sobreyectiva y
+consideremos el diagrama conmutativo siguiente:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+H^0(F(n))\otimes H^0(\mathcal O_X(1))
+  \arrow[r,"\alpha_n\otimes\mathrm{id}"]
+  \arrow[d]
+& H^0(G(n))\otimes H^0(\mathcal O_X(1))
+  \arrow[r]
+  \arrow[d,"\beta_n"]
+& 0 \\
+H^0(F(n+1))
+  \arrow[r,"\alpha_{n+1}"]
+& H^0(G(n+1)).
+\end{tikzcd}
+\]
+Si \(n\ge m\), entonces \(\beta_n\) es sobreyectiva por \sisi{2.3}{1.3} (ii); por tanto, % Canon SGA-SRC-001407
+\(\alpha_{n+1}\) es sobreyectiva. En consecuencia,
+\(H^1(F(n-1))\xrightarrow{\sim}H^1(F(n))\xrightarrow{\sim}\ldots\xrightarrow{\sim}0\).
+Por otra parte, si \(\alpha_n\) no es sobreyectiva, entonces
+\(h^1(F(n-1))>h^1(F(n))\); por tanto, \(\sisi{\mapsto n^1(F(n))}{n\mapsto h^1(F(n))}\) es % Canon SGA-SRC-001408
+\emph{estrictamente} decreciente desde \(h^1(F(m-1))\) hasta el momento de
+hacerse \(0\); de donde resulta (iii).
+
+\textbf{Definición 1.5.} \emph{Sean \(F\) un haz coherente sobre \(X\),
+\(r\) un entero \(\ge\operatorname{dim{.}supp}(F)\) y
+\((b)=(b_0,\ldots,b_r)\) una sucesión de \(r+1\) enteros. Entonces se dice
+que \(F\) es un \emph{\((b)\)-haz} si satisface uno de los dos conjuntos
+equivalentes de condiciones siguientes}~:
+
+\((1.5.1)\)
+\begin{enumerate}[label=(\roman*)]
+\item \emph{En cada punto del soporte de \(F\), \(\mathcal O_X(1)\) está
+generado por \(H^0(\mathcal O_X(1))\).}
+\item \emph{\(h^0(F(-1))\le b_0\).}
+\item \emph{(Cuando \(r\ge1\)), existe una sección
+\(\sigma\in H^0(\mathcal O_X(1))\) que define una sucesión exacta
+\(0\to F(-1)\to F\to G\to0\) tal que \(G\) sea un
+\((b_1,\ldots,b_r)\)-haz.}
+\end{enumerate}
+
+\((1.5.2)\) \emph{Existe una sucesión \(F\)-regular de \(r\) secciones
+\(\sigma_1,\ldots,\sigma_r\in H^0(\mathcal O_X(1))\) tal que, para
+\(i=0,\ldots,r\), si \(F_i\) denota la restricción de \(F\) al esquema de
+ceros de \(\sigma_1,\ldots,\sisi{\sigma_1}{\sigma_i}\), entonces % Canon SGA-SRC-001409
+\(h^0(F_i(-1))\le b_i\).}
+
+\textbf{Proposición 1.6.} \emph{Sea \(F\) un \((b)\)-haz sobre \(X\).
+Entonces}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para toda sucesión ``suficientemente general'' \(\sigma\) de
+\(r\) secciones \(\sigma_1,\ldots,\sigma_r\in H^0(\mathcal O_X(1))\), si
+\(F_{\sigma,i}\) denota la restricción de \(F\) al esquema de ceros de
+\(\sigma_1,\ldots,\sisi{\sigma_1}{\sigma_i}\), entonces
+\(h^0(F_{\sigma,i}(-1))\le b_i\), donde \(0\le i\le r\).}
+\item \emph{Todo subhaz \(G\) de \(F\) es un \((b)\)-haz.}
+\end{enumerate}
+
+En efecto, sean \(S'\) el espacio afín \(\mathbb A_k^N\) cuyos \(k\)-puntos
+corresponden a las sucesiones \(\sigma\), y \(T\) el abierto de \(\sisi{S}{S'}\) % Canon SGA-SRC-001410
+correspondiente a las sucesiones \(F\)-regulares. Para \(i\) fijo, los haces
+\(F_{\sigma,i}(-1)\) que corresponden a los \(k\)-puntos de \(T\) están
+contenidos en una familia plana sobre \(T\), y por hipótesis \(T\) es no
+vacío. Por tanto, (i) se deduce de la propiedad de semicontinuidad superior
+de la función $\sigma\longmapsto h^0(F_{\sigma,i}(-1))$ (EGA III, 7.7.5).
+Finalmente, como toda sucesión ``suficientemente general'' es \(G\)-regular
+y tal que \(G_{\sigma,i}\) es un subhaz de \(F_{\sigma,i}\) para todo \(i\),
+(ii) se deduce de (i).
+
+\textbf{Lema 1.7.} \emph{Sea \(0\to F(\sisi{1}{-1})\to F\to G\to0\) una sucesión % Canon SGA-SRC-001411
+exacta sobre \(X\). Si el polinomio de Hilbert de \(F\) se escribe en la
+forma}
+\[
+ \chi(F(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i},
+\]
+\emph{entonces}
+\[
+ \chi(G(n))=\sum_{i=0}^{r-1}a_{i+1}\binom{n+i}{i}.
+\]
+En efecto,
+\(\chi(G(n))=\chi(F(n))-\chi(F(n-1))=\sum_{i=0}^{r}a_i\left[\binom{n+i}{i}-\binom{n-1+i}{i}\right]\);
+por tanto, \(\chi(G(n))=\sum_{i=1}^{r}a_i\binom{n+i-1}{i-1}\), de donde
+resulta la afirmación.
+
+\textbf{Proposición 1.8.} \emph{Sean \(F\) un \((b)\)-haz sobre \(X\),
+\(s=\operatorname{dim{.}supp}(F)\) y
+\(\chi(F(n))=\sum_{i=0}^{s}a_i\binom{n+i}{i}\) el polinomio de Hilbert de
+\(F\). Entonces}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para \(n\ge -1\),
+\(h^0(F(n))\le \sum_{i=0}^{s}b_i\binom{n+i}{i}\).}
+\item \emph{\(a_s\le b_s\) y \(F\) es también un
+\((b_0,\ldots,b_{s-1},a_s)\)-haz.}
+\end{enumerate}
+En efecto, razonemos por inducción sobre \(s\). Cuando \(s=0\), es claro,
+pues \(a_0=h^0(F)=h^0(F(-1))\le b_0\). Cuando \(s\ge1\), se tiene una
+sucesión exacta
+\[
+0\longrightarrow F(-1)\longrightarrow F\longrightarrow G\longrightarrow0
+\]
+con \(G\) un \((b_1,\ldots,b_r)\)-haz y
+\(\operatorname{dim{.}supp}(G)=s-1\). Entonces
+\[
+h^0(F(n))-h^0(F(n-1))\le h^0(G(n)),
+\]
+pero
+\[
+h^0(G(n))\le\sum_{i=0}^{s-1}b_{i+1}\binom{n+i}{i}
+\]
+por inducción sobre \(s\), y \(h^0(F(-1))\le b_0\); de donde resulta (i)
+por inducción sobre \(n\ge -1\). Finalmente, por 1.7 e inducción sobre
+\(s\), \(a_s\le b_s\) y \(G\) es un
+\((b_1,\ldots,b_{s-1},a_s)\)-haz; de donde resulta (ii).
+
+\textbf{Definición 1.9.} \emph{Se llaman \emph{\((b)\)-polinomios} los
+polinomios siguientes de coeficientes racionales \(\ge0\), definidos por
+inducción}~:
+\[
+\begin{cases}
+P_{-1}=0,\\
+P_r(X_0,\ldots,X_r)=P_{r-1}(X_1,\ldots,X_r)
++\displaystyle\sum_{i=0}^{r}X_i
+\binom{P_{r-1}(X_1,\ldots,X_r)-1+i}{i}.
+\end{cases}
+\]
+
+\textbf{Observación 1.10.} Para los \((b)\)-polinomios, se ve de inmediato
+por inducción sobre \(r\ge t\) que
+\[
+P_r(X_0,\ldots,X_t,0,\ldots,0)=P_t(X_0,\ldots,X_t).
+\]
+
+\textbf{Teorema 1.11.} \emph{(El teorema principal sobre los
+\((b)\)-haces). Sean \(F\) un \((b)\)-haz sobre \(X\) y
+\(\chi(F(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}\) el polinomio de Hilbert de
+\(F\); sean \((c)=(c_0,\ldots,c_r)\) una sucesión de enteros
+\(\ge (b)-(a)\) y \(m=P_r(c)\) el entero dado por el \(r\)-ésimo
+\((b)\)-polinomio (1.9). Entonces \(m\ge0\) y \(F\) es \(m\)-regular. En
+particular, si \(s=\operatorname{dim{.}supp}(F)\), entonces \(F\) es
+\(P_{s-1}(c_0,\ldots,c_{s-1})\)-regular.}
+
+En efecto, razonemos por inducción sobre \(r\). Cuando \(r=0\), es claro,
+pues \(\sisi{m=0}{m=c_0\ge0}\) y \(F\) es \(n\)-regular para todo \(n\). Cuando \(r\ge1\), % Canon SGA-SRC-001412
+se tiene una sucesión exacta
+$0\longrightarrow F(-1)\longrightarrow F\longrightarrow G\longrightarrow0$
+donde \(G\) es un \((b_1,\ldots,b_r)\)-haz. Por 1.7 y la hipótesis de
+inducción, se ve que si \(n=P_{r-1}(c_1,\ldots,c_r)\), entonces \(n\ge0\) y
+\(G\) es \(n\)-regular. Por tanto, por 1.4, \(F\) es
+\([n+h^1(F(n-1))]\)-regular y \(h^q(F(n-1))=0\) para \(q\ge2\). Por tanto,
+\(h^1(F(n-1))=h^0(F(n-1))-\chi(F(n-1))\), lo cual es
+\(\le \sum_{i=0}^{r}(b_i-a_i)\binom{n-1+i}{i}\) por 1.8 (i), pues
+\(b_i\ge0\).\sisi{}{ Y, puesto que \(c_i\ge b_i-a_i\), esta cantidad es
+\(\le\sum_{i=0}^{r}c_i\binom{n-1+i}{i}\).} Finalmente, \(F\) es % Canon SGA-SRC-001413
+\(\left[n+\sum_{i=0}^{r}c_i\binom{n-1+i}{i}\right]\)-regular en virtud de
+1.3 (i); de donde resulta la primera afirmación. La segunda se deduce de ella
+gracias a 1.8 (ii) y 1.10.
+
+\textbf{1.12.} Sean \(S\) un esquema noetheriano y \(X\) un \(S\)-esquema
+de tipo finito. Sea \(\mathcal F\) una \emph{familia de clases de haces
+coherentes sobre las fibras de \(X/S\)}; es decir, para todo punto
+\(s\in S\) y toda extensión \(K\) de \(k(s)\), se dan haces coherentes
+\(F_K\) sobre el esquema algebraico \(X_K\), y se dice que un \(F_K\) y un
+\(F'_{K'}\) están en la misma clase si existen \(k(s)\)-homomorfismos de
+\(K,K'\) en una misma extensión \(K''\) de \(k(s)\) tales que
+\(F_{K''}(=F_K\otimes_K K'')\) y \(F'_{K''}\) sean isomorfos sobre
+\(X_{K''}\). Entonces se dice que la familia \(\mathcal F\) está
+\emph{acotada por el haz coherente} \(F\) \emph{sobre}
+\(X_T=X\times_S T\), donde \(T\) es de tipo finito sobre \(S\), si
+\(\mathcal F\) está contenida en la familia de las clases de los haces
+\(F_{k(t)}\), con \(t\in T\); se dice que \(\mathcal F\) está
+\emph{acotada} si existen \(T,F\) como arriba.
+
+Supongamos además que \(X/S\) sea proyectivo y esté provisto de un haz
+invertible (relativamente) amplio \(\mathcal O_X(1)\). Entonces se dice que
+\(\mathcal F\) es una \((b)\)-\emph{familia}, para una sucesión de enteros
+\((b)=(b_0,\ldots,b_r)\), si cada clase de \(\mathcal F\) está representada
+por un \(F_K\), con \(K\) algebraicamente cerrado, que es un \((b)\)-haz.

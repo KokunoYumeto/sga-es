@@ -1,0 +1,102 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: adiciones tipográficas y proposiciones 3.6--3.7, líneas 5552--5646 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+% Additions for Exposé III, pages 253--280
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\D}{\mathrm D}
+\providecommand{\Ho}{\mathrm H}
+\providecommand{\RHom}{\mathrm R\!\operatorname{Hom}}
+\providecommand{\parfamp}{\operatorname{parf.amp}}
+\providecommand{\tamp}{\operatorname{tor.amp}}
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\qcoh}{\mathrm{qcoh}}
+\providecommand{\coh}{\mathrm{coh}}
+\providecommand{\parf}{\mathrm{parf}}
+\providecommand{\torf}{\mathrm{torf}}
+\providecommand{\id}{\operatorname{id}}
+\providecommand{\uparf}{\underline{\mathrm{parf}}\rule[-1ex]{0pt}{0pt}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\rg}{\operatorname{rg}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\Cone}{\operatorname{Cone}}
+\providecommand{\pt}{\operatorname{Pt}}
+\providecommand{\ind}{\operatorname{ind}}
+\hbadness=10000
+\hfuzz=20pt
+\emergencystretch=3em
+
+\textbf{Proposición 3.6.} Sea
+\[
+\begin{tikzcd}
+X \arrow[r,hook,"i"] \arrow[d,"f"'] & X' \arrow[dl,"f'"]\\
+Y &
+\end{tikzcd}
+\]
+un triángulo conmutativo de esquemas, donde \(i\) es una inmersión cerrada y \(f'\) un morfismo liso, y sea \(E\in\Ob D(X)\). Para que \(E\) tenga localmente amplitud plana finita rel. a \(f\), es necesario y suficiente que \(i_*(E)\) tenga localmente amplitud plana finita (en sentido absoluto). Más precisamente, si \(f'\) tiene dimensión relativa \(\leq d\), se tiene
+\begin{align*}
+\text{(i)}\quad &\tamp(i_*(E))\subset[a,b] \Longrightarrow \tamp_f(E)\subset[a,b],\\
+\text{(ii)}\quad &\tamp_f(E)\subset[a,b] \Longrightarrow \tamp(i_*(E))\subset[a-d,b].
+\end{align*}
+
+\emph{Demostración.} Si \([m,n]\) es un intervalo de \(\mathbb Z\), se tiene evidentemente
+\[
+ \tamp_f(E)\subset[m,n]
+ \Longleftrightarrow
+ \tamp_{f'}(i_*(E))\subset[m,n],
+\]
+de modo que se puede suponer que \(X=X'\), \(i=\Id_X\), \(f=f'\). La relación (i) resulta trivialmente de (3.4.1 a)). Probemos (ii). Se tiene un cuadrado cartesiano
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X\times_Y X \arrow[l,"\operatorname{pr}_2"'] \arrow[d,"\operatorname{pr}_1"]\\
+Y & X \arrow[l,"f"']
+\end{tikzcd}
+\]
+y el morfismo diagonal \(s:X\longrightarrow X\times_YX\) es una sección de \(\operatorname{pr}_1\) y de \(\operatorname{pr}_2\). Supongamos que \(f\) es liso de dimensión relativa \(d\). Entonces (VII 1.10) \(s\) es una inmersión regular de codimensión \(\leq d\), y por tanto tiene Tor-dimensión \(\leq d\) (como se ve mediante el complejo de Koszul). Según (3.5.2), se tiene
+\[
+ \tamp_f(E)\subset[a,b]
+ \Longrightarrow
+ \tamp_{\operatorname{pr}_1}(\operatorname{pr}_2^*(E))\subset[a,b],
+\]
+y según (3.4.1 b)) se tiene
+\[
+ \tamp_{\operatorname{pr}_1}(\operatorname{pr}_2^*(E))\subset[a,b]
+ \Longrightarrow
+ \tamp(\mathbf Ls^*\operatorname{pr}_2^*(E))\subset[a-d,b],
+\]
+de donde resulta la implicación (ii), puesto que \(\mathbf Ls^*\operatorname{pr}_2^*\simeq\Id\).
+
+\textbf{Observación 3.6.1.} El enunciado (3.6) sería falso si se supusiera solamente que \(f'\) es plano; véase (3.4.2).
+
+\textbf{Proposición 3.7.} («Fórmula de proyección»)\footnote{cf. (H II 5.6).}. Sean \(S\) un esquema cuasicompacto, \(f:X\to Y\) un \(S\)-morfismo cuasicompacto y cuasiseparado de esquemas cuasicompactos sobre \(S\), \(E\in\Ob D^b(X)_{\qcoh}\), y \(M\in\Ob D^b(S)_{\qcoh}\)\footnote{El índice «qcoh» indica la subcategoría plena formada por los complejos de cohomología cuasicoherente.}. Si \(M\) tiene amplitud plana finita, o si \(E\) tiene amplitud plana finita rel. a \(S\), existe un isomorfismo funtorial canónico de \(D(Y)_{\qcoh}\)
+\[
+ Rf_*(E)\otimes_S^{\mathbf L}M
+ \xrightarrow{\sim}
+ Rf_*(E\otimes_S^{\mathbf L}M)\qquad(\text{cf. }(1.6)).
+\]
+
+\emph{Demostración.} Observemos primero que existe (EGA III 1.4.12 y IV 1.7.21) un entero \(N\) tal que \(R^if_*(F)=0\) para todo \(i>N\) y todo \(\mathcal O_X\)-módulo cuasicoherente \(F\). Por consiguiente, el funtor \(Rf_*\) envía \(D^b(X)_{\qcoh}\) en \(D^b(Y)\) (e incluso en \(D^b(Y)_{\qcoh}\) (EGA III 1.4.10 y IV 1.7.21)). Supongamos que \(E\) (resp. \(M\)) tiene amplitud plana finita rel. a \(f\) (resp. finita). La flecha de adjunción \(Lf^*Rf_*(E)\longrightarrow E\) define, al tensorizar por \(M\), una flecha canónica de \(D^-(X)\)
+\[
+ Lf^*(Rf_*(E)\otimes_S^{\mathbf L}M)
+ \longrightarrow E\otimes_S^{\mathbf L}M,
+\]
+donde \(E\otimes_S^{\mathbf L}M\in\Ob D^b(X)\). Por adjunción se deduce una flecha canónica de \(D^-(Y)\)
+\[
+ Rf_*(E)\otimes_S^{\mathbf L}M
+ \longrightarrow Rf_*(E\otimes_S^{\mathbf L}M).\tag{*}
+\]
+El objeto de llegada y el de partida tienen, además, cohomología cuasicoherente, puesto que \(Rf_*\) envía \(D^b(X)_{\qcoh}\) en \(D^b(Y)_{\qcoh}\) (EGA III 1.4.10 y IV 1.7.21) y \(\otimes_S^{\mathbf L}\) envía \(D^-(X)_{\qcoh}\times D^-(S)_{\qcoh}\) en \(D^-(X)_{\qcoh}\) (lo mismo con \(Y\) en lugar de \(X\)). Probemos que \((*)\) es un isomorfismo. Como la cuestión es local sobre \(Y\), se puede suponer que \(S\) e \(Y\) son afines. Por dévissage, en el primer caso nos reducimos inmediatamente al caso en que \(M\) es un \(\mathcal O_S\)-módulo cuasicoherente ordinario. Observando que los funtores \(Rf_*(E)\otimes_S^{\mathbf L}\cdot\) y \(Rf_*(E\otimes_S^{\mathbf L}.)\) son «way-out a la izquierda» sobre la categoría \(D^b(S)_{\qcoh}\) ([H] I 7), nos reducimos entonces, tomando una resolución izquierda de \(M\) por módulos libres y truncándola después, al caso en que \(M\) es libre. Como los \(R^if_*\) conmutan con los límites inductivos (por ser \(f\) cuasicompacto y cuasiseparado), incluso se puede suponer que \(M\) es libre de tipo finito, y luego que \(M=\mathcal O_S\). La flecha \((*)\) es entonces tautológicamente un isomorfismo. En el segundo caso nos reducimos, por dévissage, a \(M=P\), donde \(P\) es un \(A\)-módulo plano \((S=\Spec(A))\). Si se pone \(A'=D_A(P)\) (EGA \(0_{\mathrm{IV}}\) 18.2.3), \(S'=\Spec(A')\), todo se reduce a probar que \(Rf_*(E)\) conmuta con el cambio de base plano \(S'\to S\), es decir, que la flecha canónica
+\[
+ q^*Rf_*(E)\longrightarrow Rf'_*p^*(E)
+\]
+es un isomorfismo (se ha puesto \(f_{(S')}=f'\) y se ha denotado por \(p\) (resp. \(q\)) la proyección canónica \(X_{(S')}\longrightarrow X\) (resp. \(Y_{(S')}\longrightarrow Y\))). Pero esto resulta de (EGA III 1.4.15 y IV 1.7.21). Esto concluye la demostración de (3.7).

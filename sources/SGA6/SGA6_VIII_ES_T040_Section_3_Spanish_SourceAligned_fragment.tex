@@ -1,0 +1,272 @@
+% SGA 6, Exposición VIII: fragmento español alineado con la fuente.
+% Alcance exacto: sección 3 completa, fr.tex, líneas 11452--11648.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Termina inmediatamente antes de la sección 4, sin cierre sintético.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\subsection*{3. Teorema de Riemann--Roch: enunciado}
+
+\textbf{3.1.} En el número 3, $Y$ es un esquema cuasicompacto que posee un haz
+amplio.
+
+Sea $f:X\to Y$ un morfismo proyectivo, de intersección completa (1.1); se
+supone además que la dimensión relativa virtual de $f$ (1.9) es constante sobre
+$X$. Como $f$ es proyectivo, existe una inmersión cerrada $X\to P$, donde $P$
+es un fibrado proyectivo sobre $Y$, y, como $Y$ posee un haz amplio, se puede
+suponer que $P=\mathbb P^r_Y$. Se tiene, pues, una factorización
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[r,"i"] \arrow[dr,"f"'] & \mathbb P^r_Y \arrow[d,"g"]\\
+& Y.
+\end{tikzcd}
+\]
+Como $f$ es de intersección completa, la inmersión $i$ es regular (1.2).
+
+Por 1.7, $f$ es un morfismo perfecto. Además, $Y$ posee un haz amplio y, por
+consiguiente, también $X$ y $P$. Se puede definir entonces un homomorfismo
+aditivo
+\[
+f_*:K^{\bullet}(X)\longrightarrow K^{\bullet}(Y)
+\]
+(IV 2.12), pues los $K^{\bullet}$ definidos en términos de haces localmente
+libres de tipo finito o de complejos perfectos son idénticos. También se pueden
+definir homomorfismos aditivos
+\[
+i_*:K^{\bullet}(X)\longrightarrow K^{\bullet}(P);
+\qquad
+ g_*:K^{\bullet}(P)\longrightarrow K^{\bullet}(Y),
+\]
+y se tiene $f_*=g_*\circ i_*$.
+
+Sea $d$ la dimensión relativa virtual de $X$ sobre $Y$. La codimensión de $i$
+es entonces $r-d$. Por VII 4.6, el homomorfismo $i_*$ da, después de tensorizar
+por $\mathbb Q$, inclusiones
+\[
+i_*\bigl(\Fil^kK^{\bullet}(X)_{\mathbb Q}\bigr)
+\subset
+\Fil^{k+r-d}K^{\bullet}(P)_{\mathbb Q}.
+\]
+Por VI 5.8, el homomorfismo $g_*$ da inclusiones
+\[
+g_*\bigl(\Fil^{k'}K^{\bullet}(P)\bigr)
+\subset
+\Fil^{k'-r}K^{\bullet}(Y).
+\]
+Componiendo ambas, se obtiene:
+
+\textbf{Proposición 3.2.} Sea $f:X\to Y$ un morfismo proyectivo, de
+intersección completa, cuya dimensión relativa virtual $d$ es constante. Se
+supone que $Y$ es cuasicompacto y admite un haz amplio. Entonces, para todo
+$k\in\mathbb Z$, se tiene
+\[
+f_*\bigl(\Fil^kK^{\bullet}(X)_{\mathbb Q}\bigr)
+\subset
+\Fil^{k-d}K^{\bullet}(Y)_{\mathbb Q}.
+\]
+Se obtiene, pues, en particular, un homomorfismo aditivo
+\[
+f_{\mathrm{gr}}:\Gr K^{\bullet}(X)_{\mathbb Q}\longrightarrow
+\Gr K^{\bullet}(Y)_{\mathbb Q}
+\]
+que envía $\Gr^kK^{\bullet}(X)_{\mathbb Q}$ en
+$\Gr^{k-d}K^{\bullet}(Y)_{\mathbb Q}$.
+
+\textbf{3.3.} Recordemos que en (V 6.1) hemos definido un funtor
+$A\longmapsto \operatorname{Ch}(A)$ sobre la categoría de las $K$-álgebras
+graduadas, con valores en la categoría de las $K$-$\lambda$-álgebras
+aumentadas, siendo $K$ un anillo binomial (V 2.7). Si $A$ es una $K$-álgebra
+graduada, se tiene
+\[
+\operatorname{Ch}(A)=K\times(1+\widehat A^+).
+\]
+Para toda $K$-$\lambda$-álgebra aumentada $\Lambda$, hemos definido un
+$K$-$\lambda$-homomorfismo, denominado «~clase de Chern completada~» (V 6.7),
+\[
+\widetilde c=(\varepsilon,c):\Lambda\longrightarrow\operatorname{Ch}(\Gr_{\lambda}\Lambda).
+\]
+Por último, hemos definido un homomorfismo de anillos, funtorial en $A$ y
+denominado carácter de Chern (V 6.4),
+\[
+\ch:\operatorname{Ch}(A)\longrightarrow K\oplus\widehat A^+_{\mathbb Q},
+\]
+y un endomorfismo de grupos, denominado carácter de Todd (V 1.16),
+\[
+\Todd:1+\widehat A^+\longrightarrow1+\widehat A^+.
+\]
+Aplicaremos estas definiciones a los $\lambda$-anillos aumentados
+$K^{\bullet}(X)$ y $K^{\bullet}(Y)$, pues los anillos de aumentación
+$H^0(X,\mathbb Z)$ y $H^0(Y,\mathbb Z)$ son binomiales (V 2.8). Para simplificar
+las notaciones, pondremos, para todo esquema $Z$ y todo
+$z\in K^{\bullet}(Z)$,
+\[
+\ch(z)=\ch(\widetilde c(z));
+\qquad
+\Todd(z)=\Todd(c(z)).
+\]
+Para toda álgebra graduada $A$, consideraremos el grupo $1+\widehat A^+$ como
+contenido en $\widehat A$. Finalmente, si se tiene un homomorfismo $f:A\to B$,
+aditivo y compatible con las graduaciones salvo por un desplazamiento, se
+denotará también por $f$ el homomorfismo $\widehat A\to\widehat B$ que se deduce
+de él.
+
+\textbf{3.4.} Sea $X$ un esquema. Para todo $\mathcal O_X$-módulo localmente
+libre de tipo finito $E$, se denota por $\check E$ la clase en $K^{\bullet}(X)$
+del dual $\check E$ de $E$. Está claro que la función que a $E$ asocia
+$\check E$ es una función aditiva sobre la categoría de los
+$\mathcal O_X$-módulos localmente libres de tipo finito y, por consiguiente,
+define un endomorfismo de $K^{\bullet}(X)$, que se denotará por
+$x\rightsquigarrow\check x$.
+
+\textbf{Proposición 3.5.} Sea $X$ un esquema cuasicompacto. Entonces, para todo
+$x\in K^{\bullet}(X)$ y todo $i\geq0$, se tiene
+\[
+c^i(\check x)=(-1)^i c^i(x).
+\]
+La relación que se debe demostrar también puede escribirse
+\[
+c_t(\check x)=c_{-t}(x),
+\]
+poniendo $c_t(x)=\sum_{i\geq0}c^i(x)t^i$.
+Por aditividad, se puede suponer que $x$ es la clase de un
+$\mathcal O_X$-módulo localmente libre de tipo finito $E$. Además,
+reemplazando $X$ por el esquema de banderas de $E$ si es necesario, lo cual da
+una inyección sobre los $\Gr K^{\bullet}$ (VI 5.5), se puede suponer que $E$ es
+un haz invertible. Se tiene entonces $\check E=E^{-1}$; por tanto,
+$\check x=x^{-1}$.
+
+Los $c^i(\check x)$ y $c^j(x)$ son nulos para $i,j\geq2$. Basta, pues,
+demostrar que
+\[
+c^1(x^{-1})=-c^1(x).
+\]
+Ahora bien, $c^1(x)$ es la clase en $\Gr^kK^{\bullet}(X)$ de $x-1$, y
+$c^1(x^{-1})$ la de $x^{-1}-1$. La igualdad
+\[
+x^{-1}-1=1-x+(x-1)(1-x^{-1})
+\]
+da
+\[
+x^{-1}-1\equiv1-x\pmod{\Fil^2K^{\bullet}(X)};
+\]
+de donde se deduce el resultado.
+
+\textbf{Teorema 3.6 (Riemann--Roch).} Sea $f:X\to Y$ un morfismo proyectivo de
+intersección completa (1.1), cuya dimensión relativa virtual $d$ es constante
+(1.9). Se supone que $Y$ es cuasicompacto y admite un haz amplio. Con las
+notaciones de 3.3, para todo $x\in K^{\bullet}(X)$ se tiene entonces la relación
+\[
+\ch(f_*(x))=f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_f)\bigr),
+\]
+donde $\check T_f$ denota el elemento dual de la clase del complejo cotangente
+relativo $L^{X/Y}_\bullet$ (2.5 y 2.3).
+
+En otros términos, el diagrama
+\[
+\begin{tikzcd}[column sep=huge,row sep=large]
+K^{\bullet}(X) \arrow[r,"\ch\circ\widetilde c"] \arrow[d,"f_*"'] & \Gr K^{\bullet}(X)_{\mathbb Q} \arrow[d,"x\mapsto f_{\mathrm{gr}}(x\cdot\Todd(\check T_f))"]\\
+K^{\bullet}(Y) \arrow[r,"\ch\circ\widetilde c"'] & \Gr K^{\bullet}(Y)_{\mathbb Q}
+\end{tikzcd}
+\]
+es conmutativo.
+
+
+
+\subsection*{Continuación de la demostración del teorema 3.6}
+
+La demostración del teorema 3.6 ocupará el resto de esta exposición. Demos
+algunos preliminares.
+
+\textbf{Proposición 3.7.} Cualesquiera que sean
+$x\in \Gr K^{\bullet}(X)_{\mathbb Q}$ e
+$y\in \Gr K^{\bullet}(Y)_{\mathbb Q}$, se tiene
+\[
+ f_{\mathrm{gr}}\bigl(x\cdot f^{\mathrm{gr}}(y)\bigr)
+ =
+ f_{\mathrm{gr}}(x)\,y .
+\]
+
+Por aditividad, se puede suponer que \(x\) e \(y\) son homogéneos; sea
+$x\in \Gr^iK^{\bullet}(X)_{\mathbb Q}$,
+$y\in \Gr^jK^{\bullet}(Y)_{\mathbb Q}$.
+Sean $x'\in \Fil^iK^{\bullet}(X)_{\mathbb Q}$,
+$y'\in \Fil^jK^{\bullet}(Y)_{\mathbb Q}$ elementos que levantan \(x\) e
+\(y\). Entonces la fórmula de proyección da
+\[
+ f_*\bigl(x'\cdot f^*(y')\bigr)=f_*(x')\,y'.
+\]
+Por 3.2, esta igualdad se escribe en
+\(\Fil^{i+j-d}K^{\bullet}(Y)_{\mathbb Q}\). De ella se deduce una igualdad en
+\(\Gr^{i+j-d}K^{\bullet}(Y)_{\mathbb Q}\), y se comprueba inmediatamente que
+es precisamente la igualdad buscada.
+
+\textbf{Lema 3.8.} Sean \(f:X\to Y\) y \(g:Y\to Z\) dos morfismos que
+satisfacen las hipótesis de 3.6. Entonces \(g\circ f\) también las satisface.
+Si \(x\) es un elemento de \(K^{\bullet}(X)\), y si 3.6 se verifica para
+\(f\) en el elemento \(x\), y para \(g\) en el elemento \(f_*(x)\), entonces
+se verifica para \(g\circ f\) en el elemento \(x\).
+
+Por hipótesis, se tiene
+\begin{equation}\tag{3.8.1}
+ \ch(f_*(x))=
+ f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_f)\bigr),
+\end{equation}
+y
+\begin{equation}\tag{3.8.2}
+ \ch(g_*(f_*(x)))=
+ g_{\mathrm{gr}}\bigl(\ch(f_*(x))\cdot\Todd(\check T_g)\bigr).
+\end{equation}
+Combinando (3.8.1) y (3.8.2), se obtiene
+\[
+\ch(g_*(f_*(x)))=
+g_{\mathrm{gr}}\!\left(
+ f_{\mathrm{gr}}\bigl(\ch(x)\Todd(\check T_f)\bigr)\cdot \Todd(\check T_g)
+\right).
+\]
+Aplicando 3.7, se obtiene
+\[
+\ch(g_*(f_*(x)))=
+g_{\mathrm{gr}}\!\left(
+ f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_f)\cdot
+ f^{\mathrm{gr}}(\Todd(\check T_g))\bigr)
+\right).
+\]
+La funtorialidad de \(c\) y de \(\Todd\) implica
+\[
+ f^{\mathrm{gr}}(\Todd(\check T_g))=\Todd(f^*(\check T_g)).
+\]
+Por 2.7, se tiene
+\[
+ \check T_{g\circ f}=\check T_f+f^*(\check T_g).
+\]
+La multiplicatividad del carácter de Todd implica, por tanto,
+\[
+ \Todd(\check T_f)\cdot f^{\mathrm{gr}}(\Todd(\check T_g))
+ =
+ \Todd(\check T_{g\circ f}).
+\]
+Se obtiene finalmente
+\[
+ \ch(g_*(f_*(x)))=
+ g_{\mathrm{gr}}\bigl(f_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_{g\circ f})\bigr)\bigr),
+\]
+que es el resultado anunciado.
+
+\textbf{3.9.} Si se aplica 3.8 a la factorización de \(f\) dada en 3.1, se ve
+que, para demostrar el teorema de Riemann--Roch, basta demostrarlo en el caso
+de una inmersión regular de codimensión constante y en el caso del morfismo
+estructural $\mathbb P^r_Y\longrightarrow Y$.
+Además, se puede suponer que la inmersión \(i\) satisface la condición de VII
+4.1. Sea, en efecto, \(s\) la sección de \(\mathbb P^2_{\mathbb P^r_Y}\)
+introducida en VII 4.2. Entonces \(s\circ i\) es una inmersión regular que
+satisface la condición de VII 4.1 (VII 4.2) y, por 3.8, basta demostrar 3.6 para
+\(s\circ i\), \(\mathbb P^2_{\mathbb P^r_Y}\longrightarrow\mathbb P^r_Y\) y
+\(\mathbb P^r_Y\longrightarrow Y\).
+
+Se demostrará, pues, 3.6 demostrando los dos casos particulares siguientes:
+\begin{enumerate}[label=\roman*)]
+\item \(f\) es una inmersión regular de codimensión constante que satisface la
+condición de VII 4.1;
+\item \(f\) es el morfismo estructural \(\mathbb P^r_Y\to Y\).
+\end{enumerate}

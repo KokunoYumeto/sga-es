@@ -1,0 +1,78 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: demostración de 1.1.4 y conclusión del teorema 1.1, líneas 5075--5145 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\emph{Demostración.} Siguiendo un artificio debido a Lichtenbaum, se envía \(X\) diagonalmente en \(X'\times_YX''\), y se reduce inmediatamente a probar la afirmación en el caso en que uno de los morfismos \(f'\), \(f''\) es la identidad. Cambiando las notaciones, se tiene entonces un triángulo conmutativo
+\begin{equation}\tag{$*$}
+\begin{tikzcd}
+& Y \arrow[d,"f"]\\
+X \arrow[r,"i"'] \arrow[ur,"j"] & Z{,}
+\end{tikzcd}
+\end{equation}
+donde \(i\) y \(j\) son inmersiones cerradas y \(f\) un morfismo liso. Hay que mostrar que «\(i_*(E)\) \(n\)-pseudocoherente» equivale a «\(j_*(E)\) \(n\)-pseudocoherente». Como la cuestión es local en \(Y\) y en \(Z\), en un entorno de un punto de \(X\), se puede suponer que \(X,Y,Z\) son afines y que se tiene una factorización
+\[
+\begin{tikzcd}
+Y \arrow[r,"i'"] \arrow[d,"f"'] & Z[T_1,\ldots,T_r]\arrow[dl]\\
+Z{,}&
+\end{tikzcd}
+\]
+donde \(i'\) es una inmersión cerrada y la flecha oblicua la proyección canónica. Entonces, según (VII 1.10), \(i'\) es una inmersión regular; por tanto, según (1.1.1), un objeto \(F\) de \(D(Y)\) es \(n\)-pseudocoherente si y solo si \(i'_*(F)\) lo es.
+
+Se puede suponer, pues, que \(Y=Z[T_1,\ldots,T_r]\), siendo \(f\) la proyección canónica. El diagrama \((*)\) corresponde entonces a un diagrama de anillos
+\[
+\begin{tikzcd}
+& B=C[T_1,\ldots,T_r] \arrow[dl,"u"'] & \\
+A & C \arrow[l,"v"] \arrow[u,"\varepsilon"'] & {,}
+\end{tikzcd}
+\]
+donde \(u\) y \(v\) son epimorfismos y \(\varepsilon\) la inclusión canónica. Para \(1\leq i\leq r\), pongamos \(u(T_i)=x_i\), y sea \(z_i\in C\) tal que \(v(z_i)=x_i\). La retracción \(\sigma:B\longrightarrow C\) de \(\varepsilon\), definida por \(\sigma(T_i)=z_i\), es tal que \(v\sigma=u\). En lenguaje geométrico, corresponde a una sección \(s\) de \(f\) tal que \(i=sj\). Según (VII 1.10), \(s\) es una inmersión regular; la afirmación resulta, pues, de (1.1.1).
+
+\emph{Demostración de (1.1) (fin).} Sea \(f:X\to Y\) un morfismo localmente de tipo finito. Existe un recubrimiento abierto \((X_\alpha)\) de \(X\) tal que cada \(X_\alpha\) se sumerge mediante una inmersión cerrada en un esquema \(Y_\alpha\) liso sobre \(Y\). Poniendo \(\coprod X_\alpha=X'\), \(\coprod Y_\alpha=Y'\), se tiene, por tanto, un diagrama conmutativo
+\begin{equation}\tag{$a'$}
+\begin{tikzcd}
+X' \arrow[r,"\sisi{i''}{i'}"] \arrow[d,"p'"'] & Y' \arrow[ddl,"f'"]\\
+X \arrow[d,"f"']\\
+Y
+\end{tikzcd}
+\end{equation}
+donde \(p'\) es un morfismo suma de una familia sobreyectiva de inmersiones abiertas (diremos \emph{especial} para abreviar), \(i'\) una inmersión cerrada y \(f'\) un morfismo liso. Definiremos \(D(f)_{n\text{-}\coh}\) como la subcategoría plena de \(D(X)\) formada por los objetos \(E\) tales que \(i'_*p'^*(E)\) sea \(n\)-pseudocoherente. Demostremos primero que esta definición tiene sentido, es decir, que \(D(f)_{n\text{-}\coh}\) es independiente de la elección de \(i'\), \(p'\), \(f'\). Sea, pues,
+\begin{equation}\tag{$a''$}
+\begin{tikzcd}
+X'' \arrow[r,"i''"] \arrow[d,"p''"'] & Y'' \arrow[ddl,"f''"]\\
+X \arrow[d,"f"']\\
+Y
+\end{tikzcd}
+\end{equation}
+un diagrama conmutativo análogo a \((a')\) (\(p''\) un morfismo especial, \(i''\) una inmersión cerrada y \(f''\) un morfismo liso). De \((a')\) y \((a'')\) se deduce un diagrama conmutativo
+\[
+\begin{tikzcd}
+X'\times_X X'' \arrow[rr,hook] \arrow[dr] \arrow[dd] & & Y'\times_Y Y'' \arrow[dr] \arrow[dd] & \\
+& X' \arrow[rr,hook,"i'"] \arrow[dd] & & Y' \arrow[dd,"f'"]\\
+X'' \arrow[rr,hook,"i''"] \arrow[dr] & & Y'' \arrow[dr,"f''"'] & \\
+& X \arrow[rr,"f"] & & Y,
+\end{tikzcd}
+\]
+donde las flechas horizontales, con excepción de \(f\), son inmersiones cerradas, y las flechas del cuadrado cartesiano de la izquierda (resp. derecha) son morfismos especiales (resp. morfismos lisos). Se reduce, pues, a probar la afirmación siguiente:
+
+(A): \emph{Sea}
+\[
+\begin{tikzcd}
+X_1 \arrow[r,hook,"i_1"] \arrow[d,"p"'] & Y_1 \arrow[d,"q"]\\
+X_2 \arrow[r,hook,"i_2"] & Y_2
+\end{tikzcd}
+\]
+un cuadrado conmutativo de esquemas, donde \(p\) es un morfismo especial, \(q\) un morfismo liso, \(i_1\) e \(i_2\) inmersiones cerradas, y sea \(E\in\Ob D(X_2)\). Entonces, para que \(i_{2*}(E)\) sea \(n\)-pseudocoherente, es necesario y suficiente que \(i_{1*}p^*(E)\) lo sea.
+
+\emph{Demostración de} (A). Por definición, \(p\) es suma de una familia de abiertos \(U_\alpha\) de \(X_2\) que recubren \(X_2\). Cada \(U_\alpha\) es inducido por un abierto \(V_\alpha\) de \(Y_2\), y los \(V_\alpha\) recubren un entorno abierto \(X'_2\) de \(X_2\) en \(Y_2\). Se tiene, por tanto, un diagrama conmutativo de cuadrado cartesiano
+\[
+\begin{tikzcd}
+X_1 \arrow[r,hook,"i'_1"] \arrow[d,"p"'] & X'_1 \arrow[d,"p'"]\\
+X_2 \arrow[r,hook,"i'_2"] \arrow[rr,bend right,"i_2"'] & X'_2 \arrow[r,hook,"j"] & Y_2,
+\end{tikzcd}
+\]
+donde \(i'_1\) e \(i'_2\) son inmersiones cerradas, \(p\) y \(p'\) morfismos especiales y \(j\) una inmersión abierta. La condición «\(i_{2*}(E)\) \(n\)-pseudocoherente» equivale evidentemente a «\(i'_{2*}(E)\) \(n\)-pseudocoherente». Por otra parte, resulta inmediatamente de (1.1.3) que la condición «\(i'_{2*}(E)\) \(n\)-pseudocoherente» equivale a «\(i'_{1*}p^*(E)\) \(n\)-pseudocoherente». Aplicando entonces (1.1.4) a las factorizaciones \((jp')i'_1\) y \(qi_1\) de \(i_2p\), y a \(p^*(E)\in\Ob D(X_1)\), se concluye finalmente que «\(i'_{2*}(E)\) \(n\)-pseudocoherente» equivale a «\(i_{1*}p^*(E)\) \(n\)-pseudocoherente», q.e.d.
+
+Se ha mostrado, pues, que la categoría \(D(f)_{n\text{-}\coh}\) definida anteriormente mediante el diagrama \((a')\) solo depende, de hecho, de \(f\). Por otra parte, es inmediato por la definición que verifica las condiciones (i) a (iii) de (1.1). Esto termina la demostración de (1.1).

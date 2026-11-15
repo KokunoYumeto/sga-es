@@ -1,0 +1,102 @@
+% SGA 6, Exposición IV: fragmento español alineado con la fuente.
+% Parte 2 de 7. Alcance: sección 2.1 hasta (2.6.2), líneas 6209--6303 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{2. Los funtores \(K_{\bullet}\) y \(K'\) de un topos anillado}
+
+\textbf{2.1.} Sea \((X,A)\) un topos anillado. Recordemos las notaciones siguientes:
+
+\(D^b({}_A X)_{\coh}\) = categoría de los complejos pseudocoherentes y de cohomología acotada de \(A\)-módulos a izquierda (I 2.15).
+
+\(D({}_A X)_{\parf}\) = categoría de los complejos de \(A\)-módulos a izquierda de amplitud perfecta finita (I 5.8.4).
+
+\(\Loclib({}_A X)\) = categoría de los \(A\)-módulos a izquierda que son localmente sumandos directos de módulos libres de tipo finito (II 2.0).
+
+\(\Coh({}_A X)\) = categoría de los \(A\)-módulos a izquierda coherentes (con respecto a la categoría de los \(A\)-módulos libres de tipo finito) (I 3.1).
+
+Las dos últimas categorías son subcategorías plenas de la categoría \(\Mod({}_A X)\) de los \(A\)-módulos a izquierda, las dos primeras subcategorías trianguladas plenas de \(D({}_A X)\) (\(= D(\Mod({}_A X))\)).
+
+\textbf{Definición 2.2.} Sea \((X,A)\) un topos anillado. Salvo mención en contrario, pondremos
+\[
+ \begin{gathered}
+  K_\bullet({}_A X)=k(D^b({}_A X)_{\coh}),\\
+  K'({}_A X)=k(D({}_A X)_{\parf}),
+ \end{gathered}
+\]
+donde \(k(\ )\) está definido en (1.1), y
+\[
+ \begin{gathered}
+  K_\bullet({}_A X)_{\naif}=k(\Coh({}_A X)),\\
+  K'({}_A X)_{\naif}=k(\Loclib({}_A X)),
+ \end{gathered}
+\]
+donde \(k(\ )\) está definido por (1.5.2), siendo la categoría abeliana ambiente \(\Mod({}_A X)\)\footnote{Nos permitiremos omitir el índice \(A\) cuando de ello no pueda resultar confusión. A veces también suprimiremos el índice «~ingenuo~», pero indicándolo explícitamente.}. Diremos que \(K_\bullet({}_A X)\) (resp. \(K'({}_A X)\)) es el grupo de Grothendieck de los complejos pseudocoherentes (resp. perfectos) de \(A\)-módulos a izquierda, y que \(K_\bullet({}_A X)_{\naif}\) (resp. \(K'({}_A X)_{\naif}\)) es el grupo de Grothendieck de los \(A\)-módulos a izquierda coherentes (resp. localmente libres).
+
+\textbf{Observaciones 2.3.}
+\begin{enumerate}[label=\alph*)]
+\item Se pueden definir variantes de \(K_\bullet(\ )\) y \(K'(\ )\) poniendo
+\[
+ K_\bullet^{\loc}({}_A X)=k(D^{\loc b}({}_A X)_{\coh})
+\]
+(donde «~\(\loc b\)~» significa «~de cohomología localmente acotada~»), y
+\[
+ K_{\loc}'({}_A X)=k(D({}_A X)_{\parf}).
+\]
+Estos grupos coinciden con los definidos en (2.2) cuando el objeto final de \(X\) es cuasicompacto, pero en general se prestan peor al cálculo de las intersecciones.
+\item El grupo \(K_\bullet({}_A X)_{\naif}\) prácticamente solo tiene interés si \(A\) es coherente (de otro modo existe el riesgo de que haya muy pocos haces coherentes \ldots).
+\item La consideración del \(k\) de categorías trianguladas «~demasiado grandes~» no ofrece interés. Así, de (1.2 b)) se deducen fácilmente las relaciones
+\[
+ k(D({}_A X))=k(D^-({}_A X))=k(D^+({}_A X))=k(D^b({}_A X))=k(D^-({}_A X)_{\coh})=0
+\]
+(para la última igualdad, obsérvese que \(L\in\Ob D^-({}_A X)_{\coh}\) implica \(\coprod_{i\geq0}L[2i]\in\Ob D^-({}_A X)_{\coh}\)).
+\end{enumerate}
+
+\textbf{2.4. Caso de un haz de anillos coherente.} Sea \((X,A)\) un topos anillado, donde se supone que \(A\) es coherente como \(A\)-módulo a izquierda (I 3.1 y 3.6). Todo \(A\)-módulo a izquierda coherente es un complejo pseudocoherente (I 3.5), por lo que se tiene un funtor plenamente fiel
+\begin{equation}\tag{2.4.1}
+ \Coh({}_A X)\hookrightarrow D^b({}_A X)_{\coh}.
+\end{equation}
+Ahora bien, (I 3.4) \(\Coh({}_A X)\) es una subcategoría gruesa de \(\Mod({}_A X)\), y, en virtud de (I 3.5), \(D^b({}_A X)_{\coh}\) es la subcategoría plena de \(D^b({}_A X)\) formada por los objetos \(L\) tales que \(H^i(L)\in\Ob\Coh({}_A X)\) para todo \(i\). Por consiguiente, se deduce de (1.6) que el homomorfismo
+\begin{equation}\tag{2.4.2}
+ K_\bullet({}_A X)_{\naif}\longrightarrow K_\bullet({}_A X)
+\end{equation}
+definido por (2.4.1) es un isomorfismo.
+
+\textbf{2.5. El homomorfismo \(K'\to K_\bullet\).} Sea \((X,A)\) un topos anillado. El funtor de inclusión \(D({}_A X)_{\parf}\hookrightarrow D^b({}_A X)_{\coh}\) define un homomorfismo
+\begin{equation}\tag{2.5.1}
+ K'({}_A X)\longrightarrow K_\bullet({}_A X).
+\end{equation}
+Este no es en general ni inyectivo ni sobreyectivo. No obstante, hagamos las hipótesis siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item el objeto final de \(X\) es cuasicompacto;
+\item \(X\) tiene suficientes puntos, y, para todo punto \(x\) de \(X\), todo \(A_x\)-módulo a izquierda es de dimensión tor finita.
+\end{enumerate}
+Entonces se tiene, según (I 5.10), \(D({}_A X)_{\parf}=D^b({}_A X)_{\coh}\), y el homomorfismo (2.5.1) es un isomorfismo. Las hipótesis (i) y (ii) se satisfacen, por ejemplo, en el caso de un espacio compacto anillado por anillos locales regulares.
+
+\textbf{2.6. Emparejamientos entre \(K'\) y \(K'\) (caso no conmutativo).} Sea
+\[
+ f:(X',A')\longrightarrow (X,A)
+\]
+un morfismo de topoi anillados. Denotemos por \(\Mod({}_{A'} X'_A)\) la categoría de los bimódulos, a izquierda sobre \(A'\), a derecha sobre \(f^{-1}(A)\), y por \(\Loclib_{A'}({}_{A'} X'_A)\) la subcategoría plena formada por los objetos que pertenecen a \(\Loclib({}_{A'} X')\). Por analogía con (2.2), pondremos
+\[
+ K'_{\naif}({}_{A'} X'_A)_{A'}=k(\Loclib_{A'}({}_{A'} X'_A)).
+\]
+El producto tensorial
+\[
+ \otimes_A:\Mod({}_{A'} X'_A)\times\Mod({}_A X)\longrightarrow \Mod({}_{A'} X')
+\]
+envía
+\[
+ (E',E)\longmapsto E'\otimes_{f^{-1}(A)}f^{-1}(E),
+\]
+e induce un funtor
+\begin{equation}\tag{2.6.1}
+ \Loclib_{A'}({}_{A'} X'_A)\times\Loclib({}_A X)\longrightarrow\Loclib({}_{A'} X').
+\end{equation}
+La aplicación \((E',E)\mapsto\cl(E'\otimes_A E)\) deducida de (2.6.1) es biaditiva en el sentido de (1.5), y define por tanto un homomorfismo
+\begin{equation}\tag{2.6.2}
+ K'_{\naif}({}_{A'} X'_A)_{A'}\otimes K'_{\naif}({}_A X)\longrightarrow K'_{\naif}({}_{A'} X').
+\end{equation}
+

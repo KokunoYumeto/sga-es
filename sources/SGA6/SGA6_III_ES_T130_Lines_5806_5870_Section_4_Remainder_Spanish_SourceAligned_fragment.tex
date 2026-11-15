@@ -1,0 +1,71 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: resto de la sección 4, líneas 5806--5870 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\emph{Demostración.} Combínense (1.9) y (3.5).
+
+\textbf{Corolario 4.7.1.} Bajo las hipótesis de (4.6), si, para \(i=1,2\), \(f_i\) es de dimensión perfecta \(\leq n_i\), \(f\) es de dimensión perfecta \(\leq n_1+n_2\). Por consiguiente, si \(f_1\) y \(f_2\) son perfectos, lo mismo ocurre con \(f\).
+
+\textbf{Corolario 4.7.2.} Sea
+\[
+\begin{tikzcd}
+X \arrow[d,"f"'] & X' \arrow[l,"g"'] \arrow[d,"f'"]\\
+Y & Y' \arrow[l,"h"']
+\end{tikzcd}
+\]
+un cuadrado cartesiano de esquemas, donde \(f\) es localmente de tipo finito y se supone que \(X\) e \(Y'\) son Tor-independientes sobre \(Y\), y sean \(E\in\Ob D(X)\) y \([a,b]\) un intervalo de \(\mathbb Z\). Se tiene:
+\[
+ \parfamp_f(E)\subset[a,b]\Longrightarrow\parfamp_{f'}(\mathbf Lg^*(E))\subset[a,b],
+\]
+y, por consiguiente, el funtor \(\mathbf Lg^*:D^-(X)\to D^-(X')\) envía \(D(f)_{\parf}\) (resp. \(D(f)_{\uparf}\)) en \(D(f')_{\parf}\) (resp. \(D(f')_{\uparf}\)) (4.2).
+
+\textbf{Proposición 4.8.} Sean \(S\) un esquema, \(f:X\to Y\) un \(S\)-morfismo propio de \(S\)-esquemas localmente de tipo finito, y \(E\in\Ob D^b(X)\). Entonces, a reserva de la validez de (2.1) para \(f\) (por tanto, en todo caso si \(S\) es localmente noetheriano o si \(f\) es proyectivo):
+\begin{enumerate}[label=\alph*)]
+\item Si \(E\) es perfecto rel. a \(S\), lo mismo ocurre con \(Rf_*(E)\).
+\item Supongamos que \(S\) es cuasicompacto y que \(X\) e \(Y\) son de tipo finito sobre \(S\); sean \([a,b]\) un intervalo de \(\mathbb Z\), y \(N\) un entero tal que \(R^if_*(M)=0\) para todo \(i>N\) y todo \(\mathcal O_X\)-módulo cuasicoherente \(M\) (tal entero existe según (EGA III 1.4.12 y IV 1.7.21))\,; se tiene entonces
+\[
+ \parfamp_S(E)\subset[a,b]\Longrightarrow\parfamp_S(Rf_*(E))\subset[a,b+N].
+\]
+\end{enumerate}
+Por consiguiente, el funtor \(Rf_*\) envía \(D(X)_{S\text{-}\parf}\) en \(D(Y)_{S\text{-}\parf}\)\footnote{Se tiene, por lo demás, \(D(X)_{S\text{-}\parf}=D(X)_{S\text{-}\uparf}\) (y lo mismo con \(Y\)), puesto que \(X\) e \(Y\) son cuasicompactos (cf. (4.2)).}.
+
+\emph{Demostración.} La aserción a) se deduce de b), y b) se obtiene combinando (2.1) y (3.7.1).
+
+\textbf{Corolario 4.8.1.} Sean \(f:X\to Y\) un morfismo propio y perfecto, y \(E\in\Ob D^+(X)\). Entonces, a reserva de la validez de (2.1) para \(f\), si \(E\) es perfecto, lo mismo ocurre con \(Rf_*(E)\)\,; además, si \(Y\) es cuasicompacto, el funtor \(Rf_*\) envía \(D(X)_{\parf}\) en \(D(Y)_{\parf}\)\footnote{Se tiene \(D(X)_{\uparf}=D(X)_{\parf}\) (y lo mismo con \(Y\)).}.
+
+\emph{Demostración.} En efecto, si \(E\) es perfecto, \(E\) es perfecto rel. a \(f\) según (4.5.1 a)).
+
+\textbf{Proposición 4.9}\footnote{Este resultado y sus corolarios no se utilizarán en lo que sigue del presente Seminario, pero desempeñan un papel importante en la fórmula de Lefschetz--Verdier para los haces coherentes; véase SGA 5 Exp.\ III.}. Sean \(S\) un esquema noetheriano, \(X\) e \(Y\) \(S\)-esquemas de tipo finito, \(f:X\to Y\) un \(S\)-morfismo compactificable (es decir, compuesto de una inmersión abierta y un morfismo propio), \(E\in\Ob D(X)\), \(F\in\Ob D^+(Y)\). Si \(E\) es perfecto rel. a \(f\), y \(F\) perfecto rel. a \(S\), \(\RHom(E,f^!(F))\) es perfecto rel. a \(S\)\footnote{Para la definición del funtor \(f^!\), véase [H] Ap.\ n\textsuperscript{o}~4.}.
+
+\emph{Demostración.} Como la cuestión es local sobre \(X\), se factoriza \(f\) en \(X\xrightarrow{i}X'\xrightarrow{f'}Y\), donde \(i\) es una inmersión cerrada y \(f'\) un morfismo liso. Si \(E\) es perfecto rel. a \(f\), \(E\) es perfecto rel. a \(i\) (4.4), y si \(F\) es perfecto rel. a \(S\), \(f'^!(F)\) es perfecto rel. a \(S\) según (4.5.1 b)), puesto que \(f'^!(F)\) es localmente isomorfo a \(f'^*(F)\) salvo traslación. Como se tiene \(f^!\simeq i^!f'^!\), se queda así reducido a probar la aserción en el caso en que \(f\) es una inmersión cerrada. Supongamos, pues, que \(E\) es perfecto rel. a \(f\), es decir, que \(f_*(E)\) es perfecto, y que \(F\) es perfecto rel. a \(S\). Se trata de mostrar que \(f_*\RHom(E,f^!F)\) es perfecto rel. a \(S\). Pero, según el teorema de dualidad ([H] III 6.7), se tiene
+\[
+ f_*\RHom(E,f^!F)\simeq\RHom(f_*(E),F).
+\]
+Como \(f_*(E)\) es perfecto, se tiene, según (I 7.7),
+\[
+ \RHom(f_*(E),F)\simeq(f_*(E))^{\vee}\otimes^{\mathbf L}F,
+\]
+y se concluye gracias a (4.5) (donde \(X=Y\) y \(f=\Id_X\)).
+
+\textbf{Corolario 4.9.1.} Bajo las hipótesis de (4.8), si \(f\) es perfecto, \(f^!\) envía \(D(Y)_{S\text{-}\parf}\) en \(D(X)_{S\text{-}\parf}\).
+
+\emph{Demostración.} Tómese \(E=\mathcal O_X\).
+
+\textbf{Corolario 4.9.2.} Sean \(S\) un esquema noetheriano y \(f:X\to S\) un morfismo compactificable. Pongamos \(f^!(\mathcal O_S)=K_X\), \(\RHom(.,K_X)=\underline D_X\). Para \(E\in\Ob D(f)_{\parf}\), se tiene \(\underline D_X(E)\in\Ob D(f)_{\parf}\), y la flecha canónica (I 7.2)
+\[
+ E\longrightarrow D_XD_X(E)
+\]
+es un isomorfismo.
+
+\emph{Demostración.} Para la primera aserción, aplíquese (4.8) con \(Y=S\), \(F=\mathcal O_S\). Para la segunda, se reduce fácilmente al caso en que \(f\) es una inmersión cerrada. Basta entonces probar que la flecha deducida de la flecha canónica aplicando \(f_*\) es un isomorfismo. Según la dualidad global ([H] III 6.7), se tiene
+\[
+ f_*\underline D_X\simeq\underline D_Sf_*.
+\]
+Se queda, pues, reducido a mostrar que la flecha canónica
+\[
+ f_*(E)\longrightarrow D_SD_Sf_*(E)
+\]
+es un isomorfismo para \(E\) perfecto rel. a \(f\), es decir, para \(f_*(E)\) perfecto, lo cual resulta de la bidualidad ordinaria para los complejos perfectos (I 7.2).

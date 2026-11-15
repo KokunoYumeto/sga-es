@@ -1,0 +1,66 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 6, números 6.1--6.4, líneas 9580--9639 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{6. Estudio de la filtración de \texorpdfstring{$K'(X)$}{K'(X)}, con $X$ provisto de un haz amplio}
+
+En este parágrafo, $X$ es un esquema que tiene un haz amplio $L$. Recordemos que, en este caso, los $K'$ definidos en términos de haces localmente libres de tipo finito o de complejos perfectos son iguales (IV, 2.9). Denotamos por $\varepsilon$ el homomorfismo de aumentación: $K'(X)\longrightarrow H^0(X,\underline{\mathbb Z})$.
+
+\textbf{Proposición 6.1.} Sea $X$ un esquema cuasicompacto que tiene un haz amplio $L$. Entonces $\Fil^1K'(X)$ es un nilideal.
+
+Como $\Fil^1K'(X)$ está engendrado por los elementos del tipo $E-\varepsilon(E)$, donde $E$ es la clase de un $\mathcal O_X$-módulo localmente libre de tipo finito $E$, y $\varepsilon:K'(X)\to H^0(X,\underline{\mathbb Z})$ es la aumentación de $K'(X)$, basta demostrar que un elemento tal es nilpotente. La cuasicompacidad de $X$ y la compatibilidad de $K'$ con las sumas directas finitas permiten reducirnos al caso en que $E$ es de rango constante. Finalmente, pasando al fibrado de banderas de $E$, lo cual da una inyección sobre los $K'$ (3.1) y preserva la hipótesis de existencia de un haz amplio, podemos suponer que $E$ es invertible.
+
+Sea $E^*$ el dual de $E$. Para $n$ suficientemente grande, $E^*(n)=E^*\otimes_{\mathcal O_X}L^{\otimes n}$ está engendrado por sus secciones globales; se pueden encontrar, pues, un entero $m$ y un homomorfismo sobreyectivo $(\mathcal O_X)^m\longrightarrow E^*(n)$, y por tanto (tensorizando por $E(-n)$) un homomorfismo sobreyectivo $(E(-n))^m\longrightarrow\mathcal O_X$. El núcleo de este homomorfismo es localmente libre de rango $m-1$. Se obtiene, pues, denotando por $L$ la clase de $L$:
+\[
+  \lambda^m(mEL^{-n}-1)=0 .
+\]
+Ahora bien, $\lambda^m(mEL^{-n}-1)=(-1)^m\lambda_{-1}(mEL^{-n})=(-1)^m\lambda_{-1}(EL^{-n})^m=(-1)^m(1-EL^{-n})^m$. Por consiguiente, para todo haz invertible $E$, el elemento $1-EL^{-n}$ es nilpotente para $n$ suficientemente grande; o, equivalentemente, $L^n-E$, que es su producto por $L^n$, es nilpotente.
+
+Se puede escribir entonces:
+\[
+  E-1=(L^n-1)-(L^n-E)
+\]
+y, por lo anterior, $L^n-E$ y $L^n-1$ son nilpotentes si se elige $n$ suficientemente grande. Por tanto, $E-1$ es nilpotente.
+
+
+\textbf{Corolario 6.2.} Con las hipótesis de 6.1, sea $R\subset K'(X)$ un sub-$\lambda$-anillo engendrado por las clases de un número finito de haces. Entonces la filtración de $\lambda$-anillo de $R$ es discreta, y $R\cap\Fil^1K'(X)$ es nilpotente. Además, $R$ es un módulo de tipo finito sobre $R\cap H^0(X,\underline{\mathbb Z})$ (V 3.9.1).
+
+Como $X$ es cuasicompacto, se puede encontrar un recubrimiento finito de $X$ por conjuntos abiertos disjuntos tal que, sobre cada uno de los abiertos de este recubrimiento, todos los haces cuyas clases engendran $R$ sean de rango constante. El argumento estándar permite entonces reducirnos al caso en que estos haces son de rango constante sobre $X$; $R$ queda entonces provisto de una aumentación en $\mathbb Z$.
+
+Sean $E_i$, $i=1,\ldots,k$, los haces cuyas clases engendran $R$, denotemos también por $E_i$ sus clases y pongamos $x_i=E_i-\varepsilon(E_i)$. Se puede escribir $R$ como cociente del $\lambda$-anillo engendrado por los $x_i$, sometidos a las relaciones $\gamma^j(x_i)=0$ para $j>r_i=\varepsilon(E_i)$, es decir, $\mathbb Z[x_i,\gamma^j(x_i)]_{1\le i\le k,\,2\le j\le r_i}$; por consiguiente, $R$ es noetheriano. Pero, según la proposición 6.1, los $x_i$, $\gamma^j(x_i)$ son nilpotentes. Por tanto, el ideal de aumentación de $R$ es nilpotente; por otra parte, no es sino $R\cap\Fil^1K'(X)$.
+
+Todo elemento de $\Fil^n R$ se escribe como un polinomio sin componentes de peso $<n$ respecto de los $x_i$, $\gamma^j(x_i)$. Sea $m$ el mayor entero tal que exista un $i$ con $\gamma^{m-1}(x_i)\ne0$; sea $p$ un entero tal que las potencias $p$-ésimas de los $x_i$, $\gamma^j(x_i)$ sean todas nulas. Para $n>kp(1+\ldots+m)$, se ve de inmediato que $\Fil^nR=0$; la filtración de $R$ es, pues, discreta.
+
+Como la filtración de $R$ es discreta, solo hay un número finito de monomios no nulos respecto de los $x_i$, $\gamma^j(x_i)$. Estos monomios forman un sistema de generadores de $R$ como $\mathbb Z$-módulo, lo que concluye la demostración.
+
+\textbf{Corolario 6.3.} Con las hipótesis de 6.1, sea $A$ un anillo conmutativo. Para que un elemento $y$ de $K'(X)\otimes_{\mathbb Z}A=K'(X)_A$ sea invertible, es necesario y suficiente que lo sea $z=(\varepsilon\otimes\Id_A)(y)$. En particular, si $E$ es un haz localmente libre de tipo finito sobre $X$, de rango $\ne0$ en todas partes, entonces su clase en $K'(X)_{\mathbb Q}$ es invertible.
+
+El ideal de aumentación de $K'(X)\otimes_{\mathbb Z}A$ es $\Fil^1K'(X)\otimes_{\mathbb Z}A$ y, por tanto, es un nilideal, según 6.1. Para que un elemento de $K'(X)\otimes_{\mathbb Z}A$ sea invertible es, pues, necesario y suficiente que su aumentación lo sea.
+
+\textbf{Corolario 6.4.} Sean $X$ un esquema cuasicompacto que tiene un haz amplio, y $f:X'\to X$ un morfismo propio y perfecto. Se supone además que se cumple una de las dos condiciones siguientes:
+\[
+  \text{i) } f\text{ proyectivo},\qquad
+  \text{ii) } X\text{ noetheriano},
+\]
+de manera que el «teorema de finitud» sea válido (III 2.2). Sea $A$ un anillo, y consideremos el homomorfismo de «imagen directa» (IV 2.11):
+\[
+  f_*:K'(X')\otimes_{\mathbb Z}A\longrightarrow K'(X)\otimes_{\mathbb Z}A.
+\]
+Supongamos, por último, que existe un elemento $x'\in K'(X')\otimes_{\mathbb Z}A$ tal que $\varepsilon(f_*(x'))\in H^0(X,\underline A)$ sea invertible. Entonces el homomorfismo:
+\[
+  f^*:K'(X)\otimes_{\mathbb Z}A\longrightarrow K'(X')\otimes_{\mathbb Z}A
+\]
+es inyectivo.
+
+Escribamos la fórmula de proyección:
+\[
+  f_*(f^*(x)x')=x.f_*(x').
+\]
+Ahora bien, $f_*(x')$ tiene aumentación invertible, luego es invertible (6.3). Por consiguiente, el homomorfismo compuesto:
+\[
+  x\leadsto f^*(x)\leadsto f^*(x)x'\leadsto f_*(f^*(x)x')
+\]
+es inyectivo, luego $f^*$ también lo es.

@@ -1,0 +1,79 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, §§1.2.1--1.2.4, líneas 4505--4576 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsubsection*{1.2. Operadores diferenciales «relativos»}
+Es fácil realizar, siguiendo el modelo de la geometría algebraica (EGA IV 16, SGA 3 VII), un estudio infinitesimal de las variedades mixtas. Nos limitaremos a pasar rápidamente revista a las nociones que necesitaremos.
+
+\textbf{1.2.1.} Sea $f:X\to S$ una variedad mixta de clase $C^\infty$ (1.1). Para todo $n\in\N$, se define el haz $P^n_{X/S}$ de las \emph{partes principales de orden $n$} sobre $X$. De dos maneras diferentes, correspondientes a las dos proyecciones $\pr_1$ y $\pr_2$ de $X\times_S X$ sobre $X$, es una $\cO_X$-álgebra aumentada hacia $\cO_X$, localmente libre de tipo finito como $\cO_X$-módulo. Cuando no precisemos la estructura de $\cO_X$-módulo considerada sobre $P^n_{X/S}$, se sobreentenderá que se trata de la procedente de $\pr_1$. Se tienen isomorfismos canónicos
+\[
+ \begin{aligned}
+ P^0_{X/S}&\simeq\cO_X,\\
+ P^1_{X/S}&\simeq\cO_X\oplus\Omega^1_{X/S},
+ \end{aligned}
+\]
+donde $\Omega^1_{X/S}$ es el haz de las diferenciales relativas de $X$ con respecto a $S$, o \emph{haz cotangente relativo}. Se denota por $T_{X/S}$ el dual de $\Omega^1_{X/S}$, llamado \emph{haz tangente relativo}. El haz $T_{X/S}$ (resp. $\Omega^1_{X/S}$) es el haz de las secciones de un fibrado vectorial de rango finito sobre $X$, llamado \emph{fibrado tangente} (resp. \emph{cotangente}) \emph{relativo}, y que es una $S$-variedad mixta sobre $X$.
+
+El homomorfismo $f^{-1}(\cO_S)$-lineal (correspondiente a la estructura de $\cO_X$-álgebra definida por $\pr_2$)
+\[
+ d^n_{X/S}:\cO_X\longrightarrow P^n_{X/S},
+\]
+que asocia a una sección de $\cO_X$ su parte principal de orden $n$, se llama \emph{operador diferencial universal de orden} $n$ sobre $X$ relativamente a $S$.
+
+\textbf{1.2.2.} Más generalmente, si $E$ es un $\cO_X$-módulo localmente libre de tipo finito, se puede considerar el haz $P^n_{X/S}(E)=P^n_{X/S}\otimes_{\cO_X}E$ de las partes principales de orden $n$ de $E$ (definiéndose el producto tensorial mediante la segunda estructura de $\cO_X$-módulo sobre $P^n_{X/S}$), y se tiene un operador diferencial universal
+\[
+ d^n_{X/S}(E):E\longrightarrow P^n_{X/S}(E).
+\]
+
+Sean $E,F$ dos $\cO_X$-módulos localmente libres de tipo finito. Por definición, un operador diferencial de $E$ en $F$ de orden $\le n$ es un homomorfismo $\sisi{f^{-1}(\cO_X)}{f^{-1}(\cO_S)}$-lineal de $E$ en $F$ que se factoriza a través de $d^n_{X/S}(E)$ en un homomorfismo $\cO_X$-lineal de $P^n_{X/S}(E)$ en $F$ (la factorización es entonces única). En otros términos, el operador $d^n_{X/S}(E)$ establece una biyección
+\begin{equation}\tag{1.2.2.1}
+ \Homop_{\cO_X}\bigl(P^n_{X/S}(E),F\bigr)
+ \xrightarrow{\sim}
+ \Diff^n(E,F),
+\end{equation}
+donde $\Diff^n(E,F)$ designa el conjunto de los operadores diferenciales de $E$ en $F$ de orden $\le n$.
+
+\textbf{1.2.3.} Tendremos que considerar también operadores diferenciales con coeficientes complejos. Denotemos por $\cO_S\otimes\mathbb C$ (resp. $\cO_X\otimes\mathbb C$) el complexificado de $\cO_S$ (resp. $\cO_X$). Sean $E,F$ dos $(\cO_X\otimes\mathbb C)$-módulos localmente libres de tipo finito. Por un operador diferencial de $E$ en $F$ de orden $\le n$ entenderemos un homomorfismo $f^{-1}(\cO_S\otimes\mathbb C)$-lineal de $E$ en $F$ que se factoriza a través de $d^n_{X/S}(E)$ en un homomorfismo $(\cO_X\otimes\mathbb C)$-lineal de $P^n_{X/S}(E)$ en $F$. Si se designa por $\Diff^n_\mathbb C(E,F)$ el conjunto de estos operadores, el operador $d^n_{X/S}(E)$ define, por tanto, una biyección
+\begin{equation}\tag{1.2.3.1}
+ \Homop_{\cO_X\otimes\mathbb C}\bigl(P^n_{X/S}(E),F\bigr)
+ \xrightarrow{\sim}
+ \Diff^n_\mathbb C(E,F).
+\end{equation}
+
+\textbf{1.2.4.} Para $n\ge1$, se tiene una sucesión exacta canónica\footnote{$S^n(\ )$ designa la $n$-ésima potencia simétrica.}
+\[
+ 0\longrightarrow S^n(\Omega^1_{X/S})
+ \longrightarrow P^n_{X/S}
+ \longrightarrow P^{n-1}_{X/S}
+ \longrightarrow 0.
+\]
+De donde, tensorizando sobre $\cO_X$\footnote{Para la segunda estructura de $\cO_X$-módulo de $P^n_{X/S}$ y $P^{n-1}_{X/S}$.} por un $\cO_X$-módulo (resp. $(\cO_X\otimes\mathbb C)$-módulo) localmente libre de tipo finito $E$, se obtiene una sucesión exacta de $\cO_X$-módulos (resp. $(\cO_X\otimes\mathbb C)$-módulos):
+\begin{equation}\tag{1.2.4.1}
+ 0\longrightarrow S^n(\Omega^1_{X/S})\otimes_{\cO_X}E
+ \longrightarrow P^n_{X/S}(E)
+ \longrightarrow P^{n-1}_{X/S}(E)
+ \longrightarrow 0.
+\end{equation}
+Sea $F$ un $\cO_X$-módulo (resp. $(\cO_X\otimes\mathbb C)$-módulo) localmente libre de tipo finito. Aplicando a (1.2.4.1) el funtor $\Homop_{\cO_X}(.,F)$ (resp. $\Homop_{\cO_X\otimes\mathbb C}(.,F)$), se deduce, teniendo en cuenta las identificaciones (1.2.2.1) y \sisi{(1.2.4.1)}{(1.2.3.1)}, una sucesión exacta
+\begin{equation}\tag{1.2.4.2}
+\begin{gathered}
+ 0\longrightarrow \Diff^{n-1}(E,F)
+ \longrightarrow \Diff^n(E,F)
+ \xrightarrow{\sigma_n}
+ \Homop_{\cO_X}\bigl(S^n(\Omega^1_{X/S})\otimes_{\cO_X}E,F\bigr)\\
+ (\text{resp. } 0\longrightarrow \Diff^{n-1}_\mathbb C(E,F)
+ \longrightarrow \Diff^n_\mathbb C(E,F)
+ \longrightarrow
+ \Homop_{\cO_X\otimes\mathbb C}\bigl(S^n(\Omega^1_{X/S})\otimes_{\cO_X}E,F\bigr)).
+\end{gathered}
+\end{equation}
+(Si $X$ es paracompacto y $\cO_X$ blando (cf. II 2.3.1), se puede completar la sucesión exacta (1.2.4.2) añadiendo un cero a la derecha). El homomorfismo $\sigma_n$ se llama \emph{símbolo}; asocia a un operador diferencial de $E$ en $F$ de orden $\le n$ una «aplicación polinómica homogénea de grado $n$ de $\Omega^1_{X/S}$ en $\Homop_{\cO_X}(E,F)$ (resp. $\Homop_{\cO_X\otimes\mathbb C}(E,F)$)», que también se puede considerar, si se quiere, como un homomorfismo $p^*(E)\longrightarrow p^*(F)$ (donde $p$ es la proyección sobre $X$ del fibrado cotangente relativo (1.2.1)), que satisface cierta condición de homogeneidad.
+
+Sean $E,F,G$ tres $\cO_X$-módulos localmente libres de tipo finito, y $u\in\Diff^m(E,F)$, $v\in\Diff^n(F,G)$, de donde $vu\in\Diff^{m+n}(E,G)$. Se verifica fácilmente la relación
+\begin{equation}\tag{1.2.4.3}
+ \sigma_{m+n}(vu)=\sigma_n(v)\sigma_m(u).
+\end{equation}
+(Se tiene la misma relación para los operadores diferenciales con coeficientes complejos). En particular, si el compuesto de dos operadores diferenciales es nulo, también lo es el compuesto de sus símbolos.

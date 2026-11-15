@@ -1,0 +1,333 @@
+% SGA 6, Exposición 0, apéndice: introducción y Capítulo I.
+% Fuente francesa alineada: fr.tex, líneas 547--876 inclusive.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Apéndice a la Exposición 0: RRR}
+\begin{center}
+{\Large Clases de haces y teorema de Riemann--Roch}\par
+\vspace{0.5em}
+por A. Grothendieck\footnote{Esta es la reproducción textual del informe citado en la Introducción del presente Seminario. Las notas a pie de página indicadas por los signos (*), (**) se añadieron en octubre de 1967.}
+\end{center}
+
+\subsection*{CAP. I -- $\lambda$-Anillos (preliminares formales)}
+\begin{longtable}{@{}p{0.74\linewidth}r@{}}
+1. Definiciones & 1\\
+2. Ejemplos & 4\\
+3. El $\lambda$-anillo definido por un anillo graduado & 8\\
+4. Las operaciones $\lambda^p(N,x)$ & 13\\
+\end{longtable}
+
+\subsection*{CAP. II -- Clases de haces algebraicos coherentes y clases de Chern}
+\begin{longtable}{@{}p{0.74\linewidth}r@{}}
+1. La teoría de Chow & 18\\
+2. Definición de las clases de Chern de los haces algebraicos coherentes & 22\\
+3. Generalidades funtoriales sobre $K(X)$ & 27\\
+4. Algunos resultados técnicos & 34\\
+5. Definición mediante haces de las clases de Chern. Aplicación al estudio de los morfismos de inyección & 43\\
+6. El teorema de Riemann--Roch & 49
+\end{longtable}
+
+\begin{center}
+Demostración del teorema de Riemann--Roch (1 de noviembre de 1957).
+\end{center}
+
+\clearpage
+
+\section*{CAPÍTULO I}
+\begin{center}
+$\lambda$-Anillos (Preliminares formales)
+\end{center}
+
+\subsection*{\S 1. Definiciones}
+
+Se llama \emph{$\lambda$-anillo}\footnote{En este seminario decimos más bien \emph{pre-$\lambda$-anillo} (V 2.1), reservando el nombre de $\lambda$-anillo para los que satisfacen la condición adicional de la página 3 (cf.\ V 2.4).} a un anillo conmutativo $K$ con unidad, provisto de una familia de aplicaciones
+\begin{equation}\tag{1.1}
+\lambda^i:K\longrightarrow K
+\end{equation}
+($i$ entero $\geq 0$) que satisfacen las condiciones siguientes:
+\begin{equation}\tag{1.2}
+\lambda^0x=1,\qquad \lambda^1x=x,\qquad
+\lambda^n(x+y)=\sum_{i=0}^n\lambda^ix\cdot\lambda^{n-i}y.
+\end{equation}
+Pongamos, para todo $x\in K$,
+\begin{equation}\tag{1.3}
+\lambda_t(x)=\sum_{n\geq 0}\lambda^n(x)t^n\in K[[t]] ;
+\end{equation}
+las relaciones precedentes expresan entonces que $x\longmapsto\lambda_t(x)$ es un homomorfismo del grupo aditivo $K$ en el grupo multiplicativo $1+K[[t]]^+$ de las series formales sobre $K$, de aumentación $1$, que levanta el homomorfismo canónico
+\[
+1+\sum_{i>0}x_it^i\longrightarrow x_1.
+\]
+
+Así, sobre el anillo $\Z$ existe una única $\lambda$-estructura compatible con su estructura de anillo y tal que
+\begin{equation}\tag{1.4}
+\lambda_t(1)=1+t.
+\end{equation}
+Se tiene entonces
+\begin{equation}\tag{1.5}
+\lambda_t(n)=(1+t)^n,
+\end{equation}
+de donde $\lambda^i(n)=\binom{n}{i}$.
+
+La noción de $\lambda$-homomorfismo de $\lambda$-anillos es clara; un \emph{$\lambda$-anillo aumentado} es un $\lambda$-anillo provisto de un $\lambda$-homomorfismo a $\Z$.
+
+Para definir la noción de $\lambda$-\emph{anillo especial}, son útiles las consideraciones siguientes. Sea $k$ un anillo conmutativo con unidad, sea $K=1+k[[t]]^+$ el grupo de las series formales con coeficientes en $k$, de aumentación $1$; vamos a introducir en él una ley de $\lambda$-anillo cuya estructura aditiva sea la multiplicación de las series formales. La multiplicación de este anillo se denotará por $f\circ g$. Está completamente determinada por la condición de que los coeficientes $c_n=c_n(f\circ g)$ de $f\circ g$ vengan dados por polinomios \emph{universales} con coeficientes enteros en los coeficientes $a_i=c_i(f)$ y $b_i=c_i(g)$ de $f$ y $g$, respectivamente:
+\begin{equation}\tag{1.6}
+c_n=P_n(a_1,\ldots,a_n;b_1,\ldots,b_n),
+\end{equation}
+de que sea distributiva con respecto a la «adición» $fg$, y de que, para factores lineales, venga dada por
+\begin{equation}\tag{1.7}
+(1+at)\circ(1+bt)=1+abt.
+\end{equation}
+Los $P_n$ se calculan mediante cálculos de funciones simétricas; $P_n$ es isóbaro de peso $n$ en los $a_i$ e isóbaro de peso $n$ en los $b_i$ ($a_i$ y $b_i$ tienen peso $i$) y, además, es simétrico en $a=(a_i)$ y $b=(b_i)$.
+
+Del mismo modo, los $\lambda^i(f)$ quedan determinados sin ambigüedad por la condición de que los coeficientes $c_n(\lambda^i(f))=c_n\text{ de }\lambda^i(f)$ se calculen mediante polinomios \emph{universales} con coeficientes enteros en los coeficientes $c_n(f)=a_n$ de $f$:
+\begin{equation}\tag{1.8}
+c_n=P_{i,n}(a_1,\ldots,a_{in}),
+\end{equation}
+de que se satisfagan las relaciones (1.2), y de que, para $i>1$, se tenga
+\begin{equation}\tag{1.9}
+\lambda^i(1+at)=1
+\end{equation}
+($1$ es el elemento nulo del anillo $K=1+k[[t]]^+$). Los $P_{i,n}$ se calculan igualmente mediante cálculos de funciones simétricas, y se comprueba que $P_{i,n}$ es un polinomio isóbaro de peso $in$ en los $a_i$. Provisto de las operaciones precedentes, $K$ se convierte en un $\lambda$-anillo; su elemento nulo es $1$ y su elemento unidad es $1+t$. Señalemos también la relación
+\begin{equation}\tag{1.7 bis}
+(1+at)\circ f=f(at).
+\end{equation}
+
+Sea ahora $K$ un $\lambda$-anillo cualquiera. Se dice que $K$ es \emph{especial} si el homomorfismo aditivo $\lambda_t$ de $K$ en $1+K[[t]]^+$ es un $\lambda$-homomorfismo. Esto significa, pues, que se tienen las fórmulas
+\begin{equation}\tag{1.10}
+\lambda_t(1)=1+t,\quad
+\lambda_t(xy)=\lambda_t(x)\circ\lambda_t(y),\quad
+\lambda_t(\lambda^i(x))=\lambda^i(\lambda_t(x)),
+\end{equation}
+o bien, explícitamente,
+\begin{equation}\tag{1.11}
+\begin{cases}
+\lambda^i(1)=0 & \text{si }i>1,\\
+\lambda^n(xy)=P_n(\lambda^1x,\ldots,\lambda^n x;\lambda^1y,\ldots,\lambda^n y),\\
+\lambda^n(\lambda^i(x))=P_{i,n}(\lambda^1x,\ldots,\lambda^{\sisi{n}{in}}x),
+\end{cases}
+\end{equation}
+donde los $P_n$ y los $P_{i,n}$ son los polinomios universales considerados más arriba. De ello se deducen, en particular, las fórmulas (1.5). (Se puede demostrar que el $\lambda$-anillo $1+k[[t]]^+$ construido a partir de un anillo conmutativo $k$ es especial; pero no necesitaremos este hecho).
+
+\subsection*{\S 2. Ejemplos}
+
+1) Sean $G$ un grupo y $k$ un anillo conmutativo; consideremos el grupo $\underline{K}(G)$, cociente del grupo libre engendrado por las clases de representaciones de $G$ en $k$-módulos de tipo finito por el subgrupo engendrado por los elementos de la forma $(\rho\oplus\rho')-(\rho)-(\rho')$ (denotamos por $\oplus$ la suma directa). El producto tensorial y las potencias exteriores definen en $\underline{K}(G)$ una estructura de $\lambda$-anillo. También se puede pasar al cociente por los elementos de la forma $(\rho)-(\rho')-(\rho'')$, donde $\rho$ es una representación que es extensión de $\rho'$ por $\rho''$, trivial como extensión de $k$-módulos. Se obtiene el grupo $\underline{K}_r(G)$ de las clases reducidas de representaciones de $G$, y se comprueba que la ley de $\lambda$-anillo pasa al cociente.
+
+Cuando $k$ es un cuerpo \emph{algebraicamente cerrado de característica} $0$\footnote{No es necesario que $k$ sea algebraicamente cerrado; cf.\ (VI 3.3) para un resultado aún más general (que engloba todos los que se utilizarán en el presente informe).}, se puede demostrar que $\underline{K}(G)$ y, a fortiori, $\underline{K}_r(G)$ son $\lambda$-anillos especiales; esto deja de ser así si la característica es $\neq 0$, pero, no obstante, si $k$ es algebraicamente cerrado, $\underline{K}_r(G)$ sigue siendo un $\lambda$-anillo especial. Para demostrarlo, se reduce al caso en que $G$ es un producto $\Gl(m,k)\times\Gl(n,k)$ y solo se consideran las representaciones racionales de $G$; nuestra afirmación se sigue de la \emph{determinación explícita} de $\underline{K}_r(G)$ \emph{que se hará más abajo} (ejemplo 3); finalmente, cuando $k$ es de característica $0$, la completa reducibilidad de las representaciones racionales de $G$ muestra que $\underline{K}(G)=\underline{K}_r(G)$.
+
+Variantes del ejemplo precedente: $G$ es un grupo algebraico definido sobre $k$ y solo se consideran las representaciones racionales de $G$ definidas sobre $k$; se puede considerar el caso de un grupo topológico, o de Lie, y las representaciones continuas, etc.\dots\footnote{Se pueden construir otros ejemplos de $\lambda$-anillos, por ejemplo el conjunto de las clases de equivalencia de formas cuadráticas, el conjunto de las clases de representaciones de un álgebra de Lie, etc.\dots ¡Prometemos que no necesitaremos todos estos ejemplos para tratar el teorema de Riemann--Roch!}
+
+2) Sea $X$ una variedad algebraica, irreducible o no, definida sobre el cuerpo $k$. Se podrá considerar el grupo cociente del grupo libre engendrado por las clases de fibrados vectoriales sobre $X$ (definidos sobre $k$), por el subgrupo engendrado por los elementos de la forma $(E\oplus E')-(E)-(E')$, en el que las operaciones de $\lambda$-anillo estarán definidas por el producto tensorial y las potencias exteriores. Si $X$ es completa, este es un grupo libre engendrado por los fibrados vectoriales indescomponibles sobre $X$ (gracias a Krull--Remak--Schmidt); conocer este anillo y su base equivale a la clasificación completa de los fibrados vectoriales sobre $X$ y al conocimiento de las operaciones tensoriales elementales sobre estos fibrados. Si $k$ es algebraicamente cerrado de característica $0$, quedan entonces conocidas todas las demás operaciones tensoriales sobre clases de fibrados, mediante lo que sigue en 3). Se puede efectuar un paso al cociente más drástico, por el grupo engendrado por los elementos $(E)-(E')-(E'')$, donde $E$ es un fibrado vectorial que es extensión de $E'$ por $E''$; se obtiene entonces un $\lambda$-anillo, denotado por $\underline{K}(\xi(X))$, donde $\xi(X)$ designa la categoría aditiva de los fibrados vectoriales sobre $X$, definidos sobre $k$. Utilizando los resultados del ejemplo 1), se demuestra que, si $k$ es algebraicamente cerrado\footnote{Condición innecesaria; cf.\ la nota a pie de página precedente.}, el $\lambda$-anillo $\underline{K}(\xi(X))$ es especial, y que lo mismo ocurre con el primer $\lambda$-anillo definido aquí si la característica de $k$ es $0$, pero no en general.
+
+3) \emph{Determinación de $\underline{K}(G)$ y de $\underline{K}_r(G)$ en ciertos casos importantes}: Supongamos que el cuerpo $k$ es algebraicamente cerrado, que el grupo $G$ es algebraico \emph{afín conexo} y «globalmente \emph{reductivo}» (el radical de $G$ es isomorfo a $k^{*s}$), y consideremos solamente las representaciones lineales racionales. En característica $0$, la completa reducibilidad de las representaciones lineales racionales de $G$ muestra que $\underline{K}(G)=\underline{K}_r(G)$ es el grupo libre engendrado por las clases de las representaciones racionales irreducibles. Ahora bien, si $T$ es un toro maximal de $G$, se tiene $\underline{K}(T)=\underline{K}_r(T)=\Z(\That)$, álgebra del grupo $\That$ de los caracteres racionales de $T$; se tiene $\That\simeq\Z^r$ si $r$ es el rango de $G$ (esto es independiente de la característica). El grupo de Weyl $W$ actúa en $T$ y, por tanto, en $\underline{K}(T)$, de una manera que solo depende de la acción de $W$ en el grupo libre $\That$. Se tiene un homomorfismo evidente de $\lambda$-anillos, deducido de la inclusión de $T$ en $G$:
+\begin{equation}\tag{1.13}
+\underline{K}_r(G)\longrightarrow \underline{K}_r(T)^W=\underline{K}(T)^W,
+\end{equation}
+donde $\underline{K}(T)^W$ denota el conjunto de los puntos fijos de $W$ en $\underline{K}(T)$. La teoría de las representaciones lineales de $G$\footnote{Cf.\ Seminario Chevalley 1956/58, Grupos de Lie algebraicos (École Normale Supérieure).} demuestra entonces el teorema siguiente:
+
+\textbf{Teorema 1.1.} \emph{El homomorfismo} (1.13) \emph{es un isomorfismo.}
+
+Se ve, pues, que $\underline{K}_r(G)$, una vez conocido el «tipo» de $G$ (caracterizado por $W$ actuando sobre un grupo $\Z^r$), no depende de la característica, y que es un $\lambda$-anillo especial. Se tiene una base canónica de $\underline{K}_r(G)$ correspondiente a las órbitas de $W$ en $\That$; se obtiene otra base como sigue: sean $(\rho_i)_{1\leq i\leq r'}$ las clases de representación de $G$ correspondientes a las representaciones \emph{fundamentales} de $G/\rad G$, y sea $(\sigma_i)_{1\leq i\leq r''}$ una base del grupo de los homomorfismos racionales de $G$ en $k^*$; se tiene, pues, $r'+r''=r$ (rango de $G$).
+
+\textbf{Corolario:} \emph{El anillo $\underline{K}_r(G)$ se identifica con el subanillo}
+\[
+\Z[\rho_1,\ldots,\rho_{r'};\sigma_1,\ldots,\sigma_{r''};\sigma_1^{-1},\ldots,\sigma_{r''}^{-1}]
+\]
+\emph{del cuerpo de funciones racionales en los $\rho_i$ y los $\sigma_j$ con coeficientes en $\Q$}\footnote{Es preciso suponer que el grupo derivado $G'$ de $G$ es simplemente conexo para que este enunciado sea correcto.}.
+
+En particular, $\underline{K}_r(G)$ no tiene divisores de $0$; si $G=\prod_i\Gl(n_i,k)$, el anillo $\underline{K}_r(G)$ se explicita como sigue: sea $\rho_i$ la representación de $G$ deducida de la representación identidad de $\Gl(n_i,k)$; si se considera entonces el cuerpo de funciones racionales sobre $\Q$ en indeterminadas $\lambda^j(\rho_i)$ ($1\leq j\leq n_i$), entonces $\underline{K}_r(G)$ se identifica con el subanillo engendrado por estas indeterminadas y por los inversos de los $\lambda^{n_i}(\rho_i)$. Esto justifica nuestra afirmación de que, al menos en característica $0$, las operaciones $\lambda^i$ permiten reconstruir todas las operaciones tensoriales sobre los fibrados vectoriales; esto sigue siendo cierto sobre un cuerpo algebraicamente cerrado de característica arbitraria, siempre que se tomen clases reducidas.
+
+\textbf{Observaciones:} a) En el ejemplo 1), el anillo $\underline{K}(G)$ es aumentado, estando la aumentación definida por el grado de las representaciones; por paso al cociente, esta aumentación define una aumentación sobre $\underline{K}_r(G)$. Del mismo modo, los $\lambda$-anillos considerados en el ejemplo 2) son aumentados cuando $X$ es $k$-irreducible; en $\underline{K}(\xi(X))$, la aumentación viene definida por el \emph{rango de un fibrado vectorial}, es decir, la dimensión de sus fibras.
+
+b) Cuando el cuerpo $k$ no es algebraicamente cerrado, es plausible que $\underline{K}(G)$ sea un $\lambda$-anillo especial en característica $0$, y asimismo $\underline{K}_r(G)$ en todas las características.
+
+c) En característica no nula, Chevalley tuvo la amabilidad de proporcionarme el teorema 1.1.
+
+\subsection*{\S 3. El $\lambda$-anillo definido por un anillo graduado}
+
+Sea $A$ un anillo graduado conmutativo con unidad; supondremos, para simplificar, que los grados de $A$ son positivos y que $A^0=\Z$. Denotemos por $\Ahat$ el producto de los $A^i$ (es un anillo conmutativo con unidad), y por $\Ahp$ el núcleo de la aumentación evidente $\Ahat\to A^0=\Z$. Entonces $1+\Ahp$ es un subgrupo del grupo multiplicativo de los elementos invertibles de $\Ahat$. Consideremos el grupo abeliano
+\begin{equation}\tag{1.14}
+\widetilde A=\Z\times(1+\Ahp),
+\end{equation}
+cuyos elementos se denotarán por $[n,x]$, con $n\in\Z$ y $x=1+\sum_{i\geq 1}x^i\in1+\Ahp$ ($x^i\in A^i$). Escribiremos este grupo aditivamente, así:
+\begin{equation}\tag{1.15}
+[n,x]+[n',x']=[n+n',xx'].
+\end{equation}
+El elemento nulo de este grupo es $[0,1]$. Vamos a introducir en él una estructura de $\lambda$-anillo aumentado, compatible con su estructura aditiva, siendo la aumentación $\varepsilon:[n,x]\longrightarrow n$. El producto $[m,x][n,y]$ queda completamente caracterizado por el hecho de que se escriba $[mn,x^n y^m(x*y)]$, donde $x*y$ es un elemento de $1+\Ahp$ cuyas componentes se expresan como polinomios universales con coeficientes enteros en los $x^i$ y los $y^i$:
+\begin{equation}\tag{1.16}
+(x*y)^i=Q_i(x^1,\ldots,x^i;y^1,\ldots,y^i)\qquad (i\geq1),
+\end{equation}
+siendo el polinomio $Q_i$ isóbaro de peso $i$. Además, $x*y$ debe ser distributivo con respecto a la «adición» $xy$ y, para factores «lineales», debe reducirse a lo siguiente:
+\begin{equation}\tag{1.17}
+[1,1+x^1][1,1+y^1]=[1,1+x^1+y^1].
+\end{equation}
+Los polinomios $Q_i$ se evalúan mediante cálculos de funciones simétricas elementales (se trata del cálculo de las clases de Chern de un producto tensorial de fibrados vectoriales a partir de las clases de Chern $x^i$ e $y^i$ de los factores y de sus dimensiones respectivas $m$ y $n$). De (1.17) se deduce
+\begin{equation}\tag{1.17 bis}
+(1+x^1)*(1+y^1)=(1+x^1+y^1)/(1+x^1)(1+y^1),
+\end{equation}
+y un producto $x*y$ cualquiera se calcula término a término descomponiendo «formalmente» $x$ en un producto $\prod_{i=1}^n(1+\alpha_i)$ e $y$ en un producto $\prod_{i=1}^n(1+\beta_i)$, donde los $\alpha_i$ y los $\beta_i$ son de grado $1$.
+
+De este modo, $\widetilde A$ se convierte en un anillo conmutativo aumentado, con unidad $[1,1]$, y se lo puede interpretar como el anillo obtenido adjuntando una unidad al anillo $1+\Ahp$. Además, sobre $\widetilde A$ se define una \emph{filtración} poniendo $\widetilde A^0=\widetilde A$ y denotando por $\widetilde A^n$ el conjunto de los $[0,x]$ tales que $x^i=0$ para $1\leq i<n$; esta filtración es compatible con el producto, pues se tiene
+\begin{equation}\tag{1.18}
+\left(1+\sum_{i\geq m}x^i\right)*\left(1+\sum_{j\geq n}y^j\right)
+=1-\frac{(m+n-1)!}{(m-1)!(n-1)!}x^m y^n+\cdots,
+\end{equation}
+siendo los términos no escritos de grado $>m+n$. Esta fórmula muestra que el anillo graduado $G(\widetilde A)$ asociado a $\widetilde A$ se identifica con $A$ desde el punto de vista aditivo, pero no desde el punto de vista multiplicativo; solo se puede decir que la aplicación $\eta'$ de $A$ en $G(\widetilde A)$ definida por
+\begin{equation}\tag{1.19}
+\eta'(x^i)=(-1)^{i-1}(i-1)!\,x^i\qquad (x^i\in A^i)
+\end{equation}
+es un \emph{homomorfismo de anillos}.
+
+Se introducen en $\widetilde A$ operaciones $\lambda^i$ que satisfacen los axiomas de los $\lambda$-anillos (\S 1, fórmulas (1.2)), bien determinadas por la condición de que las componentes de $\lambda^i[0,x]$ se deduzcan de las componentes $x^i$ de $x$ mediante polinomios \emph{universales} con coeficientes enteros:
+\begin{equation}\tag{1.20}
+\lambda^i[0,x]=[0,\lambda^i x]\qquad (\lambda^i x)^{(n)}=Q_{i,n}(x^1,\ldots,x^n)
+\end{equation}
+($Q_{i,n}$ es isóbaro de peso $n$), y de que se tenga
+\begin{equation}\tag{1.21}
+\lambda^i[1,1+x^1]=0\qquad\text{para }i>1.
+\end{equation}
+Los polinomios $Q_{i,n}$ se evalúan mediante un cálculo de funciones simétricas elementales, que es el cálculo de las clases de Chern de las potencias exteriores de un fibrado vectorial a partir de las clases de Chern y del rango de este último. Se comprueba entonces que $\widetilde A$ es un $\lambda$-anillo \emph{especial} aumentado y que los $\widetilde A^i$ son estables por las operaciones $\lambda^j$.
+
+El $\lambda$-anillo aumentado $\widetilde A$ puede considerarse como un funtor en $A$; por consiguiente, el automorfismo principal
+\[
+x=\sum_{i\geq0}x^i\longrightarrow \check x=\sum_{i\geq0}(-1)^i x^i
+\]
+de $A$ define un automorfismo de $\widetilde A$, denotado por el mismo símbolo $\check{\ }$.
+
+\textbf{Proposición 1.2.} \emph{Para $x\in\widetilde A$ de la forma $[n,1+x^1+\cdots+x^n]$ (se tiene, pues, $x^i=0$ para $i>n$), se tiene $\lambda^i(x)=0$ para $i>n$, se tiene $\lambda^n(x)=[1,1+x^1]$ y, por último,}
+\begin{equation}\tag{1.22}
+\sum_{i=0}^n(-1)^i\lambda^i(x)=[0,1-(n-1)!x^n+\cdots].
+\end{equation}
+De esta proposición y del hecho de que los $\widetilde A^i$ son estables por las operaciones $\lambda^j$, se deduce que la fórmula (1.22) es válida siempre que $\varepsilon(x)=n$, se tenga o no $x^i=0$ para $i>n$.
+
+La fórmula (1.22) admite las generalizaciones siguientes: sea $K$ un $\lambda$-anillo cualquiera y, por lo demás, arbitrario; para $x\in K$, se pone
+\begin{equation}\tag{1.23}
+\gamma^n(x)=(-1)^n\sum_{i=0}^n(-1)^i\lambda^i(x+n)=\lambda^n(x+n-1)
+\end{equation}
+(la identidad de los dos últimos miembros resulta de una recurrencia inmediata). Se tiene, en particular, $\gamma^0(x)=1$ y $\gamma^1(x)=x$; se pone luego
+\begin{equation}\tag{1.24}
+\gamma_t(x)=\sum_{n\geq0}\gamma^n(x)t^n\in K[[t]]
+\end{equation}
+de donde se deduce la fórmula
+\begin{equation}\tag{1.25}
+\gamma_t(x)=\lambda_{t/(1-t)}(x),
+\end{equation}
+lo que equivale a
+\begin{equation}\tag{1.25 bis}
+\lambda_s(x)=\gamma_{s/(1+s)}(x).
+\end{equation}
+Esto prueba que los $\lambda^i$ se expresan mediante los $\gamma^i$ y que $\gamma_t(x+y)=\gamma_t(x)\gamma_t(y)$ y, por consiguiente, que las aplicaciones $\gamma^i$ definen una nueva estructura de $\lambda$-anillo sobre $K$. La fórmula (1.22) muestra entonces que, para $K=\widetilde A$ y todo $x\in\widetilde A$, se tiene
+\begin{equation}\tag{1.22 bis}
+\gamma^n(x-\varepsilon(x))=[0,1+(-1)^{n-1}(n-1)!x^n+\cdots]
+\end{equation}
+y, por consiguiente, \emph{la componente} $x^n$ \emph{se obtiene, salvo el factor} $(-1)^{n-1}(n-1)!$, \emph{reduciendo módulo} $\widetilde A^{n+1}$ \emph{el elemento} $\gamma^n(x-\varepsilon(x))$ \emph{de} $\widetilde A^n$.
+
+\paragraph{El homomorfismo de Chern:}
+Para todo anillo graduado $A$ que satisfaga las condiciones precedentes, vamos a definir un homomorfismo de anillos aumentados
+\begin{equation}\tag{1.26}
+\ch:\widetilde A\longrightarrow \Ahat\otimes\Q.
+\end{equation}
+Este homomorfismo queda definido sin ambigüedad por las condiciones de ser un homomorfismo aditivo, de transformar $1$ en $1$, de que las componentes de $\ch(x)$ de grado $>0$ vengan dadas por polinomios universales isóbaros con coeficientes racionales en las componentes de $x$, y de que
+\begin{equation}\tag{1.27}
+\ch([1,1+x^1])=\exp x^1=\sum_{n\geq0}(x^1)^n/n!.
+\end{equation}
+Se obtiene entonces de inmediato la expresión explícita de $\ch$: sea $\eta$ el endomorfismo aditivo de $\Ahat\otimes\Q$ definido, para $x^i$ de grado $i$, por
+\begin{equation}\tag{1.28}
+\eta(x^i)=1/(-1)^{i-1}(i-1)!\,x^i.
+\end{equation}
+Se tiene entonces
+\begin{equation}\tag{1.29}
+\ch\left([n,1+\sum_{i\geq1}x^i]\right)=n+\eta\left(\log\left(1+\sum_{i\geq1}x^i\right)\right).
+\end{equation}
+Como se puede «invertir» esta fórmula, al menos si $A$ solo tiene un número finito de componentes homogéneas, se ve que, en este caso, se tiene un \emph{isomorfismo} $\ch$ \emph{del anillo} $\widetilde A\otimes\Q$ \emph{sobre el anillo} $\Ahat\otimes\Q$ (lo que esclarece por completo la estructura de $\widetilde A\otimes\Q$).
+
+Recordemos que, según Hirzebruch [1], una serie formal $f\in\Q[[t]]$ define mediante fórmulas polinómicas universales un homomorfismo aditivo $1+\Ahp\longrightarrow 1+(\Ahat\otimes\Q)^+$, denotado por $\mathcal C_f$; cuando $f(t)=t/(1-\exp(-t))$, se pone simplemente $\mathcal C_f=\mathcal C$ ($\mathcal C$ es la inicial de Todd). Se extiende la definición de $\mathcal C(x)$ a $x\in\widetilde A$. Dicho esto, se tiene el resultado siguiente:
+
+\textbf{Proposición 1.3.} \emph{Sea $N\in\widetilde A$ de la forma $[q,1+N^1+\cdots+N^q]$ (se tiene $N^i=0$ para $i>q$). Si se pone}
+\[
+\lambda_{-1}(N)=\sum_{i\geq0}(-1)^i\lambda^i(N)=\sum_{i=0}^{\sisi{n}{q}}(-1)^i\lambda^i(N),
+\]
+\emph{se tendrá}
+\begin{equation}\tag{1.30}
+\ch(\lambda_{-1}(N))=(-1)^q N^q\mathcal C(\check N)^{-1},
+\end{equation}
+\emph{lo que equivale a}
+\begin{equation}\tag{1.30 bis}
+\ch(\lambda_{-1}(\check N))=N^q\mathcal C(N)^{-1}.
+\end{equation}
+
+\subsection*{\S 4. Las operaciones $\lambda^p(N,x)$}
+
+Sea $A$ el anillo de las series formales, con coeficientes en $\Z$, en dos sucesiones infinitas de indeterminadas, denotadas por $\lambda^iN$ y $\lambda^i x$ ($i\geq1$). Se pone $\lambda^1N=N$ y $\lambda^1x=x$, y se introduce sobre $A$ la única estructura de $\lambda$-anillo especial para la cual se tenga $\lambda^i(N)=\lambda^iN$ y $\lambda^i(x)=\lambda^ix$ y para la cual las operaciones $\lambda^i$ sean «continuas» (si nos limitásemos a los \emph{polinomios} en las indeterminadas $\lambda^iN$ y $\lambda^ix$, se tendría el «$\lambda$-anillo libre engendrado por $N$ y $x$»; nuestro anillo $A$ es una completación de este). Se puede entonces formar
+\begin{equation}\tag{1.31}
+\lambda_{-1}(N)=\sum_{i\geq0}(-1)^i\lambda^iN,
+\end{equation}
+que es una serie formal de término constante $1$ y, por tanto, invertible; se puede, pues, definir sin ambigüedad un elemento $\lambda^p(N,x)$ de $A$ poniendo
+\begin{equation}\tag{1.32}
+\lambda^p(N,x)\lambda_{-1}(N)=\lambda^p(x\lambda_{-1}(N)).
+\end{equation}
+
+\textbf{Teorema 1.4.} \emph{Sea $J_q$ el ideal cerrado de $A$ engendrado por los $\lambda^iN$ con $i>q$; identifiquemos $A/J_q$ con el anillo de las series formales en los $\lambda^i x$ y los $\lambda^jN$ ($1\leq j\leq q$). Entonces $\lambda^p(N,x)$ reducido módulo $J_q$ es un polinomio, isóbaro de peso $p$ con respecto a las variables $\lambda^i x$.}
+
+\emph{Sean $N$ y $F$ dos espacios vectoriales de dimensiones finitas $q,q'$ sobre un cuerpo $k$ algebraicamente cerrado de característica $0$; sea $N^{(p)}$ el núcleo de la aplicación} $(a_1,\ldots,a_p)\longrightarrow a_1+\cdots+a_p$ \emph{de $N^p$ en $N$.} \emph{Se hace actuar al grupo simétrico $\mathfrak S_p$ sobre $N^p$, por tanto sobre $N^{(p)}$, por tanto sobre $\Lambda(N^{(p)})$, y después sobre $\bigotimes^p F$ y sobre $\Lambda(N^{(p)})\otimes\bigotimes^p F$. Consideremos este espacio vectorial como un módulo graduado sobre $\mathfrak S_p\times\Gl(N)\times\Gl(F)$ y tomemos su «parte alternante», que es un módulo graduado sobre $\Gl(N)\times\Gl(F)\eqqcolon G$. Se tiene entonces}
+\begin{equation}\tag{1.33}
+\lambda^p(N,F)=\underline{E}_G\left(\left(\Lambda(N^{(p)})\otimes\bigotimes^p F\right)^{\mathrm{alt}}\right).
+\end{equation}
+
+N.B. Si $M$ es un complejo de $G$-módulos, se denota por $\underline{E}_G(M)$ la suma alternada en $\underline{K}(G)$ de las clases de las componentes de $M$; es la característica de Euler--Poincaré de $M$; en la fórmula (1.33), el primer miembro $\lambda^p(N,F)$ designa el elemento del anillo $\underline{K}(G)$ obtenido sustituyendo las variables $\lambda^iN$ y $\lambda^iF$ por las clases en $\underline{K}(G)$ de los $G$-módulos $\Lambda^i(N)$ y $\Lambda^i(F)$, respectivamente.
+
+\textbf{Demostración:} Desarrollando el segundo miembro de (1.32) mediante la segunda fórmula (1.11), se ve que la primera afirmación queda demostrada si se demuestra la afirmación análoga obtenida haciendo $x=1$, es decir, si se demuestra que, en el $\lambda$-anillo $\Z[\lambda^1N,\ldots,\lambda^qN]$, donde $\lambda^iN=0$ para $i>q$, el elemento $\lambda^p(\lambda_{-1}(N))$ es divisible por $\lambda_{-1}(N)$. A priori, el cociente
+\[
+\lambda^p(N,1)=\lambda^p(\lambda_{-1}(N))/\lambda_{-1}(N)
+\]
+es una serie formal contenida en el cuerpo de fracciones $K$ del anillo de las series formales en los $\lambda^iN$ para $1\leq i\leq q$. Por otra parte, denotemos también por $N$ un espacio vectorial de dimensión $q$ sobre un cuerpo algebraicamente cerrado $k$ de característica $0$, y consideremos el elemento
+\[
+\ell^p(N)=\underline{E}_G((\Lambda(N^{(p)}))^{\mathrm{alt}})\in \underline{K}(G),
+\]
+donde ahora se tiene $G=\Gl(N)$. Se sabe (\S 2, \sisi{teorema 1.3}{corolario del teorema 1.1}) que $\underline{K}(G)$ se identifica con el subanillo de $K$ engendrado por los $\lambda^iN$ para $1\leq i\leq q$ y por el inverso de $\lambda^qN$. Por otra parte, se verifica fácilmente en este anillo que se tiene
+\[
+\ell^p(N)\lambda_{-1}(N)=\lambda^p(\lambda_{-1}(N)).
+\]
+Como estamos en un cuerpo grande $K$ y $\lambda_{-1}(N)\neq0$, se concluye que $\ell^p(N)=\lambda^p(N,1)$; ambos miembros están en la intersección de $\underline{K}(G)$ y del anillo de las series formales en los $\lambda^iN$, y son, por tanto, polinomios en los $\lambda^iN$.
+
+Para demostrar (1.33) en el caso general, se verifica que el segundo miembro satisface en $\underline{K}(G)$ la fórmula análoga a (1.32), es decir, que su producto por $\lambda_{-1}(N)$ es $\lambda^p(F\lambda_{-1}(N))$. Del mismo modo, el producto de $\lambda^p(N,F)\in \underline{K}(G)$ por $\lambda_{-1}(N)$ es $\lambda^p(F\lambda_{-1}(N))$, como resulta del hecho de que $\underline{K}(G)$ es \emph{especial}. Como $\underline{K}(G)$ es un dominio entero (cf.\ \S 2) y $\lambda_{-1}(N)\neq0$ (misma referencia), queda demostrada la fórmula (1.33). cqfd.
+
+\textbf{Observaciones:} a) Cuando la dimensión $q'$ de $F$ es $\geq p$, entonces (1.33) caracteriza el polinomio $\lambda^p(N,x)$ en los $\lambda^iN$ ($1\leq i\leq q$) y los $\lambda^jx$ ($1\leq j\leq p$).
+
+b) Es plausible que (1.33) siga siendo válida si el cuerpo $k$ no es algebraicamente cerrado\footnote{En efecto, esto se demuestra por el mismo método.}. Habría que resolver esta cuestión si se quisiera demostrar el teorema de Riemann--Roch sobre un cuerpo de característica $0$ no algebraicamente cerrado mediante el método que vamos a exponer. Por otra parte, el paso de un $\mathfrak S_p$-módulo a su parte alternante solo tiene un sentido razonable si el cuerpo base es de característica $0$.
+
+Sea ahora $K$ un $\lambda$-anillo \emph{especial} cualquiera y sea $N$ un elemento de $K$ tal que $\lambda^iN=0$ para $i$ suficientemente grande. Se pueden entonces considerar, para todo $x\in K$ y todo entero $p\geq1$, los elementos $\lambda^p(N,x)$, que se expresan mediante polinomios universales con coeficientes enteros en los $\lambda^iN$ y los $\lambda^jx$. Se tiene $\lambda^1(N,x)=x$ y se tiene la fórmula (1.32) \emph{en} $K$. Para expresar las propiedades de las operaciones $x\mapsto\lambda^p(N,x)$, conviene introducir un nuevo $\lambda$-anillo denotado por $K_N$. Como anillo conmutativo, $K_N$ se obtiene adjuntando una unidad al anillo cuyo grupo aditivo subyacente es $K$ y cuya multiplicación viene dada por
+\begin{equation}\tag{1.34}
+x_Ny=xy\mu\qquad (\mu=\lambda_{-1}(N)).
+\end{equation}
+La aplicación $\lambda_t$ de $K_N$ en $K_N[[t]]$ se define por
+\begin{equation}\tag{1.35}
+\lambda_t(n,x)=(1+t)^n\sum_{p\geq0}\lambda^p(N,x)t^p,
+\end{equation}
+donde se ha puesto $\lambda^0(N,x)=(1,0)$ (elemento unidad de $K_N$). Afirmo que, \emph{provisto de estas operaciones, $K_N$ es un $\lambda$-anillo especial}. Se trata, pues, de verificar las fórmulas $\lambda_t(X+Y)=\lambda_t(X)\lambda_t(Y)$, \sisi{$\lambda_t(XY)=\lambda_t(X).\lambda_t(Y)$}{$\lambda_t(XY)=\lambda_t(X)\circ\lambda_t(Y)$}, y $\lambda_t(\lambda^i(X))=\lambda^i(\lambda_t(X))$ para $X,Y\in K_N$. Basta verificar estas fórmulas cuando $X$ e $Y$ están en $K$, y se comprueba que basta verificarlas cuando $K$ es el $\lambda$-anillo especial libre engendrado por $X,Y$ y $N$, sujeto a las relaciones $\lambda^iN=0$ para $i>q$. Pero el homomorfismo de grupos
+\begin{equation}\tag{1.36}
+K_N\longrightarrow K,
+\end{equation}
+que transforma unidad en unidad y que sobre $K$ se reduce al homomorfismo $x\longrightarrow x\mu$, es un homomorfismo compatible con las estructuras de anillos y las aplicaciones $\lambda^i$, como se comprueba de inmediato. En el caso actual, su restricción a $K$ es \emph{inyectiva}; como $K$ es un $\lambda$-anillo especial, se deduce fácilmente que las relaciones anteriores se satisfacen efectivamente para $X,Y\in K$, y esto termina de demostrar nuestra afirmación.
+
+Según la fórmula (1.23), es natural, para $x\in K$ y $n\geq1$, poner
+\begin{equation}\tag{1.37}
+\gamma^n(N,x)=\sum_{i=0}^{n-1}\binom{n-1}{i}\lambda^{\sisi{i}{n-i}}(N,x),
+\end{equation}
+en otras palabras, se pone $\gamma^n(N,x)=\gamma^n(x_N)$, donde $x_N$ designa $x$ considerado como elemento del $\lambda$-anillo $K_N$.
+
+\textbf{Proposición 1.5.} \emph{Sean $A$ un anillo graduado conmutativo con unidad, $N$ un elemento de $\widetilde A$ de la forma $N=[q,1+N^1+\cdots+N^q]$ y $x$ un elemento cualquiera de $\widetilde A$: $x=[\nu,1+\sum_{i\geq1}x^i]$. Entonces, para todo entero $\sisi{j\geq0}{j\geq1}$, se tiene $\gamma^{q+j}(N,x)\in\widetilde A^j$, y la componente de grado $j$ de $\gamma^{q+j}(N,x)$ es de la forma}
+\begin{equation}\tag{1.38}
+\left(\gamma^{q+j}(N,x)\right)^{(j)}=(-1)^{j-1}(j-1)!G_{q,j}(\nu,x^1,\ldots,x^j;N^1,\ldots,N^j),
+\end{equation}
+\emph{donde $G_{q,j}$ es un polinomio universal con coeficientes enteros caracterizado por la condición}
+\begin{equation}\tag{1.39}
+\sisi{G_{q,j}(\nu,x^1,\ldots,N^j)}{G_{q,j}(\nu,x^1,\ldots,x^j;N^1,\ldots,N^j)}N^q=(-1)^q(x*\lambda_{-1}(N))^{(q+j)}.
+\end{equation}
+
+\textbf{Demostración.} Se puede suponer que $A$ es el anillo de polinomios con coeficientes enteros en indeterminadas $x^i$ y $N^j$ (con $1\leq j\leq q$). Como se tiene evidentemente, combinando (1.32) y (1.37),
+\begin{equation}\tag{1.40}
+\gamma^n(N,x)\lambda_{-1}(N)=\gamma^n(x\lambda_{-1}(N)),
+\end{equation}
+y como, para $n=q+j$, el segundo miembro es de filtración $\geq q+j$ (utilícese la fórmula (1.22 bis), teniendo en cuenta que $x\lambda_{-1}(N)$ es de aumentación nula), mientras que $\lambda_{-1}(N)$ es de filtración $q$ (fórmula (1.22)), resulta que $\gamma^n(N,x)$ es de filtración $j$, ya que, en virtud de (1.18), el graduado asociado a $\sisi{A}{\widetilde A}$ es aquí \emph{un dominio entero}. Utilizando las fórmulas precedentes, se obtiene de inmediato la forma indicada para $(\gamma^{q+j}(N,x))^{(j)}$.
+\begin{flushright}cqfd.\end{flushright}

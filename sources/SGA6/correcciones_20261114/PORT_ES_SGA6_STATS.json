@@ -1,0 +1,15 @@
+{
+ "tag": "ES_SGA6",
+ "tree": "sga\\es_sga6\\fixed",
+ "french": "french\\sga-fr\\volumes\\sga6\\current",
+ "files": 135,
+ "two_branches": true,
+ "items": 2999,
+ "outcomes": {
+  "hand": 2042,
+  "not_applicable": 313,
+  "applied": 551,
+  "already": 93
+ },
+ "files_changed": 104
+}

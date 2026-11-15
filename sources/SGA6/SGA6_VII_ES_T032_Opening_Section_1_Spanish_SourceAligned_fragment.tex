@@ -1,0 +1,219 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: apertura y sección 1 completas, líneas 9752--9964 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Exposición VII. Inmersiones regulares y cálculo del \texorpdfstring{$K^{\bullet}$}{K0} de un esquema explotado}
+\begin{center}
+por Pierre \textsc{Berthelot}
+\end{center}
+
+\section*{1. Generalidades sobre las inmersiones regulares}
+
+Como la noción clásica de inmersión regular (EGA IV 16.9.2) resulta inadecuada en el caso no noetheriano, vamos a definir una noción más débil, pero que da lugar a las propiedades deseadas y que equivale a la definición usual en el caso noetheriano.
+
+\textbf{Definición 1.1.} Sean $A$ un anillo conmutativo, $E$ un $A$-módulo proyectivo de tipo finito, y $u:E\longrightarrow A$ un homomorfismo $A$-lineal. Se dice que $u$ es regular si el complejo de Koszul $K_\bullet(u)$ definido por $u$ es acíclico en dimensión $>0$, y por tanto es una resolución de $B=A/u(E)$.
+
+Recordemos que el complejo de Koszul asociado a $u$ se define como sigue: el $A$-módulo graduado $K_\bullet(u)$ es el álgebra exterior $\Lambda(E)$, y el operador borde es la multiplicación interior por $u$ considerado como elemento del dual $\check E$: es una antiderivación de grado $-1$ de $\Lambda(E)$, igual a $u$ sobre $E$.
+
+\textbf{Lema 1.2.} Sea $u:E\longrightarrow A$ un homomorfismo regular. Sean $A'$ una $A$-álgebra y $u':E'\longrightarrow A'$ el homomorfismo deducido de $u$ por cambio de base; se supone que $u'$ es regular. Se pone $J=u(E)$, $J'=JA'=u(E')$. Entonces se tienen las relaciones siguientes para todo entero $n\geq0$:
+\begin{align}
+ J^n/J^{n+1}\otimes_AA'&\xrightarrow{\sim}J'^n/J'^{n+1}, \tag{1.2.1}\\
+ \Tor_i^A(J^n/J^{n+1},A')&=0\quad\text{para }i\geq1, \tag{1.2.2}\\
+ J^n\otimes_AA'&\xrightarrow{\sim}J'^n, \tag{1.2.3}\\
+ \Tor_i^A(J^n,A')&=0\quad\text{para }i\geq1. \tag{1.2.4}
+\end{align}
+
+\emph{Demostración.} a) Supongamos primero que los $J^n/J^{n+1}$ son proyectivos sobre $B=A/J$; como $J$ es de tipo finito, son localmente libres de tipo finito sobre $B$. Puesto que las relaciones que hay que demostrar se verifican puntualmente sobre $\Spec(A)$, quedamos reducidos al caso en que $A$ es local, con $u(E)\subset\rad(A)$. Los $J^n/J^{n+1}$ son entonces libres sobre $B$, y las relaciones $\Tor_i^A(J^n/J^{n+1},A')=0$ para $i\geq1$ equivalen a las relaciones $\Tor_i^A(B,A')=0$ para $i\geq1$. Ahora bien, se pueden calcular los $\Tor_i^A$ utilizando la resolución proyectiva $K_\bullet(u)$ de $B$; son los grupos de homología del complejo $K_\bullet(u)\otimes_AA'=K_\bullet(u')$. Como se supone que $u'$ es regular, este último es acíclico en grados $>0$, de donde resultan las relaciones $\Tor_i^A(J^n/J^{n+1},A')=0$ para $i\geq1$.
+
+Se deducen las relaciones $\Tor_i^A(A/J^n,A')=0$ para $i\geq1$, procediendo por inducción sobre $n$ gracias a la sucesión exacta de los Tor asociada a la sucesión exacta
+\[
+ 0\longrightarrow J^n/J^{n+1}\longrightarrow A/J^{n+1}\longrightarrow A/J^n\longrightarrow0.
+\]
+Como para todo $k$ se tiene $J^kA'=J'^k$, de esta sucesión exacta y de $\Tor_1^A(A/J^n,A')=0$ se obtienen las relaciones $J^n/J^{n+1}\otimes_AA'\xrightarrow{\sim}J'^n/J'^{n+1}$. De la sucesión exacta
+\[
+ 0\longrightarrow J^n\longrightarrow A\longrightarrow A/J^n\longrightarrow0,
+\]
+y de $\Tor_1^A(A/J^n,A')=0$, se deducen las relaciones $J^n\otimes_AA'\xrightarrow{\sim}J'^n$. Finalmente, de la sucesión exacta de los Tor asociada a la sucesión exacta
+\[
+ 0\longrightarrow J^{n+1}\longrightarrow J^n\longrightarrow J^n/J^{n+1}\longrightarrow0,
+\]
+se deducen las relaciones $\Tor_i^A(J^n,A')=0$ para $i\geq1$, por inducción sobre $n$, siendo evidente el caso $n=0$.
+
+b) Vamos a demostrar ahora que los $J^n/J^{n+1}$ son proyectivos sobre $B=A/J$. Como la cuestión es local sobre $\Spec(A)$, podemos suponer que $E$ es libre, sea $E=(A)^d$, de modo que $u$ está definido por una sucesión $f_1,\ldots,f_d$ de elementos de $A$. Pongamos $A_0=\mathbb Z[T_1,\ldots,T_d]$ y sea $A_0\longrightarrow A$ el homomorfismo que envía $T_i$ a $f_i$; denotemos por $u_0:E_0=A_0^d\longrightarrow A_0$ el homomorfismo definido por la sucesión $(T_1,\ldots,T_d)$, de modo que $u$ se deduce de $u_0$ por cambio de base de $A_0$ a $A$. Como la sucesión $(T_1,\ldots,T_d)$ es regular (en el sentido clásico), el homomorfismo $u_0$ es regular, y estamos bajo las condiciones del lema, aplicado al cambio de base $A_0\longrightarrow A$. Ahora bien, los $J_0^n/J_0^{n+1}$ son libres de tipo finito sobre $\mathbb Z$; por tanto, se pueden aplicar los resultados de a). En consecuencia, $J^n/J^{n+1}\xleftarrow{\sim}J_0^n/J_0^{n+1}\otimes_{A_0}A$, y $J^n/J^{n+1}$ es libre de tipo finito.
+
+\textbf{Proposición 1.3.} Sean $A$ un anillo, $E$ un $A$-módulo proyectivo de tipo finito, $u:E\longrightarrow A$ un homomorfismo regular, y $J=u(E)$. Entonces el ideal $J$ es cuasirregular (EGA IV 16.9.7), es decir (EGA IV 16.9.8):
+\begin{enumerate}[label=\roman*)]
+\item $J$ es de tipo finito.
+\item $J/J^2$ es un $A/J$-módulo proyectivo de tipo finito;
+\item el homomorfismo canónico
+\end{enumerate}
+\begin{equation}\tag{1.3.1}
+ \Sym_{A/J}(J/J^2)\longrightarrow \gr_J(A)=\bigoplus_{n\geq0}J^n/J^{n+1},
+\end{equation}
+es un isomorfismo.
+
+\emph{Demostración.} En la demostración de 1.2 b) se ha visto que $J/J^2$ es proyectivo de tipo finito. Retomemos las notaciones de 1.2 b) (como la cuestión es local sobre $\Spec(A)$, se supone todavía que $E$ es libre de tipo finito). Entonces el homomorfismo canónico (1.3.1) se deduce del homomorfismo análogo para $J_0$ mediante el cambio de base $A_0\longrightarrow A$, por las relaciones 1.2. Ahora bien, este último es un isomorfismo, y por tanto lo mismo vale para (1.3.1).
+
+\textbf{Definición 1.4.} Sean $(X,A)$ un sitio conmutativamente localmente anillado, $E$ un $A$-módulo localmente libre de tipo finito, y $u:E\longrightarrow A$ un homomorfismo $A$-lineal. Se dice que $u$ es regular si el complejo de Koszul $K_\bullet(u)$ definido por $u$ es acíclico en grados $>0$. Sea $J$ un ideal de $A$; se dice que $J$ es regular si, localmente sobre $X$, existen un $A$-módulo libre de tipo finito $E$ y un homomorfismo regular sobreyectivo $E\longrightarrow J$.
+
+Sea $i:Y\longrightarrow X$ una inmersión de preesquemas, y sea $U$ un abierto de $X$ tal que $i(Y)\subset U$ y que $i$ sea una inmersión cerrada de $Y$ en $U$. Se dice que $i$ es regular si el ideal de $\cO_U$ que define $i(Y)$ es regular, condición que no depende de $U$. Si $y\in Y$, se dice que $i$ es regular en $y$ si existe un entorno $V$ de $i(y)$ tal que la inmersión $i^{-1}(V)\longrightarrow V$ sea regular. Para que una inmersión sea regular, es necesario y suficiente, pues, que lo sea en un entorno de cada punto.
+
+Esta definición está en conflicto con EGA IV 16.9.2 y sustituye a esta última. Sin embargo, en el caso noetheriano las dos definiciones son equivalentes (EGA IV 19.5.1). Una inmersión que localmente puede definirse por una sucesión regular es regular; una inmersión regular es cuasirregular (1.3).
+
+\textbf{1.4.1.} Sean $X$ un esquema, $J$ un ideal de tipo finito de $\cO_X$, y $x$ un punto de $\Supp(\cO_X/J)$. Diremos que una familia de secciones $f_1,\ldots,f_d$ de $J$ sobre un entorno de $x$ forma un sistema mínimo de generadores de $J$ en un entorno de $x$ si los $(f_i)_x$ son una familia de generadores de $J_x$ de cardinal mínimo, es decir, si sus imágenes en $J_x\otimes k(x)$ forman una base de este espacio vectorial sobre $k(x)$. Obsérvese que los $f_i$ engendran $J$ en un entorno de $x$.
+
+\textbf{1.4.2.} Decir que una inmersión es regular equivale también a decir que está definida en cierto abierto de $X$ por un ideal de tipo finito $J$, y que, para todo punto $x\in\Supp(\cO_X/J)$ y todo sistema mínimo de generadores de $J$ en un entorno de $x$, el complejo de Koszul asociado a esta sucesión es acíclico en un entorno de $x$. En efecto, sea $f_1,\ldots,f_d$ un sistema mínimo de generadores de $J$ en un entorno de $x$ tal que el complejo de Koszul asociado sea acíclico (existe si se supone regular la inmersión); sea $g_1,\ldots,g_d$ otro sistema mínimo de generadores de $J$. Existe un entorno de $x$ en el que $J$ puede ser engendrado tanto por los $f_i$ como por los $g_j$, y por tanto existe en ese entorno una matriz con coeficientes en $\cO_X$ que permite expresar los $g_j$ en función de los $f_i$. Ahora bien, las imágenes de los $f_i$ (resp. de los $g_j$) en $J/J^2$ forman una base en el punto $x$, y por ello en un entorno de $x$; en consecuencia, esta matriz es invertible en un entorno de $x$. Permite, pues, definir un isomorfismo del complejo de Koszul definido por los $g_j$ sobre el complejo de Koszul definido por los $f_i$, lo que muestra que el complejo de Koszul definido por los $g_j$ es acíclico.
+
+\textbf{1.4.3.} Suponiendo solamente que $J$ es de tipo finito y $J/J^2$ localmente libre de tipo finito, observemos que todo sistema mínimo de generadores de $J$ en un entorno de un punto $y$ de $Y$ da una base de $J/J^2$ en un entorno de $y$. Recíprocamente, si se tiene en un entorno de $y$ una base de $J/J^2$, se puede levantar en un entorno de $y$ a una familia de secciones de $J$, que engendran $J_y$ por Nakayama, y por tanto $J$ en un entorno de $y$ porque $J$ es de tipo finito; además, estos generadores son de cardinal mínimo, puesto que dan una base de $J/J^2$.
+
+\textbf{Proposición 1.5.} (Compárese EGA IV 19.1.5 (ii)). Sea $i:Y\longrightarrow X$ una inmersión. Si $i$ es regular, lo mismo vale para toda inmersión deducida de $i$ por cambio de base plano. Para que $i$ sea regular, es necesario y suficiente que lo sea localmente para la topología fielmente plana cuasicompacta.
+
+\emph{Demostración.} La estabilidad por cambio de base plano es evidente.
+
+Recíprocamente, sea $i'$ la inmersión deducida de $i$ por un cambio de base fielmente plano cuasicompacto. Si $i'$ es regular, entonces el ideal $J$ que define $i$ es de tipo finito, y $J/J^2$ es localmente libre de tipo finito, pues estas propiedades descienden por morfismos fielmente planos cuasicompactos.
+
+Si $f_1,\ldots,f_d$ es una sucesión de secciones de $J$ que levanta una base de $J/J^2$, el complejo de Koszul asociado a las imágenes inversas de los $f_i$ es acíclico en grados $>0$ por 1.4; como es la imagen inversa del complejo de Koszul asociado a los $f_i$, este último es acíclico en grados $>0$, y $i$ es regular.
+
+\textbf{Definición 1.6.} Sea $i:Y\longrightarrow X$ una inmersión definida en un abierto $U$ de $X$ por un ideal $J$ de $\cO_X$; el $\cO_Y$-módulo $J/J^2$ (independiente de $U$) se llama haz conormal de $Y$ en $X$, y se denota por $N_{X/Y}$. Si $i$ es regular, $J/J^2$ es localmente libre de tipo finito, y su rango se llama codimensión de $Y$ en $X$, o también codimensión de $i$.
+
+Si se tienen dos inmersiones cerradas $Z\xrightarrow{j}Y\xrightarrow{i}X$, los haces conormales forman una sucesión exacta
+\begin{equation}\tag{1.6.1}
+ j^*(N_{X/Y})\longrightarrow N_{X/Z}\longrightarrow N_{Y/Z}\longrightarrow0.
+\end{equation}
+Sean, en efecto, $I$ el ideal de $Y$ en $X$, $J$ el ideal de $Z$ en $X$, y $K$ el ideal de $Z$ en $Y$. Se tiene la sucesión exacta
+\[
+0\longrightarrow I\longrightarrow J\longrightarrow K\longrightarrow0;
+\]
+de donde, tensorizando por $\cO_X/I=\cO_Y$, resulta la sucesión exacta
+\[
+ I/I^2\longrightarrow J\otimes_{\cO_X}\cO_Y\longrightarrow K\otimes_{\cO_X}\cO_Y\longrightarrow0;
+\]
+tensorizando por $\cO_Z=\cO_X/J=\cO_Y/K$, se obtiene la sucesión exacta
+\[
+ j^*(I/I^2)\longrightarrow J\otimes_{\cO_X}\cO_Z\longrightarrow K\otimes_{\cO_Y}\cO_Z\longrightarrow0,
+\]
+que es la sucesión buscada.
+
+\textbf{Proposición 1.7.} (Compárese EGA IV 19.1.5 (iv)). Sean $i:Y\longrightarrow X$ y $j:Z\longrightarrow Y$ dos inmersiones:
+\begin{enumerate}[label=\roman*)]
+\item Si $i$ y $j$ son regulares, $i\circ j$ es regular, y la sucesión
+\[
+0\longrightarrow j^*(N_{X/Y})\longrightarrow N_{X/Z}\longrightarrow N_{Y/Z}\longrightarrow0
+\]
+es exacta; en particular, $\codim(i\circ j)=\codim(i)+\codim(j)$.
+\item Si $i\circ j$ e $i$ son regulares, y si la sucesión
+\[
+0\longrightarrow j^*(N_{X/Y})\longrightarrow N_{X/Z}\longrightarrow N_{Y/Z}\longrightarrow0,
+\]
+es exacta y localmente escindida, $j$ es regular;
+\item Si $X$ es noetheriano, y si $i\circ j$ y $j$ son regulares, $i$ es regular en los puntos de $Z$.
+\end{enumerate}
+
+\emph{Demostración.} Como la cuestión es local sobre $X$, podemos suponer que $X$ es afín y que las inmersiones son cerradas; sean $X=\Spec(A)$, $Y=\Spec(B)$, $Z=\Spec(C)$, con $B=A/I$, $C=A/J=B/K$.
+
+i) Localizando si es necesario, podemos suponer que $I/I^2$ es libre sobre $B$ y $K/K^2$ libre sobre $C$ (1.3). Sean $f_1,\ldots,f_n$ elementos de $A$ que levantan una base de $I/I^2$, y $g_1,\ldots,g_m$ elementos de $A$ que levantan una base de $K/K^2$; localizando más si es necesario, podemos suponer que $f_1,\ldots,f_n$ engendran $I$, que $f_1,\ldots,f_n,g_1,\ldots,g_m$ engendran $J$, y que $\bar g_1,\ldots,\bar g_m$ engendran $K$, siendo $\bar g_j$ la imagen de $g_j$ en $B$ (1.4); además, $f_1,\ldots,f_n$ forman un sistema mínimo de generadores de $I$, y $\bar g_1,\ldots,\bar g_m$ un sistema mínimo de generadores de $K$.
+
+Consideremos el diagrama
+\begin{equation}\tag{1.7.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+A_0=\mathbb Z[T_1,\ldots,T_{n+m}] \arrow[r] \arrow[d] & A \arrow[d]\\
+B_0=\mathbb Z[T_1,\ldots,T_m] \arrow[r] \arrow[d] & B \arrow[d]\\
+C_0=\mathbb Z \arrow[r] & C,
+\end{tikzcd}
+\end{equation}
+donde las flechas horizontales se definen enviando $T_i$ a $f_i$ para $1\leq i\leq n$, y $T_{n+j}$ a $g_j$ para $1\leq j\leq m$; el homomorfismo $A_0\longrightarrow B_0$ se define enviando $T_i$ a $0$ para $1\leq i\leq n$, y $T_{n+j}$ a $T_j$ para $1\leq j\leq m$; y el homomorfismo $B_0\longrightarrow C_0$ anulando los $T_j$, $1\leq j\leq m$. Se tiene entonces
+\[
+ B=A\otimes_{A_0}B_0,
+ \qquad
+ C=A\otimes_{A_0}C_0=B\otimes_{B_0}C_0.
+\]
+La situación estudiada se deduce, pues, de la situación $(A_0,B_0,C_0)$ mediante el cambio de base $A_0\longrightarrow A$. Ahora bien, las inmersiones correspondientes $i_0$, $j_0$ e $i_0\circ j_0$ son regulares; por tanto, los grupos de homología de los complejos de Koszul asociados a las sucesiones $(f_1,\ldots,f_n)$, $(f_1,\ldots,f_n,g_1,\ldots,g_m)$ y $(\bar g_1,\ldots,\bar g_m)$ son respectivamente los $\Tor_i^{A_0}(B_0,A)$, $\Tor_i^{A_0}(C_0,A)$, $\Tor_i^{A_0}(C_0,B)$. Por consiguiente:
+\begin{equation}\tag{1.7.2}
+\begin{aligned}
+ i\ \text{regular} &\Longleftrightarrow \forall i\geq1,
+ \Tor_i^{A_0}(B_0,A)=0,\\
+ i\circ j\ \text{regular} &\Longleftrightarrow \forall i\geq1,
+ \Tor_i^{A_0}(C_0,A)=0,\\
+ j\ \text{regular} &\Longleftrightarrow \forall i\geq1,
+ \Tor_i^{B_0}(C_0,B)=0.
+\end{aligned}
+\end{equation}
+Utilizamos entonces la sucesión espectral de transitividad ([1], XVI 5)
+\begin{equation}\tag{1.7.3}
+E^2_{pq}=\Tor_p^{B_0}\bigl(C_0,\Tor_q^{A_0}(B_0,A)\bigr)
+\Longrightarrow \Tor_n^{A_0}(C_0,A).
+\end{equation}
+Por las hipótesis de i), $E^2_{pq}=0$ para $p$ o $q\ne0$. Por tanto, degenera, y $i\circ j$ es regular por (1.7.2).
+
+Por (1.6.1), la sucesión
+\[
+ j^*(N_{X/Y})\longrightarrow N_{X/Z}\longrightarrow N_{Y/Z}\longrightarrow0
+\]
+es exacta. Como $i\circ j$ es regular, los tres haces conormales son localmente libres de tipo finito; además, su rango en un punto es el número de elementos de un sistema mínimo de generadores del ideal correspondiente; por la demostración precedente, se tiene
+\[
+ \rang(N_{X/Z})=\rang(N_{X/Y})+\rang(N_{Y/Z}).
+\]
+Se sigue que el núcleo de $j^*(N_{X/Y})\longrightarrow N_{X/Z}$ es localmente libre de rango cero, y por tanto que la sucesión (\sisi{1.8.1}{1.6.1}) es exacta.
+
+ii) Podemos suponer que $J/J^2$ es libre sobre $C$, e $I/I^2$ libre sobre $B$; además, la hipótesis hecha sobre la sucesión de los haces conormales permite suponer que $I/I^2\otimes_A A/J$ es factor directo de $J/J^2$. Podemos encontrar, pues, elementos $f_1,\ldots,f_n$ de $A$ que levantan una base de $I/I^2$, y elementos $g_1,\ldots,g_m$ de $A$ tales que $f_1,\ldots,f_n,g_1,\ldots,g_m$ levantan una base de $J/J^2$, y cuyas imágenes $g_1,\ldots,g_m$ engendran $K/K^2$; localizando de nuevo si es necesario, podemos suponer que $f_1,\ldots,f_n$ forman un sistema mínimo de generadores de $I$, que $f_1,\ldots,f_n,g_1,\ldots,g_m$ forman un sistema mínimo de generadores de $J$, y que $\bar g_1,\ldots,\bar g_m$ engendran $K$. Podemos entonces construir el diagrama (1.7.1) y utilizar la sucesión espectral (1.7.3).
+
+Por (1.7.2), como $i$ es regular, se tiene $E^2_{pq}=0$ para $q\geq1$; se obtienen, pues, isomorfismos de borde $E^2_{p,0}\simeq\Tor_p^{A_0}(C_0,A)$. Como $i\circ j$ es regular, esto implica por (1.7.2) que $E^2_{p,0}=0$ para $p\geq1$, y por tanto que $j$ es regular, siempre por (1.7.2).
+
+iii) Esta última propiedad está demostrada en EGA IV 19.1.5 (iv), puesto que en el caso noetheriano la definición de EGA IV coincide con la que adoptamos aquí.
+
+\textbf{Proposición 1.8.} Sean \(X\) un esquema, \(E\) un \(\cO_X\)-módulo localmente libre de tipo finito, \(u:E\to\cO_X\) un homomorfismo regular, y \(J=u(E)\). Denotamos por \(Y\) el subesquema cerrado de \(X\) definido por \(J\), por \(X'\) el esquema obtenido explotando \(Y\), por \(P=\bfP(E)\) el fibrado proyectivo asociado a \(E\), y por \(p:P\to X\) el morfismo estructural. Sobre \(P\), consideramos la sucesión exacta canónica
+\begin{equation}\tag{1.8.1}
+0\to F\to p^*(E)\to\cO_P(1)\to0,
+\end{equation}
+y el morfismo compuesto
+\[
+ v:F\longrightarrow p^*(E)\xrightarrow{p^*(u)}\cO_P .
+\]
+Entonces:
+\begin{enumerate}[label=\roman*)]
+\item La formación de \(X'\) conmuta con todo cambio de base \(f:T\to X\) tal que \(f^*(u)\) sea regular.
+\item La inmersión cerrada \(j:X'\to P\) definida por el homomorfismo sobreyectivo \(\cS(E)\longrightarrow\bigoplus_{n\ge0}J^n\), definido por \(u\) en grado \(1\), es una inmersión regular, siendo su ideal la imagen del morfismo regular \(v\); en particular, si \(\operatorname{codim}(i)\) es constante, \(\operatorname{codim}(j)=\operatorname{codim}(i)-1\).
+\item El \(\cS(E)\)-módulo \(\bigoplus_{n\ge0}J^n\) es perfecto como \(\cS(E)\)-módulo graduado, es decir, existe localmente una resolución finita y graduada de \(\bigoplus_{n\ge0}J^n\) por \(\cS(E)\)-módulos graduados localmente libres de tipo finito (VI 1.2).
+\end{enumerate}
+
+i) Como \(X'=\Proj(\bigoplus_{n\ge0}J^n)\), el resultado es una consecuencia inmediata de las relaciones (1.2.3) y de EGA II.
+
+ii) Como las propiedades enunciadas son locales sobre \(X\), podemos suponer que \(X\) es afín y, además, que \(E\) es libre sobre \(X\). Ponemos \(X=\Spec(A)\). Hacemos primero la demostración en el caso estándar \(A=\mathbb Z[T_1,\ldots,T_d]\), estando \(E\) provisto de una base \(e_1,\ldots,e_d\), con \(u(e_i)=T_i\). Entonces \(P=\Proj\bigl(\mathbb Z[T_1,\ldots,T_d,X_1,\ldots,X_d]\bigr)\), tomando la graduación respecto de los \(X_i\). Para demostrar que \(v\) es un morfismo regular cuya imagen es el ideal de \(j\), basta hacerlo localmente sobre \(P\), y por tanto sobre los abiertos \(D_+(X_i)\); situémonos, por ejemplo, sobre \(D_+(X_1)\). Entonces \(p^*(E)\) está definido por el módulo
+\[
+ \mathbb Z[T_1,\ldots,T_d,X_2/X_1,\ldots,X_d/X_1]\otimes E,
+\]
+y \(\cO_P(1)\) por
+\[
+ \mathbb Z[T_1,\ldots,T_d,X_2/X_1,\ldots,X_d/X_1],
+\]
+enviando el morfismo canónico \(e_i\) a \(X_i/X_1\) para todo \(i\). Entonces \(F\) admite como base los elementos \(e_i-e_1.X_i/X_1\) para \(i>1\).
+Se tiene \(v(e_i-e_1.X_i/X_1)=T_i-T_1.X_i/X_1\); pongamos \(T'_i=T_i-T_1X_i/X_1\).
+Como la sucesión de los \(T_i\) es regular en \(\mathbb Z[T_1,\ldots,T_d,X_2/X_1,\ldots,X_d/X_1]\), lo mismo vale para la sucesión \(T_1,T'_2,\ldots,T'_d\), que se deduce de ella mediante una matriz invertible, y por tanto también para la sucesión \(T'_2,\ldots,T'_d\) extraída de ella (estamos en un caso noetheriano). Por consiguiente, \(v\) es un morfismo regular.
+
+Hay que demostrar, pues, que los \(T'_i\) engendran el ideal de \(j\). En \(\bigoplus_{n\ge0}J^n\), denotaremos, para \(m\le p\), por \(x^{(m)}\) el elemento \(x\) de \(J^p\), considerado de grado \(m\). Sobre \(D_+(X_1)\), \(X'=\Spec\left(\left(\bigoplus_{n\ge0}J^n\right)_{(T_1^{(1)})}\right)\), y \(j\) está definido por el morfismo que envía \(X_i\) a \(T_i^{(1)}\). En este morfismo, la imagen de \(T'_i\) es \(T_i^{(0)}-T_1^{(0)}.T_i^{(1)}/T_1^{(1)}=\bigl((T_iT_1)^{(1)}-(T_1T_i)^{(1)}\bigr)/T_1^{(1)}=0\). Por tanto, los \(T'_i\) pertenecen al ideal de \(j\). Como todo elemento de \(\sisi{\mathbb Z[T_1,\ldots,T_d,X_2/X_1,\ldots,X_d,X_1]}{\mathbb Z[T_1,\ldots,T_d,X_2/X_1,\ldots,X_d/X_1]}\) puede expresarse como polinomio respecto de \(T_1,T'_2,\ldots,T'_d,X_2/X_1,\ldots,X_d/X_1\), para demostrar que los \(T'_i\) engendran el ideal de \(j\) basta demostrar que ningún elemento no nulo de \(\mathbb Z[T_1,X_2/X_1,\ldots,X_d/X_1]\) pertenece al ideal de \(j\), lo que equivale a demostrar que el homomorfismo
+\[
+\mathbb Z[T_1,X_1,\ldots,X_d]\longrightarrow\bigoplus_{n\ge0}J^n
+\]
+es inyectivo, pues \(T_1^{(1)}\) no es divisor de 0 en \(\bigoplus_{n\ge0}J^n\). Si se gradúa \(\mathbb Z[T_1,X_1,\ldots,X_d]\) asignando el grado \(0\) a \(T_1\), y el grado \(1\) a los \(X_i\), el núcleo del homomorfismo considerado es un ideal graduado. Ahora bien, está claro que este núcleo está contenido en el del homomorfismo compuesto
+\[
+\mathbb Z[T_1,X_1,\ldots,X_d]\longrightarrow
+\bigoplus_{n\ge0}J^n\longrightarrow A,
+\]
+donde el último está definido en grado \(n\) por la inyección de \(J^n\) en \(A\). Ahora bien, el núcleo del homomorfismo compuesto es el ideal principal engendrado por \((X_1-T_1)\), que por razones de integridad no contiene elementos homogéneos no nulos. Por tanto, el primer homomorfismo es inyectivo, lo que termina la demostración en el caso considerado.
+
+Volvamos al caso general, donde \(A\) es arbitrario; todavía podemos suponer que \(E\) es libre sobre \(X\). Afectemos con el índice \(0\) el caso particular recién tratado; entonces, por la parte i) de la proposición, la situación considerada se obtiene mediante el cambio de base \(A_0\to A\) a partir de la situación estudiada anteriormente, estando definido el homomorfismo \(A_0\to A\) al tomar una base de \(E\), su imagen \(f_1,\ldots,f_d\) en \(J\), y enviar \(T_i\) a \(f_i\). Pongamos \(B_0=\left(\bigoplus_{n\ge0}J_0^n\right)_{(T_1^{(1)})}\), \(B=\left(\bigoplus_{n\ge0}J^n\right)_{(f_1^{(1)})}\); entonces \(B=B_0\otimes_{A_0}A\). El complejo de Koszul definido por \(v:F\to\cO_P\) se deduce por cambio de base del complejo de Koszul definido por \(v_0\); como este último es una resolución proyectiva de \(B_0\) (situándose sobre un abierto conveniente), los grupos de homología de \(K_\bullet(v)\) son, sobre este abierto, los \(\Tor_i^{A_0}(A,B_0)\). Estos últimos son las componentes de grado \(0\) de los \(\Tor_i^{A_0}\left(A,\left(\bigoplus_{n\ge0}J_0^n\right)_{T_1^{(1)}}\right)=\left(\bigoplus_{n\ge0}\Tor_i^{A_0}(A,J_0^n)\right)_{T_1^{(1)}}\). Ahora bien, los \(\Tor_i^{A_0}(A,J_0^n)\) son nulos para \(i\ge1\) por las relaciones 1.2; por tanto, \(K_\bullet(v)\) es una resolución de \(B\), lo que demuestra que \(j\) es regular.
+
+iii) Como la propiedad es local sobre \(X\), todavía podemos suponer que \(X\) es afín y \(E\) libre de tipo finito. Retomamos entonces las notaciones de ii). Consideremos primero el caso estándar de ii). El anillo \(A_0\) es entonces noetheriano y de dimensión cohomológica finita, y el álgebra \(\cS(E_0)\) también. Se puede construir paso a paso una resolución parcial graduada de \(\bigoplus_{n\ge0}J_0^n\), por \(\cS(E_0)\)-módulos graduados libres de tipo finito, de longitud superior a la dimensión cohomológica de \(A_0\); el último núcleo es entonces un \(\cS(E_0)\)-módulo graduado, proyectivo de tipo finito como \(\cS(E_0)\)-módulo no graduado, y por tanto localmente libre de tipo finito sobre \(\Spec(A_0)\) como \(\cS(E_0)\)-módulo graduado, por VI 1.5.1. Se obtiene entonces la resolución finita anunciada sustituyendo el último módulo de la resolución parcial por el núcleo correspondiente.
+
+Si se tensoriza por \(A\) la resolución así construida, se obtiene un complejo graduado de \(\cS(E)\)-módulos graduados localmente libres de tipo finito, y hay que ver que es una resolución de \(\bigoplus_{n\ge0}J^n\). Ahora bien, el \(i\)-ésimo módulo de homología del complejo así obtenido es un \(\cS(E)\)-módulo graduado cuya componente \(n\)-ésima es \(\Tor_i^{A_0}(A,J_0^n)\), que es nula para \(i\ge1\) por (1.2.4). Por consiguiente, por (1.2.3), se ha construido una resolución del tipo deseado.
+
+\textbf{Proposición 1.9.} Sean \(i:Y\to X\) una inmersión cerrada regular, \(X'\) el \(X\)-esquema obtenido explotando \(Y\), y \(f:X'\to X\) el morfismo estructural. Entonces \(i\) y \(f\) son morfismos perfectos (III 4.1).
+
+Como la propiedad es local sobre \(X\), se pueden suponer dados un \(\cO_X\)-módulo localmente libre de tipo finito \(E\), y un homomorfismo regular \(u:E\to\cO_X\), cuya imagen es el ideal \(J\) de \(Y\). El complejo de Koszul \(K_\bullet(u)\) es entonces una resolución finita de \(\cO_Y\) por \(\cO_X\)-módulos localmente libres de tipo finito; por consiguiente, \(\cO_Y\) es un \(\cO_X\)-módulo perfecto. Se sigue que toda inmersión regular es un morfismo perfecto. Por 1.8, \(f\) puede escribirse como el compuesto de una inmersión regular \(X'\to\bfP(E)\) y del morfismo estructural \(\bfP(E)\to X\), que es liso, y por tanto perfecto; es, pues, el compuesto de dos morfismos perfectos y, en consecuencia, un morfismo perfecto.
+
+\textbf{Proposición 1.10.} Sean \(X\), \(Y\) dos esquemas lisos sobre \(S\). Entonces toda \(S\)-inmersión de \(X\) en \(Y\) es regular. En particular, toda sección de un morfismo liso es una inmersión regular.
+
+La proposición resulta inmediatamente de EGA IV 17.12.1, puesto que una inmersión regular en el sentido de EGA IV es regular en el sentido de 1.4.

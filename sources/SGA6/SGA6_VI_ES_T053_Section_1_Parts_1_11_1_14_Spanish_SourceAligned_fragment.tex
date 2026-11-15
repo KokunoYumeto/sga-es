@@ -1,0 +1,130 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 1, números 1.11--1.14, líneas 8784--8906 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{1.11.} Supongamos dada una ecuación de dependencia lineal sobre \(K^\circ(S)\) entre \(1,\xi,\ldots,\xi^r\):
+\begin{equation}\tag{1.11.1}
+  f^*(x_0)+f^*(x_1)\xi+\cdots+f^*(x_r)\xi^r=0.
+\end{equation}
+Cada \(x_j\) se puede escribir como diferencia de las clases de dos haces, a saber, \(x_j=\cl(E_j)-\cl(E'_j)\), siendo \(E_j\) y \(E'_j\) localmente libres de tipo finito sobre \(S\). Pongamos
+\[
+  F=\bigoplus_{j=0}^r f^*(E_j)(j),
+  \qquad
+  F'=\bigoplus_{j=0}^r f^*(E'_j)(j).
+\]
+La igualdad (1.11.1) se escribe entonces:
+\[
+  \cl_{K^\circ(X)}(F)=\cl_{K^\circ(X)}(F').
+\]
+Según el lema 1.10, se obtiene, para \(n\) suficientemente grande:
+\[
+  \cl_{K^\circ(S)}\bigl(f_*(F(n))\bigr)=\cl_{K^\circ(S)}\bigl(f_*(F'(n))\bigr).
+\]
+Ahora bien,
+\[
+\begin{aligned}
+  f_*(F(n))
+  &=\bigoplus f_*\bigl(f^*(E_j)\otimes_{\mathcal O_X}\mathcal O_X(n+j)\bigr)\\
+  &=\bigoplus E_j\otimes_{\mathcal O_S} f_*(\mathcal O_X(n+j)).
+\end{aligned}
+\]
+Por otra parte, \(f_*(\mathcal O_X(n+j))=\Sym(E)^{n+j}\); denotaremos por \(\sigma_p\) la clase en \(K^\circ(S)\) de \(\Sym(E)^p\). La relación (1.11.1) da, pues, finalmente:
+\begin{equation}\tag{1.11.2}
+  \forall n\geq n_0,
+  \qquad
+  \sum_{j=0}^r x_j\sigma_{n+j}=0.
+\end{equation}
+
+Se considera entonces el complejo:
+\[
+  0\longrightarrow \bigwedge^{r+1}(E)\otimes_{\mathcal O_S}\Sym(E)
+  \longrightarrow \bigwedge^r(E)\otimes_{\mathcal O_S}\Sym(E)
+  \longrightarrow\cdots\longrightarrow
+  E\otimes_{\mathcal O_S}\Sym(E)
+  \longrightarrow \Sym(E)\longrightarrow0,
+\]
+cuyas flechas están definidas por:
+\[
+\begin{aligned}
+&(x_1\wedge\cdots\wedge x_n)\otimes(y_1\otimes\cdots\otimes y_p)\rightsquigarrow{}\\
+&\qquad \sum(-1)^{i-1}(x_1\wedge\cdots\wedge\widehat{x_i}\wedge\cdots\wedge x_n)
+\otimes(x_i\otimes y_1\otimes\cdots\otimes y_p).
+\end{aligned}
+\]
+Si se considera \(\bigwedge^n(E)\) como \(\mathcal O_S\)-módulo graduado concentrado en grado \(n\), este es un complejo de \(\Sym(E)\)-módulos graduados, siendo los propios morfismos graduados.
+
+Este complejo es una resolución de \(\mathcal O_S\): sobre un abierto donde \(E\) es libre, \(\Sym(E)\) se identifica con un álgebra de polinomios \(\mathcal O_S[T_0,\ldots,T_r]\), y el complejo con el complejo de Koszul definido por la sucesión \(\Sym(E)\)-regular \(T_0,\ldots,T_r\); se sabe que este último es una resolución de \(\Sym(E)/(T_0,\ldots,T_r)=\mathcal O_S\).
+
+Expresando que cada una de las componentes homogéneas del complejo de grado \(\geq1\) es acíclica, se obtienen las relaciones en \(K^\circ(S)\):
+\begin{equation}\tag{1.11.3}
+  \sum_{i=0}^{r+1}(-1)^i\lambda^i(E)\sigma_{p-i}=0
+  \qquad\text{para todo }p\geq1.
+\end{equation}
+(poniendo \(\sigma_k=0\) para \(k<0\)).
+
+Supongamos que la relación (1.11.2) es verdadera para \(n\geq n_0\); vamos a mostrar que sigue siendo verdadera para \(n_0-1\), lo que permitirá descender por inducción hasta \(n_0=-r\) (veremos más adelante que esto basta para implicar la nulidad de los \(x_j\)).
+
+Según (1.11.3), se puede escribir
+\begin{equation}\tag{1.11.4}
+  \sum_{j=0}^r x_j\left(\sum_{i=0}^{r+1}(-1)^i\lambda^i(E)\sigma_{p(j)-i}\right)=0,
+\end{equation}
+con \(p(j)\geq1\). Se toma \(p(j)=n_0+r+j\), que es efectivamente \(\geq1\) si \(n_0>-r\). Se obtiene entonces:
+\[
+\begin{aligned}
+\sum_{j=0}^r x_j\left(\sum_{i=0}^{r+1}(-1)^i\lambda^i(E)\sigma_{n_0+r+j-i}\right)
+&=\sum_{i=0}^{r+1}(-1)^i\lambda^i(E)
+   \left(\sum_{j=0}^r x_j\sigma_{n_0+r+j-i}\right).
+\end{aligned}
+\]
+Para \(i\neq r+1\), \(n_0+r-i\geq n_0\), luego, según (1.11.2):
+\[
+  \sum_{j=0}^r x_j\sigma_{n_0+r+j-i}=0.
+\]
+Por consiguiente, la relación (1.11.4) se reduce a:
+\[
+  \lambda^{r+1}(E).\left(\sum_{j=0}^r x_j\sigma_{n_0-1+j}\right)=0.
+\]
+Ahora bien, \(E\) es de rango \(r+1\), de modo que \(\lambda^{r+1}(E)\) es la clase de un haz invertible, y por tanto es invertible en \(K^\circ(S)\). Por consiguiente, la relación (1.11.4) se reduce a la relación (1.11.2) para \(n_0-1\).
+
+Así, la relación (1.11.2) es verdadera para \(n\geq-r\); para \(n=-r\), da:
+\[
+  x_r\sigma_0=0.
+\]
+Como \(\sigma_0=1\), se obtiene \(x_r=0\). Se muestra así por inducción descendente sobre \(j\) que todos los \(x_j\) son nulos, utilizando las relaciones (1.11.2) para \(n\) que varía de \(-r\) a \(0\). Esto muestra que \(1,\ldots,\xi^r\) son independientes sobre \(K^\circ(S)\), y concluye la demostración del teorema 1.1.
+
+\textbf{Observación 1.12.} Para todo \(\mathcal O_S\)-módulo localmente libre de tipo finito \(E\), sea \(\sigma_i(E)\) la clase en \(K^\circ(S)\) de la \(i\)-ésima potencia simétrica de \(E\); pongamos \(\sigma_t(E)=1+\sum_{i\geq1}\sigma_i(E)t^i\); las relaciones (1.11.3) también se pueden escribir:
+\begin{equation}\tag{1.12.1}
+  \lambda_t(E).\sigma_{-t}(E)=1.
+\end{equation}
+Esta propia relación muestra la aditividad de la aplicación \(\sigma_t\), que se puede, por tanto, prolongar a un homomorfismo de \(K^\circ(S)\) en \(1+K^\circ(S)[[t]]^+\):
+
+\textbf{Observación 1.13.} Se puede tomar como base de \(K^\circ(X)\) sobre \(K^\circ(S)\) cualquier sucesión de potencias de \(\xi\), \(\xi^k,\ldots,\xi^{\sisi{k+r+1}{k+r}}\), pues \(\xi\) es invertible, y una sucesión tal está, por tanto, compuesta de elementos linealmente independientes sobre \(K^\circ(S)\); por otra parte, las demás potencias de \(\xi\) se pueden expresar explícitamente como combinaciones lineales, con coeficientes en \(K^\circ(S)\), de estas, según la igualdad (1.9.1) y la invertibilidad de \(\xi\).
+
+Pongamos \(x=1-\xi^{-1}\) (\(x\) se interpreta como «clase de una sección hiperplana»). Se pueden tomar entonces como base de \(K^\circ(X)\) sobre \(K^\circ(S)\) los elementos \(1,x,\ldots,x^r\). Para obtener la ecuación de dependencia de \(1,\ldots,x^{r+1}\), se considera la sucesión exacta:
+\[
+  0\longrightarrow F\longrightarrow f^*(E)\longrightarrow \mathcal O_X(1)\longrightarrow0,
+\]
+y la sucesión exacta obtenida pasando a los duales:
+\[
+  0\longrightarrow \mathcal O_X(-1)\longrightarrow f^*(\check E)\longrightarrow \check F\longrightarrow0.
+\]
+Se observa entonces que \(\gamma^{r+1}(\check F-r)=0\), de donde se deduce:
+\[
+  \gamma^{r+1}(\check F-r)=\gamma^{r+1}(\check E-r-1+x)=0,
+\]
+es decir:
+\begin{equation}\tag{1.13.1}
+  \sum_{k=0}^{r+1}\gamma^{r+1-k}(\check E-r-1).x^k=0.
+\end{equation}
+Se obtiene un resultado análogo introduciendo \(x'=\xi-1\).
+
+Observemos finalmente que, si \(E=(\mathcal O_S)^{r+1}\), y por tanto \(X=\mathbf P_S^r\), se tiene \(E=r+1\), y la igualdad (1.13.1) se reduce a:
+\begin{equation}\tag{1.13.2}
+  x^{r+1}=0.
+\end{equation}
+
+\textbf{Observación 1.14.} Utilizando la noción de «esquema relativo» (cf. [3]), también se puede dar sentido a 1.1 suponiendo que \(S\) es un topos localmente anillado. Si se supone que el objeto final del topos es cuasicompacto, la demostración dada en el caso de los esquemas se transporta sin dificultad, y el teorema sigue siendo válido.
+

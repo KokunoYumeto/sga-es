@@ -1,0 +1,29 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.2.1--2.2.2.1, líneas 3735--3756 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{2.2. Esquemas noetherianos y esquemas divisoriales}
+
+\textbf{Notaciones 2.2.1.} Sea $S$ un esquema. Se denota por $\Qcoh(S)$ (resp. $\Coh(S)$) la categoría (abeliana) de los $\mathcal O_S$-módulos cuasicoherentes (resp. coherentes). Sea $[m,n]$ un intervalo de $\mathbb Z$. Se dirá que un objeto $E$ de $\mathrm D(\Qcoh(S))$ es $n$-pseudocoherente (resp. pseudocoherente, resp. de amplitud perfecta contenida en $[m,n]$, resp. perfecto) si $E$ es $n$-pseudocoherente (resp. pseudocoherente, resp. de amplitud perfecta contenida en $[m,n]$, resp. perfecto) relativamente a la categoría fibrada sobre el sitio de Zariski de $S$ definida por $U\mapsto\Loclib(U)$ ((I 2.3), (I 4.7) y (2.0)). Se denotará por $\mathrm D^{-}(\Qcoh(S))_{\coh}$ (resp. $\mathrm D(\Qcoh(S))_{\parf}$) la subcategoría triangulada plena de $\mathrm D(\Qcoh(S))$ formada por los complejos pseudocoherentes (resp. perfectos).
+
+\textbf{Proposición 2.2.2}\footnote{Este resultado, accesorio, no se utilizará en lo que sigue del Seminario: se recomienda al lector omitirlo en una primera lectura.}. Sea $S$ un esquema noetheriano. El funtor canónico
+\[
+\mathrm D^{-}(\Coh(S))\longrightarrow \mathrm D(\Qcoh(S))
+\]
+es plenamente fiel y tiene por imagen esencial $\mathrm D^{-}(\Qcoh(S))_{\coh}$.
+
+\emph{Demostración.} Se aplica (1.1) tomando por $\sisi{S}{\mathcal S}$ el sitio de Zariski de $S$, por $\mathcal C$ (resp. $\mathcal C_0$) la categoría fibrada $U\mapsto\Qcoh(U)$ (resp. $\Coh(U)$). Como $\mathcal O_S$ es coherente, los objetos de $\mathcal C_0$ son pseudocoherentes (I 3.5); por tanto, un objeto de $\mathrm D(\Qcoh(U))$ ($U$ = abierto de $S$) es pseudocoherente (en el sentido de (2.2.1)) si y solo si lo es relativamente a $\mathcal C_0$ (I 2.14.1). Basta, pues, en virtud de (1.1 c)), mostrar que se satisfacen las condiciones (i) y (ii), no respectivamente, de (1.1). Para (ii), es trivial, puesto que un módulo cuasicoherente que es cociente de un módulo coherente es coherente, y la noción de coherencia es local. Para (i), se utiliza (2.1.1 a)) y el hecho de que todo $\mathcal O_S$-módulo cuasicoherente es límite inductivo filtrante de $\mathcal O_S$-módulos coherentes (EGA I 9.4.9).
+
+Admitiendo (3.5) y (3.7), independientes del presente número, se deduce fácilmente:
+
+\textbf{Corolario 2.2.2.1.} Sea $S$ un esquema noetheriano (resp. noetheriano y de dimensión finita). El funtor canónico
+\[
+\mathrm D^b(\Coh(S))\longrightarrow\mathrm D(S)
+\]
+\[
+(\text{resp. }\mathrm D^{-}(\Coh(S))\longrightarrow\mathrm D(S))
+\]
+es plenamente fiel y tiene por imagen esencial $\mathrm D^b(S)_{\coh}$ (resp. $\mathrm D^{-}(S)_{\coh}$) (I 2.15).

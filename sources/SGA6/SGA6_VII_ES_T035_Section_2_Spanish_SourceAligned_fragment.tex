@@ -1,0 +1,185 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: sección 2 completa, líneas 9965--10143 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{2. Cálculos sobre las inmersiones regulares}
+
+\subsection*{2.1}
+Sean \(A\) un anillo, y \(B\) y \(C\) dos \(A\)-álgebras. Nos proponemos dotar a \(\bigoplus_{i\ge0}\Tor_i^A(B,C)\) de una estructura de \(A\)-álgebra graduada, es decir, definir homomorfismos
+\begin{equation}\tag{2.1.1}
+ \Tor_i^A(B,C)\otimes_A\Tor_j^A(B,C)\longrightarrow \Tor_{i+j}^A(B,C).
+\end{equation}
+Sea \(P_\bullet\) una resolución de \(B\) por \(A\)-módulos proyectivos; los \(\Tor_i^A(B,C)\) son los grupos de homología del complejo \(P_\bullet\otimes_A C\). Se sabe definir homomorfismos canónicos ([1], IV 6):
+\begin{equation}\tag{2.1.2}
+ H_i(P_\bullet\otimes_A C)\otimes_A H_j(P_\bullet\otimes_A C)
+ \longrightarrow H_{i+j}\bigl((P_\bullet\otimes_A C)\otimes_A(P_\bullet\otimes_A C)\bigr).
+\end{equation}
+Por otra parte, \(P_\bullet\otimes_A P_\bullet\) es un complejo de \(A\)-módulos proyectivos, en grados \(\geq0\), y \(H_0(P_\bullet\otimes_A P_\bullet)=B\otimes_A B\); además, \(P_\bullet\) es una resolución de \(B\). Por consiguiente, el morfismo de aumento \(B\otimes_A B\to B\) se prolonga a un morfismo de complejos \(P_\bullet\otimes_A P_\bullet\to P_\bullet\), y define, teniendo en cuenta el homomorfismo \(C\otimes_A C\to C\) deducido de la estructura de álgebra de \(C\), homomorfismos
+\begin{equation}\tag{2.1.3}
+ H_{i+j}\bigl((P_\bullet\otimes_A C)\otimes_A(P_\bullet\otimes_A C)\bigr)
+ \longrightarrow H_{i+j}(P_\bullet\otimes_A C).
+\end{equation}
+Componiendo (2.1.2) y (2.1.3), se obtienen los homomorfismos (2.1.1). La estructura de álgebra definida por los homomorfismos (2.1.1) es asociativa (cf. [1] XI 2). Por otra parte, el \(A\)-módulo \(H_i(P_\bullet\otimes_A C)\) está dotado de manera estándar de una estructura de \(B\otimes_A C\)-módulo, haciendo operar \(C\) de manera evidente y \(B\) por funtorialidad; de igual modo, los \(H_j\bigl((P_\bullet\otimes_A C)\otimes_A(P_\bullet\otimes_A C)\bigr)\) están dotados de dos estructuras de \(B\otimes_A C\)-módulos. Está claro que los homomorfismos (2.1.2) y (2.1.3) son compatibles con estas dos estructuras: para (2.1.2), por funtorialidad (situándonos en la categoría de los \(A\)-módulos), y para (2.1.3), utilizando el resultado clásico sobre los morfismos de un complejo acíclico. Hemos dotado así a \(\bigoplus_{i\ge0}\Tor_i^A(B,C)\) de una estructura de \(B\otimes_A C\)-álgebra asociativa.
+
+\subsection*{2.2}
+Supongamos que \(B\) admite una resolución por \(A\)-módulos proyectivos \(P_\bullet\), tal que \(P_\bullet=\bigoplus_{i\ge0}P_i\) sea una \(A\)-álgebra graduada, satisfaciendo la diferencial:
+\[
+\begin{array}{ll}
+\text{a)}& P_0\longrightarrow B\text{ es un homomorfismo de anillos~;}\\[0.4ex]
+\text{b)}& \forall x\in P_i,\ \forall y\in P_j,\quad d(xy)=d(x)y+(-1)^i x\,d(y).
+\end{array}
+\]
+\sgastandalonefootnotetext{x-tor-resolution}{Se puede demostrar que tal resolución existe siempre.}
+Entonces las aplicaciones «~producto~» definen diagramas conmutativos para \(i,j\ge0\):
+\begin{equation}\tag{2.2.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+P_i\otimes_A P_j \arrow[r] \arrow[d] & (P_{i-1}\otimes_A P_j)\oplus(P_i\otimes_A P_{j-1}) \arrow[d]\\
+P_{i+j} \arrow[r] & P_{i+j-1},
+\end{tikzcd}
+\end{equation}
+y por tanto un homomorfismo de complejos \(P_\bullet\otimes_A P_\bullet\to P_\bullet\) que prolonga el homomorfismo de aumento \(B\otimes_A B\to B\). Esto muestra que la estructura de álgebra de \(\bigoplus_{i\ge0}\Tor_i^A(B,C)\) puede calcularse a partir de la de \(P_\bullet\). En particular, si \(P_\bullet\) es una \(A\)-álgebra alternada (es decir, tal que para todo \(x\in P_\bullet\) se tenga \(x^2=0\)), lo mismo vale para \(\bigoplus_{i\ge0}\Tor_i^A(B,C)\).
+
+Esta última observación se aplica al caso en que \(B\) es el cociente de \(A\) por un ideal regular, pues se puede tomar entonces como \(P_\bullet\) el complejo de Koszul asociado a un homomorfismo regular que define el ideal de \(B\).
+
+\subsection*{2.3}
+La estructura de \(B\otimes_A C\)-álgebra definida en 2.1 sobre \(\bigoplus_{i\ge0}\Tor_i^A(B,C)\) es funtorial en \(B\) y \(C\). Se pueden globalizar entonces las construcciones precedentes: sean \(X\) un esquema, y \(X'\), \(X''\) dos \(X\)-esquemas; se pueden definir localmente sobre \(X'\times_X X''\) los morfismos (2.1.1), que se pegan por funtorialidad y definen sobre \(\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_{X'},\cO_{X''})\) una estructura de \(\cO_{X'\times_X X''}\)-álgebra graduada asociativa.
+
+\textbf{Lema 2.4.} Sean \(X',X''\) dos \(X\)-esquemas, y \(M\) un \(\cO_{X'}\)-módulo plano. Entonces, para todo \(i\ge0\), se tiene un isomorfismo canónico
+\begin{equation}\tag{2.4.1}
+\Tor_i^{\cO_X}(M,\cO_{X''})\simeq
+M\otimes_{\cO_{X'}}\Tor_i^{\cO_X}(\cO_{X'},\cO_{X''}).
+\end{equation}
+Basta definir un isomorfismo funtorial en el caso afín; se podrá entonces, por pegado, definirlo globalmente en el caso general. Sean, pues, \(X=\Spec(A)\), \(X'=\Spec(A')\), \(X''=\Spec(A'')\); \(M\) está definido por un \(A'\)-módulo plano \(M\). Sea \(P_\bullet\) una resolución proyectiva de \(A''\) sobre \(A\); los \(\Tor_i^A(A',A'')\) son los grupos de homología de \(A'\otimes_A P_\bullet\). Como \(M\) es plano sobre \(A'\), se tiene un isomorfismo canónico \(M\otimes_{A'}\Tor_i^A(A',A'')\xrightarrow{\sim}H_i\bigl(M\otimes_{A'}(A'\otimes_A P_\bullet)\bigr)\). Por otra parte, el isomorfismo canónico \(M\otimes_{A'}(A'\otimes_A P_\bullet)\xrightarrow{\sim}M\otimes_A P_\bullet\) da un isomorfismo canónico \(H_i\bigl(M\otimes_{A'}(A'\otimes_A P_\bullet)\bigr)\xrightarrow{\sim}\Tor_i^A(M,A'')\), de donde resulta la afirmación.
+
+\textbf{Proposición 2.5.} Sean \(X\) un esquema, \(Y\) y \(Z\) dos subesquemas cerrados de \(X\), y \(T=Y\times_X Z\). Se supone que, para todo \(x\in T\), existen un entorno abierto \(U\) de \(x\) y una sucesión de secciones \(f_1,\ldots,f_p,g_1,\ldots,g_r,h_1,\ldots,h_s\) de \(\cO_U\), tales que el complejo de Koszul asociado a \(f_1,\ldots,f_p,g_1,\ldots,g_r\) sea una resolución de \(\cO_{Y\cap U}\), el complejo de Koszul asociado a \(f_1,\ldots,f_p,h_1,\ldots,h_s\) una resolución de \(\cO_{Z\cap U}\), y el complejo de Koszul asociado a \(f_1,\ldots,f_p,g_1,\ldots,g_r,h_1,\ldots,h_s\) una resolución de \(\cO_{T\cap U}\) (condiciones satisfechas, en particular, en el caso noetheriano si la sucesión \(f_1,\ldots,f_p,g_1,\ldots,g_r,h_1,\ldots,h_s\) es regular y si \(Y=V(f_1,\ldots,f_p,g_1,\ldots,g_r)\), \(Z=V(f_1,\ldots,f_p,h_1,\ldots,h_s)\)). Sean \(I,J\) los ideales de \(Y,Z\). Se tienen entonces los isomorfismos siguientes:
+\[
+\begin{array}{ll}
+\text{i)}& \forall i\ge0,\quad
+\Tor_i^{\cO_X}(\cO_Y,\cO_Z)\xrightarrow{\sim}
+\bigwedge^i\Tor_1^{\cO_X}(\cO_Y,\cO_Z);\\[0.8ex]
+\text{ii)}&
+\Tor_1^{\cO_X}(\cO_Y,\cO_Z)\simeq
+I\cap J/I.J\simeq
+\Ker\bigl(i^*(\sisi{N_{Y/X}}{N_{X/Y}})\times j^*(\sisi{N_{Z/X}}{N_{X/Z}})\to \sisi{N_{T/X}}{N_{X/T}}\bigr), % Canon SGA-SRC-001489
+\end{array}
+\]
+donde se denota por \(i\) la inmersión de \(T\) en \(Y\), y por \(j\) la inmersión de \(T\) en \(Z\).
+
+En particular, para toda inmersión cerrada regular \(Y\to X\), se tiene
+\[
+\begin{array}{ll}
+\text{i')}& \forall i\ge0,\quad
+\Tor_i^{\cO_X}(\cO_Y,\cO_Y)\xrightarrow{\sim}
+\bigwedge^i\Tor_1^{\cO_X}(\cO_Y,\cO_Y);\\[0.8ex]
+\text{ii')}&
+\Tor_1^{\cO_X}(\cO_Y,\cO_Y)\simeq \sisi{N_{Y/X}}{N_{X/Y}}.
+\end{array}
+\]
+
+\emph{Demostración.} i) Hemos visto en 2.3 que \(\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_Y,\cO_Z)\) podía dotarse de una estructura de \(\cO_T\)-álgebra; por 2.2, esta álgebra es alternada, pues la inmersión de \(Y\) (o de \(Z\)) en \(X\) es regular. Existe, pues, un único homomorfismo de álgebras
+\begin{equation}\tag{2.5.1}
+\bigwedge \Tor_1^{\cO_X}(\cO_Y,\cO_Z)\longrightarrow
+\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_Y,\cO_Z),
+\end{equation}
+que prolonga la identidad en grado \(1\).
+
+Para ver que es un isomorfismo, se puede comprobar localmente. Nos situamos, pues, en un entorno de un punto de \(T\), y consideramos secciones \(f_1,\ldots,f_p,g_1,\ldots,g_r,h_1,\ldots,h_s\) de \(\cO_X\) en este entorno, con las propiedades indicadas en el enunciado de 2.5. Pongamos \(E=(\cO_X)^p\), \(E'=(\cO_X)^r\), y sean \(u:E\to\cO_X\) el homomorfismo definido por los \(f_i\), \(v:E'\to\cO_X\) el homomorfismo definido por los \(g_j\), y \(K_\bullet(u)\) y \(K_\bullet(v)\) los complejos de Koszul asociados. El complejo de Koszul asociado a la sucesión \(f_1,\ldots,f_p,g_1,\ldots,g_r\) es isomorfo al complejo producto tensorial \(K_\bullet(u)\otimes_{\cO_X}K_\bullet(v)\). Como es una resolución de \(\cO_Y\) por \(\cO_X\)-módulos libres de tipo finito, los \(\Tor_i^{\cO_X}(\cO_Y,\cO_Z)\) son los haces de homología del complejo \(K_\bullet(u)\otimes_{\cO_X}K_\bullet(v)\otimes_{\cO_X}\cO_Z\). Se puede considerar como el producto tensorial de los complejos \(K_\bullet(u)\) y \(K_\bullet(v)\otimes_{\cO_X}\cO_Z\), y utilizar para calcular su homología las sucesiones espectrales asociadas a un bicomplejo (EGA \(0_{\mathrm{III}}\) (11.3.5)), cuyo límite es la homología del complejo simple asociado.
+
+Consideremos la sucesión espectral tal que \({}'E^2_{pq}=H^I_p\bigl(H^{II}_q(K_{\bullet,\bullet})\bigr)\), con las notaciones de EGA \(0_{\mathrm{III}}\) (11.3.5), siendo el primer índice relativo al complejo \(K_\bullet(u)\) y el segundo al complejo \(K_\bullet(v)\otimes_{\cO_X}\cO_Z\). Ahora bien, el complejo \(K_\bullet(v)\otimes_{\cO_X}\cO_Z\) es el complejo de Koszul sobre \(\cO_Z\) asociado a la sucesión de secciones \(\overline g_1,\ldots,\overline g_r\), donde los \(\overline g_i\) son las imágenes de los \(g_i\) en \(\cO_Z\), y este complejo es una resolución de \(\cO_T\) sobre \(\cO_Z\), pues las inmersiones \(Z\to X\) y \(T\to Z\to X\) son regulares (cf. demostración de 1.7 ii). Como \(\bigwedge^p E\) es libre sobre \(\cO_X\), el complejo \(\bigwedge^pE\otimes_{\cO_X}(K_\bullet(v)\otimes_{\cO_X}\cO_Z)\) es una resolución de \(\bigwedge^pE\otimes_{\cO_X}\cO_T\). Por consiguiente, la sucesión espectral degenera, y los \(\Tor_i^{\cO_X}(\cO_Y,\cO_Z)\) son los haces de homología del complejo \(K_\bullet(u)\otimes_{\cO_X}\cO_T\). Ahora bien, la diferencial de \(K_\bullet(u)\) se expresa en términos de los \(f_i\), que anulan \(\cO_T\); por tanto, la diferencial de \(K_\bullet(u)\otimes_{\cO_X}\cO_T\) es nula, y se obtienen los isomorfismos
+\begin{equation}\tag{2.5.2}
+\underline{\Tor}_i^{\cO_X}(\cO_Y,\cO_Z)
+\xrightarrow{\sim}
+\cO_T\otimes_{\cO_X}\bigwedge^iE
+\longrightarrow
+\bigwedge^i(\cO_T)^p.
+\end{equation}
+En particular, para \(i=1\), se obtiene
+\[
+\Tor_1^{\cO_X}(\cO_Y,\cO_Z)\xrightarrow{\sim}\sisi{(\cO_T)^n}{(\cO_T)^p},
+\]
+de donde, para todo \(i\):
+\begin{equation}\tag{2.5.3}
+\underline{\Tor}_i^{\cO_X}(\cO_Y,\cO_Z)
+\xrightarrow{\sim}
+\sisi{\bigwedge^i\Tor_i^{\cO_X}(\cO_Y,\cO_Z)}{\bigwedge^i\Tor_1^{\cO_X}(\cO_Y,\cO_Z)}.
+\end{equation}
+
+Ahora bien, resulta de 2.2 que el isomorfismo
+\[
+\bigwedge(\cO_T)^n\xrightarrow{\sim}
+\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_Y,\cO_Z)
+\]
+definido por los isomorfismos (2.5.2) es compatible con las estructuras de álgebra de ambos miembros; lo mismo vale, pues, para el isomorfismo
+\[
+\sisi{\bigwedge\Tor_i^{\cO_X}(\cO_Y,\cO_Z)}{\bigwedge\Tor_1^{\cO_X}(\cO_Y,\cO_Z)}\xrightarrow{\sim}
+\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_Y,\cO_Z)
+\]
+definido por los isomorfismos (2.5.3). Por razones de unicidad, este último es la restricción del homomorfismo (2.5.1) que había sido definido globalmente. Por tanto, el homomorfismo (2.5.1) es un isomorfismo.
+
+ii) Consideremos la sucesión exacta
+\[
+0\longrightarrow I\longrightarrow \cO_X\longrightarrow \cO_Y\longrightarrow0,
+\]
+y la sucesión exacta de los Tor que resulta de ella:
+\[
+0\longrightarrow\underline{\Tor}_1^{\cO_X}(\cO_Y,\cO_Z)
+\longrightarrow I\otimes_{\cO_X}\cO_Z
+\longrightarrow \cO_Z.
+\]
+Se sigue que \(\underline{\Tor}_1^{\cO_X}(\cO_Y,\cO_Z)\) es el núcleo del homomorfismo
+\[
+I\otimes_{\cO_X}(\cO_X/J)\longrightarrow \cO_X/J,
+\]
+es decir, \(I\cap J/I.J\).
+
+Para demostrar la última relación, vamos a demostrar que existe una sucesión exacta
+\[
+0\longrightarrow I\cap J/I.J
+\longrightarrow i^*(\sisi{N_{Y/X}}{N_{X/Y}})\times j^*(\sisi{N_{Z/X}}{N_{X/Z}})
+\longrightarrow \sisi{N_{T/X}}{N_{X/T}}\longrightarrow0.
+\]
+Los homomorfismos \(i^*(\sisi{N_{Y/X}}{N_{X/Y}})\to \sisi{N_{T/X}}{N_{X/T}}\) y \(j^*(\sisi{N_{Z/X}}{N_{X/Z}})\to \sisi{N_{T/X}}{N_{X/T}}\) se definieron en (1.6.1); tomamos aquí su diferencia. Por otra parte, \(I\cap J\) se envía naturalmente en \(I/I^2\), y por tanto en \(i^*(I/I^2)\), y del mismo modo en \(j^*(J/J^2)\), y estos homomorfismos se anulan sobre \(I.J\), pues \(I,J\subset K\) (donde \(K\) designa el ideal de \(T\)); esto define la flecha de la izquierda.
+
+Para comprobar que la sucesión es exacta, se puede hacer localmente sobre \(T\), utilizando las secciones definidas en el enunciado de 2.5. Se tiene entonces una base de \(\sisi{N_{T/X}}{N_{X/T}}\) formada por las imágenes de los \(f_i,g_j,h_k\), una base de \(i^*(\sisi{N_{Y/X}}{N_{X/Y}})\) formada por las imágenes de los \(f_i,g_j\), y una base de \(j^*(\sisi{N_{Z/X}}{N_{X/Z}})\) formada por las imágenes de los \(f_i,h_k\). Está claro entonces que \(i^*(\sisi{N_{Y/X}}{N_{X/Y}})\times j^*(\sisi{N_{Z/X}}{N_{X/Z}})\to \sisi{N_{T/X}}{N_{X/T}}\) es sobreyectivo, y que su núcleo está formado por los elementos que tienen coordenadas nulas sobre los \((\overline g_j,0)\) y los \((0,\overline h_k)\), y coordenadas iguales para todo \(i\) sobre \((\overline f_i,0)\) y \((0,\overline f_i)\). Por consiguiente, la sucesión es exacta también en el medio. Ahora bien, los tres \(\cO_T\)-módulos que intervienen son localmente libres de tipo finito; como \(\Tor_1^{\cO_X}(\cO_Y,\cO_Z)\) es de rango \(p\) por la demostración de i), se ve inmediatamente que la sucesión es exacta.
+
+\subsection*{2.6}
+Supongamos ahora que \(X\) es un esquema que posee un haz amplio. Todo subesquema cerrado \(Y\) de \(X\) posee entonces un haz amplio. Se sabe que en este caso «~existen resoluciones globales~», y que los \(K^\circ\) formados respectivamente con los haces localmente libres de tipo finito y con los complejos perfectos son idénticos (II, 2.2.9). Si, además, la inmersión \(i:Y\to X\) es regular, es un morfismo perfecto, y se puede definir un homomorfismo aditivo \(i_*:K^\circ(Y)\longrightarrow K^\circ(X)\) (IV 2.12), asociando a la clase de un complejo perfecto \(L^\bullet\) la clase del complejo \(\mathbb Ri_*(L^\bullet)=i_*(L^\bullet)\) (siendo \(i_*\) un funtor exacto).
+
+\textbf{Proposición 2.7.} Sean \(X\) un esquema que posee un haz amplio, \(i:Y\to X\) una inmersión cerrada regular, y \(N\) el haz conormal de \(Y\) en \(X\). Entonces, para todo \(x\in K^\circ(Y)\), se tiene la relación
+\begin{equation}\tag{2.7.1}
+i^*(i_*(x))=x.\lambda_{-1}(N),
+\end{equation}
+donde \(N\) es la clase de \(N\) en \(K^\circ(Y)\), y \(\lambda_{-1}(N)=\sum_{i\ge0}(-1)^i\lambda^i(N)\).
+
+\emph{Demostración.} Como los dos miembros de la relación que hay que demostrar son aditivos, podemos suponer que \(x\) es la clase de un \(\cO_Y\)-módulo localmente libre de tipo finito \(M\). El elemento \(i^*(i_*(x))\) es entonces la clase del complejo \(\mathbb L i^*(\mathbb Ri_*(M))\), obtenido tomando una resolución proyectiva del complejo \(\mathbb Ri_*(M)=i_*(M)\) y tensorizándola por \(\cO_Y\). Los haces de homología de este complejo son, pues, los \(\Tor_i^{\cO_X}(M,\cO_Y)\). Por 2.4, se tiene el isomorfismo
+\[
+\Tor_i^{\cO_X}(M,\cO_Y)
+\xrightarrow{\sim}
+M\otimes_{\cO_Y}\Tor_i^{\cO_X}(\cO_Y,\cO_Y).
+\]
+Por 2.5, se tiene el isomorfismo
+\[
+\Tor_i^{\cO_X}(\cO_Y,\cO_Y)
+\xrightarrow{\sim}
+\bigwedge^i N.
+\]
+Los \(\Tor_i^{\cO_X}(M,\cO_Y)\) son, por tanto, \(\cO_Y\)-módulos localmente libres de tipo finito, y la clase en \(K^\circ(Y)\) del complejo \(\mathbb L i^*(\mathbb Ri_*(M))\) es la suma alternada de las clases de sus haces de homología, es decir,
+\[
+i^*(i_*(x))=\sum_{i\ge0}(-1)^i
+\operatorname{cl}\bigl(M\otimes_{\cO_Y}\underline{\Tor}_i^{\cO_X}(\cO_Y,\cO_Y)\bigr)
+=\sum_{i\ge0}(-1)^i x.\lambda^i(N).
+\]
+
+\textbf{Corolario 2.8.} Bajo las hipótesis de 2.7, sean \(x,y\in K^\circ(Y)\); se tiene la relación
+\begin{equation}\notag
+i_*(xy\lambda_{-1}(N))=i_*(x).i_*(y).
+\end{equation}
+Por 2.7, \(y\lambda_{-1}(N)=i^*(i_*(y))\). Aplicando la fórmula de proyección, se obtiene
+\[
+i_*(xy\lambda_{-1}(N))
+=i_*(x.i^*(i_*(y)))
+=i_*(x).i_*(y).
+\]

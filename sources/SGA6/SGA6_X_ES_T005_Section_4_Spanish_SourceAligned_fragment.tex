@@ -1,0 +1,231 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance: sección 4 completa, Números de intersección.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 12969--13133.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Las superficies matemáticas de la fuente se conservan diplomáticamente;
+% las anomalías detectadas se notifican por separado para su resolución canónica.
+
+\section*{4. Números de intersección}
+
+\subsection*{4.1}
+Consideremos un esquema propio \(X\) sobre un cuerpo \(k\). Componiendo el
+producto (3.1.1)
+\[
+ \Gr^i(X)\times\Gr_i(X)\longrightarrow \Gr_0(X)=\Filt_0(X)
+ \qquad (i\in\mathbb Z)
+\]
+con la característica de Euler--Poincaré
+\[
+ \chi:\Filt_0(X)\longrightarrow\mathbb Z,
+\]
+se obtiene un emparejamiento denominado «~número de intersección~»:
+\begin{equation}\tag{4.1.1}
+ \Gr^i(X)\times\Gr_i(X)\longrightarrow \mathbb Z,
+\end{equation}
+que denotaremos por
+\[
+ (x,y)\rightsquigarrow \langle x,y\rangle\in\mathbb Z
+ \qquad (i\in\mathbb Z,\ x\in\Gr^i(X),\ y\in\Gr_i(X)).
+\]
+
+\textbf{Ejemplo 4.2.} Supongamos que el esquema \(X\) es de dimensión \(n\).
+Tomemos un elemento \(y\in\Gr_n(X)\), por ejemplo
+\(y=\cl_\bullet(\mathcal O_Z)\), donde \(Z\) es un subesquema integral de
+dimensión \(n\) de \(X\). Tomemos también un polinomio homogéneo de peso
+\(n\)
+\[
+ P\in\mathbb Z[T_1,\ldots,T_n],
+\]
+donde se asigna a \(T_i\) el peso \(i\) \((i=1,\ldots,n)\), por ejemplo un
+monomio \(T_{i_1}\cdot T_{i_2}\cdots T_{i_k}\) con
+\(i_1+i_2+\cdots+i_k=n\). Cuando en \(P\) se sustituye cada variable \(T_i\)
+\((i=1,\ldots,n)\) por la clase de Chern
+\[
+ c_i(x)=\cl^\circ(\gamma^i(x-\epsilon(x))\sisi{}{)}\in\Gr^i(X) % Canon SGA-SRC-001326
+ \qquad(x\in K^\circ(X)),
+\]
+se obtiene un elemento
+\[
+ P(c_1(x),\ldots,c_n(\sisi{X}{x}))\in\Gr^n(X). % Canon SGA-SRC-001327
+\]
+Se llama \emph{número de Chern} de \(x\) con respecto a \(y\) al entero
+\[
+ P_y(x)=\sisi{\bigl\langle P(c_1(x)),\ldots,c_n(x),y\bigr\rangle}{\bigl\langle P(c_1(x),\ldots,c_n(x)),y\bigr\rangle}. % Canon SGA-SRC-001328
+\]
+Cuando \(y=\cl_\bullet(\mathcal O_X)\), se omite la mención de \(y\) en la
+terminología precedente.
+
+\subsection*{4.3}
+Sin hipótesis sobre la dimensión de \(X\), consideremos una sucesión
+\(L_1,\ldots,L_d\) de \(\mathcal O_X\)-módulos invertibles y un
+\(\mathcal O_X\)-módulo coherente \(F\) tal que
+\(\dim(\Supp(F))\leq d\). Pongamos \(L_i=\cl^\circ(\underline L_i)\)
+\((i=1,\ldots,d)\) y \(F=\cl_\bullet(\underline F)\).
+
+\textbf{Proposición 4.3.1.} Con las notaciones anteriores, para toda
+sucesión \(\alpha_1,\ldots,\alpha_d\) de enteros positivos con
+\(\sum_{i=1}^{d}\alpha_i=d\), el coeficiente de
+\[
+ \binom{n_1}{\alpha_1}\cdots\binom{n_d}{\alpha_d}
+\]
+en el polinomio de Snapper \(\chi(L_1^{n_1}\cdots L_d^{n_d}F)\) es igual a
+\begin{equation}\tag{4.3.2}
+ \bigl\langle c_1(L_1)^{\alpha_1}\cdots \sisi{c_d}{c_1}(L_d)^{\alpha_d},\lvert F\rvert\bigr\rangle, % Canon SGA-SRC-001329
+\end{equation}
+donde \(\lvert F\rvert\) es la clase de \(F\) en \(\Gr_d(X)\). Por tanto,
+en el desarrollo ordinario de este polinomio con respecto a los monomios en
+los \(n_i\) \((i=1,\ldots,d)\), el coeficiente del monomio
+\(n_1^{\alpha_1}\cdots n_d^{\alpha_d}\) es igual a
+\[
+ (1/(\alpha_1! \cdots \sisi{a_d}{\alpha_d}!)) % Canon SGA-SRC-001330
+ \bigl\langle c_1(L_1)^{\alpha_1}\cdots c_1(L_d)^{\alpha_d},\lvert F\rvert\bigr\rangle.
+\]
+
+En particular, se obtiene inmediatamente el
+
+\textbf{Corolario 4.3.3.} El coeficiente del monomio \(n_1n_2\cdots n_d\)
+en el polinomio de Snapper
+\(\chi(L_1^{\sisi{\alpha_1}{n_1}}\cdots L_d^{\sisi{\alpha_d}{n_d}}F)\) es igual a % Canon SGA-SRC-001331
+\begin{equation}\tag{4.3.4}
+ \bigl\langle c_1(L_1)\cdots c_1(L_d),\lvert F\rvert\bigr\rangle
+ =
+ (c_1(L_1)\cdots c_1(L_d),\lvert F\rvert).
+\end{equation}
+
+\emph{Demostración:} Pongamos \(L_i=1+M_i\) para todo \(i=1,\ldots,d\).
+Teniendo en cuenta las definiciones, se ve inmediatamente que el entero
+(4.3.2) es igual a \(\chi(M_1^{\alpha_1}\cdots M_d^{\alpha_d}F)\). Al
+sustituir en (2.1.4)
+\(A=K^\circ(X)/\Filt^{d+1}(X)\),
+\(I=\Filt^1(X)/\Filt^{d+1}(X)\), entonces (2.1.5) da, teniendo en cuenta que
+\(M_i\in\Filt^1(X)\) para todo \(i=1,\ldots,d\), la congruencia
+\begin{equation}\tag{4.3.5}
+ L_1^{n_1}\cdots L_d^{n_d}
+ \equiv
+ \sum_{\substack{\alpha_1,\ldots,\alpha_d\geq0\\ \alpha_1+\cdots+\alpha_d\sisi{=}{\leq}d}} % Canon SGA-SRC-001332
+ \binom{n_1}{\alpha_1}\cdots\binom{n_d}{\alpha_d}
+ M_1^{\alpha_1}\cdots M_d^{\alpha_d}
+ \pmod{\Filt^{d+1}(X)}.
+\end{equation}
+Por tanto, el coeficiente de
+\(\binom{n_1}{\alpha_1}\cdots\binom{n_d}{\alpha_d}\) en el polinomio
+\(\chi(L_1^{n_1}\cdots L_d^{n_d}F)\) es igual a
+\(\chi(M_1^{\alpha_1}\cdots M_d^{\alpha_d}F)\), C.Q.D.
+
+\subsection*{4.4}
+A veces se llama al entero (4.3.4) \emph{número de intersección} de los
+\(\mathcal O_X\)-módulos invertibles \(L_1,\ldots,L_d\) con \(F\), y se lo
+denota por \((L_1,\ldots,L_d;F)\) (cf. [3]). Como consecuencia de la
+expresión (4.3.4) de este número, se obtienen enseguida las propiedades
+siguientes:
+
+\begin{enumerate}[label=\arabic*)]
+\item El entero (4.3.4) es una función simétrica y \(d\)-lineal en las
+variables \(L_1,\ldots,L_d\in\Pic(X)\), nula si
+\(\dim(\Supp(F))<d\), y es «~aditiva~» en \(F\), es decir, aditiva en
+\(\cl_\bullet(\underline F)=F\).
+
+\item Utilizando 2.1.2, se concluye inmediatamente (con las notaciones de
+1.1.2):
+\begin{equation}\tag{4.4.1}
+ (L_1,\ldots,L_d;F)
+ =
+ \sum_{x\in X(d)}
+ \operatorname{long}_{\mathcal O_{\sisi{}{X},x}}(F_x) % Canon SGA-SRC-001333
+ (L_1,\ldots,L_d;\mathcal O_{Z(x)}).
+\end{equation}
+
+\item Sea \(Y\) un subesquema cerrado de \(X\) y \(G\) un
+\(\mathcal O_Y\)-módulo coherente tal que \(F=f_*(G)\), donde
+\(f:Y\to X\) es la inmersión canónica. Entonces se obtiene
+\[
+ (f^*L_1,\ldots,f^*L_d;G)=(L_1,\ldots,L_d;F).
+\]
+De manera más general, la fórmula de proyección da, en efecto,
+\begin{equation}\tag{4.4.2}
+ \chi(f^*(x)\cdot y)=\chi\bigl(f_*(f^*(x)\cdot y)\bigr)=\chi(x\cdot f_*(y))
+ \qquad (x\in K^\circ(X),\ y\in K_\bullet(Y))
+\end{equation}
+para todo \(k\)-morfismo \(f:Y\to X\) de \(k\)-esquemas propios.
+
+\item Supongamos que, en el morfismo \(f:Y\to X\) anterior, \(X\) e
+\(Y\) son irreducibles de dimensión \(\leq d\). Si \(f\) es de grado
+\(n\), entonces se tiene
+\begin{equation}\tag{4.4.3}
+ (f^*L_1,\ldots,f^*L_d;\mathcal O_Y)
+ =
+ n(L_1,\ldots,L_d;\mathcal O_X).
+\end{equation}
+Recordemos la definición del grado \(n\) de \(f\) [3]: es nulo salvo en el
+caso en que \(\dim(X)=\dim(Y)=\dim(f(Y))\). En este último caso se pone
+\begin{equation}\tag{4.4.4}
+ n=(\len_{\mathcal O_{X,x}}(\mathcal O_{Y,y}))/(\len_{\mathcal O_{X,x}}(\mathcal O_{X,x})),
+\end{equation}
+donde \(x\) es el punto genérico de \(X\) e \(y\) el punto genérico de
+\(Y\).
+\end{enumerate}
+
+En la demostración de (4.4.3), el caso \(\dim(X)=\dim(Y)\) es el único no
+trivial. Si \(\dim(f(Y))<d\), entonces se tiene
+\begin{equation}\tag{4.4.5}
+ R^if_*(\mathcal O_Y)=0
+\end{equation}
+para \(i>0\) en un entorno de \(x\). Pero la condición (4.4.5) también se
+satisface en el caso \(\dim(f(Y))=d\), pues entonces la dimensión de la
+fibra genérica es nula (EGA III 4.2.2 y EGA IV 5.6.6). Entonces 1.1.2 da las
+congruencias
+\[
+ f_*(\cl_\bullet(\mathcal O_Y))
+ \equiv \cl_\bullet(f_*(\mathcal O_Y)\sisi{}{)} % Canon SGA-SRC-001334
+ \equiv
+ \len_{\mathcal O_{X,x}}(\mathcal O_{Y,y})
+ \cl_\bullet(\mathcal O_{X_{\red}})
+\]
+módulo \(\Filt_{d-1}(X)\). En virtud de (4.4.2), se deduce de ello que
+\[
+ (f^*L_1,\ldots,f^*L_d;\mathcal O_Y)
+ =
+ \len_{\mathcal O_{X,x}}(\mathcal O_{Y,y})
+ (L_1,\ldots,L_d;\mathcal O_{X_{\red}}).
+\]
+Por otra parte, \(2^\circ\) da
+\[
+ (L_1,\ldots,L_d;\mathcal O_X)
+ =
+ \len_{\mathcal O_{X,x}}(\mathcal O_{X,x})
+ (L_1,\ldots,L_d;\mathcal O_{X_{\red}}),
+\]
+de donde resulta la afirmación.
+
+\subsection*{4.5}
+Se llama equivalencia numérica a la relación de equivalencia definida por
+el producto de intersección \(\langle\, ,\,\rangle\):
+
+\textbf{Definición 4.5.1.} Se dice que dos elementos \(x\) e \(y\) de
+\(\Gr^i(X)\) \((i\in\mathbb Z)\) (resp. de \(\Gr_i(X)\)) son numéricamente
+equivalentes si definen el mismo homomorfismo
+\(\Gr_i(X)\longrightarrow\mathbb Z\) (resp.
+\(\Gr^i(X)\longrightarrow\mathbb Z\)). Se dice que dos
+\(\mathcal O_X\)-módulos invertibles \(L_1\) y \(L_2\) son numéricamente
+equivalentes si sus primeras clases de Chern
+\(x,y\in\Gr^1(X)\) son numéricamente equivalentes.
+
+\textbf{Proposición 4.5.2.} Un \(\mathcal O_X\)-módulo invertible \(L\) es
+numéricamente equivalente a cero si y solo si
+\begin{equation}\tag{4.5.3}
+ \chi(L^n\otimes_{\mathcal O_X}\mathcal O_Z)=\chi(\mathcal O_Z)
+\end{equation}
+para todo \(n\in\mathbb Z\) y para toda curva integral cerrada
+\(Z\subset X\).
+
+Esto se deduce de 1.1.2 y 4.3.1.
+
+Se denota por \(\Pic^N(X)\) el subgrupo de \(\Pic(X)\) formado por las
+clases de \(\mathcal O_X\)-módulos invertibles numéricamente equivalentes a
+cero. De \sisi{2.3.4}{2.4.4} se deduce el % Canon SGA-SRC-001335
+
+\textbf{Corolario \sisi{4.5.3}{4.5.4}.} \(\Pic^\tau(X)\subset \Pic^N(X)\). % Canon SGA-SRC-001336
+
+Se demostrará en la Exp. XIII que se tiene incluso
+\(\Pic^N(X)=\Pic^\tau(X)\).

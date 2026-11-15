@@ -1,0 +1,160 @@
+% SGA 6, Exposición I, sección 3 en español, alineada con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 2304--2459 inclusive.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+\providecommand{\sisi}[2]{#2}
+
+\section*{3. Relación con la noción clásica de coherencia}
+
+\textbf{3.0.} Las hipótesis y las notaciones son las de (2.0), salvo que ya no se supone que \(\mathcal C_0\) sea localmente cuasiestable por núcleo de epimorfismo.
+
+\textbf{Definición 3.1.} \emph{Sea \(F\in\Ob\mathcal C_S\). Diremos que \(F\) es precoherente (relativamente a \(\mathcal C_0\))\footnote{Introducimos aquí esta noción como intermediario técnico; la única noción que debe retenerse es la de coherencia.} si, para todo \(U\) sobre \(S\) y todo morfismo \(u:E\to F|U\), donde \(E\in\Ob\mathcal C_{0,U}\), \(\Ker(u)\) es de \(\mathcal C_0\)-tipo finito (1.2). Diremos que \(F\) es coherente (relativamente a \(\mathcal C_0\)) si \(F\) es precoherente y de tipo finito.}
+
+\textbf{Observación 3.2.} Sea \(F\in\Ob\mathcal C_S\). De las definiciones resulta claro que, si \(F\) es precoherente (resp. de tipo finito), entonces todo subobjeto (resp. cociente) de \(F\) es precoherente (resp. de tipo finito).
+
+\textbf{Lema 3.3.} \textbf{a)} Sea
+\[
+  0\longrightarrow F\longrightarrow G\longrightarrow H
+\]
+una sucesión exacta de \(\mathcal C_S\). Si \(G\) es de tipo finito y \(H\) es precoherente, \(F\) es de tipo finito.
+
+\textbf{b)} Sea
+\[
+  F\longrightarrow G\longrightarrow H\longrightarrow 0
+\]
+una sucesión exacta de \(\mathcal C_S\). Si \(F\) es de tipo finito y \(G\) es precoherente, \(H\) es precoherente.
+
+\textbf{c)} Sea
+\[
+  0\longrightarrow F\longrightarrow G\longrightarrow H\longrightarrow 0
+\]
+una sucesión exacta de \(\mathcal C_S\). Si \(F\) y \(H\) son precoherentes (resp. de tipo finito), \(G\) también lo es.
+
+\emph{Demostración.} a) Tras localizar, se dispone de un epimorfismo \(G'\to G\), con \(G'\in\Ob\mathcal C_0\). Se obtiene así un diagrama conmutativo cuyas filas son exactas:
+\[
+\begin{tikzcd}
+0\arrow[r]&F'\arrow[r]\arrow[d]&G'\arrow[r]\arrow[d]&H\arrow[d,"\Id"]\\
+0\arrow[r]&F\arrow[r]&G\arrow[r]&H .
+\end{tikzcd}
+\]
+\(F'\) es de tipo finito porque \(H\) es precoherente; pero \(F'\to F\) es un epimorfismo, luego \(F\) es de tipo finito.
+
+b) Sean \(U\) sobre \(S\), y \(H'\xrightarrow{f}H|U\) un morfismo de \(\mathcal C_U\), con \(H'\in\Ob\mathcal C_{0,U}\). Cambiando las notaciones, podemos suponer que \(U=S\). Gracias a la cuasilevantabilidad de \(\mathcal C_0\) en \(\mathcal C\), existe, tras localizar si es preciso, un cuadrado conmutativo
+\[
+\begin{tikzcd}
+G' \arrow[r,"p"] \arrow[d] & H' \arrow[d,"f"]\\
+G \arrow[r] & H,
+\end{tikzcd}
+\]
+donde las flechas horizontales son epimorfismos y \(G'\in\Ob\mathcal C_0\). Como \(\Ker(f)\) es cociente de \(\Ker(fp)\), basta demostrar que \(\Ker(fp)\) es de tipo finito; por tanto, podemos suponer que \(H'=G'\). Las flechas \(F\to G\) y \(H'\to G\) definen \(g:F\oplus H'\to G\). Poniendo \(K=\Ker(G\to H)\), se obtiene un diagrama conmutativo cuyas filas son exactas y en el que \(q\) es un epimorfismo:
+\[
+\begin{tikzcd}
+0\arrow[r]&F\arrow[r]\arrow[d,"q"']&F\oplus H'\arrow[r]\arrow[d,"g"]&H'\arrow[r]\arrow[d,"f"]&0\\
+0\arrow[r]&K\arrow[r]&G\arrow[r]&H\arrow[r]&0 .
+\end{tikzcd}
+\]
+El diagrama de la serpiente muestra que \(\Ker(g)\to\Ker(f)\) es un epimorfismo. Pero, como \(F\oplus H'\) es de tipo finito y \(G\) es precoherente, \(\Ker(g)\) es de tipo finito por a), y se concluye.
+
+c) Demostremos primero la afirmación sin el «~resp.~». Salvo un cambio de notación, se trata de demostrar que, si \(g:G'\to G\) es un morfismo de \(\mathcal C_S\), con \(G'\in\Ob\mathcal C_0\), entonces \(\Ker(g)\) es de tipo finito. Denotando por \(H'\) la imagen de la flecha compuesta \(G'\to H\), se tiene un diagrama conmutativo cuyas filas son exactas:
+\[
+\begin{tikzcd}
+0\arrow[r]&F'\arrow[r]\arrow[d,"f"']&G'\arrow[r]\arrow[d,"g"]&H'\arrow[r]\arrow[d,"h"]&0\\
+0\arrow[r]&F\arrow[r]&G\arrow[r]&H\arrow[r]&0 .
+\end{tikzcd}
+\]
+Como \(h\) es un monomorfismo, el diagrama de la serpiente da un isomorfismo \(\Ker(f)\qis\Ker(g)\). Pero \(F'\) es de tipo finito por a), luego (de nuevo por a)) \(\Ker(f)\) es de tipo finito, lo que demuestra la afirmación sin el «~resp.~». Pasemos a la afirmación con el «~resp.~» (en rigor, no se puede invocar (2.5 b)), pues no suponemos que \(\mathcal C_0\) sea localmente cuasiestable por núcleo de epimorfismo). Tras localizar, existen epimorfismos \(F'\xrightarrow{u}F\), \(H'\xrightarrow{v}H\), con \(F'\in\Ob\mathcal C_0\), \(H'\in\Ob\mathcal C_0\). Tras localizar aún más, podemos suponer que \(v\) se factoriza a través de \(G\), de donde resulta un diagrama conmutativo con filas exactas:
+\[
+\begin{tikzcd}
+0\arrow[r]&F'\arrow[r]\arrow[d,"u"']&F'\oplus H'\arrow[r]\arrow[d,"w"]&H'\arrow[r]\arrow[d,"v"]&0\\
+0\arrow[r]&F\arrow[r]&G\arrow[r]&H\arrow[r]&0 .
+\end{tikzcd}
+\]
+Como \(u\) y \(v\) son epimorfismos, también lo es \(w\), y se concluye. Esto termina la demostración de (3.3).
+
+De aquí se deduce inmediatamente el siguiente resultado:
+
+\textbf{Corolario 3.4.} La subcategoría (estrictamente) plena de \(\mathcal C_S\) formada por los objetos coherentes es estable por límites proyectivos (resp. inductivos) finitos. En particular, el núcleo, el conúcleo y la imagen de una flecha entre dos objetos coherentes son coherentes. Sea
+\[
+  E^0\longrightarrow E^1\longrightarrow E^2\longrightarrow E^3\longrightarrow E^4
+\]
+una sucesión exacta de \(\mathcal C_S\). Si \(E^0,E^1,E^3,E^4\) son coherentes, \(E^2\) también lo es.
+
+\textbf{Corolario 3.5.} Supongamos que los objetos de \(\mathcal C_0\) son \(\mathcal C_0\)-coherentes (lo que implica, en particular, que \(\mathcal C_0\) es localmente cuasiestable por núcleo de epimorfismo, es decir, que estamos bajo las condiciones de (2.0)).
+
+\textbf{a)} Condiciones equivalentes sobre \(F\in\Ob\mathcal C_S\):
+\begin{enumerate}[label=(\roman*)]
+\item \(F\) es de presentación finita;
+\item \(F\) es coherente;
+\item \(F\) es de \(\infty\)-presentación finita (2.8).
+\end{enumerate}
+
+\textbf{b)} Sean \(F\in\Ob\Dpx^-(\mathcal C_S)\), \(n\in\mathbb Z\). Se tiene:
+\[
+\begin{split}
+F\ n\text{-pseudocoherente}
+\quad\Longleftrightarrow\quad&
+\Ho^i(F)\text{ coherente para }i\geq n+1,\\
+&\text{y }\Ho^n(F)\text{ de tipo finito.}
+\end{split}
+\]
+En particular, para que \(F\) sea pseudocoherente, es necesario y suficiente que \(\Ho^n(F)\) sea coherente para todo \(n\).
+
+\emph{Demostración.} La afirmación a) y la implicación \(\Rightarrow\) de b) resultan trivialmente de (3.4). La implicación \(\Leftarrow\) de b) se deduce inmediatamente de a) y (2.11.b)).
+
+\textbf{Ejemplos 3.6.} Sean \((S,A)\) un topos anillado, y \(\mathcal C,\mathcal C_0\) las \(S\)-categorías de (1.3.d)) (cf. también (2.15)). Para que los objetos de \(\mathcal C_0\) sean coherentes, es necesario y suficiente que \(A\) sea coherente (es decir, precoherente). He aquí algunos ejemplos en los que esto sucede:
+\begin{itemize}[label=-]
+\item \(A\) es constante, de valor un anillo noetheriano a izquierda (SGA 4 IX 2.1).
+\item \(S\) es el topos de los haces de conjuntos (para la topología de Zariski) sobre un esquema localmente noetheriano \(S\)\footnote{De conformidad con las nuevas convenciones, diremos «~esquema~» por «~preesquema~», y «~esquema separado~» por «~esquema~».}, y \(A=\mathcal O_S\).
+\item \(S\) es el topos de los haces de conjuntos sobre un espacio analítico complejo \(S\), \(A=\mathcal O_S\).
+\end{itemize}
+En cambio, el haz de las funciones continuas complejas sobre un espacio topológico no es coherente en general.
+
+Por supuesto, si \((S,A)\) está definido por un espacio anillado, la noción de coherencia considerada aquí coincide con la noción usual de Serre (EGA \(0_I\), 5.3.1).
+
+\textbf{Proposición 3.7.} \textbf{a)} Sea \(f:(S',A')\to(S,A)\) un morfismo de topos anillados. Se supone que \(f\) es plano a derecha, es decir, que el funtor \(f^*=A'\otimes_A\cdot\) es exacto. Para \(F\in\Ob\Dpx(_A S)\), \(G\in\Ob\Dpx^+(_A S)\), existe una flecha canónica funtorial:
+\[
+  f^*\RHom(F,G)\longrightarrow\RHom(f^*(F),f^*(G)).
+\]
+Esta es un isomorfismo cuando \(F\) es pseudocoherente.
+
+\textbf{b)} Supongamos que \(A\) es conmutativo y coherente, y sean \(F\in\Ob\Dpx^-(S)\), \(G\in\Ob\Dpx^+(S)\). Si \(\Ho^i(F)\) y \(\Ho^i(G)\) son coherentes para todo \(i\), lo mismo ocurre con \(\Ext^i(F,G)\).
+
+\emph{Demostración.} a) Para definir la flecha (cf. SGA 4 XVII), podemos suponer que \(G\) tiene componentes inyectivas, y se toma la flecha compuesta
+\[
+  f^*\Hom(F,G)\longrightarrow\Hom(f^*F,f^*G)\longrightarrow\RHom(f^*F,f^*G).
+\]
+Demostremos que es un isomorfismo cuando \(F\) es pseudocoherente. Denotemos, para abreviar, por \(T\) (resp. \(T'\)) el funtor \(f^*\RHom(\cdot,G)\) (resp. \(\RHom(f^*.,f^*G)\)), y sea \(a\in\mathbb Z\) tal que \(\Ho^i(G)=0\) para \(i<a\). Está claro que \(TA\qis T'A\); por tanto, mediante reducción sucesiva, \(TF\qis T'F\) cuando \(F\) es estrictamente perfecto (2.1). Por otra parte, si \(F\) es acíclico en grado \(>n\), \(TF\) y \(T'F\) son acíclicos en grado \(<a-n\). Para verificar que \(TF\qis T'F\) cuando \(F\) es pseudocoherente, podemos, dado que la cuestión es local, suponer que \(F\) es estrictamente \(n\)-pseudocoherente, es decir, que se tiene un triángulo distinguido
+\[
+\begin{tikzcd}[column sep=small]
+& F'' \arrow[dl,"+1"'] & \\
+F' \arrow[rr] & & F \arrow[ul]
+\end{tikzcd}
+\;,
+\]
+con \(F'\) estrictamente perfecto y \(F''\) acíclico en grado \(>n-1\). Se deduce de ello un morfismo de triángulos distinguidos
+\[
+\begin{tikzcd}[column sep=small]
+& TF'' \arrow[dr] & \\
+TF' \arrow[ur,"-1"'] & & TF \arrow[ll]
+\end{tikzcd}
+\qquad\longrightarrow\qquad
+\begin{tikzcd}[column sep=small]
+& T'F'' \arrow[dr] & \\
+T'F' \arrow[ur,"-1"'] & & T'F \arrow[ll]
+\end{tikzcd}
+\;.
+\]
+Ahora bien, \(TF'\qis T'F'\) porque \(F'\) es estrictamente perfecto, y \(TF''\) y \(T'F''\) son acíclicos en grado \(\leq a-n\); al escribir el morfismo inducido entre las sucesiones exactas de cohomología de los triángulos anteriores, se deduce que \(TF\to T'F\) induce un isomorfismo \(\Ho^i(TF)\qis\Ho^i(T'F)\) para \(i\leq a-n\). Como se puede elegir \(n\) tan negativo como se quiera, se concluye.
+
+b) Se deja la demostración como ejercicio al lector; véase, por ejemplo, ([H] II 3.3).
+
+\textbf{Observación 3.7.1.} Más adelante veremos (7.1.2) otro caso de «~compatibilidad~» de \(\RHom\) con \(\mathrm Lf^*\).
+
+\textbf{Corolario 3.7.2.} (cf. EGA \(0_I\) 5.2.7). \emph{Sean \((S,A)\) un topos anillado, \(s\) un punto de \(S\) (\sisi{SGAA}{SGA} VIII 7.8), y \(E,F\in\Ob\D^b(_A S)_{\coh}\). Si \(E_s\qis F_s\), existe un objeto \(s\)-punteado \(U\) de \(S\) tal que \(E|U\qis F|U\).}
+
+\emph{Demostración.} Sean \(\alpha:E_s\to F_s\) y \(\beta:F_s\to E_s\) isomorfismos recíprocos. Según (2.22 a)), se tiene
+\[
+  \Hom(E,F)_s\qis\Hom(E_s,F_s)
+  \qquad
+  (\text{resp. }\Hom(F,E)_s\qis\Hom(F_s,E_s)).
+\]
+Existe, por tanto, una «~vecindad~» \(U\) de \(s\) y una sección \(u\) (resp. \(v\)) de \(\Hom(E,F)\) (resp. \(\Hom(F,E)\)) sobre \(U\), tal que \(u_s=\alpha\) (resp. \(v_s=\beta\)). Los homomorfismos \(vu:E|U\to E|U\) y \(uv:F|U\to F|U\) inducen la identidad en \(s\), y por tanto también sobre un \(V\) conveniente sobre \(U\), c.q.d.

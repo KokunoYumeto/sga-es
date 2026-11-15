@@ -1,0 +1,149 @@
+% SGA 6, Exposición XII: fragmento español alineado con la fuente.
+% Alcance: apertura, Advertencia y sección 1 completas; termina antes de la sección 2.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 14169--14218.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Las superficies matemáticas de la fuente se conservan diplomáticamente;
+% las anomalías detectadas se notifican por separado para su resolución canónica.
+
+\section*{Exposición XII. Un teorema de representabilidad relativa sobre el funtor de Picard}
+\begin{center}
+por M. Raynaud (redactado por S. Kleiman)
+\end{center}
+
+\subsection*{Advertencia}
+
+El objeto de las dos Exposiciones XII y XIII es dar demostraciones de los
+nueve teoremas de finitud para el funtor de Picard enunciados por A.
+Grothendieck en los comentarios (pp. C 07-C 11) de sus
+«~Fondements de la Géométrie Algébrique~» (citado como FGA). En la primera
+Exposición se demuestra el primer teorema de finitud en la forma siguiente,
+más precisa que la enunciada en FGA: sean \(X\) e \(Y\) dos esquemas propios
+sobre una base noetheriana integral \(S\), y sea
+\(f:X\longrightarrow Y\) un \(S\)-morfismo sobreyectivo. Entonces existe un
+abierto no vacío \(V\) de \(S\) sobre el cual el morfismo inducido
+\(f^*:\Pic_{Y/S}\longrightarrow \Pic_{X/S}\) es representable por un
+morfismo cuasiafín de presentación finita. En la segunda Exposición se
+demuestra el resto.
+
+Las dos Exposiciones difieren notablemente por sus técnicas de demostración.
+En la primera se emplean de manera esencial el procedimiento de
+descomposición de Oort, el descenso no plano y la representación de los
+funtores no ramificados. En la segunda se reduce primero al caso en que los
+esquemas \(X/S\) que intervienen son proyectivos y planos, con fibras
+geométricamente integrales, o incluso, si es necesario, normales o lisos,
+aplicando siempre el primer teorema de finitud a un morfismo
+\(X'\to X\) adecuado. Después se emplea la herramienta de los
+\((b)\)-haces creada por I. Castelnuovo y perfeccionada y utilizada por T.
+Matsusaka, D. Mumford, Y. Nakai y S. Kleiman. Esta herramienta permite, en
+particular, prescindir de las coordenadas de Chow, del morfismo de Frobenius
+y de los teoremas de Lefschetz utilizados en las demostraciones originales
+de Grothendieck.
+
+La presente Exposición XII fue presentada oralmente, siguiendo a Grothendieck,
+por M. Raynaud, a quien el redactor desea agradecer que le comunicara sus
+notas personales.
+
+\section*{1. Enunciado del teorema principal y aplicaciones}
+
+\textbf{Teorema 1.1.} Sean \(S\) un esquema noetheriano, \(X\) e \(Y\) dos
+\(S\)-esquemas propios y \(f:X\to Y\) un morfismo. Se supone que \(S\) es
+integral y que \(f\) es sobreyectivo. Entonces existe un abierto no vacío
+\(V\) de \(S\) tal que el morfismo
+\[
+  f^*:\Pic_{Y/S}|V\longrightarrow \Pic_{X/S}|V
+\]
+entre los funtores de Picard (localizados para la topología f.p.p.f.) sea
+representable por un morfismo cuasiafín de presentación finita.
+
+\textbf{Corolario 1.2.} Sea \(X\) un esquema propio sobre un esquema
+noetheriano \(S\). Se supone que \(S\) es integral. Entonces existe un abierto
+no vacío \(V\) de \(S\) tal que el funtor de Picard \(\Pic_{X/S}|_V\) sea
+representable por un \(V\)-esquema en grupos que sea suma de abiertos
+cuasiproyectivos de tipo finito y, por tanto, a fortiori separado sobre
+\(V\).
+
+En efecto, recordemos el hecho siguiente (FGA N\textsuperscript{o}232): sean
+\(S\) un esquema y \(X\) un \(S\)-esquema proyectivo, de presentación finita
+e integral sobre \(S\) (es decir, plano con fibras geométricamente
+integrales). Entonces el funtor de Picard está representado por un
+\(S\)-esquema en grupos \(\Pic_{X/S}\), unión creciente de abiertos
+cuasiproyectivos de presentación finita. La consideración de los
+«~polinomios de Hilbert~» permite aquí descomponer \(\Pic_{X/S}\) en una
+suma de abiertos \(\Pic^q_{X/S}\), \(q\in\mathbb Q[t]\). En la Exposición
+siguiente se demuestra, bajo la hipótesis adicional de que \(S\) sea
+noetheriano, que los \(\Pic^q_{X/S}\) son de tipo finito sobre \(S\). Se sabe
+entonces que 1.2 es cierto en el caso en que \(X\) es además proyectivo e
+integral sobre \(S\); deduciremos de ello el caso general utilizando el lema
+siguiente.
+
+\textbf{Lema 1.3.} Sea \(X\) de tipo finito sobre \(S\) noetheriano e
+integral. Entonces existen un abierto no vacío \(V\) de \(S\), un esquema
+integral \(S'\) y un morfismo finito y plano \(S'\to V\), tales que toda
+componente irreducible \(X'_i\) de \(X_{S'}\), provista de la estructura
+reducida inducida, sea integral sobre \(S'\).
+
+En efecto, existe una extensión finita \(L\) del cuerpo de funciones
+\(k(S)\) tal que toda componente irreducible de
+\((X_L)_{\text{réd}}\) sea geométricamente integral (por EGA IV 4.6.8). Sea
+\(S_1\) un \(S\)-esquema integral tal que \(k(S_1)=L\) y que existan un
+abierto no vacío \(V_1\) de \(S\) y un morfismo finito plano
+\(h:S_1\to V_1\). Existe un abierto no vacío \(S_2\) de \(S_1\) tal que
+toda componente irreducible de \(\sisi{X_{S_1}}{X_{S_2}}\), provista de la estructura % Canon SGA-SRC-001353
+reducida inducida, sea integral sobre \(\sisi{S_1}{S_2}\) (EGA IV 9.7.7). Tomemos
+\(V=V_1-h(S_1-S_2)\) y \(S'=h^{-1}(V)\).
+
+Demostremos ahora 1.2. Sean \(h:S'\to V_1\) y \(X'_i\) como en 1.3. Para
+todo \(i\), sea \(f_i:Z_i\to X'_i\) una presentación de Chow con \(Z_i\)
+integral y \(f_i\) birracional. Tras restringir \(V\) y \(S'\) si es
+necesario, se puede suponer que \(Z_i\) es integral sobre \(\sisi{S}{S'}\) (EGA IV % Canon SGA-SRC-001354
+9.7.7). Sea \(f:Z=\coprod_i Z_i\longrightarrow X'=X_{S'}\) el morfismo
+canónico. Entonces \(\Pic_{Z/S'}=\prod_i\Pic_{Z_i/S'}\) es representable por
+un esquema en grupos que es suma de abiertos cuasiproyectivos de tipo finito.
+Por último, 1.1 dice que, tras restringir \(V\) y \(S'\) si es necesario, el
+morfismo \(f^*:\Pic_{X'/S'}\longrightarrow \Pic_{\sisi{Z'}{Z}/S'}\) es representable % Canon SGA-SRC-001355
+por un morfismo cuasiafín. Por consiguiente, \(\Pic_{X'/S'}\) es
+representable por un esquema en grupos que es suma de abiertos
+cuasiproyectivos de tipo finito; gracias al descenso plano finito (SGA 1 VIII
+7.6 y EGA II 6.6.1), \(\Pic_{X/S}|_V\) también lo es.
+
+\textbf{Lema 1.4.} Sean \(k\) un cuerpo, \(P\) y \(Q\) dos
+\(k\)-esquemas en grupos localmente de tipo finito, y sea \(f:P\to Q\) un
+morfismo cuasiafín. Entonces \(f\) es afín.
+
+En efecto, sea \(R=\Ker(f)\); \(R\) es un \(k\)-esquema en grupos de tipo
+finito que es cuasiafín; en virtud de (SGA 3
+\(\mathrm{VI}_{\mathrm B}\) 11.11), \(R\) es entonces afín. Por tanto,
+\(P\to P/R\), que hace de \(P\) un \(R\)-torsor sobre \(P/R\), es afín. Por
+otra parte, se sabe (SGA 3 1.4.2) que \(P/R\to Q\) es una inmersión cerrada,
+y por tanto afín; en consecuencia, lo mismo ocurre con el compuesto
+\(P\to P/R\to Q\).
+
+\textbf{Corolario 1.5.} Sea \(k\) un cuerpo.
+\begin{enumerate}[label=\alph*)]
+\item Sea \(X\) un \(k\)-esquema propio. Entonces \(\Pic_{X/k}\) es
+representable (J. P. Murre).
+\item Sea \(f:X\to Y\) un morfismo sobreyectivo entre dos \(k\)-esquemas
+propios. Entonces el morfismo inducido
+\(f^*:\Pic_{Y/k}\longrightarrow \Pic_{X/k}\) es afín.
+\end{enumerate}
+
+\textbf{Corolario 1.6.} Sean \(S\) un esquema noetheriano integral y
+\(f:X\to Y\) un \(S\)-morfismo sobreyectivo entre dos \(S\)-esquemas
+propios.
+\begin{enumerate}[label=\alph*)]
+\item Si \(Y\) es normal sobre \(S\) (es decir, plano con fibras
+geométricamente normales), entonces, tras restringir \(S\) si es necesario,
+\(f^*:\Pic_{Y/S}\to\Pic_{X/S}\) es cuasifinito.
+\item Si \(\underline{\Pic}_{Y/S}\) es esencialmente propio sobre \(S\) (es decir, si
+satisface el criterio valuativo de ser propio, por ejemplo si \(Y\) es liso
+sobre \(S\)), entonces, tras restringir \(S\) si es necesario,
+\(f^*:\Pic_{Y/S}\to\Pic_{X/S}\) es finito (y, en particular, afín).
+\end{enumerate}
+En efecto, en a), para todo \(s\in S\), \(R_s=\Ker(f_s^*)\) es un grupo
+algebraico afín; su componente neutra es un grupo algebraico propio sobre
+\(k\) (FGA 236, Teorema 2.1 (iii)); por tanto, \(R_s\) es finito. En b),
+\(f^*\) es a la vez propio y cuasiafín, y por tanto finito.
+
+\textbf{Observación 1.7.} No se sabe si 1.1 sigue siendo válido cuando se
+reemplaza « cuasiafín » por afín, como podrían sugerir 1.5 y 1.6.

@@ -1,0 +1,103 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, §§3.1.4--3.2.1, hasta la demostración de (a'), líneas 4806--4901 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Lema 3.1.4.} Sean $S$ un espacio topológico, $V$ una variedad compacta, $E,F$ dos fibrados vectoriales complejos de rango finito sobre $V$, y $n\in\N$. Denotemos por $X$ la $S$-variedad mixta $S\times V$. Para
+\[
+ u\in\Diff^n_\mathbb C(\pr_2^*(E),\pr_2^*(F)),
+\]
+la aplicación $s\mapsto i_s^*(u)$ de $S$ en $\Diff^n_\mathbb C(E,F)$ es continua. La aplicación lineal
+\[
+ \Diff^n_\mathbb C(\pr_2^*(E),\pr_2^*(F))
+ \longrightarrow C(S,\Diff^n_\mathbb C(E,F))
+\]
+así definida es un isomorfismo.
+
+\emph{Demostración.} Mediante la identificación (1.2.3.1), se puede reducir a $n=0$. Poniendo $\underline{\Homop}(E,F)=G$, se reduce entonces a mostrar que, para $u\in\Gamma(X,\pr_2^*(G))$, la aplicación $s\mapsto u_s=i_s^*(u)$ de $S$ en $C^\infty(V,G)$ es continua y que la aplicación lineal
+\[
+ \Gamma(X,\pr_2^*(G))\longrightarrow C(S,C^\infty(V,G))
+\]
+así obtenida es un isomorfismo. Pero esto resulta inmediatamente de la definición de las variedades mixtas (1.1).
+
+\textbf{3.1.5.} Bajo las hipótesis de (3.1.4), sea\footnote{Se omite el índice $\mathbb C$ para abreviar.}
+\[
+ u\in\Diff^n(\pr_2^*(E),\pr_2^*(F)).
+\]
+Identificando $u$, mediante (3.1.4), con una aplicación continua de $S$ en $\Diff^n(E,F)$, se comprueba que, para $U$ abierto en $S$, el morfismo
+\[
+ \pr_{1*}(u)(U):\Gamma(X|U,E)\longrightarrow \Gamma(X|U,F)
+\]
+se identifica canónicamente con la aplicación lineal
+\[
+ C(U,C^\infty(V,E))\longrightarrow C(U,C^\infty(V,F))
+\]
+deducida de
+\begin{equation}\tag{3.1.3}
+ \varphi u:U\longrightarrow \Lop(C^\infty(V,E),C^\infty(V,F)).
+\end{equation}
+Supongamos que $S$ es localmente compacto. Entonces, según (3.1.1), el morfismo
+\[
+ \pr_{1*}(u):\pr_{1*}\pr_2^*(E)
+ \longrightarrow \pr_{1*}\pr_2^*(F)
+\]
+es el morfismo de haces asociado al morfismo de prehaces
+\[
+ u_\infty:\underline C'(S,C^\infty(V,E))
+ \longrightarrow \underline C'(S,C^\infty(V,F))
+\]
+definido por $\varphi u$. Por otra parte, para $r\in\Z$,
+\[
+ \varphi_r u:S\longrightarrow \Lop(C^r_2(V,E),C^{r-n}_2(V,F))
+\]
+define un morfismo de prehaces
+\[
+ u_r:\underline C'(S,C^r_2(V,E))
+ \longrightarrow \underline C'(S,\sisi{C^r_2(V,F)}{C^{r-n}_2(V,F)}).
+\]
+Según (3.1.3 (ii)), los $u_r$ forman un sistema proyectivo cuyo límite es $u_\infty$. Nos será cómodo interpretar $\varphi_r u$ como un morfismo de fibrados hilbertianos triviales (3.0.5)
+\[
+ S\times C^r_2(V,E)\longrightarrow S\times C^{r-n}_2(V,F),
+\]
+que induce sobre los haces de secciones el morfismo de haces asociado a $u_r$.
+
+\subsubsection*{3.2. Definición del índice}
+\textbf{Teorema 3.2.1.} Sean $S$ un espacio localmente compacto, $p:X\to S$ una variedad mixta propia y $E^\bullet$ un complejo elíptico de orden $n$ de fibrados vectoriales complejos sobre $X$ (1.2.5). Entonces el complejo $\mathbb Rp_*(E^\bullet)$ (que, según (2.5), es isomorfo a $p_*(E^\bullet)$ en la categoría derivada de la de los $\cO_S\otimes\mathbb C$-módulos) es perfecto.
+
+\emph{Demostración.} Como la cuestión es local sobre $S$, se puede suponer (2.9) que $X=S\times V$, donde $V$ es una variedad compacta, y que $p=\pr_1$. Además, se puede suponer (2.10) que, para todo $i$, se tiene $E^i=\pr_2^*(F^i)$, donde $F^i$ es un fibrado vectorial complejo de rango finito sobre $V$. Según (3.1.5), el complejo $p_*(E)$ está asociado al complejo de prehaces $\bigl(\underline C'(S,C^\infty(V,F^i)),d_\infty^i\bigr)$ (donde los $d^i:E^i\longrightarrow E^{i+1}$ son los operadores diferenciales dados), que denotaremos simplemente por $\underline C'(S,C^\infty(V,F^\bullet))$. Pongamos, para cada $i\in\Z$,
+\[
+ m_i=\sum_{j<i} n_j
+ \qquad (\text{se conviene que } n_i=0 \text{ si } E^i=0).
+\]
+Para cada $r\in\Z$, se tiene (3.1.5) un complejo de prehaces
+\[
+ \bigl(\underline C'(S,C_2^{r-m_i}(V,F^i)),d_{r-m_i}^i\bigr),\quad\text{que denotaremos por } \underline C'(S,C_2^r(V,F^\bullet)).
+\]
+Los $\underline C'(S,C_2^r(V,F^\bullet))$ forman un sistema proyectivo, y se tiene (3.1.5):
+\begin{equation}\tag{3.2.1.1}
+ \underline C'(S,C^\infty(V,F^\bullet))=\varprojlim_r \underline C'(S,C_2^r(V,F^\bullet)).
+\end{equation}
+Finalmente, denotaremos por $F_r^\bullet$ el complejo de fibrados hilbertianos triviales sobre $S$ definido por $\varphi_{r-m_i}d^i$, y por $\underline F_r^\bullet$ el complejo de los haces de secciones correspondiente, que no es otro (3.1.5) que el complejo de haces asociado a $\underline C'(S,C_2^r(V,F^\bullet))$. Dicho esto, para demostrar el teorema, basta probar las afirmaciones siguientes:
+
+(a) Para $r\in\Z$, el morfismo canónico
+\[
+ \underline C'(S,C^\infty(V,F^\bullet))
+ \longrightarrow \underline C'(S,C_2^r(V,F^\bullet))
+\]
+es un cuasi-isomorfismo de complejos de prehaces, es decir, induce isomorfismos sobre los prehaces de cohomología.
+
+(b) Para $r\in\Z$, el complejo $\underline F_r^\bullet$ es perfecto.
+
+\emph{Demostración de (b).} La elipticidad de $E^\bullet$ implica ([16]~XI Th.6\footnote{que se generaliza fácilmente a los complejos elípticos.}) que, para todo $s\in S$, la diferencial de $(F_r^\bullet)_s$ es de imagen cerrada y que los $H^i((F_r^\bullet)_s)$ son espacios vectoriales de dimensión finita. En otros términos, para emplear la terminología de [11], $F_r^\bullet$ es un complejo cuasiacíclico directo de fibrados hilbertianos. Por consiguiente, según ([12]~2.3), $F_r^\bullet$ es localmente homotópicamente equivalente a un complejo acotado de fibrados vectoriales de rango finito. Como el funtor «haz de secciones» es aditivo (3.0.5), $\underline F_r^\bullet$ es localmente homotópicamente equivalente a un complejo acotado de haces localmente libres de tipo finito, y por tanto es perfecto.
+
+Para la demostración de (a), necesitaremos la afirmación intermedia siguiente:
+
+(a') Para $p\geq q$, el morfismo canónico
+\[
+ \underline F_p^\bullet\longrightarrow \underline F_q^\bullet
+\]
+es un cuasi-isomorfismo.
+
+\emph{Demostración de (a').} Denotemos por $M_{pq}^\bullet$ el complejo de fibrados hilbertianos cono del morfismo $F_p^\bullet\longrightarrow F_q^\bullet$. La elipticidad de $E$ implica que, para todo $s\in S$, el morfismo $(F_p^\bullet)_s\longrightarrow (F_q^\bullet)_s$ es un cuasi-isomorfismo ([16]~XI Cor.~2 of Th.~6). En otros términos, $M_{pq}^\bullet$ es un complejo acíclico directo. Resulta ([11]~2.3) que $M_{pq}^\bullet$ es localmente homotópicamente trivial y, por tanto, que $\underline M_{pq}^\bullet$, que no es otro que el cono de $\underline F_p^\bullet\longrightarrow\underline F_q^\bullet$, es acíclico, q.e.d.

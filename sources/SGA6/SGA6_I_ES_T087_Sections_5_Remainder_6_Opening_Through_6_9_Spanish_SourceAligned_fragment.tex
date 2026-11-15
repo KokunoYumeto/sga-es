@@ -1,0 +1,170 @@
+% SGA 6, Exposición I: final de la sección 5 y sección 6 hasta 6.9, en español y alineados con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 2952--3115.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 5.9.} Supongamos que \(\sisi{S}{\mathcal S}=(\mathrm{Ens})\) (por tanto, \(A\) «es» un anillo ordinario) y que todo \(A\)-módulo izquierdo tiene tor-dimensión finita (esto ocurre, por ejemplo, si \(A\) tiene dimensión cohomológica global finita; véanse (MULT VI 2.6) y (EGA \(0_{\mathrm{IV}}\) 17.2.8)). Entonces se tiene
+\[
+\begin{aligned}
+\text{(i)}\quad & \Dpx^b({}_A \sisi{S}{\mathcal S})=\Dpx({}_A \sisi{S}{\mathcal S})_{\torf},\quad\text{y}\\
+\text{(ii)}\quad & \Dpx^b({}_A \sisi{S}{\mathcal S})_{\mathrm{coh}}=\Dpx({}_A \sisi{S}{\mathcal S})_{\mathrm{parf}}.
+\end{aligned}
+\]
+En otros términos, para que \(E\in\Ob\Dpx({}_A \sisi{S}{\mathcal S})\) tenga tor-dimensión finita (resp. tor-dimensión finita y sea perfecto), es necesario y suficiente que \(E\) tenga cohomología acotada (resp. cohomología acotada y sea pseudocoherente).
+
+\emph{Demostración.} Por (5.8), basta demostrar (i). Sea \(E\in\Ob\Dpx^b({}_A \sisi{S}{\mathcal S})\). Se puede suponer (prolongando \(E\) por \(0\) si es preciso) que \(E\in\Ob\Dpx^b({}_A S)\), donde \(S\) es el objeto final de \(\sisi{S}{\mathcal S}\). Procediendo por recurrencia sobre el número de objetos de cohomología no nulos de \(E\), se reduce, por descomposición, al caso en que \(E\) es un \(A\)-módulo ordinario, y se concluye.
+
+Puede enunciarse de forma más general:
+
+\textbf{Corolario 5.10.} Sea \(X\in\Ob \sisi{S}{\mathcal S}\). Supongamos que \(\sisi{S}{\mathcal S}_{/X}\) tiene suficientes puntos (SGA 4 IV 6.4.1.) y que, para todo punto \(s\) de \(\sisi{S}{\mathcal S}_{/X}\), todo \(A_s\)-módulo izquierdo tiene tor-dimensión finita. Entonces se tiene
+\[
+  \Dpx^b({}_A X)_{\mathrm{coh}}=\Dpx^b({}_A X)_{\mathrm{parf}}.
+\]
+En otros términos, para que \(E\in\Ob\Dpx^b({}_A X)\) sea pseudocoherente, es necesario y suficiente que \(E\) sea perfecto.
+
+\emph{Demostración.} Sean \(E\in\Ob\Dpx^b({}_A X)_{\mathrm{coh}}\) y \(s\) un punto de \(\sisi{S}{\mathcal S}_{/X}\). Se trata de demostrar que \(E\) es perfecto «en una vecindad de \(s\)», es decir, que existe un objeto \(s\)-apuntado \(U\) de \(\sisi{S}{\mathcal S}\) sobre \(X\) tal que \(E|U\) sea perfecto. Ahora bien, como el funtor \(s^*\) es exacto, se tiene, por (2.16.1 a)), \(E_s\in\Ob\Dpx^b(A_s)_{\mathrm{coh}}\). Por tanto, en virtud de (5.9), \(E_s\) es perfecto. La afirmación será, pues, consecuencia de (3.7.2) y del lema siguiente:
+
+\textbf{Lema 5.10.1.} \emph{Sea \(s\) un punto de \(\sisi{S}{\mathcal S}\), y sea \(F\in\Ob\Dpx(A_s)_{\mathrm{parf}}\). Existen un objeto \(s\)-apuntado \(U\) de \(\sisi{S}{\mathcal S}\) y \(F'\in\Ob\Dpx({}_A U)_{\mathrm{parf}}\) tales que \(F'_s=F\).}
+
+\emph{Demostración.} Es evidente si \(F\) es un \(A_s\)-módulo libre de tipo finito. Supongamos ahora que \(F\) es proyectivo de tipo finito y, por tanto, imagen de un proyector \(p:L\longrightarrow L\), donde \(L\) es libre de tipo finito. Existen entonces una «vecindad» \(U\) de \(s\), un \(A_U\)-módulo libre \(L'\) y un homomorfismo \(p':L'\to L'\) tales que \(p'_s=p\). Como \({p'_s}^2=p'_s\), se puede suponer, restringiendo \(U\) si es preciso, que \(p'^2=p'\). Por tanto, \(F'=\Im(p')\) es sumando directo de \(L'\) y verifica \(F'_s=F\). Esto se generaliza inmediatamente al caso en que \(F\) es estrictamente perfecto, es decir, un complejo acotado formado por módulos proyectivos de tipo finito.
+
+\textbf{Ejemplos 5.11.} El corolario (5.10) se aplica, en particular, cuando \((\sisi{S}{\mathcal S},A)\) está definido por un espacio anillado por anillos locales \emph{regulares}, por ejemplo, un esquema regular o un espacio analítico complejo liso sobre \(\mathbb C\).
+
+\section*{6. Rango de un complejo perfecto}
+
+\textbf{6.0.} Sea \((X,\mathcal O_X)\) un espacio anillado por anillos locales. Es bien sabido que a todo haz localmente libre de tipo finito \(L\) sobre un abierto \(U\) de \(X\) se le puede asociar una función \(\rg_U(L)\), localmente constante sobre \(U\) y con valores enteros, llamada el \emph{rango} de \(L\); la familia de funciones \(\rg_U(L)\) está caracterizada por las propiedades siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item si \(V\subset U\) es una inclusión de abiertos, se tiene \(\rg_V(L|V)=\rg_U(L)|V\);
+\item para toda sucesión exacta de \(\mathcal O_U\)-módulos localmente libres de tipo finito
+\[
+  0\longrightarrow L'\longrightarrow L\longrightarrow L''\longrightarrow 0,
+\]
+se tiene \(\rg_U(L)=\rg_U(L')+\rg_U(L'')\);
+\item \(\rg_X(\mathcal O_X)=1\).
+\end{enumerate}
+En este número nos proponemos extender la noción de rango a los complejos perfectos.
+
+\textbf{Definición 6.1} (cf. SGA 5 VIII 2). Sean \(\mathcal C\) una categoría aditiva (resp. triangulada) y \(F\) un grupo abeliano. Se dice que una función \(f:\Ob(\mathcal C)\longrightarrow F\) es una función aditiva de \(\mathcal C\) en \(F\) si, para todos \(L,L',L''\in\Ob(\mathcal C)\) tales que \(L\simeq L'+L''\) (resp. tales que se tenga un triángulo distinguido
+\[
+\begin{tikzcd}
+& L'' \arrow[dl, dashed] & \\
+L' \arrow[rr] && L \arrow[ul]
+\end{tikzcd}
+\]
+), se tiene \(f(L)=f(L')+f(L'')\).
+
+Las funciones aditivas de \(\mathcal C\) en \(F\) forman un grupo abeliano, denotado por \(\Add(\mathcal C,F)\).
+
+\textbf{6.2.} Sean \(\mathcal C\) una categoría triangulada y \(f\) una función aditiva de \(\mathcal C\) en un grupo abeliano \(F\). Entonces \(f\) induce una función aditiva sobre la categoría aditiva \(\mathcal C^{\mathrm{ad}}\) subyacente a \(\mathcal C\), de donde se obtiene una inclusión \(\Add(\mathcal C,F)\subset\Add(\mathcal C^{\mathrm{ad}},F)\). En particular, se tiene \(f(0)=0\) y \(f(L)=f(M)\) si \(L\simeq M\). Por otra parte, \(f(L[n])=(-1)^n f(L)\) para todo \(L\in\Ob(\mathcal C)\) y \(n\in\mathbb Z\).
+
+\textbf{6.3.} Sea \(\mathcal C\) una categoría aditiva (resp. triangulada). El grupo \(\Add(\mathcal C,F)\) depende funtorialmente de \(F\). El funtor \(\Add(\mathcal C,.)\) es representable (cf. SGA 5 VIII 2) por un grupo abeliano denotado por \(k(\mathcal C)\)\footnote{No utilizaremos aquí la notación usual \(\Kpx(\mathcal C)\), pues \(\Kpx(\mathcal C)\) denota ya, cuando \(\mathcal C\) es aditiva, la categoría de los complejos de \(\mathcal C\) «salvo homotopía».}, provisto de una aplicación aditiva \(\cl_{\mathcal C}:\Ob(\mathcal C)\longrightarrow k(\mathcal C)\) (si \(\mathcal C\) es aditiva, se toma como \(k(\mathcal C)\) la simetrización del monoide de las clases de isomorfía de objetos de \(\mathcal C\); si \(\mathcal C\) es triangulada, se toma como \(k(\mathcal C)\) el cociente del grupo abeliano libre generado por \(\Ob(\mathcal C)\) por las relaciones que identifican \(L\) con \(L'+L''\) cada vez que se tiene un triángulo distinguido \(L'\longrightarrow L\longrightarrow L''\longrightarrow L'[1]\)).
+
+El grupo \(k(\mathcal C)\) depende funtorialmente de \(\mathcal C\) (respecto de los funtores aditivos (resp. exactos)). Si \(u,u':\mathcal C\to\mathcal D\) son funtores aditivos (resp. exactos) isomorfos, entonces \(k(u)=k(u')\).
+
+Si \(\mathcal C\) es una categoría triangulada, se tiene un epimorfismo canónico \(k(\mathcal C^{\mathrm{ad}})\longrightarrow k(\mathcal C)\) (cf. (6.2)).
+
+\textbf{Lema 6.4.} \emph{Sea \(\mathcal C\) una categoría aditiva. El funtor canónico \(\mathcal C\longrightarrow\Kpx^b(\mathcal C)\) induce un isomorfismo (funtorial en \(\mathcal C\)) \(k(\mathcal C)\longrightarrow k(\Kpx^b(\mathcal C))\).}
+
+\emph{Demostración.} Es una consecuencia inmediata de la fórmula siguiente (que resulta trivialmente de (6.2)):
+\begin{equation}\tag{6.4.1}
+  f(L)=\sum (-1)^i f(L^i)
+\end{equation}
+para \(L\in\Ob\Kpx^b(\mathcal C)\) y \(f\) una función aditiva sobre \(\Kpx^b(\mathcal C)\).
+
+\textbf{Definición 6.5.} Sean \(\sisi{S}{\mathcal S}\) una categoría, \(\mathcal C\) una \(\sisi{S}{\mathcal S}\)-categoría aditiva (resp. triangulada) (1.1.1), y \(F\) un prehaz abeliano sobre \(\sisi{S}{\mathcal S}\). Se dice que una familia de funciones \(f_X:\Ob(\mathcal C_X)\longrightarrow F(X)\), indexada por \(X\in\Ob \sisi{S}{\mathcal S}\), es una \(\sisi{S}{\mathcal S}\)-función aditiva de \(\mathcal C\) en \(F\) si se verifican las condiciones siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item para todo \(X\in\sisi{\Ob\mathcal C_X}{\Ob\mathcal S}\), \(f_X\) es una función aditiva (6.1);
+\item para toda flecha \(u:X\to Y\) de \(\sisi{S}{\mathcal S}\), el diagrama siguiente es conmutativo:
+\[
+\begin{tikzcd}
+\Ob\mathcal C_Y \arrow[r,"f_Y"] \arrow[d,"u^*"'] & F(Y) \arrow[d,"F(u)"]\\
+\Ob\mathcal C_X \arrow[r,"f_X"] & F(X).
+\end{tikzcd}
+\]
+\end{enumerate}
+Las \(\sisi{S}{\mathcal S}\)-funciones aditivas de \(\mathcal C\) en \(F\) forman un grupo abeliano, denotado por \(\Add\sisi{_S}{_{\mathcal S}}(\mathcal C,F)\).
+
+\textbf{Observaciones 6.6.} \textbf{a)} Denotemos por \(\mathcal C^{\is}\) la \(\sisi{S}{\mathcal S}\)-categoría fibrada cuya fibra en \(X\in\Ob \sisi{S}{\mathcal S}\) es la categoría que tiene los mismos objetos que \(\mathcal C_X\), pero cuyas flechas son los isomorfismos de \(\mathcal C_X\). Denotemos, por otra parte, por \(\underline F\) la \(\sisi{S}{\mathcal S}\)-categoría fibrada cuya fibra en \(X\in\Ob \sisi{S}{\mathcal S}\) es la categoría discreta (es decir, las únicas flechas son las identidades) \(F(X)\); para \(u\in\mathrm{Fl}(\sisi{S}{\mathcal S})\), el funtor de imagen inversa es \(F(u)\). Entonces, una \(\sisi{S}{\mathcal S}\)-función aditiva de \(\mathcal C\) en \(F\) no es sino un \(\sisi{S}{\mathcal S}\)-funtor cartesiano de \(\mathcal C^{\is}\) en \(\underline F\), que induce en cada fibra una función aditiva en el sentido de (6.1). Nos será conveniente interpretar la aditividad del modo siguiente. Supongamos, para fijar las ideas, que \(\mathcal C\) es triangulada. La categoría \(\Cart\sisi{_S}{_{\mathcal S}}(\mathcal C^{\is},\underline F)\) (resp. \(\Cart\sisi{_S}{_{\mathcal S}}(\Tr(\mathcal C)^{\is},\underline F)\) (1.1.2)) de los \(\sisi{S}{\mathcal S}\)-funtores cartesianos de \(\mathcal C^{\is}\) (resp. \(\Tr(\mathcal C)^{\is}\)) en \(\underline F\) es la categoría discreta asociada a un grupo abeliano, y se tiene un homomorfismo
+\[
+  \rho:\Cart\sisi{_S}{_{\mathcal S}}(\mathcal C^{\is},\underline F)
+  \longrightarrow
+  \Cart\sisi{_S}{_{\mathcal S}}(\Tr(\mathcal C)^{\is},\underline F),
+\]
+definido por \(\rho(f)(T)=f(L)-f(L')-f(L'')\) para \(f\in\Cart\sisi{_S}{_{\mathcal S}}(\mathcal C^{\is},\underline F)\) y \(T=(L'\to L\to L''\to L'[1])\in\Ob\Tr(\mathcal C)\). Decir que \(f\in\Cart\sisi{_S}{_{\mathcal S}}(\mathcal C^{\is},\underline F)\) es aditivo significa que \(\rho(f)=0\); en otros términos, se tiene una sucesión exacta (canónica y funtorial)
+\begin{equation}\tag{6.6.1}
+  0\longrightarrow \Add\sisi{_S}{_{\mathcal S}}(\mathcal C,F)
+  \longrightarrow \Cart\sisi{_S}{_{\mathcal S}}(\mathcal C^{\is},\underline F)
+  \xrightarrow{\rho}
+  \Cart\sisi{_S}{_{\mathcal S}}(\Tr(\mathcal C)^{\is},\underline F).
+\end{equation}
+
+\textbf{b)} Sea \(u:X\to Y\) una flecha de \(\sisi{S}{\mathcal S}\). Como todos los funtores «imagen inversa por \(u\)» son isomorfos entre sí, definen (6.3) un único homomorfismo \(k(Y)\longrightarrow k(X)\). Por consiguiente, \(X\mapsto k(X)\) define un prehaz abeliano sobre \(\sisi{S}{\mathcal S}\), denotado por \(k(\mathcal C)\). Una \(\sisi{S}{\mathcal S}\)-función aditiva de \(\mathcal C\) en \(F\) se interpreta entonces simplemente como un homomorfismo de prehaces \(k(\mathcal C)\longrightarrow F\); en otros términos, se tiene
+\[
+  \Add\sisi{_S}{_{\mathcal S}}(\mathcal C,F)=\Hom(k(\mathcal C),F).
+\]
+El prehaz \(k(\mathcal C)\) depende, naturalmente, de manera funtorial de \(\mathcal C\) respecto de los \(\sisi{S}{\mathcal S}\)-funtores aditivos (resp. exactos).
+
+\textbf{Proposición 6.7.} Sean \(\sisi{S}{\mathcal S}\) un sitio, \(\mathcal C\) una \(\sisi{S}{\mathcal S}\)-categoría abeliana plana, y \(\mathcal C_0\) una sub-\(\sisi{S}{\mathcal S}\)-categoría aditiva estrictamente plena de \(\mathcal C\) que satisface las hipótesis de (4.0). Entonces, el morfismo de prehaces
+\[
+  k(\mathcal C_0)\longrightarrow k(\Parf(\mathcal C,\mathcal C_0))\qquad(\text{cf. }(4.9)),
+\]
+inducido por la inclusión de \(\mathcal C_0\) en \(\Parf(\mathcal C,\mathcal C_0)\), define un isomorfismo sobre los haces asociados. En otros términos, para todo haz abeliano \(F\) sobre \(\sisi{S}{\mathcal S}\), el homomorfismo de restricción
+\[
+  \Add\sisi{_S}{_{\mathcal S}}(\Parf(\mathcal C,\mathcal C_0),F)
+  \longrightarrow
+  \Add\sisi{_S}{_{\mathcal S}}(\mathcal C_0,F)
+\]
+es un isomorfismo.
+
+\emph{Demostración.} Sea \(F\) un haz abeliano sobre \(\sisi{S}{\mathcal S}\); demostremos que la flecha
+\[
+  \Add\sisi{_S}{_{\mathcal S}}(\Parf(\mathcal C,\mathcal C_0),F)
+  \longrightarrow
+  \Add\sisi{_S}{_{\mathcal S}}(\mathcal C_0,F)
+\]
+es un isomorfismo. Esta se factoriza como
+\[
+\Add\sisi{_S}{_{\mathcal S}}(\Parf(\mathcal C,\mathcal C_0),F)
+ \xrightarrow{a}
+\Add\sisi{_S}{_{\mathcal S}}(\Kpx^b(\mathcal C_0),F)
+ \xrightarrow{b}
+\Add\sisi{_S}{_{\mathcal S}}(\mathcal C_0,F).
+\]
+Ahora bien, por (6.4), la flecha \(b\) es un isomorfismo. Quedamos, pues, reducidos a demostrar que \(a\) es un isomorfismo.
+
+Consideremos el diagrama conmutativo siguiente, cuyas filas son exactas (6.6.1) y cuyas flechas verticales son las flechas de «restricción»:
+\[
+\begin{array}{ccccccccc}
+0&\to&\Add\sisi{_S}{_{\mathcal S}}(\Parf(\mathcal C),F)&\to&\Cart\sisi{_S}{_{\mathcal S}}(\Parf(\mathcal C)^{\is},\underline F)&\to&\Cart\sisi{_S}{_{\mathcal S}}(\Tr(\Parf(\mathcal C))^{\is},\underline F)\\
+&&\downarrow a&&\downarrow&&\downarrow\\
+0&\to&\Add\sisi{_S}{_{\mathcal S}}(\Kpx^b(\mathcal C_0),F)&\to&\Cart\sisi{_S}{_{\mathcal S}}(\Kpx^b(\mathcal C_0)^{\is},\underline F)&\to&\Cart\sisi{_S}{_{\mathcal S}}(\Tr(\Kpx^b(\mathcal C_0))^{\is},\underline F).
+\end{array}
+\]
+Como \(F\) es un haz, \(\underline F\) es un campo (G II 2.2.4); por tanto, según (4.10), las dos flechas verticales de la derecha son isomorfismos. En consecuencia, \(a\) también lo es, c.q.d.
+
+\textbf{Observación 6.7.1} (cf. 4.10.1). En (6.7) se puede sustituir \(\Parf(\mathcal C,\mathcal C_0)\) por \(\Dpx^*(\mathcal C)_{\mathcal C_0\text{-}\mathrm{parf}}\) (\(*=-\) o \(b\)).
+
+\textbf{6.8.} Sean \((\sisi{S}{\mathcal S},A)\) un topos anillado, y sean \(\mathcal C\) y \(\mathcal C_0\) las \(\sisi{S}{\mathcal S}\)-categorías fibradas consideradas en (4.8). Se tienen homomorfismos de prehaces abelianos
+\[
+  k(\mathcal C_0)
+  \xrightarrow{\alpha}
+  k(\Dpx^-({}_A \sisi{S}{\mathcal S})_{\mathrm{parf}})
+  \xrightarrow{\beta}
+  k(\Parf({}_A \sisi{S}{\mathcal S})),
+\]
+que, por (6.7), inducen isomorfismos sobre los haces asociados. El homomorfismo \(\alpha\) es compatible con las imágenes inversas, es decir, si \(u:(\sisi{S'}{\mathcal S'},A')\longrightarrow(\sisi{S}{\mathcal S},A)\) es un morfismo de topos anillados, se tiene un diagrama conmutativo cuyas flechas verticales están inducidas por el funtor \(\mathrm L u^*\) (cf. (4.19.1)):
+\[
+\begin{tikzcd}
+ k(\mathcal C_0) \arrow[r] \arrow[d] & k(\Dpx^-({}_A \sisi{S}{\mathcal S})_{\mathrm{parf}}) \arrow[d]\\
+ k(\mathcal C'_0) \arrow[r] & k(\Dpx^-({}_{A'} \sisi{S'}{\mathcal S'})_{\mathrm{parf}}),
+\end{tikzcd}
+\]
+(donde \(\mathcal C'_0\) se define de manera análoga a \(\mathcal C_0\)). Si \(A\) es conmutativo, el producto tensorial \(\overset{\mathrm L}{\otimes}\) dota a \(k(\mathcal C_0)\) y a \(k(\Dpx^-({}_A \sisi{S}{\mathcal S})_{\mathrm{parf}})\) de estructuras de prehaces de anillos (cf. (4.19.1)), y \(\alpha\) es un homomorfismo de prehaces de anillos.
+
+\textbf{6.9.} En la situación de (6.8), supongamos que \((\sisi{S}{\mathcal S},A)\) es localmente anillado (cf. (2.15.1)). Entonces, \sisi{(2.15.1)}{por (2.15.1),} para todo \(X\in\Ob \sisi{S}{\mathcal S}\), \(\sisi{\mathcal C_{0X}}{\mathcal C_{0,X}}\) es la categoría de los \(A_X\)-módulos localmente libres de tipo finito. Denotemos por \(\mathcal C_1\) la \(\sisi{S}{\mathcal S}\)-categoría fibrada definida por \(X\longmapsto\) (categoría de los \(A_X\)-módulos libres de tipo finito). Está claro que \(\mathcal C_1\) satisface las hipótesis de (4.0). Un objeto de \(\Dpx(\sisi{S}{\mathcal S})\) es perfecto si y solo si es perfecto relativamente a \(\mathcal C_1\). Se tienen homomorfismos de prehaces abelianos
+\[
+  k(\mathcal C_1)\longrightarrow k(\mathcal C_0)\longrightarrow
+  k(\Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}})\longrightarrow k(\Parf(\sisi{S}{\mathcal S}))
+\]
+(los dos de la izquierda son homomorfismos de prehaces de anillos), que, por (6.7), inducen isomorfismos sobre los haces asociados. Vamos a demostrar que, de hecho, los haces asociados son canónicamente isomorfos al haz constante \(\mathbb Z_S\).

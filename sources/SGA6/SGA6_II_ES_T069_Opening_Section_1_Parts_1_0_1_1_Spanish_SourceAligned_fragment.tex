@@ -1,0 +1,70 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apertura y sección 1, números 1.0--1.1, líneas 3505--3567 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Exposición II. Existencia de resoluciones globales}
+\begin{center}
+por L. Illusie
+\end{center}
+
+\section*{1. Criterios generales de globalización}
+
+\textbf{1.0.} En este número, se fija un sitio $\sisi{S}{\mathcal S}$, una $\sisi{S}{\mathcal S}$-categoría abeliana plana \(\mathcal C\) (I 1.1), y una sub-$\sisi{S}{\mathcal S}$-categoría aditiva estrictamente plena \(\mathcal C_0\) (I 1.1). Se supone que \(\mathcal C_0\) es localmente cuasilevantable en \(\mathcal C\) (I 1.2) y localmente cuasiestable por núcleo de epimorfismo (I 1.2).
+
+\textbf{Proposición 1.1.} Sea $S\in\Ob \sisi{S}{\mathcal S}$, y supongamos que:
+\begin{enumerate}[label=(\roman*)]
+\item $\mathcal C_{0S}$ es cuasilevantable en $\mathcal C_S$ (I 1.2) (considerándose $\mathcal C_S$ como categoría fibrada sobre un sitio puntual);
+\item todo objeto de $\mathcal C_S$ que es de $\mathcal C_0$-tipo finito (I 1.2) (resp. de $\mathcal C_0$-presentación finita (I 2.8)) es de $\mathcal C_{0S}$-tipo finito.
+\end{enumerate}
+Entonces:
+\begin{enumerate}[label=\alph*)]
+\item $\mathcal C_{0S}$ es cuasiestable por núcleo de epimorfismo (I 1.2) (considerándose $\mathcal C_{0S}$ como categoría fibrada sobre un sitio puntual).
+\item Sean $E\in\Ob \mathrm D^{-}(\mathcal C_S)$ y $n\in\mathbb Z$. Si $E$ es $n$-$\mathcal C_0$-pseudocoherente (I 2.3), $E$ es $n$-$\mathcal C_{0S}$-pseudocoherente (resp. $(n+1)$-$\mathcal C_{0S}$-pseudocoherente). En otros términos, se tiene
+\[
+\mathrm D^{-}(\mathcal C_S)_{n-\mathcal C_0\text{-coh}}
+=
+\mathrm D^{-}(\mathcal C_S)_{n-\mathcal C_{0S}\text{-coh}}
+\]
+(resp.
+\[
+\mathrm D^{-}(\mathcal C_S)_{n-\mathcal C_0\text{-coh}}
+\subset
+\mathrm D^{-}(\mathcal C_S)_{(n+1)-\mathcal C_{0S}\text{-coh}}
+\subset
+\mathrm D^{-}(\mathcal C_S)_{(n+1)-\mathcal C_0\text{-coh}},
+\]
+inclusiones de subcategorías estrictamente plenas de $\mathrm D(\mathcal C_S)$, siendo además trivial la inclusión de la derecha).
+\item Para que $E\in\Ob\mathrm D^{-}(\mathcal C_S)$ sea pseudocoherente relativamente a $\mathcal C_0$ (I 2.3), es necesario y suficiente que lo sea relativamente a $\mathcal C_{0S}$; dicho de otro modo, se tiene
+\[
+\mathrm D^{-}(\mathcal C_S)_{\mathcal C_0\text{-coh}}
+=
+\mathrm D^{-}(\mathcal C_S)_{\mathcal C_{0S}\text{-coh}}.
+\]
+Además, el funtor canónico
+\[
+\mathrm K^{-}(\mathcal C_{0S})/\mathrm K^{-,\varnothing}(\mathcal C_{0S})
+\longrightarrow \mathrm D(\mathcal C_S),
+\]
+donde $\mathrm K^{-,\varnothing}(\mathcal C_{0S})$ denota la subcategoría espesa de $\mathrm K^{-}(\mathcal C_{0S})$ formada por los complejos acíclicos, es plenamente fiel y tiene por imagen esencial $\mathrm D^{-}(\mathcal C_S)_{\mathcal C_0\text{-coh}}$. Si $\mathcal C_{0S}$ es levantable en $\mathcal C_S$ (I 1.2) (es decir, si los objetos de $\mathcal C_{0S}$ son proyectivos), la categoría $\mathrm K^{-,\varnothing}(\mathcal C_{0S})$ se reduce a los objetos nulos y, por consiguiente, el funtor
+\[
+\mathrm K^{-}(\mathcal C_{0S})\longrightarrow \mathrm D(\mathcal C_S)
+\]
+es plenamente fiel (y tiene por imagen esencial $\mathrm D^{-}(\mathcal C_S)_{\mathcal C_0\text{-coh}}$).
+\end{enumerate}
+
+\emph{Demostración.} a) Sea
+\[
+0\longrightarrow L\longrightarrow L^0\longrightarrow\ldots\longrightarrow L^m\longrightarrow0
+\]
+una sucesión exacta de $\mathcal C_S$, con $L^i\in\Ob\mathcal C_{0S}$ para todo $i$; se trata de mostrar que $L$ es de $\mathcal C_{0S}$-tipo finito. Ahora bien, según (I 2.2), $L$ es $\mathcal C_0$-pseudocoherente, luego, según (I 2.9), de $\mathcal C_0$-presentación finita, y la afirmación resulta de (ii).
+
+b) Mostremos, por recurrencia descendente sobre $i$, que $E$ es $i$-$\mathcal C_{0S}$-pseudocoherente para $i\ge n$ (resp. $i\ge n+1$). Se puede suponer ya que $E$ es estrictamente $(n+1)$-$\mathcal C_{0S}$-pseudocoherente (resp. $(n+2)$-$\mathcal C_{0S}$-pseudocoherente) (I 2.1), y se trata de probar que $E$ es $n$-$\mathcal C_{0S}$-pseudocoherente (resp. $(n+1)$-$\mathcal C_{0S}$-pseudocoherente). Se tiene, pues, una sucesión exacta
+\[
+0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow0,
+\]
+donde $E'$ es estrictamente $\mathcal C_{0S}$-perfecto (I 2.1) y $E''{}^i=0$ para $i>n$ (resp. $i>n+1$). Reemplazando, si es necesario, $E$ por $E''$, se puede suponer, pues, (I 2.6), que $E^i=0$ para $i>n$ (resp. $i>n+1$). Entonces, según (I 2.10 a)), $H^n(E)$ (resp. $H^{n+1}(E)$) es de $\mathcal C_0$-tipo finito (resp. de $\mathcal C_0$-presentación finita). Por tanto, según (ii), $H^n(E)$ (resp. $H^{n+1}(E)$) es de $\mathcal C_{0S}$-tipo finito. Aplicando de nuevo (I 2.10 b)), se deduce que $E$ es $n$-$\mathcal C_{0S}$-pseudocoherente (resp. $(n+1)$-$\mathcal C_{0S}$-pseudocoherente), q.e.d. (N.B.: la hipótesis (i) y la afirmación a) se han utilizado implícitamente en las referencias a (I 2.6 y 2.10)).
+
+c) La primera afirmación se deduce de b), la segunda de (I 2.7); la última es evidente.

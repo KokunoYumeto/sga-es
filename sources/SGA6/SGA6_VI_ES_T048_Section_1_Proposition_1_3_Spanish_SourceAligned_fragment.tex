@@ -1,0 +1,44 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: proposición 1.3 y demostración, líneas 8588--8624 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 1.3.} Sean \(S\) un esquema cuasicompacto, \(E\) un \(\mathcal O_S\)-módulo localmente libre de tipo finito, y \(X\) el fibrado proyectivo asociado. Sea \(F\) un \(\mathcal O_X\)-módulo de presentación finita, plano sobre \(S\). Existe un entero \(n_0\) tal que, para \(n\geq n_0\), se tiene:
+\[
+\begin{array}{ll}
+\text{i)}& R^i f_*(F(n))=0\quad\text{para }i\geq 1;\\[2mm]
+\text{ii)}& f_*(F(n))\text{ es localmente libre de tipo finito sobre }S;\\[2mm]
+\text{iii)}& M=\displaystyle\bigoplus_{n\geq n_0} f_*(F(n))\text{ es un }\Sym(E)\text{-módulo graduado de presentación finita (1.2).}
+\end{array}
+\]
+
+Las propiedades buscadas son de naturaleza local sobre \(S\); como \(S\) es cuasicompacto, se puede, tomando el mayor de los enteros encontrados, reducir al caso en que \(S\) es afín.
+
+Supongamos primero que \(S\) es noetheriano.
+
+La propiedad i) resulta entonces del teorema de Serre.
+
+La propiedad ii) resulta de EGA III 7.9.10, eligiendo \(n_0\) de manera que se verifique la propiedad i).
+
+Según EGA II 3.4.5, existe un \(\Sym(E)\)-módulo graduado cuasicoherente \(M'\), de tipo finito, tal que \(F=\Projz(M')\). Por otra parte, \(\Gamma_*(F)=\Gamma_*(\Projz(M'))=\displaystyle\bigoplus_{n\in\mathbb Z} f_*(F(n))\) es TN-isomorfo a \(M'\) según \sisi{ECA}{EGA} III 2.3.1; existe, pues, un entero \(n_1\) tal que \(\displaystyle\bigoplus_{n\geq n_1} f_*(F(n))\simeq \bigoplus_{n\geq n_1} M'_n\),
+de modo que \(\bigoplus_{n\geq n_1} f_*(F(n))\) es un \(\Sym(E)\)-módulo de tipo finito, y por tanto de presentación finita bajo las hipótesis noetherianas; por lo demás, el resultado es válido para todo entero \(n_1\), pues los \(f_*(F(n))\) son coherentes según el teorema de Serre.
+
+La proposición queda, pues, demostrada cuando \(S\) es noetheriano.
+
+Supongamos ahora que se tiene un cuadrado cartesiano:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[r,"g"] \arrow[d,"f"'] & X_0 \arrow[d,"f_0"]\\
+S \arrow[r,"g_0"] & S_0,
+\end{tikzcd}
+\]
+con \(S_0\) noetheriano y \(X_0=\mathbf P(E_0)\); sea \(F_0\) un \(\sisi{\mathcal O_X}{\mathcal O_{X_0}}\)-módulo de presentación finita, plano sobre \(S_0\), y sea \(F=g^*(F_0)\). Por lo que precede, la proposición es verdadera para \(F_0\). Según EGA III 7.7.5 y 7.8.5, el teorema de cambio de base es verdadero bajo las hipótesis anteriores; se deduce inmediatamente que el teorema es verdadero para \(F\).
+
+Para concluir la demostración, basta, pues, mostrar que el caso general (con \(S\) afín) se puede obtener a partir del caso noetheriano mediante cambio de base.
+
+Como \(S\) es afín, \(S\) es límite proyectivo filtrante de esquemas afines noetherianos (si \(S=\Spec(A)\), se escribe \(A\) como límite inductivo de sus subálgebras de tipo finito sobre \(\mathbb Z\)). Sea, pues, \(S=\varprojlim S_\lambda\). Según EGA IV 8.5.2 y 8.5.5, existen un índice \(\lambda\) y un \(\mathcal O_{S_\lambda}\)-módulo localmente libre de tipo finito \(E_\lambda\) tal que \(E=u_\lambda^*(E_\lambda)\) (denotando por \(u_\lambda\) el morfismo \(S\to S_\lambda\), y por \(u_{\lambda\mu}\) los morfismos de transición \(S_\mu\to S_\lambda\)).
+
+Si se pone, para \(\mu\geq\lambda\), \(E_\mu=u_{\lambda\mu}^*(E_\lambda)\), y \(X_\mu=\mathbf P(E_\mu)\), se tiene, para todo \(\mu\), \(X=X_\mu\times_{S_\mu}S\), y \(X=\varprojlim X_\mu\). Por consiguiente, existen un índice \(\lambda'\geq\lambda\) y un haz \(F_{\lambda'}\) de presentación finita sobre \(X_{\lambda'}\), tal que \(F=u'^*_{\lambda'}(F_{\lambda'})\) (siendo \(u'_{\lambda'}\) el morfismo \(X\to X_{\lambda'}\)). Como los \(X_\mu\) y los \(F_\mu\) son de presentación finita, se puede, según EGA IV 11.2.6, encontrar un índice \(\lambda''\) tal que \(F_{\lambda''}\) sea plano sobre \(S_{\lambda''}\). Se verifican, pues, todas las hipótesis de 1.3, lo que concluye la demostración.
+

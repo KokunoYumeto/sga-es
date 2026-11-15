@@ -1,0 +1,69 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: corolarios 2.3--2.6 y comienzo de la sección 3 hasta la observación 3.3.1, líneas 5392--5453 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+Tenemos un complemento «clásico» de (2.2 (ii)), que daremos para referencias posteriores:
+
+\textbf{Corolario 2.3} (EGA III 2.2.1). Sean \(S\) un esquema cuasicompacto, \(f:X\to Y\) un \(S\)-morfismo proyectivo de esquemas de tipo finito sobre \(S\), \(L=i^*\mathcal O_P(1)\) el haz invertible definido por una inmersión \(i:X\to P=P(F)\), donde \(F\) es un \(\mathcal O_Y\)-módulo cuasicoherente de tipo finito. Para \(M\in\Ob D(X)\) y \(n\in\mathbb Z\), pongamos \(M(n)=M\otimes^{\mathbf L} L^{\otimes n}\). Entonces, si \(E\in\Ob D^+(X)\) es pseudocoherente rel. a \(S\) y acíclico en grado \(>a\) \((a\in\mathbb Z)\), existe un entero \(N\) tal que, para todo \(n\geq N\), \(\mathbf Rf_*E(n)\) cumple las mismas condiciones.
+
+\emph{Demostración.} Nos reducimos trivialmente, como en la demostración de (2.2 (ii)), a la situación de (2.2.2): \(Y=S\), \(f:X=\mathbb P^r_Y\to Y\) la proyección canónica, \(L=\mathcal O_X(1)\) el haz canónico, \(E\in\Ob D^b(X)\) un complejo pseudocoherente y acíclico en grado \(\sisi{\geq}{>} a\), y se concluye gracias a (2.2.2).
+
+\textbf{Corolario 2.4.} Sean \(S\) un esquema cuasicompacto y \(f:X\to Y\) un \(S\)-morfismo propio de esquemas de tipo finito sobre \(S\). Si \(S\) es noetheriano o si \(f\) es proyectivo, el funtor \(\mathbf Rf_*:D^+(X)\longrightarrow D^+(Y)\) induce un funtor
+\[
+  \mathbf Rf_*:D^b(X)_{S\text{-}\coh}\longrightarrow D^b(Y)_{S\text{-}\coh}.
+\]
+
+\emph{Demostración.} Consecuencia de (2.2) y del hecho de que existe entonces (EGA III 1.4.12 y IV 1.7.21) un entero \(N\) tal que \(R^if_*(E)=0\) para todo \(i>N\) y todo \(\mathcal O_X\)-módulo cuasicoherente \(E\).
+
+\textbf{Corolario 2.5.} Sean \(f:X\to Y\) un morfismo propio y pseudocoherente (1.2), y \(E\in\Ob D^+(X)\). Supongamos que \(Y\) es localmente noetheriano o que \(f\) es proyectivo. Entonces, si \(E\) es pseudocoherente (en sentido absoluto), lo mismo ocurre con \(\mathbf Rf_*(E)\). Si \(Y\) es cuasicompacto, el funtor \(\mathbf Rf_*\) induce un funtor
+\[
+  \mathbf Rf_*:D^b(X)_{\mathrm{coh}}\longrightarrow D^b(Y)_{\mathrm{coh}}.
+\]
+
+\emph{Demostración.} Consecuencia de (2.2), \sisi{(2.5)}{(2.4)} y (1.12).
+
+\textbf{Escolio 2.6.} Para demostrar la conjetura (2.1) en el caso general habrá que poner en práctica, sin duda, nuevas técnicas. Cabe esperar que algún día estas ayuden a probar la conjetura análoga en geometría analítica, para un morfismo propio de espacios analíticos sobre un topos localmente anillado en \(\mathbb C\)-álgebras convenientemente topologizadas, conjetura que por el momento solo está «demostrada» sobre un espacio analítico complejo (teorema de Grauert [1]).\footnote{(añadido en abril de 1971) véase un artículo en preparación de R. Kiehl y J.L. Verdier, donde el teorema de finitud 1 se demuestra mediante técnicas diferentes, más sencillas y bajo hipótesis más generales.}
+
+\section*{3. Tor-dimensión finita relativa}
+
+\textbf{Definición 3.1.} Sean \(f:(X,\mathcal O_X)\longrightarrow(Y,\mathcal O_Y)\) un morfismo de topoi anillados, \(E\in\Ob D^{-}(X)\), y \([m,n]\) un intervalo de \(\mathbb Z\). Se dice que \(E\) tiene amplitud plana relativa a \(f\) (o a \(Y\), si no hay confusión posible) contenida en \([m,n]\), y se escribe
+\[
+  \toramp_f(E)\subset[m,n]\qquad(\text{o }\toramp_Y(E)\subset[m,n])
+\]
+si \(E\), considerado como complejo de \(f^{-1}(\mathcal O_Y)\)-módulos, tiene amplitud plana contenida en \([m,n]\) (I 5.2). Se dice que \(f\) tiene amplitud plana contenida en \([-a,0]\) \((a\geq0)\), o Tor-dimensión \(\leq a\), si \(\mathcal O_X\) tiene amplitud plana rel. a \(f\), contenida en \([-a,0]\). Se dice que \(E\) tiene amplitud plana finita rel. a \(f\) si existe un intervalo \([m,n]\) tal que \(\toramp_f(E)\subset[m,n]\).
+
+\textbf{Notación 3.2.} Denotaremos por \(D(f)_{\mathrm{torf}}\), o por \(D(X)_{f\text{-}\torf}\), o por \(D(X)_{Y\text{-}\torf}\) si no hay confusión posible, la subcategoría plena de \(D^{-}(X)\) formada por los complejos de amplitud plana finita relativa a \(f\). En virtud de (I 5.3), es una subcategoría triangulada de \(D^b(X)\).
+
+\textbf{Proposición 3.3.} Siendo los datos los de (3.1), supongamos que \(X\) tiene suficientes puntos (SGA 4 \sisi{XVII IV}{IV} 6.4). Las condiciones siguientes son entonces equivalentes: % Canon SGA-SRC-001581
+\begin{enumerate}[label=(\roman*)]
+\item \(\toramp_f(E)\subset[m,n]\);
+\item Para todo punto \(x\) de \(X\), se tiene
+\[
+  \toramp_y(E_x)\subset[m,n],
+\]
+donde \(y\) es el punto imagen de \(x\) por \(f\), anillado por \(\mathcal O_{Y,y}\);
+\item Para todo objeto \(V\) de \(Y\) y todo \(\mathcal O_V\)-módulo \(M\), se tiene
+\[
+  H^i\left((E|f^{-1}(V))\otimes_{\mathcal O_V}^{\mathbf L}M\right)=0
+  \quad\text{para }i\notin[m,n],
+\]
+donde \((E|f^{-1}(V))\otimes_{\mathcal O_V}^{\mathbf L}M=(E\vert_{f^{-1}(V)})\otimes_{\mathcal O_V}^{\mathbf L}\mathbf Lf^*(M)\);
+\item La misma condición que en (iii), pero con \(M\) conúcleo de un homomorfismo \(\mathcal O_V^q\longrightarrow\mathcal O_V^p\), donde \(p,q\in\mathbb N\).
+\end{enumerate}
+
+\emph{Demostración.} La equivalencia (i)\(\Longleftrightarrow\)(ii) resulta de (I 5.6.2), y las implicaciones (ii)\(\Longrightarrow\)(iii)\(\Longrightarrow\)(iv) son triviales. Probemos (iv)\(\Longrightarrow\)(ii). Sean \(x\) un punto de \(X\), \(y=f(x)\); se trata de mostrar que
+\begin{equation}\tag{$*$}
+  H^i(E_x\otimes_{\mathcal O_{Y,y}}^{\mathbf L}M)=0
+\end{equation}
+para todo \(\mathcal O_{Y,y}\)-módulo \(M\) y todo \(i\notin[m,n]\). Como todo \(\mathcal O_{Y,y}\)-módulo es límite inductivo filtrante de módulos de presentación finita, basta verificar la relación precedente para \(M\) de presentación finita. Ahora bien, si \(M\) es un \(\mathcal O_{Y,y}\)-módulo de presentación finita, el mismo argumento que para los espacios anillados ordinarios (EGA \(0_{\mathrm I}\) 5.3.9) muestra que existe un objeto apuntado en \(y\), denotado por \(V\), del topos \(Y\), y un \(\mathcal O_V\)-módulo \(P\), conúcleo de un homomorfismo \(\mathcal O_V^q\longrightarrow\mathcal O_V^p\) \((p,q\in\mathbb N)\), tal que \(P_y\simeq M\). Se tiene entonces
+\[
+  \bigl((E|f^{-1}(V))\otimes_{\mathcal O_V}^{\mathbf L}P\bigr)_x
+  \simeq
+  E_x\otimes_{\mathcal O_{Y,y}}^{\mathbf L}M,
+\]
+por la conmutación del producto tensorial con el paso a las fibras, y la hipótesis (iv) implica (*), cqfd.
+
+\textbf{Observación 3.3.1.} El redactor ignora si las equivalencias (i)\(\Longleftrightarrow\)(iii)\(\Longleftrightarrow\)(iv) son verdaderas sin la hipótesis de que \(X\) tenga suficientes puntos.

@@ -1,0 +1,222 @@
+% SGA 6, Exposición XIII: fragmento español alineado con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 15066--15150.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Se preservan ambos límites del tramo, incluido el final de frase abierto.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\subsection*{4. Teoremas de finitud para $\Pic^\tau_{X/S}$}
+
+\textbf{4.1.} Sean \(S\) un esquema y \(G\) un funtor en grupos conmutativos
+sobre \(S\). Se denota por \(G^0\) (resp. \(G^\tau\)) el subfuntor en grupos
+cuyos \(T\)-puntos \(f:T\to G\) son aquellos de \(G\) tales que, para todo
+cuerpo algebraicamente cerrado \(K\) y todo \(K\)-punto \(t\) de \(T\),
+existen un \(\sisi{k}{K}\)-esquema conexo \(Z\), dos \(K\)-puntos \(z,z_0\) de \(Z\) y % Canon SGA-SRC-001414
+un morfismo \(g:Z\to G\) tales que \(g(z)=f(t)\) y \(g(z_0)=0\) en \(G(K)\)
+(resp. existe un entero no nulo \(n\) tal que \(n.f(t)\in G^0(K)\)). Es
+evidente que la formación de \(G^0\) (resp. \(G^\tau\)) conmuta con todo
+cambio de base, que un morfismo de funtores en grupos \(G\to G'\) induce un
+morfismo \(G^0\to G'^0\) (resp. \(G^\tau\to G'^\tau\)), y que si \(S\) es un
+cuerpo y \(G\) está representado por un esquema en grupos localmente de tipo
+finito, entonces \(G^0\) está representado por la componente conexa del
+elemento neutro, que es un subesquema abierto (y cerrado), de tipo finito y
+geométricamente irreducible (SGA 3 VI\(_A\) 2.4).
+
+\textbf{Lema 4.2.} \emph{Sea \(\Phi:G\to G'\) un morfismo entre dos funtores
+en grupos conmutativos sobre un esquema \(S\). Se supone que, para todo cuerpo
+algebraicamente cerrado \(K\) y todo morfismo \(\Spec(K)\to S\), \(G_K\)
+(resp. \(G'_K\)) sea representable por un esquema en grupos localmente de
+tipo finito, y que \(\Phi_K\) sea representable por un morfismo de tipo finito
+(es decir, cuasicompacto). Entonces}
+\[
+  \Phi^{-1}(G'^\tau)=G^\tau.
+\]
+
+En efecto, ya se ha señalado la inclusión
+\(\sisi{\Phi(G'^\tau)}{\Phi^{-1}(G'^\tau)}\supset G^\tau\). Para la inclusión en sentido inverso, se % Canon SGA-SRC-001415
+observa que \(g\in G(K)\) está en \(G^\tau(K)\) si y solo si la sucesión de
+los \(ng\) (\(n\in\mathbb N\)) es cuasicompacta; como \(\Phi_K\) es
+cuasicompacto, para ello basta con que la sucesión de los
+\(\Phi(ng)=n\Phi(g)\) tenga la misma propiedad; de donde resulta la
+afirmación.
+
+\textbf{Lema 4.3.} \emph{Sean \(X\), \(Y\) propios sobre un esquema \(S\), y
+sea \(f:X\to Y\) un morfismo sobreyectivo (resp. el morfismo de inclusión del
+esquema de ceros de una sección \(\varphi\) de un haz amplio
+\(\mathcal O_Y(1)\)). Entonces}
+\[
+  (f^*)^{-1}\underline{\Pic}^\tau_{X/S}=\underline{\Pic}^\tau_{Y/S}.
+\]
+
+En efecto, la afirmación es consecuencia formal de 4.2, (XII 1.2), 3.1 y 3.5
+(resp. 3.8).
+
+\textbf{4.4.} Sean \(k\) un cuerpo algebraicamente cerrado, \(X\) un
+\(k\)-esquema propio y \(L\) un haz invertible sobre \(X\). Se dice que \(L\)
+es \emph{algebraicamente equivalente} a \(0\) (resp.
+\(\tau\)-\emph{equivalente} a \(0\)) si existen un \(k\)-esquema conexo de
+tipo finito \(T\), un haz invertible \(M\) sobre
+\(X_T=X\times_k T\), y dos \(k\)-puntos \(t,t_0\) de \(T\) tales que
+\(L\simeq M_t\) y \(\mathcal O_X\simeq M_{t_0}\) (resp. si existe un entero
+no nulo \(n\) tal que \(L^{\otimes n}\) sea algebraicamente equivalente a
+\(0\)); o, lo que fácilmente viene a ser lo mismo, si el \(k\)-punto
+\(\lambda\) de \(\underline{\Pic}_{X/k}\) que corresponde a \(L\) está en
+\(\underline{\Pic}^0_{X/k}(k)\) (resp. en
+\(\underline{\Pic}^\tau_{X/k}(k)\)).
+
+Recordemos también que se dice que \(L\) es \emph{numéricamente equivalente}
+a \(0\) si, para toda curva integral cerrada \(Y\) en \(X\), el número de
+intersección \(\langle c_1(L)\cdot Y\rangle\) es \(0\) (véase 2.1 o X 4.5).
+
+\textbf{Proposición 4.5 (Comportamiento funtorial).} \emph{Sea
+\(f:X'\to X\) un morfismo entre dos \(k\)-esquemas propios, y sea \(L\) un
+módulo invertible sobre \(X\). Entonces}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Si \(L\) es \(\tau\)-equivalente a \(0\) (resp. numéricamente
+equivalente a \(0\)), entonces \(f^*L\) también lo es.}
+\item \emph{Recíprocamente, cuando \(f\) es sobreyectivo, si \(f^*L\) es
+\(\tau\)-equivalente a \(0\) (resp. numéricamente equivalente a \(0\)),
+entonces \(L\) también lo es.}
+\end{enumerate}
+
+En efecto, la afirmación (i) (resp. (ii)) para la \(\tau\)-equivalencia se
+deduce inmediatamente de 4.1 (resp. 4.3). Por otra parte, sean \(Y'\) una
+curva integral cerrada en \(X'\), e \(Y=f(Y')\) su imagen, provista de la
+estructura reducida inducida. Cuando \(\dim(Y)=1\), se tiene la fórmula de
+proyección (X 4.4.4)
+\[
+  \tag*{4.5.1.}
+  \langle c_1(f^*L)\cdot Y'\rangle
+  =[k(Y'):k(Y)]\,\langle c_1(L)\cdot Y\rangle,
+\]
+donde \(k(Y')\) (resp. \(k(Y)\)) es el cuerpo de funciones de \(Y'\) (resp.
+\(Y\)), y cuando \(\dim(Y)=0\), se tiene
+\((f^*L)_{Y'}\simeq\mathcal O_{Y'}\). Por consiguiente, si \(L\) es
+numéricamente equivalente a \(0\), entonces
+\(\langle c_1(f^*L)\cdot Y'\rangle=0\); de donde resulta (i).
+
+Recíprocamente, cuando \(f\) es sobreyectivo, dada una curva integral cerrada
+\(Y\) en \(X\), se puede encontrar una curva integral cerrada \(Y'\) en
+\(X'\) tal que \(Y=f(Y')\): sean \(y\) el punto genérico de \(Y\), \(y'\) un
+punto de la fibra \(f^{-1}(y)\) algebraico sobre \(k(y)\), e \(Y'\) la
+adherencia de \(y'\). Entonces 4.5.1 muestra que
+\(\langle c_1(f^*L)\cdot Y'\rangle=0\) implica
+\(\langle c_1(L)\cdot Y\rangle=0\); de donde resulta (ii).
+
+\textbf{Teorema 4.6 (La caracterización numérica de
+\(\Pic^\tau_{X/k}\)).} \emph{Sean \(k\) un cuerpo algebraicamente cerrado,
+\(X\) un \(k\)-esquema propio y \(L\) un haz invertible sobre \(X\). Entonces
+las condiciones siguientes son equivalentes}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(L\) es \(\tau\)-equivalente a \(0\).}
+\item \emph{Para todo haz coherente \(F\) sobre \(X\), se tiene}
+\[
+  \chi(F\otimes L)=\chi(F);
+\]
+\item \emph{\(L\) es numéricamente equivalente a \(0\).}
+\end{enumerate}
+\emph{Si \(X/k\) es proyectivo y está provisto de un módulo invertible
+amplio \(H=\mathcal O_X(1)\), las condiciones anteriores son también
+equivalentes a las siguientes}~:
+\begin{enumerate}[label=(\roman*),start=4]
+\item \emph{Para todo entero \(m\) (positivo o negativo),
+\(L^{\otimes m}(1)\) es amplio.}
+\item \emph{(Si \(X\) es irreducible). Para todo par de enteros \(m,n\), se
+tiene}
+\[
+  \chi(L^{\otimes m}(n))=\chi(\mathcal O_X(n));
+\]
+\item \emph{(Si \(X\) es irreducible de dimensión \(r\ge2\)). Se tiene}
+\[
+  \langle c_1(L)\cdot c_1(H)^{r-1}\rangle=0,\qquad
+  \langle c_1(L)^2\cdot c_1(H)^{r-2}\rangle=0.
+\]
+\end{enumerate}
+
+Demostremos que (i) implica (ii). Aplicando el lema de descomposición (EGA
+III 3.1) y 4.5 (i), se reduce al caso en que \(X\) es integral y
+\(F=\mathcal O_X\). Entonces se debe probar que el polinomio
+\(\chi(L^{\otimes m})\) es constante. Para ello se puede reemplazar \(L\) por
+una potencia y, por tanto, suponer que \(L\) es algebraicamente equivalente a
+\(0\). En este caso, si \(L\) se deforma en \(\mathcal O\) mediante la familia
+algebraica definida por un haz invertible \(M\) sobre un \(X\times_kT\), donde
+\(T\) es conexo y de tipo finito, el polinomio
+\(\chi(M_t^{\otimes m})\) no depende de \(t\in T\) (EGA III 7.9.5); de donde
+resulta la implicación.
+
+Sea \(Y\) una curva integral cerrada en \(X\). Tomando
+\(F=\mathcal O_Y\) en (ii), se obtiene
+\(\chi(\mathcal O_Y)=\chi(L_Y)\). Por tanto, la fórmula (``teorema de
+Riemann'')
+\(\chi(L_Y)=\langle c_1(L)\cdot Y\rangle+\chi(\mathcal O_Y)\) da
+\(\langle c_1(L)\cdot Y\rangle=0\); de donde (ii) implica (iii).
+
+Sea \(f:X'\to X\) una presentación de Chow: \(X'\) es proyectivo y \(f\) es
+sobreyectivo. Si se admite que (iii) implica (i) para \(X'\), entonces, en
+virtud de 4.5, se deduce la implicación para \(X\). Supongamos, pues, en lo
+sucesivo que \(X\) es proyectivo y está provisto de un haz amplio \(H\).
+
+Sean \(X_i\) las componentes irreducibles de \(X\), provistas de la
+estructura reducida inducida. Aplicando 4.5 y EGA III 2.6.2 al morfismo finito
+y sobreyectivo \(\coprod X_i\to X\), se reduce la demostración de que (iii)
+implica (i) y (iv) al caso en que \(X\) es integral.
+
+Si \(X\) es irreducible, es evidente que (ii) implica (v), que (iii) implica
+(vi) y, teniendo en cuenta 2.1, que (v) implica (vi), y que (vi) para \(X\)
+es equivalente a (vi) para \(X_{\red}\) (X 4.4.1). Queda, pues, por ver que
+(vi) implica (i) y (iv), y que (iv) implica (i), suponiendo \(X\) integral.
+Pero entonces (vi) (resp. (iv)) implica que la familia \(\mathcal L\) de las
+clases de los \(L^{\otimes m}\) (\(m\in\mathbb N\)) satisface 3.13 (iii)
+(resp. (iv)), y por tanto está acotada. Existe, pues, un haz invertible \(L\)
+sobre un \(X_T\), con \(T\) de tipo finito sobre \(k\), que acota
+\(\mathcal L\). Sean \(p,q\) dos enteros diferentes tales que
+\(L^{\otimes \sisi{r}{p}}\) y \(L^{\otimes q}\) corresponden a la misma componente % Canon SGA-SRC-001417
+conexa de \(T\); entonces \(L^{\otimes(p-q)}\) es algebraicamente equivalente
+a \(0\); de donde (vi) (resp. (iv)) implica (i).
+
+Finalmente, se tiene asimismo que (vi) implica que existe un entero \(N\) tal
+que, para todo entero \(m\), \(L^{\otimes m}\otimes H^{\otimes N}\) sea
+amplio. Entonces, para todo \(m\),
+\((L^{\otimes m}\otimes H)^{\otimes N}\) es amplio; de donde (vi) implica
+(iv), lo que termina la demostración.
+
+\textbf{Teorema 4.7.} \emph{Sean \(S\) un esquema noetheriano y \(X\) un
+\(S\)-esquema propio. Entonces}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{El morfismo de inclusión
+\(\underline{\Pic}^\tau_{X/S}\to\underline{\Pic}_{X/S}\) es representable
+por una inmersión abierta.}
+\item \emph{Si \(X\) es proyectivo e integral sobre \(S\), entonces
+\(\underline{\Pic}^\tau_{X/S}\to\underline{\Pic}_{X/S}\) también es
+representable por una inmersión cerrada.}
+\item \emph{\(\underline{\Pic}^\tau_{X/S}\) es de tipo finito sobre \(S\),
+es decir, la familia de las clases de los haces invertibles
+\(\tau\)-equivalentes a \(0\) sobre las fibras de \(X/S\) está acotada.}
+\end{enumerate}
+
+En efecto, en (i) (resp. (ii)), se debe tratar el caso de un morfismo
+\(T\to\underline{\Pic}_{X/S}\), donde \(T\) es un \(S\)-esquema cualquiera,
+y mostrar que la imagen inversa de \(\underline{\Pic}^\tau_{X/S}\) es
+representable por un subesquema abierto (resp. abierto y cerrado) de \(T\).
+Basta tomar \(T=\Spec(B)\) sobre un abierto afín \(\Spec(A)\) de \(S\).
+Entonces \(T\) es el límite del sistema proyectivo filtrante de los
+\(S\)-esquemas afines \(T_\alpha=\Spec(B_\alpha)\), donde \(B_\alpha\) recorre
+las sub-\(A\)-álgebras de tipo finito de \(B\). En virtud de 3.1, el morfismo
+en cuestión proviene de un morfismo
+\(T_\alpha\to\underline{\Pic}_{X/S}\). Se puede, pues, suponer que \(T\) es de
+tipo finito sobre \(S\).
+
+El morfismo \(T\to\underline{\Pic}_{X/S}\) corresponde a un morfismo
+f.p.p.f. \(R\to T\) y a un haz invertible \(L\) sobre \(X_R\). Por descenso
+f.p.p.f., se puede reemplazar \(T\) por \(R\). Después del cambio de base
+\(R\to S\), teniendo en cuenta la compatibilidad de la formación de
+\(\underline{\Pic}^\tau_{X/S}\) con todo cambio de base (4.1), se reduce, pues,
+en (i) y (ii), al estudio del caso de una sección
+\(S\to\underline{\Pic}_{X/S}\), definida por un haz invertible \(L\) sobre
+\(X\).
+
+Se debe probar que el conjunto \(S_0\) de los \(s\in S\) tales que \(L_s\)
+sea \(\tau\)-equivalente a \(0\) es abierto, y también cerrado bajo las
+condiciones de (ii); como \(S\) es noetheriano, esto quiere decir tres cosas:
+para un \(s\in S_0\),

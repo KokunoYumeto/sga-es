@@ -1,0 +1,277 @@
+% SGA 6, Exposición 0, apéndice: Capítulo II, secciones 1--3.
+% Fuente francesa alineada: fr.tex, líneas 877--1150 inclusive.
+\providecommand{\sisi}[2]{#2}
+
+\section*{CAPÍTULO II}
+\begin{center}
+Clases de haces algebraicos coherentes\par
+y clases de Chern
+\end{center}
+
+\subsection*{\S 1. La teoría de Chow}
+
+En todo este capítulo se supone fijado un \emph{cuerpo base} $k$, que supondremos algebraicamente cerrado para simplificar. Sin embargo, gran parte de lo que sigue, y quizá todo, es válido sin esta restricción. Los espacios algebraicos y las aplicaciones regulares considerados estarán definidos sobre $k$.
+
+Se dice que un espacio algebraico es \emph{cuasiproyectivo} si es isomorfo a una parte localmente cerrada de un espacio proyectivo.
+
+Sea $X$ una variedad no singular, cuasiproyectiva y conexa de dimensión $n$. Se denota por $A(X)$, y se llama \emph{anillo de Chow} de $X$, al anillo graduado de las clases de ciclos sobre $X$ módulo equivalencia racional. ($A^i(X)$ está formado por las clases de ciclos de dimensión $n-i$). El hecho de que $A(X)$ sea efectivamente un anillo graduado resulta del siguiente teorema de Chow:
+
+\textbf{Teorema 2.1.}\footnote{A consecuencia de un malentendido por parte del autor, el teorema afirma más de lo que se conoce actualmente. En realidad, solo se utiliza el «lema de movimiento» de Chow, según el cual se pueden mover dos ciclos dentro de sus clases de modo que su intersección no sea excedentaria; cf. Seminario Chevalley 1958, Anillo de Chow y aplicaciones.} \emph{Todo ciclo sobre $X$ es racionalmente equivalente a un ciclo no singular. Dados elementos de $A^i(X)$ y $A^j(X)$, se pueden encontrar representantes no singulares de estos elementos, sean $Y^{n-i}$ y $Z^{n-j}$, que se corten transversalmente en todo punto.}
+
+(Se dice que un ciclo es no singular si sus componentes son subvariedades no singulares. Se dice que dos ciclos se cortan transversalmente en todo punto si toda componente de uno corta transversalmente en todo punto a toda componente del otro, es decir, si las dos variedades secantes son no singulares en los puntos de intersección y sus variedades tangentes están allí en posición general \dots)
+
+Sea $f$ un morfismo (es decir, una aplicación regular) de $X$ en $Y$ ($X$ e $Y$ son cuasiproyectivas y no singulares); entonces $f$ define (utilizando el teorema precedente) un homomorfismo de anillos graduados:
+\begin{equation}\tag{2.1}
+f^*:A(Y)\longrightarrow A(X)
+\end{equation}
+(\emph{imagen inversa de clases de ciclos}). Así, $A(X)$ se convierte en un funtor contravariante en $X$.
+
+Sea $f$ un morfismo \emph{propio} de $X^n$ en $Y^m$ (es decir, en la terminología de Weil, el grafo de $f$ es completo sobre $Y$; cf. [3]). Entonces $f$ define también un homomorfismo aditivo
+\begin{equation}\tag{2.2}
+f_*:A(X^n)\longrightarrow A(Y^m)
+\end{equation}
+que conserva la dimensión de los ciclos y, por tanto, aumenta el grado en $m-n$.
+
+
+
+
+% --- Páginas de la fuente 47--75 ---
+Así, con respecto a los morfismos propios, y prescindiendo de las estructuras multiplicativas y de las graduaciones, $A(X)$ es un funtor covariante en $X$. Señalemos la fórmula clásica
+\begin{equation}\tag{2.3}
+ f_*(x.f^*(y))=f_*(x).y .
+\end{equation}
+
+Utilizaremos también la teoría de Chow de las clases de Chern. Consiste en asociar a todo fibrado vectorial $E$ sobre $X$ (siempre supuesta cuasiproyectiva y no singular) unas \emph{clases de Chern} $C^i(E)\in A^i(X)$, ($i\geq 1$), de manera que se satisfagan las condiciones siguientes; se pone $C^0(E)=1$ y
+\begin{equation}\tag{2.4}
+ \Ctil(E)=\left[\rang E,\sum_{i\geq 0}C^i(E)\right]\in \Atil(X)
+\end{equation}
+(véase el capítulo I, \S 3 para la definición de $\Atil(X)$). Las condiciones que debe verificar una teoría de las clases de Chern se expresan entonces como sigue:
+\begin{equation}\tag{2.5}
+ \Ctil(E)=\Ctil(E')+\Ctil(E'')
+\end{equation}
+si el fibrado vectorial $E$ es extensión de $E'$ por $E''$ (si se pone $C(E)=\sum_{i\geq0}C^i(E)$, esta condición se expresa como $C(E)=C(E').C(E'')$). La fórmula (2.5) permite extender $\Ctil$ a un homomorfismo aditivo de $\underline{K}(\xi(X))$ (cf. Cap. I, \S 2, ejemplo 2) en $\Atil(X)$:
+\begin{equation}\tag{2.6}
+ \Ctil:\underline{K}(\xi(X))\longrightarrow \Atil(X),
+\end{equation}
+y se quiere que $\Ctil$ sea un \emph{$\lambda$-homomorfismo de $\lambda$-anillos}; esta última condición se escribe también
+\begin{equation}\tag{2.7}
+ \Ctil(E\otimes F)=\Ctil(E)\Ctil(F)\qquad
+ \Ctil(\Lambda^iE)=\lambda^i\Ctil(E),
+\end{equation}
+para dos fibrados vectoriales $E$ y $F$ (por supuesto, $\Ctil$ es automáticamente compatible con las aumentaciones). Sean $D$ un divisor sobre $X$ y $L(D)$ el fibrado vectorial que define; se quiere
+\begin{equation}\tag{2.8}
+ C^1(L(D))=\ellc(D)\qquad C^i(L(D))=0\quad (i>1)
+\end{equation}
+(donde, para un ciclo cualquiera $Z$, se denota por $\ellc(Z)$ su clase en $A(X)$). Por último, se impone que los $C^i$ sean \emph{funtoriales}, es decir, que, si $f$ es un morfismo de $X$ en $Y$ y $E$ un fibrado vectorial sobre $Y$, se tenga
+\begin{equation}\tag{2.9}
+ C^i(f^!(E))=f^*(C^i(E)),
+\end{equation}
+donde $f^!(E)$ es la imagen inversa de $E$ sobre $X$. También se puede escribir (2.9) en la forma siguiente: la noción de imagen inversa de un fibrado define un $\lambda$-homomorfismo de $\lambda$-anillos aumentados
+\begin{equation}\tag{2.10}
+ f^!:\underline{K}(Y)\longrightarrow \underline{K}(X),\footnote{La notación $f^!$ utilizada aquí entra en conflicto con la empleada en la teoría de la dualidad (cf., por ejemplo, R. Hartshorne, \emph{Residues and Duality}, Lecture Notes in Math. n\textsuperscript{o} 20, Springer, 1966). Por ello, en este Seminario la sustituimos por la notación $f^*$.}
+\end{equation}
+(aquí se escribe $\underline{K}(X)$ en lugar de $\underline{K}(\xi(X))$), y (2.9) significa que el diagrama siguiente es conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\sisi{K(Y)}{\underline K(Y)} \arrow[r,"f^!"] \arrow[d,"\Ctil_Y"'] & \sisi{K(X)}{\underline K(X)} \arrow[d,"\Ctil_X"]\\
+A(Y) \arrow[r,"f^*"'] & A(X).
+\end{tikzcd}
+\]
+(se ha añadido al símbolo $\Ctil$ el espacio sobre el que se lo considera como subíndice).
+
+\textbf{Teorema 2.2.} \emph{Existe una teoría de las clases de Chern que satisface las condiciones (2.5), (2.7), (2.8) y (2.9).}
+
+Admitiremos también la proposición siguiente:
+
+\textbf{Proposición 2.3.} \emph{Sea $Y$ una parte cerrada de $X$ y sea $U$ su complementario; si $x$ es un elemento de $A(X)$ que induce $0$ sobre $U$, existe un representante de $x$ que es un ciclo soportado en $Y$.}
+
+\textbf{Corolario.} \emph{Sea $p=\dim X-\dim Y$. Entonces, si $i<p$, el homomorfismo $A^i(X)\longrightarrow A^i(U)$ es biyectivo. Todo elemento del núcleo de $A^p(X)\longrightarrow A^p(U)$ es combinación lineal de componentes de dimensión $n-p$ de $Y$ (y, por tanto, es proporcional a $\ellc(Y)$ si $Y$ es irreducible)}.
+
+\subsection*{\S 2. Definición de las clases de Chern de los haces algebraicos coherentes}
+
+Sea $\cC$ una categoría abeliana, y sea $\cC_0$ una subclase de $\cC$. Se denota por $\sisi{K(\cC_0)}{\underline{K}(\cC_0)}$ el grupo cociente del grupo libre engendrado por las clases (salvo isomorfismo) de elementos de $\cC_0$, por el subgrupo engendrado por los elementos de la forma
+\[
+(E)-(E')-(E''),
+\]
+donde $E$ es una \emph{extensión} de $E'$ por $E''$ ($E,E',E''\in\cC_0$). Se debe suponer que las clases de elementos de $\cC_0$ para la relación de isomorfismo forman un conjunto. Se denota por $\gamma_{\cC_0}(E)$ la clase de un $E\in\cC_0$ en $\sisi{K(\cC_0)}{\underline{K}(\cC_0)}$ y se omite el subíndice $\cC_0$ cuando no hay riesgo de confusión. El grupo $\underline{K}(\cC_0)$ resuelve un \emph{problema universal} relativo a las funciones $E\longrightarrow f(E)$ definidas sobre $\cC_0$, con valores en un grupo abeliano arbitrario $A$, y que son \emph{aditivas} en el sentido de que $f(E)=f(E')+f(E'')$ cada vez que $E$ es extensión de $E'$ por $E''$.
+
+Sean $F$ un funtor aditivo de $\cC$ en $\cC'$ y $\cC'_0$ una subclase de $\cC'$ que satisface la misma condición que $\cC_0$, tales que, para todo $A\in\cC_0$, los $R^qF(A)$ pertenezcan a $\cC'_0$ y sean nulos para $q$ suficientemente grande (se supone que en $\cC$ existen resoluciones inyectivas, de modo que existan los funtores derivados $R^qF$ de $F$); entonces $F$ define un homomorfismo de $\underline{K}(\cC_0)$ en $\underline{K}(\cC'_0)$, denotado también por $F$, mediante la fórmula
+\begin{equation}\tag{2.11}
+ F(\gamma_{\cC_0}(E))=\sum_{i\geq 0}(-1)^i\gamma_{\cC'_0}(R^iF(E)).
+\end{equation}
+Más generalmente, si se tiene un funtor cohomológico $(F^i)$ de $\cC$ en $\cC'$ tal que, para todo $E\in\cC_0$, los $F^i(E)$ pertenezcan a $\cC'_0$ y sean nulos salvo para un número finito de índices, se deduce de él un homomorfismo de $\underline{K}(\cC_0)$ en $\underline{K}(\cC'_0)$. Estas observaciones se extienden a los multifuntores; además, las sucesiones espectrales «clásicas» proporcionan propiedades de transitividad que no explicitaremos.
+
+En particular, si $F$ es un funtor exacto, la fórmula (2.11) se simplifica:
+\begin{equation}\tag{2.11 bis}
+ F(\gamma_{\cC_0}(E))=\gamma_{\cC'_0}(F(E)).
+\end{equation}
+Esto se aplica, en particular, si $\cC=\cC'$, si $F$ es el funtor identidad y si $\cC_0\subset\cC'_0$: se tiene un homomorfismo canónico de $\underline{K}(\cC_0)$ en $\underline{K}(\cC'_0)$.
+
+\textbf{Teorema 2.3.} \emph{Sean $\cC$ una categoría abeliana y $\cC_0\subset\cC_1$ dos subclases tales que las clases (salvo isomorfismo) de objetos de $\cC_1$ formen un conjunto. Se supone que se satisfacen las condiciones siguientes}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para toda sucesión exacta $0\to A'\to A\to A''\to0$ en $\cC$ tal que $A$ y $A''$ estén en $\cC_0$ (resp. $\cC_1$), se tiene $A'\in\cC_0$ (resp. $A'\in\cC_1$).}
+\item \emph{Sean $u:A\to B$ y $v:C\to B$, con $A,B,C\in\cC_1$ y $u$ sobreyectivo; entonces existen $L\in\cC_0$ y homomorfismos $u':L\to C$ y $v':L\to A$ tales que $u'$ sea sobreyectivo y $vu'=uv'$.}
+\item \emph{Para todo $A\in\cC_1$, existe un entero $d=d(A)$ tal que, para toda resolución por la izquierda $\underline{L}$ de $A$ por objetos de $\cC_0$, se tenga $Z_d(\underline{L})\in\cC_0$ ($Z_d$ designa los ciclos de dimensión $d$).}
+\end{enumerate}
+\emph{En estas condiciones, el homomorfismo canónico de $\underline{K}(\cC_0)$ en $\underline{K}(\cC_1)$ es un isomorfismo.}
+
+\textbf{Idea de la demostración:} sea $A\in\cC_1$; en virtud de (ii) y (iii), existe una resolución finita $\underline{L}$ de $A$ por objetos de $\cC_0$; pongamos entonces $f(A)=\sum_{i\geq 0}(-1)^i\gamma_{\cC_0}(L^i)$.
+Se demuestra que el elemento de $\underline{K}(\cC_0)$ así construido no depende de la resolución $\underline{L}$ elegida: si se tiene una segunda resolución $\underline{L'}$, se dominan $\underline{L}$ y $\underline{L'}$ mediante una tercera resolución $\underline{L''}$, con homomorfismos sobreyectivos de $\underline{L''}$ en $\underline{L}$ y $\underline{L'}$ (lo cual es posible gracias a (i) y (ii)); se reduce entonces a demostrar que $\underline{E}_{\cC_0}(\underline{L})=\underline{E}_{\cC_0}(\underline{L''})$. Ahora bien, la diferencia de ambos es $\underline{E}_{\cC_0}(\underline{N})$, donde $\underline{N}$ es el núcleo del homomorfismo sobreyectivo de $\underline{L''}$ sobre $\underline{L}$, núcleo que pertenece a $\cC_0$ por (i). Pero $\underline{N}$ es un complejo acíclico en todos los grados, de donde $\underline{E}_{\cC_0}(\underline{N})=0$, y se obtiene la conclusión (N.B. $\underline{E}_{\cC_0}(\underline{L})$, para un complejo finito con valores en $\cC_0$, designa la característica de Euler--Poincaré $\sum_{i\geq0}(-1)^i\gamma_{\cC_0}(L^i)$ de $\underline{L}$).
+Se demuestra de manera análoga que la función $f:\cC_1\longrightarrow\underline{K}(\cC_0)$ así construida es aditiva y, por tanto, define un homomorfismo de $\underline{K}(\cC_1)$ en $\underline{K}(\cC_0)$; es inmediato que este homomorfismo es inverso del homomorfismo canónico de $\underline{K}(\cC_0)$ en $\underline{K}(\cC_1)$. cqfd.
+
+\textbf{Observación:} Para verificar (ii), basta comprobar que $\cC_1$ está contenida en una subclase $\cC_2$ de $\cC$ que satisface las dos condiciones
+\begin{enumerate}[label=(ii \alph*)]
+\item Todo $A\in\cC_2$ es isomorfo a un cociente de un $L\in\cC_0$.
+\item Si $u:A\to B$, con $A,B\in\cC_2$, entonces $\Ker u\in\cC_2$.
+\end{enumerate}
+
+\textbf{Corolario:} \emph{Sea $X$ un espacio algebraico cuasiproyectivo. Sean $\cF(X)$ la categoría de los haces algebraicos coherentes sobre $X$, $\xi(X)$ la categoría de los haces algebraicos coherentes localmente libres (equivalente a la categoría de los fibrados vectoriales sobre $X$), y $\cF_0(X)$ la categoría de los haces algebraicos coherentes $F$ tales que, para todo $x\in X$, $F_x$ sea un $\cO_x$-módulo de dimensión cohomológica finita (se tiene, pues, $\xi(X)\subset\cF_0(X)\subset\cF(X)$). Entonces el homomorfismo canónico}
+\begin{equation}\tag{2.12}
+ \sisi{K(\xi(X))}{\underline K(\xi(X))}\longrightarrow \sisi{K(\cF_0(X))}{\underline K(\cF_0(X))}
+\end{equation}
+\emph{es un isomorfismo.}
+
+Vamos a verificar las condiciones del teorema 2.3. Las condiciones (i) y (iii) resultan de la definición de la dimensión cohomológica y del hecho de que un módulo proyectivo de tipo finito sobre el anillo local noetheriano $\cO_x$ es libre. Para verificar (ii), demostraremos que $\cC=\cF(X)$ satisface las condiciones (ii a) y (ii b) de la observación. La segunda es trivial; queda, pues, por demostrar el resultado siguiente:
+
+\textbf{Proposición 2.4. (Serre).} \emph{Sea $X$ un espacio algebraico cuasiproyectivo. Entonces todo haz algebraico coherente sobre $X$ es isomorfo al cociente de un haz algebraico localmente libre.}
+
+Esta proposición es cierta si $X$ es una parte cerrada del espacio proyectivo en virtud de [2], pues, para $n$ suficientemente grande, $F(n)$ está engendrado por sus secciones, lo que significa que $F$ es un cociente de $\cO(-n)^k$. En el caso general, $X$ es una parte abierta de una parte cerrada de un espacio proyectivo, y basta utilizar el resultado siguiente (debido a Cartier y Serre en casos particulares):
+
+\textbf{Proposición 2.5.} \emph{Sea $F$ un haz algebraico coherente sobre una parte abierta $U$ de un espacio algebraico $X$. Entonces $F$ es isomorfo a la restricción de un haz algebraico coherente sobre $X$.}
+
+Aplicando el lema de Zorn a los abiertos que contienen a $U$ y sobre los que se puede prolongar $F$, se reduce al caso en que $X$ es afín. Sea $\overline F$ el haz algebraico sobre $X$ cuyas secciones sobre un abierto $V$ son las secciones de $F$ sobre $U\cap V$. Se comprueba fácilmente que $\overline F$ es \emph{cuasicoherente} (es decir, está definido sobre todo abierto afín $V$ --y, por tanto, aquí sobre $X$ entero-- por un módulo, de tipo finito o no, sobre el anillo de coordenadas del abierto en cuestión). Esto es inmediato si el propio $U$ es afín, pues entonces $\overline F$ está definido sobre el abierto $V$ por $\Gamma(U\cap V,F)$, considerado como módulo sobre $\Gamma(V,\cO_X)$. En el caso general, $U$ es unión finita de abiertos afines $U_i$, por lo que $\overline F$ es el núcleo de un homomorfismo evidente de haces cuasicoherentes:
+\[
+ \sum_i \overline{F|U_i}\longrightarrow \sum_{i,j}\overline{F|U_i\cap U_j},
+\]
+y, por tanto, es a su vez cuasicoherente. Como se supone que $X$ es afín, $\overline F$ está, pues, engendrado por sus secciones. Como $\overline F|U=F$ es coherente, existe un número finito de secciones de $\overline F$ que engendran $\overline F|U$. Estas secciones engendran un subhaz coherente de $\overline F$, cuya restricción a $U$ es isomorfa a $F$.
+\begin{flushright}cqfd.\end{flushright}
+
+Supongamos ahora que $X$ es cuasiproyectivo y no \emph{singular}. Entonces, en virtud del teorema de las sicigias, se tiene, con las notaciones del corolario al teorema 2.3, $\cF_0(X)=\cF(X)$. En este caso se tiene, pues,
+\begin{equation}\tag{2.13}
+ \underline{K}(\xi(X))=\underline{K}(\cF(X)).
+\end{equation}
+Este isomorfismo puede expresarse así:
+
+\textbf{Corolario 2 del teorema 2.3.} \emph{Sea $X$ una variedad cuasiproyectiva no singular. Para todo grupo abeliano $A$, hay una correspondencia biunívoca entre las funciones aditivas $f$ de fibrados vectoriales sobre $X$, con valores en $A$, y las funciones aditivas $g$ de haces algebraicos coherentes sobre $X$, con valores en $A$. A toda $f$ corresponde la única $g$ tal que se tenga}
+\begin{equation}\tag{2.14}
+ f(E)=g(\cO_X(E))
+\end{equation}
+\emph{para todo fibrado vectorial $E$ sobre $X$, denotando por $\cO_X(E)$ el haz de gérmenes de secciones regulares de $E$ sobre $X$.}
+
+Para calcular $g(F)$ para un haz algebraico coherente cualquiera, se considera una resolución finita de $F$ por haces de la forma $\cO_X(E_i)$, y se tiene entonces
+\begin{equation}\tag{2.14 bis}
+ g(F)=\sum_{i\geq0}(-1)^if(E_i).
+\end{equation}
+
+En particular, si $X$ es conexa, en el \S 1 se consideró una función aditiva $\Ctil(E)$ del fibrado vectorial $E$, con valores en el grupo $\Atil=\Atil(X)$. De ella se deduce una función aditiva de haces coherentes, sea $\Ctil(F)$, y, pasando a las componentes, funciones $F\longrightarrow C^i(F)\in A^i(X)$. Los $C^i(F)$ se llaman las \emph{clases de Chern del haz coherente} $F$; se calculan teóricamente a partir de las clases de Chern de los fibrados vectoriales mediante (2.14 bis) (pero en el segundo miembro hay que pasar a la escritura multiplicativa). En cuanto a la componente de $\Ctil(F)$ según $\Z$, es el \emph{rango} del haz $F$, que corresponde al rango de un módulo sobre un dominio entero: si $X$ es afín (caso al que siempre se puede reducir), $F$ está definido por un módulo de tipo finito sobre el anillo de coordenadas de $X$, y se toma el rango de este módulo\dots.
+
+\subsection*{\S 3. Generalidades funtoriales sobre $\underline{K}(X)$}
+
+Si $X$ es un espacio algebraico, se pone, para abreviar, $\underline{K}(X)=\underline{K}(\cF(X))$, y, cuando $X$ es cuasiproyectivo y no singular, se identifica este grupo con $\underline{K}(\xi(X))$ en virtud del corolario 2 del teorema 2.3. Como $\underline{K}(\xi(X))$ no solo es un grupo abeliano, sino un $\lambda$-anillo, se sigue por transporte de estructura que $\underline{K}(X)$ es también un $\lambda$-anillo y, por tanto, está provisto de una estructura multiplicativa y de aplicaciones $\lambda^i$. Es importante definir estas estructuras directamente, sin pasar por los fibrados vectoriales, lo que se hará a continuación.
+
+Si $E$ es un fibrado vectorial sobre $X$, se denota por $\gamma(E)$ su clase en $\underline{K}(X)$; si $F$ es un haz algebraico coherente sobre $X$, $\gamma(F)$ denota análogamente su clase en $\underline{K}(X)$. Si $Y$ es una subvariedad irreducible de $X$, se pone $\gamma(Y)=\gamma(\cO_Y)$, donde $\cO_Y$ designa el haz de los anillos locales de $Y$, considerado como haz algebraico coherente sobre $X$. Por linealidad, se define el símbolo $\gamma(Y)$ cuando $Y$ es un ciclo cualquiera sobre $X$. Cuando haya riesgo de confusión, se escribirá $\gamma_X$ en lugar de $\gamma$.
+
+Sea $X$ un espacio algebraico cualquiera. Se introduce sobre $\underline{K}(X)$ una \emph{filtración}, denotando por $\underline{K}(X)^i$ el subgrupo de $\underline{K}(X)$ engendrado por los $\gamma(F)$ con dim. sop.\ $F\leq n-i$ (donde $n$ es la dimensión de $X$). Del «lema de devissage» de Serre, en la forma dada en [3], resulta lo siguiente:
+
+\textbf{Proposición 2.6.} \emph{El grupo $\underline{K}(X)^i$ está engendrado por los $\gamma(Y)$, donde $Y$ recorre el conjunto de las subvariedades de dimensión $\leq n-i$ de $X$. Si $X$ es irreducible, se tiene $G^0(\underline{K}(X))=\Z$.}
+
+Este último isomorfismo viene dado por el homomorfismo de $\underline{K}(X)$ en $\Z$ definido mediante la noción de \emph{rango} de un haz algebraico coherente.
+
+Supongamos ahora que $X$ es no \emph{singular}. Inspirándose en los desarrollos del comienzo del \S 2, se define una multiplicación en $\underline{K}(X)$ poniendo
+\begin{equation}\tag{2.15}
+ \gamma(F)\gamma(G)=\sum_{i\geq0}(-1)^i\gamma(\underline{\Tor}_i(F,G)),
+\end{equation}
+(los $\underline{\Tor}_i$ se toman, por supuesto, con respecto a los anillos locales de $X$). La sucesión exacta de los $\underline{\Tor}_i$ muestra que la fórmula (2.15) define efectivamente una aplicación biaditiva de $\underline{K}(X)\times\underline{K}(X)$ en $\underline{K}(X)$; la asociatividad resulta de la sucesión espectral de los $\Tor$ múltiples. Se verifica también de este modo que el producto de varios factores puede calcularse mediante la fórmula
+\begin{equation}\tag{2.16}
+ \gamma(F_1)....\gamma(F_p)=\sum_{i\geq0}(-1)^i\gamma(\underline{\Tor}_i(F_1,\ldots,F_p)),
+\end{equation}
+donde, en el segundo miembro, los $\underline{\Tor}_i$ son «$\Tor$ simultáneos», calculados mediante resolución proyectiva simultánea de los argumentos $F_i$.
+
+Si se supone en (2.15) que $G$ es \emph{localmente libre}, se obtiene
+\begin{equation}\tag{2.15 bis}
+ \gamma(F)\gamma(G)=\gamma(F\otimes G),
+\end{equation}
+lo que muestra, en particular, que $\gamma(\cO_X)$ es el elemento unidad de $\underline{K}(X)$, y que el homomorfismo canónico de $\underline{K}(\xi(X))$ en $\underline{K}(X)$ es un homomorfismo de anillos.
+
+La fórmula (2.15) está evidentemente sugerida por la «fórmula de los $\Tor$» de Serre en teoría de intersecciones. Esta fórmula demuestra la segunda parte de la proposición siguiente, y la primera resulta inmediatamente de la fórmula (2.15) y de un cálculo de $\underline{\Tor}_i$ locales:
+
+\textbf{Proposición 2.7.} \emph{Sean $X$ una variedad no singular, e $Y$ y $Z$ dos ciclos en $X$. Si $Y$ y $Z$ se cortan transversalmente en todo punto, se tiene}
+\begin{equation}\tag{2.17}
+ \gamma(Y)\gamma(Z)=\gamma(Y.Z).
+\end{equation}
+\emph{Si $Y$ y $Z$ son homogéneos y de dimensiones respectivas $n-i$ y $n-j$, y si se cortan sin componente excedentaria, se tiene entonces}
+\begin{equation}\tag{2.18}
+ \gamma(Y)\gamma(Z)=\gamma(Y.Z)\qquad\mathrm{mod.}\ \underline K(X)^{i+j+1}.
+\end{equation}
+Debe advertirse que, en general, no se tiene igualdad en (2.18). Se verá en el \S 4 que, si $X$ es \emph{cuasiproyectiva y no singular, la estructura de anillo de $\underline K(X)$ es compatible con su filtración y el anillo graduado asociado $G(\underline K(X))$ se identifica con un cociente de $A(X)$ por un subgrupo de torsión (quizá siempre reducido a $0$\footnote{No; para un contraejemplo, cf. este Seminario XIV 4.7.})}.
+
+Solo sé definir directamente los $\lambda^i(F)$ en términos de haces si el cuerpo $k$ es de característica $0$ (esta es la razón que nos impidió demostrar el teorema de Riemann--Roch cuando $k$ \sisi{no es}{es} de característica $\neq0$). Sea $F$ un haz algebraico coherente sobre $X$ en el que actúa el grupo $\mathfrak S_p$ de las permutaciones de $p$ letras; se denota entonces por $(F)^{\mathrm{alt}}$ el conjunto de los $x\in F$ tales que $s.x=\varepsilon(s)x$ para todo $s\in\mathfrak S_p$ ($\varepsilon(s)$ es la signatura de $s$). Este es evidentemente un subhaz algebraico coherente de $F$. Dicho esto, se tiene:
+
+\textbf{Teorema 2.8.} \emph{Sea $X$ una variedad cuasiproyectiva no singular sobre el cuerpo $k$ de característica $0$. Sea $F$ un haz algebraico coherente sobre $X$; se tiene entonces}
+\begin{equation}\tag{2.19}
+ \lambda^p(\gamma(F))=\sum_{i\geq0}(-1)^i\gamma\left((\underline{\Tor}_i(F,F,\ldots,F))^{\mathrm{alt}}\right)
+\end{equation}
+N.B. Es claro que el grupo $\mathfrak S_p$ actúa sobre el haz $\underline{\Tor}_i(F,\ldots,F)$.
+
+\emph{Idea de la demostración}: se considera una resolución finita $\underline L$ de $F$ por haces localmente libres $L_i$, y se utiliza el lema general siguiente:
+
+\textbf{Lema 2.9.} \emph{Sea $\underline L=(L_i)$ un haz algebraico coherente localmente libre graduado, con un número finito de componentes no nulas. En $\underline K(X)$ se tiene la fórmula}
+\begin{equation}\tag{2.20}
+ \underline E\left((\overset{p}{\otimes}\underline L)^{\mathrm{alt}}\right)=\wedge^p(\underline E(\underline L)).
+\end{equation}
+En esta fórmula se considera $\overset{p}{\otimes}\underline L$ como un haz sobre el que actúa el grupo $\mathfrak S_p$, teniendo en cuenta las graduaciones (que introducen, por tanto, signos de la manera bien conocida; cf. Cartan--Eilenberg); además, si $\underline M$ es un haz algebraico coherente graduado sobre $X$, se pone $\underline E(\underline M)=\sum_{i\geq0}(-1)^i\gamma(M_i)$.
+
+Para demostrar la fórmula (2.20), se reduce a demostrar la fórmula análoga en $\underline K(G)$, siendo $G$ un grupo algebraico (un producto de grupos $\operatorname{Gl}(n,k)$ si se desea) y $\underline L$ un $G$-módulo de dimensión finita sobre $k$ (cf. Cap.\ I, \S 2, ejemplo 2, para la definición de $\underline K(G)$). En este caso, esta fórmula ya se utilizó en el teorema 1.4 para mostrar que el segundo miembro de (1.33) satisface la misma ecuación funcional que el primero; su verificación es elemental.
+\begin{flushright}cqfd.\end{flushright}
+
+Sea $f$ un morfismo de $X$ en $Y$, siendo $Y$ un espacio algebraico. La noción de imagen inversa de un fibrado vectorial define un homomorfismo $f^!:\underline K(\xi(Y))\longrightarrow\underline K(\xi(X))$ de $\lambda$-anillos. Identificando los fibrados vectoriales con haces algebraicos localmente libres, la noción de imagen inversa de fibrado vectorial corresponde a la noción de imagen inversa de haz algebraico (ya utilizada en [3, n\textsuperscript{o} 8]). Cuando $Y$ es no singular, se define, más generalmente, un homomorfismo de grupos
+\begin{equation}\tag{2.21}
+ f^!:\underline K(Y)\longrightarrow\underline K(X)
+\end{equation}
+mediante una fórmula en la que interviene una suma alternada de $\Tor$, inspirada en los desarrollos del comienzo del \S 2, y que el lector explicitará. Se tiene entonces conmutatividad en el diagrama siguiente:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\underline K(\xi(Y)) \arrow[r,"f^!"] \arrow[d] & \underline K(\xi(X)) \arrow[d]\\
+\underline K(Y) \arrow[r,"f^!"] & \underline K(X){,}
+\end{tikzcd}
+\]
+lo que muestra, en particular, cuando $X$ e $Y$ son ambas no singulares y cuasiproyectivas, que las dos definiciones de $f^!$ coinciden mediante la identificación de $\underline K(X)$ con $\underline K(\xi(X))$ y de $\underline K(Y)$ con $\underline K(\xi(Y))$.
+
+Otro caso en que se puede definir un homomorfismo (2.21), sin que $Y$ sea necesariamente no singular, es aquel en que el funtor $F\to f^!(F)$ de $\cF(Y)$ en $\cF(X)$ es exacto, es decir, cuando los anillos locales de $X$ son módulos \emph{planos} sobre los anillos locales de $Y$. Basta entonces poner $f^!(\gamma_Y(F))=\gamma_X(f^!(F))$.
+Este caso se presenta, en particular, cuando $X$ es un espacio fibrado localmente trivial sobre $Y$ (para verlo, se reduce al caso de un producto $X=T\times Y$). Señalemos que también se verifica en este caso que $f^!(\cO_Z)=\cO_{f^{-1}(Z)}$ si $Z$ es una subvariedad irreducible de $Y$, de donde
+\begin{equation}\tag{2.22}
+ f^!(\gamma_Y(Z))=\gamma_X(f^{-1}(Z))
+\end{equation}
+\emph{si $X$ es «plano» sobre $Y$}. Sin esta última condición, la fórmula (2.22) deja de ser exacta en general, pero se tiene el análogo siguiente de la proposición 2.7:
+
+\textbf{Proposición 2.8.} \emph{Sea $f:X\longrightarrow Y$ un morfismo de variedades no singulares, y sea $Z$ un ciclo sobre $Y$. Si $Z$ es transversal a $f$ en todo punto, la fórmula (2.22) es exacta; si $Z$ es homogéneo de codimensión $i$ y si $f^{-1}(Z)$ no tiene componente excedentaria, se tiene}
+\begin{equation}\tag{2.23}
+ f^!(\gamma_Y(Z))\equiv\gamma_X(f^{-1}(Z))\sisi{.}{}\qquad\mathrm{mod.}\ \underline K(X)^{i+1}
+\end{equation}
+Demostración análoga a la de la proposición 2.7.
+
+Señalemos, por último, que se verá en el \S 4 que \emph{cuando $X$ e $Y$ son cuasiproyectivas y no singulares, $f^!$ es compatible con las filtraciones de $\underline K(X)$ y de $\underline K(Y)$}.
+
+Sean de nuevo $X$ e $Y$ dos espacios algebraicos cualesquiera, y sea $f$ un morfismo \emph{propio} de $X$ en $Y$. Para todo haz algebraico coherente $F$ sobre $X$, el haz imagen directa $f_!(F)$ es algebraico coherente, y lo mismo ocurre, más generalmente, con los haces $R^qf_*(F)$ (cf. [3]). Recordemos que, por definición, $R^qf_!(F)$ es el haz sobre $Y$ asociado al prehaz que asigna al abierto $U$ el grupo $H^q(f^{-1}(U),F)$; se tiene, en particular,
+\begin{equation}\tag{2.24}
+ R^0f_!(F)=f_!(F),\qquad R^qf_!(F)=0\quad(q>\dim X),
+\end{equation}
+además,
+\begin{equation}\tag{2.25}
+ \Gamma(U,R^qf_!(F))=H^q(f^{-1}(U),F)
+\end{equation}
+\emph{si el abierto $U$ es afín}. Según el \S 2, se define un homomorfismo de $\underline K(X)$ en $\underline K(Y)$, denotado también por $f_*$, mediante la fórmula
+\begin{equation}\tag{2.26}
+ f_!(\gamma_X(F))=\sum_{q\geq0}(-1)^q\gamma_Y(R^qf_!(F)).
+\end{equation}
+Así, $\underline K(X)$ se convierte en un \emph{funtor covariante en $X$}, con respecto a los morfismos \emph{propios}. La relación $(fg)_!=f_!g_!$ (al igual que la relación $(fg)^!=g^!f^!$, que se olvidó señalar en su lugar) es un caso particular de las relaciones de transitividad a las que aludimos en el \S 2, y que resultan de las sucesiones espectrales de los funtores compuestos.
+
+Señalemos la fórmula siguiente, válida para $Y$ no singular (y particularmente fácil de verificar cuando $Y$ es además cuasiproyectiva, tomando como $y$ la clase de un fibrado vectorial sobre $Y$):
+\begin{equation}\tag{2.27}
+ f_!(x.f^!(y))=f_!(x).y\qquad(x\in\underline K(X),\ y\in\underline K(Y)).
+\end{equation}
+En el caso particular en que las imágenes inversas de los puntos de $Y$ por $f$ son finitas y están contenidas en un abierto afín\footnote{Esta última condición es evidentemente consecuencia de la primera (¡cosa que el autor todavía ignoraba en 1957!).}, se comprueba que el funtor $F\longrightarrow f_!(F)$ es exacto y que $R^qf_!(F)=0$ para $q>0$; en este caso se tiene, pues, $f_!(\gamma_X(F))=\gamma_Y(f_!(F))$. En particular, si $X$ es un subespacio algebraico de $Y$ y si $i$ es la inyección canónica \sisi{de $Y$ en $X$}{de $X$ en $Y$}, se tiene
+\begin{equation}\tag{2.28}
+ i_!(\gamma_X(F))=\gamma_Y(F),
+\end{equation}
+donde, en el segundo miembro, $F$ se considera como un haz sobre $Y$ nulo fuera de $X$.

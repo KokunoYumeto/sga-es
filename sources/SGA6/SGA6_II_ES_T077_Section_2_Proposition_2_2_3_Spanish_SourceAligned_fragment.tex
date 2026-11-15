@@ -1,0 +1,54 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, proposición 2.2.3 y lema 2.2.3.1, líneas 3758--3803 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 2.2.3} (cf. EGA II 4.5.2 y 4.5.5). Sea $S$ un esquema cuasicompacto y cuasiseparado, y sea $(L_i)_{i\in I}$ una familia de haces invertibles sobre $S$. Para todo $\mathcal O_S$-módulo $F$, y todo par $(i,n)\in I\times\mathbb Z$, se denota por $F_{(i,n)}$ el sub-$\mathcal O_S$-módulo de $F\otimes L_i^{\otimes n}$ engendrado por las secciones de $F\otimes L_i^{\otimes n}$ sobre $S$. Las condiciones siguientes son equivalentes:
+\begin{enumerate}
+\item[(i)] Los abiertos $S_f$, para $f\in\Gamma(S,L_i^{\otimes n})$, $i\in I$ y $n\in\mathbb N$, forman una base de la topología de $S$.
+\item[(i$'$)] Los $S_f$ que son afines recubren $S$.
+\item[(ii)] Para todo $\mathcal O_S$-módulo $F$ cuasicoherente y de tipo finito, existe una familia $(r_i)_{i\in I}$ (resp. $(n_i)_{i\in I}$) de enteros $\ge0$ (resp. $>0$), y un epimorfismo
+\[
+\coprod_{i\in I}\mathcal O_S^{r_i}\otimes L_i^{\otimes-n_i}\longrightarrow F.
+\]
+\item[(iii)] Para todo $F\in\Ob\Qcoh(S)$, se tiene
+\[
+F=\sum_{(i,n)\in I\times\mathbb N^+}F_{(i,n)}\otimes L_i^{\otimes-n}
+\]
+(suma no directa de subhaces de $F$).
+\item[(iii$'$)] La misma condición que (iii), pero siendo $F$ un ideal cuasicoherente de $\mathcal O_S$.
+\end{enumerate}
+
+\emph{Demostración.} Consiste en una simple paráfrasis de (loc. cit.); la damos brevemente para comodidad del lector.
+
+(i)$\Rightarrow$(i$'$): Para $x\in S$, se elige un abierto afín $U$ que contiene a $x$. Un abierto $S_f$ tal que $x\in S_f\subset U$, con $f\in\Gamma(S,L_i^{\otimes n})$ ($n\ge0$), es necesariamente afín, como resulta del
+
+\textbf{Lema 2.2.3.1.} (EGA II 5.5.8). Sean $X$ un esquema, $L$ un $\mathcal O_X$-módulo invertible, $f\in\Gamma(X,L)$. La inmersión canónica $i:X_f\to X$ es afín.
+
+\emph{Demostración.} Es trivial: la cuestión es local sobre $X$, luego se puede suponer que $X$ es afín y $L\simeq\mathcal O_X$, y se concluye.
+
+(i$'$)$\Rightarrow$(ii): Sea un recubrimiento finito de $S$ por abiertos afines $S_{f_{ij}}$, donde $f_{ij}\in\Gamma(S,L_i^{\otimes m_{ij}})$; pongamos $S_i=\bigcup_j S_{f_{ij}}$. Reemplazando, si es necesario, los $f_{ij}$ por potencias convenientes, se puede suponer que los $m_{ij}$ correspondientes a un mismo índice $i$ son iguales a un entero $m_i$. $F\,|\,S_{f_{ij}}$ está engendrado por un número finito de secciones $h_{ijk}$ sobre $S_{f_{ij}}$. Existe (EGA I 9.3.1 y IV 1.7.5) un entero $q_i\ge0$ tal que $h_{ijk}\otimes f_{ij}^{\otimes q_i}$ se prolonga a una sección de $F\otimes L_i^{\otimes q_im_i}$ sobre $S$. Dicho de otro modo, $F\otimes L_i^{\otimes q_im_i}$ está engendrado sobre $S_i$ por un número finito de sus secciones sobre $S$. Procediendo como en la demostración de (EGA II 4.5.5), se deduce que existe un entero $n_i$, que se puede suponer $>0$, tal que, para todo $n\ge n_i$, $F\otimes L_i^{\otimes n}$ esté engendrado sobre $S_i$ por un número finito de sus secciones sobre $S$. En particular, existe un entero $r_i\ge0$ y un morfismo
+\[
+\mathcal O_S^{r_i}\otimes L_i^{\otimes-n_i}\longrightarrow F
+\]
+que induce un epimorfismo sobre $S_i$. La implicación (i$'$)$\Rightarrow$(ii) resulta inmediatamente.
+
+(ii)$\Rightarrow$(iii): Como todo haz cuasicoherente sobre $S$ es límite inductivo de sus subhaces cuasicoherentes de tipo finito (EGA I 9.4.9 y IV 1.7.7), basta probar (iii) para $F$ de tipo finito. Existen entonces, para $i\in I$, morfismos
+\[
+u_i:\mathcal O_S^{r_i}\otimes L_i^{\otimes-n_i}\longrightarrow F
+\]
+tales que $\sum u_i$ es un epimorfismo. Ahora bien, se tiene
+\[
+\begin{aligned}
+\operatorname{Im}(u_i)&=\operatorname{Im}\bigl(u_i\otimes\operatorname{Id}(L_i^{\otimes n_i})\otimes\operatorname{Id}(L_i^{\otimes-n_i})\bigr)\\
+&=\operatorname{Im}\bigl(u_i\otimes\operatorname{Id}(L_i^{\otimes n_i})\bigr)\otimes L_i^{\otimes-n_i}.
+\end{aligned}
+\]
+Pero $\operatorname{Im}(u_i\otimes\operatorname{Id}(L_i^{\otimes n_i}))$ es un subhaz de $F_{(i,n_i)}$, de donde la afirmación.
+
+(iii)$\Rightarrow$(iii$'$): Es trivial.
+
+(iii$'$)$\Rightarrow$(i): Sean $x\in S$, $U$ un abierto que contiene a $x$, y $F$ un ideal cuasicoherente que define $S-U$. Según (iii$'$), existen $(i,n)\in I\times\mathbb N^+$ y una sección $f$ de $F\otimes L_i^{\otimes n}$ sobre $S$ tal que $f(x)\ne0$. Se tiene $x\in S_f\subset U$, lo que prueba (i).
+

@@ -1,0 +1,171 @@
+% SGA 6, Exposición I: final de la sección 7 y sección 8 hasta 8.4, en español y alineados con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 3274--3439.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Lema 7.4} (isomorfismo de CARTAN) (cf. ([H] II 5.15)). Para \(E\in\Ob\Dpx(S)\), \(F\in\Ob\Dpx^-(S)\), \(G\in\Ob\Dpx^+(S)\), existen isomorfismos canónicos funtoriales:
+\[
+\begin{aligned}
+\RHom(E\otL F,G)&\xrightarrow{\sim}\RHom(E,\RHom(F,G)),\\
+\RHom(E\otL F,G)&\xrightarrow{\sim}\RHom(E,\RHom(F,G)),\\
+\Hom(E\otL F,G)&\xrightarrow{\sim}\Hom(E,\RHom(F,G)).
+\end{aligned}
+\]
+
+\emph{Demostración} : Es estándar: tómese una resolución inyectiva de \(G\) y una resolución plana de \(F\).
+
+\textbf{Lema 7.5.} Para \(E\in\Ob\Dpx^-(S)\), \(F\in\Ob\Dpx^+(S)\), existe un homomorfismo canónico funtorial
+\[
+  E\otL\RHom(E,F)\longrightarrow F.
+\]
+
+\textbf{Proposición 7.6} (cf. ([H] II 5.13)). Sean \(E\in\Ob\Dpx(S)\), \(F\in\Ob\Dpx^+(S)\)., \(G\in\Ob\Dpx^+(S)\). Bajo una de las hipótesis siguientes
+\begin{enumerate}[label=\roman*)]
+\item \(G\) de tor-dimensión finita,
+\item \(E\in\Ob\Dpx^-(S)\), \(F\) de tor-dimensión finita y \(G\in\Ob\Dpx^b(S)\),
+\end{enumerate}
+existe un homomorfismo canónico funtorial
+\[
+  \RHom(E,F)\otL G
+  \longrightarrow
+  \RHom(E,F\otL G).
+\]
+Este es un isomorfismo cuando \(E\) es perfecto.
+
+\emph{Demostración.} Definamos la flecha. Bajo la hipótesis (i), basta tomar una resolución inyectiva de \(F\) y una resolución plana de \(G\). Bajo la hipótesis (ii), equivale, por (7.4), a definir una flecha
+\[
+  E\otL\RHom(E,F)\otL G\longrightarrow F\otL G.
+\]
+Se aplica el funtor \(\otL G\) a la flecha de (7.5).
+
+Para ver que la flecha es un isomorfismo cuando \(E\) es perfecto, se utiliza el método estándar (cf. demostración de (7.2)): se reduce, por localización y descomposición, al caso en que \(E=A\).
+
+\textbf{Corolario 7.7.} Existe, para \(E\in\Ob\Dpx(S)_{\mathrm{parf}}\) y \(F\in\Ob\Dpx^+(S)\), un isomorfismo funtorial
+\[
+  E^\vee\otL F\xrightarrow{\sim}\RHom(E,F),
+\]
+con la notación de (7.3).
+
+\emph{Demostración.} Aplíquese (7.6), sustituyendo \(F\) y \(G\), respectivamente, por \(A\) y \(F\), y téngase en cuenta el hecho (7.1) de que \(E^\vee\in\Ob\Dpx(S)_{\underline{\mathrm{parf}}}\).
+
+\textbf{Corolario 7.8.} Sean \(E,F\in\Ob\Dpx(S)_{\mathrm{parf}}\). Existe una flecha natural
+\[
+  \RHom(E,F)\otL\RHom(F,E)\longrightarrow A,
+\]
+que es una «~dualidad perfecta~», es decir,\ identifica, mediante (7.4), cada uno de los complejos \(\RHom(E,F)\), \(\RHom(F,E)\) con el dual del otro (en el sentido de (7.3)).
+
+\emph{Demostración.} Por (7.5), se tienen emparejamientos naturales \(E^\vee\otL E\to A\), \(F^\vee\otL F\to A\), de donde, por producto tensorial, se obtiene un emparejamiento natural
+\[
+  E^\vee\otL F\otL F^\vee\otL E\longrightarrow A,
+\]
+que, teniendo en cuenta (7.7), da el emparejamiento anunciado sobre los \(\RHom\). Demostremos que se trata de una dualidad perfecta. Se tienen los isomorfismos canónicos
+\[
+\begin{aligned}
+\RHom(F^\vee\otL E,A)&\simeq\RHom(F^\vee,E^\vee) &&(7.4)\\
+&\simeq F^{\vee\vee}\otL E^\vee &&(7.6)\\
+&\simeq F\otL E^\vee &&(7.2).
+\end{aligned}
+\]
+Por tanto, a reserva de una verificación de compatibilidad, se concluye. También se podría localizar y descomponer para reducirse a \(E=F=A\).
+
+
+\textbf{Ejercicio 7.9.} Sean \(E,F\in\Ob\Dpx(S)_{\mathrm{parf}}\). Demostrar que existe un isomorfismo canónico
+\[
+  E^\vee\otL F^\vee \xrightarrow{\sim} (E\otL F)^\vee .
+\]
+
+\section*{8. Trazas y productos cup}
+
+\textbf{8.0.} En este número se generaliza a los complejos perfectos la noción de traza de un endomorfismo de un módulo proyectivo de tipo finito (véase SGA 5 III para aplicaciones). Las hipótesis y notaciones son las de (7.0).
+
+\textbf{8.1.} Sea \(E\in\Ob\Dpx(S)_{\parf}\) (5.8.4.b)). Existe una flecha natural
+\[
+  \tau:\RHom(E,E)\longrightarrow A,
+\]
+compuesta por el isomorfismo inverso de (7.7) \(\RHom(E,E)\xrightarrow{\sim}E^\vee\otL E\) y la flecha canónica (7.5) \(E^\vee\otL E\to A\).
+
+Sea \(U\in\Ob \sisi{S}{\mathcal S}\). Aplicando a \(\tau\) el funtor \(H^0(U,.)\), y teniendo en cuenta que \(H^0(U,\RHom(E,E))\) se identifica con \(\Hom_{\Dpx(U)}(E|U,E|U)\), se deduce un homomorfismo de \(H^0(U,A)\)-módulos
+\[
+  \Tr_{E|U}:\Hom_{\Dpx(U)}(E|U,E|U)\longrightarrow H^0(U,A),
+\]
+que se llama \emph{homomorfismo traza}\footnote{La hipótesis de tor-dimensión finita sobre \(E\) es, de hecho, superflua para la definición de \(\Tr_{E|U}\); véase (8.5).}.
+
+Antes de seguir, demos algunas propiedades de la traza que se deducen inmediatamente de la definición.
+
+\textbf{8.1.1.} Si \(E=A\), \(\Tr_{A|U}:\Hom(A|U,A|U)\longrightarrow H^0(U,A)\) no es sino el conocido isomorfismo. Si \(E\) es sumando directo de un módulo libre de tipo finito, un homomorfismo de \(E\) en \(E\) sobre \(U\) está definido localmente por
+\[
+  e\longmapsto \sum\langle e,x_i^\vee\rangle x_i,
+\]
+donde \(x_i\) (resp. \(x_i^\vee\)) es una sección local de \(E\) (resp. \(E^\vee\)); la traza correspondiente es \(\sum\langle x_i,x_i^\vee\rangle\). Se deduce fácilmente que, si \(E\) y \(F\) son sumandos directos de módulos libres de tipo finito, y si \(u:(E+F)|U\longrightarrow(E+F)|U\) está definido por una matriz \(\begin{pmatrix}a&b\\ c&d\end{pmatrix}\), se tiene
+\[
+  \Tr_{(E+F)|U}(u)=\Tr_{E|U}(a)+\Tr_{F|U}(d).
+\]
+
+\textbf{8.1.2.} Sean \(E\) un complejo estrictamente perfecto, \(U\in\Ob \sisi{S}{\mathcal S}\), y \(u:E|U\longrightarrow E|U\) un homomorfismo de complejos, con componentes \(u^i:E^i|U\to E^i|U\). Se tiene entonces
+\[
+  \Tr_{E|U}(u)=\sum(-1)^i\Tr_{E^i|U}(u^i).
+\]
+En efecto, como la cuestión es local, se puede suponer que \(u\) está definido por una sección de \(\underline H^0(E^\vee\otimes E)\), e incluso que esta sección es del tipo \(\coprod_i\sum_j x_{ij}^\vee\otimes x_{ij}\), donde \(x_{ij}\) (resp. \(x_{ij}^\vee\)) es una sección de \(E^i\) (resp. \(E^{i\vee}\)). Explicitando la flecha (7.5) \(E^\vee\otL E\to A\), se obtiene
+\[
+  \Tr_{E|U}(u)=\sum(-1)^i\langle x_{ij},x_{ij}^\vee\rangle
+  =\sum(-1)^i\Tr_{E^i|U}(u^i),
+\]
+c.q.d.
+
+\textbf{8.2.} Sean \(E,F\in\Ob\Dpx(S)_{\mathrm{parf}}\). Se ha visto en (7.8) que existe un homomorfismo canónico
+\[
+  \gamma:\RHom(E,F)\otL\RHom(F,E)\longrightarrow A.
+\]
+Sea \(U\in\Ob \sisi{S}{\mathcal S}\), y tomemos \(u\in H^0(U,\RHom(E,F))\) y \(v\in H^0(U,\RHom(F,E))\).
+Se puede interpretar \(u\) (resp. \(v\)) como un homomorfismo, en \(\Dpx(U)\), de \(A|U\) en \(\RHom(E,F)|U\) (resp. \(\RHom(F,E)|U\)), y formar
+\[
+  u\otL v:A|U\longrightarrow(\RHom(E,F)\otL\RHom(F,E))|U.
+\]
+La aplicación \((u,v)\mapsto\langle u,v\rangle=\gamma\circ(u\otL v)\) define una aplicación \(H^0(U,A)\)-lineal
+\[
+  \Hom_{\Dpx(U)}(E|U,F|U)\otimes_{H^0(U,A)}\Hom_{\Dpx(U)}(F|U,E|U)
+  \longrightarrow H^0(U,A),
+\]
+que llamaremos \emph{producto cup}\footnote{La misma observación que para la definición de \(\Tr_{E|U}\)}.
+
+El vínculo entre la traza y el producto cup se expresa en la proposición siguiente.
+
+\textbf{Proposición 8.3.} En la situación de (8.2), para \(u\in\Hom(E|U,F|U)\) y \(v\in\Hom(F|U,E|U)\), se tiene
+\[
+  \Tr_{E|U}(vu)=\Tr_{F|U}(uv)=\langle u,v\rangle.
+\]
+En particular, si \(E=F\), se tiene
+\[
+  \Tr_{E|U}(u)=\langle u,\Id\rangle=\langle\Id,u\rangle.
+\]
+
+\emph{Demostración.} Para simplificar, supondremos \(U=S\). Se tienen, pues, dos flechas \(u:A\longrightarrow E^\vee\otL F\) y \(v:A\longrightarrow F^\vee\otL E\), de donde
+\[
+  u\otL v:A\longrightarrow E^\vee\otL F\otL F^\vee\otL E.
+\]
+Por otra parte, se tiene \(vu:A\to E^\vee\otL E\) y \(uv:A\to F^\vee\otL F\). La proposición resulta de la conmutatividad de los diagramas siguientes (cuya verificación es «~puramente mecánica~»):
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ A \arrow[r,"u\otL v"] \arrow[dr,"vu"'] & E^\vee\otL F\otL F^\vee\otL E \arrow[d,"\Id\mathop{\otimes}^{\mathrm L}\tau_F"] \\
+ & E^\vee\otL E
+\end{tikzcd}
+\qquad
+\begin{tikzcd}[column sep=large,row sep=large]
+ A \arrow[r,"u\otL v"] \arrow[dr,"uv"'] & E^\vee\otL F\otL F^\vee\otL E \arrow[d,"\tau_E\mathop{\otimes}^{\mathrm L}\Id"] \\
+ & F^\vee\otL F
+\end{tikzcd}
+\]
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+E^\vee\otL F\otL F^\vee\otL E \arrow[r,"\Id\mathop{\otimes}^{\mathrm L}\tau_E"] \arrow[d,"\Id\otimes\tau_F"'] & F^\vee\otL F \arrow[d,"\tau_F"]\\
+E^\vee\otL E \arrow[r,"\tau_E"'] & A .
+\end{tikzcd}
+\]
+
+\textbf{Corolario 8.4.} Dados \(E,F,U\) como en (8.2), sean \(u\in\Hom(E|U,E|U)\) y \(s:E|U\to F|U\) un isomorfismo, de donde \(sus^{-1}\in\Hom(F|U,F|U)\). Se tiene entonces
+\[
+  \Tr_{F|U}(sus^{-1})=\Tr_{E|U}(u).
+\]
+
+\emph{Demostración.} Es inmediato.

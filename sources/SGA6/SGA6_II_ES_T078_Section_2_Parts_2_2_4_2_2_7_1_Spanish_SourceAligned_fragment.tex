@@ -1,0 +1,38 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.2.4--2.2.7.1, líneas 3805--3834 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Definición 2.2.4.} Sea $S$ un esquema cuasicompacto y cuasiseparado, y sea $(L_i)_{i\in I}$ una familia de haces invertibles sobre $S$. Se dice que los $L_i$ forman una \emph{familia amplia}\footnote{Esta noción, bajo la forma (i$'$), fue introducida por M.~\textsc{Borelli} y S.~L.~\textsc{Kleiman}; la terminología «familia amplia» es propuesta por el redactor.} si se verifican las condiciones equivalentes de (2.2.3). (En particular, una familia reducida a un solo haz $L$ es amplia si y solo si $L$ es amplio en el sentido usual (EGA II 4.5.3)).
+
+\textbf{Definición 2.2.5.} Se dice que un esquema $S$ es \emph{divisorial} si $S$ es cuasicompacto y cuasiseparado y si existe una familia amplia (2.2.4) de $\mathcal O_S$-módulos invertibles.
+
+\textbf{Lema 2.2.6.} Sea $X$ un esquema localmente noetheriano. Sea $U$ un abierto de $X$ tal que la inclusión $U\to X$ sea afín (por ejemplo, $U$ afín y $X$ separado). Entonces $X-U$ es puramente de codimensión $0$ o $1$ (es decir, en todo punto maximal $x$ de $X-U$ se tiene $\dim(\mathcal O_{X,x})=0$ o $1$), luego puramente de codimensión $1$ si $U$ contiene los puntos maximales de $X$.
+
+\emph{Demostración.} Pongamos $Y=X-U$. Sea $x$ un punto maximal de $Y$, y hagamos el cambio de base $X'=\operatorname{Spec}(\mathcal O_{X,x})\to X$: se obtiene un diagrama cartesiano
+\[
+\begin{tikzcd}
+U' \arrow[r] \arrow[d] & X' \arrow[d] & Y' \arrow[l] \arrow[d] \\
+U \arrow[r] & X & Y \arrow[l]
+\end{tikzcd},
+\]
+donde $Y'=\sisi{X'-U}{X'-U'}$. Como $x$ es un punto maximal de $Y$, $Y'$ no es sino el punto cerrado de $X'$. Por otra parte, como $X'$ es afín, $U'$ es un abierto afín de $X'$. Mostremos que la dimensión $n$ de $X'$ es igual a $0$ o $1$. En efecto, se sabe (SGA 2 V 5.7) que $H^n_{Y'}(X',\mathcal O_{X'})\ne0$. Pero se tiene, si $n\ge2$,
+\[
+H^n_{Y'}(X',\mathcal O_{X'})\simeq H^{n-1}(U',\mathcal O_{U'}),
+\]
+ahora bien,
+\[
+H^{n-1}(U',\mathcal O_{U'})=0,
+\]
+puesto que $U'$ es afín y $n-1\ge1$, de donde una contradicción.
+
+\textbf{Observación 2.2.6.1.} Sin la hipótesis de separación sobre $X$, (2.2.6) sería falso para un abierto afín $U$ de $X$, como muestra el ejemplo del plano afín en el que se ha desdoblado el origen (EGA I 5.5.11).
+
+\textbf{Proposición 2.2.7.} Sea $S$ un esquema noetheriano, separado, localmente factorial (es decir, cuyos anillos locales son factoriales). Entonces $S$ es divisorial (2.2.5). En particular (EGA IV 21.11.1):
+
+\textbf{Corolario 2.2.7.1.} Todo esquema noetheriano regular separado es divisorial.
+
+\emph{Demostración de 2.2.7.} Se puede suponer que $S$ es íntegro. Sea $(S_i)_{i\in I}$ un recubrimiento finito de $S$ por abiertos afines no vacíos. En virtud de (2.2.6), $S-S_i$ es puramente de codimensión $1$, luego, según (EGA IV 21.7.4), es el soporte de un divisor positivo. En otros términos, para cada $i\in I$, existe un haz invertible $L_i$ y una sección $f_i\in\Gamma(S,L_i)$ tal que $S_i=S_{f_i}$. La familia $(L_i)$ es entonces amplia (2.2.4) según (2.2.3 (i$'$)). Esto termina la demostración.
+

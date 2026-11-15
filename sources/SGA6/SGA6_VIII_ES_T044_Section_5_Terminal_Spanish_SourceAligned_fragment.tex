@@ -1,0 +1,233 @@
+% SGA 6, Exposición VIII: fragmento español alineado con la fuente.
+% Alcance exacto: sección 5 y material terminal, fr.tex, líneas 11813--11990.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Termina inmediatamente antes de la Exposición IX, sin cierre sintético.
+% Las superficies matemáticas se conservan diplomáticamente; las correcciones
+% forzadas de la fuente se presentan mediante aparatos \sisi reversibles.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{5. Teorema de Riemann--Roch: caso del morfismo estructural de un fibrado proyectivo}
+
+\textbf{5.1.} Según 3.9, para demostrar el teorema de Riemann--Roch queda por
+demostrarlo para el morfismo estructural
+\(f:\mathbb P^r_Y\longrightarrow Y\), donde \(Y\) es un esquema cuasicompacto
+que posee un haz amplio. Se pone \(P=\mathbb P^r_Y\),
+\(\xi=\cl(\mathcal O_P(1))\) y \(E=(\mathcal O_Y)^{r+1}\).
+
+\textbf{Proposición 5.2.} Se tiene sobre \(P\) la sucesión exacta:
+\[
+0\longrightarrow\Omega^1_{P/Y}\longrightarrow f^*(E)(-1)\longrightarrow\mathcal O_P\longrightarrow0,
+\]
+es decir, se tiene un isomorfismo
+\[
+\Omega^1_{P/Y}\simeq F(-1),\quad\text{donde}\quad F=\Ker\bigl(f^*(E)\longrightarrow\mathcal O_P(1)\bigr).
+\]
+
+Considérese el fibrado vectorial sobre \(Y\) definido por \(E\), y denótese
+por \(Z\) el complemento de la sección nula de este fibrado. Se tiene el
+diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+P \arrow[dr,"f"'] && Z \arrow[ll,"h"'] \arrow[dl,"g"]\\
+& Y &
+\end{tikzcd}
+\]
+El morfismo \(h\) identifica \(Z\) con el \(P\)-esquema afín definido por el
+haz de álgebras
+\(B=\bigoplus_{n\in\mathbb Z}\mathcal O_P(n)\); \(B\) es una
+\(\mathcal O_P\)-álgebra graduada.
+
+Como \(f,g,h\) son morfismos lisos, se puede escribir la sucesión exacta de
+los haces de diferenciales relativos; como \(Z\) es afín sobre \(P\), se puede
+escribir esta sucesión en términos de \(B\)-módulos; se obtiene así:
+\begin{equation}\tag{5.2.1}
+0\longrightarrow
+ \Omega^1_{P/Y}\otimes_{\mathcal O_P}B
+\longrightarrow
+ \Omega^1_{B/Y}
+\longrightarrow
+ \Omega^1_{B/\mathcal O_P}
+\longrightarrow0 .
+\end{equation}
+Ahora bien, esta sucesión exacta es una sucesión exacta graduada de
+\(B\)-módulos graduados. En efecto, resulta del diagrama conmutativo:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+S(E) \arrow[rr] && \displaystyle\bigoplus_{n\in\mathbb Z}S(E)(n)\simeq S(E)[T,T^{-1}]\\
+& \sisi{\mathcal O_X}{\mathcal O_Y} \arrow[ul] \arrow[ur] &
+\end{tikzcd}
+\]
+donde las flechas son homomorfismos de álgebras compatibles con la graduación
+de \(S(E)[T,T^{-1}]\) (graduación definida por el grado respecto de la
+indeterminada \(T\)), suponiéndose reducidas al grado \(0\) las otras dos
+álgebras.
+
+El módulo de diferenciales \(\Omega^1_{B/\mathcal O_P}\) es isomorfo a
+\(B(-1)\otimes_{\mathcal O_P}\mathcal O_P(1)\), pues se puede definir una
+\(S(E)\)-derivación \(d\):
+\[
+S(E)[T,T^{-1}]
+\longrightarrow
+S(E)[T,T^{-1}]\otimes_{S(E)}S(E)\cdot dT
+\]
+de manera que satisfaga la propiedad universal que define
+\(\Omega^1_{B/\mathcal O_P}\), poniendo
+\(d(aT^n)=naT^{n-1}\otimes dT\); además, \(d\) es compatible con las
+graduaciones si se atribuye el grado \(1\) al factor \(S(E)\cdot dT\).
+
+Sea \(V\) el fibrado vectorial sobre \(Y\) definido por \(E\). Entonces
+\(\Omega^1_{Z/Y}\) es la restricción a \(Z\) de \(\Omega^1_{V/Y}\). Ahora
+bien, \(V\) es el \(Y\)-esquema afín definido por \(S(E)\), luego
+\(\Omega^1_{V/Y}\) está definido por
+\(S(E)\otimes_{\mathcal O_Y}E\) (pues \(E\) es localmente libre de tipo
+finito), de modo que \(\sisi{\Omega^1_{V/Y}}{\Omega^1_{Z/Y}}\) es igual a \(g^*(E)\), y por tanto
+\(\Omega^1_{B/Y}=f^*(E)\otimes_{\mathcal O_P}B\). Para ver su graduación, se
+razona localmente y se ve de inmediato que \(f^*(E)\) debe considerarse de
+grado \(1\). Tomando los términos de grado \(0\) en la sucesión exacta
+(5.2.1), se obtiene la sucesión exacta anunciada.
+
+\textbf{Observación 5.2.1.} Utilizando los resultados generales sobre el
+estudio diferencial de los funtores de Hilbert ([2], 5), se obtiene
+directamente un isomorfismo
+\[
+\Omega^1_{P/Y}\xrightarrow{\sim}F(-1)
+\]
+a partir de la caracterización funtorial dada de
+\(g^*(\Omega^1_{P/Y})\) para todo \(Y\)-morfismo \(g:Y'\to P\).
+
+\textbf{5.3.} Según 5.2, se tiene:
+\[
+ T_f=\cl(\Omega^1_{P/Y})=\sisi{g^*(E)}{f^*(E)}\cdot\xi^{-1}-1.
+\]
+Por consiguiente:
+\[
+ \widetilde c(T_f)=\widetilde c(E)\cdot\widetilde c(\xi^{-1})-\widetilde c(1).
+\]
+Como \(E=(\mathcal O_Y)^{r+1}\), se tiene \(E=r+1\), y por tanto:
+\[
+ \widetilde c(E)=(r+1,1).
+\]
+Pongamos:
+\[
+ x=\cl_{\Gr^1K^{\bullet}(P)}(\xi-1)
+ =
+ \cl_{\Gr^1K^{\bullet}(P)}(1-\xi^{-1})
+ =
+ c^1(\xi).
+\]
+Como \(\xi^{-1}=\check \xi\), se tiene:
+\[
+ \widetilde c(\xi^{-1})=(1,1-x).
+\]
+Se deduce, según V (6.2.1):
+\[
+ \widetilde c(T_f)=(r,(1-x)^{r+1}).
+\]
+Teniendo en cuenta 3.5, se obtiene finalmente:
+\[
+ \widetilde c(\check T_f)=(r,(1+x)^{r+1}).
+\]
+Por la definición de \(\Todd\), se tiene entonces:
+\begin{equation}\tag{5.3.1}
+ \Todd(\check T_f)=
+ \left(\frac{x}{1-\exp(-x)}\right)^{r+1}.
+\end{equation}
+
+\textbf{5.4.} Utilizando la base de \(K^{\bullet}(P)\) sobre
+\(K^{\bullet}(Y)\) formada por los elementos \(\xi^k\), con
+\(-r\leq k\leq0\), se ve por aditividad que basta demostrar el teorema para
+elementos de la forma \(f^*(a)\cdot\xi^k\). Se tiene entonces:
+\[
+ \ch\bigl(f_*(f^*(a)\xi^k)\bigr)
+ =
+ \ch(a f_*(\xi^k))
+ =
+ \ch(a)\cdot\ch(f_*(\xi^k)).
+\]
+Por otra parte:
+\[
+ f_{\mathrm{gr}}\bigl(\ch(f^*(a)\xi^k)\Todd(\check T_f)\bigr)
+ =
+ f_{\mathrm{gr}}\bigl(f^{\mathrm{gr}}(\ch(a))\ch(\xi^k)\Todd(\check T_f)\bigr)
+ =
+ \ch(a)\cdot f_{\mathrm{gr}}\bigl(\ch(\xi^k)\Todd(\check T_f)\bigr).
+\]
+Se ve, pues, que basta demostrar el teorema para los \(\xi^k\), con
+\(-r\leq k\leq0\). Ahora bien, según (VI (5.2.3)), se tiene
+\[
+ f_*(\xi^k)=0\quad\text{para }-r\leq k<0~;\qquad f_*(1)=1.
+\]
+Por tanto:
+\begin{equation}\tag{5.4.1}
+ \ch(f_*(\xi^k))=0\quad\text{si }-r\leq k<0~;\qquad
+ \ch(f_*(1))=1.
+\end{equation}
+
+Calculemos ahora el segundo miembro de la fórmula de Riemann--Roch. Para todo
+\(k\), se tiene:
+\[
+ \widetilde c(\xi^k)=(\widetilde c(\xi))^k=(1,1+x)^k=(1,1+kx)
+\]
+según (V (6.2.1)). Por tanto:
+\begin{equation}\tag{5.4.2}
+ \ch(\xi^k)=\exp(kx).
+\end{equation}
+El segundo miembro de la fórmula de Riemann--Roch es, pues:
+\begin{equation}\tag{5.4.3}
+ f_{\mathrm{gr}}\left(\exp(kx)\cdot
+ \frac{x^{r+1}}{(1-\exp(-x))^{r+1}}\right).
+\end{equation}
+Como \(x\) es la clase en \(\Gr^1K^{\bullet}(P)\) de \(1-\xi^{-1}\),
+\(f_{\mathrm{gr}}(x^n)\) es, para \(0\leq n\leq r\), la clase en
+\(\Gr^{n-r}K^{\bullet}(Y)\) de
+\(f_*((1-\xi^{-1})^n)=1\). Se tiene, pues:
+\begin{equation}\tag{5.4.4}
+ f_{\mathrm{gr}}(x^n)=0\quad\text{si }0\leq n<r~;\qquad
+ f_{\mathrm{gr}}(x^r)=1.
+\end{equation}
+Recordemos finalmente que los elementos \(1,x,\ldots,x^{r+1}\) son
+linealmente dependientes sobre \(\Gr K^{\bullet}(Y)\) (VI 5.6), y satisfacen
+la ecuación:
+\begin{equation}\tag{5.4.5}
+ x^{r+1}=0,
+\end{equation}
+y que \(1,\ldots,x^r\) son linealmente independientes sobre
+\(\Gr K^{\bullet}(Y)\).
+
+Se puede escribir entonces la serie
+\(\varphi_k=\exp(kx)\cdot\frac{x^{r+1}}{(1-\exp(-x))^{r+1}}\) de manera única
+como combinación lineal, con coeficientes en
+\(\widehat{\Gr K^{\bullet}(Y)_{\mathbb Q}}\), de los elementos \(1,\ldots,x^r\). Por
+(5.4.4) y 3.7, la imagen por \(f_{\mathrm{gr}}\) de \(\varphi_k\) es entonces
+su coeficiente de \(x^r\). Teniendo en cuenta (5.4.1), el teorema de
+Riemann--Roch para \(f\) equivale, pues, a:
+\[
+\left\{
+\begin{array}{ll}
+\text{para }-r\leq k<0,\text{ el coeficiente de }x^r\text{ en }\varphi_k\text{ es }0,\\
+\text{para }k=0,\text{ el coeficiente de }x^r\text{ en }\varphi_k\text{ es }1.
+\end{array}
+\right.
+\tag{RR}
+\]
+Este coeficiente es el residuo de la forma diferencial
+\[
+ \frac{\exp(kx)\cdot dx}{(1-\exp(-x))^{r+1}}.
+\]
+Poniendo \(y=1-\exp(-x)\), se reduce el cálculo al residuo de:
+\[
+ \frac{(1-y)^{-k-1}\cdot dy}{y^{r+1}},
+\]
+es decir, al coeficiente de \(y^r\) en \((1-y)^{-k-1}\). Para
+\(-r\leq k<0\), es nulo, y para \(k=0\), es \(1\).
+
+Queda así concluida la demostración del teorema de Riemann--Roch.
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item A. Borel y J.P. Serre, \emph{Le théorème de Riemann--Roch}, Bull. Soc. Math. de France, t. 86, 1958.
+\item A. Grothendieck, Techniques de construction et théorèmes d'existence en Géométrie Algébrique, Sém. Bourbaki, 1960-61.
+\end{enumerate}
+

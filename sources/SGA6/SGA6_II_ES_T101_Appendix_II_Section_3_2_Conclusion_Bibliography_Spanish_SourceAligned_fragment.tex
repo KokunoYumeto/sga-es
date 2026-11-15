@@ -1,0 +1,79 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, conclusión de §3.2 y bibliografía, líneas 4903--4974 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\emph{Demostración de (a).} Se trata de mostrar que, para todo abierto relativamente compacto $U$ de $S$, el morfismo
+\[
+ C(\overline U,C^\infty(V,F^\bullet))
+ \longrightarrow C(\overline U,C_2^r(V,F^\bullet))
+\]
+es un cuasi-isomorfismo. Reemplazando $S$ por $\overline U$ (y $E^\bullet$ por el complejo inducido sobre $\overline U$), se reduce a mostrar que
+\[
+ C(S,C^\infty(V,F^\bullet))
+ \longrightarrow C(S,C_2^r(V,F^\bullet))
+\]
+es un cuasi-isomorfismo, suponiéndose $S$ compacto. Según (3.2.1.1), se tiene
+\[
+ C(S,C^\infty(V,F^\bullet))=
+ \varprojlim_r C(S,C_2^r(V,F^\bullet)).
+\]
+Para cada $i$, $C(S,C_2^r(V,F^i))$ es un espacio de Banach (para la topología de la convergencia uniforme), y los morfismos de transición
+\[
+ C(S,C_2^p(V,F^i))\longrightarrow C(S,C_2^q(V,F^i))
+\]
+son, en virtud de (3.0.4) y (3.1.2), aplicaciones lineales continuas de imagen densa. Por otra parte, aplicando a los cuasi-isomorfismos (a') $\underline F_p^\bullet\longrightarrow\underline F_q^\bullet$ el funtor $\Gamma'_S$, que es exacto porque $\cO_S$ es blando, se ve que los morfismos de transición
+\[
+ C(S,C_2^p(V,F^\bullet))\longrightarrow C(S,C_2^q(V,F^\bullet))
+\]
+son cuasi-isomorfismos. La afirmación (a) resulta entonces de (EGA $0_{\mathrm{III}}$ 13.2.3, variante «topológica»). Esto termina la demostración de (3.2.1).
+
+\textbf{3.2.2.} Si $S$ es un espacio topológico, denotaremos por $\Parf(S)$ la categoría triangulada de los complejos perfectos de $(\cO_S\otimes\mathbb C)$-módulos, y por $K^\bullet(S)$ el «grupo de Grothendieck» correspondiente\footnote{véase (I 6.3). Para una revisión general de los funtores $K$, véase Exp.~IV.}. Sean $S$, $X$, $E^\bullet$ como en (3.2.1); se llama \emph{índice analítico} de $E^\bullet$ al elemento
+\[
+ \operatorname{ind.an}(E^\bullet)=C\ell(\mathbb Rp_*(E^\bullet))\in K^\bullet(S).
+\]
+Si $S$ es compacto, $\operatorname{ind.an}(E^\bullet)$ define canónicamente un elemento del grupo usual $K(S)$ de los topólogos. En efecto, de manera general, para todo espacio topológico $S$, denotemos por $\mathrm{Loclib}(S)$ la categoría aditiva de los $(\cO_S\otimes\mathbb C)$-módulos localmente libres de tipo finito, y por $K(S)$ el «grupo de Grothendieck» de la categoría triangulada $K^b(\mathrm{Loclib}(S))/K^{b,\varnothing}(\mathrm{Loclib}(S))$ (esta última se identifica, por lo demás, con $K^b(\mathrm{Loclib}(S))$ cuando $S$ es paracompacto (II 2.3.2 (a)), de modo que en este caso (I 6.4) $K(S)$ es canónicamente isomorfo al «grupo de Grothendieck» de la categoría aditiva $\mathrm{Loclib}(S)$). Se tiene un homomorfismo natural
+\[
+ K(S)\longrightarrow K^\bullet(S).
+\]
+Pero, en virtud de (II 2.3.2), este es un isomorfismo para $S$ compacto, de donde resulta nuestra afirmación. Más generalmente, $\operatorname{ind.an}(E^\bullet)$ define un elemento en el grupo completado
+\[
+ \widehat K(S)=\varprojlim_A K(A),
+\]
+tomándose el límite proyectivo sobre los compactos $A$ de $S$.
+
+\textbf{3.2.3.} El redactor ignora si el teorema de finitud (3.2.1) sigue siendo válido cuando, en lugar de suponer que $S$ es localmente compacto, se supone solamente que cada punto de $S$ admite un sistema fundamental de entornos paracompactos. Por lo demás, la hipótesis de compacidad local sobre $S$ no parece muy natural. En efecto, el espacio de los «parámetros locales universales» para los complejos elípticos de orden fijado es un subespacio (de dimensión infinita) de un espacio de Fréchet. Precisemos este punto. Sean $V$ una variedad compacta, $F=(F^i)_{i\in\Z}$ una sucesión de fibrados vectoriales complejos de rango finito sobre $V$, nulos salvo un número finito de ellos, y $\underline n=(n_i)$ una sucesión de enteros $\geq 0$. Denotemos por $\operatorname{Comp.diff}^n(F)$ el espacio de los complejos de operadores diferenciales «de base $F$» y de orden $n$, es decir, el subespacio cerrado de $\prod\Diff^{n_i}(F^i,F^{i+1})$ definido por las ecuaciones $d^{i+1}d^i=0$. (El espacio $\prod\Diff^{n_i}(F^i,F^{i+1})$ es un espacio de Fréchet). El subconjunto $\operatorname{Ell}^{\underline n}(F)$ de $\operatorname{Comp.diff}^n(F)$ formado por los complejos elípticos de orden $n$ es abierto; este espacio (que, en general, no es localmente compacto) es el que desempeña el papel de espacio de parámetros locales universales.
+
+\textbf{3.2.4.} Sin embargo, incluso si la generalización de (3.2.1) a la que se ha aludido anteriormente resulta imposible, siempre se puede asociar a $E^\bullet$, bajo la única hipótesis de que la fibración $p$ sea propia y localmente trivial, un elemento de $K^\bullet(S)$ que merece el nombre de índice analítico de $E^\bullet$. En efecto, supongamos (para simplificar\footnote{para el caso general, utilícese la noción de «fibrado hilbertiano débil» o campo continuo de espacios de Hilbert de [12].}) que estamos en la situación «local» en la que $X=S\times V$ ($V$, una variedad compacta), estando dado $E^\bullet$ por una aplicación continua de $S$ en $\operatorname{Ell}^{\underline n}(F)$ (3.2.3). Las afirmaciones (a') y (b) de la demostración de (3.2.1) son, de hecho, válidas sin ninguna hipótesis sobre $S$: es razonable, por tanto, poner, con las notaciones de (loc. cit.):
+\[
+ \operatorname{ind.an}(E^\bullet)=C\ell(\underline F_r^\bullet)\in K^\bullet(S),
+\]
+siendo este elemento independiente de $r$.
+
+\textbf{3.2.5.} Supongamos que $S$ es paracompacto, denotemos por $H$ un espacio de Hilbert complejo de dimensión hilbertiana infinita y por $I(H)$ el subespacio de $L(H,H)$ formado por los operadores «con índice». Entonces, los complejos $\underline F_r^\bullet$ definen [12] un elemento canónico en el grupo $[S,I(H)]$ de las clases de homotopía de aplicaciones continuas de $S$ en $I(H)$, pero el redactor ignora, para $S$ no compacto (incluso cuando $S$ es localmente compacto), cuáles son las relaciones entre los grupos $\sisi{[S,I(S)]}{[S,I(H)]}$ y $K^\bullet(S)$ (¿existe una flecha natural de uno al otro? ¿son isomorfos?), y por tanto, a fortiori, entre los dos índices así definidos.
+
+Para una generalización, bajo las hipótesis de (3.2.1), del teorema del índice de Atiyah--Singer, remitimos al trabajo reciente de Shih [17], o a un trabajo en preparación de M. F. Atiyah e I. M. Singer.
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item Artin, M., Grothendieck, A., y Verdier, J.-L., Cohomologie étale des schémas, de próxima aparición en North Holl. Pub. Comp., (citado SGA 4).
+\item Atiyah, M. y Segal, G., papiers secrets.
+\item Cartan, H. Funzioni e varietà complesse, Faisceaux analytiques cohérents, curso en el Centro Internazionale Matematico Estivo, 1964, Roma.
+\item Cartan, H., y Schwartz, L., Théorème d'Atiyah--Singer, Seminario 1963--64, Institut Henri Poincaré, París.
+\item Frisch, J., Fonctions analytiques sur un ensemble semi-analytique, nota en CRAS París, t. 260, p. 2974-2976 (1965).
+\item Godement, R., Théorie des Faisceaux, Hermann (1958), (citado T.F).
+\item Grothendieck, A., Cohomologie locale des faisceaux cohérents et théorèmes de Lefschetz locaux et globaux, Séminaire de Géométrie Algébrique de l'IHES 1962, de próxima aparición en North Holl. Pub. Comp., (citado SGA 2).
+\item Grothendieck, A., Fondements de la Géométrie Analytique, Séminaire Cartan 1959-60, Institut Henri Poincaré, París.
+\item Hartshorne, R., Residues and Duality, Lecture Notes, Springer n\textsuperscript{o}~20, citado [H].
+\item Houzel, C., Géométrie Analytique Locale, Séminaire Cartan 1959-60, Institut Henri Poincaré, París.
+\item Illusie, L., Complexes de fibrés et définitions du foncteur $K$, Séminaire Shih Weishu, IHES 1964-65.
+\item Illusie, L., Complexes quasi-acycliques directs de fibrés banachiques, nota en CRAS París, t. 260, p. 6499-6502.
+\item Kiehl, R., Theorem A und Theorem B in der nichtarchimedischen Funktionentheorie, Invent. math. 2, p. 256-273 (1967).
+\item Lang, S., Introduction to differentiable manifolds,
+\item Lojasiewicz, S., Ann. della Scuola Norm. Sup. Pisa, serie III, 18, fasc. IV, 1964.
+\item Palais, R., Exposiciones en el Seminario de Princeton 1963--64 sobre el teorema del índice.
+\item Shih, W., Fiber cobordism and the index of a family of elliptic differential operators,
+\item Verdier, J.-L., Les catégories dérivées des catégories abéliennes, de próxima aparición en North Holl. Pub. Comp.
+\end{enumerate}

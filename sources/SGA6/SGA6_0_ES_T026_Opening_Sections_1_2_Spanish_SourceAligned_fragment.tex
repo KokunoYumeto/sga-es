@@ -1,0 +1,253 @@
+% SGA 6, Exposición 0: fragmento español alineado con la fuente.
+% Alcance: portada y secciones 1--2 completas, antes de la sección 3.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 171--286 inclusive.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\section*{Exposición 0}
+\begin{center}
+\underline{ESBOZO DE UN PROGRAMA PARA UNA TEORÍA DE LAS INTERSECCIONES}\\[3pt]
+\underline{SOBRE LOS ESQUEMAS GENERALES}\\[8pt]
+\underline{por A. Grothendieck}
+\end{center}
+
+La presente exposición es de carácter introductorio, y su lectura no es
+lógicamente indispensable para el estudio del Seminario. Se dirige más
+especialmente a los lectores familiarizados con la versión provisional del
+teorema de Riemann--Roch, tal como se expone en el informe de Borel--Serre
+[2] o en el informe de Grothendieck ya mencionado en la Introducción (citado
+en adelante como [RRR]), y que se reproduce como apéndice al final de la
+presente exposición.
+
+\subsection*{1.}
+Recordemos la fórmula de Riemann--Roch para un morfismo propio
+\[
+f:X\longrightarrow Y
+\]
+de esquemas cuasiproyectivos y lisos sobre un cuerpo $k$, y para un haz
+coherente $F$ sobre $X$, cuya clase en el grupo $K(X)$ de las clases de
+haces coherentes sobre $X$ se denota por $\cl(F)$:
+\begin{equation}\tag{1.1}
+\Todd(T_Y)\,\ch_Y\bigl(f_*(\cl(F))\bigr)=f_*\bigl(\Todd(T_X)\,\ch_X(F)\bigr).
+\end{equation}
+Esta fórmula es válida en $A(Y)\otimes_{\mathbb Z}\mathbb Q$, donde $A(Y)$
+es el anillo de Chow de $Y$, y el $f_*$ del segundo miembro se deduce,
+mediante tensorización por $\mathbb Q$, del homomorfismo «~imagen directa de
+ciclos~»
+\[
+f_*:A(X)\longrightarrow A(Y),
+\]
+mientras que el del primer miembro es la característica de
+Euler--Poincaré de $F$ relativa a $f$:
+\[
+f_*(\cl(F))=\sum_i(-1)^i\cl\bigl(R^if_*(F)\bigr)~;
+\]
+$\ch_X$, $\ch_Y$ designan los caracteres de Chern sobre $X$, resp. sobre
+$Y$, y $T_X$, $T_Y$ los fibrados tangentes a $X$, resp. a $Y$. Como es
+sabido, $\Todd(-)$ y $\ch(-)$ son polinomios universales con coeficientes en
+$\mathbb Q$ en las clases de Chern del argumento. Como el término constante
+de $\Todd(-)$ es $1$, se trata de un elemento invertible para todo valor del
+argumento, de modo que la fórmula (1.1), después de multiplicar por
+$\Todd(T_Y)^{-1}$, adopta la forma equivalente, más conveniente para nuestro
+propósito,
+\begin{equation}\tag{1.2}
+\ch_Y\bigl(f_*(\cl(F))\bigr)=f_*\bigl(\Todd(T_f)\cdot\ch_X(F)\bigr),
+\end{equation}
+donde se ha puesto
+\begin{equation}\tag{1.3}
+T_f=T_X-f^*(T_Y)\in K(X),
+\end{equation}
+de modo que $T_f$ desempeña el papel de un \underline{fibrado tangente
+relativo virtual} de $X$ sobre $Y$. En el caso en que el morfismo $f$ es
+liso (es decir, con aplicación tangente sobreyectiva en todo punto), se
+tiene simplemente
+\[
+T_f=T_{X/Y}\qquad\text{(fibrado tangente a lo largo de las fibras)},
+\]
+mientras que, en el caso en que $f:X\to Y$ es una inmersión, se obtiene
+\[
+T_f=-\check N_{X/Y},
+\]
+donde $\check N_{X/Y}$ designa el haz normal de $X$ en $Y$.
+
+Uno de los objetivos principales del Seminario es generalizar (1.2)
+simultáneamente en dos direcciones:
+\begin{enumerate}[label=\alph*)]
+\item Prescindir de la hipótesis de existencia de un cuerpo base $k$.
+\item Sustituir las hipótesis de regularidad sobre $Y,X$ por una hipótesis de
+«~regularidad local~» de $f$.
+\end{enumerate}
+Finalmente, a lo largo del camino nos ocuparemos también del problema:
+\begin{enumerate}[label=\alph*),start=3]
+\item Eliminar las hipótesis de cuasiproyectividad que, en ausencia de un
+cuerpo base, se expresan mediante la existencia de módulos invertibles
+amplios sobre $X$ y sobre $Y$.
+\end{enumerate}
+
+\subsection*{2.}
+Examinemos primero la generalización a), conservando, no obstante, las
+hipótesis de regularidad y de existencia de módulos invertibles amplios sobre
+$X$ y sobre $Y$.
+
+La definición de $K(X)$, $K(Y)$ y del homomorfismo $f_*:K(X)\to K(Y)$ no
+presenta entonces ningún problema nuevo, gracias al hecho de que $X$ e $Y$
+son regulares. La vía más natural para dar sentido a (1.2) parece consistir,
+por tanto, en definir \underline{anillos de Chow} $A(X),A(Y)$ y un
+homomorfismo de grupos
+\[
+f_*:A(X)\longrightarrow A(Y),
+\]
+en establecer una teoría de clases de Chern que proporcione aplicaciones
+\[
+c_i:K(X)\longrightarrow A(X),
+\]
+y análogamente para $Y$, y, finalmente, en describir un elemento que
+desempeñe el papel de fibrado tangente relativo virtual
+\[
+T_f\in K(X).
+\]
+
+\subsubsection*{2.1}
+En cuanto a este último, se ofrece una definición bastante evidente. Se
+utiliza el hecho de que el morfismo $f$, gracias a la hipótesis de existencia
+de un módulo invertible amplio sobre $X$ y sobre $Y$, puede factorizarse como
+\begin{equation}\tag{2.1}
+X\xrightarrow{i}X'\xrightarrow{f'}Y,
+\end{equation}
+donde $i$ es una inmersión cerrada y $f'$ un morfismo liso; por ejemplo, se
+puede tomar $X'=\mathbb P^r_Y$ para un $r$ conveniente. Se pondrá entonces
+\begin{equation}\tag{2.2}
+\check T_f=\cl({\underline\Omega}^1_{X'/Y})-\cl({\underline N}_{X/X'}),
+\end{equation}
+donde ${\underline\Omega}^1_{X'/Y}$ es el módulo localmente libre de las
+$1$-diferenciales relativas de $X'$ sobre $Y$ (o módulo cotangente relativo
+de $X'$ sobre $Y$), y ${\underline N}_{X/X'}$ el módulo conormal de $X$ en
+$X'$, igual, por definición, a ${\underline J}/{\underline J}^2$, donde
+${\underline J}$ es el ideal sobre $X'$ que define el subesquema cerrado
+$X$; como $X$ y $X'$ son regulares, se concluye además que
+${\underline N}_{X/X'}$ es también localmente libre. Finalmente,
+$\check T_f$ designa el dual de $T_f$. Se comprueba sin dificultad (Exp.
+VIII) que el elemento $T_f$ definido por (\sisi{2.1}{2.2}) no depende de la % Canon SGA-SRC-001468
+factorización elegida de $f$.
+
+\subsubsection*{2.2}
+En cuanto a la definición, bajo las condiciones consideradas, de un anillo
+de Chow y de una teoría correspondiente de clases de Chern, aunque es
+plausible que tal teoría deba poder desarrollarse siguiendo el modelo de la
+ya conocida para los esquemas algebraicos lisos y cuasiproyectivos, parece
+que este trabajo no se ha realizado hasta ahora y, a fortiori, no se ha
+emprendido en el Seminario. En cambio, se introduce otro anillo, que
+desempeñará un papel análogo al del anillo de Chow y cuyo producto tensorial
+por $\mathbb Q$ es efectivamente isomorfo a
+$A(X)\otimes_{\mathbb Z}\mathbb Q$ cuando $X$ es cuasiproyectivo y liso
+sobre un cuerpo $k$. Este anillo es el anillo graduado asociado a $K(X)$
+para una filtración adecuada de este anillo.
+
+Una primera filtración natural de $K(X)$, que es la considerada en [RRR], es
+la «~\underline{filtración topológica}~» por la codimensión del soporte de
+los haces coherentes; $\operatorname{Filt}^{i}_{\mathrm{top}}K(X)$ está
+engendrado por los $\cl(F)$ con $F$ coherente y
+$\operatorname{codim}(\operatorname{supp}F,X)\ge i$. Una primera cuestión es
+la compatibilidad de esta filtración con la estructura de anillo, cuestión
+resuelta en [RRR], cuando $X$ es liso sobre un cuerpo $k$, gracias al
+«~lema de desplazamiento~» de Chow. Admitido este punto, se obtiene, pues, un
+anillo graduado asociado, que aquí denotaremos por
+$\Gr^{\bullet}_{\mathrm{top}}(X)$. En [RRR] se define un homomorfismo de
+anillos sobreyectivo
+\[
+\varphi:A(X)\longrightarrow \Gr^{\bullet}_{\mathrm{top}}(X),
+\]
+(que transforma la clase de un ciclo primo $Z$ en
+$\cl(\underline O_Z)$), cuyo núcleo resulta después (Exp. XIV 4.2) ser un
+subgrupo de torsión. Además, en [RRR] se muestra cómo las imágenes en
+$\Gr^{\bullet}_{\mathrm{top}}(X)$ de las clases de Chern $c_i(F)$ pueden
+calcularse directamente en términos de $\cl(F)\in K(X)$ y de las
+operaciones $\lambda^i$ de potencia exterior en $K(X)$.
+
+Esto muestra que, para $X$ esquema noetheriano regular provisto de un módulo
+invertible amplio, el anillo $\Gr^{\bullet}_{\mathrm{top}}(X)$ es un
+sustituto conveniente del hipotético anillo de Chow $A(X)$; tiene además
+sobre este último la ventaja de que ciertos cálculos de [RRR] se efectúan
+directamente en este anillo y conducen a fórmulas importantes en él, fórmulas
+que, incluso para $X$ proyectivo y liso sobre un cuerpo, no están
+establecidas actualmente en el propio $A(X)$ (Exp. XIV, 4.3 y 4.4). Sin
+embargo, para justificar por completo este punto de vista, habría que
+resolver el problema antes señalado de la compatibilidad de la filtración
+topológica de $K(X)$ con su estructura de anillo, problema que parece
+esencialmente ligado al «~lema de desplazamiento~» de Chow, el cual es a su
+vez el ingrediente técnico esencial de la teoría del anillo de Chow que
+hemos pretendido evitar.
+
+\subsubsection*{2.3}
+Para evitar este problema, se dota a $K(X)$ de una segunda filtración, más
+fina que la filtración topológica, que puede describirse en términos
+puramente algebraicos a partir de la estructura de $\lambda$-anillo
+aumentado de $K(X)$. La definición de esta filtración viene sugerida por la
+expresión dada en [RRR] para las clases de Chern de un $x\in K(X)$ en
+$\Gr^{\bullet}_{\mathrm{top}}(X)$,
+\begin{equation}\tag{2.3}
+c_i(x)=\gamma^i(x-\epsilon(x))\mod \operatorname{Filt}^{i+1}_{\mathrm{top}}K(X),
+\end{equation}
+donde $\gamma^i$ designa cierta combinación lineal de los $\lambda^j$
+($j\le i$), explicitada en loc. cit., siendo $\epsilon$ la aumentación. Se
+demuestra que $\gamma^i(x-\epsilon(x))$ es efectivamente de filtración
+topológica $\ge i$, lo que da sentido a la fórmula (2.3). Se define entonces
+la $\lambda$-\underline{filtración} de $K(X)$ mediante los ideales
+$\operatorname{Filt}^i K(X)$, donde $\operatorname{Filt}^i K(X)$ está
+formado por las sumas de expresiones de la forma
+\[
+\gamma^{i_1}(x_1-\epsilon(x_1))\cdots \gamma^{i_k}(x_k-\epsilon(x_k)),\qquad i_1+\cdots+i_k\ge i.
+\]
+El anillo graduado asociado a esta filtración se denotará por
+$\Gr^\bullet(X)$, y es este el que sustituirá en el Seminario al anillo de
+Chow de $X$. Por otra parte, se puede demostrar que, en el caso aquí
+considerado, el homomorfismo canónico
+\begin{equation}\tag{2.4}
+\Gr^\bullet(X)\longrightarrow \Gr^{\bullet}_{\mathrm{top}}(X)
+\end{equation}
+es un isomorfismo módulo torsión, lo que justifica el punto de vista según el
+cual este anillo, tensorizado por $\mathbb Q$, puede desempeñar en todos los
+aspectos el mismo papel que el anillo de Chow tensorizado por $\mathbb Q$.
+Por otra parte, se ha hecho exactamente lo necesario para que la fórmula
+(2.3) (donde se sustituye $\operatorname{Filt}^i_{\mathrm{top}}$ por
+$\operatorname{Filt}^i$) defina una teoría de clases de Chern con valores en
+$\Gr^\bullet(X)$, cuyas clases de Chern en
+$\Gr^{\bullet}_{\mathrm{top}}(X)$ se deducen mediante el homomorfismo (2.4).
+Se demuestra (Exp. V), gracias al hecho (Exp. VI) de que $K(X)$ es un
+$\lambda$-anillo \underline{especial} en el sentido de [RRR] (es decir, un
+$\lambda$-anillo en el sentido de Exp. V), que esta noción de clase de Chern
+satisface todas las propiedades formales habituales, examinadas en [RRR].
+
+\subsubsection*{2.4}
+Se observará una ventaja muy apreciable de la definición de
+$\Gr^\bullet(X)$ sobre las de $A(X)$ y
+$\Gr^{\bullet}_{\mathrm{top}}(X)$: conserva su sentido para un esquema $X$
+absolutamente arbitrario y, más generalmente, para un topos localmente
+anillado cualquiera $X$, tomando entonces como $K(X)$ el grupo de clases
+construido con los módulos localmente libres sobre $X$, que sigue siendo un
+$\lambda$-anillo aumentado y, por tanto, está provisto de una filtración
+correspondiente que permite definir un graduado asociado $\Gr^\bullet(X)$.
+Como precio de esta generalidad, debe señalarse, sin embargo, que, cuando no
+se está dispuesto a despreciar los fenómenos de torsión, es decir, a
+tensorizar por $\mathbb Q$, las propiedades de $\Gr^\bullet(X)$ son menos
+satisfactorias en diversos aspectos que las de sus dos competidores (Exp.
+XIV n\textsuperscript{o}~4). Así, suponiendo de nuevo que $f:X\to Y$ es un
+morfismo propio de esquemas noetherianos regulares provistos de módulos
+invertibles amplios, no es cierto, en general, que el homomorfismo
+$f_*:K(X)\longrightarrow K(Y)$ aplique $\operatorname{Filt}^i K(X)$ en
+$\operatorname{Filt}^{i-d} K(Y)$, donde $d$ es la dimensión relativa de $X$
+sobre $Y$, y defina, por consiguiente, al pasar a los graduados asociados, un
+homomorfismo de grado $-d$ de $\Gr^\bullet(X)$ en $\Gr^\bullet(Y)$. Sin
+embargo, se puede demostrar (Exp. VII) que esto es así siempre que se
+tensorice por $\mathbb Q$, de modo que se obtiene un homomorfismo de grado
+$-d$
+\begin{equation}\tag{2.5}
+f_*:\Gr^\bullet(X)_{\mathbb Q}\longrightarrow \Gr^\bullet(Y)_{\mathbb Q},
+\end{equation}
+que desempeña el papel del homomorfismo «~imagen directa de ciclos~»
+$A(X)\to A(Y)$.
+
+Sentado esto, vemos que disponemos de todos los elementos de estructura
+necesarios para dar sentido a la fórmula (1.2) cuando no se postula la
+existencia de un cuerpo base, siendo $f:X\to Y$ un morfismo propio de
+esquemas noetherianos regulares que admiten módulos invertibles amplios.

@@ -1,0 +1,111 @@
+% SGA 6, Exposición IV: fragmento español alineado con la fuente.
+% Parte 3 de 7. Alcance: continuación de 2.6 hasta 2.8, líneas 6304--6407 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+Denotemos por \(D({}_{A'} X'_A)\) la categoría derivada de \(\Mod({}_{A'} X'_A)\), por \(D({}_{A'} X'_A)_{A'\text{-}\parf}\) la subcategoría plena formada por los complejos de amplitud perfecta finita con respecto a \(A'\) (es decir, como objetos de \(D({}_{A'} X')\)), y pongamos, como en (2.2),
+\[
+ K'({}_{A'} X'_A)_{A'}=k(D({}_{A'} X'_A)_{A'\text{-}\parf}).
+\]
+Los funtores de inclusión definen de manera evidente homomorfismos
+\begin{align}
+ K'_{\naif}({}_{A'} X'_A)_{A'}&\longrightarrow K'({}_{A'} X'_A)_{A'}, \tag{2.6.3.1}\\
+ K'_{\naif}({}_A X)&\longrightarrow K'({}_A X), \tag{2.6.3.2}\\
+ K'_{\naif}({}_{A'} X')&\longrightarrow K'({}_{A'} X'). \tag{2.6.3.3}
+\end{align}
+Se sabe, por otra parte, (I 4.18, 4.19) que el funtor derivado de \(\otimes_A\),
+\[
+ \otimes_A^{\mathbf L}:D^-({}_{A'} X'_A)\times D^-({}_A X)\longrightarrow D^-({}_{A'} X'),
+\]
+induce un funtor (exacto)
+\begin{equation}\tag{2.6.4}
+ D({}_{A'} X'_A)_{A'\text{-}\parf}\times D({}_A X)_{\parf}
+ \longrightarrow D({}_{A'} X')_{\parf}.
+\end{equation}
+Este último define un homomorfismo
+\begin{equation}\tag{2.6.5}
+ K'({}_{A'} X'_A)_{A'}\otimes K'({}_A X)\longrightarrow K'({}_{A'} X').
+\end{equation}
+Como el funtor (2.6.1) está inducido por (2.6.4), los homomorfismos (2.6.2) y (2.6.5) son compatibles con los homomorfismos (2.6.3.1), (2.6.3.2) y (2.6.3.3); en otros términos, se tiene un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=tiny]
+K'_{\naif}({}_{A'} X'_A)_{A'}\otimes K'_{\naif}({}_A X)\arrow[r]\arrow[d]
+&K'_{\naif}({}_{A'} X')\arrow[d]\\
+K'({}_{A'} X'_A)_{A'}\otimes K'({}_A X)\arrow[r]
+&K'({}_{A'} X'),
+\end{tikzcd}
+\tag{2.6.6}
+\]
+donde las flechas horizontales superior e inferior son respectivamente (2.6.2) y (2.6.5), y las flechas verticales están definidas por (2.6.3.1), (2.6.3.2) y (2.6.3.3).
+
+\textbf{2.7. Ley contravariante y estructura de anillo sobre \(K'\).} Vamos a explicitar algunos casos particulares importantes de los emparejamientos (2.6) (su estudio directo es, por lo demás, inmediato).
+\begin{enumerate}[label=\alph*)]
+\item Sea \(f:(X',A')\longrightarrow (X,A)\) un morfismo de topoi anillados. El funtor \(Lf^*:D^-({}_A X)\longrightarrow D^-({}_{A'} X')\) envía (I 4.19.1) \(D({}_A X)_{\parf}\) en \(D({}_{A'} X')_{\parf}\) (resp. \(\Loclib({}_A X)\) en \(\Loclib({}_{A'} X')\)), y define un homomorfismo
+\begin{equation}\tag{2.7.1}
+ f^*:K'({}_A X)\longrightarrow K'({}_{A'} X')
+\end{equation}
+(resp.
+\begin{equation}\tag{2.7.2}
+ f^*:K'({}_A X)_{\naif}\longrightarrow K'({}_{A'} X')_{\naif}
+\end{equation}
+), que también puede interpretarse como el producto por \(\cl(A')\) en \sisi{(2.6.2) (resp. (2.6.5))}{(2.6.5) (resp. (2.6.2))}. Se tiene un diagrama conmutativo (caso particular de (2.6.6))
+\[
+\begin{tikzcd}
+K'({}_A X)_{\naif}\arrow[r,"f^*"]\arrow[d]
+&K'({}_{A'} X')_{\naif}\arrow[d]\\
+K'({}_A X)\arrow[r,"f^*"]
+&K'({}_{A'} X'),
+\end{tikzcd}
+\]
+donde las flechas verticales izquierda y derecha son respectivamente (2.6.3.2) y (2.6.3.3).
+
+Sea \(g:(X,A)\to(X'',A'')\) un morfismo de topoi anillados; la transitividad de los funtores imagen inversa implica que los homomorfismos del tipo (2.7.1) (resp. 2.7.2) satisfacen la relación
+\begin{equation}\tag{2.7.3}
+ (gf)^*=f^*g^*.
+\end{equation}
+Así, \(K'({}_A X)\) (resp. \(K'({}_A X)_{\naif}\)) es un funtor contravariante de \((X,A)\).
+
+\item Sea \((X,\mathcal O_X)\) un topos anillado conmutativamente. Gracias a la asociatividad y a la conmutatividad del producto tensorial, el homomorfismo (2.6.5) (resp. (2.6.2)) (donde se toma \(A=\mathcal O_X\), \((X',A')=(X,A)\), \(f=\Id\)) dota a \(K'(X)\) (resp. \(K'(X)_{\naif}\)) de una estructura de anillo conmutativo con unidad \((1=\cl(\mathcal O_X))\), y el homomorfismo canónico (2.6.3.2)
+\[
+ K'(X)_{\naif}\longrightarrow K'(X)
+\]
+es un homomorfismo de anillos unitarios.
+
+Sea \(f:(X,\mathcal O_X)\to(Y,\mathcal O_Y)\) un morfismo de topoi anillados por anillos conmutativos. Entonces la compatibilidad del producto tensorial con las imágenes inversas muestra que el homomorfismo
+\[
+ f^*:K'(Y)\longrightarrow K'(X)
+\]
+(resp.
+\[
+ f^*:K'(Y)_{\naif}\longrightarrow K'(X)_{\naif}
+\]
+) es un homomorfismo de anillos unitarios.
+\end{enumerate}
+
+\textbf{2.8. Aumentación de \(K'\) hacia \(H^0(\ ,\mathbb Z)\).} Sea \((X,\mathcal O_X)\) un topos localmente anillado (I 2.15.1). Recordemos que se ha definido (I 6.11 a 6.14) un homomorfismo de anillos (unitarios)
+\[
+ i:H^0(X,\mathbb Z)\longrightarrow K'(X)_{\naif},
+\]
+que dota así a \(K'(X)_{\naif}\) (y por consiguiente también a \(K'(X)\), mediante el homomorfismo canónico \(K'(X)_{\naif}\to K'(X)\)) de una estructura de álgebra (con unidad) sobre \(H^0(X,\mathbb Z)\). Además (loc.cit.), el álgebra \(K'(X)_{\naif}\) (resp. \(K'(X)\)) está aumentada hacia \(H^0(X,\mathbb Z)\) por el rango, y el homomorfismo canónico \(K'(X)_{\naif}\to K'(X)\) es un homomorfismo de álgebras aumentadas.
+
+Sea \(f:(X,\mathcal O_X)\to(Y,\mathcal O_Y)\) un morfismo de topoi localmente anillados. Los homomorfismos \(f^*:K'(Y)\longrightarrow K'(X)\) y \(f^*:K'(Y)_{\naif}\longrightarrow K'(X)_{\naif}\) son compatibles (I 6.12, 6.13) con las estructuras de álgebras aumentadas precedentes, lo que se expresa por la conmutatividad del diagrama (donde \(\Rg\) denota el rango):
+\[
+\begin{tikzcd}[column sep=tiny]
+H^0(Y,\mathbb Z)\arrow[r,"i"]\arrow[d]
+&K'(Y)_{\naif}\arrow[r]\arrow[d]
+&K'(Y)\arrow[r,"\Rg"]\arrow[d]
+&H^0(Y,\mathbb Z)\arrow[d]\\
+H^0(X,\mathbb Z)\arrow[r,"i"]
+&K'(X)_{\naif}\arrow[r]
+&K'(X)\arrow[r,"\Rg"]
+&H^0(X,\mathbb Z).
+\end{tikzcd}
+\]
+\textsuperscript{*}Más adelante en el Seminario se verá (V 3.9.1 y VI) que \(K'(X)_{\naif}\) puede dotarse de una estructura más rica que la de álgebra aumentada hacia \(H^0(X,\mathbb Z)\), a saber, de una estructura de \(\lambda\)-álgebra aumentada hacia \(H^0(X,\mathbb Z)\), considerado como anillo binomial (V 2.8), siendo esta estructura compatible con los homomorfismos imagen inversa. Deligne \sisi{[5]}{[1]} ha probado recientemente que \(K'(X)\) puede dotarse de una estructura análoga (al menos si \(X\) es de característica \(p\geq0\)) y que el homomorfismo canónico
+\[
+ K'(X)_{\naif}\longrightarrow K'(X)
+\]
+es un homomorfismo de \(\lambda\)-álgebras aumentadas, respondiendo así afirmativamente a una conjetura de Grothendieck (XIV 1).\textsuperscript{*}
+

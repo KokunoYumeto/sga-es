@@ -1,0 +1,70 @@
+% SGA 6, Exposición I: final de la sección 8, bibliografía y notación adicional, en español y alineados con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 3440--3504.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Observación 8.5.} Si \(\mathcal C\) es una \(\sisi{S}{\mathcal S}\)-categoría fibrada, denotemos por \(E(\mathcal C)\) la \(\sisi{S}{\mathcal S}\)-categoría fibrada cuya fibra en \(U\in\Ob \sisi{S}{\mathcal S}\) es la categoría que tiene por objetos los pares \((L,u)\), donde \(L\in\Ob\mathcal C_U\) y \(u\in\sisi{\operatorname{End}_S(L)}{\operatorname{End}_{\mathcal S}(L)}\), y por flechas de \((L,u)\) a \((M,v)\) las flechas \(f:L\to M\) tales que \(fu=vf\). Por (8.4), se puede considerar el homomorfismo traza como un \(\sisi{S}{\mathcal S}\)-funtor de \(\mathcal E(\Dpx(S)_{\parf})^{\mathrm{is}}\) en \(\mathcal A\), donde el exponente \(\mathrm{is}\) significa que las únicas flechas consideradas son los isomorfismos, y \(\mathcal A\) es la \(\sisi{S}{\mathcal S}\)-categoría de fibras discretas definida por \(A\) (cf. (6.6.a)). Como todo complejo perfecto es localmente de tor-dimensión finita, el \(\sisi{S}{\mathcal S}\)-funtor de olvido
+\[
+  E(\Dpx(S)_{\parf})^{\mathrm{is}}
+  \longrightarrow
+  \mathcal E(\Dpx(S)_{\parf})^{\mathrm{is}}
+\]
+induce un isomorfismo sobre los campos asociados. Por consiguiente, el homomorfismo traza se prolonga de manera única a un \(\sisi{S}{\mathcal S}\)-funtor de \(\mathcal E(\Dpx(S)_{\parf})^{\mathrm{is}}\) en \(\underline A\).
+
+Para \(E\in\Ob\Parf(U)\) (\(U\in\Ob \sisi{S}{\mathcal S}\)), se sigue denotando por
+\[
+  \Tr_E:\Hom(E,E)\longrightarrow H^0(U,A)
+\]
+el homomorfismo correspondiente, que es un homomorfismo de \(H^0(U,A)\)-módulos. Se ve asimismo que la definición del producto cup (8.2), así como las afirmaciones (8.3) y (8.4), se generalizan al caso de complejos perfectos (no necesariamente de tor-dimensión finita).
+
+\textbf{Proposición 8.6.} Sean \(U\in\Ob \sisi{S}{\mathcal S}\), \(E,F\in\Parf(U)\), \(u\in\Hom(E,E)\), \(v\in\Hom(F,F)\), de donde \(u\otL v\in\Hom(E\otL F,E\otL F)\). Se tiene
+\[
+  \Tr_{E\otL F}(u\otL v)=\Tr_E(u)\,\Tr_F(v).
+\]
+
+\emph{Demostración.} Como la cuestión es local, se puede suponer, gracias a (8.4) y (4.10), que \(u\) y \(v\) son flechas de \(K^b(\mathcal C_0)\). Utilizando (8.1.2), se reduce al caso en que \(u\) y \(v\) son flechas de \(\mathcal C_0\). Se concluye gracias a (8.1.1).
+
+\section*{Bibliografía}
+\begin{description}[leftmargin=2.5cm,style=nextline]
+\item[{[H]}] Hartshorne, R. \emph{Residues and Duality}, Lecture Notes n\textsuperscript{o}~20, Springer, 1966.
+\item[{[V]}] Verdier, J-L. \emph{Catégories dérivées}, I.H.E.S., 1963.
+\item[{[G]}] Giraud, J. Cohomologie non abélienne, de próxima aparición en North Holl. Pub. Comp.
+\item[{SGA 4}] Cohomologie étale des schémas, por M. Artin, A. Grothendieck y J-L. Verdier, de próxima aparición en North Holl. Pub. Comp.
+\item[{SGA 5}] Cohomologie \(\ell\)-adique et fonctions L, por A. Grothendieck, de próxima aparición en North Holl. Pub. Comp.
+\item[{[1]}] Hakim, M. Topos annelés et schémas relatifs, tesis (en preparación).
+\item[{[2]}] Verdier, J-L. Les catégories dérivées des catégories abéliennes, de próxima aparición en North Holl. Pub. Comp.
+\item[{[MULT]}] Cartan, H. y Eilenberg, S. \emph{Homological Algebra}, Princeton, 1956.
+\end{description}
+
+
+
+\providecommand{\cS}{\mathcal S}
+\providecommand{\cCz}{\mathcal C_0}
+\providecommand{\cCone}{\mathcal C_1}
+\providecommand{\cA}{\mathcal A}
+\providecommand{\cB}{\mathcal B}
+\providecommand{\cL}{\mathcal L}
+\providecommand{\cI}{\mathcal I}
+\providecommand{\cJ}{\mathcal J}
+\providecommand{\Db}{\mathrm D}
+\providecommand{\Kb}{\mathrm K}
+\providecommand{\Dminus}{\mathrm D^{-}}
+\providecommand{\Kminus}{\mathrm K^{-}}
+\providecommand{\Kbd}{\mathrm K^{b}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ob}{\operatorname{ob}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\coker}{\operatorname{Coker}}
+\providecommand{\coh}{\operatorname{coh}}
+\providecommand{\parf}{\operatorname{parf}}
+\providecommand{\amp}{\operatorname{amp}}
+\providecommand{\RHom}{\operatorname{RHom}}
+
+

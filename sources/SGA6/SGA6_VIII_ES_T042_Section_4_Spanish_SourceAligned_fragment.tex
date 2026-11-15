@@ -1,0 +1,221 @@
+% SGA 6, Exposición VIII: fragmento español alineado con la fuente.
+% Alcance exacto: sección 4 completa, fr.tex, líneas 11649--11812.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Termina inmediatamente antes de la siguiente unidad estructural.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\section*{4. Teorema de Riemann--Roch: caso de una inmersión cerrada regular}
+
+\textbf{4.1.} Sea \(i:Y\to X\) una inmersión cerrada regular. El teorema de
+Riemann--Roch para \(i\) es esencialmente la relación VII 4.4, que permite
+calcular las clases de Chern de \(i_*(x)\) a partir de los \(\gamma^p(N,x)\).
+Más precisamente, si se introduce el \(\lambda\)-anillo
+\(K^{\bullet}(Y)_{\mathbb Q N}\) definido en V 5.5, el homomorfismo de
+\(K^{\bullet}(Y)_{\mathbb Q N}\) en \(K^{\bullet}(X)_{\mathbb Q}\) deducido de
+\(i_*\) es un \(\lambda\)-homomorfismo por VII 2.8 y VII 4.3. El teorema de
+Riemann--Roch se reduce entonces a una fórmula análoga relativa al homomorfismo
+(aditivo) \(K^{\bullet}(Y)\longrightarrow K^{\bullet}(Y)_{\mathbb Q N}\)
+definido por \(y\rightsquigarrow(0,y)\), es decir, a una relación de naturaleza
+formal, válida para todo \(\lambda\)-anillo. No desarrollaremos aquí esta
+demostración, para evitar todavía más formalismo sobre los \(\lambda\)-anillos
+(cf. \(\RRR\) I 1.5), y retomaremos el método de [1], que utilizaba los esquemas
+obtenidos por explosión (método ya empleado en la demostración de VII 4.3 y que
+es también el de la parte final de \(\RRR\)).
+
+Como se indicó en 3.9, se puede restringir al caso de una inmersión regular de
+codimensión constante \(d\) que satisface la condición de VII 4.1; el caso de
+una inmersión regular general se deduce después de 3.8. Retomaremos en este
+parágrafo las notaciones de VII 3.1. Se tiene, pues, el cuadrado cartesiano
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"'] & X ,
+\end{tikzcd}
+\]
+donde \(X'\) es el \(X\)-esquema obtenido efectuando la explosión de \(Y\). Se
+supone además que \(X\) es cuasicompacto y posee un haz amplio.
+
+\textbf{Proposición 4.2.} El morfismo \(f\) es proyectivo, de intersección
+completa y de dimensión relativa virtual nula. Se tiene además la relación
+\[
+ f_{\mathrm{gr}}\circ f^{\mathrm{gr}}=\operatorname{Id}_{\Gr K^{\bullet}(X)_{\mathbb Q}} .
+\]
+La primera afirmación se deduce inmediatamente de (VII 1.8). La segunda
+relación es consecuencia de la relación
+\[
+ f_*\circ f^*=\operatorname{Id}_{K^{\bullet}(X)},
+\]
+demostrada en (VII 3.6).
+
+\textbf{Proposición 4.3.} Para todo \(y\in K^{\bullet}(Y)_{\mathbb Q}\), se
+tiene la relación
+\[
+ f^{\mathrm{gr}}\circ i_{\mathrm{gr}}(y)
+ =
+ j_{\mathrm{gr}}\bigl(g^{\mathrm{gr}}(y)\cdot c^{d-1}(\check F)\bigr),
+\]
+donde \(c^{d-1}\) denota la clase de Chern \((d-1)\)-ésima.
+
+Esta relación está contenida en VII 4.8, pues no es sino
+\[
+ v^{\mathrm{gr}}\circ u^{\mathrm{gr}}=0 .
+\]
+
+\textbf{Proposición 4.4.} Sea \(X\) un esquema cuasicompacto. Si \(E\) es un
+haz localmente libre de tipo finito sobre \(X\), de clase \(E\) en
+\(K^{\bullet}(X)\) y de rango \(n\), se tiene
+\[
+ \ch(\lambda_{-1}(E))=c^n(\check E)(\Todd(\check E))^{-1}.
+\]
+
+Los dos miembros de la relación que se debe demostrar son multiplicativos: es
+claro para \(\ch\circ\lambda_{-1}\) y para \(\Todd\); también es cierto para
+\(c^n\), que es la clase de
+\((-1)^{\varepsilon(E)}\lambda_{-1}(E)\). Por consiguiente, pasando al fibrado
+de banderas de \(E\), se puede suponer que \(E\) es una suma de clases de haces
+invertibles y reducirse a demostrar la fórmula para un haz invertible. Sea
+\(\xi\) la clase de tal haz. Se tiene entonces
+\[
+ \ch(\lambda_{-1}(\xi))=\ch(1-\xi)=1-\ch(\xi).
+\]
+Como \(\widetilde c(\xi)=(1,1+c^1(\xi))\), se obtiene, por la definición de
+\(\ch\),
+\[
+ \ch(\lambda_{-1}(\xi))=1-\exp(c^1(\xi)).
+\]
+Por otra parte, \(\xi\) tiene aumentación \(1\); la clase de Chern que
+interviene en la fórmula 4.4 relativa a \(\xi\) es, pues, \(c^1\). Teniendo en
+cuenta la definición de \(\Todd\) y 3.5, la relación que se debe demostrar se
+escribe
+\[
+ 1-\exp(c^1(\xi))
+ =
+ -c^1(\xi)\cdot\left(\frac{-c^1(\xi)}{1-\exp(c^1(\xi))}\right)^{-1},
+\]
+y queda así verificada.
+
+\textbf{Observación 4.4.1.} También es posible deducir 4.4 de un enunciado
+puramente algebraico correspondiente; cf. \(\RRR\) I 1.3.
+
+\textbf{4.5.} Demostraremos ahora que, para demostrar el teorema de
+Riemann--Roch en el caso considerado en este parágrafo, nos podemos reducir al
+caso en que \(Y\) es un divisor de \(X\) y en que el elemento al cual se aplica
+la fórmula es la imagen inversa de un elemento de \(K^{\bullet}(X)\).
+
+Por 3.2, la fórmula que se debe demostrar,
+\[
+ \ch(i_*(x))=
+ i_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_i)\bigr)
+\]
+es equivalente a la fórmula
+\[
+ f^{\mathrm{gr}}\bigl(\ch(i_*(x))\bigr)
+ =
+ f^{\mathrm{gr}}\circ i_{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_i)\bigr).
+\]
+Teniendo en cuenta la funtorialidad de \(\ch\) y 4.3, también puede escribirse
+\[
+ \ch\bigl(f^*(i_*(x))\bigr)
+ =
+ j_{\mathrm{gr}}\bigl(g^{\mathrm{gr}}\bigl(\ch(x)\cdot\Todd(\check T_i)\bigr)\cdot c^{d-1}(\check F)\bigr),
+\]
+es decir, por VII 3.4,
+\[
+ \ch\bigl(j_*(g^*(x)\cdot\lambda_{-1}(F))\bigr)
+ =
+ j_{\mathrm{gr}}\bigl(\ch(g^*(y))\cdot\Todd(g^*(\check T_i))\cdot c^{d-1}(\check F)\bigr).
+\]
+
+Ahora bien, por definición se tiene
+\[
+ T_i=-\cl(J/J^2)=-N,\qquad
+ T_j=-\cl(J'/J'^2)=-L.
+\]
+Por otra parte, la sucesión exacta
+\[
+0\longrightarrow F\longrightarrow g^*(N)\longrightarrow \mathcal O_{Y'}(1)\longrightarrow0
+\]
+da la relación
+\[
+ g^*(T_i)=-(F+L),
+\]
+de donde se deduce
+\[
+ \Todd(g^*(\check T_i))=\Todd(\check T_j)\cdot(\Todd(\check F))^{-1}.
+\]
+Teniendo en cuenta 4.4, la relación que se debe demostrar se escribe, pues,
+\[
+ \ch\bigl(j_*(g^*(x)\cdot\lambda_{-1}(F))\bigr)
+ =
+ j_{\mathrm{gr}}\bigl(\ch(g^*(x)\cdot\lambda_{-1}(F))\cdot\Todd(\check T_j)\bigr).
+\]
+Poniendo \(z=g^*(x)\cdot\lambda_{-1}(F)\), esta relación no es sino el teorema
+de Riemann--Roch aplicado a la inmersión regular de codimensión \(1\)~\(j\), y
+al elemento \(z\) de \(K^{\bullet}(Y')\).
+
+Además, como se ha supuesto que \(i\) satisface la hipótesis de (VII 4.1),
+\(\lambda_{-1}(F)\) es divisible por \((1-L)\). Se puede, pues, encontrar
+\(z'\) tal que \(z=z'(1-L)\), o también \(z=j^*(j_*(z'))\) (Exp. VII 2.7). Se
+reduce así al caso en que \(Y\) es un divisor y a un elemento \(x\) tal
+que existe \(y\), con \(x=i^*(y)\).
+
+\textbf{4.6.} Hay que demostrar, por tanto, la relación
+\[
+ \ch\bigl(i_*(i^*(y))\bigr)
+ =
+ i_{\mathrm{gr}}\bigl(\ch(i^*(y))\cdot\Todd(\check T_i)\bigr).
+\]
+Ahora bien, la fórmula de proyección da
+\[
+ i_*(i^*(y))=y\cdot i_*(1),
+\]
+y de la sucesión exacta
+\(0\longrightarrow J\longrightarrow\mathcal O_X\longrightarrow\mathcal O_Y\longrightarrow0\),
+donde \(J\) es aquí invertible, se deduce
+\[
+ i_*(1)=1-J,
+\]
+de donde
+\[
+ \ch(i_*(i^*(y)))=\ch(y)\cdot\ch(1-J).
+\]
+Como \(J\) es invertible, se tiene
+\(\widetilde c(J)=(1,1+c^1(J))\), y por tanto
+\(\ch(J)=\exp(c^1(J))\).
+Por consiguiente, se tiene
+\[
+ \ch(i_*(i^*(y)))=\ch(y)\cdot(1-\exp(c^1(J))).
+\]
+
+Por otra parte, la funtorialidad de \(\ch\) y la fórmula de proyección 3.7
+implican
+\[
+ i_{\mathrm{gr}}\bigl(\ch(i^*(y))\cdot\Todd(\check T_i)\bigr)
+ =
+ \ch(y)\cdot i_{\mathrm{gr}}(\Todd(\check T_i)).
+\]
+Ahora bien, \(T_i=-\cl(J/J^2)=-i^*(J)\). Por tanto,
+\[
+ i_{\mathrm{gr}}(\Todd(\check T_i))
+ =
+ i_{\mathrm{gr}}\bigl(i^{\mathrm{gr}}(\Todd(-\check J))\bigr)
+ =
+ i_{\mathrm{gr}}(1)\cdot\Todd(-\check J).
+\]
+Como \(i_*(1)=1-J\), \(i^{\mathrm{gr}}_*(1)\) es la imagen en
+\(\Gr^1K^{\bullet}(X)\) de \(1-J\), y por tanto es \(-c(J)\). Por otra parte,
+se tiene
+\[
+ \Todd(-\check J)=(\Todd(\check J))^{-1}
+ =
+ \frac{1-\exp(c^1(J))}{-c^1(J)}.
+\]
+Se obtiene finalmente
+\[
+ i_{\mathrm{gr}}\bigl(\ch(i^*(y))\cdot\Todd(\check T_i)\bigr)
+ =
+ \ch(y)\cdot(1-\exp(c^1(J))),
+\]
+lo que demuestra la relación buscada.

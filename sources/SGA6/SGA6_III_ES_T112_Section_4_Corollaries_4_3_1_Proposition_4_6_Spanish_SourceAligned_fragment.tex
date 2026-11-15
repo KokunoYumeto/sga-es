@@ -1,0 +1,104 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: corolario 4.3.1 hasta la demostración de la proposición 4.6, líneas 5686--5782 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 4.3.1.} Sean \(f:X\to Y\) un morfismo localmente de tipo finito y \(E\) un \(\mathcal O_X\)-módulo. Para que se tenga \(\parfamp_f(E)\subset[0,0]\), es necesario y suficiente que \(E\) sea, rel. a \(f\), plano y de presentación finita (1.2.1 c)). En particular, para que \(f\) tenga dimensión perfecta nula (4.1), es necesario y suficiente que \(f\) sea plano y localmente de presentación finita.
+
+\emph{Demostración.} Aplíquese (4.3 (ii) \(\Longrightarrow\) (i)) con \(a=b=0\).
+
+\textbf{Corolario 4.3.2.} Sean \(f:X\to Y\) un morfismo localmente de tipo finito, \(E\in\Ob D(X)\) un complejo de \(\mathcal O_X\)-módulos planos y de presentación finita rel. a \(f\) (1.2.1 c)), y \([a,b]\) un intervalo de \(\mathbb Z\). Si \(E^i=0\) para \(i\notin[a,b]\), se tiene \(\parfamp_f(E)\subset[a,b]\). Si \(E\) está acotado superiormente en grados, \(E\) es pseudocoherente rel. a \(f\).
+
+\emph{Demostración.} Consecuencia de (4.3.1) y (I 4.15 y 2.11).
+
+\textbf{Proposición 4.4.} Sea un triángulo conmutativo de esquemas
+\[
+\begin{tikzcd}
+X \arrow[r,hook,"i"] \arrow[d,"f"'] & Y \arrow[dl,"g"]\\
+S &
+\end{tikzcd}
+\]
+donde \(i\) es una inmersión cerrada y \(g\) un morfismo liso, y sea \(E\in\Ob D(X)\). Para que \(E\) sea perfecto rel. a \(f\), es necesario y suficiente que \(i_*(E)\) sea perfecto (en sentido absoluto (I 4.8)). Más precisamente, supongamos que \(g\) tiene dimensión relativa \(\leq d\), y sea \([a,b]\) un intervalo de \(\mathbb Z\). Se tiene entonces:
+\begin{enumerate}[label=(\roman*)]
+\item \(\sisi{\parfamp(i_*(E)}{\parfamp(i_*(E))}\subset[a,b]\Longrightarrow\parfamp_f(E)\subset[a,b]\);
+\item \(\parfamp_f(E)\subset[a,b]\Longrightarrow\parfamp(i_*(E))\subset[a-d,b]\).
+\end{enumerate}
+
+\emph{Demostración.} Consecuencia inmediata de (3.6).
+
+\textbf{Proposición 4.5.} Sea
+\[
+\begin{tikzcd}
+X \arrow[rr,"f"] \arrow[dr,"h"'] && Y \arrow[dl,"g"]\\
+& S &
+\end{tikzcd}
+\]
+un triángulo conmutativo de morfismos localmente de tipo finito de esquemas, y sean \(E\in\Ob D^-(X)\), \(F\in\Ob D^-(Y)\), y \([a,b]\), \([c,d]\) intervalos de \(\mathbb Z\). Se tiene entonces:
+\[
+ \parfamp_f(E)\subset[a,b]\text{ y }\parfamp_g(F)\subset[c,d]
+ \Longrightarrow
+ \parfamp_h(E\otimes_Y^{\mathbf L}F)
+ \subset[a+c,b+d].
+\]
+Por consiguiente, si \(E\) es perfecto rel. a \(f\) y \(F\) perfecto rel. a \(g\), \(E\otimes_Y^{\mathbf L}F\) es perfecto rel. a \(h\).
+
+\emph{Demostración.} Combínense (1.1) y (3.4).
+
+\textbf{Corolario 4.5.1.} Bajo las hipótesis de (4.5):
+\begin{enumerate}[label=\alph*)]
+\item si \(g\) tiene dimensión perfecta \(\leq n\), se tiene
+\[
+ \parfamp_f(E)
+ \subset[a,b]
+ \Longrightarrow
+ \parfamp_h(E)
+ \subset[a-n,b];
+\]
+por consiguiente, si \(g\) es perfecto, que \(E\) sea perfecto rel. a \(f\) implica que \(E\) es perfecto rel. a \(h\);
+\item si \(f\) tiene dimensión perfecta \(\leq m\), se tiene
+\[
+ \parfamp_g(F)
+ \subset[c,d]
+ \Longrightarrow
+ \parfamp_h(\mathbf Lf^*(F))
+ \subset[c-m,d];
+\]
+por consiguiente, si \(f\) es perfecto, que \(F\) sea perfecto rel. a \(g\) implica que \(\mathbf Lf^*(F)\) es perfecto rel. a \(h\).
+\end{enumerate}
+
+\textbf{Observación 4.5.2.} Con las notaciones precedentes, si \(g\) es perfecto, que \(E\) sea perfecto rel. a \(h\) no implica necesariamente que \(E\) sea perfecto rel. a \(f\), como muestra el sempiterno ejemplo de un punto singular de un esquema sobre un cuerpo. Se tiene el criterio siguiente:
+
+\textbf{Proposición 4.6} (criterio de perfección por fibras)\footnote{Análogo al «criterio de planitud por fibras» (EGA IV 11.3.10).}. Sea
+\[
+\begin{tikzcd}
+X \arrow[rr,"f"] \arrow[dr,"h"'] && Y \arrow[dl,"g"]\\
+& S &
+\end{tikzcd}
+\]
+un triángulo conmutativo de morfismos de esquemas. Se supone que \(f\) y \(h\) son localmente de tipo finito, y que \(g\) es localmente de presentación finita y plano. Sean \(x\in X\), \(y=f(x)\), \(s=h(x)=g(y)\). Finalmente, sea \(E\in\Ob D^-(X)\), y sea \([a,b]\) un intervalo de \(\mathbb Z\). Denotemos por \(f_s:X_s\to Y_s\) la fibra de \(f\) en \(s\), es decir, el morfismo deducido de \(f\) por el cambio de base \(\Spec(k(s))\to S\). Entonces las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item \(\parfamp_h(E)\subset[a,b]\) en un entorno de \(x\), y
+\[
+ \tamp_{\mathcal O_{Y_s,y}}(E_x\otimes_{\mathcal O_{Y,y}}^{\mathbf L}\mathcal O_{Y_s,y})
+ \subset[a,b];
+\]
+\item \(\parfamp_f(E)\subset[a,b]\) en un entorno de \(x\).
+\end{enumerate}
+
+\emph{Demostración.} (ii) \(\Longrightarrow\) (i). Ya sabemos (4.3.1) que \(g\) tiene dimensión perfecta nula. Por tanto, según (4.5.1 a)), la condición (ii) implica \(\parfamp_h(E)\subset[a,b]\) en un entorno de \(x\). También implica, según \sisi{4.3)}{(4.3)}, \(\tamp_{\mathcal O_{Y,y}}(E_x)\subset[a,b]\), y por tanto (I 5.1 (i)), \(\tamp_{\mathcal O_{Y_s,y}}(E_x\otimes_{\mathcal O_{Y,y}}^{\mathbf L}\mathcal O_{Y_s,y})\subset[a,b]\), lo que concluye la demostración de (ii) \(\Longrightarrow\) (i).
+
+(i) \(\Longrightarrow\) (ii). Como la cuestión es local en un entorno de \(x\), se puede suponer que \(f\) se factoriza como \(X\overset{i}{\hookrightarrow}X'\overset{f'}{\longrightarrow}Y\), donde \(i\) es una inmersión cerrada y \(f'\) un morfismo liso. Es inmediato que las condiciones (i) y (ii) no se alteran al reemplazar \(E\) por \(i_*(E)\), \(f\) por \(f'\) (y \(h\) por \(gf'\)), de modo que se puede suponer que \(f\) es liso. Como \(g\) es perfecto (4.3.1), \(h\) es perfecto, y por tanto (1.12) \(E\) es pseudocoherente. Tras localizar si es necesario, se puede, según (II 2.2.10 b)) y (I 2.10 a)), suponer que \(E\) es estrictamente pseudocoherente (I 2.1) y nulo en grado \(>b\), y que la flecha de truncación
+\begin{equation}
+ E\longrightarrow(0\longrightarrow E^a/B^a\longrightarrow E^{a+1}\longrightarrow\ldots\longrightarrow E^b\longrightarrow0)\tag*{$t)$}
+\end{equation}
+es un cuasi-isomorfismo (en efecto, la hipótesis (i) implica que \(E\) es, en un entorno de \sisi{\(s\)}{\(x\)}, acíclico fuera de \([a,b]\)). Se trata de probar que \(E^a/B^a\) es \(f\)-plano en un entorno de \(x\). Denotemos por \(i:X_s\longrightarrow X\) la flecha canónica. Se tiene:
+\begin{equation}
+ E_x\otimes_{\mathcal O_{Y,y}}^{\mathbf L}\mathcal O_{Y_s,y}\simeq i^*(E)_x.\tag{$*$}
+\end{equation}
+Como \(h\) es plano, la hipótesis (i) implica, según (3.5.2), \(\tamp_{h_s}(i^*(E))\subset[a,b]\) en un entorno de \(x\). Por tanto, tras localizar si es necesario, se puede suponer que la flecha de truncación
+\begin{equation}
+ i^*(E)\longrightarrow(0\longrightarrow i^*(E^a)/B^a(i^*(E))\longrightarrow\ldots\longrightarrow i^*(E^b)\longrightarrow0)\tag*{$i^*(t)$}
+\end{equation}
+es un cuasi-isomorfismo. La hipótesis \(\tamp_{\mathcal O_{Y_s,y}}i^*(E)_x\subset[a,b]\) implica entonces, según (I 5.1.1), que \(i^*(E^a/B^a)_x\) es un \(\mathcal O_{Y_s,y}\)-módulo plano. Por otra parte, como la flecha \((*)\) es un cuasi-isomorfismo, la hipótesis \(\tamp_h(E)\subset[a,b]\) implica, siempre según (I 5.1.1), que \(E^a/B^a\) es \(h\)-plano. Gracias al criterio de planitud por fibras (EGA IV 11.3.10), se concluye que \(E^a/B^a\) es \(f\)-plano en un entorno de \(x\), cqfd.

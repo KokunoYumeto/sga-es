@@ -1,0 +1,104 @@
+% SGA 6, Exposición IV: fragmento español alineado con la fuente.
+% Parte 6 de 7. Alcance: sección 3.3 y bibliografía, líneas 6592--6688 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{3.3. Grupos de Grothendieck relativos.}
+
+\textbf{3.3.1.} Sea \(f:X\longrightarrow Y\) un morfismo localmente de tipo finito de esquemas. Pondremos~:
+\[
+\begin{gathered}
+ K'(f)=k(D(f)_{\parf}),\\
+ K_{\bullet}(f)=k(D^b(f)_{\coh}),
+\end{gathered}
+\]
+donde \(D^b(f)_{\coh}\) designa la categoría de los complejos pseudocoherentes con respecto a \(f\) y de cohomología acotada (III 1.2), y \(D(f)_{\parf}\) la categoría de los complejos de amplitud perfecta finita con respecto a \(f\) (III 4.2). Cuando no haya ambigüedad posible, escribiremos a veces \(K'(X/Y)\) (resp. \(K_{\bullet}(X/Y)\)) en lugar de \(K'(f)\) (resp. \(K_{\bullet}(f)\)).
+
+Los grupos \(K'(f)\) y \(K_{\bullet}(f)\) no poseen la rica estructura de sus análogos «~absolutos~» \(K'(X)\) y \(K_{\bullet}(X)\), pues el producto tensorial no define en general un homomorfismo \(K'(f)\otimes K'(f)\longrightarrow K'(f)\) (resp. \(K'(f)\otimes K_{\bullet}(f)\longrightarrow K_{\bullet}(f)\)). En cambio, satisfacen interesantes propiedades de variancia, que vamos a repasar.
+
+\textbf{3.3.2.} Sea
+\[
+\begin{tikzcd}
+X\arrow[rr,"f"]\arrow[dr,"h"'] &&Y\arrow[dl,"g"]\\
+&S&
+\end{tikzcd}
+\]
+un triángulo conmutativo de \sisi{morfismo}{morfismos} localmente de tipo finito de esquemas.
+\begin{enumerate}[label=\textbf{3.3.2.\arabic*.}, leftmargin=4em]
+\item Si \(g\) es pseudocoherente, se tiene \(K_{\bullet}(f)=K_{\bullet}(h)\) (III 1.12). Si \(g\) es liso y \(X\) cuasicompacto, se tiene \(K'(f)=K'(h)\) (III 4.4.1).
+
+\item Según (III 1.11 y 4.5), el funtor \(\otimes_Y^{\mathbf L}\) define emparejamientos
+\[
+ D(f)_{\parf}\times D^b(g)_{\coh}\longrightarrow D^b(h)_{\coh},
+\]
+\[
+ D(f)_{\parf}\times D(g)_{\parf}\longrightarrow D(h)_{\parf},
+\]
+que inducen homomorfismos
+\[
+ K'(f)\otimes K_{\bullet}(g)\longrightarrow K_{\bullet}(h),
+\]
+\[
+ K'(f)\otimes K'(g)\longrightarrow K'(h).
+\]
+Se deduce de ello, en particular (tomando \(X=Y\), \(f=\Id\)), que \(K_{\bullet}(g)\) es un \(K'(Y)\)-módulo. Por otra parte, si \(f\) es perfecto, el producto por \(\cl(\mathcal O_X)\in K'(f)\) define homomorfismos \(K'(Y)\)-lineales
+\[
+ f^*:K_{\bullet}(Y/S)\longrightarrow K_{\bullet}(X/S),
+\]
+y
+\[
+ f^*:K'(Y/S)\longrightarrow K'(X/S).
+\]
+
+\item Supongamos que \(S\) es cuasicompacto, que \(X\) e \(Y\) son de tipo finito sobre \(S\), y que \(f\) es propio. Entonces, bajo reserva de la validez de la conjetura de finitud (III 2.1), y por tanto, en particular, si \(Y\) es noetheriano o si \(f\) es proyectivo, el funtor \(Rf_*\) envía \(D^b(h)_{\coh}\) en \(D^b(g)_{\coh}\), y define por tanto un homomorfismo
+\[
+ f_*:K_{\bullet}(X/S)\longrightarrow K_{\bullet}(Y/S).
+\]
+Si además \(f\) es perfecto, \(Rf_*\) envía \(D(h)_{\parf}\) en \(D(g)_{\parf}\) (III 4.8), y define un homomorfismo
+\[
+ f_*:K'(X/S)\longrightarrow K'(Y/S).
+\]
+De la fórmula de proyección (III 3.7) se deduce la fórmula
+\[
+ f_*(a x)=a f_*(x),
+\]
+para \(f\) propio, \(a\in K'(S)\), \(x\in \sisi{K_{\bullet}(X)}{K_{\bullet}(X/S)}\) (resp. \(f\) propio y perfecto, \(a\in \sisi{K_{\bullet}(S)}{K'(S)}\), \(x\in K'(X/S)\)).
+
+\item Supongamos que \(S\) es noetheriano, que \(X\) e \(Y\) son de tipo finito sobre \(S\), y que \(f\) es compactificable y perfecto. Entonces (III 4.9.1) el funtor \(f^!\) envía \(D(g)_{\parf}\) en \(D(h)_{\parf}\), y define un homomorfismo
+\[
+ f^!:K'(Y/S)\longrightarrow K'(X/S).
+\]
+\end{enumerate}
+
+\textbf{3.3.3.} Bajo las hipótesis de (III 4.7), el funtor \(\otimes_S^{\mathbf L}\) define emparejamientos
+\[
+ D(f_1)_{\parf}\times D^b(f_2)_{\coh}\longrightarrow D^b(f)_{\coh},
+\]
+\[
+ D(f_1)_{\parf}\times D(f_2)_{\parf}\longrightarrow D(f)_{\parf},
+\]
+que inducen homomorfismos
+\[
+ K'(f_1)\otimes K_{\bullet}(f_2)\longrightarrow K_{\bullet}(f),
+\]
+\[
+ K'(f_1)\otimes K'(f_2)\longrightarrow K'(f).
+\]
+(Por supuesto, para \(X_i=Y_i=S\), se recupera la estructura de \(K'(S)\)-módulo de \(K_{\bullet}(S)\).)
+
+Si \(X\) es plano sobre \(S\), se deducen de ello, para \(n\geq1\), homomorfismos
+\[
+ K'(X/S)^{\otimes n}\longrightarrow K'\bigl((X/S)^n\bigr),
+\]
+que deberían sustituir, en cierto sentido, la estructura de anillo ausente sobre \(K'(X/S)\).
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item Deligne, P., papeles secretos.
+\item Grauert, H., Ein Theorem der Analytischen Garbentheorie \dots, Pub. Math. IHES, n\textsuperscript{o}5 (1960).
+\item Grothendieck, A., Théorèmes de finitude pour la cohomologie des faisceaux, Bull. Soc. Math. France, 84, 1956, p.1-7.
+\item[{[V]}] Verdier, J.-L., \emph{Catégories dérivées}, IHES (1964), mimeografiado.
+\end{enumerate}
+

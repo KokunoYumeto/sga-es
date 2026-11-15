@@ -1,0 +1,149 @@
+% SGA 6, Exposición 0: fragmento español alineado con la fuente.
+% Alcance: sección 4 completa, antes de la sección 5.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 363--416 inclusive.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\subsection*{4.}
+Finalmente, debemos dar algunas indicaciones sobre la manera en que todavía
+se puede dar sentido a (1.2) en ausencia de una hipótesis de existencia de
+módulos invertibles amplios sobre $X$ e $Y$.
+
+\subsubsection*{4.1}
+Observemos primero que \uline{para un esquema $X$ (o, más generalmente, un
+topos localmente anillado) cualquiera, parece indudable que el «~buen~»
+invariante que debe sustituir al anillo $K(X)$ de [RRR] no es el anillo
+$K^\bullet(X)$ considerado anteriormente, definido en términos de módulos
+localmente libres sobre $X$, sino el grupo $K(\Parf(X))$ considerado en 3.1,
+definido en términos de complejos perfectos sobre $X$, grupo que aquí
+denotaremos por $K^\bullet(X)$ y que distinguiremos del grupo «~ingenuo~» de
+3.1, que denotamos por $K^\bullet_{\mathrm{naif}}(X)$}. Este punto de vista
+viene impuesto por la necesidad de definir un homomorfismo (3.1) de imagen
+directa para un morfismo $f:X\to Y$ propio y de tor-dimensión finita, de
+esquemas noetherianos, digamos (el caso no noetheriano exige propiedades de
+finitud locales algo más fuertes sobre $f$; cf. Exp. III). Con la definición
+de $K^\bullet(X)$ adoptada ahora, este homomorfismo $f_*$ se define, en
+efecto, de manera trivial mediante la fórmula (3.2), donde ahora
+$\underline F$ es un complejo perfecto cualquiera sobre $X$, lo que implica
+que $Rf_*(\underline F)$ también es perfecto.
+
+\subsubsection*{4.2}
+Esta nueva definición de $K^\bullet(X)$ plantea, sin embargo, un nuevo
+problema de álgebra homológica: el de definir una $\lambda$-estructura sobre
+$K^\bullet(X)$ compatible con su estructura natural de anillo, procedente
+del producto tensorial en la categoría derivada. (NB: si $L_\bullet$ y $L'$
+son dos complejos perfectos, lo mismo ocurre con su producto tensorial total
+$L_\bullet\otimes^{\mathbf L}L'_\bullet$). Más precisamente, habría que definir
+operaciones «~potencias exteriores~» en la categoría derivada $D^-(X)$ que
+transformen complejos perfectos en complejos perfectos. Esta cuestión aún no
+se ha aclarado en la actualidad y, como se dijo en la Introducción,
+constituye la laguna más grave del Seminario. Una vez resuelta esta cuestión,
+y procediendo como en 2.3, se obtiene una filtración natural sobre
+$K^\bullet(X)$, que permite formar el anillo graduado asociado
+$\Gr^\bullet(X)$, el cual desempeñará el papel del anillo de Chow, y definir
+una teoría de clases de Chern
+\[
+c_i:K^\bullet(X)\longrightarrow \Gr^\bullet(X).
+\]
+
+\subsubsection*{4.3}
+Para dar sentido a la fórmula (1.2) para un morfismo propio localmente de
+intersección completa $f:X\to Y$ de esquemas noetherianos, aún hay que
+incluir en el enunciado de esta fórmula las inclusiones no triviales (3.4)
+(donde $d$ es la dimensión relativa virtual), a fin de poder definir (3.3),
+y definir, finalmente, la clase tangente relativa virtual
+\[
+T_f\in K^\bullet(X).
+\]
+Cuando $f$ admite una factorización (2.1) mediante una inmersión en un
+esquema relativo liso, la definición de $T_f$ no presenta ninguna dificultad
+nueva. Por otra parte, en este caso puede reformularse de una manera más
+conforme con el espíritu de las «~categorías derivadas~», considerando el
+conocido homomorfismo canónico
+\begin{equation}\tag{4.1}
+\underline N_{X/X'}\xrightarrow{d}\Omega^1_{X'/Y}\otimes_{\underline O_{X'}}\underline O_X
+\end{equation}
+inducido por la diferencial exterior
+\[
+d_{X'/X}:\underline J\subset\underline O_{X'}\longrightarrow\Omega^1_{X'/Y},
+\]
+y el complejo de cadenas
+\begin{equation}\tag{4.2}
+L^{X/Y}_\bullet\in\operatorname{Ob}D(X)
+\end{equation}
+definido gracias a (4.1) «~prolongando por ceros~», complejo igual en grado
+$1$, resp. $0$, a la fuente, resp. al destino, del homomorfismo (4.1). La
+fórmula (2.2) adopta entonces la forma más agradable
+\begin{equation}\tag{4.3}
+\check T_f=\cl^\bullet\bigl(L^{X/Y}_\bullet\bigr),
+\end{equation}
+fórmula que tiene sentido en $K^\bullet(X)$ cuando $f$ es un morfismo
+localmente de intersección completa, puesto que, en este caso, el complejo
+$L^{X/Y}_\bullet$ es manifiestamente perfecto. La afirmación de invariancia
+de $T_f$ respecto de la factorización elegida de $f$ puede precisarse
+entonces fácilmente como una afirmación de invariancia para el complejo
+$L^{X/Y}_\bullet$: salvo isomorfismo canónico en la categoría derivada
+$D(X)$, este complejo también es independiente de la factorización elegida
+(Exp. VIII).
+
+\subsubsection*{4.4}
+Cuando $f:X\to Y$ es un morfismo cualquiera de esquemas, todavía se puede
+construir un objeto canónico $L^{X/Y}_\bullet$ de la categoría derivada
+$D(X)$, definido salvo isomorfismo único, que sobre cada abierto afín de $X$
+por encima de un abierto afín de $Y$ sea isomorfo al complejo construido
+según el principio expuesto en el párrafo anterior (aunque, en el caso
+general, conviene sustituir «~liso~» por «~formalmente liso~», de modo que
+toda álgebra $B$ sobre un anillo $A$ aparece como cociente de un álgebra
+formalmente lisa, por ejemplo un álgebra de polinomios). Para tal definición
+no es posible proceder por simple «~pegado~» a partir de las construcciones
+afines, pues los objetos de la categoría derivada $D(X)$ son de naturaleza
+esencialmente no pegable.
+
+He aquí una construcción general de $L^{X/Y}_\bullet$, válida más
+generalmente para todo morfismo $f:X\to Y$ de topoi (conmutativamente)
+anillados: sea $B=\underline O_X$, $A=f^{-1}(\underline O_Y)$, de modo que
+$A$ es un anillo sobre el espacio $X$ y $B$ una $A$-álgebra. Sea $T\to B$
+un homomorfismo de haces de conjuntos que engendre $B$ como $A$-álgebra, es
+decir, tal que el homomorfismo de $A$-álgebras
+\[
+\varphi:C=A[T]\longrightarrow B
+\]
+correspondiente sea un epimorfismo de haces de conjuntos, donde $A[T]$
+designa la $A$-álgebra conmutativa libre engendrada por $T$ (es decir, el haz
+asociado al prehaz $U\longmapsto A(U)[T(U)]$ = $A(U)$-álgebra conmutativa
+libre engendrada por $T(U)$).
+Sea $J$ el núcleo de $\varphi$, y consideremos, como en 4.3, el complejo de
+cadenas de longitud $1$ definido por el homomorfismo natural
+\[
+J/J^2\xrightarrow{d}\Omega^1_{C/A}\otimes_C B.
+\]
+No es difícil ver que, salvo isomorfismo canónico en la categoría $D(X)$, el
+complejo así construido es independiente de la elección de $T$ y de
+$T\to B$, de modo que merece la denominación de \uline{complejo cotangente
+relativo $L^{X/Y}_\bullet$ de $X$ sobre $Y$}. Se comprueba asimismo que,
+para todo abierto afín de $X$ por encima de un abierto afín de $Y$, viene
+dado (salvo isomorfismo canónico) por el procedimiento de 4.3.
+
+Cuando $f$ es localmente de intersección completa, se ve además que se
+obtiene incluso un complejo \underline{perfecto}, lo que permite definir
+también un elemento $T_f$ en $K^\bullet(X)$ mediante la fórmula (4.3).
+Señalemos que, también aquí, no habría sido posible, en general, definir
+$T_f$ como un elemento de $K^\bullet_{\mathrm{naif}}(X)$, y nada permite
+suponer que $T_f$ sea \underline{globalmente} isomorfo en $D(X)$ a un
+complejo acotado cuyas componentes sean localmente libres de tipo finito.
+Esto constituye, pues, una justificación adicional del punto de vista
+defendido en 4.1 a favor del $K^\bullet(X)$ «~sofisticado~», con preferencia
+sobre $K^\bullet_{\mathrm{naif}}(X)$.
+
+\subsubsection*{4.5}
+A reserva de la cuestión planteada en 4.2, hemos reunido, pues, todos los
+elementos de estructura necesarios para dar sentido a (1.2) para un
+morfismo propio localmente de intersección completa de esquemas cualesquiera
+(la hipótesis noetheriana hecha implícitamente en las secciones anteriores
+puede eliminarse, de hecho, sin dificultad esencial). Por desgracia, esto no
+significa que, aun con esta reserva, la fórmula en cuestión esté establecida,
+ni siquiera cuando $Y$ es el espectro de un cuerpo algebraicamente cerrado
+de característica $p>0$ y $X$ es un esquema algebraico propio y liso de
+dimensión $3$, digamos. Véanse los comentarios de Exp. XIV
+n\textsuperscript{o}~2.
+

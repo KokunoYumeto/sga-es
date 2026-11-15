@@ -1,0 +1,73 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 3, números 3.0--3.4, líneas 4107--4171 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{3. Complementos sobre los haces cuasicoherentes sobre los esquemas\protect\footnote{Este número se debe esencialmente a J.L. Verdier.}}
+
+\textbf{3.0.} En esta sección se fija un esquema cuasicompacto y cuasiseparado $S$. El funtor de inclusión canónico (plenamente fiel)\footnote{$\Mod(S)$ (resp. $\Qcoh(S)$) denota la categoría de los $\mathcal O_S$-módulos (resp. $\mathcal O_S$-módulos cuasicoherentes).}
+\[
+ \varphi:\Qcoh(S)\longrightarrow\Mod(S)
+\]
+se extiende a un funtor, denotado también por $\varphi$, de $\mathrm D(\Qcoh(S))$ en $\mathrm D(S)=\mathrm D(\Mod(S))$, que nos proponemos estudiar\footnote{Omitiremos denotar $\varphi$ en las fórmulas donde no haya confusión que temer.}.
+
+\textbf{Lema 3.1.} La categoría $\Qcoh(S)$ es una categoría abeliana que verifica (AB 5) y para la cual los haces cuasicoherentes de tipo finito forman una familia «pequeña» de generadores. En particular (Tohoku 1.10.1), $\Qcoh(S)$ posee suficientes inyectivos.
+
+\emph{Demostración.} La afirmación relativa a los generadores resulta inmediatamente de que todo haz cuasicoherente sobre $S$ es límite inductivo filtrante de sus subhaces cuasicoherentes de tipo finito (EGA I 9.4.9 y IV 1.7.7). Las demás afirmaciones son evidentes.
+
+\textbf{Observación 3.1.1.} El redactor ignora si $\Qcoh(S)$ sigue poseyendo suficientes inyectivos cuando se supone solamente que $S$ es cuasiseparado.
+
+\textbf{Lema 3.2.} El funtor $\varphi:\Qcoh(S)\longrightarrow\Mod(S)$ tiene un adjunto a derecha
+\[
+ Q:\Mod(S)\longrightarrow\Qcoh(S),
+\]
+(llamado coherizador).
+
+\emph{Demostración.} Si $S$ es afín, la existencia de $Q$ es inmediata: se toma $Q=\widetilde{\Gamma_S}$ (EGA $\mathrm{Err}_{\mathrm I}$ 1.8.7). Sea ahora $f:U\longrightarrow S$ un abierto afín de $S$; está claro que, para $E\in\Ob\Qcoh(S)$ y $F\in\Ob\Mod(U)$, se tiene un isomorfismo canónico
+\begin{equation}\tag{1}
+ \Hom(E,f_*(F))\simeq \Hom(E,f_*Q(F)).
+\end{equation}
+Sea entonces $(f_i:U_i\longrightarrow S)$ un recubrimiento finito de $S$ por abiertos afines, y, para cada $(i,j)$, sea $(U_{ijk}\longrightarrow U_{ij})$ un recubrimiento finito de $U_{ij}=U_i\cap U_j$ por abiertos afines ($U_{ij}$ es cuasicompacto puesto que $S$ es cuasiseparado). Sea $F\in\Ob\Mod(S)$. Se tiene una sucesión exacta
+\begin{equation}\tag{2}
+ 0\longrightarrow F\longrightarrow \coprod_i f_{i*}(F|U_i)
+ \longrightarrow \coprod_{ijk}f_{ijk*}(F|U_{ijk}),
+\end{equation}
+(donde $f_{ijk}$ denota la inclusión de $U_{ijk}$ en $S$). Observemos que, si $g:V\longrightarrow U$ es una inclusión de abiertos afines de $S$, se tiene una flecha natural evidente
+\[
+ Q(F|U)\longrightarrow g_*Q(F|V).
+\]
+Por consiguiente, se deduce de (2) una flecha
+\begin{equation}\tag{3}
+ \coprod_i f_{i*}Q(F|U_i)\longrightarrow
+ \coprod_{ijk}f_{ijk*}Q(F|U_{ijk}),
+\end{equation}
+cuyo núcleo denotaremos por $QF$. Sea $E\in\Ob\Qcoh(S)$. Aplicando el funtor $\Hom(E,.)$ a la sucesión (2), se obtiene, teniendo en cuenta (1), un isomorfismo funtorial en $E$:
+\[
+ \Hom(E,F)\simeq\Hom(E,QF).
+\]
+Esto prueba la existencia de $Q$; la unicidad es evidente, puesto que se trata de un adjunto.
+
+\textbf{Lema 3.3.} \begin{enumerate}[label=\alph*)]
+\item El coherizador es un funtor aditivo que transforma inyectivos en inyectivos.
+\item Denotemos por
+\[
+ RQ:\mathrm D^+(S)\longrightarrow \mathrm D^+(\Qcoh(S))
+\]
+el derivado derecho del coherizador. Para $E\in\Ob\mathrm D(\Qcoh(S))$ y $F\in\Ob\mathrm D^+(S)$, existen isomorfismos funtoriales canónicos\footnote{El índice $\Mod$ (resp. $\Qcoh$) es una abreviatura de $\mathrm D(S)$ (resp. $\mathrm D(\Qcoh(S))$).}
+\begin{align}
+ R\Hom_{\Mod}(E,F)&\simeq \mathbb R\Hom_{\Qcoh}(E,\mathbb RQ(F)) \tag{i}\\
+ \Hom_{\Mod}(E,F)&\simeq \Hom_{\Qcoh}(E,\mathbb RQ(F)). \tag{ii}
+\end{align}
+\end{enumerate}
+
+\emph{Demostración.} La afirmación a) es consecuencia inmediata de la definición. Para b), basta establecer el isomorfismo (i), pues (ii) se deducirá de él pasando a la cohomología. Se puede, para ello, suponer que $F$ tiene componentes inyectivas; $QF$ tiene entonces componentes inyectivas según a), y el isomorfismo (i) proviene simplemente de la definición de $Q$.
+
+\textbf{Lema 3.4.} Sea $f:X\longrightarrow Y$ un morfismo de esquemas cuasicompactos y cuasiseparados. Para $E\in\Ob\Mod(X)$, existe un isomorfismo funtorial canónico
+\[
+ Qf_*(E)\simeq f_*Q(E).
+\]
+
+\emph{Demostración.} Como $f$ es cuasicompacto y cuasiseparado (EGA IV 1.2.3 y 1.2.4), $f_*$ transforma haces cuasicoherentes en haces cuasicoherentes (III 1.4.10 y IV 1.7.21). Los funtores $Qf_*$ y $f_*Q$ de $\Mod(X)$ en $\Qcoh(Y)$ son ambos adjuntos a derecha del funtor $f^*:\Qcoh(Y)\longrightarrow\Mod(X)$, luego son canónicamente isomorfos.
+

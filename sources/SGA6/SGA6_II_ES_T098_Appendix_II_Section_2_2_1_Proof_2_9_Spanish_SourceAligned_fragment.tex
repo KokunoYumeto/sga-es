@@ -1,0 +1,89 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, demostración de 2.2.1 y corolarios 2.3--2.9, líneas 4646--4727 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\emph{Demostración.} Reemplazando, si es necesario, $f_1$ por $af_1$, donde $a$ es una función $C^r$ sobre $U$, igual a $1$ en un entorno de $A_1$ y con soporte en $U_1$, se puede suponer que $U_1=U$. Sea $b$ una función $C^r$ sobre $U$, igual a $1$ sobre $A_0$ y con soporte en $U_0\cap(\{s\}\times U)$. Entonces
+\[
+ U'=U_0\cup(S\times(U-\operatorname{Supp}b))
+\]
+es un abierto de $S\times U$ que contiene $\{s\}\times U$. El morfismo $\bar f:U'\to S\times V$ definido por
+\[
+ \bar f(t,x)=\bigl(t,\ b(x)\pr_2f_0(t,x)+(1-b(x))f_1(x)\bigr)
+\]
+satisface evidentemente las condiciones (i) y (ii).
+
+\textbf{Corolario 2.3.} Bajo las hipótesis de (2.2), los haces $i_s^{-1}\underline{\Homop}(X,Y)$ y $\underline{\Homop}(X_s,Y_s)$ son blandos. En particular, los haces $i_s^{-1}(\cO_X)$ y $\cO_{X_s}$ son blandos\footnote{Para $\cO_{X_s}$, esto es «muy conocido». El redactor ignora si $\cO_X$ es blando cuando se verifican las hipótesis de (2.2) para cada $s\in S$ y $X$ es paracompacto. Esto implicaría trivialmente (bajo dichas hipótesis) la blandura de $i_s^{-1}(\cO_X)$, así como (2.5) más abajo.}. Para todo cerrado $A$ de $X_s$, la aplicación
+\[
+ H^0\bigl(X_s,i_s^{-1}\underline{\Homop}(X,Y)\bigr)
+ \longrightarrow
+ H^0\bigl(A,\underline{\Homop}(X_s,Y_s)\bigr)
+\]
+deducida de (2.1.1) es sobreyectiva.
+
+\emph{Demostración.} El hecho de que $i_s^{-1}\underline{\Homop}(X,Y)$ sea blando resulta de (2.2) aplicado con $A=\varnothing$; tomando $S=s$, se deduce que $\underline{\Homop}(X_s,Y_s)$ es blando. La última afirmación se deduce de (2.2).
+
+\textbf{Corolario 2.4.} Bajo las hipótesis de (2.2), sea $E$ un $\cO_X$-módulo. Para todo cerrado $A$ de $X_s$, el homomorfismo canónico
+\[
+ H^0\bigl(X_s,i_s^{-1}(E)\bigr)
+ \longrightarrow
+ H^0\bigl(A,i_s^*(E)\bigr),
+\]
+deducido del epimorfismo
+\[
+ i_s^{-1}(E)\longrightarrow i_s^*(E)
+ =i_s^{-1}(E)\otimes_{i_s^{-1}(\cO_X)}\cO_{X_s},
+\]
+es un epimorfismo.
+
+\emph{Demostración.} Como $i_s^{-1}(\cO_X)$ es blando (2.3), el funtor $H^0(A,.)$ es exacto sobre la categoría de los $i_s^{-1}(\cO_X)$-módulos (T.F. II 3.7.1, 3.4.2, 4.4.3); por tanto, el homomorfismo
+\[
+ H^0\bigl(A,i_s^{-1}(E)\bigr)
+ \longrightarrow
+ H^0\bigl(A,i_s^*(E)\bigr)
+\]
+es un epimorfismo. Como $i_s^{-1}(E)$ es blando, el homomorfismo
+\[
+ H^0\bigl(X_s,i_s^{-1}(E)\bigr)
+ \longrightarrow
+ H^0\bigl(A,i_s^{-1}(E)\bigr)
+\]
+es un epimorfismo, y se concluye.
+
+\textbf{Corolario 2.5.} Sean $p:X\to S$ una variedad mixta y $s\in S$. Se supone que $s$ admite un sistema fundamental de entornos paracompactos $S'$ tales que los $p^{-1}(S')$ formen un sistema fundamental de entornos paracompactos de $X_s$ (condición que se cumple, por ejemplo, si $S$ es localmente compacto y $p$ es una aplicación propia de espacios topológicos). Entonces, para todo $\cO_X$-módulo $E$, se tiene
+\[
+ R^i p_*(E)_s=0 \quad \text{para } i>0.
+\]
+
+\emph{Demostración.} Según (T.F. II 4.17.1), se tiene
+\[
+ R^i p_*(E)_s=H^i\bigl(X_s,i_s^{-1}(E)\bigr).
+\]
+Pero, como $i_s^{-1}(\cO_X)$ es blando (2.3), se tiene
+\[
+ H^i\bigl(X_s,i_s^{-1}(E)\bigr)=0\quad \text{para } i>0,
+\]
+de donde resulta la afirmación.
+
+\textbf{Corolario 2.6.} Sean $X,Y$ dos $S$-variedades mixtas y $s\in S$. Se supone que $X$ satisface las hipótesis de (2.5). Para todo morfismo $f:X_s\to Y_s$, existen un entorno abierto $S'$ de $s$ y un morfismo $\bar f:X|S'\longrightarrow Y|S'$ tales que $\bar f_s=f$.
+
+\emph{Demostración.} Consecuencia inmediata de (2.3) (con $A=X_s$) y del hecho de que, gracias a las hipótesis sobre $X$, se tiene
+\[
+ H^0\bigl(X_s,i_s^{-1}\underline{\Homop}(X,Y)\bigr)
+ =\varinjlim_{S'\ni s}\Homop(X|S',Y)\qquad (S'\ \text{abierto})
+\]
+(T.F. II 3.3.1).
+
+\textbf{Proposición 2.7.} Sean $X,Y$ dos $S$-variedades mixtas, $f:X\to Y$ un morfismo, $s\in S$ y $x\in X_s$. Si la aplicación lineal tangente a $f_s:X_s\to Y_s$ es invertible en $x$, entonces $f$ es un isomorfismo local en $x$, es decir, existen un entorno abierto $U$ de $x$ en $X$ y un abierto $V$ de $Y$ tales que $f$ induce un isomorfismo de $U$ sobre $V$.
+
+\emph{Demostración.} Es una consecuencia fácil del teorema de las funciones implícitas. Se dejan los detalles al lector.
+
+\textbf{Corolario 2.8.} Sean $X,Y$ dos $S$-variedades mixtas y $s\in S$. Se supone que $s$ admite un sistema fundamental de entornos $S'$ tales que los $X|S'$ (resp. $Y|S'$) formen un sistema fundamental de entornos de $X_s$ (resp. $Y_s$) (condición que se cumple, por ejemplo, si $S$ es localmente compacto y $X$ (resp. $Y$) es propio sobre $S$). Sea $f:X\to Y$ un $S$-morfismo tal que $f_s:X_s\to Y_s$ sea un isomorfismo. Existe entonces un entorno $S'$ de $s$ tal que $f|X|S':X|S'\longrightarrow Y|S'$ sea un isomorfismo.
+
+\emph{Demostración.} Según (2.7), existe un entorno abierto $U$ de $X_s$ en $X$ tal que $f|U$ sea étale (es decir, un isomorfismo local). Se puede suponer que $U=X|S'$, donde $S'$ es un entorno de $s$ en $S$; dicho de otro modo, restringiendo $S$ si es necesario, se puede suponer que $f$ es étale. Se verifica entonces fácilmente que el producto fibrado $Z=X\times_Y X$ está provisto naturalmente de una estructura de $S$-variedad mixta (étale sobre $X$ para cada proyección), y que el morfismo diagonal $\Delta:X\to Z$ es una inmersión abierta\footnote{Obsérvese la analogía con la geometría algebraica (SGA 1 I 5.1).}. Por otra parte, es inmediato que $Z$ verifica la misma hipótesis que $X$ e $Y$, a saber, que los abiertos de la forma $Z|S'$, para $S'$ entorno abierto de $s$ en $S$, forman un sistema fundamental de entornos de $Z_s$. Como $\Delta_s:X_s\to Z_s$ es un isomorfismo, resulta, restringiendo $S$ si es necesario, que $\Delta$ es un isomorfismo. Por tanto, $f$ es una inmersión abierta y, reduciendo de nuevo $S$ si es necesario, un isomorfismo; queda así probado.
+
+\textbf{Corolario 2.9.} Sean $X$ una $S$-variedad mixta y $s\in S$. Se supone verificada la hipótesis de (2.5). Existe entonces un entorno $S'$ de $s$ en $S$ tal que $X|S'$ sea $S'$-isomorfo a $S'\times X_s$.
+
+\emph{Demostración.} Aplíquense (2.6) y (2.8).

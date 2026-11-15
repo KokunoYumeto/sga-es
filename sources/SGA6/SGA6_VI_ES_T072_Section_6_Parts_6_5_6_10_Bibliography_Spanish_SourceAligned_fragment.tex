@@ -1,0 +1,98 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 6, números 6.5--6.10 y bibliografía, líneas 9640--9732 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{6.5.} Sea $X$ un esquema noetheriano de dimensión $d$, con un haz amplio $L$. Se dota a $K'(X)$ de la filtración definida como sigue (cf. [1]): $x$ pertenece a $K'(X)_i$ si y solo si, para todo cerrado $Y$ de $X$, existe un complejo perfecto $M^\bullet(Y)$ tal que:
+\[
+  \text{i) } \cl(M^\bullet(Y))=x;
+\]
+\[
+  \text{ii) } \operatorname{Codim}(\Supp(H^*(M^\bullet(Y)))\cap Y,Y)\ge i,
+  \quad\text{con } H^*(M^\bullet(Y))=\bigoplus_{\sisi{i\ge0}{i\in\mathbb Z}}H^i(M^\bullet(Y)).
+\]
+Los $K'(X)_i$ así definidos son subgrupos aditivos de $K'(X)$. En efecto, sean $x,x'\in K'(X)_i$ y, para un cerrado $Y$ dado en $X$, sean $M^\bullet$ y $M'{}^\bullet$ los complejos correspondientes; entonces $x+x'$ es la clase del complejo $M^\bullet\oplus M'{}^\bullet$, y
+\[
+\Supp(H^*(M^\bullet\oplus M'{}^\bullet))
+ =\Supp(H^*(M^\bullet)\oplus H^*(M'{}^\bullet))
+ =\Supp(H^*(M^\bullet))\cup\Supp(H^*(M'{}^\bullet));
+\]
+como la codimensión de una unión finita de cerrados es el ínfimo de las codimensiones de los cerrados, se tiene efectivamente $x+x'\in K'(X)_i$.
+
+\textbf{Proposición 6.6.} La filtración \sisi{5.5}{6.5} de $K'(X)$ es una filtración de anillo y $K'(X)_{d+1}=0$.
+
+Sean $x\in K'(X)_i$, $x'\in K'(X)_j$ y $Y$ un cerrado de $X$. Existe un complejo $M^\bullet$ tal que $x=\cl(M^\bullet)$ y $\codim(\Supp(H^*(M^\bullet))\cap Y,Y)\ge i$; existe un complejo $M'{}^\bullet$ tal que $x'=\cl(M'{}^\bullet)$, y:
+\[
+\codim\bigl(\Supp(H^*(M^\bullet))\cap\Supp(H^*(M'{}^\bullet))\cap Y,
+            \Supp(H^*(M^\bullet))\cap Y\bigr)\ge j.
+\]
+Se tiene entonces $xx'=\cl(M^\bullet\overset{\mathbf L}{\otimes}M'{}^\bullet)$, y:
+\[
+\codim\bigl(\Supp(H^*(M^\bullet))\cap\Supp(H^*(M'{}^\bullet))\cap Y,Y\bigr)\ge i+j
+\]
+(EGA $0_{\mathrm{IV}}$ 14.2.2.3). Para concluir la demostración basta, pues, observar que:
+\[
+\Supp\bigl(H^*(M^\bullet\overset{\mathbf L}{\otimes}M'{}^\bullet)\bigr)
+ \subset \Supp(H^*(M^\bullet))\cap\Supp(H^*(M'{}^\bullet)).
+\]
+Para demostrar que $K'(X)_{d+1}$ es nulo, se toma $x\in K'(X)_{d+1}$ y $Y=X$; existe entonces $M^\bullet$ tal que $x=\cl(M^\bullet)$ y $\codim_X(\Supp(H^*(M^\bullet)))\ge d+1$; como $X$ tiene dimensión $d$, esto implica que $\Supp(H^*(M^\bullet))=\varnothing$, luego $M^\bullet$ es acíclico y $x=0$.
+
+\textbf{Lema 6.7.} Sea $X=\Spec(A)$ un esquema afín noetheriano, sean $x_1,\ldots,x_k$ un número finito de puntos de $X$ y $E$ un $\mathcal O_X$-módulo invertible. Entonces existe una sección $s\in\Gamma(X,E)$ tal que, para todo $i$, $s_{x_i}$ sea una base de $E_{x_i}$.
+
+Pongamos $M=\Gamma(X,E)$. Para todo $i$, sea $x'_i$ un punto cerrado de $X$ tal que $x'_i\in\sisi{\{x_i\}}{\overline{\{x_i\}}}$. Los $x'_i$ corresponden a ideales maximales $\mathfrak m_i$ de $A$, que podemos suponer todos distintos, cambiando si es preciso el conjunto de índices de modo que cada $\mathfrak m_i$ aparezca una vez y solo una en la familia $(\mathfrak m_i)$. Como $E$ es invertible, para todo $i$ se tiene un isomorfismo $M_{\mathfrak m_i}\simeq A_{\mathfrak m_i}$; de aquí se deduce un isomorfismo $M/\mathfrak m_iM\simeq A/\mathfrak m_i$, luego $\prod_i M/\mathfrak m_iM\simeq\prod_i A/\mathfrak m_i$, o también $A/\prod_i\mathfrak m_i\simeq M/(\prod_i\mathfrak m_i)M$. Al levantar este último isomorfismo se obtiene un homomorfismo $A\to M$ tal que el homomorfismo correspondiente $A_{\mathfrak m_i}\to M_{\mathfrak m_i}$ sea, para todo $i$, un isomorfismo módulo $\mathfrak m_i$, y por tanto un isomorfismo por el lema de Nakayama. La imagen de $1$ por este homomorfismo proporciona, pues, una sección $s$ de $E$ que es una base de $E_{x'_i}$ para todo $i$. Como el conjunto de los puntos donde $s$ es una base de $E$ es un abierto de $X$, $s$ es también una base de $E_{x_i}$ para $i=1,\ldots,k$.
+
+\textbf{Lema 6.8.} Sean $X$ un esquema noetheriano con un haz amplio $L$, $E$ un $\mathcal O_X$-módulo invertible y $x_1,\ldots,x_k$ puntos de $X$. Entonces existe un entero $n$ tal que, para todo $\sisi{k}{q}\ge1$, existe una sección $s\in\Gamma(X,E(\sisi{k}{q}n))$ que es una base de $E(\sisi{k}{q}n)_{x_i}$ para todo $i$.
+
+Se pueden encontrar un entero $n_0$ y una sección $f\in\Gamma(X,L^{\otimes n_0})$ tales que, para todo $i$, $x_i\in X_f$ y $X_f$ sea un abierto afín (EGA II 4.5.4). Sobre $X_f$ se puede encontrar una sección $t\in\Gamma(X_f,E)$ que satisface las condiciones del lema 6.7; además, existe un entero $n'_0$ tal que la sección $f^{\otimes n'_0}\otimes t\in\Gamma(X_f,E(n_0n'_0))$ se prolonga a todo $X$. Pongamos $n=n_0n'_0$; entonces $f^{\otimes n'_0}\in\Gamma(X,L^n)$; tomando el producto tensorial de la sección de $E(n)$ obtenida anteriormente y de $f^{\otimes \sisi{k}{q}n'_0}$, se obtiene una sección de $E((\sisi{k}{q}+1)n)$ para todo $\sisi{k}{q}\ge0$. Como, para todo $p$, $X_{f^{\otimes p}}=X_f$, y la sección $t$ es una base de $E_{x_i}$ para todo $i$, cada una de las secciones de $E(\sisi{k}{q}n)$ así construidas para todo $\sisi{k}{q}\ge1$ es una base de $E(\sisi{k}{q}n)_{x_i}$ para todo $i$.
+
+\textbf{Teorema 6.9.} Sea $X$ un esquema noetheriano de dimensión $d$, con un haz amplio $L$. Entonces $\Fil^{d+1}K'(X)=0$ y, a fortiori, $(\Fil^1K'(X))^{d+1}=0$.
+
+(Esta última relación se debe a J.P. Serre en el caso general considerado aquí).
+
+Vamos a demostrar primero que, si $E,E'$ son dos haces invertibles sobre $X$, de clases $E,E'$, entonces $E-E'\in K'(X)_1$.
+
+Sea $Y$ un cerrado de $X$, sean $Y_1,\ldots,Y_k$ sus componentes irreducibles y, para todo $i$, sea $x_i$ un punto de $Y_i-\bigcup_{j\ne i}Y_j$. Según el lema 6.8, existen enteros $n,n'$ tales que, cualesquiera que sean los enteros $\sisi{k}{q},\sisi{k'}{q'}\ge1$, se pueden encontrar homomorfismos de $\mathcal O_X$ en $E(\sisi{k}{q}n)$, $E'(\sisi{k'}{q'}n')$ que son isomorfismos en los puntos $x_i$; se obtienen, pues, morfismos:
+\[
+  L^{\otimes -\sisi{k}{q}n}\xrightarrow{\sisi{s_k}{s_q}} E,
+  \qquad
+  L^{\otimes -\sisi{k'}{q'}n'}\xrightarrow{s'_{\sisi{k'}{q'}}} E',
+\]
+que son isomorfismos en los puntos $x_i$. Consideremos entonces el complejo:
+\[
+  N^\bullet=\ldots\to0\to L^{\otimes -nn'}
+    \xrightarrow{(s'_n,0)} E'\oplus L^{\otimes -nn'}
+    \xrightarrow{0+s_{n'}} E\to0\to\ldots
+\]
+La clase de $N^\bullet$ es $E-E'$; por otra parte, $N^\bullet$ es acíclico en los puntos $x_i$, de modo que $\Supp(H^*(N^\bullet))\cap Y$ no contiene ninguna componente irreducible de $Y$ y, por consiguiente, tiene codimensión $\ge1$ en $Y$; esto demuestra que $E-E'$ pertenece a $K'(X)_1$.
+
+Sea ahora $x$ un elemento de $\Fil^{d+1}K'(X)$; vamos a demostrar que $x=0$. Podemos suponer que $x$ se escribe:
+\[
+  x=\gamma^{i_1}(E_1-F_1)\ldots\gamma^{i_k}(E_k-F_k),
+  \qquad\text{con } i_1+\cdots+i_k\ge d+1,
+\]
+siendo los $E_i,F_i$ las clases de haces localmente libres de tipo finito y teniendo, para todo $i$, $E_i$ y $F_i$ el mismo rango. Además, descomponiendo si es preciso $X$ en una suma de un número finito de abiertos y razonando en cada abierto, podemos suponer que los $E_i,F_i$ tienen rango constante. Sea entonces $X'$ el producto fibrado sobre $X$ de los esquemas de banderas de los $E_i,F_i$. En $K'(X')$, las imágenes de los $E_i,F_i$ son sumas de clases de haces invertibles. Sean $\xi,\eta$ las clases de dos $\mathcal O_{X'}$-módulos invertibles; se tiene:
+\[
+  \gamma_t(\xi-\eta)=\gamma_t(\xi-1)/\gamma_t(\eta-1)
+  =(1+(\xi-1)t)/(1+(\eta-1)t).
+\]
+Por tanto, $\gamma^i(\xi-\eta)=(-1)^{i-1}(\xi-\eta)(\eta-1)^{i-1}$. Ahora bien, $X'$ es noetheriano y tiene un haz amplio; luego, por lo anterior y por 6.6, $\gamma^i(\xi-\eta)\in K'(X')_i$. Utilizando la aditividad de $\gamma_t$ y 6.6, se deduce que $f^*(\gamma^{i_j}(E_j-F_j))\in K'(X')_{i_j}$ y $f^*(x)\in K'(X')_{d+1}$, siendo $f$ el morfismo canónico $X'\to X$.
+
+Vamos a deducir que $f^*(x)=0$. Sea $r$ la dimensión relativa de $X'$ sobre $X$. Existe un elemento $x'$ de $K'(X')$, perteneciente a una base de $K'(X')$ sobre $K'(X)$, tal que:
+\[
+  x'=\prod_{i=\sisi{0}{1}}^{r}(\xi_i-1),
+\]
+siendo los $\xi_i$ las clases de haces invertibles: para demostrarlo, nos reducimos mediante el razonamiento de 3.1 al caso de un fibrado proyectivo sobre $X$. Ahora bien, este último caso es consecuencia inmediata de 1.13. El elemento $x'$ considerado pertenece a $K'(X')_r$ por lo anterior y, por consiguiente, $x'f^*(x)\in K'(X')_{d+r+1}$. Pero $\dim X'=d+r$; luego, por 6.6, $x'f^*(x)=0$. Como $x'$ forma parte de una base de $K'(X')$ sobre $K'(X)$, esto implica que $f^*(x)=0$. Como $f^*$ es inyectivo (3.1), se tiene finalmente $x=0$.
+
+\textbf{Problema 6.10.} Bajo las hipótesis de 6.9, ¿es cierto que para todo $k$ se tiene $\Fil^kK^{\bullet}(X)\subset K'(X)_k$?
+
+\subsection*{Bibliografía de la Exposición VI}
+\begin{enumerate}[label={\textup{[\arabic*]}}]
+\item Bass H., K-Theory and stable algebra, Publ. Math. de l'IHES, n°22.
+\item Chevalley C., Séminaire 1958: Anneaux de Chow et applications.
+\item Hakim M., Topos localement annelés et schémas relatifs, tesis (en preparación).
+\item Hartshorne R., Residues and duality, \sisi{Lectures notes}{Lecture Notes} in Mathematics n°20, Springer-Verlag.
+\item Serre J.-P., Le groupe de Grothendieck des schémas en groupes réductifs, Publications Mathématiques de l'IHES, n°34.
+\end{enumerate}
+

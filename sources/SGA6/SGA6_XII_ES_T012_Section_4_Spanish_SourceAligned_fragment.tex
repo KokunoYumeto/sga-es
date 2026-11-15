@@ -1,0 +1,242 @@
+% SGA 6, Exposición XII: fragmento español alineado con la fuente.
+% Alcance: sección 4 completa, líneas francesas 14469--14577.
+% Las lecturas fuente manifiestamente defectuosas se conservan como primer
+% argumento de \sisi; la lectura coherente usada por la edición es la segunda.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{4. Demostración de II*: la parte más delicada de la demostración}
+
+Recordemos la afirmación II*: el teorema 1.1 cuando $X$ e $Y$ son íntegros
+sobre $S$ y la sucesión (*)
+$\mathcal O_Y\longrightarrow f_*\mathcal O_X\rightrightarrows
+g_*(\mathcal O_{X\times_YX})$ es exacta. Aplicando el teorema de planitud
+genérica EGA IV 6.9.1 y EGA III 7.8.8, se reduce la cuestión a demostrar la
+siguiente proposición.
+
+\textbf{Proposición 4.1.} Sean $S$ un esquema noetheriano íntegro,
+$\lambda:X\to S$ y $\mu:Y\to S$ morfismos propios de presentación finita,
+$f:X\to Y$ un $S$-morfismo sobreyectivo y
+$g:X\times_YX\to Y$ el morfismo canónico. Se supone que:
+\begin{enumerate}[label=\arabic*)]
+\item $X,Y,X\times_YX$ son planos sobre $S$.
+\item $\lambda_*\mathcal O_X=\mathcal O_S$ y
+$\mu_*\mathcal O_Y=\mathcal O_S$ universalmente.
+\item Para $i,j\geq0$, $R^if_*\mathcal O_X$ y
+$R^jg_*\mathcal O_{X\times_YX}$ son planos sobre $S$.
+\item La sucesión
+\begin{equation}\tag{*}
+\mathcal O_Y\longrightarrow f_*\mathcal O_X
+\mathrel{\substack{\xrightarrow{\pi_1}\\[-0.7ex]\xrightarrow[\pi_2]{}}}
+g_*\mathcal O_{X\times_YX}
+\end{equation}
+es exacta y $\coker(\pi_1-\pi_2)$ es un $\mathcal O_Y$-módulo plano sobre
+$S$.
+\end{enumerate}
+Entonces
+$f^*:\Pic_{Y/S}\longrightarrow\Pic_{X/S}$ es representable por un
+morfismo cuasi-afín de presentación finita.
+
+En efecto, observemos primero que 1)--4) son estables por todo cambio de base
+$T\to S$. Solo la estabilidad de 3) y 4) no es evidente. Pero, según la
+fórmula de Künneth (EGA III 6.9.9), 1) y 3) implican que la formación de los
+$R^if_*(\mathcal O_X)$ y $R^ig_*(\mathcal O_{X\times_YX})$ conmuta con los
+cambios de base $T\to S$, lo que implica inmediatamente la estabilidad de
+las condiciones 3). Además, la formación del conúcleo de
+$\pi_1-\pi_2:f_*\mathcal O_X\longrightarrow
+g_*\mathcal O_{X\times_YX}$ conmuta también con los cambios de base; como
+es plano sobre $S$ (por 4)), $\im(\pi_1-\pi_2)$ es plano sobre $S$ y
+conmuta con los cambios de base. Por consiguiente,
+$\Ker(\pi_1-\pi_2)$ conmuta con los cambios de base $T\to S$ y es, por
+tanto, igual a $\mathcal O_Y$ universalmente.
+
+La estabilidad de las hipótesis implica dos cosas. a) Como la afirmación
+que se ha de demostrar es local para la topología f.p.p.f., por descenso se
+puede suponer que $X$ posee una sección $\alpha$; entonces $Y$ posee la
+sección $\beta=f\circ\alpha$. b) Para establecer la afirmación basta
+considerar un $S$-punto de $\Pic_{X/S}$, es decir, según a) y 2), un haz
+invertible $L$ sobre $X$ provisto de una rigidificación $u$ respecto de
+$\alpha$, y demostrar que el haz f.p.p.f. $Z$, imagen inversa de este punto
+en $\Pic_{Y/S}$, es representable por un $S$-esquema cuasi-afín de
+presentación finita sobre $S$.
+
+\textbf{Lema 4.2.} Bajo las condiciones de 4.1, $f$ es un morfismo de
+descenso para la categoría de haces localmente libres; es decir, para todo
+par $L,M$ de haces localmente libres sobre $Y$, el diagrama
+\[
+\begin{tikzcd}[column sep=tiny]
+\Hom_Y(L,M) \arrow[r] &
+\Hom_X(f^*L,f^*M) \arrow[r,shift left=.7ex] \arrow[r,shift right=.7ex] &
+\Hom_{X\times_YX}(g^*L,g^*M)
+\end{tikzcd}
+\]
+es exacto.
+
+En efecto, si $N=\underline{\Hom}_{\mathcal O_Y}(L,M)$, se debe demostrar que la
+sucesión
+\[
+\sisi{\Gamma\ Y,N)}{\Gamma(Y,N)}\longrightarrow\Gamma(X,f^*N)
+\rightrightarrows
+\Gamma(X\times_YX,g^*N)
+\]
+es exacta o bien (según EGA $0_{\mathrm I}$ 5.4.10.1) que la sucesión
+\[
+\Gamma(Y,N)\longrightarrow
+\Gamma(Y,f_*\mathcal O_X\otimes_{\mathcal O_Y}N)
+\rightrightarrows
+\Gamma(Y,g_*\mathcal O_{X\times_YX}\otimes_{\mathcal O_Y}N)
+\]
+es exacta. Pero la sucesión (*)
+$\mathcal O_Y\to f_*\mathcal O_X\rightrightarrows
+g_*\mathcal O_{X\times_YX}$ es exacta por hipótesis; de aquí resulta el
+lema al aplicarle el funtor $\Gamma(N\otimes -)$, que es exacto por la
+izquierda, pues $N$ es plano sobre $Y$.
+
+Sea $L$ un haz invertible sobre $X$ provisto de una rigidificación $u$
+respecto de $\alpha$. Según 4.2, se tiene una equivalencia entre la categoría
+$C$ de los pares $(M,\varphi)$ formados por un haz invertible $M$ sobre $Y$
+y un isomorfismo $\varphi:f^*M\xrightarrow{\sim}L$, y la categoría
+$\mathrm{Deff}(S)$ de los datos de descenso efectivos sobre $L$ respecto de
+$f$. Pero, si $f^*M\simeq L$, como $L$ está rigidificado respecto de
+$\alpha$, $M$ queda provisto canónicamente de una rigidificación respecto de
+$\beta$. Por consiguiente, $C$ es equivalente a la categoría discreta
+definida por el conjunto de clases de haces invertibles $\beta$-rigidificados
+$(M,v)$ sobre $Y$ tales que $f^*(M,v)\simeq(L,u)$. Este es precisamente el
+conjunto $Z(S)$ de los $S$-puntos de la imagen inversa, en $\Pic_{Y/S}$, del
+$S$-punto de $\Pic_{X/S}$ definido por $(L,u)$. Además, esta descripción de
+$Z(S)$ es funtorial en $S$. Por tanto, $Z$ se identifica con el funtor
+$\mathrm{Deff}$, y en lo sucesivo se pueden omitir las rigidificaciones.
+
+Existe un monomorfismo canónico de $\mathrm{Deff}$ en el funtor
+$\mathrm{Rec}$ de los datos de pegado sobre $f^*L$. Por definición,
+$\mathrm{Rec}$ es igual al funtor $\Isom(p_1^*L,p_2^*L)$, donde
+$p_i:X\times_YX\to X$ son las proyecciones; según 2.4, este funtor está
+representado por un esquema afín $I$ de presentación finita sobre $S$.
+Queda, por tanto, representar el monomorfismo
+\[
+i:\mathrm{Deff}\hookrightarrow \underline{\Isom}(p_1^*L,p_2^*L)
+\]
+por un morfismo de presentación finita, que será necesariamente cuasi-afín
+(según EGA IV 8.11.2).
+
+Observemos de paso que, si se desea, se puede restringir
+$\Isom(p_1^*L,p_2^*L)$ imponiendo la condición de cociclo, pero esto no es
+indispensable para lo que sigue.
+
+Después del cambio de base $I\to S$, la cuestión se reduce al problema
+siguiente: si $L$ es un haz invertible sobre $X$ provisto de un dato de
+pegado $\varphi:p_1^*L\xrightarrow{\sim}p_2^*L$, representar el subfuntor de
+$S$ «que hace efectivo este dato». Pero se tiene el siguiente lema.
+
+\textbf{Lema 4.3.} Bajo las condiciones de 4.1, sea $L$ un haz invertible
+sobre $X$ provisto de un dato de pegado
+\[
+\varphi:p_1^*L\xrightarrow{\sim}p_2^*L.
+\]
+Para que este dato sea efectivo, es necesario y suficiente que se cumplan
+las cinco condiciones siguientes.
+\begin{enumerate}[label=\arabic*)]
+\item Para todo $i\geq0$, $R^if_*(L)$ es plano sobre $S$.
+\item Para todo $j\geq0$, $R^jg_*(p_1^*L)$ es plano sobre $S$.
+\item El conúcleo de
+$\pi_1-\pi_2:f_*(L)\longrightarrow
+g_*(p_1^*L)\simeq g_*(p_2^*(L))$ es plano sobre $S$ (donde el último
+isomorfismo es $g_*(\varphi)$).
+\item El núcleo $N$ de
+$\pi_1-\pi_2:f_*(L)\to g_*(p_1^*L)$ es invertible sobre $Y$.
+\item El morfismo compuesto $f^*N\to f^*f_*L\to L$ es un isomorfismo.
+\end{enumerate}
+En efecto, estas condiciones son suficientes, pues 4) y 5) ya implican la
+efectividad. Recíprocamente, sea $M$ invertible sobre $Y$ tal que exista un
+isomorfismo $f^*M\simeq L$ compatible con el dato de pegado. Se puede cubrir
+$Y$ por abiertos $V$ sobre los cuales $M$ es isomorfo a $\mathcal O_Y$; por
+tanto, el dato de descenso sobre $L$, restringido sobre
+$V=f^{-1}(V)$, es isomorfo al dato de descenso trivial sobre
+$\mathcal O_X|V$. Finalmente, las condiciones 1)--5) son de naturaleza
+local sobre $Y$ y se verifican, por las hipótesis de 4.1, para
+$L=\mathcal O_X$; se verifican, pues, para $L$.
+
+Queda representar sucesivamente cada una de las condiciones 1) a 5) por
+monomorfismos de presentación finita. Para 1) y 2), se aplica el lema
+siguiente.
+
+\textbf{Lema 4.4.} Sean $S$ un esquema,
+$\lambda:X\to S$ y $\mu:Y\to S$ morfismos propios de presentación finita,
+$f:X\to Y$ un $S$-morfismo. Sea $F$ un haz sobre $X$ de presentación finita
+y plano sobre $S$ y, para un entero $n$, sea $S_n$ el subfuntor de $S$ que
+hace $R^if_*(F)$ plano sobre $S$ para todo $i\geq n$ (precisamente,
+$S_n(T)=\{\varnothing\}$ si
+$R^{\sisi{1}{i}}(f_T)_*(F_T)$ es plano para todo $i\geq n$, y
+$S_n(T)=\varnothing$ en caso contrario). Entonces
+$S_n\hookrightarrow S$ es representable por un monomorfismo sobreyectivo de
+presentación finita, y, para $i\geq n$, los
+$R^i(f_{S_n})_*(F_{S_n})$ conmutan con los cambios de base $T\to S_n$.
+Además, $S_n$ coincide con el funtor $S'_n$ que hace exactos los funtores
+\[
+M\longmapsto R^i(f_V)_*(F_V\otimes\lambda_V^*M)
+\qquad\text{para }i\geq n,
+\]
+donde $M$ recorre los $\mathcal O_V$-módulos cuasicoherentes para todo
+abierto afín $V$ de $S$.
+
+En efecto, la afirmación es local sobre $S$; se puede suponer, por tanto,
+que $S$ es cuasicompacto. Entonces la dimensión relativa de $X/Y$ está
+acotada, digamos por $r$, y para $n>r$,
+$R^nf_*(F_V\otimes\lambda_V^*M)=0$. La afirmación es, pues, cierta para
+$n>r$. Procediendo por recurrencia descendente, supongamos que es conocida
+para $n+1$. Tras reemplazar $S$ por $S_{n+1}=S'_{n+1}$, se puede suponer que
+$R^{\sisi{n}{i}}f_*(F)$ es plano sobre $S$ para $i\geq n+1$. Como $F$ es
+plano sobre $S$, resulta entonces de EGA III 6.9.8 que $R^nf_*(F)$ conmuta
+con todo cambio de base. Por consiguiente, la representabilidad de $S_n$
+resulta del lema siguiente (véase J.P. Murre, \emph{Representation of
+unramified functors}, Séminaire Bourbaki, mayo de 1965, p.294-11, th.2):
+
+\textbf{Lema 4.5.} Sean $X\to S$ un morfismo propio de presentación finita
+y $F$ un haz de presentación finita sobre $X$. Entonces el subfuntor $S_F$
+de $S$ que hace $F$ plano sobre $S$ es representable por un monomorfismo
+sobreyectivo de presentación finita (que, naturalmente, no es una inmersión
+en general).
+
+Para representar la condición 3) de 4.3, se observa que, según 1) y 2),
+$f_*(L)$ y $g_*(p_1^*L)$ conmutan con los cambios de base $I\to S$, y por
+tanto $\operatorname{coker}(\pi_1-\pi_2)$ también conmuta con ellos; a
+continuación se aplica 4.5.
+
+Para representar 4), se observa que, según 3) y el hecho de que $f_*(L)$ y
+$g_*(p_1^*L)$ son planos y conmutan con los cambios de base,
+$N=\ker(\pi_1-\pi_2)$ también conmuta con ellos; a continuación se aplica el
+lema siguiente.
+
+\textbf{Lema 4.6.} Sean $\lambda:X\to S$ un morfismo propio de presentación
+finita y $u:F\to G$ un homomorfismo de
+$\sisi{\mathcal O_Y}{\mathcal O_X}$-módulos de presentación finita, con $G$
+plano sobre $S$. Entonces el subfuntor $S_1$ de $S$ que hace de $u$ un
+isomorfismo es representable por un subesquema abierto de $S$, de
+presentación finita.
+
+Se reduce la cuestión, como de costumbre, al caso en que $S$ es
+noetheriano, utilizando EGA IV 8 y 11.2.6, lo que evita tener que ocuparse de
+la presentación finita. Representemos primero el funtor que hace de $u$ un
+epimorfismo, es decir, que anula $\operatorname{Coker}u$. Como la formación
+de $\operatorname{Coker}u$ conmuta con el cambio de base, se ve que está
+representado por el abierto
+$S-\lambda(\operatorname{supp}(\operatorname{Coker}u))$ de $S$. Se puede
+suponer entonces que $u$ ya es un epimorfismo. Utilizando ahora la hipótesis
+de que $G$ es plano sobre $S$, se obtiene que la formación de
+$\operatorname{Ker}u$ conmuta con el cambio de base; por consiguiente, el
+funtor considerado está representado por el abierto
+$S-\lambda(\operatorname{supp}(\operatorname{Ker}u))$ de $S$.
+
+% Macros locales de la Exposición XIII
+\providecommand{\Ass}{\operatorname{Ass}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\NS}{\operatorname{NS}}
+\providecommand{\Tors}{\operatorname{Tors}}
+\providecommand{\Picnum}{\operatorname{Pic}^{\mathrm{num}}}
+\providecommand{\Piczero}{\operatorname{Pic}^{0}}
+\providecommand{\Pictau}{\operatorname{Pic}^{\tau}}
+\providecommand{\length}{\operatorname{length}}
+\providecommand{\etale}{\text{\'etale}}
+

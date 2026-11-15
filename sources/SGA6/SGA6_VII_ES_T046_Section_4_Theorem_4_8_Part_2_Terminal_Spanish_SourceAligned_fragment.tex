@@ -1,0 +1,94 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: final de 4.8, 4.9--4.11 y bibliografía, líneas 11010--11096 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+Supongamos ahora que \(X\) es noetheriano e \(Y\) regular, lo que implica que \(v\) es sobreyectivo (3.7). Se vio en la demostración de 3.7 que, para todo \(x'\in K^\circ(X')\), existe \(y'\in K^\circ(Y')\) tal que:
+\[
+  x'=f^*(f_*(x'))+j_*(y').
+\]
+La misma propiedad sigue siendo evidentemente verdadera después de tensorizar por \(\mathbb Q\). Por consiguiente, si \(x'\in\Fil^kK^\circ(X')_{\mathbb Q}\), existen \((y',x)\in K^\circ(Y')_{\mathbb Q}\times K^\circ(X)_{\mathbb Q}\) tales que:
+\[
+  x'=v(y',x),\qquad x\in\Fil^kK^\circ(X)_{\mathbb Q}.
+\]
+En efecto, basta tomar \(x=f_*(x')\).
+
+Se filtra el anillo \(K^\circ(Y')_{\mathbb Q}\times K^\circ(X)_{\mathbb Q}\) definido en 4.7 poniendo:
+\[
+  \Fil^k\bigl(K^\circ(Y')_{\mathbb Q}\times K^\circ(X)_{\mathbb Q}\bigr)
+  =
+  \Fil^{k-1}K^\circ(Y')_{\mathbb Q}\times \Fil^kK^\circ(X)_{\mathbb Q}.
+\]
+De (4.7.1) resulta inmediatamente que esta es una filtración de anillo. Para mostrar que, para todo \(k\), el homomorfismo
+\[
+  \Fil^k\bigl(K^\circ(Y')_{\mathbb Q}\times K^\circ(X)_{\mathbb Q}\bigr)
+  \longrightarrow
+  \Fil^kK^\circ(X')_{\mathbb Q}
+\]
+es sobreyectivo, basta mostrar que, si \(x'= \gamma^k(x'_1)\), con \(\epsilon(x'_1)=0\), existe \((y',x)\in\Fil^k(K^\circ(Y')_{\mathbb Q}\times K^\circ(X)_{\mathbb Q})\) tal que \(x'=v(y',x)\).
+
+Ahora bien, por lo que precede, existe \((y'_1,x_1)\in K^\circ(Y')_{\mathbb Q}\times K^\circ(X)_{\mathbb Q}\) tal que \(x'_1=v(y'_1,x_1)\) y \(x_1\in\Fil^1K^\circ(X)_{\mathbb Q}\). Según 4.7, se tiene entonces:
+\[
+  x'=v\bigl(\gamma^k_*(y'_1,x_1)\bigr).
+\]
+Ahora bien:
+\[
+  \gamma^k_*(y'_1,x_1)
+  =
+  \left(\sum_{p=1}^{k}\gamma^{k-p}(x_1)\gamma^p(L,y'_1),\;
+  \gamma^k(x_1)\right),
+\]
+(consecuencia inmediata de (4.7.2)). Como \(x_1\) tiene aumentación nula, \(\gamma^k(x_1)\in\Fil^kK^\circ(X)_{\mathbb Q}\), y teniendo en cuenta V 5.7,
+\[
+  \sum_{p=1}^{k}\gamma^{k-p}(x_1)\gamma^p(L,y'_1)
+  \in\Fil^{k-1}K^\circ(Y')_{\mathbb Q},
+\]
+de donde resulta el enunciado.
+
+\textbf{Observación 4.9.} En el caso en que \(X\) es noetheriano e \(Y\) regular, se puede, procediendo como en 4.7, describir la estructura de anillo graduado de \(\operatorname{Gr}^*K^\circ(X')_{\mathbb Q}\) en términos de los anillos graduados \(\operatorname{Gr}^*K^\circ(X)_{\mathbb Q}\), \(\operatorname{Gr}^*K^\circ(Y)_{\mathbb Q}\), de los homomorfismos aditivos \(i^{\gr}\) e \(i_{\gr}\) deducidos de \(i^*\) e \(i_*\), y del elemento \(c^{\bullet}(N)\) de \(\operatorname{Gr}^*K^\circ(Y)\). Del mismo modo, a partir de los mismos datos se pueden describir los homomorfismos \(f^{\gr},f_{\gr},j^{\gr},j_{\gr}\) definidos a partir de \(f^*,f_*,j^*,j_*\) por paso a los graduados asociados.
+
+\subsection*{4.10}
+
+Sea \(X\) un esquema regular que posee un haz amplio. Se sabe (IV\qquad) que los grupos de Grothendieck formados con los \(\mathcal O_X\)-módulos localmente libres de tipo finito, y con los \(\mathcal O_X\)-módulos coherentes, son isomorfos. Se utiliza este hecho para definir sobre \(K^\circ(X)\) una filtración «topológica», tomando como \(\Fil^i_{\mathrm{top}}K^\circ(X)\) el subgrupo engendrado por las clases de los haces coherentes cuyo soporte es de codimensión \(\ge i\); se muestra fácilmente que \(\Fil^i_{\mathrm{top}}K^\circ(X)\) está engendrado por las clases de los haces \(\mathcal O_Z\), donde \(Z\) recorre el conjunto de los subesquemas cerrados íntegros de \(X\), de codimensión \(\ge i\)(X\qquad).
+
+\textbf{Proposición 4.11.} Sea \(X\) un esquema regular que posee un haz amplio. Entonces, para todo \(k\ge0\):
+\[
+  \Fil_{\mathrm{top}}^kK^\circ(X)_{\mathbb Q}
+  \subset
+  \Fil_\lambda^kK^\circ(X)_{\mathbb Q}.
+\]
+\((\mathrm{N.B.}\) La inclusión inversa, válida sin tensorizar por \(\mathbb Q\), se demostrará en X\qquad).
+
+Según 4.10, basta mostrar que, si \(Z\) es un subesquema cerrado íntegro de \(X\), de codimensión \(k\), entonces:
+\[
+  \operatorname{cl}(\mathcal O_Z)\in\Fil^kK^\circ(X)_{\mathbb Q}.
+\]
+Para ello, se procede por inducción noetheriana sobre los subesquemas cerrados íntegros de \(X\). Supongamos, pues, que la propiedad está demostrada para los subesquemas cerrados íntegros de \(Z\), y demostrémosla para \(Z\). Sea \(J\) el ideal de \(\mathcal O_X\) que define \(Z\), y sea \(z\) el punto genérico de \(Z\). Como \(Z\) es íntegro, \(J_z\) es el ideal maximal de \(\mathcal O_{X,z}\), y, puesto que \(X\) es regular, \(J_z\) puede estar engendrado por una sucesión \(\mathcal O_{X,z}\)-regular. Se puede, pues, encontrar una sucesión de secciones de \(J\) en un entorno de \(z\), que forme una sucesión \(\mathcal O_X\)-regular. Por consiguiente, existe un entorno abierto \(U\) de \(z\), tal que \(Z'=X-U\) esté contenido en \(Z\), y que \(J|U\) sea un ideal regular de \(\mathcal O_U\). La inmersión \(Z\cap U\xrightarrow{i}U\) es entonces una inmersión regular, cuya codimensión es \(\dim(\mathcal O_{X,z})=\codim(Z,X)\) (EGA IV 5.1.2). Por otra parte, se tiene la sucesión exacta (IV\qquad):
+\[
+  K^\circ(Z')\xrightarrow{j_*}K^\circ(X)
+  \xrightarrow{u^*}K^\circ(U)\to0,
+\]
+donde \(j\) es la inmersión \(Z'\to X\) y \(u\) la inmersión \(U\to X\); se obtiene una sucesión análoga después de tensorizar por \(\mathbb Q\). Ahora bien, \(u^*(\mathcal O_Z)=i_*(\mathcal O_{Z\cap U})\), y según 4.6, la imagen \(u^*(1_Z)\) de la clase de \(\mathcal O_Z\) por \(u^*\) pertenece, por tanto, a \(\Fil^kK^\circ(U)_{\mathbb Q}\). Como \(u^*\) es un \(\lambda\)-homomorfismo sobreyectivo, induce una sobreyección
+\[
+  \Fil^kK^\circ(X)\longrightarrow \Fil^kK^\circ(U),
+\]
+de modo que \(u^*(1_Z)=u^*(x)\), con \(x\in\Fil^kK^\circ(X)\); existe, pues, \(y\in j_*(K^\circ(Z'))\) tal que:
+\[
+  \operatorname{cl}(\mathcal O_Z)-y\in\Fil^kK^\circ(X)_{\mathbb Q}.
+\]
+Ahora bien, \(Z'\subset Z\), y como \(z\notin Z'\), \(\codim(Z',X)>k\). Por consiguiente, \(\sisi{x}{y}\) se puede expresar como combinación de clases de haces \(\mathcal O_{Z''_\alpha}\), donde los \(Z''_\alpha\) son subesquemas cerrados íntegros de \(Z\), distintos de \(Z\). Según la hipótesis de inducción, \(\sisi{x}{y}\in\Fil^{k+1}K^\circ(X)_{\mathbb Q}\), lo que concluye la demostración.
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item Cartan--Eilenberg, \emph{Homological Algebra}.
+\end{enumerate}
+
+
+
+% Adiciones de macros de la Exposición VIII
+\providecommand{\etale}{\'etale}
+\providecommand{\Ch}{\operatorname{Ch}}
+
+

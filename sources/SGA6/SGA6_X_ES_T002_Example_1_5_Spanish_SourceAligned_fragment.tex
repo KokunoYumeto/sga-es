@@ -1,0 +1,63 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance: Ejemplo 1.5 completo, inmediatamente antes de la subsección 1.6.
+% Fuente francesa corregida: sga6/split_r2/corr/main.tex, líneas 12631--12670.
+% SHA-256 de la fuente completa: 5D841302BF42D65817A80CC3754987AE3798A3E0D0DA2207177BE9A4C21B24AF.
+% Control diplomático: el bloque correspondiente de orig/main.tex es idéntico.
+% Integración: requiere tikz-cd y las macros \codim, \dimdot y \degtr.
+
+\textbf{Ejemplo 1.5.} Sea $S$ un esquema localmente noetheriano
+universalmente catenario (por ejemplo, un subesquema de un esquema de
+Cohen--Macaulay). Definamos
+\begin{equation}\tag{1.5.1}
+D_S(x)=n-\codim(\overline{\{x\}},S)=n-\dimdot\mathcal O_{S,x}\qquad(x\in S),
+\end{equation}
+y, para todo $S$-esquema propio $s_Y:Y\to S$ y todo $y\in Y$, definamos
+también
+\begin{equation}\tag{1.5.2}
+D_Y(y)=D_S(s_Y(y))+\degtr_{k(s_Y(y))}k(y).
+\end{equation}
+Si $f:Y_1\to Y_2$ es un $S$-morfismo de $S$-esquemas propios, la aditividad
+de los grados de trascendencia y (1.5.2) dan inmediatamente
+\begin{equation}\tag{1.5.3}
+D_{Y_1}(y)=D_{Y_2}(f(y))+\degtr_{k(f(y))}k(y),\qquad(y\in Y_1).
+\end{equation}
+Mostremos que las funciones $D_Y$ así definidas satisfacen las condiciones
+(i)--(iv) de 1.4. En virtud de (1.5.3), la condición (ii) es la única no
+trivial. Gracias a (iv), podemos suponer evidentemente que
+$Y=\overline{\{x\}}$. Factorizamos entonces el morfismo estructural $s_Y$ de
+$Y$ a través de su imagen $s_Y(Y)=Z\hookrightarrow S$; es decir,
+$s_Y=g\circ f$:
+\[
+\begin{tikzcd}
+Y \arrow[r,"f"] & Z \arrow[r,hook,"g"] & S,
+\end{tikzcd}
+\]
+donde $Y$ y $Z$ son irreducibles, $f$ es propio y sobreyectivo, y $g$ es una
+inmersión cerrada. Pongamos $x'=s_Y(x)$, $y'=s_Y(y)$. Se deduce entonces de
+(1.5.2) y (1.5.1) que
+\[
+D_Y(x)-D_Y(y)=\dimdot\mathcal O_{S,y'}-\dimdot\mathcal O_{S,x'}+
+\degtr_{k(x')}k(x)-\degtr_{k(y')}k(y).
+\]
+Puesto que $S$ es catenario, se tiene
+\[
+\dimdot\mathcal O_{S,y'}-\dimdot\mathcal O_{S,x'}=
+\dimdot\mathcal O_{Z,y'}-\dimdot\mathcal O_{Z,x'}
+\]
+(EGA $0_{IV}$ 14.3.2.1), de donde
+\begin{equation}\tag{1.5.4}
+D_Y(x)-D_Y(y)=
+[\dimdot\mathcal O_{Z,y'}-\degtr_{k(y')}k(y)]-
+[\dimdot\mathcal O_{Z,x'}-\degtr_{k(x')}k(x)].
+\end{equation}
+Como $Z$ es universalmente catenario, se puede aplicar EGA IV 5.6.5.1, y se
+obtiene
+\[
+C_1=\dimdot\mathcal O_{Y,y}-e,\qquad C_2=\dimdot\mathcal O_{Y,x}-e,
+\]
+donde $C_1$ y $C_2$ son los dos términos del miembro derecho de (1.5.4).
+Se concluye entonces inmediatamente de (1.5.4) que
+\[
+D_Y(x)-D_Y(y)=\dimdot\mathcal O_{Y,y}-\dimdot\mathcal O_{Y,x}>0,
+\qquad \text{C.Q.D.}
+\]

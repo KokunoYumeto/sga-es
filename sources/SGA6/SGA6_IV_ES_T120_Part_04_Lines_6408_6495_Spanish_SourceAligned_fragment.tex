@@ -1,0 +1,95 @@
+% SGA 6, Exposición IV: fragmento español alineado con la fuente.
+% Parte 4 de 7. Alcance: secciones 2.9--2.12, líneas 6408--6495 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{2.9. Comparación de \(K'\) y \(K'_{\naif}\).} Sea \((X,A)\) un topos anillado. No hay razón, en general, para que el homomorfismo canónico
+\[
+ K'(X)_{\naif}\longrightarrow K'(X)
+\]
+sea inyectivo o sobreyectivo. No obstante, los «~criterios de existencia de resoluciones globales~» de la Exp. II muestran que es un isomorfismo en los casos siguientes:
+\begin{enumerate}[label=(\roman*)]
+\item \(X\) es el topos de Zariski de un esquema divisorial, separado o noetheriano (y \(A=\mathcal O_X\)) (II 2.2.9);
+\item \(X\) es el topos definido por un espacio compacto y \(A\) es un haz flácido (II 2.3.2);
+\item \(X\) es un topos de Stein cuyo objeto final es cuasicompacto y \(A=\mathcal O_X\) (II 2.4.5).
+\end{enumerate}
+
+\textbf{2.10. Emparejamiento entre \(K'\) y \(K_{\bullet}\).} Sea \((X,\mathcal O_X)\) un topos anillado conmutativamente. Se sabe (I 5.8.4 b)) que se tiene un emparejamiento
+\[
+ \otimes_A^{\mathbf L}:D(X)_{\parf}\times D^b(X)_{\coh}
+ \longrightarrow D^b(X)_{\coh}.
+\]
+Este define un homomorfismo
+\begin{equation}\tag{2.10.1}
+ K'(X)\otimes K_{\bullet}(X)\longrightarrow K_{\bullet}(X).
+\end{equation}
+Gracias a la asociatividad del producto tensorial, se ve que (2.10.1) dota a \(K_{\bullet}(X)\) de una estructura de \(K'(X)\)-módulo. Más generalmente, si \(f:(X,\mathcal O_X)\longrightarrow(Y,\mathcal O_Y)\) es un morfismo de topoi anillados conmutativamente, se puede considerar \(K_{\bullet}(X)\) como un \(K'(Y)\)-módulo mediante el homomorfismo \(f^*:K'(Y)\longrightarrow K'(X)\).
+
+\textbf{2.11. Ley covariante sobre \(K_{\bullet}\) y fórmula de proyección.} Sea \((X,A)\) un topos anillado. A diferencia de \(K'({}_A X)\), el grupo \(K_\bullet({}_A X)\) no tiene variancia natural con respecto a \((X,A)\). No obstante, en Geometría Algebraica y en Geometría Analítica, \(K_{\bullet}(X)\) tiende a ser covariante en \(X\) para los morfismos propios. Precisemos este punto:
+
+\textbf{2.11.1.} Sea \(f:X\to Y\) un morfismo propio y pseudocoherente (III 1.2) de esquemas cuasicompactos. Entonces, bajo reserva de la validez de la conjetura de finitud para \(f\) (III 2.1), y por tanto en particular (III 2.2) si \(Y\) es noetheriano (en cuyo caso la hipótesis de pseudocoherencia sobre \(f\) se satisface automáticamente (III 1.3)) o si \(f\) es proyectivo, el funtor \(Rf_*\) induce, en virtud de (III 2.6), un funtor
+\[
+ Rf_*:D^b(X)_{\coh}\longrightarrow D^b(Y)_{\coh}.
+\]
+Este define un homomorfismo
+\begin{equation}\tag{2.11.1.1}
+ f_*:K_{\bullet}(X)\longrightarrow K_{\bullet}(Y).
+\end{equation}
+Este homomorfismo es \(K'(Y)\)-lineal (cf. (2.10)); en otros términos, para \(y\in K'(Y)\) y \(x\in K_{\bullet}(X)\) se tiene la \emph{denominada fórmula de proyección}
+\begin{equation}\tag{2.11.1.2}
+ f_*(yx)=y f_*(x).
+\end{equation}
+En efecto, si \(x=\cl(E)\) para \(E\in\Ob D^b(X)_{\coh}\) y \(y=\cl(M)\) para \(M\in\Ob D(Y)_{\parf}\), se tiene (III 3.7)
+\[
+ Rf_*(E)\otimes^{\mathbf L}M\simeq
+ Rf_*(E\otimes_Y^{\mathbf L}M).
+\]
+Por último, si \(g:Y\to Z\) es un morfismo que satisface las mismas hipótesis que \(f\) y para el cual la conjetura de finitud (III 2.1) es verdadera, la transitividad de los funtores imagen directa implica, para los homomorfismos (2.11.1.1), la fórmula
+\begin{equation}\tag{2.11.1.3}
+ g_*f_*=(gf)_*.
+\end{equation}
+
+\textbf{2.11.2.} Sea \(f:X\to Y\) un morfismo propio de espacios analíticos de dimensión finita. Entonces, según el teorema de finitud de Grauert [2], \(Rf_*\) envía \(D^b(X)_{\coh}\) en \(D^b(Y)_{\coh}\), y define por tanto un homomorfismo
+\begin{equation}\tag{2.11.2.1}
+ f_*:K_{\bullet}(X)\longrightarrow K_{\bullet}(Y).
+\end{equation}
+Como su análogo algebraico (2.11.1.1), este es \(K'(Y)\)-lineal, es decir, la fórmula (2.11.1.2) es válida, como se deduce de la fórmula de proyección al nivel de las categorías derivadas (III 5.9 b)). Se tiene asimismo la fórmula de transitividad (2.11.1.3).
+
+\textbf{2.11.3.} En cuanto se sale del marco algebraico o analítico, desaparece este carácter covariante de \(K_{\bullet}\) para los morfismos propios. Así, sea \(f:X\to Y\) un morfismo propio de espacios topológicos anillados por el haz de las funciones continuas complejas. Entonces, si \(E\in\Ob D^b(X)_{\coh}\), no se tiene en general \(Rf_*(E)\in\Ob D^b(Y)_{\coh}\), como ya es evidente para \(E=\mathcal O_X\) e \(Y\) reducido a un punto. De hecho, la definición (2.2) de \(K_{\bullet}\) parece sobre todo adaptada a las necesidades de la Geometría Algebraica y de la Geometría Analítica, y queda por encontrar una buena definición del \(K_{\bullet}\) de un espacio topológico. Parece, por lo demás, que habrá que salir del marco de los complejos \(\mathcal O_X\)-lineales, y definir para un morfismo \(f:X\to Y\) (de espacios topológicos, resp. de variedades mixtas (II Ap. II), etc.) una clase conveniente de complejos de haces vectoriales topológicos sobre \(X\), que habrá de englobar, por ejemplo, cuando \(f\) sea el morfismo estructural de una variedad mixta, los complejos elípticos sobre \(X\) con respecto a \(Y\). Esto es lo que sugiere el teorema de finitud (II Ap. II), así como un teorema análogo (donde se supone que \(Y\) está reducido a un punto) demostrado por Grothendieck en [3].
+
+\textbf{2.12. Variancias inusuales de \(K'\) y \(K_{\bullet}\).} Sea \(f:(X,A)\longrightarrow(Y,B)\) un morfismo de dimensión tor finita de topoi anillados (III 3.1). El funtor \(Lf^*:D^-({}_B Y)\longrightarrow D^-({}_A X)\) envía \(D^b({}_B Y)\) en \(D^b({}_A X)\), y por tanto (I 2.16.1) \(D^b({}_B Y)_{\coh}\) en \(D^b({}_A X)_{\coh}\), y, por consiguiente, define un homomorfismo
+\begin{equation}\tag{2.12.1}
+ f^*:K_\bullet({}_B Y)\longrightarrow K_\bullet({}_A X).
+\end{equation}
+Si \(A\) y \(B\) son conmutativos, la conmutación de la imagen inversa con el producto tensorial muestra que el homomorfismo (2.12.1) es compatible con las estructuras de módulos de \(K_{\bullet}(Y)\) y \(K_{\bullet}(X)\) sobre \(K'(Y)\) y \(K'(X)\), respectivamente, (2.10); en otros términos, para \(a\in K'(Y)\) e \(y\in K_{\bullet}(Y)\), se tiene la fórmula
+\begin{equation}\tag{2.12.2}
+ f^*(ay)=\sisi{a f^*(y)}{f^*(a)f^*(y)}.
+\end{equation}
+Si \(g:(Y,B)\to(Z,C)\) es un morfismo de dimensión tor finita de topoi anillados, la transitividad de los funtores imagen inversa implica que los homomorfismos (2.12.1) satisfacen la fórmula:
+\begin{equation}\tag{2.12.1.1}
+ f^*g^*=(gf)^*.
+\end{equation}
+
+Supongamos ahora que se está en la situación (2.11.1) (resp. (2.11.2)), con \(f\) de dimensión tor finita. Entonces (III 4.8.1 y 5.9 b)) el funtor \(Rf_*\) envía \(D(X)_{\parf}\) en \(D(Y)_{\parf}\), y por tanto define un homomorfismo
+\begin{equation}\tag{2.12.3}
+ f_*:K'(X)\longrightarrow K'(Y).
+\end{equation}
+Este no es en general un homomorfismo de anillos. No obstante, para \(y\in K_{\bullet}(Y)\) (resp. \(K'(Y)\)\sisi{}{)} y \(x\in K'(X)\), se tiene la fórmula
+\begin{equation}\tag{2.12.4}
+ f_*(f^*(y)x)=y f_*(x),
+\end{equation}
+donde \(f^*\) es el homomorfismo (2.12.1) (resp. (2.7.1)). La demostración es análoga a la de (2.11.1.2). Si \(g:Y\to Z\) es un morfismo que satisface las mismas hipótesis que \(f\), los homomorfismos (2.12.3) satisfacen la fórmula de transitividad~:
+\begin{equation}\tag{2.12.3.1}
+ g_*f_*=(gf)_*.
+\end{equation}
+
+El homomorfismo (2.12.3) es uno de los ingredientes esenciales del teorema de Riemann--Roch, tanto en Geometría Algebraica como en Geometría Analítica (para indicaciones en el caso analítico, véase (Exp. 0, 5)).
+
+Supongamos que \(X\) e \(Y\) son esquemas separados y divisoriales (II 2.2.5) (lo que ocurre, por ejemplo, si \(X\) e \(Y\) poseen haces invertibles amplios). Entonces (2.9 (i)) \(K'(X)\) (resp. \(K'(Y)\)) se identifica con \(K'(X)_{\naif}\) (resp. \(K'(Y)_{\naif}\)), y (2.12.3) define por tanto un homomorfismo
+\begin{equation}\tag{2.12.3'}
+ f_*:K'(X)_{\naif}\longrightarrow K'(Y)_{\naif}.
+\end{equation}
+Como ya se explicó en (Exp. 0, 3.1), la definición de (2.12.3') no era en absoluto evidente a priori. Constituye incluso, desde la perspectiva de nuestro Seminario, una de las motivaciones principales de los sorites de las Exp. I a Exp. IV.
+

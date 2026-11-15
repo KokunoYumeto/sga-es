@@ -1,0 +1,22 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance exacto: fr.tex, líneas 12671--12687 inclusive; conclusión de 1.5 y §1.6.
+% Fuente francesa completa SHA-256:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+Se ve, pues, que (1.3.2) y (1.3.3) siguen siendo válidos para un esquema noetheriano universalmente catenario $X$ de dimensión $n$, si se define la filtración de $K_\bullet(X)$ por medio de (1.5.1), según la codimensión de los soportes. Obsérvese que esta filtración coincide con la de (1.1.1) cuando, además, $X$ es biequidimensional.
+
+\subsection*{1.6}
+Cabe preguntarse si siempre es posible definir sobre un esquema noetheriano $X$ de dimensión finita una función $D$ que posea la propiedad (i) de 1.4 y, además, la propiedad siguiente, más fuerte que (ii):
+\begin{quote}
+(ii bis) Si $x\in X$, e $y\ne x$ es una especialización inmediata de $x$, entonces $D(x)=D(y)+1$.
+\end{quote}
+Para ello es evidentemente necesario que $X$ sea catenario, y es suficiente que $X$ sea biequidimensional (EGA $0_{IV}$ 14.3.3). Sin embargo, existen esquemas noetherianos de dimensión finita, catenarios y equidimensionales, que no poseen tales funciones $D$. Para verlo, se puede modificar el ejemplo (EGA IV 5.6.11) de la manera siguiente: tomemos dos ejemplares $Y_1$ e $Y_2$ del espectro del anillo $E$ de loc. cit. y denotemos por $y_i$ y $z_i$ ($i=1,2$) los puntos cerrados de $Y_i$ ($i=1,2$) correspondientes a los ideales maximales $\mathfrak m$ y $\mathfrak m'$ de $E$, de alturas $2$ y $1$, respectivamente. Recordemos que los cuerpos residuales de $\mathfrak m$ y $\mathfrak m'$ son isomorfos. Se puede construir, por tanto, pegando $Y_1$ e $Y_2$, un esquema $X$, identificando $y_1$ con $z_2$ e $y_2$ con $z_1$. Entonces se pueden identificar $Y_1$ e $Y_2$ con las dos componentes irreducibles de $X$, y en \sisi{$Z$}{$X$}, $Y_1\cap Y_2=\{y_1,y_2\}$ tiene dimensión cero. Se ve entonces que $X$ es un esquema noetheriano, catenario y equidimensional (de dimensión $2$). Si (ii bis) se cumpliera sobre $X$, se tendría
+\[
+D(y_1)=D(z_1)-1=D(y_2)-1,
+\]
+y, por otra parte,
+\[
+D(y_1)=D(z_2)=D(y_2)+1,
+\]
+lo que da una contradicción.

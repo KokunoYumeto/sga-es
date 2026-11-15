@@ -1,0 +1,362 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance: sección 6 completa, «Apéndice: Cálculo de los determinantes
+% de los haces localmente libres».
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 13296--13494.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\section*{6. Apéndice: Cálculo de los determinantes de los haces localmente libres}
+
+\subsection*{6.1}
+Consideremos primero un topos anillado cualquiera
+\(X=(\mathcal C,\mathcal O)\). Para toda sección positiva
+\(n\in\Gamma(\mathbb Z_X)\) del haz constante \(\mathbb Z\) y para todo
+\(\mathcal O\)-módulo \(M\in\Mod_{\mathcal O}(X)\), está claro cómo definir
+los \(\mathcal O\)-módulos
+\begin{equation}\tag{6.1.1}
+ M^n,\qquad \bigotimes^n M,\qquad \bigwedge^n M,\quad\text{etc.}
+\end{equation}
+Los funtores \((\ )^n\), \(\bigotimes\limits^n\) y
+\(\bigwedge\limits^n\) transforman módulos libres (resp. localmente libres)
+en módulos libres (resp. localmente libres).
+
+En general, consideremos secciones \(n_1,\ldots,n_r\) de \(\mathbb Z_X\) y
+un multifuntor (covariante, para fijar ideas)
+\[
+ T:\Mod^{n_1}(\mathcal O)\times\cdots\times
+ \Mod^{n_r}(\mathcal O)\longrightarrow\Mod(\mathcal O)
+\]
+de \(r\) variables, donde \(\Mod_{\mathcal O}^{n}(X)\) designa la categoría
+fibrada sobre \(X\) de los \(\mathcal O\)-módulos localmente libres de rango
+\(n\). Sea
+\[
+ M=T(\mathcal O^{n_1},\ldots,\mathcal O^{n_r})
+\]
+y
+\[
+ G=\operatorname{G\ell}(n_1)\times\cdots\times\operatorname{G\ell}(n_r),
+ \quad\text{donde }\operatorname{G\ell}(n_i)=\underline{\Aut}_{\mathcal O}(\mathcal O^{n_i}).
+\]
+Se sigue inmediatamente que \(T\) define una representación
+\begin{equation}\tag{6.1.2}
+ \alpha_T:G\longrightarrow\underline{\Aut}_{\mathcal O}(M).
+\end{equation}
+Está claro que, si \(M\) es a su vez localmente libre de rango \(m\), para
+todo funtor compuesto
+\[
+ T'T,\ \text{donde } T':\Mod^{m}(\mathcal O)\longrightarrow\Mod(\mathcal O),
+\]
+se tiene
+\begin{equation}\sisi{\tag{6.1.3}}{} % Canon SGA-SRC-001341
+ \alpha_{T'T}=\alpha_{T'}\,\alpha_T.
+\end{equation}
+
+Recíprocamente, dada la representación
+\(\alpha=\alpha_T:G\to\underline{\Aut}_{\mathcal O}(M)\), se recupera
+\(T(E_1,\ldots,E_r)\) (para toda sucesión \(E_1,\ldots,E_r\) de
+\(\mathcal O\)-módulos localmente libres de rangos \(n_1,\ldots,n_r\))
+pegando el \(\mathcal O\)-módulo libre
+\(T(\mathcal O^{n_1},\ldots,\mathcal O^{n_r})\) sobre cartas locales
+trivializantes mediante la representación \(\alpha\). Más precisamente, a
+la sucesión \(E_1,\ldots,E_r\) le corresponde un \(G\)-torsor derecho
+\(P=P_{E_1,\ldots,E_r}\) tal que se tiene un isomorfismo canónico
+\begin{equation}\tag{6.1.3}
+ E_i\xrightarrow{\sim}P\overset{G}{\wedge}\mathcal O^{n_i}\qquad(i=1,\ldots,r),
+\end{equation}
+donde \(\overset{G}{\wedge}\) designa el producto contraído, y \(G\) actúa
+sobre \(\mathcal O^{n_i}\) mediante la \(i\)-ésima proyección
+\(G\to\Gl(n_i)\); entonces toda representación
+\[
+ \alpha:G\longrightarrow\underline{\Aut}_{\mathcal O}(M)
+\]
+hace actuar a \(G\) sobre \(\sisi{\mathcal O^m}{M}\) mediante % Canon SGA-SRC-001342
+\(\mathcal O\)-automorfismos y define así un multifuntor \(T=T_\alpha\) tal
+que
+\begin{equation}\tag{6.1.4}
+ T_\alpha(E_1,\ldots,E_r)=P_{E_1,\ldots,E_r}\overset{G}{\wedge} M.
+\end{equation}
+Además, para toda representación compuesta
+\(\alpha=\alpha_1\circ\alpha_2\), se obtiene
+\begin{equation}\tag{6.1.5}
+ T_\alpha=T_{\alpha_1}\circ T_{\alpha_2}.
+\end{equation}
+
+\subsection*{6.2}
+Para todo \(\mathcal O\)-módulo localmente libre \(E\) de rango \(n\),
+designaremos por \(\det(E)\) el \(\mathcal O\)-módulo invertible
+\(\bigwedge\limits^n E\). Conservando las notaciones de 6.1, el funtor
+\(\det(T(E_1,\ldots,E_r))\) queda determinado, salvo isomorfismo canónico,
+por la representación correspondiente
+\begin{equation}\tag{6.2.1}
+ \det\circ\alpha_T:G\longrightarrow\Gm=\Gl(1).
+\end{equation}
+
+Supongamos ahora que \(X\) es el topos anillado de los haces sobre el sitio
+anillado \((\Sch/S)\), provisto de la topología étale. Entonces se puede
+calcular \(\det(T(E_1,\ldots,E_r))\), o, lo que es lo mismo, la
+representación \(\det\circ\alpha_T\), con ayuda de la
+
+\textbf{Proposición 6.2.2.} Para toda sección positiva \(n\) de
+\(\mathbb Z\), el haz étale de grupos \(\Der(\Gl(n))\) de los conmutadores
+de \(\Gl(n)\sisi{)}{}\) es representable por % Canon SGA-SRC-001343
+\(\operatorname{Sl}(n)=\Ker(\det:\Gl(n)\to\Gm)\).
+
+\textbf{Corolario 6.2.3.} Toda representación
+\begin{equation}\tag{6.2.4}
+ \alpha:G=\Gl(n_1)\times\cdots\times\Gl(n_r)\longrightarrow\Gm
+\end{equation}
+es de la forma
+\begin{equation}\tag{6.2.5}
+ \alpha(Y)(s)=(\det(s_1))^{m_1}\cdots(\det(s_r))^{m_r},
+\end{equation}
+donde \(Y\in\operatorname{Ob}(\Sch/S)\),
+\(s=(s_1,\ldots,s_r)\in G(Y)\), y \(m_1,\ldots,m_r\) son secciones de
+\(\mathbb Z\) determinadas unívocamente por \(\alpha\).
+
+\textbf{Corolario 6.2.6.} Con las notaciones de 6.1, se tiene
+\begin{equation}\tag{6.2.6}
+ \det\bigl(T_\alpha(E_1,\ldots,E_r)\bigr)
+ =
+ \det(E_1)^{\otimes m_1}\otimes\cdots\otimes
+ \det(E_r)^{\otimes m_r},
+\end{equation}
+donde \(m_1,\ldots,m_r\) son secciones de \(\mathbb Z\) determinadas
+unívocamente por \(\alpha\).
+
+\textbf{Observación 6.2.7.} Se pueden determinar los exponentes
+\(m_1,\ldots,m_r\) en (6.2.5) y (6.2.6) sustituyendo sucesivamente en
+(6.2.5)
+\(s_i=\lambda.\ \operatorname{id}.(\lambda\in\Gm(Y))\),
+\(s_j=\operatorname{id}_{\Gl(n_j)(Y)}\), para \(j\ne i\)
+\((i,j=1,\ldots,r)\), de donde
+\[
+ \det(s_i)=\lambda^{n_i}\quad\text{y}\quad
+ \alpha(Y)(s)=\lambda^{n_im_i}.
+\]
+Por ejemplo, se deduce así de (6.2.6)
+\begin{align}
+ \det(\sisi{E_i}{E_1}\otimes E_2)&=(\det(E_1))^{\otimes n_2}\otimes(\det(E_2))^{\otimes n_1}, \tag{6.2.8}\\ % Canon SGA-SRC-001344
+ \det(E_1\sisi{\otimes}{\oplus} E_2)&=(\det(E_1))\otimes(\det(E_2)) \tag{6.2.9} % Canon SGA-SRC-001345
+\end{align}
+y
+\begin{equation}\tag{6.2.10}
+ \det\bigl(\bigwedge\limits^m E_1\bigr)=(\det(E_1))^{\binom{n_1-1}{m-1}}
+\end{equation}
+etc.
+
+\subsection*{6.3}
+Mostremos primero cómo se deduce 6.2.3 de 6.2.2. Para ello basta
+evidentemente con demostrar (6.2.5) para los
+\(s_{(i)}=(1,\ldots,s_i,\ldots,1)\) \((i=1,\ldots,r)\); por tanto, se puede
+suponer \(r=1\), \(G=\operatorname{G\ell}(n_1)\). Según 6.2.2, \(\alpha\)
+se factoriza a través de
+\(\operatorname{G\ell}(n_1)/\operatorname{Sl}(n_1)\), es decir, existe un
+diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{G\ell}(n_1) \arrow[r,"\alpha"] \arrow[d,"j"'] & \Gm\\
+\operatorname{G\ell}(n_1)/\operatorname{Sl}(n_1) \arrow[ur,"\beta"'] &
+\end{tikzcd}
+\]
+donde \(j\) es el epimorfismo canónico y \(\beta\) una representación de
+\(\operatorname{G\ell}(n_1)/\operatorname{Sl}(n_1)\) en \(\Gm\). Pero el
+homomorfismo
+\[
+ \det:\operatorname{G\ell}(\sisi{n_i}{n_1})\longrightarrow\Gm % Canon SGA-SRC-001346
+\]
+posee una sección, de modo que el monomorfismo
+\[
+ \operatorname{G\ell}(\sisi{n_i}{n_1})/\operatorname{S\ell}(\sisi{n_i}{n_1})\longrightarrow\Gm
+\]
+inducido por det es un isomorfismo. Por otra parte, se sabe (SGA 3 VIII 1.3)
+que toda representación de \(\Gm\) en sí mismo es de la forma
+\[
+ s\rightsquigarrow s^m,
+\]
+donde \(m\) es una sección de \(\mathbb Z\), de donde resulta la afirmación.
+
+El corolario 6.2.6 es una simple reformulación de 6.2.3. Obsérvese que 6.2.3
+se deduce también inmediatamente de SGA 3 XXII 6.2.1, pero queremos dar aquí
+una demostración elemental mediante 6.2.2\sisi{)}{}. % Canon SGA-SRC-001347
+
+\subsection*{6.4. Demostración de 6.2.2}
+Basta con demostrar que, cualesquiera que sean
+\(Y\in\operatorname{Ob}(\Sch/S)\), \(y\in Y\) y
+\(s\in\operatorname{S\ell}(n)(Y)\), se puede encontrar un «~entorno
+étale~» \(Y'\to Y\) de \(y\) tal que la restricción de \(s\) a \(Y'\) sea
+un producto de conmutadores de \(\operatorname{G\ell}(n)(Y')\). Al ser la
+cuestión local, se puede suponer que \(Y\) es afín, de anillo \(A\), y que
+\(n\) es constante e igual a \(n\) sobre \(Y\). Sean \(\underline p\) el
+ideal primo de \(y\) y \((s_{ij})(i,j=1,\ldots,n)\) la matriz de \(s\).
+Para todo \(\lambda\in A\) y \(h, k=1,\ldots,n\); \(h\ne k\), designaremos
+por \(c_{h,k,\lambda}\) la matriz \((c_{ij})\)
+\((i,j=1,\ldots,n)\) tal que \(c_{hk}=\lambda\) y
+\(c_{ij}=\delta_{ij}\) para \((i,j)\ne(h,k)\) \((\delta_{ij}=\) símbolo de
+Kronecker). Para toda matriz \(a=(a_{ij})(i,j=1,\ldots,n)\), se obtiene
+\(c_{h,k,\lambda}a\) añadiendo \sisi{a la \(k\)-ésima columna de \(a\)
+\(\lambda\) veces la \(h\)-ésima}{a la \(h\)-ésima fila de \(a\)
+\(\lambda\) veces la \(k\)-ésima}. Del mismo modo, se obtiene la matriz % Canon SGA-SRC-001349
+\(ac_{h,k,\lambda}\) añadiendo \sisi{a la \(h\)-ésima fila de \(a\)
+\(\lambda\) veces la \(k\)-ésima}{a la \(k\)-ésima columna de \(a\)
+\(\lambda\) veces la \(h\)-ésima}. En particular, se tiene
+\[
+ \det(c_{h,k,\lambda})=1,
+\]
+y se ve inmediatamente que
+\begin{equation}\tag{\sisi{6.3.1}{6.4.1}} % Canon SGA-SRC-001348
+ c_{h,k,\lambda}c_{h,k,\mu}=c_{h,k,\lambda+\mu}
+\end{equation}
+para todo \(\lambda,\mu\in A\), de modo que se obtiene una representación
+\[
+ c_{h,k}:G_a\longrightarrow\operatorname{S\ell}(n)
+ \qquad(h,k=1,\ldots,n\ ;\ h\ne k).
+\]
+\sisi{Salvo indicación expresa en contrario, en lo que sigue supondremos
+invertible el \(\lambda\) que interviene en \(c_{h,k,\lambda}\)
+\((\lambda\in A\ ;\ h,k=1,\ldots,n\ ;\ h\ne k)\).}{No es necesaria ninguna hipótesis de invertibilidad sobre el parámetro
+\(\lambda\) en el primer paso de la reducción matricial; nos reduciremos a
+parámetros invertibles antes del segundo paso, dedicado a los conmutadores.}
+
+La demostración se hace entonces en dos pasos. Mostraremos primero que \(s\)
+es un producto de matrices \(c_{h,k,\lambda}\) en un entorno zariskiano
+suficientemente pequeño de \(y\). Después mostraremos que las matrices
+\(c_{h,k,\lambda}\) son productos de conmutadores de
+\(\operatorname{G\ell}(n)\) en un entorno étale suficientemente pequeño de
+\(y\).
+
+Para el primer paso, se trata de transformar \(s\) en la matriz unidad
+\(\mathbf 1=(\delta_{ij})\) en un entorno zariskiano de \(y\), multiplicando \(s\)
+a izquierda y a derecha por matrices adecuadas \(c_{h,k,\lambda}\).
+Mostremos primero que de este modo se puede hacer \(s_{11}=1\). Si
+\(s_{11}\ne1\) y \(s_{21}\in\underline p\), buscamos una matriz
+\(c=\sisi{c_{h,1,\lambda}}{c_{2,h,\lambda}}\) tal que el producto \(\sisi{s'=sc}{s'=cs}=(s'_{ij})\) tenga
+\(s'_{21}\notin\mathfrak p\). Puesto que
+\(\det(s)=1\notin\mathfrak p\), existe al menos un índice \(i\) tal que
+\(s_{i1}\notin\underline p\). Entonces
+\(s_{21}+s_{i1}\notin\underline p\), y \(\sisi{c_{i,1,1}}{c_{2,i,1}}\) resuelve el problema.
+Se puede, pues, suponer \(s_{21}\notin\underline p\) y, tras localizar, se
+puede suponer que \(s_{21}\) es invertible. Si
+\(s_{11}-1\in\underline p\), entonces en
+\(s'=(s'_{ij})=\sisi{sc_{1,2,1}}{c_{1,2,1}s}\) se tiene
+\(s'_{11}-1=(s_{11}+s_{21})-1\notin\underline p\). Tras localizar, se puede
+entonces suponer que \(s_{11}-1\) es invertible. Así,
+\(\lambda=(1-s_{11})/s_{21}\) es invertible y se obtiene \(s'_{11}=1\) en
+\(s'=(s'_{ij})=\sisi{sc_{1,2,\lambda}}{c_{1,2,\lambda}s}\).
+
+Suponiendo \(s_{11}=1\), se puede entonces dar a \(s\) la forma en que
+\[
+ s_{11}=1,\qquad s_{1i}=s_{i1}=0\quad(i=2,\ldots,n)
+\]
+en un entorno zariskiano de \(y\), multiplicando \(s\) a izquierda (resp. a
+derecha) por matrices \(c_{i,1,\lambda}\) (resp.
+\(\sisi{c_{i,1,\lambda}}{c_{1,i,\lambda}}\)). A continuación se hace \(s_{22}=1\), etc. Por
+recurrencia, se puede entonces transformar \(s\), en un entorno zariskiano
+\(U\) de \(y\), en una matriz \(s'=(s'_{ij})\) tal que
+\(s'_{ij}=\delta_{ij}\) para \(i<n\) o \(j<n\). Pero, por la propia
+construcción, se tiene entonces \(s'=c_1sc_2\) sobre \(\mathcal U\), donde
+\(c_1\) y \(c_2\) son productos de matrices \(c_{h,k,\lambda}\). Por tanto,
+se tiene
+\[
+ \det(s')=\det(s)=1,
+\]
+de modo que \(s'_{nn}=1\), \(s'=\mathbf 1\), y hemos terminado.
+
+\sisi{}{Tras restringir a un entorno de \(y\), un parámetro
+\(a\notin\mathfrak p\) es invertible. Si \(a\in\mathfrak p\), entonces
+\(a=1+(a-1)\), y \(1\) y \(a-1\) son invertibles en un entorno de \(y\);
+por (6.4.1),
+\[
+ c_{h,k,a}=c_{h,k,1}c_{h,k,a-1}.
+\]
+} % Canon SGA-SRC-001349
+
+Suponemos, pues, que \(s\) ya es sobre \(Y\) un producto de matrices
+\(c_{h,k,\lambda}\).
+
+Queda por ver que estas son productos de conmutadores en un entorno étale de
+\(y\). Ante todo, se ve que dos matrices cualesquiera
+\(c_{h,k,\lambda}\) y \(c_{h,k,\mu}\) son conjugadas; en otras palabras,
+existe una matriz invertible \(a=(a_{ij})\)
+\((i,j=1,\ldots,n)\) tal que
+\[
+ ac_{h,k,\lambda}=c_{h,k,\mu}a.
+\]
+En efecto, la matriz \((a_{ij})\) con \(a_{hh}=1/\sisi{\mu}{\lambda}\),
+\(a_{kk}=1/\sisi{\lambda}{\mu}\), y en lo restante \(a_{ij}=\delta_{ij}\), resuelve el % Canon SGA-SRC-001350
+problema (recuérdese que, por hipótesis, \(\lambda\) y \(\mu\) son
+invertibles y \(h\ne k\)). Por tanto, para un homomorfismo cualquiera
+\(\beta\) de \(\operatorname{G\ell}(n)(U)\) en un haz de grupos abelianos
+\(B\), se tiene
+\[
+ \beta(c_{h,k,\lambda})=\beta(c_{h,k,\mu}).
+\]
+Si \(\lambda+\mu\) es invertible, se deduce de esto y de (\sisi{6.3.1}{6.4.1}) que
+\(\beta(c_{h,k,\lambda})=0\) para \sisi{todo \(h,\beta\)}{todos \(h,k\)}, de modo que % Canon SGA-SRC-001351
+\(c_{h,k,\lambda}\) es un producto de conmutadores. Si el cuerpo residual
+\(k\) de \(y\) no es el cuerpo primo
+\(\underline F_2=\{0,1\}\), entonces se pueden encontrar, para todo
+\(\lambda\in A\) invertible, un entorno zariskiano \(U=\Spec(B)\) de \(y\)
+y un elemento invertible \(\mu\in B\) tal que \(\lambda+\mu\in B\) sea
+invertible. De ello se sigue que \(c_{h,k,\lambda}\) es un producto de
+conmutadores sobre \(U\).
+
+Si \(k=\underline F_2\), entonces \(V=\Spec(A[T]/(T^2+T+1))\) es un entorno
+étale de \(y\), cuyo cuerpo residual es distinto de \(\underline F_2\).
+Hemos terminado.
+
+\subsection*{6.5. Observaciones}
+\textbf{6.5.1.} Cuando ningún cuerpo residual de \(S\) es isomorfo a
+\(\underline F_2\), la demostración anterior muestra que 6.2.2
+sigue siendo válida para el topos anillado de los haces zariskianos sobre
+\(S\). En cambio, ya para \(S=\Spec(\mathbb F_2)\),
+\(\operatorname{S\ell}(2,\mathbb F_2)=\operatorname{G\ell}(2,\mathbb F_2)\)
+es distinto del grupo de los conmutadores de
+\(\operatorname{G\ell}(2,\underline F_2)\). El orden de este último es \(3\),
+mientras que el orden de \(\operatorname{S\ell}(2,\mathbb F_2)\) es \(6\)
+(cf. [1]).
+
+\textbf{6.5.2.} En un topos localmente anillado cualquiera \(X\), no es
+cierto en general que toda representación \(\Gm\to\Gm\) esté definida por
+una potencia. Por ejemplo, en el topos \((\Ens)\) anillado por el cuerpo
+\(\mathbb Q\), la representación \(\Gm\to\Gm\) definida por
+\[
+ r\rightsquigarrow|r|\qquad(r\in\mathbb Q^*)
+\]
+no es una potencia. En particular, 6.2.3 no sigue siendo válido para
+cualquier topos localmente anillado \(X\) y para cualquier representación
+\(\alpha:G\to\Gm\).
+
+\textbf{6.5.3.} En cambio, 6.2.3 sigue siendo válido para las
+representaciones asociadas a las fórmulas (6.2.8), (6.2.9) y (6.2.10) sobre
+un topos anillado cualquiera \(X=(\mathcal C,\mathcal O)\), porque estas
+representaciones son «~algebraicas~» en el sentido siguiente:
+
+Sean \(e\) el objeto final de \(X\), \(S=\Spec(\mathcal O(e))\), y
+consideremos el funtor
+\[
+ u:\mathcal C\longrightarrow(\Sch/S)
+\]
+que asocia a cada \(Y\in\operatorname{Ob}(\mathcal C)\) el esquema afín
+\(\Spec(\mathcal O(Y))\) sobre \(S\). Entonces, para todo entero positivo
+\(n\), el prehaz \(\operatorname{G\ell}(n)_X\) sobre \(\mathcal C\) es el
+compuesto con \(u\) del prehaz correspondiente
+\(\operatorname{G\ell}(n)_S\) sobre \((\Sch/S)\). Se dice que una
+representación sobre \(X\)
+\begin{equation}\tag{6.5.4}
+ \alpha:\operatorname{G\ell}(n)\longrightarrow\Gm
+\end{equation}
+es \emph{algebraica} si proviene mediante \(u\) de una representación
+\begin{equation}\tag{6.5.5}
+ \alpha_S:\operatorname{G\ell}(n)_S\longrightarrow G_{m,S}
+\end{equation}
+de prehaces en grupos sobre \((\Sch/S)\), es decir, si se tiene
+\[
+ \alpha(s)=\alpha_S(s)
+\]
+para todo \(Y\in\operatorname{Ob}(\mathcal C)\),
+\(s\in\operatorname{G\ell}(n)(Y)=\operatorname{G\ell}(n)_S(u(Y))\). La
+representación \(\alpha\) de (6.5.4) está, por supuesto, completamente
+determinada por \(\alpha_S\). Se sigue inmediatamente que (6.2.3) continúa
+siendo válido en un topos anillado cualquiera cuando \(\alpha\) es
+algebraica. Por tanto, en particular, las fórmulas (6.2.8), (6.2.9) y
+(6.2.10) continúan siendo válidas sobre un topos anillado cualquiera.

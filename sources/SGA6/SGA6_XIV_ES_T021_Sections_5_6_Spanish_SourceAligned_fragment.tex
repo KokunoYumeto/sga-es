@@ -1,0 +1,193 @@
+% SGA 6, Exposición XIV: traducción española alineada con la fuente.
+% Alcance exacto: fr.tex líneas 15726--15825, secciones 5 y 6 completas.
+% Las lecturas fuente corregidas se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{5. Relaciones entre $\operatorname{Gr}^\bullet(X)$ y
+$H^{2\bullet}(X,\Zell(\bullet))$}
+
+\textbf{5.1.} El ejemplo dado en 4.8 no excluye que quizá pueda encontrarse,
+para un esquema arbitrario $X$, un homomorfismo de anillos
+\[
+g^\bullet:\operatorname{Gr}^\bullet(X)\longrightarrow
+H^{2\bullet}(X,\Zell(\bullet)),
+\]
+tal que, para todo módulo localmente libre $E$ sobre $X$, $g^i$ transforme
+la clase de Chern $c_i(E)$ de la Exp. V en la clase de Chern cohomológica de
+SGA 5 VII. Naturalmente, $\ell$ denota aquí un número primo distinto de las
+características residuales de $X$. Como el anillo
+$\operatorname{Gr}^\bullet(X)$ está engendrado por los $\sisi{c^i}{c_i}(E)$, se ve en % Canon SGA-SRC-001421
+todo caso que $g^\bullet$ está determinado de manera única por la condición de ser
+compatible con las clases de Chern.
+
+\textbf{5.2.} Utilizando el homomorfismo de Chern
+\[
+K^\bullet(X)\longrightarrow
+\Ch\bigl(H^{2\bullet}(X,\Zell(\bullet))\bigr),
+\]
+se obtiene, pasando a los graduados asociados respecto de la filtración del
+primer miembro y de la filtración por el grado del segundo, un homomorfismo
+de grupos graduados, pero no de anillos,
+\[
+\psi:\operatorname{Gr}^\bullet(X)\longrightarrow
+H^{2\bullet}(X,\Zell(\bullet)),
+\]
+que satisface la relación
+\[
+\psi(c_i(E))=(-1)^{i-1}(i-1)!\,c_i^\ell(E),
+\]
+donde $c_i^\ell(E)$ denota la clase de Chern $\ell$-ádica. Se deduce de los
+$\psi^i$, mediante división, un homomorfismo de anillos
+\[
+g_\Q:\operatorname{Gr}^\bullet(X)\longrightarrow
+H^{2\bullet}(X,\Qell(\bullet))=
+H^{2\bullet}(X,\Zell(\bullet))\otimes_{\Zell}\Qell,
+\]
+que transforma clases de Chern en clases de Chern y cuya imagen del primer
+miembro está contenida en la de
+$\sisi{H^2(X,\Zell(\bullet))}{H^{2\bullet}(X,\Zell(\bullet))}$. Por tanto,
+la cuestión de la existencia de $g^\bullet$ se resuelve afirmativamente si se
+reemplaza $H^{2\bullet}(X,\Zell(\bullet))$ por su cociente por el subgrupo de
+torsión. El primer caso dudoso al definir las componentes $g^i$ del
+hipotético homomorfismo $g$ es el de $g^3$; a priori solo se consigue definir
+\[
+2g^3=\psi^3.
+\]
+La respuesta a la cuestión de la existencia de $g^3$ sería negativa si, por
+ejemplo, se pudieran encontrar tres haces invertibles $L_1,L_2,L_3$ sobre
+$X$ que satisfagan la relación
+\[
+(L_1-1)(L_2-1)(L_3-1)=0\quad\text{en }K^\bullet(X),
+\]
+pero tales que
+\[
+c_1^\ell(L_1)c_1^\ell(L_2)c_1^\ell(L_3)\ne0
+\quad\text{en }H^6(X,\mu_2^{\otimes3}).
+\]
+
+\textbf{5.3.} Cuando $X$ es liso y cuasiproyectivo sobre un cuerpo $k$,
+puede plantearse análogamente la existencia de un homomorfismo de anillos
+\[
+g:\operatorname{Gr}^\bullet(X)\longrightarrow A(X)
+\]
+con valores en el anillo de Chow $A(X)$ y que transforme clases de Chern en
+clases de Chern. Se pueden repetir al respecto las consideraciones
+precedentes, que muestran en particular cómo construir directamente
+$(-1)^{i-1}(i-1)!g^i$ cuando no se dispone del propio $g^i$.
+
+\textbf{5.4.} Señalemos, para terminar este número, que se plantea
+esencialmente la misma cuestión si, en lugar de un esquema $X$, se considera
+un espacio topológico compacto, digamos, $X$. Todavía se puede considerar el
+graduado $\operatorname{Gr}^\bullet(X)$ de $K^\bullet(X)$, provisto de su
+$\lambda$-filtración, y buscar un homomorfismo de anillos
+\[
+\operatorname{Gr}^\bullet(X)\longrightarrow H^{2\bullet}(X,\Z)
+\]
+que transforme clases de Chern en clases de Chern.
+
+\section*{6. Teorema de Riemann--Roch cohomológico y homomorfismo de Gysin}
+
+\textbf{6.1.} Para simplificar, nos limitaremos aquí a esquemas $X$ que
+admiten un módulo invertible amplio, lo que evita distinguir entre el
+$K'(X)$ ingenuo y el otro. Comencemos por la fórmula de Riemann--Roch «con
+denominadores» para un morfismo propio de intersección completa $f:X\to Y$.
+Como, para un número primo $\ell$ distinto de las características residuales
+de $Y$, se pueden definir las clases de Chern $\ell$-ádicas de un módulo
+localmente libre $E$,
+\[
+c_i(E)\in H^{2i}(X,\Zell(i))
+\]
+(SGA 5 VII), correspondientes a un homomorfismo
+\begin{equation}\tag{6.1}
+K^\bullet(X)\longrightarrow\Ch\bigl(H^{2\bullet}(X,\Zell(\bullet))\bigr),
+\end{equation}
+se plantea la cuestión de dar una variante cohomológica de la fórmula de
+Riemann--Roch. El único ingrediente que falta para dar sentido a la fórmula
+es un homomorfismo de Gysin
+\begin{equation}\tag{6.2}
+H^n(X,\Qell(i))\longrightarrow H^{n-2d}(Y,\Qell(i-d)),
+\end{equation}
+donde $d$ es la dimensión relativa virtual de $f$. Suponiendo definido este
+homomorfismo y teniendo en cuenta la fórmula de Riemann--Roch en la forma de
+la Exp. VIII, con valores en $\operatorname{Gr}^\bullet(Y)_\Q$, se comprueba que la
+validez de la fórmula de Riemann--Roch $\ell$-ádica para $f$ equivale
+exactamente a la conmutatividad del cuadrado
+\begin{equation}\tag{6.3}
+\begin{tikzcd}[column sep=large,row sep=large]
+\operatorname{Gr}^\bullet(X)_{\Q} \arrow[r] \arrow[d] &
+H^{2\bullet}(X,\Qell(\bullet)) \arrow[d] \\
+\operatorname{Gr}^\bullet(Y)_{\Q} \arrow[r] &
+H^{2\bullet}(Y,\Qell(\bullet)),
+\end{tikzcd}
+\end{equation}
+donde las flechas horizontales se definen a partir de (6.1), pasando a los
+graduados asociados y dividiendo de modo que transformen clases de Chern en
+clases de Chern, y las flechas verticales son, respectivamente, la flecha de
+la Exp. VIII y el homomorfismo de Gysin en cohomología, supuesto dado.
+
+\textbf{6.2.} Obsérvese que el homomorfismo de Gysin está definido en todo
+caso si $Y$ es liso sobre un cuerpo $k$ (SGA 5 IV), utilizando el teorema de
+pureza cohomológica relativa sobre $k$. La misma construcción se aplica
+cuando $Y$ es excelente, regular y de característica cero, gracias al
+teorema de pureza cohomológica absoluta de SGA 4 XIX, y se aplicará
+automáticamente a todo $Y$ excelente y regular, sin restricción de
+característica, una vez demostrado en toda generalidad el teorema de pureza
+cohomológica absoluta. Finalmente, la misma construcción se aplica, gracias
+al teorema de pureza cohomológica relativa (SGA 4 XVI 3.7), cuando $X$ e $Y$
+son ambos lisos sobre un mismo esquema $S$ y $f$ es un $S$-morfismo. Cabe
+conjeturar que, en cada uno de estos casos en que está definido el
+homomorfismo de Gysin, el diagrama (6.3) es conmutativo. El único caso en que
+esta afirmación está actualmente verificada es aquel en que $X$ e $Y$ son
+ambos lisos sobre un cuerpo $k$; resulta entonces de la conmutatividad del
+diagrama análogo a (6.3)
+\begin{equation}\tag{6.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+A(X) \arrow[r] \arrow[d] & H^{2\bullet}(X,\Zell(\bullet)) \arrow[d] \\
+A(Y) \arrow[r] & H^{2\bullet}(Y,\Zell(\bullet)),
+\end{tikzcd}
+\end{equation}
+en el que intervienen los anillos de clases de ciclos módulo equivalencia
+racional $A(X)$ y $A(Y)$, cuya conmutatividad se establece en SGA 5 IV.
+
+\textbf{6.3.} Obsérvese que, en cada uno de los casos considerados arriba en
+los que se consigue definir un homomorfismo de Gysin, se obtiene en realidad
+una construcción para la cohomología con coeficientes en $\Zell(\bullet)$,
+y no solo en $\Qell(\bullet)$. Esto permite, cuando $f$ es una inmersión,
+plantear la validez de la fórmula de Riemann--Roch «sin denominadores», como
+se explica en el número 3. Cuando $X$ e $Y$ son ambos lisos sobre un cuerpo
+$k$, la conmutatividad de (6.4) muestra que bastaría demostrar la fórmula sin
+denominadores en el anillo de Chow $A(Y)$; cf. (3.3).
+
+\textbf{6.4.} Cuando no se impone ninguna hipótesis de regularidad sobre $Y$,
+e incluso si $X$ e $Y$ son de tipo finito sobre el cuerpo $\C$, ya no se ve
+una definición plausible de un homomorfismo de Gysin cohomológico (6.2), ni
+siquiera para una inmersión regular de codimensión $1$. ¿Puede encontrarse,
+sin embargo, uno con propiedades razonables, en particular que haga
+conmutativo el cuadrado (6.3)? La cuestión está evidentemente relacionada
+con la de definir, para un $X$ de intersección completa de codimensión $i$
+en $Y$, «su clase de cohomología»
+\[
+\gamma(X)\in H^{2i}(Y,\Zell(i)),
+\]
+de manera que transforme intersecciones sin componentes excedentarias en
+cup-productos. Esta última cuestión se resuelve afirmativamente, al menos
+módulo torsión, es decir, en $H^{2\bullet}(Y,\Qell(\bullet))$, definiendo
+\[
+\gamma(X)=\frac{1}{(-1)^{i-1}(i-1)!}\,c_i(\mathcal O_X).
+\]
+Pero ignoro si $c_i(\mathcal O_X)$ es divisible por $(i-1)!$ en
+$H^{2i}(Y,\Zell(i))$. En particular, si $Y$ es, por ejemplo, un esquema
+proyectivo de dimensión $3$ sobre el cuerpo de los complejos y $X$ se reduce
+a un punto singular de $Y$, ¿es $c_3(\mathcal O_X)$ divisible por $2$ en
+$H^6(Y,\Z_2(3))$ y, en particular, es nula la clase de Chern en
+$H^6(Y,\Z/2\Z)$? Señalemos también, en la misma dirección, la cuestión
+siguiente: sea $Y$ un esquema proyectivo singular de dimensión $4$, sea $X$
+un subesquema cerrado de dimensión $1$ que sea globalmente una intersección
+de tres divisores positivos $D_1,D_2,D_3$, y consideremos el producto de sus
+clases de Chern módulo $2$:
+\[
+c_1(D_1)c_1(D_2)c_1(D_3)\in H^6(Y,\Z/2\Z).
+\]
+¿Es este elemento de $H^6$ independiente de la elección particular de los
+$D_i$ cuya intersección es $X$?

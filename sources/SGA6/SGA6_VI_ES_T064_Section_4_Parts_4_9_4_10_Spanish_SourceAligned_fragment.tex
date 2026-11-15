@@ -1,0 +1,50 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 4, números 4.9--4.10, líneas 9344--9386 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{4.9}
+Sea \(S\) un esquema; denotemos por \(G_S^{n,r}\) el grassmanniano de tipo \((n,r-n)\) de \((\mathcal O_S)^r\), con \(r\ge n\). Al variar \(r\), los \(G_S^{n,r}\) forman un sistema inductivo, definiéndose el morfismo \(G_S^{n,r}\longrightarrow G_S^{n,r+1}\) al considerar \((\mathcal O_{G_S^{n,r}})^r\) como cociente de \((\mathcal O_{G_S^{n,r}})^{r+1}\) por el \((r+1)\)-ésimo factor. En este sistema de morfismos, los cocientes canónicos se corresponden, pues, por imagen inversa. El sistema inductivo así definido se denotará por \(G_S^{n,\infty}\).
+
+Se define su \(K'\) mediante la fórmula:
+\begin{equation}\tag{4.9.1}
+  K'(G_S^{n,\infty})
+  = \varprojlim_r \bigl(K'(G_S^{n,r})\bigr) .
+\end{equation}
+Sean \(F_1,F_2\) los haces canónicos sobre \(G_S^{n,r}\) (4.5), y denotemos también por \(F_1,F_2\) sus clases en \(K'(G_S^{n,r})\). Pongamos \(c_i=\gamma^i(F_1-n)\). Si se hace variar \(r\), los \(c_i\) se corresponden por los morfismos de transición y definen, por consiguiente, elementos, denotados también por \(c_i\), de \(K'(G_S^{n,\infty})\).
+
+\textbf{Proposición 4.10.} Sea \(S\) un esquema cuasicompacto. Entonces, con las notaciones de 4.9, se tiene un isomorfismo:
+\[
+  K'(G_S^{n,\infty})\simeq K'(S)[[c_1,\ldots,c_n]] .
+\]
+
+Según 4.8, \(K'(G_S^{n,r})\) es la \(K'(S)\)-álgebra engendrada por los \(c_i=\gamma^i(F_1-n)\), \(1\le i\le n\), y los \(\gamma^j(F_2-r+n)\), \(1\le j\le r-n\), sometidos a las relaciones deducidas de:
+\[
+  \gamma_t(F_1-n).\gamma_t(F_2-r+n)
+  = \gamma_t(r-r)=1,
+\]
+o, equivalentemente:
+\[
+  \gamma_t(F_2-r+n)=1/\gamma_t(F_1-n).
+\]
+Esta relación permite expresar los \(\gamma^j(F_2-r+n)\) en función de los \(c_i\), y da una serie de relaciones isóbaras entre los \(c_i\) (atribuyendo a \(c_i\) el peso \(i\)) al escribir que los coeficientes de \(1/\gamma_t(F_1-n)\) son nulos en grados \(>r-n\); además, estas relaciones engendran el ideal de las relaciones entre los \(c_i\). Se puede escribir, pues:
+\[
+  K'(G_S^{n,r})=K'(S)[c_1,\ldots,c_n]/I_r,
+\]
+donde \(I_r\) es un ideal homogéneo de \(K'(S)[c_1,\ldots,c_n]\), de grado \(>r-n\). Resulta entonces de la definición (4.9.1) que \(K'(\mathbf G_S^{n,\infty})\) es el completado separado de \(K'(S)[c_1,\ldots,c_n]\) para la topología definida por los \(I_r\). Esta topología es más fina que la topología definida por el peso; vamos a demostrar que es equivalente a ella, lo que implicará la proposición.
+
+Pongamos \(A=K'(S)[c_1,\ldots,c_n]/I_r\), y sea \(C\) la \(A\)-álgebra engendrada por unos generadores \(x_1,\ldots,x_n\) sometidos a las relaciones:
+\[
+  \sigma_j(x_1,\ldots,x_n)=c_j,
+\]
+donde las \(\sigma_j\) denotan las funciones simétricas elementales. Según 4.4, el homomorfismo canónico \(A\to C\) es inyectivo. Se obtiene:
+\[
+  \gamma_t(F_1-n)
+  =1+c_1t+\ldots+c_nt^n
+  =\prod_{i=1}^n(1+x_it).
+\]
+Como \(1/\gamma_t(F_1-n)\) es un polinomio, lo mismo ocurre con \(1/(1+x_it)\) para todo \(i\). Por consiguiente, los \(x_i\) son nilpotentes, y existe un entero \(N\) tal que todo polinomio de grado \(>N\) respecto de los \(x_i\), con coeficientes en \(K'(S)\), sea nulo. Por tanto, todo polinomio de \(A\), de peso \(>N\), es nulo, es decir, todo polinomio de \(K'(S)[c_1,\ldots,c_n]\) de peso \(>N\) pertenece a \(I_r\). Se sigue que las dos topologías consideradas son equivalentes, lo que concluye la demostración.
+
+

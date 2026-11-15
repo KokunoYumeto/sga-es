@@ -1,0 +1,82 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: apertura y sección 1, números 1.1--1.2.3, líneas 8513--8587 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{Exposición VI. El \(K^\circ\) de un fibrado proyectivo: cálculos y consecuencias}
+\begin{center}
+por Pierre Berthelot
+\end{center}
+
+\section*{1. Cálculo del \(K^\circ\) de un fibrado proyectivo: caso de los haces localmente libres de tipo finito}
+
+En este parágrafo, la notación \(K^\circ(X)\) designará el grupo de Grothendieck de los haces localmente libres de tipo finito sobre un esquema \(X\).
+
+El objetivo del parágrafo es demostrar el teorema siguiente:
+
+\textbf{Teorema 1.1.} Sean \(S\) un esquema cuasicompacto, \(E\) un \(\mathcal O_S\)-módulo localmente libre de rango \(r+1\), y \(X=\mathbf P(E)\) el fibrado proyectivo asociado; el morfismo estructural \(X\xrightarrow{f}S\) define un homomorfismo de anillos:
+\[
+  K^\circ(S) \xrightarrow{f^*} K^\circ(X)
+\]
+que dota a \(K^\circ(X)\) de una estructura de \(K^\circ(S)\)-álgebra. Sea \(\xi\in K^\circ(X)\) la clase del haz \(\mathcal O_X(1)\). Entonces \(K^\circ(X)\) es un \(K^\circ(S)\)-módulo libre que admite como base \(1,\ldots,\xi^r\).
+
+\textbf{Plan de la demostración:}
+
+\(1^\circ\)) Las potencias de \(\xi\) engendran \(K^\circ(X)\) como \(K^\circ(S)\)-módulo.
+
+Para mostrarlo, demostraremos los puntos siguientes:
+
+\begin{enumerate}[label=\alph*)]
+\item Si \(F\) es un \(\mathcal O_X\)-módulo localmente libre de tipo finito, existe un \(\Sym(E)\)-módulo graduado \(M\), de presentación finita y plano sobre \(\mathcal O_S\), tal que \(F=\Projz(M)\) (siendo \(\Sym(E)\) el álgebra simétrica de \(E\); para la notación \(\Projz\), véase EGA II 8.12.1).
+
+\item Existe una resolución graduada finita de \(M\) por \(\Sym(E)\)-módulos graduados \(L_i\) localmente libres de tipo finito: \(0\longrightarrow L_{r+1}\longrightarrow\cdots\longrightarrow L_0\longrightarrow M\longrightarrow 0\).
+
+\item Los \(L_i\) admiten una filtración finita cuyos cocientes son del tipo \(N_j\otimes_{\mathcal O_S}\Sym(E)(j)\), siendo los \(N_j\) localmente libres de tipo finito sobre \(S\).
+\end{enumerate}
+
+\(2^\circ\)) \(1,\ldots,\xi^{r+1}\) son linealmente dependientes sobre \(K^\circ(S)\).
+
+\(3^\circ\)) \(1,\ldots,\xi^r\) son linealmente independientes sobre \(K^\circ(S)\).
+
+\subsection*{1.2.}
+Para mayor comodidad, recordaremos aquí algunas definiciones y propiedades clásicas de los módulos graduados.
+
+Sean \(S\) un esquema, \(B\) una \(\mathcal O_S\)-álgebra graduada y \(M\) un \(B\)-módulo graduado. Para todo \(B\)-módulo graduado \(N\), se denota, como de costumbre, por \(N(n)\) el \(B\)-módulo graduado definido por:
+\[
+  (N(n))_k=N_{n+k}\quad\text{para todo }k.
+\]
+Se dice que \(M\) es un \(B\)-módulo graduado localmente libre (resp. localmente libre de tipo finito) si todo punto de \(S\) posee un entorno abierto \(U\) tal que \(M|U\) es isomorfo, como \(B\)-módulo graduado, a una suma directa de módulos de la forma \(B(n)|U\) (resp. a una suma directa finita).
+
+Se dice que \(M\) es un \(B\)-módulo graduado de presentación finita si todo punto de \(S\) posee un entorno abierto \(U\) tal que existe una sucesión exacta \(P\longrightarrow Q\longrightarrow M|U\longrightarrow 0\), donde \(P\) y \(Q\) son \((B|U)\)-módulos graduados libres de tipo finito, y los homomorfismos son compatibles con las graduaciones.
+
+\textbf{1.2.1.} Para todo entero \(n\), se puede definir un homomorfismo canónico de \(B\)-módulos graduados:
+\begin{equation}\tag{1.2.1}
+  M_n\otimes_{\mathcal O_S} B(-n)\longrightarrow M,
+\end{equation}
+enviando \(x\otimes a\), donde \(x\) es una sección de \(M_n\), y \(a\) una sección de \((B(-n))_k=B_{k-n}\), al elemento \(a.x\) de \(M_k\).
+
+\textbf{1.2.2.} Se dice que un \(B\)-módulo graduado \(M\) es libre de tipo finito y homogéneo de grado \(n\) si es isomorfo, como \(B\)-módulo graduado, a \((B(-n))^k\) para cierto entero \(k\).
+
+Sea \(M\) un \(B\)-módulo graduado libre de tipo finito. Según 1.2, se puede encontrar un isomorfismo graduado:
+\begin{equation}\tag{1.2.2}
+  M\simeq \bigoplus_{n=n_0}^{n_1} \bigl(B(-n)\bigr)^{k_n}.
+\end{equation}
+Se obtiene así una descomposición de \(M\) como suma directa de \(B\)-módulos graduados libres de tipo finito y homogéneos, a saber:
+\[
+  M\simeq \bigoplus_{n=n_0}^{n_1}M^{(n)},
+\]
+donde \(M^{(n)}\) es libre homogéneo de grado \(n\) y de rango \(k_n\).
+
+\textbf{Proposición 1.2.3.} Los enteros \(k_n\) que intervienen en la descomposición (1.2.2) no dependen de la descomposición elegida.
+
+Supongamos dadas dos descomposiciones, y por tanto un isomorfismo graduado:
+\[
+  \bigoplus_{n=n_0}^{n_1}\bigl(B(-n)\bigr)^{k_n}\simeq
+  \bigoplus_{n=n'_0}^{n'_1}\bigl(B(-n)\bigr)^{k'_n}.
+\]
+La demostración se hace por inducción sobre el número de factores directos libres homogéneos no nulos que intervienen en la descomposición de la izquierda. Si es \(0\), entonces \(M=0\), y la proposición es evidente. Supongámosla demostrada para \(n_1-n_0=m\), y demostrémosla para \(n_1-n_0=m+1\). El isomorfismo dado, al ser compatible con las graduaciones, induce un isomorfismo sobre las componentes homogéneas de ambos miembros, y en particular un isomorfismo de las componentes homogéneas de grado \(<n_0\), lo que muestra que, para \(n<n_0\), se tiene \(k'_n=0\), y sobre las componentes homogéneas de grado \(n_0\), lo que muestra que tienen el mismo rango y, por tanto, que \(k_{n_0}=k'_{n_0}\). El isomorfismo dado induce, pues, un isomorfismo de los factores directos libres homogéneos de menor grado de las dos descomposiciones, y pasa por tanto al cociente por estos factores directos; se aplica entonces la hipótesis de inducción al módulo cociente, de donde resulta el enunciado.
+
+De 1.2.3 resulta, en particular, que para todo módulo graduado libre de tipo finito \(M\), el número de elementos de una base homogénea de \(M\) que tienen un grado dado no depende de la base elegida. En particular, los enteros \(n_0\) y \(n_1\) que intervienen en la descomposición (1.2.2), definidos por las condiciones \(k_{n_0}\neq0\), \(k_{n_1}\neq0\), no dependen de la descomposición.
+

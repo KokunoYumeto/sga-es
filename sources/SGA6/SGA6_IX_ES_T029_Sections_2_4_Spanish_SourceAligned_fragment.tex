@@ -1,0 +1,237 @@
+% SGA 6, Exposición IX: fragmento español alineado con la fuente.
+% Alcance: secciones 2--4 y macros locales siguientes, líneas 12199--12429 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{2. Fibrados principales bajo toros desplegados}
+
+\textbf{2.1.} Sean $S$ un esquema noetheriano, y $T$ un toro sobre $S$. Se supone que $T$ es desplegado; se tiene, pues, un isomorfismo $T\simeq D_S(M)$, donde $M$ es un grupo abeliano libre de rango $r$, o también $T\simeq \underline G_{m\,S}^r$. Sea $P$ un torsor bajo $T$. Entonces $P$ es afín sobre $S$, definido por una $\mathcal O_S$-álgebra $A$ graduada de tipo $M$; si se pone $A=\bigoplus_{m\in M}A_m$, entonces $A_m$ es un $\mathcal O_S$-módulo invertible para todo $m$, y, para $m,m'\in M$, el homomorfismo $A_m\otimes_{\mathcal O_S}A_{m'}\longrightarrow A_{m+m'}$ definido por la multiplicación de $A$ es un isomorfismo (SGA 3 VIII 4.1). Se define así un homomorfismo multiplicativo $\eta:M\longrightarrow K^\circ(S)$ asociando a $m\in M$ la clase de $A_m$ en $K^\circ(S)$.
+
+\textbf{Proposición 2.2.} Con las notaciones y las hipótesis de 2.1, sea $f:P\to S$ el morfismo estructural de $P$. Entonces el homomorfismo
+\[
+f^*:K_\bullet(S)\longrightarrow K_\bullet(P)
+\]
+es sobreyectivo, y su núcleo es el subgrupo de $K_\bullet(S)$ engendrado por los subgrupos $(\eta(m)-1)K_\bullet(S)$ para $m\in M$, o, equivalentemente, para $m$ recorriendo un sistema de generadores de $M$.
+
+Supongamos primero $r=1$, es decir, $T=G_{m\,S}$. Entonces $M=\mathbb Z$, y para todo $m\in M$ se tiene
+\[
+A_m\simeq A_1^{\otimes m}.
+\]
+Por consiguiente, si se pone $A_1=L$, se tiene $A=\bigoplus_{n\in\mathbb Z}L^{\otimes n}$, lo que muestra que $P$ se identifica con el complementario de la sección cero en el fibrado $X=\mathbb V(L)$. Considerando $S$ como un subesquema cerrado de $X$ mediante la sección cero, se tiene por 1.1 la sucesión exacta
+\[
+K_\bullet(S)\xrightarrow{g_*}K_\bullet(X)\longrightarrow K_\bullet(P)\longrightarrow 0,
+\]
+donde $g:S\to X$ es la sección cero de $X$. Por otra parte, $f^*$ se factoriza como \(K_\bullet(S)\xrightarrow{f'^*}K_\bullet(X)\longrightarrow K_\bullet(P)\), donde $f'$ es el morfismo estructural de $X$. Por 1.6, $f'^*$ es un isomorfismo, inverso de $g^*$. Se tiene entonces la sucesión exacta
+\[
+K_\bullet(S)\xrightarrow{g^*\circ g_*}K_\bullet(S)\xrightarrow{f^*}K_\bullet(P)\longrightarrow 0,
+\]
+de la que, por 1.8, se deduce
+\[
+K_\bullet(P)\simeq K_\bullet(S)/\lambda_{-1}(L)K_\bullet(S)=K_\bullet(S)/(1-L)K_\bullet(S),
+\]
+donde $L$ es la clase en $K^\circ(S)$ de $L$. Como, para todo $n\in\mathbb Z$, $L^n-1$ es múltiplo de $1-L$, esto demuestra 2.2 cuando $P$ es de rango $1$.
+
+Continuamos la demostración por inducción sobre el rango $r$ de $P$. Supongamos demostrado el resultado para los torsores bajo toros desplegados de rango $<r$. Escribimos entonces $M=M_1\oplus M_2$, con $M_1\simeq\mathbb Z^{r-1}$ y $M_2\simeq\mathbb Z$; ponemos $A'=\bigoplus_{m\in M_1}A_m$ y $A''=\bigoplus_{m\in M_2}A_m$, de modo que $A=A'\otimes_{\mathcal O_S}A''$. Sea $P_1=\Spec(A')$; entonces $P_1$ es un torsor bajo $D_S(M_1)$ y $P$ es un torsor sobre $P_1$, de grupo $\underline G_{m\,P_1}$ y cuya álgebra es la imagen inversa de $A''$ sobre $P_1$. Por lo anterior, $K_\bullet(P)$ es el cociente de $K_\bullet(P_1)$ por el subgrupo engendrado por los $(\eta(m_2)-1)K_\bullet(P_1)$ para $m_2\in M_2$. Por la hipótesis de inducción, $K_\bullet(P_1)$ es el cociente de $K_\bullet(S)$ por el subgrupo engendrado por los $(\eta(m_1)-1)K_\bullet(S)$ para $m_1\in M_1$. Teniendo en cuenta la relación
+\[
+\eta(m_1+m_2)-1=\eta(m_1)\eta(m_2)-1
+=\eta(m_1)(\eta(m_2)-1)+\eta(m_1)-1,
+\]
+$K_\bullet(P)$ es, pues, el cociente de $K_\bullet(S)$ por el subgrupo engendrado por los $(\eta(m)-1)K_\bullet(S)$ para $m\in M$, o también para $m$ recorriendo un sistema de generadores de $M$.
+
+\textbf{Corolario 2.3.} Con las notaciones y las hipótesis de 2.1, supongamos que $S$ sea regular; entonces se tiene un isomorfismo canónico
+\[
+K^\circ(P)\simeq K^\circ(S)/\bigl((\eta(m)-1)_{m\in M}\bigr),
+\]
+donde $((\eta(m)-1)_{m\in M})$ es el ideal de $K^\circ(S)$ engendrado por los $\eta(m)-1$ para $m$ recorriendo un sistema de generadores de $M$.
+
+Si $S$ es regular, el homomorfismo canónico $K^\circ(S)\to K_\bullet(S)$ es un isomorfismo (IV 2.5). Del mismo modo, como $P$ es entonces regular, $K^\circ(P)\to K_\bullet(P)$ es un isomorfismo. El corolario resulta, pues, inmediatamente de 2.2.
+
+\subsection*{3. Fibrados proyectivos y fibrados de banderas}
+
+\textbf{Proposición 3.1.} Sean $S$ un esquema noetheriano, $E$ un $\mathcal O_S$-módulo localmente libre de rango $n$, $\pi=(p_1,\ldots,p_k)$ una sucesión de enteros tales que $\sum_i p_i=n$, y $X=\mathbb D_\pi(E)$ el esquema de banderas de tipo $\pi$ de $E$. Entonces el homomorfismo canónico
+\[
+K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(X)\longrightarrow K_\bullet(X)
+\]
+es un isomorfismo.
+
+Retomamos las notaciones de VI 4.5. Denotamos, pues, por $L_i$ los cocientes canónicos de la imagen inversa de $E$ sobre $X$, por $F_i$ el núcleo de $L_i\to L_{i-1}$ ($i=1,\ldots,k$), y por $\lambda_i^{(j)}$ la clase en $K^\circ(X)$ de $\Lambda^i(F_j)$. Entonces los $\lambda_i^{(j)}$ engendran $K^\circ(X)$ como $K^\circ(S)$-álgebra (VI 4.6). Del mismo modo, las imágenes de los $\lambda_i^{(j)}$ en $K^\circ(X_s)$ engendran $K^\circ(X_s)$ como álgebra sobre $K^\circ(k(s))=\mathbb Z$ para todo punto $s$ de $S$. Como $X_s$ es un esquema de banderas sobre un cuerpo, es un esquema regular; por tanto, el homomorfismo $K^\circ(X_s)\to K_\bullet(X_s)$ es un isomorfismo, de modo que el homomorfismo $K^\circ(X)\to K_\bullet(X_s)$ es sobreyectivo. Por 1.3, esto implica que el homomorfismo
+\[
+K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(\sisi{S}{X})\longrightarrow K_\bullet(X)
+\]
+es sobreyectivo.
+
+Para demostrar la inyectividad, podemos reducirnos primero al caso del fibrado de banderas completo $\mathbb D(E)$. En efecto, supongamos que
+\[
+K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(\mathbb D(E))\longrightarrow K_\bullet(\mathbb D(E))
+\]
+sea inyectivo. Como $K_\bullet(S)\to K_\bullet(\mathbb D(E))$ se factoriza por $K_\bullet(X)$, este homomorfismo se factoriza como
+\[
+K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(X)\otimes_{K^\circ(X)}K^\circ(\mathbb D)
+\longrightarrow K_\bullet(X)\otimes_{K^\circ(X)}K^\circ(\mathbb D)
+\longrightarrow K_\bullet(\mathbb D)
+\]
+y el primer homomorfismo es inyectivo. Como, por VI 4.3, 4.6 y 4.7, $K^\circ(\mathbb D)$ es libre sobre $K^\circ(X)$, esto implica la inyectividad de
+\[
+K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(X)\to K_\bullet(X).
+\]
+Sea, pues, $X=\mathbb D(E)$. Procedemos por inducción sobre el rango de $E$. Como el caso $n=1$ es trivial, supongamos demostrada la propiedad para $n-1$. Introducimos entonces $P=\mathbb P(E)$ y el núcleo $F$ del homomorfismo canónico $p^*(E)\to \mathcal O_P(1)$, donde $p$ es el morfismo estructural de $P$. Entonces $X$ se identifica con el esquema de banderas de $F$ sobre $P$, y por la hipótesis de inducción se ve que basta demostrar 3.1 para $P$. Teniendo en cuenta VI 1.1, el resultado que hay que demostrar puede enunciarse así:
+
+\textbf{Corolario 3.2.} Sean $S$ un esquema noetheriano, $E$ un $\mathcal O_S$-módulo localmente libre de rango $n$, $X=\mathbb P(E)$ el fibrado proyectivo asociado, $f$ el morfismo estructural de $X$, y $\xi$ la clase en $K^\circ(X)$ del haz $\mathcal O_X(1)$. Entonces el homomorfismo
+\[
+\varphi:(K_\bullet(S))^n\longrightarrow K_\bullet(X)
+\]
+definido por
+\[
+\varphi((x_i))=\sum_{i=0}^{n-1}\xi^{-i}f^*(x_i)
+\]
+es un isomorfismo.
+
+Ya hemos visto que este homomorfismo es sobreyectivo, puesto que los $\xi^i$, $i=0,\ldots,-n+1$, forman una base de $K^\circ(X)$ sobre $K^\circ(S)$; para ver que es inyectivo, utilizamos el homomorfismo $f_*$, definido porque $f$ es proyectivo. Se tiene entonces, por IV (2.12.4),
+\[
+f_*\left(\sum_{i=0}^{n-1}\xi^{-i}f^*(x_i)\right)
+=\sum_{i=0}^{n-1}x_i f_*(\xi^{-i})=x_0,
+\]
+donde la última igualdad resulta de que, para $-n+1\le i<0$, se tiene $f_*(\xi^i)=0$ (VI 2.8). Supongamos que $\varphi((x_i))=0$. Lo anterior muestra entonces que $x_0=0$; aplicando el mismo razonamiento a los elementos $\xi^i\varphi((x_i))$ para $i=1,\ldots,n-1$, se deduce por inducción que todos los $x_i$ son nulos, de donde resulta la inyectividad.
+
+\textbf{3.3.} Sean todavía $S$ un esquema noetheriano, y $E$ un $\mathcal O_S$-módulo localmente libre de rango $n$. Denotamos por $V=\mathbb V(E)$ el fibrado vectorial (¡contravariante en $E$!) asociado a $E$ (SGA 3 I 4.6), considerado como esquema en grupos sobre $S$. Sea $P$ un torsor bajo $V$; nos proponemos calcular $K_\bullet(P)$.
+
+Recordemos cómo se puede sumergir $P$ en un fibrado proyectivo sobre $S$. Los torsores bajo $V$ corresponden a las extensiones $F$ de $E$ por $\mathcal O_S$. En efecto, si se tiene una extensión
+\[
+0\longrightarrow \mathcal O_S\xrightarrow{s}F\xrightarrow{u}E\longrightarrow 0,
+\tag{3.3.1}
+\]
+se deduce un torsor bajo $V$ considerando el homomorfismo $\mathbb V(F)\to \mathbb V(\mathcal O_S)$ definido por $s$, la sección de $\mathbb V(\mathcal O_S)=\Spec(\mathcal O_S[T])$ definida por $T=1$, y tomando $P=\mathbb V(F)\times_{\mathbb V(\mathcal O_S)}S$, estando inducidas las operaciones de $V$ sobre $P$ por las de $V$ sobre $\mathbb V(F)$.
+Recíprocamente, sea $P$ un torsor bajo $V$. Denotemos por $\underline P$ el haz de gérmenes de homomorfismos de $S$ en $P$; es un haz principal homogéneo bajo el haz de gérmenes de homomorfismos de $S$ en $V$, que se identifica con el dual $\check E$ de $E$. Se deduce entonces, de manera clásica, una extensión de $\mathcal O_S$ por $\check E$, de donde, pasando a los duales, resulta la sucesión (3.3.1).
+
+Sea, pues, $P$ un torsor bajo $V$, correspondiente a una extensión $F$ de $E$ por $\mathcal O_S$. El álgebra $A(P)$ de $P$ sobre $\mathcal O_S$ es $\mathbb S(F)\otimes_{\mathbb S(\mathcal O_S)}\mathcal O_S$, es decir, $\mathbb S(F)/(s-1)\mathbb S(F)$, que se identifica con el anillo de fracciones homogéneas de grado $0$, $\mathbb S(F)_{(s)}$. Por tanto, $P$ se identifica con el abierto $D_+(s)$ de $\mathbb P(F)$. El complementario de $P$ en $\mathbb P(F)$ es entonces $\operatorname{Proj}(\mathbb S(F)/s\cdot \mathbb S(F))$, que se identifica, por (3.3.1), con $\mathbb P(E)$. Se tienen así las inmersiones
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+\mathbb P(E) \arrow[r,hook] \arrow[dr] & \mathbb P(F) \arrow[d] & P \arrow[l,hook'] \arrow[dl]\\
+& S &
+\end{tikzcd}
+\]
+donde $\mathbb P(E)$ es cerrado en $\mathbb P(F)$, y $P$ es abierto y complementario de $\mathbb P(E)$.
+
+\textbf{Proposición 3.4.} Sean $S$ un esquema noetheriano, $E$ un $\mathcal O_S$-módulo localmente libre de rango $n$, $V=\mathbb V(E)$ el fibrado vectorial asociado, $P$ un torsor bajo $V$, y $f$ el morfismo estructural de $P$. Entonces el homomorfismo canónico
+\[
+f^*:K_\bullet(S)\longrightarrow K_\bullet(P)
+\]
+es un isomorfismo.
+
+Con las identificaciones de 3.3, se tiene la sucesión exacta
+\[
+K_\bullet(\mathbb P(E))\xrightarrow{i_*}K_\bullet(\mathbb P(F))\longrightarrow K_\bullet(P)\longrightarrow 0,
+\tag{3.4.1}
+\]
+donde $i$ designa la inmersión cerrada $\mathbb P(E)\to \mathbb P(F)$ definida por $u$. Por 3.2, se tiene $K_\bullet(\mathbb P(E))=K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(\mathbb P(E))$, $K_\bullet(\mathbb P(F))=K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(\mathbb P(F))$.
+Como $\mathbb P(E)$ y $\mathbb P(F)$ son lisos, $i$ es una inmersión regular, y se tiene, pues, un homomorfismo $i_*:K^\circ(\mathbb P(E))\to K^\circ(\mathbb P(F))$; el homomorfismo entre los $K_\bullet$ se obtiene entonces tensorizando el homomorfismo entre los $K^\circ$ por $K_\bullet(S)$. Para verlo basta demostrar que, para $a\in K_\bullet(S)$ y $b\in K^\circ(\mathbb P(E))$, se tiene
+\[
+i_*(b\cdot h^*(a))=i_*(b)\cdot g^*(a),
+\]
+donde $g$ y $h$ son los morfismos estructurales de $\mathbb P(F)$ y $\mathbb P(E)$. Como $h=g\circ i$, se tiene:
+\[
+i_*(b\cdot h^*(a))=i_*(b\cdot i^*g^*(a))=g^*(a)\cdot i_*(b)
+\]
+por IV 2.12.4.
+
+Por (3.4.1), se tiene, pues,
+\[
+K_\bullet(P)\simeq K_\bullet(S)\otimes_{K^\circ(S)}
+\bigl(K^\circ(\mathbb P(F))/\operatorname{Im}K^\circ(\mathbb P(E))\bigr).
+\]
+Sean $\xi_F$ y $\xi_E$ las clases de los haces invertibles canónicos sobre $\mathbb P(F)$ y $\mathbb P(E)$. Entonces, por VI 1.1, $K^\circ(\mathbb P(F))$ (resp. $K^\circ(\mathbb P(E))$) admite como base sobre $K^\circ(S)$ los elementos $\xi_F^k$ para $k=0,\ldots,-n$ (resp. $\xi_E^k$ para $k=0,\ldots,-n+1$). La fórmula de proyección da
+\[
+i_*(\xi_E^k)=i_*(i^*(\xi_F^k))=\xi_F^k i_*(1).
+\]
+Si $I$ es el ideal de $\mathbb P(E)$ en $\mathbb P(F)$, $I$ es un ideal invertible, y se tiene $i_*(1)=1-I$. Por otra parte, $I$ está definido por el ideal $J$ de $S(F)$, núcleo de $S(F)\to S(E)$, que está engendrado por un submódulo de $F$ isomorfo a $\mathcal O_S$; por consiguiente, $I\simeq \mathcal O_{\mathbb P(F)}(-1)$. La imagen de $K^\circ(\mathbb P(E))$ es, pues, el sub-$K^\circ(S)$-módulo engendrado por los $\xi_F^k-\xi_F^{k-1}$ para $k=0,\ldots,-n+1$. El homomorfismo
+\[
+K^\circ(S)\longrightarrow K^\circ(\mathbb P(F))/\operatorname{Im}(K^\circ(\mathbb P(E)))
+\]
+es, por tanto, un isomorfismo, y lo mismo vale para el homomorfismo $K_\bullet(S)\to K_\bullet(P)$.
+
+\subsection*{4. Fibrados principales bajo los grupos $\mathrm{GL}(n)_S$}
+
+\textbf{Proposición 4.1.} Sean $S$ un esquema noetheriano, $G$ el $S$-grupo $\mathrm{GL}(n)_S$, $P$ un torsor bajo $G$, y $E$ el $\mathcal O_S$-módulo localmente libre de rango $n$ correspondiente a $P$. Denotamos también por $E$ la clase de $E$ en $K^\circ(S)$, y por $J$ el $\lambda$-ideal engendrado por $(E-n)$. Si $f$ es el morfismo estructural de $P$, entonces $f^*$, definido porque $f$ es plano, es sobreyectivo y define un isomorfismo
+\[
+K_\bullet(S)/J\cdot K_\bullet(S)\xrightarrow{\sim}K_\bullet(P).
+\]
+
+Sean $E_0=(\mathcal O_S)^n$, $e_1,\ldots,e_n$ la base evidente de $E_0$, y $E_0^{(i)}$ el submódulo de $E_0$ engendrado por $e_1,\ldots,e_i$. El subfuntor de $G$ que a todo $S$-esquema $S'$ asocia el subgrupo de los automorfismos de $E_{0,S'}$ que dejan invariantes los submódulos $E_{0,S'}^{(i)}$ para todo $i$ es representable por un subesquema en grupos $B$ de $G$, que es un subgrupo de Borel de $G$. El haz cociente $G/B$ (para la topología fpqc) es representable por el esquema de banderas de $E_0$, que se denotará por $X_0$. Sean $L_0^{(i)}$ los cocientes canónicos de la imagen inversa de $E_0$ sobre $X_0$, $G_0^{(i)}$ el núcleo de $E_{0,X_0}\to L_0^{(i)}$, y
+\[
+F_0^{(i)}=G_0^{(i-1)}/G_0^{(i)}\simeq \Ker(L_0^{(i)}\to L_0^{(i-1)}).
+\]
+
+Por otra parte, $B$ es producto semidirecto de su radical unipotente $U$ y de su subtoro maximal $T$ que deja invariantes los $e_i$. Sea $Y_0=G/U$. Entonces $Y_0$ es un torsor de base $X_0$ bajo el grupo $T_{X_0}$. Si $S'$ es un $S$-esquema, el dato de un $S'$-punto de $Y_0$ equivale al dato, sobre un $S''$ fielmente plano cuasicompacto sobre $S'$, de un automorfismo de $E_{0,S''}$ módulo los unipotentes de $U_{S''}$, es decir, de una bandera de $E_{0,S''}$ cuyos submódulos son libres, y, para todo $i$, de una clase de elementos $f_i^\alpha$ libres sobre $\mathcal O_{S''}$ tales que $f_i^\alpha-f_i^\beta\in \sisi{G_{0,S''}^{(i+1)}}{G_{0,S''}^{(i)}}$; o, equivalentemente, al dato de una bandera de $E_{0,S''}$ y, para todo $i$, de una base de $F_{0,S''}^{(i)}$, estando sometido este dato a la condición de pegado sobre $S''\times_{S'}S''$. Por descenso fpqc, esto equivale al mismo dato sobre $S'$. Se ve entonces inmediatamente que $Y_0$ es el $X_0$-esquema afín definido por el álgebra
+\[
+A_0=\coprod_{k_i\in\mathbb Z}{F_0^{(1)}}^{\otimes k_1}\otimes\cdots\otimes{F_0^{(n)}}^{\otimes k_n}.
+\]
+El grupo $G$ opera sobre $E_0$, sobre $X_0$ provisto de los haces $L_0^{(i)}$ y sobre $Y_0$. Si se toma el producto contraído de estos objetos con $P$, bajo $G$, se obtienen el haz $E$ asociado a $P$, el esquema $X=\mathbb D(E)=P/B$ de las banderas de $E$, y el esquema $Y=P/U$. Denotaremos los haces canónicos sobre $X$ con las mismas letras que sus homólogos sobre $X_0$. Se tiene, pues, el diagrama
+\[
+\begin{array}{ccccc}
+&& Y=P/U &&\\[-0.2em]
+& \nearrow && \searrow &\\[-0.2em]
+P &&&& X=P/B=\mathbb D(E)\\[-0.2em]
+& \searrow && \swarrow &\\[-0.2em]
+&& S &&
+\end{array}
+\]
+Observemos que $P$ es un torsor de base $Y$, de grupo estructural $U_Y$, y que $Y$ es un torsor de base $X$, de grupo estructural $T_X$, definido por la $\mathcal O_X$-álgebra
+\[
+A=\bigoplus_{k_i\in\mathbb Z}{F^{(1)}}^{\otimes k_1}\otimes\cdots\otimes{F^{(n)}}^{\otimes k_n}.
+\]
+
+El homomorfismo $K_\bullet(S)\to K_\bullet(P)$ se factoriza, pues, como
+\[
+K_\bullet(S)\longrightarrow K_\bullet(X)\longrightarrow K_\bullet(Y)\longrightarrow K_\bullet(P).
+\]
+Por 3.1, se tiene $K_\bullet(X)=K_\bullet(S)\otimes_{K^\circ(S)}K^\circ(X)$. Sea $\xi_i$ la clase de $F^{(i)}$ en $K^\circ(X)$. Entonces, por 2.2, $K_\bullet(Y)$ es el cociente de $K_\bullet(X)$ por el submódulo engendrado por los $(\xi_i-1)K_\bullet(X)$. Si $I$ es el ideal de $K^\circ(X)$ engendrado por los $\xi_i-1$, se tiene, pues,
+\[
+K_\bullet(Y)=K_\bullet(S)\otimes_{K^\circ(S)}(K^\circ(X)/I).
+\]
+Ahora bien, por VI 4.8, $K^\circ(X)$ es la $K^\circ(S)$-álgebra engendrada por los $\xi_i-1$, sometidos a las relaciones deducidas de
+\[
+\gamma_t(E-n)=\prod_{i=1}^n\gamma_t(\xi_i-1).
+\]
+Por tanto, $K^\circ(X)/I=K^\circ(S)/J$, donde $J$ es el ideal engendrado por los $\gamma^j(E-n)$ para $j=1,\ldots,n$, y por ello el $\lambda$-ideal engendrado por $E-n$. Por consiguiente,
+\[
+K_\bullet(Y)\simeq K_\bullet(S)/J K_\bullet(S).
+\]
+La demostración se termina con el lema siguiente:
+
+\textbf{Lema 4.2.} Sean $S$ un esquema noetheriano, $B$ un subgrupo parabólico de un $S$-grupo reductivo, y $P$ un torsor bajo el radical unipotente $U$ de $B$; entonces se tiene un isomorfismo
+\[
+K_\bullet(S)\xrightarrow{\sim}K_\bullet(P).
+\]
+En efecto, existe una sucesión de subesquemas en grupos de $U$
+\[
+U_0=U\supset U_1\supset U_2\supset\cdots\supset U_p=e,
+\]
+cerrados en $B$, finita porque $B$ es noetheriano, y tales que, para todo $i$, $U_i/U_{i+1}$ sea isomorfo a un $S$-grupo vectorial (SGA 3 XXVI 2.1). Por consiguiente, $P\to S$ se factoriza por una sucesión de torsores bajo grupos vectoriales, de donde resulta la afirmación por 3.4.
+
+\textbf{Corolario 4.3.} Sean $S$ un esquema noetheriano, $G=\mathrm{Gl}(n)_S$. Entonces el homomorfismo canónico $K_\bullet(S)\longrightarrow K_\bullet(G)$ es un isomorfismo.
+
+Resulta inmediatamente de 4.1, aplicado a $P=G$, puesto que entonces $E=\mathcal O_S^n$.
+
+\textbf{Corolario 4.4.} Bajo las hipótesis de 4.1, supongamos $S$ regular. Entonces se tiene un isomorfismo
+\[
+K^\circ(S)/J\xrightarrow{\sim}K^\circ(P).
+\]
+Si $S$ es regular, $G$ también es regular, y $P$ igualmente. Se tiene, pues, $K^\circ(S)\simeq K_\bullet(S)$, $K^\circ(P)\simeq K_\bullet(P)$, de donde resulta la afirmación por 4.1.
+
+
+
+% Macros locales de la Exposición X
+\providecommand{\Filt}{\operatorname{Filt}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\longg}{\operatorname{long}}
+\providecommand{\degtr}{\operatorname{deg.tr}}
+\providecommand{\dimdot}{\operatorname{dim.}}
+\providecommand{\Frac}{\operatorname{Frac}}
+\providecommand{\fpqc}{\mathrm{fpqc}}
+\providecommand{\Sch}{\operatorname{Sch}}
+\providecommand{\Picf}{\operatorname{Pic}}
+\providecommand{\Ens}{\operatorname{Ens}}
+\providecommand{\im}{\operatorname{Im}}

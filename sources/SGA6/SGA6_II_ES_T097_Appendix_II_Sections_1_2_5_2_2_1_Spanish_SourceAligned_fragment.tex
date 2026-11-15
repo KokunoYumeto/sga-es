@@ -1,0 +1,74 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: apéndice II, §§1.2.5--2.2.1 (enunciado), líneas 4578--4644 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{1.2.5.} Sea $E$ un complejo, de grados acotados, de operadores diferenciales con coeficientes complejos sobre $X$ relativamente a $S$ (1.2.3), siendo $d^i:E^i\longrightarrow E^{i+1}$ de orden $\le n_i$. Según (1.2.4.3), se tiene
+\[
+ \sigma_{n_{i+1}}(d^{i+1})\,\sigma_{n_i}(d^i)=0.
+\]
+Se dice que $E$ es un \emph{complejo elíptico de orden $n$} $=(n_i)$ si el complejo $(p^*(E^i),\sigma_{n_i}(d^i))$ (donde $p$ es la proyección sobre $X$ del fibrado cotangente) es acíclico fuera de la sección nula.
+
+Cuando $S$ se reduce a un punto, la noción precedente de complejo elíptico sobre $X$ coincide con la noción usual, estudiada en detalle en [4] o [16].
+
+\textbf{1.2.6.} Sean $s\in S$ e $i_s$ la inclusión de la fibra $X_s$ en $X$ (considerada como monomorfismo de espacios anillados; cf.~(1.1)). Para $n\in\N$, se tiene un isomorfismo canónico
+\[
+ i_s^*(P^n_{X/S})\simeq P^n_{X_s},
+\]
+de donde un homomorfismo de restricción
+\[
+ i_s^*:\Diff^n(E,F)
+ \longrightarrow
+ \Diff^n\bigl(i_s^*(E),i_s^*(F)\bigr),
+\]
+para $E,F$ dos $\cO_X$-módulos localmente libres de tipo finito (y un homomorfismo análogo para los operadores con coeficientes complejos). Sea $E$ un complejo, de grados acotados, de operadores diferenciales con coeficientes complejos sobre $X$; para que $E$ sea elíptico (1.2.5), es necesario y suficiente que, para todo $s\in S$, $i_s^*(E)$ sea un complejo elíptico (se deja la verificación al lector).
+
+\subsection*{2. Lemas de rigidez}
+
+\textbf{2.0.} Es «bien conocido» que las variedades diferenciables compactas son «rígidas», es decir, no admiten más deformación continua que la trivial. Sin embargo, como este resultado nos servirá de manera esencial en el §3 y las referencias parecen bastante escasas, quizá no sea inútil dar enunciados precisos y algunas demostraciones.
+
+Se fija un espacio topológico $S$. Las variedades mixtas de las que se tratará se supondrán de clase $C^r$, con $r\ge1$ (eventualmente $r=\infty$).
+
+\textbf{2.1. Notaciones.} Sean $X,Y$ dos $S$-variedades mixtas. Se denota por $\Homop(X,Y)$ el conjunto de los $S$-morfismos de $X$ en $Y$, y por $\underline{\Homop}(X,Y)$ el haz sobre $X$ de los gérmenes de $S$-morfismos de $X$ en $Y$ (definido por
+\[
+ \underline{\Homop}(X,Y)(U)=\Homop(U,Y)
+\]
+para $U$ abierto de $X$).
+
+Sea $s\in S$. Se denota por $i_s$ la inclusión de $X_s$ en $X$. Se tiene un homomorfismo canónico de inducción
+\begin{equation}\tag{2.1.1}
+ i_s^{-1}\underline{\Homop}(X,Y)
+ \longrightarrow
+ \underline{\Homop}(X_s,Y_s),
+\end{equation}
+que es un epimorfismo, como se comprueba inmediatamente. En el caso en que $Y=S\times\R$, el haz $\underline{\Homop}(X,Y)$ se identifica canónicamente con $\cO_X$, y el epimorfismo (2.1.1) con el epimorfismo
+\[
+ i_s^{-1}(\cO_X)\longrightarrow i_s^*(\cO_X)=\cO_{X_s}
+\]
+considerado en (1.1).
+
+\textbf{Proposición}\footnote{Comunicada al redactor por A. Douady.} \textbf{2.2.} Sean $X,Y$ dos $S$-variedades mixtas y $s\in S$. Se supone que la fibra $X_s$ es paracompacta y que $s$ admite un sistema fundamental de entornos paracompactos. Sean $A$ un cerrado de $X_s$ y
+\[
+ f\in H^0(A,\underline{\Homop}(X_s,Y_s)).
+\]
+El subhaz $F$ de $i_s^{-1}\underline{\Homop}(X,Y)$ formado por los gérmenes «que prolongan $f$» (es decir, cuya imagen por (2.1.1) coincide con $f$ sobre $A$) es blando.
+
+\emph{Demostración.} \sisi{}{Fijemos $x\in X_s$. }Sea $X'$ un entorno abierto de $x$ en $X$, isomorfo (como variedad mixta) a $S'\times U$, donde $S'$ es un entorno paracompacto de $s$ y $U$ un abierto relativamente compacto de $\R^m$, y tal que la imagen por $f$ de $X'_s\cap A$ esté contenida en un abierto de $Y$ isomorfo a $S'\times V$, donde $V$ es un abierto convexo de $\R^n$ que contiene el origen. Según (T.F. II 3.4.1), basta mostrar que toda sección de $F$ sobre un cerrado $A_0$ de $X_s$ contenido en $X'_s$ se prolonga a $X'_s$. Ahora bien, $X'_s$ ($\simeq\{s\}\times U$) es relativamente compacto, de modo que un cerrado de $X_s$ contenido en $X'_s$ es compacto. Identifiquemos $X'$ (resp. $Y'$) con $S'\times U$ (resp. $S'\times V$), pongamos $A'=A\cap X'_s$ y sea $A_0$ un compacto de $X'_s=\{s\}\times U$. Como $A'$ es cerrado en $\{s\}\times U$, que es paracompacto, se tiene ([T.F.]~II 3.3.1)\footnote{Un cerrado de un espacio paracompacto admite un sistema fundamental de entornos paracompactos.}
+\[
+ H^0\bigl(A',\underline{\Homop}(X_s,Y_s)\bigr)
+ =\varinjlim_{U'\supset A'}\Homop(U',Y'_s),
+\]
+cuando $U'$ recorre los abiertos de $X'_s$ que contienen $A'$. Del mismo modo, como $A_0$ es cerrado en $S'\times \overline U$, que es paracompacto (producto de un paracompacto y un compacto), se tiene
+\[
+ H^0\bigl(A_0,i_s^{-1}\underline{\Homop}(X,Y)\bigr)
+ =\varinjlim_{U_0\supset A_0}\Homop(U_0,Y'),
+\]
+cuando $U_0$ recorre los abiertos de $X'$ que contienen $A_0$. La proposición será, por tanto, consecuencia del lema siguiente:
+
+\textbf{Lema 2.2.1.} Sean $U$ un abierto de $\R^m$ y $V$ un abierto convexo de $\R^n$ que contiene $0$. Sean $A_0,A_1$ dos cerrados de $\{s\}\times U$, sea $U_0$ (resp. $U_1$) un abierto de $S\times U$ (resp. $\{s\}\times U$) que contiene $A_0$ (resp. $A_1$). Sea $f_1:U_1\to V$ un morfismo y sea $f_0:U_0\to S\times V$ un $S$-morfismo que induce sobre $U_0\cap(\{s\}\times U)$ un morfismo que define el mismo germen que $f_1$ en un entorno de $A_1$. Existe entonces un abierto $U'$ de $S\times U$ que contiene $s\times U$ y un $S$-morfismo $\bar f:U'\longrightarrow S\times V$ tal que
+\begin{itemize}
+\item[(i)] el germen de $\bar f$ a lo largo de $\{s\}\times U$ prolonga el germen definido por $f_0$;
+\item[(ii)] el morfismo inducido por $\bar f$ sobre $\{s\}\times U$ define el mismo germen que $f_1$ en un entorno de $A_1$.
+\end{itemize}

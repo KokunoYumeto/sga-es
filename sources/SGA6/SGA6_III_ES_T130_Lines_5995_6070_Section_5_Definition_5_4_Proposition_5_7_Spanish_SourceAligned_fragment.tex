@@ -1,0 +1,81 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: sección 5, desde la definición 5.4 hasta la proposición 5.7, líneas 5995--6070 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Definición 5.4.} Sea \(X\) un topos; denotemos por \(\pt(X)\) el conjunto de sus puntos (SGA 4 IV 6.1). Sean \(M\) un conjunto ordenado, \(f:\pt(X)\to M\) una aplicación, y \(x\in\pt(X)\). Se dice que \(f\) es semicontinua superiormente (resp. semicontinua inferiormente, resp. localmente constante) en \(x\) si existe un objeto \(x\)-punteado \(U\) de \(X\) tal que para todo punto \(y\) de \(U\) se tenga \(f(y)\leq f(x)\) (resp. \(f(y)\geq f(x)\), resp. \(f(y)=f(x)\)). Se dice que \(f\) es semicontinua superiormente (resp. semicontinua inferiormente, \sisi{rep.}{resp.} localmente constante) si lo es en todo punto\footnote{Si \(X\) proviene de un espacio topológico, se recuperan las nociones usuales.}.
+
+\textbf{Ejemplos 5.4.1.} a) Denotemos por \(M_X\) el haz constante de valor \(M\) sobre \(X\), y sea \(s\in H^0(X,M)\). La aplicación \(x\mapsto s(x)=x^*(s)\) de \(\pt(X)\) en \(M\) es localmente constante. En particular, sea \(E\) un complejo perfecto sobre \(X\), supuesto localmente anillado: el rango de \(E\) (I 6.11) define una función localmente constante sobre \(\pt(X)\) con valores en \(\mathbb Z\).
+
+b) Supongamos \(X\) localmente anillado, y sea \(P\) un \(\mathcal O_X\)-módulo de tipo finito. Para \(x\in\pt(X)\), denotemos por \(\mathcal O_{X,x}\) el anillo local fibra de \(\mathcal O_X\) en \(x\), y por \(k(x)\) el cuerpo residual. Entonces, para \(x\in\pt(X)\), \(P_x\otimes_{\mathcal O_{X,x}}k(x)\) es de rango finito sobre \(k(x)\), y la función \(x\mapsto\operatorname{rg}_{k(x)}(P\otimes_{\mathcal O_{X,x}}k(x))\) es semicontinua superiormente. En efecto, si, para \(x\in\pt(X)\), \(P_x\otimes_{\mathcal O_{X,x}}k(x)\) es de rango \(n\), existe un epimorfismo \(\mathcal O_{X,x}^n\to P_x\) según Nakayama, y, como \(P\) es de tipo finito, existe un objeto \(x\)-punteado \(U\) de \(X\) y un epimorfismo \(\mathcal O_U^n\to P\,|\,U\), de donde resulta la aserción.
+
+\textbf{Lema 5.5.} Sean \((X,\mathcal O_X)\) un topos localmente anillado, \(E\in\Ob D^{-}(X)\), y \(p\in\mathbb Z\). Entonces se tiene, con las notaciones de (5.4.1 b)):
+\begin{enumerate}[label=(\roman*)]
+\item Si \(E\) es perfecto, los \(H^i(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x))\), para \(x\in\pt(X)\), son espacios vectoriales de rango finito sobre \(k(x)\), nulos salvo un número finito de ellos, y la función
+\[
+ x\longmapsto\sum(-1)^i\operatorname{rg}_{k(x)}H^i(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x))
+\]
+es localmente constante sobre \(\pt(X)\).
+\item Si \(E\) es \((p-1)\)-pseudocoherente, \(H^p(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x))\) es, para \(x\in\pt(X)\), un espacio vectorial de rango finito sobre \(k(x)\), y la función
+\[
+ x\longmapsto\operatorname{rg}_{k(x)}H^p(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x))
+\]
+es semicontinua superiormente sobre \(\pt(X)\). Si, además, el funtor \(M\mapsto H^p(E\otimes^{\mathbf L}M)\) de \(\Mod(X)\) en \(\Mod(X)\) es exacto, \(H^p(E)\) es localmente libre de tipo finito y la función precedente es localmente constante.
+\item Supongamos que \(E\) es \(p\)-pseudocoherente (resp. \((p-1)\)-pseudocoherente), y sea \(x\in\pt(X)\). Si el funtor \(M\mapsto H^p(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}M)\) es exacto por la derecha (resp. por la izquierda) sobre la categoría \(\Mod(x)\) de los \(\mathcal O_{X,x}\)-módulos, existe un abierto \(x\)-punteado \(U\) de \(X\) tal que el funtor \(M\mapsto H^p(E\,|\,U\otimes^{\mathbf L}M)\) sea exacto por la derecha (resp. por la izquierda) sobre \(\Mod(U)\).
+\end{enumerate}
+
+\emph{Demostración.} (i) Según (I 4.19.1), \(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x)\) es un complejo perfecto de \(k(x)\)-módulos; por tanto (I 5.9 y 3.5), los \(H^i(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x))\) son de rango finito sobre \(k(x)\) y nulos salvo un número finito de ellos. Se tiene\footnote{\(\operatorname{rg}(\ )\) designa el rango de un complejo perfecto (I 6.11).}
+\begin{equation}
+ \operatorname{rg}(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x))=\sum(-1)^i\operatorname{rg}_{k(x)}H^i(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x)),\tag{5.5.1}
+\end{equation}
+como se ve mediante un dévissage inmediato que utiliza la aditividad de la función rango. Teniendo en cuenta (5.4.1 a)), la aserción (i) resulta, pues, de la compatibilidad del rango con las imágenes inversas (I 6.12).
+
+(ii) Truncando y trasladando si es necesario, se puede, para la primera aserción, suponer \(E\) estrictamente perfecto, \(p=0\), y \(E^i=0\) para \(i\notin[-1,+1]\). Para \(x\in\pt(X)\), pongamos \(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}k(x)=E_{k(x)}\). Se tiene según (5.5.1)
+\[
+\begin{gathered}
+ \operatorname{rg}_{k(x)}H^0(E_{k(x)})=\operatorname{rg}_{k(x)}H^{-1}(E_{k(x)})+\operatorname{rg}_{k(x)}H^1(E_{k(x)})\\
+ +\operatorname{rg}(E_x),
+\end{gathered}
+\]
+por tanto basta probar que la función \(x\mapsto\operatorname{rg}_{k(x)}H^{-1}(E_{k(x)})\) (resp. \(\operatorname{rg}_{k(x)}H^1(E_{k(x)})\)) es semicontinua superiormente (puesto que la función \(x\mapsto\operatorname{rg}(E_x)=\operatorname{rg}(E_{k(x)})\) es localmente constante). Para la función \(x\mapsto\operatorname{rg}_{k(x)}H^1(E_{k(x)})\), esto es una consecuencia inmediata de (5.4.1 b))\footnote{Teniendo en cuenta que se tiene \(H^1(E_{k(x)})\simeq H^1(E)_{k(x)}\).}. Para la función \(x\mapsto\operatorname{rg}_{k(x)}H^{-1}(E_{k(x)})\), se puede suponer \(E^1=0\), es decir, sustituir \(E\) por \(E'=(0\to E^{-1}\to E^0\to0)\). Ya se sabe que la función \(x\mapsto\operatorname{rg}_{k(x)}H^0(E'_{k(x)})\) es semicontinua superiormente; por tanto, lo mismo ocurre con la función \(x\mapsto\operatorname{rg}_{k(x)}H^{-1}(E'_{k(x)})=\operatorname{rg}_{k(x)}H^{-1}(E_{k(x)})\), puesto que la función \(x\mapsto\operatorname{rg}_{k(x)}H^0(E'_{k(x)})-\operatorname{rg}_{k(x)}H^{-1}(E'_{k(x)})=\operatorname{rg}(E'_x)\) es localmente constante. Probemos ahora la segunda aserción. Truncando si es necesario, se puede suponer \(E\) estrictamente perfecto y \(E^i=0\) para \(i<p-1\). El \(\mathcal O_X\)-módulo \(Z'^i(E)=\Coker(E^{i-1}\to E^i)\) es, pues, de presentación finita. Se tiene una sucesión exacta:
+\begin{equation}
+ 0\to H^p(E)\to Z'^p(E)\to E^{p+1}\to Z'^{p+1}(E)\to0.\tag{$*$}
+\end{equation}
+Como el funtor \(M\mapsto H^p(E\otimes^{\mathbf L}M)\) es exacto por la derecha y por la izquierda, \(Z'^{p+1}(E)\) y \(Z'^p(E)\)\sisi{)}{} son planos según (5.2 (iii)), y por tanto (I 5.8.3) localmente libres de tipo finito. La exactitud de (*) implica entonces que \(H^p(E)\) es localmente libre de tipo finito, y por consiguiente que la función \(x\mapsto\operatorname{rg}_{k(x)}H^p(E_{k(x)})=\operatorname{rg}(H^p(E)_x)\) es localmente constante, lo que termina la demostración de (ii).
+
+(iii) Se puede suponer \(E\) estrictamente perfecto y \(E^i=0\) para \(i<p\) (resp. \(p-1\)). Decir que el funtor \(M\mapsto H^p(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}M)\) es exacto por la derecha (resp. por la izquierda) sobre \(\Mod(x)\) equivale, según (5.2 (iii)), a decir que \(Z'^{p+1}(E_x)\) (resp. \(Z'^p(E_x)\)) (con las notaciones de (ii)) es plano, y por tanto libre de tipo finito (puesto que es de presentación finita). Como se tiene \(Z'^{p+1}(E_x)\simeq Z'^{p+1}(E)_x\) (resp. \(Z'^p(E_x)\simeq Z'^p(E)_x\)), el argumento usual (cf. EGA \(\mathrm O_I\) 5.2.7) muestra que existe un objeto \(x\)-punteado \(U\) de \(X\) tal que \(Z'^{p+1}(E\,|\,U)\) (resp. \(Z'^p(E\,|\,U)\)) sea libre de tipo finito, y se concluye.
+
+\textbf{Corolario 5.6} (EGA III 7.6.9). Sean \(X\) un esquema, \(p\in\mathbb Z\), y \(E\in\Ob D^{-}(X)\) un complejo \((p-1)\)-pseudocoherente. Entonces:
+\begin{enumerate}[label=(\roman*)]
+\item Para \(x\in X\), \(H^p(E\otimes_X^{\mathbf L}k(x))\) es de rango finito sobre \(k(x)\) y la función
+\[
+ x\longmapsto\operatorname{rg}_{k(x)}H^p(E\otimes_X^{\mathbf L}k(x))
+\]
+es constructible y semicontinua superiormente sobre \(X\).
+\item Supongamos \(X\) cuasiseparado y \(E\) con cohomología cuasicoherente y localmente acotada. Si el funtor \(M\mapsto H^p(E\otimes^{\mathbf L}M)\) es exacto sobre la categoría de los \(\mathcal O_X\)-módulos cuasicoherentes, la función \(x\mapsto\operatorname{rg}_{k(x)}H^p(E\otimes_X^{\mathbf L}k(x))\) es localmente constante y \(H^p(E)\) es localmente libre de tipo finito. Recíprocamente, si \(X\) es localmente noetheriano y reducido y si la función precedente es localmente constante, el funtor \(M\mapsto H^p(E\otimes^{\mathbf L}M)\) es exacto sobre la categoría de los \(\mathcal O_X\)-módulos cuasicoherentes.
+\end{enumerate}
+
+\emph{Demostración.} Si \(X\) es íntegro de punto genérico \(x\), el funtor \(M\mapsto H^p(E_x\otimes_{\mathcal O_{X,x}}^{\mathbf L}M)\) es exacto sobre la categoría de los \(\mathcal O_{X,x}\)-módulos (puesto que \(\mathcal O_{X,x}=k(x)\)); por tanto, según (5.5 (iii)), existe un entorno abierto \(U\) de \(x\) tal que el funtor \(M\mapsto H^p(E\,|\,U\otimes^{\mathbf L}M)\) sea exacto sobre \(\Mod(U)\), y, sobre \(U\), la función \(y\mapsto\operatorname{rg}_{\sisi{k(x)}{k(y)}}H^p(E\otimes_X^{\mathbf L}k(y))\) es localmente constante según (5.5 (ii)). La aserción de constructibilidad de (i) se deduce de ello inmediatamente. Las demás aserciones se deducen de (5.5 (ii) y (iii)) y (5.2 (iv)), salvo la recíproca de (ii), para la cual basta, después de reducirse a \(E\) estrictamente perfecto (tras localización y truncación), aplicar (EGA III 7.6.2 y 7.6.5) al funtor \(T_{-p}=H^p(E\otimes\,.\,)\).
+
+\textbf{Proposición 5.7.} (EGA III 7.7.5 y 7.9.4). Sean \(f:X\to Y\) un morfismo propio de esquemas cuasicompactos, \(E\in\Ob D^b(f)_{\parf}\) (4.2), y \(p\in\mathbb Z\). Entonces, a reserva de la validez de (2.1), por tanto, por ejemplo, si \(f\) es proyectivo o si \(Y\) es noetheriano:
+\begin{enumerate}[label=(\roman*)]
+\item Para \(y\in Y\), los \(H^i(Rf_*(E)\otimes_Y^{\mathbf L}k(y))\) son espacios vectoriales de rango finito sobre \(k(y)\), nulos salvo un número finito de ellos, y la función
+\[
+ y\longmapsto\sum(-1)^i\operatorname{rg}_{k(y)}H^i(Rf_*(E)\otimes_Y^{\mathbf L}k(y))
+\]
+es localmente constante sobre \(Y\).
+\item La función
+\[
+ y\longmapsto\operatorname{rg}_{k(y)}H^p(Rf_*(E)\otimes_Y^{\mathbf L}k(y))
+\]
+es constructible y semicontinua superiormente sobre \(Y\).
+\item Supongamos \(Y\) cuasiseparado. Entonces, si el funtor \(M\mapsto R^pf_*(E\otimes_Y^{\mathbf L}M)\) es exacto sobre la categoría de los \(\mathcal O_Y\)-módulos cuasicoherentes, \(R^pf_*(E)\) es un \(\mathcal O_Y\)-módulo localmente libre de tipo finito, y la función de (ii) es localmente constante. Recíprocamente, si \(Y\) es noetheriano y reducido, y si la función de (ii) es localmente constante, el funtor \(M\mapsto R^pf_*(E\otimes_Y^{\mathbf L}M)\) es exacto sobre la categoría de los \(\mathcal O_Y\)-módulos cuasicoherentes.
+\end{enumerate}
+
+\emph{Demostración.} Según (4.8), \(Rf_*(E)\) es un complejo perfecto. La aserción (i) (resp. (ii)) resulta, pues, de (5.5 (i)) (resp. (5.6 (i)) ). Finalmente, si \(M\) es un \(\mathcal O_Y\)-módulo cuasicoherente, la flecha canónica
+\[
+ Rf_*(E)\otimes_Y^{\mathbf L}M\longrightarrow Rf_*(E\otimes_Y^{\mathbf L}M)
+\]
+es un isomorfismo según (3.7); por tanto, la aserción (iii) resulta de (5.6 (ii)).

@@ -1,0 +1,243 @@
+% SGA 6, Exposición VIII: fragmento español alineado con la fuente.
+% Alcance exacto: sección 2 completa, fr.tex, líneas 11290--11451.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Termina inmediatamente antes de la sección 3, sin cierre sintético.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\subsection*{2. Complejo cotangente relativo}
+
+\textbf{2.1.} Daremos aquí una definición del complejo cotangente que, sin
+tener toda la generalidad posible (véase Exp. 0 4.4), bastará para las
+necesidades del teorema de Riemann--Roch; por supuesto, en el caso considerado,
+la definición dada en la Exp. 0 coincide con la que se da aquí.
+
+Sea $f:X\to Y$ un morfismo alisable, es decir, que admite una factorización
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y,
+\end{tikzcd}
+\]
+donde $g$ es un morfismo liso e $i$ una inmersión que se puede suponer cerrada.
+Sea $J$ el ideal de $X$ en $V$. La derivación canónica
+\[
+d:\mathcal O_V\longrightarrow\Omega^1_{V/Y}
+\]
+define un homomorfismo
+\[
+J\longrightarrow\mathcal O_V\xrightarrow{d}\Omega^1_{V/Y}\longrightarrow
+\Omega^1_{V/Y}\otimes_{\mathcal O_V}\mathcal O_X
+\]
+que se anula sobre $J^2$ y define, por tanto, un homomorfismo, denotado también
+por $d$,
+\begin{equation}\tag{2.1.1}
+J/J^2\xrightarrow{d} i^*(\Omega^1_{V/Y}).
+\end{equation}
+Se comprueba fácilmente que este homomorfismo es $\mathcal O_X$-lineal. Se
+define entonces un complejo de cadenas $L^{X/Y}_\bullet$ poniendo
+\[
+L^{X/Y}_0=i^*(\Omega^1_{V/Y}),\qquad
+L^{X/Y}_1=J/J^2;
+\qquad
+L^{X/Y}_i=0\quad\text{si }i\neq0,1,
+\]
+y tomando como homomorfismo $L^{X/Y}_1\to L^{X/Y}_0$ el homomorfismo (\sisi{1.5.1}{2.1.1}). % Canon SGA-SRC-001511
+
+\textbf{Proposición 2.2.} El complejo $L^{X/Y}_\bullet$ no depende, salvo
+isomorfismo canónico en la categoría derivada $D(X)$, de la factorización
+elegida por un $Y$-esquema liso.
+
+Sean $V,V'$ dos $Y$-esquemas lisos por los cuales se factoriza $f$. Pongamos
+$V''=V\times_Y V'$; entonces $V''$ es liso sobre $Y$, y también sobre $V$ y
+$V'$. Además, las inmersiones $X\to V$ y $X\to V'$ definen una inmersión
+$X\to V''$ que factoriza $f$. Se puede, pues, reducir la comparación de los
+complejos $L^{X/Y}_\bullet$ relativos a dos factorizaciones por $Y$-esquemas
+lisos $V$ y $V'$ al caso en que existe un diagrama conmutativo sobre $Y$
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& V' \arrow[d,"p"]\\
+X \arrow[ur,"j"] \arrow[r,"i"'] & V,
+\end{tikzcd}
+\]
+donde $i$ y $j$ son inmersiones cerradas y $p$ un morfismo liso. Por
+funtorialidad, se obtienen entonces homomorfismos
+\[
+I/I^2\longrightarrow J/J^2;
+\qquad
+p^*(\Omega^1_{V/Y})\longrightarrow\Omega^1_{V'/Y},
+\]
+de donde resulta un diagrama
+\begin{equation}\tag{2.2.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+I/I^2 \arrow[r] \arrow[d,"d"'] & J/J^2 \arrow[d,"d"]\\
+i^*(\Omega^1_{V/Y}) \arrow[r] & j^*(\Omega^1_{V'/Y}).
+\end{tikzcd}
+\end{equation}
+Como $V$ y $V'$ son lisos sobre $Y$, se obtiene la sucesión exacta
+\[
+0\longrightarrow p^*(\Omega^1_{V/Y})\longrightarrow\Omega^1_{V'/Y}
+\longrightarrow\Omega^1_{V'/V}\longrightarrow0.
+\]
+Como los módulos de diferenciales considerados son localmente libres sobre
+$\mathcal O_{\sisi{V}{V'}}$, al aplicar el funtor $j^*$ se obtiene la sucesión exacta % Canon SGA-SRC-001512
+\begin{equation}\tag{2.2.2}
+0\longrightarrow i^*(\Omega^1_{V/Y})\longrightarrow j^*(\Omega^1_{V'/Y})
+\longrightarrow j^*(\Omega^1_{V'/V})\longrightarrow0.
+\end{equation}
+Por otra parte, $j$ define una sección $j'$ de $X'=V'\times_V X$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X' \arrow[r,"i'"] \arrow[d,"p'"'] & V' \arrow[d,"p"]\\
+X \arrow[r,"i"'] \arrow[ur,"j"] \arrow[u,"j'"',bend right] & V .
+\end{tikzcd}
+\]
+Sean $I,J,K$ los ideales que definen $i,j,j'$, respectivamente; se tiene
+$j=i'\circ j'$, y \sisi{las inmersiones $i',j,j'$ son regulares}{la inmersión $j'$ es regular}; además, $i'$ está % Canon SGA-SRC-001513
+definida por el ideal $p^*(I)$ (pues $p$ es plano), y su haz conormal es, por
+tanto, $i'^*(p^*(I))=p'^*(I/I^2)$. Se obtiene entonces la sucesión exacta
+\begin{equation}\tag{2.2.3}
+0\longrightarrow I/I^2\longrightarrow J/J^2\longrightarrow K/K^2\longrightarrow0.
+\end{equation}
+Demostraremos: a) que el diagrama (2.2.1) es conmutativo; se obtendrá así un
+morfismo de complejos $\theta$ del complejo $L^{X/Y}_\bullet$ definido por $V$
+al complejo $L^{X/Y}_\bullet$ definido por $V'$; b) que el homomorfismo
+$K/K^2\longrightarrow j^*(\Omega^1_{V'/V})$ definido por (2.2.2), (2.2.3) y
+(2.2.1) es un isomorfismo; esto implicará que el cilindro de la aplicación
+$\theta$ es acíclico, y por tanto que $\theta$ es un cuasi-isomorfismo y define
+un isomorfismo en la categoría derivada.
+
+Las propiedades a) y b) son de naturaleza local sobre $X$. Se puede, pues,
+suponer que $X,Y,V$ y $V'$ son afines. Pongamos $Y=\Spec(A)$, $V=\Spec(B)$,
+$V'=\Spec(B')$, $X=\Spec(C)$, y conservemos las mismas letras para denotar los
+homomorfismos y los ideales correspondientes. Se tiene el diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+B\otimes_A B \arrow[r,"p\otimes p"] \arrow[d,"\Delta"'] & B'\otimes_A B' \arrow[d,"\Delta"] & B'\otimes_B B' \arrow[l,"\Delta"] \arrow[d]\\
+B \arrow[r,"p"] \arrow[dr,"i"'] & B' \arrow[d,"j"] & B'\otimes_B C = B'/IB' \arrow[dl,"p'" ]\\
+{} & C & {}
+\end{tikzcd}
+\]
+El homomorfismo $I/I^2\to J/J^2$ se deduce del homomorfismo $IB'\to J$ y
+coincide con el que se deduce de $p:I\to J$; el homomorfismo
+$i^*(\Omega^1_{V/Y})\longrightarrow j^*(\Omega^1_{V'/Y})$ se deduce del
+cuadrado conmutativo (1). Por tanto, la propiedad a) es evidente.
+
+El homomorfismo $K/K^2\to j^*(\Omega^1_{V'/V})$ considerado en b) se puede
+definir como sigue: sea $\overline x\in K/K^2$ y sea $x$ un elemento de $J$ que
+levanta $\overline x$ (existe porque $K=J/IB'$). Se asocia a $\overline x$ la
+imagen de $x$ por el homomorfismo compuesto
+$J\xrightarrow{d}\Omega_{B'/A}\otimes_{B'}C\longrightarrow\Omega^1_{B'/B}\otimes_{B'}C$.
+Por otra parte, sea $H$ el ideal de aumentación
+de $B'\otimes_B B'\longrightarrow B'$; el cuadrado conmutativo (2) da un
+homomorfismo $H\to K$, y de él un homomorfismo
+$H/H^2\otimes_{B'}C\longrightarrow K/K^2$. Ahora bien,
+$H/H^2=\Omega^1_{B'/B}$; por consiguiente, basta comprobar que los
+homomorfismos construidos son inversos entre sí, lo cual se hace sin dificultad.
+
+\textbf{Definición 2.3.} Sea $f:X\to Y$ un morfismo alisable. El complejo
+$L^{X/Y}_\bullet$, definido salvo isomorfismo canónico en la categoría derivada
+$D(X)$, se denomina complejo cotangente relativo de $X$ sobre $Y$ (o de $f$).
+
+\textbf{Proposición 2.4.} Sea $f:X\to Y$ un morfismo de intersección completa
+(1.1) alisable. Entonces $L^{X/Y}_\bullet$ es perfecto. Más precisamente, para
+toda factorización de $f$ como composición de una inmersión y un morfismo liso,
+el complejo $L^{X/Y}_\bullet$ definido en 2.1 es estrictamente perfecto.
+
+Sea $f=g\circ i$, donde $g$ es un morfismo liso e $i$ una inmersión. Por 1.2,
+$i$ es una inmersión regular. Si $J$ es el ideal que define $i$, entonces
+$J/J^2$ es un $\mathcal O_X$-módulo localmente libre de tipo finito. Del mismo
+modo, como $g:V\to Y$ es liso, $i^*(\Omega^1_{V/Y})$ es localmente libre de tipo
+finito, de donde resulta 2.4.
+
+\textbf{Corolario 2.5.} Sea $f:X\to Y$ un morfismo de intersección completa
+alisable, y sea $f=g\circ i$ una factorización de $f$ por un $Y$-esquema liso
+$V$. Sea $J$ el ideal de $\mathcal O_V$ que define $i$. Entonces, si
+$K^{\bullet}(X)$ denota el grupo de Grothendieck de los $\mathcal O_X$-módulos
+localmente libres de tipo finito (resp. de los complejos perfectos sobre $X$),
+el elemento $T_f\in K^{\bullet}(X)$ definido por
+\[
+T_f=\operatorname{cl}(i^*(\Omega^1_{V/Y}))-\operatorname{cl}(J/J^2)
+\]
+\[
+(\text{resp. }T_f=\operatorname{cl}(L^{X/Y}_\bullet))
+\]
+no depende de la factorización elegida de $f$. El valor, en un punto $x$ de
+$X$, de la aumentación de $T_f$ no es sino la dimensión relativa virtual de $X$
+sobre $Y$ en el punto $x$ (1.9).
+
+El elemento $T_f$ está bien definido en los dos casos considerados por 2.4, y
+su clase en $K^{\bullet}(X)$ no depende de la factorización: por 2.2 en el
+segundo caso, y por la demostración de 2.2 en el primero. La última afirmación
+de 2.5 es trivial.
+
+\textbf{Proposición 2.6.} Sean $f:X\to Y$ y $g:Y\to Z$ dos morfismos de
+intersección completa alisables, y supongamos además que se satisface la
+condición siguiente:
+
+(G) Existe un $Y$-esquema liso $V$ por el cual se factoriza $f$, tal que, para
+toda inmersión cerrada $Y\to V'$, se pueda encontrar un $V'$-esquema liso
+$V''$, con $V\simeq V''\times_{V'}Y$ (esta condición se satisface, en
+particular, si $f$ es cuasiproyectivo y $Y$ posee un haz amplio, tomando como
+$V$ un $\mathbb P^r_Y$).
+
+Entonces $g\circ f$ es de intersección completa y alisable, y se tiene un
+triángulo distinguido
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& L^{X/Y}_\bullet \arrow[dl] \\
+Lf^*(L^{Y/Z}_\bullet) \arrow[rr] && L^{X/Z}_\bullet \arrow[ul]
+\end{tikzcd}
+\]
+Sea $V'$ un $Z$-esquema liso por el cual se factoriza $g$. Considérese el
+diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[r,"j'"] \arrow[d,"p"] & V'' \arrow[d,"p''"]\\
+& Y \arrow[r,"j"] \arrow[dr,"g"'] & V' \arrow[d,"p'"]\\
+& & Z .
+\end{tikzcd}
+\]
+La inmersión $j'$ es regular, pues se deduce de $j$ mediante un cambio de base
+plano. Por tanto, $j'\circ i$ es una inmersión regular que factoriza
+$g\circ f$, el cual es, por consiguiente, alisable y de intersección completa.
+Además, se tiene la sucesión exacta de haces conormales
+\[
+0\longrightarrow i^*(J'/J'^2)\longrightarrow K/K^2\longrightarrow I/I^2\longrightarrow0,
+\]
+donde $I,J,J',K$ denotan los haces que definen, respectivamente, las
+inmersiones $i,j,j',j'\circ i$. Ahora bien, como $p''$ es plano,
+$J'=p''^*(J)$. La sucesión puede escribirse, pues,
+\begin{equation}\tag{2.6.1}
+0\longrightarrow f^*(J/J^2)\longrightarrow K/K^2\longrightarrow I/I^2\longrightarrow0.
+\end{equation}
+Por otra parte, como $V'$ y $V''$ son lisos sobre $Z$, se tiene la sucesión
+exacta
+\[
+0\longrightarrow p''^*(\Omega^1_{V'/Z})\longrightarrow\Omega^1_{V''/Z}\longrightarrow\Omega^1_{V''/V'}\longrightarrow0.
+\]
+Aplicando $i^*\circ j'^*$, se obtiene la sucesión exacta
+\[
+0\longrightarrow (p''\circ j'\circ i)^*(\Omega^1_{V'/Z})\longrightarrow (j'\circ i)^*(\Omega^1_{V''/Z})\longrightarrow (j'\circ i)^*(\Omega^1_{V''/V'})\longrightarrow0.
+\]
+Como $j'^*(\Omega^1_{V''/V'})=\Omega^1_{V/Y}$ por la hipótesis (G), se obtiene
+\begin{equation}\tag{2.6.2}
+0\longrightarrow f^*(j^*\Omega^1_{V'/Z})\longrightarrow (j'\circ i)^*(\Omega^1_{V''/Z})\longrightarrow i^*(\Omega^1_{V/Y})\longrightarrow0.
+\end{equation}
+Combinando (2.6.1) y (2.6.2), basta comprobar que el diagrama
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0 \arrow[r] & f^*(J/J^2) \arrow[r] \arrow[d,"f^*(d)"'] & K/K^2 \arrow[r] \arrow[d,"d"] & I/I^2 \arrow[r] \arrow[d,"d"] & 0\\
+0 \arrow[r] & f^*(j^*(\Omega^1_{V'/Z})) \arrow[r] & (j'\circ i)^*\Omega^1_{V''/Z} \arrow[r] & i^*\Omega^1_{V/Y} \arrow[r] & 0
+\end{tikzcd}
+\]
+es conmutativo, lo que se verifica localmente sin dificultad volviendo a las
+definiciones de los morfismos en juego. De la sucesión exacta de complejos así
+obtenida se deduce el triángulo distinguido anunciado en la categoría derivada.
+
+\textbf{Corolario 2.7.} Con las notaciones y las hipótesis de 2.6, se tiene en
+$K^{\bullet}(X)$ la igualdad siguiente:
+\[
+T_{g\circ f}=T_f+f^*(T_g).
+\]

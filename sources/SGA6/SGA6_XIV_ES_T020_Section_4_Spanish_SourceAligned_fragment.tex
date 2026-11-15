@@ -1,0 +1,400 @@
+% SGA 6, Exposición XIV: fragmento español alineado con la fuente.
+% Alcance exacto: sección 4, sga6_fr_r1/src/fr.tex, líneas 15555--15725.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Termina inmediatamente antes de la sección 5, sin material sintético.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\section*{4. \uline{Relaciones entre $K'(X)$ y el anillo de Chow $A(X)$}}
+
+\textbf{4.1.} Supongamos, para simplificar, que $X$ sea un esquema liso y
+cuasiproyectivo sobre un cuerpo $k$ (cf. n\textsuperscript{o}~8 para un caso
+más general), de modo que se dispone del anillo de Chow $A(X)$ de las clases
+de ciclos módulo equivalencia racional [4]. Como variantes de este anillo,
+definido además bajo consideraciones sensiblemente más generales, se tienen
+los anillos $\operatorname{Gr}'(X)$ (graduado asociado a la
+$\lambda$-filtración de $K'(X)$) y
+$\operatorname{Gr}'_{\mathrm{top}}(X)$ (graduado asociado a la filtración de
+$K'(X)\simeq K_\bullet(X)$ por la codimensión de los soportes). Se tienen
+teorías de las clases de Chern con valores en cada uno de estos tres anillos
+(cf. [9] para el caso de $A(X)$, y este seminario para
+$\operatorname{Gr}'(X)$, que se envía a
+$\operatorname{Gr}'_{\mathrm{top}}(X)$). Se tiene también una teoría
+cohomológica ($\ell$-ádica, digamos, donde $\ell$ es primo con la
+característica de $k$) de las clases de Chern (SGA 5 VII):
+\[
+ c_i(\underline E)\in H^{2i}(X,\underline{\Z}_\ell(i)),
+\]
+(donde $\underline E$ es un fibrado vectorial sobre $X$, o también un
+elemento cualquiera de $K'(X)$). Estas teorías cohomológicas están
+relacionadas mediante los homomorfismos canónicos (compatibles con las
+estructuras multiplicativas)
+\begin{equation}\tag{4.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+ H^{2*}(X,\underline{\Z}_\ell(*)) & {} \\
+ A(X) \arrow[u,"\gamma"] \arrow[r,"\varphi"] & \operatorname{Gr}'_{\mathrm{top}}(X) \\
+ {} & \operatorname{Gr}'(X) \arrow[u,"j"]
+\end{tikzcd}
+\end{equation}
+donde se ha puesto
+\[
+ H^{2*}(X,\underline{\Z}_\ell(*))=\coprod_i H^{2i}(X,\underline{\Z}_\ell(i)).
+\]
+El homomorfismo $j$ procede del hecho de que la $\lambda$-filtración de
+$K'(X)$ es más fina que la filtración topológica por la codimensión del
+soporte (Exp. X), y es un isomorfismo módulo torsión (Exp. VII 4.11). El
+homomorfismo $\varphi$ se define, por ejemplo, en [RRR], y asocia a la clase
+del ciclo de codimensión $i$ asociado a un subesquema cerrado $Y$ de $X$ de
+codimensión $i$, el elemento $\cl_X^i(\underline O_Y)$ de
+$\Ftop^i(K'(X))$ módulo $\Ftop^{i+1}(K'(X))$. Es un homomorfismo
+sobreyectivo, del que veremos también (4.2) que es un isomorfismo módulo
+torsión. Así, \uline{módulo torsión, los tres anillos $A(X)$,
+$\operatorname{Gr}'_{\mathrm{top}}(X)$ y $\operatorname{Gr}'(X)$ son
+canónicamente isomorfos}; por tanto, \uline{a posteriori}, las fórmulas de
+Riemann--Roch expresadas mediante uno u otro de estos anillos (tensorizados
+por $\Q$) son equivalentes. El anillo graduado $\operatorname{Gr}'(X)$,
+utilizado sobre todo en este seminario como sustituto del anillo de Chow,
+tiene la ventaja apreciable de estar definido para todo topos localmente
+anillado y, en particular, para todo esquema (regular o no). Tiene, en cambio,
+la desventaja (4.6), frente a $A(X)$ y
+$\operatorname{Gr}'_{\mathrm{top}}(X)$, de no poseer tal cual un carácter
+covariante con respecto a los morfismos propios (incluso para esquemas lisos
+cuasiproyectivos sobre un cuerpo); solo adquiere este carácter una vez
+tensorizado por $\Q$.
+
+Otra ventaja de $A(X)$ sobre sus competidores
+$\operatorname{Gr}'_{\mathrm{top}}\sisi{}{(X)}$ y $\operatorname{Gr}'(X)$ es que se % Canon SGA-SRC-001448
+dispone de un homomorfismo de $A(X)$ en
+$H^{2*}(X,\underline{\Z}_\ell(*))$, que permite interpretar las clases de
+Chern cohomológicas como imágenes de las clases de Chern con valores en
+$A(X)$. En general, este homomorfismo no se factoriza por
+$\operatorname{Gr}'_{\mathrm{top}}(X)$ (4.7), y es, cuando menos, dudoso que
+exista en general un homomorfismo de $\operatorname{Gr}'(X)$ en
+$H^{2*}(X,\underline{\Z}_\ell(*))$ que transforme clases de Chern en clases de
+Chern (cf. n\textsuperscript{o}~5). Naturalmente, estas dificultades
+desaparecen cuando se tensoriza por $\Q$, y se obtiene un homomorfismo
+\begin{equation}\tag{4.2}
+ \operatorname{Gr}'_{\mathrm{top}}(X)\longrightarrow H^{2*}(X,\underline{\Q}_\ell(*))=
+ H^{2*}(X,\underline{\Z}_\ell(*))\otimes_{\underline{\Z}_\ell}\underline{\Q}_\ell
+\end{equation}
+que transforma clases de Chern en clases de Chern.
+
+\textbf{4.2.} Para establecer que el homomorfismo sobreyectivo $\varphi$ de
+(4.1) es un isomorfismo módulo torsión, se utiliza el homomorfismo de Chern
+(deducido de la teoría de las clases de Chern [9])
+\[
+ K'(X)\longrightarrow \Ch(A(X))
+\]
+(donde el segundo miembro es el anillo de Chern de $A(X)$ definido en la Exp.
+V), que, como se ve fácilmente, es compatible con la filtración topológica de
+$K'(X)$ y la filtración natural de $\Ch(A(X))$, y da, al pasar a los graduados
+asociados, un homomorfismo de grupos graduados
+\begin{equation}\tag{4.3}
+ \psi:\operatorname{Gr}'_{\mathrm{top}}(X)\longrightarrow A(X).
+\end{equation}
+Sentado esto, se demostrarán las fórmulas
+\begin{equation}\tag{4.4}
+\left\{
+\begin{aligned}
+ \psi\varphi(x)&=(-1)^{i-1}(i-1)!\,x\quad \text{mod. torsion}\quad \text{para }x\in A^i(X),\\
+ \varphi\psi(x)&=(-1)^{i-1}(i-1)!\,x\quad \text{mod. torsion}\quad \text{para }x\in \operatorname{Gr}_{\mathrm{top}}^{\prime i}(X),
+\end{aligned}
+\right.
+\end{equation}
+de las cuales la primera implica además la segunda, gracias a que $\varphi$
+es sobreyectivo. Estas fórmulas implican evidentemente que $\varphi$ y $\psi$
+son isomorfismos módulo torsión y que, salvo un factor
+$(-1)^{i-1}(i-1)!$ en grado $i$, son inversos el uno del otro.
+
+Para demostrar la primera fórmula (4.4), se puede suponer evidentemente que
+$x$ está definido por un subesquema cerrado irreducible $Y$ de $X$ de
+codimensión $i$, en cuyo caso la fórmula equivale a
+\begin{equation}\tag{4.5}
+ c_i(\underline O_Y)=(-1)^{i-1}(i-1)!\,\cl(Y)\quad \text{mod. torsion},
+\end{equation}
+donde, en el primer miembro, $\underline O_Y$ se considera como un haz
+coherente sobre $X$, que define por tanto un elemento de $K'(X)$, y, en el
+segundo miembro, $\cl(Y)$ denota la clase de $Y$ en $A^i(X)$. Como $A^i(X)$
+no cambia al retirar de $X$ una parte cerrada de codimensión $>i$, se reduce
+al caso en que $Y$ es regular y, por tanto, liso sobre el cuerpo base $k$ si
+este es perfecto. Pero, en este último caso, la fórmula (4.5) no es sino la
+fórmula de Riemann--Roch para la inclusión $Y\to X$ y el elemento $1$ de
+$K'(Y)$, escrita utilizando la teoría de las clases de Chern con valores en
+el anillo de Chow $A(X)$. Esta fórmula se establece en [2] bajo las
+condiciones consideradas aquí, mediante un método muy próximo al utilizado en
+este seminario para la fórmula análoga que emplea $\operatorname{Gr}'(X)$.
+Esto establece, pues, al menos para $k$ perfecto, la fórmula (4.4) y, por
+consiguiente, el hecho de que $\varphi$ sea un isomorfismo módulo torsión (lo
+que implica a su vez, a posteriori, que la fórmula de Riemann--Roch ``con
+denominadores'', para un morfismo propio de esquemas algebraicos lisos sobre
+$k$, es esencialmente la misma, tanto si se escribe utilizando $A(X)$ como en
+[2], como si se utiliza $\operatorname{Gr}'(X)$ como en este seminario). El
+caso en que no se hace ninguna hipótesis sobre $k$ se reduce fácilmente al caso
+en que $k$ es algebraicamente cerrado, utilizando el hecho de que, para una
+extensión finita $k'$ de grado $n$ de $k$, el núcleo de la aplicación natural
+\[
+ A(X)\xrightarrow{f^*}A(X\otimes_k k')
+\]
+es anulado por $n$ (como se ve utilizando el homomorfismo traza
+$f_*:A(X\otimes_k k')\to A(X)$, que satisface
+$f_*f^*=n\,\id$).\begingroup\renewcommand{\thefootnote}{*}\footnote{Queda,
+pues, establecida gracias a P. JOUANOLOU para $X$ liso y cuasiproyectivo sobre
+un cuerpo (cf. nota p.5).}\addtocounter{footnote}{-1}\endgroup
+
+\textbf{4.3.} Parece bastante plausible que las fórmulas (4.4) sean ciertas
+tal cual y no solo módulo torsión o, lo que viene a ser lo mismo, que la
+fórmula (4.5) sea cierta no solo módulo torsión. Esta cuestión es un caso muy
+particular de la validez en $A(X)$ de la ``fórmula de Riemann--Roch sin
+denominadores'' (3.1), para una inmersión $Y\to X$ (a saber, el caso en que
+$i=d$). La validez de este caso particular puede considerarse bastante
+plausible. En efecto, ya se ha señalado en el n\textsuperscript{o}~3 que,
+cuando $k$ es de característica cero, la fórmula de Riemann--Roch sin
+denominadores es válida al menos en $\operatorname{Gr}'_{\mathrm{top}}(X)$,
+lo que implica en este caso que los dos miembros de (4.5) tienen la misma
+imagen en $\operatorname{Gr}'_{\mathrm{top}}(X)$ o, lo que viene a ser lo
+mismo, que la segunda de las fórmulas (4.4) es válida; este resultado se
+extenderá por sí mismo al caso de característica arbitraria una vez resuelta
+de manera satisfactoria la cuestión planteada en el n\textsuperscript{o}~1.
+Como apoyo para la fórmula (4.5) en el propio $A(X)$, señalemos el hecho de que
+es claro a priori que la restricción del primer miembro a $X-Y$ es nula; por
+tanto, suponiendo $Y$ irreducible, el primer miembro debe ser a priori un
+múltiplo entero de $\cl(Y)$:
+\[
+ c_i(\sisi{Y}{\mathcal O_Y})=n(Y)\cl(Y). % Canon SGA-SRC-001449
+\]
+Esto demuestra ya la fórmula exacta (4.5) cuando $\cl(Y)$ no es un elemento
+de torsión de $A^i(X)$. Es inmediato que este es el caso si $X$ es proyectivo
+(y no solo cuasiproyectivo) sobre el cuerpo $k$, observando que, si
+$\xi\in A^1(X)$ es una polarización de $X$, entonces
+$\deg(Y\cdot\xi^{\sisi{i}{\dim Y}})>0$; esto demuestra la fórmula deseada en este caso. Se % Canon SGA-SRC-001450
+deduce que esta fórmula sigue siendo válida siempre que $X$ sea isomorfo a un
+subesquema abierto de un esquema proyectivo liso sobre $k$, lo que ocurrirá
+cuando se disponga de una solución adecuada del problema de resolución de
+singularidades. Así sucede, en particular, si $k$ es de característica cero,
+gracias a Hironaka [11].
+
+La validez de la fórmula exacta (4.5), y por tanto de (4.4), implicaría que el
+núcleo de
+\[
+ \varphi^i:A^i(X)\longrightarrow \operatorname{Gr}_{\mathrm{top}}^{\prime i}(X)
+\]
+es anulado por $(i-1)!$ y, en particular, que
+$\varphi^2:A^2(X)\to\operatorname{Gr}_{\mathrm{top}}^{\prime 2}(X)$ es un
+isomorfismo. (Que $\varphi^1$ sea un isomorfismo se deduce ya inmediatamente
+de X 5.3.2). Salvo error, el hecho de que $\varphi^2$ sea un isomorfismo no
+está demostrado en la actualidad, ni siquiera en el caso particular en que
+$\dim X=3$. En cualquier caso, fue precipitadamente como el redactor había
+afirmado la validez de (4.4) y (4.5) en [9,
+n\textsuperscript{o}~4, 3\textsuperscript{o}].
+
+\textbf{4.4.} En la actualidad, la principal ventaja de
+$\operatorname{Gr}'_{\mathrm{top}}(X)$ (o de $\operatorname{Gr}'(X)$) sobre
+el anillo de Chow $A(X)$ es que se presta mejor a los cálculos explícitos de
+ciertas fórmulas de intersección entre ciclos, en el caso de intersecciones
+``excedentarias'', es decir, de dimensión demasiado grande. La definición de
+la clase de intersección, mediante el lema de Chow que permite mover
+suficientemente un ciclo dentro de su clase, se presta, en efecto, con
+dificultad al cálculo. Un ejemplo notable a este respecto es la fórmula
+fundamental siguiente [Exp. VII 2.7], para una inmersión cerrada $f:Y\to X$
+de esquemas cuasiproyectivos lisos sobre $k$:
+\begin{equation}\tag{4.6}
+ f^*f_*(y)=y\,c_d(\underline N),
+\end{equation}
+fórmula válida en $\operatorname{Gr}'_{\mathrm{top}}(Y)$, donde $y$ está en
+$\operatorname{Gr}'_{\mathrm{top}}(Y)$ y $\underline N$ es el haz conormal de
+$Y$ en $X$, supuesto de rango $d$ en todas partes. En loc. cit., esta fórmula
+se deduce de un cálculo muy sencillo de haces Tor. Gracias a lo visto en 4.2,
+la fórmula anterior implica la misma fórmula en $A(Y)$, pero solo módulo
+torsión. Es bastante extraordinario que la fórmula (4.6) en el propio $A(Y)$
+no esté demostrada en la actualidad\begingroup\renewcommand{\thefootnote}{*}\footnote{Cf.
+nota de la página 23.}\addtocounter{footnote}{-1}\endgroup, ni siquiera el
+caso particular obtenido tomando $y=1$, que da la autointersección de $Y$:
+\begin{equation}\tag{4.7}
+ f^*(\cl(Y))=c_d(\underline N),
+\end{equation}
+¡incluso si $k$ es el cuerpo de los complejos! Se tropieza con un problema
+análogo cuando se intenta calcular el anillo de Chow de la explosión
+$X'$ de $X$ a lo largo de $Y$, imitando el método seguido para calcular
+$\operatorname{Gr}'(X')_\Q$ [Exp. VII 4.8], y que funciona también (sin
+tensorizar por $\Q$) para calcular $\operatorname{Gr}'_{\mathrm{top}}(X')$.
+La fórmula clave para esta determinación (con las notaciones de loc. cit.) es
+\begin{equation}\tag{4.8}
+ f^*(i_*(y))=j_*\bigl(g^*(y)c_{d-1}(\underline{\check P})\bigr),
+\end{equation}
+fórmula establecida actualmente en $\operatorname{Gr}'_{\mathrm{top}}(X')$
+(para $y\in\operatorname{Gr}'_{\mathrm{top}}(Y)$) mediante un cálculo de Tor
+(Exp. VII 3.4), y cuya validez en $A(X')$ (para $y\in A(Y)$) quedaría por
+establecer.
+
+Señalemos que ni siquiera los análogos $\ell$-ádicos de las fórmulas (4.6),
+(4.7) y (4.8) están demostrados en la actualidad; cuando $y$ es la clase de
+cohomología de un ciclo algebraico, (4.6) y (4.8) son ciertas, en cualquier
+caso, módulo torsión.
+
+\textbf{4.5.} En esta sección y en las siguientes se darán ejemplos en los
+que, en el diagrama (4.1), el homomorfismo $j$, respectivamente el
+homomorfismo $\varphi$, no es un isomorfismo. Evidentemente, para un $X$ dado,
+viene a ser lo mismo decir que
+\[
+ j:\operatorname{Gr}'(X)\longrightarrow \operatorname{Gr}'_{\mathrm{top}}(X)
+\]
+es un isomorfismo, un monomorfismo o un epimorfismo. Además, la imagen de $j$
+es el subanillo de $\operatorname{Gr}'_{\mathrm{top}}(X)$ generado por las
+clases de Chern de los haces localmente libres sobre $X$. En el caso en que
+$K'(X)$ está generado como álgebra sobre $\Z$ por las clases de los haces
+invertibles sobre $X$, se ve de inmediato que el subanillo considerado de
+$\operatorname{Gr}'_{\mathrm{top}}(X)$ es también el subanillo generado por
+$\operatorname{Gr}'^{1}_{\mathrm{top}}(X)$, la componente de grado $1$ de
+$\operatorname{Gr}'_{\mathrm{top}}(X)$.
+
+Tomemos ahora como $X$ una variedad de banderas
+\[
+ X=G/B,
+\]
+donde $G$ es un grupo algebraico semisimple simplemente conexo sobre el
+cuerpo algebraicamente cerrado $k$, y $B$ un subgrupo de Borel [5]. Cuando
+$k=\C$, la descomposición celular de Bruhat de $X$ [5, Exp. 13] implica que
+el homomorfismo canónico
+\[
+ (*)\qquad K'(X)\longrightarrow K(X(\C))
+\]
+es un isomorfismo, al igual, por otra parte, que el homomorfismo canónico
+\[
+ (**)\qquad A(X)\longrightarrow H^*(X(\C),\Z),
+\]
+donde $X(\C)$ es el espacio compacto de los puntos complejos de $X$, provisto
+de su topología usual deducida de la topología de $\C$. Por otra parte, L.
+HODGKIN [12] demostró que $K(X(\C))$ está ciertamente generado por las clases
+de los haces invertibles sobre $X$. Por tanto, lo mismo ocurre con el propio
+$K'(X)$, y no es difícil deducir de ello, mediante una técnica de
+especialización que utiliza los grupos semisimples desplegados sobre $\Z$
+(SGA 3), que el mismo resultado sigue siendo válido para todo cuerpo $k$
+algebraicamente cerrado. Además, la descomposición celular de $X$ (o la
+biyectividad de $(**)$ en el caso $k=\C$) implica fácilmente que $A(X)$ no
+tiene torsión; por tanto, gracias a 4.2, el homomorfismo
+\[
+ \varphi:A(X)\longrightarrow\operatorname{Gr}'_{\mathrm{top}}(X)
+\]
+es un isomorfismo. De estos hechos se deduce que $j$ es un isomorfismo si y
+solo si $A(X)$ está generado por sus elementos de grado $1$ o, también, si
+$k=\C$, si y solo si la cohomología entera de $X(\C)$ está generada por los
+elementos de grado $2$, es decir, si el espacio clasificante $B_{G(\C)}$ no
+tiene torsión. Se sabe, por otra parte [15, p. 217 th. B
+(1)$\Leftrightarrow$(2), y 2.5], que esto sucede si y solo si $G$ es ``sin
+torsión'', o también si $G$ es isomorfo a un producto de grupos
+$\operatorname{S\ell}(n)$ y $\operatorname{Sp}(m)$. Basta, pues, tomar como $G$
+un grupo $\operatorname{\sisi{SO}{Spin}}(n)$ con $n\geq 7$, o un grupo simple excepcional, % Canon SGA-SRC-001451
+para obtener un ejemplo en que $j$ no es un isomorfismo.
+
+\textbf{4.6.} Obsérvese que, en este ejemplo, no cabe duda de que el anillo
+``bueno'' es el anillo sin torsión
+\[
+ A(X)\simeq\operatorname{Gr}'_{\mathrm{top}}(X),
+\]
+que tiene como base las celdas de la descomposición de Bruhat, anillo también
+isomorfo a la cohomología entera de $X(\C)$ si $k=\C$; en cambio, el anillo
+$\operatorname{Gr}'(X)$ aparece como un anillo con una torsión de naturaleza
+bastante patológica. Este ejemplo confirma, pues, la concepción según la cual
+el invariante $\operatorname{Gr}'(X)$ apenas es interesante salvo módulo
+torsión, es decir, tensorizado por $\Q$. Al mismo tiempo se ve, mediante este
+ejemplo, que solo una vez tensorizado por $\Q$ posee
+$\operatorname{Gr}'(X)$ un carácter covariante con respecto a los morfismos
+propios, incluso
+limitándose a las inmersiones cerradas de esquemas cuasiproyectivos y lisos.
+En efecto, si $X$ es tal que $j$ no sea un isomorfismo, existe en $X$ un
+subesquema cerrado integral $Y$ tal que
+\[
+ \sisi{\cl^i(Y)}{\cl'(Y)}\in K'(X) % Canon SGA-SRC-001452
+\]
+no está en $\Filt^i(X)$, donde $i=\operatorname{codim}(Y,X)$. Se puede tomar
+$Y$ de dimensión mínima, de modo que
+\[
+ \Filt^{i+1}(X)=\Filt_{\mathrm{top}}^{i+1}(X).
+\]
+Si $Z$ es el conjunto singular de $Y$, y $X'=X-Z$, $Y'=Y-Z$, se concluye que
+\[
+ \cl'(Y')\in K'(X')
+\]
+no está en $\Filt^i(X')$ (teniendo en cuenta que
+$K'(X)\to K'(X')$ es sobreyectivo y compatible con los aumentos, y que su
+núcleo es
+\[
+ \operatorname{Im}\bigl(\sisi{K(Z)\longrightarrow K(X)}{K'(Z)\longrightarrow K'(X)}\bigr)\subset % Canon SGA-SRC-001453
+ \Filt_{\mathrm{top}}^{i+1}(X)=\Filt^{i+1}(X)).
+\]
+Consideremos entonces la inclusión
+\[
+ f:Y'\longrightarrow X',
+\]
+que es una inmersión cerrada de codimensión $i$ de esquemas
+cuasiproyectivos y lisos sobre $k$, tal que
+\[
+ f_*:K'(Y')\longrightarrow K'(X')
+\]
+no es compatible con las $\lambda$-filtraciones (salvo desplazamiento por
+$i$), puesto que $f_*(1)$ no está en $\Filt^i(X')$.
+
+\textbf{4.7.} Conservando las notaciones de 4.5, observemos ahora que de (Exp.
+IX) se deduce que el teorema de HODGKIN citado equivale a que se tenga un
+isomorfismo
+\[
+ K'(G)\simeq\Z,\qquad\text{por tanto}\qquad \operatorname{Gr}'_{\mathrm{top}}(G)\simeq\Z,
+\]
+siendo el homomorfismo $K'(G/B)\to K'(G)$ a priori sobreyectivo y teniendo
+como núcleo el ideal generado por los $\cl'(\underline L)-1$, donde
+$\underline L$ recorre los módulos invertibles sobre $X=G/B$ asociados a las
+representaciones $B\to\Gm$ (que dan, de hecho, todos los módulos invertibles
+sobre $X$ [5, Exp. 15]). Por otra parte, un razonamiento análogo muestra que
+\[
+ A(G/B)\longrightarrow A(G)
+\]
+es también sobreyectivo y que su núcleo es el ideal generado por los elementos
+de $A^1(G/B)$ definidos por las representaciones $B\to\Gm$ y, por tanto, de
+hecho por todo $A^1(G/B)$.\begingroup\renewcommand{\thefootnote}{*}\footnote{Cf.
+IX 3.4, 2.2.}\addtocounter{footnote}{-1}\endgroup Esto muestra que $A(G)$ se
+reduce a $A^0(\sisi{X}{G})=\Z$ si y solo si ``$G$ no tiene torsión'', es decir, si $G$ % Canon SGA-SRC-001454
+es isomorfo a un producto de grupos $\operatorname{S\ell}(n)$ y
+$\operatorname{Sp}(m)$. Por tanto, en este caso, y solo en este caso, el
+homomorfismo
+\[
+ \varphi:A(G)\longrightarrow\operatorname{Gr}'_{\mathrm{top}}(G)
+\]
+es un isomorfismo. Por tanto, si $G$ tiene torsión, el esquema subyacente
+proporciona un ejemplo de un $\varphi$ no biyectivo.
+
+\textbf{4.8.} De igual modo se obtiene un ejemplo en que el homomorfismo
+$\gamma$ de (4.1)
+\begin{equation}\tag{4.9}
+ \gamma:A(G)\longrightarrow H^{2*}(G,\underline{\Z}_\ell(*))
+\end{equation}
+no se factoriza por $\operatorname{Gr}'_{\mathrm{top}}(G)$ o, lo que viene a
+ser lo mismo aquí, un ejemplo en que este homomorfismo no es nulo en grados
+$>0$. Limitándonos (como es lícito gracias a teoremas de especialización
+adecuados) al caso en que $k=\C$, se reduce al estudio del homomorfismo
+\begin{equation}\tag{4.10}
+ A(G)\longrightarrow H^*(G(\C),\Z),
+\end{equation}
+deducido, por otra parte, pasando al cociente del homomorfismo canónico
+\[
+ A(G/B)\simeq H^*(G/B(\C),\Z)\longrightarrow H^*(G(\C),\Z).
+\]
+Es tentador conjeturar que el homomorfismo (4.10) es de hecho inyectivo, pues
+se sabe, por otra parte, que los números primos de torsión para $G(\C)$ son
+exactamente los que dividen el orden del grupo finito
+\[
+ A^+(G)=\bigoplus_{i>0}A^i(G).
+\]
+Si así fuera, en cuanto $G$ tuviera torsión, el homomorfismo (4.10) no se
+factorizaría por $\varphi$; por tanto, para un $\ell$ adecuado (más
+precisamente, para $\ell$ que divida el orden de $A^+(G)$, es decir, $\ell$
+coeficiente de torsión de $G$), lo mismo ocurriría con (4.9). Al menos se puede
+afirmar que, en el caso del grupo $G=\underline G_2$ sobre el cuerpo $\C$, el
+homomorfismo (4.10) no es nulo en grado $>0$; más precisamente, existe un
+elemento de $A^3(G)$ cuya imagen en $H^6(G(\C),\Z)$ es de orden $2$; se
+deduce, pues, que el homomorfismo (4.9) no se factoriza por $\varphi$ cuando
+$\ell=2$. El hecho utilizado relativo a $\underline G_2$, que equivale a decir que existe
+en $H^6(G/B(\C),\Z)$ un elemento cuya imagen en $H^6(G(\C),\Z)$ no es nula,
+se encuentra en [3], mediante el diccionario conocido entre el lenguaje de los
+grupos algebraicos semisimples complejos y el de los grupos de Lie compactos;
+me fue comunicado amablemente por J.P. SERRE.

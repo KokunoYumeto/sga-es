@@ -1,0 +1,148 @@
+% SGA 6, Exposición XIII: fragmento español alineado con la fuente.
+% Alcance: líneas francesas 15301--15446, hasta el final de la Exposición XIII.
+% Continuidad: el comienzo pertenece a la enumeración abierta en la línea 15300.
+% Las lecturas fuente dudosas se conservan y se consignan en el informe de control.
+
+\[
+   |a_i|\le A_{r-i}(b_i,\ldots,b_r;m).
+\]
+\item \emph{Si $\chi(F_q(n))=\sum_{i=0}^{r} a_i^{(q)}\binom{n+i}{i}$ es el polinomio de Hilbert de $F_q$, entonces, para $i=0,\ldots,q-1$,}
+\[
+   |a_i^{(q)}|\le A_{r-i}^{(r-q)}(c_{q-1},\ldots,c_r;m).
+\]
+\end{enumerate}
+\emph{(Obsérvese que $a_{q-1}^{(q)}\le a_{q-1}$\sisi{ y $a_q^{(q)}$}{} y $a_q^{(q)}=a_q,\ldots,a_r^{(q)}=a_r$, puesto que $\operatorname{dim{.}supp}(N_q)\le q-1$).} % Canon SGA-SRC-001435
+
+En efecto, sea una sucesión exacta $0\to F(-1\sisi{}{)}\to F\to G\to0$ tal que $G$ sea un haz de tipo $(b_1,\ldots,b_r)$; razonando por inducción sobre $r$, se pueden suponer definidos $A_0,\ldots,A_{r-1}$, teniendo en cuenta 1.7. Entonces 6.4 (ii) pone de manifiesto la definición de $A_r$, teniendo en cuenta 1.8. Por último, (ii) resulta formalmente de 6.4 (iii), 6.6 y de la afirmación (i) (donde se toma $F_q$ por $F$). % Canon SGA-SRC-001436
+
+\textbf{Corolario 6.8. (Grothendieck).} \emph{Sean $X$ proyectivo sobre $S$ noetheriano, $\mathcal O_X(1)$ muy amplio para $X/S$, y $\mathcal J$ una familia de clases de haces coherentes sobre las fibras de $X/S$. Se supone}~:
+\begin{enumerate}[label=(\alph*)]
+\item \emph{Existe un haz coherente $E$ sobre $X$ tal que $\mathcal J$ está contenida en la familia de las clases de cocientes de haces de la forma $E_K$.}
+\item[$(b_q)$] \emph{En los polinomios de Hilbert $\chi(F_K(n))$ de los $F_K\in\mathcal J$, los coeficientes de grados $\ge q-1$ permanecen acotados superiormente.}
+\end{enumerate}
+\emph{Entonces los $(F_K)_q$ (cuando $F_K$ permanece en $\mathcal J$) forman una familia acotada; además, los coeficientes de $\chi(F_K(n))$ de grados $\ge q-2$ permanecen acotados inferiormente.}
+
+En efecto, se puede suponer evidentemente que $X=\mathbf P^N_S$ y $E=\mathcal O_X(-m)^{\oplus M}$. Entonces la primera afirmación resulta formalmente de 6.7 (ii) y 1.13; la segunda resulta razonando por inducción con ayuda de una sucesión exacta $0\to F(-1)\to F\to G\to0$, y de 6.4 (ii).
+
+\textbf{Definición 6.9.} \emph{Sea $k$ un cuerpo. Se llama \emph{$k$-ciclo positivo especial de dimensión $r$} a todo $k$-esquema proyectivo $X$, provisto de un haz $\mathcal O_X(1)$ muy amplio, que es reunión de subesquemas cerrados $X_j$ de dimensión $r$, obteniéndose $X_j$, mediante un cambio de base $\operatorname{Spec}(k)\to\operatorname{Spec}(k_j)$, como imagen inversa de un $k_j$-esquema integral $X'_j$ (provisto de $\mathcal O_{X'_j}(1)$). Se llama \emph{grado} de $X$ al coeficiente $a_r$ del polinomio de Hilbert $\chi(\mathcal O_X(n))=\sum a_i\binom{n+i}{i}$.}
+
+\textbf{Lema 6.10.} \emph{Sean $k$ un cuerpo algebraicamente cerrado y $X$ un $k$-ciclo positivo especial de dimensión $r$ y grado $d$. Entonces $\mathcal O_X$ es un haz de tipo $(0,\ldots,0,d)$.}
+
+En efecto, sea $X$ en $\mathbf P^N_k$. Sustituyendo, si es preciso, $k$ por la clausura algebraica de una extensión puramente trascendente, lo que está permitido gracias a 1.6 (i), se puede suponer que existen $r(N+1)$ elementos en $k$ algebraicamente independientes sobre todos los $k_j$. Entonces las $r$ secciones hiperplanas ``genéricas'' sucesivas de $X$, definidas mediante estos elementos, son siempre $k$-ciclos positivos especiales de grado $d$. Razonando por inducción sobre $r$, solo queda observar que, cuando $r=0$, se tiene $h^0(\mathcal O_X(-1))=d$, y cuando $r\ge1$, se tiene $h^0(\mathcal O_X(-1))=0$. Para este último punto, se puede suponer que el propio $X$ proviene de un esquema integral $X'$, gracias a la inyección $\mathcal O_X\to \coprod\mathcal O_{X_j}$; pero entonces $h^0(\mathcal O_X(-1))=h^0(\mathcal O_{X'}(-1))$, que es $0$ porque $H^0(\mathcal O_{X'})$ es un cuerpo.
+
+\textbf{Corolario 6.11.} (i) \emph{Sean $r,d$ dos enteros, $c_i=A_{r-i}(0,\ldots,0,d;0)$ para $i=0,\ldots,r$ $(6.7\ \mathrm{(i)})$, y $p=P_r(c_0,\ldots,c_r)$ $(1.9)$. Sean $k$ un cuerpo algebraicamente cerrado, y $X$ un $k$-ciclo positivo especial de dimensión $\le r$ y grado $\le d$, con polinomio de Hilbert $\chi(\mathcal O_X(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}$. Entonces, para $i=0,\ldots,r$, se tiene}
+\[
+   |a_i|\le c_i.
+\]
+\emph{Además, $X$ se sumerge como subesquema de $\mathbf P^N_k$, con $N=d(r+1)-1$, definido por (a lo sumo) $\binom{N+p}{N}$ ecuaciones de grado $p$.}
+
+(ii) (Chow) \emph{Sea $S$ un esquema noetheriano. Cuando $K$ recorre las extensiones algebraicamente cerradas de los $k(s)$, $s\in S$, los $K$-ciclos positivos especiales de dimensión y grado acotados forman una ``familia acotada'' (ya sea con los $X$ considerados como subesquemas de un $\mathbf P^N_S$ fijo, ya sea en un sentido abstracto evidente).}
+
+En efecto, en (i), la primera afirmación resulta de 6.7 (i); la segunda, de 6.10 y 1.8 (i), y de 6.2 (aplicado a $0\to I\to\mathcal O_P\to\mathcal O_X\to0$, $P=\mathbf P^N_k$) y 1.3. Por último, (ii) resulta de (i) y 1.13.
+
+\textbf{Observación 6.12.} Sean $k$ un cuerpo algebraicamente cerrado y $X$ un $k$-esquema proyectivo puramente de dimensión $r$, sin ciclo primo asociado inmerso. Si se admiten de manera arbitraria elementos nilpotentes en $\mathcal O_X$, ya no se pueden acotar los coeficientes del polinomio de Hilbert $\chi(\mathcal O_X(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}$ solamente en términos de $a_r$.
+
+Por ejemplo, sea $Z$ una curva lisa de grado $d$ en $\mathbf P^3_k$. Para todo $n\gg0$, existe una superficie lisa $Y$ de grado $n$ que contiene a $Z$. Entonces $Z$ es un divisor de Cartier sobre $Y$; sea $\mathcal O_{X_n}=\mathcal O_Y/\mathcal O_Y(-2Z)$. Por último, se tiene la sucesión exacta $0\to\sisi{\mathcal O_X}{\mathcal O_Y}(-Z)\to\sisi{\mathcal O_X}{\mathcal O_Y}\to\mathcal O_Z\to0$ y la fórmula $\langle Z^2\rangle_Y=2p_a(Z)-2-(n-4)d$; de donde $a_0=\chi(\mathcal O_{X_n}(-1))\to\infty$ ($n\to\infty$), aunque $a_1=2d$. % Canon SGA-SRC-001437
+
+\textbf{Corolario 6.13.} \emph{Bajo las condiciones de 6.1, consideremos una sucesión exacta}
+\[
+   \mathcal O_P(-m_1)^{\oplus M_1}\longrightarrow
+   \mathcal O_P(-m)^{\oplus M}\xrightarrow{\alpha}F\longrightarrow0
+\]
+\emph{con $m_1\ge m\ge0$. Entonces, para $i=0,\ldots,N$,}
+\[
+   |a_i|\le A_{N-i}(0,\ldots,0,M;m_1)+M\binom{m}{N-i}.
+\]
+En efecto, sea $I=\operatorname{Ker}(\alpha)$; evidentemente, $I$ es un haz de tipo $(0,\ldots,0,M)$, y $\chi(I(n))=\sum_{i=0}^{N}\left[M\binom{-m-1+N-i}{N-i}-a_i\right]\binom{n+i}{i}$; de ahí la afirmación gracias a 6.7 (i), y a la fórmula $\binom{-m-1+Q}{Q}=(-1)^Q\binom{m}{Q}$.
+
+\textbf{Corolario 6.14. (I. Hermann).} \emph{Para todo $N\ge0$, existe un polinomio $R_N(m)$ tal que, para todo cuerpo $k_0$ y todo ideal del anillo de polinomios $k_0[T_1,\ldots,T_N]$, engendrado por elementos de grado $\le m$, el radical $\sqrt I$ de $I$ está engendrado por elementos de grado $\le R_N(m)$.}
+
+En efecto, sea $k$ la clausura algebraica de $k_0$. Introduciendo una indeterminada auxiliar, consideremos $Y$ (respectivamente, $X$), el subesquema de $P=\mathbf P^N_k$ definido por el ideal homogeneizado de $I$ (respectivamente, de $\sqrt I$). En el polinomio de Hilbert $\chi(\mathcal O_Y(n))=\sum_{i=0}^{N}b_i\binom{n+i}{i}$, se tiene $|b_i|\le c_i$, con $c_i=A_{N-i}(0,\ldots,0,1;m)$, por 6.13. Sea $X=\bigcup X^q$ la descomposición según la dimensión. Entonces $\text{degr\'e}(X^q)\le e_q$, con $e_q=P_{N-q}(c_q,\ldots,c_N)$. En efecto, cortando, si es preciso, $X$ (respectivamente, $Y$) por un espacio lineal ``general'' de codimensión $q$, se puede suponer $q=0$. Entonces, evidentemente, $\text{degr\'e}(X^q)=h^0(\mathcal O_{X^q})$ y $h^0(\mathcal O_{X^q})\le h^0(\mathcal O_Y)$, y en virtud de 6.4 (iii), $h^0(\mathcal O_Y)\le e_q$. Por consiguiente, $\mathcal O_{X^q}$ es un haz de tipo $(0,\ldots,0,e_q)$ gracias a 6.10. Resulta, pues, de la inyección $\mathcal O_X\to \prod\mathcal O_{X^q}$ que $\mathcal O_X$ es un haz de tipo $(e_0,\ldots,e_N)$. Por tanto, en el polinomio de Hilbert $\chi(\mathcal O_X(n))=\sum_{i=0}^{\sisi{n}{N}}a_i\binom{n+i}{i}$, se tiene $|a_i|\le f_i$, con $f_i=A_{N-i}(e_i,\ldots,e_N;0)$, por 6.7. Por último, el ideal $\sqrt I$ de $X$ es $R_N(m)$-regular, con $R_N(m)=P_N(f_0,\ldots,f_N)$; de ahí la afirmación gracias a 1.3. % Canon SGA-SRC-001438
+
+\subsection*{7. Apéndice: Teorema del índice de Hodge}
+
+Se recuperan y completan aquí algunos resultados anteriores mediante un razonamiento directo.
+
+\textbf{Teorema 7.1.} \emph{Sea $X$ una superficie irreducible, propia sobre un cuerpo algebraicamente cerrado. Se supone que existe un haz invertible $H$ sobre $X$ tal que $\langle c_1(H)^2\rangle>0$ (por ejemplo, $H$ amplio). Entonces un haz invertible $L$ sobre $X$ tal que}
+\[
+   \langle c_1(L)\cdot c_1(H)\rangle=0
+   \quad\hbox{y}\quad
+   \langle c_1(L)^2\rangle\geq 0,
+\]
+\emph{es numéricamente equivalente a $0$. (Por consiguiente, la forma de intersección sobre $A^1_{\mathrm{num}}(X)_{\Q}$ ($=\bigl[\Pic(X)/\Pic^\tau(X)\bigr]\otimes\Q$, por 4.6) es no degenerada de tipo $(1,\rho-1)$.)}
+
+\textbf{7.1.1.} Supongamos primero: $X$ reducido (por tanto, integral); $H$ amplio; $\langle c_1(L)\cdot c_1(H)\rangle=0$; y $\langle c_1(L)^2\rangle>0$. Razonando por reducción al absurdo, tomemos $m>0$ tal que $H_1=L\otimes H^{\otimes m}$ sea amplio, y tomemos $n$ tal que, poniendo $N=L^{\otimes n}\otimes H^{-1}$, se tenga que $\langle c_1(N)\cdot c_1(H_1)\rangle=n\langle c_1(L)^2\rangle-m\langle c_1(H)^2\rangle$ sea $>0$. Entonces se tiene también que $\langle c_1(N)\cdot c_1(H)\rangle=-\langle c_1(H)^2\rangle$ es $<0$, y que $\langle c_1(N)^2\rangle=n^2\langle c_1(L)^2\rangle+\langle c_1(H)^2\rangle$ es $>0$, lo que contradice el lema siguiente.
+
+\textbf{Lema 7.1.2.} \emph{Sea $X$ una superficie integral, proyectiva sobre un cuerpo algebraicamente cerrado. Para un haz invertible $N$ sobre $X$ tal que $\langle c_1(N)^2\rangle>0$, las condiciones siguientes son equivalentes}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para todo haz amplio $H$, se tiene $\langle c_1(N)\cdot c_1(H)\rangle>0$.}
+\item[(i')] \emph{Existe un haz amplio $H$ tal que $\langle c_1(N)\cdot c_1(H)\rangle>0$.}
+\sisi{\item}{\item[(ii)]} \emph{Existe un entero $n>0$ tal que $H^0(X,N^{\otimes n})\ne0$.} % Canon SGA-SRC-001439
+\end{enumerate}
+En efecto, (ii) implica que existe un divisor efectivo $D$ tal que $N^{\otimes n}\simeq\mathcal O_X(D)$, y $\langle c_1(N)^2\rangle>0$ implica que $D>0$; de ahí (i).
+
+Para ver que (i') implica (ii), se puede suponer evidentemente que $H=\mathcal O_X(1)$ es muy amplio; entonces existe una curva cerrada integral, localmente principal, $Y$, tal que $H=\mathcal O_X(Y)$. Por el teorema de Riemann, (i') implica que $H^1\bigl(N_Y^{\otimes n}(p)\bigr)=0$ para $p\geq0$ y $n\geq n_0$, con $n_0=2h^1(\mathcal O_Y)-1$. Como $H^2\bigl(N^{\otimes n}(p)\bigr)=0$ para $p\gg0$, la sucesión exacta
+\[
+   H^1\bigl(N_Y^{\otimes n}(p)\bigr)
+   \longrightarrow H^2\bigl(N^{\otimes n}(p-1)\bigr)
+   \longrightarrow H^2\bigl(N^{\otimes n}(p)\bigr)
+   \longrightarrow0
+\]
+da $H^2(N^{\otimes n})=0$ para $n\geq n_0$. Por tanto, para $n\gg0$, se tiene
+\[
+   h^0(N^{\otimes n})
+   =\chi(N^{\otimes n})+h^1(N^{\otimes n})
+   \geq\chi(N^{\otimes n})
+   =1/2\langle c_1(N)^2\rangle n^2+\ldots>0,
+\]
+lo que termina de probar el lema.
+
+\textbf{7.1.3.} Supongamos ahora en 7.1 que existe un haz invertible $M$ sobre $X$ tal que $\langle c_1(L)\cdot c_1(M)\rangle\ne0$, y razonemos por reducción al absurdo. Sustituyamos $X$ por el esquema reducido subyacente a una presentación de Chow de $X$, lo que está permitido gracias a la fórmula de proyección X 4.4.4, y sea $G$ amplio sobre $X$. Tomemos $m>0$ tal que $H_1=G^{\otimes m}\otimes M$ sea amplio y tal que $\langle c_1(L)\cdot c_1(H_1)\rangle\ne0$; tomemos $p,q$ ($q\ne0$) tales que, poniendo $L_1=L^{\otimes p}\otimes H^{\otimes q}$, se tenga que $\langle c_1(L_1)\cdot c_1(H_1)\rangle=p\langle c_1(L)\cdot c_1(H_1)\rangle+q\langle c_1(H)\cdot c_1(H_1)\rangle$ sea $0$; entonces se tiene también que $\langle c_1(L_1)^2\rangle=p^2\langle c_1(L)^2\rangle+q^2\langle c_1(H)^2\rangle$ es $>0$, lo que nos devuelve al caso 7.1.1, con $L=L_1$ y $H=H_1$.
+
+\textbf{7.1.4.} Consideremos, por último, el caso general de 7.1. Razonando todavía por reducción al absurdo, supongamos que $L$ no es numéricamente equivalente a $0$; además, sustituyamos $X$ por la normalización de $X_{\red}$, de modo que $X$ solo tenga un número finito de puntos singulares, reducción justificada por la fórmula de proyección X 4.4.4 y por 4.5 (ii). Existe, pues, una curva cerrada integral $Y$ sobre $X$ tal que $\langle c_1(L)\cdot Y\rangle\ne0$, y $Y$ es localmente principal fuera de un conjunto finito $Z$. Sea $f:X'\to X$ la explosión \sisi{del ideal $I$ de $\mathcal O_Y$}{del ideal $I$ de $Y$ en $\mathcal O_X$}. El ideal $M=I\cdot\mathcal O_{X'}$ es invertible y define un subesquema de $X'$, que es la reunión de dos subesquemas $Y'$, $Y''$ tales que $f(Y')=Y$ y $f(Y'')\subset Z$. Gracias a la fórmula de proyección X 4.4.4, se tiene que $\langle c_1(f^*L)\cdot c_1(M)\rangle=-\langle c_1(f^*L)\cdot Y'\rangle-\langle c_1(f^*L)\cdot Y''\rangle$ es igual a $-\langle c_1(L)\cdot Y\rangle-0\ne0$, y se pueden sustituir $X,L,H$ por $X',f^*L,f^*H$; nos reducimos, por tanto, al caso anterior, y queda terminada la demostración de 7.1. % Canon SGA-SRC-001440
+
+\textbf{Observación 7.2.} Se ignora si una superficie irreducible, propia (sobre un cuerpo algebraicamente cerrado), que posee un haz invertible $H$ tal que $\langle c_1(H)^2\rangle>0$, es necesariamente proyectiva. Se ignora asimismo si, para toda superficie irreducible propia, la forma de intersección sobre $A^1_{\mathrm{num}}(X)_{\Q}$ es no degenerada; de 7.1 resulta que, cuando es degenerada, es necesariamente negativa (no definida).
+
+\textbf{Corolario 7.3.} \emph{Bajo las condiciones de 7.1, sea $M$ un haz invertible sobre $X$ que no es numéricamente \sisi{equivalente}{proporcional} a $H$, y sean $d=\langle c_1(M),c_1(H)\rangle$ y $h=\langle c_1(H)^2\rangle$. Entonces, $\langle c_1(M)^2\rangle<d^2/h$.} % Canon SGA-SRC-001442
+
+En efecto, sea $L=M^{\otimes \sisi{n}{h}}\otimes H^{\otimes -d}$. Como $\langle c_1(L)\cdot c_1(H)\rangle=0$, por 7.1, $\langle c_1(L)^2\rangle<0$; de ahí la afirmación. % Canon SGA-SRC-001441
+
+\textbf{Corolario 7.4.} \emph{Sea $X$ un esquema irreducible de dimensión $r\geq2$, proyectivo sobre un cuerpo algebraicamente cerrado, y sea $H$ un haz amplio sobre $X$. Entonces}~:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para que un haz invertible $L$ sobre $X$ sea numéricamente equivalente a $0$, (es necesario y) basta que}
+\[
+   \langle c_1(L)\cdot c_1(H)^{r-1}\rangle=0
+   \quad\hbox{y}\quad
+   \langle c_1(L)^2\cdot c_1(H)^{r-2}\rangle\geq0;
+\]
+\item \emph{Para todo haz invertible $M$ sobre $X$ que no es numéricamente \sisi{equivalente}{proporcional} a $H$, se tiene} % Canon SGA-SRC-001442
+\[
+   \langle c_1(M)^2\cdot c_1(H)^{r-2}\rangle
+   <
+   \langle c_1(M)\cdot c_1(H)^{r-1}\rangle^2/\langle c_1(H)^r\rangle.
+\]
+\end{enumerate}
+En efecto, (ii) resulta inmediatamente de (i), por el razonamiento de 7.3. Para establecer (i), sea $Y$ una curva cerrada integral en $X$; se quiere probar que $\langle c_1(L)\cdot Y\rangle=0$. Sumerjamos $X$ en $\mathbb P^N_k$ mediante $H^{\otimes n}$ ($n>0$). Sean $I=\bigoplus I_\nu$ el ideal homogéneo de $Y$, y $\nu_0$ un entero tal que $I_{\nu_0}$ engendre $I_\nu$ para $\nu\geq\nu_0$. Entonces las hipersuperficies $Z$ de grado $\nu_0$ que contienen a $Y$ no tienen puntos comunes fuera de $Y$. Razonando por inducción sobre $r=\dim(X)$, se obtienen, con ayuda del teorema de Bertini, $r-2$ hipersuperficies $Z_1,\ldots,Z_{r-2}$ de grado $\nu_0$ que contienen a $Y$, tales que $X'=Z_1\cap\ldots\cap Z_{r-2}\cap X$ sea irreducible. Como $\langle c_1(L)\cdot Y\rangle=\langle c_1(L_{X'})\cdot Y\rangle$, basta probar que $L_{X'}$ es numéricamente equivalente a $0$ sobre $X'$. Ahora bien, por la fórmula de proyección, se tiene $\langle c_1(L_{X'})\cdot c_1(H_{X'})\rangle=0$ y $\langle c_1(L_{X'})^2\rangle\geq0$; por tanto, la afirmación resulta de 7.1.
+
+\textbf{Corolario 7.5.} \emph{Sean $k$ un cuerpo algebraicamente cerrado, $Y$ un $k$-esquema proyectivo provisto de un haz amplio $H$, y $X$ el esquema de ceros de una sección $\varphi$ de $H$. Se supone que, para toda componente irreducible $Y^i$ de $Y$, las componentes irreducibles de $X\cap Y^i=V(\varphi|Y^i)$ son de dimensión $\geq2$. Entonces el morfismo $A^1_{\mathrm{num}}(Y)\longrightarrow A^1_{\mathrm{num}}(X)$ es inyectivo.}
+
+En efecto, como se puede suponer evidentemente que $Y$ es integral, la afirmación resulta de 7.4 (i), gracias a la fórmula de proyección.
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item Abhyankar S.: Resolution of singularities of arithmetical surfaces, in: Arithmetical Algebraic Geometry, Purdue University, Harper-Row, New York 1965.
+\item Mumford D: Pathologies III, \sisi{Amer. J. Math 1967 p. 94-103 Amer. J. Math 1967 p.94-103}{Amer. J. Math. 1967, p. 94--103}. % Canon SGA-SRC-001445
+\item Grothendieck \sisi{A. .}{A.} y Dieudonn\'e J. EGA, El\'ements de G\'eom\'etrie Alg\'ebrique, Pub. Math. Inst des Hautes Etudes Sci., 1960. % Canon SGA-SRC-001446
+\item Grothendieck A.: FGA, Fondements de la g\'eom\'etrie alg\'ebrique, Extractos del S\'eminaire Bourbaki 1957-1962.
+\item Grothendieck \sisi{A. .}{A.} et alii, SGA, S\'eminaire de g\'eom\'etrie alg\'ebrique, 1960-66, \sisi{J.H.E.S.}{I.H.E.S.} % Canon SGA-SRC-001446, SGA-SRC-001447
+\item Jussila O.: X, Formalisme des intersections sur les sch\'emas alg\'ebriques propres, Exposición X de este seminario.
+\item Raynaud M.: XII, Un th\'eor\`eme de repr\'esentabilit\'e relative sur le foncteur de Picard, Exposición XII de este seminario.
+\end{enumerate}
+
+
+
+% Notación local de la Exposición XIV
+\providecommand{\Kb}{K^\bullet}
+\providecommand{\Db}{D}
+\providecommand{\Gtop}{\operatorname{Gr}_{\mathrm{top}}}
+\providecommand{\Ftop}{\operatorname{Fil}_{\mathrm{top}}}

@@ -1,0 +1,180 @@
+% SGA 6, Exposición XIV: fragmento español alineado con la fuente.
+% Alcance: secciones 7 y 8, bibliografía y notas finales, hasta la línea
+% 15922 inclusive; se detiene antes del índice terminológico.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 15826--15922.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\section*{7. Clases de Chern de los complejos perfectos}
+
+\textbf{7.1.} Cuando se plantea la cuestión de desarrollar una fórmula
+cohomológica de Riemann--Roch, con o sin denominadores, prescindiendo de la
+hipótesis bastante artificial de la existencia de un módulo invertible
+amplio sobre los esquemas considerados, uno se enfrenta necesariamente a la
+cuestión de definir, para un complejo de módulos perfectos $L^\bullet$ sobre
+un esquema $X$, las clases de Chern
+\[
+ c_i(L_\bullet)\in H^{2i}(X,\Zell(i)),
+\]
+que generalicen las clases de Chern de los módulos localmente libres de SGA
+5 VII. Por otra parte, la misma cuestión se plantea para topoi localmente
+anillados generales (compárese [10]), así como para los complejos perfectos
+sobre espacios paracompactos anillados por las funciones complejas
+continuas, trabajando entonces con la cohomología entera ordinaria. En el
+caso de un espacio compacto, se sabe que el $K'(X)$ construido con los
+complejos perfectos es el mismo que el «~ingenuo~», construido con los
+módulos localmente libres (Exp. IV), y en este caso nos reducimos
+trivialmente a la definición clásica. Pero ya en el caso de un espacio
+localmente compacto el problema planteado parece no trivial, puesto que la
+cohomología entera de tal espacio no siempre es el límite proyectivo de las
+cohomologías de sus partes compactas.
+
+\textbf{7.2.} Más precisamente, cuando $Y$ es una parte cerrada de $X$ tal
+que $L_\bullet|(X-Y)$ sea nulo (en el sentido de las categorías derivadas),
+es decir, tal que los haces de cohomología de $L^\bullet$ tengan soporte en
+$Y$, se querrían definir clases de Chern con soporte en $Y$
+\[
+ c_i^Y(L_\bullet)\in H_Y^{2i}(X,\Zell(i))\quad\text{resp.}\quad H_Y^{2i}(X,\Z),
+\]
+que restituyeran las clases de Chern «~ordinarias~» (sic) de 7.1 mediante el
+homomorfismo canónico
+\[
+ H_Y^\bullet(X,-)\longrightarrow H^\bullet(X,-).
+\]
+Incluso en el caso en que estas últimas se reducen a las clases de Chern de
+los módulos localmente libres ($X$ esquema con módulo invertible amplio, o
+espacio compacto), no se han construido aún estas clases de Chern «~con
+soportes~», y sin duda solo podrán construirse al mismo tiempo que las clases
+de Chern generales postuladas en 7.1.\footnote{Añadido en octubre de 1968.
+Los problemas planteados aquí fueron resueltos en el marco de la cohomología
+de Hodge por L. ILLUSIE; cf. [13].}
+
+Es probable que las clases de Chern con soportes tengan un papel que
+desempeñar en la demostración de la fórmula cohomológica de Riemann--Roch sin
+denominadores (cf. 3.5). Por otra parte, deberían permitir dar una versión
+mejorada de la fórmula de Riemann--Roch (con o sin denominadores),
+introduciendo en ella familias de soportes.
+
+\section*{8. Anillo de Chow de los esquemas regulares}
+
+El problema consiste en definir la equivalencia racional de los ciclos y
+estudiar el anillo de clases obtenido (en particular, sus propiedades
+funtoriales), para un esquema noetheriano regular $X$ que admita un módulo
+invertible amplio, generalizando la teoría conocida cuando $X$ es liso sobre
+un cuerpo [4]. El resultado técnico clave seguirá siendo un «~lema de
+desplazamiento~», que asegure que se pueda hacer variar un ciclo dentro de
+su clase de modo que corte un ciclo dado con la dimensión correcta.
+
+El problema considerado es bastante natural a priori, tanto más cuanto que
+hemos visto (4.5 a 4.8) que los sustitutos $\operatorname{Gr}'(X)$,
+$\Gtop^\bullet(X)$ del anillo de Chow $A(X)$ son poco satisfactorios cuando
+no nos limitamos a una teoría «~módulo torsión~». Cuando $X$ se obtiene de
+un esquema algebraico proyectivo y liso $Y$ sobre un cuerpo $k$, tomando el
+esquema local en el vértice de un cono \sisi{proyectante}{proyectivo} $C$ y eliminando el % Canon SGA-SRC-001456
+origen, se obtiene (admitiendo que $A(X)$ es efectivamente el límite
+inductivo de los anillos de Chow de los $U-(O)$, donde $U$ recorre los
+entornos abiertos en $C$ del vértice $O$) que $A(X)$ es canónicamente
+isomorfo al anillo cociente $A(Y)/\xi A(Y)$, donde $\xi\in A^1(Y)$ está
+inducido por la inmersión proyectiva considerada de $Y$. Esto muestra que el
+conocimiento del anillo de Chow $A(X)$ (de tipo no clásico) equivale al
+conocimiento de $A(Y)/\xi A(Y)$, que podría denominarse la «~parte
+primitiva~» del anillo de Chow $A(Y)$ (en un sentido sugerido por la teoría
+cohomológica de Lefschetz--Hodge de las variedades algebraicas proyectivas
+no singulares). Este ejemplo muestra que los «~anillos de Chow locales~» de
+los anillos locales con singularidades aisladas son invariantes geométricos
+nada triviales y que sin duda tendrán un papel que desempeñar en el estudio
+«~aritmético~» de estos anillos locales.
+
+Naturalmente, una vez que se disponga de una noción razonable de anillo de
+Chow para un esquema noetheriano regular que admita un módulo invertible
+amplio, habrá que generalizar a este caso las relaciones establecidas, resp.
+conjeturadas, en el n.º 4 entre dicho anillo y el anillo
+$\Gtop^\bullet(X)$, y formular en términos de este anillo la cuestión de la
+«~fórmula de Riemann--Roch sin denominadores~» enunciada en el n.º 3.
+
+\subsection*{Bibliografía de la Exposición XIV}
+\begin{enumerate}[label={[\arabic*]}]
+\item M. F. Atiyah y F. Hirzebruch, \emph{The Riemann--Roch theorem for analytic embeddings}, Topology, vol. 1, pp. 151--166 (1962).
+\item A. Borel y J.-P. Serre, \emph{Le théorème de Riemann--Roch}, Bull. Soc. Math. France, vol. 86, pp. 97--136 (1958).
+\item R. Bott y H. Samelson, \emph{Applications of the theory of Morse to symmetric spaces}, Amer. J. Math., vol. 80, pp. 964--1029 (1958).
+\item C. Chevalley, \emph{Les classes d'équivalence rationnelle}, I y II, Séminaire à l'É.N.S., 1958, exposiciones 2 y 3.
+\item C. Chevalley, Classification des groupes de Lie algébriques, Séminaire à l'É.N.S., 1956/58.
+\item A. Dold y D. Puppe, Homologie nicht-additiver Funktoren. Anwendungen, Annales de l'Institut Fourier, t. XI, pp. 201--312 (1961).
+\item H. Grauert, \emph{Ein Theorem der analytischen Garbentheorie}, Publ. Math. IHÉS n.º 5, pp. 5--64 (1960).
+\item A. Grothendieck, Classes de faisceaux et théorème de Riemann--Roch, notas multicopiadas del Institute for Advanced Study, 1957, citado aquí como RRR y reproducido en este seminario como apéndice al Capítulo 0.
+\item A. Grothendieck, \emph{La théorie des classes de Chern}, Bull. Soc. Math. France, vol. 86, pp. 137--154 (1958).
+\item A. Grothendieck, Classes de Chern et représentations linéaires des groupes discrets, en: Dix exposés sur la cohomologie des schémas, Masson--North Holland Pub. Cie.
+\item H. Hironaka, Resolution of singularities of an algebraic variety over a field of characteristic zero, Ann. of Math. 79, pp. 109--326 (1964).
+\item L. Hodgkin, tesis (¿de próxima aparición?).
+\item L. Illusie, trabajo en preparación.
+\item J.-P. Serre, \emph{Algèbre locale. Multiplicités}, Lecture Notes in Mathematics n.º 11, Springer, 1965.
+\item A. Borel, Sous-groupes commutatifs et torsion des groupes de Lie compacts connexes, Tohoku Math. Journal, vol. 13, pp. 216--240 (1961).
+\item[{[16]}(*)] P. Deligne, Exp. XVIII en \emph{Théorie des topos et cohomologie étale des schémas (SGA \sisi{6}{4})}, por M. Artin, A. Grothendieck y J. L. Verdier. % Canon SGA-SRC-001457
+\item[{[17]}(*)] \sisi{U. Mausin}{Yu. I. Manin}, Correspondances, motifs et transformations monoïdales (en ruso). Mat. Sbornik, t. 77 (119), n\textsuperscript{o} 4, 1968. % Canon SGA-SRC-001458
+\end{enumerate}
+
+\noindent{\footnotesize (*) Añadido en febrero de 1969.}
+
+\subsection*{Nota para la página 1}
+
+La teoría de las operaciones $\Lambda^i$ en $D^-(X)$ y de las operaciones
+$\lambda^i$ en $K'(X)$ fue escrita por P. Deligne en 1968. Demuestra que
+$K'(X)$ se convierte así en un pre-$\lambda$-anillo y, cuando
+$\mathcal O_X$ es un haz de álgebras sobre un cuerpo, que $K'(X)$ es incluso
+un $\lambda$-anillo. Es plausible que un refinamiento del método de Deligne
+permita prescindir de la hipótesis restrictiva sobre $\mathcal O_X$.
+
+\subsection*{Notas para la página 11}
+
+\noindent(*) (Abril de 1969) D. MUMFORD nos señala una demostración de (9.6)
+en el anillo de Chow (sin despreciar la torsión), que obtuvo en un seminario
+en Harvard en 1959. El lector encontrará la demostración de este bello
+resultado en SGA 5 VII 9. Este resultado contiene evidentemente el resultado
+cohomológico correspondiente, señalado en la nota (**). Sin embargo, el
+resultado cohomológico es demostrado por J. P. JOUANOLOU bajo condiciones
+más generales (\sisi{sin hiperplano cuasiproyectivo}{sin hipótesis de cuasiproyectividad} y en el caso liso relativo % Canon SGA-SRC-001459
+sobre una base cualquiera).
+
+\medskip
+
+\noindent(**) (Enero de 1969) J. P. JOUANOLOU acaba de demostrar estas
+fórmulas para todo $y$ sin despreciar la torsión; cf. SGA 5 VII \S{} 4.9.
+DELIGNE y MANIN \sisi{17}{[17]} habían observado anteriormente, de manera independiente y % Canon SGA-SRC-001460
+mediante argumentos (fáciles) de naturaleza bastante diferente, que bastaba
+con establecer fórmulas para $y$ «~algebraico~», e incluso para $y=1$ en \sisi{16}{[16]},
+para concluir la misma relación en el caso general.
+
+
+
+% Final-index helper macros
+\providecommand{\Qcoh}{\operatorname{Qcoh}}
+\providecommand{\Coh}{\operatorname{Coh}}
+\providecommand{\Parf}{\operatorname{Parf}}
+\providecommand{\Lib}{\operatorname{Lib}}
+\providecommand{\Loclib}{\operatorname{Loclib}}
+\providecommand{\Proj}{\operatorname{Proj}}
+\providecommand{\Mod}{\operatorname{Mod}}
+\providecommand{\Ob}{\operatorname{Ob}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\toramp}{\operatorname{tor.amp}}
+\providecommand{\parfamp}{\operatorname{par.amp}}
+\providecommand{\coh}{\operatorname{coh}}
+\providecommand{\qcoh}{\operatorname{qcoh}}
+\providecommand{\parf}{\operatorname{parf}}
+\providecommand{\torf}{\operatorname{torf}}
+\providecommand{\amp}{\operatorname{amp}}
+\providecommand{\num}{\operatorname{num}}
+\providecommand{\naif}{\operatorname{naif}}
+\providecommand{\alg}{\operatorname{alg}}
+\providecommand{\Pic}{\operatorname{Pic}}
+\providecommand{\Gr}{\operatorname{Gr}}
+\providecommand{\Fil}{\operatorname{Fil}}
+\providecommand{\Ch}{\operatorname{Ch}}
+\providecommand{\Todd}{\operatorname{Todd}}
+\providecommand{\Diff}{\operatorname{Diff}}
+\providecommand{\Dcat}{\mathrm D}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\Z}{\mathbb Z}
+\providecommand{\Q}{\mathbb Q}
+
+\newpage

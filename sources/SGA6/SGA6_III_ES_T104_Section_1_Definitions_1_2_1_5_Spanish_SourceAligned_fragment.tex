@@ -1,0 +1,58 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: definiciones y resultados 1.2--1.5, líneas 5147--5197 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Definición 1.2.} Sean \(f:X\to Y\) un morfismo localmente de tipo finito, \(E\in\Ob D(X)\) y \(n\in\mathbb Z\). Se dirá que \(E\) es \(n\)-pseudocoherente relativamente a \(f\) si \(E\in\Ob D(f)_{n\text{-}\coh}\) (cf. (1.1)). Se dirá que \(E\) es pseudocoherente (o también \((-\infty)\)-pseudocoherente) relativamente a \(f\) si \(E\) es \(n\)-pseudocoherente relativamente a \(f\) para todo \(n\in\mathbb Z\). Se denotará por \(D(f)_{\mathrm{coh}}\) la subcategoría plena de \(D(X)\) formada por los objetos pseudocoherentes relativamente a \(f\).
+
+Se dirá que \(f\) es \(n\)-pseudocoherente (resp. pseudocoherente) si \(\mathcal O_X\) es \(n\)-pseudocoherente (resp. pseudocoherente) relativamente a \(f\). Se dirá a veces, cuando ello no pueda dar lugar a confusión, «\(n\)-pseudocoherente (resp. pseudocoherente) relativamente a \(Y\)» en lugar de «relativamente a \(f\)», y se escribirá también \(D(X)_{Y\text{-}n\text{-}\coh}\) (resp. \(D(X)_{Y\text{-}\coh}\)) en lugar de \(D(f)_{n\text{-}\coh}\) (resp. \(D(f)_{\mathrm{coh}}\)). Finalmente, para \(*=+,-,b\), se pondrá
+\[
+\begin{gathered}
+ D^*(f)_{n\text{-}\coh}=D^*(X)\cap D(f)_{n\text{-}\coh},\\
+ D^*(f)_{\mathrm{coh}}=D^*(X)\cap D(f)_{\mathrm{coh}}.
+\end{gathered}
+\]
+
+\textbf{Observaciones 1.2.1.}
+\begin{enumerate}[label=\alph*)]
+\item Las categorías \(D(f)_{n\text{-}\coh}\), \(D(f)_{\mathrm{coh}}\) no están, en general, contenidas en \(D^{-}(X)\). Sin embargo, así ocurre si \(X\) es cuasicompacto, pues un objeto de \(D(X)\) con cohomología localmente acotada superiormente tiene entonces cohomología acotada superiormente.
+
+\item Los objetos de \(D(f)_{\mathrm{coh}}\) tienen cohomología cuasicoherente. En efecto, sea \(E\in\Ob D(f)_{\mathrm{coh}}\); como la cuestión es local, se puede suponer que \(f\) es una inmersión cerrada; entonces \(f_*(E)\) es pseudocoherente, y por tanto tiene cohomología cuasicoherente, y se concluye porque un \(\mathcal O_X\)-módulo \(M\) es cuasicoherente si y solo si \(f_*(M)\) lo es.
+
+\item Cuando se trate de un \(\mathcal O_X\)-módulo, utilizaremos la terminología «de presentación finita rel. a \(f\)» de preferencia a «\((-1)\)-pseudocoherente rel. a \(f\)». Para que un \(\mathcal O_X\)-módulo \(E\) sea de presentación finita rel. a \(f\), es necesario y suficiente, teniendo en cuenta (I 2.9), que exista localmente una inmersión cerrada \(i:X\to X'\), con \(X'\) liso sobre \(Y\), tal que \(i_*(E)\) sea de presentación finita (en el sentido ordinario). En particular, decir que \(f\) es \((-1)\)-pseudocoherente equivale a decir que \(f\) es localmente de presentación finita en el sentido de (EGA IV 1.4).
+\end{enumerate}
+
+\textbf{Ejemplos 1.3.} Un morfismo liso y una inmersión regular (1.1.2) son morfismos pseudocoherentes. Lo mismo ocurre con cualquier morfismo localmente de tipo finito \(f:X\to Y\) si \(Y\) es localmente noetheriano.
+
+\textbf{Proposición 1.4.} Sea \(f:X\to Y\) un morfismo localmente de tipo finito, y sea
+\[
+E\longrightarrow F\longrightarrow G\longrightarrow E[1]
+\]
+un triángulo distinguido de \(D(X)\). Se tiene entonces el cuadro siguiente, donde \(n\in\mathbb Z\cup\{-\infty\}\) indica un grado de pseudocoherencia con respecto a \(f\), y cada línea representa una implicación cuyo objetivo está subrayado:
+\[
+\begin{array}{ccc}
+E&F&G\\
+n+1&n&\underline n\\
+n&\underline n&n\\
+\underline n&n&n-1.
+\end{array}
+\]
+En particular, \(D(f)_{\mathrm{coh}}\) es una subcategoría triangulada de \(D(X)\).
+
+\emph{Demostración.} En virtud de las propiedades (i) a (iii) de (1.1), se puede suponer que \(f\) es una inmersión cerrada. Se tiene entonces un triángulo distinguido
+\[
+f_*(E)\longrightarrow f_*(F)\longrightarrow f_*(G)\longrightarrow f_*(E)[1]
+\]
+y la afirmación resulta de (I 2.6).
+
+\textbf{Definición 1.5.} Sean \(X\) e \(Y\) dos \(S\)-esquemas. Diremos que \(X\) e \(Y\) son tor-independientes sobre \(S\) si se tiene
+\[
+ \underline{\Tor}_i^S(\mathcal O_X,\mathcal O_Y)=0\quad\text{para }i\ne 0,
+\]
+siendo los \(\underline{\Tor}_i^S\) los hipertor locales definidos en (EGA III 6.5). Es una condición de naturaleza local; si \(X,Y,S\) son afines de anillos respectivos \(B,C,A\), significa que la flecha canónica
+\[
+ B\otimes_A^{L}C\longrightarrow B\otimes_A C
+\]
+es un isomorfismo. Se satisface, por tanto, en particular, si \(X\) o \(Y\) es plano sobre \(S\).

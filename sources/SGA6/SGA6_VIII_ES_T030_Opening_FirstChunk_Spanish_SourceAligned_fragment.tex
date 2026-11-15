@@ -1,0 +1,338 @@
+% SGA 6, Exposición VIII: fragmento español alineado con la fuente.
+% Alcance exacto: apertura y sección 1 completas, fr.tex, líneas 11097--11289.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+% Termina inmediatamente antes de la sección 2, sin cierre sintético.
+% Las superficies matemáticas se conservan diplomáticamente; las anomalías
+% detectadas se notifican por separado para su resolución canónica.
+
+\section*{Exposición VIII. El teorema de Riemann--Roch}
+\begin{center}
+por Pierre Berthelot
+\end{center}
+
+\subsection*{1. Morfismos de intersección completa}
+
+\textbf{Definición 1.1.} Sea $f:X\to Y$ un morfismo de esquemas. Se dice que
+$f$ es un \emph{morfismo de intersección completa} si, para todo punto $x$ de
+$X$, existen un entorno abierto $U$ de $x$ y un $Y$-esquema liso $V$ tales
+que la restricción de $f$ a $U$ se factoriza como
+\[
+\begin{tikzcd}[column sep=tiny]
+U \arrow[r,"i"] \arrow[dr] & V \arrow[d]\\
+& Y,
+\end{tikzcd}
+\]
+donde $i$ es una inmersión regular (VII 1.4). Reemplazando $V$ por un abierto
+si es necesario, se puede suponer que $i$ es una inmersión cerrada regular.
+
+En esta definición se puede reemplazar $V$ por un fibrado vectorial
+$Y[T_1,\ldots,T_n]$. En efecto, como la noción es local, se puede suponer que
+$V$ es afín y que su imagen en $Y$ está contenida en un abierto afín $W$ de
+$Y$. Existen entonces un entero $n$ y una $W$-inmersión cerrada
+$V\longrightarrow W[T_1,\ldots,T_n]$, de donde se obtiene una $Y$-inmersión
+$V\to Y[T_1,\ldots,T_n]$, que es regular por VII 1.10. Como la composición
+de dos inmersiones regulares es regular, se obtiene así una $Y$-inmersión
+regular $U\longrightarrow Y[T_1,\ldots,T_n]$ que factoriza $f$.
+
+\textbf{Proposición 1.2.} Sea $f:X\to Y$ un morfismo de intersección
+completa. Entonces toda $Y$-inmersión $i:X\to Z$ de $X$ en un $Y$-esquema
+liso es regular.
+
+Demostraremos primero el corolario:
+
+\textbf{Corolario 1.3.} Sea el diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& V' \arrow[d,"p"]\\
+X \arrow[ur,"j"] \arrow[r,"i"'] & V
+\end{tikzcd}
+\]
+donde $i$ y $j$ son inmersiones y $p$ un morfismo liso. Para que $i$ sea una
+inmersión regular es necesario y suficiente que $j$ sea una inmersión regular.
+
+i) Supongamos que $i$ es regular. Pongamos $X'=V'\times_V X$. El dato de $j$
+define una sección $j'$ de $X'$ sobre $X$, tal que $j=i'\circ j'$:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X' \arrow[r,"i'"] \arrow[d,"p'"'] & V' \arrow[d,"p"]\\
+X \arrow[r,"i"'] \arrow[ur,"j"] \arrow[u,bend right=35,"j'"'] & V .
+\end{tikzcd}
+\]
+Ahora bien, $j'$ es una inmersión regular porque es una sección de un
+morfismo liso (VII 1.10); $i'$ es una inmersión regular porque se deduce de
+$i$ mediante un cambio de base liso, y por tanto plano (VII 1.5). Por tanto,
+$j$ es una inmersión regular (VII 1.7).
+
+ii) Supongamos que $j$ es regular y que $p$ es étale. Entonces $j'$ es una
+inmersión abierta (EGA IV 17.9.3), y por tanto un isomorfismo de $X$ sobre
+$j'(X)$; pongamos $U=j'(X)$. Sea $i''$ la restricción de $i'$ a $U$, y sea
+$U'$ un abierto de $V'$ tal que $U=U'\cap X'$. Se tiene entonces
+$i''=j\circ(j')^{-1}$, por lo que $i''$ es una inmersión regular de $U$ en
+$U'$. Ahora bien, el morfismo $U'\to V$, al ser liso, es plano y de
+presentación finita, y por tanto abierto. En consecuencia, es un morfismo
+fielmente plano y cuasicompacto de $U'$ sobre un entorno abierto de $X$ en
+$V$. Se deduce de ello (VII 1.5) que $i$ es una inmersión regular.
+
+iii) Supongamos que $j$ es regular y que $V'$ es un fibrado vectorial sobre
+$V$. Como la propiedad que se debe demostrar ($i$ regular) es local sobre
+$V$, se puede suponer que $V$ es afín, que $i$ es cerrada y que
+$V'=V[T_1,\ldots,T_n]$. Pongamos $V=\Spec(A)$, $X=\Spec(B)$; se tiene el
+diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& A[T_1,\ldots,T_n] \arrow[dl,"v"]\\
+B & A \arrow[l,"u"] \arrow[u]
+\end{tikzcd}
+\]
+donde los morfismos $u$ y $v$ son sobreyectivos. Sean $t_i$, para
+$i=1,\ldots,n$, elementos de $A$ tales que, para todo $i$, se tenga
+\[
+u(t_i)=v(T_i).
+\]
+Se define un homomorfismo $w:A[T_1,\ldots,T_n]\longrightarrow A$ poniendo
+$w(T_i)=t_i$. Se obtiene así una inmersión cerrada $s:V\to V'$ que es una
+sección de $p$ y que cumple $j=s\circ i$. Además, al ser una sección de un
+morfismo liso, es una inmersión regular (VII 1.10). Sabiendo que $s$ y
+$s\circ i$ son regulares, se deducirá que $i$ es regular si se demuestra que
+la sucesión
+\[
+0\longrightarrow i^*(K/K^2)\longrightarrow J/J^2\longrightarrow I/I^2\longrightarrow0
+\]
+es exacta y localmente escindida, donde $I$, $J$ y $K$ designan,
+respectivamente, los ideales que definen $i$, $j$ y $s$ (VII 1.7). Para ello
+basta demostrar que $i^*(K/K^2)$ es un sumando directo de $J/J^2$. Ahora bien,
+se ve inmediatamente que $j'$ se deduce de $s$ mediante el cambio de base
+$i':X'\to V'$. Además, las inmersiones $j'$ y $s$ son regulares (VII 1.10).
+Por consiguiente (VII 1.2), el ideal que define $j'$ es $i'^*(K)$, y el haz
+conormal de $j'$ es $i'^*(K/K^2)$. La sucesión exacta de los haces conormales
+relativa a la descomposición $j=i'\circ j'$ da, en particular, un
+homomorfismo $J/J^2\longrightarrow i^*(K/K^2)$. Es inmediato comprobar que la
+composición
+$i^*(K/K^2)\longrightarrow J/J^2\longrightarrow i^*(K/K^2)$ es la identidad
+(desde el punto de vista afín, esto corresponde a la descomposición de $J$ en
+suma directa de un ideal de $A$ y del ideal generado por los $T_i-t_i$). Se
+obtiene así, en efecto, la escisión buscada.
+
+iv) Supongamos finalmente que $j$ es regular y que $p$ es liso. Para todo
+$x\in X$, se pueden encontrar un entorno abierto $W$ de $i(x)$, un entorno
+abierto $W'$ de $j(x)$ sobre $W$, y un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+W' \arrow[r,"q"] \arrow[d,"p"'] & W[T_1,\ldots,T_n] \arrow[dl,"p_0"]\\
+W &
+\end{tikzcd}
+\]
+donde $p_0$ es el morfismo estructural y $q$ un morfismo étale (EGA IV
+17.11.4). Se puede suponer entonces que $V=W$, $V'=W'$. Es fácil ver que
+$q\circ j$ es una inmersión (introdúzcase el producto fibrado
+$X[T_1,\ldots,T_n]$). Aplicando los resultados ii) y iii), se deduce que
+$q\circ i$ es regular, y después que $i$ es regular.
+
+Demostremos ahora 1.2. Como la propiedad es local sobre $Z$, para demostrarla
+se puede trabajar en un entorno de un punto $x$ de $X$. Se pueden encontrar
+entonces un entorno abierto $U$ de $x$ en $X$, un $Y$-esquema liso $V$ y una
+$Y$-inmersión regular $i':U\to V$. Se tiene entonces el diagrama conmutativo
+siguiente:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& U \arrow[dl,"i"'] \arrow[dr,"i'"] &\\
+Z \arrow[dr] && V \arrow[dl]\\
+& Y . &
+\end{tikzcd}
+\]
+De él se deducen una inmersión cerrada $i'':U\to Z\times_Y V$ y el diagrama
+conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& U \arrow[dl,"i"'] \arrow[d,"i''"] \arrow[dr,"i'"] &\\
+Z & Z\times_Y V \arrow[l,"p"'] \arrow[r,"p'"] & V.
+\end{tikzcd}
+\]
+Como $i'$ es regular y $p$ y $p'$ son lisos, se deduce de 1.3 que $i''$ e $i$
+son regulares.
+
+La proposición siguiente no se utilizará en lo sucesivo en el Seminario:
+
+\textbf{Proposición 1.4.} Sea $f:X\to Y$ un morfismo plano localmente de
+presentación finita. Para que $f$ sea un morfismo de intersección completa en
+el sentido de 1.1 es necesario y suficiente que sea un morfismo de
+intersección completa en el sentido de EGA IV 19.3.6.
+
+Supongamos que $f$ es un morfismo de intersección completa en el sentido de
+1.1, y sea $x\in X$. Entonces existen un entorno abierto $U$ de $x$ y una
+factorización
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y,
+\end{tikzcd}
+\]
+donde $i$ es una inmersión regular y $g$ un morfismo liso. Sea $y=f(x)$;
+entonces la inmersión $i_y:U_y\to V_y$ es regular en $x$. En efecto, se
+puede suponer, restringiendo $V$ si es necesario, que existe un
+$\mathcal O_V$-módulo libre de tipo finito $E$, y un homomorfismo regular
+$u:E\to\mathcal O_V$ tal que el complejo de Koszul asociado a $u$ sea una
+resolución de $\mathcal O_U$. Se consideran entonces el homomorfismo $u_y$
+inducido sobre la fibra en $y$ y el complejo de Koszul asociado
+$K_\bullet(u_y)=K_\bullet(u)_y$. Como $g$ es liso, y por tanto plano,
+$K_\bullet(u)$ es una resolución $Y$-plana de $\mathcal O_U$. Por consiguiente,
+los grupos de homología de $K_\bullet(u)_y$ son los
+$\Tor_i^{\mathcal O_Y}(\mathcal O_U,k(y))$, donde $k(y)$ es el cuerpo residual
+de $\mathcal O_{Y,y}$. Como $f$ es un morfismo plano, son nulos, e $i_y$ es
+regular en $x$. Por otra parte, como $g$ es liso, el anillo local de $V_y$ en
+$x$ es regular. Como el anillo local de $U_y$ en $\sisi{y}{x}$ es cociente de un anillo % Canon SGA-SRC-001505
+regular por un ideal regular, es un anillo de intersección completa (EGA IV
+19.3.2), y por tanto $f$ es de intersección completa en $x$ en el sentido de
+EGA IV 19.3.6.
+
+Recíprocamente, supongamos que $f$ sea un morfismo de intersección completa
+en el sentido de EGA IV 19.3.6, y sea $x\in X$. Sea $U$ un entorno afín de
+$x$, sobre un entorno afín $U'$ de $y=f(x)$. Se pueden encontrar entonces un
+$U'$-esquema liso $V$ y una inmersión cerrada $U\xrightarrow{i}V$ (tomando,
+por ejemplo, como $V$ un fibrado vectorial sobre $U'$). Demostraremos que $i$
+es regular. Ahora bien, por EGA IV 19.3.7, $i$ es transversalmente regular en
+$x$, puesto que $V$ es liso sobre $Y$, y por tanto $V_y$ es regular en $x$, y
+$U'$ es plano sobre $Y$. Se deduce entonces de EGA IV 19.2.4,
+a)$\Rightarrow$c), que $i$ es regular en $x$. Por tanto, $f$ es un morfismo de
+intersección completa en el sentido de 1.1.
+
+\textbf{Proposición 1.5.} Sean $f:X\to Y$ y $g:Y\to Z$ dos morfismos
+localmente de intersección completa. Entonces $g\circ f$ es un morfismo
+localmente de intersección completa.
+
+Sea $x\in X$. Se pueden encontrar entornos abiertos $U,V$ de $x,f(x)$ e
+inmersiones regulares $i,j$ tales que se tengan las factorizaciones
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[r,"i"] \arrow[dr,"f"'] & V[T_1,\ldots,T_n] \arrow[d] &\\
+& V \arrow[r,"j"] \arrow[dr,"g"'] & Z[T'_1,\ldots,T'_m] \arrow[d]\\
+& & Z .
+\end{tikzcd}
+\]
+Este diagrama se puede completar con el cuadrado conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+V[T_1,\ldots,T_n] \arrow[r,"j'"] \arrow[d] & Z[T'_1,\ldots,T'_m,T_1,\ldots,T_n] \arrow[d]\\
+V \arrow[r,"j"'] & Z[T'_1,\ldots,T'_m],
+\end{tikzcd}
+\]
+donde $j'$ se obtiene de $j$ por cambio de base; como este cambio de base es
+plano, $j'$ es una inmersión regular y, por tanto, $j'\circ i$ es una
+inmersión regular de $U$ en un esquema liso sobre $\sisi{W}{Z}$, de donde resulta la % Canon SGA-SRC-001506
+afirmación.
+
+\textbf{Proposición 1.6.} Sea $f:X\to Y$ un morfismo y $g:Y'\to Y$ un cambio
+de base plano. Si $f$ es de intersección completa, entonces el morfismo
+\[
+f':X\times_Y Y'\to Y'
+\]
+deducido de $f$ también lo es. La recíproca es cierta si, además, $g$ es
+cuasicompacto y sobreyectivo.
+
+Se puede encontrar un recubrimiento de $X$ por abiertos $U_i$ tales que, para
+todo $i$, la restricción de $f$ a $U_i$ se factoriza como
+$U_i\longrightarrow V_i\longrightarrow Y$, donde $U_i\to V_i$ es una
+inmersión regular y $V_i\to Y$ un morfismo liso. Los $U_i\times_Y Y'$ forman
+un recubrimiento abierto de $X\times_Y Y'$, las inmersiones
+$U_i\times_Y Y'\longrightarrow V_i\times_Y Y'$ son regulares por VII 1.5, y
+los morfismos $V_i\times_Y Y'\to Y'$ son lisos, de donde resulta la primera
+afirmación. Para el recíproco, se deduce primero de EGA IV 2.7.1 (iv) que $f$
+es localmente de presentación finita, lo que reduce fácilmente, gracias a 1.2,
+al caso en que $f$ es una inmersión cerrada, caso en el cual la afirmación no
+es otra que VII 1.5.
+
+\textbf{Proposición 1.7.} Sea $f:X\to Y$ un morfismo de intersección
+completa. Entonces $f$ es un morfismo perfecto.
+
+Como la propiedad es local sobre $X$, se puede trabajar en un entorno de un
+punto $x$ de $X$ y suponer que existen un abierto $U$ que contiene a $x$ y
+una factorización
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y,
+\end{tikzcd}
+\]
+donde $i$ es una inmersión regular y $g$ un morfismo liso. Como $g$ es liso,
+es un morfismo perfecto (III 4.1). Por VII 1.9, $i$ es también un morfismo
+perfecto. Como la composición de dos morfismos perfectos es perfecta (III
+4.5), se deduce la proposición.
+
+\textbf{Proposición 1.8.} Sean $f:X\to Y$ un morfismo de intersección
+completa, $x$ un punto de $X$, y una factorización
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+U \arrow[r,"i"] \arrow[dr,"f"'] & V \arrow[d,"g"]\\
+& Y
+\end{tikzcd}
+\]
+donde $U$ es un entorno abierto de $x$, $i$ una inmersión regular y $g$ un
+morfismo liso. Se denota por $J$ el ideal de $\mathcal O_V$ que define $U$.
+Entonces el entero
+\[
+d_x=\operatorname{rang}\bigl((\Omega^1_{V/Y})_{i(x)}\bigr)-\operatorname{rang}\bigl((J/J^2)_x\bigr)
+\]
+es independiente de la factorización elegida de $f$.
+
+Supongamos que la restricción de $f$ a $U$ se factoriza por dos $Y$-esquemas
+lisos $V$ y $V'$, y pongamos $V''=V\times_Y V'$. Entonces $V''$ es liso sobre
+$Y$, y también sobre $V$ y $V'$. Además, las inmersiones $X\to V$ y
+$X\to V'$ definen una inmersión $X\to V''$, regular por 1.2. Se puede, pues,
+reducir la comparación de los enteros $d_x$ relativos a dos factorizaciones
+de $f$ por $Y$-esquemas lisos $V$ y $V'$ al caso en que existe un diagrama
+conmutativo sobre $Y$
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& V' \arrow[d,"p"]\\
+X \arrow[ur,"j"] \arrow[r,"i"'] & V,
+\end{tikzcd}
+\]
+donde $p$ es un morfismo liso. Se puede suponer además que
+$\Omega^1_{V/Y}$, $\Omega^1_{V'/Y}$ y $\Omega^1_{V'/V}$ tienen rango
+constante, al igual que los haces conormales de $i$ y $j$.
+
+Del diagrama conmutativo (en el que todos los morfismos son lisos)
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\sisi{V}{V'} \arrow[r,"p"] \arrow[dr] & \sisi{V'}{V} \arrow[d]\\ % Canon SGA-SRC-001507
+& Y,
+\end{tikzcd}
+\]
+se deduce
+\begin{equation}\tag{1.8.1}
+\operatorname{rang}(\Omega^1_{V'/Y})=
+\operatorname{rang}(\Omega^1_{V/Y})+
+\operatorname{rang}(\Omega^1_{V'/V}).
+\end{equation}
+Sea $X'=V'\times_V X$; entonces el rango de $\Omega^1_{V'/V}$ es igual al de
+$\Omega^1_{X'/X}$. Por otra parte, $j$ define una sección
+$X\xrightarrow{j'} X'$, que es una inmersión regular de codimensión igual al
+rango de $\Omega^1_{X'/X}$ (EGA IV 17.10.4). Si $i'$ es la inmersión deducida
+de $i$ mediante el cambio de base $V'\to V$, se tiene $j=i'\circ j'$ y, por
+tanto (VII 1.7),
+\begin{equation}\tag{1.8.2}
+\operatorname{rang}(N_{V'/X})=
+\operatorname{rang}(N_{V/X})+
+\operatorname{rang}(\Omega^1_{V'/V}).
+\end{equation}
+Comparando (1.8.1) y (1.8.2), se deduce la proposición.
+
+\textbf{Definición 1.9.} El entero $d_x$ de la proposición 1.8 se denomina
+\emph{dimensión relativa virtual} de $X$ sobre $Y$ (o de $f$) en el punto
+$x$.
+
+La dimensión relativa virtual de $X$ sobre $Y$ es, por tanto, una función
+localmente constante sobre $X$, con valores enteros (positivos o negativos).
+Si $f$ es un morfismo liso de dimensión relativa $n$, su dimensión relativa
+virtual es $n$. Si $f$ es una inmersión regular de codimensión $n$, su
+dimensión relativa virtual es $-n$.
+
+\textbf{Proposición 1.10.} Sean $f:X\to Y$ y $g:Y\to Z$ dos morfismos de
+intersección completa, y sea $x$ un punto de $X$. Entonces
+\[
+\operatorname{dim.rel.virt.}_x(g\circ f)=
+\operatorname{dim.rel.virt.}_x(f)+
+\operatorname{dim.rel.virt.}_{f(x)}(g).
+\]
+Esto se deduce inmediatamente de 1.9 y de la demostración de 1.5.

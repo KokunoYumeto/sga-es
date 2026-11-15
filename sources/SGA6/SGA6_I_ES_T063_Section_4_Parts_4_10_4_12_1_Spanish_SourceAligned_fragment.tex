@@ -1,0 +1,78 @@
+% SGA 6, Exposición I: sección 4, apartados 4.10--4.12.1, en español y alineados con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 2538--2609.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 4.10.} La categoría \(\Parf(\mathcal C,\mathcal C_0)\) es una sub-\(\sisi{S}{\mathcal S}\)-categoría triangulada de \(\Dpx(\mathcal C)\) (1.1.4). El funtor canónico
+\[
+  \Kpx^b(\mathcal C_0)\longrightarrow\Parf(\mathcal C,\mathcal C_0)
+\]
+(resp. \(\Tr(\Kpx^b(\mathcal C_0))\to\Tr(\Parf(\mathcal C,\mathcal C_0))\) (1.1.3)) induce una \(\sisi{S}{\mathcal S}\)-equivalencia entre los campos asociados ([G] II 2.2.4), lo cual significa:
+\begin{enumerate}[label=(\roman*)]
+\item para todo \(X\in\Ob \sisi{S}{\mathcal S}\) y todos \(E,F\in\Ob\Kpx^b(\mathcal C_{0,X})\) (resp. \(\Tr(\Kpx^b(\mathcal C_{0,X}))\)), la flecha canónica
+\[
+  \Hom_{\Kpx^b(\mathcal C_0)}(E,F)
+  \longrightarrow
+  \Hom_{\Dpx(\mathcal C)}(E,F)
+\]
+(resp. \(\Hom_{\Tr(\Kpx^b(\mathcal C_0))}(E,F)\to\Hom_{\Tr(\Dpx(\mathcal C))}(E,F)\)) es un isomorfismo, y
+\item todo objeto de \(\Parf(\mathcal C,\mathcal C_0)\) (resp. \(\Tr(\Parf(\mathcal C,\mathcal C_0))\)) es localmente isomorfo en \(\Dpx(\mathcal C)\) (resp. \(\Tr(\Dpx(\mathcal C))\)) a un objeto de \(\Kpx^b(\mathcal C_0)\) (resp. \(\Tr(\Kpx^b(\mathcal C_0))\)).
+\end{enumerate}
+
+\emph{Demostración.} La afirmación (i) sin la cláusula «respectivamente» es un caso particular de (4.6), y la afirmación (ii) sin dicha cláusula es verdadera por definición ((4.7) y (4.9)). Por otra parte, está claro que \(\Parf(\mathcal C,\mathcal C_0)\) es estable por traslación de grados. Para demostrar que \(\Parf(\mathcal C,\mathcal C_0)\) es una sub-\(\sisi{S}{\mathcal S}\)-categoría triangulada de \(\Dpx(\mathcal C)\), basta, pues, demostrar que, si
+\[
+\begin{tikzcd}
+& G \arrow[dl,"+1"'] & \\
+E \arrow[rr,"u"] && F \arrow[ul]
+\end{tikzcd}
+\tag{*}
+\]
+es un triángulo distinguido de \(\Dpx(\mathcal C)\) tal que \(E\) y \(F\) son perfectos, entonces \(G\) es perfecto. Tras localizar, se puede suponer que \(E\) y \(F\) son objetos de \(\Kpx^b(\mathcal C_0)\). Tras localizar aún más, se puede suponer, por la afirmación (i) sin la cláusula «respectivamente», que \(u\) es una flecha de \(\Kpx^b(\mathcal C_0)\); entonces \(G\) es perfecto, pues es isomorfo al cono de \(u\), que es estrictamente perfecto. Por tanto, \(\Parf(\mathcal C,\mathcal C_0)\) es efectivamente una sub-\(\sisi{S}{\mathcal S}\)-categoría triangulada de \(\Dpx(\mathcal C)\). El argumento precedente demuestra también, por cierto, la afirmación (ii) con la cláusula «respectivamente». Queda por demostrar la afirmación (i) con dicha cláusula. Sea, pues, \(X\in\Ob \sisi{S}{\mathcal S}\), y sean
+\[
+E=(E_1\xrightarrow{a_1}E_2\xrightarrow{a_2}E_3\xrightarrow[+1]{a_3}E_1),
+\quad
+F=(F_1\xrightarrow{b_1}F_2\xrightarrow{b_2}F_3\xrightarrow[+1]{b_3}F_1)
+\]
+triángulos distinguidos de \(\Kpx^b(\mathcal C_{0,X})\). Demostremos que la flecha
+\[
+  \Hom_{\Tr(\Kpx^b(\mathcal C_0))}(E,F)
+  \longrightarrow
+  \Hom_{\Tr(\Dpx(\mathcal C))}(E,F)
+  \tag{**}
+\]
+es un isomorfismo. Por la afirmación (i) sin la cláusula «respectivamente», ya sabemos que \((**)\) es inyectiva. Sea \((u_i):E\to F\) un morfismo de triángulos en \(\Dpx(\mathcal C)\). Tras localizar, se puede suponer, por la afirmación (i) sin dicha cláusula, que \(u_i\) (\(1\leq i\leq3\)) es una flecha de \(\Kpx^b(\mathcal C_0)\). La flecha \(u_{i+1}a_i-b_iu_i\), para \(1\leq i\leq3\) (con el convenio \(u_4=u_1\)), es nula en \(\Dpx(\mathcal C)\) y, por tanto, localmente nula en \(\Kpx^b(\mathcal C_0)\), por la afirmación (i) sin la cláusula «respectivamente». En otros términos, \((u_i)\) define localmente un morfismo de triángulos en \(\Kpx^b(\mathcal C_0)\). Esto demuestra que \((**)\) es sobreyectiva y concluye la demostración de (4.10).
+
+\textbf{Observación 4.10.1.} Se puede sustituir, en (4.10), \(\Parf(\mathcal C,\mathcal C_0)\) por \(\Dpx^*(\mathcal C)_{\mathcal C_0\text{-}\Parf}=\Dpx^*(\mathcal C)\cap\Parf(\mathcal C,\mathcal C_0)\) \((*=-\text{ o }b)\); no hay que modificar nada en la demostración.
+
+\textbf{Complemento 4.11.} La estructura triangulada de \(\Parf(\mathcal C,\mathcal C_0)\) puede precisarse en términos de amplitud perfecta (4.7). Si \(E\in\Ob\Dpx(\mathcal C)\) es de amplitud perfecta contenida en \([a,b]\), entonces \(E[n]\) es de amplitud perfecta contenida en \([a-n,b-n]\).
+
+Sea
+\[
+\begin{tikzcd}
+& G \arrow[dl,"+1"'] & \\
+E \arrow[rr] && F \arrow[ul]
+\end{tikzcd}
+\]
+un triángulo distinguido de \(\Dpx(\mathcal C)\). Se puede formar una tabla análoga a la de (2.6), cuyas casillas indican amplitudes perfectas y cada una de cuyas filas corresponde a una implicación cuya conclusión está subrayada.
+\[
+\begin{array}{ccc}
+E&F&G\\[0.3em]
+{}[a+1,b+1]&{}[a,b]&\underline{[a,b]}\\
+{}[a,b]&\underline{[a,b]}&{}[a,b]\\
+\underline{[a,b]}&{}[a,b]&{}[a-1,b-1].
+\end{array}
+\]
+De (4.10) se deduce inmediatamente el siguiente:
+
+\textbf{Corolario 4.12.} Supongamos que \(\sisi{S}{\mathcal S}\) es un sitio puntual. Para que \(F\in\Ob\Dpx(\mathcal C)\) sea de amplitud perfecta (rel.\ a \(\mathcal C_0\)) contenida en \([a,b]\), es necesario y suficiente que exista un cuasi-isomorfismo \(F'\to F\), con \(F'\) estrictamente perfecto y tal que \(F'^i=0\) para \(i\notin[a,b]\). Los funtores canónicos
+\[
+  \Kpx^b(\mathcal C_0)\longrightarrow\Parf(\mathcal C,\mathcal C_0)
+\]
+y
+\[
+  \Tr(\Kpx^b(\mathcal C_0))\longrightarrow\Tr(\Parf(\mathcal C,\mathcal C_0))
+\]
+son equivalencias de categorías.
+
+\textbf{Observación 4.12.1.} Cuando \(\sisi{S}{\mathcal S}\) es un sitio puntual, los objetos de \(\mathcal C_0\) son proyectivos. Cuando \(\mathcal C_0\) contiene todos los objetos proyectivos de \(\mathcal C\), se dice «amplitud proyectiva» en lugar de «amplitud \(\mathcal C_0\)-perfecta».

@@ -1,0 +1,679 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance: sección 7 completa, hasta el final de la Exposición X.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 13495--14168.
+% Las lecturas fuente dudosas se conservan y se consignan en el informe de control.
+
+\section*{7. Apéndice: Especialización en teoría de intersecciones}
+\begin{center}
+por A. Grothendieck
+\end{center}
+
+\textbf{Lema 7.1.} Sea \(i:Y\to X\) una inmersión cerrada regular (VII 1.4), de codimensión acotada, de modo que \(i\) es un morfismo perfecto (VII 1.9), y que por tanto se puede definir el morfismo (IV 2.12)
+\[
+ i^*:K_\bullet(X)\longrightarrow K_\bullet(Y).
+\]
+Sea, por otra parte, \(N\) el haz conormal de \(i\), que es un haz localmente libre de tipo finito sobre \(Y\) (VII 1.6), de modo que se puede formar
+\[
+ \lambda_{-1}(N)\in K^\circ(Y).
+\]
+Consideremos también el homomorfismo de imagen directa (IV 2.11)
+\[
+ i_*:K_\bullet(Y)\longrightarrow K_\bullet(X).
+\]
+Con esto establecido, se tiene la fórmula
+\[
+ i^*i_*(x)=x\lambda_{-1}(\mathbb N)\qquad\text{para } x\in K_\bullet(Y),
+\]
+donde el producto del segundo miembro es relativo a la estructura de \(K^\circ(Y)\)-módulo de \(K_\bullet(Y)\) definida en (IV 2.10).
+
+La demostración es, esencialmente sin cambio, la misma que para la misma fórmula, escrita trabajando con \(K^\circ(X)\), \(K^\circ(Y)\), establecida en (VII 2.7).
+
+\textbf{Corolario 7.2.} Sean \(f:X\to S\) un morfismo plano, con \(S\) un rasgo, es decir, el espectro de un anillo de valoración discreta \(A\), \(s\) el punto cerrado de \(S\), \(t\) su punto genérico, e \(i:X_s\to X\) la inclusión canónica. Entonces \(i\) es de tor-dimensión finita; por tanto, (IV 2.12), se puede definir
+\[
+ i^*:K_\bullet(X)\longrightarrow K_\bullet(X_s),
+\]
+y por otra parte (IV 2.11) se tiene un homomorfismo
+\[
+ i_*:K_\bullet(X_s)\longrightarrow K_\bullet(X).
+\]
+Con esto establecido, el compuesto
+\[
+ i^*i_*:K_\bullet(X_s)\longrightarrow K_\bullet(X)\longrightarrow K_\bullet(X_s)
+\]
+es nulo.
+
+En efecto, \(i:X_s\to X\) es una inmersión regular de codimensión \(1\), cuyo haz conormal \(\mathbb N\) es libre de rango \(1\), pues \(X_s\) puede describirse mediante una ecuación global \(f^*(g)=0\) (donde \(g\) es un uniformizante de \(A\)). Se tiene, pues, \(\lambda_{-1}(N)=0\), y se concluye gracias a 7.1.
+
+En todo lo que sigue supondremos que \(X\) es noetheriano y plano sobre \(S\). Apliquemos ahora la sucesión exacta de homotopía (IX 1.1) a la situación: \(X\), provisto del abierto \(X_t\) y del subesquema cerrado complementario \(X_s\):
+\[
+K_\bullet(X_s)\xrightarrow{i_*}K_\bullet(X)\xrightarrow{j^*}K_\bullet(X_t)\longrightarrow0,
+\]
+donde \(j:X_t\to X\) es la inclusión, que es una inmersión abierta. Utilizando 7.2, se obtiene:
+
+\textbf{Proposición 7.3.} Con las notaciones de 7.2, suponiendo \(X\) noetheriano, existe un único homomorfismo de grupos
+\begin{equation}\tag{7.3.1}
+ \sigma_\bullet:K_\bullet(X_t)\longrightarrow K_\bullet(X_s)
+\end{equation}
+(llamado «~homomorfismo de especialización~») que hace conmutativo el diagrama
+\begin{equation}\tag{7.3.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X) \arrow[r,"j^*"] \arrow[d,"i^*"'] & K_\bullet(X_t) \arrow[dl,"\sigma_\bullet"]\\
+K_\bullet(X_s) & {.}
+\end{tikzcd}
+\end{equation}
+
+
+
+% Adiciones locales de macros para la continuación de la Exposición X
+\providecommand{\Kalg}{K_{\mathrm{alg}}}
+\providecommand{\Gralg}{\operatorname{Gr}_{\mathrm{alg}}}
+\providecommand{\Grnum}{\operatorname{Gr}_{\mathrm{num}}}
+\providecommand{\Knum}{K_{\mathrm{num}}}
+\providecommand{\Cl}{\operatorname{Cl}}
+\providecommand{\Ch}{\operatorname{Ch}}
+\providecommand{\Nm}{\operatorname{N}}
+\providecommand{\colim}{\varinjlim}
+\providecommand{\Hens}{\operatorname{Hens}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\coker}{\operatorname{coker}}
+
+
+Cuando se consideran los dos miembros de (7.3.1) como módulos sobre \(K^\circ(X)\) mediante los homomorfismos de anillos \(K^\circ(X)\xrightarrow{j^*}K^\circ(X_t)\) y \(K^\circ(X)\xrightarrow{i^*}K^\circ(X_s)\) (IV 2.7 b), y las estructuras de módulo de \(K_\bullet(X_t)\) y \(K_\bullet(X_s)\) sobre \(K^\circ(X_t)\) y \(K^\circ(X_s)\), respectivamente (IV 2.10), el homomorfismo \(\sigma_\bullet\) es un homomorfismo de \(K^\circ(X)\)-módulos.
+
+La última afirmación proviene de que \(i^*:K_\bullet(X)\to K_\bullet(X_s)\) es un homomorfismo de \(K^\circ(X)\)-módulos, al igual que el epimorfismo \(j^*:K_\bullet(X)\longrightarrow K_\bullet(X_t)\), en virtud de (IV 2.12.2).
+
+Repasaremos otras propiedades del morfismo de especialización.
+
+\subsection*{7.4. Compatibilidad con las filtraciones}
+Dotemos los \(K_\bullet\) de la filtración \(\operatorname{Fil}_\bullet K_\bullet\) por la dimensión de los soportes (1.1.1). Entonces, si \(f\) es de tipo finito, o más generalmente si \(X\) es catenario, el homomorfismo de especialización es compatible con estas filtraciones y, por consiguiente, induce un homomorfismo (llamado asimismo homomorfismo de especialización):
+\begin{equation}\tag{7.4.1}
+  \sigma_\bullet:\Gr_\bullet(X_t)\longrightarrow \Gr_\bullet(X_s).
+\end{equation}
+
+Para verlo, por \sisi{1.14}{1.1.4} nos reducimos a probar que, si \(Y_t\) es un subesquema integral de dimensión \(d\) de \(X_t\), entonces \(\sigma_\bullet(\cl_\bullet(Y_t))\) tiene filtración \(\leq d\). Sea ahora \(Y\) la adherencia esquemática de \(Y_t\) en \(X\), de modo que \(Y\) es plano sobre \(S\) (EGA IV 2.8.1). De ello resulta fácilmente que \(i^*(\cl_\bullet(Y))=\cl_\bullet(Y_s)\), donde los dos \(\cl_\bullet\) se toman respectivamente en \(K_\bullet(X)\) y en \(K_\bullet(X_s)\), de donde \(\sigma_\bullet(\cl_\bullet(Y_t))=\cl_\bullet(Y_s)\). Se comprueba fácilmente (gracias a que \(X\) es catenario y, por tanto, \(Y\) catenario) que \(\dim Y_s\leq \dim Y_t\); en el caso en que \(f\) es de tipo finito, esto resulta inmediatamente, por reducción al caso \(X\) integral, de EGA IV 7.1.13. De aquí la conclusión anunciada. % Canon SGA-SRC-001366
+
+\subsection*{7.5. «~Conservación del número~».}
+Supongamos ahora \(f\) propio, por tanto \(X_t\) y \(X_s\) propios sobre \(k(t)\) y \(k(s)\), respectivamente, de modo que se dispone de los homomorfismos 2.3:
+\[
+  \chi_t:K_\bullet(X_t)\longrightarrow \mathbb Z,\qquad
+  \chi_s:K_\bullet(X_s)\longrightarrow \mathbb Z .
+\]
+Con esto establecido, se tiene la relación
+\begin{equation}\tag{7.5.1}
+  \chi_s(\sigma_\bullet(x))=\chi_t(x)\qquad\text{para } x\in K_\bullet(X_t)
+\end{equation}
+(«~teorema de conservación del número~»); en otros términos, se tiene conmutatividad en el diagrama
+\begin{equation}\tag{7.5.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[r,"\sigma_\bullet"] \arrow[dr,"\chi_t"'] &
+K_\bullet(X_s) \arrow[d,"\chi_s"]\\
+& \mathbb Z .
+\end{tikzcd}
+\end{equation}
+
+Para probar (7.5.1), nos reducimos de nuevo al caso en que \(x=\cl_\bullet(Y_t)\), siendo \(Y_t\) un subesquema cerrado integral de \(X_t\), y con las notaciones de la demostración de 7.4 nos reducimos a probar que
+\[
+  \chi(Y_s)=\chi(Y_t),
+\]
+lo que es bien conocido (EGA III 7.9.4, o Exposición III 5.7).
+
+\subsection*{7.6.}
+Es inmediato que se tiene
+\begin{equation}\tag{7.6.1}
+  \sigma_\bullet\bigl(\cl_\bullet(\mathcal O_{X_t})\bigr)=\cl_\bullet(\mathcal O_{X_s}),
+\end{equation}
+lo que implica, teniendo en cuenta que \(\sigma_\bullet\) es \(K^\circ(X)\)-lineal, que el diagrama siguiente es conmutativo:
+\begin{equation}\tag{7.6.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+& K^\circ(X) \arrow[dl,"j^*"'] \arrow[dr,"i^*"] &\\
+K^\circ(X_t) \arrow[d] && K^\circ(X_s) \arrow[d]\\
+K_\bullet(X_t) \arrow[rr,"\sigma_\bullet"] && K_\bullet(X_s),
+\end{tikzcd}
+\end{equation}
+donde las flechas verticales son los homomorfismos canónicos \(K^\circ\to K_\bullet\) (IV 2.5.1).
+
+\subsection*{7.7. Especialización para \(K^\bullet\) y \(\Gr^\bullet\).}
+Cuando \(X_t\) y \(X_s\) son regulares (por ejemplo, si \(f\) es liso), las dos flechas verticales anteriores son isomorfismos (IV 2.5), y el homomorfismo de especialización puede interpretarse entonces como un homomorfismo
+\begin{equation}\tag{7.7.1}
+  \sigma^\bullet:K^\bullet(X_t)\longrightarrow K^\bullet(X_s),
+\end{equation}
+que puede describirse también como el único homomorfismo que hace conmutativo el diagrama siguiente
+\begin{equation}\tag{7.7.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K^\bullet(X) \arrow[r,"j^*"] \arrow[d,"i^*"'] & K^\bullet(X_t) \arrow[dl,"\sigma^\bullet"]\\
+K^\bullet(X_s) &
+\end{tikzcd}
+\end{equation}
+
+Como en este último \(i^*\) y \(j^*\) son homomorfismos de anillos (IV 2.7 b), con \(j^*\) sobreyectivo, se sigue que el homomorfismo de especialización (7.7.1) es un homomorfismo de anillos. Por la misma razón, si \(X\) es separado, el homomorfismo (7.7.1) es incluso un homomorfismo de \(\lambda\)-anillos. Para precisar este punto, basta observar que un esquema noetheriano regular separado es divisorial (II 2.2.7.1), por lo que su \(K^\bullet\) se identifica con su \(K^\bullet\) «~ingenuo~» (IV 2.9 (ii)), el cual está provisto de manera natural de una estructura de \(\lambda\)-anillo (VI 3.2). Por otra parte, el hecho de que \(X_t\) y \(X_s\) sean regulares implica lo mismo para \(X\) (EGA \(0_{\mathrm{IV}}\) 17.1.8), y los homomorfismos \(i^*:K^\bullet(X)\to K^\bullet(X_s)\) y \(j^*:K^\bullet(X)\to K^\bullet(X_t)\) son \(\lambda\)-homomorfismos; por tanto, lo mismo vale para (7.7.1), que se deduce de \(i^*\) al pasar al cociente.
+
+Observemos también que, siendo \(X\) regular y por tanto normal, sus componentes conexas son idénticas a sus componentes irreducibles, las cuales dominan \(S\), de modo que el homomorfismo \(H^0(X,\mathbb Z)\to H^0(X_t,Z)\) inducido por la inclusión \(X_t\to X\) es biyectivo. Por consiguiente, el homomorfismo \(H^0(X,\mathbb Z)\to H^0(X_s,\mathbb Z)\) inducido por la inclusión \(X_s\to X\) puede interpretarse también como un homomorfismo
+\begin{equation}\tag{7.7.3}
+  H^0(X_t,\mathbb Z)\longrightarrow H^0(X_s,\mathbb Z).
+\end{equation}
+que merece asimismo el nombre de «~homomorfismo de especialización~». Con esto establecido, se comprueba inmediatamente a partir de las definiciones que el homomorfismo (7.7.1) es compatible con las estructuras de álgebras aumentadas sobre \(H^0(X_t,\mathbb Z)\) y \(H^0(X_s,\mathbb Z)\), respectivamente, de los dos miembros, definidas en (IV 2.8), teniendo en cuenta el homomorfismo anterior (7.7.3).
+
+Suponiendo todavía \(X\) separado, lo anterior implica en particular que (7.7.1) induce un homomorfismo de anillos graduados
+\begin{equation}\tag{7.7.4}
+  \sigma^\bullet:\Gr^\bullet(X_t)\longrightarrow\Gr^\bullet(X_s),
+\end{equation}
+y, utilizando la noción de clase de Chern de (V 6), se obtiene un diagrama conmutativo
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+K^\bullet(X_t) \arrow[r,"c_{X_t}"] \arrow[d] &
+\Ch\,\Gr^\bullet(X_t) \arrow[d]\\
+K^\bullet(X_s) \arrow[r,"c_{X_s}"] &
+\Ch\,\Gr^\bullet(X_s).
+\end{tikzcd}
+\]
+
+\subsection*{7.8. Especialización para \(\Pic\).}
+Conservemos las hipótesis de 7.7: \(X\) separado, \(X_t\) y \(X_s\) regulares. Teniendo en cuenta el isomorfismo canónico (5.3.2):
+\[
+  \Gr^1\simeq \Pic ,
+\]
+el homomorfismo (7.7.4) nos proporciona, pues, un homomorfismo canónico
+\begin{equation}\tag{7.8.1}
+  \Pic(X_t)\longrightarrow \Pic(X_s).
+\end{equation}
+Una manera equivalente de describir este último es la siguiente: la hipótesis de que \(X\) es regular implica que estos anillos locales son factoriales (por el teorema de Auslander--Buchsbaum, EGA IV 21.11.1), y por tanto que todo haz invertible \(L_t\) sobre \(X_t\) puede prolongarse a un haz invertible \(L\) sobre \(X\) (EGA IV 21.6.11). Con esto establecido, se comprueba inmediatamente que la imagen por (7.8.1) de \(\cl(L_t)\in\Pic(X_t)\) es \(\cl(L_s)\in\Pic(X_s)\), donde se pone, evidentemente, \(L_s=L|X_s\).
+
+De hecho, utilizando solamente la hipótesis de que los anillos locales de \(X\) son factoriales y que \(X_s\) es localmente integral (excluyendo las hipótesis de regularidad y separación), se demuestra que \(\cl(L_s)\) no depende de la prolongación elegida \(L\) de \(L_t\) a un módulo invertible sobre \(X\), de modo que se obtiene así directamente un homomorfismo (7.8.1). Para comprobar la independencia anunciada, nos reducimos a probar que, si \(L_t\simeq\mathcal O_{X_t}\), entonces \(L_s\simeq\mathcal O_{X_s}\). Ahora bien, la hipótesis significa que \(L\simeq\mathcal O_X(D)\), siendo \(D\) un divisor sobre \(X\) de soporte \(\subset X_s\) (cf. EGA IV 21.2.11), y nos reducimos inmediatamente al caso en que \(X_s\) es integral, por tanto \(D=nX_s\); pero entonces \(D=\operatorname{div}(g^n)\) (siendo \(g\) un uniformizante de \(A\)), por lo que \(\mathcal O_X(D)\simeq\mathcal O_X\) y, con mayor razón, \(L_s\simeq\mathcal O_{X_s}\).
+
+\subsection*{7.9. Especialización y equivalencia numérica.}
+Supongamos \(f\) propio, y \(X_s\) y \(X_t\) regulares, y consideremos las dos aplicaciones de especialización (7.4.1) y (7.7.4):
+\begin{equation}\tag{7.9.1}
+\begin{gathered}
+  \sigma_\bullet:\Gr_\bullet(X_t)\longrightarrow\Gr_\bullet(X_s)\\
+  \sigma^\bullet:\Gr^\bullet(X_t)\longrightarrow\Gr^\bullet(X_s).
+\end{gathered}
+\end{equation}
+Por el hecho de que el homomorfismo
+\begin{equation}\tag{7.9.2}
+  \sigma:K^\bullet(X_t)\longrightarrow K^\bullet(X_s)
+\end{equation}
+del que se deducen es compatible con las estructuras de anillo, y gracias a (7.5.1), se obtiene
+\[
+  \langle\sigma_\bullet(x_t),\sigma^\bullet(y_t)\rangle
+  =
+  \langle x_t,y_t\rangle
+  \qquad\text{para }
+  x_t\in\Gr_\bullet(X_t)\quad y_t\in\Gr^\bullet(X_t),
+\tag{7.9.3}
+\]
+utilizando los emparejamientos \(\langle x,y\rangle\) de 4.1 entre \(\Gr_\bullet\) y \(\Gr^\bullet\). De esto se deduce formalmente que, si \(x\) es un elemento de \(\Gr_\bullet(X_t)\) (respectivamente, de \(\Gr^\bullet(X_t)\)) tal que \(\sigma_\bullet(x)\) (respectivamente, \(\sigma^\bullet(x)\)) sea numéricamente equivalente a cero (4.5.1), entonces lo mismo vale para \(x\). El recíproco es verdadero si (7.9.2) (o, lo que viene a ser lo mismo, uno u otro homomorfismo (7.9.1) que se deduce de él al pasar a los graduados asociados) es un epimorfismo módulo torsión, circunstancia que, sin embargo, solo se presenta bastante excepcionalmente.
+
+\textbf{7.9.4.} Es plausible, al menos cuando \(f\) es propio y liso, que el recíproco considerado sea siempre válido, es decir, que \(\sigma_\bullet(x)\) (respectivamente, \(\sigma^\bullet(x)\)) sea numéricamente equivalente a cero desde el momento en que lo sea \(x\), lo que implicaría que los homomorfismos (7.9.1) inducen monomorfismos para los grupos cociente correspondientes por la relación de equivalencia numérica \(\Gr^{\mathrm{num}}_\bullet\) y \(\Gr_{\mathrm{num}}^\bullet\). Al menos, lo anterior implica que el grupo \(\Gr_\bullet^{\mathrm{num}}(X_t)\) es isomorfo a un cociente de un subgrupo de \(\Gr_\bullet^{\mathrm{num}}(X_s)\) (y, en particular, tiene rango a lo sumo igual al de \(\Gr_\bullet^{\mathrm{num}}(X_s)\)); y lo mismo vale para \(\Gr_{\mathrm{num}}^\bullet\), así como para el propio \(K^\bullet_{\mathrm{num}}\).
+
+\subsection*{7.10. Compatibilidad con las imágenes directas y las imágenes inversas}
+Démonos un morfismo
+\[
+  g:X\longrightarrow Y
+\]
+de esquemas noetherianos y planos sobre \(S\). Se denota por \(\sigma_X\) (respectivamente, \(\sigma_Y\)) el homomorfismo de especialización para \(X\) (respectivamente, \(Y\)), y por \(i_X,j_X\) (respectivamente, \(i_Y,j_Y\)) los morfismos \(i,j\) para \(X\) (respectivamente, \(Y\)) de las fibras especiales y genéricas en el esquema ambiente. Denotamos por
+\[
+  g_t:X_t\to Y_t,\qquad g_s:X_s\to Y_s
+\]
+los morfismos inducidos, que dan lugar, por tanto, a los cuadrados cartesianos
+\begin{equation}\tag{7.10.0}
+\begin{tikzcd}[column sep=large,row sep=large]
+X_t \arrow[r,"g_t"] \arrow[d,"j_X"'] & Y_t \arrow[d,"j_Y"'] &
+X_s \arrow[r,"g_s"] \arrow[d,"i_X"'] & Y_s \arrow[d,"i_Y"']\\
+X \arrow[r,"g"] & Y &
+X \arrow[r,"g"] & Y .
+\end{tikzcd}
+\end{equation}
+
+Supongamos primero que \(g\) es propio. Afirmo que entonces el diagrama siguiente es conmutativo:
+\begin{equation}\tag{7.10.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[r,"g_{t*}"] \arrow[d,"\sigma_X"'] &
+K_\bullet(Y_t) \arrow[d,"\sigma_Y"]\\
+K_\bullet(X_s) \arrow[r,"g_{s*}"] &
+K_\bullet(Y_s).
+\end{tikzcd}
+\end{equation}
+Este resultado generaliza 7.5 (pues para \(\sisi{X}{Y}=S\), las flechas de (7.3.2) se identifican con la flecha identidad de \(\mathbb Z\)). Se observará que, si \(X\) e \(Y\) satisfacen las condiciones de 7.7, es decir, tienen fibras regulares, entonces \(g_t\) y \(g_s\) son automáticamente de tor-dimensión finita, y el diagrama puede interpretarse como un diagrama conmutativo con \(K^\bullet\), cuya reescritura se deja al lector. % Canon SGA-SRC-001368
+
+Para probar la conmutatividad de (7.10.1), se ve inmediatamente, utilizando la definición de \(\sigma_X\) y \(\sigma_Y\), que nos reducimos a probar la conmutatividad de los dos cuadrados anteriores del prisma
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[rr,"g_{t*}"] && K_\bullet(Y_t)\\
+& K_\bullet(X) \arrow[ul,"j_X^*" description] \arrow[dl,"i_X^*" description] \arrow[rr,"g_*"] &&
+K_\bullet(Y) \arrow[ul,"j_Y^*" description] \arrow[dl,"i_Y^*" description]\\
+K_\bullet(X_s) \arrow[rr,"g_{s*}"] && K_\bullet(Y_s),
+\end{tikzcd}
+\tag{*}
+\]
+Ahora bien, estos dos cuadrados son los cuadrados «~de cambio de base~» deducidos de los dos cuadrados (7.10.0), de modo que puede aplicarse (IV 3). Solo hay que comprobar que estos cuadrados corresponden a pares \((X,Y_t)\) y \((X,Y_s)\) de esquemas sobre \(Y\) que son tor-independientes sobre \(Y\). Esto es trivial para el primer par, pues \(Y_t\to Y\) es plano, y también inmediato para el segundo, pues la inmersión \(Y_s\to Y\) es regular de codimensión 1 y sigue siéndolo después del cambio de base \(X\to Y\).
+
+No supongamos ya que \(g\) sea propio, pero supongámoslo, en cambio, de tor-dimensión finita. Afirmo que entonces ocurre lo mismo con \(g_t\) y \(g_s\). Esto es trivial para el primero y, para el segundo, resulta del hecho (que acabamos de señalar) de que \(X\) e \(Y_s\) son tor-independientes sobre \(Y\). Se puede considerar, por tanto, el cuadrado de homomorfismos
+\begin{equation}\tag{7.10.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(Y_t) \arrow[r,"g_t^*"] \arrow[d,"\sigma_Y"'] &
+K_\bullet(X_t) \arrow[d,"\sigma_X"]\\
+K_\bullet(Y_s) \arrow[r,"g_s^*"] &
+K_\bullet(X_s),
+\end{tikzcd}
+\end{equation}
+donde las flechas horizontales se definen en (IV 2.12). Se observará que, si \(X\) e \(Y\) satisfacen las condiciones de 7.7, es decir, tienen fibras regulares, entonces (siendo \(Y\) regular) \(g\) es automáticamente de tor-dimensión finita, y el diagrama anterior puede interpretarse como la conmutatividad de un diagrama de anillos \(K^\bullet\).
+
+Para probar la conmutatividad de (7.10.2), basta probar de nuevo la de los cuadrados anteriores del prisma análogo a \((*)\), pero donde los homomorfismos de imagen directa \(g_{t*}\), \(g_*\), \(g_{s*}\) se sustituyen por los homomorfismos de imagen inversa \(g_t^*\), \(g^*\), \(g_s^*\). Ahora bien, la conmutatividad de estos cuadrados resulta inmediatamente de la de los cuadrados correspondientes (7.10.0), teniendo en cuenta la transitividad de las imágenes inversas (IV 2.12).
+
+\textbf{Observación 7.10.3.} Cuando \(g\) es propio, la conmutatividad de (7.10.1) implica inmediatamente la del diagrama siguiente, que se deduce de él al pasar a los graduados asociados:
+\begin{equation}\tag{7.10.1 bis}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Gr_\bullet(X_t) \arrow[r,"g_{t*}"] \arrow[d,"\sigma_{X\bullet}"'] &
+\Gr_\bullet(Y_t) \arrow[d,"\sigma_{Y\bullet}"]\\
+\Gr_\bullet(X_s) \arrow[r,"g_{s*}"] &
+\Gr_\bullet(Y_s).
+\end{tikzcd}
+\end{equation}
+Del mismo modo, si \(X\) e \(Y\) tienen fibras regulares y son separados, la conmutatividad de (7.10.2) implica la de
+\begin{equation}\tag{7.10.2 bis}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Gr^\bullet(Y_t) \arrow[r,"g_t^*"] \arrow[d,"\sigma_Y^\bullet"'] &
+\Gr^\bullet(X_t) \arrow[d,"\sigma_X^\bullet"]\\
+\Gr^\bullet(Y_s) \arrow[r,"g_s^*"] &
+\Gr^\bullet(X_s).
+\end{tikzcd}
+\end{equation}
+Cuando \(X\) e \(Y\) son además cuasiproyectivos y lisos sobre \(S\), se sabe asimismo que \(g_t^*\) y \(g_s^*\) son compatibles con las filtraciones por la codimensión de los soportes, y se obtiene un diagrama conmutativo como (7.10.2 bis), pero sustituyendo los \(\Gr^\bullet\) por los \(\Gr^\bullet_{\mathrm{top}}\) (cf. Exp. 0, 2.1). También puede observarse que, si \(X\) e \(Y\) son cuasiproyectivos sobre \(S\), con fibras regulares y separados, entonces \(\sisi{f_t}{g_t}\) y \(\sisi{f_s}{g_s}\) son automáticamente morfismos de intersección completa (VIII 1.1), y se obtiene un diagrama conmutativo análogo a (7.10.1 bis), donde los \(\Gr_\bullet\) se sustituyen por los \(\Gr^\bullet(\ )_{\mathbb Q}\), teniendo en cuenta el resultado de compatibilidad (VIII 3.2). % Canon SGA-SRC-001369
+
+\textbf{7.11.} Para un esquema \(T\) sobre un cuerpo algebraicamente cerrado \(k\), se puede definir el subgrupo de \(K^\bullet(T)\) de los elementos algebraicamente equivalentes a cero como el subgrupo de los elementos de la forma
+\begin{equation}\tag{7.11.1}
+  E(x_1)-E(x_0),
+\end{equation}
+donde \(x_0\) y \(x_1\) son dos puntos \(k\)-racionales de una curva algebraica \(C\) propia, regular y conexa sobre \(k\), \(E\) un elemento de \(K^\bullet(T\times_k C)\), y donde, para todo punto \(x\) racional sobre \(k\) de \(C\), se pone
+\[
+  E(x)=i_x^*(E)\in K^\bullet(T),\qquad\text{donde }
+  i_x:T\longrightarrow T\times_k C
+\]
+es el morfismo \(t\mapsto(t,x)\) definido por \(x\). El hecho de que los elementos de la forma (7.11.1) formen un subgrupo de \(K^\bullet(T)\) se ve mediante un razonamiento estándar, utilizando un producto \(C\times_k C'\), el par de puntos \((x_1,x'_1)\), \((x_0,x'_0)\) de este, y el hecho de que por dos puntos de un esquema algebraico cuasiproyectivo irreducible sobre \(k\) (aquí \(C\times_k C'\)) siempre se puede hacer pasar una curva algebraica irreducible. (El lector que no quiera admitir este hecho podrá definir la equivalencia algebraica mediante el grupo engendrado por los elementos de la forma (7.11.1)). Los elementos algebraicamente equivalentes a cero forman un ideal de \(K^\bullet(T)\), como se comprueba inmediatamente, estable además bajo las operaciones \(\lambda^i\) cuando estas están definidas, es decir, cuando se trabaja con el \(K^\bullet\) «~ingenuo~»; este ideal está además contenido en el ideal de aumentación de \(K^\bullet(T)\), como se comprueba trivialmente. Se puede definir, por tanto, un anillo cociente
+\begin{equation}\tag{7.11.2}
+  K^\bullet_{\mathrm{alg}}(T),
+\end{equation}
+que es incluso un \(\lambda\)-anillo cuando se trabaja con los \(K^\bullet\) ingenuos.
+
+De la misma manera se puede definir un subgrupo de elementos algebraicamente equivalentes a 0 en \(K_\bullet(T)\), tomando arriba \(E\) en \(K_\bullet(T\times_k C)\), y observando que \(i_x:T\to T\times_k C\) es un morfismo perfecto, pues se deduce mediante el cambio de base plano \(T\times_k C\to C\) del morfismo \(j_x:x\to C\), que es perfecto gracias a la hipótesis de que \(C\) es regular. Se obtiene así un grupo cociente
+\begin{equation}\tag{7.11.3}
+  K_\bullet^{\mathrm{alg}}(T)
+\end{equation}
+de \(K_\bullet(T)\). Este último es, además, de manera natural un módulo sobre \(K^\bullet_{\mathrm{alg}}(T)\), pues se comprueba inmediatamente a partir de las definiciones que el producto de un elemento de \(K^\bullet(T)\) por un elemento de \(K_\bullet(T)\) es algebraicamente equivalente a cero si lo es uno de los dos factores, utilizando (IV 2.12.2) para \(i_x\).
+
+Se define (cuando se trabaja con el \(K^\bullet\) ingenuo) el ideal de \(\Gr^\bullet(T)\) de los elementos algebraicamente equivalentes a cero como el ideal engendrado por los \(c^i(x)\), donde \(i\geq1\) y \(x\in K^\bullet(T)\) es algebraicamente equivalente a cero; el anillo graduado cociente
+\begin{equation}\tag{7.11.4}
+  \Gr^\bullet_{\mathrm{alg}}(T)
+\end{equation}
+no es entonces sino el anillo de Chern asociado al \(\lambda\)-anillo \(K^\bullet_{\mathrm{alg}}(T)\).
+
+Por último, se define el subgrupo graduado de \(\Gr_\bullet(T)\) de los elementos algebraicamente equivalentes a cero (suponiendo \(T\) localmente noetheriano) como aquel cuya componente de dimensión \(i\) es la imagen en \(\Gr_i(T)\) del subgrupo de \(\Fil_iK_\bullet(T)\) formado por los elementos algebraicamente equivalentes a cero en \(K_\bullet(T)\). Se obtiene inmediatamente que el grupo graduado cociente
+\begin{equation}\tag{7.11.5}
+  \Gr_\bullet^{\mathrm{alg}}(T)
+\end{equation}
+es un módulo sobre el anillo \(\Gr^\bullet_{\mathrm{alg}}(T)\), al pasar al cociente a partir de la estructura de módulo de \(\Gr_\bullet(T)\) sobre \(\Gr^\bullet(T)\) (3.1).
+
+\textbf{7.11.6.} Las definiciones anteriores seguirían teniendo sentido si no se supusiera \(k\) algebraicamente cerrado, tomando arriba \(C\) geométricamente conexa sobre \(k\). Sin embargo, no está claro que estas definiciones fueran muy útiles; en particular, no parece que, en el caso del grupo \(\Pic(T)\), se recupere la noción «~geométrica~» clásica de equivalencia algebraica considerada en 2.4.1. Por ello preferimos decir que un elemento de \(K^\bullet(T)\) es algebraicamente equivalente a cero si lo es su imagen en \(K^\bullet(T\otimes_k\bar k)\), donde \(\bar k\) es una clausura algebraica de \(k\), y proceder de la misma manera para definir la equivalencia algebraica en los grupos \(K_\bullet(T)\), \(\Gr^\bullet(T)\) y \(\Gr_\bullet(T)\).
+
+\textbf{7.12.} Establecidas estas definiciones, afirmo que \emph{el homomorfismo de especialización} (7.3.1) \emph{transforma elementos algebraicamente equivalentes a cero en elementos algebraicamente equivalentes a cero} y, por tanto, define al pasar al cociente un homomorfismo
+\begin{equation}\tag{7.12.1}
+  K_\bullet^{\mathrm{alg}}(X_t)\longrightarrow K_\bullet^{\mathrm{alg}}(X_s).
+\end{equation}
+
+Para verlo, nos reducimos inmediatamente al caso en que \(A\) es completo y \(k(s)\) algebraicamente cerrado (mediante una compatibilidad sencilla explicitada en 7.15). Basta ver que \(\sigma_\bullet\) transforma un elemento de la forma (7.11.1) de \(K_\bullet(X_t)\) en un elemento algebraicamente equivalente a cero en \(K_\bullet(X_s)\). Aquí \(T=X_t\), y escribiremos en consecuencia \(C_t\), \(E_t\) en lugar de \(C\), \(E\), como arriba. Se sabe que \(C_t\) es proyectiva sobre \(k(t)\), por lo que (EGA IV 2.8.5) existe un esquema proyectivo y plano \(C\) sobre \(S\) cuya fibra genérica es \(C_t\). Utilizando la resolución de singularidades de superficies aritméticas de Abhyankar [6], se ve que incluso se puede elegir \(C\) regular. (N.B. La planitud se conserva por resolución, gracias a EGA IV 14.3.8). Como \(C\) es propio sobre \(S\), los puntos \(x_{0t}\) y \(x_{1t}\) de \(C_t\), racionales sobre \(k(t)\), se prolongan a secciones \(x_0\), \(x_1\) de \(C\) sobre \(S\), y como \(C\) es regular, es bien sabido que \(C\) es liso sobre \(S\) en los puntos de \(x_0(S)\), \(x_1(S)\) (EGA IV, 17.12.1 c) \(\Rightarrow\) a) y 19.1.1). Por consiguiente, las inmersiones \(x_i:S\to \sisi{X}{C}\) (\(i=0,1\)) son regulares y siguen siendo inmersiones regulares \(x_i:s\to C_s\) por el cambio de base \(s\to S\). Observemos que, en virtud de la sucesión exacta de homotopía (IX 1.1), \(E_t\in K_\bullet(X_t\times_{k(t)}C_t)\) proviene de un elemento \(E\in K_\bullet(X\times_SC)\); por tanto, el elemento \(E_t(x_{1t})-E_t(x_{0t})\) de \(K_\bullet(X_t)\) proviene del elemento \(E(x_1)-E(x_0)\) de \(K_\bullet(X\times_SC)\), y por consiguiente su imagen en \(K_\bullet(X_s)\) por (7.3.1) no es sino % Canon SGA-SRC-001370
+\[
+  i^*(E(x_1)-E(x_0)).
+  \tag{*}
+\]
+
+Por supuesto, para una sección \(x\) de \(C\) sobre \(S\), se pone
+\[
+  E(x)=i_x^*(E),\qquad\text{donde } i_x:X\longrightarrow X\times_SC
+\]
+se define como arriba, y puede considerarse deducida de \(x\) por el cambio de base plano \(X\times_SC\to C\); es, por tanto, una inmersión regular y, con mayor razón, un morfismo perfecto, lo que da sentido a la expresión \(E(x)\). Por la misma razón, la expresión \(E_s(x_s)\) está definida, y por transitividad de las imágenes inversas (IV 2.12) en el diagrama conmutativo siguiente de morfismos perfectos:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X \arrow[r,"i_x"] & X\times_SC\\
+X_s \arrow[u,"i"] \arrow[r,"i_{x_s}"] & X_s\times_{k(\sisi{x}{s})}C_s \arrow[u] % Canon SGA-SRC-001371
+\end{tikzcd}
+\;,
+\]
+se obtiene que el primer miembro de \((*)\) es igual a
+\[
+  E_s(x_{1s})-E_s(x_{0s}).
+  \tag{**}
+\]
+Como \(k(s)\) es algebraicamente cerrado, las componentes irreducibles reducidas de \(C_s\) son geométricamente integrales sobre \(k(s)\), y sus puntos de intersección son racionales sobre \(k(s)\). Se concluye fácilmente que la expresión \((**)\) es algebraicamente equivalente a cero en \(K_\bullet(X_s)\), utilizando la conexidad de \(C_s\), que resulta de la conexidad geométrica de \(C_t\).
+
+Del homomorfismo (7.12.1) se deduce, gracias a 7.4, un homomorfismo
+\begin{equation}\tag{7.12.2}
+  \Gr_\bullet^{\mathrm{alg}}(X_t)\longrightarrow \Gr_\bullet^{\mathrm{alg}}(X_s).
+\end{equation}
+Cuando se supone además que \(X_s\) y \(X_t\) son regulares, (7.12.1) puede interpretarse también como un homomorfismo de anillos
+\begin{equation}\tag{7.12.3}
+  K^\bullet_{\mathrm{alg}}(X_t)\longrightarrow K^\bullet_{\mathrm{alg}}(X_s),
+\end{equation}
+que, cuando \(X\) es además separado, es un homomorfismo de \(\lambda\)-anillos y define, por tanto, un homomorfismo
+\begin{equation}\tag{7.12.4}
+  \Gr^\bullet_{\mathrm{alg}}(X_t)\longrightarrow \Gr^\bullet_{\mathrm{alg}}(X_s).
+\end{equation}
+
+\textbf{7.12.5.} Sea \(T\) un esquema algebraico liso y propio sobre un cuerpo \(k\). Se comprueba fácilmente que un elemento de \(K^\bullet(T)\) tal que exista un entero \(n\geq1\) con \(nx\) algebraicamente equivalente a cero es numéricamente equivalente a cero. Es plausible que el recíproco sea siempre verdadero, al menos si \(T\) es proyectivo. En esta cuestión se puede suponer manifiestamente que \(k\) es algebraicamente cerrado y sustituir \(K^\bullet(T)\) por \(\Gr^\bullet(T)\) o \(\Gr_\bullet(T)\), sin modificar la conjetura. Se obtiene también una conjetura equivalente trabajando con el anillo de Chow \(A(T)\) (cf. XIV 4.1), y se obtiene la conjetura más o menos clásica siguiente: si \(Z\) es un ciclo algebraico numéricamente equivalente a cero sobre \(T\), existe un entero \(n\geq1\) tal que \(nZ\) es algebraicamente equivalente a cero. En el caso en que esta conjetura sea correcta para \(X_t\), del resultado de compatibilidad del homomorfismo (7.3.1) con la equivalencia algebraica se seguiría que este homomorfismo de especialización (cuando \(f:X\to S\) es un morfismo proyectivo y liso) es también compatible con la equivalencia numérica, como se conjeturó en 7.9.
+
+\subsection*{7.13. Relaciones con la cohomología \(\ell\)-ádica}
+Recordemos (SGA 5 VII) que, para todo módulo localmente libre de tipo finito \(\underline{E}\) sobre un esquema \(T\), y todo número primo distinto de las características residuales de \(T\), se definen clases de Chern \(\ell\)-ádicas (para \(i\geq 0\))
+\[
+  c^i(E)\in H^{2i}(T,\mathbb Z_\ell(i)),
+\]
+que satisfacen una fórmula de aditividad
+\[
+  c(E)=c(E')c(E'')
+\]
+cuando \(E\) es una extensión de un módulo localmente libre \(E'\) por un módulo localmente libre \(E''\). De esta aditividad se concluye que la clase de Chern total \(c(E)=\sum_i c^i(E)\) proviene de un homomorfismo
+\begin{equation}\tag{7.13.0}
+  c:K^\bullet(T)\longrightarrow
+  \widehat G\bigl(H^{2*}(T,\mathbb Z_\ell(*))\bigr)
+  =
+  1+\prod_{i\geq 1}H^{2i}(T,\mathbb Z_\ell(i)),
+\end{equation}
+donde el objeto de llegada es un grupo para el producto, como se explicó en V 1, y donde \(K^\bullet(T)\) es el \(K^\bullet\) «~\emph{ingenuo}~». De ello se deducen aplicaciones canónicas
+\begin{equation}\tag{7.13.1}
+  c^i:K^\bullet(T)\longrightarrow H^{2i}(T,\mathbb Z_\ell(i)).
+\end{equation}
+
+Con esto establecido, sea \(X\) un esquema \emph{propio} y plano sobre \(S\), de \emph{fibras regulares}, y supongamos \(S\) \emph{henseliano}. Se supone que \(\ell\neq\) car. residual de \(S\). Se puede formar entonces el diagrama
+\begin{equation}\tag{7.13.2}
+\begin{tikzcd}[column sep=large,row sep=large]
+K^\bullet(X_t) \arrow[r,"c^i"] \arrow[d,"\sigma"'] &
+H^{2i}(X_t,\mathbb Z_\ell(i))\\
+K^\bullet(X_s) \arrow[r,"c^i"] &
+\sisi{K^{2i}}{H^{2i}}(X_s,\mathbb Z_\ell(i)) \arrow[u,"\sigma^{-1}"'] % Canon SGA-SRC-001372
+\end{tikzcd}
+\;,
+\end{equation}
+donde las flechas horizontales son las aplicaciones «~clase de Chern~» relativas a \(X_t\) y \(X_s\), respectivamente, y donde \(\sigma^{-1}\) es el homomorfismo compuesto
+\[
+  H(X_s)\xleftarrow[\sim]{i^*}H(X)\xrightarrow{j^*}H(X_t).
+\]
+Las flechas escritas aquí son homomorfismos de restricción, y se utiliza que \(i^*\) es un isomorfismo por el teorema de cambio de base propio (SGA 4 XII 5.5). Afirmo que \emph{el cuadrado} (7.13.2) \emph{es conmutativo}. La demostración es esencialmente la misma que la que establece la conmutatividad de (7.10.2); basta utilizar aquí la compatibilidad de la formación de las clases de Chern con las imágenes inversas, en el caso de los morfismos \(j:X_t\to X\) e \(i:X_s\to X\).
+
+\textbf{7.13.3.} Observemos que el cuadrado (7.13.2) proviene, al pasar al límite proyectivo, de los cuadrados análogos en los que la cohomología con coeficientes en el haz \(\ell\)-ádico \(\mathbb Z_\ell(i)\) se sustituye por la cohomología con coeficientes en los haces de torsión \(\mu_n^{\otimes i}\) (donde \(n\) recorre las potencias de \(\ell\)). Por tanto, la conmutatividad de (7.13.2) no hace sino expresar la conmutatividad de los cuadrados que hacen intervenir las clases de Chern módulo \(n\), para toda potencia \(n\) de \(\ell\). Elijamos una clausura algebraica \(\bar K\) de \(K=k(t)\), de donde resulta una clausura algebraica \(\bar k\) de \(k=k(s)\) (a saber, el cuerpo residual de la clausura normal de \(V\) en \(\bar K\)). Para toda subextensión finita \(K_\alpha\) de \(\bar K\), se puede considerar el diagrama conmutativo análogo (para \(n\) fijo) relativo a la situación deducida de \(f:X\to S\) por el cambio de base \(S_\alpha\to S\), siendo \(S_\alpha\) el normalizado de \(S\) en \(K_\alpha\). Obsérvese para esto que, por Krull--Akizuki, y siendo \(S\) henseliano, \(S_\alpha\) es efectivamente un rasgo; además, habrá que suponer aquí que las fibras de \(X\) sobre \(S\) son geométricamente regulares, es decir, que \(X\) es \emph{liso} sobre \(S\), de modo que esta hipótesis se conserva por cambio de base. Se obtiene así, para \(\alpha\) variable, un sistema inductivo de cuadrados conmutativos. Pasando al límite inductivo y utilizando (SGA 4 VII 5.8) y (IV 3.2), se obtiene un cuadrado conmutativo (cf. 7.16)
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+K^\bullet(X_{\bar t}) \arrow[r,"c^i"] \arrow[d,"\sigma"'] &
+H^{2i}(X_{\bar t},\mu_n^{\otimes i}) \arrow[d,"\sigma^{-1}"]\\
+K^\bullet(X_{\bar s}) \arrow[r,"c^i"] &
+H^{2i}(X_{\bar s},\mu_n^{\otimes i})
+\end{tikzcd}
+\;,
+\]
+donde \(X_{\bar t}\), \(X_{\bar s}\) son las fibras \emph{geométricas} de \(X\). Por otra parte, se sabe que ahora el homomorfismo de especialización \(\sigma^{-1}\) para la cohomología es un isomorfismo (SGA 4 XVI 2.2); por tanto, la conmutatividad del cuadrado anterior puede expresarse también mediante la del cuadrado que se deduce de él invirtiendo la flecha anterior. Pasando entonces al límite proyectivo sobre \(n\) en los cuadrados conmutativos así obtenidos, se obtiene un cuadrado conmutativo
+\begin{equation}\tag{7.13.4}
+\begin{tikzcd}[column sep=large,row sep=large]
+K^\bullet(X_{\bar t}) \arrow[r] \arrow[d,"\sigma"'] &
+H^{2i}(X_{\bar t},\mathbb Z_\ell(i)) \arrow[d,"\sim"']\\
+K^\bullet(X_{\bar s}) \arrow[r] &
+H^{2i}(X_{\bar s},\mathbb Z_\ell(i)).
+\end{tikzcd}
+\end{equation}
+
+\textbf{7.13.5.} Otra manera de expresar esta conmutatividad consiste en decir que, si \(x_t\) es un elemento de \(K^\bullet(X_t)\) y \(x_s\) su imagen en \(K^\bullet(X_s)\), entonces \(c^i(x_{\bar t})\) y \(c^i(x_{\bar s})\) son los valores, en los puntos geométricos \(\bar t\) y \(\bar s\), respectivamente, de una \emph{sección} de \(R^{2i}f_*(\mathbb Z_\ell(i))\). Esta sección se interpreta además fácilmente tomando un elemento \(x\in K^\bullet(X)\) que induce \(x_t\), de donde se obtiene un \(c^i(x)\in H^{2i}(X,\mathbb Z_\ell(i))\), que define la sección buscada de \(R^{2i}f_*(\mathbb Z_\ell(i))\).
+
+\textbf{7.13.6.} Sea \(T\) un esquema. Entonces, al pasar a los graduados asociados, el homomorfismo (7.13.0) define homomorfismos
+\[
+  \psi_i:\Gr^i(T)\longrightarrow H^{2i}(T,\mathbb Z_\ell(i)),
+\]
+la imagen por \(\psi_i\) de un elemento \(x\) de \(\Filt^iK^\bullet(T)\) es por definición \(c^i(x)\). (El hecho de que (7.13.0) sea compatible con la \(\lambda\)-filtración sobre \(K^\bullet(T)\) y la filtración por el grado sobre el segundo miembro resulta fácilmente de (V 6.6.4) y del hecho de que los \(c^i\) definen una \emph{teoría de Chern} de \(K^\bullet(T)\) en el sentido de (V 6.13), cuando se considera \(K^\bullet(T)\) como un \(\lambda\)-álgebra aumentada sobre el anillo binomial \(H^0(T,\mathbb Z)\)). De ello se deducen aplicaciones
+\begin{equation}\tag{7.13.7}
+  \operatorname{cl}:\Gr^i(T)\longrightarrow H^{2i}(T,\mathbb Q_\ell(i))
+  \stackrel{\mathrm{dfn}}{=}
+  H^{2i}(T,\mathbb Z_\ell(i))\otimes_{\mathbb Z_\ell}\mathbb Q_\ell,
+\end{equation}
+mediante la fórmula
+\begin{equation}\tag{7.13.8}
+  \operatorname{cl}(x^{(i)})=
+  \frac{1}{(-1)^{i-1}(i-1)!}\,\psi_i(x^{(i)}),
+\end{equation}
+compárese (XIV 5.1 y 5.2). Con esto establecido, la conmutatividad de los diagramas (7.13.2) y (7.13.4) implica trivialmente la de los diagramas análogos
+\begin{equation}\tag{7.13.9}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Gr^i(X_t)_{\mathbb Q} \arrow[r,"\operatorname{cl}"] \arrow[d,"\sigma_{\mathbb Q}"'] &
+H^{2i}(X_t,\mathbb Q_\ell(i))\\
+\Gr^i(X_s)_{\mathbb Q} \arrow[r,"\operatorname{cl}"] &
+H^{2i}(X_s,\mathbb Q_\ell(i)) \arrow[u,"\sigma^{-1}"]
+\end{tikzcd}
+\;,
+\end{equation}
+y
+\begin{equation}\tag{7.13.10}
+\begin{tikzcd}[column sep=large,row sep=large]
+\Gr^i(X_{\bar t})_{\mathbb Q} \arrow[r,"\operatorname{cl}"] \arrow[d] &
+H^{2i}(X_{\bar t},\mathbb Q_\ell(i)) \arrow[d,"\sim"]\\
+\Gr^i(X_{\bar s})_{\mathbb Q} \arrow[r,"\operatorname{cl}"] &
+H^{2i}(X_{\bar s},\mathbb Q_\ell(i))
+\end{tikzcd}
+\;.
+\end{equation}
+\textbf{Observación 7.13.11.} La conmutatividad de los dos últimos diagramas, que puede expresarse diciendo que la especialización de los ciclos algebraicos es compatible con la formación de las clases de cohomología \(\ell\)-ádicas asociadas, no es muy satisfactoria en la forma enunciada, pues se ha tenido que sustituir los coeficientes \(\mathbb Z_\ell(i)\) por \(\mathbb Q_\ell(i)\), es decir, despreciar la torsión. Para obtener un enunciado que no desprecie la torsión, parece que habrá que trabajar con el anillo de Chow, pues es sobre este donde se encuentra definido naturalmente el homomorfismo \(\operatorname{cl}\) como homomorfismo con valores en \(H^{2*}(-,\mathbb Z_\ell(*))\); compárese (XIV 4.1). Por desgracia, por el momento no se ha desarrollado una teoría de la especialización para el anillo de Chow (cf. 7.14.) que permita escribir cuadrados conmutativos análogos a (7.13.9) y (7.13.10) en términos de los anillos de Chow y de la cohomología con coeficientes \(\mathbb Z_\ell(*)\). Todo lo que se puede decir cuando \(f:X\to S\) es liso y propio es que se tiene un cuadrado conmutativo
+\begin{equation}\tag{7.13.12}
+\begin{tikzcd}[column sep=large,row sep=large]
+Z^i(X_t) \arrow[r,"\operatorname{cl}"] \arrow[d,"\sigma"'] &
+H^{2i}(X_t,\mathbb Z_\ell(i))\\
+Z^i(X_s) \arrow[r,"\operatorname{cl}"] &
+H^{2i}(X_s,\mathbb Z_\ell(i)) \arrow[u]
+\end{tikzcd}
+\;,
+\end{equation}
+análogo a (7.13.9), y un cuadrado correspondiente análogo a (7.13.10) cuya escritura se deja al lector, donde \(Z^i\) denota el grupo de los ciclos algebraicos (sin módulo alguno) de codimensión \(i\), donde las flechas horizontales son los homomorfismos de «~clase de cohomología asociada~» definidos en (SGA 5 IV), y donde \(\sigma\) denota el homomorfismo de especialización de ciclos algebraicos, que asocia a un ciclo \(Z_t\) el ciclo \(Z_s\), donde \(Z\) es la adherencia esquemática de \(Z_t\) en \(X\) (cf. 7.15)). Esta conmutatividad resulta del hecho siguiente, establecido en (SGA 5 IV): si \(Z\) es un subesquema cerrado de \(X\) de codimensión \(\geq i\) sobre cada fibra, se le puede asociar una clase de cohomología \(\operatorname{cl}(Z)\in H^{2i}(X,\mathbb Z_\ell(i))\), cuya formación conmuta con todo cambio de base y, en particular, tal que su restricción a \(X_t\) (respectivamente, \(X_s\)) es igual a \(\operatorname{cl}(Z_t)\) (respectivamente, \(\operatorname{cl}(Z_s)\)). Por supuesto, cuando se sabe que el homomorfismo \(\sigma\) de (7.13.12) transforma ciclos racionalmente equivalentes a cero en ciclos racionalmente equivalentes a cero (siendo \(X\) proyectivo sobre \(S\)), se pueden sustituir en este diagrama los \(Z^i\) por los \(A^i\), y se obtiene un diagrama del tipo deseado, en términos de los anillos de Chow de \(X_t\) y \(X_s\).
+
+\textbf{Observación 7.13.13.} Sea \(T\) un esquema liso y proyectivo sobre un cuerpo algebraicamente cerrado. Del formalismo desarrollado en (SGA 5 IV) resulta trivialmente que, si \(Z\) es un ciclo de codimensión \(i\) sobre \(T\) cuya imagen en \(H^{2i}(T,\mathbb Q_\ell(i))\) es nula, entonces \(Z\) es numéricamente equivalente a cero. Una de las conjeturas estándar de la teoría de ciclos algebraicos afirma que el recíproco también es verdadero. Por otra parte, es inmediato gracias a (VII 4.11) que se obtiene una conjetura equivalente sustituyendo en ella el grupo de ciclos algebraicos por el grupo \(\Gr^\bullet(T)_{\mathbb Q}\), utilizando la definición (7.13.8), o bien por el grupo \(K^\bullet(T)\), escribiendo que la equivalencia numérica a cero de un elemento de \(K^\bullet(T)\) equivale a la nulidad de su aumentación y de sus clases de Chern en los \(H^{2i}(T,\mathbb Q_\ell(i))\). Con esto establecido, de la conmutatividad de (7.13.10) resulta inmediatamente que, si \(X_{\bar t}\) satisface la conjetura anterior, entonces el homomorfismo de especialización \(\Gr^\bullet(X_{\bar t})\longrightarrow \Gr^\bullet(X_{\bar s})\) (y, con mayor razón, \(\Gr^\bullet(X_t)\longrightarrow \Gr^\bullet(X_s)\)) es compatible con la equivalencia numérica, como se conjeturó en 7.9. Obsérvese además que la conjetura a la que se ha recurrido para ello (la equivalencia numérica implica la equivalencia \(\mathbb Q_\ell\)-cohomológica) es más débil que la considerada en \sisi{7.11.5}{7.12.5}. % Canon SGA-SRC-001373
+
+\subsection*{7.14. Homomorfismo de especialización para los grupos de ciclos y las clases de ciclos.}
+Si \(T\) es un esquema noetheriano, denotemos por \(Z_i(T)\) (respectivamente, \(Z^i(T)\)) el grupo de ciclos algebraicos sobre \(T\) puramente de dimensión \(i\) (respectivamente, puramente de codimensión \(i\)). Cuando \(f:X\to S\) es de tipo finito, se define entonces un homomorfismo de especialización:
+\begin{equation}\tag{7.14.1}
+  \sigma_i:Z_i(X_t)\longrightarrow Z_i(X_s),
+\end{equation}
+definiendo, para todo ciclo primo \(Z_t\) de \(X_t\), puramente de dimensión \(i\), identificado con un subesquema integral de \(X_t\), el elemento \(\sigma_i(Z_t)\) de \(Z_i(X_s)\) como el ciclo asociado al subesquema cerrado \(Z_s\) de \(X_s\), donde \(Z\) es la adherencia esquemática de \(Z_t\) en \(X\) (que es un subesquema cerrado de \(X\), plano sobre \(S\) (EGA IV 2.8), de fibra genérica igual al \(Z_t\) de partida y que satisface \(\dim Z_s=\dim Z_t\) (EGA IV 7.1.13)). Cuando \(X_s\) es localmente equidimensional (es decir, todas sus componentes irreducibles que pasan por un punto dado tienen la misma dimensión), se comprueba inmediatamente que el homomorfismo de especialización que se acaba de definir induce homomorfismos
+\begin{equation}\tag{7.14.1 bis}
+  \sigma^i:Z^i(X_t)\longrightarrow Z^i(X_s).
+\end{equation}
+
+Supongamos ahora \(f\) cuasiproyectivo, de modo que se dispone de la noción de equivalencia racional de los ciclos sobre \(X_t\) y sobre \(X_s\) (cf. [5], donde la teoría se desarrolla sobre un cuerpo algebraicamente cerrado). Parece muy plausible que el homomorfismo (7.14.1) transforme ciclos racionalmente equivalentes a cero en ciclos racionalmente equivalentes a cero y, por tanto, induzca un homomorfismo correspondiente sobre los grupos «~de Chow~» de clases de ciclos
+\begin{equation}\tag{7.14.2}
+  \sigma_i:A_i(X_t)\longrightarrow A_i(X_s),
+\end{equation}
+o bien, cuando \(X_s\) es localmente equidimensional:
+\begin{equation}\tag{7.14.2 bis}
+  \sigma^i:A^i(X_t)\longrightarrow A^i(X_s).
+\end{equation}
+
+Podría pensarse en demostrarlo mediante un método que parafraseara el de 7.12, pero en el que el recurso a la resolución de singularidades y la reducción al caso de un cuerpo residual algebraicamente cerrado resultarían innecesarios, puesto que aquí se dispone de \(C=\mathbb P^1_S\) como «~curva de parámetros~» para deformar los ciclos. Sin embargo, se tropieza con una dificultad, pues con las notaciones de 7.12, \(E\) deberá designar ahora un ciclo sobre \(P^1_S\times_SX\) tal que \(E_t(x_{1t})-E_t(x_{0t})\) «~esté definido~», pero de ello no se sigue en absoluto que el ciclo \(E_s(x_{1s})-E_s(x_{0s})\) también lo esté. Nos reducimos, por tanto, como era de esperar, a obtener un enunciado del tipo «~moving lemma~» de Chow, para llegar a definir (7.14.2).
+
+Observemos, sin embargo, que la existencia del homomorfismo (7.4.1) muestra que (7.14.1) es compatible con la relación de equivalencia sobre los ciclos definida por el homomorfismo sobreyectivo \(Z_\bullet(T)\longrightarrow \Gr_\bullet(T)\), que solo es ligeramente más gruesa que la equivalencia lineal; así, si \(\sisi{Z}{T}\) es cuasiproyectivo y liso sobre un cuerpo, señalamos además que no difiere de ella salvo por torsión (XIV 4.1, 4.2). Se obtiene, por tanto, en este caso un homomorfismo análogo a (7.14.2), o mejor a (7.14.2 bis), pero con ambos miembros tensorizados por \(\mathbb Q\). % Canon SGA-SRC-001374
+
+La manera más natural de definir directamente un homomorfismo (7.14.2) parecería consistir en proceder como en 7.3. Sin embargo, esto exigiría disponer de una teoría de los grupos de Chow \(A_i\) (o del anillo de Chow en el caso regular) para esquemas más generales que los esquemas cuasiproyectivos sobre un cuerpo, que englobara \(X\), y de una ley contravariante para estos grupos que permitiera definir el homomorfismo de restricción a \(X_s\), \(A_i(X)\longrightarrow A_i(X_s)\). Compárese XIV 8. Una vez en posesión de una teoría suficientemente general de los grupos y anillos de Chow, debería ser posible transcribir a la teoría de Chow todos los resultados enumerados anteriormente para el homomorfismo de especialización en teoría \(K\).
+
+\subsection*{7.15. Se hace variar \(S\).}
+Sea \(S'\) un segundo rasgo y
+\[
+  S'\longrightarrow S
+\]
+un morfismo de rasgos, es decir, un morfismo local dominante (es decir, que transforma el punto cerrado en el punto cerrado y el punto genérico en el punto genérico). Se denota por \(s'\) (respectivamente, \(t'\)) el punto cerrado (respectivamente, el punto genérico) de \(S'\), y se pone \(X'=X\times_SS'\). Supongamos que \(X'\) es noetheriano (por ejemplo, \(X\) de tipo finito sobre \(S\)). Se tiene un diagrama conmutativo
+\[
+\begin{tikzcd}
+X & X_t \arrow[l,hook,"j_X"'] & & \\
+& & X' \arrow[ull] & X'_{t'} \arrow[l,hook,"\sisi{i'_{X'}}{j_{X'}}"] \arrow[ull] \\ % Canon SGA-SRC-001375
+X_s \arrow[uu,hook,"i_X"] & & & \\
+& & X'_{s'} \arrow[uu,hook,"\sisi{j_{X'}}{i_{X'}}"'] \arrow[ull] &
+\end{tikzcd}
+\;,
+\]
+cuyas flechas oblicuas son morfismos planos. Se pueden tomar, por tanto, los homomorfismos de imagen inversa para \(K_\bullet\) por todas las flechas del diagrama (IV 2.12). Aplicando la definición 7.3, se obtiene que el diagrama siguiente
+\begin{equation}\tag{7.15.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+K_\bullet(X_t) \arrow[r,"\sigma_X"] \arrow[d] &
+K_\bullet(X_s) \arrow[d]\\
+K_\bullet(X'_{t'}) \arrow[r,"\sisi{\sigma_X}{\sigma_{X'}}"] & % Canon SGA-SRC-001376
+K_\bullet(X'_{s'})
+\end{tikzcd}
+\end{equation}
+es conmutativo, donde las flechas verticales son los homomorfismos de imagen inversa. Se deduce inmediatamente un diagrama conmutativo análogo, con \(\Gr_\bullet\) en lugar de \(K_\bullet\); y cuando \(X_s\) y \(X_t\) son regulares, se pueden escribir también \(K^\bullet\) y \(\Gr^\bullet\) en lugar de \(K_\bullet\) y \(\Gr_\bullet\).
+
+\subsection*{7.16. Paso a las fibras geométricas.}
+Sea \(\bar K\) una clausura algebraica de \(K=k(t)\), límite inductivo de sus subextensiones finitas \(K_i\), y sea \(\bar A=\varinjlim \bar A_i\) el normalizado de \(A\) en \(\bar K\), límite inductivo de sus normalizados \(\bar A_i\) en los \(K_i\). Elijamos un ideal maximal \(\bar{\mathfrak m}\) de \(\bar A\), que induce, por tanto, sobre cada \(\bar A_i\) un ideal maximal \(\mathfrak m_i\), y sea \(B_i=(\sisi{A_i}{\bar A_i})_{\mathfrak m_i}\), que por Krull--Akizuki sigue siendo un anillo de valoración discreta, cuyo espectro denotamos por \(S_i\), y sus puntos por \(s_i\) y \(t_i\). El cuerpo residual \(\bar k=\bar A/\bar{\mathfrak m}\) es una clausura algebraica de \(k=k(s)\), y es el límite inductivo de los cuerpos residuales \(k_i=\sisi{A_i}{\bar A_i}/\mathfrak m_i=k(s_i)\) de los \(B_i\). Sea \(\bar t=\Spec(\bar K)\), \(\bar s=\Spec(\bar k)\). \emph{Supongamos ahora} que \(X\) es \emph{de tipo finito sobre} \(S\); entonces \(X_{\bar t}\) y \(X_{\bar s}\) son de tipo finito sobre \(\bar t\) y \(\bar s\), respectivamente, y por tanto \emph{noetherianos}. En virtud de IV 3.2.3, se tiene % Canon SGA-SRC-001377
+\[
+  K_\bullet(X_{\bar t})\xleftarrow{\sim}\varinjlim_i K_\bullet(X_{t_i}),
+  \qquad
+  K_\bullet(X_{\bar s})\xleftarrow{\sim}\varinjlim_i K_\bullet(X_{s_i}).
+\]
+Por otra parte, en virtud de 7.15 se tiene un homomorfismo del sistema inductivo de los \(K_\bullet(X_{t_i})\) al sistema inductivo de los \(K_\bullet(X_{s_i})\). Pasando al límite, se obtiene un homomorfismo canónico:
+\begin{equation}\tag{7.16.1}
+  K_\bullet(X_{\bar t})\longrightarrow K_\bullet(X_{\bar s}),
+\end{equation}
+llamado también, como es natural, \emph{homomorfismo de especialización}. Induce un homomorfismo \(\Gr_\bullet(X_{\bar t})\longrightarrow \Gr_\bullet(X_{\bar s})\) gracias a 7.4, utilizando el hecho (cuya comprobación se deja al lector) de que el funtor \(\Gr_\bullet\) (al igual que \(K_\bullet\)) conmuta con los límites que intervienen aquí. Del mismo modo, cuando \(f\) es liso, se puede interpretar (7.16.1) como un homomorfismo sobre los \(K^\bullet\), que será además un homomorfismo de anillos, e incluso un homomorfismo de \(\lambda\)-anillos si \(X\) es separado; en este caso induce, por tanto, un homomorfismo sobre los \(\Gr^\bullet\).
+
+\textbf{7.16.2.} No repasaremos aquí, en el caso de las fibras geométricas, la extensión de todas las propiedades de los homomorfismos de especialización demostradas en las secciones anteriores para las fibras «~aritméticas~»; todas ellas se deducen trivialmente de estas últimas al pasar al límite. Señalemos solamente la siguiente consecuencia interesante de 7.9.4, cuando \(f\) es liso y propio: \(\Gr_\bullet^{\mathrm{num}}(X_{\bar t})\) es isomorfo a un cociente de un subgrupo de \(\Gr_\bullet^{\mathrm{num}}(X_{\bar s})\); en particular, su rango está acotado superiormente por el de este último grupo. Es, por tanto, un resultado de \emph{semicontinuidad} para el rango del grupo de ciclos módulo equivalencia numérica.
+
+\subsection*{7.17. Caso de una base arbitraria.}
+Sea ahora
+\[
+  f:X\longrightarrow S
+\]
+un morfismo plano y cuasicompacto de preesquemas noetherianos, y sean \(s,t\) dos puntos de \(S\) tales que \(s\) sea una especialización de \(t\); se quieren relacionar los grupos \(K_\bullet\), etc., para las dos fibras \(X_t\) y \(X_s\), y para las fibras geométricas correspondientes. Para ello, se observa (EGA II 7.1.9) que existe un morfismo
+\[
+  g:S'\longrightarrow S,
+\]
+donde \(S'\) es un rasgo y donde \(g\) transforma el punto cerrado \(s'\) en \(s\) y el punto genérico \(t'\) en \(t\); incluso puede suponerse que \(k(t)\xrightarrow{\sim}k(t')\). Supongamos que \(X'=X\times_S S'\) es noetheriano, lo que sucede si \(f\) es de tipo finito o si \(S'\) es esencialmente de tipo finito sobre \(S\) (EGA IV 1.3.8) (lo cual puede suponerse si el propio \(S\) es universalmente japonés (EGA \(0_{\mathrm{IV}}\) 23.1.1)). Entonces el homomorfismo de especialización para \(X'\) define un homomorfismo
+\begin{equation}\tag{7.17.1}
+  \sigma_\bullet:K_\bullet(X_t)\xrightarrow{\sim}K_\bullet(X_{t'})
+  \longrightarrow K_\bullet(X_{s'}).
+\end{equation}
+Se obtiene, por tanto, un homomorfismo de especialización sobre \(K_\bullet(X_t)\), pero con valores no en \(K_\bullet(X_s)\), sino en \(K_\bullet(X_{s'})\), donde \(X_{s'}\) se deduce de \(X_s\) por una extensión \(k(s)\to k(s')\) de los cuerpos base (que puede suponerse de tipo finito si \(S\) es universalmente japonés). Pasando a las fibras geométricas como se explicó en 7.16, se obtiene igualmente un homomorfismo
+\begin{equation}\tag{7.17.2}
+  \sigma_\bullet:K_\bullet(X_{\bar t})\longrightarrow K_\bullet(X_{\overline{s'}});
+\end{equation}
+por tanto, también aquí el homomorfismo de especialización «~geométrico~» toma sus valores no en \(K_\bullet(X_{\bar s})\), sino en \(K_\bullet(X_{\overline{s'}})\), donde \(X_{\overline{s'}}\) se deduce de \(X_{\bar s}\) por la extensión de cuerpos algebraicamente cerrados \(k(\bar s)\to k(\overline{s'})\).
+
+\textbf{7.17.3.} En general, el homomorfismo \(K_\bullet(X_{\bar s})\to K_\bullet(X_{\overline{s'}})\) no es un isomorfismo (a causa de la posible presencia de componentes «~continuas~» en el grupo \(K_\bullet(X_{\bar s})\)). Sin embargo, es fácil comprobar que es un isomorfismo módulo equivalencia algebraica (7.11), y también módulo equivalencia numérica (4.5.1) si \(f\) es liso y propio. Por consiguiente, utilizando 7.12, se obtiene que (7.17.2) induce un homomorfismo de especialización
+\begin{equation}\tag{7.17.3.1}
+  K_\bullet^{\mathrm{alg}}(X_{\bar t})\longrightarrow
+  K_\bullet^{\mathrm{alg}}(X_{\bar s});
+\end{equation}
+y si \(f\) es propio y liso, y a reserva de que el homomorfismo de especialización (7.17.2) sea compatible con la equivalencia numérica (cf. 7.9.4), se obtiene igualmente un homomorfismo
+\begin{equation}\tag{7.17.3.2}
+  K_\bullet^{\mathrm{num}}(X_{\bar t})\longrightarrow
+  K_\bullet^{\mathrm{num}}(X_{\bar s}).
+\end{equation}
+Dejamos al lector la tarea de desarrollar (en caso necesario) las construcciones correspondientes para \(\Gr_\bullet\), \(K^\bullet\) y \(\Gr^\bullet\), y las propiedades de estos homomorfismos de especialización que resultan trivialmente de las propiedades desarrolladas en las secciones anteriores. Señalemos solamente que de 7.16.2 resulta que \(\Gr_\bullet^{\mathrm{num}}(X_{\bar t})\) es isomorfo a un cociente de un subgrupo de \(\Gr_\bullet^{\mathrm{num}}(X_{\bar s})\) (\(f\) propio y liso); en particular, su rango sigue estando acotado superiormente por el rango de este último.
+
+\textbf{7.17.4.} Cuando \(S\) es regular en \(s\) y \(t\) es maximal, se puede construir \(S'\) haciendo explotar \(s\) en el localizado de \(S\) en \(s\), y localizando en el punto genérico de la fibra de \(s\) en el explotado. Se obtiene entonces para \(k(s')\) una \emph{extensión pura} de \(k(s)\). Ahora bien, no es difícil demostrar que, si \(k'\) es una extensión pura de un cuerpo \(k\), entonces, para todo esquema noetheriano \(T\) sobre \(k\), el homomorfismo canónico \(K_\bullet(T)\to K_\bullet(T\otimes_k k')\) es un isomorfismo, representando \(k'\) como límite inductivo de los anillos afines de abiertos afines de esquemas de la forma \(\Spec k[T_1,\ldots,T_n]\), y utilizando (IX 1.6). Se concluye, por tanto, que (7.17.1) puede considerarse como un homomorfismo canónico
+\begin{equation}\tag{7.17.4.1}
+  K_\bullet(X_t)\longrightarrow K_\bullet(X_s).
+\end{equation}
+Pero se observará que de ello no puede deducirse un homomorfismo \(K_\bullet(X_{\bar t})\to K_\bullet(X_{\bar s})\), pues, al pasar a una extensión finita \(K_i\) de \(K=k(t)\) y normalizar \(S\) en \(K_i\), se perderá la hipótesis de regularidad sobre \(S\).
+
+Otra manera de definir un homomorfismo (7.17.4.1) consiste en reducirse al caso en que \(S\) es local de punto cerrado \(s\) (lo cual es trivial), y considerar una sucesión creciente de subesquemas cerrados \emph{regulares} \(S_i\) de \(S\), de punto genérico \(t_i\), tales que \(\dim S_i=i\) (\(0\leq i\leq n=\dim S\)). Como, para todo \(i\), \(0\leq i\leq n-1\), \(\mathcal O_{S_{i+1},t_i}\) es un anillo de valoración discreta de cuerpo residual \(k(t_i)\) y cuerpo de fracciones \(k(t_{i+1})\), se dispone de un homomorfismo de especialización
+\[
+  K_\bullet(X_{t_{i+1}})\longrightarrow K_\bullet(X_{t_i}),
+\]
+y el compuesto de estos homomorfismos para \(0\leq i\leq n-1\) define un homomorfismo (7.17.4.1), del que puede demostrarse (procediendo de manera análoga a 7.3) que es el mismo que el definido anteriormente mediante una explosión. La ventaja del segundo método es, sin embargo, que incluso se tienen aquí homomorfismos de la forma (7.16.1):
+\[
+  K_\bullet(X_{\bar t_{i+1}})\longrightarrow K_\bullet(X_{\bar t_i}),
+\]
+(con elecciones coherentes convenientes de las clausuras algebraicas \(k(\bar t_i)\) de los \(k(t_i)\)), que permiten definir por composición un homomorfismo
+\begin{equation}\tag{7.17.4.2}
+  K_\bullet(X_{\bar t})\longrightarrow K_\bullet(X_{\bar s}),
+\end{equation}
+que depende sin duda de manera esencial de la elección de los \(S_i\), es decir, de los \(t_i\).
+
+\textbf{7.17.5.} Se puede generalizar la construcción de un homomorfismo de especialización (7.17.4.2) al caso en que ya no se supone que \(S\) sea regular en \(s\) y \(t\) un punto maximal, con tal de que se disponga de la resolución de singularidades para el subesquema cerrado integral \(T\) de \(S\) de punto genérico \(t\), o simplemente para su localizado en \(s\); esta hipótesis se verifica, en particular, si \(\mathcal O_{S,s}\) es excelente de característica cero, gracias a Hironaka. En efecto, puede encontrarse entonces un morfismo \(S'\to \Spec(\mathcal O_{T,s})\), con \(S'\) regular, y tomando un punto cerrado de la fibra \(S'_s\), se puede aplicar lo anterior a \(X'=X\times_S S'\) sobre \(S'\), al punto genérico \(t'\) de \(S'\) y a su punto cerrado \(s'\). De ahí un homomorfismo de la forma (7.17.4.2), puesto que \(k(s')\) es una extensión finita de \(k(s)\) y tiene, por tanto, la misma clausura algebraica.
+
+\textbf{7.17.6.} En todas las construcciones consideradas en la sección 7.17, para construir un homomorfismo de especialización nos hemos reducido al caso en que la base es un rasgo. Se sigue que las propiedades del homomorfismo de especialización repasadas en las secciones anteriores, cuando la base es un rasgo, se extienden automáticamente al caso de una base más general. Por supuesto, los procedimientos de definición considerados se aplican igualmente a \(\Gr_\bullet\), \(K^\bullet\) (cuando \(f\) es liso) y \(\Gr^\bullet\) (cuando además \(f\) es separado).
+
+\textbf{7.17.7.} Para terminar, señalemos que la definición de un homomorfismo (7.17.3.1) o (7.17.3.2), o la de un homomorfismo (7.17.4.2), depende de manera esencial de ciertas elecciones arbitrarias (un rasgo conveniente sobre \(S\) en 7.17.3, una sucesión de \((S_i)\) en 7.17.4 y, además, el dato de una resolución de singularidades en 7.17.5), y lo mismo ocurre para las variantes relativas a \(\Gr_\bullet\), etc. Se construyen ejemplos evidentes tomando para \(s\), digamos, un punto doble ordinario de una curva algebraica, y \(X\) un esquema proyectivo y liso sobre \(S\) (por ejemplo, un esquema abeliano de dimensión relativa 2), en los que el homomorfismo de especialización sobre \(\Gr^1=\Pic\), e incluso sobre \(\Gr^1_{\mathrm{alg}}=\mathrm{NS}\) (grupo de Néron--Severi), depende efectivamente de la elección del rasgo \(S'\) elegido sobre \(S\), o, lo que viene a ser lo mismo aquí, de la elección de un punto sobre \(s\) del normalizado de \(S\).
+
+\subsection*{7.18. Apéndice al Apéndice: extensión del cuerpo base para ciertos funtores en grupos conmutativos}
+Explicitamos aquí un punto técnico planteado en 7.17.4.
+
+\textbf{7.18.1.} Sean \(k\) un cuerpo, \(C\) la categoría de las \(k\)-álgebras integrales y de los homomorfismos planos de tales álgebras, y \(F\) un funtor sobre \(C\), con valores en la categoría \((\mathrm{Ens})\) de los conjuntos. Supongamos que \(F\) conmuta con los límites inductivos filtrantes. Sea \(K\) una extensión de \(k\); buscamos criterios para que
+\[
+  F(k)\longrightarrow F(K)
+\]
+sea inyectivo (respectivamente, sobreyectivo).
+
+\textbf{7.18.2.} Supongamos que nos encontramos en uno de los dos casos siguientes:
+\begin{enumerate}[label=\alph*)]
+\item El cuerpo \(k\) es separablemente cerrado, y \(K/k\) es una extensión separable.
+\item El cuerpo \(k\) es infinito, y \(K\) es una extensión pura de este.
+\end{enumerate}
+Entonces la aplicación \(F(k)\to \sisi{K(K)}{F(K)}\) es inyectiva. % Canon SGA-SRC-001378
+
+En efecto, utilizando el hecho de que \(K\) es límite inductivo filtrante de subálgebras de tipo finito sobre \(k\), con morfismos de transición planos, y la conmutación de \(F\) con los límites inductivos filtrantes, nos reducimos en el caso a) a probar que, si \(A\) es un álgebra integral de tipo finito sobre \(k\), cuyo cuerpo de fracciones \(K\) es separable sobre \(k\), entonces \(F(k)\to F(A)\) es inyectivo. Ahora bien, las hipótesis hechas sobre \(k\) y sobre \(K\) implican que existe un \(k\)-homomorfismo \(A\to k\); entonces el compuesto \(F(k)\to F(A)\to F(k)\) es la identidad, de donde resulta la conclusión. En el caso b), nos reducimos del mismo modo, al pasar al límite, a probar que, si \(A\) es un álgebra integral de tipo finito sobre \(k\) tal que su cuerpo de fracciones es una extensión pura de \(k\), entonces \(F(k)\to F(A)\) es inyectivo. Como \(k\) es infinito, la hipótesis implica de nuevo que existe un \(k\)-homomorfismo \(A\to k\), y se concluye como arriba.
+
+\textbf{7.18.3.} Supongamos ahora que \(F\) es un funtor con valores en la categoría \((\mathrm{Ab})\) de los grupos abelianos, y supongamos que, para toda extensión finita \(k'\) de \(k\), se ha definido un homomorfismo norma
+\[
+  N_{k'/k}:F(k')\longrightarrow F(k),
+\]
+tal que el compuesto
+\[
+  F(k)\longrightarrow F(k')\xrightarrow{N_{k'/k}}F(k)
+\]
+sea la multiplicación por \([k':k]\). Bajo estas condiciones, se tiene:
+\begin{enumerate}[label=(\roman*)]
+\item para toda extensión \(K\) de \(k\), el núcleo de \(F(k)\to F(K)\) es un grupo de torsión;
+\item para toda extensión pura \(K\) de \(k\), el homomorfismo \(F(k)\to F(K)\) es inyectivo. (N.B. Obsérvese que no se supone necesariamente \(k\) infinito).
+\end{enumerate}
+
+En el caso (i), nos reducimos a probar que todo elemento \(x\) del núcleo de \(F(k)\to F(A)\), donde \(A\) es un álgebra integral de tipo finito sobre \(k\), es un elemento de torsión. Utilizando un \(k\)-homomorfismo \(A\to k'\), donde \(k'\) es una \(k\)-álgebra finita, nos reducimos al caso en que \(A=k'\) es una extensión finita de \(k\). Entonces se tiene \([k':k]x=0\) en virtud de la propiedad postulada anteriormente para el homomorfismo norma. Esto prueba que \(x\) es un elemento de torsión. Se tendrá incluso \(x=0\) en el caso en que el mcd de los grados de las extensiones finitas \(k'\) de \(k\) cocientes de \(A\) sea igual a 1. Ahora bien, esto sucede si el cuerpo de fracciones \(K\) de \(A\) es una extensión pura de \(k\), como se comprueba fácilmente (solo el caso en que \(k\) es finito requiere una nueva comprobación). Esta observación da entonces la conclusión de (ii).
+
+\textbf{7.18.4.} Supongamos que, para todo abierto afín no vacío \(U\) del espacio afín \(\Spec k[T_1,\ldots,T_n]\), si \(A\) es el anillo de \(U\), el homomorfismo \(F(k)\to F(A)\) es sobreyectivo (compárese IX 1.6). Entonces, utilizando la conmutación de \(F\) con los límites inductivos filtrantes, se obtiene que, para toda extensión pura \(K\) de \(k\), \(F(k)\to F(K)\) es sobreyectivo. Si se supone además que \(k\) es infinito, o que pueden definirse homomorfismos norma como en 7.18.3, se concluye que este homomorfismo es incluso biyectivo.
+
+\textbf{7.18.5.} A modo de ejemplo, consideremos un esquema \(X\) de tipo finito sobre \(k\), y pongamos
+\[
+  F(A)=K_\bullet(X\otimes_k A),
+\]
+que es un funtor sobre la categoría \(C\) (gracias a (IV 2.12)\sisi{}{)}. En virtud de (IV 3.2.3), este último conmuta con los límites inductivos filtrantes. Además, si \(k'\) es una extensión finita de \(k\), entonces la proyección \(p:X\otimes_k k'\to X\) es un morfismo finito, plano y de presentación finita, por lo que define un homomorfismo de imagen directa % Canon SGA-SRC-001389
+\[
+  p_*=N_{k'/k}:K_\bullet(X\otimes_k k')\longrightarrow K_\bullet(X).
+\]
+Se comprueba inmediatamente que la condición considerada en 7.18.3 sobre los homomorfismos norma se verifica efectivamente. Por último, si \(A\) es el álgebra afín de un abierto \(U\) del espacio afín \(\Spec k[T_1,\ldots,T_n]\), entonces \(F(k)\to F(A)\) se identifica con la aplicación
+\[
+  K_\bullet(X)\longrightarrow K_\bullet(X\times_k U),
+\]
+que es sobreyectiva para \(X\) noetheriano, en virtud de IX 1.6. Utilizando entonces los resultados demostrados arriba, se obtiene:
+\begin{enumerate}[label=(\roman*)]
+\item Si \(K/k\) es una extensión pura de \(k\), entonces \(K_\bullet(X)\longrightarrow K_\bullet(X_K)\) es inyectivo, e incluso biyectivo si \(X\) es noetheriano.
+\item Si \(k\) es separablemente cerrado y \(K/k\) una extensión separable, entonces \(K_\bullet(X)\longrightarrow K_\bullet(X_K)\) es inyectivo.
+\item Para toda extensión \(K\) de \(k\), el núcleo de \(K_\bullet(X)\longrightarrow K_\bullet(X_K)\) es un grupo de torsión.
+\end{enumerate}
+Estos resultados siguen siendo válidos si solo se supone \(X\) noetheriano, con la condición de limitarse a extensiones \(K\) de \(k\) que sean de tipo finito (de modo que \(X_K\) siga siendo \sisi{de tipo finito}{noetheriano}\sisi{}{)}. Además, se obtienen esencialmente los mismos resultados para \(K^\bullet\) en lugar del funtor \(K_\bullet\), con la única diferencia de que en (i) no puede afirmarse en general la biyectividad, por no disponerse del teorema de homotopía para \(K^\bullet\) en lugar de \(K_\bullet\); para poder concluir la biyectividad, habría que suponer \(X\) noetheriano regular, lo que implica que los grupos \(K^\bullet\) y \(K_\bullet\) son los mismos para \(X\) y para \(X_K\), respectivamente. % Canon SGA-SRC-001379, SGA-SRC-001380
+
+Se obtienen también esencialmente los mismos resultados para \(\Gr^\bullet\) en lugar de \(K_\bullet\) o \(K^\bullet\), con la misma reserva relativa a la afirmación de biyectividad en (i). En el caso en que uno se limita a \(\Gr^1=\Pic\), esta afirmación de biyectividad es válida si \(X\) es noetheriano y \emph{normal}, pues en este caso, para todo abierto \(U\) de un espacio afín sobre \(k\), se ve inmediatamente que \(\Pic(X)\longrightarrow \Pic(X\times_k U)\) es sobreyectivo (EGA \(\mathrm{Err}_{\mathrm{IV}}\) 53, 21.4.13).
+
+\subsection*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]}]
+\item Dickson, E. Linear groups, Dover, New York, 1958.
+\item Grothendieck, A. TDTE, V, VI~; Séminaire Bourbaki 232, 236.
+\item Kleiman, S. Towards a numerical theory of ampleness, Ann. of Math. 84 (1966), pp. 293-344.
+\item Murre, J. On contravariant functors from the category of préschemes over a field into the category of abelian groups, Publications Mathématiques de l'IHES, 23, 1964.
+\item Chevalley, C. Les classes d'équivalence rationnelles, I et II, Séminaire à l'ENS 1958, exposés 2 et 3.
+\item S. Abhyankar, Resolution of singularities of arithmetical surfaces, in~: Arithmetical Algebraic Geometry, Purdue University, Harper--Row, New York 1965.
+\end{enumerate}
+
+\providecommand{\Isom}{\operatorname{Isom}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Nil}{\operatorname{Nil}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\coker}{\operatorname{coker}}
+\providecommand{\Supp}{\operatorname{Supp}}
+\providecommand{\fppf}{\mathrm{fppf}}
+\providecommand{\zar}{\mathrm{zar}}
+\providecommand{\GL}{\operatorname{Gl}}
+\providecommand{\Gr}{\operatorname{Gr}}
+\providecommand{\Pic}{\operatorname{Pic}}
+\providecommand{\Spec}{\operatorname{Spec}}
+\providecommand{\V}{\operatorname{V}}
+\providecommand{\Ass}{\operatorname{Ass}}
+
+\newpage

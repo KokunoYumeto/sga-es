@@ -1,0 +1,155 @@
+% SGA 6, Exposición VII: fragmento español alineado con la fuente.
+% Alcance: sección 3, números 3.1--3.2, líneas 10144--10292 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{3. Cálculo del \texorpdfstring{$K^\circ$}{K} de un esquema explotado}
+
+\textbf{3.1.} En este parágrafo, \(i:Y\to X\) designa una inmersión cerrada regular. Denotamos por \(X'\) el esquema obtenido explotando \(Y\), y por \(Y'=Y\times_X X'\). Se sabe (EGA II 8.1.8) que \(Y'\) es un subesquema cerrado de \(X'\) definido por un ideal de \(\cO_{\sisi{X}{X'}}\), canónicamente isomorfo a \(\cO_{X'}(1)\); como la inmersión \(j:Y'\to \sisi{X}{X'}\) está definida por un ideal invertible, es una inmersión cerrada regular de codimensión \(1\). Denotamos por \(J\) el ideal de \(\cO_X\) que define \(Y\), y por \(J'\) el ideal de \(\cO_{X'}\) que define \(Y'\); se tiene, pues, \(J'\simeq J.\cO_{X'}\simeq\cO_{X'}(1)\). Finalmente, denotamos por \(f:X'\to X\) y \(g:Y'\to Y\) los morfismos estructurales. Se tiene así el diagrama conmutativo
+\begin{equation}\tag{3.1.1}
+\begin{tikzcd}[column sep=large,row sep=large]
+Y' \arrow[r,"j"] \arrow[d,"g"'] & X' \arrow[d,"f"]\\
+Y \arrow[r,"i"'] & X.
+\end{tikzcd}
+\end{equation}
+Por definición, \(X'=\Proj(S)\), donde \(S=\bigoplus_{n\ge0}J^n\). Por tanto, se tiene
+\[
+Y'=\Proj\bigl(i^*(S)\bigr)
+=\Proj\left(\left(\bigoplus_{n\ge0}J^n\right)\otimes_{\cO_X}(\cO_X/J)\right)
+=\Proj\left(\bigoplus_{n\ge0}J^n/J^{n+1}\right).
+\]
+Ahora bien, como \(i\) es regular, \(\bigoplus_{n\ge0}J^n/J^{n+1}\simeq \underline{\Sym}_{\cO_Y}(J/J^2)\) (1.3). Denotamos por \(N\) el haz conormal \(J/J^2\); se tiene, pues,
+\[
+Y'=\bfP(N).
+\]
+Sobre \(Y'\), se puede escribir la sucesión exacta
+\begin{equation}\tag{3.1.2}
+0\to F\to g^*(N)\to\cO_{Y'}(1)\to0.
+\end{equation}
+Obsérvese que \(\cO_{Y'}(1)=j^*(\cO_{X'}(1))=J'/J'^2\); es, pues, el haz conormal de la inmersión \(j\), y lo denotaremos por \(L\).
+
+\textbf{Lema 3.2.} Bajo las hipótesis y con las notaciones de 3.1, se tienen los isomorfismos siguientes:
+\[
+\begin{array}{ll}
+\text{i)}&
+\forall i\ge0,\quad
+\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)
+\simeq
+\bigwedge^i\Tor_1^{\cO_X}(\cO_{X'},\cO_Y),\\[4pt]
+\text{ii)}&
+\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)\simeq F.
+\end{array}
+\]
+
+\textit{Demostración.}
+i) Como \(\cO_Y\) puede resolverse localmente mediante un complejo de Koszul, el álgebra graduada \(\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)\) es alternada (2.2). Existe, pues, un único homomorfismo de álgebras
+\begin{equation}\tag{3.2.1}
+\bigwedge \Tor_1^{\cO_X}(\cO_{X'},\cO_Y)
+\longrightarrow
+\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_{X'},\cO_Y),
+\end{equation}
+que prolonga la inyección de \(\underline{\Tor}_1^{\cO_X}(\cO_{X'},\cO_Y)\) en
+\(\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)\). Basta comprobar localmente que es un isomorfismo.
+
+Podemos situarnos, pues, sobre un abierto afín \(U=\Spec(A)\) de \(X\), estando \(J\) definido por un ideal \(J\) de \(A\), y darnos un homomorfismo regular \(u:E\to A\), que define \(J\), con \(E=(A)^{\sisi{n}{d}}\). Sean \(f_1,\ldots,f_d\) las imágenes de una base de \(E\). En \(\bigoplus_{n\ge0}J^n\), denotaremos, para \(m\le p\), por \(x^{(m)}\) el elemento \(x\) de \(J^p\), considerado de grado \(m\). Podemos restringirnos al abierto \(V\) de \(X'\) donde, por ejemplo, el elemento \(f_1^{(1)}\) es invertible.
+
+Los \(\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)\) son los haces de homología del complejo \(K_\bullet(u)\otimes_{\cO_X}\cO_{X'}\). Para estudiar este complejo sobre \(V\), hacemos el cambio de base siguiente en \(E'=E\otimes_A\Gamma(V,\cO_{X'})\): si \(e_1,\ldots,e_d\) es la base dada de \(E\), ponemos
+\[
+e'_1=e_1;\qquad \text{para }i\ne1,\quad
+e'_i=e_i-(f_i^{(1)}/f_1^{(1)})e_1,
+\]\sisi{,}{.} % Canon SGA-SRC-001492
+Pongamos \(A'=\Gamma(V,\cO_{X'})\); la diferencial del complejo \(K_\bullet(u)\otimes_A A'\) está dada por
+\[
+d(e'_1)=f_1^{(0)};\qquad \text{para }i\ne1,\quad d(e'_i)=0.
+\]
+Tomando como base de \(\bigwedge^k(E')\) los elementos
+\(e'_{i_1}\wedge\cdots\wedge e'_{i_k}\), con \(i_1<\cdots<i_k\), se obtiene
+\[
+\begin{array}{ll}
+d(a.e'_{i_1}\wedge\cdots\wedge e'_{i_k})=0
+&\text{si }i_1\ne1;\\[3pt]
+d(a.e'_{i_1}\wedge\cdots\wedge e'_{i_k})=
+af_1^{(0)}.e'_{i_2}\wedge\cdots\wedge e'_{i_k}
+&\text{si }i_1=1.
+\end{array}
+\]
+Denotando por \(E''\) el submódulo de \(E'\) engendrado por \(e'_2,\ldots,e'_d\), se ve que la imagen de \(d:\bigwedge^kE'\longrightarrow\bigwedge^{k-1}E'\) es \(f_1^{(0)}\bigwedge^{k-1}E''\). Por otra parte, \(f_1^{(0)}\) es regular en \(A'\), pues sobre \(V\) el ideal invertible \(J'\) está definido por la ecuación \(f_1^{(0)}\). El núcleo de \(d:\bigwedge^kE'\longrightarrow\bigwedge^{k-1}E'\) es, por tanto, \(\bigwedge^kE''\). En consecuencia, el grupo de homología de grado \(k\) de \(K_\bullet(u)\otimes_AA'\) es \(\bigwedge^kE''/f_1^{(0)}\bigwedge^kE''\); se obtienen así sobre \(V\) isomorfismos
+\begin{equation}\tag{3.2.2}
+\underline{\Tor}_i^{\cO_X}(\cO_{X'},\cO_Y)
+\xrightarrow{\sim}
+(\cO_{X'}/f_1^{(0)}\cO_{X'})\otimes_{\cO_{X'}}
+\bigwedge^i(\cO_{X'})^{d-1}
+\xrightarrow{\sim}
+\bigwedge^i(\cO_{Y'})^{d-1}.
+\end{equation}
+En particular, para \(i=1\), se obtiene
+\[
+\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)
+\xrightarrow{\sim}
+(\cO_{Y'})^{d-1}.
+\]
+Por tanto, para todo \(i\), se tiene
+\begin{equation}\tag{3.2.3}
+\underline{\Tor}_i^{\cO_X}(\cO_{X'},\cO_Y)
+\xrightarrow{\sim}
+\bigwedge^i\Tor_1^{\cO_X}(\cO_{X'},\cO_Y).
+\end{equation}
+Ahora bien, por 2.2, el isomorfismo
+\[
+\bigwedge(\cO_{Y'})^{d-1}
+\xrightarrow{\sim}
+\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)
+\]
+definido por los isomorfismos (3.2.2) es un isomorfismo de álgebras. Lo mismo vale, pues, para el isomorfismo
+\[
+\bigwedge\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)
+\xrightarrow{\sim}
+\bigoplus_{i\ge0}\Tor_i^{\cO_X}(\cO_{X'},\cO_Y)
+\]
+definido por los isomorfismos (3.2.3). Por razones de unicidad, es entonces la restricción a \(V\) del homomorfismo (3.2.1), y este último es, por tanto, un isomorfismo.
+
+ii) Consideremos la sucesión exacta
+\[
+0\longrightarrow J\longrightarrow\cO_X\longrightarrow\cO_Y\longrightarrow0,
+\]
+y la sucesión exacta de los Tor obtenida tensorizando por \(\cO_{X'}\):
+\[
+0\longrightarrow
+\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)
+\longrightarrow
+J\otimes_{\cO_X}\cO_{X'}
+\longrightarrow
+\cO_{X'}
+\longrightarrow
+\cO_{Y'}
+\longrightarrow0.
+\]
+La imagen del morfismo \(J\otimes_{\cO_X}\cO_{X'}\to\cO_{X'}\) es
+\(J.\cO_{X'}=\cO_{X'}(1)\). Por consiguiente, se obtiene la sucesión exacta
+\[
+0\longrightarrow
+\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)
+\longrightarrow
+J\otimes_{\cO_X}\cO_{X'}
+\longrightarrow
+\cO_{X'}(1)
+\longrightarrow0.
+\]
+Tensoricémosla entonces por \(\cO_{Y'}\); como
+\(\underline{\Tor}_1^{\cO_X}(\cO_{X'},\cO_Y)\) es un \(\cO_{Y'}\)-módulo, y
+\(\cO_{X'}(1)\) es invertible, se obtiene la sucesión exacta
+\[
+0\longrightarrow
+\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)
+\longrightarrow
+g^*(N)
+\longrightarrow
+\cO_{Y'}(1)
+\longrightarrow0.
+\]
+Se comprueba fácilmente que el morfismo \(g^*(N)\to\cO_{Y'}(1)\) que figura en esta sucesión es el morfismo canónico, de modo que se identifica con la sucesión (3.1.2). Por definición, se tiene, pues,
+\[
+\Tor_1^{\cO_X}(\cO_{X'},\cO_Y)=F.
+\]

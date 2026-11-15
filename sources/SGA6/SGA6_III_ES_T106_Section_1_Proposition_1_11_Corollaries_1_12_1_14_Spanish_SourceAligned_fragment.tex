@@ -1,0 +1,63 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: proposición 1.11 y corolarios 1.12--1.14, líneas 5277--5332 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 1.11.} Sea
+\[
+\begin{tikzcd}
+X \arrow[r,"f"] \arrow[dr,"\sisi{f}{h}"'] & Y \arrow[d,"g"]\\
+& Z
+\end{tikzcd}
+\]
+un triángulo conmutativo de morfismos localmente de tipo finito, sean \(E\in\Ob D(X)\), \(F\in\Ob D(Y)\), y \([a,b]\), \([c,d]\) intervalos de \(\mathbb Z\).
+\begin{enumerate}[label=\alph*)]
+\item Si \(E\) es \(a\)-pseudocoherente rel. a \(f\) y acíclico en grado \(>b\), y si \(F\) es \(c\)-pseudocoherente rel. a \(g\) y acíclico en grado \(>d\), entonces \(E\otimes_Y^{\mathbf L}F\) (cf. (1.6)) es \(m\)-pseudocoherente rel. a \(h\) y acíclico en grado \(>n\), donde \(m=\operatorname{Sup}(a+d,b+c)\) y \(n=b+d\).
+
+\item Si \(E\) es \(a\)-pseudocoherente rel. a \(h\) y acíclico en grado \(>b\), y si \(g\) es \((a+1-b)\)-pseudocoherente, entonces \(E\) es \(a\)-pseudocoherente rel. a \(f\).
+\end{enumerate}
+
+\emph{Demostración.} Como la cuestión es local sobre \(X\), se puede suponer que se tiene un diagrama conmutativo de cuadrado cartesiano
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& & E^{r+s}_Z \arrow[dr] & \\
+& E^r_Y \arrow[ur,hook,"j"] \arrow[d,"p"'] & & E^s_Z \arrow[d,"q"]\\
+X \arrow[ur,hook,"i"] \arrow[r,"f"] & Y \arrow[urr,hook,"k"'] \arrow[rr,"g"] & & Z{,}
+\end{tikzcd}
+\]
+donde \(i,j,k\) son inmersiones cerradas y \(p,q\) las proyecciones canónicas de los espacios afines tipo. Si \(F\) es \(c\)-pseudocoherente rel. a \(Z\), entonces \(k_*(F)\) es \(c\)-pseudocoherente según (1.1 (iii)), y \(j_*(p^*(F))\) es \(c\)-pseudocoherente según (1.1.3). Del mismo modo, si \(g\) es \(x\)-pseudocoherente, entonces \(j_*(\mathcal O_{E^r_Y})\) es \(x\)-pseudocoherente. Por definición de la pseudocoherencia relativa (1.2), se reduce, pues, a probar a) y b) cuando \(f\) y \(g\) son inmersiones cerradas.
+
+\emph{Demostración de a).} Según (1.1 (iii)), hay que mostrar lo siguiente: supongamos que \(f_*(E)\) es \(a\)-pseudocoherente y acíclico en grado \(>b\), y que \(g_*(F)\) es \(c\)-pseudocoherente y acíclico en grado \(>d\); entonces \(h_*(E\otimes_Y^{L}F)\) es \(m\)-pseudocoherente y acíclico en grado \(>n\). Ahora bien, se tiene un isomorfismo canónico
+\[
+ f_*(E)\otimes^{L}F\xrightarrow{\sim} f_*(E\otimes_Y^{L}F)
+\]
+(caso particular del isomorfismo (*) de la demostración de (1.8)). Como el funtor \(g_*(.\otimes^{L}F)\) transforma haces localmente libres de tipo finito en complejos \(c\)-pseudocoherentes, y complejos acíclicos en grado \(>0\) en complejos acíclicos en grado \(>d\), la afirmación resulta de (I 2.13).
+
+\emph{Demostración de b).} Hay que probar la afirmación siguiente: supongamos que \(\sisi{f_*(E)}{h_*(E)}\) es \(a\)-pseudocoherente y acíclico en grado \(>b\), y que \(g_*(\mathcal O_Y)\) es \((a+1-b)\)-pseudocoherente; entonces \(f_*(E)\) es \(a\)-pseudocoherente. Como la afirmación versa sobre \(f_*(E)\), se puede suponer que \(X=Y\) y \(f=\Id_X\). Se procede entonces como en la demostración de (1.1.1), probando por recurrencia descendente que \(E\) es pseudocoherente en grado \(\ge a\). Se supone ya probado que \(E\) es \((a+1)\)-pseudocoherente; de donde, según (I 2.10) y localizando si es necesario, un triángulo distinguido
+\[
+E'\longrightarrow E\longrightarrow E''\longrightarrow E'[1]
+\]
+donde \(E'^i\) es localmente libre para \(i\in[a+1,b]\), \(E'^i=0\) para \(i\notin[a+1,b]\), y \(E''^i=0\) para \(i>a\). La hipótesis de que \(g_*(\mathcal O_Y)\) es \((a+1-b)\)-pseudocoherente implica entonces, por (I 2.11 a)), que \(g_*(E')\) es \((a+1)\)-pseudocoherente. Como \(g_*(E)\) es \(a\)-pseudocoherente, resulta de (I 2.6) que \(g_*(E'')\) es \(a\)-pseudocoherente. Se concluye gracias a (I 2.10 b)) y al hecho de que un \(\mathcal O_Y\)-módulo \(M\) es de tipo finito si y solo si \(g_*(M)\) lo es.
+
+Se deducen trivialmente de (1.11) los corolarios siguientes:
+
+\textbf{Corolario 1.12.} En la situación de (1.11), si \(g\) es pseudocoherente, se tiene, para \(r\in\mathbb Z\cup\{-\infty\}\),
+\[
+ D^{-}(f)_{r\text{-}\coh}=D^{-}(h)_{r\text{-}\coh};
+\]
+en particular (tomando \(X=Y\)), las nociones de \(r\)-pseudocoherencia sobre \(Y\), «en sentido absoluto» o rel. a \(g\), coinciden.
+
+\textbf{Corolario 1.13.} En la situación de (1.11), si \(f\) es pseudocoherente, el funtor
+\[
+ \mathcal O_X\otimes_Y^{\mathbf L}\cdot=Lf^*:D^{-}(Y)\longrightarrow D^{-}(X)
+\]
+induce, para \(r\in\mathbb Z\cup\{-\infty\}\), un funtor
+\[
+ Lf^*:D^{-}(g)_{r\text{-}\coh}\longrightarrow D^{-}(h)_{r\text{-}\coh}.
+\]
+
+\textbf{Corolario 1.14.} En la situación de (1.11), si \(f\) es \(r\)-pseudocoherente y \(g\) es \(s\)-pseudocoherente (\(r,s\in\mathbb Z\cup\{-\infty\}\)), entonces \(h\) es \(\operatorname{Sup}(r,s)\)-pseudocoherente. Si \(h\) es \(r\)-pseudocoherente y \(g\) es \((r+1)\)-pseudocoherente, \(f\) es \(r\)-pseudocoherente.
+
+\textbf{Observación 1.14.1.} En particular, para \(r=s=-1\), se recuperan (cf. (1.2.1 c))) las afirmaciones (ii) y (v) de (EGA IV 1.4.3).

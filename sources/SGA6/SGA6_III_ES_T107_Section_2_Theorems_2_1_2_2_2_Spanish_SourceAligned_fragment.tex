@@ -1,0 +1,64 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: sección 2, conjetura 2.1 y teoremas 2.2--2.2.2, líneas 5334--5390 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{2. El teorema de finitud}
+
+\textbf{Conjetura 2.1.} Sean \(S\) un esquema, \(f:X\to Y\) un \(S\)-morfismo propio de esquemas localmente de tipo finito sobre \(S\), y \(E\in\Ob D^+(X)\). Entonces, si \(E\) es pseudocoherente rel. a \(S\) (1.2), lo mismo ocurre con \(\mathbf Rf_*(E)\).
+
+\textbf{Teorema 2.2.} La conjetura precedente es cierta en los casos siguientes:
+\[
+\begin{gathered}
+ \text{(i) } S\text{ es localmente noetheriano};\\
+ \text{(ii) } f\text{ es proyectivo}.
+\end{gathered}
+\]
+
+\emph{Demostración en el caso (i).} Como \(S\) es localmente noetheriano, la proyección de \(X\) (resp. \(Y\)) sobre \(S\) es un morfismo pseudocoherente (1.3), y las nociones de pseudocoherencia sobre \(X\) (resp. \(Y\)) y relativamente a \(S\) coinciden (1.12). Por otra parte, como \(X\) (resp. \(Y\)) es localmente noetheriano, y por tanto \(\mathcal O_X\) (resp. \(\mathcal O_Y\)) coherente, un objeto \(M\) de \(D(X)\) (resp. \(D(Y)\)) es pseudocoherente si y solo si (I 3.5) los \(H^i(M)\) son coherentes y \(M\) está localmente en \(D^{-}\). El teorema resulta, pues, del siguiente:
+
+\textbf{Teorema 2.2.1.} Sea \(f:X\to Y\) un morfismo propio de esquemas localmente noetherianos, y sea \(E\in\Ob D^+(X)\). Si los \(H^i(E)\) son coherentes, lo mismo ocurre con los \(R^if_*(E)\). Si, además, \(E\) está localmente en \(D^{-}\), lo mismo ocurre con \(\mathbf Rf_*(E)\).
+
+\emph{Demostración.} La primera afirmación resulta de la sucesión espectral
+\begin{equation}\tag{$*$}
+ R^pf_*(H^q(E)) \Longrightarrow R^*f_*(E)
+\end{equation}
+y del teorema de finitud (EGA III 3.2.1). Para la segunda, se puede suponer que \(Y\) es afín; \(X\) es entonces cuasicompacto y separado, y supongamos que está recubierto por \(r\) abiertos afines. Se sabe (EGA III 1.4.12) que, en estas condiciones, se tiene \(R^if_*(M)=0\) para todo \(\mathcal O_X\)-módulo cuasicoherente \(M\) y todo \(i>r\). Si \(E\) está localmente en \(D^{-}\), \(E\) está en \(D^{-}\) puesto que \(X\) es cuasicompacto; digamos \(H^i(E)=0\) para \(i>N\). De la sucesión espectral (*) se deduce entonces que \(R^if_*(E)=0\) para \(i>N+r\), de donde resulta la afirmación.
+
+\emph{Demostración en el caso (ii).} Como la cuestión es local sobre \(Y\), se puede suponer que \(S\) e \(Y\) son afines. Se tiene entonces un diagrama conmutativo de cuadrado cartesiano
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+& & P^r_{Y'} \arrow[dr,"p'"] & \\
+& \mathbb P^r_Y \arrow[ur,hook,"j"] \arrow[d,"p"'] & & Y' \arrow[d,"g'"]\\
+X \arrow[ur,hook,"i"] \arrow[r,"f"] & Y \arrow[urr,hook,"j'"] \arrow[rr,"g"] & & S{,}
+\end{tikzcd}
+\]
+donde \(i,j,j'\) son inmersiones cerradas, \(g'\) un morfismo liso y afín, y \(p,p'\) las proyecciones del espacio proyectivo tipo. Supongamos que \(E\) es pseudocoherente rel. a \(S\). Según (1.1 (iii)), esto significa que \((ji)_*(E)\) es pseudocoherente. Hay que mostrar que \(\mathbf Rf_*(E)\) es pseudocoherente rel. a \(S\), es decir (1.1 (iii)), que
+\[
+ j'_*\mathbf Rf_*(E)
+\]
+es pseudocoherente. Pero se tiene
+\[
+ j'_*\mathbf Rf_*(E)\xrightarrow{\sim} \mathbf Rp'_*(ji)_*(E),
+\]
+por lo que la afirmación será consecuencia del resultado más preciso siguiente:
+
+\textbf{Teorema 2.2.2.} Sean \(Y\) un esquema afín, \(f:X=\mathbb P^r_Y\longrightarrow Y\) la proyección de un espacio proyectivo tipo, \(E\in\Ob D^b(X)_{\mathrm{coh}}\), y \(a\in\mathbb Z\). Entonces \(\mathbf Rf_*(E)\) es pseudocoherente. Además, si \(E\) es acíclico en grado \(>a\), \(\mathbf Rf_*(E)\) es acíclico en grado \(>a+r\), y existe un entero \(N\) tal que, para todo \(n\geq N\), \(\mathbf Rf_*(E(n))\) (donde \(E(n)=E\otimes\mathcal O_X(n)\)) sea acíclico en grado \(>a\).
+
+\emph{Demostración.} Como \(Y\) es afín, \(X\) es cuasicompacto y separado; por tanto, según (II 2.2.9 a)), \(E\) es isomorfo, en \(D(X)\), a un complejo \(F\) de grados acotados superiormente tal que, para todo \(i\), \(F^i\in\Ob L(X)\), es decir (loc. cit.), sea suma directa finita de haces del tipo \(\mathcal O_X(-n)\) \((n>0)\). Además, si \(E\) es acíclico en grado \(>a\), se puede elegir \(F\) de manera que \(F^i=0\) para \(i>a\): esto resulta formalmente de la afirmación precedente, teniendo en cuenta (I 2.10 a) y II 2.2.8 a)). Reemplazando \(E\) por \(F\), se puede suponer, pues, que \(E^i\in\Ob L(X)\) para todo \(i\), y \(E^i=0\) para \(i>a\). Como \(X\) está recubierto por \((r+1)\) abiertos afines, se tiene, según (EGA III 1.4.10) y la sucesión espectral de hipercohomología, \(R^qf_*(E)=0\) para \(\sisi{i}{q}>a+r\). Sea \(t\) un entero \(\leq a\), pongamos \(E'=(0\to E^t\to\cdots\to E^a\to0)\). Se tiene una sucesión exacta
+\[
+ 0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow0,
+\]
+donde \(E''\) verifica las mismas condiciones que \(E\), pero con \(a\) reemplazado por \(t-1\). Aplicando \(\mathbf Rf_*\), se obtiene un triángulo distinguido
+\begin{equation}\tag{$*$}
+\mathbf Rf_*(E')\longrightarrow \mathbf Rf_*(E)\longrightarrow \mathbf Rf_*(E'')\longrightarrow \mathbf Rf_*(E')[1]
+\end{equation}
+Como \(t\) puede elegirse arbitrariamente grande en valor absoluto negativo, basta, para la primera afirmación, mostrar que \(\mathbf Rf_*(E)\) es \((t+r)\)-pseudocoherente. Ahora bien, \(\mathbf Rf_*(E'')\) es acíclico en grado \(\geq t+r\), y por tanto \((t+r)\)-pseudocoherente. Se habrá concluido, pues, en virtud de (I 2.6), si se prueba que \(\mathbf Rf_*(E')\) es perfecto.
+
+Para ello, se reduce por devissage (I 4.10) al caso en que \(E'\) está concentrado en grado \(0\) y es igual a \(\mathcal O_X(-n)\), \(n>0\). Entonces, según (EGA III 2.1.16), \(R^rf_*(\mathcal O_X(-n))\) es localmente libre de tipo finito, y se tiene
+\[
+ \mathbf Rf_*(\mathcal O_X(-n))\xrightarrow{\sim} R^rf_*(\mathcal O_X(-n))[-r].
+\]
+Por tanto, \(\mathbf Rf_*(\mathcal O_X(-n))\) es perfecto, y se deduce la primera afirmación de (2.2.2). Ya se ha visto que \(\mathbf Rf_*(E)\) es acíclico en grado \(>a+r\). Queda probar la última afirmación. Para \(t<-r+a\), \(\mathbf Rf_*(E'')\) es acíclico en grado \(>a\); teniendo en cuenta el triángulo \((*)\), se reduce, pues, a hacer la demostración para \(E'\) en lugar de \(E\). Como \(E'\) tiene grados acotados y sus componentes son objetos de \(L(X)\), existe un entero \(N\) tal que, para \(n\geq N\), las componentes de \(E'(n)\) sean sumas directas finitas de haces del tipo \(\mathcal O_X(p)\), donde \(p\geq0\). Entonces, según (EGA III 2.1.16) y la sucesión espectral de hipercohomología, \(\mathbf Rf_*(E'(n))\) es acíclico en grado \(>a\) para todo \(n\geq N\), lo que termina la demostración de (2.2.2), y por consiguiente la de (2.2).

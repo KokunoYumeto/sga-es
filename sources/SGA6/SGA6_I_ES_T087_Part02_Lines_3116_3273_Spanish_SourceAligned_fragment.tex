@@ -1,0 +1,163 @@
+% SGA 6, Exposición I: final de la sección 6 y comienzo de la sección 7, en español y alineados con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 3116--3273.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Lema 6.10.} \emph{Sean \((\sisi{S}{\mathcal S},A)\) un topos localmente anillado, \(U\) un objeto de \(\sisi{S}{\mathcal S}\) distinto del objeto vacío, y \(p,q\in\mathbb N\). Si se tiene \(A_U^p\simeq A_U^q\), entonces \(p=q\).}
+
+\emph{Demostración.} Mediante un argumento similar al dado en la demostración de (2.15.1), se reduce al caso en que \((\sisi{S}{\mathcal S},A)\) es el topos localmente anillado definido por un preesquema, y en este caso la afirmación es trivial (tómese un punto de \(U\)).
+
+\textbf{Definición 6.11.} Se llama rango, y se denota por \(\rg\), a la \(\sisi{S}{\mathcal S}\)-función aditiva de \(\mathcal C_1\) en \(\mathbb Z_S\) definida por
+\[
+  \rg(L)=p\quad\text{si } L\simeq A_X^p,
+  \qquad X\ne\varnothing,
+\]
+\[
+  \rg(L)=0\quad\text{si } L\in\Ob\sisi{\mathcal C_{1X}}{\mathcal C_{1,X}},
+  \qquad X=\varnothing.
+\]
+En virtud de (6.7), la función rango se prolonga de manera única a una \(\sisi{S}{\mathcal S}\)-función aditiva de \(\Parf(\sisi{S}{\mathcal S})\) en \(\mathbb Z_S\) (que seguiremos llamando rango y denotando por \(\rg\)).
+
+\textbf{Proposición 6.12.} \textbf{a)} Para \(L,M\in\Ob\Dpx^-(X)_{\mathrm{parf}}\) (\(X\in\Ob \sisi{S}{\mathcal S}\)), se tiene \(\rg(L\overset{\mathrm L}{\otimes} M)=\rg(L)\,\rg(M)\).
+
+\textbf{b)} Sea \(u:(\sisi{S'}{\mathcal S'},A')\longrightarrow(\sisi{S}{\mathcal S},A)\) un morfismo de topos localmente anillados. Para \(M\in\Ob\Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}}\), se tiene \(\rg(\mathrm L u^*(M))=u^*(\rg(M))\). En otros términos, el homomorfismo rango: \(k(\Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}})\longrightarrow \mathbb Z_S\) es un homomorfismo de prehaces de anillos, compatible con las imágenes inversas.
+
+
+
+% Additional notation for Exposé I
+\providecommand{\Cpx}{\mathrm C}
+\providecommand{\Kpx}{\mathrm K}
+\providecommand{\Dpx}{\mathrm D}
+\providecommand{\Ho}{\mathrm H}
+\providecommand{\RHom}{\mathrm R\!\operatorname{Hom}}
+\providecommand{\Ob}{\operatorname{ob}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\RHom}{\mathrm R\!\operatorname{Hom}}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Tor}{\operatorname{Tor}}
+\providecommand{\Tr}{\operatorname{Tr}}
+\providecommand{\Add}{\operatorname{Add}}
+\providecommand{\Cart}{\operatorname{Cart}}
+\providecommand{\Parf}{\operatorname{Parf}}
+\providecommand{\coh}{\operatorname{coh}}
+\providecommand{\amp}{\operatorname{amp}}
+\providecommand{\cl}{\operatorname{cl}}
+\providecommand{\rg}{\operatorname{rg}}
+\providecommand{\Id}{\operatorname{Id}}
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Im}{\operatorname{Im}}
+\providecommand{\cH}{\mathcal H}
+\providecommand{\Zs}{\mathbb Z_S}
+\providecommand{\A}{\mathcal A}
+\providecommand{\cC}{\mathcal C}
+\providecommand{\cCzero}{\mathcal C_0}
+\providecommand{\otL}{\mathop{\otimes}^{\mathrm L}}
+\providecommand{\tamp}{\operatorname{tor.amp}}
+\providecommand{\pamp}{\operatorname{parf.amp}}
+\providecommand{\pdim}{\operatorname{parf.dim}}
+\providecommand{\bon}{\mathrm b}
+\providecommand{\parf}{\operatorname{parf}}
+\providecommand{\parff}{\operatorname{parf}}
+\providecommand{\ac}{\mathrm{ac}}
+
+
+% Additional notation for Exposé I, completion pages 154--166
+\providecommand{\End}{\operatorname{End}}
+\providecommand{\tr}{\operatorname{tr}}
+
+\emph{Demostración.} Basta demostrar que el homomorfismo inducido por el rango sobre el haz asociado a \(k(\Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}})\) es un homomorfismo de haces de anillos compatible con las imágenes inversas. Por (6.9), se puede sustituir \(k(\Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}})\) por \(k(\mathcal C_1)\). Quedamos, pues, reducidos a verificar a) y b) para \(L\) y \(M\) libres de tipo finito, lo cual es trivial.
+
+\textbf{6.13.} Sea todavía \((\sisi{S}{\mathcal S},A)\) un topos localmente anillado, y sean \(X\in\Ob \sisi{S}{\mathcal S}\) y \(\underline n\in H^0(X,\mathbb Z_S)\). Se define un objeto de \(\Parf(X)\), denotado por \(A_X^{\underline n}\), del modo siguiente. Si \(\underline n\) es constante de valor un entero \(n\geq0\) (resp. \(n<0\)), se pone \(A_X^{\underline n}=A_X^n\) (resp. \(A_X^{\underline n}=A_X^{-n}[1]\)); en el caso general, se descompone \(X\) en partes disjuntas \(X_i\) tales que \(\underline n|X_i\) sea constante, y \(A_X^{\underline n}\) se define como el único objeto de \(\Parf(X)\) que induce \(A_{X_i}^{\underline n|X_i}\) sobre cada \(X_i\). (Más generalmente, se puede definir \(L^{\underline n}\) para \(L\in\Ob\Parf(X)\), poniendo \(L^{\underline n}=A_X^{\underline n}\otimes L\).).
+
+La aplicación \(i_X:H^0(X,\mathbb Z_S)\longrightarrow k(\Parf(X))\), definida por \(i_X(\underline n)=\cl(A_X^{\underline n})\), es un homomorfismo de anillos (tal que \(i_X(1)=1\)), y define, para \(X\) variable, un homomorfismo de prehaces de anillos
+\[
+  i:\mathbb Z_S\longrightarrow k(\Parf(\sisi{S}{\mathcal S})).
+\]
+
+\textbf{Proposición 6.14.} Bajo las hipótesis de (6.13), se tiene
+\[
+  \rg\, i=\Id(\mathbb Z_S)
+\]
+(en otros términos, \(k(\Parf(\sisi{S}{\mathcal S}))\), considerado como prehaz de \(\mathbb Z_S\)-álgebras por medio de \(i\), está aumentado hacia \(\mathbb Z_S\) por el rango). Además, el rango
+\[
+  \rg:k(\Parf(\sisi{S}{\mathcal S}))\longrightarrow\mathbb Z_S
+\]
+define un isomorfismo sobre los haces asociados.
+
+\emph{Demostración.} La primera afirmación resulta trivialmente de las relaciones \(\cl(L[1])=-\cl(L)\), \(\cl(L^n)=n\cl(L)\) para \(L\in\Ob\Parf(\sisi{S}{\mathcal S})\). Demostremos la segunda. Se observa primero que \(i\) se factoriza de manera evidente a través de \(k(\mathcal C_0)\). Como \(\rg\, i\) es la identidad, se reduce (por (6.9)) a demostrar que el homomorfismo \(i\, \rg:k(\mathcal C_0)\longrightarrow k(\mathcal C_0)\) induce un isomorfismo sobre los haces asociados, es decir, que, para \(L\in\Ob\mathcal C_0\), \(i\, \rg(L)\) es localmente isomorfo a \(L\), lo cual es inmediato.
+
+Se deduce de ello, por (6.6.b)),
+
+\textbf{Corolario 6.15.} Bajo las hipótesis de (6.13), para todo haz abeliano \(F\) sobre \(\sisi{S}{\mathcal S}\), el grupo de las \(\sisi{S}{\mathcal S}\)-funciones aditivas de \(\Parf(\sisi{S}{\mathcal S})\) en \(F\) se identifica canónicamente con \(H^0(S,F)\) (\(S\) = objeto final de \(\sisi{S}{\mathcal S}\)), correspondiendo la función rango a \(F=\mathbb Z_S\) y a la sección unidad de \(\mathbb Z_S\).
+
+\section*{7. Dualidad de los complejos perfectos}
+
+\textbf{7.0.} En este número, \((\sisi{S}{\mathcal S},A)\) denota un topos anillado por anillos conmutativos, y se denota por \(S\) el objeto final de \(\sisi{S}{\mathcal S}\). Nos proponemos generalizar a los complejos perfectos las nociones de dualidad bien conocidas para los haces localmente libres de tipo finito.
+
+\textbf{Proposición 7.1.} Sean \(E\in\Ob\Dpx(S)_{\mathrm{parf}}\) y \(F\in\Ob\Dpx^+(S)\).
+
+\textbf{a)} Si \(F\) tiene cohomología localmente acotada, lo mismo ocurre con \(\RHom(E,F)\). Si \(F\in\Ob\Dpx(S)\) es pseudocoherente (resp. localmente de tor-dimensión finita, resp. perfecto), lo mismo ocurre con \(\RHom(E,F)\).
+
+\textbf{b)} Supongamos además que \(E\) tiene tor-dimensión finita (condición que se verifica si \(S\) es de tipo finito). Entonces, si \(F\) tiene cohomología acotada (resp. tor-dimensión finita), lo mismo ocurre con \(\RHom(E,F)\). Más precisamente, sean \(a,b,m,n\) enteros tales que \(\tamp(E)\subset[a,b]\) (o, lo que equivale a lo mismo por (5.8), \(\pamp(E)\subset[a,b]\)) y \(\Ho^i(F)=0\) para \(i\notin[m,n]\) (resp. \(\tamp(F)\subset[m,n]\)). Entonces se tiene \(\Ho^i(\RHom(E,F))=0\) para \(i\notin[m-b,n-a]\) (resp. \(\tamp(\RHom(E,F))\subset[m-b,n-a]\)).
+
+\emph{Demostración.} La afirmación a) es local, por lo que se puede suponer que \(E\) es estrictamente perfecto, y se concluye descomponiendo \(E\) (reduciéndose a \(E=A\)). Para la afirmación b), se puede suponer que \(E\) es estrictamente perfecto, que \(E^i=0\) para \(i\notin[a,b]\), y que \(F^i=0\) para \(i\notin[m,n]\) (resp. que \(F^i\) es plano para todo \(i\) y \(F^i=0\) para \(i\notin[m,n]\)). Basta entonces aplicar el lema siguiente:
+
+\textbf{Lema 7.1.1.} Sea \(E\in\Ob\Dpx^-(S)\), \(F\in\Ob\Dpx^+(S)\). Si \(E\) es estrictamente pseudocoherente (es decir, (2.1) con componentes que son sumandos directos de módulos libres de tipo finito), la flecha canónica de \(\Dpx^+(S)\)
+\[
+  \Hom^\bullet(E,F)\longrightarrow\RHom(E,F)
+\]
+es un isomorfismo.
+
+\emph{Demostración.} La sucesión espectral
+\[
+  E_2^{pq}=\Ho^p(\Ext^q(E,F)^\bullet)\Longrightarrow \Ext^*(E,F),
+\]
+donde
+\[
+  \Ext^q(E,F)^i=\coprod_{i_2-i_1=i}\Ext^q(E^{i_1},F^{i_2}),
+\]
+degenera, puesto que \(\underline{\Ext}^q(E,F)^\bullet=0\) para todo \(q>0\) (1.3.1). Se deducen de ello isomorfismos
+\[
+  E_2^{p0}=\underline{\Ho}^p(\underline{\Hom}^\bullet(E,F))
+  \xrightarrow{\sim}\Ext^p(E,F)=\Ho^p(\RHom(E,F)),
+\]
+lo cual demuestra la afirmación.
+
+\textbf{Proposición 7.1.2.} Sea \(f:(\sisi{S'}{\mathcal S'},A')\longrightarrow(\sisi{S}{\mathcal S},A)\) un morfismo de topos anillados. Sean \(E\in\Ob\Dpx^-(S)\) y \(F\in\Ob\Dpx^b(S)\) tales que \(\RHom(E,F)\in\Ob\Dpx^b(S)\) y \(\mathrm Lf^*(F)\in\Ob\Dpx^b(S')\). Existe una flecha canónica funtorial
+\[
+  \mathrm Lf^*\RHom(E,F)
+  \longrightarrow
+  \RHom(\mathrm Lf^*E,\mathrm Lf^*F).
+\]
+Esta es un isomorfismo si \(E\) es perfecto.
+
+\emph{Demostración.} En virtud de la adjunción de los funtores \(\mathrm Lf^*\) y \(\mathrm Rf_*\), basta definir una flecha
+\[
+  \RHom(E,F)
+  \longrightarrow
+  \mathrm Rf_*\RHom(\mathrm Lf^*E,\mathrm Lf^*F).
+\]
+Para ello se utilizan la flecha de adjunción \(F\to\mathbb Rf_*\mathbb Lf^*F\) y el isomorfismo de dualidad
+\[
+  \mathrm Rf_*\RHom(\mathrm Lf^*E,\mathrm Lf^*F)
+  \xrightarrow{\sim}
+  \RHom(E,\mathrm Rf_*\mathrm Lf^*F).
+\]
+Para ver que la flecha de (7.1.2) es un isomorfismo cuando \(E\) es perfecto, se reduce trivialmente, por localización y descomposición, al caso en que \(E=A\), en cuyo caso es una tautología.
+
+\textbf{Proposición 7.2.} Existe (cf. SGA 5 I 1.6), para \(E\in\Ob\Dpx(S)\) y \(F\in\Ob\Dpx^+(S)\), una flecha canónica funtorial
+\[
+  E\longrightarrow\RHom(\RHom(E,F),F).
+\]
+Esta es un isomorfismo si \(E\in\Ob\Dpx(S)_{\mathrm{parf}}\) y \(F=A\).
+
+\emph{Demostración.} Se define la flecha tomando una resolución inyectiva de \(F\) y utilizando la flecha canónica de \(\Kpx(S)\)
+\[
+  E\longrightarrow\underline{\Hom}^\bullet(\underline{\Hom}^\bullet(E,F),F).
+\]
+Para ver que la flecha en cuestión es un isomorfismo si \(E\) es perfecto y \(F=A\), se reduce, por localización y descomposición, a \(E=A\), en cuyo caso es evidente.
+
+\textbf{Definición 7.3.} \emph{Sea \(E\in\Ob\Dpx(S)\). Pondremos \(\RHom(E,A)=E^\vee\), y diremos que \(E^\vee\) es el dual de \(E\).}
+
+Por (7.1) y (7.2), si \(E\in\Ob\Dpx(S)\) es perfecto (resp. perfecto y de tor-dimensión finita), \(E^\vee\) también lo es, y la flecha canónica \(E\to E^{\vee\vee}\) es un isomorfismo. En otros términos, el funtor \(\RHom(\quad,A)\) define una antiautoequivalencia de la categoría \(\Dpx(S)_{\mathrm{parf}}\) (resp. \(\Dpx(S)_{\parf}\) (5.8.4.b))) consigo misma.

@@ -1,0 +1,166 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance: sección 5 completa.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 13134--13295.
+% Las lecturas fuente dudosas se conservan y se consignan en el informe de control.
+
+\section*{5. El isomorfismo \(\Pic(X)\cong\Gr^1(X)\)}
+
+\subsection*{5.1}
+Sea \(X\) un topos anillado cualquiera. Entonces se pueden definir el anillo \(K^\circ(X)\) y la filtración \((\Filt^i(X))_{i\in\mathbb Z}\) exactamente como para los esquemas. Del mismo modo, se define el grupo \(\Pic(X)\) como el grupo de las clases de isomorfismo de los \(\mathcal O_X\)-módulos invertibles. Se denota por
+\begin{equation}\tag{5.1.1}
+ i:\Pic(X)\longrightarrow K^\circ(X)
+\end{equation}
+la aplicación que asocia a la clase \(\cl_P(L)\in\Pic(X)\) de un \(\mathcal O_X\)-módulo invertible \(L\) el elemento \(\cl^\circ(L)\) de \(K^\circ(X)\). Esta aplicación es evidentemente un homomorfismo de \(\Pic(X)\) al grupo multiplicativo \(K^\circ(X)^*\) de los elementos invertibles de \(K^\circ(X)\). En adelante escribiremos multiplicativamente la ley de grupo de \(\Pic(X)\).
+
+La aplicación \(i\) tiene un inverso por la izquierda definido por el funtor «~det~»: cuando \(E\) es un \(\mathcal O_X\)-módulo localmente libre de rango \(n\), se tiene
+\[
+ \det(E)=\bigwedge^n E.
+\]
+Si
+\begin{equation}\tag{5.1.2}
+0\longrightarrow E'\longrightarrow E\longrightarrow E''\longrightarrow0
+\end{equation}
+es una sucesión exacta de \(\mathcal O_X\)-módulos localmente libres, hay un isomorfismo canónico
+\[
+ \det(E)\xrightarrow{\sim}(\det(E'))\otimes_{\mathcal O_X}(\det(E''))
+\]
+que proviene de (6.2.9) y del hecho de que (5.1.2) es localmente escindida. Se obtiene, por tanto, un homomorfismo de grupos abelianos
+\begin{equation}\tag{5.1.3}
+ \det:K^\circ(X)\longrightarrow\Pic(X)
+\end{equation}
+que es el inverso por la izquierda buscado de \(i\). En particular, \(i\) es inyectiva, y en adelante identificaremos \(\Pic(X)\) con su imagen en \(K^\circ(X)^*\).
+
+\subsection*{5.2}
+Se define otra aplicación
+\begin{equation}\tag{5.2.1}
+ \delta:\Pic(X)\longrightarrow\Filt^1(X)
+\end{equation}
+poniendo, para todo \(L\in\Pic(X)\),
+\[
+ \delta(L)=1-L^{-1}.
+\]
+
+\textbf{Observaciones 5.2.2.}:
+\begin{enumerate}[label=\alph*)]
+\item Supongamos que \(X\) es el topos localmente anillado de los haces de Zariski sobre un esquema \(S\). Cuando \(D\) es un divisor de Cartier \(\geq0\) sobre \(\sisi{X}{S}\) y % Canon SGA-SRC-001337
+\[
+ L=\cl^\circ(\mathcal O_S(D)),
+\]
+se tiene
+\begin{equation}\tag{5.2.3}
+ \theta_S(\delta(L))=\cl_\bullet(\mathcal O_D)
+\end{equation}
+donde \(\theta_S:K^\circ(X)\to K_\bullet(S)\) es el homomorfismo canónico de 1.2.3. Esto resulta inmediatamente de la sucesión exacta
+\[
+0\longrightarrow\mathcal O_S(-D)\longrightarrow\mathcal O_S\longrightarrow\mathcal O_D\longrightarrow0.
+\]
+
+\item Bajo las hipótesis de 5.1 y 5.2 se tiene, para todo \(L\in\Pic(X)\),
+\begin{equation}\tag{5.2.4}
+ \delta(L)\equiv L-1\quad\operatorname{mod.}\Filt^2(X),
+\end{equation}
+lo que justifica la notación \(c_1(L)\) introducida más abajo. En efecto, se tiene
+\[
+ (L-1)-(1-L^{-1})=(L-1)(1-L^{-1})\in\Filt^2(X).
+\]
+\end{enumerate}
+
+\subsection*{5.3}
+La composición de \(\delta\) con el epimorfismo canónico
+\[
+ \Filt^1(X)\longrightarrow\Gr^1(X)
+\]
+da la «~primera clase de Chern~» sobre \(\Pic(X)\):
+\begin{equation}\tag{5.3.1}
+ c_1:\Pic(X)\longrightarrow\Gr^1(X).
+\end{equation}
+
+\textbf{Teorema 5.3.2.} La aplicación \(c_1\) (5.3.1) es un homomorfismo inyectivo, y el homomorfismo
+\[
+ \det:\Filt^1(X)\longrightarrow\Pic(X)
+\]
+induce, al pasar al cociente, un homomorfismo inverso por la izquierda de \(c_1\):
+\[
+ \alpha:\Gr^1(X)\longrightarrow\Pic(X).
+\]
+Si toda sección \(n\) del haz constante \(\mathbb Z_X\) está acotada (por ejemplo, si \(X\) es «~cuasicompacto~», o si el objeto final \(e\) de \(X\) es suma finita de objetos conexos), entonces \(c_1\) es un isomorfismo y \(\alpha\) es su inverso.
+
+\emph{Demostración:} \(c_1\) es un homomorfismo, pues para todo \(L,L'\in\Pic(X)\) se tiene la ecuación
+\[
+ (1-(LL')^{-1})-(1-L^{-1})-(1-{L'}^{-1})
+ =
+ -(1-L^{-1})(1-{L'}^{-1})\in\Filt^2(X).
+\]
+Admitamos por el momento que
+\[
+ \det(\Filt^2(X))=\{1\}\in\Pic(X),
+\]
+es decir, que \(\alpha\) está bien definido. Se tiene entonces
+\[
+ \alpha\circ c_1=\id_{\Pic(X)},
+\]
+pues, por 5.2.2 b), se tiene:
+\[
+ \det(1-L^{-1})=(\det(L-1))=L
+\]
+para todo \(L\in\Pic(X)\). A continuación se demuestra que
+\[
+ c_1\circ\alpha=\id_{\Gr^1(X)}
+\]
+cuando toda sección \(n\) de \(\mathbb Z_X\) está acotada. Como \(\Filt^1(X)\) es el grupo abeliano engendrado por los elementos \(\cl^\circ(E)-n\), donde \(E\) es un \(\mathcal O_X\)-módulo localmente libre de rango \(n\), basta demostrar, teniendo en cuenta 5.2.2 b), que
+\begin{equation}\tag{5.3.3}
+ \det(\cl^\circ(E))-\cl^\circ(E)+\sisi{N}{n}-1\in\Filt^2(X). % Canon SGA-SRC-001338
+\end{equation}
+Como \(n\) está acotada, el objeto final \(e\) de \(X\) se descompone en una suma directa finita disjunta \(\coprod e_i\) de subobjetos, de tal manera que \(n\) es constante sobre cada subtopos \(X/e_i\) \((i=1,\ldots,p)\). Como el funtor \(Y\rightsquigarrow K^\circ(X/Y)\) \((Y\in\operatorname{Ob}(X))\) transforma sumas directas finitas en productos directos finitos, se puede suponer que \(\underline n\) es constante sobre \(X\), es decir, \(\underline n=n\in\mathbb Z\). Poniendo \(E=\cl^\circ(\underline E)\), se obtiene (cf. Exp. V):
+\[
+ \det(E)=\lambda^n(E)=\gamma^n((E-n)+1)
+ =
+ \sum_{0\leq i\leq n}\gamma^i(E-n),
+\]
+lo que demuestra (5.3.3), pues el primer miembro es igual a
+\[
+ \sum_{2\leq i\leq n}\gamma^i(E-n).
+\]
+
+Queda por demostrar el
+
+\textbf{Lema 5.3.4.} Para todo topos anillado \(X\) y para todo \(x\in\Filt^2(X)\), se tiene
+\[
+ \det(x)=1.
+\]
+
+\emph{Demostración:} Sea \(\epsilon:K^\circ(X)\to\Gamma(\mathbb Z)\) el homomorfismo de aumentación. Entonces (6.2.8) y (6.5.8), más abajo, dan por linealidad la fórmula
+\begin{equation}\tag{5.3.5}
+ \det(xy)=(\det(x))^{\epsilon(y)}(\det(y))^{\epsilon(x)}
+ \qquad(x,y\in K^\circ(X)).
+\end{equation}
+Por tanto, basta demostrar que para todo \(k>1\) se tiene
+\[
+ \det(\gamma^k(E-n))=1,
+\]
+donde, como antes, \(E=\cl^\circ(\underline E)\), \(n=\epsilon(E)\). Ahora bien, se tiene
+\[
+ \gamma^k(x)=\lambda^k(x+k-1)
+\]
+para todo \(x\in K^\circ(X)\), de modo que
+\[
+ \det(\gamma^k(E-n))
+ =
+ \det(\lambda^k(E-n+k-1))
+ =
+ \det\left(\sum_{p+q=k}\binom{\sisi{n}{-n}+k-1}{p}\lambda^q(E)\right). % Canon SGA-SRC-001340
+\]
+Pero (6.2.10) y (6.5.3) dan
+\[
+ \det(\lambda^q(E))=(\det(E))^{\binom{n-1}{q-1}}
+\]
+para todo \(q>0\), de donde
+\[
+ \det(\gamma^k(E-n))=(\det(E))^r,
+\]
+con
+\[
+ r=\sum_{\substack{p+q=k\\ q\geq1}}
+ \binom{-n+k-1}{p}\binom{n-1}{q-1}.
+\]
+Ahora bien, \(r\) es una sección de \(\mathbb Z\), igual en todas partes al coeficiente de \(t^{k-1}\) en \((1+t)^{k-2}\), y por tanto nula. Esto concluye la demostración.

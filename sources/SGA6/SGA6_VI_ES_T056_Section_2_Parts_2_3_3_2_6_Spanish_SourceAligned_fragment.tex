@@ -1,0 +1,82 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.3.3--2.6, líneas 9014--9088 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{2.3.3.} De 2.3.1 y 2.3.2 resulta que el funtor \(\Proj_0\) es exacto. Volviendo a las notaciones de 2.2, se deduce, pues, pasando a las categorías derivadas, un funtor denotado también por \(\Proj_0\):
+\[
+  \Proj_0:D^+(\mathcal G)\longrightarrow D^+(\mathcal A).
+\]
+Se ve igualmente en las construcciones anteriores que el funtor \(\Proj_0\) sobre la categoría de los \(B\)-módulos graduados es compatible con el producto tensorial; lo mismo sigue siendo cierto para el funtor obtenido sobre las categorías derivadas.
+
+
+\textbf{2.4.} Para todo entero $k$, y todo $\mathcal O_X$-módulo $L$, pongamos:
+\begin{equation}\tag{2.4.1}
+  F_k(L)=\bigoplus_{n\geq k} f_*\bigl(L(n)\bigr).
+\end{equation}
+El funtor $F_k:\mathcal A\to\mathcal G$ así definido es exacto por la izquierda. Como la categoría de los $\mathcal O_X$-módulos tiene suficientes inyectivos, se puede definir un funtor derivado:
+\begin{equation}\tag{2.4.2}
+  \mathbf R F_k:D^+(\mathcal A)\longrightarrow D^+(\mathcal G).
+\end{equation}
+Si $L$ es un $\mathcal O_X$-módulo localmente libre de tipo finito, existe un entero $k_0$ tal que, para $k\geq k_0$, $L$ es $F_k$-acíclico. Para verlo, basta mostrar que, para $n$ suficientemente grande, $L$ es acíclico para los funtores $L\leadsto f_*\bigl(L(n)\bigr)$. Como la tensorización por $\mathcal O_X(n)$ es un funtor exacto, esto resulta inmediatamente de la sucesión espectral de los funtores compuestos y de 1.3.
+
+\textbf{2.5.} Nos proponemos construir, para todo $\mathcal O_X$-módulo $F$, un homomorfismo funtorial en $F$:
+\begin{equation}\tag{2.5.1}
+  \beta:\operatorname{Proj}_0\bigl(F_k(F)\bigr)\longrightarrow F.
+\end{equation}
+Para ello, se define la restricción de $\beta$ a los $D_+(U,s)$ (2.3.2). Ahora bien, por construcción se tiene, poniendo $M=F_k(F)$:
+\[
+  \operatorname{Proj}_0(M)|D_+(U,s)
+  =\bar f^{*}_{U,s}\bigl(M_{(s),U}\bigr).
+\]
+Para definir un homomorfismo
+\[
+  \bar f^{*}_{U,s}\bigl(M_{(s),U}\bigr)\longrightarrow F|_{D_+(U,s)},
+\]
+basta, según la definición de $\bar f^{*}_{U,s}$ como adjunto por la izquierda al funtor de imagen directa, definir un homomorfismo $f_{U,s*}(\mathcal O_X)$-lineal
+\[
+  M_{(s),U}\longrightarrow f_{U,s*}\bigl(F|_{D_+(U,s)}\bigr).
+\]
+Para hacerlo, hay que darse, para todo abierto $V$ de $U$, un homomorfismo:
+\begin{equation}\tag{2.5.2}
+  \Gamma\bigl(V,M\bigr)_{(s)}\longrightarrow \Gamma\bigl(D_+(V,s),F\bigr)
+\end{equation}
+compatible con las restricciones a los abiertos de $U$, y tomar el homomorfismo correspondiente sobre los haces asociados. El homomorfismo (2.5.2) se define de la manera siguiente: sea $z/s^n\in\Gamma(V,M)_{(s)}$, donde, siendo $s$ de grado $d$, $z\in\Gamma(V,M_{nd})=\Gamma\bigl(D_+(V,s),F(nd)\bigr)$; se asocia entonces a $z/s^n$ la sección $z.\sisi{\alpha_d}{\alpha_{nd}}(s^n)^{-1}$ de $F$ sobre $D_+(V,s)$, denotando por $\sisi{\alpha_d}{\alpha_{nd}}$ el homomorfismo canónico
+\[
+  \Gamma(V,\sisi{B_d}{B_{nd}})\longrightarrow \Gamma\bigl(f^{-1}(V),\mathcal O_X(\sisi{d}{nd})\bigr)
+\]
+(cf. EGA II 2.6.3 y 2.6.4). Se verifican sin dificultad las compatibilidades necesarias, de donde se obtiene, por pegado, el homomorfismo (2.5.1).
+
+Está claro que, cuando $F$ es cuasicoherente, el homomorfismo así construido es el de EGA II (3.3.4.1).
+
+El homomorfismo de funtor $\operatorname{Proj}_0\circ F_k\to \operatorname{Id}$ sobre la categoría de los $\mathcal O_X$-módulos da, pasando a las categorías derivadas, un homomorfismo de funtor sobre $D^+(\mathcal A)$:
+\begin{equation}\tag{2.5.3}
+  \operatorname{Proj}_0\circ\mathbf R F_k\longrightarrow \operatorname{Id}_{D^+(\mathcal A)}.
+\end{equation}
+
+\textbf{Proposición 2.6.} Sean $S$ un esquema cuasicompacto, $E$ un $\mathcal O_S$-módulo localmente libre de tipo finito, $X=\mathbf P(E)$, y $L^{\bullet}$ un complejo perfecto sobre $X$. Entonces existe un entero $k_0$ tal que, para $k\geq k_0$, se verifican las propiedades siguientes:
+\[
+\begin{array}{ll}
+\mathrm{i)}& \mathbf R F_k(L^{\bullet})\text{ es }\mathcal G_0\text{-perfecto};\\[2mm]
+\mathrm{ii)}& \text{El morfismo canónico }(2.5.3):
+\operatorname{Proj}_0\circ\mathbf R F_k(L^{\bullet})\longrightarrow L^{\bullet}
+\text{ es un isomorfismo de }D^+(\mathcal A).
+\end{array}
+\]
+
+La noción de complejo $\mathcal G_0$-perfecto considerada aquí es local, es decir, se trata de perfección respecto de la categoría fibrada sobre $S$ definida por $\mathcal G_0$. Esta noción de perfección tiene sentido, pues $\mathcal G_0$ verifica los axiomas de (I 4.0): solo la estabilidad por núcleo de epimorfismo no es inmediata; resulta de 1.5.1.
+
+Como $S$ es cuasicompacto, basta verificar localmente sobre $S$ las dos afirmaciones de 2.6, de modo que se puede suponer $S$ afín. El haz invertible $\mathcal O_X(1)$ es entonces amplio, y se dispone de resoluciones globales sobre $X$ (II 2.2.9). Existe, pues, un complejo $L'{}^{\bullet}$ de $D_{\mathrm{parf}}(\mathcal A)$, estrictamente perfecto, y un isomorfismo en $D_{\mathrm{parf}}(\mathcal A)$, $L^{\bullet}\xleftarrow{\sim}L'{}^{\bullet}$, lo que permite suponer $L^{\bullet}$ estrictamente perfecto. Ahora bien, se vio en 2.4 que, para $k$ suficientemente grande, los $L^i$, todos nulos salvo un número finito, son $F_k$-acíclicos; se tiene por consiguiente:
+\[
+  \mathbf R F_k(L^{\bullet})=F_k(L^{\bullet})
+\]
+si $k$ es suficientemente grande. Ahora bien, según 1.3 y 1.6, se puede encontrar $k_0$ tal que, para $k\geq k_0$, se cumpla la condición anterior y los $F_k(L^i)$ sean $B$-módulos $\mathcal G_0$-perfectos para todo $i$. El complejo $F_k(L^{\bullet})$ es entonces $\mathcal G_0$-perfecto, de donde i).
+
+Si $k$ se elige como anteriormente, el homomorfismo (2.5.3) es entonces el homomorfismo
+\[
+  \operatorname{Proj}_0\bigl(F_k(L^{\bullet})\bigr)\longrightarrow L^{\bullet},
+\]
+y es un isomorfismo sobre cada componente, puesto que se ha supuesto que $L^{\bullet}$ es estrictamente perfecto, de donde ii).
+

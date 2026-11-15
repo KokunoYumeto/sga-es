@@ -1,0 +1,32 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 3, demostración de la proposición 3.7 b), líneas 4310--4334 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\emph{Demostración de b).} Como el coherizador es de dimensión cohomológica finita según a), admite ([H] I 5.3) un derivado derecho
+\[
+ RQ:\mathrm D(S)\longrightarrow\mathrm D(\Qcoh(S))
+\]
+(cuya restricción a $\mathrm D^+(S)$ coincide con el funtor $\mathbb RQ$ definido anteriormente). Para $E\in\Ob\mathrm D(\Qcoh(S))$, existe un isomorfismo funtorial canónico
+\begin{equation}\tag{1}
+ E\xrightarrow{\sim}\mathbb RQ(E),
+\end{equation}
+puesto que, según (3.5.1), los $E^i$ son acíclicos para $Q$ y tales que $E^i\xrightarrow{\sim}Q(E^i)$. Por otra parte, para $E\in\Ob\mathrm D(S)$, se tiene un homomorfismo funtorial canónico
+\begin{equation}\tag{2}
+ RQ(E)\longrightarrow E
+\end{equation}
+(que proviene, cuando los $E^i$ son $Q$-acíclicos, del homomorfismo de adjunción ordinario entre $\varphi$ y $Q$). Se verifica trivialmente que los homomorfismos (1) y (2) hacen de
+\[
+ RQ:\mathrm D(S)\longrightarrow\mathrm D(\Qcoh(S))
+\]
+un adjunto a derecha de
+\[
+ \varphi:\mathrm D(\Qcoh(S))\longrightarrow\mathrm D(S).
+\]
+El hecho de que (1) sea un isomorfismo implica que $\varphi$ es plenamente fiel. Finalmente, utilizando la sucesión espectral
+\[
+ R^pQ(H^q(E))\Longrightarrow R^{*}Q(E),
+\]
+(convergente porque $Q$ es de dimensión cohomológica finita), se ve que (2) es un isomorfismo para $E\in\Ob\mathrm D(S)_{\qcoh}$, y por tanto que $\varphi$ tiene por imagen esencial $\mathrm D(S)_{\qcoh}$. Esto prueba b) y termina la demostración de (3.7).

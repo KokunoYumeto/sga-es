@@ -1,0 +1,69 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 4, números 4.1--4.4, líneas 9216--9278 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\section*{4. Cálculo del \(K'\) de un fibrado de banderas}
+
+\subsection*{4.1}
+Sean \(S\) un esquema y \(E\) un \(\mathcal O_S\)-módulo localmente libre de rango \(n\). Sea \(\pi=(p_1,\ldots,p_k)\) una sucesión de enteros \(\geq1\), tal que:
+\[
+  \sum_{i=1}^k p_i=n.
+\]
+Recordemos que se llama funtor de las banderas de tipo \(\pi\) de \(E\) al funtor sobre la categoría de los \(S\)-esquemas, con valores en la categoría de los conjuntos, que a un \(S\)-esquema \(X\xrightarrow{f} S\) asocia el conjunto de las sucesiones de cocientes de \(f^*(E)\):
+\[
+  (L_{k-1},\ldots,L_1),
+\]
+donde, para todo \(i\), \(L_i\) es un cociente de \(L_{i+1}\), localmente libre de rango \(p_1+\ldots+p_i\). Tal funtor es representable por un \(S\)-esquema \(D_\pi(E)\), que está provisto de una sucesión de cocientes canónica de la imagen inversa de \(E\), localmente libres de rangos \(p_1,p_1+p_2,\ldots\).
+
+Si \(\pi=(1,n-1)\), entonces \(\mathbf D_\pi(E)=\mathbf P(E)\). Si \(\pi=(r,n-r)\), entonces \(\mathbf D_\pi(E)=\mathbf G_{r,n}(E)\), grassmanniano de tipo \((r,n-r)\) de \(E\). Si todos los \(p_i\) son iguales a \(1\), se obtiene el fibrado de banderas usual de \(E\), denotado por \(D(E)\).
+
+\textbf{Lema 4.2.} Sean \(S\) un esquema, \(E\) un \(\mathcal O_S\)-módulo localmente libre de rango \(n\), \(\pi=(p_1,\ldots,p_i,\ldots,p_k)\), con \(p_1+\ldots+p_k=n\); sean \(p',p''\) dos enteros \(\geq1\), tales que \(p'+p''=p_i\); pongamos \(\pi'=(p_1,\ldots,p_{i-1},p',p'',p_{i+1},\ldots,p_k)\), \(\pi''=(p',p'')\). Sean \(L_1,\ldots,L_{k-1}\) los cocientes canónicos de la imagen inversa de \(E\) sobre \(D_\pi(E)\), y sea \(F\) el núcleo de \(L_i\to L_{i-1}\). Entonces se tiene un \(S\)-isomorfismo canónico:
+\[
+  \mathbf D_{\pi'}(E)\simeq \mathbf D_{\pi''}(F).
+\]
+La demostración, inmediata a partir de la definición funtorial de los esquemas de banderas, se deja al lector.
+
+\textbf{Lema 4.3.} Sean \(A\) un anillo conmutativo con unidad, \(n\) un entero \(>0\), \((c_i)_{1\le i\le n}\) una familia de elementos de \(A\); sea \(C\) la \(A\)-álgebra engendrada por generadores \(\xi_i\), \(i=1,\ldots,n\), sometidos a las relaciones:
+\[
+  \sigma_i(\xi_1,\ldots,\xi_n)=c_i,
+  \qquad i=1,\ldots,n,
+\]
+donde las \(\sigma_i\) denotan las funciones simétricas elementales. Sean \(p_1,\ldots,p_k\) enteros \(\geq1\), de suma \(n\), y, para \(1\le j\le k\),
+\[
+  \xi^{(j)}=(\xi_1^{(j)},\ldots,\xi_{p_j}^{(j)}),
+\]
+con
+\[
+  \xi_i^{(j)}=\xi_{\sum_{\alpha<j}p_\alpha+i}.
+\]
+Pongamos:
+\[
+  c_i^{(j)}=\sigma_i(\xi_1^{(j)},\ldots,\xi_{p_j}^{(j)}),
+  \qquad 1\le j\le k,
+  \quad 1\le i\le p_j,
+\]
+y sea \(B\) la subálgebra de \(C\) engendrada por los \(c_i^{(j)}\). Entonces:
+\begin{enumerate}[label=\textup{\roman*)}]
+\item los elementos de la forma:
+\[
+  (\xi^{(1)})^{\alpha(1)}\cdots (\xi^{(k)})^{\alpha(k)}.
+\]
+donde \(\alpha(j)=(\alpha_1^{(j)},\ldots,\alpha_{p_j}^{(j)})\), y \(0\le \alpha_i^{(j)}\le p_j-i\), forman una base de \(C\) considerado como \(B\)-módulo.
+\item los generadores \(c_i^{(j)}\) de la \(A\)-álgebra \(B\) satisfacen las \(n\) relaciones isóbaras deducidas de la relación:
+\[
+  \sisi{\sum_{i=1}^{n}c_i=\prod_{j=1}^{k}\left(\sum_{i=1}^{p_j}c_i^{(j)}\right)}{1+\sum_{i=1}^{n}c_i=\prod_{j=1}^{k}\left(1+\sum_{i=1}^{p_j}c_i^{(j)}\right)}, % Canon SGA-SRC-001520
+\]
+(atribuyéndose a \(c_i\) y a \(c_i^{(j)}\) el peso \(i\)), y estas \(n\) relaciones engendran el ideal de las relaciones entre los \(c_i^{(j)}\).
+\end{enumerate}
+
+\textbf{Corolario 4.4.} Los elementos de \(C\) de la forma:
+\[
+  \xi_1^{\alpha_1}\cdots\xi_{n-1}^{\alpha_{n-1}},
+  \qquad 0\le\alpha_i\le n-i,
+\]
+forman una base de \(C\) considerado como módulo sobre \(A\).
+
+Para la demostración del lema y del corolario, remitimos a [2], exposición 4, página 4.19, de donde se han tomado.

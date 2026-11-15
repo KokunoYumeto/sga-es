@@ -1,0 +1,282 @@
+% SGA 6, Exposición 0: fragmento español alineado con la fuente.
+% Alcance: secciones 5--7 y bibliografía completa, antes del Apéndice.
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 417--546 inclusive.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\subsection*{5.}
+En la forma presentada en el n\textsuperscript{o}~4, la fórmula de
+Riemann--Roch (1.2) también tiene sentido para un morfismo propio localmente
+de intersección completa de espacios analíticos complejos (o de espacios
+analíticos rígidos en el sentido de Tate). Pero, naturalmente, la
+demostración dada en [RRR] solo se aplica a este caso cuando se supone,
+además, que el morfismo $f$ es \underline{proyectivo} y, como en el caso
+algebraico, parece que hace falta una idea esencialmente nueva para tratar el
+caso general. La fórmula aquí considerada es una fórmula con valores en un
+«~anillo de Chow analítico~» $\Gr^\bullet(X)$, o más bien
+$\Gr^\bullet(X)_{\mathbb Q}$, construido según el principio explicado en
+4.2 (la dificultad allí encontrada se desvanece, por otra parte, debido a
+que estamos en característica cero, como se señala en Exp. XIV
+n\textsuperscript{o}~1).
+
+Cuando $X$ e $Y$ son no singulares, es posible dar otra versión de la fórmula
+de Riemann--Roch procediendo como sigue. Sea primero $X$ un espacio analítico
+complejo cualquiera, y sea $X^{\mathrm{top}}$ el mismo espacio provisto del
+haz de funciones complejas continuas. Se tiene, pues, un morfismo canónico de
+espacios anillados
+\[
+X^{\mathrm{top}}\longrightarrow X,
+\]
+que define, gracias al evidente carácter contravariante del funtor
+$K^\bullet(X)$ respecto del espacio anillado variable $X$, un homomorfismo
+de anillos
+\begin{equation}\tag{5.1}
+K^\bullet(X)\longrightarrow K^\bullet(X^{\mathrm{top}}).
+\end{equation}
+Supongamos, para simplificar, que $X^{\mathrm{top}}$ es compacto; entonces,
+como en el caso (ya señalado en 3.1) de un esquema que admite un módulo
+invertible amplio, se ve (Exp. II) que todo complejo perfecto sobre
+$X^{\mathrm{top}}$ es globalmente isomorfo a un complejo acotado localmente
+libre en cada grado, es decir, a un complejo de fibrados vectoriales
+complejos sobre $X^{\mathrm{top}}$, y que, por consiguiente,
+$K^\bullet(X^{\mathrm{top}})$ es canónicamente isomorfo al conocido grupo
+$K(X^{\mathrm{top}})$ de los topólogos [1], definido en términos de fibrados
+vectoriales complejos sobre el espacio compacto $X^{\mathrm{top}}$. Se puede
+interpretar, pues, el homomorfismo (5.1) como un homomorfismo del
+$K^\bullet(X)$ definido en términos de la estructura analítica al conocido
+anillo $K(X^{\mathrm{top}})$ de los topólogos. Si ahora
+$f:X\longrightarrow Y$ es un morfismo de espacios analíticos no singulares
+compactos, se le sabe asociar, gracias a Atiyah--Hirzebruch [1], un
+homomorfismo de grupos
+\begin{equation}\tag{5.2}
+f^{\mathrm{top}}_*:K^\bullet(X^{\mathrm{top}})\longrightarrow K^\bullet(Y^{\mathrm{top}}).
+\end{equation}
+Utilizando asimismo el homomorfismo $f_*$ de (3.1), definido por la fórmula
+(3.2) (que aquí utiliza implícitamente el teorema de finitud de Grauert [\sisi{4}{3}] % Canon SGA-SRC-001493
+para un morfismo propio de espacios analíticos), se obtiene un cuadrado de
+homomorfismos naturales que solo hace intervenir grupos del tipo $K^\bullet$
+(con exclusión de anillos del tipo de los anillos de Chow o de cohomología):
+\begin{equation}\tag{5.3}
+\begin{array}{ccc}
+K^\bullet(X) & \longrightarrow & K^\bullet(X^{\mathrm{top}}) \\
+f_*\downarrow && \downarrow f^{\mathrm{top}}_* \\
+K^\bullet(Y) & \longrightarrow & K^\bullet(Y^{\mathrm{top}}).
+\end{array}
+\end{equation}
+La fórmula de tipo Riemann--Roch a la que aludíamos consiste en afirmar la
+conmutatividad de este cuadrado. Obsérvese la diferencia de naturaleza entre
+esta afirmación (que no desprecia los fenómenos de torsión y se sitúa en un
+grupo $K^\bullet(Y^{\mathrm{top}})$ de naturaleza esencialmente discreta) y
+la fórmula de Riemann--Roch del tipo considerado en el
+n\textsuperscript{o}~4, que se sitúa en un grupo del tipo «~Chow~» que ya no
+es de naturaleza discreta, pero que, en cambio, debe tensorizarse por
+$\mathbb Q$. Obsérvese que la fórmula (5.3) está demostrada, en todo caso,
+cuando $X$ e $Y$ son variedades proyectivas no singulares [7], al igual que
+la fórmula del tipo considerado en el n\textsuperscript{o}~4, que está
+demostrada en este caso en [RRR]. Se trata de una variante plausible del
+teorema del índice de Atiyah--Singer (y de sus generalizaciones debidas a
+Shih [\sisi{7}{6}] y a Atiyah), que reclama evidentemente una generalización común. Una % Canon SGA-SRC-001494
+vez demostrada la conmutatividad de (5.3), se deduciría inmediatamente,
+mediante el «~teorema de Riemann--Roch diferenciable~» de
+Atiyah--Hirzebruch [1], una variante cohomológica de la fórmula de
+Riemann--Roch analítica compleja, a saber, la conmutatividad del cuadrado
+\begin{equation}\tag{5.4}
+\begin{array}{ccc}
+K^\bullet(X) & \xrightarrow{\;x\longrightarrow \ch(x)\Todd(T_X)\;} & H^{2*}(X,\mathbb Q) \\
+\downarrow && \downarrow \\
+K^\bullet(Y) & \xrightarrow{\;y\longrightarrow \ch(y)\Todd(T_Y)\;} & H^{2*}(Y,\mathbb Q),
+\end{array}
+\end{equation}
+donde las flechas horizontales se deducen de las clases de Chern
+cohomológicas, deducidas del homomorfismo (5.1) y del homomorfismo de clase de
+Chern ordinario
+\[
+K^\bullet(X^{\mathrm{top}})\longrightarrow H^{2*}(X,\mathbb Z),
+\]
+la primera flecha vertical es la misma que en (5.3), y la segunda es el
+homomorfismo de Gysin en cohomología racional.
+
+\subsection*{6.}
+En todo lo anterior apenas se ha tratado más que el invariante contravariante
+$K^\bullet(X)$, con exclusión del invariante covariante $K_\bullet(X)$ cuya
+existencia se señaló en 3.1. Si se considera que $K^\bullet(X)$ proporciona
+un análogo del anillo de \underline{cohomología} entera de un espacio
+topológico, debe considerarse que $K_\bullet(X)$ proporciona un análogo de la
+\underline{homología} entera, correspondiendo entonces la estructura de
+módulo de $K_\bullet(X)$ sobre $K^\bullet(X)$ a la operación de producto
+cap\footnote{Esta analogía no es, por otra parte, puramente verbal, y puede
+precisarse, tras pasar a los graduados asociados $\Gr^\bullet(X)$,
+$\Gr_\bullet(X)$, mediante una relación explícita de compatibilidad entre la
+estructura de módulo sobre $\Gr_\bullet(X)$ y la operación «~cap~».}. El
+hecho de que, cuando $X$ es regular, el homomorfismo natural
+$K^\bullet(X)\to K_\bullet(X)$ sea un isomorfismo debe considerarse el
+análogo del teorema de dualidad de Poincaré sobre las variedades topológicas
+orientadas, que afirma que el producto cap con la clase de homología
+fundamental define un isomorfismo de la cohomología a la homología. Estas
+analogías sugieren, además, la conveniencia de definir también, para un
+poliedro finito $X$, pongamos por caso, un invariante $K_\bullet(X)$ de
+carácter covariante, cuyas relaciones con la homología entera (sucesión
+espectral, homomorfismo de Chern\dots) serían análogas a las existentes entre
+$K^\bullet(X)$ y la cohomología entera; tampoco parece excluido que puedan
+existir, en términos de estos grupos $K_\bullet(X)$, variantes del teorema de
+Riemann--Roch diferenciable, válidas para espacios más generales que las
+variedades diferenciables compactas.
+
+Volviendo al caso en que $X$ es un esquema noetheriano cualquiera, conviene
+dotar a $K_\bullet(X)$ de una filtración creciente,
+$\Fil_iK_\bullet(X)$ engendrada por clases $\cl_\bullet(F)$, con $F$ un haz
+coherente sobre $X$ tal que $\dim \operatorname{supp}F\le i$. Se demostrará
+(Exp. X) la compatibilidad de esta filtración con la estructura de módulo y
+la filtración de $K^\bullet(X)$, es decir, la fórmula
+\begin{equation}\tag{6.1}
+\Fil^iK^\bullet(X)\cdot \Fil_jK_\bullet(X)\subset \Fil_{j-i}K_\bullet(X),
+\end{equation}
+lo que permite dotar al graduado asociado al módulo filtrado $K_\bullet(X)$,
+denotado por
+\[
+\Gr_\bullet(X),
+\]
+de una estructura de módulo sobre $\Gr^\bullet(X)$. Sus elementos pueden
+interpretarse, además, como \uline{clases de ciclos algebraicos} sobre $X$
+(para una relación de equivalencia menos fina que la equivalencia racional,
+cuando $X$ es de tipo finito sobre un cuerpo base $K$). Si
+\[
+f:X\longrightarrow Y
+\]
+es un morfismo propio de esquemas noetherianos, entonces
+\begin{equation}\tag{6.2}
+f_*:K_\bullet(X)\longrightarrow K_\bullet(Y)
+\end{equation}
+es compatible con las filtraciones y define un homomorfismo de grupos
+graduados
+\begin{equation}\tag{6.3}
+f_*:\Gr_\bullet(X)\longrightarrow \Gr_\bullet(Y),
+\end{equation}
+que da lugar a una «~fórmula de proyección~», es decir, que es
+$\Gr^\bullet(Y)$-lineal, fórmula que se obtiene al pasar a los graduados a
+partir de la fórmula de proyección análoga para el homomorfismo (6.2) (que es
+$K^\bullet(Y)$-lineal).
+
+\uline{Desde el punto de vista propuesto en el Seminario, una teoría de las
+intersecciones manejable sobre los esquemas noetherianos $X$, no
+necesariamente regulares, debe consistir en el estudio combinado de los
+invariantes contravariantes} $K^\bullet(X),\Gr^\bullet(X)$ \uline{y de los
+invariantes covariantes} $K_\bullet(X),\Gr_\bullet(X)$, \uline{que desempeñan
+papeles de naturaleza esencialmente diferente y cuyas propiedades se
+complementan mutuamente.} Así, los grupos covariantes
+$K_\bullet(X),\Gr_\bullet(X)$ se calculan mejor para ciertas fibraciones no
+propias, gracias a la «~sucesión exacta de homotopía~» que puede establecerse
+para ellos ([RRR] y Exp. IX); por ejemplo, se demuestran (Exp. IX)
+isomorfismos canónicos tales como
+\[
+K_\bullet(X[t])\simeq K_\bullet(X),\qquad \Gr_\bullet(X[t])\simeq \Gr_\bullet(X),
+\]
+que fallan, en general, para $K^\bullet$ cuando $X$ es un esquema no regular.
+En cambio, $K^\bullet(X)$ y $\Gr^\bullet(X)$ se prestan bien a los cálculos
+gracias a sus estructuras de anillos.
+
+Cuando se consideran esquemas $X$ propios sobre un cuerpo, la proyección
+\[
+f^X:X\longrightarrow(\operatorname{point})
+\]
+define un homomorfismo «~\uline{característica de Euler--Poincaré}~»
+\begin{equation}\tag{6.4}
+\lambda_X=f^X_*:K_\bullet(X)\longrightarrow K_\bullet(\operatorname{point})=\mathbb Z,
+\end{equation}
+que induce sobre el subgrupo $\Gr_0(X)=\Fil_0K_\bullet(X)$ el homomorfismo
+«~grado de los $0$-ciclos~»
+\begin{equation}\tag{6.5}
+\deg_X:\Gr_0(X)\longrightarrow \mathbb Z.
+\end{equation}
+El homomorfismo de multiplicación
+\[
+\Gr^i(X)\times\Gr_i(X)\longrightarrow \Gr_0(X),
+\]
+compuesto con el homomorfismo de grado (6.5), proporciona entonces un
+emparejamiento
+\begin{equation}\tag{6.6}
+\Gr^i(X)\times \Gr_i(X)\longrightarrow \mathbb Z,
+\end{equation}
+que explica que, en ciertos aspectos, $\Gr^\bullet(X)$ y $\Gr_\bullet(X)$
+desempeñen papeles duales, al igual que la cohomología y la homología. Así,
+si $f:X\to Y$ es un morfismo de esquemas algebraicos propios, los dos
+homomorfismos
+\[
+f^*:\Gr^\bullet(Y)\longrightarrow \Gr^\bullet(X)\qquad\text{y}\qquad f_*:\Gr_\bullet(X)\longrightarrow \Gr_\bullet(Y)
+\]
+son formalmente transpuestos el uno del otro, en el sentido de los
+emparejamientos (6.6).
+
+Los homomorfismos (6.4) y (6.5), y el emparejamiento (6.6) que se deduce de
+ellos, pueden considerarse la fuente de las \uline{relaciones numéricas} en
+la teoría de las intersecciones sobre esquemas algebraicos propios sobre un
+cuerpo dado $k$. Este punto de vista se desarrollará con algún detalle en
+Exp. X, esencialmente independiente de Exp. VI, VII, VIII (centradas en la
+demostración del teorema de Riemann--Roch) y de Exp. IX. Allí se darán
+también algunas nociones sobre el \uline{comportamiento de}
+$K^\bullet(X),\Gr^\bullet(X)$ \uline{por especialización}.
+
+\subsection*{7.}
+Como en toda teoría de intersección, importa precisar el lugar que ocupa en
+la teoría el \uline{grupo de Picard} (o grupo de las \uline{clases de
+divisores}, en la terminología clásica). Bajo una ligera restricción,
+satisfecha automáticamente cuando $X$ es, por ejemplo, cuasicompacto, se
+establece en Exp. X un isomorfismo canónico
+\begin{equation}\tag{7.1}
+c_1:\Pic(X)\xrightarrow{\sim}\Gr^1(X),
+\end{equation}
+que muestra el papel exacto del grupo de Picard en la teoría que proponemos.
+Este papel justifica un estudio más detallado de dicho grupo de Picard en
+las exposiciones XII y XIII, que son lógicamente independientes del texto
+del Seminario. Kleiman realiza en Exp. XIII un estudio de la
+\uline{equivalencia numérica} y de ciertos \uline{teoremas de finitud para el
+grupo de Picard} (anunciados sin demostración en [\sisi{6}{5}]), utilizando técnicas de % Canon SGA-SRC-001495
+carácter puramente numérico (que no utilizan la teoría del funtor de Picard
+ni su representabilidad), debidas a él mismo y a Mumford, claramente más
+sencillas que las demostraciones iniciales de Grothendieck. El único
+resultado refractario a los métodos de Kleiman (y que se ve obligado a
+utilizar) es [\sisi{6}{5}, C-07 (i)], cuya demostración y ciertos refinamientos
+(incluidos algunos teoremas de representabilidad para el funtor de Picard)
+ocupan la exposición XII. Esta última pertenece, por otra parte, a un
+espíritu y una técnica completamente ajenos al resto del Seminario y
+vinculados a [5]; esta exposición es lógicamente independiente de todas las
+demás.
+
+Finalmente, en Exp. XI, de carácter claramente más general que XII y XIII y
+más próximo al espíritu general del Seminario, se estudia, sobre un topos
+localmente anillado cualquiera, un funtor notable denominado
+«~\uline{funtor determinante}~»:
+\begin{equation}\tag{7.2}
+\det^*:\underline{\Parf_{\mathrm{is}}}(X)\longrightarrow \underline{\Inv}(X)
+\end{equation}
+desde la categoría de los complejos perfectos sobre $X$, cuyos únicos
+morfismos son los isomorfismos en el sentido de la categoría derivada $D(X)$,
+hacia la categoría de los módulos invertibles sobre $X$. Este funtor está
+descrito, salvo detalles menores, por la exigencia de ser de «~carácter
+local~» y de venir dado, para un complejo $L$ acotado y con componentes
+localmente libres, por la fórmula
+\begin{equation}\tag{7.3}
+\det^*(L_\bullet)\simeq\bigotimes_i \det(L_i)^{(-1)^i},
+\end{equation}
+donde $\det(L_i)$ designa la potencia exterior de grado máximo del módulo
+localmente libre $L_i$. Aunque esta exposición también sea lógicamente
+independiente del resto del Seminario, con excepción de la exposición I,
+constituye, no obstante, un elemento importante del «~yoga~» general
+propuesto en el Seminario y desarrollado esencialmente en las exposiciones I
+a XI.
+
+\section*{Bibliografía}
+\begin{enumerate}[label={[\arabic*]},leftmargin=2.5em]
+\item M. Atiyah y F. Hirzebruch, Vector bundles and homogeneous spaces, Symposia in Pure Mathematics, vol. 3, Differential Geometry, p. 7--38, 1961.
+\item A. Borel y J.-P. Serre, Le th\'eor\`eme de Riemann--Roch, Bull. Soc. math. France, t. 86, p. 97--136 (1958).
+\item H. Grauert, \emph{Ein Theorem der analytischen Garbentheorie}, Pub. Math. n\textsuperscript{o}~5, p. 5--64 (1960).
+\item A. Grothendieck, Classes de faisceaux et th\'eor\`eme de Riemann--Roch, notas mimeografiadas, Princeton 1957 (citado [RRR] y reproducido como Apéndice a la Exp. 0 del Seminario).
+\item A. Grothendieck, Technique de descente et th\'eor\`emes d'existence en G\'eom\'etrie Alg\'ebrique, en Fondements de la G\'eom\'etrie Alg\'ebrique, extractos del Séminaire Bourbaki 1957--1962, Secrétariat Mathématique, París.
+\item W. Shih, Seminario de Topología en el IHES, 1966/67.
+\item M. Atiyah y F. Hirzebruch, \emph{The Riemann--Roch theorem for analytic embeddings}, Topology, vol. 1, p. 151--166 (1962).
+\end{enumerate}
+
+
+
+\clearpage
+

@@ -1,0 +1,82 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 3, proposición 3.7 y demostración de a), líneas 4235--4308 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Proposición 3.7.} Bajo la hipótesis de (3.5), supongamos además que existe un entero $N$ tal que, para todo $F\in\Ob\Mod(S)$ y todo abierto cuasicompacto $U$ de $S$,
+\footnote{Condición que se cumple, según (Tohoku 3.6.5), si el espacio subyacente a $S$ es noetheriano y de dimensión de Krull $\leq N$.}
+\[
+ H^i(U,F)=0\quad\text{para }i>N.
+\]
+Entonces:
+\begin{enumerate}[label=\alph*)]
+\item El coherizador es de dimensión cohomológica finita.
+\item El funtor
+\[
+ \varphi:\mathrm D(\Qcoh(S))\longrightarrow \mathrm D(S)
+\]
+es plenamente fiel y tiene por imagen esencial la subcategoría plena $\mathrm D(S)_{\qcoh}$ de $\mathrm D(S)$ formada por los complejos de cohomología cuasicoherente.
+\end{enumerate}
+
+\emph{Demostración de a).} Si $S$ es afín, la fórmula $Q=\widetilde{\Gamma_S}$ (cf. demostración de (3.2)) implica que $Q$ es de dimensión cohomológica $\leq N$. Pasemos al caso general. Demostremos que existe un entero $a$ tal que $R^qQ(E)=0$ para todo $E\in\Ob\Mod(S)$ y todo $q>a$. La hipótesis implica que todo $E\in\Ob\Mod(S)$ admite una resolución derecha finita $E^\bullet$ de longitud $N$ tal que los $E^i$ sean acíclicos, es decir, verifiquen $H^q(U,E^i)=0$ para todo abierto $U$ de $S$ y todo $q>0$. Por consiguiente, basta probar que existe un entero $b$ tal que $R^qQ(E)=0$ para todo $\mathcal O_S$-módulo acíclico $E$ y todo $q>b$. (Se podrá tomar entonces $a=b+N$).
+
+Sea $(U_i)$ un recubrimiento finito de $S$ por $N'$ abiertos afines. Sea $E$ un $\mathcal O_S$-módulo acíclico, y consideremos la resolución $C'(E)$ de $E$ definida por el recubrimiento $(U_i)$ (T.F. II 5.2). Hay que examinar dos casos:
+
+1°) $S$ es separado. Entonces las componentes de $C'(E)$ son sumas de términos del tipo $f_*f^*(E)$, donde $f:U\longrightarrow S$ es la inclusión de un abierto afín (por tanto, un morfismo afín, ya que $S$ es separado). Se tiene
+\[
+ \mathbb R(Qf_*)f^*E\simeq \mathbb RQ\,\mathbb Rf_*f^*E\simeq \mathbb RQ\,f_*f^*E,
+\]
+puesto que $f^*E$ es acíclico. Por otra parte, según (3.4), se tiene
+\[
+ \mathbb R(Qf_*)f^*E\simeq \mathbb R(f_*Q)f^*E\simeq f_*\mathbb RQf^*E,
+\]
+puesto que $f$ es afín. Se deduce
+\[
+ R^nQ(f_*f^*E)\simeq f_*R^nQ(f^*E)
+ \quad\text{para todo }n\geq0,
+\]
+de donde, por el caso afín,
+\[
+ R^nQ(f_*f^*E)=0\quad\text{para }n>N.
+\]
+Como $C'(E)$ es de longitud $N'$, se obtiene finalmente
+\[
+ R^nQ(E)=0\quad\text{para }n>N+N',
+\]
+y queda probado este caso.
+
+2°) $S$ es noetheriano. Las componentes de $C'(E)$ son sumas de términos del tipo $f_*f^*(E)$, donde $f:U\longrightarrow S$ es la inclusión de un abierto cuasicompacto y separado. Como en el caso 1°), se tiene
+\begin{equation}\tag{*}
+ \mathbb R(Qf_*)f^*E\simeq \mathbb RQ\,f_*f^*E\simeq \mathbb R(f_*Q)f^*E.
+\end{equation}
+Como $U$ es noetheriano, $\Qcoh(U)$ posee suficientes objetos inyectivos en $\Mod(U)$ ([H] II 7.18); por tanto, el derivado derecho de $f_*:\Qcoh(U)\longrightarrow\Qcoh(S)$ está «inducido» por $Rf_*:\mathrm D^+(U)\longrightarrow\mathrm D^+(S)$ cuando se identifica $\mathrm D^+(\Qcoh(U))$ (resp. $\mathrm D^+(\Qcoh(S))$) con una subcategoría plena de $\mathrm D^+(U)$ (resp. $\mathrm D^+(S)$) gracias a (3.5). Por consiguiente, se tiene
+\[
+ \mathbb R(f_*Q)f^*E\simeq \mathbb Rf_*\mathbb RQf^*E.
+\]
+De ello se deduce una sucesión espectral
+\[
+ E_2^{pq}=R^pf_*R^qQ(f^*E)\Longrightarrow R^{*}(f_*Q)f^*E.
+\]
+Según el caso 1°), existe un entero $n(U)$, que depende solamente de $U$, tal que $Q$ sea de dimensión cohomológica $\leq n(U)$ sobre $\Mod(U)$. Se tiene, pues,
+\[
+ E_2^{pq}=0\quad\text{para }q>n(U).
+\]
+Pero se tiene
+\[
+ E_2^{pq}=0\quad\text{para }p>N,
+\]
+a causa de la hipótesis de «dimensión cohomológica» sobre $S$. Por tanto,
+\[
+ R^n(f_*Q)f^*E=0\quad\text{para }n>N+N'',
+\]
+donde $N''$ es un entero mayor que todos los $n(U)$, cuando $U$ recorre el conjunto de las intersecciones $U_{i_0}\cap\cdots\cap U_{i_p}$. Teniendo en cuenta (*), se obtiene
+\[
+ R^nQ(f_*f^*E)=0\quad\text{para }n>N+N'',
+\]
+de donde finalmente
+\[
+ R^nQ(E)=0\quad\text{para }n>N+N'+N'',
+\]
+lo que termina la demostración de a).

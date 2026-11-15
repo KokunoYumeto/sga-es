@@ -1,0 +1,44 @@
+% SGA 6, Exposición III: fragmento español alineado con la fuente.
+% Alcance: corolarios 3.7.1--3.7.2 y sección 4 hasta la proposición 4.3, líneas 5648--5684 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{Corolario 3.7.1.} Sean \(S\) un esquema, \(f:X\to Y\) un \(S\)-morfismo cuasicompacto y cuasiseparado de esquemas cuasicompactos sobre \(S\), y \(E\in\Ob D^b(X)_{\qcoh}\). Si \(E\) tiene localmente amplitud plana finita rel. a \(S\), lo mismo ocurre con \(Rf_*(E)\). Más precisamente, si \(S\) es cuasicompacto y si \(N\) es un entero tal que \(R^if_*(F)=0\) para todo \(i>N\) y todo \(\mathcal O_X\)-módulo cuasicoherente \(F\) (EGA III 1.4.12 y IV 1.7.21), entonces se tiene
+\[
+ \tamp_S(E)\subset[a,b]
+ \Longrightarrow
+ \tamp_S(Rf_*(E))
+ \subset[a,b+N].
+\]
+
+\emph{Demostración.} Evidentemente, basta probar la última aserción. Según (3.3 (i)\(\Longleftrightarrow\)(iv)), y teniendo en cuenta que \(Rf_*\) «conmuta con la restricción a un abierto de \(S\)», se trata de probar que la hipótesis \(\tamp_S(E)\subset[a,b]\) implica
+\[
+ H^i(Rf_*(E)\otimes_S^{\mathbf L}M)=0
+\]
+para todo \(i\notin[a,b+N]\) y todo \(\mathcal O_S\)-módulo cuasicoherente \(M\). Ahora bien, la hipótesis precedente significa que \(H^i(E\otimes_S^{\mathbf L}M)=0\) para todo \(i\notin[a,b]\) y todo \(\mathcal O_S\)-módulo cuasicoherente \(M\), y se concluye gracias a (3.7).
+
+\textbf{Corolario 3.7.2.} Sea \(f:X\to Y\) un morfismo cuasicompacto, cuasiseparado y localmente de Tor-dimensión finita (3.1), y sea \(E\in\Ob D^b(X)_{\qcoh}\). Si \(E\) tiene localmente amplitud plana finita (en sentido absoluto), lo mismo ocurre con \(Rf_*(E)\).
+
+\emph{Demostración.} Combínense (3.4.1 a)) y (3.7.1).
+
+\section*{4. Perfección relativa}
+
+\textbf{Definición 4.1.} Sean \(f:X\to Y\) un morfismo localmente de tipo finito de esquemas, \(E\in\Ob D(X)\), y \([a,b]\) un intervalo de \(\mathbb Z\). Se dice que \(E\) tiene amplitud perfecta relativa a \(f\) (o a \(Y\), si no hay ambigüedad), contenida en \([a,b]\), y se escribe
+\[
+ \parfamp_f(E)\subset[a,b]\qquad(\text{o }\parfamp_Y(E)\subset[a,b])
+\]
+si, relativamente a \(f\), \(E\) es pseudocoherente (1.2) y tiene amplitud plana contenida en \([a,b]\) (3.1). Se dice que \(f\) tiene amplitud perfecta contenida en \([-n,0]\), o dimensión perfecta \(\leq n\) \((n\geq0)\), si \(\mathcal O_X\) tiene amplitud perfecta contenida en \([-n,0]\). Se dice que \(E\) tiene amplitud perfecta finita relativa a \(f\) si existe un intervalo \([a,b]\) tal que \(\parfamp_f(E)\subset[a,b]\). Se dice que \(E\) es perfecto rel. a \(f\) si \(E\) tiene localmente amplitud perfecta finita rel. a \(f\). Se dice que \(f\) es perfecto si \(f\) tiene localmente amplitud perfecta finita.
+
+\textbf{Ejemplo 4.1.1.} Una inmersión regular de codimensión \(d\) (VII 1.4) tiene dimensión perfecta \(\leq d\) (como se ve gracias al complejo de Koszul). Un morfismo localmente de intersección completa (es decir, localmente compuesto de una inmersión regular y un morfismo liso) es un morfismo perfecto.
+
+\textbf{Notación 4.2.} Sea \(f:X\to Y\) un morfismo localmente de tipo finito de esquemas. Denotaremos por \(D(f)_{\parf}\), o por \(D(X)_{f\text{-}\parf}\), o por \(D(X)_{Y\text{-}\parf}\) si no hay confusión posible (resp. \(D(f)_{\uparf}\), \(D(X)_{f\text{-}\uparf}\), \(D(X)_{Y\text{-}\uparf}\)), la subcategoría plena de \(D(X)\) formada por los complejos perfectos (resp. de amplitud perfecta finita) rel. a \(f\). Según (I 5.3) y (1.4), \(D(f)_{\parf}\) y \(D(f)_{\uparf}\) son subcategorías trianguladas de \(D(X)\). Si \(X\) es cuasicompacto, se tiene \(D(f)_{\parf}=D(f)_{\uparf}\).
+
+\textbf{Proposición 4.3} (cf. I 5.8). Sean \(f:X\to Y\) un morfismo localmente de tipo finito de esquemas, \(E\in\Ob D(X)\), \([a,b]\) un intervalo de \(\mathbb Z\), \(x\) un punto de \(X\), y \(y=f(x)\). Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item \(\parfamp_f(E)\subset[a,b]\) en un entorno de \(x\);
+\item \(E\) es, en un entorno de \(x\), \((a-1)\)-pseudocoherente rel. a \(f\) y acíclico fuera de \([a,b]\), y se tiene \(\tamp_{\mathcal O_{Y,y}}(E_x)\subset[a,b]\).
+\end{enumerate}
+
+\emph{Demostración.} La implicación (i) \(\Longrightarrow\) (ii) es trivial; probemos (ii) \(\Longrightarrow\) (i). Como la cuestión es local en un entorno de \(x\), las definiciones nos reducen inmediatamente al caso en que \(f\) es liso. Entonces \(E\) es \((a-1)\)-pseudocoherente en un entorno de \(x\); por tanto, tras localizar si es necesario, se puede suponer que \(E\) es estrictamente \((a-1)\)-pseudocoherente (I 2.1) y nulo en grado \(>b\), y tras truncar (es decir, reemplazar \(E\) por el complejo \((0\to E^a/B^a\to E^{a+1}\to\ldots E^b\to 0)\)), se puede suponer que \(E^i\) es libre de tipo finito para \(i>a\), que \(E^a\) es de presentación finita y que \(E^i=0\) para \(i\notin[a,b]\). Según (I 5.1.1), \(E^a_x\) es plano rel. a \(\mathcal O_{Y,y}\), y por tanto (EGA IV 11.3.1) \(E^a\) es \(f\)-plano en un entorno de \(x\). Para abreviar, pongamos \(E^a=F\); se trata de mostrar que \(F\) es pseudocoherente (en un entorno de \(x\)). Tras sumergir \(X\) en un espacio afín tipo sobre \(Y\), se puede suponer que \(X=Y[t_1,\dots,t_r]\), con \(Y\) afín y \(f\) la proyección canónica. Entonces \(Y\) es límite proyectivo de esquemas afines noetherianos \(Y_\alpha\). Denotemos por \(f_\alpha:X_\alpha=Y_\alpha[t_1,\dots,t_r]\to Y_\alpha\) la proyección canónica. Existen (EGA IV 8.5.2 y 11.2.6) un índice \(\alpha\) y un \(\mathcal O_{X_\alpha}\)-módulo \(F_\alpha\) de presentación finita y \(f_\alpha\)-plano tales que \(g_\alpha^*(F_\alpha)\simeq F\), donde \(g_\alpha:X\to X_\alpha\) es el morfismo canónico. Como \(X_\alpha\) es noetheriano, \(F_\alpha\) es coherente, y por tanto pseudocoherente rel. a \(f_\alpha\). Como, por otra parte, \(F_\alpha\) es \(f_\alpha\)-plano y \(f_\alpha\) es plano, se tiene \(\sisi{g_\alpha^*(F)}{g_\alpha^*(F_\alpha)}\xrightarrow{\sim}F_\alpha\otimes^{\mathbf L}_{Y_\alpha}\mathcal O_Y\), y resulta de (1.10 a)) que \(F\) es pseudocoherente rel. a \(Y\), y por tanto pseudocoherente, cqfd.

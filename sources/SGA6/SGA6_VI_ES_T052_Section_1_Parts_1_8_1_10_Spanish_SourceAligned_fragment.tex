@@ -1,0 +1,100 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 1, números 1.8--1.10, líneas 8691--8783 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{1.8.} Volviendo a la demostración del teorema 1.1, mostremos que \(K^\circ(X)\) está engendrado como \(K^\circ(S)\)-módulo por las potencias de \(\xi\).
+
+Si \(F\) es un \(\mathcal O_X\)-módulo localmente libre de tipo finito, existe, según 1.4, un \(B\)-módulo graduado de presentación finita \(M\), plano sobre \(S\), tal que \(F=\Projz(M)\). Según 1.6, \(M\) admite una resolución graduada por \(B\)-módulos graduados localmente libres de tipo finito. Se deduce una sucesión exacta:
+\[
+  0\longrightarrow \Projz(L_{r+1})\longrightarrow\cdots\longrightarrow
+  \Projz(L_0)\longrightarrow\Projz(M)\longrightarrow 0,
+\]
+y la igualdad siguiente en \(K^\circ(X)\):
+\[
+  \cl(F)=\sum_i(-1)^i\cl\bigl(\Projz(L_i)\bigr).
+\]
+Utilizando la filtración sobre los \(L_i\) definida en 1.7, se obtiene:
+\[
+  \cl(\Projz(L_i))=\sum_j \cl\bigl(\Projz(N_{ij}\otimes_{\mathcal O_S}B(j))\bigr).
+\]
+Ahora bien, \(\Projz(N_{ij}\otimes_{\mathcal O_S}B(j))=f^*(N_{ij})(j)\); se obtiene, pues:
+\[
+\begin{aligned}
+  \cl(\Projz(L_i))
+  &=\sum_j \cl\bigl(f^*(N_{ij})\bigr).\xi^j \\
+  &=\sum_j f^*\bigl(\cl(N_{ij})\bigr).\xi^j.
+\end{aligned}
+\]
+Se ha expresado finalmente \(\cl(F)\) como combinación lineal, con coeficientes en \(K^\circ(S)\), de las potencias de \(\xi\).
+
+\textbf{1.9.} Para ver que \(1,\xi,\ldots,\xi^{r+1}\) son linealmente dependientes sobre \(K^\circ(S)\), se considera el homomorfismo canónico sobreyectivo \(f^*(E)\to\mathcal O_X(1)\), cuyo núcleo \(F\) es localmente libre de rango \(r\). Se puede, pues, escribir:
+\[
+  \lambda^{r+1}\bigl(f^*(E)-\xi\bigr)=0,
+  \qquad \text{con } E=\cl E,
+\]
+estando definidas las operaciones \(\lambda^i\) sobre \(K^\circ(X)\) en V 2.2. Se obtiene, pues:
+\[
+  \sum_{i=0}^{r+1}\lambda^i(f^*(E))\lambda^{r+1-i}(-\xi)=0.
+\]
+Como \(\mathcal O_X(1)\) es un haz invertible, \(\lambda_t(\xi)=1+\xi t\), y por consiguiente \(\lambda_t(-\xi)=1/(1+\xi t)\), de donde resulta finalmente la relación:
+\begin{equation}\tag{1.9.1}
+  \sum_{i=0}^{r+1}(-1)^{r+1-i}\xi^{r+1-i}\lambda^i(E)=0.
+\end{equation}
+
+Mostremos finalmente que \(1,\xi,\ldots,\xi^r\) son independientes sobre \(K^\circ(S)\)\footnote{Esta demostración se debe a J. P. Jouanolou.}.
+
+
+\textbf{Lema 1.10.} Con las notaciones y las hipótesis de 1.1, sean \(F\) y \(G\) dos haces localmente libres de tipo finito sobre \(X\), tales que:
+\[
+  \cl_{K^\circ(X)}(F)=\cl_{K^\circ(X)}(G);
+\]
+entonces existe un entero \(n_0\) tal que, para \(n\geq n_0\), se tiene:
+\[
+\begin{array}{ll}
+\text{i)}& f_*(F(n)),\ f_*(G(n))\text{ son localmente libres de tipo finito sobre }S;\\[1mm]
+\text{ii)}& \cl_{K^\circ(S)}\bigl(f_*(F(n))\bigr)=\cl_{K^\circ(S)}\bigl(f_*(G(n))\bigr).
+\end{array}
+\]
+
+Sea \(A\) el grupo abeliano libre engendrado por las clases (salvo isomorfismo) de haces localmente libres de tipo finito sobre \(X\). Decir que, en \(K^\circ(X)\), \(F\) y \(G\) tienen la misma clase significa, según la construcción de \(K^\circ\), que existen sucesiones exactas de \(\mathcal O_X\)-módulos localmente libres de tipo finito:
+\[
+  0\longrightarrow L_i\longrightarrow M_i\longrightarrow N_i\longrightarrow 0,
+  \qquad i=1,\ldots,k,
+\]
+y enteros \(n_i\), tales que en \(A\) se tiene la igualdad:
+\[
+  (F)-(G)=\sum_i n_i\bigl((L_i)-(M_i)+(N_i)\bigr).
+\]
+Para todo \(n\), la tensorización por \(\mathcal O_X(n)\) define un automorfismo de \(A\), de donde:
+\[
+  (F(n))-(G(n))=\sum_i \sisi{}{n_i}\bigl((L_i(n))-(M_i(n))+(N_i(n))\bigr),
+\]
+y las sucesiones \(0\to L_i(n)\to M_i(n)\to N_i(n)\to0\) siguen siendo exactas.
+
+Sean \(B\) el grupo abeliano libre engendrado por las clases (salvo isomorfismo) de haces cuasicoherentes sobre \(S\), y \(A'\subset B\) el subgrupo engendrado por las clases de haces localmente libres de tipo finito sobre \(S\). Mediante imagen directa se define un homomorfismo \(A\to B\), y se tiene aún:
+\[
+\begin{aligned}
+  \bigl(f_*(F(n))\bigr)-\bigl(f_*(G(n))\bigr)
+  ={}&\sum_i n_i\bigl((f_*(L_i(n)))-(f_*(M_i(n)))\\
+      &\hspace{35mm}+(f_*(N_i(n)))\bigr).
+\end{aligned}
+\]
+Según \sisi{1.2}{1.3}, para \(n\) suficientemente grande se cumplirán las condiciones siguientes:
+\[
+  \forall k\geq1,\ \forall i,
+  \quad R^k f_*(L_i(n))=0;
+\]
+\[
+  \forall i,
+  \quad f_*(L_i(n)),\ f_*(M_i(n)),\ f_*(N_i(n)),\ f_*(F(n)),\ f_*(G(n))
+  \text{ son localmente libres de tipo finito.}
+\]
+De ello resulta que, para \(n\) suficientemente grande, todos estos elementos pertenecen a \(A'\), verifican la relación escrita anteriormente, y las sucesiones
+\[
+  0\longrightarrow f_*(L_i(n))\longrightarrow f_*(M_i(n))\longrightarrow f_*(N_i(n))\longrightarrow0
+\]
+son exactas. Esto implica que, en \(K^\circ(S)\), \(f_*(F(n))\) y \(f_*(G(n))\) tienen la misma clase.
+

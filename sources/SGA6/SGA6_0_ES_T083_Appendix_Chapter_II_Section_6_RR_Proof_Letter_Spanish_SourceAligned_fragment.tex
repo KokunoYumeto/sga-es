@@ -1,0 +1,218 @@
+% SGA 6, Exposición 0, apéndice: Capítulo II, sección 6, demostración y carta.
+% Fuente francesa alineada: fr.tex, líneas 1410--1623 inclusive.
+\providecommand{\sisi}[2]{#2}
+
+\section*{6. El teorema de Riemann--Roch}
+
+Su enunciado es el siguiente: \emph{sea \(f\) un morfismo propio de una variedad cuasiproyectiva no singular \(Y\) en una variedad \(X\) de la misma clase. Entonces se tiene:}
+\begin{equation}\tag{2.39}
+ f_*\bigl(\ch_Y(x)\,\mathcal T(Y)\bigr)
+ =
+ \ch_X\bigl(f_*(x)\bigr)\,\mathcal T(X).
+\end{equation}
+(Ambos miembros están en \(A(X)\otimes\mathbb Q\) y \(\mathcal T(X)=\mathcal T(C(T_X))\).)
+
+Permite calcular, salvo elementos de torsión, las clases de Chern de \(f_!(x)\), conociendo las clases de Chern de \(x\), las de \(T_X\) y \(T_Y\), y el homomorfismo \(f_*\). O, dicho de otro modo, permite determinar el homomorfismo
+\(f_!\) de \(\underline K(Y)\otimes\mathbb Q\) en \(\underline K(X)\otimes\mathbb Q\), cuando se identifican mediante los homomorfismos \(\ch_Y\) y \(\ch_X\) estos grupos, respectivamente, con \(A(Y)\otimes\mathbb Q\) y \(A(X)\otimes\mathbb Q\) (¡si la fórmula (2.35) es verdadera!), utilizando \(f_*\) y las clases de Chern de \(T_X\) y de \(T_Y\).
+
+Solo sé demostrar la fórmula (2.39) en característica \(0\)\footnote{Véase más abajo una demostración válida en todas las características, basada en un principio diferente (p.\,51).}, y como igualdad en \(G(\underline K(X))\otimes\mathbb Q\). Para ello, como \(Y\) es localmente cerrada en un espacio proyectivo \(P\), se descompone \(f\) como composición de un morfismo de inyección de \(Y\) en \(P\times X\) y un morfismo de proyección de \(P\times X\) sobre \(X\), y se demuestra (2.39) para cada uno de estos dos morfismos\sisi{..}{.}
+
+Para un morfismo de inyección, se ve inmediatamente que las fórmulas (2.38) y (2.39) son equivalentes (la hipótesis de característica \(0\) solo intervino por medio del teorema 2.8, que permite expresar los \(\lambda^i(\gamma(F))\), para un haz algebraico coherente \(F\), mediante invariantes cohomológicos \emph{locales} de \(F\)).
+
+Para un morfismo de proyección \(f:P\times X\longrightarrow X\), se puede, gracias a la proposición 2.13, suponer que \(x\) es de la forma \(y\otimes z\), con \(y\in\underline K(P)\) y \(z\in\underline K(X)\). Entonces la fórmula de Künneth da \(f_!(x)=\chi(y)z\), donde, para un haz algebraico coherente \(F\) sobre \(P\), se pone:
+\[
+  \chi(F)=\sum_{i\geq 0}(-1)^i\dim H^i(P,F).
+\]
+Se reduce entonces inmediatamente a demostrar la fórmula
+\begin{equation}\tag{2.40}
+  \chi(F)=\varkappa_r\bigl(\sisi{\ch_p}{\ch_P}(F)\,\mathcal T(P)\bigr)
+\end{equation}
+donde \(\varkappa_r\) designa la componente de grado \(r=\dim P\). En virtud de la proposición 2.13, se puede suponer que \(F=\mathcal O_Q\), donde \(Q\) es una subvariedad lineal de \(P\). Entonces \(\chi(F)=1\), puesto que es el género aritmético de \(Q\); queda por ver que el segundo miembro de la fórmula (2.40) vale \(1\).
+
+Si, en efecto, \(V\) es un hiperplano de \(P\) y se pone \(\xi=\gamma_P(\mathcal O_V)\) y \(L=\ell(V)\), se tendrá:
+\[
+  1-\xi=\gamma_P(E(-L))
+\]
+(donde \(E(-L)\) es el fibrado vectorial definido por \(-L\)), de donde:
+\[
+  \sisi{c_p}{c_P}(1-\xi)=[1,1-L],
+\]
+y, por consiguiente,
+\[
+  \sisi{\ch_p}{\ch_P}(1-\xi)=e^{-L},\qquad\text{de donde}\qquad \sisi{\ch_p}{\ch_P}(\xi)=1-e^{-L},
+\]
+y, por tanto,
+\[
+  \sisi{\ch_p}{\ch_P}(\xi^p)=(1-e^{-L})^p.
+\]
+Ahora bien, si \(p\) es la \sisi{dimensión}{codimensión} de \(Q\) en \(P\), se tiene \(\xi^p=\gamma_P(Q)\); se deduce
+\[
+  \sisi{\ch_p}{\ch_P}(F)\,\mathcal T(P)
+  =
+  \bigl(L/(1-e^{-L})\bigr)^{r+1}(1-e^{-L})^p
+\]
+y hay que verificar que el coeficiente de \(L^r\) en esta serie formal en \(L\) vale \(1\), lo que resulta de la propiedad característica de la serie formal \(L/(1-e^{-L})\), a saber, que el coeficiente de \(L^q\) en \(\bigl(L/(1-e^{-L})\bigr)^{q+1}\) vale \(1\) (póngase \(\sisi{q=r+1-p}{q=r-p}\)).
+
+\subsection*{Referencias bibliográficas}
+\begin{enumerate}[label={[\arabic*]}]
+\item \emph{Hirzebruch}: Neue \sisi{topologischen}{topologische} Methoden in der algebraischen Geometrie.
+\item \emph{Serre}: Faisceaux algébriques cohérents, Ann. of Maths.
+\item \emph{Grothendieck}: Sur les faisceaux algébriques cohérents, in Séminaire Cartan 1956/57.
+\end{enumerate}
+
+\section*{Demostración del teorema de Riemann--Roch}
+\begin{center}
+(Grothendieck, 1 de noviembre de 1957)
+\end{center}
+
+\subsection*{Recordatorio de notaciones\footnotemark}
+\footnotetext{Los pasajes entre \sisi{astéricos}{asteriscos} *\dots* son interpolaciones del copista.}
+[Son las del «informe sobre Riemann--Roch», citado como \(\RRR\) en lo que sigue.]
+
+Todas las variedades consideradas son no singulares y cuasiproyectivas (es decir,\ isomorfas a una subvariedad localmente cerrada de un espacio proyectivo). El cuerpo base es algebraicamente cerrado, de característica arbitraria.
+
+Si \(X\) es una variedad tal, se denota por \(K(X)\) el grupo abeliano engendrado por las clases de haces coherentes sobre \(X\) (identificando una extensión con una suma); la suma alternada de los Tor hace de \(K(X)\) un anillo. Si \(\underline F\) es un haz (resp.\ un fibrado vectorial \(E\), resp.\ una subvariedad \(Y\) de \(X\)), se denota por \(\gamma_X(\underline F)\) (resp.\ \(\gamma_X(E)\), resp.\ \(\gamma_X(Y)\)) el elemento de \(K(X)\) correspondiente a \(\underline F\) (resp.\ a \(\underline E\), resp.\ a \(\mathcal O_Y\)). (En realidad, se escribe a menudo \(\underline F\), \(E\) en lugar de \(\gamma_X(\underline F)\)\dots).
+
+Se denota por \(A(X)\) el anillo graduado de las clases de \sisi{cylces}{ciclos} de \(X\) (para la equivalencia racional -- cf.\ Chow); \(A^i(X)\) está formado por los ciclos de codimensión \(i\). Si \(E\) es un fibrado vectorial, se denota por \(C(E)=\sum C^i(E)\), \(C^i(E)\in A^i(X)\), su clase de Chern (definida como imagen inversa de los ciclos de Schubert); se deducen por linealidad los \(C^i(y)\), para todo \(y\in K(X)\). Si \(C(y)=\prod(1+a_i)\), se pone, siguiendo a Hirzebruch:
+\[
+  \ch(y)=\sum e^{a_i},\qquad
+  T(y)=\prod\frac{a_i}{1-e^{-a_i}}.
+\]
+Estos son elementos de \(A(X)\otimes\mathbb Q\). Cuando \(y\) es el fibrado tangente a \(X\), se escribe \(T(X)\) en lugar de \(T(y)\).
+
+Si \(G\) es un fibrado vectorial, se denota por \(\lambda^pG\) su \(p\)-ésima potencia exterior, y se pone \(\lambda_{-1}(G)=\sum(-1)^p\lambda^p(G)\); es un elemento de \(K(X)\).
+
+Si \(f\) es una aplicación regular propia de una variedad \(Y\) en una variedad \(X\), se definen homomorfismos (aditivos):
+\[
+  f^*:A(X)\longrightarrow A(Y)\qquad\text{y}\qquad
+  f_*:A(Y)\longrightarrow A(X).
+\]
+El primero es homogéneo de grado \(0\) y multiplicativo. El segundo es homogéneo de grado \(\dim X-\dim Y\). Se definen también homomorfismos:
+\[
+  f^!:K(X)\longrightarrow K(Y)\qquad\text{y}\qquad
+  f_!:K(Y)\longrightarrow K(X).
+\]
+Si \(\underline F\) es un haz coherente sobre \(X\), \(f^!(\underline F)\) es igual, por definición, a la suma alternada de los \(\Tor_p^{\mathcal O_X}(\mathcal O_Y,\underline F)\). Para los fibrados vectoriales, es simplemente la operación de imagen inversa.
+
+Si \(G\) es un haz coherente sobre \(Y\), \(f_*(\underline G)\) es coherente sobre \(X\). Si se denota por \(R^pf_*\) el \(p\)-ésimo funtor derivado del funtor \(\sisi{f}{f_*}\) así definido, se tiene, por definición, \(f_!(\underline G)=\sum(-1)^p R^pf_*(\underline G)\).\quad*
+
+\textbf{Teorema de Riemann--Roch.} \emph{Sea \(f:Y\longrightarrow X\) un morfismo} (* aplicación regular *) \emph{propio de una variedad cuasiproyectiva no singular \(Y\) en otra \(X\), y sea \(y\in K(Y)\). Se tiene:}
+\begin{equation}\tag{1}
+  f_*\bigl(\ch(y)T(Y)\bigr)=\ch(f_!(y))T(X)
+  \quad\text{en } A(X)\otimes\mathbb Q.
+\end{equation}
+
+\emph{Demostración} (* abreviada *).
+
+\textbf{Lema 1.} \emph{Consideremos morfismos propios de variedades \(Z\xrightarrow{g}Y\xrightarrow{f}X\). Si el teorema \(\RR\) vale para \(f\) y \(g\), también vale para \(f\circ g\). Si vale para \(fg\) y \(g\), vale para \(f\). Si \(f_*\) es inyectivo y el teorema \(\RR\) vale para \(fg\) y \(f\), vale para \(g\).}
+
+Trivial. (* En realidad, cuando se supone que \(\RR\) vale para \(fg\) y \(g\), hay que suponer además que \(g_!\) es sobreyectivo para poder afirmar que \(\RR\) vale para \(f\). *)
+
+Como todo morfismo propio se descompone en una inyección y una proyección \(X\times P\longrightarrow X\) (donde \(P\) es un espacio proyectivo), se reduce a tratar por separado estos dos casos. El segundo, como se vio, se reduce a un cálculo estándar, mediante la proposición 2.13 («descomposición celular») de \(\RRR\). Supondremos, pues, que \(Y\subset X\), con el morfismo de inyección \(i\). La fórmula (1) se convierte entonces en:
+\begin{equation}\tag{2}
+  \ch(i_!(y))=i_*\bigl(\ch(y)T(E)^{-1}\bigr),
+\end{equation}
+donde \(E=T_{X/Y}\) es el fibrado normal a \(Y\) en \(X\).
+
+\textbf{Lema 2.} \emph{Supongamos que existe sobre \(X\) un fibrado vectorial \(G\) de rango \(p=\codim_XY\), tal que:}
+\begin{equation}\tag{3}
+  \gamma_X(Y)=\sisi{i_*}{i_!}(1)=\lambda_{-1}(G)\,;\qquad
+  i^!(G)=\check E\,;\qquad
+  (-1)^pC^p(G)=Y.
+\end{equation}
+\emph{Si se tiene entonces:}
+\begin{equation}\tag{4}
+  y=i^!(x),\qquad \text{con }x\in K(X),
+\end{equation}
+\emph{la fórmula (2) es válida.}
+
+Demostración inmediata, a partir del hecho de que \(\ch\) es un homomorfismo de anillos y de que se tiene:
+\begin{equation}\tag{5}
+  \ch(\lambda_{-1}(G))=(-1)^pC^p(G)T(\check G)^{-1}.
+\end{equation}
+
+\textbf{Corolario.} \emph{\(\RR\) vale si \(Y\) es una hipersuperficie y si \(y\) es de la forma \(i^!(x)\), con \(x\in K(X)\).}
+
+\textbf{Lema 3.} \emph{Supongamos que \(X=Y\times P\), siendo \(P\) un espacio proyectivo, y que \(i\) es la inyección \(u\mapsto (u,v_0)\), \(v_0\in P\). Entonces \(i_*\) es inyectivo y \(\RR\) vale.}
+
+Se trata de un mero cálculo estándar.
+
+Supongamos de nuevo \(X,Y,y\) cualesquiera (siempre con \(Y\subset X\)). Sea \(X'\) la variedad obtenida por explosión de \(X\) a lo largo de \(Y\), y sea \(Y'\) la hipersuperficie imagen inversa de \(Y\). Se tiene un diagrama de aplicaciones:
+\[
+\begin{tikzcd}
+Y \arrow[r,"i"] & X\\
+Y' \arrow[u,"g"] \arrow[r,"j"'] & X' \arrow[u,"f"']
+\end{tikzcd}
+\]
+canónicas (siendo \(j\) la aplicación canónica). La imagen inversa de \(E\) en \(Y'\) admite un subfibrado de rango \(1\), cuyo dual se denota por \(L\). Además, \(L^{-1}\) es también la restricción a \(Y'\) del fibrado \(L(Y')\) definido sobre \(X'\) por el divisor \(Y'\). Se pone \(F=E/L^{-1}\). Cálculos elementales dan el
+
+\textbf{Lema 4.} \emph{Se tienen las fórmulas (donde \(p=\codim_XY\)):}
+\begin{align}
+  f^!i_!(y)&=j_!\bigl(\lambda_{-1}(\check F)y\bigr). \tag{6}\\
+  \lambda_{-1}(\check F)&\equiv \gamma^{p-1}(E)\lambda^p(\check E)
+    \quad\text{mod.}(1-L)\footnotemark. \tag{7}\\
+  f_*(1)&=1,\quad\text{de donde }f_*f^*=1. \tag{8}\\
+  f^*i_*(\alpha)&\equiv j_*\bigl(\alpha C^{p-1}(F)\bigr)
+    \quad\text{mod.}\Ker f_*\quad\text{para todo }\alpha\in A(Y). \tag{9}
+\end{align}
+\footnotetext{Esta fórmula innecesariamente complicada puede sustituirse, por ejemplo, por VII 4.1.}
+[Para simplificar la escritura, se ha hecho actuar \(K(Y)\) sobre \(K(Y')\) y \(A(Y)\) sobre \(A(Y')\) mediante los homomorfismos \(g^!\) y \(g^*\). {*}En la fórmula (7), parece que \(\gamma^{p-1}(E)\) designa \(\lambda^{p-1}(\sisi{E-2}{E-p})\), es decir, \(\sum_{i+j=p-1}\binom{-p}{j}\lambda^i(E)\)\,; la congruencia tiene lugar en \(K(Y')\).{*}]
+
+La fórmula (6) resulta de la igualdad:
+\begin{equation}\tag{6 bis}
+  \Tor_i^{\mathcal O_X(v)}\bigl(\mathcal O_Y(v),\mathcal O_{Y'}(v')\bigr)
+  =
+  \wedge^i\check F(v')
+  \quad (v'\in Y',\ v=g(v')).
+\end{equation}
+La fórmula (7) resulta de las fórmulas
+\begin{equation}\tag{10}
+  g_*(L^{-i})=0\quad\text{para }0<i\leq p-1,\qquad g_*(1)=1,
+\end{equation}
+que son a su vez consecuencias de Künneth y de la cohomología de los espacios proyectivos.
+
+La fórmula (8) es trivial; por último, (9) resulta de \(g_*(C^{p-1}(F))=1\), que se deduce, por ejemplo, de las fórmulas inmediatas
+\begin{equation}\tag{10 bis}
+  g_*(\xi^i)=0\quad\text{si }0\leq i<p-1,\qquad
+  g_*(\xi^{p-1})=1,
+\end{equation}
+con \(\xi=C^1(L)\in A^1(Y')\). [En realidad, es muy verosímil que (9) sea una identidad, y no solamente una congruencia.]
+
+De la fórmula (7) resulta inmediatamente \(y\lambda_{-1}(\check F)\in j^!(K(X'))\), con tal de que se tenga:
+\begin{equation}\tag{11}
+  y\,\gamma^{p-1}(E)\lambda^p(\check E)\in i^!(K(X)).
+\end{equation}
+Supongamos satisfecha esta condición (11). Por el corolario del lema 2, \(\RR\) vale para \((Y',X',y\lambda_{-1}(\check F))\). Por otra parte, para demostrar (2), basta, en virtud de la fórmula (8), demostrar que:
+\begin{equation}\tag{12}
+  f^*\ch(i_!(y))
+  \equiv
+  f^*\bigl(i_*(\ch(y)T(E)^{-1})\bigr)
+  \quad\text{mod.}\Ker f_*.
+\end{equation}
+Ahora bien, esta última fórmula se verifica inmediatamente utilizando (6), (9), \(\RR\) para \((Y',X',y\lambda_{-1}(\sisi{F}{\check F}))\) y la fórmula
+\begin{equation}\tag{13}
+  \ch(\lambda_{-1}(\check F))=C^{p-1}(F)T(F)^{-1}\quad\text{(cf.\ fórmula (5)).}
+\end{equation}
+
+Así, \(\RR\) queda demostrado siempre que \(y\,\gamma^{p-1}(E)=0\), en particular (puesto que \(\gamma^{p-1}(E)\) es de filtración \(\geq p-1\) {*}en \(K(Y)\), filtrado por la codimensión de los soportes{*}) siempre que \(p-1>\dim Y\), es decir,\ siempre que \(\dim Y<\frac{\dim X-1}{2}\). Ahora bien, se reduce a este caso combinando el lema 1 y el lema 3 (tomando como \(P\) un espacio proyectivo de dimensión \(r\) suficientemente grande, por ejemplo \(r>\dim X+1\)). C.Q.F.D.
+
+\textbf{N.B.} Se ha utilizado el hecho de que \(\gamma^{p-1}(E)\) era de filtración \(\geq p-1\). Este hecho se puede demostrar directamente, sin pasar por las \sisi{grassmanianas}{grassmannianas} como en \(\RRR\) 2.16, mediante el estudio del fibrado \(Y'\) en espacios proyectivos asociado a \(E\). Este método da, más generalmente, el teorema\ 2.14 de \(\RRR\).
+
+\subsection*{Extracto de una carta de Grothendieck}
+\dots{} «moralmente», el nuevo método se basa en la determinación de \(K(X)\) y de \(A(X)\) cuando \(X\) es, o bien un fibrado proyectivo asociado a un fibrado vectorial, o bien una variedad \sisi{obtenido}{obtenida} por una explosión con centro en una subvariedad no singular. En este segundo caso, no he hecho la determinación completa; falta un pequeño detalle. Con las notaciones del breve escrito, hay que demostrar la fórmula (9) (pero como \emph{igualdad}):
+\begin{equation}\tag{9}
+  f^*(i_*(\alpha))=j_*(\alpha C^{p-1}(F)),\qquad \alpha\in A(Y).
+\end{equation}
+Se comprueba que ambos miembros tienen la misma imagen por \(f_*\), y la misma imagen por \(j^*\), de modo que la cuestión equivale a
+\begin{equation}\tag{9 bis}
+  \Ker f_*\cap\Ker j^*=0.
+\end{equation}
+En cualquier caso, (9) se cumple tras pasar a \(G(K(X'))\) (lo que destruye, a lo sumo, un poco de torsión), pues entonces se deduce de (6); apenas cabe, por tanto, dudar de que sea cierta.
+
+\dots Te señalo, además, que la \emph{igualdad} (9) resulta con gran facilidad de (6), sin pasar por la molesta (6 bis)\dots
+
+\begin{flushleft}
+p.c.c.J-P.S.
+\end{flushleft}
+
+\newpage

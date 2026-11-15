@@ -1,0 +1,112 @@
+% SGA 6, Exposición X: fragmento español alineado con la fuente.
+% Alcance: sección 3 completa, «Fórmulas de proyección para los graduados asociados».
+% Fuente francesa: sga6_fr_r1/src/fr.tex, líneas 12888--12968.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\section*{3. Fórmulas de proyección para los graduados asociados}
+
+\subsection*{3.1}
+Consideremos un esquema noetheriano \(X\). Se denota por \(\Gro(X)\) el
+graduado asociado a la \(\lambda\)-filtración de \(K^\circ(X)\), y por
+\(\Grb(X)\) el graduado asociado a la filtración 1.1.1 de \(K_\bullet(X)\).
+Gracias a 1.3.2, la ley de composición (1.3.1)
+\[
+ K^\circ(X)\times K_\bullet(X)\longrightarrow K_\bullet(X)
+\]
+induce, al pasar a los graduados asociados, leyes de composición
+\begin{equation}\tag{3.1.1}
+ \Gr^i(X)\times\Gr_j(X)\longrightarrow \Gr_{j-i}(X)\qquad(i,j\in\mathbb Z).
+\end{equation}
+\(\Grb(X)\) se convierte así en un módulo sobre el anillo \(\Gro(X)\) (e
+incluso en un módulo graduado sobre el anillo graduado \(\Gro(X)\), a
+condición de cambiar el signo de la graduación de \(\Grb(X)\), poniendo
+\(\Gr^i_\bullet(X)=\Gr_{-i}(X)\) \((i\in\mathbb Z)\)).
+
+Consideremos ahora un morfismo propio
+\[
+ f:X'\longrightarrow X
+\]
+de esquemas noetherianos. Entonces \(f\) induce un homomorfismo
+\[
+ f^*:\Gro(X)\longrightarrow\Gro(X')
+\]
+de anillos graduados (V), y, según 1.1.8, un homomorfismo
+\[
+ f_*:\Grb(X')\longrightarrow\Grb(X)
+\]
+de grupos abelianos graduados. La fórmula de proyección (IV 2.11) y (3.1.1)
+dan entonces, al pasar a los graduados asociados, la fórmula de proyección
+graduada
+\begin{equation}\tag{3.1.2}
+ x\cdot f_*(y)=f_*\bigl(f^*(x)\cdot y\bigr)
+ \qquad (x\in\Gro(X),\ y\in\Grb(X')).
+\end{equation}
+
+\subsection*{3.2}
+Sea \(f:X'\to X\) un morfismo proyectivo de intersección completa (Exp. VIII)
+y de dimensión virtual \(r\) entre esquemas noetherianos, teniendo \(X\) un
+\(\mathcal O_X\)-módulo invertible amplio. En Exp. VIII se ha demostrado que
+\(f\) induce un homomorfismo
+\begin{equation}\tag{3.2.1}
+ f_*:\Filt^k(X')_{\mathbb Q}\longrightarrow\Filt^{k-r}(X)_{\mathbb Q}\qquad(k\in\mathbb Z),
+\end{equation}
+que satisface además la fórmula de proyección (Exp. IV):
+\begin{equation}\tag{3.2.2}
+ \sisi{f_*((f^*(x)\cdot y)=x\cdot f_*(Y)}{f_*(f^*(x)\cdot y)=x\cdot f_*(y)} % Canon SGA-SRC-001323
+ \qquad (x\in K^\circ(X)_{\mathbb Q},\ y\in K^\circ(X')_{\mathbb Q}).
+\end{equation}
+Al pasar a los graduados asociados en (3.2.1) y (3.2.2), se obtiene un
+homomorfismo de grado \(-r\):
+\begin{equation}\tag{3.2.3}
+ f_*:\Gro(X')_{\mathbb Q}\longrightarrow\Gro(X)_{\mathbb Q}
+\end{equation}
+y, gracias a (1.3.2), una fórmula de proyección graduada
+\[
+ f_*\bigl(f^*(x)\cdot y\bigr)=x\cdot f_*(y)
+ \qquad (x\in\Gro(X)_{\mathbb Q},\ y\in\Gro(X')_{\mathbb Q}).
+\]
+
+\subsection*{3.3}
+Consideremos finalmente un morfismo \(f:X'\to X\) de dimensión de Tor finita
+entre esquemas noetherianos. Se sabe entonces (Exp. IV) que \(f\) induce un
+homomorfismo
+\[
+ f^*:K_\bullet(X)\longrightarrow K_\bullet(X')
+\]
+tal que
+\[
+ f^*(\cl_\bullet(F))=
+ \sum_i(-1)^i\cl_\bullet\bigl(\underline{\Tor}_i^{\mathcal O_X}(F,\mathcal O_{X'})\bigr)
+\]
+para todo \(\mathcal O_X\)-módulo coherente \(F\). Los
+\(\mathcal O_X\)-módulos
+\(\Tor_i^{\mathcal O_X}(F,\mathcal O_{X'})\) están concentrados sobre
+\(f^{-1}(\Supp(F))\), y cuando las fibras de \(f\) son en todo punto de
+dimensión \(\leq d\), se sabe (EGA IV 5.6.7) que
+\[
+ \sisi{\dim(f^{-1}(\Supp(F))}{\dim(f^{-1}(\Supp(F)))}\leq \dim(\Supp(F))+d. % Canon SGA-SRC-001324
+\]
+Se sigue que \(f\) induce, para todo \(k\in\mathbb Z\), un homomorfismo
+\[
+ f^*:\Filt_k(X)\longrightarrow\Filt_{k+d}(X'),
+\]
+de donde se obtiene un homomorfismo de grado \(d\) de grupos abelianos
+graduados
+\begin{equation}\tag{3.3.1}
+ f^*:\Grb(X)\longrightarrow\Grb(X').
+\end{equation}
+
+\subsection*{3.4}
+Supongamos finalmente que los morfismos (3.2.3) y (3.3.1) están ambos
+definidos para un morfismo \(f:X'\to X\) tal que \(r=d\). Este es el caso,
+por ejemplo, si \(X\) es cuasicompacto con un \(\mathcal O_X\)-módulo amplio
+y si \(X'=\mathbf P_X(E)\), donde \(E\) es un \(\mathcal O_X\)-módulo
+localmente libre de rango \(r+1\). Entonces la fórmula de proyección en la
+categoría derivada da, para todo \(x\in\Filt^i(X')_{\mathbb Q}\) y
+\(y\in\Filt_j(X)_{\mathbb Q}\), la fórmula de proyección
+\[
+ f_*\bigl(x\cdot f^*(y)\bigr)=f_*(x)\cdot y\in\Filt_{j+r}(X)_{\mathbb Q}.
+\]
+Cuando \(X\) es noetheriano, 1.3.2 permite deducir de ella la fórmula
+graduada correspondiente.

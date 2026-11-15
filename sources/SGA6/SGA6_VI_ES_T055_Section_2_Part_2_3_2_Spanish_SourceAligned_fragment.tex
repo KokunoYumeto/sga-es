@@ -1,0 +1,76 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 2, número 2.3.2, líneas 8945--9013 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\textbf{2.3.2.} Sean ahora \(B\) una \(\mathcal O_S\)-álgebra graduada cuasicoherente, \(M\) un \(B\)-módulo graduado y \(X=\Proj(B)\). Para todo abierto afín \(U\) de \(S\), y toda sección \(s\) de \(B\) sobre \(U\), homogénea de grado \(d>0\), denotemos por \(M_{(s),U}\) la componente homogénea de grado \(0\) del módulo de fracciones \(M_s\); se tiene, pues:
+\[
+  M_{(s),U}=
+  \bigl((M|U)\otimes_{(B|U)}(B|U)_s\bigr)_0 .
+\]
+Si \(V\) es un abierto afín de \(U\), entonces \(M_{(s),V}\) es la restricción a \(V\) de \(M_{(s),U}\).
+
+Consideremos la base de abiertos de \(X\) formada por los abiertos afines:
+\[
+  D_+(U,s)\simeq \Spec\bigl((B|U)_{(s)}\bigr) .
+\]
+Denotemos por \(f\) el morfismo estructural \(X\to S\), y por \(f_{U,s}\) el morfismo afín:
+\[
+  f_{U,s}:D_+(U,s)\longrightarrow U .
+\]
+Pongamos entonces:
+\[
+  \Proj_0(M)_{U,s}
+  =
+  \bar f_{U,s}^{\,*}\bigl(M_{(s),U}\bigr),
+\]
+con las notaciones de 2.3.1. Mostraremos que los \(\Proj_0(M)_{U,s}\) se pegan cuando varían \(U\) y \(s\), definiendo así un \(\mathcal O_X\)-módulo denotado por \(\Proj_0(M)\). Siendo evidente el pegado para \(U\) variable y \(s\) fijo, se reduce (cf. EGA II 2.5.2) a mostrar que, si \(t\) es una sección de \(B\) sobre \(U\), homogénea de grado \(e>o\), entonces la restricción de \(\Proj_0(M)_{U,s}\) a \(D_+(U,st)\) es canónicamente isomorfa a \(\Proj_0(M)_{U,st}\). Consideremos:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+D_+(st) \arrow[r,hook,"i"] \arrow[dr,"f_{U,st}"'] &
+D_+(s) \arrow[d,"f_{U,s}"]\\
+& U
+\end{tikzcd}
+\]
+se trata de mostrar que los módulos
+\[
+  i^*\circ\bar f_{U,s}^{\,*}\bigl(M_{(s),U}\bigr)
+  \quad\text{y}\quad
+  \bar f_{U,st}^{\,*}\bigl(M_{(st),U}\bigr)
+\]
+son canónicamente isomorfos. Ahora bien, se tienen por una parte los isomorfismos canónicos:
+\[
+\begin{aligned}
+i^*\circ\bar f_{U,s}^{\,*}\bigl(M_{(s),U}\bigr)
+&\simeq
+i^*\Bigl(f_{U,s}^{-1}\bigl(M_{(s),U}\bigr)
+ \otimes_{f_{U,s}^{-1}((B|_U)_{(s)})}\mathcal O_{D_+(s)}\Bigr)\\
+&\simeq
+i^{-1}\Bigl(\sisi{i_{U,s}^{-1}}{f_{U,s}^{-1}}\bigl(M_{(s),U}\bigr)
+ \otimes_{f_{U,s}^{-1}((B|_U)_{(s)})}\mathcal O_{D_+(s)}\Bigr)
+ \otimes_{i^{-1}(\mathcal O_{D_+(s)})}\mathcal O_{D_+(st)}\\
+&\simeq
+f_{U,st}^{-1}\bigl(M_{(s),U}\bigr)
+ \otimes_{f_{U,st}^{-1}((B|_U)_{(s)})}\mathcal O_{D_+(st)} .
+\end{aligned}
+\]
+Por otra parte:
+\[
+  \bar f_{U,st}^{\,*}\bigl(M_{(st),U}\bigr)
+  \simeq
+  f_{U,st}^{-1}\bigl(M_{(st),U}\bigr)
+  \otimes_{f_{U,st}^{-1}((B|U)_{(st)})}\mathcal O_{D_+(st)} .
+\]
+Por último, se deduce de EGA II 2.2.2, traducido en términos de haces, que se tienen los isomorfismos canónicos:
+\[
+  M_{(st),U}\simeq
+  \bigl(M_{(s),U}\bigr)_{t^d/s^e}
+  \simeq
+  M_{(s),U}\otimes_{(B|U)_{(s)}}(B|U)_{(st)},
+\]
+de donde resulta finalmente el isomorfismo buscado.
+
+Es claro que, si \(M\) es cuasicoherente, el módulo \(\Proj_0(M)\) así construido es precisamente el definido en EGA II.
+

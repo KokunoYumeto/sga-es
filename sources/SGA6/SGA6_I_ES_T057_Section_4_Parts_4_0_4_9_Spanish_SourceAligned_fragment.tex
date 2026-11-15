@@ -1,0 +1,90 @@
+% SGA 6, Exposición I: sección 4, apartados 4.0--4.9, en español y alineados con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 2460--2537.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+\section*{4. Complejos perfectos}
+
+\textbf{4.0.} En este número, \(\sisi{S}{\mathcal S}\) denota un sitio, \(S\) un objeto de \(\sisi{S}{\mathcal S}\), \(\mathcal C\) una \(\sisi{S}{\mathcal S}\)-categoría abeliana plana y \(\mathcal C_0\) una sub-\(\sisi{S}{\mathcal S}\)-categoría aditiva estrictamente plena de \(\mathcal C\) (1.1). Salvo mención en contrario, se supone que \(\mathcal C_0\) es localmente levantable en \(\mathcal C\) y localmente estable por núcleos de epimorfismos (1.2).
+
+\textbf{Lema 4.1.}\footnote{Este lema fue comunicado al redactor por D. Ferrand.} \emph{Sea \(u:E\to F\) una flecha de \(\Cpx(\mathcal C_S)\). Si \(E\) es estrictamente \(\mathcal C_0\)-perfecto (2.1) y \(F\) es acíclico, entonces \(u\) es localmente homótopa a cero.}
+
+\emph{Demostración.} Se trata de construir localmente una homotopía \(k\) tal que \(u=dk+kd\). Como \(E\) es estrictamente perfecto, existen \(a,b\in\mathbb Z\), con \(a\leq b\), tales que \(E^i=0\) para \(i\notin[a,b]\). Por tanto, se puede tomar \(k^i=0\) para \(i\notin[a,b]\). A continuación se construye \(k^i\), para \(i\geq a\), por recurrencia descendente sobre \(i\). Supongamos construido \(k^i:E^i\to F^{i-1}\), de modo que \(u^i=k^{i+1}d_E^i+d_F^{i-1}k^i\) para \(i\geq n>a\), y demostremos que, después de localizar si es necesario, existe \(k^{n-1}:E^{n-1}\to F^{n-2}\) tal que \(u^{n-1}=k^nd_E^{n-1}+d_F^{n-2}k^{n-1}\). Por la hipótesis de recurrencia, la flecha
+\[
+  v^{n-1}=u^{n-1}-k^nd_E^{n-1}:E^{n-1}\to F^{n-1}
+\]
+se factoriza por \(Z^{n-1}(F)\). Pero \(Z^{n-1}(F)=B^{n-1}(F)\), puesto que \(F\) es acíclico. Como \(\mathcal C_0\) es localmente levantable en \(\mathcal C\), se sigue que, después de localizar si es necesario, existe \(k^{n-1}:E^{n-1}\to F^{n-2}\) tal que \(v^{n-1}=d_F^{n-2}k^{n-1}\), c.q.f.d.
+
+\textbf{Corolario 4.2.} Sea
+\[
+\begin{tikzcd}
+& P \arrow[d,"v"] \\
+E \arrow[r,"f"] & F
+\end{tikzcd}
+\]
+un diagrama de \(\Cpx(\mathcal C_S)\), donde \(P\) es estrictamente \(\mathcal C_0\)-perfecto y \(f\) un cuasi-isomorfismo. El conjunto de los \(X\) sobre \(S\) para los que existe una flecha \(u:P_X\to E_X\) de \(\Cpx(\mathcal C_X)\), tal que el diagrama
+\[
+\begin{tikzcd}
+& P_X \arrow[d,"v_X"]\\
+E_X \arrow[r,"f_X"] \arrow[ur,"u"] & F_X
+\end{tikzcd}
+\]
+sea conmutativo en \(\Kpx(\mathcal C_X)\), es un refinamiento de \(S\).
+
+\emph{Demostración.} Sea \(G\) el cono de \(f\). Se tiene la sucesión exacta
+\[
+  \longrightarrow \Hom_{\Kpx(\mathcal C_S)}(P,E)
+  \longrightarrow \Hom_{\Kpx(\mathcal C_S)}(P,F)
+  \longrightarrow \Hom_{\Kpx(\mathcal C_S)}(P,G)
+  \longrightarrow .
+\]
+Como \(G\) es acíclico, la imagen de \(v\) en \(\Hom_{\Kpx(\mathcal C_S)}(P,G)\) es localmente nula por (4.1). Por tanto, después de localizar si es necesario, existe \(u:P\to E\) tal que \(v=fu\) en \(\Kpx(\mathcal C_S)\), c.q.f.d.
+
+\textbf{Corolario 4.3.} \emph{Sea \(f:E\to F\) un cuasi-isomorfismo de \(\Cpx(\mathcal C_S)\), con \(F\) estrictamente perfecto (relativamente a \(\mathcal C_0\)). El conjunto de los \(X\) sobre \(S\) para los que existe un cuasi-isomorfismo \(g:F_X\to E_X\) tal que \(f_Xg\) sea homótopo a \(\Id_{F_X}\) es un refinamiento de \(S\).}
+
+\emph{Demostración.} Es un caso particular de (4.2).
+
+\textbf{Escolio 4.4.} Sea \(F\in\Ob\Kpx(\mathcal C_S)\). Se puede definir (por ejemplo, mediante un clivaje de \(\mathcal C\) (SGA 1 VI 7.1)) una categoría \((\underline{\Qis/F})\) fibrada sobre \(\sisi{S}{\mathcal S}/S\), cuya fibra en \(X\) sobre \(S\) es la categoría \((\Qis/F_X)^\circ\) (opuesta de la categoría de los cuasi-isomorfismos con destino \(F_X\)). Puede entonces expresarse (4.3) diciendo que, si \(F\) es estrictamente perfecto, la flecha \(\Id_F\) es localmente cofinal en \((\underline{\Qis/F})\).
+
+\textbf{Notación 4.5.} Sea \(\mathcal M\) una \(\sisi{S}{\mathcal S}\)-categoría fibrada. Sean \(X\in\Ob \sisi{S}{\mathcal S}\) y \(E,F\in\Ob\mathcal M_X\). Denotaremos por \(\underline{\Hom}_{\mathcal M}(E,F)\) el haz sobre \(\sisi{S}{\mathcal S}/X\) asociado al prehaz de los \(\sisi{S}{\mathcal S}\)-morfismos de \(E\) en \(F\) en \(\mathcal M\) (para la definición de este prehaz, véase [G] I 2.6; adviértase que, aun si \(\mathcal C\) es un campo ([G]), el prehaz correspondiente a \(\mathcal M=\Kpx(\mathcal C)\) (o \(\Dpx(\mathcal C)\)) no es, en general, un haz).
+
+\textbf{Corolario 4.6.} Sean \(E,F\in\Ob\Cpx(\mathcal C_S)\), siendo \(E\) estrictamente perfecto. La flecha canónica
+\[
+  \underline{\Hom}_{\Kpx(\mathcal C)}(E,F)
+  \longrightarrow
+  \underline{\Hom}_{\Dpx(\mathcal C)}(E,F)
+\]
+es un isomorfismo.
+
+\emph{Demostración.} Es una consecuencia inmediata de (4.4) y de la fórmula
+\[
+  \underline{\Hom}_{\Dpx(\mathcal C_X)}(E_X,F_X)
+  = \varinjlim_{(\Qis/E_X)^\circ}\underline{\Hom}_{\Kpx(\mathcal C_X)}(\,\cdot\,,F_X)
+\]
+para \(X\) sobre \(S\).
+
+\textbf{Definición 4.7.} Sea \(F\in\Ob\Dpx(\mathcal C_S)\) y sean \(a,b\in\mathbb Z\) tales que \(a\leq b\). Diremos que \(F\) es de amplitud \(\mathcal C_0\)-perfecta contenida en el intervalo \([a,b]\), y escribiremos
+\[
+  \mathcal C_0\text{-}\Parf\text{-}\amp(F)\subset[a,b],
+\]
+si el conjunto de los \(X\) sobre \(S\) para los que existe un cuasi-isomorfismo \(F'\to F\) \emph{de} \(\Cpx(\mathcal C_X)\), con \(F'\) estrictamente \(\mathcal C_0\)-perfecto (2.1) y tal que \(F'^i=0\) para \(i\notin[a,b]\), es un refinamiento de \(S\). (En virtud de (4.3), esta condición equivale a la que se obtiene sustituyendo la expresión « cuasi-isomorfismo de \(\Cpx(\mathcal C_X)\) » por « isomorfismo de \(\Dpx(\mathcal C_X)\) ».) Diremos que \(F\) es de amplitud \(\mathcal C_0\)-perfecta finita si existen enteros \(a\) y \(b\) tales que \(\mathcal C_0\)-\(\Parf\)-\(\amp(F)\subset[a,b]\). Diremos que \(F\) es \(\mathcal C_0\)-perfecto si \(F\) es localmente de amplitud \(\mathcal C_0\)-perfecta finita\footnote{Como es natural, cuando no pueda dar lugar a confusión, omitiremos \(\mathcal C_0\) en las expresiones precedentes.}.
+
+\textbf{Ejemplo 4.8.} Sean \((S,A)\) un topos anillado, \(\mathcal C\) la \(S\)-categoría definida por
+\[
+  U\longmapsto (\text{categoría de los }A_U\text{-módulos izquierdos}),
+\]
+\(\mathcal C_0\) la sub-\(S\)-categoría definida por
+\[
+  U\longmapsto
+  \left(
+  \begin{gathered}
+  \text{categoría de los }A_U\text{-módulos izquierdos}\\
+  \text{que son sumandos directos de módulos}\\
+  \text{libres de tipo finito}
+  \end{gathered}
+  \right).
+\]
+El par \((\mathcal C,\mathcal C_0)\) satisface, por (1.3.1), las hipótesis de (4.0). Un objeto \(F\) de \(\Dpx(_A S)\) (cf. (2.15)) se dirá de amplitud perfecta contenida en \([a,b]\) (resp. de amplitud perfecta finita, resp. perfecto) si \(F\) es de amplitud \(\mathcal C_0\)-perfecta contenida en \([a,b]\) (resp.\dots). Cuando los sumandos directos de módulos libres de tipo finito son localmente libres (cf. (2.15.1)), decir que \(F\) es perfecto significa, por tanto, que \(F\) es localmente isomorfo (en \(\Dpx(S)\)) a un complejo acotado con componentes libres de tipo finito.
+
+\textbf{Notación 4.9.} Denotaremos por \(\Dpx(\mathcal C)_{\mathcal C_0\text{-}\Parf}\) o \(\Parf(\mathcal C,\mathcal C_0)\) la sub-\(S\)-categoría estrictamente plena de \(\Dpx(\mathcal C)\) formada por los objetos \(\mathcal C_0\)-perfectos. En el caso del ejemplo (4.8), escribiremos \(\Dpx(_A S)_{\Parf}\), o \(\Parf(_A S)\), o incluso \(\Parf(S)\) si no hay ambigüedad posible sobre \(A\).

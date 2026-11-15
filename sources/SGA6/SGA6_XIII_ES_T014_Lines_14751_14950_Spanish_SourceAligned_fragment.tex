@@ -1,0 +1,460 @@
+% SGA 6, Exposición XIII: fragmento español alineado con la fuente.
+% Alcance exacto: fr.tex, líneas 14751--14950 inclusive.
+% El límite final queda dentro del diagrama del Lema 3.4 y continúa en el
+% fragmento siguiente; no se añaden cierres ajenos a la fuente.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+
+\textbf{Teorema 1.13.} \emph{Sean \(S\) un esquema noetheriano y \(X\) un
+\(S\)-esquema proyectivo, provisto de un haz amplio \(\mathcal O_X(1)\)
+cuyos inducidos \(\mathcal O_{X_s}(1)\), con \(s\in S\), están generados por
+su \(H^0(\mathcal O_{X_s}(1))\); sea \(\mathcal F\) una familia de clases de
+haces coherentes sobre las fibras de \(X/S\). Entonces las condiciones
+siguientes son equivalentes}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(\mathcal F\) es acotada. Además, si todos los
+\(F_K\in\mathcal F\) son localmente libres de rango \(p\), se puede suponer
+que \(\mathcal F\) está acotada por un haz \(F\) sobre un \(X_T\), con \(F\)
+localmente libre de rango \(p\).}
+\item \emph{El conjunto de los polinomios de Hilbert \(\chi(F_K(n))\) de los
+\(F_K\in\mathcal F\) es finito, y existe una sucesión de enteros \((b)\) tal
+que \(\mathcal F\) sea una \((b)\)-familia.}
+\item \emph{El conjunto de los polinomios de Hilbert \(\chi(F_K(n))\) de los
+\(F_K\in\mathcal F\) es finito, y existe un entero \(m\) tal que todos los
+\(F_K\in\mathcal F\) sean \(m\)-regulares.}
+\item \emph{El conjunto de los polinomios de Hilbert \(\chi(F_K(n))\) de los
+\(F_K\in\mathcal F\) es finito, y \(\mathcal F\) está contenida en la
+familia de las clases de cocientes de haces de la forma \(E_K\), donde \(E\)
+es un haz coherente sobre un \(X_T\). Además, se puede suponer \(T=S\) y
+\(E\) de la forma \(\mathcal O_X(-m)^{\oplus M}\).}
+\item \emph{\(\mathcal F\) está contenida en la familia de las clases de
+conúcleos de homomorfismos de la forma \(E'_K\to E_K\), donde \(E'\) y \(E\)
+son haces coherentes sobre un \(X_T\). Además, se puede suponer \(T=S\), y
+\(E'\) y \(E\) de las formas \(\mathcal O_X(-m')^{\oplus M'}\) y
+\(\mathcal O_X(-m)^{\oplus M}\).}
+\end{enumerate}
+En efecto, supongamos que \(\mathcal F\) está acotada por un haz \(F\) sobre
+un \(X_T\); descomponiendo \(T\) en partes si es necesario y utilizando el
+teorema de planitud genérica (EGA IV 6.9.1), se puede suponer que \(F\) es
+plano sobre \(T\). Entonces, el número de polinomios \(\chi(\sisi{F}{F_t}(n))\) es a lo % Canon SGA-SRC-001425
+sumo igual al número de componentes conexas de \(T\) (EGA III 7.9.5), y un
+pequeño lema afirma que, si para un \(t\in T\), \(F_t\) es localmente libre
+de rango \(p\), entonces \(F\) también lo es por encima de un entorno
+abierto de \(t\) en \(T\) (véase EGA IV 11.3.10, donde se toma \(X=Y\),
+\(f=\mathrm{id}\)). Ahora bien, de las hipótesis y de EGA III 7.7.6 resulta
+que, descomponiendo \(T\) todavía más finamente si es necesario, se puede
+encontrar una sucesión \(\sigma\) de secciones
+\(\sigma_1,\ldots,\sigma_r\in H^0(\mathcal O_X(1))\) que es
+\(F\)-regular. Por tanto, (ii) resulta de la propiedad de semicontinuidad
+superior de la función \(t\longmapsto h^0(F_{t,i}(-1))\), donde, para
+\(t\in T\) y \(0\le i\le r\), \(F_{t,i}\) designa la restricción de \(F_t\)
+al esquema de ceros de \(\sigma_1,\ldots,\sigma_i\) (EGA III 7.7.5).
+
+La implicación (ii) \(\Rightarrow\) (iii) resulta inmediatamente de 1.11.
+La implicación (iii) \(\Rightarrow\) (iv) resulta de 1.3 (iii), tomando
+\(M=\max(\chi(F_K(m)))\) y \(E=\mathcal O_X(-m)^{\oplus M}\).
+
+Supongamos que \(\mathcal F\) satisface (iv); existen sucesiones exactas
+\[
+0\longrightarrow F'_K\longrightarrow E_K\longrightarrow F_K\longrightarrow0
+\]
+y el conjunto de los polinomios \(\chi(F_K(n))\) es finito. Por hipótesis,
+la familia de las clases de los \(E_K\) es acotada; por la implicación (i)
+\(\Rightarrow\) (ii), ya demostrada, el conjunto de los polinomios
+\(\chi(E_K(n))\) es, pues, finito, y existe una sucesión de enteros \((b)\)
+tal que todos los \(E_K\) (con \(K\) algebraicamente cerrado) sean
+\((b)\)-haces. Por consiguiente, el conjunto de los polinomios
+\(\chi(F'_K(n))\) es finito y, en virtud de 1.6, todos los \(F'_K\) son
+\((b)\)-haces. Aplicando entonces a la familia de las clases de los \(F'_K\)
+la implicación (ii) \(\Rightarrow\) (iv), ya demostrada, se obtiene (v).
+
+Supongamos finalmente que \(\mathcal F\) satisface (v), y demostremos que
+\(\mathcal F\) es acotada. Se puede suponer que \(E\) (resp. \(E'\)) es de
+la forma \(\mathcal O_X(-m)^{\oplus M}\). En efecto, por (i)
+\(\Rightarrow\) (iv), tomemos una sobreyección
+\(L=\mathcal O_{X_T}(-m)^{\oplus M}\longrightarrow E\). Descomponiendo \(T\)
+en partes si es necesario, de modo que \(E\) pase a ser plano sobre \(T\),
+la formación de la sucesión exacta
+\(0\longrightarrow I\xrightarrow{u}L\longrightarrow E\longrightarrow0\)
+conmuta con el paso a las fibras. Por (i) \(\Rightarrow\) (iii) y (i)
+\(\Rightarrow\) (iv), tomemos \(m_1\) suficientemente grande para que todos
+los
+\(\operatorname{Ext}^1(\mathcal O_{X_K}(-m_1),I_K)=H^1(I_K(m_1))\)
+sean nulos y para que existan sobreyecciones
+\(L_1=\mathcal O_{X_T}(-m_1)^{\oplus M_1}\longrightarrow E'\) y
+\(\alpha:L_2=\mathcal O_{X_T}(-m_1)^{\oplus M_2}\longrightarrow I\).
+Entonces las aplicaciones
+\(\operatorname{Hom}(L_{1,K},L_K)\longrightarrow
+\operatorname{Hom}(L_{1,K},E_K)\) son sobreyectivas. Sea
+\(\beta:E'_K\to E_K\) un homomorfismo y sea \(\gamma\) la composición
+\(\sisi{L'_K}{L_{1,K}}\to E'_K\to E_K\); entonces \(\gamma\) proviene de un homomorfismo % Canon SGA-SRC-001426
+\(\delta:L_{1,K}\to L_K\), y
+$(\delta,u_K\circ\alpha):L_{1,K}\oplus L_{2,K}\longrightarrow L_K$ y
+\(\beta:E'_K\to E_K\) tienen el mismo conúcleo. Por consiguiente,
+\(\mathcal F\) está contenida en la familia de las clases de los conúcleos de
+homomorfismos de la forma
+\(\mathcal O_{X_K}(-m_1)^{\oplus(M_1+M_2)}\longrightarrow
+\mathcal O_{X_K}(-m)^{\oplus M}\).
+
+Descomponiendo siempre \(T\) en partes si es necesario, se puede suponer
+además que \(X_T\) (y, por tanto,
+\(\mathcal H\!om_{\mathcal O_{X_T}}(E',E)\)) y todos los
+\(R^q(f_T)_*\mathcal H\!om_{\mathcal O_{X_T}}(E',E)\) (donde
+\(f_T:X_T\to T\) es el morfismo estructural) son planos sobre \(T\), a fin de
+que la formación de
+\(G=(f_T)_*\mathcal H\!om_{\mathcal O_{X_T}}(E',E)\) conmute con cualquier
+cambio de base \(T'\to T\) (EGA III 6.9.9.2). Sea $R=\mathbb V(G^*)$; entonces
+\(X_R\) lleva canónicamente una sucesión exacta «~universal~»
+\[
+E'_R\longrightarrow E_R\longrightarrow F\longrightarrow0
+\]
+y \(F\) acota \(\mathcal F\).
+
+\subsection*{2. Varios lemas técnicos}
+\textbf{2.1.} Sean \(k\) un cuerpo y \(X\) un \(k\)-esquema propio. Sean
+\(L_1,\ldots,L_s\) haces invertibles sobre \(X\), \(c_1(L_i)\) la clase de
+Chern de \(L_i\), e \(Y\) un subesquema cerrado de \(X\) de dimensión
+\(\le s\). Recordemos que se designa por
+\(\langle c_1(L_1)\cdots c_1(L_s)\cdot Y\rangle\) el número de intersección,
+que puede calcularse como el coeficiente del monomio \(n_1\cdots n_s\) en el
+polinomio de Snapper
+\(\chi\bigl(L_1^{\otimes n_1}\otimes\cdots\otimes L_s^{\otimes n_s}\otimes\mathcal O_Y\bigr)\)
+(X 4.3.1).
+
+\textbf{2.2.} En adelante, se supone que \(k\) es algebraicamente cerrado,
+que \(X\) es proyectivo, provisto de un haz invertible muy amplio
+\(H=\mathcal O_X(1)\), y que \(X\) es íntegro, de dimensión \(r\).
+
+Sea \(L\) un haz invertible sobre \(X\). El entero
+\(\langle c_1(L)\cdot c_1(H)^{r-1}\rangle\) se denomina el \emph{grado} de
+\(L\) (relativo a \(H\)) y se denota por \(d(L)\).
+
+En lo que sigue, se considera un haz invertible \(L\) y los polinomios de
+Hilbert: \(\chi(L(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}\) y
+\(\chi(\mathcal O_X(n))=\sum_{i=0}^{r}e_i\binom{n+i}{i}\).
+
+\textbf{Lema 2.3.} \emph{Se tiene}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(a_r=e_r=d(H)\).}
+\item \emph{(Si \(r\ge1\)), \(a_{r-1}-e_{r-1}=d(L)\).}
+\end{enumerate}
+
+En efecto, se obtienen (i) y (ii) inmediatamente tomando \(m=0,1\) en el
+polinomio siguiente:
+\[
+\chi\bigl(L^{\otimes m}\otimes H^{\otimes n}\bigr)
+=
+\sum_{i+j\le r} f_{ij}\binom{m+i}{i}\binom{n+j}{j}.
+\]
+
+\textbf{Lema 2.4.} \emph{Si \(d(L)\le0\) y \(h^0(L)\ne0\), entonces
+\(L\simeq\mathcal O_X\); por tanto, \(d(L)=0\) y \(h^0(L)=1\).}
+
+En efecto, como \(X\) es íntegro, existe un divisor \(Y\ge0\) tal que
+\(L\simeq\mathcal O_X(Y)\). Si \(Y>0\), se tendría
+\(0\ge\langle \sisi{c(L)}{c_1(L)}\cdot c_1(H)^{r-1}\rangle=\langle c_1(H)^{r-1}\cdot Y\rangle\ge1\). % Canon SGA-SRC-001427
+
+\textbf{Lema 2.5.} \emph{Si \(d(L)\le0\), entonces \(L\) es un
+\((0,\ldots,0,a_r)\)-haz (con \(r-1\) ceros).}
+
+En efecto, si \(r=0\), \(L\) es evidentemente un \(a_0\)-haz. Si \(r\ge1\),
+por 2.4, \(h^0(L(-1))=0\), puesto que \(d(L(-1))<0\). Sea \(Y\) una sección
+hiperplana de \(X\), y sea
+\(0\longrightarrow L(-1)\longrightarrow L\longrightarrow L_Y\longrightarrow0\)
+una sucesión exacta definida por \(Y\). Si \(r=1\), por 1.7,
+\(h^0(L_Y(-1))=a_1\); por tanto, \(L\) es un \((0,a_1)\)-haz. Si \(r\ge2\),
+se puede tomar \(Y\) íntegro gracias al teorema de Bertini, y se puede
+suponer así, por inducción, que \(L_Y\) es un
+\((0,\ldots,a_r)\)-haz; de donde resulta la afirmación.
+
+\textbf{Lema \sisi{2.7}{2.6}.} \emph{Si \(r=2\) y \(d(L)\le0\), entonces}: % Canon SGA-SRC-001428
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para todo \(n\), \(h^1(L(n))\le a_1(a_1+1)a_2-a_0\)}
+\item \emph{\(a_0\le a_1(a_1+1)\).}
+\end{enumerate}
+
+Sea \(Y\) una sección hiperplana íntegra de \(X\). Por 1.7 y 2.6, \(L_Y\)
+es un \((0,a_2)\)-haz con polinomio de Hilbert
+\(\chi(L_Y(n))=a_1+a_2\binom{n+1}{1}\). Por tanto, por 1.11,
+\(-a_1\ge0\) y \(L_Y\) es \([-a_1]\)-regular.
+
+Consideremos la sucesión exacta siguiente:
+\[
+H^0(L_Y(n))\longrightarrow H^1(L(n-1))
+\longrightarrow H^1(L(n))\longrightarrow H^1(L_Y(n)).
+\]
+Para \(n\ge -a_1-1\), se tiene
+\(h^1(L(-a_1-2))\ge h^1(L(n))\), pues \(h^1(L_Y(n))=0\) por 1.3 (i); para
+\(n\le -1\), se tiene \(h^1(L(n-1))\le h^1(L(-1))\), pues
+\(h^0(L_Y(n))=0\) por 2.4. Finalmente, para todo \(n\),
+\(h^0(L_Y(n-1))\le h^0(L_Y(n))\), pues existe una inyección
+\(L_Y(n-1)\longrightarrow L_Y(n)\), y
+\(h^0(L_Y(-a_1-1))=a_2\binom{-a_1}{1}+a_1\), pues
+\(h^1(L_Y(-a_1-1))=0\); por tanto, para \(n\le -a_1-2\), se tiene
+\(h^1(L(n))-h^1(L(n+1))\le -a_2a_1+a_1\). Como consecuencia, se concluye
+que, para todo \(n\),
+\[
+h^1(L(n))\le h^1(L(-a_1-2))+(-a_1-1)(-a_2a_1+a_1).
+\tag{\sisi{2.7.1}{2.6.1}}
+\]
+
+Como \(L_Y\) es \([-a_1]\)-regular, \(h^2(L(-a_1-2)\sisi{}{)}=0\) por 1.4; de donde % Canon SGA-SRC-001429
+\(h^1(L(-a_1-2))=h^0(L(-a_1-2))-\chi(L(-a_1-2))\). Ahora bien,
+\(h^0(L(-a_1-2))\le a_2\binom{-a_1}{2}\) por 1.8 (i), ya que \(L\) es un
+\((0,0,a_2)\)-haz por 2.5. Por consiguiente,
+\[
+0\le h^1(L(-a_1-2))\le -a_1(-a_1-1)-a_0.
+\tag{2.7.2}
+\]
+Finalmente, 2.7.2 da (ii), y 2.7.1 y 2.7.2 dan (i).
+
+\textbf{Lema 2.8.} \emph{Supongamos que \(r=2\) y \(d(L)\le0\). Sean
+\(\delta=d(L)\) y \(\beta=\delta(e_2-1)+e_1\). Entonces}:
+\[
+a_0\ge
+\langle c_1(L)^2\rangle+2e_0+
+\sum_{i=1}^{2}(2e_i-a_i)\binom{\delta-1+i}{i}
++\beta(\beta+1).
+\]
+
+En efecto, sea
+\(\chi\bigl(L^{\otimes m}(\delta-1)\bigr)=\alpha_2m^2+\alpha_1m+\alpha_0\);
+entonces, comparando polinomios, resulta que
+\(2\alpha_2=\langle c_1(L)^2\rangle\), que
+\(\alpha_0=\sum_{i=0}^{2}e_i\binom{\delta-1+i}{i}\) y que
+\(\alpha_2+\alpha_1+\alpha_0=\sum_{i=0}^{2}a_i\binom{\delta-1+i}{i}\).
+Sea
+\(\chi\bigl(L^{-1}(\delta)(n)\bigr)=\sum_{i=0}^{2}\beta_i\binom{n+i}{i}\);
+entonces \(\beta_0=\alpha_2-\alpha_1+\alpha_0\) y, por 2.3,
+\(\beta_1=d(L^{-1}(\delta))+e_1\), lo que es igual a \(\beta\). Por tanto,
+\(a_0=2\alpha_2+2\alpha_0-\sum_{i=1}^{2}a_i\binom{\delta-1+i}{i}-\beta_0\),
+y, como \(d(L^{-1}(\delta))\le0\), se tiene
+\(\beta_0\le\beta(\beta+1)\) por 2.7 (ii); de donde resulta la afirmación.
+
+\textbf{Lema 2.9.} \emph{Supongamos que \(r\ge2\), que \(d(L)\le0\) y que
+\(X\) es normal. Entonces}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(h^1(L(-n))=0\) para
+\(n\ge2+h_2(a_{r-2},a_{r-1},a_r)\),}
+\item \emph{\(h^1(L(n))\le h_r(a_{r-2},a_{r-1},a_r)\) para todo \(n\),}
+\item \emph{\(|a_i|\le g_{r-i}(a_{r-2},a_{r-1},a_r)\) para
+\(i=0,\ldots,r\),}
+\end{enumerate}
+\emph{donde
+\(h_2(X_0,X_1,X_2),h_3(X_0,X_1,X_2),\ldots\) y
+\(g_0(X_0,X_1,X_2),g_1(X_0,X_1,X_2),\ldots\) son polinomios universales con
+coeficientes en \(\mathbb Q\), que no dependen ni de \(k\) ni de \(X\).}
+
+En efecto, tratemos primero el caso \(r=2\). Sean
+\(g_i(X_0,X_1,X_2)=X_{2-i}^2\) para \(i=0,1,2\) y
+\(h_2(X_0,X_1,X_2)=X_1(X_1+1)X_2-X_0\). Entonces (iii) es evidente y (ii)
+es 2.7 (i).
+
+Sean \(X\) en \(P=\mathbb P_k^N\) y
+\(\omega=\mathcal E\!xt^{N-2}_{\mathcal O_P}(\mathcal O_X,\Omega^N_{P/k})\).
+Entonces \(h^1(L(-n))=h^1(\omega\otimes L^{-1}(n))\), y \(\omega\) es
+invertible fuera del conjunto finito \(Z\) de los puntos singulares de \(X\)
+(véase FGA 149 \S 6). Sea \(Y\) una sección hiperplana normal de \(X\) que
+no contiene a \(Z\). Entonces \(\omega_Y(1)\simeq\Omega^1_{Y/k}\), y se tiene
+una sucesión exacta:
+\[
+0\longrightarrow \omega\otimes L^{-1}(-1)
+\longrightarrow \omega\otimes L^{-1}
+\longrightarrow \Omega^1_{Y/k}\otimes L_Y^{-1}(-1)
+\longrightarrow0.
+\]
+Ahora bien, \(h^1(\Omega^1_{Y/k}\otimes L_Y^{-1}(n))=h^0(L_Y(-n))\) para
+todo \(n\), y \(h^0(L_Y(-n))=0\) para \(n\ge1\) por 2.5. Por tanto,
+\(\Omega^1_{Y/k}\otimes L_Y^{-1}(-1)\) es 3-regular y, por 1.4,
+\(\omega\otimes L^{-1}\) es
+\(\bigl[3+h^1(\omega\otimes L^{-1}(2))\bigr]\)-regular. En consecuencia,
+\(h^1(L(-n))=0\) para \(n\ge2+h^1(L(-2))\)\,; de donde resulta (i).
+
+Supongamos ahora que \(r\ge3\) y razonemos por inducción sobre \(r\). Sea
+\(Y\) una sección hiperplana normal de \(X\), y consideremos la sucesión
+exacta:
+\[
+H^0(L_Y(-n))\longrightarrow H^1(L(-n-1))
+\longrightarrow H^1(L(-n))\longrightarrow H^1(L_Y(-n)).
+\tag{2.9.1}
+\]
+Por 1.7,
+\(\chi(L_Y(n))=\sum_{i=0}^{r-1}a_{i+1}\binom{n+i}{i}\). Por tanto, para
+\(n\ge2+h_2(a_{r-2},a_{r-1},a_r)\), la hipótesis de inducción da
+\(h^1(L_Y(-n))=0\), y como \(n\ge2\) por (ii) para \(r=2\), 2.4 da
+\(h^0(L_Y(-n))=0\)\,; de donde
+\(h^1(L(-n-1))=h^1(L(-n))\). Pero, para \(n\gg0\),
+\(h^1(L(\sisi{n}{-n}))=0\) (véase FGA 149 \S 6)\,; de donde resulta (i). % Canon SGA-SRC-001430
+
+Como hipótesis de inducción, se supone que los polinomios \(g_i\) y \(h_i\)
+están definidos para \(i\le r-1\). Entonces, para todo \(n\),
+\(h^1(L(n))\le h^1(L(n-1))+h_{r-1}(a_{r-2},a_{r-1},a_r)\), gracias a
+2.9.1. Por tanto, por (i), ya demostrado, se concluye que, cualquiera que sea
+\(m\ge -2\),
+\[
+h^1(L(n))\le
+\bigl[2+h_2(a_{r-2},a_{r-1},a_r)+m\bigr]
+h_{r-1}(a_{r-2},a_{r-1},a_r)
+\tag{2.9.2}
+\]
+para todo \(n\le m\).
+
+Por 2.5, \(L_Y\) es un \((0,\ldots,0,a_r)\)-haz. Sean
+\(c_i=g_{r-i}(a_{r-2},a_{r-1},a_r)\) para \(i=1,\ldots,r\) y
+\(m=P_{r-2}(c_1,\ldots,c_{r-1})\). Por 1.11, \(m\ge0\) y \(L_Y\) es
+\(m\)-regular. Por tanto, por 1.4 (ii),
+\(h^1(L(m-2))\ge h^1(L(n))\) para todo \(n\ge m-1\). Así, si se definen
+polinomios mediante \(M=P_{r-2}(g_{r-1},\ldots,g_1)\) y
+\(h_r=(h_2+M)h_{r-1}\), se obtiene (ii) en virtud de 2.9.2.
+
+Finalmente, como \(L_Y\) es \(m\)-regular, \(h^q(L(m))=0\) para \(q\ge2\)
+por 1.4 (i)\,; de donde
+\(\sum_{i=0}^{r}a_i\binom{m+i}{i}=h^0(L(m))-h^1(L(m))\). Pero
+\(h^0(L(m))\le a_r\binom{m+r}{r}\) por 1.8 (i). Por tanto, si se define
+\(g_r=\sum_{i=1}^{r}g_{r-i}\binom{M+i}{i}+a_r\binom{M+r}{r}+h_r\), se
+obtiene (iii).
+
+\textbf{Observación 2.10.} Para \(m\) fijo, consideremos una igualdad de
+polinomios en \(n\):
+\[
+\sum_{i=0}^{r}a_{m,i}\binom{n+i}{i}
+=
+\sum_{j=0}^{r}a_j\binom{m+n+j}{j}.
+\]
+Entonces se obtiene fácilmente la fórmula
+\[
+a_{m,i}=\sum_{j=0}^{r-i}a_{j+i}\binom{m-1+\sisi{i}{j}}{j} % Canon SGA-SRC-001431
+\]
+razonando por inducción sobre \(r\) para hacer que \(a_{m,i}\) se convierta
+en \(a_{m,0}\), y tomando \(n=-1\).
+
+Del mismo modo, se obtiene que existe un polinomio con coeficientes racionales
+\(P_i^{(m,r)}(X_r,\ldots,X_i)\), creciente en \(X_i\), tal que, en la
+igualdad siguiente:
+\[
+\sum_{i=0}^{r}a_i^{(m)}\binom{n+i}{i}
+=
+\sum_{j=0}^{r}a_j\binom{mn+j}{j},
+\]
+se tiene: \(a_i^{(m)}=P_i^{(m,r)}(a_r,\ldots,a_i)\).
+
+\textbf{Lema 2.11.} \emph{Sean \(S\) un esquema noetheriano y \(X\) un
+\(S\)-esquema proyectivo, provisto de un haz muy amplio
+\(H=\mathcal O_X(1)\). Supongamos que las fibras de \(X/S\) son
+geométricamente íntegras, de la misma dimensión \(r\). Sea \(\mathcal L\)
+una familia de clases de haces invertibles \(L_K\) sobre las fibras de
+\(X/S\). Entonces, para que \(\mathcal L\) sea acotada, (es necesario y)
+basta con que, en los polinomios de Hilbert
+\(\chi(L_K(n))=\sum_{i=0}^{r}a_i\binom{n+i}{i}\) de los
+\(L_K\in\mathcal L\), todos los coeficientes \(a_i\) permanezcan acotados.
+Además, si las fibras de \(X/S\) son también geométricamente normales, basta
+con que los tres coeficientes \(a_r,a_{r-1},a_{r-2}\) permanezcan acotados.}
+
+En efecto, sea \(\delta=\sisi{\operatorname{supp}}{\sup}\{d(L_K)\}\). Si \(\delta>0\), % Canon SGA-SRC-001432
+se puede sustituir \(\mathcal L\) por la familia de las clases de los
+\(L_K(-\delta)\), gracias a 2.3 y 2.10\,; se puede suponer así que
+\(\delta\le0\). Entonces \(\mathcal L\) es una \((b)\)-familia según 2.5,
+por lo que es acotada si todos los coeficientes \(a_i\) permanecen acotados,
+en virtud de 1.13; y, cuando las fibras de \(X/S\) son geométricamente
+normales, basta para ello con que los tres coeficientes
+\(a_r,a_{r-1},a_{r-2}\) permanezcan acotados, en virtud de 2.9.
+
+\subsection*{3. Teoremas generales de finitud}
+\textbf{Lema 3.1.} \emph{Sean \(S\) un esquema y \(X\) un \(S\)-esquema
+cuasicompacto y cuasiseparado; sea \(\underline{\Pic}_{X/S}\) el funtor de
+Picard (localizado para la topología f.p.p.f.)}\footnote{Cf. SGA 3 IV 6.3 y
+FGA n.º 232 para la definición de \(\underline{\Pic}_{X/S}\), donde
+conviene aquí, como se ha indicado, sustituir la topología fpqc por la
+topología fppf.} \emph{Entonces, para todo sistema proyectivo filtrante
+\((Z_\alpha)\) de \(S\)-esquemas cuasicompactos y cuasiseparados, con
+morfismos de transición afines, la aplicación canónica}
+\[
+\varinjlim_\alpha \underline{\Pic}_{X/S}(Z_\alpha)\longrightarrow
+\underline{\Pic}_{X/S}\bigl(\varprojlim_\alpha Z_\alpha\bigr)
+\tag{3.1.1}
+\]
+\emph{es biyectiva.}
+
+\emph{Por consiguiente} (EGA IV 8.14.2), \emph{si el funtor de Picard está
+representado por un \(S\)-esquema \(\Pic_{X/S}\), entonces \(\Pic_{X/S}\) es
+localmente de presentación finita.}
+
+En efecto, un elemento \(\lambda_\alpha\) de
+\(\underline{\Pic}_{X/S}(Z_\alpha)\) está representado por un haz invertible
+\(L'_\alpha\) sobre un \(X_{Z'_\alpha}\), donde
+\(Z'_\alpha\to Z_\alpha\) es un morfismo f.p.p.f. Pongamos
+\(Z=\varprojlim Z_\alpha\). La imagen \(\lambda\) de \(\lambda_\alpha\) en
+\(\underline{\Pic}_{X/S}(Z)\) está representada por el haz invertible \(L'\)
+sobre \(X_{Z'}\), imagen inversa de \(\sisi{L_\alpha}{L'_\alpha}\), donde % Canon SGA-SRC-001433
+\(Z'=Z'_\alpha\times_{Z_\alpha}Z\).
+
+Si \(\lambda\) es el elemento neutro de \(\underline{\Pic}_{X/S}(Z)\),
+existe un morfismo f.p.p.f. \(Z''\to Z'\) tal que la imagen inversa de \(L'\)
+sobre \(X_{Z''}\) sea \(\simeq\mathcal O_{X_{Z''}}\). En virtud de EGA IV
+8.8.2, 8.10.5 (vi), 11.2.6 (ii), 8.5.2 (i) y 8.5.2.4, existe un
+\(\beta\geq\alpha\) y un morfismo f.p.p.f.
+\(Z''_\beta\to Z'_\beta\), donde
+\(Z'_\beta=Z'_\alpha\times_{Z_\alpha}Z_\beta\), tal que la imagen inversa de
+\(L'_\alpha\) sobre \(X_{Z''_\beta}\) sea
+\(\simeq\mathcal O_{X_{Z''_\beta}}\). La imagen de \(\lambda_\alpha\) ya es,
+por tanto, el elemento neutro en \(\underline{\Pic}_{X/S}(Z_\beta)\). Por
+consiguiente, 3.1.1 es inyectiva.
+
+La sobreyectividad de 3.1.1 se demuestra de manera análoga.
+
+\textbf{Proposición 3.2.} \emph{Sean \(S\) un esquema noetheriano y \(X\) un
+\(S\)-esquema propio. Supongamos que el funtor de Picard está representado
+por un \(S\)-esquema \(\Pic_{X/S}\). Entonces}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{\(\Pic_{X/S}\) es localmente de tipo finito sobre \(S\).}
+\item \emph{Los subconjuntos \(\Lambda\) de \(\Pic_{X/S}\) corresponden
+biyectivamente a las familias \(\mathscr L\) de clases de haces invertibles
+sobre las fibras de \(X/S\).}
+\item \emph{Una familia \(\Lambda\) de \(\Pic_{X/S}\) es cuasicompacta si y
+solo si la familia correspondiente \(\mathscr L\) es acotada.}
+\end{enumerate}
+
+En efecto, (i) resulta de (3.1); (ii), del hecho siguiente: si \(s\) es un
+punto de \(S\) y \(K\) es una extensión algebraicamente cerrada de \(k(s)\),
+entonces los \(K\)-puntos de \(\Pic_{X/S}\) corresponden biyectivamente a
+las clases de isomorfismo de haces invertibles sobre \(X_K\). En cuanto a
+(iii), supongamos que el subconjunto \(\Lambda\) de \(\Pic_{X/S}\) es
+cuasicompacto. Entonces \(\Lambda\) está contenido en un abierto \(U\) de
+tipo finito, y la inclusión \(U\to\Pic_{X/S}\) corresponde a un haz
+invertible \(L\) sobre un \(X_T\), donde \(T\to U\) es un morfismo
+sobreyectivo, (plano) de tipo finito. Finalmente, \(T\to S\) es de tipo
+finito, por lo que \(L\) acota \(\mathscr L\). Recíprocamente, supongamos que
+\(\mathscr L\) está acotada por un haz coherente \(L\) sobre un \(X_T\), con
+\(T\) de tipo finito sobre \(S\). Se puede suponer que \(L\) es invertible
+(1.13 (i)), de modo que \(L\) defina un morfismo
+\(f:T\to\Pic_{X/S}\). La imagen de \(f\) contiene a \(\Lambda\) y es
+cuasicompacta, luego es noetheriana por (i). Por consiguiente, \(\Lambda\) es
+cuasicompacto y se obtiene (iii).
+
+Gracias a 3.2, la definición habitual de los morfismos de tipo finito entre
+dos esquemas de Picard se generaliza en la siguiente:
+
+\textbf{Definición 3.3.} \emph{Sean \(X\) e \(Y\) propios sobre \(S\)
+noetheriano. Un morfismo entre los funtores de Picard}
+\[
+\begin{tikzcd}
+\underline{\Pic}_{Y/S}\arrow[r]&\underline{\Pic}_{X/S}
+\end{tikzcd}
+\]
+\emph{se dice de tipo finito si toda familia acotada de clases de haces
+invertibles sobre las fibras de \(X/S\) tiene como imagen inversa una familia
+acotada de clases de haces sobre las fibras de \(Y/S\).}
+
+\textbf{Lema 3.4.} \emph{Sean \(X,Y,X',Y'\) propios sobre \(S\) noetheriano
+y \(T\to S\) sobreyectivo de tipo finito. Entonces}:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Para que un morfismo
+\(\Phi:\underline{\Pic}_{Y/S}\to\underline{\Pic}_{X/S}\) sea de tipo finito,
+es necesario y suficiente que
+\(\Phi_T:\underline{\Pic}_{Y_T/T}\to\underline{\Pic}_{X_T/T}\) sea de tipo
+finito.}
+\item \emph{En un diagrama conmutativo}
+\[
+\begin{tikzcd}
+\Phi':\underline{\Pic}_{Y'/S}\arrow[r]&
+\underline{\Pic}_{X'/S}\\

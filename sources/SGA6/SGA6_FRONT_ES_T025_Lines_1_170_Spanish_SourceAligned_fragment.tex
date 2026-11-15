@@ -1,0 +1,293 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{mathrsfs}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows}
+\usepackage{enumitem}
+\usepackage{longtable,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\emergencystretch=3em
+\hbadness=10000
+\hfuzz=20pt
+\usepackage[normalem]{ulem}
+\newcommand{\K}{K}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Fil}{\operatorname{Fil}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\Todd}{\operatorname{Todd}}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\Parf}{\operatorname{Parf}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\RRR}{\mathrm{RRR}}
+\providecommand{\codim}{\operatorname{codim}}
+\providecommand{\Inv}{\operatorname{Inv}}
+\providecommand{\Pic}{\operatorname{Pic}}
+\providecommand{\Z}{\mathbb Z}
+\providecommand{\Q}{\mathbb Q}
+\providecommand{\Ahat}{\widehat A}
+\providecommand{\Ahp}{\widehat A^{+}}
+\providecommand{\That}{\widehat T}
+\providecommand{\rad}{\operatorname{rad}}
+\providecommand{\Gl}{\operatorname{Gl}}
+\providecommand{\GL}{\operatorname{Gl}}
+\providecommand{\ch}{\operatorname{ch}}
+\providecommand{\Todd}{\operatorname{Todd}}
+\providecommand{\Gr}{\operatorname{Gr}}
+\providecommand{\red}{\text{réd}}
+
+% Core macro additions
+\providecommand{\Atil}{\widetilde A}
+\providecommand{\Ctil}{\widetilde C}
+\providecommand{\K}{\mathrm K}
+\providecommand{\cC}{\mathcal C}
+\providecommand{\cF}{\mathscr F}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\ellc}{\ell}
+\providecommand{\Tor}{\operatorname{Tor}}
+\providecommand{\Coker}{\operatorname{Coker}}
+\providecommand{\Ker}{\operatorname{Ker}}
+\providecommand{\Supp}{\operatorname{Supp}}
+\providecommand{\codim}{\operatorname{codim}}
+\providecommand{\Gr}{\operatorname{G}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\rang}{\operatorname{rang}}
+\providecommand{\cO}{\mathcal O}
+\providecommand{\sgacircled}[1]{\tikz[baseline=(char.base)]\node[shape=circle,draw,inner sep=.35pt](char){\mbox{\scriptsize #1}};}
+
+\hypersetup{hypertexnames=false}
+\newcommand{\sgastandalonefootnotetext}[2]{%
+  \begingroup
+  \NoHyper
+  \footnotetext{#2}%
+  \endNoHyper
+  \endgroup
+}
+\newcommand{\sgarepeatfootnotemark}{%
+  \begingroup
+  \NoHyper
+  \footnotemark[\value{footnote}]%
+  \endNoHyper
+  \endgroup
+}
+\newcommand{\sganohyperfootnotemark}{%
+  \begingroup
+  \NoHyper
+  \footnotemark
+  \endNoHyper
+  \endgroup
+}
+\providecommand{\R}{\mathbb R}
+\providecommand{\C}{\mathbb C}
+\providecommand{\N}{\mathbb N}
+\providecommand{\Zell}{\mathbb Z_\ell}
+\providecommand{\Qell}{\mathbb Q_\ell}
+\providecommand{\C}{\mathbb C}
+\providecommand{\Ch}{\operatorname{Ch}}
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Td}{\operatorname{Td}}
+% --- build fix (typesetting only), 15 Nov 2026 ---
+\usepackage{adjustbox}
+\setlength{\emergencystretch}{5em}
+\tolerance=2000
+\begin{document}
+\begin{center}
+{\Large Seminario de Geometría Algebraica del Bois Marie}\par
+{\large 1966--67}\par
+\vspace{1.5em}
+{\Large Teoría de las intersecciones y teorema de Riemann--Roch}\par
+{\large (SGA 6)}\par
+\vspace{1.5em}
+un Seminario dirigido por\par
+P. Berthelot, A. Grothendieck, L. Illusie\par
+con la colaboración de\par
+D. Ferrand, J.-P. Jouanolou, O. Jussila, S. Kleiman, M. Raynaud, J.-P. Serre
+\end{center}
+
+\section*{Prefacio}
+La presente edición del Seminario de Geometría Algebraica 6 reproduce casi
+por completo la primera edición, distribuida por el I.H.E.S. en forma de
+exposiciones mimeografiadas. Las correcciones efectuadas se refieren
+esencialmente a erratas de imprenta, salvo en las Exposiciones I y III, donde
+L. Illusie introdujo ligeras modificaciones en algunos enunciados incorrectos
+de la versión primitiva. Por otra parte, se han añadido notas a pie de página,
+en particular en la Exposición XIV por A. Grothendieck, con el fin de señalar
+progresos recientes en cuestiones que todavía estaban abiertas durante el
+Seminario.
+
+Señalemos finalmente que la Exposición XI, de D. Ferrand, relativa a la teoría
+del determinante para los complejos perfectos, no fue redactada y, por tanto,
+no será publicada; para evitar errores de referencia, se ha conservado sin
+cambios la numeración de las Exposiciones siguientes.
+
+\begin{flushright}Junio de 1971\end{flushright}
+
+\section*{Introducción}
+El objeto del presente Seminario es desarrollar una teoría
+\underline{global} de las intersecciones y una fórmula de Riemann--Roch para
+esquemas arbitrarios. El lector encontrará una descripción del programa del
+Seminario en la Exposición 0. La posibilidad, en principio, de demostrar una
+fórmula de Riemann--Roch para esquemas \underline{regulares} generales,
+siguiendo las líneas del conocido informe de Borel--Serre de 1958, estaba ya
+clara en ese momento, al menos para un morfismo proyectivo. La extensión al
+caso general es menos evidente; el programa en el que se inscribe (y que se
+realiza parcialmente en nuestro Seminario) se remonta a 1960. Como ocurría
+también con la teoría de dualidad de los haces coherentes (cf.\ R.~Hartshorne,
+Residues and Duality, Lecture Notes in Mathematics
+n\textsuperscript{o}~20, Springer), una herramienta esencial para formular
+una teoría satisfactoria es la teoría de las \underline{categorías derivadas}
+de Verdier, cuyo conocimiento es indispensable para comprender el Seminario.
+
+Aparte de esta teoría, el estudio del Seminario apenas exige un conocimiento
+general de los fundamentos de la Geometría Algebraica, tal como se exponen en
+EGA, capítulos I, II y III; además, solo necesitaremos hacer referencias
+ocasionales a EGA IV para ciertos hechos relativos a los morfismos planos o
+lisos, que figuran también, en lo esencial, en las primeras Exposiciones de
+SGA~1. Finalmente, para desarrollar ciertos resultados con toda la
+generalidad deseable para las aplicaciones, utilizamos a veces la noción de
+\underline{sitio anillado} y de \underline{topos anillado}, para la cual
+remitimos a SGA~4, Exposiciones I a IV. El lector que desconozca el lenguaje
+de los sitios y los topos podrá reemplazar en todas partes dichos objetos por
+espacios topológicos ordinarios, reemplazando entonces los objetos del topos
+por abiertos de estos espacios; no obstante, le aconsejamos preferentemente
+que asimile el lenguaje de los topos, que proporciona un principio de
+unificación sumamente cómodo.
+
+La noción fundamental para la teoría aquí presentada es la de
+\underline{complejo perfecto de módulos}, y sus diversas variantes,
+desarrolladas en las Exposiciones I, II y III. Parece claro que estas nociones,
+también importantes en otros contextos de la Geometría Algebraica (en
+particular para las fórmulas de tipo Lefschetz--Verdier en cohomología con
+coeficientes discretos (SGA 5) o coherentes), tendrán asimismo un papel que
+desempeñar fuera de la Geometría Algebraica, en particular para formular una
+variante analítica compleja del teorema de Riemann--Roch aquí presentado, o
+variantes adecuadas del teorema del índice de Atiyah--Singer. En la Exp.\ II
+se darán algunas indicaciones en este sentido. Desgraciadamente, todavía
+falta en la actualidad un enunciado, siquiera heurístico, que englobe estos
+dos teoremas (el primero de los cuales sigue siendo por ahora conjetural).
+Parece faltar una idea nueva, como falta también en Geometría Algebraica para
+llegar a una demostración del teorema de Riemann--Roch fuera de hipótesis
+proyectivas (cf.\ Exp.\ XIV, n\textsuperscript{o}~2).
+
+No haremos uso alguno en este Seminario de la \underline{teoría local} de las
+intersecciones, expuesta en J.P. Serre, Algèbre Locale. Multiplicités (Lecture
+Notes in Mathematics n\textsuperscript{o}~11, Springer), y nos limitaremos a
+señalar aquí que este curso de Serre ejerció una influencia evidente en la
+génesis de la teoría en 1957. Tampoco utilizaremos la teoría del
+\underline{anillo de Chow} desarrollada en el Séminaire Chevalley 1958,
+Exposiciones 2 y 3 (École Normale Supérieure). Esta teoría está vinculada de
+manera esencial a hipótesis de no singularidad, mientras que el objeto de
+nuestro Seminario es, por el contrario, desarrollar una teoría de las
+intersecciones sobre esquemas generales (e incluso topoi localmente anillados
+generales); véanse a este respecto los comentarios de la Exp.\ XIV,
+n\textsuperscript{o}~4 y n\textsuperscript{o}~8, que exponen las relaciones
+entre nuestra teoría y la del anillo de Chow y plantean la cuestión de una
+generalización de esta última. Podemos decir que el Seminario presenta una
+teoría de intersecciones coherente y autosuficiente, pero en modo alguno
+exhaustiva respecto de los diversos puntos de vista útiles (e incluso
+indispensables) en teoría de intersecciones, y que, por consiguiente, conviene
+completarlo con las exposiciones citadas de Serre y Chevalley.
+
+Se ha adjuntado al Seminario (como Apéndice a la Exp.\ 0) el informe de
+Grothendieck de 1957 «~classes de Faisceaux et théorème de Riemann--Roch~»,
+que había servido de base al seminario de Borel y Serre en Princeton ese mismo
+año, así como a su artículo ya citado. Este informe esboza dos demostraciones
+del teorema de Riemann--Roch para variedades cuasiproyectivas no singulares;
+la primera de ellas, válida por el momento solo en característica cero, pero
+que proporciona en cambio un resultado algo más preciso en el caso de una
+inmersión, todavía no figura en la literatura (sin exceptuar el trabajo de
+Borel--Serre ni el presente Seminario). Naturalmente, la lectura de este
+informe no presupone la de ninguna otra Exposición del Seminario, e incluso
+puede servir de introducción a su estudio al mismo título que la Exposición 0,
+especialmente para un lector que aún no esté familiarizado con Borel--Serre.
+La demostración a la que acabamos de aludir se aplica, además, esencialmente
+sin cambios al caso de un morfismo proyectivo de espacios analíticos complejos,
+y se aplicará sin duda también en característica arbitraria una vez resuelto el
+problema de las operaciones «~potencias exteriores~» en la categoría derivada
+(cf.\ Exp.\ XIV, n\textsuperscript{os}~1, 2, 3). La ausencia de un estudio de
+esta cuestión constituye sin duda la laguna más grave de este Seminario, dentro
+del propio enfoque que se ha adoptado en él.
+
+Se observará la ausencia, en la tabla de materias del presente Seminario, de
+dos de los participantes mencionados en la portada. Uno de ellos, J.P.
+Jouanolou, había participado activamente en la elaboración técnica de la
+primera parte del Seminario, pero no había podido participar en las
+exposiciones orales; se le debe, en particular, la afirmación de independencia
+lineal contenida en el importante enunciado VI 1.1, que da la estructura del
+anillo $K^\circ$ de las clases de módulos localmente libres sobre un fibrado
+proyectivo (que anteriormente solo se había demostrado bajo la hipótesis de
+que el esquema base admitiese un módulo invertible amplio). El otro, J.P.
+Serre, había impartido dos exposiciones orales, lógicamente independientes del
+resto del Seminario, y por ello prefirió publicarlas en forma de artículo
+separado (cf.\ J.P. Serre, Groupes de Grothendieck des schémas en groupes
+réductifs déployés, de próxima aparición en Publications Mathématiques,
+n\textsuperscript{o}~34).
+
+Como en las demás partes del Seminario de Geometría Algebraica del Bois Marie,
+las siglas SGA 1 a SGA 6 remiten a las distintas partes de dicho Seminario; el
+número romano que sigue a estas siglas indica el n\textsuperscript{o} de la
+Exposición, y las cifras arábigas que lo siguen corresponden a la numeración
+interna de la Exposición de que se trate. Para las referencias internas al
+presente Seminario se omiten las siglas SGA 6 y se utilizan referencias del
+tipo I 4.9 (que significa: Exposición I, enunciado 4.9). La sigla EGA remite a
+los Éléments de Géométrie Algébrique de J. Dieudonné y A. Grothendieck.
+
+\section*{Tabla de materias}
+
+\noindent
+\underline{EXPOSICIÓN 0}\\
+Esbozo de un programa para una teoría de las intersecciones sobre esquemas generales\\
+por A. Grothendieck \dotfill 1\\[8pt]
+Clases de haces y teorema de Riemann--Roch\\
+por A. Grothendieck \dotfill 20\\[8pt]
+\underline{EXPOSICIÓN I}\\
+Generalidades sobre las condiciones de finitud en las categorías derivadas\\
+por L. Illusie \dotfill 78\\[8pt]
+\underline{EXPOSICIÓN II}\\
+Existencia de resoluciones globales\\
+por L. Illusie \dotfill 160\\[8pt]
+\underline{EXPOSICIÓN III}\\
+Condiciones de finitud relativas\\
+por L. Illusie \dotfill 222\\[8pt]
+\underline{EXPOSICIÓN IV}\\
+Grupos de Grothendieck de los topos anillados\\
+por L. Illusie \dotfill 274\\[8pt]
+\underline{EXPOSICIÓN V}\\
+Generalidades sobre los $\lambda$-anillos\\
+por P. Berthelot \dotfill 297\\[8pt]
+\underline{EXPOSICIÓN VI}\\
+El $K^\circ$ de un fibrado proyectivo: cálculos y consecuencias\\
+por P. Berthelot \dotfill 365\\[8pt]
+\underline{EXPOSICIÓN VII}\\
+Inmersiones regulares y cálculo del $K^\circ$ de un esquema obtenido por explosión\\
+por P. Berthelot \dotfill 416\\[8pt]
+\underline{EXPOSICIÓN VIII}\\
+El teorema de Riemann--Roch\\
+por P. Berthelot \dotfill 466\\[8pt]
+\underline{EXPOSICIÓN IX}\\
+Algunos cálculos de grupos $K_\bullet$\\
+por P. Berthelot \dotfill 498\\[8pt]
+\underline{EXPOSICIÓN X}\\
+Formalismo de las intersecciones sobre los esquemas algebraicos propios\\
+por O. Jussila\\
+Con un Apéndice de A. Grothendieck\\
+Especialización en teoría de intersecciones \dotfill 519\\[8pt]
+\underline{EXPOSICIÓN XI} -- No redactada\\[8pt]
+\underline{EXPOSICIÓN XII}\\
+Un teorema de representabilidad relativa sobre el funtor de Picard\\
+por M. Raynaud (redactado por S. Kleiman) \dotfill 595\\[8pt]
+\underline{EXPOSICIÓN XIII}\\
+Los teoremas de finitud para el funtor de Picard\\
+por S. Kleiman \dotfill 616\\[8pt]
+\underline{EXPOSICIÓN XIV}\\
+Problemas abiertos en teoría de intersecciones\\
+por A. Grothendieck \dotfill 667\\[8pt]
+Índice terminológico \dotfill 691\\[4pt]
+Índice de notaciones \dotfill 696\par

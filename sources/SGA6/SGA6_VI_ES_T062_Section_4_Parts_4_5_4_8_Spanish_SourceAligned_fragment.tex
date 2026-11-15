@@ -1,0 +1,72 @@
+% SGA 6, Exposición VI: fragmento español alineado con la fuente.
+% Alcance: sección 4, números 4.5--4.8, líneas 9279--9343 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{4.5}
+Sean \(S\) un esquema cuasicompacto, \(E\) un \(\mathcal O_S\)-módulo localmente libre de rango \(n\), \(\pi=(p_1,\ldots,p_k)\) una sucesión de enteros \(\geq1\), de suma \(n\). Pongamos \(X=D_\pi(E)\); \(X\) está provisto de una sucesión de cocientes canónica \(L_i\); se pone \(L_0=0\), \(L_k=f^*(E)\), siendo \(f\) el morfismo estructural \(X\to S\). Para \(1\le i\le k\), denotamos por \(F_i\) el núcleo de \(L_i\to L_{i-1}\). Sea \(K'(X)\) el grupo de Grothendieck de los haces localmente libres de tipo finito sobre \(X\) (resp. de los complejos perfectos). Denotamos por \(F_j\) la clase de \(F_j\), y por \(\lambda_i^{(j)}\) la clase de \(\Lambda^i(F_j)\). En el caso en que \(K'(X)\) se define en términos de complejos perfectos, se sigue dando un sentido evidente a las series \(\lambda_t(E)\), \(\lambda_t(F_j)\), donde \(E\) es la clase de \(E\). Por último, se observa que:
+\[
+  \sum_{j=1}^{k}F_j=E.
+\]
+
+\textbf{Teorema 4.6.} Con las hipótesis y notaciones de 4.5, la \(K'(S)\)-álgebra \(K'(X)\) está engendrada por los \(\lambda_i^{(j)}\); el ideal de las relaciones entre los \(\lambda_i^{(j)}\) está engendrado por las relaciones deducidas de:
+\[
+  \lambda_t(E)=\prod_{j=1}^{k}\lambda_t(F_j).
+\]
+En otros términos, \(K'(X)\) es la \(K'(S)\)-\(\lambda\)-álgebra engendrada por los generadores \(F_1,\ldots,F_k\) sometidos a las relaciones (cf. V 4.6): i) \(\lambda^p(F_i)=0\) para \(p>p_i\); ii) \(\sum_i F_i=E\).
+
+Se comienza por el caso en que todos los \(p_i\) son iguales a \(1\); el teorema se enuncia entonces:
+
+\textbf{Corolario 4.7.} Sean \(S\) un esquema cuasicompacto, \(E\) un \(\mathcal O_S\)-módulo localmente \sisi{}{libre }de rango \(n\), \(X\) el fibrado de banderas de \(E\), \(\xi_1,\ldots,\xi_n\) las clases de los haces invertibles \(F_1,\ldots,F_n\) (notación de 3.5). Entonces \(K'(X)\) es la \(K'(S)\)-álgebra engendrada por los \(\xi_i\), sometidos a las relaciones:
+\[
+  \sigma_i(\xi_1,\ldots,\xi_n)=\lambda^i(E).
+\]
+
+Se procede por recurrencia sobre \(n\). Para \(n=1\), el teorema es trivial. Supongamos que se ha demostrado para \(n-1\); se considera entonces \(\mathbb P(E)\), y sobre \(\mathbb P(E)\) la sucesión exacta:
+\[
+  0\longrightarrow F\longrightarrow g^*(E)\longrightarrow \mathcal O_{\mathbb P(E)}(1)\longrightarrow 0,
+\]
+siendo \(g\) el morfismo estructural de \(\mathbb P(E)\). Según el lema 4.2, \(X\) se identifica con el fibrado de banderas usual \(D(F)\) sobre \(\mathbb P(E)\), correspondiéndose los haces canónicos en esta identificación. El diagrama:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+D(E)=D(F) \arrow[r,"h"] \arrow[dr,"f"'] & \mathbb P(E) \arrow[d,"g"]\\
+& S
+\end{tikzcd}
+\]
+muestra que \(K'(S)\to K'(X)\) se factoriza por \(K'(\mathbb P(E))\). Según la hipótesis de recurrencia aplicada a \(D(F)\), y el corolario 3.4, \(K'(X)\) admite como base sobre \(K'(\mathbb P(E))\) los elementos de la forma:
+\[
+  \xi_2^{\alpha_2}\ldots\xi_{n-1}^{\alpha_{n-1}},
+  \qquad \text{con } 0\le\alpha_i\le n-i;
+\]
+por otra parte, \(K'(\mathbb P(E))\) admite como base sobre \(K'(S)\) los elementos \(1,\xi_1,\ldots,\xi_1^{n-1}\); por tanto, \(K'(X)\) admite como base sobre \(K'(S)\) los elementos:
+\[
+  \xi_1^{\alpha_1}\cdots\xi_{n-1}^{\alpha_{n-1}},
+  \qquad \text{con } 0\le\alpha_i\le n-i.
+\]
+Además, la aditividad de \(\lambda_t\) implica que \(\prod_i(1+\xi_i t)=\lambda_t(E)\), y se verifican las relaciones del corolario. Si \(C\) es la \(K'(S)\)-álgebra engendrada por generadores \(\xi_i\), sometidos a las relaciones:
+\[
+  \sigma_i(\xi_1,\ldots,\xi_n)=\lambda^i(E),
+\]
+existe, pues, un homomorfismo sobreyectivo de \(C\) sobre \(K'(X)\). Según 4.4, este homomorfismo transforma una base de \(C\) en una base de \(K'(X)\); es, por tanto, un isomorfismo, lo que termina la demostración del corolario.
+
+Tratemos el caso general de un fibrado de banderas de tipo \(\pi\). El fibrado de banderas usual \(D(E)\) se puede obtener a partir de \(D_\pi(E)\) construyendo sucesivamente los fibrados de banderas de los \(F_j\) (4.2). De ello resulta que \(K'(D(E))\), considerado como módulo sobre \(K'(X)\), admite una base formada por los elementos considerados en 4.3.i), siendo los \(\xi_i^{(j)}\) las clases de los haces análogos a los \(F_j\) que intervienen en el desdoblamiento de las imágenes inversas de los \(F_j\) sobre \(D(E)\) (notaciones de 3.5 y 3.7). Por tanto, \(K'(X)\) es un subanillo de \(K'(D(E))\); además, la aditividad de \(\lambda_t\) implica que:
+\[
+  \lambda_i^{(j)}=\sigma_i(\xi_1^{(j)},\ldots,\xi_{p_j}^{(j)}),
+\]
+y \(K'(X)\) contiene la sub-\(K'(S)\)-álgebra de \(K'(D(E))\) engendrada por los \(\lambda_i^{(j)}\). Sea \(B\) esta subálgebra; según 4.3.i), y lo que se acaba de decir, se tiene en \(K'(D(E))\) una familia de elementos que forma una base a la vez para la estructura de \(B\)-módulo y para la estructura de \(K'(X)\)-módulo; por consiguiente, \(K'(X)=B\), lo que muestra que \(K'(X)\) está engendrado por los \(\lambda_i^{(j)}\). El ideal de las relaciones entre los \(\lambda_i^{(j)}\) viene dado entonces por 4.3.ii), teniendo en cuenta la estructura de \(K'(D(E))\) sobre \(K'(S)\), determinada por 4.7, y el hecho de que los \(\xi_i^{(j)}\) son las clases de los haces que intervienen en el desdoblamiento de la imagen inversa de \(E\) sobre \(D(E)\). Esto termina la demostración de la primera forma de 4.6.
+
+Para deducir de ella la segunda forma, se observa que los elementos \(F_i\) de la \(K'(S)\)-\(\lambda\)-álgebra \(K'(X)\) verifican las relaciones i) y ii). Si \(A\) es la \(K'(S)\)-\(\lambda\)-álgebra engendrada por elementos \(F_i'\) que satisfacen i) y ii), existe, pues, un \(K'(S)\)-\(\lambda\)-homomorfismo de \(A\) en \(K'(X)\) que envía \(F_i'\) sobre \(F_i\) (V 4.7). Según 4.6, este homomorfismo es sobreyectivo. Como el \(\lambda\)-ideal engendrado por las relaciones i) y ii) en \(K'(S)[F_1,\ldots,F_k]\) contiene el ideal usual engendrado por las relaciones de 4.6, este homomorfismo es también inyectivo y, por tanto, es un isomorfismo.
+
+\textbf{Corolario 4.8.} Con las hipótesis y notaciones de 4.5, pongamos:
+\[
+  c_i^{(j)}=\gamma^i(F_j-p_j),
+  \qquad 1\le i\le p_j;
+\]
+entonces la \(K'(S)\)-álgebra \(K'(X)\) está engendrada por los \(c_i^{(j)}\); el ideal de las relaciones entre los \(c_i^{(j)}\) está engendrado por las relaciones deducidas de:
+\[
+  \gamma_t(E-n)=\prod_{j=1}^{k}\gamma_t(F_j-p_j).
+\]
+Esto no es sino otro enunciado de 4.6. En efecto, se pueden expresar los \(c_i^{(j)}\) en función de los \(\lambda_i^{(j)}\), y recíprocamente. Además, la relación \(\lambda_t(E)=\prod\lambda_t(F_j)\) equivale a la relación \(\gamma_t(E-n)=\prod\gamma_t(F_j-p_j)\).
+

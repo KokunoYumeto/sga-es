@@ -1,0 +1,60 @@
+% SGA 6, Exposición II: fragmento español alineado con la fuente.
+% Alcance: sección 2, números 2.4.1--2.4.4, líneas 3956--4007 inclusive.
+% Fuente francesa: sga6_fr_r1/src/fr.tex.
+% SHA-256 de la fuente francesa completa:
+% 0D2158B9FE3B466309A92165727A0B191422E05FBAA0DACD5806E8322C54BA1A.
+\providecommand{\sisi}[2]{#2}
+
+\subsection*{2.4. Espacios de Stein}
+
+\textbf{Definición 2.4.1.} Sea $\sisi{S}{\mathcal S}$ un topos localmente anillado (I 2.15.1 (ii)), de objeto final $S$. Se dice que $\sisi{S}{\mathcal S}$ es de Stein si el haz estructural $\mathcal O_S$ es coherente (I 3.1) y si se tienen las propiedades siguientes:
+
+«\emph{teorema A}»: todo $\mathcal O_S$-módulo coherente (I 3.1) está engendrado por sus secciones;
+
+«\emph{teorema B}»: para todo $\mathcal O_S$-módulo coherente $F$, se tiene $H^i(S,F)=0$ para $i>0$.
+
+\textbf{Observación 2.4.1.1.} Si $\sisi{S}{\mathcal S}$ tiene «suficientes puntos cerrados»\footnote{es decir, suficientes funtores fibra (SGA~4 IV 6.4.1) del tipo $i_s:s\to S$, donde $i_s$ es la inclusión de un cerrado de $S$.} $s$ tales que el ideal $\mathfrak m_s$ definido por $s$\footnote{es decir, formado por las secciones de $\mathcal O_S$ cuya fibra en $s$ pertenece al ideal maximal $m_s$ de $\mathcal O_{S,s}$.} sea coherente, entonces la relación «$H^1(S,F)=0$ para todo haz coherente $F$» implica el teorema A. En efecto, sean $F$ un $\mathcal O_S$-módulo coherente y $s$ un punto cerrado de $S$. Se tiene la sucesión exacta
+\[
+0\longrightarrow\mathfrak m_sF\longrightarrow F\longrightarrow F/\mathfrak m_sF\longrightarrow0,
+\]
+donde $F/\mathfrak m_sF$ es un haz coherente concentrado sobre $s$. Aplicando el funtor $H^0(S,.)$ y escribiendo la sucesión exacta de cohomología, se encuentra que $H^0(S,F)\longrightarrow H^0(S,F/\mathfrak m_sF)$ es un epimorfismo. Como se tiene $H^0(S,F/\mathfrak m_sF)\xrightarrow{\sim}F_s/m_sF_s$, donde $\mathfrak m_s$ es el ideal maximal de $\mathcal O_{S,s}$, se concluye por Nakayama. El redactor ignora si la implicación precedente es verdadera en general (cuando se supone solamente que $\mathcal O_S$ es un haz coherente de anillos locales). El redactor ignora asimismo si la relación «$H^1(S,F)=0$ para todo haz coherente $F$» implica el teorema B.
+
+\textbf{Ejemplos 2.4.2.} Un espacio analítico complejo de Stein [3], un compacto convexo de $\mathbb C^n$ provisto del haz inducido por el haz de las funciones holomorfas [3], el espectro de un anillo noetheriano y un espacio rígido analítico afín [13] definen topoi de Stein.
+
+\textbf{Lema 2.4.3.} Sea $\sisi{S}{\mathcal S}$ un topos de Stein (2.4.1). Se supone que el objeto final $S$ es cuasicompacto (2.1.1), y se denota por $\Coh(S)$ la categoría abeliana de los $\mathcal O_S$-módulos coherentes, es decir, de presentación finita. Entonces:
+\begin{enumerate}[label=\alph*)]
+\item La categoría $\Lib(S)$ (resp. $\Loclib(S)$) (2.0) es levantable en $\Coh(S)$ y cuasiestable (resp. estable) por núcleo de epimorfismo (I 1.2).
+\item Los funtores canónicos
+\[
+\mathrm K^{-}(\Lib(S))\longrightarrow\mathrm K^{-}(\Loclib(S))\longrightarrow\mathrm D^{-}(\Coh(S))
+\]
+son equivalencias de categorías.
+\item Pongamos $A=\Gamma(S,\mathcal O_S)$, y denotemos por $\Mod(A)$ la categoría de los $A$-módulos y por $\mathrm D(A)$ la categoría derivada correspondiente. El funtor
+\[
+\Gamma_S:\Coh(S)\longrightarrow\Mod(A)
+\]
+es exacto, plenamente fiel y tiene por imagen esencial la subcategoría aditiva estrictamente plena de $\Mod(A)$ formada por los $A$-módulos de presentación finita. Induce un funtor plenamente fiel
+\[
+\mathrm D^{-}(\Coh(S))\longrightarrow\mathrm D(A),
+\]
+cuya imagen esencial es la subcategoría plena $\mathrm D^{-}(A)_{\coh}$ formada por los complejos pseudocoherentes (relativamente a la subcategoría de los módulos libres de tipo finito).
+\end{enumerate}
+
+\emph{Demostración.} Para la primera afirmación de a), se aplica (2.1.2 a)) para $\mathcal C'_S=\Coh(S)$, verificándose la hipótesis de (2.1.2) según el teorema B: con las notaciones de (2.1.2 a)), si $E$ es coherente y $G$ localmente libre de tipo finito, entonces $\operatorname{Hom}(G,E)$ es coherente, luego la categoría $\Loclib(S)$ (y con mayor razón $\Lib(S)$) es levantable en $\Coh(S)$. La segunda afirmación de a) resulta de (1.1 a)) (resp. (1.2 a))) aplicado para $\mathcal C_0=\Lib$ (resp. $\Loclib$)\footnote{Lib y Loclib son localmente estables por núcleo de epimorfismo según (I 2.15.1).}, verificándose la condición (ii), respectivamente, de (1.1) según el teorema A y (2.1.1 b)). La afirmación b) resulta de (1.1 c)) aplicado sucesivamente para $\mathcal C_0=\Lib$ y $\mathcal C_0=\Loclib$. La primera afirmación de c) se deduce de (2.1.2 b)(ii)) aplicado para $\mathcal C'_S=\Coh(S)$. Para probar que el funtor $\Gamma_S:\mathrm D^{-}(\Coh(S))\to\mathrm D(A)$ es plenamente fiel, basta, teniendo en cuenta b), probar que el compuesto
+\[
+\mathrm K^{-}(\Lib(S))\longrightarrow\mathrm D^{-}(\Coh(S))\xrightarrow{\Gamma_S}\mathrm D(A)
+\]
+lo es. Pero este se factoriza en
+\[
+\mathrm K^{-}(\Lib(S))\xrightarrow{(*)}\mathrm K^{-}(\Lib(A))\xrightarrow{(**)}\mathrm D(A),
+\]
+donde $\Lib(A)$ denota la categoría de los $A$-módulos libres de tipo finito y $(*)$ está inducido por $\Gamma_S$. Es trivial que $(*)$ es una equivalencia de categorías. Por otra parte, resulta de (I 2.7 b)) aplicado para $\mathcal C=\Mod(A)$, $\mathcal C_0=\Lib(A)$ (y teniendo en cuenta que $\mathrm K^{-,\varnothing}(\Lib(A))=0$) que $(**)$ es plenamente fiel y tiene por imagen esencial $\mathrm D^{-}(A)_{\coh}$. Esto prueba la última afirmación de c) y termina la demostración de (2.4.3).
+
+\textbf{Lema 2.4.4.} Bajo las hipótesis de (2.4.3), el funtor canónico
+\[
+\mathrm D^b(\Coh(S))\longrightarrow\mathrm D(S)
+\]
+es plenamente fiel y tiene por imagen esencial $\mathrm D^b(S)_{\coh}$ (I 2.15).
+
+\emph{Demostración.} Se aplica (2.1.3) con $\mathcal A=\Coh(S)$, $\mathcal B=\Mod(S)$, siendo $\varphi:\mathcal A\to\mathcal B$ el funtor de inclusión. Como este último es plenamente fiel, basta verificar, según (2.1.3 a)(ii)), que, para $M\in\Ob\Coh(S)$ fijo y $n>0$, el funtor $L\longmapsto \Ext^n_{\Mod(S)}(L,M)$ es coefaceable en $L\in\Ob\Coh(S)$. Ahora bien, según el teorema A y (2.1.1 b)), todo $\mathcal O_S$-módulo coherente es cociente de un módulo libre de tipo finito, y, si $L$ es libre de tipo finito, se tiene $\Ext^n_{\Mod(S)}(L,M)=0$ según el teorema B, de donde nuestra afirmación. Se deduce que el funtor $\mathrm D^b(\Coh(S))\to\mathrm D(S)$ es plenamente fiel y tiene por imagen esencial la subcategoría plena de $\mathrm D(S)$ formada por los complejos de cohomología acotada y coherente, que no es sino $\mathrm D^b(S)_{\coh}$ puesto que $\mathcal O_S$ es coherente (I 3.5. b)).
+

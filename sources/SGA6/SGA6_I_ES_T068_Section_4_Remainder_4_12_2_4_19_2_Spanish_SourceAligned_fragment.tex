@@ -1,0 +1,171 @@
+% SGA 6, Exposición I: final de la sección 4 (4.12.2--4.19.2), en español y alineado con la fuente.
+% Alcance exacto: sga6_fr_r1/src/fr.tex, líneas 2613--2776.
+% Las lecturas diplomáticas corregidas de forma transparente se conservan mediante \sisi.
+
+\providecommand{\sisi}[2]{#2}
+
+% Notación adicional para la continuación de la Exposición I
+\providecommand{\Cpx}{\mathrm C}
+\providecommand{\Kpx}{\mathrm K}
+\providecommand{\Dpx}{\mathrm D}
+\providecommand{\Ho}{\mathrm H}
+\providecommand{\RHom}{\mathrm R\!\operatorname{Hom}}
+\providecommand{\Ob}{\operatorname{ob}}
+\providecommand{\qis}{\xrightarrow{\sim}}
+\providecommand{\RHom}{\mathrm R\!\Hom}
+\providecommand{\Ext}{\operatorname{Ext}}
+\providecommand{\Hom}{\operatorname{Hom}}
+\providecommand{\Tr}{\operatorname{Tr}}
+
+\providecommand{\Add}{\operatorname{Add}}
+\providecommand{\Cart}{\operatorname{Cart}}
+\providecommand{\perfamp}{\operatorname{perf.amp}}
+\providecommand{\perfdim}{\operatorname{perf.dim}}
+\providecommand{\toramp}{\operatorname{tor.amp}}
+\providecommand{\torf}{\operatorname{torf}}
+\providecommand{\injf}{\operatorname{injf}}
+\providecommand{\rg}{\operatorname{rg}}
+\providecommand{\is}{\mathrm{is}}
+\providecommand{\Mod}{\operatorname{Mod}}
+
+
+\textbf{Observación 4.12.2.} Sea \(\mathcal C\) una categoría abeliana (que puede considerarse fibrada sobre un sitio puntual), y sea \(\mathcal C_0\) una subcategoría aditiva estrictamente plena. Supongamos que \(\mathcal C_0\) es estable por núcleos de epimorfismos y cuasilevantable en \(\mathcal C\). Entonces, un objeto acíclico de \(\Kpx^b(\mathcal C_0)\) no es nulo en general, por lo que no cabe esperar que el funtor
+\[
+  \Kpx^b(\mathcal C_0)\longrightarrow \Dpx(\mathcal C)
+\]
+sea fiel. Sin embargo, si \(\Kpx^{b,\mathrm{ac}}(\mathcal C_0)\) denota la subcategoría gruesa de \(\Kpx^b(\mathcal C_0)\) formada por los objetos acíclicos (en \(\mathcal C\)), el funtor canónico
+\[
+  \Kpx^b(\mathcal C_0)/\Kpx^{b,\mathrm{ac}}(\mathcal C_0)
+  \longrightarrow \Dpx(\mathcal C)
+\]
+es plenamente fiel.
+
+Indicaciones: Ya se sabe por (2.7) que el funtor
+\[
+  \Kpx^-(\mathcal C_0)/\Kpx^{-,\mathrm{ac}}(\mathcal C_0)
+  \longrightarrow \Dpx^-(\mathcal C)
+\]
+es plenamente fiel. Demostrar, por ejemplo mediante el criterio ([V] 4.2.b)(ii)'), que el funtor
+\[
+  \Kpx^b(\mathcal C_0)/\Kpx^{b,\mathrm{ac}}(\mathcal C_0)
+  \longrightarrow
+  \Kpx^-(\mathcal C_0)/\Kpx^{-,\mathrm{ac}}(\mathcal C_0)
+\]
+es plenamente fiel.
+
+\textbf{Lema 4.13.} \emph{Sean \(F\in\Ob\Dpx(\mathcal C_S)\), \(a,b,c\in\mathbb Z\) tales que \(a\leq b\) y \(a\leq c\). Si \(F\) es de amplitud perfecta contenida en \([a,c]\) (4.7) y si \(\Ho^i(F)=0\) para \(i>b\), entonces \(F\) es de amplitud perfecta contenida en \([a,d]\), donde \(d=\inf(b,c)\).}
+
+\emph{Demostración.} Se puede suponer que \(b\leq c\) y que \(F\) es estrictamente perfecto, con \(F^i=0\) para \(i\notin[a,c]\). Entonces \(F\) es isomorfo a su truncado \(F'\), definido por \(F'^i=F^i\) para \(i<b\), \(F'^b=Z^b(F)\) y \(F'^i=0\) para \(i>b\). Pero \(Z^b(F)\) admite una resolución finita derecha por objetos de \(\mathcal C_0\), por lo que es localmente un objeto de \(\mathcal C_0\); de aquí resulta la afirmación.
+
+\textbf{Corolario 4.14.} Sean \(F\in\Ob\mathcal C_S\) y \(n\in\mathbb N\). Las condiciones siguientes son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+\item \(\perfamp(F)\subset[-n,0]\);
+\item \(F\) admite localmente una resolución izquierda de longitud \(n\) por objetos de \(\mathcal C_0\), es decir, el conjunto de los \(X\) sobre \(S\) para los que existe una sucesión exacta
+\[
+  0\longrightarrow L^{-n}\longrightarrow L^{-n+1}\longrightarrow \cdots
+  \longrightarrow L^0\longrightarrow F_X\longrightarrow 0,
+\]
+con \(L^i\in\Ob\mathcal C_{0,X}\) para todo \(i\), es un refinamiento de \(S\).
+\end{enumerate}
+
+\emph{Demostración.} Es una consecuencia inmediata de (4.7) y (4.13).
+
+\textbf{Definición 4.14.1.} \emph{Diremos que \(F\) es de dimensión perfecta \(\leq n\), y escribiremos \(\perfdim(F)\leq n\), si \(F\) verifica las condiciones equivalentes de (4.14). Llamaremos dimensión perfecta de \(F\) al menor entero \(n\) tal que \(\perfdim(F)\leq n\) (si no existe tal entero, diremos que \(F\) es de dimensión perfecta infinita).}
+
+Cuando \(\sisi{S}{\mathcal S}\) es el sitio puntual y \(\mathcal C_0\) es la subcategoría plena de \(\mathcal C\) formada por los objetos proyectivos, la dimensión perfecta no es sino la dimensión proyectiva usual.
+
+\textbf{Proposición 4.15.} \emph{Sean \(a,b,n\in\mathbb Z\) (\(a\leq b\), \(n\geq0\)), y sea \(F\in\Ob\Dpx(\mathcal C)\) tal que \(F^i=0\) (resp. \(\Ho^i(F)=0\)) para \(i\notin[a,b]\). Si, para todo \(i\in[a,b]\), \(F^i\) (resp. \(\Ho^i(F)\)) es de dimensión perfecta \(\leq n+(i-a)\), entonces \(F\) es de amplitud perfecta contenida en \([a-n,b]\). Por consiguiente, si, para todo \(i\in[a,b]\), \(F^i\) (resp. \(\Ho^i(F)\)) es perfecto, entonces \(F\) también lo es.}
+
+\emph{Demostración.} Procédase por recurrencia sobre \(b\) (con \(a\) y \(n\) fijos), truncando \(F\) y aplicando (4.11) (cf. demostración de (2.11)).
+
+\textbf{Lema 4.16.} \emph{Sean \(a,b\in\mathbb Z\) (\(a\leq b\)), y sea \(F\in\Ob\Dpx(\mathcal C)\) tal que \(F^i=0\) para \(i\notin[a,b]\). Supongamos que \(\perfamp(F)\subset[a,b]\) y que \(F^i\in\Ob\mathcal C_0\) para \(i>a\). Entonces \(F^a\) es localmente un objeto de \(\mathcal C_0\).}
+
+\emph{Demostración.} Se tiene una sucesión exacta (obtenida truncando \(F\))
+\[
+  0\longrightarrow F'\longrightarrow F\longrightarrow F^a[-a]\longrightarrow 0,
+\]
+con \(\perfamp(F')\subset[a+1,b+1]\). De (4.11) y (4.13) se deduce que \(\perfdim(F^a)=0\), es decir, que \(F^a\) es localmente un objeto de \(\mathcal C_0\).
+
+\textbf{Proposición 4.17.} Sean \(F',F''\in\Ob\Dpx(\mathcal C_S)\), y sean \(a,b\in\mathbb Z\), con \(a\leq b\). Consideremos las condiciones:
+\begin{enumerate}[label=(\roman*)]
+\item \(\perfamp(F')\subset[a,b]\) y \(\perfamp(F'')\subset[a,b]\);
+\item \(\perfamp(F'+F'')\subset[a,b]\).
+\end{enumerate}
+Se tiene (i) \(\Rightarrow\) (ii), y, si \(\mathcal C_0\) es localmente estable por sumandos directos (es decir, si la relación \(E'+E''\in\Ob\mathcal C_0\), para \(E',E''\in\Ob\mathcal C_X\) y \(X\in\Ob \sisi{S}{\mathcal S}\), implica que \(E'\) y \(E''\) son localmente objetos de \(\mathcal C_0\)), se tiene (i) \(\Leftrightarrow\) (ii).
+
+\emph{Demostración.} La implicación (i) \(\Rightarrow\) (ii) es un caso particular de (4.11). Demostremos el recíproco. Pongamos \(F=F'+F''\). Como \(F\) es pseudocoherente, \(F'\) y \(F''\) también lo son (2.12). Por otra parte, la relación \(\Ho^i(F)=0\) para \(i\notin[a,b]\) implica que \(\Ho^i(F')=\Ho^i(F'')=0\) para \(i\notin[a,b]\). Por (2.10 a)), se puede suponer (tras localizar) que \(F'^i\) (resp. \(F''^i\)) \(\in\Ob\mathcal C_0\) para \(i\geq a+1\) y que \(F'^i=F''^i=0\) para \(i>b\), y luego, truncando, que \(F'^i=F''^i=0\) para \(i<a\). Como \(\sisi{\perfdim(F)}{\perfamp(F)}\subset[a,b]\), se deduce de (4.16) que \(F^a\) es localmente un objeto de \(\mathcal C_0\). Ahora bien, \(F^a=F'^a+F''^a\); por tanto, \(F'^a\) y \(F''^a\) son localmente objetos de \(\mathcal C_0\), puesto que \(\mathcal C_0\) es localmente estable por sumandos directos.
+
+\textbf{Proposición 4.18.} Sea \((\sisi{S'}{\mathcal S'},\mathcal C',\mathcal C'_0)\) una terna que satisfaga las mismas hipótesis (4.0) que \((\sisi{S}{\mathcal S},\mathcal C,\mathcal C_0)\). Sea \(f:\sisi{S'}{\mathcal S'}\to \sisi{S}{\mathcal S}\) un morfismo de sitios (definido por \(f^{-1}:\sisi{S}{\mathcal S}\to \sisi{S'}{\mathcal S'}\)), y sea
+\[
+  u:\Dpx^*(\mathcal C)\longrightarrow \Dpx^*(\mathcal C')\qquad (*=-,+,\varnothing)
+\]
+un funtor sobre \(f\) (cf. (2.13)). Si \(u\) transforma los objetos de \(\mathcal C_0\) en complejos \(\mathcal C'_0\)-perfectos, entonces \(u\) define un funtor
+\[
+  \Dpx^*(\mathcal C)_{\mathcal C_0\text{-}\mathrm{parf}}
+  \longrightarrow
+  \Dpx^*(\mathcal C')_{\mathcal C'_0\text{-}\mathrm{parf}}.
+\]
+
+\emph{Demostración.} Sea \(F\in\Ob\Dpx^*(\mathcal C)_{\mathcal C_0\text{-}\mathrm{parf}}\); demostremos que \(u(F)\in\Ob\Dpx^*(\mathcal C')_{\mathcal C'_0\text{-}\mathrm{parf}}\). Como la cuestión es local, se puede suponer que \(F\) es estrictamente perfecto. Solo queda razonar por descomposición, teniendo en cuenta que \(\Dpx^*(\mathcal C')_{\mathcal C'_0\text{-}\mathrm{parf}}\) es una subcategoría triangulada de \(\sisi{\Dpx^*(\mathcal C)}{\Dpx^*(\mathcal C')}\) (4.10).
+
+\textbf{Observación 4.18.1.} Supongamos que existen \(m,n\in\mathbb Z\) (\(m\leq n\)) tales que \(F\in\Ob\mathcal C_0\) implica \(\mathcal C'_0\text{-}\perfamp(u(F))\subset[m,n]\). Entonces, si \(F\in\Ob\Dpx^*(\mathcal C)\), se tiene
+\[
+  \mathcal C_0\text{-}\perfamp(F)
+  \subset[a,b]
+  \quad\Rightarrow\quad
+  \mathcal C'_0\text{-}\perfamp(u(F))
+  \subset[a+m,b+n].
+\]
+La demostración se deja como ejercicio al lector (utilícese (4.11)).
+
+\textbf{Corolario 4.19.} Bajo las hipótesis de (2.16), si \(E'\in\Ob\sisi{\Dpx^-({}_A, S'_A)}{\Dpx^-({}_{A'}\mathcal S'_A)}\) es perfecto como objeto de \(\sisi{\Dpx^-({}_A, S')}{\Dpx^-({}_{A'}\mathcal S')}\) y \(E\in\Ob\sisi{\Dpx^-({}_A S)}{\Dpx^-({}_A\mathcal S)}\) es perfecto, entonces
+\[
+  E'\overset{\mathrm L}{\otimes}_A E
+\]
+es perfecto.
+
+\emph{Demostración.} Se puede suponer que \(E'\in\Ob\sisi{\Dpx^-({}_A, S'_A)}{\Dpx^-({}_{A'}\mathcal S'_A)}\) (\(S'\) = objeto final de \(\sisi{S'}{\mathcal S'}\)), y se aplica (4.18) a
+\[
+  u=E'\overset{\mathrm L}{\otimes}_A:
+  \sisi{\Dpx^-({}_A S)}{\Dpx^-({}_A\mathcal S)}\longrightarrow \sisi{\Dpx^-({}_A, S')}{\Dpx^-({}_{A'}\mathcal S')}.
+\]
+En particular:
+
+\textbf{Corolario 4.19.1.} \textbf{a)} El funtor
+\[
+  \mathrm L f^*:\sisi{\Dpx^-({}_A S)}{\Dpx^-({}_A\mathcal S)}\longrightarrow \sisi{\Dpx^-({}_A, S')}{\Dpx^-({}_{A'}\mathcal S')}
+\]
+induce un funtor
+\[
+  \mathrm L f^*:\sisi{\Dpx^-({}_A S)_{\mathrm{parf}}}{\Dpx^-({}_A\mathcal S)_{\mathrm{parf}}}
+  \longrightarrow
+  \sisi{\Dpx^-({}_A, S')_{\mathrm{parf}}}{\Dpx^-({}_{A'}\mathcal S')_{\mathrm{parf}}}.
+\]
+
+\textbf{b)} Si \(A\) es conmutativo, el funtor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx^-(\sisi{S}{\mathcal S})\times\sisi{_S}{_{\mathcal S}}\Dpx^-(\sisi{S}{\mathcal S})
+  \longrightarrow \Dpx^-(\sisi{S}{\mathcal S})
+\]
+induce un funtor
+\[
+  \overset{\mathrm L}{\otimes}_A:
+  \Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}}\times\sisi{_S}{_{\mathcal S}}\Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}}
+  \longrightarrow \Dpx^-(\sisi{S}{\mathcal S})_{\mathrm{parf}}.
+\]
+
+\textbf{Observación 4.19.2.} Se puede precisar (4.19) en términos de amplitud perfecta:
+\[
+  \perfamp(E)\subset[a,b]\quad\text{y}\quad
+  \perfamp(E')\subset[a',b']
+  \quad\Rightarrow\quad
+  \perfamp(E'\overset{\mathrm L}{\otimes}_A E)\subset[a+a',b+b'].
+\]
+En particular:
+\[
+  \perfamp(E)\subset[a,b]
+  \quad\Rightarrow\quad
+  \perfamp(\mathbb L f^*(E))\subset[a,b].
+\]
+
