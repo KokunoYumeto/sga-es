@@ -13,7 +13,7 @@
 \medskip
 \noindent\textbf{Contenido de la fuente}
 \begin{center}
-\begin{tabular}{@{}llr@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}llr@{}}
 \S1. & Singularidades cuadráticas ordinarias (formas canónicas) & 2\\
 1.1 & Recordatorios & 2\\
 1.2 & Singularidades cuadráticas ordinarias & 4\\
@@ -27,7 +27,7 @@
 3.2 & Dimensión relativa par & 24\\
 3.3 & Dimensión relativa impar & 26\\
 3.4 & Resumen & 31
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \pageoriginale
@@ -754,7 +754,7 @@ $(\widetilde X_1-Y,Y_0)$ forman las filas del diagrama
 \pageoriginale
 
 \begin{equation}\tag{2.1.5.1}
-\begin{tikzcd}[column sep=large]
+\begin{adjustbox}{max width=\displaywidth}\begin{tikzcd}[column sep=large]
 H^{i-1}(X^*) \arrow[r] \arrow[d,equal]
   & H^{i-2}(Y)(-1) \arrow[r,"\eta"'] \arrow[d,equal]
   & H^i(Y) \arrow[r] \arrow[d,dash,"-1"]
@@ -765,7 +765,7 @@ H^{i-1}(X^*) \arrow[r]
   & H^i(Y) \arrow[r]
   & H^i(X^*) \arrow[r]
   & {} .
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{equation}
 
 \subsubsection*{Lema 2.1.6.}
@@ -817,7 +817,7 @@ puede escribirse
 \pageoriginale
 
 \begin{equation}\tag{\sisi{2.1 7.1}{2.1.7.1}}
-\begin{tikzcd}[column sep=large]
+\begin{adjustbox}{max width=\displaywidth}\begin{tikzcd}[column sep=large]
 H^{i-1}(X^*_{(O)}) \arrow[r]
   & H^{i-2}(Y_0)(-1) \arrow[r,"-\eta"]
   & H^i(Y_0) \arrow[r]
@@ -827,7 +827,7 @@ H^{i-1}(X^*) \arrow[r] \arrow[u,"\wr"]
   & H^i(Y) \arrow[r] \arrow[u,equal]
   & H^i(X^*) \arrow[u,dash,"\wr"]
   & {} ,
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{equation}
 siendo la segunda fila de este diagrama conmutativo la segunda fila de
 (2.1.5.1).
@@ -1196,7 +1196,7 @@ Los ciclos $\pm\delta$ están caracterizados por sus imágenes en
 $H_c^{\sisi{i}{n}}(X_{\bar\eta},\Lambda(m))$. Utilizando (2.1.7.1),
 basta, por tanto, demostrar que la aplicación compuesta
 \begin{center}
-\begin{tikzcd}[column sep=huge,row sep=huge]
+\begin{adjustbox}{max width=\linewidth}\begin{tikzcd}[column sep=huge,row sep=huge]
 H^{n-1}(Y_0,\Lambda(m))
   & H^{n-1}(\widetilde X_s,\Lambda(m))
       \arrow[l,"\sim"'] \arrow[r]
@@ -1204,7 +1204,7 @@ H^{n-1}(Y_0,\Lambda(m))
 H_c^n(X_{\bar\eta},\Lambda(m))
   & H_c^n(X_s,\Lambda(m)) \arrow[l,"\operatorname{sp}"']
   & H^n_{\{x_0\}}(X_s,\Lambda(m)) \arrow[l]
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{center}
 envía los generadores distinguidos del cociente primitivo del primer
 grupo a los generadores distinguidos del último grupo.
@@ -1437,7 +1437,7 @@ cuádrica imagen inversa de $x$, y pongamos
 \]
 El morfismo compuesto
 \begin{center}
-\begin{tikzcd}[column sep=huge,row sep=huge]
+\begin{adjustbox}{max width=\linewidth}\begin{tikzcd}[column sep=huge,row sep=huge]
 H^{n-1}(Y,\Lambda(m))
   & H^{n-1}(\widetilde X_{s(x)},\Lambda(m))
       \arrow[l,"\sim"'] \arrow[r]
@@ -1445,7 +1445,7 @@ H^{n-1}(Y,\Lambda(m))
 {}
   & H^n_{\{x\}}\bigl(X_s,R\psi_{\bar\eta}(\Lambda(m))\bigr)
   & H^n_{\{x\}}(X_s,\Lambda(m)) \arrow[l]
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{center}
 identifica el último grupo con el cociente primitivo (XII, 3.5) de la
 cohomología de la cuádrica $Y$. En efecto, esto resulta de 2.2.7 en
@@ -1467,7 +1467,7 @@ imágenes de los generadores del cociente primitivo de
 $H^{n-1}(Y,\Lambda(m))$ (con la misma notación anterior) por el
 morfismo compuesto
 \begin{center}
-\begin{tikzcd}[column sep=huge,row sep=huge]
+\begin{adjustbox}{max width=\linewidth}\begin{tikzcd}[column sep=huge,row sep=huge]
 H^{n-1}(Y,\Lambda(m))
   & H^{n-1}(\widetilde X_{s(x)},\Lambda(m))
       \arrow[l,"\sim"'] \arrow[r]
@@ -1475,7 +1475,7 @@ H^{n-1}(Y,\Lambda(m))
 H^0\bigl(S,R^nf_!\Lambda(m)\bigr)
   & H_c^n(X_s,\Lambda(m)) \arrow[l,"\sim"']
   & H^n_{\{x\}}(X_s,\Lambda(m)) \arrow[l]
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{center}
 La clase $\pm\delta_x$ es el \underline{ciclo evanescente} en $x$.
 
@@ -1680,7 +1680,7 @@ H^i(X_s)\xrightarrow{\ \sim\ }H^i(X_{\bar\eta})
 \pageoriginale
 
 {\small
-\[
+\[\begin{adjustbox}{max width=\displaywidth}$\displaystyle 
 0\longrightarrow H^n(X_s)
  \longrightarrow H^n(X_{\bar\eta})
  \xrightarrow{\,((\,\cdot\,,\delta_x))_{x\in\Sigma}\,}
@@ -1688,7 +1688,7 @@ H^i(X_s)\xrightarrow{\ \sim\ }H^i(X_{\bar\eta})
  \longrightarrow H^{n+1}(X_s)
  \longrightarrow H^{n+1}(X_{\sisi{\eta}{\bar\eta}})
  \longrightarrow0.
-\]
+$\end{adjustbox}\]
 }
 
 \item[(iii)] \underline{Se definen caracteres locales del grupo de

@@ -118,7 +118,7 @@ H^{p+q}\bigl(\mathbb P(\mathcal E),\mathbb Z_\ell\bigr)
 \end{equation}
 \underline{degenera;}
 \item[(b)] \underline{la aplicación}
-\begin{equation}\tag{1.2.2}
+{\small\begin{equation}\tag{1.2.2}
 \bigoplus_{0\leq j\leq \sisi{n}{r}}
 \sisi{H^{q-2-j}\bigl(X,\mathbb Z_\ell(-j)}
       {H^{q-2j}\bigl(X,\mathbb Z_\ell(-j)\bigr)}
@@ -127,7 +127,7 @@ H^q\bigl(\mathbb P(\mathcal E),\mathbb Z_\ell\bigr),
 \qquad
 (\tau_{q-2j})_j\longmapsto
 \sum_j f^*(\tau_{q-2j})\wedge u^j
-\end{equation}
+\end{equation}}
 \underline{es un isomorfismo.}
 \end{enumerate}
 \footnote{En (1.2.2), la impresión da la cota superior $n$, el grado
@@ -818,8 +818,8 @@ utilizando que el eje de $D$ corta transversalmente a $X$.
 Retomamos la situación de 3.1, resumida por el diagrama conmutativo
 (cf. 2.1.6.3):
 \begin{equation}\tag{4.1.1}
-\resizebox{\textwidth}{!}{%
-\begin{tikzcd}[ampersand replacement=\&,row sep=huge,column sep=huge]
+\resizebox{\dimexpr\textwidth-4em\relax}{!}{%
+\begin{adjustbox}{max width=\dimexpr\displaywidth-5em\relax}\begin{tikzcd}[ampersand replacement=\&,row sep=huge,column sep=huge]
 X\times\mathbb P^1
   \& \widetilde X
       \arrow[l,hook',"f\times\rho"]
@@ -831,7 +831,7 @@ X\times\mathbb P^1
       \arrow[r,"{(g,\rho_i)}","\sim"']
   \& \Delta\times\mathbb P^1 \\
 \mathbb P^1 \& X \& \Delta\arrow[l,hook',"j"] \& {}
-\end{tikzcd}}.
+\end{tikzcd}\end{adjustbox}}.
 \end{equation}
 Comencemos por precisar (2.2.2) en este caso.
 
@@ -1014,7 +1014,7 @@ H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
 H^\bullet(\widetilde X,\mathbb Z_\ell).
 \end{equation}
 Queda demostrar que el compuesto
-\begin{equation}\tag{4.2.9}
+{\small\begin{equation}\tag{4.2.9}
 \begin{aligned}
 &H^\bullet(X,\mathbb Z_\ell)\oplus
  H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
@@ -1024,7 +1024,7 @@ Queda demostrar que el compuesto
  H^\bullet(X,\mathbb Z_\ell)\oplus
  H^{\bullet-2}(\Delta,\mathbb Z_\ell(-1))
 \end{aligned}
-\end{equation}
+\end{equation}}
 es la identidad. Ahora bien,
 \[
 f_*f^*=\mathrm{id}\quad\text{sobre }H^\bullet(X,\mathbb Z_\ell)
@@ -1415,7 +1415,7 @@ polarización, a característica cero.
 
 Recordemos que, para una variedad proyectiva $S$ y $i\leq n$, la parte
 primitiva de la cohomología se define por
-\begin{equation}\tag{5.2.2.2}
+{\footnotesize\begin{equation}\tag{5.2.2.2}
 \operatorname{Prim}^i(S,\mathbb Q_\ell(j))
 =\operatorname{Ker}\!\left(
 L^{n-i+1}:H^i(S,\mathbb Q_\ell(j))
@@ -1423,7 +1423,7 @@ L^{n-i+1}:H^i(S,\mathbb Q_\ell(j))
 H^{2n-i+2}\bigl(S,\mathbb Q_\ell(
   \sisi{j+2n-2i+2}{j+n-i+1})\bigr)
 \right).
-\end{equation}
+\end{equation}}
 \footnote{La potencia $L^{n-i+1}$ aumenta el giro de Tate en $n-i+1$; la
 impresión da en el blanco el giro de Tate $j+2n-2i+2$.}
 Si $S$ satisface (LV), para $i\leq n$ se tiene la descomposición
@@ -2260,13 +2260,13 @@ H^n(X_{\bar\eta},\mathbb Q_\ell)
 \right).
 \]
 Bajo (LV), $k^*$ también se escribe
-\begin{equation}\tag{5.7.3}
+{\small\begin{equation}\tag{5.7.3}
 \operatorname{Prim}^n(X,\mathbb Q_\ell)
 \oplus H^{n-2}(X,\mathbb Q_\ell(-1))
 \oplus H^{n-2}(\Delta,\mathbb Q_\ell(-1))
 \xrightarrow{\;m^*+m^*L+h_*\;}
 H^n(X_{\bar\eta},\mathbb Q_\ell),
-\end{equation}
+\end{equation}}
 y la aplicación central
 \begin{equation}\tag{5.7.4}
 H^{n-2}(X,\mathbb Q_\ell(-1))
@@ -2396,7 +2396,7 @@ E_\infty^{1,\bullet}\lhook\joinrel\longrightarrow E_2^{1,\bullet}.
 
 El compuesto
 \begin{equation}\tag{5.8.1.5}
-\begin{tikzcd}[column sep=large,row sep=large]
+\begin{adjustbox}{max width=\displaywidth}\begin{tikzcd}[column sep=large,row sep=large]
 \operatorname{Prim}^i(T/S,\mathbb Q_\ell(j))
 =F^1H^i(T,\mathbb Q_\ell(j))
   \arrow[r]
@@ -2409,7 +2409,7 @@ El compuesto
 &
 H^1(S,R^{i-1}f_*\mathbb Q_\ell(j))
 =E_2^{1,i-1}
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{equation}
 se denotará
 \begin{equation}\tag{5.8.1.6}
@@ -2994,7 +2994,7 @@ El diagrama siguiente es conmutativo:
 \begingroup
 \small
 \begin{equation}\notag
-\begin{tikzcd}[column sep=large,row sep=large]
+\begin{adjustbox}{max width=\displaywidth}\begin{tikzcd}[column sep=large,row sep=large]
 {} & \pi_1^{\mathrm{mod}}(\mathbb P^r-Z,\bar a) & {} \\
 \pi_1^{\mathrm{mod}}(D_\eta-D_\eta\cap Z,\bar a)
   \arrow[ur,"i_{\eta*}"]
@@ -3005,7 +3005,7 @@ El diagrama siguiente es conmutativo:
   \arrow[uu,"i_{\bar\eta*}"']
   \arrow[ul]
   \arrow[ur,"\bar\eta\longrightarrow o"'] & {} .
-\end{tikzcd}
+\end{tikzcd}\end{adjustbox}
 \end{equation}
 \endgroup
 
@@ -3301,12 +3301,12 @@ Euler--Poincaré de $Y(d)$ es
 \pageoriginale
 
 Por otra parte, la dualidad de Poincaré y Lefschetz débil dan
-\begin{equation}\tag{6.4.2.4}
+{\small\begin{equation}\tag{6.4.2.4}
 \chi(Y(d))
 =(-1)^{n-1}\dim H^{n-1}(Y(d),\mathbb Q_\ell)
 +2\sum_{i\ge1}(-1)^{n-1-i}
   \dim H^{n-1-i}(X,\mathbb Q_\ell).
-\end{equation}
+\end{equation}}
 Al combinar (6.4.2.3) y (6.4.2.4) se obtiene el resultado.
 
 \subsection*{6.5. Recordatorio de la fórmula de Picard--Lefschetz
