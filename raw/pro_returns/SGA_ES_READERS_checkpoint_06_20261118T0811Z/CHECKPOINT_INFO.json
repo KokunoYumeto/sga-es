@@ -1,0 +1,12 @@
+{
+  "index": 6,
+  "date": "2026-11-18T08:00:57.441448+00:00",
+  "status": "incomplete",
+  "files": 6045,
+  "exclusions": [
+    "original supplied inputs",
+    "previous checkpoint ZIPs",
+    "raw compiler build directories",
+    "regenerable compiler auxiliary files"
+  ]
+}

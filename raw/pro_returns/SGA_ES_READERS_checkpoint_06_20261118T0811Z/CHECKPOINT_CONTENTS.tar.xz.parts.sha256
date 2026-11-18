@@ -1,0 +1,2 @@
+ba49fb0a6fc65814bf4a6eca7e14ac3f22d1975550e9c43042cc776c81962dac  CHECKPOINT_CONTENTS.tar.xz  (383434380 bytes in 9 parts)
+join: cat CHECKPOINT_CONTENTS.tar.xz.part* > CHECKPOINT_CONTENTS.tar.xz   (Windows: copy /b CHECKPOINT_CONTENTS.tar.xz.part01+CHECKPOINT_CONTENTS.tar.xz.part02+... CHECKPOINT_CONTENTS.tar.xz)
