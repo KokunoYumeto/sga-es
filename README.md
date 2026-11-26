@@ -16,18 +16,21 @@ textos matemáticos escritos en español.
 - **SGA 3, los tres tomos (texto de 1970):** el 9 y el 10 de noviembre de 2026 la traducción se llevó al texto de 1970
   del impreso: GPT-6.1 Sol (API de OpenAI, esfuerzo de razonamiento alto, nivel Flex) retradujo del francés los
   pasajes que la reedición de 2011 había cambiado, con los scripts y las comprobaciones de Claude Opus 5.5 con
-  esfuerzo max.
+  esfuerzo max. El 26 de noviembre de 2026 SGA 3 pasó a una sola edición, el texto de 1970 (Claude Opus 5.5 con
+  esfuerzo high), y el tomo II se recompuso con el texto justificado (Claude Opus 5.5 con esfuerzo max).
 - **SGA 5 y SGA 7:** las correcciones del cotejo del texto francés con el impreso (noviembre de 2026).
 - **Composición (15 de noviembre de 2026):** cada lector se reconstruyó desde su fuente más reciente; nada sobresale
   del margen más de 2 pt. La corrección toca solo la composición (preámbulo, fórmulas y diagramas anchos reducidos al
   ancho de la línea, encabezados largos), nunca el texto: Claude Opus 5.5 con esfuerzo high.
 
-Cada volumen tiene dos ediciones: la corregida, con las correcciones aceptadas, y la diplomática, que conserva las
-lecturas del texto impreso. El lector acumulado usa la edición corregida.
+Cada volumen tiene dos ediciones, la corregida, con las correcciones aceptadas, y la diplomática, que conserva las
+lecturas del texto impreso, salvo SGA 3, que tiene una sola: el texto de 1970. El lector acumulado usa la edición
+corregida; su SGA 3 es todavía la versión del 15 de noviembre de 2026, hasta la próxima publicación de los lectores.
 
 ## Estado
 
-La traducción está completa: los trece libros, cada uno en dos ediciones. Puede contener errores.
+La traducción está completa: los trece libros, en dos ediciones cada uno salvo SGA 3, que tiene una. Puede contener
+errores.
 
 ## Otras ediciones de SGA
 
@@ -43,7 +46,9 @@ Todas las ediciones de EGA, FGA y SGA de este proyecto figuran en
 ## Contenido
 
 Los PDF están en la publicación del
-[15 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-15-r24):
+[15 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-15-r24), salvo los de SGA 6
+([15 de noviembre, r25](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-15-r25)) y los de SGA 3
+([26 de noviembre de 2026](https://github.com/KokunoYumeto/sga-es/releases/tag/v2026-11-26-r26)):
 
 - [Lector acumulado](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r25/00_SGA_ES_CUMULATIVE_LINKED_READER.pdf) con los trece libros (4.226 páginas, versión
   2026-11-15-r25); [COMPONENT_COVERAGE.tsv](COMPONENT_COVERAGE.tsv) indica las páginas de cada uno.
@@ -53,9 +58,9 @@ Los PDF están en la publicación del
 |---|---|---|---|
 | SGA 1 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA1_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA1_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA1_ES_fuentes.zip) |
 | SGA 2 | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA2_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA2_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA2_ES_fuentes.zip) |
-| SGA 3, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_I_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_I_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_I_ES_fuentes.zip) |
-| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_II_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_II_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_II_ES_fuentes.zip) |
-| SGA 3, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_III_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_III_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA3_TOMO_III_ES_fuentes.zip) |
+| SGA 3, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-26-r26/SGA3_TOMO_I_ES_texto_1970.pdf) (texto de 1970) | una sola edición | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-26-r26/SGA3_TOMO_I_ES_fuentes.zip) |
+| SGA 3, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-26-r26/SGA3_TOMO_II_ES_texto_1970.pdf) (texto de 1970) | una sola edición | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-26-r26/SGA3_TOMO_II_ES_fuentes.zip) |
+| SGA 3, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-26-r26/SGA3_TOMO_III_ES_texto_1970.pdf) (texto de 1970) | una sola edición | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-26-r26/SGA3_TOMO_III_ES_fuentes.zip) |
 | SGA 4, tomo I | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_I_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_I_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_I_ES_fuentes.zip) |
 | SGA 4, tomo II | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_II_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_II_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_II_ES_fuentes.zip) |
 | SGA 4, tomo III | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_III_ES_corregida.pdf) | [PDF](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_III_ES_diplomatica.pdf) | [ZIP](https://github.com/KokunoYumeto/sga-es/releases/download/v2026-11-15-r24/SGA4_TOMO_III_ES_fuentes.zip) |
@@ -75,7 +80,8 @@ Las fuentes de SGA 1, SGA 5 y SGA 7 están también en este repositorio ([SGA 1]
 - SGA 1: la edición [arXiv math/0206203v2](https://arxiv.org/abs/math/0206203v2), recomposición LaTeX de los
   voluntarios del proyecto dirigido por Bas Edixhoven, con las notas de Michel Raynaud y la contribución de la Société
   mathématique de France.
-- SGA 3: el texto de 1970 del impreso. Las adiciones de la reedición de P. Gille y P. Polo (Société mathématique de France, 2011) figuran solo como notas que la nombran, redactadas por nosotros; la presentación editorial de esa reedición (pp. v–xviii), obra de sus editores, no forma parte de esta edición.
+- SGA 3: el texto de 1970 del impreso (Lecture Notes in Mathematics 151, 152 y 153), en una sola edición. La
+  reedición de P. Gille y P. Polo (Société mathématique de France, 2011) no forma parte de esta edición.
 
 ## Derechos
 
