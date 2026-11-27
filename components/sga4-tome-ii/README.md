@@ -11,4 +11,4 @@ El ZIP contiene los 118 archivos compilables de la fuente española, nueve scrip
 
 La traducción cubre por completo los Exposés V, Vbis, VI, VII y VIII, además de preliminares e índices finales. Los dos PDF se reconstruyeron de forma determinista; todas sus 362 páginas fueron inspeccionadas; los enlaces internos, marcadores, fuentes incrustadas, referencias y ramas se comprobaron; y el control final independiente terminó con resultado PASS.
 
-Los avisos históricos de copyright se conservan únicamente como procedencia y no restringen esta edición matemática independiente ni su publicación. No se afirma por ello dominio público ni una licencia abierta general.
+Los avisos históricos de copyright se conservan como procedencia; los derechos se indican en [RIGHTS_NOTICE.md](../../RIGHTS_NOTICE.md).
